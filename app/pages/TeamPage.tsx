@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function TeamPage() {
@@ -47,4 +48,9 @@ export default function TeamPage() {
       </div>
     </>
   );
+=======
+// TeamPage - Basic implementation
+export default function TeamPage() {
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 }

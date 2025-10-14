@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function PropertyManagementAiPage() {
@@ -44,7 +45,42 @@ export default function PropertyManagementAiPage() {
             </div>
           </div>
         </div>
+=======
+'use client';';';
+import React from 'react';';';
+;export default function PropertyManagementAiPage() {}
+  return (
+    <div>Page content</div>
+  );
+}
+  return (
+    <div>Page content</div>
+  );
+    <div className="min-h-screen bg-gray-90o0 text-white py-20">";";
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div className="container mx-auto px-4">";";
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>;
+        <h1 className="text-4xl font-bold mb-8">Property Management Ai</h1>;";";
+        <p className="text-gray-30o0 text-lg">;";";
+          This page is under development.;
+        </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+        </p></div></div>
+  );}
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

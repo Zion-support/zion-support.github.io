@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
@@ -47,4 +48,9 @@ export default function Page() {
       </div>
     </>
   );
+=======
+// sitemap-page - Basic implementation
+export default function sitemap-page() {
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 }

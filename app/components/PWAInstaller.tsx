@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
@@ -48,3 +49,16 @@ export default function Page() {
     </>
   );
 }
+=======
+
+const PWAInstaller = () => {
+  return (
+    <div className="pwainstaller-component">
+      <h2>PWAInstaller</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default PWAInstaller;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

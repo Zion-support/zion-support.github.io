@@ -64,16 +64,37 @@ const SolutionsPage: React.FC = () => {return (
               <p className="text-gray-300 mb-8">"
                 Contact us today to discuss your specific requirements.
               </p>
+<<<<<<< HEAD
               <div className="flex justify-center space-x-4">"
                 <a;
                   href="/contact""
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors""
+=======
+              <div className="flex justify-center space-x-4">
+                <a
+                  href="/contact"
+<<<<<<< HEAD
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors"
+=======
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
                 >
                   Contact Us;
                 </a>
+<<<<<<< HEAD
                 <a;
                   href="/demo""
                   className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors""
+=======
+                <a
+                  href="/demo"
+<<<<<<< HEAD
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-md transition-colors"
+=======
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
                 >
                   Request Demo;
                 </a>

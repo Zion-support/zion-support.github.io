@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 interface OptimizedImageProps {} src: "string",alt: "string" width?: number height?: number className?: string priority?: boolean placeholder?: string sizes?: string quality?: number;' loading?: 'lazy' | 'eager'' onLoad?: () => void onError?: () => void}
@@ -7,3 +8,17 @@ const OptimizedImage: "React.FC<OptimizedImageProps> = ({"} src, alt, width,' he
 export default OptimizedImage
 }''
 export default OptimizedImage;'
+=======
+import React from 'react';
+
+const OptimizedImage = () => {
+  return (
+    <div className="optimizedimage-component">
+      <h2>OptimizedImage</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

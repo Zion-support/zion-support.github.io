@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy, ComponentType } from 'react'
 import LoadingSpinner from './LoadingSpinner'
 interface LazyWrapperProps {} children: "React.ReactNode" fallback?: React.ReactNode}
@@ -11,3 +12,17 @@ export const withLazyLoading = <P extends object>( Component: "ComponentType<P>"
 export default LazyWrapper
 };'
 export default LazyWrapper''
+=======
+import React from 'react';
+
+const LazyWrapper = () => {
+  return (
+    <div className="lazywrapper-component">
+      <h2>LazyWrapper</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default LazyWrapper;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

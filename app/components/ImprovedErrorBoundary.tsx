@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -6,3 +7,17 @@ const ImprovedErrorBoundary: "React.FC = () => {"} return ( <div className="min-
 export default ImprovedErrorBoundary
 };''
 export default ImprovedErrorBoundary'
+=======
+import React from 'react';
+
+const ImprovedErrorBoundary = () => {
+  return (
+    <div className="improvederrorboundary-component">
+      <h2>ImprovedErrorBoundary</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default ImprovedErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

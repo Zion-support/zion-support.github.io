@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { Helmet } from 'react-helmet-async'
 interface Props {} children: "ReactNode" fallback?: ReactNode onError?: (error: "Error", errorInfo: "ErrorInfo) => void"}"
@@ -6,3 +7,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {} constructor(props
 '' {/* Development Error Details */}'' {process.env.NODE_ENV === 'development' && this.state.error && ('} <details className="mt-6 text-left">" <summary className="text-sm text-gray-40o0 cursor-pointer hover:text-white">" Error Details (Development) </summary> <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-40o0 font-mono overflow-auto max-h-40">" <div className="mb-2">}" <strong>Error: "</strong> {this.state.error.message"}" </div> <div className="mb-2">" <strong>Stack: "</strong>"," {this.state.error.stack} </pre> </div> {this.state.errorInfo && (} <div> <strong>Component Stack: "</strong>"}" {this.state.errorInfo.componentStack} </pre> </div> )} </div> </details> )} </div> </div> </> )} return this.props.children}
 }
 export default EnhancedErrorBoundary'
+=======
+import React from 'react';
+
+const EnhancedErrorBoundary = () => {
+  return (
+    <div className="enhancederrorboundary-component">
+      <h2>EnhancedErrorBoundary</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default EnhancedErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

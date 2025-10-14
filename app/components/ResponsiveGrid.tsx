@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -6,3 +7,17 @@ const ResponsiveGrid: "React.FC = () => {"} return ( <div className="min-h-scree
 export default ResponsiveGrid
 };''
 export default ResponsiveGrid'
+=======
+import React from 'react';
+
+const ResponsiveGrid = () => {
+  return (
+    <div className="responsivegrid-component">
+      <h2>ResponsiveGrid</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default ResponsiveGrid;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

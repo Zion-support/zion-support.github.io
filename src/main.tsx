@@ -1,5 +1,26 @@
 import React from 'react';
+<<<<<<< HEAD
 import react-helmet-async from 'react-helmet-async';
+=======
+<<<<<<< HEAD
+import { createRoot } from 'react-dom/client';
+import App from './App';
+
+const container = document.getElementById('root');
+if (!container) {
+  throw new Error('Root element not found');
+}
+
+const root = createRoot(container);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+=======
+import { Helmet } from 'react-helmet-async';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 const Main: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">"
@@ -83,4 +104,10 @@ const Main: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default Main;
+=======
+
+export default Main;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

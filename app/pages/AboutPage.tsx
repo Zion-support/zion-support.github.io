@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function AboutPage() {
@@ -47,4 +48,9 @@ export default function AboutPage() {
       </div>
     </>
   );
+=======
+// AboutPage - Basic implementation
+export default function AboutPage() {
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 }

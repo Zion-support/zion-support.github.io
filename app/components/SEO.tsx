@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOProps {} title?: string description?: string keywords?: string image?: string url?: string;' type?: 'website' | 'article' | 'profile'' author?: string publishedTime?: string modifiedTime?: string section?: string tags?: string[]}
@@ -7,3 +8,17 @@ const SEO: "React.FC<SEOProps> = ({"'"} title = 'Zion Tech Group - Advanced AI &
 export default SEO
 }
 export default SEO'
+=======
+import React from 'react';
+
+const SEO = () => {
+  return (
+    <div className="seo-component">
+      <h2>SEO</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default SEO;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -6,3 +7,17 @@ const Loading: "React.FC = () => {"} return ( <div className="min-h-screen bg-wh
 export default Loading
 };''
 export default Loading'
+=======
+import React from 'react';
+
+const Loading = () => {
+  return (
+    <div className="loading-component">
+      <h2>Loading</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default Loading;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

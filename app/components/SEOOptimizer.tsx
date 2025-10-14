@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
@@ -48,3 +49,16 @@ export default function Page() {
     </>
   );
 }
+=======
+
+const SEOOptimizer = () => {
+  return (
+    <div className="seooptimizer-component">
+      <h2>SEOOptimizer</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default SEOOptimizer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

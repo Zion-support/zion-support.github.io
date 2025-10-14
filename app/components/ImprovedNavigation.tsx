@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -6,3 +7,17 @@ const ImprovedNavigation: "React.FC = () => {"} return ( <div className="min-h-s
 export default ImprovedNavigation
 };''
 export default ImprovedNavigation'
+=======
+import React from 'react';
+
+const ImprovedNavigation = () => {
+  return (
+    <div className="improvednavigation-component">
+      <h2>ImprovedNavigation</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default ImprovedNavigation;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

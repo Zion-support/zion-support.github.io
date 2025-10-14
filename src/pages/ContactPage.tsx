@@ -36,24 +36,50 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="name" className="block text-sm font-medium mb-2">"
                       Name;
                     </label>
+<<<<<<< HEAD
                     <input;
                       type="text""
                       id="name""
                       name="name""
                       className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500""
                       required;
+=======
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+<<<<<<< HEAD
+                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
+                      required
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">"
                       Email;
                     </label>
+<<<<<<< HEAD
                     <input;
                       type="email""
                       id="email""
                       name="email""
                       className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500""
                       required;
+=======
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+<<<<<<< HEAD
+                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
+                      required
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
                     />
                   </div>
                   <div>
@@ -64,8 +90,17 @@ const ContactPage: React.FC = () => {
                       id="message""
                       name="message""
                       rows={4}
+<<<<<<< HEAD
                       className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500""
                       required;
+=======
+<<<<<<< HEAD
+                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
+                      required
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
                     ></textarea>
                   </div>
                   <button;

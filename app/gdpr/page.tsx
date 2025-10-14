@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
     <>
+=======
+import React from 'react';';';
+import { Helmet } from 'react-helmet-async';';';
+
+export default function Page() {
+  return (
+    <React.Fragment>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>Gdpr - Zion Tech Group</title>
+        <meta name="description" content="Professional gdpr services by Zion Tech Group." />";";
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -46,5 +56,14 @@ export default function Page() {
         </div>
       </div>
     </>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";";
+        <div className="text-center">";";
+          <h1 className="text-4xl font-bold text-white mb-4">Gdpr</h1>";";
+          <p className="text-gray-300">Coming soon...</p>";";
+        </div>
+      </div>
+    </React.Fragment>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
   );
 }

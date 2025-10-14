@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -6,3 +7,17 @@ const CriticalResourcePreloader: "React.FC = () => {"} return ( <div className="
 export default CriticalResourcePreloader
 };''
 export default CriticalResourcePreloader'
+=======
+import React from 'react';
+
+const CriticalResourcePreloader = () => {
+  return (
+    <div className="criticalresourcepreloader-component">
+      <h2>CriticalResourcePreloader</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default CriticalResourcePreloader;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

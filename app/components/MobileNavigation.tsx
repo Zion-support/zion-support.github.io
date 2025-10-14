@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -6,3 +7,17 @@ const MobileNavigation: "React.FC = () => {"} return ( <div className="min-h-scr
 export default MobileNavigation
 };''
 export default MobileNavigation'
+=======
+import React from 'react';
+
+const MobileNavigation = () => {
+  return (
+    <div className="mobilenavigation-component">
+      <h2>MobileNavigation</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default MobileNavigation;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
