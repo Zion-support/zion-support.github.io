@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;

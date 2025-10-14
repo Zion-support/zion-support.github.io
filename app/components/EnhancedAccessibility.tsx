@@ -1,8 +1,9 @@
 import React from 'react';'react'
 interface EnhancedAccessibilityProps {
-  children: "Node"}
 
-const EnhancedAccessibility: "React.FC = () => {"
+  children: Node}
+const EnhancedAccessibility: React.FC = () => {
+
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     fontSize: "'normal'",'
@@ -39,27 +40,33 @@ const EnhancedAccessibility: "React.FC = () => {"
         *:focus {
           outline: 2px solid #06b6d4 !important
           outline-offset: 2px !important}
-
       // Add ARIA landmarks
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {'
         main.setAttribute('role', 'main');
         main.setAttribute('aria-label', 'Main content');
       }
-
       // Add focus indicators
       const style = document.createElement('style');
       style.textContent = `
         *:focus {
           outline: "2px solid #8b5cf6 !important;",
         }
-        
         .sr-only {
           position: "absolute;",width: "1px;",height: "1px;",padding: "0;",margin: "-1px;",overflow: "hidden;",clip: "rect(0", 0, 0, 0);
           white-space: "nowrap;",border: "0;"
         }
-        
-        .focus\\:not-sr-only: "focus {",position: "static;",width: "auto;",height: "auto;",padding: "8px;",margin: "0;",overflow: "visible;",clip: "auto;",
+
+        .focus\\:not-sr-only:focus {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: 8px;
+          margin: 0;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+
         }
       `;
       document.head.appendChild(style);
@@ -133,7 +140,6 @@ const EnhancedAccessibility: "React.FC = () => {"
     root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')'
     if (settings.fontSize !== 'normal') {'
       root.classList.add(`font-size-${settings.fontSize}`)}
-
     // Apply reduced motion
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
@@ -156,35 +162,53 @@ const EnhancedAccessibility: "React.FC = () => {"
     style.id = 'enhanced-accessibility-styles''
     style.textContent = `
       .high-contrast {
-        filter: "contrast(150%) brightness(110%)"}
 
+        filter: contrast(150%) brightness(110%)}
       .font-size-small {
-        font-size: "0.875rem"}
-
+        font-size: 0.875rem}
       .font-size-large {
-        font-size: "1.125rem"}
-
+        font-size: 1.125rem}
       .font-size-extra-large {
-        font-size: "1.25rem"}
-
+        font-size: 1.25rem}
       .reduced-motion * {
-        animation-duration: "0.0o1ms !important",
-        transition-duration: "0.0o1ms !important"}
-
+        animation-duration: 0.01ms !important
+        animation-iteration-count: 1 !important
+        transition-duration: 0.01ms !important}
       .accessibility-panel {
-        position: "fixed",top: "50%",right: "-30o0px",transform: "translateY(-50%)",width: "30o0px",background: "#1e293b",border: "1px solid #334155",,padding: "1rem"
-        z-index: 10o00,transition: "right 0.3s ease",color: "white"}
+        position: fixed
+        top: 50%
+        right: -300px
+        transform: translateY(-50%)
+        width: 300px
+        background: #1e293b
+        border: 1px solid #334155
+        border-radius: 8px 0 0 8px
+        padding: 1rem
+        z-index: 1000
+        transition: right 0.3s ease
+        color: white}
 
       .accessibility-panel.visible {
         right: 0}
-
       .accessibility-toggle {
-        position: "fixed",top: "50%",right: 0,transform: "translateY(-50%)",background: "#8b5cf6",color: "white",border: "none",padding: "0.5rem",,cursor: "pointer"
-        z-index: 10o01
-        font-size: "0.875rem",
-        text-orientation: "mixed"}
 
-      .accessibility-toggle: "hover {",background: "#7c3aed"}
+        position: fixed
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        background: #8b5cf6
+        color: white
+        border: none
+        padding: 0.5rem
+        border-radius: 8px 0 0 8px
+        cursor: pointer
+        z-index: 1001
+        font-size: 0.875rem
+        writing-mode: vertical-rl
+        text-orientation: mixed}
+      .accessibility-toggle:hover {
+        background: #7c3aed}
+
     `
     document.head.appendChild(style)
     return () => {;
@@ -267,7 +291,6 @@ export default EnhancedAccessibility;
       document.documentElement.style.setProperty('--tw-bg-opacity', '1');
       document.documentElement.style.setProperty('--tw-text-opacity', '1');
     }
-
     // Apply reduced motion
     if (isReducedMotion) {
       document.documentElement.style.setProperty('--tw-transition-duration', '0ms');
@@ -293,37 +316,43 @@ export default EnhancedAccessibility;
         }
       }
 
-      // Alt + H: "Go to home"
+      // Alt + H: Go to home
+
       if (event.altKey && event.key === 'h') {'
         event.preventDefault();
         window.location.href = '/';
       }
 
-      // Alt + C: "Go to contact"
+      // Alt + C: Go to contact
+
       if (event.altKey && event.key === 'c') {'
         event.preventDefault();
         window.location.href = '/contact';
       }
 
-      // Alt + S: "Go to services"
+      // Alt + S: Go to services
+
       if (event.altKey && event.key === 's') {'
         event.preventDefault();
         window.location.href = '/services';
       }
 
-      // Ctrl + Plus: "Increase font size"
+      // Ctrl + Plus: Increase font size
+
       if (event.ctrlKey && event.key === '=') {'
         event.preventDefault();
         setFontSize(prev => Math.min(prev + 2, 24));
       }
 
-      // Ctrl + Minus: "Decrease font size"
+      // Ctrl + Minus: Decrease font size
+
       if (event.ctrlKey && event.key === '-') {'
         event.preventDefault();
         setFontSize(prev => Math.max(prev - 2, 12));
       }
 
-      // Ctrl + 0: "Reset font size"
+      // Ctrl + 0: Reset font size
+
       if (event.ctrlKey && event.key === '0') {'
         event.preventDefault();
         setFontSize(16);

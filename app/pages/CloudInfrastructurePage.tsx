@@ -1,11 +1,13 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
-import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react;'
-const CloudInfrastructurePage: "React.FC = () => {"
-  const services = [{;
-      icon: "Cloud",;
-      title: "'Cloud Migration'",';'
-      description: "'Seamlessly migrate your applications and data to the cloud with minimal downtime.'",';'
+
+import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react;';
+const CloudInfrastructurePage: React.FC = () => {
+  const services = [{
+      icon: Cloud,
+      title: 'Cloud Migration',';'
+      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',';'
+
       features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';'
     },
     {

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 interface FuturisticButtonProps {
   children: React.ReactNode;
   className?: string;
@@ -10,11 +11,12 @@ interface FuturisticButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({
-  children,
-  className = '',
-  variant = 'primary',
-  size = 'md',
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
+  children, ''
+  className = '',';''
+  variant = 'primary',';''
+  size = 'md',';'
+
   icon,
   onClick,
   type = 'button'

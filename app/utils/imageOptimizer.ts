@@ -5,7 +5,6 @@ export interface ImageOptimizationOptions {
   format?: 'webp' | 'avif' | 'jpeg' | 'png';'
   lazy?: boolean;}
 }
-
 export const optimizeImage = (
   src: "string",;
   options: "ImageOptimizationOptions = {"};

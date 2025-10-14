@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 interface OptimizedImageProps {
   src: "string",alt: "string"
   width?: number
@@ -13,7 +13,8 @@ interface OptimizedImageProps {
   onLoad?: () => void
   onError?: () => void}
 
-const OptimizedImage: "React.FC<OptimizedImageProps> = ({"
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+
   src,
   alt,
   width,
@@ -45,9 +46,11 @@ const OptimizedImage: "React.FC<OptimizedImageProps> = ({"
       }
     )
     if (imgRef.current) {
-      observer.observe(imgRef.current)};
-    return () => observer.disconnect()}, [priority]);
-  const handleLoad = () => {;
+
+      observer.observe(imgRef.current)}
+    return () => observer.disconnect()}, [priority])
+  const handleLoad = () => {
+
     setIsLoaded(true);
     onLoad?.();
   }
@@ -66,11 +69,12 @@ const OptimizedImage: "React.FC<OptimizedImageProps> = ({"
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: "string) => {''",,b:')) {'"
       return originalSrc}
-    
     // For external images, return as-is''
-    if (originalSrc.startsWith('http')) {';
-      return originalSrc};
-    // For local images, you could implement WebP conversion here;
+
+    if (originalSrc.startsWith('http')) {'
+      return originalSrc}
+    // For local images, you could implement WebP conversion here
+
     return originalSrc;
   }
   const optimizedSrc = getOptimizedSrc(src);
@@ -96,7 +100,6 @@ const OptimizedImage: "React.FC<OptimizedImageProps> = ({"
             <div className="text-gray-40o0 text-sm">Loading...</div>
           </div>
         )}
-
         {/* Error state */}
         {isError && (
           <div
@@ -109,7 +112,6 @@ const OptimizedImage: "React.FC<OptimizedImageProps> = ({"
             </div>
           </div>
         )}
-
         {/* Actual image */}
         {isInView && !isError && (
           <img}

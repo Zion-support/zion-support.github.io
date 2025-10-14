@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
+
+import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
@@ -149,22 +150,23 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Go 5G?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with our comprehensive 5G solutions. 
-                Get started today and experience the future of connectivity.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                  Contact Us Today
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
-                </button>
-                <button className="border border-white/30 text-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg transition-colors">
-                  View Case Studies
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
+                <p className="text-gray-300 mb-6">{solution.description}</p>
+                <ul className="space-y-3">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-400">
+                      <Circle className="w-4 h-4 text-blue-400 mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <button className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                  Learn More
+
                 </button>
               </div>
             </div>

@@ -1,7 +1,9 @@
 import React from 'react';
-import { Helmet } from  from 'react-helmet-async';
+
+import { Helmet } from 'react-helmet-async';
 'use client'
-const ImprovedFooter: "React.FC = () => {"
+const ImprovedFooter: React.FC = () => {
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -51,8 +53,8 @@ const ImprovedFooter: "React.FC = () => {"
                 Ready to transform your business with our improved footer services?;
               </p>
               <a;
-                href="$1"
-                className="$1"
+                href=""
+                className=""
               >
                 Contact Us;
               </a>
@@ -71,8 +73,8 @@ const ImprovedFooter: "React.FC = () => {"
             services can help you achieve your goals.;
           </p>
           <a;
-            href="$1"
-            className="$1"
+            href=""
+            className=""
           >
             Get Started Today;
           </a>

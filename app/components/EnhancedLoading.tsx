@@ -1,7 +1,9 @@
 import React from 'react';
-import { Helmet } from  from 'react-helmet-async';
+
+import { Helmet } from 'react-helmet-async';
 'use client'
-const EnhancedLoading: "React.FC = () => {"
+const EnhancedLoading: React.FC = () => {
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -51,8 +53,8 @@ const EnhancedLoading: "React.FC = () => {"
                 Ready to transform your business with our enhanced loading services?;
               </p>
               <a;
-                href="$1"
-                className="$1"
+                href=""
+                className=""
               >
                 Contact Us;
               </a>
@@ -71,8 +73,8 @@ const EnhancedLoading: "React.FC = () => {"
             services can help you achieve your goals.;
           </p>
           <a;
-            href="$1"
-            className="$1"
+            href=""
+            className=""
           >
             Get Started Today;
           </a>

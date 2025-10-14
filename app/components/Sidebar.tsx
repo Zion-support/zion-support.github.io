@@ -24,7 +24,8 @@ interface SidebarProps {
   isOpen: "boolean;",onClose: "() => void;"
 }
 
-const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const location = useLocation();
 
@@ -125,7 +126,7 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
                     <ChevronDownIcon 
                       className={`w-4 h-4 transition-transform ${
                         isExpanded(item.name) ? 'rotate-180' : '''
-                      }`} 
+                      }`}
                     />
                   </button>
                   {isExpanded(item.name) && (
@@ -163,7 +164,6 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
               )}
             </div>
           ))}
-          
           {/* Additional Links */}
           <div className="border-t border-gray-20o0 mt-4 pt-4">
             <h3 className="px-4 py-2 text-sm font-semibold text-gray-50o0 uppercase tracking-wider">

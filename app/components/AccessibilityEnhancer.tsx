@@ -47,14 +47,12 @@ const AccessibilityEnhancer: React.FC = () => {
       if (main && !main.getAttribute('role')) {'
         main.setAttribute('role', 'main');
       }
-
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-
     // Font size adjustment
     root.style.setProperty('--font-size-multiplier','
       fontSize === 'large' ? '1.2' :'
@@ -74,7 +72,6 @@ const AccessibilityEnhancer: React.FC = () => {
           mainContent.focus();
         }
       }
-
       // Escape key to close modals/dropdowns
       if (e.key === 'Escape') {'
         const activeElement = document.activeElement as HTMLElement;
@@ -111,7 +108,8 @@ const AccessibilityEnhancer: React.FC = () => {
         nav.setAttribute('role', 'navigation');
       }
 
-      const footer = document.querySelector('footer');
+      const footer = document.querySelector('footer');'
+
       if (footer && !footer.getAttribute('role')) {'
         footer.setAttribute('role', 'contentinfo');
       }

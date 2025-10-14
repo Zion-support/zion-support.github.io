@@ -1,11 +1,13 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
-import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react;'
-const AIServicesPage: "React.FC = () => {"
-  const services = [{;
-      icon: "Brain",;
-      title: "'AI Strategy & Consulting'",';'
-      description: "'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.'",';'
+
+import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react;';
+const AIServicesPage: React.FC = () => {
+  const services = [{
+      icon: Brain,
+      title: 'AI Strategy & Consulting',';'
+      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',';'
+
       features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']';'
     },
     {

@@ -33,8 +33,8 @@ import React from  from 'react';
                 Ready to transform your business with our skip link services?;
               </p>
               <a;
-                href="$1"
-                className="$1"
+                href=""
+                className=""
               >
                 Contact Us;
               </a>

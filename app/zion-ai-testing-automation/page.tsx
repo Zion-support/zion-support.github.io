@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 /* global describe, test, expect, it, beforeEach */
 'use client'
 export default function ZionAiTestingAutomationPage() {

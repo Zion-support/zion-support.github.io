@@ -1,6 +1,10 @@
+
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import { Right, User } from 'lucide-react';'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+import { Right, User, Calendar } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
 =======
@@ -88,18 +92,7 @@ const BlogPage: React.FC = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Zion Tech Group blog page." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
-          <p className="text-xl text-gray-600">
-            Welcome to our blog page.
-          </p>
-        </div>
-=======
+
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends." />
         <meta name="keywords" content="blog, AI insights, cloud computing, cybersecurity, technology trends" />
       </Helmet>
@@ -204,14 +197,12 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
+
 export default BlogPage;
-=======
-export default BlogPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+

@@ -1,6 +1,17 @@
 export interface Service {
-  id: "string;",title: "string;",description: "string;",shortDescription: "string;",category: "'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';'",icon: "string;",features: "string[];",pricing: {,basic: "number;",pro: "number;",enterprise: "number;"
-  }
+
+  id: string;
+  title: string;
+  description: string;
+  shortDescription: string;
+  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';'
+  icon: string;
+  features: string[];
+  pricing: {
+    basic: number;
+    pro: number;,
+    enterprise: number;}
+
   };
   benefits: "string[];",useCases: "string[];",technologies: "string[];",contactInfo: {,phone: "string;",email: "string;",website: "string;"
   }
@@ -8,7 +19,8 @@ export interface Service {
   href: "string;",glowColor: "'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' | 'red' | 'orange';'"
 }
 
-export const services: "Service[] = ["
+export const services: Service[] = [
+
   // AI Services
   {''
     id: "'ai-chatbot-enterprise'",''

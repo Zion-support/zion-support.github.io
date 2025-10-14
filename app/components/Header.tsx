@@ -1,8 +1,10 @@
-import React from 'react'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown } from 'lucide-react'
-const Header: "React.FC = () => {"
+
+import React from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
+const Header: React.FC = () => {
+
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)''
   const navigationItems = [{ name: "'Home'", href: "'/'"},'{ name: "'About'", href: "'/about'"},'{'
@@ -29,7 +31,7 @@ const Header: "React.FC = () => {"
                 <div key={item.name} className="relative group">
                   <Link;
                     to={item.href}
-                    className="$1"
+                    className=""
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
@@ -43,7 +45,7 @@ const Header: "React.FC = () => {"
                         <Link;}
                           key={subItem.name}
                           to={subItem.href}
-                          className="$1"
+                          className=""
                         >
                           {subItem.name}
         <div className="flex justify-between items-center h-16">{/* Logo */}"
@@ -78,8 +80,8 @@ const Header: "React.FC = () => {"
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link;
-              to="$1""
-              className="$1"
+              to="""
+              className=""
             >
               Get Started;
             </Link>
@@ -88,7 +90,7 @@ const Header: "React.FC = () => {"
           <div className="md:hidden">
             <button;
               onClick={() => setIsOpen(!isOpen)}
-              className="$1"
+              className=""
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
             </button>
@@ -102,7 +104,7 @@ const Header: "React.FC = () => {"
                 <div key="{item.name}">
                   <Link;
                     to={item.href}
-                    className="$1"
+                    className=""
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
@@ -113,7 +115,7 @@ const Header: "React.FC = () => {"
                         <Link;}
                           key={subItem.name}
                           to={subItem.href}
-                          className="$1"
+                          className=""
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
@@ -153,8 +155,8 @@ const Header: "React.FC = () => {"
               ))}
               <div className="pt-4">
                 <Link;
-                  to="$1""
-                  className="$1"
+                  to="""
+                  className=""
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started;

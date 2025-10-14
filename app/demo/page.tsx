@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+
+import React from 'react';'react-helmet-async;'
+import { Play, Right, Circle, Star } from 'lucide-react;';
 
 const DemoPage: React.FC = () => {
 =======
@@ -63,18 +63,7 @@ const DemoPage: React.FC = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Demo - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Zion Tech Group demo page." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Demo</h1>
-          <p className="text-xl text-gray-600">
-            Welcome to our demo page.
-          </p>
-        </div>
-=======
+
         <meta name="description" content="Experience our AI, cloud, and cybersecurity solutions through interactive demos." />
         <meta name="keywords" content="demo, AI demo, cloud demo, security demo, interactive demo" />
       </Helmet>
@@ -200,14 +189,12 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
+
 export default DemoPage;
-=======
-export default DemoPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+

@@ -20,7 +20,7 @@ import {
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
 export default function AISolutionsPage() {
 
   const aiServices = [
@@ -126,12 +126,14 @@ export default function AISolutionsPage() {
         "Change management","
         "Training and support""
       ],
-      color: "from-cyan-50o0 to-blue-50o0",";
-      price: "Starting at $1,50o0/month",";
-      benefits: ["Expert guidance", "Strategic planning", "Risk mitigation"],";
-      useCases: ["AI transformation", "Technology adoption", "Process improvement"],";
-      href: "/ai-consulting";
-    };
+
+      color: "from-cyan-500 to-blue-500","
+      price: "Starting at ,500/month","
+      benefits: ["Expert guidance", "Strategic planning", "Risk mitigation"],"
+      useCases: ["AI transformation", "Technology adoption", "Process improvement"],"
+      href: "/ai-consulting"
+    }
+
   ];
 const AISolutionsPage: "React.FC = () => {"
   ]
@@ -139,23 +141,21 @@ const AISolutionsPage: "React.FC = () => {"
     {
       title: "Custom AI Solutions","
       description: "Tailored AI implementations designed specifically for your business needs and requirements.","
-      icon: "CpuChipIcon"
-    },
+
+      icon: CpuChipIcon},
     {
       title: "Scalable Architecture","
       description: "AI solutions that grow with your business and handle increasing data volumes and complexity.","
-      icon: "CloudIcon"
-    },
+      icon: CloudIcon},
     {
       title: "Real-time Processing","
       description: "High-performance AI systems that process data in real-time for immediate insights and actions.","
-      icon: "RocketLaunchIcon"
-    },
+      icon: RocketLaunchIcon},
     {
       title: "Expert Support","
       description: "Dedicated AI experts who provide ongoing support, monitoring, and optimization of your AI systems.","
-      icon: "UserGroupIcon"
-  }
+      icon: UserGroupIcon}
+
   ]
   return (
     <>

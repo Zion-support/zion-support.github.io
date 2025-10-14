@@ -1,6 +1,8 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-const ContactPage: "React.FC = () => {"
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+const ContactPage: React.FC = () => {
+
   return (
     <>
       <Helmet>

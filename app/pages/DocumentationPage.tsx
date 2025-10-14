@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO'
 import { 
   DocumentTextIcon,
@@ -10,7 +10,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
 export default function DocumentationPage() {
 
   const sections = [
@@ -170,8 +170,10 @@ export default function DocumentationPage() {
                   {section.links.map((link, linkIndex) => (
                     <li key="{linkIndex}">
                       <Link 
-                        to={link.href} 
-                        className="text-green-40o0 hover:text-green-30o0 flex items-center group"
+
+                        to={link.href}
+                        className="text-green-400 hover:text-green-300 flex items-center group"
+
                       >
                         <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                         {link.name}

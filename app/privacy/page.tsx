@@ -1,23 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+
 const PrivacyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-<<<<<<< HEAD
-        <title>Privacy - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group privacy page." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy</h1>
-          <p className="text-xl text-gray-600">
-            Welcome to our privacy page.
-          </p>
-        </div>
-=======
+
         <title>Privacy Policy - Zion Tech Group</title>
         <meta name="description" content="Privacy Policy for Zion Tech Group - Learn how we collect, use, and protect your personal information." />
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR" />
@@ -139,14 +128,12 @@ const PrivacyPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
+
 export default PrivacyPage;
-=======
-export default PrivacyPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+

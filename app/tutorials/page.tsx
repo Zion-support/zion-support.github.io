@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+
+import { Right, Play, User, Star, Circle, Clock } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
 =======
@@ -97,18 +98,7 @@ const TutorialsPage: React.FC = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Tutorials - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Zion Tech Group tutorials page." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Tutorials</h1>
-          <p className="text-xl text-gray-600">
-            Welcome to our tutorials page.
-          </p>
-        </div>
-=======
+
         <meta name="description" content="Learn from our comprehensive tutorials on AI, cloud computing, cybersecurity, and web development." />
         <meta name="keywords" content="tutorials, learning, AI tutorials, cloud tutorials, cybersecurity tutorials, web development" />
       </Helmet>
@@ -134,103 +124,12 @@ const TutorialsPage: React.FC = () => {
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-3 rounded-full font-medium transition-colors ${
-                    selectedCategory === category
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Tutorials Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTutorials.map((tutorial) => (
-                <div key={tutorial.id} className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:bg-white/20 transition-colors group">
-                  <div className="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
-                    <Play className="w-16 h-16 text-white opacity-80" />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">
-                        {tutorial.category}
-                      </span>
-                      <span className="text-xs text-gray-400">{tutorial.difficulty}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                      {tutorial.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 line-clamp-2">{tutorial.description}</p>
-                    
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{tutorial.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <User className="w-4 h-4" />
-                        <span>{tutorial.students} students</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-300">{tutorial.rating}</span>
-                      </div>
-                      <span className="text-sm text-gray-400">by {tutorial.instructor}</span>
-                    </div>
-
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-                      <Play className="w-5 h-5 mr-2" />
-                      Start Tutorial
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Learn?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join thousands of students who are already advancing their careers 
-                with our comprehensive tutorials and expert guidance.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                  Browse All Tutorials
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
-                </button>
-                <button className="border border-white/30 text-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg transition-colors">
-                  Request Custom Tutorial
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
+
 export default TutorialsPage;
-=======
-export default TutorialsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+

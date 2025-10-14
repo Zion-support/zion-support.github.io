@@ -6,7 +6,8 @@ interface AnimatedCardProps {
   hoverEffect?: boolean;
 }
 
-const AnimatedCard: "React.FC<AnimatedCardProps> = ({"
+const AnimatedCard: React.FC<AnimatedCardProps> = ({
+
   children,
   className = '','
   glowColor = 'purple','
@@ -50,5 +51,4 @@ const AnimatedCard: "React.FC<AnimatedCardProps> = ({"
     </div>;
   );
 }
-
 export default AnimatedCard;

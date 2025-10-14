@@ -1,5 +1,7 @@
-import React from 'react'
-const AdvancedPerformanceMonitor: "React.FC = () => {"
+
+import React from 'react';
+const AdvancedPerformanceMonitor: React.FC = () => {
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -20,7 +22,6 @@ const AdvancedPerformanceMonitor: "React.FC = () => {"
     if (process.env.NODE_ENV !== 'development') {'
       return;
     }
-
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && window.performance) {'
         const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -99,11 +100,9 @@ const AdvancedPerformanceMonitor: "React.FC = () => {"
   if (process.env.NODE_ENV === 'production') {'
     return null;
   }
-
   if (!isVisible) {
     return null;
   }
-
   const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';

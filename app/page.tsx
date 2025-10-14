@@ -1,37 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
 
-const HomePage: React.FC = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence to automate and optimize your business processes.',
-      color: 'from-blue-500 to-purple-600'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Experienced professionals dedicated to delivering exceptional results for your business.',
-      color: 'from-green-500 to-teal-600'
-    },
-    {
-      icon: Award,
-      title: 'Proven Results',
-      description: 'Track record of successful implementations and satisfied clients across various industries.',
-      color: 'from-orange-500 to-red-600'
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '100+', label: 'Happy Clients' },
-    { number: '50+', label: 'Team Members' },
-    { number: '99%', label: 'Client Satisfaction' }
-=======
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -90,57 +60,90 @@ export default function HomePage() {
     { label: 'Happy Clients', value: '200+' },
     { label: 'Years Experience', value: '10+' },
     { label: 'Success Rate', value: '99%' }
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-<<<<<<< HEAD
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation." />
-        <meta name="keywords" content="AI solutions, IT services, digital transformation, automation, technology consulting" />
-      </Helmet>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Transform Your Business with
-              <span className="text-blue-600"> AI & Technology</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              We deliver cutting-edge AI solutions and IT services that drive innovation, 
-              efficiency, and growth for modern businesses.
+        {/* Services Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Our Services
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <Link 
+                  key={index}
+                  to={service.href}
+                  className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="flex items-center text-blue-600 font-medium">
+                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Why Choose Us?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center">
+                  <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3" />
+                  <span className="text-gray-700">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-lg text-gray-600 mb-8">
+              Let's discuss how our AI and IT solutions can help you achieve your goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center"
+                to="/contact" "
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Get Started
-                <ArrowRight className="ml-2" size={20} />
+                Contact Us
               </Link>
               <Link 
-                to="/services" 
+                to="/about" "
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
-                Learn More
+                About Us
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
+                <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300 font-medium">{feature}</span>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 interface SEOProps {
   title: "string",description: "string"
   keywords?: string
@@ -11,7 +11,8 @@ interface SEOProps {
   noIndex?: boolean
   noFollow?: boolean}
 
-const EnhancedSEO: "React.FC<SEOProps> = ({"
+const EnhancedSEO: React.FC<SEOProps> = ({
+
   title,
   description,''
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions','

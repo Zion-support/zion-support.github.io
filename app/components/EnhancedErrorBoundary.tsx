@@ -1,12 +1,15 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 interface Props {
   children: "ReactNode"
   fallback?: ReactNode
-  onError?: (error: "Error", errorInfo: "ErrorInfo) => void"}
 
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 interface State {
-  hasError: "boolean",error: "Error | null",errorInfo: "ErrorInfo | null",errorId: "string"}
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string}
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: "Props) {"
@@ -20,7 +23,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
     }}
 
-  static getDerivedStateFromError(error: "Error): Partial<State> {"
+  static getDerivedStateFromError(error: Error): Partial<State> {
+
     return {
       hasError: true,
       error}
@@ -28,7 +32,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
-  componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {"
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+
     this.setState({
       error,
       errorInfo
@@ -43,7 +48,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       this.logErrorToService(error, errorInfo)}
   }
 
-  private logErrorToService = (error: "Error", errorInfo: "ErrorInfo) => {"
+  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+
     // In a real application, you would send this to an error tracking service
     // like Sentry, LogRocket, or Bugsnag
     try {
@@ -91,7 +97,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback}
-
       // Default error UI
       return (
         <>
@@ -114,8 +119,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <path 
                     strokeLinecap="round" "
                     strokeLinejoin="round" "
-                    strokeWidth={2} 
-                    d="M12 9v2m0 4h.0o1m-6.938 4h13.856c1.54 0 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" "
+
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" "
+
                   />
                 </svg>
               </div>
@@ -139,7 +146,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   </code>
                 </div>
               )}
-
               {/* Action Buttons */}
               <div className="space-y-3">
                 <button
@@ -203,8 +209,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           </div>
         </>
       )}
-
     return this.props.children}
 }
-
 export default EnhancedErrorBoundary

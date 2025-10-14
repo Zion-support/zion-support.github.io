@@ -37,8 +37,10 @@ const ITSolutionsPage: "React.FC = () => {"
         "24/7 monitoring","
         "Disaster recovery""
       ],
-      color: "from-blue-50o0 to-cyan-50o0","
-      price: "Starting at $1,50o0/month","
+
+      color: "from-blue-500 to-cyan-500","
+      price: "Starting at ,500/month","
+
       benefits: ["Scalability", "Reliability", "Cost efficiency"],"
       useCases: ["Web hosting", "Data storage", "Application hosting"],"
       href: "/cloud-infrastructure"
@@ -73,8 +75,10 @@ const ITSolutionsPage: "React.FC = () => {"
         "Change management","
         "Training and support""
       ],
-      color: "from-green-50o0 to-emerald-50o0","
-      price: "Starting at $1,20o0/month","
+
+      color: "from-green-500 to-emerald-500","
+      price: "Starting at ,200/month","
+
       benefits: ["Expert guidance", "Cost savings", "Risk reduction"],"
       useCases: ["Technology planning", "Digital transformation", "System integration"],"
       href: "/it-consulting"
@@ -91,8 +95,10 @@ const ITSolutionsPage: "React.FC = () => {"
         "Disaster recovery","
         "Remote access""
       ],
-      color: "from-purple-50o0 to-indigo-50o0","
-      price: "Starting at $1,80o0/month","
+
+      color: "from-purple-500 to-indigo-500","
+      price: "Starting at ,800/month","
+
       benefits: ["Reliable connectivity", "Enhanced security", "Performance"],"
       useCases: ["Office networking", "Remote work", "Data centers"],"
       href: "/network-solutions"
@@ -127,8 +133,10 @@ const ITSolutionsPage: "React.FC = () => {"
         "Hardware support","
         "User training""
       ],
-      color: "from-cyan-50o0 to-blue-50o0","
-      price: "Starting at $1,0o00/month","
+
+      color: "from-cyan-500 to-blue-500","
+      price: "Starting at ,000/month","
+
       benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],"
       useCases: ["Help desk", "System maintenance", "User support"],";
       href: "/it-support";
@@ -139,23 +147,21 @@ const ITSolutionsPage: "React.FC = () => {"
     {
       title: "Expert Solutions","
       description: "Our team of certified professionals delivers cutting-edge IT solutions.","
-      icon: "CpuChipIcon"
-    },
+
+      icon: CpuChipIcon},
     {
       title: "Scalable Architecture","
       description: "Solutions that grow with your business and adapt to changing needs.","
-      icon: "CloudIcon"
-    },
+      icon: CloudIcon},
     {
       title: "24/7 Support","
       description: "Round-the-clock support to ensure your systems are always running.","
-      icon: "UserGroupIcon"
-    },
+      icon: UserGroupIcon},
     {
       title: "Security First","
-      description: "Security is built into every solution we deliver.",";
-      icon: "ShieldCheckIcon;"
-    };
+      description: "Security is built into every solution we deliver.","
+      icon: ShieldCheckIcon}
+
   ];
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'

@@ -1,23 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+
 const TermsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-<<<<<<< HEAD
-        <title>Terms - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group terms page." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>
-          <p className="text-xl text-gray-600">
-            Welcome to our terms page.
-          </p>
-        </div>
-=======
+
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Terms of Service for Zion Tech Group - Learn about our terms and conditions for using our services." />
         <meta name="keywords" content="terms of service, terms and conditions, legal, user agreement" />
@@ -164,14 +153,12 @@ const TermsPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
+
 export default TermsPage;
-=======
-export default TermsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO'
 import { 
   CloudIcon,
@@ -11,7 +11,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
 export default function CloudSolutionsPage() {
 
   const services = [
@@ -57,9 +57,11 @@ export default function CloudSolutionsPage() {
       
       <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">CloudSolutionsPage</h1>;
-          <p className="text-gray-30o0">This page is under construction.</p>;
-        </div>;
-      </div>;
-    </>;
-  )};
+
+          <h1 className="text-4xl font-bold mb-4">CloudSolutionsPage</h1>
+          <p className="text-gray-300">This page is under construction.</p>
+        </div>
+      </div>
+    </>
+  )}
+

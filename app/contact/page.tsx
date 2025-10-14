@@ -1,6 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
+
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async';
+import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
+export default function ContactPage() {
+
 
 const ContactPage: React.FC = () => {
   return (
@@ -326,11 +329,31 @@ export default function ContactPage() {
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+
+
+              <div className="text-center">
+                <button
+                  type="submit""
+                  disabled={isSubmitting}
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send className="w-5 h-5 ml-2 inline" />
+                    </>}
+                  )}
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
+      </section>
+    </div>
+  )}
+

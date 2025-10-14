@@ -1,6 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+
+'use client'
+export default function Page() {
+
 
 const AboutPage: React.FC = () => {
 =======
@@ -64,19 +67,7 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>About - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group about page." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">About</h1>
-          <p className="text-xl text-gray-600">
-            Welcome to our about page.
-          </p>
-        </div>
-=======
+
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group - leading provider of AI, cloud, and cybersecurity solutions." />
         <meta name="keywords" content="about us, company, team, AI solutions, technology company" />
@@ -196,14 +187,10 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+
       </div>
     </>
   );
-<<<<<<< HEAD
-};
 
-export default AboutPage;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+

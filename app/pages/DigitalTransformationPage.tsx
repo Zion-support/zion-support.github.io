@@ -1,11 +1,13 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
-import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react;'
-const DigitalTransformationPage: "React.FC = () => {"
-  const services = [{;
-      icon: "RefreshCw",;
-      title: "'Process Automation'",';'
-      description: "'Streamline and automate business processes to improve efficiency and reduce manual errors.'",';'
+
+import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react;';
+const DigitalTransformationPage: React.FC = () => {
+  const services = [{
+      icon: RefreshCw,
+      title: 'Process Automation',';'
+      description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',';'
+
       features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']';'
     },
     {
