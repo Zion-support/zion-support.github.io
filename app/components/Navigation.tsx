@@ -49,15 +49,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
-      ]
-    },
     { 
       name: 'Solutions', 
       href: '/solutions', 
@@ -148,6 +139,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
             >
               Get Started
+            </Link>
+          </div>
+
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
