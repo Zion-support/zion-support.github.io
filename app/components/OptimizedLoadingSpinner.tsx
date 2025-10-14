@@ -2,11 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
@@ -147,9 +142,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
   }
 </div></div>);
 ;
-<<<<<<< HEAD
-
-=======
 export default function ComponentsPage() {
   return (
     <>
@@ -173,9 +165,6 @@ export default function ComponentsPage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b

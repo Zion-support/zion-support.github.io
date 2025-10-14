@@ -20,7 +20,7 @@ const importStatements = missingPages.map(page => {
 // Generate route statements
 const routeStatements = missingPages.map(page => {
   const componentName = page.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1);
+    word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
   return `                  <Route path="/${page}" element={<${componentName} />} />`;
 }).join('\n');

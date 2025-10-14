@@ -1,248 +1,271 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+'use client';
+import React, { useState } from 'react';
+import { Search, Zap, CheckCircle } from 'lucide-react';
 
-export default function ComponentsPage() {
-  return (
-<<<<<<< HEAD
+interface SEOOptimizerProps {
+  url?: string;
+  onOptimize?: (results: SEOResults) => void;
+}
 
-=======
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-=======
-export default EnhancedSEOOptimizerPage;
-ursor/
-      description: 'Advanced AI technology to automatically optimize your website for search engines',
-      description: 'Advanced AI technology to optimize your website for search engines and improve rankings',
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered SEO Optimization',
-      icon: Zap,
-      title: 'Real-time Analysis',
-      description: 'Lightning-fast SEO analysis and optimization with instant recommendations',
-    },
-    {
-      icon: Shield,
-      title: 'White-Hat Techniques',
-      description: 'Ethical SEO practices with long-term sustainable results and compliance',
-    },
-    {
-      icon: Globe,
-      title: 'Global Optimization',
-      description: 'Worldwide SEO optimization and support for international businesses',
+interface SEOResults {
+  score: number;
+  issues: SEOIssue[];
+  suggestions: SEOSuggestion[];
+  metrics: SEOMetrics;
+}
+
+interface SEOIssue {
+  type: 'error' | 'warning' | 'info';
+  message: string;
+  element?: string;
+  suggestion?: string;
+}
+
+interface SEOSuggestion {
+  category: string;
+  title: string;
+  description: string;
+  priority: 'high' | 'medium' | 'low';
+}
+
+interface SEOMetrics {
+  titleLength: number;
+  descriptionLength: number;
+  headingCount: number;
+  imageCount: number;
+  linkCount: number;
+  wordCount: number;
+}
+
+const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  url = '',
+  onOptimize
+}) => {
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [results, setResults] = useState<SEOResults | null>(null);
+  const [currentUrl, setCurrentUrl] = useState(url);
+
+  const analyzeSEO = async () => {
+    if (!currentUrl) return;
+
+    setIsAnalyzing(true);
+    
+    // Simulate SEO analysis
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    const mockResults: SEOResults = {
+      score: 85,
+      issues: [
+        {
+          type: 'warning',
+          message: 'Meta description is too long',
+          element: 'meta[name="description"]',
+          suggestion: 'Keep meta descriptions between 150-160 characters'
+        },
+        {
+          type: 'error',
+          message: 'Missing alt text on images',
+          element: 'img',
+          suggestion: 'Add descriptive alt text to all images'
+        },
+        {
+          type: 'info',
+          message: 'Consider adding more internal links',
+          element: 'body',
+          suggestion: 'Add more internal links to improve site structure'
+        }
+      ],
+      suggestions: [
+        {
+          category: 'Content',
+          title: 'Improve Title Tag',
+          description: 'Make your title tag more compelling and include target keywords',
+          priority: 'high'
+        },
+        {
+          category: 'Technical',
+          title: 'Optimize Page Speed',
+          description: 'Improve loading times by optimizing images and scripts',
+          priority: 'medium'
+        },
+        {
+          category: 'Content',
+          title: 'Add More Headings',
+          description: 'Use more H2 and H3 tags to structure your content better',
+          priority: 'low'
+        }
+      ],
+      metrics: {
+        titleLength: 65,
+        descriptionLength: 155,
+        headingCount: 8,
+        imageCount: 12,
+        linkCount: 25,
+        wordCount: 850
+      }
+    };
+
+    setResults(mockResults);
+    setIsAnalyzing(false);
+    
+    if (onOptimize) {
+      onOptimize(mockResults);
     }
-  ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success';
-  ];
+  };
+
+  // const getScoreColor = (score: number) => {
+  //   if (score >= 90) return 'text-green-400';
+  //   if (score >= 70) return 'text-yellow-400';
+  //   return 'text-red-400';
+  // };
+
+  const getPriorityColor = (priority: string) => {
+    switch (priority) {
+      case 'high': return 'text-red-400';
+      case 'medium': return 'text-yellow-400';
+      case 'low': return 'text-green-400';
+      default: return 'text-gray-400';
+    }
+  };
+
   return (
-    <div>Content</div>
-  );
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Enhanced SEO Optimizer | Zion Tech Group</title>
-        <meta name = "description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
-        <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" /></meta>
-        <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
-        <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" /></meta>
-      </Helmet>
-      {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>;
-              <span className="w-5h-5ml-2" />Enhanced SEO;
-                Enhanced SEO Optimizer;
-              </span>
-              <br /></br>
-              <span className = "text-white"  >Optimizer</span>
-            </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced SEO optimization solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-              Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
-              Improve rankings and drive more organic traffic.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>;
-                Get Started;
-                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
-              </button>;
-              <button className="w-5h-5ml-2">Learn More;
-              </button>
-            </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className = "w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-            <h2 className="w-5h-5ml-2" />Our Features;
-            </h2>
-            <p className = "w-5h-5ml-2">Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
-            </p>
+    <div className="max-w-4xl mx-auto p-6">
+      <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8">
+        <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
+          <Search className="w-8 h-8 mr-3 text-cyan-400" />
+          SEO Optimizer
+        </h2>
+
+        <div className="mb-6">
+          <label className="block text-white font-medium mb-2">
+            Website URL
+          </label>
+          <div className="flex space-x-4">
+            <input
+              type="url"
+              value={currentUrl}
+              onChange={(e) => setCurrentUrl(e.target.value)}
+              placeholder="https://example.com"
+              className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400"
+            />
+            <button
+              onClick={analyzeSEO}
+              disabled={!currentUrl || isAnalyzing}
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+            >
+              {isAnalyzing ? (
+                <>
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                  Analyzing...
+                </>
+              ) : (
+                <>
+                  <Zap className="w-5 h-5 mr-2" />
+                  Analyze
+                </>
+              )}
+            </button>
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300borderborder-white/20" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <feature.icon className="w-6 h-6text-white"  /></feature>
+        </div>
+
+        {results && (
+          <div className="space-y-6">
+            {/* Score */}
+            <div className="bg-gray-700 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">SEO Score</h3>
+              <div className="flex items-center space-x-4">
+                <div className="text-4xl font-bold text-cyan-400">
+                  {results.score}/100
                 </div>
-                <h3 className="w-5h-5ml-2" />{feature.title}
-                </h3>
-                <p className="w-5h-5ml-2">{feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Why Choose Our Solutions?
-            </h2>
-            <p className="w-5h-5ml-2">Experience the benefits of working with our cutting-edge enhanced SEO optimizer solutions.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-start space-x-4" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                <div className="flex-1">
+                  <div className="w-full bg-gray-600 rounded-full h-3">
+                    <div
+                      className="bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full transition-all duration-500"
+                      style={{ width: `${results.score}%` }}
+                    ></div>
+                  </div>
                 </div>
-                <p className="w-5h-5ml-2">{benefit}
-                </p>
               </div>
-            ))}
-          </div>
-      </section>
-      {/* Contact Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5h-5ml-2">Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-              <button className="w-5h-5ml-2">Contact Us;
-              </button>
-              <button className="w-5h-5ml-2">Schedule Demo;
-              </button>
             </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-    <>
-      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      </div><Helmet >
-        <title>Enhanced SEO Optimizer | Zion Tech Group
-        </title>
-        <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" />
-        <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-<<<<<<< HEAD
+
+            {/* Metrics */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="bg-gray-700 rounded-lg p-4">
+                <div className="text-2xl font-bold text-cyan-400">{results.metrics.titleLength}</div>
+                <div className="text-gray-300 text-sm">Title Length</div>
+              </div>
+              <div className="bg-gray-700 rounded-lg p-4">
+                <div className="text-2xl font-bold text-cyan-400">{results.metrics.descriptionLength}</div>
+                <div className="text-gray-300 text-sm">Description Length</div>
+              </div>
+              <div className="bg-gray-700 rounded-lg p-4">
+                <div className="text-2xl font-bold text-cyan-400">{results.metrics.headingCount}</div>
+                <div className="text-gray-300 text-sm">Headings</div>
+              </div>
+              <div className="bg-gray-700 rounded-lg p-4">
+                <div className="text-2xl font-bold text-cyan-400">{results.metrics.imageCount}</div>
+                <div className="text-gray-300 text-sm">Images</div>
+              </div>
+              <div className="bg-gray-700 rounded-lg p-4">
+                <div className="text-2xl font-bold text-cyan-400">{results.metrics.linkCount}</div>
+                <div className="text-gray-300 text-sm">Links</div>
+              </div>
+              <div className="bg-gray-700 rounded-lg p-4">
+                <div className="text-2xl font-bold text-cyan-400">{results.metrics.wordCount}</div>
+                <div className="text-gray-300 text-sm">Words</div>
+              </div>
+            </div>
+
+            {/* Issues */}
+            <div className="bg-gray-700 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Issues Found</h3>
+              <div className="space-y-3">
+                {results.issues.map((issue, index) => (
+                  <div key={index} className="flex items-start space-x-3 p-3 bg-gray-600 rounded-lg">
+                    <div className={`w-2 h-2 rounded-full mt-2 ${
+                      issue.type === 'error' ? 'bg-red-400' :
+                      issue.type === 'warning' ? 'bg-yellow-400' : 'bg-blue-400'
+                    }`}></div>
+                    <div className="flex-1">
+                      <div className="text-white font-medium">{issue.message}</div>
+                      {issue.element && (
+                        <div className="text-gray-400 text-sm">Element: {issue.element}</div>
+                      )}
+                      {issue.suggestion && (
+                        <div className="text-cyan-400 text-sm mt-1">{issue.suggestion}</div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Suggestions */}
+            <div className="bg-gray-700 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Suggestions</h3>
+              <div className="space-y-4">
+                {results.suggestions.map((suggestion, index) => (
+                  <div key={index} className="flex items-start space-x-3 p-4 bg-gray-600 rounded-lg">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mt-1" />
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <span className="text-white font-medium">{suggestion.title}</span>
+                        <span className={`text-xs px-2 py-1 rounded ${getPriorityColor(suggestion.priority)} bg-gray-700`}>
+                          {suggestion.priority}
+                        </span>
+                      </div>
+                      <div className="text-gray-300 text-sm">{suggestion.description}</div>
+                      <div className="text-cyan-400 text-xs mt-1">{suggestion.category}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
-      </section>
-      {/* Features Section */}
-      <section className="w-5 h-5 ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><h2 className="w-5 h-5 ml-2" />Our Features
-            </h2>
-            <p className="w-5 h-5 ml-2">Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            {features.map((feature, index) => (
-              </div></div><div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300borderborder-white/20" />
-                </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  </div></div><feature .icon className="w-6h-6text-white"  />
-                </div>
-                <h3 className="w-5 h-5 ml-2" />{feature.title}
-                </h3>
-                <p className="w-5 h-5 ml-2">{feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="w-5 h-5 ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><h2 className="w-5 h-5 ml-2" />Why Choose Our Solutions?
-            </h2>
-            <p className="w-5 h-5 ml-2">Experience the benefits of working with our cutting-edge enhanced SEO optimizer solutions.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            {benefits.map((benefit, index) => (
-              </div></div><div key="{index}" className="flexitems-start space-x-4" />
-                </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  </div></div><CheckCircle className="w-5 h-5 ml-2" />
-                </div>
-                <p className="w-5 h-5 ml-2">{benefit}
-                </p>
-              </div>
-            ))}
-          </div>
-      </section>
-      {/* Contact Section */}
-      <section className="w-5 h-5 ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><h2 className="w-5 h-5 ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5 h-5 ml-2">Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              </div></div><button className="w-5 h-5 ml-2">Contact Us
-              </button>
-              <button className="w-5 h-5 ml-2">Schedule Demo
-              </button>
-            </div>
-        </div>
-      </section>
     </div>
-  )
-}
-export default EnhancedSEOOptimizerPage
-    </>;
-);
-;
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+  );
+};
+
+export default EnhancedSEOOptimizer;

@@ -1,17 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-'use client';
-interface FuturisticCardProps {
-  children: React.ReactNode;
-  variant?: 'default' | 'service' | 'testimonial' | 'feature';
-  className?: string;
-<<<<<<< HEAD
 
-=======
- void;
-  onClick?: () => void;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   children, 
   const variant = 'default', 
   className = '', ;
@@ -43,9 +31,6 @@ interface FuturisticCardProps {
       animate="{{" opacity: 1, y: 0 }}
       transition="{{" duration: 0.6, ease: "easeOut" }} /></motion>
       {/* Animated background gradient */}
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -71,8 +56,6 @@ export default function ComponentsPage() {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
       {/* Animated border glow */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Content */}
@@ -94,6 +77,3 @@ export default function ComponentsPage() {
     </div></div></motion.div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
     </motion.div>;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-  );
-}

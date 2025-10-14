@@ -1,313 +1,120 @@
-<<<<<<< HEAD
-export default EnhancedAccessibilityEnhancerPage;
-ursor/website-audit-and-update-with-deployment-a178;
-ursor/
-                Enhanced Accessibility
-                EnhancedAccessibilityEnhancer
-<<<<<<< HEAD
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Eye, Volume2, MousePointer, Keyboard } from 'lucide-react';
 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            return (
+interface AccessibilityFeature {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  enabled: boolean;
+  onToggle: (enabled: boolean) => void;
+}
 
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+const EnhancedAccessibilityEnhancer: React.FC = () => {
+  const [features, setFeatures] = useState<AccessibilityFeature[]>([
+    {
+      id: 'high-contrast',
+      title: 'High Contrast Mode',
+      description: 'Increase contrast for better visibility',
+      icon: Eye,
+      enabled: false,
+      onToggle: (enabled) => {
+        document.body.classList.toggle('high-contrast', enabled);
+        localStorage.setItem('accessibility-high-contrast', enabled.toString());
+      }
+    },
+    {
+      id: 'text-size',
+      title: 'Large Text',
+      description: 'Increase text size for better readability',
+      icon: Volume2,
+      enabled: false,
+      onToggle: (enabled) => {
+        document.body.classList.toggle('large-text', enabled);
+        localStorage.setItem('accessibility-large-text', enabled.toString());
+      }
+    },
+    {
+      id: 'focus-indicators',
+      title: 'Enhanced Focus Indicators',
+      description: 'Make focus indicators more visible',
+      icon: MousePointer,
+      enabled: false,
+      onToggle: (enabled) => {
+        document.body.classList.toggle('enhanced-focus', enabled);
+        localStorage.setItem('accessibility-enhanced-focus', enabled.toString());
+      }
+    },
+    {
+      id: 'keyboard-navigation',
+      title: 'Keyboard Navigation',
+      description: 'Improve keyboard navigation experience',
+      icon: Keyboard,
+      enabled: false,
+      onToggle: (enabled) => {
+        document.body.classList.toggle('keyboard-navigation', enabled);
+        localStorage.setItem('accessibility-keyboard-nav', enabled.toString());
+      }
+    }
+  ]);
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+  useEffect(() => {
+    // Load saved preferences
+    features.forEach(feature => {
+      const saved = localStorage.getItem(`accessibility-${feature.id}`);
+      if (saved === 'true') {
+        feature.onToggle(true);
+        setFeatures(prev => prev.map(f => 
+          f.id === feature.id ? { ...f, enabled: true } : f
+        ));
+      }
+    });
+  }, [features]);
 
-export default function ComponentsPage() {
+  const toggleFeature = (featureId: string) => {
+    setFeatures(prev => prev.map(feature => {
+      if (feature.id === featureId) {
+        const newEnabled = !feature.enabled;
+        feature.onToggle(newEnabled);
+        return { ...feature, enabled: newEnabled };
+      }
+      return feature;
+    }));
+  };
+
   return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
+    <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-6">
+      <h3 className="text-2xl font-bold text-white mb-6">Accessibility Enhancements</h3>
+      <p className="text-gray-300 mb-6">
+        Customize your browsing experience with these accessibility features.
+      </p>
+      
+      <div className="space-y-4">
+        {features.map((feature) => (
+          <div key={feature.id} className="flex items-center justify-between p-4 bg-gray-700 rounded-lg">
+            <div className="flex items-center space-x-4">
+              <feature.icon className="w-6 h-6 text-cyan-400" />
+              <div>
+                <h4 className="text-white font-medium">{feature.title}</h4>
+                <p className="text-gray-300 text-sm">{feature.description}</p>
+              </div>
+            </div>
+            
+            <label className="relative inline-flex items-center cursor-pointer">
+              <input
+                type="checkbox"
+                checked={feature.enabled}
+                onChange={() => toggleFeature(feature.id)}
+                className="sr-only peer"
+              />
+              <div className="w-11 h-6 bg-gray-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>
+            </label>
+          </div>
+        ))}
       </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
-              <span const className = "text-white">Enhancer</span>
-              Transform your business with our advanced enhanced accessibility enhancer solutions. ;
-                Enhanced Accessibility;
-                EnhancedAccessibilityEnhancer;
-              </span>
-              <br /></br>
-              <span const className = "text-white"  >Enhancer</span>
-            </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced enhanced accessibility enhancer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>;
-              <button className="w-5h-5ml-2">Get Started;
-              </button>
-              <button className="w-5h-5ml-2">Learn More;
-              </button>
-            </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className = "w-5h-5ml-2" /></section>
-        return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Why Choose Our EnhancedAccessibilityEnhancer?
-            </h2>
-            <p className="w-5h-5ml-2" /></p>
-              Our enhancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
-              Why Choose Our Accessibility Solutions?
-            </h2>
-            <p className="w-5h-5ml-2">Our accessibility enhancement solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {features.map((feature, index) => (
-              <div key={index} className="text-center" /></div>
-                return (
-    <div>Content</div>
-  );
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              </div></div><button className="w-5 h-5 ml-2" />
-              <button className="w-5 h-5 ml-2">Get Started
-              </button>
-              <button className="w-5 h-5 ml-2">Learn More
-              </button>
-            </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="w-5 h-5 ml-2" />
-        return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          return (
-    <div>Content</div>
-  );
-    </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><h2 className="w-5 h-5 ml-2" />Why Choose Our EnhancedAccessibilityEnhancer?
-            </h2>
-            <p className="w-5 h-5 ml-2" />
-              Our enhancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
-              Why Choose Our Accessibility Solutions?
-            </h2>
-            <p className="w-5 h-5 ml-2">Our accessibility enhancement solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            {features.map((feature, index) => (
-              </div></div><div key="{index}" className="text-center" />
-                return (
-    <div>Content</div>
-  );
-    </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  </div></div><feature .icon className="h-8w-8text-white"  />
-                </div>
-                <h3 className="text-xl font-boldtext-whitemb-2"  >{feature.title}</h3>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <feature.icon className="h-8w-8text-white"  /></feature>
-                </div>
-                <h3 className="text-xl font-bold text-whitemb-2"  >{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="w-5h-5ml-2" /></section>
-        return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Why Choose Our Solutions?
-            </h2>
-            <p className="w-5h-5ml-2">Experience the benefits of working with our cutting-edge enhanced accessibility enhancer solutions.
-            </p>
-          </div>
-          return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-start space-x-4" /></div>
-                return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                </div>
-                <p className="w-5h-5ml-2">{benefit}
-                </p>
-              </div>
-            ))}
-          </div>
-      </section>
-          return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5h-5ml-2">Transform your business with our enhancedaccessibilityenhancer solutions today.
-            </p>
-            return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-              <button className="w-5h-5ml-2">Contact Us Now;
-              </button>
-              <button className="w-5h-5ml-2">Learn More;
-              </button>
-            </div>
-      {/* Contact Section */}
-      <section className = "w-5h-5ml-2" /></section>
-        return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5h-5ml-2">Contact us today to learn more about our accessibility enhancement solutions and how they can benefit your business.
-            </p>
-            return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-              <button className="w-5h-5ml-2">Contact Us;
-              </button>
-              <button className="w-5h-5ml-2">Schedule Demo;
-              </button>
-            </div>
-        </div>
-      </section>
     </div>
-  )
-}
-          </div>
-      </section>
-      {/* Benefits Section */}
-      <section className = "w-5 h-5 ml-2" />
-        return (
-    <div>Content</div>
   );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          return (
-    <div>Content</div>
-  );
-    </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><h2 className="w-5 h-5 ml-2" />Why Choose Our Solutions?
-            </h2>
-            <p className="w-5 h-5 ml-2">Experience the benefits of working with our cutting-edge enhanced accessibility enhancer solutions.
-            </p>
-          </div>
-          return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            {benefits.map((benefit, index) => (
-              </div></div><div key="{index}" className="flexitems-start space-x-4" />
-                return (
-    <div>Content</div>
-  );
-    </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  </div></div><CheckCircle className="w-5 h-5 ml-2" />
-                </div>
-                <p className="w-5 h-5 ml-2">{benefit}
-                </p>
-              </div>
-            ))}
-          </div>
-      </section>
-          return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><h2 className="w-5 h-5 ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5 h-5 ml-2">Transform your business with our enhancedaccessibilityenhancer solutions today.
-            </p>
-            return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              </div></div><button className="w-5 h-5 ml-2">Contact Us Now
-              </button>
-              <button className="w-5 h-5 ml-2">Learn More
-              </button>
-            </div>
-      {/* Contact Section */}
-      <section className="w-5 h-5 ml-2" />
-        return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          return (
-    <div>Content</div>
-  );
-    </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><h2 className="w-5 h-5 ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5 h-5 ml-2">Contact us today to learn more about our accessibility enhancement solutions and how they can benefit your business.
-            </p>
-            return (
-    <div>Content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              </div></div><button className="w-5 h-5 ml-2">Contact Us
-              </button>
-              <button className="w-5 h-5 ml-2">Schedule Demo
-              </button>
-            </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-export default EnhancedAccessibilityEnhancerPage
-    </>;
-);
-;
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+};
+
+export default EnhancedAccessibilityEnhancer;

@@ -1,24 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-=======
-'use client'
-/**
- * Advanced Error Handler;
- * Comprehensive error handling utilities for React applications;
- */
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
  void;
   { hasError: boolean; error: AppError | null }
     super(props)
     this.state = { hasError: false, error: null }
-<<<<<<< HEAD
-
-=======
 export default function UtilsPage() {
   return (
     <>
@@ -42,7 +26,4 @@ export default function UtilsPage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b

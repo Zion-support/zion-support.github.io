@@ -1,173 +1,144 @@
+'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-'use client'
-const EnhancedHero: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-  const benefits = [
+
+interface HeroProps {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  benefits?: string[];
+  primaryButtonText?: string;
+  primaryButtonLink?: string;
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
+  showContactInfo?: boolean;
+}
+
+const EnhancedHero: React.FC<HeroProps> = ({
+  title = "Transform Your Business with AI",
+  subtitle = "Leading provider of AI and IT solutions",
+  description = "Empower your organization with cutting-edge artificial intelligence, advanced analytics, and comprehensive IT services tailored to your unique needs.",
+  benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
-    'Custom implementation and training';
-  ];
-const contactInfo = [
+    'Custom implementation and training'
+  ],
+  primaryButtonText = "Get Started",
+  primaryButtonLink = "/contact",
+  secondaryButtonText = "Learn More",
+  secondaryButtonLink = "/about",
+  showContactInfo = true
+}) => {
+  const contactInfo = [
     {
       icon: Phone,
       title: 'Call Us',
       details: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9 AM-6 PM PST'
+      link: 'tel:+15551234567'
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+      details: 'info@ziontechgroup.com',
+      link: 'mailto:info@ziontechgroup.com'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
       details: 'San Francisco, CA',
-      description: 'Schedule a meeting'
-    };
+      link: '#'
+    }
   ];
+
   return (
-    <div>Content</div>
-  );
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      {/* Background Effects */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
-      {/* Main Content */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        {/* Left Content */}
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              Transform Your Business with{' '};
-              <span className="w-5h-5ml-2" />AI & IT Solutions;
-              </span>
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center">
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              {title}
             </h1>
-            <p className="w-5h-5ml-2">Harness the power of cutting-edge artificial intelligence and information technology;
-              to drive innovation, efficiency, and growth in your organization.
+            
+            <p className="text-xl text-cyan-400 mb-4 font-semibold">
+              {subtitle}
             </p>
-            {/* Benefits List */}
-            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h3 className="text-lgfont-semiboldtext-whitemb-4"  >Why Choose Us?</h3>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center text-gray-300" /></div>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                    <span className="text-sm"  >{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            {/* CTA Buttons */}
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>;
-                Get Started;
-                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
-              </button>;
-              <button className="w-5h-5ml-2">Learn More;
-              </button>
-            </div>
-            {/* Contact Info */}
-            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-center text-gray-300" /></div>
-                  <contact.icon className="h-5w-5tex t-c yan-400mr-3flex-shrink-0"  /></contact>
-                  <div /></div>
-                    <div className="text-smfont-medium text-white"  >{contact.title}</div>
-                    <div className="text-xs text-gray-400"  >{contact.details}</div>
+            
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+              {description}
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}
             </div>
-        </div>
-        {/* Right Content - Visual Elements */}
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {/* Floating Cards */}
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Brain className="w-5h-5ml-2" /></Brain>
-                <h3 className="text-lgfont-bold text-whitemb-2"  >AI Solutions</h3>
-                <p className="text-sm text-gray-300">Machine Learning & Analytics</p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Link
+                to={primaryButtonLink}
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center transform hover:scale-105"
+              >
+                {primaryButtonText}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              
+              <Link
+                to={secondaryButtonLink}
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center"
+              >
+                {secondaryButtonText}
+              </Link>
+            </div>
+
+            {showContactInfo && (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                {contactInfo.map((info, index) => (
+                  <a
+                    key={index}
+                    href={info.link}
+                    className="flex items-center space-x-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300"
+                  >
+                    <info.icon className="w-6 h-6 text-cyan-400" />
+                    <div>
+                      <p className="text-white font-medium">{info.title}</p>
+                      <p className="text-gray-300 text-sm">{info.details}</p>
+                    </div>
+                  </a>
+                ))}
               </div>
-            <div className="absolute top-20 right-0 w-64 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2 xl backdrop-blur-sm borderborder-purple-500/30animate-float" style="{{" animationDelay: '1 s' }} /></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Shield className="w-5h-5ml-2" /></Shield>
-                <h3 className="text-lgfont-bold text-whitemb-2"  >Security</h3>
-                <p className="text-sm text-gray-300">Cybersecurity & Compliance</p>
-              </div>
-            <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-64 h-40 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2 xl backdrop-blur-sm borderborder-green-500/30animate-float" style="{{" animationDelay: '2 s' }} /></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Globe className="w-5h-5ml-2" /></Globe>
-                <h3 className="text-lgfont-bold text-whitemb-2"  >Cloud Services</h3>
-                <p className="text-sm text-gray-300">Infrastructure & Migration</p>
-              </div>
+            )}
           </div>
-      </div>
-  )
-<<<<<<< HEAD
 
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function ComponentsPage() {
-=======
-export default function EnhancedHero() {
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>;
-  );
-}
-  return (
-    <div>Content</div>
-  );
-    <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-=======
-      <Helmet >
-        <title>Enhanced Hero - Zion Tech Group</title>
-        <meta name = "description" content="Professional enhanced hero by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Enhanced Hero</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional enhanced hero coming soon.</p>
-          <Link >
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          <div className="relative">
+            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+                <p className="text-gray-300 mb-6">
+                  Join thousands of businesses already transforming with our solutions.
+                </p>
+                <Link
+                  to="/contact"
+                  className="bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center"
+                >
+                  Contact Us Today
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </>;
+    </div>
   );
-}
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+
+export default EnhancedHero;

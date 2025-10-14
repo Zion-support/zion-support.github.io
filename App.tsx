@@ -9,7 +9,6 @@ import Footer from './app/components/Footer';
 import HomePage from './app/page';
 import { LoadingPage } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
 import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
@@ -20,6 +19,7 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import FuturisticBackground from './app/components/FuturisticBackground';
 
 // Lazy load pages for better performance
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
@@ -159,6 +159,7 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import('./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import('./app/5g-private-networks/page'));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import('./app/5g-smart-city-solutions/page'));
 const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 // Main App Component
 function App() {

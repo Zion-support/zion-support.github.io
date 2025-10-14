@@ -1,118 +1,53 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-export default function ContentPromotionBanner() {
-  return (
-
-=======
-export default function ComponentsPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-=======
 'use client';
+import React from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+
 interface ContentPromotionBannerProps {
   title?: string;
   subtitle?: string;
   features?: string[];
   buttonText?: string;
   onButtonClick?: () => void;
-  variant?: 'default' | 'premium' | 'limited';
+  className?: string;
 }
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
-  const title = "Unlock Premium Features",
-  subtitle = "Get access to advanced tools and exclusive content",
-  features = [
-    "Advanced Analytics",
-    "Priority Support",
-    "Custom Integrations",
-    "24/7 Monitoring"
-  ],
-  buttonText = "Upgrade Now",
+
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+  title = "Transform Your Business",
+  subtitle = "Discover how our solutions can revolutionize your operations",
+  features = [],
+  buttonText = "Get Started",
   onButtonClick,
-  variant = 'default'
+  className = ""
 }) => {
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'premium':;
-        return 'bg-gradient-to-r from-purple-600 to-pink-600';
-      case 'limited':
-        return 'bg-gradient-to-r from-red-600 to-orange-600';
-      default: return 'bg-gradient-to-r from-blue-600 to-purple-600';
-    }
-  };
-export default function ContentPromotionBanner() {
   return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
-}
-  return (
-    <div>Content</div>
-  );
-      {/* Background Pattern */}
-      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2"  >{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-centertext-sm" /></div>
-                  <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                  <span  >{feature}</span>
-                </div>
-              ))}
+    <div className={`bg-gradient-to-r from-cyan-600 to-purple-600 rounded-lg p-8 ${className}`}>
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-white mb-4">{title}</h2>
+        <p className="text-cyan-100 text-lg">{subtitle}</p>
+      </div>
+
+      {features.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-center space-x-3">
+              <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
+              <span className="text-white">{feature}</span>
             </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-            <button;              className = "bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" /></button>
-              onClick="{onButtonClick}"
-              {buttonText}
-              <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-            </button>
-          </div>
-      </div>;
+          ))}
+        </div>
+      )}
+
+      <div className="text-center">
+        <button
+          onClick={onButtonClick}
+          className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          {buttonText}
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </button>
+      </div>
+    </div>
   );
 };
-    <>
-      <Helmet >
-        <title>Content Promotion Banner - Zion Tech Group</title>
-        <meta name = "description" content="Professional content promotion banner by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Content Promotion Banner</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional content promotion banner coming soon.</p>
-          <Link >
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>;
-  );
-<<<<<<< HEAD
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+
+export default ContentPromotionBanner;

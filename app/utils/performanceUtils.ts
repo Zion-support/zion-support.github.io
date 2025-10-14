@@ -1,16 +1,1 @@
-<<<<<<< HEAD
-// Performance utility functions
-export const debounce = <T extends (...args: unknown[]) => void>(func: T, wait: number) => {
-  let timeout: NodeJS.Timeout;
-  return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-=======
 // Utility file: performanceUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-};

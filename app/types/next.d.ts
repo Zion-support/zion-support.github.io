@@ -24,48 +24,6 @@ export interface User {
 // SVG component type
 declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-<<<<<<< HEAD
-  export default content;
-}
-
-// Static file types
-declare module '*.png' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.jpg' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.jpeg' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.gif' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.webp' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.ico' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.svg' {
-  const content: string;
-  export default content;
-}
-
-export {};
-=======
   const content: string;
   const content: string;
   const content: string;
@@ -74,4 +32,3 @@ export {};
   const content: string;
   const content: string;
   const content: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b

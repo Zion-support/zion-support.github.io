@@ -2,11 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 interface GenericServicePageProps {
   title: string;,
   description: string;,
@@ -156,9 +151,6 @@ const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
     </>
   );
 };
-<<<<<<< HEAD
-
-=======
 export default function ComponentsPage() {
   return (
     <>
@@ -182,7 +174,4 @@ export default function ComponentsPage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
 export default GenericServicePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b

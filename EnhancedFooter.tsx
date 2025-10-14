@@ -1,39 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export default function EnhancedFooter() {
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 const EnhancedFooter: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
   return (
-    <div>Content</div>
-  );
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
-          <div >
+          <div>
             <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Leading provider of AI and IT solutions for businesses worldwide.
             </p>
-            <Link >
+            <Link 
               to="/contact"
               className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
-<<<<<<< HEAD
 
           <div>
-=======
-          <div >
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
               <li><Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Solutions</Link></li>
@@ -42,7 +30,7 @@ const EnhancedFooter: React.FC = () => {
               <li><Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
-          <div >
+          <div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">About Us</Link></li>
@@ -51,7 +39,7 @@ const EnhancedFooter: React.FC = () => {
               <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
-          <div >
+          <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-center">
@@ -78,13 +66,5 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
 export default EnhancedFooter;
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
-export default EnhancedFooter;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b

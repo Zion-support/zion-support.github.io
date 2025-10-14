@@ -1,26 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-interface ServicePageProps {
-  title: string,
-  description: string,
-  icon: React.ReactNode,
-  benefits: string[],
-  features: string[],
-  pricing: string,
-  seoTitle: string,
-  seoDescription: string,
-  seoKeywords: string
-<<<<<<< HEAD
-
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   title,
   description,
   icon,
@@ -32,9 +13,6 @@ interface ServicePageProps {
   seoKeywords;
 }: ServicePageProps) {
   return (
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -62,8 +40,6 @@ export default function AppPage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
     <div>Content</div>
   );
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -180,4 +156,3 @@ export default function AppPage() {
     </>;
 );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
