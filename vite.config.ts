@@ -69,9 +69,22 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
+            // React ecosystem
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
+            }
+            // UI libraries
+            if (id.includes('lucide-react') || id.includes('framer-motion')) {
+              return 'ui-vendor';
+            }
+            // Other vendor libraries
             return 'vendor';
+          }
+          // App chunks
+          if (id.includes('/app/')) {
+            return 'app';
           }
           return undefined;
         },
