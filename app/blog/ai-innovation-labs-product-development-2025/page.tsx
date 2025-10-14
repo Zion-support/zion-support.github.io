@@ -58,5 +58,4 @@ const AiInnovationLabsProductDevelopment2025Page: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default AiInnovationLabsProductDevelopment2025Page;
