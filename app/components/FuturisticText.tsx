@@ -3,9 +3,9 @@ import { cn    } from "../utils/cn;
 
 interface FuturisticTextProps {
   children: React.ReactNode
-  variant?: 'primary' | 'secondary' | 'accent' | 'muted';'
-  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl';'
-  weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black';'
+  variant?: 'primary' | 'secondary' | 'accent' | 'muted';
+  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl';
+  weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black';
   glow?: boolean
   animate?: boolean
 }
@@ -21,7 +21,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
   animate = false,
   ...props
 }) => {
-  const baseClasses = 'font-sans';'
+  const baseClasses = 'font-sans';
   
   const variantClasses = {
     primary: 'text-white','
@@ -53,8 +53,8 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     extrabold: 'font-extrabold','
     black: 'font-black
   }
-  const glowClasses = glow ? 'drop-shadow-[0_0_20px_rgba(0,255,255,0.5)]' : ';'
-  const animateClasses = animate ? 'animate-pulse' : ';'
+  const glowClasses = glow ? 'drop-shadow-[0_0_20px_rgba(0,255,255,0.5)]' : ';
+  const animateClasses = animate ? 'animate-pulse' : ';
   
   const combinedClasses = cn(
     baseClasses,

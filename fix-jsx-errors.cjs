@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const { glob } = require('glob');
 
 // Function to fix common JSX errors
 function fixJsxErrors(content) {
@@ -53,7 +53,7 @@ function processFile(filePath) {
 }
 
 // Main function to fix all files
-function fixAllFiles() {
+async function fixAllFiles() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
@@ -65,17 +65,17 @@ function fixAllFiles() {
   
   let totalFixed = 0;
   
-  patterns.forEach(async (pattern) => {
+  for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
-    files.forEach(file => {
+    for (const file of files) {
       if (processFile(file)) {
         totalFixed++;
       }
-    });
-  });
+    }
+  }
   
   console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
 // Run the fix
-fixAllFiles();
+fixAllFiles().catch(console.error);

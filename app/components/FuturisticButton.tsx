@@ -19,8 +19,8 @@ import React from "react;
 interface FuturisticButtonProps {
   children: React.ReactNode
   onClick?: () => void
-  variant?: 'primary' | 'secondary' | 'outline';'
-  size?: 'sm' | 'md' | 'lg';'
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
   disabled?: boolean
   className?: string
 }

@@ -5,7 +5,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm'
   const variantClasses = {
   children: React.ReactNode
-  className?: string';'
+  className?: string';
   variant?: 'default' | 'glow' | 'gradient';}'
 }
     </div>

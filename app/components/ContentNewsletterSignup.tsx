@@ -52,7 +52,7 @@ const ContentNewsletterSignup: React.FC = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) = /> setEmail(e.target.value)}
                 placeholder="Enter your email address"
                 className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-300"
                 required

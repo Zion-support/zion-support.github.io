@@ -22,10 +22,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const images = document.querySelectorAll('img');'
       images.forEach((img) => {
         if (!img.loading) {
-          img.loading = 'lazy';'
+          img.loading = 'lazy';
         }
         if (!img.decoding) {
-          img.decoding = 'async';'
+          img.decoding = 'async';
         }
         // Add fetchpriority for above-the-fold images
         if (img.getBoundingClientRect().top < window.innerHeight) {
@@ -42,7 +42,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const existingLink = document.querySelector(`link[href="${href}"]`);``"`
         if (!existingLink) {
           const link = document.createElement('link');'
-          link.rel = 'prefetch';'
+          link.rel = 'prefetch';
           link.href = href
           document.head.appendChild(link)
         }
