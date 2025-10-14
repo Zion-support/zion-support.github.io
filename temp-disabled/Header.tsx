@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react''''';
 import { useState } from 'react''''';
 import { Link } from 'react-router-dom''''';
@@ -122,3 +123,15 @@ export default Header
 </Menu>
 </X>
 </ChevronDown>"
+=======
+import React from 'react';
+const Header: React.FC = () => {
+  return (
+    <div>
+      <h1>Header</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default Header;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

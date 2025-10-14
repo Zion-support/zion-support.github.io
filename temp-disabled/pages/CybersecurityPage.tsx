@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";";
 import { Helmet } from "react-helmet-async";
 ;
@@ -22,3 +23,15 @@ const CybersecurityPagePage = () => {
 ;
 export default CybersecurityPagePage;
 "
+=======
+import React from 'react';
+const CybersecurityPage: React.FC = () => {
+  return (
+    <div>
+      <h1>CybersecurityPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default CybersecurityPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

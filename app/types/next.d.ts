@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   export interface NextPageProps {
   export default content;
 // Next.js type definitions
@@ -41,3 +42,17 @@ export const nextUtil = () => { // Implementation;
 };
 export default nextUtil;
 '
+=======
+// Type definitions for Next.js
+
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      NODE_ENV: 'development' | 'production' | 'test';
+      // Add your environment variables here
+    }
+  }
+}
+
+export {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

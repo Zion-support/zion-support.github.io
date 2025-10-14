@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import { 
@@ -185,3 +186,14 @@ const structuredData = {"
     </>
   )"
 }}}}
+=======
+const HomePage: React.FC = () => {
+  return (
+    <div>
+      <h1>HomePage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default HomePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

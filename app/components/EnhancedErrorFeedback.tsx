@@ -1,40 +1,29 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Mail }    from "lucide-react
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+=======
+import React from "react";
+
+interface GlobalErrorBoundaryProps {
+  children: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 }
 
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  retryCount: number;
-}
-
-export class GlobalErrorBoundary extends Component<Props, State> {
-  private maxRetries = 3;
-
-  constructor(props: Props) {
+class GlobalErrorBoundary extends React.Component<GlobalErrorBoundaryProps, { hasError: boolean }> {
+  constructor(props: GlobalErrorBoundaryProps) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
-      errorId: ''
-    };
+    this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null,
-      retryCount: 0
-    };
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true };
   }
 
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -187,12 +176,32 @@ export class GlobalErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div></div>);
+=======
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Global Error Boundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300">Please refresh the page and try again.</p>
+          </div>
+        </div>
+      );
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
     }
 
     return this.props.children;
   }
 }
 
+<<<<<<< HEAD
 export default GlobalErrorBoundary;
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+export default GlobalErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

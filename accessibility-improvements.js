@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Accessibility improvements utility
 export default function accessibilityImprovements() {
   // Add focus indicators for keyboard navigation
@@ -30,5 +31,9 @@ export default function accessibilityImprovements() {
     addAriaLandmarks();
   }
 
+=======
+// accessibility-improvements - Basic implementation
+export default function accessibilityImprovements() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   return null;
 }

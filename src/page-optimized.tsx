@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -69,3 +70,14 @@ function OptimizedHomePage() {
 };
 export default OptimizedHomePage;
 "
+=======
+const page-optimized: React.FC = () => {
+  return (
+    <div>
+      <h1>page-optimized</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default page-optimized;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

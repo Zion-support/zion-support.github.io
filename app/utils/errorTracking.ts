@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const reportError = (
   error: Error,
   context?: Record<string, unknown>,)
@@ -10,3 +11,10 @@ export const initErrorReporting = () => {
   // Initialize error reporting service
   console.log("Error reporting initialized")
 }
+=======
+// ErrorTracking utility functions
+
+export const ErrorTracking = {
+  // Add your utility functions here
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

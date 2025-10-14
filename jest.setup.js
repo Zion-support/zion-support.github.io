@@ -1,11 +1,17 @@
 // Learn more: https://github.com/testing-library/jest-dom
+<<<<<<< HEAD
 require("@testing-library/jest-dom
 // Polyfills for Node.js environment
 const { TextEncoder, TextDecoder } = require("util
+=======
+require("@testing-library/jest-dom");
+
+// Polyfills for Node.js environment
+const { TextEncoder, TextDecoder } = require("util");
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-<<<<<<< HEAD
 // Mock CSS imports
 jest.mock('react-lazy-load-image-component/src/effects/blur.css'
 
@@ -20,12 +26,18 @@ jest.mock('react-lazy-load-image-component'
     },
   };
 });
+<<<<<<< HEAD
 Object.defineProperty(windowmatchMedia
   writable: true,)
+=======
+
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
-    onchange: null,)
+    onchange: null,
     addListener: jest.fn(),
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
@@ -35,24 +47,33 @@ Object.defineProperty(windowmatchMedia
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {;
-constructor() {}
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
   disconnect() {}
   observe() {}
-  takeRecords() {
-    return [];
-  }
   unobserve() {}
 };
 
-// Suppress console errors in tests;
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
   console.error = jest.fn((...args) => {
     if (
       typeof args[0] === "string" &&
       (args[0].includes("Warning: ReactDOM.render") ||
+<<<<<<< HEAD
         args[0].includes("Not implemented: HTMLFormElement.prototype.submit
+=======
+        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
     ) {
       return;
     }
@@ -62,4 +83,8 @@ beforeAll(() => {
 
 afterAll(() => {
   console.error = originalError;
+<<<<<<< HEAD
 })
+=======
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

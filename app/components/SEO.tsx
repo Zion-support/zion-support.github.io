@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface SEOProps {
@@ -45,3 +46,19 @@ interface SEOProps {
       <meta name="twitter:image" content={image}  />
       { /* Canonical URL */ }
       <link rel="canonical" href={url} /></Helmet>)
+=======
+import React from "react";
+
+const SEO = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">SEO</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for SEO.
+      </p>
+    </div>
+  );
+};
+
+export default SEO;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

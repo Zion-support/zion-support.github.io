@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React    from "react
 interface AdvancedSEOOptimizerProps {
   className?: string;
@@ -20,4 +21,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className, 
     </div>)
   );
 };
+=======
+import React from 'react';
+
+const AdvancedSEOOptimizer = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-white mb-4">AdvancedSEOOptimizer</h2>
+      <p className="text-gray-300">This component is under construction.</p>
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 export default AdvancedSEOOptimizer;

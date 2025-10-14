@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'''''
 interface FuturisticButtonProps {}
   children: React.ReactNode
@@ -39,3 +40,15 @@ const variantClasses = {}
 }
 export default FuturisticButton
 </FuturisticButtonProps>"
+=======
+import React from 'react';
+const FuturisticButton: React.FC = () => {
+  return (
+    <div>
+      <h1>FuturisticButton</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default FuturisticButton;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

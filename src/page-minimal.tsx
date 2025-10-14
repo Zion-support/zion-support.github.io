@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -162,3 +163,14 @@ function HomePage() {
 };
 export default HomePage;
 "
+=======
+const page-minimal: React.FC = () => {
+  return (
+    <div>
+      <h1>page-minimal</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default page-minimal;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

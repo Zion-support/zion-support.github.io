@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 variant?: 'default' | 'glow' | 'gradient' }
 ;
@@ -53,3 +54,19 @@ export default FuturisticCard;
 export default FuturisticCard;
 };
 export default FuturisticCard;'
+=======
+import React from "react";
+
+const FuturisticCard = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">FuturisticCard</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for FuturisticCard.
+      </p>
+    </div>
+  );
+};
+
+export default FuturisticCard;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

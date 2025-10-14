@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -129,6 +130,19 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <link rel="dns-prefetch" href="//images.unsplash.com" />
       {/* Additional Performance Hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" /></Helmet>");
+=======
+import React from "react";
+
+const EnhancedSEO = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">EnhancedSEO</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for EnhancedSEO.
+      </p>
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 };
 
 export default EnhancedSEO;

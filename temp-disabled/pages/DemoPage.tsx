@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 const DemoPage: React.FC = () => {}
@@ -19,3 +20,15 @@ const DemoPage: React.FC = () => {}
   )
 }
 export default DemoPage"
+=======
+import React from 'react';
+const DemoPage: React.FC = () => {
+  return (
+    <div>
+      <h1>DemoPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default DemoPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

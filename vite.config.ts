@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
@@ -75,13 +76,28 @@ export default defineConfig({
       }
     },
     // Enhanced build optimizations
+=======
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
+export default defineConfig({
+  plugins: [
+    react(),
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@app': path.resolve(__dirname, './app'),
+    },
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
     rollupOptions: {
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-      },
       output: {
+<<<<<<< HEAD
         manualChunks: (id) => {
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
@@ -144,27 +160,29 @@ export default defineConfig({
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
+=======
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       },
     },
-    // Enable tree shaking
-    treeshake: true,
   },
   server: {
     port: 3000,
     open: true,
+<<<<<<< HEAD
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   },
-  preview: {
-    port: 4173,
-    open: true,
-    host: true,
-  },
-  // Optimize dependencies
   optimizeDeps: {
+<<<<<<< HEAD
     include: [
       "react",
       "react-dom",
@@ -177,5 +195,8 @@ export default defineConfig({
   // CSS optimization
   css: {
     devSourcemap: true,
+=======
+    include: ['react', 'react-dom', 'react-router-dom'],
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   },
 });

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 ";
 import React from "react";
@@ -10,3 +11,15 @@ export default function TeamPage() {
     </div>)
   );
 }"
+=======
+import React from 'react';
+const TeamPage: React.FC = () => {
+  return (
+    <div>
+      <h1>TeamPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default TeamPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

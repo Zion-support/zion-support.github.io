@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react''''';
 import { Link } from 'react-router-dom''''';
 import {}
@@ -375,3 +376,15 @@ export default Footer
 </div>
 </div>
 </div>"
+=======
+import React from 'react';
+const Footer: React.FC = () => {
+  return (
+    <div>
+      <h1>Footer</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default Footer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

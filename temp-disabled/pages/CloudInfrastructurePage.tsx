@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react''';
@@ -105,3 +106,15 @@ const CloudInfrastructurePage: React.FC = () => {}
 }
 export default CloudInfrastructurePage
 </Icon>"
+=======
+import React from 'react';
+const CloudInfrastructurePage: React.FC = () => {
+  return (
+    <div>
+      <h1>CloudInfrastructurePage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default CloudInfrastructurePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

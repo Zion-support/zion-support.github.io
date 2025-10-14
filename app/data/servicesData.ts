@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 },
     href: '/ai-solutions''
   },
@@ -23,3 +24,10 @@
 
     id: 'cloud-infrastructure',
     title: 'Cloud Infrastructure',
+=======
+// ServicesData data
+
+export const ServicesData = {
+  // Add your data here
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

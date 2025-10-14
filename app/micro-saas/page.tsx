@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react
 import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Database, Mail, Users, Globe, Smartphone, TrendingUp, Settings, Monitor, MessageSquare, Share, Award, Cpu, Video, Calculator, Grid, Star as StarIcon, Package, Receipt, Workflow } from "lucide-react
 import { Helmet } from "react-helmet-async
@@ -284,3 +285,19 @@ const MicroSaasPage: React.FC = () => {"
                 </a>
               </div>
             </div>
+=======
+import React from "react";
+
+const Page = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for Page.
+      </p>
+    </div>
+  );
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react''';
@@ -105,3 +106,15 @@ const DigitalTransformationPage: React.FC = () => {}
 }
 export default DigitalTransformationPage
 </Icon>"
+=======
+import React from 'react';
+const DigitalTransformationPage: React.FC = () => {
+  return (
+    <div>
+      <h1>DigitalTransformationPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default DigitalTransformationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

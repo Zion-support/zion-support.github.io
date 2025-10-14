@@ -62,6 +62,7 @@ const metaTags = [{ name: 'description', content: "description"},'''''"
       {metaTags.map((tag, _index) => (}
         <meta key={_index} {...tag} />)
       ))}
+<<<<<<< HEAD
       {/* Canonical URL */}"
       <link rel="canonical" href={url} />""""
       {/* Favicon */}"
@@ -102,6 +103,48 @@ const  {}"
     "addressRegion": "CA","""""
     "postalCode": "94105","""""
     "addressCountry": "US"""""
+=======
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />"""
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />"""
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"""
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"""
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"""
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />"""
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"""
+      {/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />"""
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />"""
+    </Helmet>
+  )
+}
+// Default structured data for the organization
+const  {}
+  "@context": "https: "//schema.org"","""
+  "@type": "Organization","""
+  "name": "Zion Tech Group","""
+  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.","""
+  "url": "https: "//ziontechgroup.com"","""
+  "logo": "https: "//ziontechgroup.com/images/logo.png"","""
+  "contactPoint": {"}""
+    "@type": "ContactPoint","""
+    "telephone": "+1-555-0123","""
+    "contactType": "customer service","""
+    "availableLanguage": "English"},"""
+  "sameAs": ["https: "//www.linkedin.com/company/zion-tech-group"","""
+    "https: "//twitter.com/ziontechgroup"","""
+    "https://github.com/zion-tech-group""""
+  ],
+  "address": {"}""
+    "@type": "PostalAddress","""
+    "streetAddress": "123 Tech Street","""
+    "addressLocality": "San Francisco","""
+    "addressRegion": "CA","""
+    "postalCode": "94105","""
+    "addressCountry": "US""""
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   }
 }
 export default SEOEnhancer

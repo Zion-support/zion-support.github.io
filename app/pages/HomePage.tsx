@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
@@ -36,8 +37,13 @@ const structuredData = {
       "query-input": "required name=search_term_string
     };
   };
+=======
+import React from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 
+const HomePage = () => {
   return (
+<<<<<<< HEAD
     <>
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -236,5 +242,15 @@ const structuredData = {
         </div>
       </section>
     </>
+=======
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">HomePage</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for HomePage.
+      </p>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   );
-}
+};
+
+export default HomePage;

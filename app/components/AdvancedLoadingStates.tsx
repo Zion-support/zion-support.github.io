@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 
+<<<<<<< HEAD
 interface AdvancedLoadingStatesProps {
   type?: string;
   fullScreen?: boolean;
@@ -34,4 +35,17 @@ const getLoadingIcon = () => {
         <p>{message || 'Loading...'}</p>
       </div></div>);
 };
+=======
+const AdvancedLoadingStates = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">AdvancedLoadingStates</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for AdvancedLoadingStates.
+      </p>
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 export default AdvancedLoadingStates;

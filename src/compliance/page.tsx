@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -345,3 +346,15 @@ const auditSchedule = [
 }
 ;
 export default CompliancePage"
+=======
+import React from 'react';
+const page: React.FC = () => {
+  return (
+    <div>
+      <h1>page</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

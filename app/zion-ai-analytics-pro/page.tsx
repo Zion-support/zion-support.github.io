@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async
 import { Link } from "react-router-dom
 import { ArrowRight, BarChart3, Brain, Star, Users, Award, Zap, Shield, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Cpu, Sparkles, Target, Calendar, FileText, Clock }    from "lucide-react
@@ -206,8 +207,13 @@ const ZionAIAnalyticsProPage = () => {
     { number: "99.9%", label: "Data Accuracy", icon: <Award className="w-6 h-6"
     { number: "24/7", label: "Real-time Monitoring", icon: <Monitor className="w-6 h-6"
   ];
+=======
+import React from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 
+const Page = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet >
         <title>Zion AI Analytics Pro - Advanced Business Intelligence Platform | Zion Tech Group</title><meta
@@ -606,3 +612,15 @@ const HomePage = () => {
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for Page.
+      </p>
+    </div>
+  );
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

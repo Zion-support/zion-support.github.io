@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from "react-router-dom
 import { ArrowRight }    from "lucide-react
@@ -93,8 +94,13 @@ export default function BlockchainWeb3Page() {
       popular: false
     }
   ];
+=======
+import React from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 
+const Page = () => {
   return (
+<<<<<<< HEAD
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         {/* Hero Section */}
@@ -185,3 +191,15 @@ const HomePage = () => {
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for Page.
+      </p>
+    </div>
+  );
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

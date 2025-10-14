@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from "react-router-dom
 import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Clock }    from "lucide-react
@@ -70,6 +71,11 @@ const WebDevelopmentPage: React.FC = () => {
       color: 'text-gray-400'
     }
   ]
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+const PagePage = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   return (
     <>
       <SEOOptimizer title="Web Development Services - Zion Tech Group"
@@ -232,7 +238,11 @@ const WebDevelopmentPage: React.FC = () => {
     </>
   );
 };
+<<<<<<< HEAD
 
 export default WebDevelopmentPage;
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

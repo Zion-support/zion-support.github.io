@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
@@ -60,3 +61,18 @@ constructor(props: Props) {
 ;
 export default AdvancedErrorBoundary;
 "
+=======
+import React from 'react';
+interface AdvancedErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advancederrorboundary ${className}`}>
+      {children}
+    </div>
+  );
+};
+export default AdvancedErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

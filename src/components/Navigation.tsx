@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, Check } from 'lucide-react';
@@ -405,6 +406,18 @@ const specializedServices = [
         )}
       </div>
     </nav>
+=======
+import React from 'react';
+interface NavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {
+  return (
+    <div className={`navigation ${className}`}>
+      {children}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   );
 };
 ;

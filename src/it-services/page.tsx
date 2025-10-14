@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -536,3 +537,14 @@ const benefits = [
 };
 ;
 export default ITServicesPage;"
+=======
+const page: React.FC = () => {
+  return (
+    <div>
+      <h1>page</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+export default page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

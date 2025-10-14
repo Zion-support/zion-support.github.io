@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode } from "react"
 
 interface Props {
@@ -47,3 +48,18 @@ class ErrorBoundary extends Component<Props, State> {
 }
 ;
 export default ErrorBoundary"
+=======
+import React from 'react';
+interface ErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`errorboundary ${className}`}>
+      {children}
+    </div>
+  );
+};
+export default ErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 
@@ -121,3 +122,18 @@ const interval = setInterval(updateMetrics, 5000);
 };
 export default PerformanceDashboard;
 "
+=======
+import React from 'react';
+interface PerformanceDashboardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`performancedashboard ${className}`}>
+      {children}
+    </div>
+  );
+};
+export default PerformanceDashboard;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

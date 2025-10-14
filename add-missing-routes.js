@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Add missing routes utility
 export default function addMissingRoutes() {
   // This utility would typically be used to dynamically add routes
@@ -17,4 +18,9 @@ export default function addMissingRoutes() {
   // console.log('Available routes:', routes);
 
   return routes;
+=======
+// add-missing-routes - Basic implementation
+export default function addMissingRoutes() {
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 }
