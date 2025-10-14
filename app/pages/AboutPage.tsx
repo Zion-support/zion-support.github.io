@@ -1,25 +1,24 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
+import {
+  CpuChipIcon,
+  ShieldCheckIcon,
   RocketLaunchIcon,
-  CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon,
-  UserGroupIcon,
-  AcademicCapIcon,
-  BriefcaseIcon
+  UserGroupIcon
 } from '@heroicons/react/24/outline';
 
-const AboutPage: React.FC = () => {
-  const stats = [
-    { number: '50+', label: 'Projects Completed' },
-    { number: '25+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '4+', label: 'Years Experience' }
+
+
+const stats = [
+    { label: 'Projects Completed', value: '500+', number: '500+' },
+    { label: 'Happy Clients', value: '200+', number: '200+' },
+    { label: 'Team Members', value: '50+', number: '50+' },
+    { label: 'Years Experience', value: '10+', number: '10+' }
   ];
+
+  const AboutPage: React.FC = () => {
+  
 
   const values = [
     {
@@ -194,7 +193,7 @@ const AboutPage: React.FC = () => {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our team can help transform your business with 
+              Let&apos;s discuss how our team can help transform your business with 
               cutting-edge AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
