@@ -57,7 +57,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 }
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // Sidebar state management (currently unused)
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
 
   useEffect(() => {
