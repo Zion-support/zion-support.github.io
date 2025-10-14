@@ -12,7 +12,7 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-// Focus management for keyboard navigation
+    // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
@@ -50,20 +50,32 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');
       }
 
-    // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
 
-    // Font size adjustment
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'large' ? '1.2' : 
-      fontSize === 'extra-large' ? '1.4' : 
-      fontSize === 'small' ? '0.9' : '1'
-    );
-  }, [isHighContrast, isReducedMotion, fontSize]);
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+      }
+    };
+
+    // Initialize accessibility features
+    addSkipLink();
+    addFocusStyles();
+    addAriaLandmarks();
+
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
 
   // Keyboard navigation enhancement
   useEffect(() => {
@@ -90,72 +102,42 @@ const AccessibilityEnhancer: React.FC = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Focus management
+  // Screen reader announcements
   useEffect(() => {
-    const handleFocusIn = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.add('focus-visible');
-      }
+    const announceToScreenReader = (message: string) => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      document.body.appendChild(announcement);
+
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
     };
 
-    const handleFocusOut = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.remove('focus-visible');
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-
-<<<<<<< HEAD
-    return () => {
-<<<<<<< HEAD
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
-    // Add alt text to images without alt attributes
-    const addAltText = () => {
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
+    // Announce page changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          const addedNode = mutation.addedNodes[0] as HTMLElement;
+          if (addedNode && addedNode.tagName === 'H1') {
+            announceToScreenReader(`Page loaded: ${addedNode.textContent}`);
+          }
         }
-
       });
-    };
+    });
 
-    // Initialize accessibility enhancements
-    addSkipLink();
-    addFocusStyles();
-    addAriaLandmarks();
-    addAltText();
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
 
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
+    return () => observer.disconnect();
   }, []);
 
-return null;
+  return null;
 };
 
 export default AccessibilityEnhancer;

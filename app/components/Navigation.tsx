@@ -40,7 +40,6 @@ const Navigation = () => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-<<<<<<< HEAD
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -48,11 +47,6 @@ const Navigation = () => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
   ];
 
   const isActive = (path: string) => {
@@ -73,7 +67,6 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -101,7 +94,6 @@ const Navigation = () => {
                           key={subItem.name}
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
                         >
                           {subItem.name}
                         </Link>
@@ -111,57 +103,19 @@ const Navigation = () => {
                 </div>
               );
             })}
-=======
-{navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
->>>>>>> origin/main
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              Get Started
-            </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2"
+              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
             >
-              {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+              {isOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -176,19 +130,25 @@ const Navigation = () => {
                   <div key={item.name}>
                     <Link
                       to={item.href}
-                      className="flex items-center space-x-3 text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        isActive(item.href)
+                          ? 'bg-purple-600 text-white'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       <Icon className="w-5 h-5" />
                       <span>{item.name}</span>
                     </Link>
+                    
+                    {/* Mobile Submenu */}
                     {item.submenu && (
-                      <div className="ml-8 space-y-1">
+                      <div className="ml-6 mt-2 space-y-1">
                         {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.name}
                             to={subItem.href}
-                            className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
+                            className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
                             onClick={() => setIsOpen(false)}
                           >
                             {subItem.name}
@@ -199,15 +159,6 @@ const Navigation = () => {
                   </div>
                 );
               })}
-              <div className="pt-4 border-t border-slate-700">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
             </div>
           </div>
         )}

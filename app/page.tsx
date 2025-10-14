@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from './components/SEO';
-=======
-=======
-=======
-import SEOHead from './components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
->>>>>>> origin/main
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -43,9 +34,9 @@ export default function HomePage()  {
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
+        "telephone": "+1-302-464-0950",
         "contactType": "customer service",
-        "email": "info@ziontechgroup.com"
+        "email": "kleber@ziontechgroup.com"
       },
       "sameAs": [
         "https://linkedin.com/company/ziontechgroup",
@@ -57,14 +48,11 @@ export default function HomePage()  {
 
   return (
     <>
-<<<<<<< HEAD
       <SEO 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
         url="/"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       />
       
       {/* Hero Section */}
@@ -196,7 +184,7 @@ export default function HomePage()  {
                 Custom micro SaaS solutions designed to solve specific business 
                 challenges with scalable, cost-effective applications.
               </p>
-              <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <Link to="/micro-saas-solutions" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
