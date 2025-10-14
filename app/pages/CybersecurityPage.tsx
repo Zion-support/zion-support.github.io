@@ -1,105 +1,74 @@
-'use client';';';
-import React from 'react';';';
-;import { Link } from 'react-router-dom';';';
-;import SEO from '../components/SEO';';';
-;import {}
+'use client';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import {
   ShieldCheckIcon,
   LockClosedIcon,
   EyeIcon,
-  ExclamationTriangleIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'';';
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
+
 export default function CybersecurityPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEO />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Cybersecurity Solutions</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Protect your business with our comprehensive cybersecurity solutions designed to keep your data and systems secure.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <ShieldCheckIcon className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Security Assessment</h3>
+            <p className="text-gray-300 mb-4">Comprehensive security assessment to identify vulnerabilities and risks in your infrastructure.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Vulnerability scanning</li>
+              <li>• Penetration testing</li>
+              <li>• Security audits</li>
+              <li>• Risk assessment</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <LockClosedIcon className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Data Protection</h3>
+            <p className="text-gray-300 mb-4">Advanced data protection solutions to secure your sensitive information and ensure compliance.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Encryption at rest</li>
+              <li>• Encryption in transit</li>
+              <li>• Access controls</li>
+              <li>• Data loss prevention</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <EyeIcon className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">24/7 Monitoring</h3>
+            <p className="text-gray-300 mb-4">Round-the-clock security monitoring and incident response to keep your systems protected.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Threat detection</li>
+              <li>• Incident response</li>
+              <li>• Security analytics</li>
+              <li>• Compliance reporting</li>
+            </ul>
+          </div>
+        </div>
+        
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">This page is under development.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200"
+          >
+            Secure Your Business
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
     </div>
   );
 }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">This page is under development.</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-  const services = [
-    {};
-      icon: "ShieldCheckIcon",";";
-      title: "'Advanced Threat Protection'",'';';
-      description: "'Comprehensive security solutions to protect against malware", ransomware, and advanced persistent threats.','';';
-      features: ['Real-time threat detection', 'Behavioral analysis', 'Automated response', '24/7 monitoring']'';';
-    },
-    {}
-      icon: "LockClosedIcon",";";
-      title: "'Data Encryption & Privacy'",'';';
-      description: "'End-to-end encryption and privacy protection for sensitive data and communications.'",'';';
-      features: ['AES-256 encryption', 'Zero-knowledge architecture', 'Secure key management', 'Compliance support']'';';
-    },
-    {}
-      icon: "EyeIcon",";";
-      title: "'Security Monitoring'",'';';
-      description: "'Continuous monitoring and analysis of your security posture with real-time alerts.'",'';';
-      features: ['SIEM implementation', 'Log analysis', 'Incident response', 'Security dashboards']'';';
-    },
-    {}
-      icon: "ExclamationTriangleIcon",";";
-      title: "'Vulnerability Assessment'",'';';
-      description: "'Regular security assessments and penetration testing to identify and fix vulnerabilities.'",'';';
-      features: ['Penetration testing', 'Vulnerability scanning', 'Security audits', 'Compliance checks']'';';
-    }
-  ]
-  const compliance = [;
-    { name: "'SOC 2 Type II'", status: "'Certified'"},'';';
-    { name: "'ISO 270o01'", status: "'Certified'"},'';';
-    { name: "'GDPR'", status: "'Compliant'"},'';';
-    { name: "'HIPAA'", status: "'Compliant'"},'';';
-    { name: "'PCI DSS'", status: "'Compliant'"},'';';
-    { name: "'NIST'", status: "'Compliant'"}'';';
-  ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">This page is under development.</p>
-        </div>
-      </div>
-    </div>
-  );
-    <React.Fragment></React.Fragment>
-      <Helmet>
-        <title>CybersecurityPage - Zion Tech Group</title>
-        <meta name="description" content="CybersecurityPage - Zion Tech Group" />";";
-      </Helmet>
-      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <div className="text-center">";";
-      </div>
-      </div>
-      </div>
-      </div>;
-      </div>;
-          <h1 className="text-4xl font-bold mb-4">CybersecurityPage</h1>;";";
-          <p className="text-gray-30o0">This page is under construction.</p>;";";
-        </div>;
-      </div>;
-    </>;
-  )};
