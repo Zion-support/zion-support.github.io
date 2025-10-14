@@ -4,62 +4,41 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix comprehensive syntax errors
-function fixComprehensiveSyntax(content) {
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
   let fixed = content;
   
   // Fix unterminated string literals in import statements
-  fixed = fixed.replace(/import\s+([^"]*?)\s+from\s+"([^"]*?)(?:\n|$)/g, (match, imports, module) => {
+  fixed = fixed.replace(/import\s+.*?from\s+"([^"]*?)(?:\n|$)/g, (match, importPath) => {
     if (!match.includes('"') || match.split('"').length % 2 === 0) {
+      return match.replace(/([^"]*?)(?:\n|$)/, '$1"\n');
+    }
+    return match;
+  });
+  
+  // Fix unterminated string literals in general
+  fixed = fixed.replace(/"([^"]*?)(?:\n|$)/g, (match, str) => {
+    if (match.endsWith('\n') && !match.endsWith('"\n')) {
+      return `"${str}"\n`;
+    }
+    return match;
+  });
+  
+  // Fix malformed import statements
+  fixed = fixed.replace(/import\s+([^"]*?)\s+from\s+"([^"]*?)"([^;]*?)(?:\n|$)/g, (match, imports, module, rest) => {
+    if (rest && !rest.includes(';')) {
       return `import ${imports} from "${module}";\n`;
     }
     return match;
   });
   
-  // Fix unterminated string literals in general - more aggressive approach
-  const lines = fixed.split('\n');
-  const fixedLines = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    let line = lines[i];
-    
-    // Fix unterminated string literals
-    if (line.includes('"') && line.split('"').length % 2 === 0) {
-      // Count quotes to see if we need to close
-      const quoteCount = (line.match(/"/g) || []).length;
-      if (quoteCount % 2 !== 0) {
-        line = line + '"';
-      }
+  // Fix broken JSX attributes
+  fixed = fixed.replace(/className="([^"]*?)(?:\n|$)/g, (match, className) => {
+    if (match.endsWith('\n') && !match.endsWith('"\n')) {
+      return `className="${className}"\n`;
     }
-    
-    // Fix malformed JSX attributes
-    line = line.replace(/className="([^"]*?)(?:\n|$)/g, (match, className) => {
-      if (match.endsWith('\n') && !match.endsWith('"\n')) {
-        return `className="${className}"\n`;
-      }
-      return match;
-    });
-    
-    // Fix malformed object properties
-    line = line.replace(/(\w+):\s*([^,}]+)(?:\n|$)/g, (match, key, value) => {
-      if (match.endsWith('\n') && !match.includes(',') && !match.includes('}')) {
-        return `${key}: ${value},\n`;
-      }
-      return match;
-    });
-    
-    // Fix broken JSX tags
-    line = line.replace(/<(\w+)([^>]*?)(?:\n|$)/g, (match, tag, attrs) => {
-      if (match.endsWith('\n') && !match.includes('>')) {
-        return `<${tag}${attrs}>\n`;
-      }
-      return match;
-    });
-    
-    fixedLines.push(line);
-  }
-  
-  fixed = fixedLines.join('\n');
+    return match;
+  });
   
   // Fix merge conflict markers
   fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
@@ -73,7 +52,11 @@ function fixComprehensiveSyntax(content) {
     return match;
   });
   
-  // Fix broken JSX structure
+  // Fix broken JSX structure - add missing closing tags
+  const openTags = (fixed.match(/<(\w+)(?:\s[^>]*)?>/g) || []).length;
+  const closeTags = (fixed.match(/<\/(\w+)>/g) || []).length;
+  
+  // Fix common JSX issues
   fixed = fixed.replace(/<(\w+)([^>]*?)(?:\n|$)/g, (match, tag, attrs) => {
     if (match.endsWith('\n') && !match.includes('>')) {
       return `<${tag}${attrs}>\n`;
@@ -89,14 +72,6 @@ function fixComprehensiveSyntax(content) {
     return match;
   });
   
-  // Fix broken JSX expressions
-  fixed = fixed.replace(/\{([^}]*?)(?:\n|$)/g, (match, expr) => {
-    if (match.endsWith('\n') && !match.includes('}')) {
-      return `{${expr}}\n`;
-    }
-    return match;
-  });
-  
   return fixed;
 }
 
@@ -107,7 +82,7 @@ function fixFile(filePath) {
     const originalContent = content;
     
     // Apply fixes
-    content = fixComprehensiveSyntax(content);
+    content = fixSyntaxErrors(content);
     
     // If content changed, write it back
     if (content !== originalContent) {
@@ -125,7 +100,7 @@ function fixFile(filePath) {
 
 // Main execution
 async function main() {
-  console.log('Starting comprehensive syntax error fixes...');
+  console.log('Starting syntax error fixes...');
   
   // Find all TypeScript and TSX files
   const patterns = [

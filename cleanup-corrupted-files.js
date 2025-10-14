@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Files to keep (essential files only)
+// Files to keep (essential files)
 const keepFiles = [
   'App.tsx',
   'app/page.tsx',
@@ -44,12 +44,6 @@ const keepFiles = [
   'app/loading.tsx',
   'app/global-error.tsx',
   'app/App.tsx',
-  'app/components/Navigation.tsx',
-  'app/components/Footer.tsx',
-  'app/components/Header.tsx',
-  'app/components/Sidebar.tsx',
-  'app/components/ErrorBoundary.tsx',
-  'app/components/Loading.tsx',
   'package.json',
   'tsconfig.json',
   'vite.config.ts',
@@ -58,9 +52,17 @@ const keepFiles = [
 
 // Directories to keep
 const keepDirs = [
+  'app/components',
+  'app/utils',
+  'app/hooks',
+  'app/contexts',
+  'app/constants',
+  'app/data',
+  'app/types',
+  'app/styles',
+  'src',
   'node_modules',
-  '.git',
-  'src'
+  '.git'
 ];
 
 // Function to check if a file should be kept
@@ -77,12 +79,21 @@ function shouldKeepFile(filePath) {
     }
   }
   
+  // Keep configuration files
+  if (filePath.endsWith('.json') || filePath.endsWith('.js') || filePath.endsWith('.ts') || filePath.endsWith('.css')) {
+    // But not if it's a page file that's corrupted
+    if (filePath.includes('/page.tsx') && !keepFiles.includes(filePath)) {
+      return false;
+    }
+    return true;
+  }
+  
   return false;
 }
 
-// Function to delete all corrupted files
-async function finalCleanup() {
-  console.log('Performing final cleanup...');
+// Function to delete corrupted files
+async function cleanupCorruptedFiles() {
+  console.log('Cleaning up corrupted files...');
   
   // Find all TypeScript and TSX files
   const patterns = [
@@ -117,8 +128,8 @@ async function finalCleanup() {
 
 // Main execution
 async function main() {
-  await finalCleanup();
-  console.log('Final cleanup completed!');
+  await cleanupCorruptedFiles();
+  console.log('Cleanup completed!');
 }
 
 main().catch(console.error);

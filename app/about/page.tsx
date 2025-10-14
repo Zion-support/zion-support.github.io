@@ -1,87 +1,114 @@
-export default function Page() {;
-import React from "react
-import { Helmet }    from "react-helmet-async
-      <Helmet></Helmet>"
-        <meta name="description" content="Professional services by Zion Tech Group."
-              </p>
-              <div className="flex items-center text-purple-400"><CheckCircle className="w-6 h-6 mr-2" />
-                <span className="font-semibold"
-              </div>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8"><div className="grid grid-cols-2 gap-6"><div className="text-center"><div className="text-3xl font-bold text-white mb-2"></div>500+</div>
-                  <div className="text-gray-400"></div>Projects Delivered</div>
-                </div>
-                <div className="text-center"><div className="text-3xl font-bold text-white mb-2"></div>100+</div>
-                  <div className="text-gray-400"></div>Happy Clients</div>
-                </div>
-                <div className="text-center"><div className="text-3xl font-bold text-white mb-2"></div>50+</div>
-                  <div className="text-gray-400"></div>Expert Team</div>
-                </div>
-                <div className="text-center"><div className="text-3xl font-bold text-white mb-2"></div>24/7</div>
-                  <div className="text-gray-400"
-                </div>
-              </div>
-            </div>
-          </div>
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight } from "lucide-react";
 
-        </div>
-      </section>
-      {/* Values Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto"><div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto"
-              The principles that guide everything we do
+export default function AboutPage() {
+  return (
+    <>
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              We are a leading technology company specializing in AI solutions, 
+              IT services, and digital transformation for businesses worldwide.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {values.map((value, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
-                <value.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300"
-              </div>)
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Team Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto"><div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto"
-              The experts behind our innovative solutions
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {team.map((member, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-slate-800/70 transition-all duration-300"></div>
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mx-auto mb-4 flex items-center justify-center"><Users className="w-10 h-10 text-white" />
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  To empower businesses with cutting-edge AI and technology solutions 
+                  that drive innovation, efficiency, and growth.
+                </p>
+                <div className="flex items-center text-purple-400">
+                  <CheckCircle className="w-6 h-6 mr-2" />
+                  <span className="font-semibold">Innovation First</span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                <p className="text-purple-400 mb-2">{member.role}</p>
-                <p className="text-gray-300 text-sm"
-              </div>)
-            ))}
+              </div>
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-2">500+</div>
+                    <div className="text-gray-400">Projects Delivered</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-2">100+</div>
+                    <div className="text-gray-400">Happy Clients</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-2">50+</div>
+                    <div className="text-gray-400">Expert Team</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                    <div className="text-gray-400">Support</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center"><div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Work With Us?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
-              Let'
+        </section>
+
+        {/* Values Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center">
+                <h3 className="text-2xl font-bold text-white mb-4">Innovation</h3>
+                <p className="text-gray-300">
+                  We constantly push the boundaries of technology to deliver 
+                  innovative solutions that exceed expectations.
+                </p>
+              </div>
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center">
+                <h3 className="text-2xl font-bold text-white mb-4">Quality</h3>
+                <p className="text-gray-300">
+                  We maintain the highest standards in everything we do, 
+                  ensuring reliable and robust solutions.
+                </p>
+              </div>
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center">
+                <h3 className="text-2xl font-bold text-white mb-4">Excellence</h3>
+                <p className="text-gray-300">
+                  We strive for excellence in every project, 
+                  delivering results that drive business success.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's work together to create innovative solutions that drive your success.
             </p>
-            <a
-              href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get In Touch
-              <ArrowRight className="ml-2 w-5 h-5"
-            </a>
+            <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
+  );
 }
