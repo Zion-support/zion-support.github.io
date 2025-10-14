@@ -28,7 +28,8 @@ import {
   Receipt,
   TrendingUp,
   Cpu,
-  Network
+  Network,
+  Calendar
 } from 'lucide-react';
 import FuturisticButton from './FuturisticButton';
 
