@@ -74,8 +74,8 @@ const AccessibilityEnhancer: React.FC = () => {
     const addAltText = () => {
       const images = document.querySelectorAll('img:not([alt])');
       images.forEach((img, index) => {
-        if (!img.getAttribute(&apos;alt&apos;)) {
-          img.setAttribute(&apos;alt&apos;, `Image ${index + 1}`);
+        if (!img.getAttribute('alt')) {
+          img.setAttribute('alt', `Image ${index + 1}`);
         }
       });
     };

@@ -41,7 +41,7 @@ title="5G Migration Services - Zion Tech Group"
             <div key={index} className="bg-white rounded-lg shadow-lg p-8">
               <div className="flexitems-center mb-4">
                 <CheckCircle className="h-8w-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold text-gray-900"></h3>
                   {service.title}
                 </h3>
               </div>

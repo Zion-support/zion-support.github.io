@@ -1091,7 +1091,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                   </div>
 
                   {/* Title and Description */}
-                  <h3 className="text-2xlfont-bold text-white mb-4 gradient-text group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-2xlfont-bold text-white mb-4 gradient-text group-hover:text-purple-400 transition-colors"></h3>
                     {product.title}
                   </h3>
                   <p className="text-gray-300mb-6 leading-relaxed">

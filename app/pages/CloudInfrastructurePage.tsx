@@ -110,7 +110,7 @@ const CloudInfrastructurePage: React.FC = () => {
             Ready to Scale in the Cloud?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our cloud infrastructure services can transform your business operations.
+            Let's discuss how our cloud infrastructure services can transform your business operations.
           </p>
           <div className="flexflex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">

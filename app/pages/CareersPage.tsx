@@ -18,7 +18,7 @@ const CareersPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 <<<<<<< HEAD
-            Be part of a team that&apos;s shaping the future of AI and IT solutions.
+            Be part of a team that's shaping the future of AI and IT solutions.
 =======
             Be part of a team that's shaping the future of AI and IT solutions.';
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17d
@@ -118,9 +118,9 @@ const CareersPage: React.FC = () => {
         <div className="text-center">
 <<<<<<< HEAD
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Don&apos;t See Your Perfect Role?</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>
             <p className="text-gray-300 mb-6">
-              We&apos;re always looking for talented individuals. Send us your resume and we&apos;ll keep you in mind for future opportunities.
+              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
             </p>
             <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
               Send Resume

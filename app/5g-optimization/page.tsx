@@ -58,7 +58,7 @@ const FiveGOptimizationPage: React.FC = () => {
               <div className="w-12h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
                 <CheckCircle className="w-6h-6 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4"></h3>
                 Performance Tuning
               </h3>
               <p className="text-gray-600">
@@ -70,7 +70,7 @@ const FiveGOptimizationPage: React.FC = () => {
               <div className="w-12h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
                 <CheckCircle className="w-6h-6 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4"></h3>
                 Capacity Planning
               </h3>
               <p className="text-gray-600">
@@ -82,7 +82,7 @@ const FiveGOptimizationPage: React.FC = () => {
               <div className="w-12h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
                 <CheckCircle className="w-6h-6 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4"></h3>
                 Cost Optimization
               </h3>
               <p className="text-gray-600">
