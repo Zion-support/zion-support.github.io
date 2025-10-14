@@ -4,11 +4,10 @@ const CloudInfrastructurePage: React.FC = () => {
   <>
     
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">"
-      <Helmet></Helmet>
+      <Helmet>
         <title>Cloud Infrastructure | Zion Tech Group</title>"
         <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />"
         <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />"
-      </Helmet>"
       <div className="container mx-auto px-4 py-16">"
         {/* Hero Section */}"
         <div className="text-center mb-16">"
@@ -56,10 +55,8 @@ const CloudInfrastructurePage: React.FC = () => {
 const CloudInfrastructurePage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
         <title>Cloud Infrastructure - Zion Tech Group</title>"
         <meta name="description" content="Professional cloud infrastructure services by Zion Tech Group." />"
-      </Helmet>"
       <div className="min-h-screen bg-white">"
         <div className="container mx-auto px-4 py-16">"
           <div className="text-center">"
@@ -99,8 +96,6 @@ const CloudInfrastructurePage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
                 Get Started Today
               </button>
-            </div>
-          </div>
 const CloudInfrastructurePage: React.FC = () => {
   return (
     <>

@@ -82,9 +82,7 @@ const MarketingToolsPage: React.FC = () => {
       <Helmet>
         <title>Marketing Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
-      </Helmet>
         <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
-      </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -136,9 +134,7 @@ const MarketingToolsPage: React.FC = () => {
                   <div className="text-5xl mb-4">{tool.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
                   <p>{tool.description}</p>
-                  <div>{tool.category}</div>
-                  </div>
-
+                  <div>{tool.category}
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">

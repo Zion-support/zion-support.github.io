@@ -148,9 +148,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-slate-700">"
           <div className="max-w-md mx-auto text-center">"
@@ -166,8 +163,6 @@ const Footer = () => {
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />"
               </button>
-            </div>
-          </div>
         </div>
 
       {/* Bottom Footer */}
@@ -189,11 +184,9 @@ const Footer = () => {
                   {social.icon}
                 </a>
               ))}
-            </div>
-          </div>
-        </div>
-      </div>
     </footer>
   )
 }
 export default Footer
+    </>
+  );

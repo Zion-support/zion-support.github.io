@@ -58,9 +58,7 @@ const GuidesPage: React.FC = () => {
       <Helmet>
         <title>Implementation Guides - Zion Tech Group</title>
         <meta name="description" content="Comprehensive guides for implementing AI, automation, and digital transformation solutions in your enterprise." />
-      </Helmet>
         <meta name="keywords" content="AI implementation, automation guides, digital transformation, enterprise solutions, technical guides" />
-      </Helmet>
       
       <div>{/* Navigation */}</div>
     </>

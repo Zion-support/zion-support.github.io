@@ -1,7 +1,6 @@
-      <Helmet></Helmet>
+      <Helmet>
         <title>Lazy Image - Zion Tech Group</title>
         <meta name="description" content="Professional lazy image services by Zion Tech Group." />
-      </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
@@ -49,8 +48,6 @@
                 className="$1"></a>
                 Contact Us
               </a>
-            </div>
-          </div>
         </div>
       </section>
             Ready to Get Started?
@@ -138,3 +135,5 @@ const LazyImage: React.FC<LazyImageProps> = ({
       )
     </div>
 export default LazyImage
+  );
+}

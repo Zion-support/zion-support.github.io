@@ -4,11 +4,10 @@ const AIServicesPage: React.FC = () => {
   <>
     
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <Helmet></Helmet>
+      <Helmet>
         <title>AI Services | Zion Tech Group</title>"
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation solutions." />"
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, automation, artificial intelligence" />"
-      </Helmet>"
       <div className="container mx-auto px-4 py-16">"
         {/* Hero Section */}"
         <div className="text-center mb-16">"
@@ -56,10 +55,8 @@ const AIServicesPage: React.FC = () => {
 const AIServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
         <title>AI Services - Zion Tech Group</title>"
         <meta name="description" content="Professional AI services by Zion Tech Group." />"
-      </Helmet>"
       <div className="min-h-screen bg-white">"
         <div className="container mx-auto px-4 py-16">"
           <div className="text-center">"
@@ -99,8 +96,6 @@ const AIServicesPage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
                 Get Started Today
               </button>
-            </div>
-          </div>
 const AIServicesPage: React.FC = () => {
   return (
     <>

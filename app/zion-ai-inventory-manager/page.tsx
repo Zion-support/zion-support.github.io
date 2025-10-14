@@ -4,21 +4,16 @@ import { Helmet } from "react-helmet-async";
 
 export default function Page() {
   return (
-
+    <>
       <Helmet>
-        <title>Zion Ai Inventory Manager - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Inventory Manager services and solutions from Zion Tech Group" />
-      </Helmet>
-      </Helmet>
-      
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page services and solutions from Zion Tech Group" />
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Zion Ai Inventory Manager</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Page</h1>
           <p className="text-xl text-gray-600">
-            This page is under development. Please check back soon for more information about our zion ai inventory manager services.
+            This page is under development. Please check back soon for more information about our page services.
           </p>
-        </div>
-      </div>
     </>
   );
 }

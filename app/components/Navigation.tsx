@@ -62,4 +62,5 @@ const Navigation: React.FC = () => {
         <h1 className="text-xl font-bold">Zion Tech Group</h1>"
         <div className="space-x-4"></div>"
     </>
-
+  );
+}

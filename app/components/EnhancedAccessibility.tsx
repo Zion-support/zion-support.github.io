@@ -1,236 +1,153 @@
-    reducedMotion: false,
-    screenReader: false
-  }
-  const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {
-    // Enhanced accessibility features
-    const addSkipLinks = () => {
-import React, { useEffect, useState } from "react
-const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighContrast] = useState(false)
-  const [isReducedMotion, setIsReducedMotion] = useState(false)
-  const [fontSize, setFontSize] = useState(16)
+'use client';
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
+
+const EnhancedAccessibility: React.FC = () => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
+
   useEffect(() => {
     // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches";'"
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches";'"
-    setIsReducedMotion(prefersReducedMotion)
-    setIsHighContrast(prefersHighContrast)
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    
+    setIsReducedMotion(prefersReducedMotion);
+    setIsHighContrast(prefersHighContrast);
+
     // Apply accessibility enhancements
     const applyAccessibilityEnhancements = () => {
       // Add skip links
-      const skipLink = document.createElement('a')";'"
-      skipLink.href = "#main-content
-      skipLink.textContent = "Skip to main content
-      skipLink.className = "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50
-      skipLink.style.cssText = `````
-        position: absolute
-        top: -40px
-        left: 6px
-        background: #8b5cf6
-        color: white
-        padding: 8px
-        text-decoration: none
-        border-radius: 4px
-        z-index: 1000
-        transition: top 0.3s
-      `;````
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px'"})"'"'"
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px'"})"'"'"
-      document.body.insertBefore(skipLink, document.body.firstChild)
-      const skipLink = document.createElement('a')
-      skipLink.href = '#main-content'
-      skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
-      document.body.insertBefore(skipLink, document.body.firstChild)
-    const enhanceFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style')
-      style.textContent = `````
-        *:focus {
-          outline: 2px solid #06b6d4 !important
-          outline-offset: 2px !important}
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+
       // Add ARIA landmarks
-          width: 1px
-          height: 1px
-          padding: 0
-          margin: -1px
-          overflow: hidden
-          clip: rect(0, 0, 0, 0)
-          white-space: nowrap
-          width: auto
-          height: auto
-          padding: 8px
-          margin: 0
-          overflow: visible
-          clip: auto
-          position: absolute
-          width: 1px
-          height: 1px
-          padding: 0
-          margin: -1px
-          overflow: hidden
-          clip: rect(0, 0, 0, 0)
-          white-space: nowrap
-          border: 0}
-      `````
-      document.head.appendChild(style)
-    const addAriaLabels = () => {
-      // Add ARIA labels to interactive elements
-      const buttons = document.querySelectorAll('button:not([aria-label])')
-      buttons.forEach((button) => {
-        if (!button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button')}'
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+        main.id = 'main-content';
       }
-    // Apply accessibility settings
-    applyAccessibilitySettings(settings)
-    // Listen for system preference changes
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const handleChange = () => {
-      setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))
-    mediaQuery.addEventListener('change', handleChange)";'"
-    const setupKeyboardNavigation = () => {// Enhanced keyboard navigation
-      document.addEventListener('keydown", (e) => {"'"'"
-        if (e.key === 'Tab") {"'"'"
-          document.body.classList.add('keyboard-navigation')"}"'"'"
-      }
-      document.addEventListener('mousedown", () => {"'"'"
-        document.body.classList.remove('keyboard-navigation')"})"'"'"
-    }
-    // Initialize accessibility enhancements
-    addSkipLinks()
-    enhanceFocusManagement()
-    addAriaLabels()
-    setupKeyboardNavigation()
-    applyAccessibilityEnhancements()
-    // Listen for preference changes
-    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')";'"
-    const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)')";'"
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      setIsReducedMotion(e.matches)
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-    const setupKeyboardNavigation = () => {
-      // Enhanced keyboard navigation
-      document.addEventListener('keydown', (e) => {'
-        if (e.key === 'Tab') {'
-          document.body.classList.add('keyboard-navigation')}'
-      }
-      document.addEventListener('mousedown', () => {'
-        document.body.classList.remove('keyboard-navigation')})}
-    // Initialize accessibility enhancements
-    addSkipLinks()
-    enhanceFocusManagement()
-    addAriaLabels()
-    setupKeyboardNavigation()
-    // Cleanup
-    return () => {
-      // Cleanup if needed}}, [])
-  useEffect(() => {
-    applyAccessibilitySettings(settings)
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])
-  const applyAccessibilitySettings = (settings: AccessibilitySettings) => {
-    const root = document.documentElement
-    // Apply high contrast
-    if (settings.highContrast) {
-    // Apply font size
-    root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')
-    if (settings.fontSize !== 'normal') {
-      root.classList.add(`font-size-${settings.fontSize}`)}````
-    // Apply reduced motion
-  // Add CSS for accessibility features
-  useEffect(() => {
-    const style = document.createElement('style')
-    style.id = 'enhanced-accessibility-styles'
-    style.textContent = `````
-      .high-contrast {
-        animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important }
-      .accessibility-panel { position: fixed
-        top: 50%
-        right: -300px
-        transform: translateY(-50%)
-        width: 300px
-        background: #1e293b
-        border: 1px solid #334155
-        border-radius: 8px 0 0 8px
-        padding: 1rem
-        z-index: 1000
-        transition: right 0.3s ease
-        color: white }
-      .accessibility-panel.visible { right: 0 }
-      .accessibility-toggle { position: fixed
-        top: 50%
-        right: 0
-        transform: translateY(-50%)
-        background: #8b5cf6
-        color: white
-        border: none
-        padding: 0.5rem
-        border-radius: 8px 0 0 8px
-        cursor: pointer
-        z-index: 1001
-        font-size: 0.875rem
-        writing-mode: vertical-rl
-    document.head.appendChild(style)
-    return () => {
-      const existingStyle = document.getElementById('enhanced-accessibility-styles')
-      if (existingStyle) {
-        existingStyle.remove()
-  }, [])
-        existingStyle.remove()
-    }}, [])
+    };
+
+    applyAccessibilityEnhancements();
+  }, []);
+
+  const toggleHighContrast = () => {
+    setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast');
+  };
+
+  const toggleReducedMotion = () => {
+    setIsReducedMotion(!isReducedMotion);
+    document.documentElement.classList.toggle('reduced-motion');
+  };
+
+  const increaseFontSize = () => {
+    setFontSize(prev => Math.min(prev + 2, 24));
+    document.documentElement.style.fontSize = `${fontSize + 2}px`;
+  };
+
+  const decreaseFontSize = () => {
+    setFontSize(prev => Math.max(prev - 2, 12));
+    document.documentElement.style.fontSize = `${fontSize - 2}px`;
+  };
+
   return (
-<>
-      <button></button>
-        ♿ A11y
-      </button>
-      <div className={`accessibility-panel ${isVisible ? 'visible' : '}`}>"`"`'"``'"`
-        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
-        <div className="space-y-4">
-          <div></div>
-    </>
-            <label className="flex items-center space-x-2">
-              <input
-              /></input>
-              <span>High Contrast</span>
-            </label>
-          </div>
-          <div></div>
-            <label className="block text-sm font-medium mb-2">Font Size</label>
-            <div className="space-y-2">
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => (
-                <label key={size} className="flex items-center space-x-2">
-                  <input
-                  /></input>
-                  <span className="capitalize">{size}</span>
-                </label>
-              )})
+    <>
+      <Helmet>
+        <title>Enhanced Accessibility - Zion Tech Group</title>
+        <meta name="description" content="Enhanced Accessibility services and solutions from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Enhanced Accessibility
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional accessibility enhancement services designed to make your applications more inclusive.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                WCAG Compliance
+              </h3>
+              <p className="text-blue-700">
+                Ensure your application meets WCAG 2.1 AA standards for accessibility.
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Screen Reader Support
+              </h3>
+              <p className="text-green-700">
+                Optimize your application for screen readers and assistive technologies.
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                Keyboard Navigation
+              </h3>
+              <p className="text-purple-700">
+                Implement comprehensive keyboard navigation for better accessibility.
+              </p>
             </div>
           </div>
-          <div></div>
-          >
-            Close
-          </button>
+
+          <div className="mt-12 bg-gray-50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Accessibility Controls</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={toggleHighContrast}
+                  className={`px-4 py-2 rounded-lg font-medium ${
+                    isHighContrast 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  {isHighContrast ? 'High Contrast On' : 'High Contrast Off'}
+                </button>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={toggleReducedMotion}
+                  className={`px-4 py-2 rounded-lg font-medium ${
+                    isReducedMotion 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  {isReducedMotion ? 'Reduced Motion On' : 'Reduced Motion Off'}
+                </button>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={decreaseFontSize}
+                  className="px-3 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+                >
+                  A-
+                </button>
+                <span className="text-sm text-gray-600">{fontSize}px</span>
+                <button
+                  onClick={increaseFontSize}
+                  className="px-3 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+                >
+                  A+
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  )
-export default EnhancedAccessibility
-  )
-export default EnhancedAccessibility
-    // Apply high contrast mode
-  useEffect(() => {
-    // Apply font size changes
-    document.documentElement.style.fontSize = `${fontSize}px`;````
-  }, [fontSize])
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Alt + M: Skip to main content
-      if (event.altKey && event.key === 'm') {
-        event.preventDefault()
-        const mainContent = document.getElementById('main-content')";'"
-        if (mainContent) {}
-      // Alt + H: Go to home
-export default EnhancedAccessibility
+    </>
+  );
+};
+
+export default EnhancedAccessibility;

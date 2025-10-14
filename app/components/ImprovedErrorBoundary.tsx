@@ -1,60 +1,19 @@
-            Improved Error Boundary
-          </h1>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional improved error boundary services
-            designed to help your business grow and succeed.
+'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>ImprovedErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="ImprovedErrorBoundary services and solutions from Zion Tech Group" />
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">ImprovedErrorBoundary</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our improvederrorboundary services.
           </p>
-        </div>
-      </section>
-      { /* Content Section */ }
-            Improved Error Boundary</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional improved error boundary services
-import React, { Component, ErrorInfo, ReactNode } from "react;
-import { AlertTriangle, RefreshCw, Home     } from "lucide-react;
-
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+    </>
+  );
 }
-
-interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId: string
-}
-
-class ImprovedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
-      errorId: 
-    }
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
-    }
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
-    })
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {'
-
-  )
-export default ImprovedErrorBoundary
-}
-export default ImprovedErrorBoundaryPage

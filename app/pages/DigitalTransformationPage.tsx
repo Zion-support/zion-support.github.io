@@ -4,11 +4,10 @@ const DigitalTransformationPage: React.FC = () => {
   <>
     
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">"
-      <Helmet></Helmet>
+      <Helmet>
         <title>Digital Transformation | Zion Tech Group</title>"
         <meta name="description" content="Comprehensive digital transformation services to modernize your business processes and technology infrastructure." />"
         <meta name="keywords" content="digital transformation, process automation, change management, digital strategy, innovation" />"
-      </Helmet>"
       <div className="container mx-auto px-4 py-16">"
         {/* Hero Section */}"
         <div className="text-center mb-16">"
@@ -56,10 +55,8 @@ const DigitalTransformationPage: React.FC = () => {
 const DigitalTransformationPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
         <title>Digital Transformation - Zion Tech Group</title>"
         <meta name="description" content="Transform your business with our digital transformation services." />"
-      </Helmet>"
       <div className="min-h-screen bg-white">"
         <div className="container mx-auto px-4 py-16">"
           <div className="text-center">"
@@ -99,8 +96,6 @@ const DigitalTransformationPage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
                 Get Started Today
               </button>
-            </div>
-          </div>
 const DigitalTransformationPage: React.FC = () => {
   return (
     <>

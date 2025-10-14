@@ -79,8 +79,6 @@ const HomePage = () => {
                 Explore Services
                 <ArrowRightIcon className="w-5 h-5 ml-2" />"
               </NeonButton>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -96,8 +94,6 @@ const HomePage = () => {
               View All Services
               <ArrowRightIcon className="w-5 h-5 ml-2" />"
             </NeonButton>
-          </div>
-        </div>
       </section>
 
       {/* About Section */}"
@@ -139,8 +135,6 @@ const HomePage = () => {
                 Learn More About Us
                 <ArrowRightIcon className="w-5 h-5 ml-2" />"
               </NeonButton>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -188,11 +182,11 @@ const HomePage = () => {
                 Schedule Demo
                 <ArrowRightIcon className="w-5 h-5 ml-2" />"
               </NeonButton>
-            </div>
-          </div>
         </div>
       </section>
     </div>
   )
 }
 export default HomePage;"
+  );
+}

@@ -41,3 +41,5 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       <Link to={to} className={classes}></Link>
         {children}
       </Link>
+    </>
+  );

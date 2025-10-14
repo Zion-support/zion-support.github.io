@@ -35,14 +35,9 @@ const CaseStudiesPage: React.FC = () => {
                             <div key={resultIndex} className="bg-white/5 rounded-lg p-4 text-center">
                           <Icon className="w-8 h-8 text-violet-400 mx-auto mb-2" />
                           <div className="text-2xl font-bold text-white mb-1">{result.value}</div>
-                          <div className="text-sm text-gray-400">{result.metric}</div>
-                        </div>
+                          <div className="text-sm text-gray-400">{result.metric}
                       )}
                     }
-                  </div>
-                </div>
-              </div>
-            </div>
           )})
         </div>
               Let us help you achieve similar results with our proven AI and IT solutions.
@@ -57,10 +52,9 @@ const CaseStudiesPage: React.FC = () => {
 const CaseStudiesPage: React.FC = () => {
   return (
 <>
-      <Helmet></Helmet>
+      <Helmet>
         <title>Case Studies - Zion Tech Group</title>"
         <meta name="description" content="Explore our successful projects and case studies at Zion Tech Group." />
-      </Helmet>"
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -100,15 +94,11 @@ const CaseStudiesPage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View All Case Studies
               </button>
-            </div>
-          </div>
 const CaseStudiesPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
         <title>CaseStudiesPage - Zion Tech Group</title>"
         <meta name="description" content="CaseStudiesPage - Zion Tech Group" />
-      </Helmet>"
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">CaseStudiesPage</h1>
@@ -125,3 +115,5 @@ export default function CaseStudiesPage() {
 
 }
 '"
+  );
+}

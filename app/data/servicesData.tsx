@@ -2,11 +2,20 @@
 
 export default function Page() {
   return ("
-<>"
-      <Helmet></Helmet>"
+<>
+      <Helmet>
+        <title>ServicesData - Zion Tech Group</title>
+        <meta name="description" content="ServicesData services and solutions from Zion Tech Group" />
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">ServicesData</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our servicesdata services.
+          </p>
+        </div>
+      </div>"
         <title>Services Data - Zion Tech Group</title>"
         <meta name="description" content="Professional services data by Zion Tech Group." /></meta>"
-      </Helmet>"
       <div className="container mx-auto px-4 py-16"></div>
     </>"
         <div className="text-center"></div>
@@ -24,10 +33,10 @@ export default function Page() {
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>"
               Get Started Today
             </button>
-          </div>
-        </div>
       </div>
     </div>)}
   )
 }"
 "
+  );
+}

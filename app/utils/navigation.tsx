@@ -1,7 +1,6 @@
-      <Helmet></Helmet>
+      <Helmet>
         <title>- Zion Tech Group</title>
         <meta name="description" content="Professional navigation services by Zion Tech Group." />"
-      </Helmet>
       <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">"
@@ -39,10 +38,6 @@
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
               Get Started Today
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
             Professional navigation solutions tailored to your business needs.</p>"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
@@ -59,15 +54,11 @@
               <h3 className="text-lg font-semibold text-purple-900 mb-2">"
                 24/7 Support</h3>
               <p className="text-purple-700">"
-                Round-the-clock support for all your navigation needs.</p></div></div>
+                Round-the-clock support for all your navigation needs.</p>
           <div className="mt-12"></div>
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-              Get Started Today</button></div></div></div></div>
+              Get Started Today</button></div></div>
   )
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
   )}
 "

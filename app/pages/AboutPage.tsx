@@ -14,10 +14,9 @@ import {
 const AboutPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet>
         <title>About Us - Zion Tech Group</title>"
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />
-      </Helmet>
       
         {/* Hero Section */}"
         <div className="relative overflow-hidden">
@@ -36,4 +35,5 @@ const AboutPage: React.FC = () => {
                   <span className="text-gray-300">Innovation-driven approach</span>"
                 </div>"
                 <div className="flex items-start"></div>
-
+  );
+}
