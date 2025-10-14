@@ -6,11 +6,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import { AnalyticsProvider } from './app/contexts/AnalyticsContext.tsx';
-// import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-// import EnhancedSEO from './app/components/EnhancedSEO';
-// import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-// import ErrorBoundary from './app/components/ErrorBoundary';
-// import LoadingStates from './app/components/LoadingStates';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import EnhancedSEO from './app/components/EnhancedSEO';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import LoadingStates from './app/components/LoadingStates';
 
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';
@@ -83,7 +83,7 @@ const App: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return <LoadingSpinner />;
+    return <AdvancedLoadingStates type="spinner" fullScreen message="Loading application..." />;
   }
 
   return (
@@ -92,7 +92,7 @@ const App: React.FC = () => {
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer />
-            <SEOOptimizer
+            <EnhancedSEO
               title="Zion Tech Group - Advanced AI and IT Solutions"
               description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
               keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}

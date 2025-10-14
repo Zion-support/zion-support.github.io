@@ -1,5 +1,5 @@
 export const seoOptimizer = {
-  optimize: (data: { title?: string; description?: string keywords?: string }) => {
+  optimize: (data: { title?: string; description?: string; keywords?: string }) => {
     const optimized = { ...data }
     
     // Optimize title length
