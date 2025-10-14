@@ -52,67 +52,20 @@ import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
 import CookiesPage from './app/pages/CookiesPage';
+// TODO: Add lazy imports for components when they are created
+
 import SitemapPage from './app/pages/SitemapPage';
 
 // New Innovative Micro SAAS Services
-const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
-const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
-const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
-const ZionAIEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-analyzer/page"));
-const ZionSmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-smart-inventory-optimizer/page"));
-const ZionAICustomerSentimentTrackerPage = React.lazy(() => import("./app/zion-ai-customer-sentiment-tracker/page"));
-const ZionSmartExpenseCategorizerPage = React.lazy(() => import("./app/zion-smart-expense-categorizer/page"));
-const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice-assistant-pro/page"));
-const ZionAICodeReviewerPage = React.lazy(() => import("./app/zion-ai-code-reviewer/page"));
-const ZionAISocialMediaManagerPage = React.lazy(() => import("./app/zion-ai-social-media-manager/page"));
-const ZionAIContractAnalyzerPage = React.lazy(() => import("./app/zion-ai-contract-analyzer/page"));
-const ZionAIPerformanceOptimizerPage = React.lazy(() => import("./app/zion-ai-performance-optimizer/page"));
-const ZionAICustomerChurnPredictorPage = React.lazy(() => import("./app/zion-ai-customer-churn-predictor/page"));
-const ZionAISupplyChainOptimizerPage = React.lazy(() => import("./app/zion-ai-supply-chain-optimizer/page"));
-const ZionAIFinancialForecasterPage = React.lazy(() => import("./app/zion-ai-financial-forecaster/page"));
-const ZionAIContentModeratorPage = React.lazy(() => import("./app/zion-ai-content-moderator/page"));
-const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translator-pro/page"));
-const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
-const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
-const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
 // 5G Solutions Pages
-const FiveGSolutionsPageLazy = React.lazy(() => import("./app/5g-solutions/page"));
-const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
-const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
-const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
-const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
-const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
-const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
-const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
-const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
 // Additional AI Services Pages
-const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
-const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
-const AIDesignStudioPage = React.lazy(() => import("./app/ai-design-studio/page"));
-const AIComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
-const AIConversationalAIPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
-const AICRMPage = React.lazy(() => import("./app/ai-crm/page"));
-const AICustomerInsightsPage = React.lazy(() => import("./app/ai-customer-insights/page"));
-const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualization/page"));
-const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
-const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
 
 // New Advanced AI Services
-const AIBusinessIntelligenceProPage = React.lazy(() => import("./app/ai-business-intelligence-pro/page"));
-const AICybersecuritySuiteProPage = React.lazy(() => import("./app/ai-cybersecurity-suite-pro/page"));
 
 // Additional IT Services Pages
-const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
-const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
-const DisasterRecoveryPage = React.lazy(() => import("./app/disaster-recovery/page"));
-const ITSupportPage = React.lazy(() => import("./app/it-support/page"));
-const ManagedServicesPage = React.lazy(() => import("./app/managed-services/page"));
-const SecurityAuditPage = React.lazy(() => import("./app/security-audit/page"));
-const TechnologyConsultingPage = React.lazy(() => import("./app/technology-consulting/page"));
 
 function App() {
-  
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = useCallback(() => {
@@ -124,28 +77,30 @@ function App() {
   }, []);
 
   useEffect(() => {
-// Performance monitoring
-if (typeof window !== 'undefined') {
-  // Monitor Core Web Vitals
-  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-    onCLS(console.log);
-    onFCP(console.log);
-    onLCP(console.log);
-    onTTFB(console.log);
-  });
+    // Performance monitoring
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+        onCLS(console.log);
+        onFCP(console.log);
+        onLCP(console.log);
+        onTTFB(console.log);
+      });
 
-  // Monitor bundle size
-  const observer = new PerformanceObserver((list) => {
-    for (const entry of list.getEntries()) {
-      if (entry.entryType === 'navigation') {
-        const navEntry = entry as PerformanceNavigationTiming;
-        console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
-      }
+      // Monitor bundle size
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
     }
-  });
-  observer.observe({ entryTypes: ['navigation'] });
-}
+  }, []);
 
+  useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       console.log('Zion Tech Group App initialized');
@@ -153,7 +108,6 @@ if (typeof window !== 'undefined') {
   }, []);
 
   return (
-    
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
@@ -188,21 +142,10 @@ if (typeof window !== 'undefined') {
                     <Route path="/careers" element={<CareersPage />} />
                     
                     {/* New Innovative Micro SAAS Services */}
-<<<<<<< HEAD
-                    <Route path="/ai-powered-email-analyzer" element={<AIPoweredEmailAnalyzerPage />} />
-                    <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
-                    <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
-                    <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+                    {/* TODO: Add micro SaaS service routes when components are created */}
                     
                     {/* Advanced AI Services */}
-                    <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
-                    <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
-=======
-                    <Route path="/ai-powered-email-analyzer" element={<ZionAIEmailAnalyzerPage />} />
-                    <Route path="/smart-inventory-optimizer" element={<ZionSmartInventoryOptimizerPage />} />
-                    <Route path="/ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
-                    <Route path="/smart-expense-categorizer" element={<ZionSmartExpenseCategorizerPage />} />
->>>>>>> cursor/fix-errors-and-merge-to-main-38d5
+                    {/* TODO: Add advanced AI service routes when components are created */}
 
                     {/* Catch all route */}
                     <Route path="*" element={

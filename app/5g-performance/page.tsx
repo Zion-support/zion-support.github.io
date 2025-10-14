@@ -116,5 +116,5 @@ const Page = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+
+export default Page;

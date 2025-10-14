@@ -8,7 +8,7 @@ import { Zap } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Target } from 'lucide-react';
 
-function HomePage() {
+function Page() {
   const features = [
     {
       icon: Brain,
@@ -41,11 +41,6 @@ function HomePage() {
       link: "/micro-saas"
     }
   ];
-
-<<<<<<< HEAD
-=======
-function Page() {
->>>>>>> cursor/fix-errors-and-merge-to-main-38d5
   return (
     <>
       <Helmet>
@@ -123,5 +118,4 @@ function Page() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default Page;

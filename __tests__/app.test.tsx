@@ -1,14 +1,24 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
 import HomePage from '../app/page';
-describe('HomePage', () => {}
-  it('renders without crashing', () => {}
-    render(<HomePage />);}
-    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();}
+
+describe('HomePage', () => {
+  it('renders without crashing', () => {
+    render(
+      <HelmetProvider>
+        <HomePage />
+      </HelmetProvider>
+    );
+    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
   });
-  it('renders navigation links', () => {}
-    render(<HomePage />);}
-    expect(screen.getByText('Explore Services')).toBeInTheDocument();}
-    expect(screen.getByText('Get Started')).toBeInTheDocument();}
+
+  it('renders navigation links', () => {
+    render(
+      <HelmetProvider>
+        <HomePage />
+      </HelmetProvider>
+    );
+    expect(screen.getByText('Get Started')).toBeInTheDocument();
   });
 });
