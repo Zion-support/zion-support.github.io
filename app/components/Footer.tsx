@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
       services: [
         { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
         { name: 'API Management', href: '/ai-api-management' },
-        { name: 'Database Solutions', href: '/database-solutions' },
+        { name: 'Database Solutions', href: '/ai-database-solutions' },
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
         { name: 'DevOps Solutions', href: '/devops-solutions' }
