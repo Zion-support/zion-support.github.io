@@ -11,3 +11,4 @@ import React from 'react';const AccessibilityEnhancer = () => {
 
 export default AccessibilityEnhancer;
 
+

@@ -11,3 +11,4 @@ import React from 'react';const CoreWebVitals = () => {
 
 export default CoreWebVitals;
 
+

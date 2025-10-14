@@ -11,3 +11,4 @@ import React from 'react';const ResponsiveText = () => {
 
 export default ResponsiveText;
 
+

@@ -16,3 +16,4 @@ import { Helmet } from "react-helmet-async";const PrivacyPage = () => {
 export default PagePage;</div>
 
 
+

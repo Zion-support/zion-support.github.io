@@ -11,3 +11,4 @@ import React from 'react';const AnimatedCard = () => {
 
 export default AnimatedCard;
 
+
