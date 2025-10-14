@@ -1,1 +1,64 @@
-'use client'; import React, {create Context, use Context, use Effect, React Node }from 'react'; interface Analytics Context Type {track Event: (event Name: string, parameters?: Record<string, any> )=> void; track Page View: (page Name: string, page Path: string )=> void; }const Analytics Context = create Context<Analytics Context Type | undefined> (undefined ); export const use Analytics = ( )=> {const context = use Context (Analytics Context ); if (!context ){throw new Error ('use Analytics must be used within an Analytics Provider' ); }return context; }; interface Analytics Provider Props {children: React Node; }export const Analytics Provider: React.FC<Analytics Provider Props> = ({children } )=> {use Effect ( ( )=> {// Initialize Google Analytics if available if (typeof window !== 'undefined' && 'gtag' in window ){const gtag = (window as {gtag: (command: string, target Id: string, config?: any )=> void } ).gtag; // Configure Google Analytics gtag ('config', 'GA_MEASUREMENT_ID', {page_title: document.title, page_location: window.location.href } ); } }, [ ]); const track Event = (event Name: string, parameters: Record<string, any> = { } )=> {if (typeof window === 'undefined' )return; // Google Analytics if ('gtag' in window ){const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, any> )=> void } ).gtag; gtag ('event', event Name, {event_category: parameters.category || 'engagement', event_label: parameters.label, value: parameters.value, ...parameters } ); }// Console logging for development if (process.env.NODE_ENV === 'development' ){console.log ('Analytics Event:', event Name, parameters ); } }; const track Page View = (page Name: string, page Path: string )=> {if (typeof window === 'undefined' )return; // Google Analytics if ('gtag' in window ){const gtag = (window as {gtag: (command: string, target Id: string, config: any )=> void } ).gtag; gtag ('config', 'GA_MEASUREMENT_ID', {page_title: page Name, page_location: window.location.origin + page Path } ); }// Console logging for development if (process.env.NODE_ENV === 'development' ){console.log ('Page View:', page Name, page Path ); } }; const value: Analytics Context Type= {track Event, track Page View }; return (<Analytics Context.Provider value= {value }> {children }</Analytics Context.Provider> ); };
+import React, { create Context, use Context, React Node } from 'react'
+
+
+interface Analytics Context Type {
+  track Event: (event Name: string, properties?: Record<string, unknown>) => void
+  track Page View: (page Name: string, properties?: Record<string, unknown>) => void
+  identify User: (user Id: string, properties?: Record<string, unknown>) => void
+}
+  )
+const Analytics Context = create Context<Analytics Context Type | undefined>(undefined)
+interface Analytics Provider Props {
+  children: React Node
+}
+  )
+export const Analytics Provider: React.FC<Analytics Provider Props> = ({ children }) => {
+  const track Event = (event Name: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_EN V === 'development') {
+      console.warn('Event tracked: ', event Name, properties)
+    }
+  )
+    // Add your analytics tracking logic here
+  }
+  )
+  const track Page View = (page Name: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_EN V === 'development') {
+      console.warn('Page view tracked: ', page Name, properties)
+    }
+  )
+    // Add your page view tracking logic here
+  }
+  )
+  const identify User = (user Id: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_EN V === 'development') {
+      console.warn('User identified: ', user Id, properties)
+    }
+  )
+    // Add your user identification logic here
+  }
+  )
+  const value: Analytics Context Type = {
+    track Event
+    track Page View
+    identify User
+  }
+  )
+  return (
+    <div>
+    <Analytics Context.Provider value={value}>
+      {children}
+  )
+    </Analytics Context.Provider>
+  )
+}
+  )
+export const use Analytics = () => {
+  const context = use Context(Analytics Context)
+  if (context === undefined) {
+    throw new Error('use Analytics must be used within an Analytics Provider')
+  }
+  )
+  return context
+}
+  )
+export default Analytics;; Provider

@@ -1,53 +1,58 @@
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Target, Rocket } from 'lucide-react'
 
-const MicroSaasSolutionsPage: React.FC = () => {
+
+
+
+const Micro Saas Solutions Page: React.FC = () => {
   return (
     <>
+      <div>
       <Helmet>
-        <title>Micro Saas Solutions</title>
-        <meta name="description" content="Professional micro saas solutions solutions and services" />
-        <meta name="keywords" content="micro, saas, solutions" />
+        <title>Micro Saa S Solutions - Zion Tech Group</title>
+        <meta name="description" content="Scalable micro Saa S solutions for modern businesses" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Micro Saas Solutions</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional micro saas solutions solutions and services
+        
+          <div className="text-center mb-16">
+        
+            <h1>
+          
+              Micro Saa S Solutions
+            </h1>
+            <p>
+          
+              Scalable micro Saa S solutions tailored to your business needs
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
           </div>
+          
+          <div className="gridmd:grid-cols-2 gap-8">
+        
+            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
+        
+              <Rocket className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xl font-semiboldtext-whitemb-3">Rapid Development</h3>
+              <p>
+          
+                Fast-track your Saa S product development with our expert team.
+              </p>
+            </div>
+            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
+        
+              <Target className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xl font-semiboldtext-whitemb-3">Targeted Solutions</h3>
+              <p>
+          
+                Focused solutions for specific business challenges.
+              </p>
+            </div>
         </div>
-      </div>
-    </div> 
-          </div> 
     </>
-  )}; export default MicroSaasSolutionsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3e4e
+  )
+  }
+  )
+export default Micro;; Saas Solutions Page

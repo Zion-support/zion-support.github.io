@@ -1,55 +1,67 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 
+
+
+const FiveG Infrastructure Page: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <EnhancedSEO
-        title="5G Infrastructure - Zion Tech Group"
-        description="Professional 5G infrastructure services by Zion Tech Group. Expert solutions for your business needs."
-      />
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            5G Infrastructure
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert guidance for your 5g infrastructure transformation journey
-          </p>
-        </div>
+    <>
+      <div>
+      <Helmet>
+        <title>5G Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G infrastructure solutions and services" />
+        <meta name="keywords" content="5g, infrastructure" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {service.description}
-              </p>
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-              >
-                Learn More
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-          ))}
-        </div>
+        <div className="containermx-auto px-4 py-16">
         
-        <div className="text-center">
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-          >
-            Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-        </div>
+          <div className="text-center">
+        
+            <h1 className="text-4xlfont-bold text-white mb-8">5G Infrastructure</h1>
+            <p>
+          
+              Professional 5G infrastructure solutions and services
+            </p>
+            <div className="gridmd:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        
+              <div className="bg-blue-50border border-blue-200 rounded-lg p-6">
+        
+                <h3>
+          
+                  Expert Solutions
+                </h3>
+                <p>
+          
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50border border-green-200 rounded-lg p-6">
+        
+                <h3>
+          
+                  Custom Implementation
+                </h3>
+                <p>
+          
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50border border-purple-200 rounded-lg p-6">
+        
+                <h3>
+          
+                  24/7 Support
+                </h3>
+                <p>
+          
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+          </div>
       </div>
-    </div>
-  );
-};
-
-export default FiveGInfrastructurePage;
+    </>
+  )
+  }
+  )
+export default FiveG;; Infrastructure Page

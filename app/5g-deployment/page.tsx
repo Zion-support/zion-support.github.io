@@ -1,69 +1,87 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from 'react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
+
+
+
+
 
 const FiveGDeploymentPage = () => {
+  
   const services = [
     {
-      title: '5G Deployment Strategy',
-      description: 'Comprehensive 5g deployment strategies tailored to your business needs.',
-    },
+      title: "Service 1"
+      description: "Description 1"
+    }
     {
-      title: 'Security Assessment',
-      description: 'Complete security evaluation for 5g deployment implementation.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Expert training for your team on 5g deployment technologies and best practices.',
-    },
-  ];
-
-const FiveGDeployment: React.FC = () => {
+      title: "Service 2"
+      description: "Description 2"
+    }
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
-      <EnhancedSEO
-        title="5G Deployment - Zion Tech Group"
-        description="Professional 5G deployment services by Zion Tech Group. Expert solutions for your business needs."
+        
+      <EnhancedSEO 
+title="5G Deployment Services - Zion TechGroup"
+        description="Professional 5G deployment services to implement next-generation wirelessnetworks."
       />
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            5G Deployment
+      <div className="containermx-auto px-4 py-16">
+        
+        <div className="text-center mb-16">
+        
+          <h1>
+          
+            5G Deployment Services
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert guidance for your 5g deployment transformation journey
+          <p>
+          
+            Deploy 5G networks with confidence using our proven deployment methodologies.
           </p>
         </div>
+
+        <div className="gridmd:grid-cols-3 gap-8 mb-16">
         
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-4">
+            <div key={index} className="bg-whiterounded-lg shadow-lg p-8">
+              <div className="flexitems-center mb-4">
+        
+                <CheckCircle className="h-8 w-8 text-blue-600 mr-3" />
+                <h3>
+          
+                  {service.title}
+  )
+                </h3>
+              </div>
+              <p>
+          
                 {service.description}
+  )
               </p>
               <Link 
                 to="/contact" 
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
                 Learn More
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
           ))}
+  )
         </div>
         
         <div className="text-center">
+        
           <Link 
-            to="/contact" 
-            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+            to="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
-            Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
+            Get Started Today
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+        </div>
     </div>
-  );
-};
-
-export default FiveGDeploymentPage;
+  )
+  }
+  )
+export default FiveG;; Deployment Page

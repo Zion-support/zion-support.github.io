@@ -1,55 +1,57 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 
+
+
+const FiveG Smart City Solutions Page: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <EnhancedSEO
-        title="5G Smart City Solutions - Zion Tech Group"
-        description="Professional 5G smart city solutions by Zion Tech Group. Expert solutions for your business needs."
-      />
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            5G Smart City Solutions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert guidance for your 5g smart city solutions transformation journey
-          </p>
-        </div>
+    <>
+      <div>
+      <Helmet>
+        <title>5g smart city solutions - Zion Tech Group</title>
+        <meta name="description" content="Professional 5g smart city solutions solutions and services" />
+        <meta name="keywords" content="5g, smart, city, solutions" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
         
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {service.description}
-              </p>
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-              >
-                Learn More
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+        <div className="container mx-auto px-4 py-16">
+        
+          <div className="text-center">
+        
+            <h1 className="text-4xl font-bold text-white mb-8">5g smart city solutions</h1>
+            <p>
+          
+              Professional 5g smart city solutions solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+        
+                <h3>
+          
+                  Expert Solutions
+                </h3>
+                <p>
+          
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+                </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+        
+                <p>
+          
+                  Tailored implementations for your specific requirements.
+              </p><div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+        
+                <p>
+          
+                  Round-the-clock support for all your needs.
+              </div>
             </div>
-          ))}
-        </div>
-        
-        <div className="text-center">
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-          >
-            Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-        </div>
+          </div>
       </div>
-    </div>
-  );
-};
-
-export default FiveGSmartCitySolutionsPage;
+    </>
+  )
+  }
+  )
+export default FiveG;; Smart City Solutions Page

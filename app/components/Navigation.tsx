@@ -1,190 +1,138 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDownIcon, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
+import React, { use State } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
 
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
-  const toggleServicesMenu = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
 
-  const toggleSolutionsMenu = () => {
-    setIsSolutionsOpen(!isSolutionsOpen);
-  };
-
-  const isActive = (path: string) => {
-    return window.location.pathname === path;
-  };
-
-  const navigation = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: Globe
-    },
-    {
-      name: 'Services',
-      href: '/services',
-      icon: Zap,
-      submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cloud Services', href: '/cloud-services' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Web Development', href: '/web-development' }
-      ]
-    },
-    {
-      name: 'Solutions',
-      href: '/solutions',
-      icon: Code,
-      submenu: [
-        { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
-        { name: 'Mobile Apps', href: '/mobile-apps' },
-        { name: 'Data Analytics', href: '/data-analytics' },
-        { name: 'IoT Solutions', href: '/iot-solutions' }
-      ]
-    },
-    {
-      name: 'About',
-      href: '/about',
-      icon: Shield
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: Smartphone
-    }
-  ];
-
+export default function;; Navigation() {
+  const  = use State(false)
+  const  = use State(false)
+  
+  const toggle Menu = () => {
+    set Is Open(!is Open)
+  }
+  )
+  const toggle Services = () => {
+    set Is Services Open(!is Services Open)
+  }
+  )
   return (
+    <div>
     <nav className="bg-slate-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="flex justify-between h-16">
+        
           <div className="flex items-center">
-            <Link to="/" className="flex shrink-0 flex items-center">
-              <div className="h-8 w-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
+        
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+        
+                <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="ml-2 text-white text-xl font-bold">Zion Tech Group</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                {item.submenu ? (
-                  <div className="relative">
-                    <button
-                      onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
-                      className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                    >
-                      <item.icon className="w-5 h-5 mr-2" />
-                      {item.name}
-                      <ChevronDownIcon className="w-4 h-4 ml-1" />
-                    </button>
-                    {/* Desktop Dropdown */}
-                    <div className={`absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50 ${(item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'block' : 'hidden'}`}>
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                          onClick={() => {
-                            setIsServicesOpen(false);
-                            setIsSolutionsOpen(false);
-                          }}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'}`}
-                  >
-                    <item.icon className="w-5 h-5 mr-2" />
-                    {item.name}
+  )
+          <div className="hidden md:flex items-center space-x-8">
+        
+            <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              About
+            </Link>
+            
+            {/* Services Dropdown */}
+  )
+            <div className="relative">
+        
+              <button
+                on Click={toggle Services}
+  )
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+              >
+                Services
+                <Chevron Down className="ml-1 h-4 w-4" />
+              </button>
+              
+              {is Services Open && (
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+        
+                  <Link to="/ai-solutions" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Zap className="mr-2 h-4 w-4" />
+                    A I Solutions
                   </Link>
-                )}
-              </div>
-            ))}
+                  <Link to="/cloud-solutions" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Cloud className="mr-2 h-4 w-4" />
+                    Cloud Solutions
+                  </Link>
+                  <Link to="/cybersecurity" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Shield className="mr-2 h-4 w-4" />
+                    Cybersecurity
+                  </Link>
+                  <Link to="/web-development" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Globe className="mr-2 h-4 w-4" />
+                    Web Development
+                  </Link>
+                  <Link to="/database-solutions" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Database className="mr-2 h-4 w-4" />
+                    Database Solutions
+                  </Link>
+                  <Link to="/mobile-apps" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Smartphone className="mr-2 h-4 w-4" />
+                    Mobile Apps
+                  </Link>
+                </div>
+              )}
+  )
+            </div>
+
+            <Link to="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Contact
+            </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
+  )
+          <div className="md:hidden flex items-center">
+        
             <button
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
+              on Click={toggle Menu}
+  )
+              className="text-gray-300 hover:text-white p-2 rounded-md"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {is Open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+  )
             </button>
           </div>
-        </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800">
-              {navigation.map((item) => (
-                <div key={item.name}>
-                  {item.submenu ? (
-                    <div>
-                      <button
-                        onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
-                        className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium w-full text-left"
-                      >
-                        <item.icon className="w-5 h-5 mr-2" />
-                        {item.name}
-                        <ChevronDownIcon className="w-4 h-4 ml-1" />
-                      </button>
-                      {(item.name === 'Services' ? isServicesOpen : isSolutionsOpen) && (
-                        <div className="pl-4 space-y-1">
-                          {item.submenu.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.href}
-                              className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
-                              onClick={() => {
-                                setIsOpen(false);
-                                setIsServicesOpen(false);
-                                setIsSolutionsOpen(false);
-                              }}
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`flex items-center px-3 py-2 rounded-md text-base font-medium ${isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'}`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <item.icon className="w-5 h-5 mr-2" />
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
+  )
+        {is Open && (
+          <div className="md:hidden">
+        
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
+        
+              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Home
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                About
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Services
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Contact
+              </Link>
             </div>
-          </div>
         )}
+  )
       </div>
 =======
 import React from 'react';
@@ -204,7 +152,6 @@ const,
           <Link to="/contact" className="hover:text-blue-400">Contact</Link>
         </div>      </div>
     </nav>
-  );
-};
-
-export default Navigation;
+  )
+}
+  )

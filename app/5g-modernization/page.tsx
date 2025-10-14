@@ -1,52 +1,86 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from 'react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 
+
+
+
+
+
+const FiveGModernizationPage = () => {
+  
+  const services = [
+    {
+      title: "Service 1"
+      description: "Description 1"
+    }
+    {
+      title: "Service 2"
+      description: "Description 2"
+    }
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
-      <EnhancedSEO
-        title="5G Modernization - Zion Tech Group"
-        description="Professional 5G modernization services by Zion Tech Group. Expert solutions for your business needs."
+        
+      <EnhancedSEO 
+title="5G Modernization Services - Zion TechGroup"
+        description="Professional 5G modernization services to upgrade your networkinfrastructure."
       />
       
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            5G Modernization
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert guidance for your 5g modernization transformation journey
-          </p>
-        </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="text-center mb-16">
+        
+          <h1>
+          
+            5G Modernization Services
+          </h1>
+          <p>
+          
+            Modernize your network infrastructure with cutting-edge 5G technology.
+          </p>
+          </div>
+        <div className="gridmd:grid-cols-3 gap-8 mb-16">
+        
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-4">
+            <div key={index} className="bg-whiterounded-lgshadow-lgp-8">
+              </div><div className="flexitems-centermb-4">
+        
+                <CheckCircle className="h-8 w-8 text-blue-6 0 0mr-3" />
+                <h3>
+          
+                  {service.title}
+  )
+                </h3>
+                </div>
+              <p>
+          
                 {service.description}
+  )
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flex items-centertext-blue-60 0hover:text-blue-8 0 0font-medium"
               >
                 Learn More
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 h-4w-4" />
               </Link>
+              </div>
           ))}
-        </div>
-        
+  )
         <div className="text-center">
+        
           <Link 
-            to="/contact" 
-            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+            to="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparenttext-basefont-mediumrounded-mdtext-whitebg-blue-6 0 0hover:bg-blue-7 0 0"
           >
-            Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
+            Get Started Today
+            <ArrowRight className="ml-2 h-5w-5" />
           </Link>
-    </div>
-  );
-};
-
-export default FiveGModernizationPage;
+      </div>
+  )
+}
+  )
+export default FiveG;; Modernization Page
