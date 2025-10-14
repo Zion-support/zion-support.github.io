@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const EnhancedSEO = () => {
+export default function EnhancedSEO() {
   return (
     <div>
-      <h2>EnhancedSEO</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>EnhancedSEO</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default EnhancedSEO;
+}

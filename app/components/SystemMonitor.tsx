@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const SystemMonitor = () => {
+export default function SystemMonitor() {
   return (
     <div>
-      <h2>SystemMonitor</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>SystemMonitor</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default SystemMonitor;
+}

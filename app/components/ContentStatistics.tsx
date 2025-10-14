@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const ContentStatistics = () => {
+export default function ContentStatistics() {
   return (
     <div>
-      <h2>ContentStatistics</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>ContentStatistics</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default ContentStatistics;
+}

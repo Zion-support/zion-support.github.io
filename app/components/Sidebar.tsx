@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const Sidebar = () => {
+export default function Sidebar() {
   return (
     <div>
-      <h2>Sidebar</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>Sidebar</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default Sidebar;
+}

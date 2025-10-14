@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -17,7 +17,7 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
     
     const measurePerformance = () => {
       const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize;
       
       setMetrics({
         loadTime,
@@ -32,20 +32,7 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
     return () => clearTimeout(timeoutId);
   }, []);
 
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        console.log('Performance entry:', entry);
-      }
-    });
-
-    observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  return { measurePerformance };
+  return metrics;
 };
+
+export default usePerformanceMonitor;

@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const FuturisticButtonEnhanced = () => {
+export default function FuturisticButtonEnhanced() {
   return (
     <div>
-      <h2>FuturisticButtonEnhanced</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>FuturisticButtonEnhanced</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default FuturisticButtonEnhanced;
+}

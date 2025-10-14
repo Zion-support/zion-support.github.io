@@ -1,15 +1,19 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-
-
-
 export default function Page() {
   return (
-        <React.Fragment>
+    <React.Fragment>
       <Helmet>
-
         <title>Cloud Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud infrastructure services by Zion Tech Group." />      </Helmet>      <div>        <div>
+        <meta name="description" content="Professional cloud infrastructure services by Zion Tech Group." />
+      </Helmet>
+      <div>
+        <div>
+          <h1>Cloud Infrastructure</h1>
+          <p>Professional cloud infrastructure services by Zion Tech Group.</p>
+        </div>
+      </div>
+    </React.Fragment>
   );
 }

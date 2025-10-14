@@ -10,8 +10,8 @@ export default function Page() {
       </Helmet>
       <div>
         <div>
-          <h1 className="text-4xl font-bold text-white mb-4">Ad Management</h1>
-          <p className="text-gray-300">Coming soon...</p>
+          <h1>Ad Management</h1>
+          <p>Professional ad management services.</p>
         </div>
       </div>
     </React.Fragment>

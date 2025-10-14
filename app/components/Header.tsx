@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const Header = () => {
+export default function Header() {
   return (
     <div>
-      <h2>Header</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>Header</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default Header;
+}

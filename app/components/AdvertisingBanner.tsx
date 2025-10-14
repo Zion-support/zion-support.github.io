@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const AdvertisingBanner = () => {
+export default function AdvertisingBanner() {
   return (
     <div>
-      <h2>AdvertisingBanner</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>AdvertisingBanner</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default AdvertisingBanner;
+}

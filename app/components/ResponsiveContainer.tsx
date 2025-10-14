@@ -1,12 +1,10 @@
 import React from 'react';
 
-const ResponsiveContainer = () => {
+export default function ResponsiveContainer() {
   return (
     <div>
-      <h2>ResponsiveContainer</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>ResponsiveContainer</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default ResponsiveContainer;
+}

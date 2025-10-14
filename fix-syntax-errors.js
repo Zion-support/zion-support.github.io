@@ -9,79 +9,83 @@ import { glob } from 'glob';
 function fixSyntaxErrors(content, filePath) {
   let fixed = content;
   
-  // Fix unterminated string literals in JSX attributes
-  fixed = fixed.replace(/content="([^"]*?)(?=\s*\/>)/g, (match, content) => {
-    if (!content.endsWith('"')) {
-      return `content="${content}"`;
-    }
-    return match;
-  });
+  // Fix unterminated string literals
+  fixed = fixed.replace(/content="([^"]*?)(?:\n|$)/g, 'content="$1" />');
   
-  // Fix malformed JSX closing tags
-  fixed = fixed.replace(/<\/[^>]*>\s*;\s*$/gm, '');
+  // Fix JSX parsing errors - remove stray characters
+  fixed = fixed.replace(/\}\s*;\s*\}\s*;\s*\}\s*;/g, '}');
+  fixed = fixed.replace(/\}\s*;\s*\}\s*;\s*\}\s*\)\s*;/g, '}');
+  fixed = fixed.replace(/\}\s*;\s*\}\s*;\s*\)\s*;/g, '}');
+  fixed = fixed.replace(/\}\s*;\s*\)\s*;/g, '}');
   
-  // Fix multiple closing braces and semicolons
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*}\s*;\s*}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*$/gm, '}');
+  // Fix malformed JSX elements
+  fixed = fixed.replace(/<(\w+)\s*>\s*<\/\1>\s*<(\w+)\s*>/g, '<$1>');
+  fixed = fixed.replace(/<\/\w+>\s*<\w+\s*>/g, '');
   
-  // Fix malformed JSX structure
-  fixed = fixed.replace(/<(\w+)>\s*<\/\1>\s*<(\w+)>/g, '<$2>');
+  // Fix broken JSX structure
+  fixed = fixed.replace(/\}\s*\)\s*;\s*\)\s*;\s*\)\s*;\s*\)\s*;/g, '}');
+  fixed = fixed.replace(/\}\s*\)\s*;\s*\)\s*;\s*\)\s*;\s*\)\s*\)\s*;/g, '}');
   
-  // Fix missing closing tags in JSX
+  // Fix missing closing tags
   fixed = fixed.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
   
-  // Fix broken JSX expressions
-  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;\s*\)\s*;\s*\)\s*;\s*$/gm, ')');
-  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;\s*\)\s*;\s*$/gm, ')');
-  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;\s*$/gm, ')');
-  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*$/gm, ')');
-  fixed = fixed.replace(/\)\s*;\s*$/gm, ')');
+  // Fix broken function declarations
+  fixed = fixed.replace(/export default function\s+(\w+)\s*\(\s*\)\s*\{\s*'([^']*?)'\s*return\s*\(/g, 'export default function $1() {\n  return (');
   
-  // Fix malformed function declarations
-  fixed = fixed.replace(/export default function (\w+)\(\)\s*{\s*'([^']*)'\s*return\s*\(/g, 'export default function $1() {\n  return (');
+  // Fix malformed return statements
+  fixed = fixed.replace(/\}\s*'([^']*?)'\s*return\s*\(/g, '}\n  return (');
   
-  // Fix broken JSX structure in specific patterns
-  fixed = fixed.replace(/<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment><(\w+)>/g, '<$1>');
+  // Fix broken JSX fragments
+  fixed = fixed.replace(/<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g, '<React.Fragment>');
   
-  // Fix malformed Helmet tags
-  fixed = fixed.replace(/<\/Helmet>\s*<div>\s*<div>\s*}/g, '</Helmet>\n      <div>\n        <div>\n        </div>\n      </div>\n    </React.Fragment>\n  );');
+  // Fix broken closing tags
+  fixed = fixed.replace(/<\/\w+>\s*;\s*<\/\w+>\s*;\s*<\/\w+>\s*;\s*<\/\w+>/g, '</div>');
   
-  // Fix broken return statements
-  fixed = fixed.replace(/return\s*\(\s*<(\w+)>\s*\)\s*;\s*<\/\1>/g, 'return (\n    <$1>\n    </$1>\n  );');
+  // Fix malformed imports
+  fixed = fixed.replace(/import\s+React\s+from\s+"react";\s*\n\s*\n\s*\n\s*import/g, 'import React from "react";\nimport');
   
-  // Fix malformed JSX in App.tsx specifically
+  // Fix broken JSX structure in App.tsx
   if (filePath.includes('App.tsx')) {
-    fixed = fixed.replace(/<HelmetProvider>\s*<\/HelmetProvider><Router>\s*\)\s*;\s*\)\s*;\s*\)\s*;\s*\)\s*;\s*\)\s*;\s*<div/g, '<HelmetProvider>\n      <Router>\n        <div');
-    fixed = fixed.replace(/<\/Router><Header \/>\s*<main>\s*<\/Header><Routes>\s*<\/Routes><Route/g, '          <Header />\n          <main>\n            <Routes>\n              <Route');
-    fixed = fixed.replace(/<\/Route><Route/g, '</Route>\n              <Route');
-    fixed = fixed.replace(/<\/Routes>\s*;\s*<\/main>\s*<\/Route><Footer \/>\s*<\/div>\s*<\/Router>\s*;\s*<\/HelmetProvider>\s*;\s*\)\s*;\s*}\s*;\s*export default App;\s*<\/Footer>/g, '            </Routes>\n          </main>\n          <Footer />\n        </div>\n      </Router>\n    </HelmetProvider>\n  );\n}\n\nexport default App;');
+    fixed = fixed.replace(/<HelmetProvider>\s*<\/HelmetProvider><Router>/g, '<HelmetProvider>\n      <Router>');
+    fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;\s*<div/g, '>\n        <div');
+    fixed = fixed.replace(/<\/Router><Header \/>/g, '          <Header />');
+    fixed = fixed.replace(/<\/Header><Routes>/g, '          <Routes>');
+    fixed = fixed.replace(/<\/Routes><Route/g, '            <Route');
+    fixed = fixed.replace(/<\/Route><Route/g, '            </Route>\n            <Route');
+    fixed = fixed.replace(/<\/Route><Route/g, '            </Route>\n            <Route');
+    fixed = fixed.replace(/<\/Route><Route/g, '            </Route>\n            <Route');
+    fixed = fixed.replace(/<\/Route><Route/g, '            </Route>\n            <Route');
+    fixed = fixed.replace(/<\/Route><Route/g, '            </Route>\n            <Route');
+    fixed = fixed.replace(/<\/Route><Route/g, '            </Route>\n            <Route');
+    fixed = fixed.replace(/<\/Routes>;/g, '          </Routes>');
+    fixed = fixed.replace(/<\/Route><Footer \/>/g, '            </Route>\n          </Routes>\n          <Footer />');
+    fixed = fixed.replace(/<\/div>\s*<\/Router>;/g, '        </div>\n      </Router>');
+    fixed = fixed.replace(/<\/HelmetProvider>;/g, '    </HelmetProvider>');
+    fixed = fixed.replace(/export default App;<\/Footer>/g, 'export default App;');
   }
   
-  // Fix 404.tsx specifically
+  // Fix 404.tsx
   if (filePath.includes('404.tsx')) {
     fixed = fixed.replace(/<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">\s*\)\s*;\s*<div/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">\n      <div');
-    fixed = fixed.replace(/<\/div>\s*}\s*;\s*}\s*;\s*}\s*;\s*}\s*;\s*}\s*;\s*\)\s*;\s*}\s*;\s*$/g, '</div>\n    </div>\n  );\n}');
+    fixed = fixed.replace(/\}\s*;\s*\}\s*;\s*\}\s*;\s*\)\s*;\s*\}\s*;/g, '}\n    </div>\n  </div>\n);\n}');
+  }
+  
+  // Fix ad-management page
+  if (filePath.includes('ad-management/page.tsx')) {
+    fixed = fixed.replace(/export default function Page\(\) \{\s*'\s*return\s*\(/g, 'export default function Page() {\n  return (');
+    fixed = fixed.replace(/<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g, '<React.Fragment>');
+    fixed = fixed.replace(/<Helmet>\s*<title>Ad Management - Zion Tech Group<\/title>\s*<meta name="description"content="Professional ad management services by Zion Tech Group\.\s*" \/>\s*<\/Helmet>\s*<div>\s*<div>\s*\}\s*;\s*\}\s*;\s*\}\s*;/g, 
+      '<Helmet>\n        <title>Ad Management - Zion Tech Group</title>\n        <meta name="description" content="Professional ad management services by Zion Tech Group." />\n      </Helmet>\n      <div>\n        <div>\n          <h1>Ad Management</h1>\n          <p>Professional ad management services.</p>\n        </div>\n      </div>\n    </React.Fragment>\n  );\n}');
   }
   
   return fixed;
 }
 
-// Function to fix specific page files
-function fixPageFile(content, filePath) {
-  let fixed = content;
-  
-  // Common pattern for page files
-  const pagePattern = /export default function Page\(\)\s*{\s*'\s*return\s*\(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment><Helmet>/;
-  
-  if (pagePattern.test(fixed)) {
-    // Extract the title from the file path
-    const fileName = path.basename(filePath, '.tsx');
-    const pageTitle = fileName.split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content, filePath);
     
     fixed = `import React from "react";
 import { Helmet } from "react-helmet-async";
@@ -109,8 +113,11 @@ export default function Page() {
   return fixed;
 }
 
-// Main function to process all files
-function processFiles() {
+// Main execution
+function main() {
+  console.log('Starting syntax error fixes...');
+  
+  // Get all TypeScript and JSX files
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
@@ -118,42 +125,22 @@ function processFiles() {
     '__tests__/**/*.ts'
   ];
   
-  let totalFiles = 0;
-  let fixedFiles = 0;
+  let totalFixed = 0;
   
   patterns.forEach(async pattern => {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    
+    const files = await glob(pattern);
     files.forEach(file => {
-      totalFiles++;
-      const filePath = path.join(process.cwd(), file);
-      
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        const originalContent = content;
-        
-        // Apply fixes
-        content = fixSyntaxErrors(content, file);
-        
-        // Apply page-specific fixes
-        if (file.includes('/page.tsx') || file.includes('/page.ts')) {
-          content = fixPageFile(content, file);
-        }
-        
-        // Only write if content changed
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content, 'utf8');
-          console.log(`Fixed: ${file}`);
-          fixedFiles++;
-        }
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
+      if (processFile(file)) {
+        totalFixed++;
       }
     });
   });
   
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
+  console.log(`Fixed ${totalFixed} files`);
 }
 
-// Run the fix
-processFiles();
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { fixSyntaxErrors, processFile };

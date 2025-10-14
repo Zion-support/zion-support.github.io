@@ -5,13 +5,17 @@ export default function Page() {
   return (
     <div>
       <Helmet>
-
-  );
-        <title>PagePage - Zion Tech Group</title>
-        <meta name="description" content="PagePage - Zion Tech Group" />      </Helmet>            <div>
+        <title>Ai Healthcare Diagnostics - Zion Tech Group</title>
+        <meta name="description" content="Professional ai healthcare diagnostics services by Zion Tech Group." />
+      </Helmet>
+      <div>
         <div>
-          <h1 className="text-4xl font-bold text-white mb-8">PagePage</h1>          <p className="text-gray-300 text-lg">"            This page is under construction. Please check back later.          </p>        </div>
+          <h1 className="text-4xl font-bold text-white mb-8">Ai Healthcare Diagnostics</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 }

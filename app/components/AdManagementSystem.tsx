@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const AdManagementSystem = () => {
+export default function AdManagementSystem() {
   return (
     <div>
-      <h2>AdManagementSystem</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>AdManagementSystem</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default AdManagementSystem;
+}

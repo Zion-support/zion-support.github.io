@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const MobileNavigation = () => {
+export default function MobileNavigation() {
   return (
     <div>
-      <h2>MobileNavigation</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>MobileNavigation</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default MobileNavigation;
+}

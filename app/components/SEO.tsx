@@ -1,19 +1,10 @@
-import React from 'react';
+import React from "react";
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-}
-
-const SEO: React.FC<SEOProps> = ({ title, description }) => {
+export default function SEO() {
   return (
     <div>
-      <h2>SEO</h2>
-      <p>This component is under construction.</p>
-      {title && <p>Title: {title}</p>}
-      {description && <p>Description: {description}</p>}
+      <h1>SEO</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default SEO;
+}

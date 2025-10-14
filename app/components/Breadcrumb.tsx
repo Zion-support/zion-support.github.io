@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const Breadcrumb = () => {
+export default function Breadcrumb() {
   return (
     <div>
-      <h2>Breadcrumb</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>Breadcrumb</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default Breadcrumb;
+}

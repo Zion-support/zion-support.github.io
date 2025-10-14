@@ -1,15 +1,25 @@
-// Error tracking utility
-export const reportError = (error: Error, context?: Record<string, any>) => {
-  console.error('Error reported:', error, context);
-  // In a real application, this would send the error to an error tracking service
+// Error tracking utility for the application
+export const reportError = (error: Error, context?: string) => {
+  if (process.env.NODE_ENV === 'development') {
+    console.error(`[ERROR] ${context || 'Unknown context'}:`, error);
+  } else {
+    // In production, you would send this to an error tracking service
+    // like Sentry, LogRocket, etc.
+    console.error('Error reported:', error);
+  }
 };
 
 export const initErrorReporting = () => {
-  console.log('Error reporting initialized');
-  // In a real application, this would initialize error tracking services
+  if (typeof window !== 'undefined') {
+    // Initialize error reporting for client-side
+    window.addEventListener('error', (event) => {
+      reportError(event.error, 'Global error');
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      reportError(new Error(event.reason), 'Unhandled promise rejection');
+    });
+  }
 };
 
-export default {
-  reportError,
-  initErrorReporting
-};
+export default { reportError, initErrorReporting };

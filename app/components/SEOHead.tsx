@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const SEOHead = () => {
+export default function SEOHead() {
   return (
     <div>
-      <h2>SEOHead</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>SEOHead</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default SEOHead;
+}

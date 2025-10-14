@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-export default function NavigationBackup() {
+export default function Navigation-backup() {
   return (
     <div>
-      <h2>Navigation-backup</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>Navigation-backup</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default Navigation-backup;
+}

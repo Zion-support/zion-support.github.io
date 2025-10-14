@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const EnhancedSEOOptimizer = () => {
+export default function EnhancedSEOOptimizer() {
   return (
     <div>
-      <h2>EnhancedSEOOptimizer</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>EnhancedSEOOptimizer</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default EnhancedSEOOptimizer;
+}

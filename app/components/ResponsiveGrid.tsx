@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const ResponsiveGrid = () => {
+export default function ResponsiveGrid() {
   return (
     <div>
-      <h2>ResponsiveGrid</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>ResponsiveGrid</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default ResponsiveGrid;
+}

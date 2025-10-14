@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const PerformanceDashboard = () => {
+export default function PerformanceDashboard() {
   return (
     <div>
-      <h2>PerformanceDashboard</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>PerformanceDashboard</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default PerformanceDashboard;
+}

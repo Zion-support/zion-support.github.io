@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const GlobalErrorBoundary = () => {
+export default function GlobalErrorBoundary() {
   return (
     <div>
-      <h2>GlobalErrorBoundary</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <h1>GlobalErrorBoundary</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default GlobalErrorBoundary;
+}

@@ -1,18 +1,18 @@
-// Logger utility
+// Logger utility for the application
 export const logger = {
   debug: (message: string, ...args: any[]) => {
     if (process.env.NODE_ENV === 'development') {
-      console.debug(message, ...args);
+      console.debug(`[DEBUG] ${message}`, ...args);
     }
   },
   info: (message: string, ...args: any[]) => {
-    console.info(message, ...args);
+    console.info(`[INFO] ${message}`, ...args);
   },
   warn: (message: string, ...args: any[]) => {
-    console.warn(message, ...args);
+    console.warn(`[WARN] ${message}`, ...args);
   },
   error: (message: string, ...args: any[]) => {
-    console.error(message, ...args);
+    console.error(`[ERROR] ${message}`, ...args);
   }
 };
 
