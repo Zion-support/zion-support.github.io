@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface AdvancedLoadingStatesProps {
   type?: string;
@@ -6,7 +6,11 @@ interface AdvancedLoadingStatesProps {
   message?: string;
 }
 
-const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ type = 'spinner', fullScreen, message }) => {
+const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ 
+  type = 'spinner', 
+  fullScreen, 
+  message 
+}) => {
   const getLoadingIcon = () => {
     switch (type) {
       case 'pulse':

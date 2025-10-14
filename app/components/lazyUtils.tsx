@@ -1,16 +1,14 @@
-import React, { lazy, ComponentType } from 'react';
+import React, { lazy, ComponentType, ComponentProps } from 'react';
 import LazyWrapper from './LazyWrapper';
 
 // Higher-order component for lazy loading
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function withLazyLoading<T extends ComponentType<any>>(
+export function withLazyLoading<T extends ComponentType<Record<string, unknown>>>(
   Component: T,
   fallback?: React.ReactNode
 ) {
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (props: any) => (
+  return (props: ComponentProps<T>) => (
     <LazyWrapper fallback={fallback}>
       <LazyComponent {...(props as Record<string, unknown>)} />
     </LazyWrapper>
@@ -18,15 +16,13 @@ export function withLazyLoading<T extends ComponentType<any>>(
 }
 
 // Utility function to create lazy-loaded components
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function createLazyComponent<T extends ComponentType<any>>(
+export function createLazyComponent<T extends ComponentType<Record<string, unknown>>>(
   importFunction: () => Promise<{ default: T }>,
   fallback?: React.ReactNode
 ) {
   const LazyComponent = lazy(importFunction);
   
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (props: any) => (
+  return (props: ComponentProps<T>) => (
     <LazyWrapper fallback={fallback}>
       <LazyComponent {...(props as Record<string, unknown>)} />
     </LazyWrapper>

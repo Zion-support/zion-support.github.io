@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react';
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate: () => void;
+  onMetricsUpdate: (metrics: {
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number;
+  }) => void;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
