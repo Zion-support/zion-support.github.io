@@ -14,12 +14,12 @@ import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
 const TestComponent = () => <div>Test component</div>;
 
 describe('AdvancedErrorBoundary', () => {
-  const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-    if (shouldThrow) {
-      throw new Error('Test error');
-    }
-    return <div>No error</div>;
-  };
+  // const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  //   if (shouldThrow) {
+  //     throw new Error('Test error');
+  //   }
+  //   return <div>No error</div>;
+  // };
 
   it('should catch errors and display fallback UI', () => {
     const { getByText } = render(
