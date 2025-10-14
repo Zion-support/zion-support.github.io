@@ -9,6 +9,7 @@ export const performanceMonitoring = {
     
     const measure = performance.getEntriesByName(name)[0];
     if (measure) {
+      // eslint-disable-next-line no-console
       console.log(`${name} took ${measure.duration.toFixed(2)}ms`);
       
       // Send to analytics

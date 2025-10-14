@@ -1,5 +1,5 @@
 export const errorTracking = {
-  track: (error: Error, context?: Record<string, any>) => {
+  track: (error: Error, context?: Record<string, unknown>) => {
     const errorInfo = {
       message: error.message,
       stack: error.stack,
@@ -9,6 +9,7 @@ export const errorTracking = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('Error tracked:', errorInfo);
     }
     

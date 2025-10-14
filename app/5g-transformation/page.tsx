@@ -92,4 +92,5 @@ function FiveGTransformationPage() {
   );
 }
 
-export default FiveGTransformationPage;
+const page = React.lazy(() => import('./page'));
+export default page;

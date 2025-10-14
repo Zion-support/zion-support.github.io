@@ -18,9 +18,10 @@ export const enhancedErrorHandler = {
     };
   },
   
-  handleApiError: (error: any) => {
-    const status = error.response?.status;
-    const message = error.response?.data?.message || error.message;
+  handleApiError: (error: unknown) => {
+    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+    const status = errorWithResponse.response?.status;
+    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     
     switch (status) {
       case 400:

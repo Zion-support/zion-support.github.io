@@ -92,4 +92,5 @@ function FiveGTrainingPage() {
   );
 }
 
-export default FiveGTrainingPage;
+const page = React.lazy(() => import('./page'));
+export default page;

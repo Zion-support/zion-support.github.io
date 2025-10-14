@@ -92,4 +92,5 @@ function FiveGSecurityPage() {
   );
 }
 
-export default FiveGSecurityPage;
+const page = React.lazy(() => import('./page'));
+export default page;

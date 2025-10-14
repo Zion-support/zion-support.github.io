@@ -92,4 +92,5 @@ function FiveGReliabilityPage() {
   );
 }
 
-export default FiveGReliabilityPage;
+const page = React.lazy(() => import('./page'));
+export default page;

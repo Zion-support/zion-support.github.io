@@ -92,4 +92,5 @@ function FiveGPerformancePage() {
   );
 }
 
-export default FiveGPerformancePage;
+const page = React.lazy(() => import('./page'));
+export default page;

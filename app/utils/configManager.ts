@@ -6,7 +6,7 @@ interface Config {
     seo: boolean;
     performance: boolean;
   };
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export const configManager = {
@@ -21,13 +21,23 @@ export const configManager = {
   } as Config,
   
   get: (key: string) => {
-    return key.split('.').reduce((obj, k) => obj?.[k], configManager.config);
+    return key.split('.').reduce((obj: unknown, k: string) => {
+      if (obj && typeof obj === 'object' && k in obj) {
+        return (obj as Record<string, unknown>)[k];
+      }
+      return undefined;
+    }, configManager.config);
   },
   
-  set: (key: string, value: any) => {
+  set: (key: string, value: unknown) => {
     const keys = key.split('.');
     const lastKey = keys.pop();
-    const target = keys.reduce((obj, k) => obj[k] = obj[k] || {}, configManager.config);
+    const target = keys.reduce((obj: Record<string, unknown>, k: string) => {
+      if (!(k in obj)) {
+        obj[k] = {};
+      }
+      return obj[k] as Record<string, unknown>;
+    }, configManager.config as Record<string, unknown>);
     if (lastKey) {
       target[lastKey] = value;
     }

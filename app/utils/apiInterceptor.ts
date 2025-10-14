@@ -1,22 +1,25 @@
 export const apiInterceptor = {
-  request: (config: any) => {
+  request: (config: Record<string, unknown>) => {
     // Add auth token if available
     const token = localStorage.getItem('authToken');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
+    if (token && config.headers && typeof config.headers === 'object') {
+      (config.headers as Record<string, string>).Authorization = `Bearer ${token}`;
     }
     return config;
   },
   
-  response: (response: any) => {
+  response: (response: unknown) => {
     return response;
   },
   
-  error: (error: any) => {
-    if (error.response?.status === 401) {
-      // Handle unauthorized access
-      localStorage.removeItem('authToken');
-      window.location.href = '/login';
+  error: (error: unknown) => {
+    if (error && typeof error === 'object' && 'response' in error) {
+      const errorWithResponse = error as { response?: { status?: number } };
+      if (errorWithResponse.response?.status === 401) {
+        // Handle unauthorized access
+        localStorage.removeItem('authToken');
+        window.location.href = '/login';
+      }
     }
     return Promise.reject(error);
   }

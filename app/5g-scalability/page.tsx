@@ -92,4 +92,5 @@ function FiveGScalabilityPage() {
   );
 }
 
-export default FiveGScalabilityPage;
+const page = React.lazy(() => import('./page'));
+export default page;

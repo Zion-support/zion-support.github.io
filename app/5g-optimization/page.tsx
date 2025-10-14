@@ -92,4 +92,5 @@ function FiveGOptimizationPage() {
   );
 }
 
-export default FiveGOptimizationPage;
+const page = React.lazy(() => import('./page'));
+export default page;
