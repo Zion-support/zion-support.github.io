@@ -101,17 +101,13 @@ export default defineConfig({
             // Other vendor libraries
             return "vendor";
           }
-<<<<<<< HEAD
           // App chunks - split by feature
           if (id.includes('/app/')) {
             // Split by page categories
             if (id.includes('/ai-') || id.includes('/5g-')) {
               return 'feature-pages';
             }
-          }
-          // App chunks
-          if (id.includes("/app/")) {
-            return "app";
+            return 'app';
           }
           return undefined;
         },
