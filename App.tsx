@@ -34,24 +34,6 @@ const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => {
   );
 };
 
-// Main router component
-const AppRouter: React.FC = () => {
-  const location = useLocation();
-  
-  return (
-    <main className="relative z-10" id="main-content" role="main">
-      <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="text-white text-xl">Loading application...</div></div>}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<DynamicPageLoader pagePath={location.pathname} />} />
-        </Routes>
-      </Suspense>
-    </main>
-  );
-};
 
 // Router content component that has access to location
 const RouterContent: React.FC = () => {
