@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -116,10 +115,6 @@ const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) =>
   ];
 
   const isActive = (href: string) => location.pathname === href;
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> cursor/fix-errors-and-merge-to-main-71c6
 
   return (
     <>
@@ -271,8 +266,4 @@ import { Helmet } from "react-helmet-async";
   );
 };
 
-<<<<<<< HEAD
 export default ImprovedSidebar;
-=======
-export default ImprovedSidebarPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-71c6
