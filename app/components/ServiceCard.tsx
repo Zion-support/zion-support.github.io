@@ -1,29 +1,10 @@
-<<<<<<< HEAD
-import React from "react";
-
+import React from 'react'
 const ServiceCard: React.FC = () => {
   return (
-    <div>
-      <h2>ServiceCard</h2>
-      <p>Component implementation coming soon.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">ServiceCard</h2>
+      <p className="text-gray-300">This is the ServiceCard component.</p>
     </div>
-  );
-};
-
-export default ServiceCard;
-=======
-import React from 'react';
-
-export default function ServiceCardPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">ServiceCard</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about servicecard</p>
-        </div>
-      </div>
-    </div>
-  );
+  )
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
+export default ServiceCard

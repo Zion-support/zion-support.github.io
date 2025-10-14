@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-import React from "react";
-
-const LoadingPage = () => {
+import React from 'react'
+const Loading: React.FC = () => {
   return (
-    <div>
-      <h1>Loading...</h1>
-      <p>Please wait while we load the content.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">Loading</h2>
+      <p className="text-gray-300">This is the Loading component.</p>
     </div>
-  );
-};
-
-export default LoadingPage;
-=======
-// loading - Basic implementation
-export default function loading() {
-  return null;
+  )
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
+export default Loading

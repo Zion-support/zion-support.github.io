@@ -1,19 +1,12 @@
-<<<<<<< HEAD
-import React from "react";
+import React from 'react';
 
-const GlobalErrorPage = () => {
+const GlobalError: React.FC = () => {
   return (
-    <div>
-      <h1>Global Error</h1>
-      <p>Something went wrong globally.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">GlobalError</h2>
+      <p className="text-gray-300">This is the GlobalError component.</p>
     </div>
   );
 };
 
-export default GlobalErrorPage;
-=======
-// global-error - Basic implementation
-export default function globalError() {
-  return null;
-};
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
+export default GlobalError;

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const EnhancedFooter = () => {
+const EnhancedFooter: React.FC = () => {
   return (
-    <div>
-      <h1>Enhanced Footer</h1>
-      <p>This is an enhanced footer component.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">Enhanced Footer</h2>
+      <p className="text-gray-300">This is the enhanced footer component.</p>
     </div>
   );
 };

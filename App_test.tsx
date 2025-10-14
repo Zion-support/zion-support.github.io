@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-import React from "react";
-
-const AppTest = () => {
-  return (
-    <div>
-      <h1>App Test</h1>
-      <p>This is a test app component.</p>
-=======
 import React from 'react';
 
-const App: React.FC = () => {
+const AppTest: React.FC = () => {
   return (
-    <div className="App">
-      <h1>Test App</h1>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">App Test</h1>
+          <p className="text-gray-300 text-xl mb-8">This is the test app component.</p>
+        </div>
+      </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default AppTest;
-=======
-export default App;
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

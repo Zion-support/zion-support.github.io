@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Function to create a clean page component
 function createCleanPageComponent(pageName) {
@@ -46,45 +46,54 @@ export default function ${componentName}({ children, className = '' }: ${compone
 
 // Function to fix all broken files
 function fixAllBrokenFiles() {
-  const appDir = path.join(__dirname, 'app');
+  const appDir = path.join(__dirname, "app");
   let fixedCount = 0;
 
   function walkDir(dir) {
     const files = fs.readdirSync(dir);
-    
+
     for (const file of files) {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
-      
+
       if (stat.isDirectory()) {
         walkDir(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
         try {
-          let content = fs.readFileSync(filePath, 'utf8');
-          
+          let content = fs.readFileSync(filePath, "utf8");
+
           // Check if file is severely broken
-          if (content.includes('JSX expressions must have one parent element') || 
-              content.includes('Declaration or statement expected') ||
-              content.includes('Expression expected') ||
-              content.includes('Expected ";" but found') ||
-              content.includes('Unexpected token') ||
-              content.includes('Unterminated string literal') ||
-              content.includes('Missing closing') ||
-              content.includes('Cannot find name') ||
-              content.length < 100) {
-            
+          if (
+            content.includes("JSX expressions must have one parent element") ||
+            content.includes("Declaration or statement expected") ||
+            content.includes("Expression expected") ||
+            content.includes('Expected ";" but found') ||
+            content.includes("Unexpected token") ||
+            content.includes("Unterminated string literal") ||
+            content.includes("Missing closing") ||
+            content.includes("Cannot find name") ||
+            content.length < 100
+          ) {
             // Extract component/page name from path
-            const pathParts = filePath.split('/');
-            const fileName = pathParts[pathParts.length - 1].replace(/\.(tsx|ts)$/, '');
-            const componentName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, '');
-            
-            if (filePath.includes('/page.tsx')) {
-              const pageName = pathParts[pathParts.length - 2].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            const pathParts = filePath.split("/");
+            const fileName = pathParts[pathParts.length - 1].replace(
+              /\.(tsx|ts)$/,
+              "",
+            );
+            const componentName = fileName
+              .replace(/-/g, " ")
+              .replace(/\b\w/g, (l) => l.toUpperCase())
+              .replace(/\s/g, "");
+
+            if (filePath.includes("/page.tsx")) {
+              const pageName = pathParts[pathParts.length - 2]
+                .replace(/-/g, " ")
+                .replace(/\b\w/g, (l) => l.toUpperCase());
               content = createCleanPageComponent(pageName);
             } else {
               content = createCleanComponent(componentName);
             }
-            
+
             fs.writeFileSync(filePath, content);
             console.log(`Fixed: ${filePath}`);
             fixedCount++;
@@ -97,10 +106,12 @@ function fixAllBrokenFiles() {
   }
 
   walkDir(appDir);
-  
+
   // Fix root files
   const rootFiles = [
-    { file: 'App.tsx', content: `import React, { Suspense } from 'react';
+    {
+      file: "App.tsx",
+      content: `import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -160,8 +171,11 @@ function App() {
   );
 }
 
-export default App;` },
-    { file: 'main.tsx', content: `import React from 'react';
+export default App;`,
+    },
+    {
+      file: "main.tsx",
+      content: `import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
@@ -169,7 +183,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);` }
+);`,
+    },
   ];
 
   for (const { file, content } of rootFiles) {
@@ -180,7 +195,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       fixedCount++;
     }
   }
-  
+
   console.log(`\nFixed ${fixedCount} files`);
 }
 

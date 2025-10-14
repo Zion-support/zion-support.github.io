@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-import React from "react";
-
+import React from 'react'
 const AccessibilityEnhancer: React.FC = () => {
   return (
-    <div>
-      <h2>AccessibilityEnhancer</h2>
-      <p>Component implementation coming soon.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">AccessibilityEnhancer</h2>
+      <p className="text-gray-300">This is the AccessibilityEnhancer component.</p>
     </div>
-  );
-};
-=======
-import React, { ReactNode } from 'react';
-
-interface AccessibilityEnhancerProps {
-  children: ReactNode;
+  )
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
-
-export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
-  return (
-    <div className="accessibilityenhancer">
-      {children}
-    </div>
-  );
-}
+export default AccessibilityEnhancer

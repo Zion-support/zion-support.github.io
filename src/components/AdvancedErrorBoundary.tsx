@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -24,33 +24,36 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error("Error caught by boundary:", error, errorInfo);
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, retryCount: this.state.retryCount + 1 });
+    this.setState({
+      hasError: false,
+      error: undefined,
+      retryCount: this.state.retryCount + 1,
+    });
   };
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="error-boundary">
-          <h2>Something went wrong.</h2>
-          <details>
-            {this.state.error && this.state.error.toString()}
-          </details>
-          {this.props.enableRetry && (
-            <button onClick={this.handleRetry} className="retry-button">
-              Try Again
-            </button>
-          )}
-        </div>
+      return (
+        this.props.fallback || (
+          <div className="error-boundary">
+            <h2>Something went wrong.</h2>
+            <details>{this.state.error && this.state.error.toString()}</details>
+            {this.props.enableRetry && (
+              <button onClick={this.handleRetry} className="retry-button">
+                Try Again
+              </button>
+            )}
+          </div>
+        )
       );
     }
-
     return this.props.children;
   }
 }

@@ -1,13 +1,10 @@
-import React, { ReactNode } from 'react';
-
-interface MetaManagerProps {
-  children: ReactNode;
-}
-
-export default function MetaManager({ children }: MetaManagerProps) {
+import React from 'react'
+const MetaManager: React.FC = () => {
   return (
-    <div className="metamanager">
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">MetaManager</h2>
+      <p className="text-gray-300">This is the MetaManager component.</p>
     </div>
-  );
+  )
 }
+export default MetaManager

@@ -1,19 +1,12 @@
-<<<<<<< HEAD
-import React from "react";
+import React from 'react';
 
-const SitemapPage = () => {
+const SitemapPage: React.FC = () => {
   return (
-    <div>
-      <h1>Sitemap</h1>
-      <p>This is the sitemap page.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">SitemapPage</h2>
+      <p className="text-gray-300">This is the SitemapPage component.</p>
     </div>
   );
 };
 
 export default SitemapPage;
-=======
-// sitemap-page - Basic implementation
-export default function sitemapPage() {
-  return null;
-};
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

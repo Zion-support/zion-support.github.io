@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ErrorPage = () => {
+import React from 'react'
+const Error: React.FC = () => {
   return (
-    <div>
-      <h1>Error</h1>
-      <p>Something went wrong.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">Error</h2>
+      <p className="text-gray-300">This is the Error component.</p>
     </div>
-  );
-};
-
-export default ErrorPage;
-=======
-// error - Basic implementation
-export default function error() {
-  return null;
+  )
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
+export default Error

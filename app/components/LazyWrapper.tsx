@@ -1,24 +1,10 @@
-import React from "react";
-
-<<<<<<< HEAD
+import React from 'react'
 const LazyWrapper: React.FC = () => {
   return (
-    <div>
-      <h2>LazyWrapper</h2>
-      <p>Component implementation coming soon.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">LazyWrapper</h2>
+      <p className="text-gray-300">This is the LazyWrapper component.</p>
     </div>
-  );
-};
-=======
-interface LazyWrapperProps {
-  children: React.ReactNode;
+  )
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
-
-export default function LazyWrapper({ children }: LazyWrapperProps) {
-  return (
-    <div className="lazy-wrapper">
-      {children}
-    </div>
-  );
-}
+export default LazyWrapper
