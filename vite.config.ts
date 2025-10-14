@@ -1,9 +1,13 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
 export default defineConfig({
   plugins: [
     react({
       // Enable React Fast Refresh
       fastRefresh: true,
-      // Optimize JSX runtime
+    }),
   ],
   resolve: {
     alias: {
@@ -22,8 +26,9 @@ export default defineConfig({
       output: {
         manualChunks: (id) => {
           // Vendor chunks
+          if (id.includes('node_modules')) {
+            return 'vendor';
           }
-          // Page chunks for better code splitting
         },
         assetFileNames: (assetInfo) => {
           if (
@@ -43,7 +48,7 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: false, // Disable auto-open for CI/CD
+    open: false,
     cors: true,
     hmr: {
       overlay: true,
@@ -55,13 +60,9 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+    ],
   },
-  // Performance optimizations
-  define: {
-    __VUE_OPTIONS_API__: false,
-    __VUE_PROD_DEVTOOLS__: false,
-  },
-  // CSS optimizations
-  css: {
-    devSourcemap: true,
-  },
+});
