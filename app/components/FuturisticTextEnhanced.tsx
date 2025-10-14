@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const FuturisticTextEnhanced: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>Futuristic Text Enhanced - Zion Tech Group</title>
         <meta name="description" content="Professional futuristic text enhanced services by Zion Tech Group." />

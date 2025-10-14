@@ -60,8 +60,7 @@ const CloudInfrastructurePage: React.FC = () => {
         <meta name="keywords" content="cloud infrastructure, cloud migration, AWS, Azure, Google Cloud, DevOps, infrastructure as code" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">{/* Hero Section */}</div>
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-white mb-6">
@@ -86,8 +85,7 @@ const CloudInfrastructurePage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Our Cloud Services
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{services.map((service, index) => (</div>
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-white" />
@@ -116,8 +114,7 @@ const CloudInfrastructurePage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Why Choose Our Cloud Infrastructure Services?
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-center">
                   <div className="w-6 h-6 bg-green-500 rounded-full mr-4 flex-shrink-0"></div>
                   <span className="text-gray-300">{benefit}</span>

@@ -141,8 +141,7 @@ const TutorialsPage: React.FC = () => {
         <meta name="keywords" content="tutorials, courses, learning, AI tutorials, cloud computing, cybersecurity, digital transformation, online learning" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-white">{/* Hero Section */}</div>
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -183,16 +182,13 @@ const TutorialsPage: React.FC = () => {
             </div>
         </section>
 
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          {/* Filters */}
+        <div className="max-w-7xl mx-auto px-4 py-16">{/* Filters */}</div>
           <div className="mb-8">
-            <div className="flex flex-wrap gap-4 mb-6">
-              {/* Category Filter */}
+            <div className="flex flex-wrap gap-4 mb-6">{/* Category Filter */}</div>
               <div className="flex items-center space-x-2">
                 <FunnelIcon className="w-5 h-5 text-gray-500" />
                 <span className="text-gray-700 font-medium">Category:</span>
-                <div className="flex flex-wrap gap-2">
-                  {categories.map((category) => (
+                <div className="flex flex-wrap gap-2">{categories.map((category) => (</div>
                     <button
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
@@ -211,8 +207,7 @@ const TutorialsPage: React.FC = () => {
             {/* Level Filter */}
             <div className="flex items-center space-x-2">
               <span className="text-gray-700 font-medium">Level:</span>
-              <div className="flex flex-wrap gap-2">
-                {levels.map((level) => (
+              <div className="flex flex-wrap gap-2">{levels.map((level) => (</div>
                   <button
                     key={level.id}
                     onClick={() => setSelectedLevel(level.id)}
@@ -270,8 +265,7 @@ const TutorialsPage: React.FC = () => {
           )}
 
           {/* Tutorials Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredTutorials.map((tutorial) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredTutorials.map((tutorial) => (</div>
               <div key={tutorial.id} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                   <PlayIcon className="w-12 h-12 text-gray-500" />

@@ -165,8 +165,7 @@ const AIServices = () => {
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, analytics, cybersecurity" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
           <ResponsiveContainer>
@@ -178,8 +177,7 @@ const AIServices = () => {
                 Transform your business with cutting-edge AI solutions. From video generation to predictive analytics, 
                 we provide comprehensive AI services that drive innovation and growth.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
-                {stats.map((stat, index) => (
+              <div className="flex flex-wrap justify-center gap-4 mb-12">{stats.map((stat, index) => (</div>
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
                     <div className="text-2xl font-bold text-white">{stat.value}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
@@ -195,11 +193,9 @@ const AIServices = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI solutions are built with enterprise-grade technology and designed for scalability, security, and performance.
               </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <FuturisticCard key={index} className="text-center">
-                  <div className="text-purple-400 mb-4 flex justify-center">
-                    {feature.icon}
+                  <div className="text-purple-400 mb-4 flex justify-center">{feature.icon}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -215,12 +211,10 @@ const AIServices = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose from our comprehensive suite of AI services designed to meet your specific business needs.
               </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{aiServices.map((service, index) => (</div>
                 <FuturisticCard key={index} className={`${service.featured ? 'ring-2 ring-purple-400' : ''}`}>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-purple-400">
-                      {service.icon}
+                    <div className="text-purple-400">{service.icon}</div>
                     </div>
                     {service.featured && (
                       <div className="flex items-center text-yellow-400">

@@ -139,8 +139,7 @@ const PricingPage: React.FC = () => {
         <meta name="keywords" content="pricing, plans, AI solutions pricing, IT services pricing, cloud infrastructure pricing, enterprise solutions" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-white">{/* Hero Section */}</div>
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -180,15 +179,13 @@ const PricingPage: React.FC = () => {
         {/* Pricing Plans */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
+            <div className="grid md:grid-cols-3 gap-8">{plans.map((plan, index) => (</div>
                 <div
                   key={index}
                   className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                     plan.popular ? 'border-purple-500 scale-105' : 'border-gray-200'
                   } p-8`}
-                >
-                  {plan.popular && (
+                >{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
@@ -245,13 +242,11 @@ const PricingPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Additional Services
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {addOns.map((addOn, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{addOns.map((addOn, index) => (</div>
                 <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{addOn.name}</h3>
                   <p className="text-gray-600 text-sm mb-4">{addOn.description}</p>
-                  <div className="text-2xl font-bold text-blue-600">
-                    ${addOn.price}
+                  <div className="text-2xl font-bold text-blue-600">${addOn.price}</div>
                     <span className="text-sm font-normal text-gray-500 ml-1">{addOn.unit}</span>
                 </div>
               ))}
@@ -264,8 +259,7 @@ const PricingPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Frequently Asked Questions
             </h2>
-            <div className="space-y-8">
-              {faqs.map((faq, index) => (
+            <div className="space-y-8">{faqs.map((faq, index) => (</div>
                 <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
                   <p className="text-gray-600">{faq.answer}</p>

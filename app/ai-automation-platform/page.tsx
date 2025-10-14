@@ -43,14 +43,13 @@ const AIAutomationPlatform = () => {
         keywords="AI automation, workflow automation, process optimization, business automation, intelligent automation, RPA"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
           <ResponsiveContainer>
             <div className="relative z-10 text-center py-20">
               <div className="flex items-center justify-center mb-6">
-
+</div>
                 <Brain className="w-4 h-4 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -87,11 +86,9 @@ const AIAutomationPlatform = () => {
                 Everything you need to automate and optimize your business processes.
               </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <FuturisticCard key={index} className="text-center">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}>
-                    {feature.icon}
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}>{feature.icon}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">
                     {feature.title}
@@ -114,8 +111,7 @@ const AIAutomationPlatform = () => {
                 Experience intelligent automation that transforms your business operations.
               </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
                   <Circle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-white font-medium">{benefit}</span>

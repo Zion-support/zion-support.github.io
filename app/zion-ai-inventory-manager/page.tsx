@@ -177,14 +177,12 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
               and reduce costs while improving customer satisfaction.
             </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                  {feature.icon}
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">{feature.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {feature.title}
@@ -224,8 +222,7 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Inventory?</h2>
             <p className="text-gray-300 mb-6">Our AI inventory management experts are ready to help you streamline your operations.</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div>
               <div
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
@@ -233,8 +230,7 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
                     ? 'border-cyan-400 shadow-2xl shadow-cyan-500/25' 
                     : 'border-white/20 hover:border-cyan-400/50'
                 }`}
-              >
-                {plan.popular && (
+              >{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -283,14 +279,12 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
               See how businesses are transforming their inventory management with our AI-powered solution.
             </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div>
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -299,8 +293,7 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  <div className="text-cyan-400 text-sm font-medium bg-cyan-400/10 px-3 py-1 rounded-full">
-                    {testimonial.savings}
+                  <div className="text-cyan-400 text-sm font-medium bg-cyan-400/10 px-3 py-1 rounded-full">{testimonial.savings}</div>
                   </div>
               </div>
             ))}

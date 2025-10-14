@@ -23,18 +23,12 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     window.addEventListener('resize', resizeCanvas);
 
     // Animated particles
-    const particles: Array<{,
-
-      x: number;,
-
-      y: number;,
-
-      vx: number;,
-
-      vy: number;,
-
-      size: number;,
-
+    const particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
       opacity: number;
     }> = [];
 
@@ -113,13 +107,11 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       />
       {children}
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Animated gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Animated gradient overlay */}</div>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
         
         {/* Animated Particles */}
-        <div className="absolute inset-0">
-          {Array.from({ length: 20 }).map((_, i) => (
+        <div className="absolute inset-0">{Array.from({ length: 20 }).map((_, i) => (</div>
             <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
@@ -138,8 +130,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       </div>
       
       {/* Content */}
-      <div className="relative z-10">
-        {children}
+      <div className="relative z-10">{children}</div>
       </div>
   );
 }

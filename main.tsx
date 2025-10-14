@@ -7,18 +7,11 @@ import './index.css';
 if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
   if (!window.performance || !window.performance.now) {
-    window.performance = window.performance || {}
+    window.performance = window.performance || {};
     window.performance.now = window.performance.now || (() => Date.now());
   }
 }
 
-// Ensure scheduler is properly initialized
-if (typeof window !== 'undefined') {
-  // Fix for scheduler unstable_now error
-  if (!window.performance || !window.performance.now) {
-    window.performance = window.performance || {}
-    window.performance.now = window.performance.now || (() => Date.now())
-  }
 const root = createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -36,15 +29,11 @@ if ("serviceWorker" in navigator) {
       .register("/sw.js")
       .then((registration) => {
         // Service worker registered successfully
+        console.log('Service worker registered successfully');
       })
       .catch((registrationError) => {
         // Service worker registration failed
+        console.log('Service worker registration failed:', registrationError);
       });
-      .catch((registrationError) => {
-        // Service worker registration failed
-        console.log('Service worker registration failed:', registrationError)
-      });)
-}
-
-}
+  });
 }

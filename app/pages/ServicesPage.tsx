@@ -148,8 +148,7 @@ const ServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, IT services, cloud infrastructure, cybersecurity, digital transformation, micro SaaS, Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-white">{/* Hero Section */}</div>
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -170,8 +169,7 @@ const ServicesPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Core Services
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mainServices.map((service, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{mainServices.map((service, index) => (</div>
                 <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow">
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
                     <service.icon className="w-8 h-8 text-white" />
@@ -207,8 +205,7 @@ const ServicesPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Additional Services
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {additionalServices.map((service, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{additionalServices.map((service, index) => (</div>
                 <Link
                   key={index}
                   to={service.href}
@@ -233,11 +230,9 @@ const ServicesPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Our Process
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{processSteps.map((step, index) => (</div>
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                    {step.step}
+                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">{step.step}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {step.title}
@@ -255,8 +250,7 @@ const ServicesPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Why Choose Zion Tech Group?
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {whyChooseUs.map((reason, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{whyChooseUs.map((reason, index) => (</div>
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <reason.icon className="w-8 h-8 text-blue-600" />

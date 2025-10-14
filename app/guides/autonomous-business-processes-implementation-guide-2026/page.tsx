@@ -9,8 +9,7 @@ export const metadata = {
 
 export default function AutonomousBusinessProcessesImplementationGuide2026() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
+    <div className="min-h-screen bg-white">{/* Header */}</div>
       <header className="bg-gradient-to-r from-green-900 to-blue-900 text-white">
         <div className="max-w-6 xl mx-auto px-4 py-12">
           <Link

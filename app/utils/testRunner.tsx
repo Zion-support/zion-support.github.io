@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 /* global describe, test, expect, it, beforeEach */
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>TestRunner - Zion Tech Group</title>
         <meta name="description" content="Professional testrunner services by Zion Tech Group." />"

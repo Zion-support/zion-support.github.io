@@ -98,11 +98,9 @@
               <h3 className="text-lg font-semibold text-blue-900 mb-2">Expert Solutions</h3>
               <p className="text-blue-700">Our team of experts delivers cutting-edge page solutions.</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <FuturisticCard key={index} className="text-center">
-                  <div className="mb-4">
-                    {feature.icon}
+                  <div className="mb-4">{feature.icon}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

@@ -148,8 +148,7 @@ const EnhancedNavigation = () => {
   return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
+        <div className="flex justify-between items-center py-4">{/* Logo */}</div>
           <Link to="/" className="text-2xl font-bold text-white group">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300">
               Zion Tech Group
@@ -161,9 +160,9 @@ const EnhancedNavigation = () => {
               <div
                 key={item.label}
                 className="relative group"
-                onMouseEnter={() => setActiveDropdown(item.label)}
+                onMouseEnter={() =>setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
-              >
+              ></div>
                 <Link
                   to={item.href}
                   className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
@@ -176,8 +175,7 @@ const EnhancedNavigation = () => {
                 {/* Dropdown Menu */}
                 {activeDropdown === item.label && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
-                    <div className="py-2">
-                      {item.dropdown.map((dropdownItem) => (
+                    <div className="py-2">{item.dropdown.map((dropdownItem) => (</div>
                         <Link
                           key={dropdownItem.href}
                           to={dropdownItem.href}
@@ -194,8 +192,7 @@ const EnhancedNavigation = () => {
 
           {/* Quick Links & CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="hidden lg:flex space-x-4">
-              {quickLinks.map((link) => (
+            <div className="hidden lg:flex space-x-4">{quickLinks.map((link) => (</div>
                 <Link
                   key={link.href}
                   to={link.href}
@@ -224,8 +221,7 @@ const EnhancedNavigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-white/10">
-            <div className="space-y-4">
-              {navigationItems.map((item) => (
+            <div className="space-y-4">{navigationItems.map((item) => (</div>
                 <div key={item.label}>
                   <Link
                     to={item.href}
@@ -234,8 +230,7 @@ const EnhancedNavigation = () => {
                   >
                     {item.icon}
                     <span className="font-medium">{item.label}</span>
-                  <div className="ml-6 space-y-2">
-                    {item.dropdown.slice(0, 4).map((dropdownItem) => (
+                  <div className="ml-6 space-y-2">{item.dropdown.slice(0, 4).map((dropdownItem) => (</div>
                       <Link
                         key={dropdownItem.href}
                         to={dropdownItem.href}
@@ -258,8 +253,7 @@ const EnhancedNavigation = () => {
               ))}
               
               <div className="pt-4 border-t border-white/10">
-                <div className="space-y-2">
-                  {quickLinks.map((link) => (
+                <div className="space-y-2">{quickLinks.map((link) => (</div>
                     <Link
                       key={link.href}
                       to={link.href}

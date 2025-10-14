@@ -101,8 +101,7 @@ const BlogPage: React.FC = () => {
         <meta name="keywords" content="technology blog, AI insights, cybersecurity, cloud computing, development, tech trends" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
           <ResponsiveContainer>
@@ -195,8 +194,7 @@ const BlogPage: React.FC = () => {
           <ResponsiveContainer>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPosts.map((post) => (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredPosts.map((post) => (</div>
                   <FuturisticCard key={post.id} className="overflow-hidden">
                     <img
                       src={post.image}

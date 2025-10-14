@@ -33,8 +33,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
 }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        {showIcon && (
+      <div className="text-center">{showIcon && (</div>
           <div className="mb-6">
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <Brain className="w-8 h-8 text-white animate-pulse" />
@@ -58,10 +57,8 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
   icon
 }) => {
   return (
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center">
-      {icon && (
-        <div className="mb-4">
-          {icon}
+    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center">{icon && (</div>
+        <div className="mb-4">{icon}</div>
         </div>
       )}
       <LoadingSpinner size="md" className="mb-4" />
@@ -80,15 +77,13 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
   className = '' 
 }) => {
   return (
-    <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+    <div className={`animate-pulse ${className}`}>{Array.from({ length: lines }).map((_, index) => (</div>
         <div
           key={index}
           className={`h-4 bg-white/10 rounded mb-2 ${
             index === lines - 1 ? 'w-3/4' : 'w-full'
           }`}
-        />
-      ))}
+        />))}</div>
     </div>
   );
 };
@@ -108,8 +103,7 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-6">
         <div className="mb-6">
-          <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            {getServiceIcon(serviceName)}
+          <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">{getServiceIcon(serviceName)}</div>
           </div>
         <LoadingSpinner size="lg" />
         <h2 className="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}</h2>

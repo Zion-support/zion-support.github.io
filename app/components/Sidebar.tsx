@@ -68,7 +68,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
       />
-      
       {/* Sidebar */}
       <div className="fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 border-r border-slate-700 transform transition-transform duration-300 ease-in-out lg:translate-x-0">
         <div className="flex items-center justify-between h-16 px-4 border-b border-slate-700">
@@ -115,6 +114,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         >
                           <subItem.icon className="w-4 h-4" />
                           <span>{subItem.name}</span>
+                        </Link>
                       </li>
                     ))}
                   </ul>

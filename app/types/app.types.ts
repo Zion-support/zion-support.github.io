@@ -107,9 +107,12 @@ export interface BlogPost {
   title: string;
   slug: string;
   excerpt: string;
-  content: string;
-  author: string;
-  publishedAt: string;
+  content: string;,
+
+  author: string;,
+
+  publishedAt: string;,
+
   updatedAt: string;,
 
   tags: string[];,
@@ -213,8 +216,10 @@ export interface Testimonial {
  * Case Study Interface;
  */;
 export interface CaseStudy {
-  id: "string;
-  title: string;
+  id: "string;,
+
+  title: string;,
+
   slug: string;,
 
   client: string;,

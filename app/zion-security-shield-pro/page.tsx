@@ -159,8 +159,7 @@ const ZionSecurityShieldProPage = () => {
         />
         <meta
           name="keywords"
-          content="cybersecurity, AI security, threat detection, compliance, data protection, security monitoring, incident response, enterprise security"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
+          content="cybersecurity, AI security, threat detection, compliance, data protection, security monitoring, incident response, enterprise security"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">{/* Animated Background */}</div>
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
         
@@ -200,11 +199,9 @@ const ZionSecurityShieldProPage = () => {
                   </Link>
                 
                 {/* Stats */}
-                <div className="grid grid-cols-2 gap-6">
-                  {securityStats.map((stat, index) => (
+                <div className="grid grid-cols-2 gap-6">{securityStats.map((stat, index) => (</div>
                     <div key={index} className="text-center group">
-                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {stat.icon}
+                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
                       </div>
                       <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -259,14 +256,12 @@ const ZionSecurityShieldProPage = () => {
                 Comprehensive cybersecurity protection powered by artificial intelligence
               </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
                 >
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                    {feature.icon}
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">{feature.icon}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-300 transition-colors">
                     {feature.title}
@@ -274,8 +269,7 @@ const ZionSecurityShieldProPage = () => {
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {feature.description}
                   </p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                  <div className="space-y-2">{feature.benefits.map((benefit, idx) => (</div>
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 flex-shrink-0"></div>
                         <span>{benefit}</span>
@@ -297,8 +291,7 @@ const ZionSecurityShieldProPage = () => {
                 Choose the security plan that fits your organization's needs and budget
               </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div>
                 <div
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
@@ -306,8 +299,7 @@ const ZionSecurityShieldProPage = () => {
                       ? 'border-red-500/50 shadow-red-500/25' 
                       : 'border-white/20 hover:border-red-500/30'
                   }`}
-                >
-                  {plan.popular && (
+                >{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
@@ -322,8 +314,7 @@ const ZionSecurityShieldProPage = () => {
                       <span className="text-gray-300 ml-1">/{plan.period}</span>
                   </div>
                   
-                  <div className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
+                  <div className="space-y-4 mb-8">{plan.features.map((feature, idx) => (</div>
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
@@ -357,21 +348,18 @@ const ZionSecurityShieldProPage = () => {
                 See what security experts say about Zion Security Shield Pro
               </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div>
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
+                    <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">{testimonial.avatar}</div>
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

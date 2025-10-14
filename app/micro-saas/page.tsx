@@ -406,11 +406,9 @@ const MicroSaasPage: React.FC = () => {
             </FuturisticButton>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">{stats.map((stat, index) => (</div>
               <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
@@ -429,15 +427,13 @@ const MicroSaasPage: React.FC = () => {
               Choose from our comprehensive suite of micro SAAS solutions designed to streamline your business operations.
             </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasProducts.map((product, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{microSaasProducts.map((product, index) => (</div>
               <div
                 key={index}
                 className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${
                   product.featured ? 'ring-2 ring-cyan-500/50' : ''
                 }`}
-              >
-                {product.featured && (
+              >{product.featured && (</div>
                   <div className="absolute top-4 right-4">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                       Featured
@@ -445,8 +441,7 @@ const MicroSaasPage: React.FC = () => {
                 )}
                 
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {product.icon}
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">{product.icon}</div>
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
@@ -542,8 +537,7 @@ const MicroSaasPage: React.FC = () => {
                 Specialized tools designed to address specific business needs
               </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {microSaasProducts.map((product, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{microSaasProducts.map((product, index) => (</div>
                 <div
                   key={index}
                   className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300 group ${
@@ -551,8 +545,7 @@ const MicroSaasPage: React.FC = () => {
                   }`}
                 >
                   <div className="flex items-start justify-between mb-6">
-                    <div className="text-cyan-400 group-hover:scale-110 transition-transform duration-300">
-                      {product.icon}
+                    <div className="text-cyan-400 group-hover:scale-110 transition-transform duration-300">{product.icon}</div>
                     </div>
                     {product.featured && (
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full flex items-center">
@@ -579,8 +572,7 @@ const MicroSaasPage: React.FC = () => {
                   </ul>
                   
                   <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-cyan-400">
-                      {product.price}
+                    <div className="text-2xl font-bold text-cyan-400">{product.price}</div>
                     </div>
                     <Link
                       to={product.path}

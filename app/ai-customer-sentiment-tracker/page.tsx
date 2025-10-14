@@ -148,8 +148,7 @@ const AICustomerSentimentTrackerPage = () => {
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{stats.map((stat, index) => (</div>
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -157,11 +156,9 @@ const AICustomerSentimentTrackerPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
                 </div>
-                <div className="text-gray-400 font-medium">
-                  {stat.label}
+                <div className="text-gray-400 font-medium">{stat.label}</div>
                 </div>
             ))}
           </div>
@@ -183,8 +180,7 @@ const AICustomerSentimentTrackerPage = () => {
               loyalty, and business growth.
             </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -192,8 +188,7 @@ const AICustomerSentimentTrackerPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="mb-6 flex justify-center">
-                  {benefit.icon}
+                <div className="mb-6 flex justify-center">{benefit.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {benefit.title}
@@ -222,8 +217,7 @@ const AICustomerSentimentTrackerPage = () => {
               across all touchpoints.
             </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -231,8 +225,7 @@ const AICustomerSentimentTrackerPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
               >
-                <div className="mb-6">
-                  {feature.icon}
+                <div className="mb-6">{feature.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {feature.title}
@@ -261,8 +254,7 @@ const AICustomerSentimentTrackerPage = () => {
               with no hidden fees or long-term contracts.
             </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div>
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -276,8 +268,7 @@ const AICustomerSentimentTrackerPage = () => {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</div>
                     </div>
                 )}
 

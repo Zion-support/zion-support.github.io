@@ -198,8 +198,7 @@ const MicroSaaSServicesPage = () => {
         />
         <meta
           name="keywords"
-          content="micro SAAS, AI analytics, business intelligence, CRM, marketing automation, project management, cloud storage, cybersecurity, business solutions"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
+          content="micro SAAS, AI analytics, business intelligence, CRM, marketing automation, project management, cloud storage, cybersecurity, business solutions"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">{/* Animated Background */}</div>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
         
@@ -237,11 +236,9 @@ const MicroSaaSServicesPage = () => {
               </Link>
             
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">{stats.map((stat, index) => (</div>
                 <div key={index} className="text-center group">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
+                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
@@ -257,8 +254,7 @@ const MicroSaaSServicesPage = () => {
                 Browse by Category
               </h2>
               <p className="text-gray-300">Find the perfect solution for your business needs</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
+            <div className="flex flex-wrap justify-center gap-4">{categories.map((category, index) => (</div>
                 <div
                   key={index}
                   className="flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group"
@@ -286,13 +282,11 @@ const MicroSaaSServicesPage = () => {
                 Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform your business operations.
               </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasServices.map((service, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{microSaasServices.map((service, index) => (</div>
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
-                >
-                  {service.popular && (
+                >{service.popular && (</div>
                     <div className="absolute top-4 right-4">
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full">
                         POPULAR
@@ -304,8 +298,7 @@ const MicroSaaSServicesPage = () => {
                   
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
-                      <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                        {service.icon}
+                      <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">{service.icon}</div>
                       </div>
                       <div className="flex-1">
                         <div className="text-center mb-2">
@@ -331,15 +324,13 @@ const MicroSaaSServicesPage = () => {
                       </div>
                     
                     {/* Key Features */}
-                    <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                    <div className="space-y-2 mb-6">{service.features.slice(0, 4).map((feature, idx) => (</div>
                         <div key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
                       ))}
                       {service.features.length > 4 && (
-                        <div className="text-xs text-cyan-400 text-center">
-                          +{service.features.length - 4} more features
+                        <div className="text-xs text-cyan-400 text-center">+{service.features.length - 4} more features</div>
                         </div>
                       )}
                     </div>
@@ -347,8 +338,7 @@ const MicroSaaSServicesPage = () => {
                     {/* Benefits */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Benefits:</h4>
-                      <div className="space-y-1">
-                        {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      <div className="space-y-1">{service.benefits.slice(0, 2).map((benefit, idx) => (</div>
                           <div key={idx} className="text-xs text-gray-300 flex items-center">
                             <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></div>
                             <span>{benefit}</span>

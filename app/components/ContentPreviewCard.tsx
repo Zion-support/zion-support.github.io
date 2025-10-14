@@ -1,7 +1,8 @@
 import React from "react";
 
 interface ContentPreviewCardProps {
-  id: string;
+  id: string;,
+
   title: string;,
 
   excerpt: string;,

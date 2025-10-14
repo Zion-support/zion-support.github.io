@@ -155,8 +155,7 @@ const SupportPage: React.FC = () => {
         <meta name="keywords" content="support, help, technical support, customer service, documentation, tutorials, FAQ, assistance" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-white">{/* Hero Section */}</div>
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -187,8 +186,7 @@ const SupportPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Get Support
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {supportChannels.map((channel, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{supportChannels.map((channel, index) => (</div>
                 <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-lg transition-shadow">
                   <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
                     <channel.icon className="w-8 h-8 text-white" />
@@ -216,8 +214,7 @@ const SupportPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Self-Service Resources
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{resources.map((resource, index) => (</div>
                 <Link
                   key={index}
                   to={resource.href}
@@ -240,8 +237,7 @@ const SupportPage: React.FC = () => {
             </h2>
             
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2 mb-8 justify-center">
-              {supportCategories.map((category) => (
+            <div className="flex flex-wrap gap-2 mb-8 justify-center">{supportCategories.map((category) => (</div>
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -256,13 +252,11 @@ const SupportPage: React.FC = () => {
               ))}
             </div>
 
-            <div className="space-y-4">
-              {filteredFaqs.map((faq) => (
+            <div className="space-y-4">{filteredFaqs.map((faq) => (</div>
                 <div key={faq.id} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
                   <p className="text-gray-600 mb-4">{faq.answer}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {faq.tags.map((tag, index) => (
+                  <div className="flex flex-wrap gap-2">{faq.tags.map((tag, index) => (</div>
                       <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
                         {tag}
                       </span>

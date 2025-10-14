@@ -58,7 +58,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
           border: 0,
         }
-        .focus\\:not-sr-only: focus {
+        .focus\\:not-sr-only: focus {,
+
           position: static;,
 
           width: auto;,
@@ -302,7 +303,7 @@ filter: contrast(150%) brightness(110%)}
           <div>
             <label className="block text-sm font-medium mb-2">Font Size</label>"
             <div className="space-y-2">"
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('
+              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('</div>
                 <label key={size} className="flex items-center space-x-2">"
                   <input
                     type="radio""

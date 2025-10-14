@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const CriticalResourcePreloader: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>Critical Resource Preloader - Zion Tech Group</title>
         <meta name="description" content="Professional critical resource preloader services by Zion Tech Group." />
@@ -36,9 +36,8 @@ const CriticalResourcePreloader: React.FC = () => {
                   Expert consultation</li>;
                 <li className="flex items-center">;
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
-                  Ongoing support</li></ul>;
-            </div>;
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+                  Ongoing support</li></ul></div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;</div>
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
               <p className="mb-6">;
                 Ready to transform your business with our critical resource preloader services?</p>;
@@ -46,12 +45,10 @@ const CriticalResourcePreloader: React.FC = () => {
                 href="/contact";
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
               >;
-                Contact Us</a></div>;
-          </div></div>;
-      </section>;
+                Contact Us</a></div></div></div></section>;
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">;
-        <div className="max-w-4xl mx-auto text-center">;
+        <div className="max-w-4xl mx-auto text-center">;</div>
           <h2 className="text-3xl font-bold text-white mb-6">;
             Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">
@@ -103,5 +100,8 @@ export default CriticalResourcePreloader
             </div>
               </ul>
         </div>
+        </div>
+    </div>
+              </ul>
         </div>
     </div>

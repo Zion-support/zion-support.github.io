@@ -180,8 +180,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
               ×
             </button>
 
-          <div className="space-y-4">
-            {/* High Contrast */}
+          <div className="space-y-4">{/* High Contrast */}</div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Eye className="w-4 h-4" />
@@ -364,7 +363,8 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
           border: 0;
         }
         
-        .focus\\:not-sr-only: focus {
+        .focus\\:not-sr-only: focus {,
+
           position: static;,
 
           width: auto;,

@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;,
-
-  renderTime: number;,
-
-  memoryUsage: number;,
-
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
   networkLatency: number;
 }
 
@@ -97,8 +94,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
           </span>
       </div>
       
-      <div className="mt-3 pt-2 border-t border-slate-700 text-xs text-gray-500">
-        Press Ctrl+Shift+P to toggle
+      <div className="mt-3 pt-2 border-t border-slate-700 text-xs text-gray-500">Press Ctrl+Shift+P to toggle</div>
       </div>);
 };
 

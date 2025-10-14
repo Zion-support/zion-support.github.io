@@ -144,8 +144,7 @@ const TermsPage: React.FC = () => {
         <meta name="keywords" content="terms of service, terms and conditions, legal terms, user agreement, service agreement, terms of use" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-white">{/* Hero Section */}</div>
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
@@ -197,8 +196,7 @@ const TermsPage: React.FC = () => {
         {/* Main Content */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-12">
-              {sections.map((section, index) => (
+            <div className="space-y-12">{sections.map((section, index) => (</div>
                 <div key={index} className="bg-white rounded-lg p-8 shadow-sm">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">{section.title}</h2>
                   <ul className="space-y-3">

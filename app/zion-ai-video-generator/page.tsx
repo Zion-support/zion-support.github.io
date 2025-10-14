@@ -198,11 +198,9 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
               </FuturisticButton>
             
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">{stats.map((stat, index) => (</div>
                 <div key={index} className="text-center group">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
+                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
@@ -217,14 +215,12 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
               Our advanced AI technology handles every aspect of video creation, from script writing to final editing
             </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-purple-400 transition-colors">
                   {feature.title}
@@ -252,14 +248,12 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
               Whether you're creating marketing content, educational videos, or corporate communications
             </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {useCase.icon}
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">{useCase.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-purple-400 transition-colors">
                   {useCase.title}
@@ -267,8 +261,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                 <p className="text-gray-300 text-center mb-6 leading-relaxed">
                   {useCase.description}
                 </p>
-                <div className="space-y-2">
-                  {useCase.examples.map((example, idx) => (
+                <div className="space-y-2">{useCase.examples.map((example, idx) => (</div>
                     <div key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {example}
@@ -290,8 +283,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
               Choose the plan that fits your needs. All plans include a 14-day free trial.
             </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingPlans.map((plan, index) => (</div>
               <FuturisticCard
                 key={index}
                 className={`relative group hover:scale-105 transition-all duration-300 ${
@@ -344,21 +336,18 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See what our users say about Zion AI Video Generator
               </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div>
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                      {testimonial.avatar}
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">{testimonial.avatar}</div>
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

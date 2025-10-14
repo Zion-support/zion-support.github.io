@@ -112,8 +112,7 @@ const CareersPage = () => {
         <meta name="keywords" content="careers, jobs, employment, technology careers, AI jobs, software development" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
           <ResponsiveContainer>
@@ -142,11 +141,9 @@ const CareersPage = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 These core values guide everything we do and shape our company culture.
               </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{values.map((value, index) => (</div>
                 <FuturisticCard key={index} className="text-center">
-                  <div className="mb-4 flex justify-center">
-                    {value.icon}
+                  <div className="mb-4 flex justify-center">{value.icon}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
@@ -162,11 +159,9 @@ const CareersPage = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We offer comprehensive benefits and a supportive work environment.
               </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
                 <FuturisticCard key={index} className="text-center">
-                  <div className="mb-4 flex justify-center">
-                    {benefit.icon}
+                  <div className="mb-4 flex justify-center">{benefit.icon}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
@@ -182,8 +177,7 @@ const CareersPage = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our current job openings and find the perfect role for you.
               </p>
-            <div className="space-y-8">
-              {jobOpenings.map((job, index) => (
+            <div className="space-y-8">{jobOpenings.map((job, index) => (</div>
                 <FuturisticCard key={index} className="p-8">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                     <div>

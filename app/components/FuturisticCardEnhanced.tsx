@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const FuturisticCardEnhanced: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>Futuristic d Enhanced - Zion Tech Group</title>
         <meta name="description" content="Professional futuristic card enhanced services by Zion Tech Group." />

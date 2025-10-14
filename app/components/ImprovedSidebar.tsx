@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const ImprovedSidebar: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>Improved Sidebar - Zion Tech Group</title>
         <meta name="description" content="Professional improved sidebar services by Zion Tech Group." />

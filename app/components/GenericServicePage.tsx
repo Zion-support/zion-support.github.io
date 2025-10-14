@@ -59,8 +59,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               {description}
             </p>
             {pricing && (
-              <div className="text-2xl font-semibold text-cyan-400 mb-8">
-                Starting at {pricing}
+              <div className="text-2xl font-semibold text-cyan-400 mb-8">Starting at {pricing}</div>
               </div>
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -90,8 +89,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 Comprehensive {title.toLowerCase()} solutions designed to drive
                 your business forward
               </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (</div>
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
@@ -115,8 +113,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 Experience the difference with our proven expertise and
                 cutting-edge technology
               </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <Star className="w-6 h-6 text-yellow-400" />
@@ -138,23 +135,19 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             <div className="text-center mb-12">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
-                    500+
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
                   </div>
                   <div className="text-gray-300">Happy Clients</div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
-                    99%
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">99%</div>
                   </div>
                   <div className="text-gray-300">Success Rate</div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
-                    24/7
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
                   </div>
                   <div className="text-gray-300">Support</div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
-                    10+
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">10+</div>
                   </div>
                   <div className="text-gray-300">Years Experience</div>
               </div>

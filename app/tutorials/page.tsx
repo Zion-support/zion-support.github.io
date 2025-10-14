@@ -7,8 +7,7 @@ import { Helmet } from "react-helmet-async";
         <title>Home - Zion Tech Group</title>
         <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
@@ -27,8 +26,7 @@ import { Helmet } from "react-helmet-async";
         {/* Categories */}
         <section className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, _index) => (
+            <div className="flex flex-wrap justify-center gap-4">{categories.map((category, _index) => (</div>
                 <button;}
                   key={_index}
                   className="$1"
@@ -40,15 +38,13 @@ import { Helmet } from "react-helmet-async";
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">Featured Tutorials</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {tutorials.map((tutorial) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{tutorials.map((tutorial) => (</div>
                 <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
                   <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {tutorials.map((tutorial) => (}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{tutorials.map((tutorial) => (}</div>
                 <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
                   <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">
@@ -61,7 +57,7 @@ import { Helmet } from "react-helmet-async";
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {tutorial.title}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -79,7 +75,7 @@ import { Helmet } from "react-helmet-async";
                 Browse All</button></div>{/* Categories */}
         <section className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">{categories.map((category, _index) => (
+            <div className="flex flex-wrap justify-center gap-4">{categories.map((category, _index) => (</div>
                 <button
                   key={_index}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300">{category.name} ({category.count})
@@ -90,7 +86,7 @@ import { Helmet } from "react-helmet-async";
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Featured Tutorials</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{tutorials.map((tutorial) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{tutorials.map((tutorial) => (</div>
                 <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
                   <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">

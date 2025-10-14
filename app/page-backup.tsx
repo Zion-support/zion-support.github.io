@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>Page backup - Zion Tech Group</title>
         <meta name="description" content="Professional page backup services by Zion Tech Group." />"

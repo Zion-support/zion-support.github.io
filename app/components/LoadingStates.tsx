@@ -1,11 +1,20 @@
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
+export const LoadingPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
         <div className="w-16 h-16 mx-auto mb-4">
           <Loader2 className="w-16 h-16 text-cyan-400 animate-spin" />
         </div>
         <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-        <p className="text-gray-300">Please wait while we load the content</p>export default LoadingPage; cursor/analyze-improve-and-deploy-application-30da
+        <p className="text-gray-300">Please wait while we load the content</p>
+      </div>
+    </div>
+  );
+};
+
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
     <div className="animate-pulse">
@@ -20,15 +29,21 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   );
 };
 
-export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
-
+export const Spinner: React.FC = () => {
   return (
-    <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />);
+    <div className="flex items-center justify-center p-4">
+      <Loader2 className="w-6 h-6 text-cyan-400 animate-spin" />
+    </div>
+  );
 };
 
-export default LoadingPage</div>
+export const LoadingSpinner: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="text-center">
+        <Loader2 className="w-8 h-8 text-cyan-400 animate-spin mx-auto mb-2" />
+        <p className="text-gray-300">Loading...</p>
+      </div>
+    </div>
+  );
+};

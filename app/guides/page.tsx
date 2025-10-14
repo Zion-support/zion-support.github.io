@@ -85,8 +85,7 @@ const Page = () => {
           {/* Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {categories.map((category, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">{categories.map((category, index) => (</div>
                 <div key={index} className="bg-slate-800 rounded-lg p-4 text-center hover:bg-slate-700 transition-colors">
                   <category.icon className={`w-8 h-8 mx-auto mb-2 ${category.color}`} />
                   <h3 className="text-white font-semibold text-sm">{category.name}</h3>
@@ -96,8 +95,7 @@ const Page = () => {
           {/* Guides Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {guides.map((guide, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{guides.map((guide, index) => (</div>
                 <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200">
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">

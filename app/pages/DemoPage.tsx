@@ -147,8 +147,7 @@ const DemoPage: React.FC = () => {
         <meta name="keywords" content="demos, live demos, AI demos, cloud demos, cybersecurity demos, technology demonstrations, interactive demos" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-white">{/* Hero Section */}</div>
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -189,8 +188,7 @@ const DemoPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Choose a Demo to Explore
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {demos.map((demo, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{demos.map((demo, index) => (</div>
                 <button
                   key={demo.id}
                   onClick={() => setSelectedDemo(index)}
@@ -271,8 +269,7 @@ const DemoPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Why Watch Our Demos?
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-blue-600" />
@@ -293,8 +290,7 @@ const DemoPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               What Our Clients Say
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+            <div className="grid md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
                 <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
@@ -304,8 +300,7 @@ const DemoPage: React.FC = () => {
                       <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                       <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
                   </div>
-                  <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-3">{[...Array(testimonial.rating)].map((_, i) => (</div>
                       <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
                     ))}
                   </div>

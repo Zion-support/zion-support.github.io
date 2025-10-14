@@ -42,8 +42,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   };
 
   return (
-    <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>
-      {children}
+    <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>{children}</div>
     </div>
   );
 }

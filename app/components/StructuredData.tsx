@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const StructuredData: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>Structured Data - Zion Tech Group</title>
         <meta name="description" content="Professional structured data services by Zion Tech Group." />

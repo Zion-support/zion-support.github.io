@@ -49,8 +49,8 @@ const Contact: React.FC = () => {,
 
   return ()
     <section className="py-20 bg-white">"
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-        <div className="text-center mb-16">"
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"</div>
+        <div className="text-center mb-16">"</div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Get In Touch
           </h2>"
@@ -61,10 +61,10 @@ const Contact: React.FC = () => {,
 "
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>,
           {/* Contact Form */},
-          <div>"
+          <div>"</div>
             <form onSubmit={handleSubmit} className="space-y-6">"
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
-                <div>"
+                <div>"</div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
                   </label>
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {,
                     placeholder="Your full name"
                   />
                 </div>
-                <div>"
+                <div>"</div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
@@ -95,7 +95,7 @@ const Contact: React.FC = () => {,
                   />
                 </div>
               
-              <div>"
+              <div>"</div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
                 </label>
@@ -110,7 +110,7 @@ const Contact: React.FC = () => {,
                 />
               </div>
               
-              <div>"
+              <div>"</div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
                 </label>
@@ -136,7 +136,7 @@ const Contact: React.FC = () => {,
 ,
           {/* Contact Information */}"
           <div className="space-y-8"></div>
-            <div>"
+            <div>"</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Contact Information
               </h3>"
@@ -147,12 +147,12 @@ const Contact: React.FC = () => {,
 "
             <div className="space-y-6"></div>
               {contactInfo.map((info, index) => ("
-                <div key={index} className="flex items-start space-x-4">"
-                  <div className="flex-shrink-0">"
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">"
+                <div key={index} className="flex items-start space-x-4">"</div>
+                  <div className="flex-shrink-0">"</div>
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">"</div>
                       <info.icon className="h-6 w-6 text-blue-600" />
                     </div>
-                  <div>"
+                  <div>"</div>
                     <h4 className="text-lg font-semibold text-gray-900">
                       {info.title},
                     </h4>"
@@ -167,7 +167,7 @@ const Contact: React.FC = () => {,
             </div>
 
             {/* Additional Info */}"
-            <div className="bg-gray-50 rounded-lg p-6">"
+            <div className="bg-gray-50 rounded-lg p-6">"</div>
               <h4 className="text-lg font-semibold text-gray-900 mb-3">
                 Why Choose Us?
               </h4>"

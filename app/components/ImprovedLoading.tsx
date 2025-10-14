@@ -45,8 +45,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
   if (variant === 'futuristic') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-        <div className="text-center">
-          {/* Animated Background */}
+        <div className="text-center">{/* Animated Background */}</div>
           <div className="relative mb-8">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
             <div className="relative w-24 h-24 mx-auto">
@@ -69,8 +68,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
                   style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
                 ></div>
-              <div className="text-sm text-gray-400 mt-2">
-                {Math.round(progress)}% complete
+              <div className="text-sm text-gray-400 mt-2">{Math.round(progress)}% complete</div>
               </div>
           )}
 

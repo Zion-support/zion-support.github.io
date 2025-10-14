@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const ResponsiveText: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>Responsive Text - Zion Tech Group</title>
         <meta name="description" content="Professional responsive text services by Zion Tech Group." />

@@ -59,8 +59,7 @@ export default function Support() {
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Live chat, phone support, documentation, and more." />'
         <meta name="keywords" content="support, help, customer service, technical support, documentation, FAQ" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
@@ -72,7 +71,6 @@ export default function Support() {
               </span>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               We're here to help! Get support for our AI and IT solutions through multiple channels.'
-            </p></div>;
-        </section>;
+            </p></div></section>;
         {/* Support Options */}
 }

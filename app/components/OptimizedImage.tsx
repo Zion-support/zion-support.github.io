@@ -109,9 +109,8 @@ return () => observer.disconnect()}, [priority])
         ref={ imgRef }
         className={`relative overflow-hidden ${className}`}
         style={{ width, height }
-      >
-        {/* Placeholder */}
-        {!isLoaded && !isError && (
+      >{/* Placeholder */}
+        {!isLoaded && !isError && (</div>
           <div
             className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}
             style={{ width, height }

@@ -204,8 +204,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8 items-center">
-            {/* Search Button */}
+          <div className="hidden lg:flex space-x-8 items-center">{/* Search Button */}</div>
             <button
               onClick={toggleSearch}
               className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
@@ -260,8 +259,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                       }`}
                       onClick={() => setIsAiServicesOpen(false)}
                     >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
-                        {service.icon}
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">{service.icon}</div>
                       </div>
                       <div className="flex-1">
                         <span className="font-medium">{service.name}</span>
@@ -297,8 +295,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                       className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group"
                       onClick={() => setIsItServicesOpen(false)}
                     >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                        {service.icon}
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">{service.icon}</div>
                       </div>
                       <span className="font-medium">{service.name}</span>
                   ))}
@@ -329,8 +326,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                       }`}
                       onClick={() => setIsMicroSaasOpen(false)}
                     >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
-                        {service.icon}
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">{service.icon}</div>
                       </div>
                       <div className="flex-1">
                         <span className="font-medium">{service.name}</span>
@@ -382,8 +378,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-cyan-500/20">
-            <div className="flex flex-col space-y-2">
-              {mainNavItems.map((item) => (
+            <div className="flex flex-col space-y-2">{mainNavItems.map((item) => (</div>
                 <Link
                   key={item.name}
                   to={item.path}
@@ -409,8 +404,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 </button>
                 
                 {isAiServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {aiServices.map((service) => (
+                  <div className="ml-4 mt-2 space-y-1">{aiServices.map((service) => (</div>
                       <Link
                         key={service.name}
                         to={service.path}
@@ -440,8 +434,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 </button>
                 
                 {isItServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {itServices.map((service) => (
+                  <div className="ml-4 mt-2 space-y-1">{itServices.map((service) => (</div>
                       <Link
                         key={service.name}
                         to={service.path}
@@ -469,8 +462,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 </button>
                 
                 {isMicroSaasOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {microSaasServices.map((service) => (
+                  <div className="ml-4 mt-2 space-y-1">{microSaasServices.map((service) => (</div>
                       <Link
                         key={service.name}
                         to={service.path}

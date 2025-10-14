@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const ErrorHandler: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>Error Handler - Zion Tech Group</title>
         <meta name="description" content="Professional error handler services by Zion Tech Group." />

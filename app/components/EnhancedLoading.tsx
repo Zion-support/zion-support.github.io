@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const EnhancedLoading: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>Enhanced Loading - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced loading services by Zion Tech Group." />

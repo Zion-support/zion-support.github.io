@@ -214,15 +214,14 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   performanceScore >= 70 ? 'bg-yellow-400' : 'bg-red-400'
                 }`}
                 style={{ width: `${performanceScore}%` }}
-              />
+              /></div>
             </div>
             <p className="text-xs text-gray-400 mt-1">
               {getScoreLabel(performanceScore)}
             </p>
 
           {/* Metrics */}
-          <div className="space-y-2 text-sm">
-            {metrics.lcp && (
+          <div className="space-y-2 text-sm">{metrics.lcp && (</div>
               <div className="flex justify-between">
                 <span className="text-gray-300">LCP</span>
                 <span className={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>

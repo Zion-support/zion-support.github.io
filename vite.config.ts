@@ -1,21 +1,18 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
-// https: //vitejs.dev/config/
-export default defineConfig({,
 
+// https://vitejs.dev/config/
+export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh;,
-
+      // Enable React Fast Refresh
       fastRefresh: true,
-      // Optimize JSX runtime,
-
+      // Optimize JSX runtime
       jsxRuntime: 'automatic',
-    });
+    }),
   ],
-  resolve: {,
-
+  resolve: {
     alias: {
       '@': resolve(__dirname, './app'),
       '@/components': resolve(__dirname, './app/components'),
@@ -28,34 +25,27 @@ export default defineConfig({,
       '@/content': resolve(__dirname, './content'),
     },
   },
-  build: {,
-
+  build: {
     outDir: 'dist',
     sourcemap: false,
     minify: 'esbuild',
     target: 'es2020',
     cssCodeSplit: true,
-    modulePreload: {,
-
+    modulePreload: {
       polyfill: false,
     },
-    // Performance optimizations,
-
-    chunkSizeWarningLimit: 150, // Balanced threshold for better performance,
-
+    // Performance optimizations
+    chunkSizeWarningLimit: 150, // Balanced threshold for better performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
-    // Enable compression,
-
+    // Enable compression
     reportCompressedSize: true,
-    // Optimize for production;
-    terserOptions: {,
-
-      compress: {,
-
+    // Optimize for production
+    terserOptions: {
+      compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization;
+        passes: 3, // More passes for better optimization
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
@@ -72,31 +62,26 @@ export default defineConfig({,
         side_effects: false,
         unused: true,
       },
-      mangle: {,
-
-        safari10: true, // Better Safari compatibility;
+      mangle: {
+        safari10: true, // Better Safari compatibility
         toplevel: true,
-        properties: {,
-
+        properties: {
           regex: /^_/
         }
       },
-      format: {,
-
+      format: {
         comments: false,
         ascii_only: true
       }
     },
-    // Enhanced build optimizations;
-    rollupOptions: {,
-
-      output: {,
-
+    // Enhanced build optimizations
+    rollupOptions: {
+      output: {
         manualChunks: (id) => {
           // Vendor chunks
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react',
+              return 'vendor-react';
             }
             if (id.includes('react-router')) {
               return 'vendor-router';
@@ -112,58 +97,58 @@ export default defineConfig({,
             }
             return 'vendor-other';
           }
-          // Router;
+          // Router
           if (id.includes('react-router')) {
             return 'router';
           }
-          // UI libraries;
+          // UI libraries
           if (id.includes('framer-motion')) {
             return 'animations';
           }
           if (id.includes('lucide-react')) {
             return 'icons';
           }
-          // SEO and meta;
+          // SEO and meta
           if (id.includes('react-helmet')) {
-            return 'seo'
+            return 'seo';
           }
-          // Charts and data visualization;
+          // Charts and data visualization
           if (id.includes('recharts')) {
-            return 'charts'
+            return 'charts';
           }
-          // Utility libraries;
+          // Utility libraries
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
-            return 'utils'
+            return 'utils';
           }
-          // Performance monitoring;
+          // Performance monitoring
           if (id.includes('web-vitals')) {
-            return 'performance'
+            return 'performance';
           }
-          // Error handling;
+          // Error handling
           if (id.includes('react-error-boundary')) {
-            return 'error-handling'
+            return 'error-handling';
           }
-          // AI service pages - split into smaller chunks;
+          // AI service pages - split into smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            return `ai-${serviceName || 'services'}`
+            return `ai-${serviceName || 'services'}`;
           }
-          // Zion service pages;
+          // Zion service pages
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            return `zion-${serviceName || 'services'}`
+            return `zion-${serviceName || 'services'}`;
           }
-          // 5G service pages;
+          // 5G service pages
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/5g-')[1]?.split('/')[0];
-            return `5g-${serviceName || 'services'}`
+            return `5g-${serviceName || 'services'}`;
           }
           // IT service pages - group together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
               (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
                id.includes('software') || id.includes('web') || id.includes('it-'))) {
-            return 'it-services'
+            return 'it-services';
           }
           // Micro SAAS pages - group together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
@@ -172,22 +157,22 @@ export default defineConfig({,
                id.includes('financial') || id.includes('employee') || id.includes('social') ||
                id.includes('email') || id.includes('website') || id.includes('task') ||
                id.includes('smart-') || id.includes('ai-powered'))) {
-            return 'micro-saas'
+            return 'micro-saas';
           }
           // Main pages - keep core pages together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               (id.includes('about') || id.includes('contact') || id.includes('services') || 
                id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
-            return 'main-pages'
+            return 'main-pages';
           }
           // Default chunk for other modules
-          return 'vendor'
+          return 'vendor';
         },
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.')
+          const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
-            return `assets/images/[name]-[hash][extname]`,
+            return `assets/images/[name]-[hash][extname]`;
           }
           if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
             return `assets/fonts/[name]-[hash][extname]`;
@@ -198,29 +183,25 @@ export default defineConfig({,
         entryFileNames: 'assets/js/[name]-[hash].js',
       },
     },
-    // Enable tree shaking;
+    // Enable tree shaking
     treeshake: true,
   },
-  server: {,
-
+  server: {
     port: 3000,
     open: true,
     host: true,
-    // Enable HMR;
-    hmr: {,
-
+    // Enable HMR
+    hmr: {
       overlay: true,
     },
   },
-  preview: {,
-
+  preview: {
     port: 4173,
     open: true,
     host: true,
   },
-  // Optimize dependencies;
-  optimizeDeps: {,
-
+  // Optimize dependencies
+  optimizeDeps: {
     include: [
       'react',
       'react-dom',
@@ -228,12 +209,10 @@ export default defineConfig({,
       'react-helmet-async',
       'framer-motion',
       'lucide-react',
-      'framer-motion;
     ],
   },
-  // CSS optimization;
-  css: {,
-
+  // CSS optimization
+  css: {
     devSourcemap: true,
   },
 });

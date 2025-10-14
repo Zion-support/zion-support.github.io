@@ -1,7 +1,8 @@
 import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
 
 interface FormData {
-  name: string;
+  name: string;,
+
   email: string;,
 
   phone: string;,
@@ -309,8 +310,7 @@ const ImprovedContactForm: React.FC = () => {
             </button>
             
             {isServiceDropdownOpen && (
-              <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto">
-                {services.map((service) => (
+              <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto">{services.map((service) => (</div>
                   <button
                     key={service}
                     type="button"
@@ -405,8 +405,7 @@ const ImprovedContactForm: React.FC = () => {
         >
           {isSubmitting ? (
             <>
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              Sending...
+              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />Sending...</div>
             </>
           ) : (
             <>

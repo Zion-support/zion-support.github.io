@@ -78,9 +78,8 @@ const Partners = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">Strategic Partners</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {partners.map((partner, _index) => (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{partners.map((partner, _index) => (</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -100,7 +99,7 @@ const Partners = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Strategic Partners</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{partners.map((partner, _index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{partners.map((partner, _index) => (</div>
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="text-center">
                     <div className="text-4xl mb-4">{partner.logo}</div>
@@ -115,8 +114,7 @@ const Partners = () => {
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">Partner Benefits</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, _index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, _index) => (</div>
                 <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                     <Circle className="w-4 h-4 text-white" />
@@ -148,7 +146,7 @@ const Partners = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Partner Benefits</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, _index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, _index) => (</div>
                 <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                     <Circle className="w-4 h-4 text-white" /></div>

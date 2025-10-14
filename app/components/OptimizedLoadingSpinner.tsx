@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">;</div>
       <Helmet>
         <title>OptimizedLoadingSpinner - Zion Tech Group</title>
         <meta name="description" content="Professional optimizedloadingspinner services by Zion Tech Group." />
@@ -12,13 +12,13 @@ export default function Page() {
           <h1 className="text-4xl font-bold text-gray-900 mb-8">OptimizedLoadingSpinner</h1>;
           <p className="text-xl text-gray-600 mb-8">;
             Professional optimizedloadingspinner solutions tailored to your business needs.</p>;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;</div>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;</div>
               <h3 className="text-lg font-semibold text-blue-900 mb-2">;
                 Expert Solutions</h3>;
               <p className="text-blue-700">;
                 Our team of experts delivers cutting-edge optimizedloadingspinner solutions.</p></div>;
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;</div>
               <h3 className="text-lg font-semibold text-green-900 mb-2">;
                 Custom Implementation</h3>
               <p className="text-green-700">

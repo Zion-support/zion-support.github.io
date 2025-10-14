@@ -56,8 +56,7 @@ const CareersPage: React.FC = () => {
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">{/* Hero Section */}</div>
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-white mb-6">
@@ -81,8 +80,7 @@ const CareersPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Open Positions
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {positions.map((position, index) => (
+            <div className="grid md:grid-cols-2 gap-8">{positions.map((position, index) => (</div>
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div>
@@ -131,8 +129,7 @@ const CareersPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Why Work With Us?
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-center">
                   <Heart className="w-6 h-6 text-rose-400 mr-4 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
