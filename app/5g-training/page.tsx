@@ -1,10 +1,20 @@
-import React from 'react'
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-      title: '5G Training Strategy'
-      description: 'Comprehensive 5G training strategies tailored to your business needs.'
-      title: 'Security Assessment'
-      description: 'Complete security evaluation for 5G training implementation.'
-      title: 'Expert Support'
-      description: 'Professional support for your 5G training journey.'
+import React from 'react';
+
+const FiveGTrainingPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5gTraining Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional services and solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default FiveGTrainingPage;

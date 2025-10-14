@@ -1,5 +1,0 @@
-import React from 'react'
-import { render, RenderOptions, RenderResult } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
-  options?: Omit<RenderOptions, 'wrapper'
-export * from '@testing-library/react'

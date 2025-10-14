@@ -1,7 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import './index.css';
 
@@ -33,10 +31,14 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw.js")
       .then((_registration) => {
-        // Service Worker registered successfully
+        if (process.env.NODE_ENV === 'development') {
+          // Service Worker registered successfully
+        }
       })
       .catch((_error) => {
-        // Service Worker registration failed
+        if (process.env.NODE_ENV === 'development') {
+          // Service Worker registration failed
+        }
       });
   });
 }

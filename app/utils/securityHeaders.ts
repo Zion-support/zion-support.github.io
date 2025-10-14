@@ -1,8 +1,10 @@
 export const securityHeaders = {
   csp: {
-    'default-src': ["
-    'script-src': ["'self'", "
-    'style-src': ["'self'", "
-    'img-src': ["
-    'font-src': ["
-    'connect-src': ["
+    'default-src': ["'self'"],
+    'script-src': ["'self'", "'unsafe-inline'"],
+    'style-src': ["'self'", "'unsafe-inline'"],
+    'img-src': ["'self'", "data:", "https:"],
+    'font-src': ["'self'", "data:"],
+    'connect-src': ["'self'"]
+  }
+}
