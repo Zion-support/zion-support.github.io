@@ -120,7 +120,7 @@ const PagePage = () => {
               Proven Results
             </h2>
             <p>Our AI e-commerce solutions deliver measurable improvements</p>
-            </div>
+          </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {industryStats.map((stat, index) => (
@@ -130,6 +130,7 @@ const PagePage = () => {
               </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Services Grid */}
@@ -140,7 +141,7 @@ const PagePage = () => {
               Our E-commerce Solutions
             </h2>
             <p>Comprehensive AI-powered tools for every aspect of e-commerce</p>
-            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ecommerceServices.map((service, index) => (
@@ -185,6 +186,7 @@ const PagePage = () => {
               </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Features Section */}
@@ -195,7 +197,7 @@ const PagePage = () => {
               Why Choose Our E-commerce Solutions?
             </h2>
             <p>Advanced AI technology designed specifically for e-commerce success</p>
-            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {ecommerceFeatures.map((feature, index) => (
@@ -206,6 +208,7 @@ const PagePage = () => {
               </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Success Stories */}
@@ -216,7 +219,7 @@ const PagePage = () => {
               Success Stories
             </h2>
             <p>Real results from our e-commerce clients</p>
-            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
@@ -239,6 +242,8 @@ const PagePage = () => {
               <div className="font-semibold text-gray-900">Emily Rodriguez</div>
               <div className="text-sm text-gray-500">Customer Success Manager, HomeDecor Plus</div>
             </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact Section */}

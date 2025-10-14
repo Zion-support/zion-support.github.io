@@ -41,37 +41,39 @@ const InnovationLabsPage: React.FC = () => {
               <li><strong>Focus:</strong> AI-driven product innovation and development</li>
               <li><strong>Team:</strong> 200+ AI researchers and product engineers</li>
               <li><strong>Projects:</strong> 50+ active AI-powered product initiatives</li>
-              <li><strong>Impact:</strong> $2B+ in new product revenue generated</ul>
+              <li><strong>Impact:</strong> $2B+ in new product revenue generated</li>
+            </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Innovation Methodology</h2>
             <p>Our AI Innovation Labs follow a systematic approach to product development that leverages 
               cutting-edge AI technologies to accelerate every stage of the product lifecycle.</p>
-            </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: AI-Powered Ideation</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• Market analysis using AI-driven trend prediction</li>
               <li>• Customer need identification through AI sentiment analysis</li>
               <li>• Competitive landscape mapping with AI-powered research</li>
-              <li>• Concept generation using generative AI models</ul>
+              <li>• Concept generation using generative AI models</li>
+            </ul>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Rapid Prototyping</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• AI-assisted design and architecture planning</li>
               <li>• Automated code generation and testing</li>
               <li>• Virtual prototyping and simulation</li>
-              <li>• Real-time performance optimization</ul>
+              <li>• Real-time performance optimization</li>
+            </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact Metrics</h2>
             <p>The AI Innovation Labs have delivered measurable value across multiple dimensions:</p>
-            </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Development Efficiency</h3>
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
               <li>• <strong>90% reduction</strong> in development time</li>
               <li>• <strong>85% cost savings</strong> in R&D expenses</li>
               <li>• <strong>95% accuracy</strong> in market demand prediction</li>
-              <li>• <strong>80% faster</strong> time from concept to market</ul>
+              <li>• <strong>80% faster</strong> time from concept to market</li>
+            </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
