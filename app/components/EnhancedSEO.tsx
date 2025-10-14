@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from "react"
+import { Helmet } from "react-helmet-async"
 interface SEOProps {
   title: "string",description: "string"
   keywords?: string
@@ -13,44 +13,47 @@ interface SEOProps {
 
 const EnhancedSEO: "React.FC<SEOProps> = ({"
   title,
-  description,''
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions','
-  canonicalUrl,''
-  ogImage = '/api/placeholder/120o0/630',''
-  ogType = 'website',''
-  twitterCard = 'summary_large_image','
+  description,""
+  keywords = "AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions",
+  canonicalUrl,""
+  ogImage = "/api/placeholder/120/630","
+  ogType = "website","
+  twitterCard = "summary_large_image",
   structuredData,
   noIndex = false,
   noFollow = false
 }) => {
-  const siteName = 'Zion Tech Group''
-  const siteUrl = 'https: "//ziontechgroup.com''"
+  const siteName = "Zion Tech Group""
+  const siteUrl = "https: "//ziontechgroup.com"""
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`'
+  const fullOgImage = ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`"
   const defaultStructuredData = {
-    '@context': 'https: "//schema.org'",'
-    '@type': 'Organization','
+    "@context": "https: "//schema.org"",
+    "@type": "Organization",
     name: "siteName",
-    url: "siteUrl"}
-    logo: "`${siteUrl"}/logo.png`,''
-    description: "'Leading provider of advanced AI and IT solutions", cybersecurity, cloud infrastructure, and digital transformation services.','
-    address: {''
-      '@type': 'PostalAddress',''
-      addressLocality: "'Middletown'",''
-      addressRegion: "'DE'",''
-      addressCountry: "'US'"}'
+      url: "url"
+    }
+    logo: "`${siteUrl"}/logo.png`,""
+    description: ""Leading provider of advanced AI and IT solutions", cybersecurity, cloud infrastructure, and digital transformation services.",
+    address: {""
+      "@type": "PostalAddress","
+      addressLocality: ""Middletown"","
+      addressRegion: ""DE"","
+      addressCountry: ""US""
+    }
     },
-    contactPoint: {''
-      '@type': 'ContactPoint',''
-      telephone: "'+1-30o2-464-0o950'",''
-      contactType: "'customer service'",''
-      email: "'kleber@ziontechgroup.com'"}'
+    contactPoint: {""
+      "@type": "ContactPoint","
+      telephone: ""+1-32-464-0950"","
+      contactType: ""customer service"","
+      email: ""kleber@ziontechgroup.com""
+    }
     },
-    sameAs: ['';
-      'https: "//www.linkedin.com/company/zion-tech-group'",'';
-      'https: "//github.com/ziontechgroup'",'';
-      'https: "//twitter.com/ziontechgroup'';"
-    ];
+    sameAs: ["";
+      "https: "//www.linkedin.com/company/zion-tech-group"",";
+      "https: "//github.com/ziontechgroup"",";
+      "https: "//twitter.com/ziontechgroup"";"
+    ]
   };
   const mergedStructuredData = structuredData || defaultStructuredData;
 
@@ -58,25 +61,39 @@ const EnhancedSEO: "React.FC<SEOProps> = ({"
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content="{description}" />
-      <meta name="keywords" content="{keywords}" />
-      <link rel="canonical" href="{fullCanonicalUrl}" />
-      {/* Robots */}''
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />'"
+      <meta name="description" content="{description
+    } />
+      <meta name="keywords" content="{keywords
+    } />
+      <link rel="canonical" href="{fullCanonicalUrl
+    } />
+      {/* Robots */
+    }
+      <meta name="robots" content={`${noIndex ? "noindex" : "index"}, ${noFollow ? "nofollow" : "follow"}`} />""
       
       {/* Open Graph */}
-      <meta property="og:type" content="{ogType}" />
-      <meta property="og:title" content="{title}" />
-      <meta property="og:description" content="{description}" />
-      <meta property="og:image" content="{fullOgImage}" />
-      <meta property="og:url" content="{fullCanonicalUrl}" />
-      <meta property="og:site_name" content="{siteName}" />
+      <meta property="og:type" content="{ogType
+    } />
+      <meta property="og:title" content="{title
+    } />
+      <meta property="og:description" content="{description
+    } />
+      <meta property="og:image" content="{fullOgImage
+    } />
+      <meta property="og:url" content="{fullCanonicalUrl
+    } />
+      <meta property="og:site_name" content="{siteName
+    } />
       <meta property="og:locale" content="en_US" />
       {/* Twitter Card */}
-      <meta name="twitter:card" content="{twitterCard}" />
-      <meta name="twitter:title" content="{title}" />
-      <meta name="twitter:description" content="{description}" />
-      <meta name="twitter:image" content="{fullOgImage}" />
+      <meta name="twitter:card" content="{twitterCard
+    } />
+      <meta name="twitter:title" content="{title
+    } />
+      <meta name="twitter:description" content="{description
+    } />
+      <meta name="twitter:image" content="{fullOgImage
+    } />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional SEO Meta Tags */}
@@ -101,9 +118,9 @@ const EnhancedSEO: "React.FC<SEOProps> = ({"
         {JSON.stringify(mergedStructuredData)}
       </script>
     </Helmet>
-  );
+  )
 }
-export default EnhancedSEO;
-};
+export default Page
+}
 
-export default EnhancedSEO;''
+export default Page

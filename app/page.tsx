@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -12,54 +12,59 @@ import {
   UsersIcon,
   GlobeAltIcon,
   ChartBarIcon
-} from '@heroicons/react/24/outline';
-import FuturisticCard from './components/FuturisticCard';
-import FuturisticButton from './components/FuturisticButton';
-import ResponsiveContainer from './components/ResponsiveContainer';
+} from "@heroicons/react/24/outline";
+import FuturisticCard from "./components/FuturisticCard";
+import FuturisticButton from "./components/FuturisticButton";
+import ResponsiveContainer from "./components/ResponsiveContainer";
 
 export default function HomePage() {
   const services = [
     {
       icon: CpuChipIcon,
-      title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions to transform your business.',
-      href: '/ai-solutions'
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence solutions to transform your business.",
+      href: "href"
     },
     {
       icon: CloudIcon,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services.',
-      href: '/cloud-services'
+      title: "Cloud Services",
+      description: "Scalable cloud infrastructure and migration services.",
+      href: "href"
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      href: '/cybersecurity'
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions to protect your digital assets.",
+      href: "href"
     },
     {
       icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies and implementation.',
-      href: '/digital-transformation'
+      title: "Digital Transformation",
+      description: "Complete digital transformation strategies and implementation.",
+      href: "href"
     }
-  ];
+  ]
 
   const features = [
-    '24/7 Expert Support',
-    'Cutting-edge Technology',
-    'Scalable Solutions',
-    'Enterprise Security',
-    'Custom Implementation',
-    'Proven Results'
-  ];
+    "24/7 Expert Support",Cutting-edge Technology",
+    "Scalable Solutions",Enterprise Security",
+    "Custom Implementation",Proven Results"
+  ]
 
   const stats = [
-    { label: 'Projects Completed', value: '500+' },
-    { label: 'Happy Clients', value: '200+' },
-    { label: 'Years Experience', value: '10+' },
-    { label: 'Success Rate', value: '99%' }
-  ];
+    { label: "Projects Completed",
+      value: "value"
+    },
+    { label: "Happy Clients",
+      value: "value"
+    },
+    { label: "Years Experience",
+      value: "value"
+    },
+    { label: "Success Rate",
+      value: "value"
+    }
+  ]
 
   return (
     <>
@@ -69,13 +74,13 @@ export default function HomePage() {
         <meta name="keywords" content="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-90 via-purple-90 to-slate-90">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-60/20 to-purple-60/20"></div>
           <ResponsiveContainer>
             <div className="text-center relative z-10">
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-40 via-purple-40 to-pink-40 bg-clip-text text-transparent mb-6">
                 Zion Tech Group
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -121,11 +126,11 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
-                <FuturisticCard key={index} className="text-center group hover:scale-105 transition-transform duration-300">
-                  <div className="text-blue-400 mb-4 flex justify-center">
+                <FuturisticCard key={index} className="text-center group hover:scale-15 transition-transform duration-30">
+                  <div className="text-blue-40 mb-4 flex justify-center">
                     <service.icon className="w-12 h-12" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-40 transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -154,13 +159,13 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 gap-4">
                   {features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <CheckCircleIcon className="w-5 h-5 text-green-40 flex-shrink-0" />
                       {feature}
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-white/20">
+              <div className="bg-gradient-to-br from-blue-50/20 to-purple-50/20 rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform?</h3>
                 <p className="text-gray-300 mb-6">
                   Let's discuss how our solutions can accelerate your digital transformation 
@@ -180,7 +185,7 @@ export default function HomePage() {
         {/* CTA Section */}
         <section className="py-20">
           <ResponsiveContainer>
-            <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
+            <div className="text-center bg-gradient-to-r from-blue-60/20 to-purple-60/20 rounded-2xl p-12 border border-white/20">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Join hundreds of satisfied clients who have transformed their businesses 
@@ -204,5 +209,5 @@ export default function HomePage() {
         </section>
       </div>
     </>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { 
   Bars3Icon, 
   XMarkIcon,
@@ -20,7 +20,7 @@ import {
   CpuChipIcon,
   SignalIcon,
   UserGroupIcon
-} from '@heroicons/react/24/outline';
+} from "@heroicons/react/24/outline";
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
@@ -31,39 +31,39 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    { name: "Home", href: "/", icon: HomeIcon },
+    { name: "About", href: "/about", icon: InformationCircleIcon },
     { 
-      name: 'Services',
-      href: '/services',
+      name: "Services",
+      href: "/services",
       icon: BriefcaseIcon,
       submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
-        { name: 'IT Services', href: '/it-services', icon: CogIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon }
+        { name: "AI Services", href: "/ai-services", icon: CpuChipIcon },
+        { name: "IT Services", href: "/it-services", icon: CogIcon },
+        { name: "Cloud Infrastructure", href: "/cloud-infrastructure", icon: CloudIcon },
+        { name: "Cybersecurity", href: "/cybersecurity", icon: ShieldCheckIcon }
       ]
     },
     { 
-      name: 'Solutions',
-      href: '/solutions',
+      name: "Solutions",
+      href: "/solutions",
       icon: CogIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: "AI Solutions", href: "/ai-solutions", icon: CpuChipIcon },
+        { name: "Cybersecurity", href: "/cybersecurity", icon: ShieldCheckIcon },
+        { name: "Cloud Infrastructure", href: "/cloud-solutions", icon: CloudIcon },
+        { name: "Digital Transformation", href: "/digital-transformation", icon: CogIcon },
+        { name: "Micro SaaS", href: "/micro-saas", icon: GlobeAltIcon },
+        { name: "5G Solutions", href: "/5g-solutions", icon: SignalIcon }
       ]
     },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-    { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
-  ];
+    { name: "Blog", href: "/blog", icon: DocumentTextIcon },
+    { name: "Tutorials", href: "/tutorials", icon: AcademicCapIcon },
+    { name: "Demo", href: "/demo", icon: PlayIcon },
+    { name: "Support", href: "/support", icon: QuestionMarkCircleIcon },
+    { name: "Pricing", href: "/pricing", icon: CurrencyDollarIcon },
+    { name: "Contact", href: "/contact", icon: PhoneIcon }
+  ]
 
   const isActive = (path: string) => {
     return location.pathname === path;
@@ -76,7 +76,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="flex">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-2xl font-bold text-blue-600">
+              <Link to="/" className="text-2xl font-bold text-blue-60">
                 Zion Tech Group
               </Link>
             </div>
@@ -88,7 +88,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   {item.submenu ? (
                     <div className="relative group">
                       <button
-                        className="text-gray-70o0 hover:text-blue-60o0 px-3 py-2 text-sm font-medium flex items-center"
+                        className="text-gray-70 hover:text-blue-60 px-3 py-2 text-sm font-medium flex items-center"
                         onMouseEnter={() => setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
                       >
@@ -105,7 +105,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-70o0 hover:bg-gray-10o0"
+                              className="block px-4 py-2 text-sm text-gray-70 hover:bg-gray-10"
                             >
                               {subItem.name}
                             </Link>
@@ -116,8 +116,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   ) : (
                     <Link
                       to={item.href}
-                      className={`text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium ${
-                        isActive(item.href) ? 'text-blue-600' : ''
+                      className={`text-gray-70 hover:text-blue-60 px-3 py-2 text-sm font-medium ${
+                        isActive(item.href) ? "text-blue-60" : ""
                       }`}
                     >
                       {item.name}
@@ -132,7 +132,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
                 to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              className="bg-gradient-to-r from-purple-60 to-cyan-60 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-70 hover:to-cyan-70 transition-all duration-30"
             >
               Get Started
             </Link>
@@ -142,7 +142,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-70o0 hover: text-blue-60o0 focus:outline-none focu,s:text-blue-60o0"
+              className="text-gray-70 hover:text-blue-60 focus:outline-none focu,s:text-blue-60"
             >
               {isOpen ? (
                 <XMarkIcon className="h-6 w-6" />
@@ -158,12 +158,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navigation.map((item) => (
-                <div key="{item.name}">
+                <div key="{item.name
+    }>
                   {item.submenu ? (
                     <div>
                       <button
                         onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className="w-full text-left px-3 py-2 text-base font-medium text-gray-70o0 hover: text-blue-60o0 hove,r:bg-gray-50"
+                        className="w-full text-left px-3 py-2 text-base font-medium text-gray-70 hover:text-blue-60 hover:bg-gray-50"
                       >
                         {item.name}
                       </button>
@@ -175,8 +176,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                               to={subItem.href}
                               className={`block px-3 py-2 text-base font-medium ${
                                 isActive(subItem.href)
-                                  ? 'text-blue-60o0 bg-blue-50''
-                                  : 'text-gray-70o0 hover: "text-blue-60o0 hove,r:bg-gray-50''"
+                                  ? "text-blue-60 bg-blue-50""
+                                  : "text-gray-70 hover:"text-blue-60 hover:bg-gray-50"""
                               }`}
                               onClick={() => setIsOpen(false)}
                             >
@@ -191,8 +192,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       to={item.href}
                       className={`block px-3 py-2 text-base font-medium ${
                         isActive(item.href)
-                          ? 'text-blue-60o0 bg-blue-50''
-                          : 'text-gray-70o0 hover: "text-blue-60o0 hove,r:bg-gray-50''"
+                          ? "text-blue-60 bg-blue-50""
+                          : "text-gray-70 hover:"text-blue-60 hover:bg-gray-50"""
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
@@ -206,7 +207,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         )}
       </div>
     </nav>
-  );
+  )
 };
 
 export default Navigation;

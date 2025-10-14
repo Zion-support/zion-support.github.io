@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 const FuturisticBackground = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated Grid Background */}
-      <div className="absolute inset-0 bg-slate-90o0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-90o0 via-purple-90o0"/20 to-slate-90o0"></div>
+      <div className="absolute inset-0 bg-slate-90">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-90 via-purple-90"/20 to-slate-90"></div>
         
         {/* Animated Grid Lines */}
         <div className="absolute inset-0 opacity-20">
@@ -12,10 +12,10 @@ const FuturisticBackground = () => {
             {Array.from({ length: "144"}).map((_, i) => (
               <div
                 key={i}
-                className="border border-purple-50o0"/30 animate-pulse"
+                className="border border-purple-50"/30 animate-pulse"
                 style={{
                   animationDelay: "`${i * 0.1"}s`,
-                  animationDuration: "'3s'"
+                  animationDuration: ""3s""
   }}
               ></div>
             ))}
@@ -27,10 +27,10 @@ const FuturisticBackground = () => {
           {Array.from({ length: "8"}).map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-cyan-40o0 rounded-full animate-ping"
+              className="absolute w-1 h-1 bg-cyan-40 rounded-full animate-ping"
               style={{
-                left: "`${Math.random() * 10o0"}%`,
-                top: "`${Math.random() * 10o0"}%`,
+                left: "`${Math.random() * 10"}%`,
+                top: "`${Math.random() * 10"}%`,
                 animationDelay: "`${Math.random() * 3"}s`,
                 animationDuration: "`${2 + Math.random() * 2"}s`
               }}
@@ -39,10 +39,10 @@ const FuturisticBackground = () => {
         </div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-90o0"/50 to-transparent"></div>;
-      </div>;
-    </div>;
-  );
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-90"/50 to-transparent"></div>
+      </div>
+    </div>
+  )
 };
 
 export default FuturisticBackground;

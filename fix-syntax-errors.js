@@ -1,103 +1,81 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
-  let fixed = content;
+  // Fix malformed string literals with extra quotes
+  content = content.replace(/'([^']*)'/g, '"$1"');
   
-  // Fix malformed import statements with 'use client'
-  fixed = fixed.replace(/import\s+([^']+)'([^']+)'use client'/g, "import $1 from '$2';\n'use client'");
-  fixed = fixed.replace(/import\s+([^']+)'([^']+)'use client'/g, "import $1 from '$2';\n'use client'");
+  // Fix malformed class names with 'o' instead of '0'
+  content = content.replace(/(\w+)-(\d+)o(\d+)/g, '$1-$20$3');
+  content = content.replace(/(\w+)o(\d+)/g, '$10$2');
   
-  // Fix missing semicolons after import statements
-  fixed = fixed.replace(/import\s+[^;]+(?!;)\n/g, (match) => {
-    if (!match.trim().endsWith(';')) {
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
+  // Fix malformed hover states
+  content = content.replace(/hove,r:/g, 'hover:');
+  content = content.replace(/hover: /g, 'hover:');
   
-  // Fix unterminated string literals in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"([^,}\n]*)/g, (match, key, value, rest) => {
-    if (rest.includes('"') && !rest.includes('",')) {
-      return `${key}: "${value}",`;
-    }
-    return match;
-  });
+  // Fix malformed duration values
+  content = content.replace(/duration-(\d+)o(\d+)/g, 'duration-$10$2');
   
-  // Fix unterminated string literals with missing closing quotes
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)(?![^"]*")/g, (match, key, value) => {
-    if (!value.endsWith('"')) {
-      return `${key}: "${value}"`;
-    }
-    return match;
-  });
+  // Fix malformed price strings
+  content = content.replace(/"Starting at \$(\d+),(\d+)"/g, '"Starting at $$1,$2"');
+  content = content.replace(/"Starting at \$(\d+)",(\d+)o(\d+)'/g, '"Starting at $$1,$20$3"');
   
-  // Fix missing commas in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*(?=\w+:)/g, '$1: "$2",');
+  // Fix malformed JSX syntax
+  content = content.replace(/const (\w+): "React\.FC = \(\) => \{"/g, 'const $1: React.FC = () => {');
+  content = content.replace(/const (\w+): "React\.FC = \(\) => \{"/g, 'const $1: React.FC = () => {');
   
-  // Fix malformed JSX closing tags
-  fixed = fixed.replace(/<(\w+)([^>]*)>\s*<\/\1>/g, '<$1$2></$1>');
+  // Fix malformed array syntax
+  content = content.replace(/\[\];/g, '[]');
+  content = content.replace(/\];/g, ']');
   
-  // Fix missing closing brackets in object literals
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*}(?=\s*[}\]])/g, '$1: "$2"\n  }');
+  // Fix malformed object syntax
+  content = content.replace(/\{;/g, '{');
+  content = content.replace(/;\s*title:/g, 'title:');
+  content = content.replace(/;\s*description:/g, 'description:');
+  content = content.replace(/;\s*price:/g, 'price:');
+  content = content.replace(/;\s*features:/g, 'features:');
   
-  // Fix missing semicolons after variable declarations
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\n/g, (match) => {
-    if (!match.trim().endsWith(';')) {
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
+  // Fix malformed closing tags
+  content = content.replace(/<\/section>/g, '</section>');
+  content = content.replace(/<\/div>/g, '</div>');
   
-  return fixed;
+  // Fix malformed JSX attributes
+  content = content.replace(/className="([^"]*)"\/>/g, 'className="$1" />');
+  
+  return content;
 }
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+// Function to process all TypeScript/TSX files
+function processFiles(dir) {
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main function
-async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'api/**/*.js'
-  ];
-  
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
+    if (stat.isDirectory()) {
+      processFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      try {
+        console.log(`Processing: ${filePath}`);
+        let content = fs.readFileSync(filePath, 'utf8');
+        const originalContent = content;
+        
+        content = fixSyntaxErrors(content);
+        
+        if (content !== originalContent) {
+          fs.writeFileSync(filePath, content, 'utf8');
+          console.log(`Fixed: ${filePath}`);
+        }
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error.message);
       }
     }
   }
-  
-  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { fixSyntaxErrors, processFile };
+// Process the app directory
+console.log('Starting syntax error fixes...');
+processFiles('./app');
+console.log('Syntax error fixes completed!');
