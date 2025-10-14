@@ -43,8 +43,9 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
                 Forecast trends and make data-driven decisions.
               </p>
             </div>
-</div>
-</div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -43,8 +43,9 @@ const AICybersecuritySuiteProPage: React.FC = () => {
                 Continuous AI monitoring and security analysis.
               </p>
             </div>
-</div>
-</div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

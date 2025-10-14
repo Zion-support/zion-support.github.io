@@ -41,9 +41,9 @@ const NotFoundPage: React.FC = () => {
                   Round-the-clock support for all your needs.
                 </p>
               </div>
-</div>
-</div>
-</div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

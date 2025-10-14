@@ -33,9 +33,9 @@ const AiLegalAssistantPage: React.FC = () => {
                 <p className="text-purple-700   ">Round-the-clock support for all your needs.
                 </p>
               </div>
-</div>
-</div>
-</div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
