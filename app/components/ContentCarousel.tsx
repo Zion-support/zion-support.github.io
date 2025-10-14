@@ -89,9 +89,9 @@ const ContentCarousel: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div className="space-y-8">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <currentSlideData.icon className="w-8 h-8 text-white" />
+                <div className="flex items-centergap-4">
+                  <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <currentSl ideData.icon className="w-8 h-8text-white" />
                   </div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -105,11 +105,11 @@ const ContentCarousel: React.FC = () => {
 
                 {/* Features */}
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4>
+                  <h4 className="text-lgfont-semiboldtext-white mb-4">Key Features:</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {currentSlideData.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    {currentSlide Data.features.map((feature, index) => (
+                      <divke y ={index} className="flex items-centerspace-x-3">
+                        <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </div>
                     ))}
@@ -117,11 +117,11 @@ const ContentCarousel: React.FC = () => {
                 </div>
 
                 {/* Stats */}
-                {currentSlideData.stats && (
+                {currentSlide Data.stats && (
                   <div className="grid grid-cols-3 gap-6">
-                    {currentSlideData.stats.map((stat, index) => (
-                      <div key={index} className="text-center">
-                        <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                    {currentSlide Data.stats.map((stat, index) => (
+                      <divke y ={index} className="text-center">
+                        <div className="text-2 xlfont-bold text-white mb-1">{stat.value}</div>
                         <div className="text-gray-400 text-sm">{stat.label}</div>
                       </div>
                     ))}
@@ -129,12 +129,12 @@ const ContentCarousel: React.FC = () => {
                 )}
 
                 {/* CTA */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                <div className="flexflex-colsm:flex-row gap-4">
+                  <button ton className="inline-flex items-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                     <Zap className="w-5 h-5" />
                     Get Started
-                  </button>
-                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  </butn>
+                  <button ton className="inline-flex items-centergap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <ArrowRight className="w-5 h-5" />
                     Learn More
                   </button>
@@ -154,12 +154,12 @@ const ContentCarousel: React.FC = () => {
           </div>
 
           {/* Navigation */}
-          <button onClick ={prevSlide}
-            className ="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300">
+          <buttonton onClick ={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300">
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button onClick ={nextSlide}
-            className ="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300">
+          <buttonton onClick ={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300">
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
@@ -167,10 +167,10 @@ const ContentCarousel: React.FC = () => {
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
           {slides.map((_, index) => (
-            <button key ={index}
-              onClick ={() => setCurrentSlide(index)}
-              className ={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
+            <buttonton key={index}
+              onClic k ={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                inde x === currentSlide
                   ? 'bg-gradient-to-r from-purple-500 to-blue-500'
                   :'bg-white/30 hover:bg-white/50'
               }`}

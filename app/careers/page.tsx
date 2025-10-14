@@ -220,8 +220,8 @@ const CareersPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {positions.map((position) => (
-                <div key ={position.id}
-                  className ={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
+                <div key={position.id}
+                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' :'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}>
                   {position.featured && (
@@ -286,7 +286,7 @@ const CareersPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
-                <div key ={index} className ="text-center group">
+                <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>

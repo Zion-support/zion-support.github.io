@@ -1,5 +1,5 @@
-import React, { memo, useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
+import React, { useState, useEffect, Suspense, memo } from 'react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -33,9 +33,7 @@ const HomePage: React.FC = () => {
     }
   };
 
-  // These variables are used for future functionality
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _unused = { isVisible, handlePhoneClick };
+  // Use the state and handler for future functionality
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

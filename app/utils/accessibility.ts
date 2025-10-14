@@ -1,9 +1,9 @@
 export const accessibilityUtils ={
   addSkip Link: () => {
     const skipLink = document.createElement('a');
-    skipLink.href ='#main-content';
-    skipLink.textContent ='Skip to main content';
-    skipLink.className ='sr-only focus:not-sr-only';
+    skipLink.hre f ='#main-content';
+    skipLink.textConten t ='Skip to main content';
+    skipLink.className='sr-only focus:not-sr-only';
     document.body.insertBefore(skipLink, document.body.firstChild);
   },
   trapFocus: (element: HTMLElement) => {

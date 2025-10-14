@@ -114,7 +114,7 @@ const DynamicContentShowcase: React.FC = () => {
     <div className="bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7 xlmx-auto text-center">
+        <div className="max-w-7xlmx-auto text-center">
           <h1 className="text-4 xlmd:text-6 xl font-bold text-white mb-6">
             Dynamic <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
           </h1>
@@ -123,11 +123,11 @@ const DynamicContentShowcase: React.FC = () => {
             and interactive showcases that bring your business to life.
           </p>
           <div className="flexflex-colsm:flex-row gap-4 justify-center">
-            <button ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+            <button ton className="inline-flex items-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Play className="w-5 h-5" />
               Start Demo
             </butn>
-            <button ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <button ton className="inline-flex items-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
               Learn More
             </butn>
@@ -137,7 +137,7 @@ const DynamicContentShowcase: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7 xlmx-auto">
+        <div className="max-w-7xlmx-auto">
           <div className="text-centermb-16">
             <h2 className="text-3 xlfont-bold text-white mb-6">
               Why Choose Our Solutions?
@@ -149,19 +149,19 @@ const DynamicContentShowcase: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divke y ={index} className ="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="flexitems-centerjustify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+              <divke y ={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+                <div className="flex items-centerjustify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
+                  <feature.icon className="w-8 h-8text-white" />
                 </div>
-                <h3 className="text-xlfont-boldtext-white mb-4 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-xl font-boldtext-white mb-4 group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 
                 {feature.stats && (
-                  <div className="gridgrid-cols-3 gap-4">
+                  <div className="grid grid-cols-3 gap-4">
                     {feature.stats.map((stat, statIndex) => (
-                      <divke y ={statIndex} className ="text-center">
+                      <divke y ={statIndex} className="text-center">
                         <div className="text-lgfont-boldtext-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
@@ -189,7 +189,7 @@ const DynamicContentShowcase: React.FC = () => {
               <div className="text-center">
                 <div className="flexjustify-centermb-6">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Starke y ={i} className ="w-6 h-6text-yellow-400 fill-current" />
+                    <Starke y ={i} className="w-6 h-6text-yellow-400 fill-current" />
                   ))}
                 </div>
                 
@@ -197,9 +197,9 @@ const DynamicContentShowcase: React.FC = () => {
                   &ldquo;{currentTestimonial.content}&rdquo;
                 </blockquote>
                 
-                <div className="flexitems-centerjustify-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8 text-white" />
+                <div className="flex items-centerjustify-center gap-4">
+                  <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <Users className="w-8 h-8text-white" />
                   </div>
                   <div className="text-left">
                     <div className="text-lg font-semibold text-white">{currentTestimonial.name}</div>
@@ -211,19 +211,19 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
 
             {/* Navigation Controls */}
-            <div className="flexitems-centerjustify-center gap-4 mt-8">
+            <div className="flex items-centerjustify-center gap-4 mt-8">
               <button tononClick ={prevTestimonial}
-                className ="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
+                className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
                 <ChevronLeft className="w-6 h-6" />
               </butn>
               
               <button tononClick ={togglePlay Pause}
-                className ="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
+                className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </butn>
               
               <button tononClick ={nextTestimonial}
-                className ="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
+                className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
                 <ChevronRight className="w-6 h-6" />
               </butn>
             </div>
@@ -231,10 +231,10 @@ const DynamicContentShowcase: React.FC = () => {
             {/* Dots Indicator */}
             <div className="flexjustify-centermt-6 space-x-2">
               {testimonials.map((_, index) => (
-                <button tonkey ={index}
-                  onClick ={() => setCurrent Index(index)}
-                  className ={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-purple-400' :'bg-white/30'
+                <button tonkey={index}
+                  onClic k ={() => setCurrent Index(index)}
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                    inde x === currentIndex ? 'bg-purple-400' :'bg-white/30'
                   }`}
                 />
               ))}
@@ -245,7 +245,7 @@ const DynamicContentShowcase: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7 xlmx-auto">
+        <div className="max-w-7xlmx-auto">
           <div className="text-centermb-16">
             <h2 className="text-3 xlfont-bold text-white mb-6">Comprehensive Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
@@ -256,8 +256,8 @@ const DynamicContentShowcase: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <divke y ={index} className ="flexitems-startspace-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                <divke y ={index} className="flexitems-startspace-x-3">
+                  <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}

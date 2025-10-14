@@ -54,13 +54,13 @@ const MetaManager: React.FC<MetaManagerProps> = ({
 
     // Update canonical URL
     if (canonical) {
-      const canonicalLink = document.querySelector('link[re l ="canonical"]');
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', canonical);
       } else {
         const link = document.createElement('link');
-        link.rel ='canonical';
-        link.href = canonical;
+        link.rel='canonical';
+        link.hre f = canonical;
         document.head.appendChild(link);
       }
     }

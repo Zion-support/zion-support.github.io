@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, 
+import { 
+  Menu, 
   X, 
   Network,
   FileText,
@@ -14,7 +15,7 @@ import { Menu,
   Shield, 
   Code, 
   BarChart
- } from 'lucide-react';
+} from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
@@ -30,8 +31,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const toggleDropdown = useCallback((dropdown: string) => {
     setActiveDropdown(prev => prev === dropdown ? null : dropdown);
   }, []);
+<<<<<<< HEAD
 
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6be4
 
   const handleResize = () => {
     if (window.innerWidth >= 1024) {

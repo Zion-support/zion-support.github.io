@@ -3,6 +3,7 @@ import React from 'react';
 export const ContentPromotionBanner: React.FC = () => {
   return null; // This component doesn't render anything visible
 };
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp  } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
@@ -145,3 +146,5 @@ const ContentPromotionBanner: React.FC = () => {
 };
 
 export default ContentPromotionBanner;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6be4
