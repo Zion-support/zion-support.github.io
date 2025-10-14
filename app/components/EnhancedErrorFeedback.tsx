@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+'use client''
+'use client'
+=======
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
@@ -206,4 +210,5 @@ const EnhancedErrorFeedback = () => {
 };
 
 export default EnhancedErrorFeedback;
+>>>>>>> origin/main
 >>>>>>> origin/main

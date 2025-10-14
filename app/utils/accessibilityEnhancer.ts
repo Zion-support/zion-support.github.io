@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+export const utilityFunction = () => {// Utility implementation;
+  return true}
+=======
 export const utilityFunction = () => { // Utility implementation;
   return true; }
 };
@@ -11,4 +15,5 @@ export const accessibilityenhancer = () => {
 };
 
 export default accessibilityenhancer;
+>>>>>>> origin/main
 >>>>>>> origin/main

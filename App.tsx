@@ -84,24 +84,28 @@ import ContactPage from './app/pages/ContactPage';
 <<<<<<< HEAD
 import NotFoundPage from './app/404';
 function App() {
+<<<<<<< HEAD
+  const [sidebarOpen, setSidebarOpen] = React.useState(false)
+=======
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
+>>>>>>> origin/main
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-slate-900 flex">
+          <div className="min-h-screen bg-slate-900 flex">"
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col">"
               <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
-              <main className="relative z-10 flex-1" id="main-content" role="main">
+              <main className="relative z-10 flex-1" id="main-content" role="main">"
                 <ErrorBoundary>
-                  <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+                  <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>"
                     <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="*" element={<NotFoundPage />} />
+                      <Route path="/" element={<HomePage />} />"
+                      <Route path="/about" element={<AboutPage />} />"
+                      <Route path="/services" element={<ServicesPage />} />"
+                      <Route path="/contact" element={<ContactPage />} />"
+                      <Route path="*" element={<NotFoundPage />} />"
                     </Routes>
                   </Suspense>
                 </ErrorBoundary>

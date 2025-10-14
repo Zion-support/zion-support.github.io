@@ -1,5 +1,15 @@
 import React from 'react';
 <<<<<<< HEAD
+
+const App: React.FC = () => {return (
+    <div className="App">
+      <h1>Test App</h1>
+    </div>
+  )};
+
+export default App;
+=======
+<<<<<<< HEAD
 const App: React.FC = () => { return (
     <div className="App">
       <h1>Test App</h1>
@@ -17,3 +27,4 @@ const AppTest: React.FC = () => {
 };
 
 export default AppTest;
+>>>>>>> origin/main

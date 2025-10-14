@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+'use client''
+'use client'
+=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
@@ -195,3 +199,4 @@ export default function Page() {
 };
 
 export default CaseStudiesPage;
+>>>>>>> origin/main

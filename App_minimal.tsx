@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+=======
+>>>>>>> origin/main
 
 const App: React.FC = () => {
 <<<<<<< HEAD
@@ -10,6 +15,12 @@ const App: React.FC = () => {
         </Routes>
       </Router>
     </HelmetProvider>
+<<<<<<< HEAD
+  );
+};
+
+export default App;
+=======
 import React from 'react';'
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';'
 { HelmetProvider } from 'react-helmet-async';
@@ -29,3 +40,4 @@ const App: React.FC = () => { return (
 };
 
 export default App;
+>>>>>>> origin/main

@@ -1,4 +1,54 @@
 <<<<<<< HEAD
+import React from 'react';react-helmet-async";
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react";
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react";
+import FuturisticBackground from '../components/FuturisticBackground";
+import React from 'react';
+import { Helmet , Right,  Star,  Brain,  BarChart3,  Zap,  FileText,  MessageSquare,  Shield   } from 'lucide-react';
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield  } from 'lucide-react';
+FuturisticBackground from '../components/FuturisticBackground";
+const AiServicesPage: React.FC = () => {const services = [{
+      icon: Brain,''
+      title: 'AI Consulting','
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.','
+      color: 'from-purple-500 to-pink-500''}'
+    },
+    {icon: BarChart3,''
+      title: 'AI Analytics','
+      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.','
+      color: 'from-blue-500 to-cyan-500''}'
+    },
+    {icon: Zap,''
+      title: 'AI Automation','
+      description: 'Intelligent automation solutions to streamline your business processes.','
+      color: 'from-green-500 to-emerald-500''}'
+    },
+    {icon: FileText,''
+      title: 'AI Content Generation','
+      description: 'AI-powered content creation for marketing, documentation, and communication.','
+      color: 'from-orange-500 to-red-500''}'
+    },
+    {icon: MessageSquare,''
+      title: 'AI Customer Service','
+      description: 'Intelligent chatbots and customer service solutions powered by AI.','
+      color: 'from-indigo-500 to-purple-500''}'
+    },
+    {
+      icon: icon: Shield,
+      title: 'AI Security","
+      description: 'AI-powered security solutions to protect your business and data.","
+      color: 'from-cyan-500 to-blue-500''";
+import React from 'react";
+import { Helmet } from 'react-helmet-async";
+import { Right, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react";
+import FuturisticBackground from '../components/FuturisticBackground";
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react'
+import FuturisticBackground from '../components/FuturisticBackground'
+const AiServicesPage: React.FC = () => {
+=======
+<<<<<<< HEAD
 import React from 'react';'react-helmet-async;
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;
@@ -59,10 +109,95 @@ import Analytics from '../components/Analytics';
 >>>>>>> origin/main
 
 const AIServicesPage: React.FC = () => {
+>>>>>>> origin/main
   const services = [
     {
 <<<<<<< HEAD
       icon: Brain,
+<<<<<<< HEAD
+      title: 'AI Consulting','
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.','
+      color: 'from-purple-500 to-pink-500''
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Analytics','
+      description: 'Advanced analytics solutions powered by AI to extract insights from your data.','
+      color: 'from-blue-500 to-cyan-500''
+    },
+    {
+      icon: Zap,
+      title: 'AI Automation','
+      description: 'Automate repetitive tasks and processes with intelligent AI solutions.','
+      color: 'from-green-500 to-emerald-500''
+    },
+    {
+      icon: FileText,
+      title: 'AI Content Generation','
+      description: 'Generate high-quality content at scale using advanced AI models.','
+      color: 'from-orange-500 to-red-500''
+    },
+    {
+      icon: MessageSquare,
+      title: 'AI Chatbots','
+      description: 'Intelligent chatbots and virtual assistants for customer support.','
+      icon: MessageCircle,
+      title: 'AI Customer Service','
+      description: 'Intelligent chatbots and customer service solutions powered by AI.','
+      color: 'from-indigo-500 to-purple-500''
+    },
+    {
+      icon: Shield,
+      title: 'AI Security','
+      description: 'AI-powered security solutions to protect your business from threats.','
+      color: 'from-red-500 to-pink-500''
+      description: 'AI-powered security solutions to protect your business and data.','
+      color: 'from-cyan-500 to-blue-500''
+    }
+  ]
+  const features = [
+    {
+      title: 'Custom AI Solutions','
+      description: 'Tailored AI implementations designed specifically for your business needs.','
+      icon: '🤖''
+    },
+    {
+      title: 'Machine Learning Models','
+      description: 'Advanced ML models trained on your data for optimal performance.','
+      icon: '🧠''
+    },
+    {
+      title: 'Real-time Processing','
+      description: 'High-performance AI systems that process data in real-time.','
+      icon: '⚡''
+    },
+    {title: 'Scalable Architecture','
+      description: 'AI solutions that grow with your business and handle increasing loads.','
+      icon: '📈''
+      icon: Shield,''
+      title: 'AI Security','
+      description: 'AI-powered security solutions to protect your business and data.','
+      color: 'from-cyan-500 to-blue-500''}'
+    }
+  ];
+  const testimonials = [{name: "Dr. Sarah Johnson","
+      company: "MedTech Solutions","
+      role: "CTO",''
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.","
+      rating: 5}
+    },
+    {name: "Michael Chen","
+      company: "E-commerce Plus","
+      role: "CEO",''
+      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.","
+      rating: 5}
+    },
+    {name: "Emily Rodriguez","
+      company: "FinanceFlow","
+      role: "Head of Analytics","
+      content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.","
+      rating: 5}
+=======
       title: "AI Consulting",
       description: "Strategic AI consulting to help you identify opportunities and develop AI roadmaps.",
       color: "from-purple-500 to-pink-500" },
@@ -136,6 +271,7 @@ const AIServicesPage: React.FC = () => {
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
       rating: 5; }
     }
+>>>>>>> origin/main
   ]
 =======
 <<<<<<< HEAD
@@ -178,48 +314,83 @@ const AIServicesPage: React.FC = () => {
 
 >>>>>>> origin/main
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-slate-900">"
+      <Helmet>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and more." />"
+        <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and custom solutions." />"
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, consulting" />"
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services and solutions for modern businesses. Transform your operations with cutting-edge artificial intelligence." />
+>>>>>>> origin/main
       </Helmet>
 <<<<<<< HEAD
       <FuturisticBackground />
+<<<<<<< HEAD
+      <div className="relative z-10">"
+        {/* Hero Section */}
+        <section className="py-20 px-4">"
+          <div className="max-w-6xl mx-auto text-center">"
+            <h1 className="text-5xl font-bold text-white mb-6">"
+=======
       <div className="relative z-10">
         { /* Hero Section */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-white mb-6">
+>>>>>>> origin/main
               AI Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
               Transform your business with our comprehensive AI services designed to drive innovation and growth.
             </p>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Services Grid */}
+        <section className="py-20 px-4">"
+          <div className="max-w-6xl mx-auto">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+=======
         { /* Services Grid */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> origin/main
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300""
                 >
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
-                    <service.icon className="w-6 h-6 text-white" />
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>`
+                    <service.icon className="w-6 h-6 text-white" />"
                   </div>
+<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold text-white mb-3">"
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">"
+                    {service.description}
+=======
                   <h3 className="text-xl font-semibold text-white mb-3">
                     { service.title }
                   </h3>
                   <p className="text-gray-300 mb-4">
                     { service.description }
+>>>>>>> origin/main
                   </p>
-                  <button className="flex items-center text-white hover:text-gray-300 transition-colors">
+                  <button className="flex items-center text-white hover:text-gray-300 transition-colors">"
                     Learn More
-                    <Right className="w-4 h-4 ml-2" />
+                    <Right className="w-4 h-4 ml-2" />"
                   </button>
                 </div>
+<<<<<<< HEAD
+              ))
+=======
               ))}
 =======
 
@@ -251,6 +422,7 @@ const AIServicesPage: React.FC = () => {
                 ))}
               </ul>
 >>>>>>> origin/main
+>>>>>>> origin/main
             </div>
           ))}
         </div>
@@ -270,36 +442,52 @@ const AIServicesPage: React.FC = () => {
           </div>
 <<<<<<< HEAD
         </section>
+<<<<<<< HEAD
+        {/* CTA Section */}
+        <section className="py-20 px-4">"
+          <div className="max-w-4xl mx-auto text-center">"
+            <h2 className="text-4xl font-bold text-white mb-6">"
+=======
         { /* CTA Section */ }
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
+>>>>>>> origin/main
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8">"
               Let our AI experts help you unlock the full potential of artificial intelligence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">"
                 Get Started
               </button>
+<<<<<<< HEAD
+              <button className="border border-white/30 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">"
+      <div className="relative z-10 min-h-screen bg-slate-900">"
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
+          <div className="max-w-7xl mx-auto text-center">"
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
+=======
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">
       <div className="relative z-10 min-h-screen bg-slate-900">
         { /* Hero Section */ }
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> origin/main
               AI Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
               Transform your business with cutting-edge artificial intelligence solutions. 
               From consulting to implementation, we deliver AI that drives real results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
                 Get Started
               </button>
-              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
+              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">"
                 Learn More
               </button>
             </div>
@@ -307,28 +495,92 @@ const AIServicesPage: React.FC = () => {
         </section>
       </div>
     </div>
+<<<<<<< HEAD
+      <FuturisticBackground>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          {/* Hero Section */}
+          <section className="relative py-20 px-4">
+            <div className="max-w-7xl mx-auto text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+=======
       <FuturisticBackground>;
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
           { /* Hero Section */ }
           <section className="relative py-20 px-4">;
             <div className="max-w-7xl mx-auto text-center">;
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
+>>>>>>> origin/main
                 AI;
-                <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+                <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   Services;
-                </span>;
-              </h1>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your business with our comprehensive AI services.;
                 From analytics to automation, we provide cutting-edge AI solutions.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Get Started;
-                  <Right className="w-5 h-5 ml-2 inline" />;
-                </button>;
-                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
+                  <Right className="w-5 h-5 ml-2 inline" />
+                </button>
+                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   Learn More;
+<<<<<<< HEAD
+                </button>
+              </div>
+            </div>
+          </section>
+          {/* Services Grid */}
+          <section className="py-20 px-4">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-4xl font-bold text-white text-center mb-16">
+                Our AI Services;
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, _index) => (}
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
+                    <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>`
+                      aria-hidden="true"
+                    >;
+                      <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2 text-center">{service.title}</h3>
+                    <p className="text-gray-300 text-sm text-center">{service.description}</p>
+                  </div>
+                ))
+              </div>
+            </div>
+          </section>
+          {/* Testimonials Section */}
+          <section className="py-20 px-4 bg-slate-800/30">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-4xl font-bold text-white text-center mb-16">
+                What Our Clients Say;
+              </h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {testimonials.map((testimonial, _index) => (}
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
+                    <div className="flex items-center mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (}
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      ))
+                    </div>
+                    <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                    <div>
+                      <p className="text-white font-semibold">{testimonial.name}</p>
+                      <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                    </div>
+                  </div>
+                ))
+              </div>
+            </div>
+          </section>
+          {/* CTA Section */}
+          <section className="py-20 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">
+=======
                 </button>;
               </div>
             </div>
@@ -382,18 +634,33 @@ const AIServicesPage: React.FC = () => {
           <section className="py-20 px-4">;
             <div className="max-w-4xl mx-auto text-center">;
               <h2 className="text-4xl font-bold text-white mb-6">;
+>>>>>>> origin/main
                 Ready to Transform Your Business with AI?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
                 Join hundreds of companies already using our AI services to drive innovation and growth.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Start Your AI Journey;
-                  <Right className="w-5 h-5 ml-2 inline" />;
-                </button>;
-                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
+                  <Right className="w-5 h-5 ml-2 inline" />
+                </button>
+                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   Schedule Consultation;
+<<<<<<< HEAD
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </FuturisticBackground>
+    </>
+  )
+        {/* Services Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">"
+          <div className="max-w-7xl mx-auto">"
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">"
+=======
                 </button>;
               </div>
             </div>
@@ -407,55 +674,70 @@ const AIServicesPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+>>>>>>> origin/main
               Our AI Services
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {services.map((service, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
-                    <service.icon className="w-6 h-6 text-white" />
+                <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">"
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>`
+                    <service.icon className="w-6 h-6 text-white" />"
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <button className="text-purple-400 hover:text-purple-300 font-medium flex items-center">
-                    Learn More <Right className="w-4 h-4 ml-1" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>"
+                  <p className="text-gray-300 mb-4">{service.description}</p>"
+                  <button className="text-purple-400 hover:text-purple-300 font-medium flex items-center">"
+                    Learn More <Right className="w-4 h-4 ml-1" />"
                   </button>
                 </div>
-              ))}
+              ))
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">"
+          <div className="max-w-7xl mx-auto">"
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">"
+=======
         { /* Features Section */ }
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+>>>>>>> origin/main
               Why Choose Our AI Services?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
               {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                <div key={index} className="text-center">"
+                  <div className="text-4xl mb-4">{feature.icon}</div>"
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p className="text-gray-300">{feature.description}</p>"
                 </div>
-              ))}
+              ))
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">"
+          <div className="max-w-4xl mx-auto text-center">"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">"
+=======
         { /* CTA Section */ }
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> origin/main
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our AI services can help you achieve your goals.
+            <p className="text-xl text-gray-300 mb-8">"
+              Let's discuss how our AI services can help you achieve your goals.'
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
                 Schedule Consultation
               </button>
-              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
+              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">"
                 View Portfolio
               </button>
             </div>
@@ -463,8 +745,11 @@ const AIServicesPage: React.FC = () => {
         </section>
       </div>
     </>
-  )}
+  )
 export default AiServicesPage
+<<<<<<< HEAD
+export default AiServicesPage';
+=======
 export default AiServicesPage;'
 =======
         </div>
@@ -709,5 +994,6 @@ export default AIServicesPage;
 };
 
 export default AIServicesPage;
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main

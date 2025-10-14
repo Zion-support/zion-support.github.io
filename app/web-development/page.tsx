@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+'use client''
+'use client'
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -256,3 +260,4 @@ const WebDevelopmentPage: React.FC = () => {
 };
 
 export default WebDevelopmentPage;
+>>>>>>> origin/main

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+'use client''
+'use client'
+=======
 import React from "react";
 
 interface AdvancedSEOOptimizerProps {
@@ -24,3 +28,4 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className, 
 };
 
 export default AdvancedSEOOptimizer;
+>>>>>>> origin/main

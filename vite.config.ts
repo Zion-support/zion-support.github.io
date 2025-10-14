@@ -1,13 +1,36 @@
 <<<<<<< HEAD
+import { defineConfig } from 'vite";
+import react from '@vitejs/plugin-react";
+import path from 'path";
+=======
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+>>>>>>> origin/main
 export default defineConfig({
   plugins: [
     react({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Optimize JSX runtime
+<<<<<<< HEAD
+      jsxRuntime: 'automatic','
+    }
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './'),'
+      '@app': path.resolve(__dirname, './app'),'
+      '@components': path.resolve(__dirname, './app/components'),'
+      '@utils': path.resolve(__dirname, './utils'),'
+    },
+  },
+  build: {outDir: 'dist','
+    target: 'esnext','
+    minify: 'esbuild','
+    sourcemap: process.env.NODE_ENV === 'development','
+=======
       jsxRuntime: "automatic",
     })
 =======
@@ -37,6 +60,7 @@ export default defineConfig({
     sourcemap: process.env.NODE_ENV === 'development',
 =======
     sourcemap: process.env.NODE_ENV === "development",
+>>>>>>> origin/main
 >>>>>>> origin/main
     cssCodeSplit: true,
 <<<<<<< HEAD
@@ -90,6 +114,20 @@ export default defineConfig({
       output: {
         manualChunks: (id) => {
           // Vendor chunks
+<<<<<<< HEAD
+          if (id.includes('node_modules')) {'
+            if (id.includes('react') || id.includes('react-dom')) {'
+              return 'vendor-react'"}"
+            if (id.includes('react-router')) {'
+              return 'vendor-router'"}"
+            if (id.includes('@heroicons') || id.includes('lucide-react')) {'
+              return 'vendor-icons'"}"
+            if (id.includes('framer-motion')) {'
+              return 'vendor-motion'"}"
+            if (id.includes('react-helmet')) {'
+              return 'vendor-helmet'"}"
+            return "vendor-other"
+=======
           if (id.includes("node_modules")) {
             if (id.includes("react") || id.includes("react-dom")) {
               return "vendor-react";
@@ -115,8 +153,25 @@ export default defineConfig({
             }
             return "vendor-other";
 >>>>>>> origin/main
+>>>>>>> origin/main
           }
           // Page chunks for better code splitting
+<<<<<<< HEAD
+          if (id.includes('/app/pages/')) {'
+            return 'pages'"}"
+          if (id.includes('/app/components/')) {'
+            return 'components'"}"
+        },
+        assetFileNames: (assetInfo) => {const info = assetInfo.name.split('.')";
+          const ext = info[info.length - 1];
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+            return `assets/images/[name]-[hash][extname]`}`
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {return `assets/fonts/[name]-[hash][extname]`}`
+          return `assets/[name]-[hash][extname]`;`
+        },
+        chunkFileNames: 'assets/js/[name]-[hash].js','
+        entryFileNames: 'assets/js/[name]-[hash].js','
+=======
 <<<<<<< HEAD
           if (id.includes('/app/pages/')) { return 'pages'; }
           if (id.includes('/app/components/')) { return 'components'; }
@@ -178,6 +233,7 @@ export default defineConfig({
         },
         chunkFileNames: "assets/js/[name]-[hash].js",
         entryFileNames: "assets/js/[name]-[hash].js",
+>>>>>>> origin/main
       },
     },
     chunkSizeWarningLimit: 500,
@@ -197,6 +253,21 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
+<<<<<<< HEAD
+      'react','
+      'react-dom','
+      'react-router-dom','
+      'react-helmet-async','
+      '@heroicons/react/24/outline','
+      'lucide-react','
+      'framer-motion''
+    ],
+    exclude: ['@vite/client', '@vite/env'],'
+  },
+  esbuild: {
+    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],'
+    target: 'esnext','
+=======
       "react",
       "react-dom",
       "react-router-dom",
@@ -223,6 +294,7 @@ export default defineConfig({
     target: "esnext",
 >>>>>>> origin/main
 >>>>>>> origin/main
+>>>>>>> origin/main
   },
   // Performance optimizations
   define: {
@@ -233,4 +305,8 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+<<<<<<< HEAD
+}
+=======
 });
+>>>>>>> origin/main

@@ -14,13 +14,17 @@ import React from 'react'
 interface AnimatedCardProps {
   children: React.ReactNode
   className?: string
-  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow'
+  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow''
   hoverEffect?: boolean
 >>>>>>> origin/main
 }
 
 const AnimatedCard: React.FC<AnimatedCardProps> = ({
   children,
+<<<<<<< HEAD
+  className = '','
+  glowColor = 'purple','
+=======
   className = '',
   glowColor = 'purple',
 <<<<<<< HEAD
@@ -58,26 +62,30 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
       {/* Glow effect */}
       <div className={`absolute inset-0 rounded-lg shadow-lg ${glowClass} opacity-0 hover:opacity-100 transition-opacity duration-300`}></div>
 =======
+>>>>>>> origin/main
   hoverEffect = true
 }) => {
   const glowClasses = {
-    purple: 'shadow-purple-500/25 hover:shadow-purple-500/40',
-    cyan: 'shadow-cyan-500/25 hover:shadow-cyan-500/40',
-    pink: 'shadow-pink-500/25 hover:shadow-pink-500/40',
-    green: 'shadow-green-500/25 hover:shadow-green-500/40',
-    blue: 'shadow-blue-500/25 hover:shadow-blue-500/40',
-    yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40'
+    purple: 'shadow-purple-500/25 hover:shadow-purple-500/40','
+    cyan: 'shadow-cyan-500/25 hover:shadow-cyan-500/40','
+    pink: 'shadow-pink-500/25 hover:shadow-pink-500/40','
+    green: 'shadow-green-500/25 hover:shadow-green-500/40','
+    blue: 'shadow-blue-500/25 hover:shadow-blue-500/40','
+    yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40''
   }
 
-  const baseClasses = 'transition-all duration-300 transform'
-  const hoverClasses = hoverEffect ? 'hover:scale-105 hover:-translate-y-1' : ''
+  const baseClasses = 'transition-all duration-300 transform''
+  const hoverClasses = hoverEffect ? 'hover:scale-105 hover:-translate-y-1' : '''
   const glowClass = glowClasses[glowColor]
 
   return (
-    <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>
+    <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>`
       {children}
     </div>
   )
+<<<<<<< HEAD
+export default AnimatedCard
+=======
 }
 
 export default AnimatedCard
@@ -98,5 +106,6 @@ const AnimatedCard = () => {
 export default AnimatedCard;
 =======
 export default AnimatedCard;
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
