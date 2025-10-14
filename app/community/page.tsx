@@ -143,7 +143,6 @@ const CommunityPage: React.FC = () => {
       <Helmet>
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join our developer community. Share projects, get help, and connect with other AI developers using Zion Tech Group services." />
-      </Helmet>
         <meta name="keywords" content="developer community, AI community, developer forum, project showcase, technical discussions" />
       </Helmet>
 
@@ -154,16 +153,17 @@ const CommunityPage: React.FC = () => {
             Developer Community
           </h1>
           <p>Connect with fellow developers, share your projects, get help, and learn from the community.</p>
-          </p>
           
           {/* Community Stats */}
-          <div>{communityStats.map((stat, index) => (</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            {communityStats.map((stat, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center justify-center mb-2">
                   <stat.icon className="w-8 h-8 text-cyan-400 mr-2" />
                 </div>
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
+              </div>
             ))}
           </div>
 
@@ -174,7 +174,8 @@ const CommunityPage: React.FC = () => {
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Browse Discussions
-            </div>
+            </button>
+          </div>
         </section>
 
       {/* Categories */}
@@ -291,7 +292,8 @@ const CommunityPage: React.FC = () => {
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Learn More
-            </div>
+            </button>
+          </div>
         </section>
     </div>
   );
