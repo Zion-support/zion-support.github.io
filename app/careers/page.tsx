@@ -28,7 +28,7 @@ const CareersPage: React.FC = () => {
       experience: '5+ years',
       posted: '2 days ago',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements: ['PhD in Computer Science or related field', '5+ years ML/AI experience', 'Expert in Python, TensorFlow, PyTorch'],
+      requirements: ['PhD inComputer Science or related field', '5+ years ML/AI experience', 'Expert inPython, TensorFlow, PyTorch'],
       featured: true
     },
     {
@@ -40,7 +40,7 @@ const CareersPage: React.FC = () => {
       experience: '3+ years',
       posted: '1 week ago',
       description: 'Research and develop quantum algorithms and applications for real-world problems.',
-      requirements: ['PhD in Physics or Computer Science', 'Quantum computing experience', 'Strong mathematical background'],
+      requirements: ['PhD inPhysics orComputer Science', 'Quantum computing experience', 'Strong mathematical background'],
       featured: true
     },
     {
@@ -52,7 +52,7 @@ const CareersPage: React.FC = () => {
       experience: '4+ years',
       posted: '3 days ago',
       description: 'Design and maintain cloud infrastructure for scalable AI and IT solutions.',
-      requirements: ['AWS/Azure/GCP certification', 'Kubernetes experience', 'Infrastructure as Code'],
+      requirements: ['AWS/Azure/GCP certification', 'Kubernetes experience', 'Infrastructure asCode'],
       featured: false
     },
     {
@@ -76,7 +76,7 @@ const CareersPage: React.FC = () => {
       experience: '2+ years',
       posted: '1 week ago',
       description: 'Analyze complex datasets and build predictive models for business insights.',
-      requirements: ['Masters in Data Science', 'Python/R expertise', 'Statistical modeling'],
+      requirements: ['Masters inData Science', 'Python/R expertise', 'Statistical modeling'],
       featured: false
     },
     {
@@ -298,7 +298,7 @@ const CareersPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">
-                Don&apos;t See Your Dream Job?
+                Don&apos;tSee Your Dream Job?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 We&apos;re always looking for exceptional talent. Send us your resume and let us know how you&apos;d like to contribute to our mission.

@@ -39,7 +39,7 @@ const CaseStudiesPage: React.FC = () => {
     },
     {
       id: '2',
-      title: 'Cloud Migration for Financial Services',
+      title: 'Cloud Migration forFinancial Services',
       client: 'FinanceCorp',
       industry: 'Financial Services',
       challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
@@ -56,7 +56,7 @@ const CaseStudiesPage: React.FC = () => {
     },
     {
       id: '3',
-      title: 'Cybersecurity Enhancement for Healthcare',
+      title: 'Cybersecurity Enhancement forHealthcare',
       client: 'MediCare Plus',
       industry: 'Healthcare',
       challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
@@ -73,7 +73,7 @@ const CaseStudiesPage: React.FC = () => {
     },
     {
       id: '4',
-      title: 'Machine Learning for Predictive Analytics',
+      title: 'Machine Learning forPredictive Analytics',
       client: 'RetailMax',
       industry: 'Retail',
       challenge: 'Inventory management inefficiencies leading to stockouts and overstock situations.',
@@ -90,7 +90,7 @@ const CaseStudiesPage: React.FC = () => {
     },
     {
       id: '5',
-      title: 'Digital Transformation for Manufacturing',
+      title: 'Digital Transformation forManufacturing',
       client: 'ManufacturingPro',
       industry: 'Manufacturing',
       challenge: 'Manual processes and lack of real-time visibility into production efficiency.',
@@ -107,7 +107,7 @@ const CaseStudiesPage: React.FC = () => {
     },
     {
       id: '6',
-      title: 'Blockchain Integration for Supply Chain',
+      title: 'Blockchain Integration forSupply Chain',
       client: 'GlobalLogistics',
       industry: 'Logistics',
       challenge: 'Lack of transparency and traceability in complex supply chain operations.',
@@ -135,7 +135,7 @@ const CaseStudiesPage: React.FC = () => {
     <>
       <Helmet>
         <title>Case Studies | Zion Tech Group | Success Stories & Client Results</title>
-        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions. Real results from real clients." />
+        <meta name="description" content="Explore our successful case studies and see howZion Tech Group has helped businesses transform with AI and IT solutions. Real results from real clients." />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation, client results" />
         <meta property="og:title" content="Case Studies - Zion Tech Group" />
         <meta property="og:description" content="Success stories and client results from our AI and IT solutions" />
@@ -242,7 +242,7 @@ const CaseStudiesPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Write Your Success Story?
+                Ready toWrite Your Success Story?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Let&apos;s discuss how we can help transform your business with our AI and IT solutions.

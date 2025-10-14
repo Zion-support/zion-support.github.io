@@ -1,78 +1,70 @@
 const fs = require('fs');
-const { glob } = require('glob');
+const path = require('path');
 
-async function fixFile(filePath) {
+// Function to fix import statements
+function fixImportStatements(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix broken imports - remove spaces in import names
-    content = content
-      // Fix import statements with spaces
-      .replace(/import\s+{\s*([^}]+)\s*}\s*from\s*'([^']+)';/g, (match, imports, module) => {
-        const cleanImports = imports.split(',').map(imp => imp.trim().replace(/\s+/g, '')).join(', ');
-        return `import { ${cleanImports} } from '${module}';`;
-      })
-      
-      // Fix component names with spaces
-      .replace(/const\s+([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*)\s*=/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `const ${cleanName} =`;
-      })
-      
-      // Fix function names with spaces
-      .replace(/function\s+([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*)\s*\(/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `function ${cleanName}(`;
-      })
-      
-      // Fix export statements with spaces
-      .replace(/export\s+default\s+([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*)/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `export default ${cleanName}`;
-      })
-      
-      // Fix JSX component names with spaces
-      .replace(/<([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*)/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `<${cleanName}`;
-      })
-      
-      // Fix closing JSX tags with spaces
-      .replace(/<\/([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*)>/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `</${cleanName}>`;
-      });
-    
-    if (content !== originalContent) {
+    let modified = false;
+
+    // Fix import statements that were incorrectly modified
+    const fixes = [
+      { pattern: /importReact/g, replacement: 'import React' },
+      { pattern: /import\{/g, replacement: 'import {' },
+      { pattern: /from'react'/g, replacement: "from 'react'" },
+      { pattern: /from'react-helmet-async'/g, replacement: "from 'react-helmet-async'" },
+      { pattern: /from'react-router-dom'/g, replacement: "from 'react-router-dom'" },
+      { pattern: /from'lucide-react'/g, replacement: "from 'lucide-react'" },
+      { pattern: /from'@\/components'/g, replacement: "from '@/components'" },
+      { pattern: /from'@\/hooks'/g, replacement: "from '@/hooks'" },
+      { pattern: /from'@\/utils'/g, replacement: "from '@/utils'" },
+      { pattern: /from'@\/contexts'/g, replacement: "from '@/contexts'" },
+      { pattern: /from'@\/config'/g, replacement: "from '@/config'" },
+      { pattern: /from'@\/constants'/g, replacement: "from '@/constants'" },
+    ];
+
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed imports in: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-async function main() {
-  try {
-    const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-    
-    console.log(`Found ${files.length} files to process...`);
-    
-    let fixedCount = 0;
-    for (const file of files) {
-      if (await fixFile(file)) {
+// Function to recursively find and fix all TypeScript/JavaScript files
+function fixAllFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += fixAllFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixImportStatements(filePath)) {
         fixedCount++;
       }
     }
-    
-    console.log(`Fixed ${fixedCount} files.`);
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  });
+
+  return fixedCount;
 }
 
-main();
+// Start fixing from the app directory
+console.log('Starting to fix import statements...');
+const fixedCount = fixAllFiles('./app');
+console.log(`Fixed ${fixedCount} files with import issues.`);

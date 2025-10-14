@@ -312,7 +312,7 @@ const MicroSaasPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Get Started?
+                Ready toGet Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Choose the micro SaaS solution that fits your business needs. 

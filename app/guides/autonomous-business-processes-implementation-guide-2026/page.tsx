@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => {
+=======
+constAutonomous Business Processes Implementation Guide 2026 Page: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>
