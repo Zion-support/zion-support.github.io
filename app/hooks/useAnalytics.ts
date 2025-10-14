@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useContext } from 'react';
 
 interface AnalyticsContextType {
@@ -7,6 +8,11 @@ interface AnalyticsContextType {
 
 // This will be imported from the AnalyticsProvider component
 declare const AnalyticsContext: React.Context<AnalyticsContextType | undefined>;
+=======
+'use client';
+import { useContext } from 'react';
+import { AnalyticsContext } from '../contexts/AnalyticsContext';
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);

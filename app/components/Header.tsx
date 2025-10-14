@@ -7,4 +7,9 @@ const Header = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default Header;
+=======
+
+export default Header;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

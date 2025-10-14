@@ -7,4 +7,9 @@ const ContentPromotionBanner = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default ContentPromotionBanner;
+=======
+
+export default ContentPromotionBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

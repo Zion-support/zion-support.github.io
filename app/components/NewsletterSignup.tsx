@@ -7,4 +7,9 @@ const NewsletterSignup = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default NewsletterSignup;
+=======
+
+export default NewsletterSignup;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

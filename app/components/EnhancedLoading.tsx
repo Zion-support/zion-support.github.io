@@ -7,4 +7,9 @@ const EnhancedLoading = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default EnhancedLoading;
+=======
+
+export default EnhancedLoading;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

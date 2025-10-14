@@ -7,4 +7,9 @@ const AdScheduler = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default AdScheduler;
+=======
+
+export default AdScheduler;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

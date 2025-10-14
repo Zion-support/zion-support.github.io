@@ -211,9 +211,16 @@ const EnhancedAnalytics: React.FC = () => {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
+<<<<<<< HEAD
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEventTiming;
           trackPerformance('FID', fidEntry.processingStart - fidEntry.startTime);
+=======
+        entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
+          if (entry.processingStart) {
+            trackPerformance('FID', entry.processingStart - entry.startTime);
+          }
+>>>>>>> d11f3463202cce5e705e8cbfeff0fcf5b9845190
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -247,25 +254,25 @@ const EnhancedAnalytics: React.FC = () => {
 
   // Expose tracking functions globally for manual tracking
   useEffect(() => {
-    (window as typeof window & {
+    (window as typeof window & { 
       trackEvent?: typeof trackEvent;
       trackUserInteraction?: typeof trackUserInteraction;
       trackPerformance?: typeof trackPerformance;
       trackError?: typeof trackError;
     }).trackEvent = trackEvent;
-    (window as typeof window & {
+    (window as typeof window & { 
       trackEvent?: typeof trackEvent;
       trackUserInteraction?: typeof trackUserInteraction;
       trackPerformance?: typeof trackPerformance;
       trackError?: typeof trackError;
     }).trackUserInteraction = trackUserInteraction;
-    (window as typeof window & {
+    (window as typeof window & { 
       trackEvent?: typeof trackEvent;
       trackUserInteraction?: typeof trackUserInteraction;
       trackPerformance?: typeof trackPerformance;
       trackError?: typeof trackError;
     }).trackPerformance = trackPerformance;
-    (window as typeof window & {
+    (window as typeof window & { 
       trackEvent?: typeof trackEvent;
       trackUserInteraction?: typeof trackUserInteraction;
       trackPerformance?: typeof trackPerformance;
@@ -273,25 +280,25 @@ const EnhancedAnalytics: React.FC = () => {
     }).trackError = trackError;
 
     return () => {
-      delete (window as typeof window & {
+      delete (window as typeof window & { 
         trackEvent?: typeof trackEvent;
         trackUserInteraction?: typeof trackUserInteraction;
         trackPerformance?: typeof trackPerformance;
         trackError?: typeof trackError;
       }).trackEvent;
-      delete (window as typeof window & {
+      delete (window as typeof window & { 
         trackEvent?: typeof trackEvent;
         trackUserInteraction?: typeof trackUserInteraction;
         trackPerformance?: typeof trackPerformance;
         trackError?: typeof trackError;
       }).trackUserInteraction;
-      delete (window as typeof window & {
+      delete (window as typeof window & { 
         trackEvent?: typeof trackEvent;
         trackUserInteraction?: typeof trackUserInteraction;
         trackPerformance?: typeof trackPerformance;
         trackError?: typeof trackError;
       }).trackPerformance;
-      delete (window as typeof window & {
+      delete (window as typeof window & { 
         trackEvent?: typeof trackEvent;
         trackUserInteraction?: typeof trackUserInteraction;
         trackPerformance?: typeof trackPerformance;

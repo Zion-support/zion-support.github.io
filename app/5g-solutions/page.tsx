@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function FiveGSolutionsPage() {
+=======
+const PagePage = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea
   return (
     <React.Fragment>
       <Helmet>

@@ -74,6 +74,7 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
   );
 };
 
+<<<<<<< HEAD
 // Specialized loading components for different sections
 export const AILoadingState: React.FC<{ message?: string }> = ({ message = 'AI is thinking...' }) => (
   <div className="flex items-center justify-center p-4">
@@ -112,3 +113,6 @@ export const PerformanceLoadingState: React.FC<{ message?: string }> = ({ messag
 );
 
 export default LoadingStates;
+=======
+export default LoadingStates;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

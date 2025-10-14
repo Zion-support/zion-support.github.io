@@ -77,12 +77,50 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return undefined;
   }, [reducedMotion]);
 
+<<<<<<< HEAD
   useEffect(() => {
     // Add ARIA landmarks if not present
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
       main.setAttribute('role', 'main');
     }
+=======
+    // Improve focus management
+    const improveFocusManagement = () => {
+      // Add focus indicators
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
+        }
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        
+        .focus:not-sr-only:focus {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: 0.5rem 1rem;
+          margin: 0;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+        }
+      `;
+      document.head.appendChild(style);
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea
 
     const nav = document.querySelector('nav');
     if (nav && !nav.getAttribute('role')) {

@@ -7,4 +7,9 @@ const FuturisticButton = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default FuturisticButton;
+=======
+
+export default FuturisticButton;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

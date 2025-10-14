@@ -7,4 +7,9 @@ const ImprovedImage = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default ImprovedImage;
+=======
+
+export default ImprovedImage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

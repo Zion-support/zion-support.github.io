@@ -7,4 +7,9 @@ const FuturisticButtonEnhanced = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default FuturisticButtonEnhanced;
+=======
+
+export default FuturisticButtonEnhanced;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

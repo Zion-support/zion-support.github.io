@@ -7,4 +7,9 @@ const NewContentAdvertisingBanner = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default NewContentAdvertisingBanner;
+=======
+
+export default NewContentAdvertisingBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

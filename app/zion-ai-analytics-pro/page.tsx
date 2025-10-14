@@ -12,4 +12,10 @@ export default function ZionAiAnalyticsProPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

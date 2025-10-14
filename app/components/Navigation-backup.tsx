@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 interface NavigationProps {
   className?: string;
 }
@@ -30,5 +31,18 @@ export default function NavigationBackup({ className = '' }: NavigationProps) {
         </div>
       </div>
     </nav>
+=======
+
+export default function NavigationBackup() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Navigation Backup</h1>
+        <p className="text-gray-300 text-lg">
+          This is a backup navigation component.
+        </p>
+      </div>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea
   );
 }

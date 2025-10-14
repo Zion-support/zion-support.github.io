@@ -1,5 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea
 const PagePage = () => {
   return (
     <>
@@ -18,4 +22,9 @@ const PagePage = () => {
     </>
   );
 };
+<<<<<<< HEAD
 export default PagePage;
+=======
+
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea
