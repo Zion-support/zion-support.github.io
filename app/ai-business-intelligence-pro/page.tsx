@@ -1,9 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { Brain } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 
 const AIBusinessIntelligenceProPage: React.FC = () => {
   return (
@@ -53,4 +57,8 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
   );
 };
 
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 export default AIBusinessIntelligenceProPage;

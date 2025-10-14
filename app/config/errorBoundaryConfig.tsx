@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import React from 'react';
 
+import React, { Suspense } from 'react';
 export const errorBoundaryConfig = {
   fallback: <div>Something went wrong</div>,
   onError: (error: Error) => {

@@ -6,6 +6,7 @@ const ErrorPage: React.FC = () => {
   return (
     <>
       <Helmet>
+import React, { Suspense } from 'react';
         <title>Error - Zion Tech Group</title>
         <meta name="description" content="An error occurred" />
       </Helmet>

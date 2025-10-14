@@ -1,6 +1,11 @@
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import React from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
 
 const FiveGTransformationPage: React.FC = () => {
@@ -19,5 +24,9 @@ const FiveGTransformationPage: React.FC = () => {
     </div>
   );
 }
+import React, { Suspense } from 'react';
 
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 export default FiveGTransformationPage;

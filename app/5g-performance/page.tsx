@@ -1,6 +1,11 @@
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import React from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
 
 const FiveGPerformancePage: React.FC = () => {
@@ -19,5 +24,9 @@ const FiveGPerformancePage: React.FC = () => {
     </div>
   );
 }
+import React, { Suspense } from 'react';
 
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 export default FiveGPerformancePage;

@@ -15,6 +15,7 @@ export const apiClient = {
     })
     
     if (!response.ok) {
+      throw new Error(`HTTP _error! status: ${response.status}`);
       throw new Error(`HTTP error! status: ${response.status}`)
       throw new Error(`API request failed: ${response.status}`)
     }
@@ -22,6 +23,19 @@ export const apiClient = {
     return response.json()
   },
   
+  get: <T>(endpoint: string) => apiClient.request<T>(endpoint),
+  post: <T>(endpoint: string, data: unknown) => apiClient.request<T>(endpoint, {
+    method: 'POST',
+    body: JSON.stringify(data),
+  }),
+  put: <T>(endpoint: string, data: unknown) => apiClient.request<T>(endpoint, {
+    method: 'PUT',
+    body: JSON.stringify(data),
+  }),
+  delete: <T>(endpoint: string) => apiClient.request<T>(endpoint, {
+    method: 'DELETE',
+  }),
+};
   async get<T>(endpoint: string): Promise<T> {
     return this.request<T>(endpoint, { method: 'GET' })
   },

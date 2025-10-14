@@ -14,6 +14,7 @@ export function formatDate(date: Date): string {
   }).format(date)
 }
 
+export function slugify(text: string) {
 export function slugify(str: string) {
   return str
 export function slugify(text: string): string {

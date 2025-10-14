@@ -51,5 +51,6 @@ const Ai20252026MegaTrendsBreakthroughPage: React.FC = () => {
 }
 
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 export default Ai20252026MegaTrendsBreakthroughPage;
 

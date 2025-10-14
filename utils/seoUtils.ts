@@ -31,6 +31,7 @@ interface SEOConfig {
     href: string
     hreflang: string
   }>
+  structuredData?: unknown
   structuredData?: Record<string, unknown>
 }
 

@@ -51,5 +51,6 @@ const BlockchainWeb3Page: React.FC = () => {
 }
 
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 export default BlockchainWeb3Page;
 

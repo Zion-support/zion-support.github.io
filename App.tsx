@@ -1,7 +1,6 @@
-import React, { useEffect, Suspense, lazy } from "react";
+import React, { useEffect, Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import React, { Suspense } from 'react';
 
 // Lazy load pages
 const HomePage = lazy(() => import('./app/page'));
@@ -33,11 +32,22 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     this.state = { hasError: false };
   }
 
+<<<<<<< HEAD
+=======
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+>>>>>>> 36f53afe595353e822638a76ccd9bfa4cbbfb462
   static getDerivedStateFromError(): ErrorBoundaryState {
     return { hasError: true };
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+<<<<<<< HEAD
+=======
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+>>>>>>> 36f53afe595353e822638a76ccd9bfa4cbbfb462
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
@@ -58,7 +68,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 }
 
 function App() {
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
   useEffect(() => {
+import React, { Suspense } from 'react';
 // Performance monitoring
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
@@ -94,19 +107,22 @@ if (typeof window !== 'undefined') {
         }
       }
     }
-  });
-  observer.observe({ entryTypes: ['navigation'] });
-}
 
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+import React, { Suspense } from 'react';
       console.warn('Zion Tech Group App initialized');
     }
   }, []);
+
+  const handleSidebarToggle = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
+import React, { Suspense } from 'react';
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>

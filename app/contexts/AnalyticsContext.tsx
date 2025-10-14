@@ -1,7 +1,10 @@
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import React, { createContext, ReactNode, useCallback } from 'react'
 
 interface AnalyticsContextType {
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void
   trackPageView: (pageName: string, properties?: Record<string, unknown>) => void
   identifyUser: (userId: string, properties?: Record<string, unknown>) => void
@@ -14,6 +17,8 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
   const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
 import React, { Suspense } from 'react';
     if (process.env.NODE_ENV === 'development') {
@@ -48,6 +53,7 @@ import React, { Suspense } from 'react';
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
   )
 }

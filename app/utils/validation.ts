@@ -9,6 +9,8 @@ export const validation = {
     return phoneRegex.test(phone.replace(/\s/g, ''))
   },
   
+  required: (value: unknown) => {
+    return value !== null && value !== undefined && value !== '';
   required: (value: any) => {
   required: (value: unknown) => {
     return value !== null && value !== undefined && value !== ''

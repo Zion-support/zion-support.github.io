@@ -9,6 +9,7 @@ export const usePerformanceMonitor = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         if (entries.length > 0) {
+          setMetrics(prev => ({
           setMetrics((prev: any) => ({
             ...prev,
             [entries[0].name]: entries[0].duration

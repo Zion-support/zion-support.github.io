@@ -19,7 +19,28 @@ export interface Service {
   icon: string
 }
 
+export interface AnalyticsEvent {
+  action: string
+  category: string
+  label?: string
+  value?: number
 export interface ContactForm {
+  name: string;
+  email: string;
+  compunknown: string;
+  message: string;
+  service: string;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  content: string;
+  excerpt: string;
+  author: string;
+  publishedAt: Date;
+  tags: string[];
+  slug: string;
   name: string
   email: string
   company: string
