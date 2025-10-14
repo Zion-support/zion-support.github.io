@@ -12,7 +12,7 @@ jest.mock('react-router-dom', () => {
       pathname: '/',
       search: '',
       hash: '',
-      state: null;
+      state: null
     }),
     useParams: () => ({}),
     Link: ({ children, to, ...props }) => {
@@ -27,15 +27,15 @@ jest.mock('react-router-dom', () => {
       const router = createMemoryRouter([
         {
           path: '/',
-          element: children;
+          element: children
         }
       ], {
         initialEntries: ['/'],
-        initialIndex: 0;
+        initialIndex: 0
       });
       return React.createElement(RouterProvider, { router });
     },
-    RouterProvider: ({ router }) => null;
+    RouterProvider: ({ router }) => null
   };
 });
 
@@ -46,13 +46,13 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
 };
 
-// Suppress console errors in tests;
+// Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {
     if (
       typeof args[0] === 'string' &&
-      args[0].includes('Warning: 'ReactDOM.render is no longer supported')',
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {
       return;
     }
