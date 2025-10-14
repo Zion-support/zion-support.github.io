@@ -2,10 +2,17 @@ import React from "react";
 import { CheckIcon, UsersIcon, TrophyIcon, LightBulbIcon } from "@heroicons/react/24/outline";
 
 const About: React.FC = () => {
-  const stats = [
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients' },
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },
-    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }
+    const stats = [
+    { icon: UsersIcon, value: '500+', label: 'Happy Clients' ,
+  },
+    {
+    icon: TrophyIcon, value: '50+', label: 'Awards Won' ,
+  },
+    {
+    icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' ,
+  }
+  ,
+  ,
   ];
 
   const values = [
@@ -25,6 +32,8 @@ const About: React.FC = () => {
       title: 'Integrity',
       description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
     }
+  ,
+  ,
   ];
 
   return (
@@ -32,7 +41,7 @@ const About: React.FC = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
+            {/* Content   */}
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 About Zion Tech Group
@@ -55,13 +64,13 @@ const About: React.FC = () => {
                   <CheckIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Client-Focused</h3>
-                    <p className="text-gray-600">We prioritize our clients&apos; success and work closely with them to achieve their goals.</p>
+                    <p className="text-gray-600">We prioritize our clients' success and work closely with them to achieve their goals.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Stats */}
+            {/* Stats   */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -75,7 +84,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Values Section */}
+          {/* Values Section   */}
           <div className="mt-20">
             <div className="text-center mb-16">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h3>

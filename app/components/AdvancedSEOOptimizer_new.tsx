@@ -1,10 +1,11 @@
 import React from "react";
 
 interface AdvancedSEOOptimizerNewProps {
-  className?: string;
-}
+    className?: string;
+,
+  }
 
-const AdvancedSEOOptimizerNew: React.FC<AdvancedSEOOptimizerNewProps> = ({ className = "" }) => {
+const AdvancedSEOOptimizerNew: React.FC<AdvancedSEOOptimizerNewProps> = ({ className = " }) => {
   return (
     <div className={`advanced-seo-optimizer-new ${className}`}>
       <div className="max-w-7xl mx-auto px-4 py-16">

@@ -1,14 +1,26 @@
     reducedMotion: false,
     screenReader: false
   }
-  const [isVisible, setIsVisible] = useState(false)
+  const [
+    isVisible, setIsVisible,
+  ,
+  ] = useState(false)
   useEffect(() => {
     // Enhanced accessibility features
     const addSkipLinks = () => {
 import React, { useEffect, useState } from "react
-const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighContrast] = useState(false)
-  const [isReducedMotion, setIsReducedMotion] = useState(false)
-  const [fontSize, setFontSize] = useState(16)
+const EnhancedAccessibility: React.FC = () => {const [
+    isHighContrast, setIsHighContrast,
+  ,
+  ] = useState(false)
+  const [
+    isReducedMotion, setIsReducedMotion,
+  ,
+  ] = useState(false)
+  const [
+    fontSize, setFontSize,
+  ,
+  ] = useState(16)
   useEffect(() => {
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches";'"
@@ -45,12 +57,13 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
       document.body.insertBefore(skipLink, document.body.firstChild)
     const enhanceFocusManagement = () => {
-      // Add focus indicators
+    // Add focus indicators
       const style = document.createElement('style')
       style.textContent = `````
         *:focus {
           outline: 2px solid #06b6d4 !important
-          outline-offset: 2px !important}
+          outline-offset: 2px !important,
+  }
       // Add ARIA landmarks
           width: 1px
           height: 1px
@@ -78,7 +91,10 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
       document.head.appendChild(style)
     const addAriaLabels = () => {
       // Add ARIA labels to interactive elements
-      const buttons = document.querySelectorAll('button:not([aria-label])')
+      const buttons = document.querySelectorAll('button:not([
+    aria-label,
+  ,
+  ])')
       buttons.forEach((button) => {
         if (!button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button')}'
@@ -88,7 +104,8 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
     // Listen for system preference changes
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const handleChange = () => {
-      setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))
+    setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches ,
+  }))
     mediaQuery.addEventListener('change', handleChange)";'"
     const setupKeyboardNavigation = () => {// Enhanced keyboard navigation
       document.addEventListener('keydown", (e) => {"'"'"
@@ -128,7 +145,10 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
       // Cleanup if needed}}, [])
   useEffect(() => {
     applyAccessibilitySettings(settings)
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [
+    settings,
+  ,
+  ])
   const applyAccessibilitySettings = (settings: AccessibilitySettings) => {
     const root = document.documentElement
     // Apply high contrast
@@ -145,8 +165,10 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
     style.textContent = `````
       .high-contrast {
         animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important }
-      .accessibility-panel { position: fixed
+        transition-duration: 0.01ms !important ,
+  }
+      .accessibility-panel {
+    position: fixed
         top: 50%
         right: -300px
         transform: translateY(-50%)
@@ -157,9 +179,13 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
         padding: 1rem
         z-index: 1000
         transition: right 0.3s ease
-        color: white }
-      .accessibility-panel.visible { right: 0 }
-      .accessibility-toggle { position: fixed
+        color: white ,
+  }
+      .accessibility-panel.visible {
+    right: 0 ,
+  }
+      .accessibility-toggle {
+    position: fixed
         top: 50%
         right: 0
         transform: translateY(-50%)
@@ -177,6 +203,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
       const existingStyle = document.getElementById('enhanced-accessibility-styles')
       if (existingStyle) {
         existingStyle.remove()
+  ,
   }, [])
         existingStyle.remove()
     }}, [])
@@ -185,7 +212,9 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
       <button></button>
         ♿ A11y
       </button>
-      <div className={`accessibility-panel ${isVisible ? 'visible' : '}`}>"`"`'"``'"`
+      <div className={
+    `accessibility-panel ${isVisible ? 'visible' : ',
+  }`}>"`"`'"``'"`
         <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
         <div className="space-y-4">
           <div></div>
@@ -199,7 +228,10 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
           <div></div>
             <label className="block text-sm font-medium mb-2">Font Size</label>
             <div className="space-y-2">
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => (
+              {([
+    'small', 'normal', 'large', 'extra-large',
+  ,
+  ] as const).map((size) => (
                 <label key={size} className="flex items-center space-x-2">
                   <input
                   /></input>
@@ -223,7 +255,10 @@ export default EnhancedAccessibility
   useEffect(() => {
     // Apply font size changes
     document.documentElement.style.fontSize = `${fontSize}px`;````
-  }, [fontSize])
+  }, [
+    fontSize,
+  ,
+  ])
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -231,6 +266,7 @@ export default EnhancedAccessibility
       if (event.altKey && event.key === 'm') {
         event.preventDefault()
         const mainContent = document.getElementById('main-content')";'"
-        if (mainContent) {}
+        if (mainContent) {,
+  }
       // Alt + H: Go to home
 export default EnhancedAccessibility

@@ -1,7 +1,7 @@
 import React from "react";
 
 const AdTemplates = () => {
-  return (
+    return (
     <>
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
@@ -11,7 +11,7 @@ const AdTemplates = () => {
           <p className="text-xl text-gray-600 mb-8">
             Professional ad templates solutions tailored to your business needs.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <div className="grid md:grid-cols-2 lg: grid-cols-3 gap-8 mt-12">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-blue-900 mb-2">
                 Expert Solutions
@@ -41,6 +41,7 @@ const AdTemplates = () => {
       </div>
     </>
   );
-};
+,
+  };
 
 export default AdTemplates;

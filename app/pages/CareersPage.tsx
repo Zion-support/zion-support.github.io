@@ -4,7 +4,7 @@
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />"
       </Helmet>"
       <div className="container mx-auto px-4 py-16">"
-        {/* Hero Section */}"
+        {/* Hero Section  */}"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-white mb-6">"
             Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>"
@@ -14,7 +14,8 @@
             Work on cutting-edge projects and make a real impact.
           </p>
         </div>
-            {benefits.map((benefit, _index) => {
+            {
+    benefits.map((benefit, _index) => {
               const Icon = benefit.icon
               return (
 
@@ -70,5 +71,6 @@ const CareersPage: React.FC = () => {
   return (
     <>
 
-}
+,
+  }
 "

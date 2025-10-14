@@ -8,43 +8,54 @@ export default function ZionAnalyticsPro() {
       title: "Real-time Dashboard",
       description: "Monitor your business metrics in real-time with customizable dashboards that update automatically.",
       icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Live data updates", "Customizable widgets", "Mobile responsive", "Export capabilities"]
+      benefits: ["Live data updates", "Customizable widgets", "Mobile responsive", "Export capabilities",
+  ]
     },
     {
       title: "Predictive Analytics",
       description: "AI-powered forecasting and trend analysis to help you make data-driven decisions.",
       icon: <TrendingUp className="w-6 h-6" />,
-      benefits: ["Sales forecasting", "Trend analysis", "Anomaly detection", "Risk assessment"]
+      benefits: [
+    "Sales forecasting", "Trend analysis", "Anomaly detection", "Risk assessment",
+  ]
     },
     {
       title: "Custom Reports",
       description: "Generate detailed reports with drag-and-drop report builder and automated scheduling.",
       icon: <FileText className="w-6 h-6" />,
-      benefits: ["Drag-and-drop builder", "Automated scheduling", "Multiple formats", "White-label options"]
+      benefits: [
+    "Drag-and-drop builder", "Automated scheduling", "Multiple formats", "White-label options",
+  ]
     },
     {
       title: "API Integration",
       description: "Connect with 100+ business applications and data sources for comprehensive analytics.",
       icon: <Database className="w-6 h-6" />,
-      benefits: ["100+ integrations", "Real-time sync", "Custom connectors", "Data transformation"]
+      benefits: [
+    "100+ integrations", "Real-time sync", "Custom connectors", "Data transformation",
+  ]
     },
     {
       title: "Data Visualization",
       description: "Create stunning charts, graphs, and interactive visualizations to present your data effectively.",
       icon: <PieChart className="w-6 h-6" />,
-      benefits: ["Interactive charts", "Multiple chart types", "Custom themes", "Export options"]
+      benefits: [
+    "Interactive charts", "Multiple chart types", "Custom themes", "Export options",
+  ]
     },
     {
       title: "Automated Alerts",
       description: "Set up intelligent alerts for important metrics and receive notifications via email, SMS, or Slack.",
       icon: <Bell className="w-6 h-6" />,
-      benefits: ["Smart thresholds", "Multi-channel alerts", "Custom conditions", "Escalation rules"]
+      benefits: [
+    "Smart thresholds", "Multi-channel alerts", "Custom conditions", "Escalation rules",
+  ]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
+    name: "Starter",
       price: "$299",
       period: "/month",
       description: "Perfect for small businesses getting started with analytics",
@@ -55,16 +66,18 @@ export default function ZionAnalyticsPro() {
         "Email support",
         "1GB data storage",
         "API access"
-      ],
+      ,
+  ],
       popular: false
-    },
+    ,
+  },
     {
-      name: "Professional",
+    name: "Professional",
       price: "$499",
       period: "/month",
       description: "Ideal for growing businesses with advanced analytics needs",
       features: [
-        "Up to 20 data sources",
+    "Up to 20 data sources",
         "Advanced dashboards",
         "Custom reports",
         "Priority support",
@@ -72,16 +85,18 @@ export default function ZionAnalyticsPro() {
         "Advanced analytics",
         "Team collaboration",
         "White-label options"
-      ],
+      ,
+  ],
       popular: true
-    },
+    ,
+  },
     {
-      name: "Enterprise",
+    name: "Enterprise",
       price: "$999",
       period: "/month",
       description: "Complete solution for large organizations",
       features: [
-        "Unlimited data sources",
+    "Unlimited data sources",
         "Custom dashboards",
         "Advanced reporting",
         "24/7 support",
@@ -89,43 +104,58 @@ export default function ZionAnalyticsPro() {
         "AI-powered insights",
         "Custom integrations",
         "Dedicated account manager"
-      ],
+      ,
+  ],
       popular: false
-    }
+    ,
+  }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+    name: "Sarah Johnson",
       company: "TechStart Inc.",
       role: "CEO",
       content: "Zion Analytics Pro transformed our data analysis. We now make decisions 40% faster with real-time insights.",
       rating: 5,
       avatar: "SJ"
-    },
+    ,
+  },
     {
-      name: "Michael Chen",
+    name: "Michael Chen",
       company: "E-commerce Solutions",
       role: "CTO",
       content: "The predictive analytics feature helped us identify trends before our competitors. Game changer!",
       rating: 5,
       avatar: "MC"
-    },
+    ,
+  },
     {
-      name: "Emily Rodriguez",
+    name: "Emily Rodriguez",
       company: "Digital Marketing Agency",
       role: "Operations Director",
       content: "Easy to use, powerful features, and excellent support. Our team productivity increased by 60%.",
       rating: 5,
       avatar: "ER"
-    }
+    ,
+  }
+  ,
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
-    { number: "100+", label: "Integrations", icon: <Database className="w-6 h-6" /> },
-    { number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" /> }
+    {
+    number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> ,
+  },
+    {
+    number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> ,
+  },
+    {
+    number: "100+", label: "Integrations", icon: <Database className="w-6 h-6" /> ,
+  },
+    {
+    number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" /> ,
+  }
+  ,
   ];
 
   return (
@@ -140,12 +170,14 @@ export default function ZionAnalyticsPro() {
           content="business intelligence, analytics, data visualization, predictive analytics, real-time dashboards, reporting, AI analytics, data insights" />
       </Helmet>
 
-      <div>{/* Animated Background */}</div>
+      <div>{/* Animated Background  */}</div>
     </>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[
+    radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%),
+  ]"></div>
         
-        {/* Hero Section */}
+        {/* Hero Section  */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -180,7 +212,7 @@ export default function ZionAnalyticsPro() {
                     <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
                   </div>
                 
-                {/* Stats */}
+                {/* Stats  */}
                 <div>{stats.map((stat, index) => (</div>
                     <div key={index} className="text-center group">
                       <div>{stat.icon}</div>
@@ -196,7 +228,7 @@ export default function ZionAnalyticsPro() {
                     <h3 className="text-2xl font-bold text-white mb-2">Live Dashboard Preview</h3>
                     <p className="text-gray-300">See your data in action</p>
                   
-                  {/* Mock Dashboard */}
+                  {/* Mock Dashboard  */}
                   <div className="space-y-4">
                     <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
@@ -219,7 +251,7 @@ export default function ZionAnalyticsPro() {
                       <div className="text-2xl font-bold text-white">1,234</div>
           </section>
 
-        {/* Features Section */}
+        {/* Features Section  */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -252,7 +284,7 @@ export default function ZionAnalyticsPro() {
             </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Pricing Section  */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -287,11 +319,13 @@ export default function ZionAnalyticsPro() {
                   
                   <Link
                     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                    className={
+    `w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                       plan.popular
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700 shadow-lg hover:shadow-blue-500/25'
-                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
-                    }`}
+                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover: text-slate-900'
+                    ,
+  }`}
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -300,7 +334,7 @@ export default function ZionAnalyticsPro() {
             </div>
         </section>
 
-        {/* Testimonials Section */}
+        {/* Testimonials Section  */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -315,7 +349,9 @@ export default function ZionAnalyticsPro() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <div>{[...Array(testimonial.rating)].map((_, i) => (</div>
+                  <div>{[
+    ...Array(testimonial.rating),
+  ].map((_, i) => (</div>
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -330,7 +366,7 @@ export default function ZionAnalyticsPro() {
             </div>
         </section>
 
-        {/* Contact Information Section */}
+        {/* Contact Information Section  */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -340,7 +376,7 @@ export default function ZionAnalyticsPro() {
               <p>Contact us today to start your free trial or schedule a personalized demo.</p>
               </p>
               
-              {/* Contact Details */}
+              {/* Contact Details  */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">

@@ -3,11 +3,19 @@ import { Helmet } from 'react-helmet-async';
 import { Users, MessageCircle, Star, TrendingUp, Award, BookOpen, Code, Lightbulb, Share2 } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
-  const communityStats = [
-    { label: 'Active Members', value: '2,500+', icon: Users },
-    { label: 'Discussions', value: '15,000+', icon: MessageCircle },
-    { label: 'Solutions', value: '8,500+', icon: Lightbulb },
-    { label: 'Projects Shared', value: '1,200+', icon: Share2 }
+    const communityStats = [
+    { label: 'Active Members', value: '2,500+', icon: Users ,
+  },
+    {
+    label: 'Discussions', value: '15,000+', icon: MessageCircle ,
+  },
+    {
+    label: 'Solutions', value: '8,500+', icon: Lightbulb ,
+  },
+    {
+    label: 'Projects Shared', value: '1,200+', icon: Share2 ,
+  }
+  ,
   ];
 
   return (
@@ -18,7 +26,7 @@ const CommunityPage: React.FC = () => {
         <meta name="keywords" content="developer community, AI community, developer forum, project showcase, technical discussions" />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* Hero Section  */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
@@ -28,7 +36,7 @@ const CommunityPage: React.FC = () => {
             Connect with fellow developers, share your projects, get help, and learn from the community.
           </p>
           
-          {/* Community Stats */}
+          {/* Community Stats  */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {communityStats.map((stat, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -41,7 +49,7 @@ const CommunityPage: React.FC = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons  */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Join Community
@@ -53,7 +61,7 @@ const CommunityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section  */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -99,7 +107,7 @@ const CommunityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Call to Action  */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

@@ -14,7 +14,9 @@ jest.mock('../app/components/AdvancedPerformanceMonitor', () => {
 });
 
 describe('EnhancedErrorBoundary', () => {
-  const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  const ThrowError = ({ shouldThrow }: {
+    shouldThrow: boolean ,
+  }) => {
     if (shouldThrow) {
       throw new Error('Test error');
     }

@@ -6,7 +6,7 @@
           </p>
         </div>
       </section>
-      { /* Content Section */ }
+      { /* Content Section   */ }
             Critical Resource Preloader</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional critical resource preloader services

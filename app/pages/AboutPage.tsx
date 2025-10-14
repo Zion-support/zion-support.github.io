@@ -19,7 +19,7 @@ const AboutPage: React.FC = () => {
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />
       </Helmet>
       
-        {/* Hero Section */}"
+        {/* Hero Section  */}"
         <div className="relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">

@@ -1,15 +1,19 @@
 import { useEffect, useState    } from "react";
 
 interface PerformanceMetrics {
-  loadTime: number;
+    loadTime: number;
   renderTime: number;
   memoryUsage?: number;
-}
+,
+  }
 
 export const usePerformanceMonitor = (): PerformanceMetrics => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    const [
+    metrics, setMetrics,
+  ] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0
+  ,
   });
 
   useEffect(() => {
@@ -17,7 +21,8 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
     
     const measurePerformance = () => {
       const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
+      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number ,
+  } }).memory?.usedJSHeapSize;
       
       setMetrics({
         loadTime,

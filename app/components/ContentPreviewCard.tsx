@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 interface ContentPreviewCardProps {
-  id: string;
+    id: string;
   title: string;
   excerpt: string;
   author: string;
@@ -11,7 +11,8 @@ interface ContentPreviewCardProps {
   category: string;
   imageUrl?: string;
   slug: string;
-}
+,
+  }
 
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   id: _id,
@@ -24,12 +25,13 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   imageUrl,
   slug
 }) => {
-  return (
-    <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    return (
+    <article className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow duration-300">
       {imageUrl && (
         <div className="aspect-w-16 aspect-h-9">
           <img
-            src={imageUrl}
+            src={imageUrl,
+  }
             alt={title}
             className="w-full h-48 object-cover"
           />

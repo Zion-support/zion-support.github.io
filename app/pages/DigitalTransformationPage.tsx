@@ -10,7 +10,7 @@ const DigitalTransformationPage: React.FC = () => {
         <meta name="keywords" content="digital transformation, process automation, change management, digital strategy, innovation" />"
       </Helmet>"
       <div className="container mx-auto px-4 py-16">"
-        {/* Hero Section */}"
+        {/* Hero Section  */}"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-white mb-6">"
             Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Transformation</span>"
@@ -54,7 +54,7 @@ const DigitalTransformationPage: React.FC = () => {
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">"
                 Get Assessment
 const DigitalTransformationPage: React.FC = () => {
-  return (
+    return (
     <>
       <Helmet></Helmet>
         <title>Digital Transformation - Zion Tech Group</title>"
@@ -115,5 +115,6 @@ import React from "react
 const DigitalTransformationPage = () => {
   return (
 
-}
+,
+  }
 "

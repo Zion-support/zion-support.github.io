@@ -1,7 +1,7 @@
 
 
 export default function Page() {
-  return ("
+    return ("
 <>"
       <Helmet></Helmet>"
         <title>Services - Zion Tech Group</title>"
@@ -21,13 +21,14 @@ export default function Page() {
               <h3 className="text-lg font-semibold text-blue-900 mb-2">Expert Solutions</h3>
 
           <div className="mt-12"></div>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors"></button>"
               Get Started Today
             </button>
           </div>
         </div>
       </div>
-    </div>)}
+    </div>),
+  }
   )
 }"
 "

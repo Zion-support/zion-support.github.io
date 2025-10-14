@@ -1,11 +1,12 @@
 import './globals.css';
 
 export default function RootLayout({
-  children: _children,
-}: {
-  children: React.ReactNode;
-}) {
-  const structuredData = {
+    children: _children,
+  }: {
+    children: React.ReactNode;
+,
+  }) {
+    const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -21,15 +22,16 @@ export default function RootLayout({
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',
-    },
+  },
     sameAs: [
-      'https://twitter.com/ziontechgroup',
+    'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-    ],
+    ,
+  ],
     address: {
-      '@type': 'PostalAddress',
+    '@type': 'PostalAddress',
       addressCountry: 'US',
-    },
+  },
     offers: {
       '@type': 'Offer',
       category: 'AI Solutions',
@@ -45,7 +47,9 @@ export default function RootLayout({
         <meta name="keywords" content="AI solutions, automation, digital transformation, enterprise AI, machine learning, cloud services" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={
+    { __html: JSON.stringify(structuredData) ,
+  }}
         />
       </head>
       <body>

@@ -4,9 +4,18 @@ import React, { useState } from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
 
 const ContentNewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [
+    email, setEmail,
+  ,
+  ] = useState('');
+  const [
+    isSubmitting, setIsSubmitting,
+  ,
+  ] = useState(false);
+  const [
+    isSubmitted, setIsSubmitted,
+  ,
+  ] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,7 +38,7 @@ const ContentNewsletterSignup: React.FC = () => {
         <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
           <div className="text-4xl mb-4">✅</div>
           <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
-          <p className="text-green-100">You&apos;ve been successfully subscribed to our newsletter.</p>
+          <p className="text-green-100">You've been successfully subscribed to our newsletter.</p>
         </div>
       </section>
     );
@@ -64,14 +73,16 @@ const ContentNewsletterSignup: React.FC = () => {
               disabled={isSubmitting}
               className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
             >
-              {isSubmitting ? (
+              {
+    isSubmitting ? (
                 <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
               ) : (
                 <>
                   Subscribe
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </>
-              )}
+              ),
+  }
             </button>
           </form>
           

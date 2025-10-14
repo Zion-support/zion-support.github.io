@@ -10,7 +10,7 @@ const CloudInfrastructurePage: React.FC = () => {
         <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />"
       </Helmet>"
       <div className="container mx-auto px-4 py-16">"
-        {/* Hero Section */}"
+        {/* Hero Section  */}"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-white mb-6">"
             Cloud <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Infrastructure</span>"
@@ -54,7 +54,7 @@ const CloudInfrastructurePage: React.FC = () => {
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">"
                 Get Assessment
 const CloudInfrastructurePage: React.FC = () => {
-  return (
+    return (
     <>
       <Helmet></Helmet>
         <title>Cloud Infrastructure - Zion Tech Group</title>"
@@ -115,5 +115,6 @@ import React from "react
 const CloudInfrastructurePage = () => {
   return (
 
-}
+,
+  }
 "

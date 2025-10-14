@@ -2,7 +2,7 @@
         <title>Lazy Image - Zion Tech Group</title>
         <meta name="description" content="Professional lazy image services by Zion Tech Group." />
       </Helmet>
-      {/* Hero Section */}
+      {/* Hero Section   */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -14,7 +14,7 @@
           </p>
         </div>
       </section>
-      { /* Content Section */ }
+      { /* Content Section   */ }
             Lazy Image</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional lazy image services
@@ -105,17 +105,28 @@ const LazyImage: React.FC<LazyImageProps> = ({
   onLoad,
   onError
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isInView, setIsInView] = useState(false)
+  const [
+    isLoaded, setIsLoaded,
+  ,
+  ] = useState(false)
+  const [
+    isInView, setIsInView,
+  ,
+  ] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null)
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([
+    entry,
+  ,
+  ]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
       },
-      { threshold: 0.1 }
+      {
+    threshold: 0.1 ,
+  }
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()

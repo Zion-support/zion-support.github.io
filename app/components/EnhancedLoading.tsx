@@ -6,7 +6,7 @@
           </p>
         </div>
       </section>
-      { /* Content Section */ }
+      { /* Content Section   */ }
             Enhanced Loading</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional enhanced loading services

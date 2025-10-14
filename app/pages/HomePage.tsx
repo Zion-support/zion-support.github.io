@@ -20,8 +20,7 @@ import AnimatedCard from "../components/AnimatedCard
 import { services    } from "../data/servicesData
 
 export default function HomePage()  {
-
-  const structuredData = {
+    const structuredData = {
 export default function HomePage() {
 const structuredData = {"
     "@context": "https://schema.org","
@@ -31,7 +30,8 @@ const structuredData = {"
     "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.","
     "potentialAction": {"
       "@type": "SearchAction","
-      "target": "https://ziontechgroup.com/search?q={search_term_string}","
+      "target": "https: //ziontechgroup.com/search?q={search_term_string,
+  }","
       "query-input": "required name=search_term_string
     }
   }
@@ -45,11 +45,11 @@ const HomePage = () => {
         structuredData={structuredData}
       /></SEOHead>
       <FuturisticBackground /></FuturisticBackground>
-      {/* Hero Section */}"
+      {/* Hero Section  */}"
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">"
         <div className="relative z-10 container mx-auto px-4 text-center">"
           <div className="max-w-5xl mx-auto">"
-            {/* Animated Title */}"
+            {/* Animated Title  */}"
             <div className="mb-8">"
               <h1 className="text-7xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent animate-pulse">"
                 Zion Tech Group
@@ -100,7 +100,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Section */}"
+      {/* About Section  */}"
       <section className="py-20 relative">"
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900"></div>"
         <div className="container mx-auto px-4 relative z-10">"
@@ -144,7 +144,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Contact Section */}"
+      {/* Contact Section  */}"
       <section className="py-20 relative">"
         <div className="absolute inset-0 bg-slate-900"></div>"
         <div className="container mx-auto px-4 relative z-10">"

@@ -8,59 +8,65 @@
  * Web Vitals and performance measurement types
  */
 export interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint
+    fcp?: number; // First Contentful Paint
   lcp?: number; // Largest Contentful Paint
   fid?: number; // First Input Delay
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
-}
+,
+  }
 
 /**
  * Performance Report Interface
  */
 export interface PerformanceReport {
-  webVitals: Partial<PerformanceMetrics>;
+    webVitals: Partial<PerformanceMetrics>;
   resources: ResourceStats;
   memory: MemoryStats | null;
   timestamp: number;
-}
+,
+  }
 
 /**
  * Resource Statistics Interface
  */
 export interface ResourceStats {
-  total: number;
+    total: number;
   scripts: number;
   styles: number;
   images: number;
   fonts: number;
-}
+,
+  }
 
 /**
  * Memory Statistics Interface
  */
 export interface MemoryStats {
-  usedJSHeapSize: number;
+    usedJSHeapSize: number;
   totalJSHeapSize: number;
   jsHeapSizeLimit: number;
-}
+,
+  }
 
 /**
  * Layout Shift Interface
  */
 export interface LayoutShift extends PerformanceEntry {
-  value: number;
+    value: number;
   hadRecentInput: boolean;
-}
+,
+  }
 
 /**
  * Performance with Memory Interface
  */
 export interface PerformanceWithMemory extends Performance {
-  memory: {
+    memory: {
     usedJSHeapSize: number;
     totalJSHeapSize: number;
     jsHeapSizeLimit: number;
+  ,
   };
 }
 
@@ -68,7 +74,7 @@ export interface PerformanceWithMemory extends Performance {
  * Service Configuration Interface
  */
 export interface ServiceConfig {
-  id: string;
+    id: string;
   name: string;
   description: string;
   icon: string;
@@ -77,6 +83,7 @@ export interface ServiceConfig {
   pricing?: {
     starting: number;
     currency: string;
+  ,
   };
 }
 
@@ -84,7 +91,7 @@ export interface ServiceConfig {
  * Blog Post Interface
  */
 export interface BlogPost {
-  id: string;
+    id: string;
   title: string;
   slug: string;
   excerpt: string;
@@ -100,6 +107,7 @@ export interface BlogPost {
     title: string;
     description: string;
     keywords: string[];
+  ,
   };
 }
 
@@ -107,33 +115,35 @@ export interface BlogPost {
  * Contact Form Interface
  */
 export interface ContactForm {
-  name: string;
+    name: string;
   email: string;
   company?: string;
   phone?: string;
   service: string;
-  message: string;
+  message: ''string;
   budget?: string;
   timeline?: string;
   consent: boolean;
-}
+,
+  }
 
 /**
  * API Response Interface
  */
 export interface ApiResponse<T = unknown> {
-  success: boolean;
+    success: boolean;
   data?: T;
   error?: string;
   message?: string;
   timestamp: number;
-}
+,
+  }
 
 /**
  * SEO Metadata Interface
  */
 export interface SEOMetadata {
-  title: string;
+    title: string;
   description: string;
   keywords: string[];
   canonical?: string;
@@ -142,23 +152,25 @@ export interface SEOMetadata {
   twitterCard?: string;
   noindex?: boolean;
   nofollow?: boolean;
-}
+,
+  }
 
 /**
  * Navigation Item Interface
  */
 export interface NavigationItem {
-  label: string;
+    label: string;
   href: string;
   external?: boolean;
   children?: NavigationItem[];
-}
+,
+  }
 
 /**
  * Testimonial Interface
  */
 export interface Testimonial {
-  id: string;
+    id: string;
   name: string;
   company: string;
   position: string;
@@ -166,13 +178,14 @@ export interface Testimonial {
   rating: number;
   avatar?: string;
   featured: boolean;
-}
+,
+  }
 
 /**
  * Case Study Interface
  */
 export interface CaseStudy {
-  id: string;
+    id: string;
   title: string;
   slug: string;
   client: string;
@@ -183,6 +196,7 @@ export interface CaseStudy {
     metric: string;
     value: string;
     improvement: string;
+  ,
   }[];
   technologies: string[];
   duration: string;
@@ -196,7 +210,7 @@ export interface CaseStudy {
  * Team Member Interface
  */
 export interface TeamMember {
-  id: string;
+    id: string;
   name: string;
   position: string;
   bio: string;
@@ -205,6 +219,7 @@ export interface TeamMember {
     linkedin?: string;
     twitter?: string;
     github?: string;
+  ,
   };
   expertise: string[];
   featured: boolean;
@@ -214,30 +229,33 @@ export interface TeamMember {
  * FAQ Item Interface
  */
 export interface FAQItem {
-  id: string;
+    id: string;
   question: string;
   answer: string;
   category: string;
   order: number;
-}
+,
+  }
 
 /**
  * Newsletter Subscription Interface
  */
 export interface NewsletterSubscription {
-  email: string;
+    email: string;
   name?: string;
   interests: string[];
   subscribedAt: string;
   active: boolean;
-}
+,
+  }
 
 /**
  * Error Boundary Props Interface
  */
 export interface ErrorBoundaryProps {
-  children: React.ReactNode;
-  fallback?: React.ComponentType<{ error: Error; resetError: () => void }>;
+    children: React.ReactNode;
+  fallback?: React.ComponentType<{ error: Error; resetError: () => void ,
+  }>;
   onError?: (_error: Error, _errorInfo: React.ErrorInfo) => void;
 }
 
@@ -245,21 +263,23 @@ export interface ErrorBoundaryProps {
  * Error Boundary State Interface
  */
 export interface ErrorBoundaryState {
-  hasError: boolean;
+    hasError: boolean;
   error?: Error;
-}
+,
+  }
 
 /**
  * Theme Configuration Interface
  */
 export interface ThemeConfig {
-  mode: 'light' | 'dark' | 'system';
+    mode: 'light' | 'dark' | 'system';
   primaryColor: string;
   secondaryColor: string;
   accentColor: string;
   fontFamily: string;
   borderRadius: number;
-}
+,
+  }
 
 /**
  * Analytics Event Interface
@@ -276,17 +296,19 @@ export interface AnalyticsEvent {
  * User Preferences Interface
  */
 export interface UserPreferences {
-  theme: ThemeConfig;
+    theme: ThemeConfig;
   language: string;
   notifications: {
     email: boolean;
     push: boolean;
     sms: boolean;
+  ,
   };
   privacy: {
     analytics: boolean;
     marketing: boolean;
     functional: boolean;
+  ,
   };
 }
 
@@ -296,8 +318,17 @@ export interface UserPreferences {
 export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-};
+    [
+    P in keyof T,
+  ]?: T[
+    P,
+  ] extends object ? DeepPartial<T[
+    P,
+  ]> : T[
+    P,
+  ];
+,
+  };
 
 /**
  * API Endpoint Types
@@ -323,7 +354,7 @@ export type Environment = 'development' | 'staging' | 'production';
  * Build Configuration Interface
  */
 export interface BuildConfig {
-  environment: Environment;
+    environment: Environment;
   version: string;
   buildTime: string;
   features: {
@@ -331,5 +362,6 @@ export interface BuildConfig {
     performanceMonitoring: boolean;
     errorReporting: boolean;
     pwa: boolean;
+  ,
   };
 }

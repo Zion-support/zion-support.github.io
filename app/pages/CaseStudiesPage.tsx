@@ -6,9 +6,10 @@
       description: 'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line, dramatically reducing defects while increasing throughput.'";
     },
     {
-      ],'"
+    ],'"
       description: 'MediCare Systems now leverages our advanced analytics platform to provide better patient care through data-driven insights and predictive modeling.'";
-    },
+    ,
+  },
     {
       ],'"
       description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.'";
@@ -24,7 +25,7 @@ const CaseStudiesPage: React.FC = () => {
                     <h4 className="text-lg font-semibold text-white mb-2">Client: {study.client}</h4>
                     <p className="text-gray-300 mb-4">{study.description}</p>
 
-                { /* Results */ }
+                { /* Results  */ }
                 <div></div>"
                   <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
                   <div className="grid grid-cols-2 gap-4">
@@ -55,7 +56,7 @@ const CaseStudiesPage: React.FC = () => {
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 View More Cases
 const CaseStudiesPage: React.FC = () => {
-  return (
+    return (
 <>
       <Helmet></Helmet>
         <title>Case Studies - Zion Tech Group</title>"
@@ -114,7 +115,8 @@ const CaseStudiesPage: React.FC = () => {
           <h1 className="text-4xl font-bold mb-4">CaseStudiesPage</h1>
 
     </div>
-  )}
+  ),
+  }
 export default CaseStudiesPage
 "use client"
 "

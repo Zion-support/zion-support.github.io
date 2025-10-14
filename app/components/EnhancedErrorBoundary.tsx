@@ -1,30 +1,37 @@
 import React, { Component, ErrorInfo, ReactNode } from "react;
 import { AlertTriangle, RefreshCw, Home     } from "lucide-react;
 import { Helmet     } from "react-helmet-async;
-interface Props { children: ReactNode
+interface Props {
+    children: ReactNode
   fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void; }
+  onError?: (error: Error, errorInfo: ErrorInfo) => void; ,
+  }
 }
-interface State { hasError: boolean
+interface State {
+    hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
-  errorId: string; }
+  errorId: string; ,
+  }
 
 interface Props {
-  children: ReactNode
+    children: ReactNode
   fallback?: ReactNode
   onError?: (error: Error, errorInfo: ErrorInfo) => void
 
-}
+,
+  }
 
 interface State {
-  hasError: boolean
+    hasError: boolean
   error?: Error
-}
+,
+  }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  public state: State = {
+    public state: State = {
     hasError: false
+  ,
   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
@@ -33,13 +40,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+    constructor(props: Props) {
     super(props)
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
+      errorId: `error_${Date.now(),
+  }_${Math.random().toString(36).substr(2, 9)}````
     }
 
   }
@@ -78,7 +86,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       return (
   <>
             <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center"></div>"
-              { /* Error Icon */ }"
+              { /* Error Icon   */ }"
               <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6"></div>"
 
                 <svg "
@@ -96,27 +104,29 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   /></path>
                 </svg>
               </div>
-              { /* Error Title */ }"
+              { /* Error Title   */ }"
               <h1 className="text-2xl font-bold text-white mb-4"></h1>"
                 Oops! Something went wrong
               </h1>
-              { /* Error Message */ }"
+              { /* Error Message   */ }"
               <p className="text-gray-300 mb-6 leading-relaxed">'"'"
                 We're sorry, but something unexpected happened. Our team has been notified;'
                 and is working to fix this issue.
               </p>
-              { /* Error ID for support */ }
-              { this.state.errorId && (
+              { /* Error ID for support   */ }
+              {
+    this.state.errorId && (
                 <div className="bg-slate-700 rounded-lg p-3 mb-6"></div>
-                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>
-                  <code className="text-xs text-cyan-400 font-mono break-all"> }"
+                  <p className="text-sm text-gray-400 mb-1">Error ID: </p>
+                  <code className="text-xs text-cyan-400 font-mono break-all"> ,
+  }"
                     { this.state.errorId }
                   </code>
                 </div>
     </>
 )
               )}
-              { /* Action Buttons */ }"
+              { /* Action Buttons   */ }"
               <div className="space-y-3"></div>"
                 <button
                   onClick={ this.handleRetry }"
@@ -137,7 +147,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </div>
               </div>
 
-              { /* Support Information */ }"
+              { /* Support Information   */ }"
               <div className="mt-8 pt-6 border-t border-slate-700"></div>
                 <p className="text-sm text-gray-400 mb-2"></p>"
                   Still having trouble? Contact our support team:
@@ -147,14 +157,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <p>Phone: +1-302-464-0950</p>
 
 
-              {/* Development Error Details */}'
-              { process.env.NODE_ENV === 'development' && this.state.error && ("'"'"
+              {/* Development Error Details   */}'
+              {
+    process.env.NODE_ENV === 'development' && this.state.error && ("'"'"
                 <details className="mt-6 text-left">
-                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">)"
+                  <summary className="text-sm text-gray-400 cursor-pointer hover: text-white">)"
                     Error Details (Development)
                   </summary>"
                   <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40"></div>
-                    <div className="mb-2"></div> }"
+                    <div className="mb-2"></div> ,
+  }"
                       <strong>Error:</strong> { this.state.error.message }
 
                     </div>"
@@ -166,11 +178,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
                       </pre>
                     </div>
-                    { this.state.errorInfo && (
+                    {
+    this.state.errorInfo && (
                       <div></div>
-                        <strong>Component Stack:</strong>
+                        <strong>Component Stack: </strong>
 "
-                        <pre className="whitespace-pre-wrap mt-1"> }"
+                        <pre className="whitespace-pre-wrap mt-1"> ,
+  }"
                           { this.state.errorInfo.componentStack }
 
                         </pre>

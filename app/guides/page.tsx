@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
 
 const GuidesPage: React.FC = () => {
-  const guides = [
+    const guides = [
     {,
       title: 'AI 2026 Implementation Roadmap',
       description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026',
@@ -13,34 +13,51 @@ const GuidesPage: React.FC = () => {
       icon: Brain,
       difficulty: 'Intermediate',
       duration: '45 min read'
-    },
+    ,
+  },
     {
-      title: 'AI 2027 Implementation Roadmap',
+    title: 'AI 2027 Implementation Roadmap',
       description: 'Advanced roadmap for AI implementation strategies in 2027',
       url: '/guides/ai-2027-implementation-roadmap',
       category: 'AI Implementation',
       icon: Brain,
       difficulty: 'Advanced',
       duration: '60 min read'
-    },
+    ,
+  },
     {
-      title: 'Autonomous Business Processes Implementation Guide 2026',
+    title: 'Autonomous Business Processes Implementation Guide 2026',
       description: 'Step-by-step guide to implementing autonomous business processes',
       url: '/guides/autonomous-business-processes-implementation-guide-2026',
       category: 'Process Automation',
       icon: Zap,
       difficulty: 'Expert',
       duration: '90 min read'
-    }
+    ,
+  }
+  ,
   ];
 
   const categories = [
-    { name: 'AI Implementation', icon: Brain, color: 'text-purple-400' },
-    { name: 'Process Automation', icon: Zap, color: 'text-blue-400' },
-    { name: 'Security', icon: Shield, color: 'text-red-400' },
-    { name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' },
-    { name: 'Data Management', icon: Database, color: 'text-green-400' },
-    { name: 'Development', icon: Code, color: 'text-orange-400' }
+    {
+    name: 'AI Implementation', icon: Brain, color: 'text-purple-400' ,
+  },
+    {
+    name: 'Process Automation', icon: Zap, color: 'text-blue-400' ,
+  },
+    {
+    name: 'Security', icon: Shield, color: 'text-red-400' ,
+  },
+    {
+    name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' ,
+  },
+    {
+    name: 'Data Management', icon: Database, color: 'text-green-400' ,
+  },
+    {
+    name: 'Development', icon: Code, color: 'text-orange-400' ,
+  }
+  ,
   ];
 
   const getDifficultyColor = (difficulty: string) => {
@@ -50,7 +67,8 @@ const GuidesPage: React.FC = () => {
       case 'Advanced': return 'text-orange-400 bg-orange-400/20';
       case 'Expert': return 'text-red-400 bg-red-400/20';,
       default: return 'text-gray-400 bg-gray-400/20';
-    }
+    ,
+  }
   };
 
   return (
@@ -62,7 +80,7 @@ const GuidesPage: React.FC = () => {
         <meta name="keywords" content="AI implementation, automation guides, digital transformation, enterprise solutions, technical guides" />
       </Helmet>
       
-      <div>{/* Navigation */}</div>
+      <div>{/* Navigation  */}</div>
     </>
         <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
           <div className="container mx-auto px-4">
@@ -79,7 +97,7 @@ const GuidesPage: React.FC = () => {
         </nav>
 
         <main className="container mx-auto px-4 py-16">
-          {/* Header */}
+          {/* Header  */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-4 mb-6">
               <BookOpen className="w-16 h-16 text-cyan-400" />
@@ -90,7 +108,7 @@ const GuidesPage: React.FC = () => {
               solutions in your enterprise with confidence.</p>
             </div>
 
-          {/* Categories */}
+          {/* Categories  */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
             <div>{categories.map((category, index) => (</div>
@@ -100,7 +118,7 @@ const GuidesPage: React.FC = () => {
               ))}
             </section>
 
-          {/* Guides Grid */}
+          {/* Guides Grid  */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
             <div>{guides.map((guide, index) => (</div>
@@ -130,7 +148,7 @@ const GuidesPage: React.FC = () => {
               ))}
             </section>
 
-          {/* Getting Started */}
+          {/* Getting Started  */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
             <div className="bg-slate-800 rounded-lg p-8">
@@ -159,7 +177,7 @@ const GuidesPage: React.FC = () => {
                 </div>
             </section>
 
-          {/* Call to Action */}
+          {/* Call to Action  */}
           <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               Need Personalized Guidance?

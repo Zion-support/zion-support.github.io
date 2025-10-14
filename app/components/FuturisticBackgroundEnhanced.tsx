@@ -6,7 +6,7 @@
           </p>
         </div>
       </section>
-      { /* Content Section */ }
+      { /* Content Section   */ }
             Futuristic Background Enhanced</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional futuristic background enhanced services

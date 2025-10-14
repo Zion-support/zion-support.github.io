@@ -27,35 +27,41 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   tags = [],
 }) => {},
     sameAs: [
-      'https://twitter.com/ziontechgroup',
+    'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
       'https://github.com/ziontechgroup',
-    ],
+    ,
+  ,
+  ],
     headline: title,
     description,
     author: {
-      '@type': 'Organization',
+    '@type': 'Organization',
       name: author,
-    },
-    publisher: {,
+  },
+    publisher: {
+    ,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteUrl}/images/logo.png`,````
+        url: `${siteUrl,
+  }/images/logo.png`,````
       },
     },
     datePublished: publishedTime,
     dateModified: modifiedTime || publishedTime,
     mainEntityOfPage: {
-      '@type': 'WebPage',
+    '@type': 'WebPage',
       '@id': finalCanonical,
-    },
+  },
     image: finalOgImage,
-    ...(section && { articleSection: section }),
+    ...(section && {
+    articleSection: section ,
+  }),
     ...(tags.length > 0 && { keywords: tags.join(', ') }),
   } : null
   return (
 <div>    <Helmet>
-      { /* Basic Meta Tags */ }
+      { /* Basic Meta Tags   */ }
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />

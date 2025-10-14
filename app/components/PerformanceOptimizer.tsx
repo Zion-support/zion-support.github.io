@@ -39,7 +39,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       link.type = 'font/woff2
       ]
       prefetchLinks.forEach((href) => {
-        const existingLink = document.querySelector(`link[href="${href}"]`);``"`
+        const existingLink = document.querySelector(`link[
+    href="${href}",
+  ,
+  ]`);``"`
         if (!existingLink) {
           const link = document.createElement('link');'
           link.rel = 'prefetch';

@@ -3,25 +3,51 @@ import { Link    } from "react-router-dom;
 import { Menu, X, ChevronDown    } from "lucide-react;
 
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
+    const [
+    isOpen, setIsOpen,
+  ,
+  ] = useState(false)
+  const [
+    isServicesOpen, setIsServicesOpen,
+  ,
+  ] = useState(false)
   const navigationItems = [
-    { name: "Home", href: "/" },"
-    { name: "About", href: "/about" },"
+    { name: "Home", href: "/" ,
+  },"
     {
-      name: "Services","
+    name: "About", href: "/about" ,
+  },"
+    {
+    name: "Services","
       href: "/services","
       submenu: [
-        { name: "AI Services", href: "/ai-services" },"
-        { name: "IT Services", href: "/it-services" },"
-        { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },"
-        { name: "Digital Transformation", href: "/digital-transformation" }"
-      ]
+        { name: "AI Services", href: "/ai-services" ,
+  },"
+        {
+    name: "IT Services", href: "/it-services" ,
+  },"
+        {
+    name: "Cloud Infrastructure", href: "/cloud-infrastructure" ,
+  },"
+        {
+    name: "Digital Transformation", href: "/digital-transformation" ,
+  }"
+      ,
+  ,
+  ]
     },
-    { name: "Solutions", href: "/solutions" },"
-    { name: "Case Studies", href: "/case-studies" },"
-    { name: "Blog", href: "/blog" },"
-    { name: "Contact", href: "/contact" }"
+    {
+    name: "Solutions", href: "/solutions" ,
+  },"
+    {
+    name: "Case Studies", href: "/case-studies" ,
+  },"
+    {
+    name: "Blog", href: "/blog" ,
+  },"
+    {
+    name: "Contact", href: "/contact" ,
+  }"
   ]
   return (
 
@@ -29,7 +55,7 @@ const Header: React.FC = () => {
             <span className="text-white font-bold text-xl">Zion Tech Group</span>"
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation   */}
           <nav className="hidden md:flex items-center space-x-8">"
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">"
@@ -58,7 +84,7 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Button   */}
           <div className="hidden md:flex items-center space-x-4">"
             <Link
               to="/contact
@@ -67,20 +93,24 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button   */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gray-300 hover:text-white
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
+            {
+    isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />,
+  }"
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-slate-700">"
+        {/* Mobile Navigation   */}
+        {
+    isOpen && (
+          <div className="md: hidden py-4 border-t border-slate-700">"
             {navigationItems.map((item) => (
-              <div key={item.name}></div>
+              <div key={item.name,
+  }></div>
                 <Link
                   to={item.href}
                   className="block py-2 text-gray-300 hover:text-white transition-colors

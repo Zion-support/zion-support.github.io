@@ -12,37 +12,54 @@ const Services: React.FC = () => {
       icon: CpuChipIcon,
       title: 'AI Solutions','
       description: 'Cutting-edge artificial intelligence solutions to automate processes and drive innovation.','
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']'
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics',
+  ,
+  ]'
     },
     {
       icon: CloudIcon,
       title: 'Cloud Infrastructure','
       description: 'Scalable and secure cloud solutions to power your business growth.','
-      features: ['AWS/Azure/GCP', 'DevOps & CI/CD', 'Container Orchestration', 'Cloud Migration']'
+      features: [
+    'AWS/Azure/GCP', 'DevOps & CI/CD', 'Container Orchestration', 'Cloud Migration',
+  ,
+  ]'
     },
     {
       icon: CogIcon,
       title: 'IT Services','
       description: 'Comprehensive IT support and management to keep your systems running smoothly.','
-      features: ['System Administration', 'Network Security', 'Data Backup', '24/7 Monitoring']'
+      features: [
+    'System Administration', 'Network Security', 'Data Backup', '24/7 Monitoring',
+  ,
+  ]'
     },
     {
       icon: ChartBarIcon,
       title: 'Data Analytics','
       description: 'Transform your data into actionable insights with advanced analytics solutions.','
-      features: ['Business Intelligence', 'Data Visualization', 'Real-time Dashboards', 'Custom Reports']'
+      features: [
+    'Business Intelligence', 'Data Visualization', 'Real-time Dashboards', 'Custom Reports',
+  ,
+  ]'
     },
     {
       icon: ShieldCheckIcon,
       title: 'Cybersecurity','
       description: 'Protect your business with comprehensive security solutions and best practices.','
-      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']'
+      features: [
+    'Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response',
+  ,
+  ]'
     },
     {
       icon: RocketLaunchIcon,
       title: 'Digital Transformation','
       description: 'Complete digital transformation strategies to modernize your business processes.','
-      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training & Support']'
+      features: [
+    'Process Automation', 'Legacy Modernization', 'Change Management', 'Training & Support',
+  ,
+  ]'
     }
   ]
   return (
@@ -96,7 +113,7 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section   */}
         <div className="text-center mt-16">"
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">"
             <h3 className="text-3xl font-bold mb-4">"

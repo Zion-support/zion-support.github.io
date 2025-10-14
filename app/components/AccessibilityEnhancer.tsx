@@ -85,7 +85,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         announcement.remove();
       }
     };
-  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
+  }, [
+    enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement
+  ]);
 
   return <>{children}</>;
 };

@@ -1,15 +1,16 @@
 import React from 'react';
 
 interface AdvertisingBannerProps {
-  className?: string;
+    className?: string;
   title?: string;
   description?: string;
   ctaText?: string;
   ctaLink?: string;
-}
+,
+  }
 
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
-  className = "",
+  className = ",
   title = "Ready to Get Started?",
   description = "Join thousands of businesses already using our solutions.",
   ctaText = "Get Started",

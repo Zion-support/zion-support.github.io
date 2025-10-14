@@ -5,18 +5,25 @@ import { EnvelopeIcon,
   ClockIcon } from "@heroicons/react/24/outline";
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
+    const [
+    formData, setFormData,
+  ,
+  ] = useState({
     name: '',
     email: '',
     company: '',
-    message: ''
+    message: '' ,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    });
+      [
+    e.target.name,
+  ,
+  ]: e.target.value
+    ,
+  });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -27,29 +34,35 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: EnvelopeIcon,
+    icon: EnvelopeIcon,
       title: 'Email',
       details: 'contact@ziontech.com',
-      description: 'Send us an email anytime'''
-    },
+      description: 'Send us an email anytime'
+    ,
+  },
     {
-      icon: PhoneIcon,
+    icon: PhoneIcon,
       title: 'Phone',
       details: '+1 (555) 123-4567',
       description: 'Mon-Fri from 9am to 6pm'
-    },
+    ,
+  },
     {
-      icon: MapPinIcon,
+    icon: MapPinIcon,
       title: 'Office',
       details: 'San Francisco, CA',
       description: 'Visit our headquarters'
-    },
+    ,
+  },
     {
-      icon: ClockIcon,
+    icon: ClockIcon,
       title: 'Response Time',
       details: '< 24 hours',
       description: 'We respond quickly'
-    }
+    ,
+  }
+  ,
+  ,
   ];
 
   return (
@@ -67,7 +80,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Contact Form   */}
             <div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -76,14 +89,14 @@ const Contact: React.FC = () => {
                       Full Name *
                     </label>
                     <input
-                      type="text"""
-                      id="name"""
-                      name="name"""
+                      type="text"
+                      id="name"
+                      name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
-                      placeholder="Your full name"""
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your full name"
                     />
                   </div>
                   <div>
@@ -97,7 +110,7 @@ const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -108,12 +121,12 @@ const Contact: React.FC = () => {
                     Company
                   </label>
                   <input
-                    type="text"""
+                    type="text"
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your company name"
                   />
                 </div>
@@ -129,7 +142,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or requirements..."
                   />
                 </div>
@@ -143,7 +156,7 @@ const Contact: React.FC = () => {
               </form>
             </div>
 
-            {/* Contact Information */}
+            {/* Contact Information   */}
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
@@ -178,7 +191,7 @@ const Contact: React.FC = () => {
                 ))}
               </div>
 
-              {/* Additional Info */}
+              {/* Additional Info   */}
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="text-lg font-semibold text-gray-900 mb-3">
                   Why Choose Us?
@@ -189,10 +202,14 @@ const Contact: React.FC = () => {
                     Free initial consultation
                   
                   
+                  
+                  
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                     Customized solutions
+                  
+                  
                   
                   
                   </li>
@@ -201,10 +218,14 @@ const Contact: React.FC = () => {
                     24/7 support available
                   
                   
+                  
+                  
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                     Proven track record
+                  
+                  
                   
                   
                   </li>

@@ -3,85 +3,178 @@ import { Link    } from "react-router-dom;
 import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle    } from "lucide-react;
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
+    const currentYear = new Date().getFullYear()
   const serviceCategories = [
     {
       title: 'AI Services','
       icon: <Brain className="w-5 h-5" />,"
       color: 'from-blue-500 to-cyan-500','
       links: [
-        { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
-        { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
-        { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
-        { label: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
-        { label: 'AI Data Analytics Pro', href: '/ai-data-analytics-pro' },
-        { label: 'AI Financial Analysis Pro', href: '/ai-financial-analysis-pro' },
-        { label: 'AI HR Recruitment Pro', href: '/ai-hr-recruitment-pro' },
-        { label: 'AI Image Recognition Pro', href: '/ai-image-recognition-pro' }
-      ]
+        { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' ,
+  },
+        {
+    label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' ,
+  },
+        {
+    label: 'AI Content Generation Pro', href: '/ai-content-generation-pro' ,
+  },
+        {
+    label: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' ,
+  },
+        {
+    label: 'AI Data Analytics Pro', href: '/ai-data-analytics-pro' ,
+  },
+        {
+    label: 'AI Financial Analysis Pro', href: '/ai-financial-analysis-pro' ,
+  },
+        {
+    label: 'AI HR Recruitment Pro', href: '/ai-hr-recruitment-pro' ,
+  },
+        {
+    label: 'AI Image Recognition Pro', href: '/ai-image-recognition-pro' ,
+  }
+      ,
+  ,
+  ]
     },
     {
-      title: 'IT Services','
+    title: 'IT Services','
       icon: <Cloud className="w-5 h-5" />,"
       color: 'from-green-500 to-emerald-500','
       links: [
-        { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-        { label: 'Database Management', href: '/database-management' },
-        { label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
-        { label: 'IT Consulting', href: '/it-consulting' },
-        { label: 'System Integration', href: '/system-integration' },
-        { label: 'Network Security', href: '/network-security' }
-      ]
+    { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' ,
+  },
+        {
+    label: 'Database Management', href: '/database-management' ,
+  },
+        {
+    label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' ,
+  },
+        {
+    label: 'IT Consulting', href: '/it-consulting' ,
+  },
+        {
+    label: 'System Integration', href: '/system-integration' ,
+  },
+        {
+    label: 'Network Security', href: '/network-security' ,
+  }
+      ,
+  ,
+  ]
     },
     {
-      title: 'Solutions','
+    title: 'Solutions','
       icon: <Zap className="w-5 h-5" />,"
       color: 'from-purple-500 to-pink-500','
       links: [
-        { label: 'Digital Transformation', href: '/digital-transformation' },
-        { label: 'Business Intelligence', href: '/business-intelligence' },
-        { label: 'Process Automation', href: '/process-automation' },
-        { label: 'Data Analytics', href: '/data-analytics' },
-        { label: 'Mobile Solutions', href: '/mobile-solutions' }
-      ]
+    { label: 'Digital Transformation', href: '/digital-transformation' ,
+  },
+        {
+    label: 'Business Intelligence', href: '/business-intelligence' ,
+  },
+        {
+    label: 'Process Automation', href: '/process-automation' ,
+  },
+        {
+    label: 'Data Analytics', href: '/data-analytics' ,
+  },
+        {
+    label: 'Mobile Solutions', href: '/mobile-solutions' ,
+  }
+      ,
+  ,
+  ]
     }
   ]
   const companyLinks = [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Team', href: '/team' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'News', href: '/news' }
+    {
+    label: 'About Us', href: '/about' ,
+  },
+    {
+    label: 'Our Team', href: '/team' ,
+  },
+    {
+    label: 'Careers', href: '/careers' ,
+  },
+    {
+    label: 'Case Studies', href: '/case-studies' ,
+  },
+    {
+    label: 'Blog', href: '/blog' ,
+  },
+    {
+    label: 'News', href: '/news' ,
+  }
+  ,
+  ,
   ]
   const supportLinks = [
-    { label: 'Help Center', href: '/help' },
-    { label: 'Documentation', href: '/docs' },
-    { label: 'API Reference', href: '/api-docs' },
-    { label: 'Status Page', href: '/status' },
-    { label: 'Contact Support', href: '/support' }
+    {
+    label: 'Help Center', href: '/help' ,
+  },
+    {
+    label: 'Documentation', href: '/docs' ,
+  },
+    {
+    label: 'API Reference', href: '/api-docs' ,
+  },
+    {
+    label: 'Status Page', href: '/status' ,
+  },
+    {
+    label: 'Contact Support', href: '/support' ,
+  }
+  ,
+  ,
   ]
   const legalLinks = [
-    { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Terms of Service', href: '/terms' },
-    { label: 'Cookie Policy', href: '/cookies' },
-    { label: 'GDPR Compliance', href: '/gdpr' },
-    { label: 'Security', href: '/security' }
+    {
+    label: 'Privacy Policy', href: '/privacy' ,
+  },
+    {
+    label: 'Terms of Service', href: '/terms' ,
+  },
+    {
+    label: 'Cookie Policy', href: '/cookies' ,
+  },
+    {
+    label: 'GDPR Compliance', href: '/gdpr' ,
+  },
+    {
+    label: 'Security', href: '/security' ,
+  }
+  ,
+  ,
   ]
   const socialLinks = [
-    { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },'"'"
-    { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },'"'"
-    { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub' },'"'"
-    { icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },'"'"
-    { icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },'"'"
-    { icon: <Youtube className="w-5 h-5" />, href: 'https://youtube.com/ziontechgroup', label: 'YouTube' }'"'"
+    {
+    icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' ,
+  },'"'"
+    {
+    icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' ,
+  },'"'"
+    {
+    icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub' ,
+  },'"'"
+    {
+    icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' ,
+  },'"'"
+    {
+    icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' ,
+  },'"'"
+    {
+    icon: <Youtube className="w-5 h-5" />, href: 'https://youtube.com/ziontechgroup', label: 'YouTube' ,
+  }'"'"
+  ,
+  ,
   ]
   return (
 <>    <footer className="bg-slate-900 text-white">"
-      {/* Main Footer Content */}
+      {/* Main Footer Content   */}
 
 
-          {/* Service Categories */}
+          {/* Service Categories   */}
           {serviceCategories.map((category, index) => (
             <div key={index} className="lg:col-span-1">"
               <div className="flex items-center mb-6">"
@@ -105,7 +198,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Additional Links */}
+        {/* Additional Links   */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700">"
           <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>"
@@ -151,7 +244,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
+        {/* Newsletter Signup   */}
         <div className="mt-12 pt-8 border-t border-slate-700">"
           <div className="max-w-md mx-auto text-center">"
             <h4 className="text-lg font-semibold text-white mb-4">Stay Updated</h4>"
@@ -170,7 +263,7 @@ const Footer = () => {
           </div>
         </div>
 
-      {/* Bottom Footer */}
+      {/* Bottom Footer   */}
       <div className="bg-slate-800 border-t border-slate-700">"
         <div className="container mx-auto px-4 py-6">"
           <div className="flex flex-col md:flex-row items-center justify-between">"

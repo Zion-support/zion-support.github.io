@@ -2,22 +2,24 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 // import { Logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
-  hasError: boolean;
+    hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
-}
+,
+  }
 
 interface ErrorBoundaryProps {
-  children: ReactNode;
+    children: ReactNode;
   fallback?: ReactNode;
   onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
-}
+,
+  }
 
 interface ErrorReport {
-  errorId: string | null;
+    errorId: string | null;
   error: Error;
   errorInfo: ErrorInfo;
   message: string;
@@ -28,13 +30,14 @@ interface ErrorReport {
   url: string;
   userId: string | null;
   sessionId: string;
-}
+,
+  }
 
 class AdvancedErrorBoundary extends Component<
   ErrorBoundaryProps,
   ErrorBoundaryState
 > {
-  private retryCount = 0;
+    private retryCount = 0;
   private maxRetries = 3;
 
   constructor(props: ErrorBoundaryProps) {
@@ -44,14 +47,15 @@ class AdvancedErrorBoundary extends Component<
       error: null,
       errorInfo: null,
       errorId: null,
-    };
+  };
   }
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      errorId: `error_${Date.now(),
+  }_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
 
@@ -94,7 +98,7 @@ class AdvancedErrorBoundary extends Component<
       url: window.location.href,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-    };
+  };
 
     // Send to error reporting service
     this.sendErrorReport(errorReport);
@@ -134,14 +138,15 @@ class AdvancedErrorBoundary extends Component<
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
+  },
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      console.error(
+    console.error(
         'Failed to send error report',
         reportError as Error,
-        { context: 'ErrorReporting' }
+        { context: 'ErrorReporting' ,
+  }
       );
     }
   };
@@ -154,7 +159,7 @@ class AdvancedErrorBoundary extends Component<
         error: null,
         errorInfo: null,
         errorId: null,
-      });
+  });
     }
   };
 
@@ -198,19 +203,21 @@ class AdvancedErrorBoundary extends Component<
                   Oops! Something went wrong
                 </h2>
                 <p className='mt-2 text-sm text-gray-600'>
-                  We&apos;re sorry, but something unexpected happened. Our team
+                  We're sorry, but something unexpected happened. Our team
                   has been notified.
                 </p>
               </div>
 
-              {process.env.NODE_ENV === 'development' && (
+              {
+    process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
                   <h3 className='text-sm font-medium text-red-800'>
                     Error Details:
                   </h3>
                   <div className='mt-2 text-sm text-red-700'>
                     <p>
-                      <strong>Error ID:</strong> {this.state.errorId}
+                      <strong>Error ID: </strong> {this.state.errorId,
+  }
                     </p>
                     <p>
                       <strong>Message:</strong> {this.state.error?.message}

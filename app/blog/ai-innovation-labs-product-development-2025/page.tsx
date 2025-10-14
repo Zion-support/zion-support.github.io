@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const InnovationLabsPage: React.FC = () => {
-  return (
+    return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -80,8 +80,7 @@ const InnovationLabsPage: React.FC = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <pre className="text-sm text-gray-800 whitespace-pre-wrap">{`AI Innovation Lab Stack:
-├── AI/ML Platform
+              <pre className="text-sm text-gray-800 whitespace-pre-wrap">{`AI Innovation Lab Stack: ├── AI/ML Platform
 │   ├── TensorFlow & PyTorch
 │   ├── Hugging Face Transformers
 │   └── Custom AI Models
@@ -96,7 +95,8 @@ const InnovationLabsPage: React.FC = () => {
 └── Infrastructure
     ├── Cloud-native Architecture
     ├── Kubernetes & Docker
-    └── CI/CD Automation`}</pre>
+    └── CI/CD Automation`}
+              </pre>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with AI Innovation</h2>

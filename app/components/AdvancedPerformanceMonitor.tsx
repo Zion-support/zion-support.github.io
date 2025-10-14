@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
+    loadTime: number;
   renderTime: number;
   memoryUsage: number;
   networkLatency: number;
@@ -10,10 +10,14 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   totalBlockingTime: number;
-}
+,
+  }
 
 const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    const [
+    metrics, setMetrics,
+  ,
+  ] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
@@ -25,8 +29,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     totalBlockingTime: 0,
   });
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [isRecording, setIsRecording] = useState(false);
+  const [
+    isVisible, setIsVisible,
+  ,
+  ] = useState(false);
+  const [
+    isRecording, setIsRecording,
+  ,
+  ] = useState(false);
 
   useEffect(() => {
     // Only run in development mode
@@ -35,8 +45,11 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     }
 
     const measurePerformance = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (typeof window !== 'undefined' && window.performance) {
+        const navigation = window.performance.getEntriesByType('navigation')[
+    0,
+  ,
+  ] as PerformanceNavigationTiming;
         const paint = window.performance.getEntriesByType('paint');
         
         const observer = new PerformanceObserver((list) => {
@@ -46,50 +59,59 @@ const AdvancedPerformanceMonitor: React.FC = () => {
               setMetrics(prev => ({
                 ...prev,
                 largestContentfulPaint: Math.round(entry.startTime)
-              }));
+              ,
+  }));
             }
             if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-              setMetrics(prev => ({
+    setMetrics(prev => ({
                 ...prev,
                 cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value
-              }));
+              ,
+  }));
             }
             if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({
+    setMetrics(prev => ({
                 ...prev,
                 firstInputDelay: Math.round((entry as any).processingStart - entry.startTime)
-              }));
+              ,
+  }));
             }
           });
         });
 
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift', 'first-input'] });
+        observer.observe({ entryTypes: [
+    'largest-contentful-paint', 'layout-shift', 'first-input',
+  ,
+  ] });
 
         // Measure basic metrics
         if (navigation) {
-          setMetrics(prev => ({
+    setMetrics(prev => ({
             ...prev,
             loadTime: Math.round(navigation.loadEventEnd - navigation.loadEventStart),
             renderTime: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
             networkLatency: Math.round(navigation.responseEnd - navigation.requestStart)
-          }));
+          ,
+  }));
         }
 
         // Measure memory usage
         if ('memory' in performance) {
-          setMetrics(prev => ({
+    setMetrics(prev => ({
             ...prev,
             memoryUsage: Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024)
-          }));
+          ,
+  }));
         }
 
         // Measure paint metrics
         paint.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
+    if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
               ...prev,
               firstContentfulPaint: Math.round(entry.startTime)
-            }));
+            ,
+  }));
           }
         });
 
@@ -111,16 +133,20 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         onClick={() => setIsVisible(!isVisible)}
         className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
       >
-        {isVisible ? 'Hide' : 'Show'} Performance
+        {
+    isVisible ? 'Hide' : 'Show',
+  } Performance
       </button>
       
-      {isVisible && (
+      {
+    isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">
           <h3 className="font-bold text-gray-900 mb-3">Performance Metrics</h3>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
-              <span className="text-gray-600">Load Time:</span>
-              <span className="font-mono">{metrics.loadTime}ms</span>
+              <span className="text-gray-600">Load Time: </span>
+              <span className="font-mono">{metrics.loadTime,
+  }ms</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Render Time:</span>

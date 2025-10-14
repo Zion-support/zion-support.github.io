@@ -10,7 +10,7 @@ const AIServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, automation, artificial intelligence" />"
       </Helmet>"
       <div className="container mx-auto px-4 py-16">"
-        {/* Hero Section */}"
+        {/* Hero Section  */}"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-white mb-6">"
             AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>"
@@ -54,7 +54,7 @@ const AIServicesPage: React.FC = () => {
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">"
                 Schedule Consultation
 const AIServicesPage: React.FC = () => {
-  return (
+    return (
     <>
       <Helmet></Helmet>
         <title>AI Services - Zion Tech Group</title>"
@@ -115,5 +115,6 @@ import React from "react
 const AIServicesPage = () => {
   return (
 
-}
+,
+  }
 "

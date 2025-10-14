@@ -3,78 +3,100 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Clock, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
 const MarketingToolsPage: React.FC = () => {
-  const marketingTools = [
+    const marketingTools = [
     {
       title: 'AI Content Generator',
       price: '$199/month',
       description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support'],
+      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support',
+  ],
       icon: '✍️',
       category: 'Content Creation'
-    },
+    ,
+  },
     {
-      title: 'AI SEO Optimizer',
+    title: 'AI SEO Optimizer',
       price: '$299/month',
       description: 'Advanced SEO analysis and optimization recommendations powered by machine learning.',
-      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights'],
+      features: [
+    'Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights',
+  ],
       icon: '🔍',
       category: 'SEO'
-    },
+    ,
+  },
     {
-      title: 'AI Social Media Manager',
+    title: 'AI Social Media Manager',
       price: '$249/month',
       description: 'Automated social media management with intelligent posting and engagement optimization.',
-      features: ['Content scheduling', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics'],
+      features: [
+    'Content scheduling', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics',
+  ],
       icon: '📱',
       category: 'Social Media'
-    },
+    ,
+  },
     {
-      title: 'AI Email Marketing',
+    title: 'AI Email Marketing',
       price: '$179/month',
       description: 'Intelligent email marketing campaigns with personalization and automation capabilities.',
-      features: ['Email templates', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management'],
+      features: [
+    'Email templates', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management',
+  ],
       icon: '📧',
       category: 'Email Marketing'
-    },
+    ,
+  },
     {
-      title: 'AI Ad Campaign Manager',
+    title: 'AI Ad Campaign Manager',
       price: '$399/month',
       description: 'Automated ad campaign creation and optimization across multiple platforms.',
-      features: ['Campaign creation', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis'],
+      features: [
+    'Campaign creation', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis',
+  ],
       icon: '📊',
       category: 'Advertising'
-    },
+    ,
+  },
     {
-      title: 'AI Analytics Dashboard',
+    title: 'AI Analytics Dashboard',
       price: '$299/month',
       description: 'Comprehensive marketing analytics with AI-powered insights and predictions.',
-      features: ['Real-time analytics', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
+      features: [
+    'Real-time analytics', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting',
+  ],
       icon: '📈',
       category: 'Analytics'
-    }
+    ,
+  }
   ];
 
   const benefits = [
     {
-      icon: TrendingUp,
+    icon: TrendingUp,
       title: 'Increase ROI',
       description: 'Average 250% increase in marketing ROI with AI-powered optimization'
-    },
+    ,
+  },
     {
-      icon: Clock,
+    icon: Clock,
       title: 'Save Time',
       description: 'Reduce marketing tasks by 80% with intelligent automation'
-    },
+    ,
+  },
     {
-      icon: Target,
+    icon: Target,
       title: 'Better Targeting',
       description: 'Reach the right audience with AI-powered targeting and personalization'
-    },
+    ,
+  },
     {
-      icon: BarChart,
+    icon: BarChart,
       title: 'Data-Driven',
       description: 'Make informed decisions with comprehensive analytics and insights'
-    }
+    ,
+  }
+  ,
   ];
 
   return (
@@ -86,7 +108,7 @@ const MarketingToolsPage: React.FC = () => {
         <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* Hero Section  */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
@@ -94,7 +116,7 @@ const MarketingToolsPage: React.FC = () => {
           </h1>
           <p>Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.</p>
           </p>
-          {/* Stats */}
+          {/* Stats  */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
@@ -109,7 +131,7 @@ const MarketingToolsPage: React.FC = () => {
               <div className="text-3xl font-bold text-orange-400 mb-2">80%</div>
               <div className="text-gray-300">Time Saved</div>
 
-          {/* Contact Info */}
+          {/* Contact Info  */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
@@ -123,7 +145,7 @@ const MarketingToolsPage: React.FC = () => {
                 <span className="text-white font-medium">Middletown, DE</span>
         </section>
 
-      {/* Marketing Tools Grid */}
+      {/* Marketing Tools Grid  */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -153,7 +175,9 @@ const MarketingToolsPage: React.FC = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+                    href={
+    `mailto: kleber@ziontechgroup.com?subject=Interest in ${tool.title,
+  }`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started
@@ -162,7 +186,7 @@ const MarketingToolsPage: React.FC = () => {
           </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Benefits Section  */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -177,7 +201,7 @@ const MarketingToolsPage: React.FC = () => {
           </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section  */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

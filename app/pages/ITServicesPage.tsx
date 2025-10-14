@@ -10,7 +10,7 @@ const ITServicesPage: React.FC = () => {
         <meta name="keywords" content="IT services, infrastructure, cloud computing, cybersecurity, technical support, system integration" />"
       </Helmet>"
       <div className="container mx-auto px-4 py-16">"
-        {/* Hero Section */}"
+        {/* Hero Section  */}"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-white mb-6">"
             IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Services</span>"
@@ -54,7 +54,7 @@ const ITServicesPage: React.FC = () => {
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">"
                 Request Quote
 const ITServicesPage: React.FC = () => {
-  return (
+    return (
     <>
       <Helmet></Helmet>
         <title>IT Services - Zion Tech Group</title>"
@@ -115,5 +115,6 @@ import React from "react
 const ITServicesPage = () => {
   return (
 
-}
+,
+  }
 "

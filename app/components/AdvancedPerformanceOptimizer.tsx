@@ -1,10 +1,11 @@
 import React from 'react';
 
 interface AdvancedPerformanceOptimizerProps {
-  className?: string;
-}
+    className?: string;
+,
+  }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ className = "" }) => {
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ className = " }) => {
   return (
     <div className={`advanced-performance-optimizer ${className}`}>
       <div className="max-w-7xl mx-auto px-4 py-16">

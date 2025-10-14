@@ -7,6 +7,6 @@ export const reportError = (
   // like Sentry, LogRocket, or Bugsnag;
 };
 export const initErrorReporting = () => {
-  // Initialize error reporting service"""
+  // Initialize error reporting service"
   console.log("Error reporting initialized")
 }"

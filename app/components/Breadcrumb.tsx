@@ -2,11 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 interface BreadcrumbProps {
-  className?: string;
-}
+    className?: string;
+,
+  }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
-  // const getBreadcrumbName = (pathname: string) => {
+    // const getBreadcrumbName = (pathname: string) => {
   //   const nameMap: Record<string, string> = {
   //     'ai-services': 'AI Services',
   //     'ai-analytics': 'AI Analytics',
@@ -36,9 +37,13 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
   //     'marketing-tools': 'Marketing Tools',
   //     'micro-saas-services': 'Micro SaaS Services',
   //     'services': 'Services'
-  //   };
+  //   ,
+  };
   //   
-  //   return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1);
+  //   return nameMap[
+    pathname,
+  ,
+  ] || pathname.charAt(0).toUpperCase() + pathname.slice(1);
   // };
 
   return (
