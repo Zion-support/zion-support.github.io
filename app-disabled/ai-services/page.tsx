@@ -1,83 +1,149 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Box, Mic, Circle, Right } from 'lucide-react';
+import React from "react";";
+import React from "react";";
+import { Helmet    } from "react-helmet-async";";
+'use client;';
+import react;
+
+import { Helmet } from  from "react;";
+
+import { Helmet    } from ";react-helmet-async";";
+import { Box, Mic,    } from "lucide-react";";
+import from ../components;
+import Footer from ../components;
+import { Circle, Right, Star, } from lucide-react;
+
+;
+
+const AIServicesPagePage: React.FC = () => {const features = [;
 
 const AIServicesPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
-      icon: <Box className="w-6 h-6" />,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: <Mic className="w-6 h-6" />,
-      title: 'Natural Language Processing',
-      description: 'AI-powered text analysis and language understanding capabilities.',
-      benefits: ['Text analysis', 'Language understanding', 'Sentiment analysis', 'Content generation']
-    },
-    {
-      icon: <Circle className="w-6 h-6" />,
-      title: 'Computer Vision',
-      description: 'Image and video analysis using advanced AI algorithms.',
-      benefits: ['Image recognition', 'Video analysis', 'Object detection', 'Pattern recognition']
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI solutions to transform your business." />
-        <meta name="keywords" content="AI services, machine learning, artificial intelligence, automation" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI solutions to transform your business and drive innovation.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <div className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <Circle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      <span>{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact us today to learn more about our AI services and how they can benefit your business.
+      ico,;
+    n: title: 'AI-Powered Intelligence,'';
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,'';
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]'';
+import { Helmet    } from "react-helmet-async";";
+import { Box, Mic,    } from "lucide-react";";
+import ../components/ from "../components/";";
+import Footer from "../components/Footer";";
+import { Circle, Right, Star,    } from "lucide-react";";
+;
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            AI Services;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Comprehensive AI solutions to transform your business.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Machine Learning</h3>
+              <p className="text-gray-600">
+                Advanced machine learning solutions for data analysis and prediction.
               </p>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto group">
-                Get Started
-                <Right className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Natural Language Processing</h3>
+              <p className="text-gray-600">
+                AI-powered text analysis and language understanding.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Computer Vision</h3>
+              <p className="text-gray-600">
+                Image and video analysis using advanced AI algorithms.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </>
+
+    </div>
+  );
+}
+      title: 'AI Content Generator','';
+      description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.','';
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],'';
+      pricing: 'Starting at $29/month','';
+      link: '/ai-content-generator','';
+      popular: true;
+    },;
+    {
+      icon: <className="w-8 h-8 text-purple-500" />,
+      title: 'AI Automation',''
+      description: 'Automate repetitive tasks and workflows with intelligent AI-powered automation solutions.',''
+      features: ['Workflow automation', 'Process optimization', 'Custom integrations', 'Real-time monitoring'],''
+      pricing: 'Starting at $49/month',''
+      link: '/ai-automation',''
+      popular: true;
+    },;
+    {
+      icon: <className="w-8 h-8 text-red-500" />,
+      title: 'AI Cybersecurity',''
+      description: 'Advanced AI-powered security solutions to protect your digital assets and detect threats.',''
+      features: ['Threat detection', 'Anomaly monitoring', 'Automated response', 'Compliance reporting'],''
+      pricing: 'Starting at $99/month',''
+      link: '/ai-cybersecurity',''
+      popular: false;
+    },;
+    {
+      icon: <className="w-8 h-8 text-green-500" />,
+      title: 'AI Analytics',''
+      description: 'Transform your data into actionable insights with powerful AI-driven analytics tools.',''
+      features: ['Predictive analytics', 'Data visualization', 'Custom dashboards', 'Real-time insights'],''
+      pricing: 'Starting at $39/month',''
+      link: '/ai-analytics',''
+      popular: false;
+    },;
+    {
+      icon: <className="w-8 h-8 text-orange-500" />,
+      title: 'Machine Learning',''
+      description: 'Build intelligent systems that learn and adapt to your business needs.',''
+      features: ['Predictive Modeling', 'Pattern Recognition', 'Automated Learning', 'Real-time Adaptation'],''
+      pricing: 'Starting at $99/month',''
+      link: '/machine-learning',''
+      popular: true;
+    },;
+    {
+      icon: <className="w-8 h-8 text-green-500" />,
+      title: 'Natural Language Processing',''
+      description: 'Transform text and speech into actionable insights and automated responses.',''
+      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],''
+      pricing: 'Starting at $89/month',''
+      link: '/nlp',''
+      popular: false;
+    },;
+    {
+      icon: <className="w-8 h-8 text-purple-500" />,
+      title: 'Computer Vision',''
+      description: 'Extract meaningful information from images and videos for business automation.',''
+      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Analysis'],''
+      pricing: 'Starting at $119/month',''
+      link: '/computer-vision',''
+      popular: true;
+    },;
+    {
+      icon: <3 className="w-8 h-8 text-yellow-500" />,
+      title: 'Predictive Analytics',''
+      description: 'Forecast future trends and behaviors to make data-driven business decisions.',''
+      features: ['Trend Analysis', 'Risk Assessment', 'Performance Prediction', 'Scenario Planning'],''
+      pricing: 'Starting at $149/month',''
+      link: '/predictive-analytics',''
+      popular: false;
+    }
+  ]
+      <Helmet></Helmet>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI services including content generation, chatbots, analytics, and automation solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
+      </>
   );
 };
 
