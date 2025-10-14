@@ -1,10 +1,10 @@
-import React from 'react'
-const LazyWrapper: React.FC = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold text-white">LazyWrapper</h2>
-      <p className="text-gray-300">This is the LazyWrapper component.</p>
-    </div>
-  )
+import React from "react";
+
+interface LazyWrapperProps {
+  children: React.ReactNode;
 }
-export default LazyWrapper
+
+export default function LazyWrapper({ children }: LazyWrapperProps) {
+  return <div className="lazy-wrapper">{children}</div>;
+}
+f7f852c0f7415181a1b362c4aa5a784585ad5828;

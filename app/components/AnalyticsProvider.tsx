@@ -1,10 +1,40 @@
-import React from 'react'
-const AnalyticsProvider: React.FC = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold text-white">AnalyticsProvider</h2>
-      <p className="text-gray-300">This is the AnalyticsProvider component.</p>
-    </div>
-  )
+
+import React, { createContext, useContext } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (event: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (page: string) => void;
 }
-export default AnalyticsProvider
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  const trackEvent = (event: string, properties?: Record<string, unknown>) => {
+    // Analytics tracking implementation
+    console.log('Analytics Event:', event, properties);
+  };
+
+  const trackPageView = (page: string) => {
+    // Page view tracking implementation
+    console.log('Page View:', page);
+  };
+
+  const contextValue = {
+    trackEvent,
+    trackPageView,
+  };
+
+
+
+export function useAnalytics() {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+}
+ f7f852c0f7415181a1b362c4aa5a784585ad5828

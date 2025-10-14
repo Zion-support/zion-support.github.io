@@ -1,10 +1,2 @@
-import React from 'react'
-const EnhancedErrorFeedback: React.FC = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold text-white">EnhancedErrorFeedback</h2>
-      <p className="text-gray-300">This is the EnhancedErrorFeedback component.</p>
-    </div>
-  )
-}
-export default EnhancedErrorFeedback
+"use client";
+f7f852c0f7415181a1b362c4aa5a784585ad5828;

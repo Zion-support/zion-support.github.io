@@ -1,10 +1,24 @@
-import React from 'react'
-const PerformanceMonitor: React.FC = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold text-white">PerformanceMonitor</h2>
-      <p className="text-gray-300">This is the PerformanceMonitor component.</p>
-    </div>
-  )
+import React from "react";
+
+interface PerformanceMonitorProps {
+  onMetricsUpdate: (metrics: {
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number;
+  }) => void;
 }
-export default PerformanceMonitor
+
+export default function PerformanceMonitor({
+  onMetricsUpdate,
+}: PerformanceMonitorProps) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _ = { onMetricsUpdate }; // Parameter will be used in future implementation
+  return (
+    <div className="performancemonitor">
+      {/* PerformanceMonitor component implementation */}
+    </div>
+  );
+}
+f7f852c0f7415181a1b362c4aa5a784585ad5828;

@@ -1,10 +1,28 @@
-import React from 'react'
-const Navigation: React.FC = () => {
+import React from "react";
+import Link from "next/link";
+
+export default function Navigation() {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold text-white">Navigation</h2>
-      <p className="text-gray-300">This is the Navigation component.</p>
-    </div>
-  )
+    <nav className="bg-slate-900 shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <Link href="/" className="text-white text-xl font-bold">
+            Zion Tech Group
+          </Link>
+          <div className="space-x-4">
+            <Link href="/services" className="text-gray-300 hover:text-white">
+              Services
+            </Link>
+            <Link href="/solutions" className="text-gray-300 hover:text-white">
+              Solutions
+            </Link>
+            <Link href="/contact" className="text-gray-300 hover:text-white">
+              Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 }
-export default Navigation
+f7f852c0f7415181a1b362c4aa5a784585ad5828;
