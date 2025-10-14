@@ -74,8 +74,8 @@ const AccessibilityEnhancer: React.FC = () => {
     const addAltText = () => {
       const images = document.querySelectorAll('img:not([alt])');
       images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
+        if (!img.getAttribute(&apos;alt&apos;)) {
+          img.setAttribute(&apos;alt&apos;, `Image ${index + 1}`);
         }
       });
     };
@@ -84,11 +84,11 @@ const AccessibilityEnhancer: React.FC = () => {
   }, []);
 
   return (
-    <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
-      <h3 className="text-white font-semibold mb-3">Accessibility</h3>
+    <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded- lgshadow-lg">
+      <h3 className="text-white font-semibold mb-3  ">Accessibility</h3>
       
       <div className="space-y-3">
-        <label className="flex items-center space-x-2 text-white text-sm">
+        <label className="flex items-center space-x-2 text-whitetext- sm">
           <input
             type="checkbox"
             checked={isHighContrast}
@@ -98,7 +98,7 @@ const AccessibilityEnhancer: React.FC = () => {
           <span>High Contrast</span>
         </label>
 
-        <label className="flex items-center space-x-2 text-white text-sm">
+        <label className="flex items-center space-x-2 text-whitetext- sm">
           <input
             type="checkbox"
             checked={isReducedMotion}
@@ -109,11 +109,11 @@ const AccessibilityEnhancer: React.FC = () => {
         </label>
 
         <div className="space-y-1">
-          <label className="text-white text-sm">Font Size</label>
+          <label className="text-whitetext- sm">Font Size</label>
           <select
             value={fontSize}
             onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large')}
-            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm"
+            className="w-full bg-slate-700 text-white rounded px-2 py-1text- sm"
           >
             <option value="small">Small</option>
             <option value="normal">Normal</option>
