@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  HomeIcon
+  HomeIcon,
   InformationCircleIcon
-  BriefcaseIcon
+  BriefcaseIcon,
   PhoneIcon
-  DocumentTextIcon
+  DocumentTextIcon,
   AcademicCapIcon
-  PlayIcon
+  PlayIcon,
   QuestionMarkCircleIcon
-  ShieldCheckIcon
+  ShieldCheckIcon,
   CurrencyDollarIcon
-  CogIcon
+  CogIcon,
   ChevronDownIcon
-  GlobeAltIcon
+  GlobeAltIcon,
   CloudIcon
-  CpuChipIcon
+  CpuChipIcon,
   SignalIcon
-  UserGroupIcon
+  UserGroupIcon,
   XMarkIcon
 } from '@heroicons/react/24/outline';
 interface SidebarProps {
@@ -103,8 +103,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
               <span className="text-white font-bold text-xl">Zion Tech Group</span>
             </Link>
-            <button
-              onClick={onClose}
+            <button,
+  onClick ={onClose}
               className="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700"
             >
               <XMarkIcon className="w-5 h-5" />
@@ -118,8 +118,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <div key={item.name}>
                   {item.submenu ? (
                     <div>
-                      <button
-                        onClick={() => toggleSection(item.name)}
+                      <button,
+  onClick ={() => toggleSection(item.name)}
                         className={`flex items-center w-full px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                           isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
                             ? 'text-white bg-slate-800'
@@ -136,8 +136,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       {/* Submenu */}
                       <div className={`pl-6 mt-1 space-y-1 ${isExpanded(item.name) ? 'block' : 'hidden'}`}>
                         {item.submenu.map((subItem) => (
-                          <Link
-                            key={subItem.name}
+                          <Link,
+  key ={subItem.name}
                             to={subItem.href}
                             className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${
                               isActive(subItem.href)
@@ -153,8 +153,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       </div>
                     </div>
                   ) : (
-                    <Link
-                      to={item.href}
+                    <Link,
+  to ={item.href}
                       className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                         isActive(item.href)
                           ? 'text-white bg-slate-800'
@@ -177,8 +177,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </h3>
               <div className="space-y-1">
                 {additionalLinks.map((link) => (
-                  <Link
-                    key={link.name}
+                  <Link,
+  key ={link.name}
                     to={link.href}
                     className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${
                       isActive(link.href)
@@ -201,8 +201,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <p className="text-xs text-gray-400 mb-2">
                 Need help? Contact our support team
               </p>
-              <Link
-                to="/contact"
+              <Link,
+  to ="/contact"
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-md hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
                 onClick={onClose}
               >

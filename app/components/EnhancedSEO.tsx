@@ -15,14 +15,14 @@ interface SEOProps {
 
 const EnhancedSEO: React.FC<SEOProps> = ({
   title
-  description
+  description,
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions'
-  canonicalUrl
+  canonicalUrl,
   ogImage = '/api/placeholder/1200/630'
   ogType = 'website'
   twitterCard = 'summary_large_image'
-  structuredData
-  noIndex = false
+  structuredData,
+  noIndex = false,
   noFollow = false
 }) => {
   const siteName = 'Zion Tech Group'

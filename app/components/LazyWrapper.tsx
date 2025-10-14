@@ -6,7 +6,7 @@ interface LazyWrapperProps {
 }
 
 const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
-  children
+  children,
   fallback = <LoadingSpinner size="lg" text="Loading component..." /> 
 }) => {
   return (

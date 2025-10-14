@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO'
 import { 
-  CloudIcon
+  CloudIcon,
   ServerIcon
-  CpuChipIcon
+  CpuChipIcon,
   ChartBarIcon
-  CheckCircleIcon
+  CheckCircleIcon,
   ArrowRightIcon
-  PhoneIcon
+  PhoneIcon,
   EnvelopeIcon
   MapPinIcon
 } from '@heroicons/react/24/outline';

@@ -10,12 +10,12 @@ interface FuturisticButtonProps {
 }
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
-  children
+  children,
   className = '','
   variant = 'primary','
   size = 'md','
   icon
-  onClick
+  onClick,
   type = 'button''
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2'
@@ -30,8 +30,8 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       lg: 'px-8 py-4 text-lg''
   }
   return (
-    <button
-      type={type}
+    <button,
+  type ={type}
       onClick={onClick}
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >

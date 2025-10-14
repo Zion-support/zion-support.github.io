@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO'
 import { 
-  UserGroupIcon
+  UserGroupIcon,
   AcademicCapIcon
-  BriefcaseIcon
+  BriefcaseIcon,
   StarIcon
-  ArrowRightIcon
+  ArrowRightIcon,
   PhoneIcon
-  EnvelopeIcon
+  EnvelopeIcon,
   MapPinIcon
 } from '@heroicons/react/24/outline';
 export default function TeamPage() {

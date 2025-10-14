@@ -24,7 +24,7 @@ const SEO: React.FC<SEOProps> = ({
   author = 'Zion Tech Group'
   publishedTime
   modifiedTime
-  section
+  section,
   tags = []
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`

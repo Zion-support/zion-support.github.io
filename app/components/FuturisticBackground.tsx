@@ -10,8 +10,8 @@ const FuturisticBackground = () => {
         <div className="absolute inset-0 opacity-20">
           <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
             {Array.from({ length: 144 }).map((_, i) => (
-              <div
-                key={i}
+              <div,
+  key ={i}
                 className="border border-purple-500/30 animate-pulse"
                 style={{
                   animationDelay: `${i * 0.1}s`
@@ -31,8 +31,8 @@ const FuturisticBackground = () => {
         {/* Animated Particles */}
         <div className="absolute inset-0">
           {Array.from({ length: 50 }).map((_, i) => (
-            <div
-              key={i}
+            <div,
+  key ={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
               style={{
                 left: `${Math.random() * 100}%`

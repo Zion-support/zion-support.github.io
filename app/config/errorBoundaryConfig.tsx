@@ -50,8 +50,8 @@ const ErrorBoundaryConfig: React.FC = () => {
               <p className="mb-6">
                 Ready to transform your business with our error boundary config services?
               </p>
-              <a
-                href="/contact"
+              <a,
+  href ="/contact"
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Contact Us
@@ -70,8 +70,8 @@ const ErrorBoundaryConfig: React.FC = () => {
             Let's discuss how our error boundary config'
             services can help you achieve your goals.
           </p>
-          <a
-            href="/contact"
+          <a,
+  href ="/contact"
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
           >
             Get Started Today

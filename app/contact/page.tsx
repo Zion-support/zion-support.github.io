@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 export default function ContactPage()    {
   const [formData, setFormData] = useState({
     name: ''
@@ -148,8 +148,8 @@ export default function ContactPage()    {
               <p className="text-gray-300 mb-6">
                 Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
-              <button
-                onClick={() => {
+              <button,
+  onClick ={() => {
                   setIsSubmitted(false)
                   setFormData({
                     name: ''
@@ -172,14 +172,14 @@ export default function ContactPage()    {
                   <label htmlFor="name" className="block text-white font-medium mb-2">
                     Full Name *
                   </label>
-                  <input
-                    type="text"
+                  <input,
+  type ="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required,
+  className ="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
@@ -187,14 +187,14 @@ export default function ContactPage()    {
                   <label htmlFor="email" className="block text-white font-medium mb-2">
                     Email Address *
                   </label>
-                  <input
-                    type="email"
+                  <input,
+  type ="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required,
+  className ="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="your.email@company.com"
                   />
                 </div>
@@ -205,8 +205,8 @@ export default function ContactPage()    {
                   <label htmlFor="company" className="block text-white font-medium mb-2">
                     Company
                   </label>
-                  <input
-                    type="text"
+                  <input,
+  type ="text"
                     id="company"
                     name="company"
                     value={formData.company}
@@ -219,8 +219,8 @@ export default function ContactPage()    {
                   <label htmlFor="phone" className="block text-white font-medium mb-2">
                     Number
                   </label>
-                  <input
-                    type="tel"
+                  <input,
+  type ="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
@@ -235,13 +235,13 @@ export default function ContactPage()    {
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
                   Subject *
                 </label>
-                <select
-                  id="subject"
+                <select,
+  id ="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  required,
+  className ="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
                   {subjects.map((subject, index) => (
@@ -256,21 +256,21 @@ export default function ContactPage()    {
                 <label htmlFor="message" className="block text-white font-medium mb-2">
                   Message *
                 </label>
-                <textarea
-                  id="message"
+                <textarea,
+  id ="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  required
-                  rows={6}
+                  required,
+  rows ={6}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
 
               <div className="text-center">
-                <button
-                  type="submit"
+                <button,
+  type ="submit"
                   disabled={isSubmitting}
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >

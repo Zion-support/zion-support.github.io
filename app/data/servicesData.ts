@@ -60,8 +60,8 @@ export const services: Service[] = [
       'FAQ Automation'
       'Appointment Scheduling'
       'E-commerce Support'
-    ]
-    technologies: ['OpenAI GPT-4', 'TensorFlow', 'Python', 'React', 'Node.js', 'MongoDB'],
+    ],
+      technologies: ['OpenAI GPT-4', 'TensorFlow', 'Python', 'React', 'Node.js', 'MongoDB'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -105,8 +105,8 @@ export const services: Service[] = [
       'Social Media Management'
       'Technical Documentation'
       'Product Descriptions'
-    ]
-    technologies: ['GPT-4', 'BERT', 'Python', 'FastAPI', 'React', 'PostgreSQL'],
+    ],
+      technologies: ['GPT-4', 'BERT', 'Python', 'FastAPI', 'React', 'PostgreSQL'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -150,8 +150,8 @@ export const services: Service[] = [
       'Customer Behavior Analysis'
       'Financial Reporting'
       'Marketing Analytics'
-    ]
-    technologies: ['Python', 'TensorFlow', 'Apache Spark', 'React', 'D3.js', 'PostgreSQL'],
+    ],
+      technologies: ['Python', 'TensorFlow', 'Apache Spark', 'React', 'D3.js', 'PostgreSQL'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -196,8 +196,8 @@ export const services: Service[] = [
       'Event Planning'
       'Construction Projects'
       'Consulting Services'
-    ]
-    technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'Redis', 'AWS'],
+    ],
+      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'Redis', 'AWS'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -241,8 +241,8 @@ export const services: Service[] = [
       'Customer Support'
       'Marketing Automation'
       'Account Management'
-    ]
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'SendGrid', 'Stripe', 'AWS'],
+    ],
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'SendGrid', 'Stripe', 'AWS'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -286,8 +286,8 @@ export const services: Service[] = [
       'Manufacturing'
       'Warehousing'
       'Distribution'
-    ]
-    technologies: ['React', 'Node.js', 'MongoDB', 'Barcode Scanner API', 'AWS', 'Redis'],
+    ],
+      technologies: ['React', 'Node.js', 'MongoDB', 'Barcode Scanner API', 'AWS', 'Redis'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -332,8 +332,8 @@ export const services: Service[] = [
       'Disaster Recovery Setup'
       'Application Modernization'
       'Cost Optimization'
-    ]
-    technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform'],
+    ],
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -377,8 +377,8 @@ export const services: Service[] = [
       'Security Audits'
       'Incident Response'
       'Security Training'
-    ]
-    technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption', 'AI/ML'],
+    ],
+      technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption', 'AI/ML'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -422,8 +422,8 @@ export const services: Service[] = [
       'Autonomous Vehicles'
       'Remote Work Solutions'
       'Healthcare Applications'
-    ]
-    technologies: ['5G NR', 'Edge Computing', 'IoT', 'AI/ML', 'Cloud Computing', 'SDN'],
+    ],
+      technologies: ['5G NR', 'Edge Computing', 'IoT', 'AI/ML', 'Cloud Computing', 'SDN'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -468,8 +468,8 @@ export const services: Service[] = [
       'Financial Services'
       'Gaming & NFTs'
       'Healthcare Records'
-    ]
-    technologies: ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'React', 'Node.js'],
+    ],
+      technologies: ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'React', 'Node.js'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',
@@ -514,8 +514,8 @@ export const services: Service[] = [
       'Asset Tracking'
       'Environmental Monitoring'
       'Healthcare Devices'
-    ]
-    technologies: ['MQTT', 'CoAP', 'REST APIs', 'React', 'Node.js', 'MongoDB'],
+    ],
+      technologies: ['MQTT', 'CoAP', 'REST APIs', 'React', 'Node.js', 'MongoDB'],
       contactInfo: {
       phone: '+1-302-464-0950',
       email: 'kleber@ziontechgroup.com',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react'
+import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -123,15 +123,15 @@ const CaseStudiesPage: React.FC = () => {
             Let's discuss how our AI and IT solutions can transform your business and deliver measurable results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
+            <a,
+  href ="/contact"
               className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Your Project
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-            <a
-              href="/demo"
+            <a,
+  href ="/demo"
               className="border-2 border-violet-400 text-violet-300 px-8 py-4 rounded-lg font-semibold hover:bg-violet-400 hover:text-white transition-all duration-300"
             >
               Schedule Demo

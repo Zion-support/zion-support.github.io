@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead'
 import { 
-  ArrowRightIcon
+  ArrowRightIcon,
   ShieldCheckIcon
-  CloudIcon
+  CloudIcon,
   CpuChipIcon
-  ChartBarIcon
+  ChartBarIcon,
   GlobeAltIcon
-  PhoneIcon
+  PhoneIcon,
   EnvelopeIcon
-  MapPinIcon
+  MapPinIcon,
   RocketLaunchIcon
-  SparklesIcon
+  SparklesIcon,
   BoltIcon
 } from '@heroicons/react/24/outline';
 import FuturisticBackground from '../components/FuturisticBackground'

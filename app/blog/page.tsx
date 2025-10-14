@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, User, Calendar } from 'lucide-react'
+import { Right, User, Calendar } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const categories = [
     { id: "all", name: "All Posts", count: 12 }
@@ -101,8 +101,8 @@ const BlogPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button
-                  key={category.id}
+                <button,
+  key ={category.id}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
                 >
                   {category.name} ({category.count})
@@ -159,8 +159,8 @@ const BlogPage: React.FC = () => {
               Subscribe to our newsletter for the latest tech insights and updates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
+              <input,
+  type ="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />

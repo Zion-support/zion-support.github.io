@@ -3,15 +3,15 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO'
 import { 
-  CheckCircleIcon
+  CheckCircleIcon,
   UserGroupIcon
-  LightBulbIcon
+  LightBulbIcon,
   ShieldCheckIcon
-  RocketLaunchIcon
+  RocketLaunchIcon,
   HeartIcon
-  ArrowRightIcon
+  ArrowRightIcon,
   StarIcon
-  PhoneIcon
+  PhoneIcon,
   EnvelopeIcon
   MapPinIcon
 } from '@heroicons/react/24/outline';

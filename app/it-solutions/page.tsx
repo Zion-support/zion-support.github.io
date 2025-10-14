@@ -5,25 +5,25 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon
+  CpuChipIcon,
   ShieldCheckIcon
-  CloudIcon
+  CloudIcon,
   ChartBarIcon
-  GlobeAltIcon
+  GlobeAltIcon,
   RocketLaunchIcon
-  ArrowRightIcon
+  ArrowRightIcon,
   CheckCircleIcon
-  PhoneIcon
+  PhoneIcon,
   EnvelopeIcon
-  CurrencyDollarIcon
+  CurrencyDollarIcon,
   ClockIcon
-  UserGroupIcon
+  UserGroupIcon,
   CogIcon
-  ServerIcon
+  ServerIcon,
   WrenchScrewdriverIcon
-  DocumentTextIcon
+  DocumentTextIcon,
   LightBulbIcon
-  WifiIcon
+  WifiIcon,
   CircleStackIcon
 } from '@heroicons/react/24/outline';
 export default function ITSolutionsPage()   {
@@ -43,7 +43,7 @@ export default function ITSolutionsPage()   {
       color: "from-blue-500 to-indigo-500",
       price: "Starting at $2,500/month",
       benefits: ["99.9% uptime", "24/7 monitoring", "Proactive maintenance"],
-      useCases: ["Enterprise infrastructure", "Data center management", "Server optimization"]
+      useCases: ["Enterprise infrastructure", "Data center management", "Server optimization"],
       href: "/it-infrastructure"
     }
     {
@@ -61,7 +61,7 @@ export default function ITSolutionsPage()   {
       color: "from-cyan-500 to-blue-500",
       price: "Starting at $3,000/month",
       benefits: ["50% cost reduction", "Scalable infrastructure", "Enhanced security"],
-      useCases: ["AWS migration", "Azure deployment", "Google Cloud setup"]
+      useCases: ["AWS migration", "Azure deployment", "Google Cloud setup"],
       href: "/cloud-migration"
     }
     {
@@ -79,7 +79,7 @@ export default function ITSolutionsPage()   {
       color: "from-red-500 to-orange-500",
       price: "Starting at $2,200/month",
       benefits: ["Zero breach guarantee", "24/7 monitoring", "SOC 2 compliance"],
-      useCases: ["Security audits", "Compliance", "Threat protection"]
+      useCases: ["Security audits", "Compliance", "Threat protection"],
       href: "/cybersecurity-solutions"
     }
     {
@@ -97,7 +97,7 @@ export default function ITSolutionsPage()   {
       color: "from-green-500 to-emerald-500",
       price: "Starting at $1,800/month",
       benefits: ["Optimized performance", "Zero data loss", "Automated backups"],
-      useCases: ["MySQL optimization", "PostgreSQL management", "MongoDB administration"]
+      useCases: ["MySQL optimization", "PostgreSQL management", "MongoDB administration"],
       href: "/database-management"
     }
     {
@@ -115,7 +115,7 @@ export default function ITSolutionsPage()   {
       color: "from-purple-500 to-pink-500",
       price: "Starting at $1,500/month",
       benefits: ["Real-time monitoring", "Threat prevention", "Network optimization"],
-      useCases: ["Network security", "VPN management", "Traffic monitoring"]
+      useCases: ["Network security", "VPN management", "Traffic monitoring"],
       href: "/network-security"
     }
     {
@@ -133,7 +133,7 @@ export default function ITSolutionsPage()   {
       color: "from-teal-500 to-green-500",
       price: "Starting at $1,200/month",
       benefits: ["24/7 availability", "Quick response", "Expert technicians"],
-      useCases: ["Technical support", "Helpdesk services", "User assistance"]
+      useCases: ["Technical support", "Helpdesk services", "User assistance"],
       href: "/it-support"
     }
     {
@@ -151,7 +151,7 @@ export default function ITSolutionsPage()   {
       color: "from-orange-500 to-red-500",
       price: "Starting at $4,000/month",
       benefits: ["Custom solutions", "Modern technology", "Ongoing support"],
-      useCases: ["Web development", "Mobile apps", "API development"]
+      useCases: ["Web development", "Mobile apps", "API development"],
       href: "/software-development"
     }
     {
@@ -169,7 +169,7 @@ export default function ITSolutionsPage()   {
       color: "from-yellow-500 to-orange-500",
       price: "Starting at $2,000/month",
       benefits: ["Strategic guidance", "Cost optimization", "Technology alignment"],
-      useCases: ["IT strategy", "Digital transformation", "Technology planning"]
+      useCases: ["IT strategy", "Digital transformation", "Technology planning"],
       href: "/it-consulting"
     }
     {
@@ -187,7 +187,7 @@ export default function ITSolutionsPage()   {
       color: "from-indigo-500 to-purple-500",
       price: "Starting at $800/month",
       benefits: ["Zero data loss", "Quick recovery", "Automated backups"],
-      useCases: ["Data protection", "Disaster recovery", "Compliance"]
+      useCases: ["Data protection", "Disaster recovery", "Compliance"],
       href: "/data-backup-recovery"
     }
     {
@@ -205,7 +205,7 @@ export default function ITSolutionsPage()   {
       color: "from-rose-500 to-pink-500",
       price: "Starting at $1,000/month",
       benefits: ["Cost optimization", "Asset tracking", "License compliance"],
-      useCases: ["Asset tracking", "Cost management", "License compliance"]
+      useCases: ["Asset tracking", "Cost management", "License compliance"],
       href: "/it-asset-management"
     }
     {
@@ -223,7 +223,7 @@ export default function ITSolutionsPage()   {
       color: "from-violet-500 to-purple-500",
       price: "Starting at $1,500/month",
       benefits: ["Secure remote access", "Productivity tools", "Seamless collaboration"],
-      useCases: ["Remote work setup", "VPN management", "Collaboration tools"]
+      useCases: ["Remote work setup", "VPN management", "Collaboration tools"],
       href: "/remote-work-solutions"
     }
     {
@@ -241,7 +241,7 @@ export default function ITSolutionsPage()   {
       color: "from-emerald-500 to-teal-500",
       price: "Starting at $2,800/month",
       benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
-      useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"]
+      useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
       href: "/it-compliance"
     }
   ]

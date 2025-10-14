@@ -7,7 +7,7 @@ interface AnimatedCardProps {
 }
 
 const AnimatedCard: React.FC<AnimatedCardProps> = ({
-  children
+  children,
   className = ''
   glowColor = 'purple'
   hoverEffect = true
@@ -29,8 +29,8 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
       yellow: 'border-yellow-500/30 hover:border-yellow-500/60'
   }
   return (
-    <div
-      className={`
+    <div,
+  className ={`
         relative bg-gradient-to-br from-slate-800/80 to-slate-700/80 
         backdrop-blur-sm border border-slate-600/50 
         rounded-xl p-6 transition-all duration-300

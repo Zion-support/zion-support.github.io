@@ -3,21 +3,21 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  ChartBarIcon
+  ChartBarIcon,
   CheckCircleIcon
-  ArrowRightIcon
+  ArrowRightIcon,
   StarIcon
-  GlobeAltIcon
+  GlobeAltIcon,
   DocumentTextIcon
-  CpuChipIcon
+  CpuChipIcon,
   ShieldCheckIcon
-  ClockIcon
+  ClockIcon,
   UserGroupIcon
-  CurrencyDollarIcon
+  CurrencyDollarIcon,
   PhoneIcon
-  EnvelopeIcon
+  EnvelopeIcon,
   ChartPieIcon
-  TrendingUpIcon
+  TrendingUpIcon,
   DatabaseIcon
 } from '@heroicons/react/24/outline';
 const BusinessIntelligenceDashboard: React.FC = () => {
@@ -312,8 +312,8 @@ const BusinessIntelligenceDashboard: React.FC = () => {
                     ))}
                   </ul>
                   
-                  <Link
-                    to="/contact"
+                  <Link,
+  to ="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-700 hover:to-purple-700 hover:scale-105'
@@ -376,14 +376,14 @@ const BusinessIntelligenceDashboard: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link
-                  to="/contact"
+                <Link,
+  to ="/contact"
                   className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
                 >
                   Start Free Trial
                 </Link>
-                <Link
-                  to="/demo"
+                <Link,
+  to ="/demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo

@@ -14,7 +14,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   children
   to
   href
-  onClick
+  onClick,
   variant = 'primary'
   size = 'md'
   className = ''

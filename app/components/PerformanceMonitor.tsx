@@ -115,8 +115,8 @@ const PerformanceMonitor: React.FC = () => {
   }
   if (!isVisible) {
     return (
-      <button
-        onClick={() => setIsVisible(true)}
+      <button,
+  onClick ={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-purple-600 text-white p-2 rounded-full shadow-lg hover:bg-purple-700 transition-colors z-50"
         title="Performance Monitor"
       >
@@ -129,8 +129,8 @@ const PerformanceMonitor: React.FC = () => {
     <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-xl border border-slate-600 z-50 max-w-sm">
       <div className="flex justify-between items-center mb-3">
         <h3 className="font-semibold text-sm">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(false)}
+        <button,
+  onClick ={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white text-sm"
         >
           ✕

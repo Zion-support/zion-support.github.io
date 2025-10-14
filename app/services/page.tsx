@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO'
 import { 
-  CpuChipIcon
+  CpuChipIcon,
   ShieldCheckIcon
-  CloudIcon
+  CloudIcon,
   ChartBarIcon
-  GlobeAltIcon
+  GlobeAltIcon,
   ArrowRightIcon
-  CheckIcon
+  CheckIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
 import { Helmet } from 'react-helmet-async';
-import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react'
-import { Circle, Star, Right } from 'lucide-react'
+import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
+import { Circle, Star, Right } from 'lucide-react';
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -93,8 +93,8 @@ const ServicesPage: React.FC = () => {
   ]
   return (
     <>
-      <EnhancedSEO
-        title="Our Services - Zion Tech Group | AI and IT Solutions"
+      <EnhancedSEO,
+  title ="Our Services - Zion Tech Group | AI and IT Solutions"
         description="Comprehensive AI and IT services including machine learning, cybersecurity, cloud infrastructure, digital transformation, and 5G solutions."
         keywords="AI services, IT services, cybersecurity, cloud computing, digital transformation, 5G solutions, micro SaaS"
         canonicalUrl="/services"

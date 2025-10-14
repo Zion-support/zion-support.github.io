@@ -1,4 +1,4 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO'
 import ResponsiveContainer from '../components/ResponsiveContainer'
 import FuturisticCard from '../components/FuturisticCard'
@@ -49,8 +49,8 @@ icon: <div className="w-6 h-6" />
   ]
   return (
     <>
-      <EnhancedSEO
-        title="AI Automation Platform - Intelligent Process Automation | Zion Tech Group"
+      <EnhancedSEO,
+  title ="AI Automation Platform - Intelligent Process Automation | Zion Tech Group"
         description="Transform your business with AI-powered automation. Workflow automation, smart decision making, and process optimization for modern enterprises."
         keywords="AI automation, workflow automation, process optimization, business automation, intelligent automation, RPA"
       />
@@ -81,13 +81,13 @@ icon: <div className="w-6 h-6" />
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton
-                  icon={<Right className="w-5 h-5" />}
+                <FuturisticButton,
+  icon ={<Right className="w-5 h-5" />}
                 >
                   Get Started Today
                 </FuturisticButton>
-                <FuturisticButton
-                  variant="outline"
+                <FuturisticButton,
+  variant ="outline"
                   icon={<Play className="w-5 h-5" />}
 
 icon={<Play className="w-5 h-5" />}
@@ -164,8 +164,8 @@ icon={<div className="w-5 h-5" />}
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join thousands of businesses already using AI automation to streamline their operations.
               </p>
-              <FuturisticButton
-                size="lg"
+              <FuturisticButton,
+  size ="lg"
                 icon={<Zap className="w-6 h-6" />}
 
 icon={<Zap className="w-6 h-6" />}

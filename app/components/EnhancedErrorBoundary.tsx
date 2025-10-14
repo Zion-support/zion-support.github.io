@@ -142,23 +142,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
               {/* Action Buttons */}
               <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
+                <button,
+  onClick ={this.handleRetry}
                   className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800"
                 >
                   Try Again
                 </button>
                 
                 <div className="flex space-x-3">
-                  <button
-                    onClick={this.handleGoHome}
+                  <button,
+  onClick ={this.handleGoHome}
                     className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
                   >
                     Go Home
                   </button>
                   
-                  <button
-                    onClick={this.handleReload}
+                  <button,
+  onClick ={this.handleReload}
                     className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
                   >
                     Reload Page

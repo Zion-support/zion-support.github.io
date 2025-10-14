@@ -3,17 +3,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon
+  CpuChipIcon,
   CheckCircleIcon
-  ArrowRightIcon
+  ArrowRightIcon,
   StarIcon
-  GlobeAltIcon
+  GlobeAltIcon,
   DocumentTextIcon
-  ChartBarIcon
+  ChartBarIcon,
   ShieldCheckIcon
-  ClockIcon
+  ClockIcon,
   UserGroupIcon
-  CurrencyDollarIcon
+  CurrencyDollarIcon,
   PhoneIcon
   EnvelopeIcon
 } from '@heroicons/react/24/outline';
@@ -272,8 +272,8 @@ const AIContentGeneratorPro: React.FC = () => {
                     ))}
                   </ul>
                   
-                  <Link
-                    to="/contact"
+                  <Link,
+  to ="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 hover:scale-105'
@@ -336,14 +336,14 @@ const AIContentGeneratorPro: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link
-                  to="/contact"
+                <Link,
+  to ="/contact"
                   className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
                 >
                   Start Free Trial
                 </Link>
-                <Link
-                  to="/demo"
+                <Link,
+  to ="/demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo

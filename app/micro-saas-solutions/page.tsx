@@ -5,19 +5,19 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon
+  CpuChipIcon,
   ShieldCheckIcon
-  CloudIcon
+  CloudIcon,
   ChartBarIcon
-  GlobeAltIcon
+  GlobeAltIcon,
   RocketLaunchIcon
-  ArrowRightIcon
+  ArrowRightIcon,
   CheckCircleIcon
-  PhoneIcon
+  PhoneIcon,
   EnvelopeIcon
-  CurrencyDollarIcon
+  CurrencyDollarIcon,
   ClockIcon
-  UserGroupIcon
+  UserGroupIcon,
   CogIcon
 } from '@heroicons/react/24/outline';
 export default function MicroSaaSSolutionsPage()   {
@@ -38,7 +38,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$299/month",
       setupFee: "$1,500",
       benefits: ["40% faster insights", "Real-time updates", "Custom dashboards"],
-      useCases: ["E-commerce analytics", "Marketing performance", "Financial reporting"]
+      useCases: ["E-commerce analytics", "Marketing performance", "Financial reporting"],
       href: "/ai-analytics-dashboard"
     }
     {
@@ -57,7 +57,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$199/month",
       setupFee: "$800",
       benefits: ["80% time savings", "SEO optimized", "Multi-language"],
-      useCases: ["Blog management", "E-commerce content", "Marketing campaigns"]
+      useCases: ["Blog management", "E-commerce content", "Marketing campaigns"],
       href: "/ai-content-management"
     }
     {
@@ -76,7 +76,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$149/month",
       setupFee: "$600",
       benefits: ["24/7 availability", "Instant responses", "95% satisfaction"],
-      useCases: ["Customer service", "Lead qualification", "FAQ automation"]
+      useCases: ["Customer service", "Lead qualification", "FAQ automation"],
       href: "/ai-customer-support-bot"
     }
     {
@@ -95,7 +95,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$249/month",
       setupFee: "$1,200",
       benefits: ["30% efficiency gain", "Predictive planning", "Risk mitigation"],
-      useCases: ["Software development", "Marketing campaigns", "Event planning"]
+      useCases: ["Software development", "Marketing campaigns", "Event planning"],
       href: "/ai-project-management"
     }
     {
@@ -114,7 +114,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$399/month",
       setupFee: "$2,000",
       benefits: ["25% sales increase", "Optimized pricing", "Reduced inventory costs"],
-      useCases: ["Online stores", "Marketplace optimization", "Retail analytics"]
+      useCases: ["Online stores", "Marketplace optimization", "Retail analytics"],
       href: "/ai-ecommerce-optimizer"
     }
     {
@@ -133,7 +133,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$179/month",
       setupFee: "$900",
       benefits: ["50% faster hiring", "Reduced turnover", "Better performance"],
-      useCases: ["Recruitment", "Performance management", "Employee development"]
+      useCases: ["Recruitment", "Performance management", "Employee development"],
       href: "/ai-hr-management"
     }
     {
@@ -152,7 +152,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$329/month",
       setupFee: "$1,500",
       benefits: ["Accurate forecasting", "Risk mitigation", "Automated compliance"],
-      useCases: ["Financial planning", "Investment analysis", "Risk management"]
+      useCases: ["Financial planning", "Investment analysis", "Risk management"],
       href: "/ai-financial-analytics"
     }
     {
@@ -171,7 +171,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$279/month",
       setupFee: "$1,200",
       benefits: ["300% ROI increase", "Personalized campaigns", "Automated optimization"],
-      useCases: ["Email marketing", "Social media", "Lead generation"]
+      useCases: ["Email marketing", "Social media", "Lead generation"],
       href: "/ai-marketing-automation"
     }
     {
@@ -190,7 +190,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$219/month",
       setupFee: "$1,000",
       benefits: ["30% cost reduction", "Zero stockouts", "Optimized inventory"],
-      useCases: ["Retail management", "Manufacturing", "Supply chain"]
+      useCases: ["Retail management", "Manufacturing", "Supply chain"],
       href: "/ai-inventory-management"
     }
     {
@@ -209,7 +209,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$159/month",
       setupFee: "$700",
       benefits: ["90% accuracy", "80% time savings", "Automated workflows"],
-      useCases: ["Document management", "Data entry", "Compliance processing"]
+      useCases: ["Document management", "Data entry", "Compliance processing"],
       href: "/ai-document-processing"
     }
     {
@@ -228,7 +228,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$129/month",
       setupFee: "$500",
       benefits: ["200% engagement increase", "Automated posting", "Optimized timing"],
-      useCases: ["Social media marketing", "Brand management", "Community building"]
+      useCases: ["Social media marketing", "Brand management", "Community building"],
       href: "/ai-social-media-manager"
     }
     {
@@ -247,7 +247,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$99/month",
       setupFee: "$400",
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
-      useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"]
+      useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
     }
     {
@@ -266,7 +266,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$399/month",
       setupFee: "$2,500",
       benefits: ["95% accuracy", "24/7 availability", "Multi-language"],
-      useCases: ["Customer service", "Voice commands", "Accessibility"]
+      useCases: ["Customer service", "Voice commands", "Accessibility"],
       href: "/ai-voice-assistant"
     }
     {
@@ -285,7 +285,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$349/month",
       setupFee: "$1,800",
       benefits: ["Real-time insights", "Automated analysis", "Performance boost"],
-      useCases: ["Video marketing", "Content optimization", "Audience analysis"]
+      useCases: ["Video marketing", "Content optimization", "Audience analysis"],
       href: "/ai-video-analytics"
     }
     {
@@ -304,7 +304,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$599/month",
       setupFee: "$3,000",
       benefits: ["90% time savings", "Risk reduction", "Compliance assurance"],
-      useCases: ["Legal firms", "Contract management", "Compliance"]
+      useCases: ["Legal firms", "Contract management", "Compliance"],
       href: "/ai-legal-analyzer"
     }
     {
@@ -323,7 +323,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$279/month",
       setupFee: "$1,500",
       benefits: ["Accurate valuations", "Market insights", "Lead generation"],
-      useCases: ["Real estate agents", "Property management", "Investment analysis"]
+      useCases: ["Real estate agents", "Property management", "Investment analysis"],
       href: "/ai-real-estate"
     }
     {
@@ -342,7 +342,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$799/month",
       setupFee: "$4,000",
       benefits: ["Improved outcomes", "Risk reduction", "Cost savings"],
-      useCases: ["Hospitals", "Clinics", "Health systems"]
+      useCases: ["Hospitals", "Clinics", "Health systems"],
       href: "/ai-healthcare-analytics"
     }
     {
@@ -361,7 +361,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$449/month",
       setupFee: "$2,200",
       benefits: ["20% cost reduction", "Optimized routes", "Risk mitigation"],
-      useCases: ["Logistics", "Manufacturing", "Retail"]
+      useCases: ["Logistics", "Manufacturing", "Retail"],
       href: "/ai-supply-chain"
     }
     {
@@ -380,7 +380,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$329/month",
       setupFee: "$1,800",
       benefits: ["30% energy savings", "Cost reduction", "Sustainability"],
-      useCases: ["Manufacturing", "Buildings", "Utilities"]
+      useCases: ["Manufacturing", "Buildings", "Utilities"],
       href: "/ai-energy-management"
     }
     {
@@ -399,7 +399,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$499/month",
       setupFee: "$2,500",
       benefits: ["99.9% accuracy", "Real-time detection", "Cost savings"],
-      useCases: ["Banking", "E-commerce", "Financial services"]
+      useCases: ["Banking", "E-commerce", "Financial services"],
       href: "/ai-fraud-detection"
     }
     {
@@ -418,7 +418,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$199/month",
       setupFee: "$1,000",
       benefits: ["Personalized learning", "Better outcomes", "Engagement boost"],
-      useCases: ["Education", "Corporate training", "Online courses"]
+      useCases: ["Education", "Corporate training", "Online courses"],
       href: "/ai-learning-management"
     }
     {
@@ -437,7 +437,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$379/month",
       setupFee: "$1,900",
       benefits: ["90% test coverage", "Faster delivery", "Quality improvement"],
-      useCases: ["Software development", "Manufacturing", "Quality control"]
+      useCases: ["Software development", "Manufacturing", "Quality control"],
       href: "/ai-quality-assurance"
     }
     {
@@ -456,7 +456,7 @@ export default function MicroSaaSSolutionsPage()   {
       price: "$249/month",
       setupFee: "$1,200",
       benefits: ["Better engagement", "Optimized planning", "Success metrics"],
-      useCases: ["Conferences", "Webinars", "Corporate events"]
+      useCases: ["Conferences", "Webinars", "Corporate events"],
       href: "/ai-event-management"
     }
   ]

@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO'
 import { 
-  DocumentTextIcon
+  DocumentTextIcon,
   CodeBracketIcon
-  CogIcon
+  CogIcon,
   QuestionMarkCircleIcon
-  ArrowRightIcon
+  ArrowRightIcon,
   PhoneIcon
-  EnvelopeIcon
+  EnvelopeIcon,
   MapPinIcon
 } from '@heroicons/react/24/outline';
 export default function DocumentationPage() {

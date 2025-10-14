@@ -109,8 +109,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <div key={item.name} className="relative group">
                   {item.submenu ? (
                     <div className="relative">
-                      <button
-                        onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
+                      <button,
+  onClick ={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
                         className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                           isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
                             ? 'text-white bg-slate-800/50 cyber-border'
@@ -127,8 +127,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         (item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                       }`}>
                         {item.submenu.map((subItem) => (
-                          <Link
-                            key={subItem.name}
+                          <Link,
+  key ={subItem.name}
                             to={subItem.href}
                             className="flex items-center px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300 group/sub"
                             onClick={() => {
@@ -143,8 +143,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       </div>
                     </div>
                   ) : (
-                    <Link
-                      to={item.href}
+                    <Link,
+  to ={item.href}
                       className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                         isActive(item.href)
                           ? 'text-white bg-slate-800/50 cyber-border'
@@ -162,8 +162,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/contact"
+            <Link,
+  to ="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 neon-button"
             >
               Get Started
@@ -172,8 +172,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center space-x-2">
-            <button
-              onClick={onSidebarToggle}
+            <button,
+  onClick ={onSidebarToggle}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-all duration-300"
             >
               <span className="sr-only">Open sidebar</span>
@@ -190,8 +190,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             <div key={item.name}>
               {item.submenu ? (
                 <div>
-                  <button
-                    onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
+                  <button,
+  onClick ={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
                     className={`flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                       isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
                         ? 'text-white bg-slate-700/50 cyber-border'
@@ -210,8 +210,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       : 'max-h-0 opacity-0 overflow-hidden'
                   }`}>
                     {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
+                      <Link,
+  key ={subItem.name}
                         to={subItem.href}
                         className="flex items-center px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300 group"
                         onClick={() => {
@@ -227,8 +227,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   </div>
                 </div>
               ) : (
-                <Link
-                  to={item.href}
+                <Link,
+  to ={item.href}
                   className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                     isActive(item.href)
                       ? 'text-white bg-slate-700/50 cyber-border'

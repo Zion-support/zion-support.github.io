@@ -6,7 +6,7 @@ interface FuturisticCardProps {
 }
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
-  children
+  children,
   className = '','
   variant = 'default''
 }) => {

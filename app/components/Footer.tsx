@@ -104,8 +104,8 @@ const Footer: React.FC = () => {
               {/* Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
+                  <a,
+  key ={social.name}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -204,8 +204,8 @@ const Footer: React.FC = () => {
                 Get the latest insights on AI and IT trends delivered to your inbox.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
+                <input,
+  type ="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent backdrop-blur-sm transition-all duration-300"
                 />
@@ -226,8 +226,8 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
               {legal.map((link) => (
-                <Link
-                  key={link.name}
+                <Link,
+  key ={link.name}
                   to={link.href}
                   className="text-gray-400 hover:text-purple-400 transition-colors text-sm hover:scale-105"
                 >

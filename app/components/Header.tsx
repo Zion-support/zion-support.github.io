@@ -36,8 +36,8 @@ const Header: React.FC = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link
-                    to={item.href}
+                  <Link,
+  to ={item.href}
                     className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
@@ -49,8 +49,8 @@ const Header: React.FC = () => {
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
+                        <Link,
+  key ={subItem.name}
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                         >
@@ -65,8 +65,8 @@ const Header: React.FC = () => {
           </div>
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link
-              to="/contact"
+            <Link,
+  to ="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
             >
               Get Started
@@ -74,8 +74,8 @@ const Header: React.FC = () => {
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
+            <button,
+  onClick ={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -88,8 +88,8 @@ const Header: React.FC = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <div key={item.name}>
-                  <Link
-                    to={item.href}
+                  <Link,
+  to ={item.href}
                     className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     onClick={() => setIsOpen(false)}
                   >
@@ -98,8 +98,8 @@ const Header: React.FC = () => {
                   {item.submenu && (
                     <div className="ml-4 space-y-1">
                       {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
+                        <Link,
+  key ={subItem.name}
                           to={subItem.href}
                           className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
                           onClick={() => setIsOpen(false)}
@@ -112,8 +112,8 @@ const Header: React.FC = () => {
                 </div>
               ))}
               <div className="pt-4">
-                <Link
-                  to="/contact"
+                <Link,
+  to ="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
                   onClick={() => setIsOpen(false)}
                 >

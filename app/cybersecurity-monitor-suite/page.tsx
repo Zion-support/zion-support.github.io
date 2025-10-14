@@ -3,19 +3,19 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  ShieldCheckIcon
+  ShieldCheckIcon,
   CheckCircleIcon
-  ArrowRightIcon
+  ArrowRightIcon,
   StarIcon
-  GlobeAltIcon
+  GlobeAltIcon,
   DocumentTextIcon
-  CpuChipIcon
+  CpuChipIcon,
   ClockIcon
-  UserGroupIcon
+  UserGroupIcon,
   CurrencyDollarIcon
-  PhoneIcon
+  PhoneIcon,
   EnvelopeIcon
-  ExclamationTriangleIcon
+  ExclamationTriangleIcon,
   LockClosedIcon
   EyeIcon
 } from '@heroicons/react/24/outline';
@@ -325,8 +325,8 @@ const CybersecurityMonitorSuite: React.FC = () => {
                     ))}
                   </ul>
                   
-                  <Link
-                    to="/contact"
+                  <Link,
+  to ="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700 hover:scale-105'
@@ -389,14 +389,14 @@ const CybersecurityMonitorSuite: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link
-                  to="/contact"
+                <Link,
+  to ="/contact"
                   className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25"
                 >
                   Start Free Trial
                 </Link>
-                <Link
-                  to="/demo"
+                <Link,
+  to ="/demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo

@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
@@ -123,8 +123,8 @@ Error Details (Development Only)
             )}
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
+              <button,
+  onClick ={this.handleRetry}
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
               >
                 <RefreshCw className="w-4 h-4" />
@@ -138,16 +138,16 @@ Error Details (Development)
             )}
 
             <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
+              <button,
+  onClick ={this.handleRetry}
                 className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <ArrowPathIcon className="w-5 h-5" />
                 Try Again
               </button>
               
-              <Link
-                to="/"
+              <Link,
+  to ="/"
 className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
                 className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >

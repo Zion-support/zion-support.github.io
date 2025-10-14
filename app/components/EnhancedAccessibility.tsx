@@ -191,8 +191,8 @@ const EnhancedAccessibility: React.FC = () => {
   }, [])
   return (
     <>
-      <button
-        className="accessibility-toggle"
+      <button,
+  className ="accessibility-toggle"
         onClick={toggleVisibility}
         aria-label="Toggle accessibility options"
         title="Accessibility Options"
@@ -206,8 +206,8 @@ const EnhancedAccessibility: React.FC = () => {
         <div className="space-y-4">
           <div>
             <label className="flex items-center space-x-2">
-              <input
-                type="checkbox"
+              <input,
+  type ="checkbox"
                 checked={settings.highContrast}
                 onChange={toggleHighContrast}
                 className="rounded"
@@ -221,8 +221,8 @@ const EnhancedAccessibility: React.FC = () => {
             <div className="space-y-2">
               {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => (
                 <label key={size} className="flex items-center space-x-2">
-                  <input
-                    type="radio"
+                  <input,
+  type ="radio"
                     name="fontSize"
                     value={size}
                     checked={settings.fontSize === size}
@@ -244,8 +244,8 @@ const EnhancedAccessibility: React.FC = () => {
             </p>
           </div>
 
-          <button
-            onClick={toggleVisibility}
+          <button,
+  onClick ={toggleVisibility}
             className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors"
           >
             Close

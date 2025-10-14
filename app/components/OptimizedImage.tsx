@@ -19,12 +19,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src
   alt
   width
-  height
+  height,
   className = ''
-  priority = false
+  priority = false,
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+'
   sizes = '100vw'
-  quality = 85
+  quality = 85,
   loading = 'lazy'
   onLoad
   onError
@@ -83,15 +83,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <link rel="preload" as="image" href={optimizedSrc} />
         </Helmet>
       )}
-      <div
-        ref={imgRef}
+      <div,
+  ref ={imgRef}
         className={`relative overflow-hidden ${className}`}
         style={{ width, height }}
       >
         {/* Placeholder */}
         {!isLoaded && !isError && (
-          <div
-            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
+          <div,
+  className ="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
             style={{ width, height }}
           >
             <div className="text-gray-400 text-sm">Loading...</div>
@@ -100,8 +100,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
         {/* Error state */}
         {isError && (
-          <div
-            className="absolute inset-0 bg-gray-100 flex items-center justify-center"
+          <div,
+  className ="absolute inset-0 bg-gray-100 flex items-center justify-center"
             style={{ width, height }}
           >
             <div className="text-gray-400 text-sm text-center">
@@ -113,8 +113,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
         {/* Actual image */}
         {isInView && !isError && (
-          <img
-            src={optimizedSrc}
+          <img,
+  src ={optimizedSrc}
             alt={alt}
             width={width}
             height={height}
