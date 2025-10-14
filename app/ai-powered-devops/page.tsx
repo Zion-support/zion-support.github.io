@@ -1,8 +1,21 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, TrendingUp, Target, Monitor, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Link } from "react-router-dom";
-import SEOOptimizer from "../components/SEOOptimizer";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Brain, 
+  Zap, 
+  TrendingUp, 
+  Monitor, 
+  MessageSquare, 
+  Eye, 
+  Award, 
+  Rocket, 
+  Globe2, 
+  DollarSign,
+  Phone
+} from 'lucide-react';
 
 export default function AiPoweredDevops() {
   const features = [
@@ -20,12 +33,6 @@ export default function AiPoweredDevops() {
     "AI-driven continuous integration and deployment"
   ];
 
-  const benefits = [
-    "Reduce deployment time by 80%",
-    "Eliminate 95% of manual DevOps tasks",
-    "Improve system reliability by 99.9%",
-    "Cut infrastructure costs by 40%"
-  ];
 
   const pricingPlans = [
     {
@@ -142,22 +149,11 @@ export default function AiPoweredDevops() {
 
   return (
     <>
-      <Helmet>
-        <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-        />
-        <meta
-          name="keywords"
-          content="AI DevOps, automated testing, intelligent deployment, predictive scaling, DevOps automation, CI/CD, infrastructure automation, monitoring AI"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
-      </Helmet>
-      <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-      />
+      {/* SEO Meta Tags */}
+      <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
+      <meta name="description" content="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform." />
+      <meta name="keywords" content="AI DevOps, automated testing, intelligent deployment, predictive scaling, DevOps automation, CI/CD, infrastructure automation, monitoring AI" />
+      <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -429,7 +425,7 @@ export default function AiPoweredDevops() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Globe className="w-6 h-6 text-white" />
+                  <Globe2 className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -456,3 +452,5 @@ export default function AiPoweredDevops() {
         </section>
       </div>
     </>
+  );
+};

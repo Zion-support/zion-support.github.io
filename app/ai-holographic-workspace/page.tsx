@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, ArrowRight, CheckCircle, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { Monitor, ArrowRight, CheckCircle, Shield, BarChart3, Users, Eye, Hand, Star } from 'lucide-react';
 
 const AIHolographicWorkspace = () => {
   const features = [
@@ -134,12 +133,11 @@ const AIHolographicWorkspace = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="AI Holographic Workspace - 3D Immersive Collaboration | Zion Tech Group"
-        description="3D holographic interface for immersive remote collaboration and data visualization. Transform your workspace with cutting-edge holographic technology."
-        keywords="holographic workspace, 3D collaboration, immersive technology, remote work, data visualization, gesture control, spatial computing"
-        canonical="https://ziontechgroup.com/ai-holographic-workspace"
-      />
+      {/* SEO Meta Tags */}
+      <title>AI Holographic Workspace - 3D Immersive Collaboration | Zion Tech Group</title>
+      <meta name="description" content="3D holographic interface for immersive remote collaboration and data visualization. Transform your workspace with cutting-edge holographic technology." />
+      <meta name="keywords" content="holographic workspace, 3D collaboration, immersive technology, remote work, data visualization, gesture control, spatial computing" />
+      <link rel="canonical" href="https://ziontechgroup.com/ai-holographic-workspace" />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
