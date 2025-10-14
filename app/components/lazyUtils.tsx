@@ -9,6 +9,7 @@ export function withLazyLoading<P = Record<string, never>>(
   
   return (props: P) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <LazyComponent {...(props as any)} />
     </Suspense>
   );
@@ -23,6 +24,7 @@ export function createLazyComponent<P = Record<string, never>>(
   
   return (props: P) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <LazyComponent {...(props as any)} />
     </Suspense>
   );
