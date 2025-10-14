@@ -1,6 +1,5 @@
 import React from "react";
-
-const UltimateContentAdvertisingBanner = () => {
+export default function UltimateContentAdvertisingBannerPage() {
   return (
     div>
       <h2>UltimateContentAdvertisingBanner</h2>
@@ -9,4 +8,4 @@ const UltimateContentAdvertisingBanner = () => {
   
   )
 }
-export default UltimateContentAdvertisingBanner;
+;

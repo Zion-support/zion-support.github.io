@@ -1,5 +1,4 @@
 import React from "react";
-
 const LoadingStates = () => {
   return (
     <div className="p-4">
@@ -8,7 +7,5 @@ const LoadingStates = () => {
     </div>
   );
 };
-
-    <div>
-      <div>
-  )
+export default LoadingStates;
+;

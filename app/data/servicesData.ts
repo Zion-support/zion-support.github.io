@@ -1,4 +1,4 @@
-// servicesData - Basic implementation;
-export default function servicesData() {;
-  return null;
+// servicesData - Basic implementation
+export default function servicesData() {
+  return null
 }

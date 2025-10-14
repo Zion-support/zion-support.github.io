@@ -1,6 +1,5 @@
 import React from "react";
-
-const FuturisticServiceCard = () => {
+export default function FuturisticServiceCardPage() {
   return (
     div>
       <h2>FuturisticServiceCard</h2>
@@ -9,4 +8,4 @@ const FuturisticServiceCard = () => {
   
   )
 }
-export default FuturisticServiceCard;
+;

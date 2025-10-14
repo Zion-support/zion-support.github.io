@@ -1,4 +1,4 @@
 // services - Basic implementation
-export default function Services() {
-  return null;
+export default function services() {
+  return null
 }

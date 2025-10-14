@@ -1,4 +1,4 @@
 // error - Basic implementation
-export default function Error() {
-  return null;
+export default function error() {
+  return null
 }

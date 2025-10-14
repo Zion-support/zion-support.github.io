@@ -1,6 +1,5 @@
 import React from "react";
-
-const ResponsiveText = () => {
+export default function ResponsiveTextPage() {
   return (
     div>
       <h2>ResponsiveText</h2>
@@ -9,4 +8,4 @@ const ResponsiveText = () => {
   
   )
 }
-export default ResponsiveText;
+;

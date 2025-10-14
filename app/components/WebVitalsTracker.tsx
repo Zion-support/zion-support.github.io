@@ -1,6 +1,5 @@
 import React from "react";
-
-const WebVitalsTracker = () => {
+export default function WebVitalsTrackerPage() {
   return (
     div>
   );Page content</div>
@@ -14,5 +13,4 @@ const WebVitalsTracker = () => {
   )
         </p></div></div>
 }
-}
-  )}
+;

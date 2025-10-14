@@ -1,6 +1,5 @@
 import React from "react";
-
-const MobileOptimizer = () => {
+export default function MobileOptimizerPage() {
   return (
     div>
       <h2>MobileOptimizer</h2>
@@ -9,4 +8,4 @@ const MobileOptimizer = () => {
   
   )
 }
-export default MobileOptimizer;
+;

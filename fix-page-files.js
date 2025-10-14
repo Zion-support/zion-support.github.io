@@ -1,83 +1,55 @@
-import React from 'react'
-import fs from "fs"
-import path from "path"
-import { fileURLToPath } from "url"
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Function to fix corrupted page files
-function fixPageFile(filePath) {
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Find all page.tsx files in the app directory
+const pageFiles = await glob('app/**/page.tsx', { cwd: import.meta.url.replace('file://', '').replace('/fix-page-files.js', '') });
+
+console.log(`Found ${pageFiles.length} page files to fix`);
+
+for (const filePath of pageFiles) {
   try {
-    let content = fs.readFileSync(filePath, "utf8")
-    // Fix common corruption patterns
-    content = content
-      // Remove extra semicolons and quotes
-      .replace(/';';/g, "")
-      .replace(/";";/g, "")
-      .replace(/";/g, "")
-      .replace(/';/g, "")
-      // Fix malformed JSX attributes
-      .replace(/className="([^"]*?)";/g, 'className="$1"')
-      .replace(/content="([^"]*?)";/g, 'content="$1"')
-      .replace(/href="([^"]*?)";/g, 'href="$1"')
-      .replace(/src="([^"]*?)";/g, 'src="$1"')
-      // Fix malformed closing tags
-      .replace(/<\/div>";/g, "</div>")
-      .replace(/<\/h1>";/g, "</h1>")
-      .replace(/<\/p>";/g, "</p>")
-      .replace(/<\/a>";/g, "</a>")
-      .replace(/<\/button>";/g, "</button>")
-      // Fix malformed opening tags
-      .replace(/<div className="([^"]*?)">
-</div>";/g, '<div className="$1">
-</div>')
-      .replace(/<h1 className="([^"]*?)">";/g, '<h1 className="$1">')
-      .replace(/<p className="([^"]*?)">";/g, '<p className="$1">')
-      .replace(/<a className="([^"]*?)">";/g, '<a className="$1">')
-      .replace(/<button className="([^"]*?)">";/g, '<button className="$1">')
-      // Fix malformed meta tags
-      .replace(
-        /<meta name="([^"]*?)" content="([^"]*?)" \/>";/g,
-        '<meta name="$1" content="$2" />',
-      )
-      .replace(
-        /<meta property="([^"]*?)" content="([^"]*?)" \/>";/g,
-        '<meta property="$1" content="$2" />',
-      )
-      // Clean up extra whitespace and newlines
-      .replace(/\n\s*\n\s*\n/g, "\n\n")
-      .replace(/\s+$/gm, "")
-      .trim()
-    fs.writeFileSync(filePath, content)
-    console.log(`Fixed: ${filePath}`)
-    return true
+    const fullPath = path.join(import.meta.url.replace('file://', '').replace('/fix-page-files.js', ''), filePath);
+    let content = fs.readFileSync(fullPath, 'utf8');
+    
+    // Skip if already properly formatted
+    if (content.includes('return (') && content.includes('<div className="min-h-screen')) {
+      console.log(`Skipping ${filePath} - already properly formatted`);
+      continue;
+    }
+    
+    // Extract the page name from the file path
+    const pathParts = filePath.split('/');
+    const pageName = pathParts[pathParts.length - 2]; // Get the directory name before page.tsx
+    
+    // Convert kebab-case to Title Case
+    const titleCase = pageName
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+    
+    // Create the proper JSX structure
+    const newContent = `import React from 'react';
+
+export default function ${titleCase.replace(/\s+/g, '')}Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">${titleCase}</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about ${pageName.replace(/-/g, ' ')}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+`;
+    
+    fs.writeFileSync(fullPath, newContent);
+    console.log(`Fixed ${filePath}`);
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
 }
-// Function to find all page.tsx files
-function findPageFiles(dir) {
-  const files = []
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-        traverse(fullPath)
-      } else if (item === "page.tsx") {
-        files.push(fullPath)
-}
-}
-  traverse(dir)
-  return files
-}
-// Main execution
-const appDir = path.join(__dirname, "app")
-const pageFiles = findPageFiles(appDir)
-console.log(`Found ${pageFiles.length} page.tsx files`)
-let fixedCount = 0
-for (const file of pageFiles) {
-  if (fixPageFile(file)) {
-    fixedCount++
-}
-console.log(`Fixed ${fixedCount} out of ${pageFiles.length} files`)
+
+console.log('Page files fix completed');

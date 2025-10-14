@@ -1,6 +1,5 @@
 import React from "react";
-
-const Sidebar = () => {
+export default function SidebarPage() {
   return (
     div>
       <h2>Sidebar</h2>
@@ -9,4 +8,4 @@ const Sidebar = () => {
   
   )
 }
-export default Sidebar;
+;

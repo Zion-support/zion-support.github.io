@@ -1,11 +1,5 @@
-import React from 'react';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-}
-
-const SEO: React.FC<SEOProps> = ({ title, description }) => {
+import React from "react";
+export default function SEOPage() {
   return (
     <div>
       <h2>SEO</h2>
@@ -14,6 +8,5 @@ const SEO: React.FC<SEOProps> = ({ title, description }) => {
       {description && <p>Description: {description}</p>}
     </div>
   );
-};
-
-export default SEO;
+}
+;

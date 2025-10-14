@@ -1,6 +1,5 @@
 import React from "react";
-
-const PWAInstaller = () => {
+export default function PWAInstallerPage() {
   return (
     div>
       <h2>PWAInstaller</h2>
@@ -9,4 +8,4 @@ const PWAInstaller = () => {
   
   )
 }
-export default PWAInstaller;
+;

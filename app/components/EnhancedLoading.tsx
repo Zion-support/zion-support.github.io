@@ -1,6 +1,5 @@
 import React from "react";
-
-const EnhancedLoading = () => {
+export default function EnhancedLoadingPage() {
   return (
     div>
       <h2>EnhancedLoading</h2>
@@ -9,4 +8,4 @@ const EnhancedLoading = () => {
   
   )
 }
-export default EnhancedLoading;
+;

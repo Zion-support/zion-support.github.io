@@ -1,6 +1,5 @@
 import React from "react";
-
-const Header = () => {
+export default function HeaderPage() {
   return (
     div>
       <h2>Header</h2>
@@ -9,4 +8,4 @@ const Header = () => {
   
   )
 }
-export default Header;
+;

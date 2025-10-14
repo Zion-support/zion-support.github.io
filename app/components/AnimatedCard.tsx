@@ -1,6 +1,5 @@
 import React from "react";
-
-const AnimatedCard = () => {
+export default function AnimatedCardPage() {
   return (
     div>
       <h2>AnimatedCard</h2>
@@ -9,4 +8,4 @@ const AnimatedCard = () => {
   
   )
 }
-export default AnimatedCard;
+;

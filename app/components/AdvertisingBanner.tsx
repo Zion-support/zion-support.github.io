@@ -1,6 +1,5 @@
 import React from "react";
-
-const AdvertisingBanner = () => {
+export default function AdvertisingBannerPage() {
   return (
     div>
       <h2>AdvertisingBanner</h2>
@@ -9,4 +8,4 @@ const AdvertisingBanner = () => {
   
   )
 }
-export default AdvertisingBanner;
+;

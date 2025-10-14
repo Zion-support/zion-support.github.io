@@ -1,38 +1,20 @@
-export const servicesData = [
+export const services = [
   {
     id: 1,
-    title: "AI Solutions",
-    description: "Advanced artificial intelligence solutions for your business needs",
-    icon: "🤖"
+    name: "AI Solutions",
+    description: "Advanced AI and machine learning solutions",
+    category: "AI"
   },
   {
     id: 2,
-    title: "IT Infrastructure",
-    description: "Robust and scalable IT infrastructure solutions",
-    icon: "🏗️"
+    name: "IT Services",
+    description: "Comprehensive IT infrastructure and support",
+    category: "IT"
   },
   {
     id: 3,
-    title: "Cybersecurity",
-    description: "Comprehensive cybersecurity services to protect your business",
-    icon: "🔒"
-  },
-  {
-    id: 4,
-    title: "Cloud Services",
-    description: "Scalable cloud solutions for modern businesses",
-    icon: "☁️"
-  },
-  {
-    id: 5,
-    title: "Digital Transformation",
-    description: "Transform your business with cutting-edge digital solutions",
-    icon: "🚀"
-  },
-  {
-    id: 6,
-    title: "Consulting",
-    description: "Expert consulting services to guide your technology decisions",
-    icon: "💡"
+    name: "Cloud Solutions",
+    description: "Scalable cloud infrastructure and migration",
+    category: "Cloud"
   }
 ];

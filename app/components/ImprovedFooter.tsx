@@ -1,6 +1,5 @@
 import React from "react";
-
-const ImprovedFooter = () => {
+export default function ImprovedFooterPage() {
   return (
     div>
       <h2>ImprovedFooter</h2>
@@ -9,4 +8,4 @@ const ImprovedFooter = () => {
   
   )
 }
-export default ImprovedFooter;
+;

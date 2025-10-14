@@ -1,16 +1,5 @@
-import React from 'react';
-
-const Footer = () => {
-  const currentYear = new Date().getFullYear()
-  const services = [
-    { name: "AI Solutions", href: "/ai-solutions" },
-    { name: "Cybersecurity", href: "/cybersecurity" },
-    { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },
-    { name: "Digital Transformation", href: "/digital-transformation" },
-    { name: "IT Services", href: "/it-services" },
-    { name: "Micro SAAS", href: "/micro-saas" }
-  ];
-
+import React from "react";
+export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -78,4 +67,4 @@ const Footer = () => {
     </footer>
   )
 }
-export default Footer;
+;

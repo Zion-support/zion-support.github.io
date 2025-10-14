@@ -1,4 +1,4 @@
 // microSaasServices - Basic implementation
-export default function MicroSaasServices() {
-  return null;
+export default function microSaasServices() {
+  return null
 }

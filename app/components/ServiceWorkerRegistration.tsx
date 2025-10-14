@@ -1,6 +1,5 @@
 import React from "react";
-
-const ServiceWorkerRegistration = () => {
+export default function ServiceWorkerRegistrationPage() {
   return (
     div>
       <h2>ServiceWorkerRegistration</h2>
@@ -9,4 +8,4 @@ const ServiceWorkerRegistration = () => {
   
   )
 }
-export default ServiceWorkerRegistration;
+;

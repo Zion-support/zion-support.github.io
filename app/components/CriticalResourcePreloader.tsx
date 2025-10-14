@@ -1,6 +1,5 @@
 import React from "react";
-
-const CriticalResourcePreloader = () => {
+export default function CriticalResourcePreloaderPage() {
   return (
     div>
       <h2>CriticalResourcePreloader</h2>
@@ -9,4 +8,4 @@ const CriticalResourcePreloader = () => {
   
   )
 }
-export default CriticalResourcePreloader;
+;

@@ -1,6 +1,5 @@
 import React from "react";
-
-const EnhancedPerformanceOptimizer = () => {
+export default function EnhancedPerformanceOptimizerPage() {
   return (
     div>
       <h2>EnhancedPerformanceOptimizer</h2>
@@ -9,4 +8,4 @@ const EnhancedPerformanceOptimizer = () => {
   
   )
 }
-export default EnhancedPerformanceOptimizer;
+;

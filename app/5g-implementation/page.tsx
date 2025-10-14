@@ -2,24 +2,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const FiveGImplementationPage = () => {
+export default function FiveGImplementationPage() {
   return (
-
-    <React.Fragment>
-  )
-      </React.Fragment><Helmet>
-
-        <title>5G Implementation - Zion Tech Group</title>
-        <meta name="description"content="Professional 5G implementation services by Zion Tech Group." />
-      
-
-      <div>
-        <div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">5G Implementation</h1>
-          <p className="text-gray-300">Coming soon...</p>
+          <p className="text-gray-300 text-xl mb-8">Learn more about 5G implementation</p>
         </div>
       </div>
-}
-}
-  )
 }

@@ -1,6 +1,5 @@
 import React from "react";
-
-const SkipLink = () => {
+export default function SkipLinkPage() {
   return (
     div>
       <h2>SkipLink</h2>
@@ -9,4 +8,4 @@ const SkipLink = () => {
   
   )
 }
-export default SkipLink;
+;

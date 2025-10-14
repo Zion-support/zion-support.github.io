@@ -1,6 +1,5 @@
 import React from "react";
-
-const OptimizedLoadingSpinner = () => {
+export default function OptimizedLoadingSpinnerPage() {
   return (
     div>
       <h2>OptimizedLoadingSpinner</h2>
@@ -9,4 +8,4 @@ const OptimizedLoadingSpinner = () => {
   
   )
 }
-export default OptimizedLoadingSpinner;
+;

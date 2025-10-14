@@ -1,6 +1,5 @@
 import React from "react";
-
-const EnhancedAccessibilityManager = () => {
+export default function EnhancedAccessibilityManagerPage() {
   return (
     div>
       <h2>EnhancedAccessibilityManager</h2>
@@ -9,4 +8,4 @@ const EnhancedAccessibilityManager = () => {
   
   )
 }
-export default EnhancedAccessibilityManager;
+;

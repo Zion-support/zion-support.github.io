@@ -1,6 +1,5 @@
 import React from "react";
-
-const AdTemplates = () => {
+export default function AdTemplatesPage() {
   return (
     div>
       <h2>AdTemplates</h2>
@@ -9,4 +8,4 @@ const AdTemplates = () => {
   
   )
 }
-export default AdTemplates;
+;

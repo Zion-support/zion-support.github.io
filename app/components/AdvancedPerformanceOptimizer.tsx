@@ -1,6 +1,5 @@
 import React from "react";
-
-const AdvancedPerformanceOptimizer = () => {
+export default function AdvancedPerformanceOptimizerPage() {
   return (
     div>
       <h2>AdvancedPerformanceOptimizer</h2>
@@ -9,4 +8,4 @@ const AdvancedPerformanceOptimizer = () => {
   
   )
 }
-export default AdvancedPerformanceOptimizer;
+;

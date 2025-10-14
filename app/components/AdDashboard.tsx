@@ -1,6 +1,5 @@
 import React from "react";
-
-const AdDashboard = () => {
+export default function AdDashboardPage() {
   return (
     div>
       <h2>AdDashboard</h2>
@@ -9,4 +8,4 @@ const AdDashboard = () => {
   
   )
 }
-export default AdDashboard;
+;

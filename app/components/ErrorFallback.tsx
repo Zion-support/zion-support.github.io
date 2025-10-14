@@ -1,6 +1,5 @@
 import React from "react";
-
-const ErrorFallback = () => {
+export default function ErrorFallbackPage() {
   return (
     div>
       <h2>ErrorFallback</h2>
@@ -9,4 +8,4 @@ const ErrorFallback = () => {
   
   )
 }
-export default ErrorFallback;
+;

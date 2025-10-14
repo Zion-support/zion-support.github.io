@@ -22,15 +22,17 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const value = {
     trackEvent,
     trackPageView,
-  }
+  };
+
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={contextValue}>
       {children}
     </AnalyticsContext.Provider>
-  )
+  );
 }
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
+
+export function useAnalytics() {
+  const context = useContext(AnalyticsContext);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
   }

@@ -1,6 +1,5 @@
 import React from "react";
-
-const PerformanceDashboard = () => {
+export default function PerformanceDashboardPage() {
   return (
     div>
       <h2>PerformanceDashboard</h2>
@@ -9,4 +8,4 @@ const PerformanceDashboard = () => {
   
   )
 }
-export default PerformanceDashboard;
+;

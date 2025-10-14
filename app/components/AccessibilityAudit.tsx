@@ -1,6 +1,5 @@
 import React from "react";
-
-const AccessibilityAudit = () => {
+export default function AccessibilityAuditPage() {
   return (
     div>
       <h2>AccessibilityAudit</h2>
@@ -9,4 +8,4 @@ const AccessibilityAudit = () => {
   
   )
 }
-export default AccessibilityAudit;
+;

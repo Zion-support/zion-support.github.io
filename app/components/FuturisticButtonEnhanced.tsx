@@ -1,6 +1,5 @@
 import React from "react";
-
-const FuturisticButtonEnhanced = () => {
+export default function FuturisticButtonEnhancedPage() {
   return (
     div>
       <h2>FuturisticButtonEnhanced</h2>
@@ -9,4 +8,4 @@ const FuturisticButtonEnhanced = () => {
   
   )
 }
-export default FuturisticButtonEnhanced;
+;

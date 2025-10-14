@@ -88,4 +88,3 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </Helmet>
   )
 }
-export default SEOEnhancer;

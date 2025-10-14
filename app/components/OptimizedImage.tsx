@@ -1,6 +1,5 @@
 import React from "react";
-
-const OptimizedImage = () => {
+export default function OptimizedImagePage() {
   return (
     div>
       <h2>OptimizedImage</h2>
@@ -9,4 +8,4 @@ const OptimizedImage = () => {
   
   )
 }
-export default OptimizedImage;
+;

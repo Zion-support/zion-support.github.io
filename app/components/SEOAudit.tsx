@@ -1,6 +1,5 @@
 import React from "react";
-
-const SEOAudit = () => {
+export default function SEOAuditPage() {
   return (
     div>
       <h2>SEOAudit</h2>
@@ -9,4 +8,4 @@ const SEOAudit = () => {
   
   )
 }
-export default SEOAudit;
+;

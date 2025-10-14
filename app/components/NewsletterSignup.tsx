@@ -1,6 +1,5 @@
 import React from "react";
-
-const NewsletterSignup = () => {
+export default function NewsletterSignupPage() {
   return (
     div>
       <h2>NewsletterSignup</h2>
@@ -9,4 +8,4 @@ const NewsletterSignup = () => {
   
   )
 }
-export default NewsletterSignup;
+;

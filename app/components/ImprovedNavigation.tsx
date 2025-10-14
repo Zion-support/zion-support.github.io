@@ -1,6 +1,5 @@
 import React from "react";
-
-const ImprovedNavigation = () => {
+export default function ImprovedNavigationPage() {
   return (
     div>
       <h2>ImprovedNavigation</h2>
@@ -9,4 +8,4 @@ const ImprovedNavigation = () => {
   
   )
 }
-export default ImprovedNavigation;
+;

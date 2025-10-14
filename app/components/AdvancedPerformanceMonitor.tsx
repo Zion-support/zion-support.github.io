@@ -1,6 +1,5 @@
 import React from "react";
-
-const AdvancedPerformanceMonitor = () => {
+export default function AdvancedPerformanceMonitorPage() {
   return (
     <div>
       <h2>AdvancedPerformanceMonitor</h2>
@@ -9,4 +8,4 @@ const AdvancedPerformanceMonitor = () => {
     </div>
   )
 }
-export default AdvancedPerformanceMonitor;
+;

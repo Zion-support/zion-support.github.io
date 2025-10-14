@@ -1,6 +1,5 @@
 import React from "react";
-
-const AdAnalytics = () => {
+export default function AdAnalyticsPage() {
   return (
     div>
       <h2>AdAnalytics</h2>
@@ -9,4 +8,4 @@ const AdAnalytics = () => {
   
   )
 }
-export default AdAnalytics;
+;

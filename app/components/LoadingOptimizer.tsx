@@ -1,6 +1,5 @@
 import React from "react";
-
-const LoadingOptimizer = () => {
+export default function LoadingOptimizerPage() {
   return (
     div>
       <h2>LoadingOptimizer</h2>
@@ -9,4 +8,4 @@ const LoadingOptimizer = () => {
   
   )
 }
-export default LoadingOptimizer;
+;

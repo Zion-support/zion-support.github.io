@@ -1,6 +1,5 @@
 import React from "react";
-
-const SecurityEnhancer = () => {
+export default function SecurityEnhancerPage() {
   return (
     div>
       <h2>SecurityEnhancer</h2>
@@ -9,4 +8,4 @@ const SecurityEnhancer = () => {
   
   )
 }
-export default SecurityEnhancer;
+;

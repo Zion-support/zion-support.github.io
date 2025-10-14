@@ -1,6 +1,5 @@
 import React from "react";
-
-const Breadcrumb = () => {
+export default function BreadcrumbPage() {
   return (
     div>
       <h2>Breadcrumb</h2>
@@ -9,4 +8,4 @@ const Breadcrumb = () => {
   
   )
 }
-export default Breadcrumb;
+;

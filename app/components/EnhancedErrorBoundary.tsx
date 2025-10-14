@@ -1,6 +1,5 @@
 import React from "react";
-
-const EnhancedErrorBoundary = () => {
+export default function EnhancedErrorBoundaryPage() {
   return (
     div>
       <h2>EnhancedErrorBoundary</h2>
@@ -9,4 +8,4 @@ const EnhancedErrorBoundary = () => {
   
   )
 }
-export default EnhancedErrorBoundary;
+;

@@ -1,6 +1,5 @@
 import React from "react";
-
-const ResponsiveGrid = () => {
+export default function ResponsiveGridPage() {
   return (
     div>
       <h2>ResponsiveGrid</h2>
@@ -9,4 +8,4 @@ const ResponsiveGrid = () => {
   
   )
 }
-export default ResponsiveGrid;
+;

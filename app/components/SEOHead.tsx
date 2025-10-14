@@ -1,6 +1,5 @@
 import React from "react";
-
-const SEOHead = () => {
+export default function SEOHeadPage() {
   return (
     div>
       <h2>SEOHead</h2>
@@ -9,4 +8,4 @@ const SEOHead = () => {
   
   )
 }
-export default SEOHead;
+;

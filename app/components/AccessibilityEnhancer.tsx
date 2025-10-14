@@ -8,4 +8,9 @@ const AccessibilityEnhancer = () => {
     </div>
   )
 }
-export default AccessibilityEnhancer;
+
+export default function AccessibilityEnhancer({
+  children,
+}: AccessibilityEnhancerProps) {
+  return <div className="accessibilityenhancer">{children}</div>;
+}

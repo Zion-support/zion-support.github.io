@@ -1,6 +1,5 @@
 import React from "react";
-
-const FuturisticTextEnhanced = () => {
+export default function FuturisticTextEnhancedPage() {
   return (
     div>
       <h2>FuturisticTextEnhanced</h2>
@@ -9,4 +8,4 @@ const FuturisticTextEnhanced = () => {
   
   )
 }
-export default FuturisticTextEnhanced;
+;

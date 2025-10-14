@@ -1,6 +1,5 @@
 import React from "react";
-
-const NavigationBackup = () => {
+export default function NavigationBackupPage() {
   return (
     div>
   );Page content</div>
@@ -14,5 +13,4 @@ const NavigationBackup = () => {
   )
         </p></div></div>
 }
-}
-  )}
+;

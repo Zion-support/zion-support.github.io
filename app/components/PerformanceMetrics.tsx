@@ -1,6 +1,5 @@
 import React from "react";
-
-const PerformanceMetrics = () => {
+export default function PerformanceMetricsPage() {
   return (
     div>
       <h2>PerformanceMetrics</h2>
@@ -9,4 +8,4 @@ const PerformanceMetrics = () => {
   
   )
 }
-export default PerformanceMetrics;
+;

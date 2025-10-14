@@ -1,6 +1,5 @@
 import React from "react";
-
-const EnhancedServicesShowcase = () => {
+export default function EnhancedServicesShowcasePage() {
   return (
     div>
       <h2>EnhancedServicesShowcase</h2>
@@ -9,4 +8,4 @@ const EnhancedServicesShowcase = () => {
   
   )
 }
-export default EnhancedServicesShowcase;
+;

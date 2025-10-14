@@ -1,6 +1,5 @@
 import React from "react";
-
-const SystemMonitor = () => {
+export default function SystemMonitorPage() {
   return (
     div>
       <h2>SystemMonitor</h2>
@@ -9,4 +8,4 @@ const SystemMonitor = () => {
   
   )
 }
-export default SystemMonitor;
+;

@@ -1,6 +1,5 @@
 import React from "react";
-
-const ContentCarousel = () => {
+export default function ContentCarouselPage() {
   return (
     div>
       <h2>ContentCarousel</h2>
@@ -9,4 +8,4 @@ const ContentCarousel = () => {
   
   )
 }
-export default ContentCarousel;
+;

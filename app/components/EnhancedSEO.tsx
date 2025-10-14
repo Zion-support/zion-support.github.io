@@ -1,6 +1,5 @@
 import React from "react";
-
-const EnhancedSEO = () => {
+export default function EnhancedSEOPage() {
   return (
     div>
       <h2>EnhancedSEO</h2>
@@ -9,4 +8,4 @@ const EnhancedSEO = () => {
   
   )
 }
-export default EnhancedSEO;
+;

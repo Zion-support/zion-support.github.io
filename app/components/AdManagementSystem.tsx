@@ -1,6 +1,5 @@
 import React from "react";
-
-const AdManagementSystem = () => {
+export default function AdManagementSystemPage() {
   return (
     div>
       <h2>AdManagementSystem</h2>
@@ -9,4 +8,4 @@ const AdManagementSystem = () => {
   
   )
 }
-export default AdManagementSystem;
+;

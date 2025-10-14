@@ -1,6 +1,5 @@
 import React from "react";
-
-const ImprovedImage = () => {
+export default function ImprovedImagePage() {
   return (
     div>
       <h2>ImprovedImage</h2>
@@ -9,4 +8,4 @@ const ImprovedImage = () => {
   
   )
 }
-export default ImprovedImage;
+;

@@ -9,4 +9,7 @@ const LazyWrapper = () => {
   
   )
 }
-export default LazyWrapper;
+
+export default function LazyWrapper({ children }: LazyWrapperProps) {
+  return <div className="lazy-wrapper">{children}</div>;
+}

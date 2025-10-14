@@ -1,6 +1,5 @@
 import React from "react";
-
-const EnhancedMetaTags = () => {
+export default function EnhancedMetaTagsPage() {
   return (
     div>
       <h2>EnhancedMetaTags</h2>
@@ -9,4 +8,4 @@ const EnhancedMetaTags = () => {
   
   )
 }
-export default EnhancedMetaTags;
+;

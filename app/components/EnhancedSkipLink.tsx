@@ -1,6 +1,5 @@
 import React from "react";
-
-const EnhancedSkipLink = () => {
+export default function EnhancedSkipLinkPage() {
   return (
     div>
       <h2>EnhancedSkipLink</h2>
@@ -9,4 +8,4 @@ const EnhancedSkipLink = () => {
   
   )
 }
-export default EnhancedSkipLink;
+;

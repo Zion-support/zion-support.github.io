@@ -1,53 +1,33 @@
-import { createContext, useState, useEffect, ReactNode } from "react";
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, unknown>) => void;
-  isEnabled: boolean;
-}
+import { createContext, useContext } from "react";
+import { AnalyticsContextType } from "./AnalyticsContextDefinition";
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
-  const [isEnabled, setIsEnabled] = useState(false);
-
-  useEffect(() => {
-    // if analytics is enabled
-    setIsEnabled(true);
-  }, []);
-
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    if (!isEnabled) return;
-    // Track event logic here
-    console.log('Analytics Event:', eventName, properties);
+export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
+  const trackEvent = (event: string, properties?: Record<string, unknown>) => {
+    console.log('Analytics Event:', event, properties);
   };
 
-  const trackPageView = (pageName: string) => {
-    // Track page view logic here
-    console.log('Page View:', pageName);
+  const trackPageView = (page: string) => {
+    console.log('Page View:', page);
   };
 
-  const setUser = (newUserId: string, properties?: Record<string, unknown>) => {
-    console.log('User Set:', newUserId, properties);
-  };
-
-  const value = {
+  const contextValue = {
     trackEvent,
     trackPageView,
-    setUser,
-    isEnabled
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={contextValue}>
       {children}
     </AnalyticsContext.Provider>
   );
-};
+}
 
-export { AnalyticsContext };
+export function useAnalytics() {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+}
