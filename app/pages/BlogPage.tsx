@@ -15,10 +15,7 @@ const BlogPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-white mb-8">Blog</h1>
             <div className="text-gray-400">
               <p>Blog posts coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>

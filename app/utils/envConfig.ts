@@ -4,4 +4,6 @@ export const envConfig = {
   features: {
     analytics: process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true',
     seo: process.env.NEXT_PUBLIC_SEO_ENABLED === 'true',
-
+    performance: process.env.NEXT_PUBLIC_PERFORMANCE_ENABLED === 'true'
+  }
+};
