@@ -1,45 +1,42 @@
-  return (
-    <>
-      <Helmet>
-        <title>Create Checkout Session.js - Zion Tech Group</title>
-        <meta name="description" content="Professional create checkout session.js services by Zion Tech Group." />"
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">"
-        {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
-          <div className="max-w-6xl mx-auto text-center">"
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">"
-              Create Checkout Session.js
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-              Professional create checkout session.js services by Zion Tech Group.
-            </p>
-          </div>
-        </section>
+// API endpoint for creating Stripe checkout sessions
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">"
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>"
-                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>"
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">"
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>"
-                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>"
-              </div>
-            </div>
-          </div>
-        </section>
+  try {
+    const { priceId, quantity = 1, customerEmail } = req.body;
 
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">"
-              Contact us today to learn more about our services and how they can benefit your organization.
-            </p>
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">"
-              Get Started
-            </button>
-          </div>
-        </section>
-      </div>
-    </>
+    if (!priceId) {
+      return res.status(400).json({ error: 'Price ID is required' });
+    }
+
+    // In a real implementation, you would:
+    // 1. Initialize Stripe with your secret key
+    // 2. Create a checkout session
+    // 3. Return the session URL
+
+    // const sessionData = {
+    //   priceId,
+    //   quantity,
+    //   customerEmail,
+    //   successUrl: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+    //   cancelUrl: `${req.headers.origin}/cancel`,
+    // };
+
+    // Mock response for development
+    res.status(200).json({
+      success: true,
+      sessionId: 'mock_session_id',
+      url: `${req.headers.origin}/checkout/mock`,
+      message: 'Checkout session created successfully'
+    });
+
+  } catch (error) {
+    console.error('Error creating checkout session:', error);
+    res.status(500).json({ 
+      error: 'Internal server error',
+      message: 'Failed to create checkout session'
+    });
+  }
+}
