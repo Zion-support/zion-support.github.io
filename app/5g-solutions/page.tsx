@@ -1,4 +1,67 @@
 <<<<<<< HEAD
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react'
+const FiveGSolutionsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Zap,
+      title: 'Ultra-Fast Speeds',
+      description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
+      benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']
+    },
+    {
+      icon: Globe,
+      title: 'Global Coverage',
+      description: 'Comprehensive 5G network coverage across multiple regions',
+      benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Optimization',
+      description: 'Optimized 5G solutions for mobile devices and applications',
+      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
+    },
+    {
+      icon: Wifi,
+
+      title: 'IoT Connectivity',
+      description: 'Connect thousands of IoT devices with 5G technology',
+      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
+    }
+  ];
+
+  const benefits = [
+    {
+
+      title: '5G Network Infrastructure',
+      description: 'Complete 5G network setup and optimization',
+      price: 'Starting at $50,000',
+      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
+    },
+    {
+      title: '5G Mobile Applications',
+      description: 'Custom mobile apps optimized for 5G networks',
+      price: 'Starting at $25,000',
+      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
+    },
+    {
+      title: '5G IoT Solutions',
+      description: 'IoT device connectivity and management platform',
+      price: 'Starting at $35,000',
+      features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
+    }
+  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <Helmet>
+        <title>5G Solutions - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G solutions for ultra-fast connectivity and IoT integration" />
+        <meta name="keywords" content="5G, connectivity, IoT, mobile, enterprise, solutions" />
+      </Helmet>
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -83,13 +146,22 @@
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
+<<<<<<< HEAD
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300">
+=======
               <div key={index} className="bg-slate-8/50 backdrop-blur-sm rounded-xl p-8 border border-slate-70 hover:border-blue-50 transition-all duration-30">
+>>>>>>> origin/main
                 <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <ul className="space-y-3">
                   {solution.features.map((feature, idx) => (
+<<<<<<< HEAD
+                    <li key={idx} className="flex items-center text-gray-400">
+                      <Circle className="w-4 h-4 text-blue-400 mr-3" />
+=======
                     <li key={idx} className="flex items-center text-gray-40">
                       <Circle className="w-4 h-4 text-blue-40 mr-3" />
+>>>>>>> origin/main
                       {feature}
                     </li>
                   ))}
@@ -120,6 +192,9 @@
     </div>
   )
 }
+<<<<<<< HEAD
+export default FiveGSolutionsPage;
+=======
 
 export default FiveGSolutionsPage
 =======
@@ -136,3 +211,4 @@ export default FiveGSolutionsPage
 };
 
 export default FiveGSolutionsPage;
+>>>>>>> origin/main

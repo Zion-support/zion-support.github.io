@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+export default function AiLanguageTranslationPage() {
+=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
+>>>>>>> origin/main
 
 const HomePage = () => {
   return (
@@ -18,6 +24,10 @@ const HomePage = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 export default HomePage;
+>>>>>>> origin/main

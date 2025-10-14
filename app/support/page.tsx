@@ -1,7 +1,26 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
+    }
+  ];
+
+  const benefits = [{
+      question: 'How do I get started with your AI services?',''
+      answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you identify the best AI solutions for your business needs.''},'
+    {
+      question: 'What is your response time for support requests?',''
+      answer: 'We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for non-urgent matters.'},'
+    {
+      question: 'Do you offer training for your solutions?',''
+      answer: 'Yes! We provide comprehensive training programs for all our solutions, including documentation, video tutorials, and live training sessions.'},'
+    {
+      question: 'What if I need custom development?',''
+      answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.'}'
+  ]
+=======
 export default function Page() {
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -39,3 +58,7 @@ export default function Page() {
     </div>
   );
 }
+<<<<<<< HEAD
+export default FiveGSolutionsPage;
+=======
+>>>>>>> origin/main

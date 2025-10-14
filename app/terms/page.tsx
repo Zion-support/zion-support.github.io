@@ -16,7 +16,11 @@ const HomePage = () => {
           </p>
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+export default FiveGSolutionsPage;
+=======
 =======
 };
 
 export default HomePage;
+>>>>>>> origin/main

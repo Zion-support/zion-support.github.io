@@ -9,4 +9,9 @@ export default function PropertyManagementAiPage() {
       <p className="text-gray-300 text-lg">This page is under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+  );
+=======
+}
+>>>>>>> origin/main

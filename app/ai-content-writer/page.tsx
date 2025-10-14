@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+export default function Page() {
+=======
           {/* CTA Section */}
           <section className="text-center">
             <div className="cyber-card p-8 max-w-4xl mx-auto">
@@ -26,11 +32,16 @@
             </div>
           </section>
         </main>
+>>>>>>> origin/main
 
         <Footer />
       </div>
     </>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 export default AIContentWriterPage;
+>>>>>>> origin/main

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+export default function WebinarsPage() {
+=======
 "use client";
+>>>>>>> origin/main
 
 import React from "react";
 
@@ -9,4 +15,9 @@ export default function WebinarsPage() {
       <p className="text-gray-300 text-lg">This page is under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+  );
+=======
+}
+>>>>>>> origin/main

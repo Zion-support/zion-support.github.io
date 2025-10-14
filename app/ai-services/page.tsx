@@ -95,9 +95,23 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Fraud Detection',
       description: 'Advanced fraud prevention and security monitoring',
       icon: Shield,
+<<<<<<< HEAD
+      title: 'AI Security','
+      description: 'AI-powered security solutions to protect your business from threats.','
+      color: 'from-red-500 to-pink-500'
+    }
+  ];
+
+  const benefits = [
+    {
+      title: 'Custom AI Solutions','
+      description: 'Tailored AI implementations designed specifically for your business needs.','
+      icon: '🤖'
+=======
       price: '$1,900/month',
       features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System'],
       color: 'text-red-500'
+>>>>>>> origin/main
     },
     {
       title: 'AI Document Processing',

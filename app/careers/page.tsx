@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+export default function Page() {
+=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/main
 
 export default function Page() {
   return (
@@ -38,4 +45,9 @@ export default function Page() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+  );
+=======
+}
+>>>>>>> origin/main

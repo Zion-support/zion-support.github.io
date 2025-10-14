@@ -18,6 +18,11 @@ const HomePage = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
+}
+export default FiveGSolutionsPage;
+=======
 };
 
 export default HomePage;
+>>>>>>> origin/main

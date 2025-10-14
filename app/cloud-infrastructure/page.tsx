@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+export default function Infrastructure() {
+=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
+>>>>>>> origin/main
 
 const HomePage = () => {
   return (
