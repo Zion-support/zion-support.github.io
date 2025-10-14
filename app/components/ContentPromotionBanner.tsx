@@ -1,12 +1,13 @@
 import React from "react";
-import { Helmet } from 'react-helmet-async';
-const ContentPromotionBannerPage = () => {
+import { Helmet } from "react-helmet-async";
+
+const ContentPromotionBanner = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet></Helmet>
+      <Helmet>
         <title>ContentPromotionBanner - Zion Tech Group</title>
-        <meta name="description" content="Professional ContentPromotionBanner services by Zion Tech Group." />
-        <meta name="keywords" content="ContentPromotionBanner, AI solutions, IT services" />
+        <meta name="description" content="Professional contentpromotionbanner services by Zion Tech Group." />
+        <meta name="keywords" content="contentpromotionbanner, AI solutions, IT services" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
@@ -15,7 +16,7 @@ const ContentPromotionBannerPage = () => {
             ContentPromotionBanner
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ContentPromotionBanner services designed to help your business grow and succeed.
+            Professional contentpromotionbanner services designed to help your business grow and succeed.
           </p>
         </div>
         
@@ -46,4 +47,4 @@ const ContentPromotionBannerPage = () => {
   );
 };
 
-export default ContentPromotionBannerPage;
+export default ContentPromotionBanner;

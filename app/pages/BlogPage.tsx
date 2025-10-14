@@ -1,5 +1,4 @@
 import React from "react";
-
 const BlogPage = () => {
   return (
     <div className="p-4">
@@ -10,5 +9,4 @@ const BlogPage = () => {
     </div>
   );
 };
-
 export default BlogPage;

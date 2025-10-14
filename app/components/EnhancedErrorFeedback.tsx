@@ -1,23 +1,18 @@
 import React from "react";
-
 interface GlobalErrorBoundaryProps {
   children: React.ReactNode;
 }
-
 class GlobalErrorBoundary extends React.Component<GlobalErrorBoundaryProps, { hasError: boolean }> {
   constructor(props: GlobalErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error) {
     return { hasError: true };
   }
-
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Global Error Boundary caught an error:', error, errorInfo);
   }
-
   render() {
     if (this.state.hasError) {
       return (
@@ -29,9 +24,7 @@ class GlobalErrorBoundary extends React.Component<GlobalErrorBoundaryProps, { ha
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default GlobalErrorBoundary;

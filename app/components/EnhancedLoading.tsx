@@ -1,12 +1,13 @@
 import React from "react";
-import { Helmet } from 'react-helmet-async';
-const EnhancedLoadingPage = () => {
+import { Helmet } from "react-helmet-async";
+
+const EnhancedLoading = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet></Helmet>
+      <Helmet>
         <title>EnhancedLoading - Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedLoading services by Zion Tech Group." />
-        <meta name="keywords" content="EnhancedLoading, AI solutions, IT services" />
+        <meta name="description" content="Professional enhancedloading services by Zion Tech Group." />
+        <meta name="keywords" content="enhancedloading, AI solutions, IT services" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
@@ -15,7 +16,7 @@ const EnhancedLoadingPage = () => {
             EnhancedLoading
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional EnhancedLoading services designed to help your business grow and succeed.
+            Professional enhancedloading services designed to help your business grow and succeed.
           </p>
         </div>
         
@@ -46,4 +47,4 @@ const EnhancedLoadingPage = () => {
   );
 };
 
-export default EnhancedLoadingPage;
+export default EnhancedLoading;

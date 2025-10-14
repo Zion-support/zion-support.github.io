@@ -13,7 +13,6 @@ export const trackPageView = (pageTitle: string, pageLocation: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_title: pageTitle,
-      page_location: pageLocation,
-    });
+      page_location: pageLocation});
   }
 };

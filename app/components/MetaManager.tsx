@@ -1,5 +1,4 @@
 import React from 'react';
-
 const MetaManager = () => {
   return (
     <div className="p-4">
@@ -8,5 +7,4 @@ const MetaManager = () => {
     </div>
   );
 };
-
 export default MetaManager;

@@ -1,11 +1,8 @@
 import React, { createContext, useContext, ReactNode } from 'react';
-
 interface AnalyticsContextContextType {
   // Add your context properties here
 }
-
 const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
-
 export const useAnalyticsContext = () => {
   const context = useContext(AnalyticsContextContext);
   if (!context) {
@@ -13,19 +10,18 @@ export const useAnalyticsContext = () => {
   }
   return context;
 };
-
 interface AnalyticsContextProviderProps {
   children: ReactNode;
 }
-
 export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
   const value = {
     // Add your context values here
   };
-
   return (
     <AnalyticsContextContext.Provider value={value}>
       {children}
     </AnalyticsContextContext.Provider>
   );
 };
+
+export default AnalyticsContextProvider;

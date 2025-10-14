@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedAnalytics = () => {
   return (
     <div className="p-4">
@@ -8,5 +7,4 @@ const EnhancedAnalytics = () => {
     </div>
   );
 };
-
 export default EnhancedAnalytics;

@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
-
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-
   const navigationItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -24,7 +22,6 @@ const Header: React.FC = () => {
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" }
   ];
-
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -36,7 +33,6 @@ const Header: React.FC = () => {
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -66,7 +62,6 @@ const Header: React.FC = () => {
               </div>
             ))}
           </nav>
-
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
@@ -76,7 +71,6 @@ const Header: React.FC = () => {
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -85,7 +79,6 @@ const Header: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-slate-700">
@@ -129,5 +122,4 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
 export default Header;
