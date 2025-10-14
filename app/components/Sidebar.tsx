@@ -51,26 +51,26 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
   if (!isOpen) return null
   return (
 
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
-      <div className="relative flex flex-col w-64 h-full bg-slate-900">
-        <div className="flex items-center justify-between p-4 border-b border-slate-700">
-          <span className="text-xl font-bold text-white">Menu</span>
-          <button onClick={onClose} className="text-gray-400 hover:text-white">
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>"
+      <div className="relative flex flex-col w-64 h-full bg-slate-900">"
+        <div className="flex items-center justify-between p-4 border-b border-slate-700">"
+          <span className="text-xl font-bold text-white">Menu</span>"
+          <button onClick={onClose} className="text-gray-400 hover:text-white">"
             <XMarkIcon className="w-6 h-6" />
           </button>
         </div>
-    </>
+    </>"
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
           {navigation.map((link) => (
             <div key={link.name}></div>
               {link.submenu ? (
                 <div></div>
                   <button
-                    onClick={() => toggleExpanded(link.name)
+                    onClick={() => toggleExpanded(link.name)"
                     className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded"
                   >
-                    <div className="flex items-center">
-                      <link.icon className="w-5 h-5 mr-3" />
+                    <div className="flex items-center">"
+                      <link.icon className="w-5 h-5 mr-3" />}
                       {link.name}
 
                       className={`w-4 h-4 transition-transform ${````
@@ -78,7 +78,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                       }`} ````
                     /></ChevronDownIcon>
                   </button>
-                  {expandedItems.includes(link.name) && (
+                  {expandedItems.includes(link.name) && ("
                     <div className="ml-4 mt-2 space-y-1">
                       {link.submenu.map((subLink) => (
                         <Link
@@ -87,9 +87,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                           className={`flex items-center px-3 py-2 text-sm transition-colors ${````
                             isActive(subLink.href)
                               ? 'text-blue-400 bg-blue-900/20'
-                              : 'text-gray-400 hover:text-white hover:bg-slate-800'
+                              : 'text-gray-400 hover:text-white hover:bg-slate-800'}
                           }`}````
-                          onClick={onClose}></Link>
+                          onClick={onClose}></Link>"
                           <subLink.icon className="w-4 h-4 mr-3" />
                           {subLink.name}
                         </Link>
@@ -121,7 +121,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationSections = [
     {
       id: 'ai-services','
-      title: 'AI Services','
+      title: 'AI Services','"
       icon: <Brain className="w-5 h-5" />,"
       color: 'from-blue-500 to-cyan-500','
       href: '/ai-services','
@@ -221,6 +221,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { label: '5G Private Networks', href: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },'"'"
         { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions', icon: <Globe className="w-4 h-4" /> }'"'"
       ]
+      </li>
     }
   ]
   const quickLinks = [
@@ -254,18 +255,19 @@ import React from "react;
   return (
     <div className={`bg-slate-800 text-white transition-all duration-300 ${isOpen ? 'w-64' : 'w-16'} ${className}`}>
       <div className="flex items-center justify-between p-4 border-b border-slate-700">
-        {isOpen && (
+        {isOpen && ("
           <h2 className="text-xl font-bold">Zion Tech Group</h2>
         )}
         <button
-          onClick={onToggle}
+          onClick={onToggle}"
           className="p-2 rounded-lg hover:bg-slate-700 transition-colors"
         >
           {isOpen ? (
             <ChevronLeftIcon className="w-5 h-5" />
-          ) : (
+          ) : ("
             <ChevronRightIcon className="w-5 h-5" />
           )}
         </button>
       </div>
     </div>
+"

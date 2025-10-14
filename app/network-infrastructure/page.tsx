@@ -9,11 +9,11 @@ export default function Page() {
         <title>Network Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Network Infrastructure services and solutions from Zion Tech Group" />
       </Helmet>
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Network Infrastructure</h1>
+
+      "
+      <div className="min-h-screen bg-white">"
+        <div className="container mx-auto px-4 py-20">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Network Infrastructure</h1>"
           <p className="text-xl text-gray-600">
             This page is under development. Please check back soon for more information about our network infrastructure services.
           </p>
@@ -21,4 +21,4 @@ export default function Page() {
       </div>
     </>
   );
-}
+}"

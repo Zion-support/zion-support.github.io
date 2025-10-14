@@ -7,7 +7,7 @@ const PagePage = () => {
       <Helmet></Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Page - Zion Tech Group" /></meta>""
-      </Helmet>
+
       <div className="container mx-auto px-4 py-16"></div>""
     </>
         <div className="text-center"></div>""

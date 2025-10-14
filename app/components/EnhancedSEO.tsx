@@ -43,7 +43,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       { /* Basic Meta Tags */ }
       <title>{title}</title>
       </script>
-    </Helmet>
+
+    </>
   )}
 export default EnhancedSEO
   )

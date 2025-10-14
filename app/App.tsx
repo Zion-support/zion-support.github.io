@@ -6,12 +6,12 @@ const AppPage = () => {
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Helmet>
-        <title>App - Zion Tech Group</title>
+        <title>App - Zion Tech Group</title>"
         <meta name="description" content="App - Zion Tech Group" />
       </Helmet>
-        </Helmet>
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
+"
+        <div className="container mx-auto px-4 py-16">"
+          <div className="text-center">"
             <h1 className="text-4xl font-bold text-white mb-8">App</h1>
 
           </div>
@@ -21,4 +21,4 @@ const AppPage = () => {
   );
 };
 
-export default AppPage;
+export default AppPage;"

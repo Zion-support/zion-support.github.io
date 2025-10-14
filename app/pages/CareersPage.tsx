@@ -2,7 +2,7 @@
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />"
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />"
-      </Helmet>"
+
       <div className="container mx-auto px-4 py-16">"
         {/* Hero Section */}"
         <div className="text-center mb-16">"
@@ -21,10 +21,10 @@
 const CareersPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
+
         <title>Careers - Zion Tech Group</title>"
         <meta name="description" content="Join our team at Zion Tech Group. Explore career opportunities in AI and IT." />"
-      </Helmet>"
+
       <div className="min-h-screen bg-white">"
         <div className="container mx-auto px-4 py-16">"
           <div className="text-center">"
@@ -70,5 +70,6 @@ const CareersPage: React.FC = () => {
   return (
     <>
 
+    </>
 }
 "

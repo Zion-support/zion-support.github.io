@@ -8,7 +8,7 @@ const CloudInfrastructurePage: React.FC = () => {
         <title>Cloud Infrastructure | Zion Tech Group</title>"
         <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />"
         <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />"
-      </Helmet>"
+
       <div className="container mx-auto px-4 py-16">"
         {/* Hero Section */}"
         <div className="text-center mb-16">"
@@ -56,10 +56,10 @@ const CloudInfrastructurePage: React.FC = () => {
 const CloudInfrastructurePage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
+
         <title>Cloud Infrastructure - Zion Tech Group</title>"
         <meta name="description" content="Professional cloud infrastructure services by Zion Tech Group." />"
-      </Helmet>"
+
       <div className="min-h-screen bg-white">"
         <div className="container mx-auto px-4 py-16">"
           <div className="text-center">"

@@ -8,7 +8,7 @@ const AIServicesPage: React.FC = () => {
         <title>AI Services | Zion Tech Group</title>"
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation solutions." />"
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, automation, artificial intelligence" />"
-      </Helmet>"
+
       <div className="container mx-auto px-4 py-16">"
         {/* Hero Section */}"
         <div className="text-center mb-16">"
@@ -56,10 +56,10 @@ const AIServicesPage: React.FC = () => {
 const AIServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
+
         <title>AI Services - Zion Tech Group</title>"
         <meta name="description" content="Professional AI services by Zion Tech Group." />"
-      </Helmet>"
+
       <div className="min-h-screen bg-white">"
         <div className="container mx-auto px-4 py-16">"
           <div className="text-center">"
