@@ -37,8 +37,9 @@ export default [
       },
     },
     plugins: {
-      "react-hooks": reactHooks
-      "react-refresh": reactRefresh
+      "@typescript-eslint": typescript,
+      "react-hooks": reactHooks,
+      "react": react
     },
     rules: {
       ...typescript.configs.recommended.rules,
