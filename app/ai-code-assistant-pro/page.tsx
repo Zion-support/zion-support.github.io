@@ -35,6 +35,7 @@ import {
 } from 'lucide-react';
 
 const AiCodeAssistantProPage: React.FC = () => {
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
   // const [activeTab, setActiveTab] = useState('overview');
 
@@ -200,6 +201,8 @@ const AiCodeAssistantProPage: React.FC = () => {
   ];
 
 constAicodeassistantpropagePage: React.FC = () => {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b03
   return (
     <>Helmet>
         <title>Ai Code Assistant Pro</title>

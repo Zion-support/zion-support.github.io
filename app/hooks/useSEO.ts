@@ -7,10 +7,11 @@ interface Useseoprops {
 
 }
 
-export const Useseo=({ title, description, keywords }: UseSEOProps) => {
+export constuseSEO= ({ title, description, keywords }: UseSEOProps) => {
   useEffect(() => {
-    if (typeof document !== 'undefined') { constMetadescription = document.query Selector('meta[name="description"]');
-      const Metakeywords=document.query Selector('meta[name="keywords"]');
+    if (typeof document !== 'undefined') {
+      const metaDescription= document.query Selector('meta[name="description"]');
+      const metaKeywords= document.query Selector('meta[name="keywords"]');
       
       if (metaDescription) {
         metaDescription.setAttribute('content', description);

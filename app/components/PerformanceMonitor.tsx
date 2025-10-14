@@ -17,8 +17,8 @@ interface Layoutshiftextendsperformanceentry {
   value: number;
 }
 
-const Performancemonitor=() => {
-  const [metrics,Setmetrics] = useState<PerformanceMetrics>({});
+const PerformanceMonitor= () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -28,16 +28,18 @@ const PerformanceMonitor: React.FC = () => {
     constCurrentmetrics: Performancemetrics = {};
 
     // Measure Largest Contentful Paint (LCP)
-    const Lcpobserver=new PerformanceObserver((list) => { constEntries = list.getEntries();
-      const Lastentry=entries[entries.length - 1];
+    const lcpObserver= new PerformanceObserver((list) => {
+      const entries= list.getEntries();
+      const lastEntry= entries[entries.length - 1];
       currentMetrics.lcp = lastEntry.startTime;
       setMetrics({ ...currentMetrics });
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Measure First Input Delay (FID)
-    const Fidobserver=new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => { constFidentry = entry as PerformanceEventTiming;
+    const fidObserver= new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        const fidEntry= entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
           currentMetrics.fid = fidEntry.processingStart - fidEntry.startTime;
           setMetrics({ ...currentMetrics });
@@ -47,9 +49,10 @@ const PerformanceMonitor: React.FC = () => {
     fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Measure Cumulative Layout Shift (CLS)
-    let Clsvalue=0;
-    const clsobserver = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => { constLayoutshiftentry = entry as LayoutShift;
+    let clsValue= 0;
+    const clsObserver= new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        const layoutShiftEntry= entry as LayoutShift;
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
         }
@@ -60,7 +63,7 @@ const PerformanceMonitor: React.FC = () => {
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // Measure First Contentful Paint (FCP)
-    const Fcpobserver=new PerformanceObserver((list) => {
+    const fcpObserver= new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
           currentMetrics.fcp = entry.startTime;
@@ -71,17 +74,16 @@ const PerformanceMonitor: React.FC = () => {
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Measure Time to First Byte (TTFB)
-    const Navigationentry=performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigationEntry= performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       currentMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
       setMetrics({ ...currentMetrics });
     }
 
-    // Send metrics after page load
-    const sendMetrics = () => {
+    // Send metricsafterpageloadconstsendMetrics= () => {
       if (Object.keys(currentMetrics).length > 0) {
-        // In a real application, you would send these metrics to your analytics service
-        console.warn('performanceMetrics: ', currentMetrics);
+        // In arealapplication, you would send these metrics to your analytics service
+        console.warn('Performance Metrics:', currentMetrics);
       }
     };
 
@@ -103,9 +105,7 @@ const PerformanceMonitor: React.FC = () => {
     return null;
   }
 
-  // developmentMode: show performance metrics
-
-  const Getscorecolor=(value: number | undefined, thresholds: { good: number; poor: number }) => {
+  // Development mode: show performancemetricsconstgetScoreColor= (value: number | undefined, thresholds: { good: number; poor: number }) => {
     if (!value) return 'text-gray-500';
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.poor) return 'text-yellow-500';

@@ -1,5 +1,5 @@
-export const Envconfig={
-  apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
+export constenvConfig= {
+  api Url: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
   environment: process.env.NODE_ENV || 'development',
   features:{
     analytics: process.env.NEXT_PUBLIC_ANALYTICS_ENABLE D ==='true',

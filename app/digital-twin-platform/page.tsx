@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constDigitaltwinplatformpagePage: React.FC = () => {
+const DigitalTwinPlatformPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Digital Twin Platform</title>

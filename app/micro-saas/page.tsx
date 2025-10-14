@@ -93,20 +93,13 @@ constMicrosaaspagePage: React.FC = () => {
       category: "Infrastructure",
     },
     {
-      id: "5",
-      icon: "📧",
-      title: "Email Marketing Automation",
-      description:
-        "AI-driven email campaigns with advanced segmentation and personalization",
-      features: [
-        "Email templates",
-        "A/B testing",
-        "Segmentation",
-        "Analytics",
-        "Integration tools",
-      ],
-      price: "$79/month",
-      users: "Up to 25,000 contacts",
+      id: '5',
+      icon: '📧',
+      title: 'Email Marketing Automation',
+      description: 'AI-driven email campaigns with advanced segmentation and personalization',
+      features: ['Email templates', 'A/B testing', 'Segmentation', 'Analytics', 'Integration tools'],
+      price: '$79/month',
+      users: 'Up to25,000 contacts',
       popular: false,
       category: "Marketing",
     },
@@ -130,7 +123,7 @@ constMicrosaaspagePage: React.FC = () => {
     },
   ];
 
-  const Benefits=[
+  const benefits= [
     'No upfront costs or setup fees',
     'Quick deployment in 24-48 hours',
     'Scalable solutions that grow with you',
@@ -141,9 +134,9 @@ constMicrosaaspagePage: React.FC = () => {
     'Cancel anytime, no long-term contracts'
   ];
 
-  const Categories=['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
+  const categories= ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
 
-  const Stats=[
+  const stats= [
     {
       icon: Users,
       value: "10,000+",
@@ -173,7 +166,7 @@ constMicrosaaspagePage: React.FC = () => {
   return (
     <>Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
-        <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more." />
+        <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered toolsforanalytics, CRM, security, and more." />
         <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software" />
       </Helmet>
 
@@ -185,9 +178,7 @@ constMicrosaaspagePage: React.FC = () => {
               Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Ready-to-use business tools that solve specific problems. No
-              complex setup, no long-term commitments - just powerful solutions
-              that work.
+              Ready-to-use business tools that solve specific problems. No complexsetup, no long-term commitments - just powerful solutions that work.
             </p>
 
             <div className="grid grid-cols-2Md: grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -288,7 +279,7 @@ constMicrosaaspagePage: React.FC = () => {
                   </ul>
 
                   <div className="flex flex-col gap-3">
-                    <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover: from-purple-600Hover:to-blue-600 transformHover:scale-105">
+                    <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transformhover:scale-105">
                       Start Free Trial
                     </button>
                     <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20Hover:bg-white/20">
@@ -309,8 +300,7 @@ constMicrosaaspagePage: React.FC = () => {
                 Why Choose Our Micro SaaS Solutions?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We&apos;ve designed our micro SaaS products to be simple,
-                powerful, and accessible to businesses of all sizes.
+                We&apos;ve designedourmicroSaaSproductstobesimple, powerful, and accessible to businesses of all sizes.
               </p>
             </div>
 
@@ -395,7 +385,7 @@ constMicrosaaspagePage: React.FC = () => {
               <div className="flex flex-colSm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semiboldHover:from-purple-600Hover:to-blue-600 transition-all duration-300 transformHover:scale-105"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transformhover:scale-105"
                 >
                   <Zap className="w-5 h-5" />
                   Start Free Trial;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constZionaidatacleanerpagePage: React.FC = () => {
+const ZionAiDataCleanerPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Zion Ai Data Cleaner</title>

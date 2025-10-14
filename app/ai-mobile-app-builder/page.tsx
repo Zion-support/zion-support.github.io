@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constAimobileappbuilderpagePage: React.FC = () => {
+const AiMobileAppBuilderPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Ai Mobile App Builder</title>

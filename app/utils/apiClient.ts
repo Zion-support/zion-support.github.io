@@ -1,8 +1,9 @@
-export const Apiclient={
-  baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
+export constapiClient= {
+  base URL: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
   
-  async request<T>(endpoint: string, options: Request Init={}): Promise<T> { constUrl = `${this.baseURL}${endpoint}`;
-    const response = await fetch(url, {
+  async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+    const url= `${this.baseURL}${endpoint}`;
+    const response= await fetch(url, {
       headers: {
         'Content-Type': 'application/json',
         ...options.headers,
@@ -11,7 +12,7 @@ export const Apiclient={
     });
     
     if (!response.ok) {
-      throw new Error(`APIRequestFailed: ${response.status}`);
+      throw new Error(`API requestfailed: ${response.status}`);
     }
     
     return response.json();

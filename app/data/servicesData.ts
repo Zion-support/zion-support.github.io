@@ -12,7 +12,7 @@ export interface Servicedata {
   icon: string;
 }
 
-exportConstServicesdata: ServiceData[] = [
+export constservicesData: Service Data[] = [
   {
     id: 'ai-solutions',
     name: 'AI Solutions',

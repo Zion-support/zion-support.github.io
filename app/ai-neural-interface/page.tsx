@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constAineuralinterfacepagePage: React.FC = () => {
+const AiNeuralInterfacePage: React.FC = () => {
   return (
     <>Helmet>
         <title>Ai Neural Interface</title>

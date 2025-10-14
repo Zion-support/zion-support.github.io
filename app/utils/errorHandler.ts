@@ -1,4 +1,4 @@
-export const Errorhandler={
+export consterrorHandler= {
   handle: (_error: Error, _context?: string) => {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
@@ -12,9 +12,10 @@ export const Errorhandler={
       code: 'GENERIC_ERROR'
     };
   },
-  handleApiError: (error: unknown) => { constErrorwithresponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
-    const status = error With Response.response?.status;
-    const message = error With Response.response?.data?.message || error With Response.message;
+  handle ApiError: (error: unknown) => {
+    const errorWithResponse= error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+    const status= error With Response.response?.status;
+    const message= error With Response.response?.data?.message || error With Response.message;
     
     switch (status) {
       case400: return { message: 'Invalid request', code: 'BAD_REQUEST' };
@@ -27,9 +28,7 @@ export const Errorhandler={
     }
   },
   log: (_error: Error, _context?: Record<string, unknown>) => {
-    // Error logging logic
-  },
+    // Error logginglogic},
   report: (_error: Error, _context?: Record<string, unknown>) => {
-    // Error reporting logic
-  }
+    // Error reportinglogic}
 };

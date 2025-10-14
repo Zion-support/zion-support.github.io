@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constZionaiperformanceoptimizerpagePage: React.FC = () => {
+const ZionAiPerformanceOptimizerPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Zion Ai Performance Optimizer</title>

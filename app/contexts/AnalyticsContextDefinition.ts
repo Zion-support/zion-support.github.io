@@ -5,7 +5,7 @@ export interface Analyticscontexttype {
 }
 
 export interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: React.React Node;
 }
 
 export interface Analyticsevent {

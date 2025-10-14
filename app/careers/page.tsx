@@ -29,75 +29,80 @@ interface Jobposition {
 constCareerspagePage: React.FC = () => {
   constPositions:Jobposition[] = [
     {
-      id:'1',
-      title:'Senior AI Engineer',
-      department:'AI Solutions',
-      location:'Remote / New York',
-      type:'Full-time',
-      experience:'5+ years',
-      posted:'2 days ago',
-      description:'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements:['PhD inComputer Science or related field','5+ years ML/AI experience','Expert inPython, TensorFlow, PyTorch'],
-      featured: true;
-    },{
-      id:'2',
-      title:'Quantum Computing Researcher',
-      department:'Research & Development',
-      location:'San Francisco, CA',
-      type:'Full-time',
-      experience:'3+ years',
-      posted:'1 week ago',
-      description:'Research and develop quantum algorithms and applications for real-world problems.',
-      requirements:['PhD inPhysics orComputer Science','Quantum computing experience','Strong mathematical background'],
-      featured: true;
-    },{
-      id:'3',
-      title:'DevOps Engineer',
-      department:'Infrastructure',
-      location:'Austin, TX',
-      type:'Full-time',
-      experience:'4+ years',
-      posted:'3 days ago',
-      description:'Design and maintain cloud infrastructure for scalable AI and IT solutions.',
-      requirements:['AWS/Azure/GCP certification','Kubernetes experience','Infrastructure asCode'],
-      featured: false;
-    },{
-      id:'4',
-      title:'UX Designer',
-      department:'Design',
-      location:'Remote',
-      type:'Full-time',
-      experience:'3+ years',
-      posted:'5 days ago',
-      description:'Create intuitive user experiences for complex AI and technology products.',
-      requirements:['Portfolio of AI/tech products','Figma expertise','User research experience'],
-      featured: false;
-    },{
-      id:'5',
-      title:'Data Scientist',
-      department:'AI Solutions',
-      location:'Boston, MA',
-      type:'Full-time',
-      experience:'2+ years',
-      posted:'1 week ago',
-      description:'Analyze complex datasets and build predictive models for business insights.',
-      requirements:['Masters inData Science','Python/R expertise','Statistical modeling'],
-      featured: false;
-    },{
-      id:'6',
-      title:'Product Manager',
-      department:'Product',
-      location:'Seattle, WA',
-      type:'Full-time',
-      experience:'5+ years',
-      posted:'4 days ago',
-      description:'Lead product strategy and development for AI-powered enterprise solutions.',
-      requirements:['Technical background','Product management experience','AI/ML knowledge'],
-      featured: false;
+      id: '1',
+      title: 'Senior AI Engineer',
+      department: 'AI Solutions',
+      location: 'Remote / New York',
+      type: 'Full-time',
+      experience: '5+ years',
+      posted: '2 days ago',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
+      requirements: ['PhD in Computer Science or related field', '5+ years ML/AI experience', 'Expert inPython, TensorFlow, PyTorch'],
+      featured: true
+    },
+    {
+      id: '2',
+      title: 'Quantum Computing Researcher',
+      department: 'Research & Development',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '3+ years',
+      posted: '1 week ago',
+      description: 'Research and develop quantum algorithms and applications for real-world problems.',
+      requirements: ['PhD in Physics or Computer Science', 'Quantum computing experience', 'Strong mathematical background'],
+      featured: true
+    },
+    {
+      id: '3',
+      title: 'DevOps Engineer',
+      department: 'Infrastructure',
+      location: 'Austin, TX',
+      type: 'Full-time',
+      experience: '4+ years',
+      posted: '3 days ago',
+      description: 'Design and maintain cloud infrastructure for scalable AI and IT solutions.',
+      requirements: ['AWS/Azure/GCP certification', 'Kubernetes experience', 'Infrastructure as Code'],
+      featured: false
+    },
+    {
+      id: '4',
+      title: 'UX Designer',
+      department: 'Design',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '3+ years',
+      posted: '5 days ago',
+      description: 'Create intuitive user experiences for complex AI and technology products.',
+      requirements: ['Portfolio of AI/tech products', 'Figma expertise', 'User research experience'],
+      featured: false
+    },
+    {
+      id: '5',
+      title: 'Data Scientist',
+      department: 'AI Solutions',
+      location: 'Boston, MA',
+      type: 'Full-time',
+      experience: '2+ years',
+      posted: '1 week ago',
+      description: 'Analyze complex datasets and build predictive models for business insights.',
+      requirements: ['Masters in Data Science', 'Python/R expertise', 'Statistical modeling'],
+      featured: false
+    },
+    {
+      id: '6',
+      title: 'Product Manager',
+      department: 'Product',
+      location: 'Seattle, WA',
+      type: 'Full-time',
+      experience: '5+ years',
+      posted: '4 days ago',
+      description: 'Lead product strategy and development for AI-powered enterprise solutions.',
+      requirements: ['Technical background', 'Product management experience', 'AI/ML knowledge'],
+      featured: false
     }
   ];
 
-  const Benefits=[
+  const benefits= [
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Competitive Salary",
@@ -124,8 +129,8 @@ constCareerspagePage: React.FC = () => {
     <>Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
-        <meta name="keywords" content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company" />
-        <Link Rel="canonical" href="https://ziontechgroup.com/careers" />
+        <meta name="keywords" content="tech careers, AI jobs, quantum computingjobs, software engineering, remote work, tech company" />
+        <link rel="canonical" href="https://ziontechgroup.com/careers" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -138,12 +143,10 @@ constCareerspagePage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build the future of technology with us. We&apos;re looking for
-              passionate individuals to join our mission of advancing AI,
-              quantum computing, and autonomous systems.
+              Build the future of technology with us. We&apos;re lookingforpassionateindividualstojoinourmissionofadvancingAI, quantum computing, and autonomous systems.
             </p>
-            <div className="flex flex-colSm: flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-cyan-500Hover:from-purple-600Hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transformHover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transformhover:scale-105">
                 View Open Positions
               </button>
               <button className="border border-white/30 text-white,
@@ -275,9 +278,8 @@ constCareerspagePage: React.FC = () => {
                   Our Culture
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  We foster an environment of innovation, collaboration, and
-                  continuous learning. Our team is diverse, inclusive, and
-                  passionate about pushing the boundaries of technology.
+                  We fosteranenvironmentofinnovation, collaboration, and continuous learning. 
+                  Our teamisdiverse, inclusive, and passionate about pushing the boundaries of technology.
                 </p>
               </div>
 
@@ -337,8 +339,8 @@ constCareerspagePage: React.FC = () => {
                 resume and let us know how you&apos;d like to contribute to our
                 mission.
               </p>
-              <div className="flex flex-colSm: flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-cyan-500Hover:from-purple-600Hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transformHover:scale-105">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transformhover:scale-105">
                   Send Your Resume
                 </button>
                 <button className="border border-white/30 text-white,

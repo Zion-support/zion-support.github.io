@@ -1,5 +1,6 @@
-export const Sitemapgenerator={
-  generate: (pages: Array<{ path: string; lastModified?: string; priority?: number }>) => { constSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+export constsitemapGenerator= {
+  generate: (pages: Array<{ path: string; last Modified?: string; priority?: number }>) => {
+    const sitemap= `<?xml version="1.0" encoding="UTF-8"?>
 <urlsetxmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
 ${pages.map(page => `  <url>
     <loc>https://ziontechgroup.com${page.path}</loc>
@@ -9,8 +10,7 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`
     
-    return sitemap
-  },
+    return sitemap},
   
   generateRobotsTxt: (sitemapUrl: string = 'https://ziontechgroup.com/sitemap.xml') => {
     return `User-agent: *

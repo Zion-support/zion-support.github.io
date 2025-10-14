@@ -30,6 +30,7 @@ import {
 } from 'lucide-react';
 
 const AiAnalyticsDashboardProPage: React.FC = () => {
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
   // const [activeTab, setActiveTab] = useState('overview');
 
@@ -153,6 +154,8 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
   ];
 
 constAianalyticsdashboardpropagePage: React.FC = () => {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b03
   return (
     <>Helmet>
         <title>Ai Analytics Dashboard Pro</title>

@@ -1,4 +1,4 @@
-export const Securityconfig={
+export constsecurityConfig= {
   csp: {
     'default-src': ["'self'"],
     'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],

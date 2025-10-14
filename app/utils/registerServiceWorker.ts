@@ -1,4 +1,4 @@
-export const Registerserviceworker=() => {
+export constregisterServiceWorker= () => {
   if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
@@ -9,7 +9,7 @@ export const Registerserviceworker=() => {
         })
         .catch((registrationError) => {
           if (process.env.NODE_ENV === 'development') {
-            console.error('SWRegistrationFailed: ', registrationError);
+            console.error('SW registrationfailed: ', registrationError);
           }
         });
     });

@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constMicrosaasservicespagePage: React.FC = () => {
+const MicroSaasServicesPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Micro Saas Services</title>

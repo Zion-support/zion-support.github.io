@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constAipasswordmanagerpagePage: React.FC = () => {
+const AiPasswordManagerPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Ai Password Manager</title>

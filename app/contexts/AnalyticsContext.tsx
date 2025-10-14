@@ -5,4 +5,4 @@ interface Analyticscontexttype {
   trackPageView: (pageName: string) => void;
 }
 
-export const Analyticscontext=createContext<AnalyticsContextType | undefined>(undefined);
+export constAnalyticsContext= createContext<AnalyticsContextType | undefined>(undefined);

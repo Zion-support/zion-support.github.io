@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constAimlplatformpagePage: React.FC = () => {
+const AiMlPlatformPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Ai Ml Platform</title>

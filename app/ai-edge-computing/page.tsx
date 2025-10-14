@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constAiedgecomputingpagePage: React.FC = () => {
+const AiEdgeComputingPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Ai Edge Computing</title>

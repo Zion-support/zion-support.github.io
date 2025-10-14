@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constSmartexpensecategorizerpagePage: React.FC = () => {
+const SmartExpenseCategorizerPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Smart Expense Categorizer</title>

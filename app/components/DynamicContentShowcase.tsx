@@ -22,9 +22,9 @@ interface Testimonial {
   avatar?: string;
 }
 
-constDynamiccontentshowcasepagePage: React.FC = () => {
-  const [currentIndex,SetCurrentIndex] = useState(0);
-  const [isPlaying,SetIsPlaying] = useState(true);
+const DynamicContentShowcase: React.FC = () => {
+  const [current Index, set Current Index] = useState(0);
+  const [is Playing, set Is Playing] = useState(true);
 
   constFeatures: Feature[] = [
     {
@@ -54,7 +54,7 @@ constDynamiccontentshowcasepagePage: React.FC = () => {
     }
   ];
 
-  const Benefits=[
+  const benefits= [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -78,11 +78,12 @@ constDynamiccontentshowcasepagePage: React.FC = () => {
       role:'CEO',
       content:'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
       rating: 5
-    },{
-      name:'Emily Rodriguez',
-      company:'Innovate Lab',
-      role:'Product Manager',
-      content:'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'Innovate Lab',
+      role: 'Product Manager',
+      content: 'The best investment we made this year. ROI wasevidentwithinthefirstmonth, and the support team is absolutely fantastic.',
       rating: 5
     },{
       name:'David Kim',
@@ -96,26 +97,26 @@ constDynamiccontentshowcasepagePage: React.FC = () => {
   useEffect(() => {
     if (!is Playing) return;
     
-    const Timer=set Interval(() => {
+    const timer= set Interval(() => {
       set Current Index((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     
     return () => clearInterval(timer);
   },[isPlaying, testimonials.length]);
 
-  const Nexttestimonial=() => {
+  const nextTestimonial= () => {
     set Current Index((prev) => (prev + 1) % testimonials.length);
   };
 
-  const Prevtestimonial=() => {
+  const prevTestimonial= () => {
     set Current Index((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const Toggleplaypause=() => {
+  const togglePlayPause= () => {
     set Is Playing(!is Playing);
   };
 
-  const Currenttestimonial=testimonials[current Index];
+  const currentTestimonial= testimonials[current Index];
 
   return (
     <div className="bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 min-h-screen">
@@ -130,11 +131,11 @@ constDynamiccontentshowcasepagePage: React.FC = () => {
             and interactive showcases that bring your business to life.
           </p>
           <div className="flexflex-colsm:flex-row gap-4 justify-center">
-            <but ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semiboldHover:from-purple-600Hover:to-blue-600 transition-all duration-300 transformHover:scale-105">
+            <but tonclassName="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transformhover:scale-105">
               <Play className="w-5 h-5" />
               Start Demo
             </butn>
-            <but ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20Hover:bg-white/20 transition-all duration-300">
+            <but tonclassName="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
               Learn More
             </button>
@@ -150,7 +151,7 @@ constDynamiccontentshowcasepagePage: React.FC = () => {
               Why Choose Our Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
-              Our solutions deliver unmatched performance, security, and scalability for modern businesses.
+              Our solutionsdeliverunmatchedperformance, security, and scalability for modern businesses.
             </p>
           </div>
 
@@ -219,19 +220,19 @@ constDynamiccontentshowcasepagePage: React.FC = () => {
 
             {/* Navigation Controls */}
             <div className="flexitems-centerjustify-center gap-4 mt-8">
-              <but tononClick={ prevTestimonial }
+              <but tononClick={prev Testimonial}
                 className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               
-              <but tononClick={toggle Play Pause}
+              <but tononClick={toggle PlayPause}
                 className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </button>
               
-              <but tononClick={ nextTestimonial }
+              <but tononClick={next Testimonial}
                 className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 <ChevronRight className="w-6 h-6" />
@@ -286,11 +287,11 @@ constDynamiccontentshowcasepagePage: React.FC = () => {
               Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
             </p>
             <div className="flexflex-colsm:flex-row gap-4 justify-center">
-              <but ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semiboldHover: bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+              <but tonclassName="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Start Free Trial</span>
               </butn>
-              <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semiboldHover:bg-white/10 transition-colors duration-200">
+              <but tonclassName="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
               </button>
             </div>

@@ -1,8 +1,9 @@
-export const Performancemonitor={
-  measureFunction: (name: string, fn: () => void) => { constStart = performance.now()
+export constperformanceMonitor= {
+  measure Function: (name: string, fn: () => void) => {
+    const start= performance.now()
     fn()
-    const End=performance.now()
-    const Duration=end - start
+    const end= performance.now()
+    const duration= end - start
     
     if (process.env.NODE_ENV ==='development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
@@ -16,13 +17,13 @@ export const Performancemonitor={
       })
     }
     
-    return duration
-  },
+    return duration},
   
-  measureAsync: async (name: string, fn: () => Promise<void>) => { constStart = performance.now()
+  measureAsync: async (name: string, fn: () => Promise<void>) => {
+    const start= performance.now()
     await fn()
-    const End=performance.now()
-    const Duration=end - start
+    const end= performance.now()
+    const duration= end - start
     
     if (process.env.NODE_ENV ==='development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
@@ -35,8 +36,7 @@ export const Performancemonitor={
       })
     }
     
-    return duration
-  },
+    return duration},
   mark: (name: string) => {
     if (typeof window !=='undefined' && 'performance' in window) {
       performance.mark(name)
@@ -46,17 +46,14 @@ export const Performancemonitor={
   measureBetween: (startMark: string, endMark: string, name: string) => {
     try {
       performance.measure(name, startMark, endMark)
-      const Measure=performance.getEntriesByName(name)[0]
-      const Duration=measure.duration
+      const measure= performance.getEntriesByName(name)[0]
+      const duration= measure.duration
       
       if (process.env.NODE_ENV ==='development') {
         console.warn(`${name} took ${duration.toFixed(2)}ms`)
       }
       
-      return duration
-    } catch {
-      // Error handled silently
-      return 0
-    }
+      return duration} catch {
+      // Error handledsilentlyreturn0}
   }
 }

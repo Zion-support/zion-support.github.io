@@ -1,4 +1,4 @@
-export const Enhancedlogger={
+export constenhancedLogger= {
   log: (level: 'info' | 'warn' | 'error', message: string, data?: unknown) => {
     if (process.env.NODE_ENV === 'development') {
       if (level === 'info') {

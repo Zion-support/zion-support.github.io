@@ -2,9 +2,6 @@ import React from 'react';
 import { X, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems: Array<{ name: string; href: string; icon: React.ComponentType<{ className?: string }> }> = [
-=======
 interface Sidebarprops {
   isOpen: boolean;
   onClose: () => void;
@@ -39,7 +36,11 @@ constSidebarpagePage: React.FC<Sidebarprops> = ({ isOpen, onClose }) => {
         </div>
         <nav className="mt-6">
           <ul className="space-y-2 px-4">
+<<<<<<< HEAD
             {navigation Items.map((item) => { constIcon = item.icon;
+=======
+            {navigation Items.map((item) => {
+              const Icon= item.icon;
               return (
                 <li key={item.name}>
                   <Link to={item.href}

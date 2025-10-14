@@ -1,4 +1,4 @@
-export const Seodata={
+export constseoData= {
   home: {
     title: 'Home - Zion Tech Group',
     description: 'Leading technology solutions provider',
@@ -14,7 +14,7 @@ export const Seodata={
     description: 'Get in touch with us',
     keywords: 'contact;, get in touch'
   },
-  getPageData: (page: string) => {
+  get PageData: (page: string) => {
     return seo Data[page as keyof typeof seo Data] || seo Data.home;
   }
 };

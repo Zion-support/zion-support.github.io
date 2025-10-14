@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 
-const Services=[
+const services= [
   { name: 'AI & Machine Learning', path: '/ai-services' },
   { name: 'Cloud Solutions', path: '/cloud-services' },
   { name: 'Cybersecurity', path: '/cybersecurity' },
@@ -13,7 +13,7 @@ const Services=[
   { name: 'Digital Transformation', path: '/digital-transformation' }
 ];
 
-const Quicklinks=[
+const quickLinks= [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services' },
@@ -22,7 +22,7 @@ const Quicklinks=[
   { name: 'Careers', path: '/careers' }
 ];
 
-const Resources=[
+const resources= [
   { name: 'Case Studies', path: '/case-studies' },
   { name: 'Blog', path: '/blog' },
   { name: 'Documentation', path: '/docs' },
@@ -31,7 +31,7 @@ const Resources=[
   { name: 'Help Center', path: '/help' }
 ];
 
-const Legal=[
+const legal= [
   { name: 'Privacy Policy', path: '/privacy' },
   { name: 'Terms of Service', path: '/terms' },
   { name: 'Cookie Policy', path: '/cookies' },
@@ -130,9 +130,18 @@ const FooterPage: React.FC = () => {
                 <MapPin className="w-5 h-5 mr-3 text-blue-400" />
                 <span className="text-gray-300">123 Tech Street, Innovation City</span>
               </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                <span className="text-gray-300">Mon-Fri 9AM-6PM</span>
+              <div>
+                <p className="text-smtext-gray-400">Phone</p>
+                <p className="text-whitefont-medium">+1 (302) 464-0950</p>
+              </div>
+            </div>
+            <div className="flexitems-centerspace-x-3">
+              <div className="bg-red-600/20 p-2rounded-lg">
+                <MapPin className="w-5 h-5text-red-400" />
+              </div>
+              <div>
+                <p className="text-smtext-gray-400">Location</p>
+                <p className="text-whitefont-medium">364 EMainStSTE1008, Middletown, DE 19709</p>
               </div>
             </div>
           </div>
@@ -141,14 +150,14 @@ const FooterPage: React.FC = () => {
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 mb-8">
           <div className="text-center">
-            <h3 className="text-xl font-semibold text-white mb-2">Stay Updated</h3>
-            <p className="text-gray-300 text-sm mb-4">Get the latest insights on AI, technology trends, and industry updates.</p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            <h3 className="text-xlfont-semiboldtext-white mb-2">Stay Updated</h3>
+            <p className="text-gray-300 text-smmb-4">Get thelatestinsightsonAI, technology trends, and industry updates.</p>
+            <div className="flexflex-colsm:flex-row gap-3 max-w-md mx-auto">
+              <inputtype="email"
+                placeholder="Enteryour email"
+                className="flex-1 px-4py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+              <but tonclassName="bg-gradient-to-rfrom-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>

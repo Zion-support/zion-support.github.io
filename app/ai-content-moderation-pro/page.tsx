@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constAicontentmoderationpropagePage: React.FC = () => {
+const AiContentModerationProPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Ai Content Moderation Pro</title>

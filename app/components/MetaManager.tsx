@@ -17,9 +17,9 @@ const MetaManagerPage: React.FC<MetaManagerProps> = ({
   description,
   keywords,
   canonical,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+  og Image,
+  og Type= 'website',
+  twitter Card= 'summary_large_image'
 }) => {
   useEffect(() => {
     // Update document title
@@ -27,41 +27,41 @@ const MetaManagerPage: React.FC<MetaManagerProps> = ({
       document.title = title;
     }
 
-    // Update meta description;
-if (description) {
-      const metaDescription = document.querySelector('meta[name="description"]');
+    // Update meta description
+    if (description) {
+      const metaDescription= document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', description);
       } else {
-        const meta = document.createElement('meta');
-        meta.name='description';
-        meta.content= description;
+        const meta= document.createElement('meta');
+        meta.name = 'description';
+        meta.content = description;
         document.head.appendChild(meta);
       }
     }
 
-    // Update meta keywords;
-if (keywords) {
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
+    // Update meta keywords
+    if (keywords) {
+      const metaKeywords= document.querySelector('meta[name="keywords"]');
       if (metaKeywords) {
         metaKeywords.setAttribute('content', keywords);
       } else {
-        const meta = document.createElement('meta');
-        meta.name='keywords';
-        meta.content= keywords;
+        const meta= document.createElement('meta');
+        meta.name = 'keywords';
+        meta.content = keywords;
         document.head.appendChild(meta);
       }
     }
 
-    // Update canonical URL;
-if (canonical) {
-      const canonicalLink = document.querySelector('link[re l ="canonical"]');
+    // Update canonical URL
+    if (canonical) {
+      const canonicalLink= document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', canonical);
       } else {
-        const link = document.createElement('link');
-        link.rel='canonical';
-        link.hre f = canonical;
+        const link= document.createElement('link');
+        link.rel = 'canonical';
+        link.href = canonical;
         document.head.appendChild(link);
       }
     }

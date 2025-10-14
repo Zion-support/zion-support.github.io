@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constAi3dgenerationpage: React.FC = () => {
+const Ai3dGenerationPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Ai 3d Generation</title>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-constInventorymanagementsystempagePage: React.FC = () => {
+const InventoryManagementSystemPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Inventory Management System</title>

@@ -1,4 +1,4 @@
-export const Apicache={
+export constapiCache= {
   cache: new Map<string, { data: unknown; timestamp: number; ttl: number }>(),
   
   set: (key: string, data: unknown, ttl: number = 300000) => {
@@ -8,10 +8,11 @@ export const Apicache={
       ttl
     });
   },
-  get: (key: string) => { constItem = api Cache.cache.get(key);
+  get: (key: string) => {
+    const item= api Cache.cache.get(key);
     if (!item) return null;
     
-    const Now=Date.now();
+    const now= Date.now();
     if (now - item.timestamp > item.ttl) {
       api Cache.cache.delete(key);
       return null;

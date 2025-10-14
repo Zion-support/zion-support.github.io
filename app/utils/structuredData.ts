@@ -1,4 +1,4 @@
-export const Structureddata={
+export conststructuredData= {
   organization: {
     '@context': 'https://schema.org',
     '@type': 'Organization',

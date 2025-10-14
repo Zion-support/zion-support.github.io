@@ -1,5 +1,6 @@
-export const Errorhandlerenhanced={
-  handle: (error: Error, context?: Record<string, unknown>) => { constErrorinfo = {
+export consterrorHandlerEnhanced= {
+  handle: (error: Error, context?: Record<string, unknown>) => {
+    const errorInfo= {
       message: error.message,
       stack: error.stack,
       timestamp: new Date().toISOString(),

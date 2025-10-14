@@ -14,8 +14,8 @@ interface Slide {
   }[];
 }
 
-constContentcarouselpagePage: React.FC = () => {
-  const [currentSlide,SetCurrentSlide] = useState(0);
+const ContentCarousel: React.FC = () => {
+  const [current Slide, set Current Slide] = useState(0);
 
   constSlides: Slide[] = [
     {
@@ -55,20 +55,21 @@ constContentcarouselpagePage: React.FC = () => {
     }
   ];
 
-  const Currentslidedata=slides[currentSlide];
+  const currentSlideData= slides[currentSlide];
 
-  useEffect(() => { constTimer = setInterval(() => {
+  useEffect(() => {
+    const timer= setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(timer);
   },[slides.length]);
 
-  const Nextslide=() => {
+  const nextSlide= () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  const Prevslide=() => {
+  const prevSlide= () => {
     set Current Slide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
@@ -132,11 +133,11 @@ constContentcarouselpagePage: React.FC = () => {
 
                 {/* CTA */}
                 <div className="flexflex-colsm:flex-row gap-4">
-                  <but ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semiboldHover: from-purple-600Hover:to-blue-600 transition-all duration-300 transformHover:scale-105">
+                  <but tonclassName="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transformhover:scale-105">
                     <Zap className="w-5 h-5" />
                     Get Started
                   </butn>
-                  <but ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20Hover:bg-white/20 transition-all duration-300">
+                  <but tonclassName="inline-flexitems-centergap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <ArrowRight className="w-5 h-5" />
                     Learn More
                   </button>

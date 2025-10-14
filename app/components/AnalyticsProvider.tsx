@@ -2,25 +2,19 @@ import React, { ReactNode } from 'react';
 import { AnalyticsContext  } from '../contexts/AnalyticsContext';
 
 interface AnalyticsProviderProps {
-  
-  children: ReactNode;
-
-interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: React Node;
 }
 
-export const AnalyticsProviderPage: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+export constAnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const trackEvent= (eventName: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
       console.warn('Analytics Event: ', eventName, properties);
     }
-    // TODO: Implement actual analytics tracking;
-  };
-  const trackPageView = (pageName: string) => {
-    console.warn('Page View: ', pageName);
-    // TODO: Implement actual page view tracking
-  };
-  const value ={
+    // TODO: Implement actualanalyticstracking};
+  const trackPageView= (pageName: string) => {
+    console.warn('Page View:', pageName);
+    // TODO: Implement actualpageviewtracking};
+  const value= {
     trackEvent,
     trackPageView};
   return (

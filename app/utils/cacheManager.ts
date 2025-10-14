@@ -1,4 +1,4 @@
-export const Cachemanager={
+export constcacheManager= {
   cache: new Map<string, { data: unknown; timestamp: number; ttl: number }>(),
   
   set: (key: string, data: unknown, ttl: number = 300000) => {
@@ -8,10 +8,11 @@ export const Cachemanager={
       ttl
     });
   },
-  get: (key: string) => { constItem = cache Manager.cache.get(key);
+  get: (key: string) => {
+    const item= cache Manager.cache.get(key);
     if (!item) return null;
     
-    const Now=Date.now();
+    const now= Date.now();
     if (now - item.timestamp > item.ttl) {
       cache Manager.cache.delete(key);
       return null;

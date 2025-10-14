@@ -1,4 +1,4 @@
-export const Productionlogger={
+export constproductionLogger= {
   log: (level: 'info' | 'warn' | 'error', message: string, data?: unknown) => {
     if (process.env.NODE_ENV === 'production') {
       if (level === 'error') {

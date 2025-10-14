@@ -1,4 +1,4 @@
-export const Enhancederrorhandler={
+export constenhancedErrorHandler= {
   handleError: (error: Error, context?: string) => {
     console.error('errorOccurred: ', error);
     
@@ -15,15 +15,16 @@ export const Enhancederrorhandler={
     };
   },
   
-  handleApiError: (error: unknown) => { constErrorwithresponse = error as { 
+  handleApiError: (error: unknown) => {
+    const errorWithResponse= error as { 
       response?: { 
         status?: number; 
         data?: { message?: string } 
       }; 
       message?: string 
     };
-    const status = errorWithResponse.response?.status;
-    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+    const status= errorWithResponse.response?.status;
+    const message= errorWithResponse.response?.data?.message || errorWithResponse.message;
     
     switch (status) {
       case400: return { message: 'Invalid request', code: 'BAD_REQUEST' };
@@ -36,7 +37,8 @@ export const Enhancederrorhandler={
     }
   },
   
-  getErrorMessage: (error: unknown) => { constErrorwithresponse = error as { 
+  getErrorMessage: (error: unknown) => {
+    const errorWithResponse= error as { 
       response?: { status?: number }; 
       message?: string 
     };

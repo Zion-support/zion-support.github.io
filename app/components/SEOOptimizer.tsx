@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-interface Seooptimizerprops {
+interface SEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -26,10 +26,12 @@ constSeooptimizerpagePage: React.FC<Seooptimizerprops> = ({
     }
 
     // Update meta description
-    if (description) { constMetadescription = document.query Selector('meta[name="description"]');
+    if (description) {
+      const metaDescription= document.query Selector('meta[name="description"]');
       if (meta Description) {
         meta Description.set Attribute('content', description);
-      } else { constMeta = document.create Element('meta');
+      } else {
+        const meta= document.create Element('meta');
         meta.name = 'description';
         meta.content = description;
         document.head.append Child(meta);
@@ -37,10 +39,12 @@ constSeooptimizerpagePage: React.FC<Seooptimizerprops> = ({
     }
 
     // Update meta keywords
-    if (keywords) { constMetakeywords = document.query Selector('meta[name="keywords"]');
+    if (keywords) {
+      const metaKeywords= document.query Selector('meta[name="keywords"]');
       if (meta Keywords) {
         meta Keywords.set Attribute('content', keywords);
-      } else { constMeta = document.create Element('meta');
+      } else {
+        const meta= document.create Element('meta');
         meta.name = 'keywords';
         meta.content = keywords;
         document.head.append Child(meta);
@@ -48,10 +52,12 @@ constSeooptimizerpagePage: React.FC<Seooptimizerprops> = ({
     }
 
     // Update canonical URL
-    if (canonical) { constCanonicallink = document.query Selector('link[rel="canonical"]');
+    if (canonical) {
+      const canonicalLink= document.query Selector('link[rel="canonical"]');
       if (canonical Link) {
         canonical Link.set Attribute('href', canonical);
-      } else { constLink = document.create Element('link');
+      } else {
+        const link= document.create Element('link');
         link.rel = 'canonical';
         link.href = canonical;
         document.head.append Child(link);
@@ -59,8 +65,7 @@ constSeooptimizerpagePage: React.FC<Seooptimizerprops> = ({
     }
   }, [title, description, keywords, canonical]);
 
-  return null; // This component doesn't render anything
-};
+  return null; // This component doesn't renderanything};
 
 export default SEOOptimizer;
 =======
