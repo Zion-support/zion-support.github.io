@@ -1,20 +1,4 @@
-import React from 'react';
-<<<<<<< HEAD
-import { createRoot } from 'react-dom/client';
-import App from './App';
 
-const container = document.getElementById('root');
-if (!container) {
-  throw new Error('Root element not found');
-}
-
-const root = createRoot(container);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-=======
 import { Helmet } from 'react-helmet-async';
 
 const Main: React.FC = () => {
@@ -102,4 +86,3 @@ const Main: React.FC = () => {
 };
 
 export default Main;
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79

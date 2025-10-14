@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  return <>{children}</>;
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
@@ -55,7 +46,3 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       {children}
     </AnalyticsContext.Provider>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-e238
-};
-
-export default AnalyticsProvider;
