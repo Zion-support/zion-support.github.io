@@ -1,5 +1,3 @@
-import { ArrowRight, Zap, TrendingDown, Leaf, BarChart3, Star, CheckCircle, Brain, Shield, Clock } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function ZionAiEnergyManager() {

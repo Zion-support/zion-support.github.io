@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Mail, CheckCircle } from "lucide-react";
 
 interface ContentNewsletterSignupProps {

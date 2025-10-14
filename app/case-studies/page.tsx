@@ -1,9 +1,5 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Users, Award, TrendingUp, Globe, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Award, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [

@@ -1,5 +1,3 @@
-import { ArrowRight, Mic, Video, Calendar, Users, Star, CheckCircle, Brain, Zap, Clock } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function ZionAiMeetingAssistant() {

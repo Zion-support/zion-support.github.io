@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useCallback } from "react";
 import logger from "../../utils/logger";
 
 // Performance metrics interface for future use

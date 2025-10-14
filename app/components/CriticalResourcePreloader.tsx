@@ -1,16 +1,4 @@
 'use client'
-import { useEffect } from 'react'
-
-const CriticalResourcePreloader = () => {
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Critical fonts
-      const criticalFonts = [
-        {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
-          as: 'style',
-          crossorigin: 'anonymous'
-        },
         {
           href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
           as: 'font',

@@ -1,5 +1,3 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Users } from 'lucide-react'
 
 const Navigation = React.memo(() => {
