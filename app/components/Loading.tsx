@@ -1,109 +1,70 @@
 import React from 'react'
-import { Brain, Zap, Shield, Globe } from 'lucide-react;'
-interface LoadingProps {';}
-  message?: string'}
-  size?: 'sm' | 'md' | 'lg';}
-}
-
-const Loading: React.FC<LoadingProps> = ({ }
-  message = "Loading...", '})
-  size = 'md' })
-}) => {
-  const sizeClasses = {'}
-    sm: 'w-8 h-8','}
-    md: 'w-12 h-12','}
-    lg: 'w-16 h-16'}
-  }
-  const iconSizeClasses = {'}
-    sm: 'w-4 h-4','}
-    md: 'w-6 h-6','}
-    lg: 'w-8 h-8'}
-  }
-  const icons = [Brain, Zap, Shield, Globe]
-  const [currentIcon, setCurrentIcon] = React.useState(0)
-  React.useEffect(() => {}
-    const interval = setInterval(() => {}
-      setCurrentIcon((prev) => (prev + 1) % icons.length);}
-    }, 800); // Faster animation for better UX
-
-    return () => clearInterval(interval)
-  }, [])
-  const CurrentIcon = icons[currentIcon]
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ]
   return (
-    <div></div>
-        {/* Animated Icon */}
-        <div>div</div>
-      <div>CurrentIcon</div>
-      <CurrentIcon></CurrentIcon>
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Advanced components solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="components, solutions, technology, enterprise"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced components solutions for modern businesses. Cutting-edge technology and expert implementation.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </section>)
-            Ready to Get Started?
-          <p className="text-xl text-blue-100 mb-8">'
-            Let's discuss how our loading'
-            services can help you achieve your goals.
-          <a></a>
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover: "bg-gray-100 transition-colors
-          >
-            Get Started Today
-        </div>
-      </section>;)
-    </div>)
+      </div>
+    </>
   )
-"}
-      { /* CTA Section */ }"""
-      <section className="py-16 px-4 bg-blue-600">"""
-        <div>h2</div>
-      <h2>""
-
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8"></p>
-            Let&apos;s discuss how our loading 
-            services can help you achieve your goals.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover: "bg-gray-100 transition-colors
-          ></a>
-            Get Started Today
-          </a>
-        </div>
-      </section>
-    </div>
-  )
-"}
-                We provide comprehensive loading
-                solutions tailored to your specific needs and requirements.</p>
-              <ul>li</ul>
-      <li>span</li>
-      <span>
-                  Custom solutions</li>
-                <li>span</li>
-      <span></span>
-                  Expert consultation</li>
-                <li>span</li>
-      <span></span>
-                  Ongoing support</li></ul></div>
-            <h3>h3</h3>
-      <h3>Get Started</h3>
-              <p className="mb-6"></p>
-                Ready to transform your business with our loading services?</p>
-              <a
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover: "bg-gray-100 transition-colors></a>
-                Contact Us</a></div></div></div></section>{/* CTA Section */"}
-      <section>div</section>
-      <div>h2</div>
-      <h2>
-            Ready to Get Started?</h2>
-          <p className="text-xl text-blue-100 mb-8"></p>'
-            Let's discuss how our loading'
-            services can help you achieve your goals.</p>
-          <a"
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"></a>
-            Get Started Today</a></div></section></div>
-export default Loading
-'
+}
+export default Page

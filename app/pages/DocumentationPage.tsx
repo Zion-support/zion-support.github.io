@@ -1,264 +1,70 @@
-import React from 'react;'
-import { Link } from 'react-router-dom;'
-import SEO from '../components/SEO
-import { DocumentTextIcon,
-  CodeBracketIcon,
-  CogIcon,'
-  QuestionMarkCircleIcon,;'
-  ArrowRightIcon,';}
-  PhoneIcon,';}
-  EnvelopeIcon,'}
-  MapPinIcon''}
-} from '@heroicons/react/24/outline
-export default function DocumentationPage() {
-  const sections = [']
-    {'
-      icon: CodeBracketIcon,'}
-      title: 'API Documentation','}
-      description: 'Comprehensive API reference for all our services and integrations.',}
-      links: ['}
-        { name: 'Authentication', href: '/docs/api/authentication' },'
-        { name: 'AI Services API', href: '/docs/' },'
-        { name: 'Cloud Management API', href: '/docs/' },']
-        { name: 'Webhooks', href: '/docs/api/webhooks' }]
-      ]
+import React from 'react'
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: CogIcon,'}
-      title: 'Integration Guides','}
-      description: 'Step-by-step guides for integrating our solutions with your systems.',}
-      links: ['}
-        { name: 'Getting Started', href: '/docs/' },'
-        { name: 'SDK Installation', href: '/docs/integration/sdk' },'
-        { name: 'Configuration', href: '/docs/integration/configuration' },']
-        { name: 'Best Practices', href: '/docs/' }]
-      ]
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: DocumentTextIcon,'}
-      title: 'User Guides','}
-      description: 'Detailed user guides for all our products and services.',}
-      links: ['}
-        { name: 'AI Solutions Guide', href: '/docs/' },'
-        { name: 'Cloud Infrastructure', href: '/docs/' },'
-        { name: 'Cybersecurity Setup', href: '/docs/guides/cybersecurity' },']
-        { name: 'Micro SaaS Development', href: '/docs/' }]
-      ]
-    },
-    {
-      icon: QuestionMarkCircleIcon,'}
-      title: 'Troubleshooting','}
-      description: 'Common issues and solutions to help you resolve problems quickly.',}
-      links: ['}
-        { name: 'FAQ', href: '/docs/troubleshooting/faq' },'
-        { name: 'Error Codes', href: '/docs/' },'
-        { name: 'Performance Issues', href: '/docs/troubleshooting/performance' },']
-        { name: 'Contact Support', href: '/support' }]
-      ]
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ]
-  const quickStart = ['
-    { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' },'
-    { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },'
-    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },']
-    { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }]
-  ]'
-import { Helmet } from 'react-helmet-async
-const DocumentationPage: "React.FC = () => {'
-  return (')
-    <></>'
-      <SEO '
-        title=Documentation - Zion Tech Group
-        description=Comprehensive documentation for all Zion Tech Group services including API references", integration guides, user manuals, and troubleshooting resources."}
-        keywords="documentation, API docs, integration guides, user manual, troubleshooting, SDK, developer resources"}
-        url="/docs"}
-      /></SEO>}
-      {/* Hero Section */}
-      <section>div</section>
-      <div></div>
-        </div>
-        
-        <div>div</div>
-                <DocumentTextIcon className="w-10 h-10 text-white" /></DocumentTextIcon>
-              </div>
-            </div>
-            <h1 className="text-5xl md: "text-6xl font-bold mb-6 bg-gradient-to-r from-white via-green-200 to-emerald-200 bg-clip-text text-transparent></h1>
-              Documentation
+  return (
+    <>
+      <EnhancedSEO 
+        title="Pages - Zion Tech Group"
+        description="Advanced pages solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="pages, solutions, technology, enterprise"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Pages
             </h1>
-            <p className="text-xl" md:text-2xl text-gray-300 mb-8 leading-relaxed></p>
-              Everything You Need to Get Started
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced pages solutions for modern businesses. Cutting-edge technology and expert implementation.
             </p>
-            <p className="text-lg" text-gray-400 mb-12 max-w-3xl mx-auto></p>
-              Comprehensive documentation", API references, and guides to help you 
-              integrate and use our services effectively.
-            </p>
-            
-            <div>Link</div>
-      <Link></Link>
-                Quick Start Guide
-                <ArrowRightIcon className="w-5" h-5 group-hover: "translate-x-1 transition-transform /></ArrowRightIcon>
-              </Link>
-              <Link 
-                to=/support 
-                className="group" border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300 flex items-center gap-2
-              ></Link>
-                Get Support
-                <ArrowRightIcon className="w-5" h-5 group-hover:translate-x-1 transition-transform /></ArrowRightIcon>
-              </Link>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Quick Start Section */"}
-      <section>div</section>
-      <div></div>
-            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6></h2>
-              Quick Start Guide
-            </h2>
-            <p className="text-xl" text-gray-300 max-w-3xl mx-auto></p>
-              Get up and running with our services in just a few steps
-            </p>
-          </div>
-          )
-          <div className="grid" md:grid-cols-4 gap-8></div>)
-            {quickStart.map((step", index) => (}
-              <div>span</div>
-      <span>{step.step}</span>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>"
-                <p>{step.description}</p>")
-              </div>)
-))}
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
-      {/* Documentation Sections */}
-      <section>div</section>
-      <div></div>
-            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6></h2>
-              Documentation Sections
-            </h2>
-            <p className="text-xl" text-gray-300 max-w-3xl mx-auto></p>
-              Browse our comprehensive documentation by category
-            </p>
-          </div>
-          
-          <div className="grid" md:grid-cols-2 gap-8></div>
-            {sections.map((section", index) => (}
-              <div>div</div>
-      <div>section</div>
-      <section></section>
-                  </div>
-                  <h3>h3</h3>
-      <h3>{section.title"}</h3>
-                    <p className="text-gray-400">{section.description}</p>
-                  </div>
-                </div>)
-                <ul className="space-y-2"></ul>)
-                  {section.links.map((link, linkIndex) => (}
-                    <li>Link</li>
-      <Link></Link>}
-                        <ArrowRightIcon className="w-4 h-4 mr-2 group-hover: "translate-x-1 transition-transform /></ArrowRightIcon>"}
-                        {link.name}
-                      </Link>)
-                    </li>)
-))}
-                </ul>
-              </div>
-))}
-          </div>
-        </div>
-      </section>
-      {/* Code Examples Section */}
-      <section>div</section>
-      <div></div>
-            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-8></h2>
-              Code Examples
-            </h2>
-            <p className="text-xl" text-gray-300 mb-12></p>
-              Get started quickly with our code examples and sample implementations
-            </p>
-            
-            <h3>h3</h3>
-      <h3>Basic API Call Example</h3>
-              <pre>code</pre>
-      <code>{`// Initialize the client`"}
-const client = new ZionTechClient({'}
-  apiKey: 'your-api-key','})
-  environment: 'production;'})
-})
-// Make an API call
-const response = await client.ai.generateText({'}
-  prompt: 'Hello', world!',})
-  maxTokens: 100})
-})
-console.log(response.data)``}</code>
-              </pre>
-            </div>
-            
-            <div>h4</div>
-      <h4>JavaScript/Node.js</h4>
-                <p className="text-gray-400" text-sm mb-4>Complete examples for web applications</p>
-                <Link to=/docs/examples/javascript className="text-green-400" hover: "text-green-300 text-sm></Link>
-                  View Examples →
-                </Link>
-              </div>
-              <div>h4</div>
-      <h4>Python</h4>
-                <p className="text-gray-400" text-sm mb-4>Python SDK and examples</p>
-                <Link to=/docs/examples/python className="text-green-400" hover:text-green-300 text-sm></Link>
-                  View Examples →
-                </Link>
-              </div>
-              <div>h4</div>
-      <h4>cURL</h4>
-                <p className="text-gray-400" text-sm mb-4>Direct HTTP API calls</p>
-                <Link to=/docs/examples/curl className="text-green-400" hover:text-green-300 text-sm></Link>
-                  View Examples →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Contact Section */"}
-      <section>div</section>
-      <div></div>
-            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-8></h2>
-              Need Help?
-            </h2>
-            <p className="text-xl" text-gray-300 mb-12></p>'
-              Can't find what you're looking for? Our support team is here to help
-            </p>
-            
-            <div>PhoneIcon</div>
-      <PhoneIcon>span</PhoneIcon>
-      <span>+1-302-464-0950</span>
-              </div>
-              <div>EnvelopeIcon</div>
-      <EnvelopeIcon>span</EnvelopeIcon>
-      <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div>MapPinIcon</div>
-      <MapPinIcon>span</MapPinIcon>
-      <span>Middletown", DE</span>
-              </div>
-            </div>
-            
-            <div>Link</div>
-      <Link></Link>
-                Contact Support
-              </Link>
-              <Link 
-                to=/contact 
-                className="border-2" border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-green-400 hover:text-white transition-all duration-300
-              ></Link>
-                Get In Touch
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </>
-  )"}
-'
+  )
+}
+export default Page

@@ -1,92 +1,70 @@
-import React from 'react;'
-import { Cookie, Settings } from "lucide-react"
-const CookieConsent: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false)
-  const [showSettings, setShowSettings] = useState(false)
-  useEffect(() => {}
-    const consent = localStorage.getItem("cookie-consent");"}
-    if (!consent) {}
-      setIsVisible(true);}
+import React from 'react'
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
-  }, [])
-  const handleAccept = () => {}
-    localStorage.setItem("cookie-consent", "accepted");"}
-    setIsVisible(false);}
-  }
-  const handleReject = () => {}
-    localStorage.setItem("cookie-consent", "rejected");"}
-    setIsVisible(false);}
-  }
-  const handleSettings = () => {}
-    setShowSettings(!showSettings);}
-  }
-  if (!isVisible) return null
+  ]
   return (
-    <div>div</div>
-            <Cookie>div</Cookie>
-      <h3>h3</h3>
-      <h3>
-                We use cookies)
-              </h3>
-              <p className="text-gray-300 text-sm mb-4"></p>
-                We use cookies to enhance your browsing experience, serve
-                personalized content, and analyze our traffic. By clicking
-                "Accept All", you consent to our use of cookies.
-              </p>
-              {showSettings && (
-                <div>h4</div>
-      <h4></h4>
-                    Cookie Preferences)
-                  </h4>
-                  <div>label</div>
-      <label>span</label>
-      <span>Essential Cookies</span>
-                      <input
-                        type="checkbox"
-                        defaultChecked))
-                        disabled
-                        className="rounded"
-                      /></input>
-                    </label>
-                    <label>span</label>
-      <span>Analytics Cookies</span>
-                      <input
-                        type="checkbox"
-                        defaultChecked
-                        className="rounded"
-                      /></input>
-                    </label>
-                    <label>span</label>
-      <span>Marketing Cookies</span>
-                      <input type="checkbox" className="rounded" /></input>}
-                    </label>}
-                  </div>})
-                </div>})
-              )}
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Advanced components solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="components, solutions, technology, enterprise"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced components solutions for modern businesses. Cutting-edge technology and expert implementation.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
 
-          <div>button</div>
-      <button>Settings</button>
-      <Settings>
-              Settings
-            </button>
-            <button
-              onClick={handleReject
-              className="px-4" py-2 border border-gray-600 text-gray-300 rounded-lg hover: "bg-gray-800 transition-colors
-            ></button>
-              Reject All
-            </button>
-            <button
-              onClick={handleAccept
-              className="px-4" py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300
-            ></button>
-              Accept All
-            </button>
-          </div>"}
-        </div>}
-      </div>}
-    </div>}
-  )}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
-export default CookieConsent
+export default Page

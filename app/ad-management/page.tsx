@@ -1,38 +1,70 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-function Page() {
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ]
   return (
-    <div>Helmet</div>
-      <Helmet>title</Helmet>
-      <title>Page - Zion Tech Group</title>
-        <meta name="description" content="404 - Zion Tech Group" />
-      </Helmet>
-      <div>h1</div>
-      <h1></h1>
-            Page)
-          </h1>
-          <p className="text-xl text-gray-600 mb-8"></p>
-            Professional page solutions tailored to your business needs.</p>
-          <div>h3</div>
-      <h3></h3>
-                Expert Solutions
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge page solutions.
+    <>
+      <EnhancedSEO 
+        title="Ad Management - Zion Tech Group"
+        description="Advanced ad management solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="ad, management, solutions, technology, enterprise"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Ad Management
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced ad management solutions for modern businesses. Cutting-edge technology and expert implementation.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
             </div>
-            <h3>h3</h3>
-      <h3>Feature 2</h3>
-              <p>Description of feature 2</p>
-            </div>
-            <h3>h3</h3>
-      <h3>Feature 3</h3>
-              <p>Description of feature 3</p>
-            </div>
-          </div>"}
-        </div>}
-      </div>})
-    </div>})
-  );}'
-}'
+          </div>
 
-'
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+export default Page

@@ -1,36 +1,70 @@
-import lucide-react from 'lucide-react;'
-const Pagebroken2Page = () => {'
-  return (')
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page Broken2 | Zion Tech Group</title>
-        <meta name="description" content="404 - Zion Tech Group" />
-      </Helmet>
-
-      <div>h1</div>
-      <h1>span</h1>
-      <span></span>
-              Page Broken2
-            </span>
-          </h1>
-          <p className="text-xl" text-gray-300 mb-8 max-w-3xl mx-auto></p>
-            Professional page broken2 services by Zion Tech Group
-          </p>
-          <div>Link</div>
-      <Link></Link>
-              Get Started
-              <ArrowRight className="w-5" h-5 ml-2 /></ArrowRight>
-            </Link>
-            <Link
-              to=/contact
-              className="border" border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: "bg-cyan-400 hover:text-slate-900 transition-all duration-300
-            ></Link>
-              Learn More
-            </Link>
+import React from 'react'
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ]
+  return (
+    <>
+      <EnhancedSEO 
+        title="Contact - Zion Tech Group"
+        description="Advanced contact solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="contact, solutions, technology, enterprise"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Contact
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced contact solutions for modern businesses. Cutting-edge technology and expert implementation.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
           </div>
-        </div>"}
-      </div>})
-    </div>)}
-  );}
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
-export default Pagebroken2Page
+export default Page

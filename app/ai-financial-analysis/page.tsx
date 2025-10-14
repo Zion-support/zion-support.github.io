@@ -1,167 +1,70 @@
 import React from 'react'
-import { ArrowRight, BarChart3, CheckCircle } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
 import EnhancedSEO from '../components/EnhancedSEO'
-import ResponsiveContainer from '../components/ResponsiveContainer'
-import FuturisticCard from '../components/FuturisticCard'
-import FuturisticButton from '../components/FuturisticButton
-'
-const AIFinancialAnalysis = () => {'
-  const features = [']
-    {'
-      title: "Predictive Financial Modeling",}
-      description: "Build accurate financial models and forecasts using AI",}
-      icon: "<TrendingUp className="w-6" h-6 />",}
-      color: "from-blue-500 to-cyan-500"}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      title: "Risk Assessment",}
-      description: "Advanced risk analysis and portfolio optimization",}
-      icon: "<Shield className="w-6" h-6 />",}
-      color: "from-green-500 to-emerald-500"}
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      title: "Real-time Market Analysis",}
-      description: "Monitor market trends and make informed decisions",}
-      icon: "<Activity className="w-6" h-6 />",}
-      color: "from-purple-500 to-pink-500"}
-    },
-    {
-      title: "Automated Reporting",}
-      description: "Generate comprehensive financial reports automatically",}
-      icon: "<FileText className="w-6" h-6 />",}
-      color: "from-orange-500 to-red-500"}]
-    }]
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
   ]
   return (
-    <div>EnhancedSEO</div>
-      <EnhancedSEO />
-      {/* Hero Section */"}
-      <section>div</section>
-      <div></div>
-          <div className="absolute" -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000></div>
-        </div>
-        
-        <ResponsiveContainer>div</ResponsiveContainer>
-      <div>DollarSign</div>
-      <DollarSign>span</DollarSign>
-      <span>AI Financial Intelligence</span>
-          </div>
-          
-          <h1>span</h1>
-      <span></span>
-              AI Financial Analysis)
-            </span>
-          </h1>
-          
-          <p className="text-lg" md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center></p>
-            Transform your financial decision-making with AI-powered analysis. 
-            Get predictive modeling", risk assessment, and automated reporting that drives better financial outcomes.
-          </p>
-          
-          <div>FuturisticButton</div>
-      <FuturisticButton>"}
-            >
-              Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon="{<BarChart3" className="w-5 h-5" />}
-            >
-              View Demo
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Features Section */}
-      <section>ResponsiveContainer</section>
-      <ResponsiveContainer>div</ResponsiveContainer>
-      <div>h2</div>
-      <h2></h2>
-              Advanced Financial Features
-            </h2>
-            <p className="text-xl" text-gray-300 max-w-4xl mx-auto leading-relaxed></p>
-              Everything you need to make smarter financial decisions with AI-powered insights.
+    <>
+      <EnhancedSEO 
+        title="Ai Financial Analysis - Zion Tech Group"
+        description="Advanced ai financial analysis solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="ai, financial, analysis, solutions, technology, enterprise"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Ai Financial Analysis
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced ai financial analysis solutions for modern businesses. Cutting-edge technology and expert implementation.
             </p>
-          </div>)
-          <div className="grid" grid-cols-1 sm: "grid-cols-2 lg:grid-cols-4 gap-6></div>)
-            {features.map((feature, index) => (
-              <FuturisticCard)
-                key="{index);"}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"}
-              ></FuturisticCard>}
-                <div}
-                  className="{`w-12" h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color`} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300``}
-                ></div>
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg md: "text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors></h3>
-                  {feature.title"}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md: "text-base></p>
-                  {feature.description"}
-                </p>)
-              </FuturisticCard>)
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Benefits Section */}
-      <section>ResponsiveContainer</section>
-      <ResponsiveContainer>div</ResponsiveContainer>
-      <div>h2</div>
-      <h2></h2>
-              Why Choose AI Financial Analysis?
-            </h2>
-            <p className="text-xl" text-gray-300 max-w-3xl mx-auto></p>
-              Experience the power of AI-driven financial intelligence that delivers measurable results.
-            </p>
-          </div>
-          <div className="grid" grid-cols-1 md: "grid-cols-2 lg:grid-cols-3 gap-8></div>
-            {benefits.map((benefit", index) => (}
-              <div>CheckCircle</div>
-      <CheckCircle>span</CheckCircle>
-      <span>{benefit}</span>)
-              </div>)
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* CTA Section */}
-      <section>ResponsiveContainer</section>
-      <ResponsiveContainer>div</ResponsiveContainer>
-      <div>h2</div>
-      <h2></h2>
-              Ready to Transform Your Financial Analysis?
-            </h2>
-            <p className="text-xl" text-gray-300 mb-8 leading-relaxed></p>
-              Join leading financial institutions using AI Financial Analysis to make smarter decisions and drive growth.
-            </p>
-            <div>FuturisticButton</div>
-      <FuturisticButton>"}
-              >
-                Start Your Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/pricing"
-                variant="outline"
-                size="lg"
-                icon="{<Target" className="w-5 h-5" />}
-              >
-                View Pricing
-              </FuturisticButton>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
-        </ResponsiveContainer>
-      </section>
 
-    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
-const page = React.lazy(() => import('./page'))
-export default page
-'
+export default Page

@@ -1,43 +1,41 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Users } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-
+import React from 'react'
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
-      title: 'WCAG Compliance',
-      description: 'Full compliance with WCAG 2.1 AA standards'
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Screen Reader Support',
-      description: 'Optimized for all major screen readers'
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: 'Inclusive Design',
-      description: 'Designed for users of all abilities'
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO 
-        title="Accessibility Solutions - Zion Tech Group"
-        description="Comprehensive accessibility solutions for web applications. WCAG compliance, screen reader support, and inclusive design."
-        keywords="accessibility, WCAG compliance, screen reader, inclusive design, web accessibility"
+        title="Accessibility - Zion Tech Group"
+        description="Advanced accessibility solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="accessibility, solutions, technology, enterprise"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              Accessibility Solutions
+              Accessibility
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Making technology accessible to everyone
+              Advanced accessibility solutions for modern businesses. Cutting-edge technology and expert implementation.
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -67,7 +65,6 @@ const Page = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default Page;
+  )
+}
+export default Page

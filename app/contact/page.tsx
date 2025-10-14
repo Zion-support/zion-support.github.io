@@ -1,233 +1,70 @@
-import React, { useState } from 'react'
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react;'
-'
-export default function ContactPage()    {'
-  const [formData, setFormData] = useState({'
-    name: '','
-    email: '','
-    company: '','}
-    phone: '','}
-    subject: '','})
-    message: ''})
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
-    setFormData({}
-      ...formData,})
-      [e.target.name]: e.target.value})
-    })}
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission}
-    await new Promise(resolve => setTimeout(resolve, 1000));}
-    }
-    setIsSubmitted(true);}
-    setIsSubmitting(false)}
-  const contactInfo = [
+import React from 'react'
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+const Page = () => {
+  const features = [
     {
-'
-      title: 'Phone','}
-      value: '+1 (555) 123-4567','}
-      description: 'Mon-Fri 9AM-6PM EST'}
-}
-    },'
-    {''}
-      icon: 'Email'''}
-      title: 'Email'''}
-      value: 'contact@ziontechgroup.com'''}
-      description: 'We respond within 24 hours'}
-    },'
-    {''}
-      icon: 'Location'''}
-      title: 'Address'''}
-      value: '123 Tech Street', Suite 100'''}
-      description: 'San Francisco', CA 94105'}
-    },'
-    {''
-      icon: 'Clock',}
-'}
-      description: '9:00 AM - 6:00 PM EST'}
-'}
-      description: '9:00 AM - 6:00 PM EST'}
-]
-    }]
-  ]
-  const subjects = ['
-    'AI Services''
-    'IT Services''
-    'Services''
-    'Micro SAAS''
-    'Digital Transformation''
-    '5G Implementation'']
-    'Other']
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
   ]
   return (
     <>
-      <EnhancedSEO) 
-        title="Page - Zion Tech Group"
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
-        keywords="page, business solutions, technology services, professional services"
-      /></EnhancedSEO>
-      {/* Hero Section */}
-      <section>div</section>
-      <div>h1</div>
-      <h1>
-            Contact
-            <span className="block" bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent></span>
-              Us
-            </span>
-          </h1>
-          <p className="text-xl" text-gray-300 mb-8 max-w-3xl mx-auto></p>
-            Ready to transform your business with AI and IT solutions? 
-            Get in touch with our experts today.
-          </p>
-        </div>
-</section>
-
-      {/* Contact Info */"}
-      <section>div</section>
-      <div>h2</div>
-      <h2>
-            Get in Touch
-          </h2>)
-          <div className="grid md: "grid-cols-2 lg:grid-cols-4 gap-8></div>)
-            {contactInfo.map((info", index) => {}
-              const Icon = info.icon;}
-              return (}
-                <div>Icon</div>
-      <Icon></Icon>
-                  </div>
-                  <h3 className="text-lg" font-semibold text-white mb-2>{info.title"}</h3>
-                  <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
-                  <p className="text-gray-400 text-sm">{info.description}</p>)
-                </div>)
-              )})}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section>div</section>
-      <div>h2</div>
-      <h2>
-            Send us a Message
-          </h2>
-          
-          {isSubmitted ? (
-            <div>Circle</div>
-      <Circle></Circle>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6"></p>'
-                Thank you for contacting us. We'll get back to you within 24 hours.
-              </p>)
-              <button)
-                onClick="{()" => {
-                  setIsSubmitted(false)
-                  setFormData({'
-                    name: '','
-                    email: '','
-                    company: '','}
-                    phone: '','}
-                    subject: '','})
-                    message: ''})
-                  })}}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover: "from-cyan-600 hover:to-blue-700 transition-all duration-300
-              >
+      <EnhancedSEO 
+        title="Contact - Zion Tech Group"
+        description="Advanced contact solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="contact, solutions, technology, enterprise"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Contact
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced contact solutions for modern businesses. Cutting-edge technology and expert implementation.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Get Started
-                <ArrowRight className="ml-2" w-5 h-5 group-hover:translate-x-1 transition-transform /></ArrowRight>
-              </Link>
-              <Link
-                to=/demo
-                className="inline-flex" items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300
-              ></Link>
-                View Demo
-              </Link>
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
-        </section>
 
-        {/* Features Section */"}
-        <section>div</section>
-      <div></div>
-              <h2 className="text-3xl" md:text-4xl font-bold text-white mb-4></h2>
-                Why Choose Our Page Services?
-              </h2>
-              <p className="text-xl" text-gray-300 max-w-2xl mx-auto></p>
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
-
-            <div className="grid" grid-cols-1 md:grid-cols-3 gap-8></div>
-              {features.map((feature, index) => (}
-                <div></div>
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>)
-                </div>)
-              ))}
-            </div>
-
-              <div>label</div>
-      <label></label>
-                  Subject *
-                </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  value="{formData.subject;"
-                  onChange="{handleChange;"
-                  required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus: "outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"}
-                ></select>}
-                  <option value="">Select a subject</option>}
-                  {subjects.map((subject, index) => (}
-                    <option key="{index}" value="{subject}"></option>
-                      {subject})
-                    </option>)
-                  ))}
-                </select>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
               </div>
-
-              <div>label</div>
-      <label></label>
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value="{formData.message;"
-                  onChange="{handleChange;"
-                  required
-                  rows="{6;"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none
-                  placeholder=Tell us about your project or how we can help you...
-                /></textarea>
-              </div>
-
-              <div>button</div>
-      <button></button>
-                  {isSubmitting ? (
-                    <></>
-                      <div className="inline-block" w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2></div>
-                      Sending...)
-                    </>)
-                  ) : (
-                    <></>"}
-                      Send Message}
-                      <Send className="w-5 h-5 ml-2 inline" /></Send>})
-                    </>})
-                  )}
-                </button>
-              </div>
-            </form>
-          )}
+            ))}
+          </div>
         </div>
-      </section>
-    </div>
-  )}
-
-'
+      </div>
+    </>
+  )
+}
+export default Page

@@ -1,67 +1,70 @@
-import React, { lazy, Suspense } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-const HomePage = lazy(() => import("./page"))
-const AboutPage = lazy(() => import("./about/page"))
-const ContactPage = lazy(() => import("./contact/page"))
-const ServicesPage = lazy(() => import("./services/page"))
-const PricingPage = lazy(() => import("./pricing/page"))
-const CaseStudiesPage = lazy(() => import("./case-studies/page"))
-const BlogPage = lazy(() => import("./blog/page"))
-const TeamPage = lazy(() => import("./team/page"))
-const CareersPage = lazy(() => import("./careers/page"))
-const PrivacyPage = lazy(() => import("./privacy/page"))
-const TermsPage = lazy(() => import("./terms/page"))
-const CookiesPage = lazy(() => import("./cookies/page"))
-// 5G Solutions Pages
-const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"))
-const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"))
-const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"))
-const FiveGIoTSolutionsPage = lazy(() => import("./5g-iot-solutions/page"))
-const FiveGMobileApplicationsPage = lazy(() => import("./5g-mobile-applications/page"))
-const FiveGNetworkInfrastructurePage = lazy(() => import("./5g-network-infrastructure/page"))
-const FiveGPrivateNetworksPage = lazy(() => import("./5g-private-networks/page"))
-const FiveGSmartCitySolutionsPage = lazy(() => import("./5g-smart-city-solutions/page"))
-const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"))
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-  </div>
-)
-// Main App Component
-export default function App() {
+import React from 'react'
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ]
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/team" element={<TeamPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="/cookies" element={<CookiesPage />} />
-            
-            {/* 5G Solutions Routes */}
-            <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
-            <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-            <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
-            <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
-            <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
-            <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-            <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
-            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </HelmetProvider>
+    <>
+      <EnhancedSEO 
+        title="App - Zion Tech Group"
+        description="Advanced app solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="app, solutions, technology, enterprise"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              App
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced app solutions for modern businesses. Cutting-edge technology and expert implementation.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
+export default Page

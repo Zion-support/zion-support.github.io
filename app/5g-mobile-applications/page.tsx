@@ -1,9 +1,8 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Users } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-
+import React from 'react'
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
 const Page = () => {
   const features = [
     {
@@ -21,23 +20,22 @@ const Page = () => {
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO 
-        title="5G Mobile Applications - Zion Tech Group"
-        description="Next-generation 5G mobile applications for enhanced user experiences"
-        keywords="5G mobile apps, mobile development, 5G applications, mobile solutions"
+        title="5g Mobile Applications - Zion Tech Group"
+        description="Advanced 5g mobile applications solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="5g, mobile, applications, solutions, technology, enterprise"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              5G Mobile Applications
+              5g Mobile Applications
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Next-generation 5G mobile applications for enhanced user experiences
+              Advanced 5g mobile applications solutions for modern businesses. Cutting-edge technology and expert implementation.
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -67,7 +65,6 @@ const Page = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default Page;
+  )
+}
+export default Page

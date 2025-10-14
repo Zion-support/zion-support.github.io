@@ -1,83 +1,70 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-export default function Page() {
+import { CheckCircle } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Users } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ]
   return (
-    <div>Helmet</div>
-      <Helmet>title</Helmet>
-      <title>LoadingStates - Zion Tech Group</title>
-        <meta name="description" content="404 - Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">)
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            LoadingStates
-          <p className="text-xl text-gray-600 mb-8">
-            Professional loadingstates solutions tailored to your business needs.
-          <div className="grid md: "grid-cols-2 lg:grid-cols-3 gap-8 mt-12>
-            <div className="bg-blue-50" border border-blue-200 rounded-lg p-6>
-              <h3 className="text-lg" font-semibold text-blue-900 mb-2>
-                Expert Solutions
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge loadingstates solutions.
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Advanced components solutions for modern businesses. Cutting-edge technology and expert implementation."
+        keywords="components, solutions, technology, enterprise"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced components solutions for modern businesses. Cutting-edge technology and expert implementation.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
             </div>
-            <div className="bg-green-50" border border-green-200 rounded-lg p-6>
-              <h3 className="text-lg" font-semibold text-green-900 mb-2>
-                Custom Implementation
-              <p className="text-green-700">
-                Tailored loadingstates implementations for your specific requirements.
-            </div>
-            <div className="bg-purple-50" border border-purple-200 rounded-lg p-6>
-              <h3 className="text-lg" font-semibold text-purple-900 mb-2>
-                24/7 Support
-              <p className="text-purple-700">
-                Round-the-clock support for all your loadingstates needs.
-            </div>
-            <div className="absolute" inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20></div></div>
- cursor/fix-errors-and-merge-to-main-54ad;"}
-          </div>}
-"})
-          <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>"})
-          <p>{message || getDefaultMessage()}</p>"
-          <div className="flex justify-center space-x-2"></div>"
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div></div>"
-            <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="{{" animationDelay: '0.1s',}}></div></div>"'"'"
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style="{{" animationDelay: '0.2s',}}></div></div>'"'"
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    )}
-  }
-  return (
-<>    </div>)
-            LoadingStates</h1>
-          <p>"
-            Professional loadingstates solutions tailored to your business needs.</p>
-          <div className="grid md: "grid-cols-2 lg:grid-cols-3 gap-8 mt-12>
-            <div className="bg-blue-50" border border-blue-200 rounded-lg p-6>
-              <h3 className="text-lg" font-semibold text-blue-900 mb-2>
-                Expert Solutions</h3>
-              <p>
-                Our team of experts delivers cutting-edge loadingstates solutions.</p></div>
-            <div className="bg-green-50" border border-green-200 rounded-lg p-6>
-              <h3 className="text-lg" font-semibold text-green-900 mb-2>
-                Custom Implementation</h3>
-              <p>
-                Tailored loadingstates implementations for your specific requirements.</p></div>
-            <div className="bg-purple-50" border border-purple-200 rounded-lg p-6>
-              <h3 className="text-lg" font-semibold text-purple-900 mb-2>
-                24/7 Support</h3>
-              <p>
-                Round-the-clock support for all your loadingstates needs.</p></div></div>
-          <div className="mt-12">
-            <button className="bg-blue-600" text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors>)
-              Get Started Today</button></div></div></div></div>)
-  )"}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );}'
-}'
-'
+    </>
+  )
+}
+export default Page
