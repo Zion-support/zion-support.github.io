@@ -3,15 +3,15 @@ import React, { useEffect, useRef } from 'react';
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
   enableHighContrast?: boolean;
+  enableReducedMotion?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children,
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enableScreenReaderSupport = true,
   enableKeyboardNavigation = true,
-  enableScreenReader = true,
-  enableHighContrast = false
+  enableHighContrast = false,
+  enableReducedMotion = false
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 

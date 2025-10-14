@@ -21,10 +21,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only run in development or when explicitly enabled
-    if (process.env.NODE_ENV !== 'development' && !localStorage.getItem('debug-performance')) {
-      return;
-    }
+    if (typeof window === 'undefined') return;
 
     const measurePerformance = () => {
       const newMetrics: PerformanceMetrics = {

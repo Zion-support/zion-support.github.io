@@ -25,7 +25,6 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const AIServices = () => {
   const aiServices = [
     {
       title: "AI Video Generation",

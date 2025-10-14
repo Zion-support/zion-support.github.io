@@ -1,15 +1,15 @@
-// Logger utility functions
 
 export const Logger = {
-  init: () => {
-    },
-
-  process: (data: any) => {
-    return data;
+  error: (message: string, error?: unknown) => {
+    console.error(message, error);
   },
-
-  cleanup: () => {
-    },
+  info: (message: string, data?: unknown) => {
+    console.info(message, data);
+  },
+  warn: (message: string, data?: unknown) => {
+    console.warn(message, data);
+  }
 };
 
-export default Logger;
+// Export logger as default for backward compatibility
+export const logger = Logger;

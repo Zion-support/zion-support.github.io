@@ -1,202 +1,130 @@
-"use client";
-import { useEffect, useCallback } from "react";
-import logger from "../../utils/logger";
+'use client'
+import React, { useEffect } from 'react'
 
-// Performance metrics interface for future use
-// interface PerformanceMetrics {
-//   lcp?: number;
-//   fid?: number;
-//   cls?: number;
-//   fcp?: number;
-//   ttfb?: number;
-// }
-
-export default function EnhancedPerformanceOptimizer() {
-  const preloadCriticalResources = useCallback(() => {
-    const criticalResources = [
-      { href: "/fonts/inter-var.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" },
-      { href: "/images/hero-bg.webp", as: "image" },
-      { href: "/images/logo.webp", as: "image" },
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement("link");
-      link.rel = "preload";
-      link.href = resource.href;
-      link.as = resource.as;
-      if (resource.type) link.type = resource.type;
-      if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
-      document.head.appendChild(link);
-    });
-
-    logger.info("Critical resources preloaded");
-  }, []);
-
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll("img[data-src]");
-    
-    if (images.length === 0) return;
-
-    const imageObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            const src = img.dataset.src;
-            if (src) {
-              img.src = src;
-              img.classList.remove("lazy");
-              img.classList.add("loaded");
-              imageObserver.unobserve(img);
-            }
-          }
-        });
-      },
-      { rootMargin: "50px" }
-    );
-
-    images.forEach((img) => imageObserver.observe(img));
-    logger.info(`Optimizing ${images.length} images`);
-  }, []);
-
-  const optimizeFonts = useCallback(() => {
-    // Preload critical fonts
-    const fontPreloads = [
-      { href: "/fonts/inter-var.woff2", type: "font/woff2" },
-    ];
-
-    fontPreloads.forEach((font) => {
-      const link = document.createElement("link");
-      link.rel = "preload";
-      link.href = font.href;
-      link.as = "font";
-      link.type = font.type;
-      link.crossOrigin = "anonymous";
-      document.head.appendChild(link);
-    });
-
-    // Add font-display: swap to existing font faces
-    const style = document.createElement("style");
-    style.textContent = `
-      @font-face {
-        font-family: 'Inter';
-        font-display: swap;
-        src: url('/fonts/inter-var.woff2') format('woff2');
-      }
-    `;
-    document.head.appendChild(style);
-  }, []);
-
-  const deferNonCriticalScripts = useCallback(() => {
-    const scripts = document.querySelectorAll("script[data-defer]");
-    scripts.forEach((script) => {
-      const newScript = document.createElement("script");
-      newScript.src = script.getAttribute("src") || "";
-      newScript.async = true;
-      newScript.defer = true;
-      script.parentNode?.replaceChild(newScript, script);
-    });
-  }, []);
-
-  const setupPerformanceMonitoring = useCallback(() => {
-    // Monitor Core Web Vitals
-    import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
-      onCLS((metric: any) => {
-        logger.info("CLS:", metric.value);
-      });
-      onINP((metric: any) => {
-        logger.info("INP:", metric.value);
-      });
-      onFCP((metric: any) => {
-        logger.info("FCP:", metric.value);
-      });
-      onLCP((metric: any) => {
-        logger.info("LCP:", metric.value);
-      });
-      onTTFB((metric: any) => {
-        logger.info("TTFB:", metric.value);
-      });
-    }).catch((error) => {
-      logger.error("Failed to load web-vitals:", error);
-    });
-
-    // Monitor resource loading
-    if ("PerformanceObserver" in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === "navigation") {
-            const navEntry = entry as PerformanceNavigationTiming;
-            logger.info("Navigation timing:", {
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              totalTime: navEntry.loadEventEnd - navEntry.fetchStart,
-            });
-          }
-        });
-      });
-      observer.observe({ entryTypes: ["navigation", "resource"] });
+const EnhancedPerformanceOptimizer: React.FC = () => {
+  const features = [
+    {
+      title: 'Advanced Caching',
+      description: 'Intelligent caching strategies that reduce load times by up to 80%',
+      icon: '⚡'
+    },
+    {
+      title: 'Code Splitting',
+      description: 'Automatic code splitting for optimal bundle sizes and faster loading',
+      icon: '📦'
+    },
+    {
+      title: 'Image Optimization',
+      description: 'Automatic image compression and lazy loading for better performance',
+      icon: '🖼️'
+    },
+    {
+      title: 'CDN Integration',
+      description: 'Global content delivery network for lightning-fast content delivery',
+      icon: '🌐'
     }
-  }, []);
-
-  const optimizeBundleLoading = useCallback(() => {
-    // Preload next likely pages
-    const nextPages = ["/about", "/services", "/contact"];
-    nextPages.forEach((page) => {
-      const link = document.createElement("link");
-      link.rel = "prefetch";
-      link.href = page;
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  const setupServiceWorker = useCallback(() => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((registration) => {
-          logger.info("Service Worker registered:", registration);
-        })
-        .catch((error) => {
-          logger.error("Service Worker registration failed:", error);
-        });
-    }
-  }, []);
+  ]
 
   useEffect(() => {
-    // Run optimizations after DOM is ready
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", () => {
-        preloadCriticalResources();
-        optimizeImages();
-        optimizeFonts();
-        deferNonCriticalScripts();
-        setupPerformanceMonitoring();
-        optimizeBundleLoading();
-        setupServiceWorker();
-      });
-    } else {
-      preloadCriticalResources();
-      optimizeImages();
-      optimizeFonts();
-      deferNonCriticalScripts();
-      setupPerformanceMonitoring();
-      optimizeBundleLoading();
-      setupServiceWorker();
+    // Performance optimization logic
+    const optimizePerformance = () => {
+      // Preload critical resources
+      const criticalResources = [
+        '/fonts/main.woff2',
+        '/images/hero-bg.jpg'
+      ]
+      
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.href = resource
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+        document.head.appendChild(link)
+      })
     }
 
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
-  }, [
-    preloadCriticalResources,
-    optimizeImages,
-    optimizeFonts,
-    deferNonCriticalScripts,
-    setupPerformanceMonitoring,
-    optimizeBundleLoading,
-    setupServiceWorker,
-  ]);
+    optimizePerformance()
+  }, [])
 
-  return null;
+  return (
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen">
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Performance Optimizer?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our performance optimization solutions deliver unmatched speed, security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="text-4xl mb-4 text-center">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
+                <p className="text-gray-300 text-center">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Metrics Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Performance Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See the measurable improvements our optimization delivers
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-green-400 mb-2">80%</div>
+              <div className="text-xl text-white mb-2">Faster Load Times</div>
+              <div className="text-gray-300">Average improvement in page load speed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">95%</div>
+              <div className="text-xl text-white mb-2">Better Core Web Vitals</div>
+              <div className="text-gray-300">Improved Google performance scores</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">60%</div>
+              <div className="text-xl text-white mb-2">Reduced Bounce Rate</div>
+              <div className="text-gray-300">Better user engagement and retention</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Optimize Your Performance?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let us help you achieve lightning-fast performance and better user experience
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Get Started
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
 }
+
+export default EnhancedPerformanceOptimizer

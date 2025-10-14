@@ -1,20 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import App from "./App";
-import "./index.css";
+import React from "react";"
+import { Helmet } from "react-helmet-async";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
-);
+const MainPage = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Main - Zion Tech Group</title>"
+        <meta name="description" content="Main - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4 xl font-bold text-white mb-8">Main</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </>
+  );
+</Helmet></title></meta></div></div></div></h1></Helmet></title></meta></div></div></div></h1>};
 
-root.render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>,
-);
+export default MainPage;

@@ -1,30 +1,20 @@
-import { ArrowRight } from "lucide-react";
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-import { Link } from "react-router-dom";
-
-export default function AIContentWriterZionTechGroup() {
+export default function AIContentWriterPage() {
   return (
     <>
       <Helmet>
         <title>AI Content Writer - Zion Tech Group</title>
+        <meta name="description" content="AI Content Writer - Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            AI Content Writer
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional AI content writer services coming soon.
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">AI Content Writer</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our AI content writer services.
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
         </div>
       </div>
     </>

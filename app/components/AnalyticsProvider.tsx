@@ -45,18 +45,20 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       window.gtag('event', eventName, properties);
     }
     
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, properties);
-    }
-  };
+    const initAnalytics = () => {
+      
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+      document.head.appendChild(script);
 
   const trackPageView = (pageName: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.REACT_APP_GA_TRACKING_ID || 'GA_TRACKING_ID', {
         page_title: pageName,
         page_location: window.location.href,
-        ...properties
+        send_page_view: true
       });
     }
     

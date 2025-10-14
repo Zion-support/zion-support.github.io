@@ -1,154 +1,105 @@
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-interface Slide {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  features: string[];
-}
-
-interface ContentCarouselProps {
-  slides?: Slide[];
-  autoPlay?: boolean;
-  interval?: number;
-  className?: string;
-}
-
-const defaultSlides: Slide[] = [
-  {
-    id: 1,
-    title: "AI-Powered Solutions",
-    description:
-      "Transform your business with cutting-edge artificial intelligence technologies.",
-    image: "/api/placeholder/600/400",
-    features: [
-      "Machine Learning",
-      "Natural Language Processing",
-      "Computer Vision",
-    ],
-  },
-  {
-    id: 2,
-    title: "Cloud Infrastructure",
-    description: "Scalable and secure cloud solutions for modern businesses.",
-    image: "/api/placeholder/600/400",
-    features: ["Scalable Architecture", "99.9% Uptime", "Global CDN"],
-  },
-  {
-    id: 3,
-    title: "Cybersecurity",
-    description:
-      "Protect your digital assets with enterprise-grade security solutions.",
-    image: "/api/placeholder/600/400",
-    features: ["Threat Detection", "Data Encryption", "Compliance"],
-  },
-];
-
-export default function ContentCarousel({
-  slides = defaultSlides,
-  autoPlay = true,
-  interval = 5000,
-  className = "",
-}: ContentCarouselProps) {
+const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    if (!autoPlay) return;
+  const slides = [
+    {
+      title: "AI-Powered Automation",
+      description: "Transform your business processes with intelligent automation that learns and adapts.",
+      image: "🤖",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Quantum Computing Solutions",
+      description: "Harness the power of quantum computing for complex problem solving and optimization.",
+      image: "⚛️",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security and compliance for your critical data and infrastructure.",
+      image: "🔒",
+      color: "from-green-500 to-emerald-500"
+    }
+  ];
 
+  useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, interval);
+    }, 5000);
 
     return () => clearInterval(timer);
-  }, [autoPlay, interval, slides.length]);
+  }, [slides.length]);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  const goToPrevious = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToNext = () => {
+  const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   return (
-    <div className={`relative w-full ${className}`}>
-      {/* Carousel Container */}
-      <div className="relative overflow-hidden rounded-lg">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
-          {slides.map((slide) => (
-            <div key={slide.id} className="w-full flex-shrink-0">
-              <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                      {slide.title}
-                    </h3>
-                    <p className="text-gray-300 mb-6">{slide.description}</p>
-                    <ul className="space-y-2">
-                      {slide.features.map((feature, index) => (
-                        <li
-                          key={index}
-                          className="flex items-center text-gray-300"
-                        >
-                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="flex justify-center">
-                    <img
-                      src={slide.image}
-                      alt={slide.title}
-                      className="w-full max-w-md h-64 object-cover rounded-lg"
-                    />
-                  </div>
+    <section className="mb-16" aria-labelledby="carousel-heading">
+      <h2 id="carousel-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
+        Featured Solutions
+      </h2>
+      
+      <div className="relative max-w-4xl mx-auto">
+        <div className="overflow-hidden rounded-xl">
+          <div 
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {slides.map((slide, index) => (
+              <div key={index} className="w-full flex-shrink-0">
+                <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-center text-white`}>
+                  <div className="text-6xl md:text-8xl mb-6">{slide.image}</div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{slide.title}</h3>
+                  <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
+                    {slide.description}
+                  </p>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Navigation buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+
+        {/* Dots indicator */}
+        <div className="flex justify-center space-x-2 mt-6">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
           ))}
         </div>
       </div>
-
-      {/* Navigation Arrows */}
-      <button
-        onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-
-      <button
-        onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
-
-      {/* Dots Indicator */}
-      <div className="flex justify-center mt-6 space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide ? "bg-cyan-400" : "bg-gray-600"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default ContentCarousel;

@@ -127,6 +127,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+        </div>
 
           {/* Company */}
           <div>

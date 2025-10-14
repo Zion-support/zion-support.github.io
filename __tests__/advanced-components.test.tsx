@@ -1,25 +1,34 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
+import { HelmetProvider } from "react-helmet-async";
+import AdvancedSEOOptimizer from "../app/components/AdvancedSEOOptimizer";
+import AdvancedPerformanceMonitor from "../app/components/AdvancedPerformanceMonitor";
 
-const TestComponent = () => {
-  return <div>Test content</div>;
+// Mock component for testing error boundary
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  if (shouldThrow) {
+    throw new Error('Test error');
+  }
+  return <div>No error content</div>;
 };
 
 describe("Advanced Components", () => {
-  // Test implementation
-  it("should render without errors", () => {
-    expect(true).toBe(true);
+
+  describe("AdvancedSEOOptimizer", () => {
+    test("renders without crashing", () => {
+      render(
+        <HelmetProvider>
+          <AdvancedSEOOptimizer />
+        </HelmetProvider>
+      );
+      expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
+    });
   });
 
-  it("should render test content", () => {
-    render(<TestComponent />);
-    expect(screen.getByText("Test content")).toBeInTheDocument();
-  });
-
-  it("should handle console errors", () => {
-    const consoleSpy = jest
-      .spyOn(console, "error")
-      .mockImplementation(() => {});
-    // Test implementation
-    consoleSpy.mockRestore();
+  describe('MockAdvancedSEOOptimizer', () => {
+    it('renders without crashing', () => {
+      render(<MockAdvancedSEOOptimizer />);
+      expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
+    });
   });
 });

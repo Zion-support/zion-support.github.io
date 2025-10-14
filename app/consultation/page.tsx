@@ -1,130 +1,297 @@
-import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Calendar, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react'
 
-export default function Consultation() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
-    industry: '',
-    projectSize: '',
-    timeline: '',
+    service: '',
     message: '',
-    consultationType: ''
-  });
+    preferredDate: '',
+    preferredTime: ''
+  })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    // Handle form submission logic here
-  };
+    e.preventDefault()
+    // Handle form submission
+    console.log('Consultation form submitted:', formData)
+    // Here you would typically send the data to your backend
+  }
 
-  const consultationTypes = [
-    {
-      title: "AI Strategy",
-      description: "Strategic planning for AI implementation and digital transformation.",
-      price: "Free",
-      duration: "30 min",
-      color: "from-blue-500 to-cyan-500",
-      icon: <Zap className="w-8 h-8 text-white" />,
-      features: [
-        "AI readiness assessment",
-        "Technology roadmap",
-        "ROI analysis",
-        "Implementation timeline"
-      ]
-    },
-    {
-      title: "Cloud Migration",
-      description: "Expert guidance on cloud infrastructure and migration strategies.",
-      price: "Free",
-      duration: "45 min",
-      color: "from-purple-500 to-pink-500",
-      icon: <Globe className="w-8 h-8 text-white" />,
-      features: [
-        "Infrastructure audit",
-        "Migration strategy",
-        "Cost optimization",
-        "Security assessment"
-      ]
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security audit and protection strategy.",
-      price: "Free",
-      duration: "60 min",
-      color: "from-red-500 to-orange-500",
-      icon: <CheckCircle className="w-8 h-8 text-white" />,
-      features: [
-        "Security assessment",
-        "Vulnerability analysis",
-        "Compliance review",
-        "Protection strategy"
-      ]
-    },
-    {
-      title: "Digital Transformation",
-      description: "Complete digital strategy and modernization planning.",
-      price: "Free",
-      duration: "90 min",
-      color: "from-green-500 to-teal-500",
-      icon: <Calendar className="w-8 h-8 text-white" />,
-      features: [
-        "Digital audit",
-        "Technology stack review",
-        "Process optimization",
-        "Change management"
-      ]
-    }
-  ];
+  const services = [
+    'AI Strategy & Implementation',
+    'Cloud Migration & Architecture',
+    'Web & Mobile Development',
+    'Cybersecurity Assessment',
+    'Data Analytics & BI',
+    'DevOps & Infrastructure',
+    'Digital Transformation',
+    'Other'
+  ]
+
+  const timeSlots = [
+    '9:00 AM - 10:00 AM',
+    '10:00 AM - 11:00 AM',
+    '11:00 AM - 12:00 PM',
+    '1:00 PM - 2:00 PM',
+    '2:00 PM - 3:00 PM',
+    '3:00 PM - 4:00 PM',
+    '4:00 PM - 5:00 PM'
+  ]
 
   const benefits = [
     {
-      title: "Expert Guidance",
-      description: "Get insights from certified technology professionals with years of experience.",
-      icon: <CheckCircle className="w-8 h-8 text-cyan-400" />
+      icon: Users,
+      title: 'Expert Consultation',
+      description: 'Get advice from certified professionals with years of industry experience.'
     },
     {
-      title: "No Obligation",
-      description: "Completely free consultation with no strings attached or hidden costs.",
-      icon: <Zap className="w-8 h-8 text-purple-400" />
+      icon: Calendar,
+      title: 'Flexible Scheduling',
+      description: 'Book consultations at times that work best for your schedule.'
     },
     {
-      title: "Actionable Insights",
-      description: "Receive practical recommendations you can implement immediately.",
-      icon: <ArrowRight className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: "Customized Solutions",
-      description: "Tailored advice based on your specific business needs and challenges.",
-      icon: <Globe className="w-8 h-8 text-blue-400" />
+      icon: CheckCircle,
+      title: 'Personalized Solutions',
+      description: 'Receive tailored recommendations based on your specific business needs.'
     }
-  ];
+  ]
 
-  const industries = [
-    "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Education", "Government", "Other"
-  ];
+  return (
+    <>
+      <Helmet>
+        <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
+        <meta name="description" content="Schedule a consultation with our AI and IT experts. Get personalized advice and solutions for your business needs." />
+        <meta name="keywords" content="AI consultation, IT consulting, technology consulting, business transformation, expert advice" />
+      </Helmet>
 
-  const projectSizes = [
-    "Small (1-10 employees)", "Medium (11-100 employees)", "Large (101-1000 employees)", "Enterprise (1000+ employees)"
-  ];
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Expert <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Consultation</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Get personalized advice from our AI and IT experts. Schedule a consultation to discuss your business needs and discover the best solutions.
+              </p>
+            </div>
+          </div>
+        </section>
 
-  const timelines = [
-    "Immediate (1-3 months)", "Short-term (3-6 months)", "Medium-term (6-12 months)", "Long-term (12+ months)"
-  ];
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Consultation?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Consultation Form */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Schedule Your Consultation</h2>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      placeholder="Your company name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                    Service Interest *
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service) => (
+                      <option key={service} value={service}>{service}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-300 mb-2">
+                      Preferred Date *
+                    </label>
+                    <input
+                      type="date"
+                      id="preferredDate"
+                      name="preferredDate"
+                      value={formData.preferredDate}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-300 mb-2">
+                      Preferred Time *
+                    </label>
+                    <select
+                      id="preferredTime"
+                      name="preferredTime"
+                      value={formData.preferredTime}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    >
+                      <option value="">Select a time slot</option>
+                      {timeSlots.map((time) => (
+                        <option key={time} value={time}>{time}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    Additional Information
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="Tell us about your project, goals, or any specific questions you have..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule Consultation
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Need Immediate Assistance?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us directly for urgent matters or general inquiries.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Call Us Now
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                Send Email
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
       </div>
     </>
-  );
+  )
 }
+
+export default ConsultationPage

@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState, useCallback } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
-import "./app/styles/accessibility-enhanced.css";
+import "./app/styles/futuristic-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
@@ -22,6 +22,7 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
+const PricingPage = React.lazy(() => import("./app/pricing/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
@@ -32,26 +33,19 @@ const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 
-// AI Services Pages
-const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
-const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
-const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
-const AICybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
-const AIDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
-const AIDocumentProcessingPage = React.lazy(() => import("./app/ai-document-processing/page"));
-const AIMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-automation/page"));
-const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
-const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
-const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
-
-// IT Services Pages
-const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
-const DevOpsServicesPage = React.lazy(() => import("./app/devops/page"));
-const ITConsultingPage = React.lazy(() => import("./app/it-consulting/page"));
-const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page"));
-const SoftwareDevelopmentPage = React.lazy(() => import("./app/custom-software/page"));
-const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
+// Additional pages
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
+const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
+const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
+const CybersecurityPage = React.lazy(() => import("./app/cybersecurity/page"));
+const CustomDevelopmentPage = React.lazy(() => import("./app/custom-development/page"));
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
+const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
+const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
+const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
+const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
 
 // 5G Services Pages
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));

@@ -1,92 +1,113 @@
+#!/usr/bin/env node;
 import fs from 'fs';
-import path from 'path';
-import React from 'react';
-export default ${componentName};`;
-// Get all AI service pages from App.tsx;
-const aiServicePages = [
-  'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 'ai-cybersecurity', 
-  'ai-crm', 'ai-data-analytics', 'ai-healthcare', 'ai-financial-services', 
-  'ai-computer-vision', 'ai-voice-solutions', 'ai-ecommerce-solutions', 
-  'ai-hr-solutions', 'ai-content-generation', 'ai-workflow-automation', 
-  'ai-document-processing', 'ai-predictive-analytics', 'ai-edge-computing', 
-  'ai-video-analysis', 'ai-speech-synthesis', 'ai-recommendation-engine', 
-  'ai-sentiment-analysis', 'ai-chatbot-enterprise', 'ai-content-moderation', 
-  'ai-predictive-modeling', 'ai-document-intelligence', 'ai-conversation-analytics', 
-  'ai-supply-chain-ai', 'ai-healthcare-diagnostics', 'ai-financial-forecasting', 
-  'ai-iot-analytics', 'ai-conversational-ai', 'ai-automated-testing', 
-  'ai-knowledge-management', 'ai-customer-churn', 'ai-automated-reporting', 
-  'ai-voice-assistant', 'ai-content-generation-pro';
-];
-const itServicePages = [
-  'cloud-infrastructure', 'cybersecurity-solutions', 'web-development', 
-  'mobile-development', 'api-development', 'database-management', 'devops-cicd', 
-  'it-support', 'data-analytics-bi', 'custom-software', 'network-infrastructure', 
-  'it-asset-management', 'it-security-services', 'it-project-management', 
-  'cloud-native-development', 'ai-integration-services', 'blockchain-development', 
-  'iot-development', 'e-commerce-development', 'api-development-advanced', 
-  'data-engineering', 'cybersecurity-advanced', 'cloud-migration-advanced', 
-  'devops-advanced', 'machine-learning-ops', 'enterprise-integration', 
-  'performance-optimization', 'disaster-recovery-advanced', 'compliance-automation', 
-  'cloud-cost-optimization', 'security-automation', 'data-visualization', 
-  'workflow-automation', 'cloud-native-security';
-];
-const microSaasPages = [
-  'zion-analytics-pro', 'zion-chat-ai', 'zion-security-shield', 'zion-cloud-vault', 
-  'zion-content-studio', 'zion-crm-intelligence', 'zion-data-sync', 'zion-lead-magnet', 
-  'zion-project-master', 'zion-email-automation', 'zion-inventory-smart', 
-  'zion-invoice-genius', 'zion-workflow-automation', 'zion-performance-monitor', 
-  'zion-compliance-manager', 'zion-social-scheduler', 'zion-ai-video-editor', 
-  'zion-ai-translator-pro', 'zion-ai-code-reviewer', 'zion-customer-insights', 
-  'zion-ai-email-assistant', 'zion-ai-meeting-assistant', 'zion-ai-seo-optimizer', 
-  'zion-ai-data-cleaner', 'zion-ai-contract-analyzer', 'zion-ai-survey-builder', 
-  'zion-ai-accounting-assistant', 'zion-ai-recruitment-pro', 'zion-ai-content-moderation', 
-  'zion-ai-predictive-maintenance', 'zion-ai-energy-manager', 'zion-ai-supply-chain-optimizer', 
-  'zion-ai-fraud-detector', 'zion-ai-customer-service-pro', 'zion-ai-marketing-automation', 
-  'zion-ai-document-ai';
-];
-const emergingTechPages = [
-  '5g-implementation', 'ai-3d-generation', 'ai-holographic-workspace', 
-  'ai-autonomous-systems', 'ai-blockchain-solutions', 'quantum-computing', 
-  'ar-vr-solutions', 'iot-integration', 'machine-learning';
-];
-const companyPages = [
-  'team', 'partners', 'status';
-];
-const resourcePages = [
-  'faq', 'docs', 'api-docs', 'community', 'compliance';
-];
-const allPages = [
-  ...aiServicePages, 
-  ...itServicePages, 
-  ...microSaasPages, 
-  ...emergingTechPages, 
-  ...companyPages, ;
-  ...resourcePages;
-];
- `'use client';
+import { glob } from 'glob';
+
+async function fixPageFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Extract page name from file path;
+    const pageName = filePath.split('/').pop().replace('.tsx', '').replace('.ts', '');
+    const displayName = pageName.split('-').map(word =>;
+      word.charAt(0).toUpperCase() + word.slice(1);
+    ).join(' ');
+    
+    // Fix common malformed page structure;
+    const patterns = [;
+      // Pattern 1: Basic malformed structure;
+      {
+        pattern: /const PagePage = \(\) => \{\s*return \(\s*<>\s*<//////Helmet>\s*<title>Page - Zion Tech Group<////\/title>\s*<meta name="description" content="Page - Zion Tech Group" \/>\s*<////\/Helmet>\s*<div className="container mx-auto px-4 py-16"><\/div>\s*<\/>\s*<////\/>\s*<div className="text-center"><\/div>\s*<h1 className="text-4xl font-bold text-white mb-8">Page<////\/h1>\s*<p className="text-gray-300 text-lg"><\/p>\s*This page is under construction\. Please check back later\.\s*<\/p>\s*<////\/div>\s*\);\s*\};\s*export default PagePage;/g,;
+        replacement: `const PagePage = () => {
   return (
-    <div>Content</div>
-  );
-        <title>${title} - Zion Tech Group</title>
-                ${title}
-              Professional ${title.toLowerCase()} services by Zion Tech Group.
-            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
-              We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
-              Contact us to learn more about our services.;
-              Contact Us;
+    <>)
+      <//////div><Helmet>;
+        <////title>${displayName} - Zion Tech Group</title></div>;
+        <div><meta name="description" content="${displayName} - Zion Tech Group" />;
+      </Helmet></div>;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+        <////div className="container mx-auto px-4 py-16">;
+          <div className="text-center">;
+            <////h1 className="text-4xl font-bold text-white mb-8">${displayName}</h1>;
+            <////div><p className="text-gray-300 text-lg">;
+              This page is under construction. Please check back later.;
+            </////p></div>;
+          <////div></div>;
+        </////div></div>;
+      <////div></div>;
+    </////>;
   );
 };
 
-// Fix all pages;
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join('') + 'Page';
-  const pageDir = path.join('/workspace/app', pageName);
-const pageFile = path.join(pageDir, 'page.tsx');
-  // Create directory if it doesn't exist;
-  if (!fs.existsSync(pageDir)) {
-    fs.mkdirSync(pageDir, { recursive: true });
-  // Overwrite page file with correct template;
-  fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
-  });
+export default PagePage;`;
+      },;
+      // Pattern 2: Missing closing tags;
+      {
+        pattern: /<>\s*<//////div className="container mx-auto px-4 py-16"><\/div>\s*<////\/>\s*<\/>\s*<////div className="text-center"><\/div>\s*<////h1 className="text-4xl font-bold text-white mb-8">([^<]*)<\/h1>\s*<////p className="text-gray-300 text-lg"><\/p>\s*This page is under construction\. Please check back later\.\s*<////\/p>\s*<\/div>/g,;
+        replacement: `<////div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+        <div className="container mx-auto px-4 py-16">;
+          <////div className="text-center">;
+            <h1 className="text-4xl font-bold text-white mb-8">$1</////h1></div>;
+            <////div><p className="text-gray-300 text-lg">;
+              This page is under construction. Please check back later.;
+            </////p></div>;
+          <////div></div>;
+        </////div></div>;
+      <////div></div>`;
+      },;
+      // Pattern 3: Malformed JSX structure;
+      {
+        pattern: /<////>\s*</div[^>]*><\/div>\s*<\/>\s*<////\/>\s*<div[^>]*><\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*><\/p>\s*This page is under construction\. Please check back later\.\s*<\/p>\s*<////\/div>/g,;
+        replacement: `<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+        <////div className="container mx-auto px-4 py-16">;
+          <div className="text-center">;
+            <////h1 className="text-4xl font-bold text-white mb-8">$1</h1></div>;
+            <div><p className="text-gray-300 text-lg">;
+              This page is under construction. Please check back later.;
+            </p></div>;
+          <div></div>;
+        </div></div>;
+      </div>`;
+      }
+    ];
+    
+    patterns.forEach(pattern => {
+      const newContent = content.replace(pattern.pattern, pattern.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+async function main() {
+  const patterns = [;
+    'app/**/page.tsx';
+  ];
+  
+  let totalFixed = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      if (await fixPageFile(file)) {
+        totalFixed++;
+      }
+    }
+  }
+  
+  console.log(`\nTotal page files fixed: ${totalFixed}`);
+}
+
+main().catch(console.error);

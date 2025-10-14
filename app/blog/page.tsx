@@ -98,9 +98,9 @@ const BlogPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
-        <meta name="keywords" content="technology blog, AI insights, cybersecurity, cloud computing, web development, tech trends" />
+        <title>Blog - Zion Tech Group | Latest AI & IT Insights</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, web development, and cybersecurity from our expert team." />
+        <meta name="keywords" content="AI blog, technology insights, cloud computing, web development, cybersecurity, enterprise technology" />
       </Helmet>
 
       <ResponsiveContainer>

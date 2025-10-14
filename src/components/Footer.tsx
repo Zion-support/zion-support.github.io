@@ -1,48 +1,57 @@
-import React from 'react';
-export default Footer;
+
+    { name: "Cybersecurity", url: "/cybersecurity" }
   ];
+const solutions = ["
+    { name: "Quantum Computing", url: "/quantum-computing" },"
+    { name: "Autonomous Systems", url: "/autonomous-systems" },"
+    { name: "Blockchain Web3", url: "/blockchain-web3" },"
+    { name: "IoT Edge Computing", url: "/iot-edge-computing" }
   ];
+const company = ["
+    { name: "About Us", url: "/about" },"
+    { name: "Team", url: "/team" },"
+    { name: "Careers", url: "/careers" },"
+    { name: "News", url: "/news" }
   ];
-  // Removed specializedServices as it was unused;
+const support = ["
+    { name: "Documentation", url: "/documentation" },"
+    { name: "Support", url: "/support" },"
+    { name: "FAQ", url: "/faq" },"
+    { name: "Contact", url: "/contact" }
   ];
-  ];
-  ];
-  ];
-          {/* Company Info */}
-              <span className = "text-xl font-bold text-white neon-text">Zion Tech Group</span>
-              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.;
-                  +1 302 464 0950;
-                  kleber@ziontechgroup.com;
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-          {/* Micro SAAS Services */}
-              Micro SAAS;
-                    <span>{service.name}</span>
+const socialLinks = ["
+    { name: "Facebook", icon: Facebook, url: "#" },"
+    { name: "Twitter", icon: Twitter, url: "#" },"
+    { name: "LinkedIn", icon: Linkedin, url: "#" },"
+    { name: "Instagram", icon: Instagram, url: "#" },"
+    { name: "YouTube", icon: Youtube, url: "#" },"
+    { name: "GitHub", icon: Github, url: "#" }
+  ]
+
+  return ("
+<>    <footer className="bg-gray-900 text-white">"
+      <div className="max-w-7xl mx-auto px-4 py-12"></div>"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></>
+          {/* Company Info */}"
+          <div className="space-y-4"></div>"
+            <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
+            <p className="text-sm text-cyan-400">AI & IT Solutions</p>"
+            <p className="text-gray-300 text-sm leading-relaxed"></p>
+                  >
+                    {service.name}
+                  </Link>;
+                <div></li>)}
               ))}
-              View All Micro SAAS →
-          {/* AI & IT Services */}
-              AI & IT Services;
-                <h4 className = "text-white font-medium mb-2">AI Services</h4>
-                        {service.name}
-                  ))}
-                <h4 className="text-white font-medium mb-2">IT Services</h4>
-                        {service.name}
-                  ))}
-              View All Services →
-          {/* Additional AI Services */};
-              AI Tools;
-                    <span>{service.name}</span>
+              <li></li>
+                <Link"
+                  to="/services
+                  className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"></Link>
+                  >
+                    {solution.name}
+                  </Link></div>;
+                <div></li>);
               ))}
-          {/* Company & Support */}
-            <h3 className = "text-cyan-400 font-semibold mb-4">Company</h3>
-                <h4 className="text-white font-medium mb-2">Company</h4>
-                        {link.name}
-                  ))}
-                <h4 className="text-white font-medium mb-2">Support</h4>
-                        {link.name}
-                  ))}
-        {/* Bottom Section */}
-              © 2024 Zion Tech Group. All rights reserved.
-                  {link.name}
-              ))};
-  );
-};
+              <li></li>
+                <Link"
+                  to="/solutions
+                  className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"></Link>
