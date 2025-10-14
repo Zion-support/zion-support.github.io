@@ -10,7 +10,7 @@ interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     console.log('Analytics Event:', eventName, properties);
     // Add your analytics tracking logic here
@@ -39,4 +39,6 @@ export function useAnalytics() {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
   }
   return context;
-}
+};
+
+export default AnalyticsProvider;

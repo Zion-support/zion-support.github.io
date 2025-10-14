@@ -13,11 +13,11 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered solutions and IT services",
-  keywords = ["AI", "IT Solutions", "Technology", "Innovation"],
-  image,
-  url,
+  title = "Zion Tech Group - AI & IT Solutions",
+  description = "Leading provider of AI-powered IT solutions and digital transformation services.",
+  keywords = ["AI", "IT Solutions", "Digital Transformation", "Cybersecurity", "Cloud Infrastructure"],
+  image = "/images/og-image.jpg",
+  url = "https://ziontechgroup.com",
   type = "website",
   structuredData
 }) => {
@@ -51,7 +51,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { property: "og:url", content: url },
     { property: "og:type", content: type },
     { property: "og:site_name", content: "Zion Tech Group" },
-    // Twitter tags
+    // Twitter Card tags
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
@@ -70,9 +70,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta key={index} {...tag} />
       ))}
       {/* Canonical URL */}
-      {url && <link rel="canonical" href={url} />}
+      <link rel="canonical" href={url} />
     </Helmet>
   );
 };
 
-export default SEOEnhancer
+export default SEOEnhancer;

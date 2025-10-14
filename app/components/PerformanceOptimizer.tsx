@@ -42,7 +42,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     optimizeImages();
     optimizeFonts();
     optimizeResources();
-    
+
     // Cleanup function
     return () => {
       // Cleanup if needed

@@ -4,10 +4,9 @@ const ContentStatistics = () => {
   return (
     <div>
       <h2>ContentStatistics</h2>
-  );
-  );
       <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    </div>
   );
 };
-export default ContentStatistics
+
+export default ContentStatistics;

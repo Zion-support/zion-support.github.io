@@ -1,11 +1,12 @@
-import React from "react";
-export default function HeaderPage() {
+import React from 'react';
+
+const Header = () => {
   return (
     <div>
       <h2>Header</h2>
-  )
       <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    </div>
   );
 };
-export default Header
+
+export default Header;

@@ -4,10 +4,9 @@ const AdvancedPerformanceMonitor = () => {
   return (
     <div>
       <h2>AdvancedPerformanceMonitor</h2>
-  );
-  );
-      <p>This component is under construction.</p>
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
     </div>
   );
 };
-export default AdvancedPerformanceMonitor
+
+export default AdvancedPerformanceMonitor;

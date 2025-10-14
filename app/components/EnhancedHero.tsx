@@ -4,10 +4,9 @@ const EnhancedHero = () => {
   return (
     <div>
       <h2>EnhancedHero</h2>
-  );
-  );
       <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    </div>
   );
 };
-export default EnhancedHero
+
+export default EnhancedHero;
