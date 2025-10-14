@@ -835,6 +835,54 @@ body::before {
   .hover-lift:hover {
     transform: none;
   }
+
+  /* Mobile-specific futuristic effects */
+  .mobile-glow {
+    box-shadow: 0 0 10px var(--neon-cyan);
+  }
+
+  .mobile-pulse {
+    animation: neonPulse 2s ease-in-out infinite;
+  }
+}
+
+/* Tablet Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tablet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop Enhancements */
+@media (min-width: 1025px) {
+  .desktop-glow {
+    box-shadow: 
+      0 0 20px var(--neon-purple),
+      0 0 40px var(--neon-cyan),
+      0 0 60px var(--neon-pink);
+  }
+
+  .desktop-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 30px var(--neon-cyan);
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1440px) {
+  .ultra-wide-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-text {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 /* Print Styles */

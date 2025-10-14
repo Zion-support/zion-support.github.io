@@ -1,5 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock, Filter, Zap, Sparkles } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 // Loading skeleton component
@@ -14,6 +14,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
     setIsVisible(true);
@@ -23,52 +24,91 @@ const HomePage: React.FC = () => {
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI Analytics Dashboard Pro",
-      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting.",
+      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting for data-driven decisions.",
       price: "$299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
-      link: "/ai-analytics-dashboard-pro"
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Machine Learning Insights"],
+      link: "/ai-analytics-dashboard-pro",
+      category: "AI Services"
     },
     {
       icon: <Code className="w-8 h-8" />,
       title: "AI Code Assistant Pro",
-      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages.",
+      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages and frameworks.",
       price: "$199/month",
-      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support"],
-      link: "/ai-code-assistant-pro"
+      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support", "Code Review AI"],
+      link: "/ai-code-assistant-pro",
+      category: "AI Services"
     },
     {
       icon: <Cloud className="w-8 h-8" />,
       title: "AI Cloud Infrastructure",
-      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization.",
+      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization for modern businesses.",
       price: "$499/month",
-      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime"],
-      link: "/ai-cloud-infrastructure"
+      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime", "Multi-cloud Support"],
+      link: "/ai-cloud-infrastructure",
+      category: "IT Services"
     },
     {
       icon: <Wifi className="w-8 h-8" />,
       title: "5G Implementation",
-      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity.",
+      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity for smart infrastructure.",
       price: "$999/month",
-      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring"],
-      link: "/5g-implementation"
+      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring", "Smart City Solutions"],
+      link: "/5g-implementation",
+      category: "5G Solutions"
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security Suite",
       description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
       price: "$399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
-      link: "/advanced-security-suite"
+      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring", "Zero Trust Architecture"],
+      link: "/advanced-security-suite",
+      category: "IT Services"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "AI Chatbot Enterprise",
-      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities.",
+      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities for customer service.",
       price: "$149/month",
-      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
-      link: "/ai-chatbot-enterprise"
+      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard", "Voice Recognition"],
+      link: "/ai-chatbot-enterprise",
+      category: "AI Services"
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Content Generation Pro",
+      description: "Advanced AI-powered content creation for blogs, social media, marketing materials, and technical documentation.",
+      price: "$179/month",
+      features: ["Multi-format Content", "SEO Optimization", "Brand Voice Training", "Plagiarism Detection", "Multi-language Support"],
+      link: "/ai-content-generation-pro",
+      category: "Micro SAAS"
+    },
+    {
+      icon: <Code className="w-8 h-8" />,
+      title: "AI API Management",
+      description: "Intelligent API gateway with AI-powered monitoring, security, and optimization for microservices architecture.",
+      price: "$249/month",
+      features: ["API Gateway", "Rate Limiting", "Security Policies", "Analytics Dashboard", "Auto-scaling"],
+      link: "/ai-api-management",
+      category: "IT Services"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Blockchain Solutions",
+      description: "Blockchain integration with AI for smart contracts, DeFi protocols, and secure decentralized applications.",
+      price: "$599/month",
+      features: ["Smart Contracts", "DeFi Integration", "NFT Marketplace", "Security Auditing", "Cross-chain Support"],
+      link: "/ai-blockchain-solutions",
+      category: "Micro SAAS"
     }
   ];
+
+  const categories = ['All', 'AI Services', 'IT Services', '5G Solutions', 'Micro SAAS'];
+  
+  const filteredServices = selectedCategory === 'All' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
 
   const stats = [
     { number: "500+", label: "Projects Completed", icon: <Award className="w-6 h-6" /> },
@@ -90,6 +130,7 @@ const HomePage: React.FC = () => {
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-400/5 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
         {/* Grid Pattern */}
@@ -103,26 +144,37 @@ const HomePage: React.FC = () => {
           }}></div>
         </div>
 
+        {/* Floating Particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-1000"></div>
+          <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping delay-2000"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping delay-3000"></div>
+        </div>
+
         <main className="relative z-10">
           {/* Hero Section */}
           <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             <div className="container mx-auto px-4 py-20 relative z-10">
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                  <Star className="w-4 h-4 mr-2" />
-                  Trusted by 150+ Companies Worldwide
+                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-8 backdrop-blur-sm shadow-lg shadow-cyan-500/10">
+                  <Zap className="w-4 h-4 mr-2 animate-pulse" />
+                  Trusted by 500+ Companies Worldwide
                 </div>
                 <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
-                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
                     Advanced AI & IT
                   </span>
                   <br />
-                  <span className="text-white">Solutions</span>
+                  <span className="text-white relative">
+                    Solutions
+                    <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 blur-lg opacity-50"></div>
+                  </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
                   Transform your business with cutting-edge artificial intelligence, 
                   5G technology, and comprehensive IT services. From micro SAAS solutions 
-                  to enterprise-grade platforms.
+                  to enterprise-grade platforms with futuristic innovation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -158,40 +210,76 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Services Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
-            <div className="container mx-auto px-4">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative overflow-hidden">
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0">
+              <div className="absolute top-20 right-20 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-20 left-20 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+            
+            <div className="container mx-auto px-4 relative z-10">
               <div className="text-center mb-16">
-                <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-                  <Star className="w-4 h-4 mr-2" />
-                  Premium Services
+                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6 backdrop-blur-sm">
+                  <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
+                  Premium Micro SAAS Services
                 </div>
                 <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
                     Our Services
                   </span>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   Comprehensive AI, IT, and 5G solutions designed to accelerate your business growth. 
-                  From micro SAAS platforms to enterprise-grade systems.
+                  From micro SAAS platforms to enterprise-grade systems with cutting-edge technology.
                 </p>
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                      selectedCategory === category
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25'
+                        : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white border border-cyan-500/20'
+                    }`}
+                  >
+                    <Filter className="w-4 h-4 inline mr-2" />
+                    {category}
+                  </button>
+                ))}
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services.map((service, index) => (
+                {filteredServices.map((service, index) => (
                   <div 
                     key={index} 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                    className="group bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-400/60 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden"
                   >
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <div className="text-white">{service.icon}</div>
+                    {/* Animated background glow */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-xs font-medium text-cyan-400 backdrop-blur-sm">
+                        {service.category}
+                      </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <div className="mb-6">
+                    
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
+                        <div className="text-white">{service.icon}</div>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-300 mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
+                      
+                      <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                         <div className="flex items-center text-yellow-400">
@@ -211,13 +299,14 @@ const HomePage: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    <a
-                      href={service.link}
-                      className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
+                      <a
+                        href={service.link}
+                        className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                      >
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -243,7 +332,7 @@ const HomePage: React.FC = () => {
                       <Phone className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                    <p className="text-gray-300">+1 302 464 0950</p>
                   </div>
                   
                   <div className="flex flex-col items-center">
@@ -251,7 +340,7 @@ const HomePage: React.FC = () => {
                       <Mail className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                    <p className="text-gray-300">info@ziontech.com</p>
+                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
                   </div>
                   
                   <div className="flex flex-col items-center">
@@ -259,7 +348,7 @@ const HomePage: React.FC = () => {
                       <MapPin className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                    <p className="text-gray-300">123 Tech Street, Innovation City</p>
+                    <p className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</p>
                   </div>
                 </div>
               </div>
