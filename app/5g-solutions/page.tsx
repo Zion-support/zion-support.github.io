@@ -27,9 +27,8 @@ const Page5gSolutionsPage: React.FC = () => {
         <meta name="description" content="Professional 5g solutions solutions and services" />
         <meta name="keywords" content="5g, solutions" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
         <div className="container mx-auto px-4 py-16">
-        
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">5g solutions</h1>
 <p className="text-xl text-gray-300 mb-8">Professional solutions and services</p>

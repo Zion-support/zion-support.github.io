@@ -4,12 +4,7 @@ import { Link } from 'react-router-dom'
 import { Brain, Shield, Zap, Users, Target, ArrowRight } from 'lucide-react'
 import Performance Monitor from './components/Performance Monitor'
 
-
-
-
-
-
-function Home Page() {
+function HomePage() {
   const features = [
     {
       title: "Service 1"
@@ -39,9 +34,9 @@ function Home Page() {
       <div className="min-h-screen bg-slate-9 0 0 text-white">
         
         {/* Hero Section */}
-        <div className="containermx-auto px-4 py-2 0">
-          <div className="text-center mb-1 6">
-            <h1 className="text-6 xlfont-bold mb-6 bg-gradient-to-r from-purple-4 0 0 to-cyan-4 0 0 bg-clip-text text-transparent">
+        <div className="container mx-auto px-4 py-2 0">
+          <div className="text-center mb-16">
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-4 0 0 to-cyan-4 0 0 bg-clip-text text-transparent">
               Zion Tech Group
             </h1>
             <p className="text-2 xltext-gray-3 0 0 max-w-4xl mx-auto mb-8">

@@ -18,7 +18,10 @@ const Page5gModernizationPage: React.FC = () => {
       description: 'Round-the-clock support for all your 5g modernization needs.'
     }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3055
   return (
     <>
       <Helmet>

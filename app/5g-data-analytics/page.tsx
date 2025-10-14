@@ -32,14 +32,40 @@ const Page5gDataAnalyticsPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Professional 5g data analytics solutions and services
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">
-                      {service.title}
-                    </h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-5 00 to-purple-6 00 text-white font-semibold rounded-lg hover:from-cyan-6 00 hover:to-purple-7 0 0 transition-all duration-3 0 0 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-4 00 text-cyan-4 00 font-semibold rounded-lg hover:bg-cyan-4 0 0/1 0 transition-all duration-3 0 0"
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-2 0 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our 5G Data Analytics Services?
+              </h2>
+              <p className="text-xl text-gray-3 0 0 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-1 6 h-1 6 bg-gradient-to-r from-cyan-5 0 0 to-purple-6 0 0 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
                   </div>
                   <p className="text-gray-300 mb-6">
                     {service.description}

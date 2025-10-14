@@ -18,44 +18,35 @@ const Page5gMonitoringPage: React.FC = () => {
       description: 'Round-the-clock support for all your 5g monitoring needs.'
     }
   ];
-
   return (
-    <>
-      <Helmet>
-        <title>5g Monitoring - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g monitoring solutions and services" />
-        <meta name="keywords" content="5g, monitoring" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">5g Monitoring</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional 5g monitoring solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-6">
-                    {service.description}
-                  </p>
-                  <Link 
-                    to="/contact" 
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-12">
+    <div className="min-h-screen bg-gray-50">
+      <EnhancedSEO 
+        title="5G Monitoring Services - Zion Tech Group"
+        description="Professional 5G monitoring services to ensure optimal network performance and security."
+      />
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5G Monitoring Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Monitor your 5G network performance with our advanced monitoring solutions.
+          </p>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-4">
+                <CheckCircle className="h-8 w-8 text-blue-600 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {service.title}
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                {service.description}
+              </p>
               <Link 
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"

@@ -8,13 +8,15 @@
         <meta name="description" content="Professional micro saas solutions solutions and services" />
         <meta name="keywords" content="micro, saas, solutions" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Micro Saas Solutions</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional micro saas solutions solutions and services
+          <div className="text-center mb-16">
+            <h1 className="text-5xlfont-boldtext-whitemb-6">
+              Micro SaaS Solutions
+            </h1>
+            <p className="text-xl text-gray-30 0 mb-8">
+              Scalable micro SaaS solutions tailored to your business needs
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               {services.map((service, index) => (

@@ -2,9 +2,12 @@ import { BrowserRouterasRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Home Page from './page'
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3055
 function App() {
   return (
     <div>
