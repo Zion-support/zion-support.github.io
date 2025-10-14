@@ -7,7 +7,7 @@ export const accessibilityChecker = {
       if (!img.getAttribute('alt')) {
         issues.push({
           element: img as HTMLElement,
-          issue: 'Missing alt text';
+          issue: 'Missing alt text'
         })
       }
     
@@ -23,7 +23,7 @@ export const accessibilityChecker = {
       if (currentLevel > previousLevel + 1) {
         issues.push({
           element: heading as HTMLElement,
-          issue: 'Heading level skipped';
+          issue: 'Heading level skipped'
         })
       }
       previousLevel = currentLevel
@@ -32,4 +32,5 @@ export const accessibilityChecker = {
   checkColorContrast: () => {
     // This would require a more complex implementation
     // For now, return empty array
-    return []
+    return []))
+}}}}}

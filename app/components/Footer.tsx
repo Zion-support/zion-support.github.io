@@ -1,43 +1,38 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,
   HeartIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const services = [
   { name: 'AI Solutions', href: '/ai-solutions' },
   { name: 'IT Solutions', href: '/it-solutions' },
   { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
   { name: 'Digital Transformation', href: '/digital-transformation' }
-];
-
+]
 const company = [
   { name: 'About Us', href: '/about' },
   { name: 'Solutions', href: '/solutions' },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Blog', href: '/blog' },
   { name: 'Careers', href: '/careers' }
-];
-
+]
 const support = [
   { name: 'Help Center', href: '/help' },
   { name: 'Contact Us', href: '/contact' },
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api' },
   { name: 'Status', href: '/status' }
-];
-
+]
 const legal = [
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms of Service', href: '/terms' },
   { name: 'Cookie Policy', href: '/cookies' },
   { name: 'GDPR', href: '/gdpr' }
-];
-
+]
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
@@ -147,7 +142,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,25 +1,22 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react'
 const AccessibilityEnhancer: React.FC = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
-
+  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [isReducedMotion, setIsReducedMotion] = useState(false)
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal')
   useEffect(() => {
-    const root = document.documentElement;
-
+    const root = document.documentElement
     // High contrast mode
     if (isHighContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast')
     } else {
-      root.classList.remove('high-contrast');
+      root.classList.remove('high-contrast')
     }
 
     // Reduced motion mode
     if (isReducedMotion) {
-      root.classList.add('reduced-motion');
+      root.classList.add('reduced-motion')
     } else {
-      root.classList.remove('reduced-motion');
+      root.classList.remove('reduced-motion')
     }
 
     // Font size adjustment
@@ -27,58 +24,53 @@ const AccessibilityEnhancer: React.FC = () => {
       fontSize === 'large' ? '1.2' : 
       fontSize === 'extra-large' ? '1.4' : 
       fontSize === 'small' ? '0.9' : '1'
-    );
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
+    )
+  }, [isHighContrast, isReducedMotion, fontSize])
   // Keyboard navigation enhancement
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();
-        const main = document.querySelector('main');
+        e.preventDefault()
+        const main = document.querySelector('main')
         if (main) {
-          (main as HTMLElement).focus();
+          (main as HTMLElement).focus()
         }
       }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [])
   // Add ARIA landmarks
   useEffect(() => {
     const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
+      const main = document.querySelector('main')
       if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
+        main.setAttribute('role', 'main')
       }
-      const nav = document.querySelector('nav');
+      const nav = document.querySelector('nav')
       if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
+        nav.setAttribute('role', 'navigation')
       }
-      const footer = document.querySelector('footer');
+      const footer = document.querySelector('footer')
       if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
+        footer.setAttribute('role', 'contentinfo')
       }
-    };
-    addAriaLandmarks();
-  }, []);
-
+    }
+    addAriaLandmarks()
+  }, [])
   // Add alt text to images without alt attributes
   useEffect(() => {
     const addAltText = () => {
-      const images = document.querySelectorAll('img:not([alt])');
+      const images = document.querySelectorAll('img:not([alt])')
       images.forEach((img, index) => {
         if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
+          img.setAttribute('alt', `Image ${index + 1}`)
         }
-      });
-    };
-    addAltText();
-  }, []);
-
+      })
+    }
+    addAltText()
+  }, [])
   return (
     <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
       <h3 className="text-white font-semibold mb-3">Accessibility</h3>
@@ -116,7 +108,7 @@ const AccessibilityEnhancer: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

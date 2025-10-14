@@ -1,11 +1,10 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
+import React from 'react'
+import { ArrowRight } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { Users } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
 const FiveGDataAnalyticsPage = () => {
   const features = [
     {
@@ -23,8 +22,7 @@ const FiveGDataAnalyticsPage = () => {
       title: 'Expert Support',
       description: '24/7 support from our team of specialists',
     }
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO 
@@ -34,17 +32,15 @@ const FiveGDataAnalyticsPage = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
         {/* Hero Section */}
-        <section className="relative py-2 0 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <section className="relative py-2 0 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7 xl mx-auto text-center">
+            <h1 className="text-4 xl md:text-6-xl font-bold text-white mb-6">
               5G Data Analytics
               <span className="block bg-gradient-to-r from-cyan-4 0 0 to-purple-4 0 0 bg-clip-text text-transparent">
                 Solutions
               </span>
-            </h1>
-            <p className="text-xl text-gray-3 0 0 mb-8 max-w-3xl mx-auto">
-              Professional 5G data analytics services designed to help your business succeed and grow.
-            </p>
+            <p className="text-xl text-gray-3 0 0 mb-8 max-w-3 xl mx-auto">
+              Professional 5G data analytics services designed to help your business succeed and grow.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -59,21 +55,17 @@ const FiveGDataAnalyticsPage = () => {
               >
                 View Demo
               </Link>
-            </div>
-          </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-2 0 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-2 0 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-1 6">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3-xl md:text-4 xl font-bold text-white mb-4">
                 Why Choose Our 5G Data Analytics Services?
               </h2>
-              <p className="text-xl text-gray-3 0 0 max-w-2xl mx-auto">
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
+              <p className="text-xl text-gray-3 0 0 max-w-2 xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -82,21 +74,17 @@ const FiveGDataAnalyticsPage = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-3 0 0">{feature.description}</p>
-                </div>
               ))}
             </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
-        <section className="py-2 0 px-4 sm:px-6 lg:px-8 bg-slate-8 0 0/3 0">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="py-2 0 px-4 sm:px-6 lg:px-8 bg-slate-8 0 0/3 0"></section>
+          <div className="max-w-4 xl mx-auto text-center">
+            <h2 className="text-3-xl md:text-4 xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-3 0 0 mb-8">
-              Let&apos;s discuss how our 5G data analytics services can help your business succeed.
-            </p>
+              Let&apos;s discuss how our 5G data analytics services can help your business succeed.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -111,12 +99,18 @@ const FiveGDataAnalyticsPage = () => {
               >
                 View All Services
               </Link>
-            </div>
-          </div>
         </section>
-      </div>
-    </>
-  );
-};
 
-export default FiveGDataAnalyticsPage;
+  )
+}
+export default FiveGDataAnalyticsPage
+</EnhancedSEO>
+</div>
+</div>
+</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

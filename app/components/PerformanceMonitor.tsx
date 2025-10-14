@@ -1,104 +1,94 @@
-import { useEffect } from 'react';
-
+import { useEffect } from 'react'
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
+  lcp?: number
+  fid?: number
+  cls?: number
+  fcp?: number
+  ttfb?: number
 }
 
 interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart?: number;
+  processingStart?: number
 }
 
 interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
+  hadRecentInput: boolean
+  value: number
 }
 
 const PerformanceMonitor = () => {
   useEffect(() => {
     // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-
-    const metrics: PerformanceMetrics = {};
-
+    if (process.env.NODE_ENV !== 'production') return
+    const metrics: PerformanceMetrics = {}
     // Measure Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      metrics.lcp = lastEntry.startTime;
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
+      const entries = list.getEntries()
+      const lastEntry = entries[entries.length - 1]
+      metrics.lcp = lastEntry.startTime
+    })
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+      const entries = list.getEntries()
       entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
+        const fidEntry = entry as PerformanceEventTiming
           if (fidEntry.processingStart) {
-            metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+            metrics.fid = fidEntry.processingStart - fidEntry.startTime
           }
-      });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-
+      })
+    })
+    fidObserver.observe({ entryTypes: ['first-input'] })
     // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
+    let clsValue = 0
     const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+      const entries = list.getEntries()
       entries.forEach((entry) => {
-        const layoutShiftEntry = entry as LayoutShift;
+        const layoutShiftEntry = entry as LayoutShift
           if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
+          clsValue += layoutShiftEntry.value
         }
-      });
-      metrics.cls = clsValue;
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-
+      })
+      metrics.cls = clsValue
+    })
+    clsObserver.observe({ entryTypes: ['layout-shift'] })
     // Measure First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+      const entries = list.getEntries()
       entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-          metrics.fcp = entry.startTime;
+          metrics.fcp = entry.startTime
         }
-      });
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-
+      })
+    })
+    fcpObserver.observe({ entryTypes: ['paint'] })
     // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
-      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart
     }
 
     // Send metrics after page load
     const sendMetrics = () => {
         if (Object.keys(metrics).length > 0) {
         // In a real application, you would send these metrics to your analytics service
-        console.log('Performance Metrics: ', metrics);
+        console.log('Performance Metrics: ', metrics)
       }
-    };
-
+    }
     // Send metrics when page is about to unload
-    window.addEventListener(',beforeunload', sendMetrics);
-
+    window.addEventListener(',beforeunload', sendMetrics)
     // Cleanup observers
     return () => {
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
-      fcpObserver.disconnect();
-      window.removeEventListener('beforeunload', sendMetrics);
-    };
-  }, []);
-
+      lcpObserver.disconnect()
+      fidObserver.disconnect()
+      clsObserver.disconnect()
+      fcpObserver.disconnect()
+      window.removeEventListener('beforeunload', sendMetrics)
+    }
+  }, [])
   // Don't render anything in production
-    if (process.env.NODE_ENV === 'production') {
-    return null;
+  if (process.env.NODE_ENV === 'production') {
+    return null
   }
 
   return (
@@ -106,7 +96,7 @@ const PerformanceMonitor = () => {
       <h3>Performance Monitor</h3>
       <p>Monitoring performance metrics...</p>
     </div>
-  );
-};
+  )
+}
 
-export default PerformanceMonitor;
+export default PerformanceMonitor

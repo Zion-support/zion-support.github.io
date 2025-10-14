@@ -1,26 +1,23 @@
-import { useEffect, useRef } from 'react';
-
+import { useEffect, useRef } from 'react'
 export const usePerformanceMonitor = (name: string) => {
-  const startTime = useRef<number>();
-  
+  const startTime = useRef<number>()
   useEffect(() => {
-    startTime.current = performance.now();
-    
+    startTime.current = performance.now()
     return () => {
       if (startTime.current) {
-        const endTime = performance.now();
-        const Duration = endTime - startTime.current;
-        
+        const endTime = performance.now()
+        const Duration = endTime - startTime.current
         // Performance measurement logged
         // eslint-disable-next-line no-console
-        console.log(`${name} took ${duration.toFixed(2)}ms`);
-        
+        console.log(`${name} took ${duration.toFixed(2)}ms`)
         // Send to analytics
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'performance_measurement', {
             name: name,
-            duration: duration;
-          });
+            duration: duration
+          })
         }
-    };
-  }, [name]);
+    }
+  }, [name])
+</number>
+}}

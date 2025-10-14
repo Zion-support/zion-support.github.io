@@ -1,9 +1,8 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Brain, Shield, Zap, Users, Target, ArrowRight } from 'lucide-react';
-import PerformanceMonitor from './components/PerformanceMonitor';
-
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Brain, Shield, Zap, Users, Target, ArrowRight } from 'lucide-react'
+import PerformanceMonitor from './components/PerformanceMonitor'
 function HomePage() {
   const features = [
     {
@@ -31,8 +30,7 @@ function HomePage() {
       title: "Digital Transformation",
       description: "Transform your business with innovative digital solutions",
     }
-  ];
-
+  ]
   return (
     <>
       <PerformanceMonitor />
@@ -48,27 +46,27 @@ function HomePage() {
         <meta name="twitter:description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
         <link rel="canonical" href="https://zion.app" />
       </Helmet>
-      <div className="min-h-screen bg-slate-9 0 0 text-white">
+      <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
-        <div className="container mx-auto px-4 py-2 0">
-          <div className="text-center mb-1 6">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-4 0 0 to-cyan-4 0 0 bg-clip-text text-transparent">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Zion Tech Group
             </h1>
-            <p className="text-2xl text-gray-3 0 0 max-w-4xl mx-auto mb-8">
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Advanced AI and IT Solutions for the Digital Future
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/services" 
-                className="inline-flex items-center bg-gradient-to-r from-purple-6 00 to-cyan-6 00 hover:from-purple-7 00 hover:to-cyan-7 0 0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-3 0 0"
+                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
               >
                 Explore Our Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center border-2 border-purple-5 00 hover:bg-purple-5 0 0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-3 0 0"
+                className="inline-flex items-center border-2 border-purple-500 hover:bg-purple-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
               >
                 Get Started
               </Link>
@@ -76,7 +74,7 @@ function HomePage() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-1 6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <div 
                 key={index} 
@@ -107,7 +105,7 @@ function HomePage() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage

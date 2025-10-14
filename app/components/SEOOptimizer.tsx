@@ -1,13 +1,12 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOOptimizerProps {
-  title: string;
-  description: string;
-  keywords: string[];
-  type?: string;
-  structuredData?: Record<string, unknown>;
-  children?: React.ReactNode;
+  title: string
+  description: string
+  keywords: string[]
+  type?: string
+  structuredData?: Record<string, unknown>
+  children?: React.ReactNode
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
@@ -37,7 +36,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       </Helmet>
       {children}
     </>
-  );
-};
+  )
+}
 
-export default SEOOptimizer;
+export default SEOOptimizer

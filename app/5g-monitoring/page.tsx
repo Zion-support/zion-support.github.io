@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
+import React, { Suspense } from 'react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
 const FiveGMonitoringPage = () => {
   const services = [
     {
@@ -17,8 +16,7 @@ const FiveGMonitoringPage = () => {
       title: 'Team Training',
       description: 'Comprehensive training for 5G network monitoring and management.',
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
@@ -26,28 +24,22 @@ title="5G Monitoring Services - Zion Tech Group"
         description="Professional 5G monitoring services to ensure optimal network performance and security."
       />
       
-      <div className="container mx-autopx-4py-1 6">
+      <div className="container mx-auto px-4 py-1 6">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4 xl font-bold text-gray-900 mb-6">
             5G Monitoring Services
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Monitor your 5G network performance with our advanced monitoring solutions.
-          </p>
-          </div>
-        </div>
+          <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+            Monitor your 5G network performance with our advanced monitoring solutions.</p>
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-4">
                 <CheckCircle className="h-8 w-8 text-blue-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900">
-                  {service.title}
-                </h3>
-              </div>
+                  {service.title}</h3>
               <p className="text-gray-600 mb-6">
-                {service.description}
-              </p>
+                {service.description}</p>
               <Link 
                 to="/contact" 
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
@@ -55,7 +47,6 @@ title="5G Monitoring Services - Zion Tech Group"
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </div>
           ))}
         </div>
         <div className="text-center">
@@ -66,9 +57,13 @@ title="5G Monitoring Services - Zion Tech Group"
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        </div>
-      </div>
     </div>
-  );
+  )
 }
 export default FiveGMonitoringPage
+</EnhancedSEO>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const SupportPage: React.FC = () => {
   return (
     <>
@@ -11,21 +10,17 @@ const SupportPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-boldtext-white mb-8">Support</h1>
-            <p className="text-xl text-gray-30 0 mb-8">
-              Get help and support from our expert team
-            </p>
+            <h1 className="text-4 xl font-bold text-white mb-8">Support</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Get help and support from our expert team</p>
             <div className="text-gray-4 0 0">
               <p>Support information coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
 
-export default SupportPage;
+  )
+}
+export default SupportPage
+</Helmet>
+</div>
+</div>
+</div>

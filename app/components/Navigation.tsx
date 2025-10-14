@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import {
   HomeIcon,
   UserGroupIcon,
@@ -10,8 +10,7 @@ import {
   CloudIcon,
   CpuChipIcon,
   ChartBarIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const navigation = [
   { name: 'Home', href: '/', icon: HomeIcon },
   { name: 'About', href: '/about', icon: UserGroupIcon },
@@ -27,17 +26,14 @@ const navigation = [
     ]
   },
   { name: 'Contact', href: '/contact', icon: PhoneIcon }
-];
-
+]
 const Navigation: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const location = useLocation()
   const isActive = (path: string) => {
-    return location.pathname === path;
-  };
-
+    return location.pathname === path
+  }
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +51,7 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon
               return (
                 <div key={item.name} className="relative group">
                   <Link
@@ -89,7 +85,7 @@ const Navigation: React.FC = () => {
                     </div>
                   )}
                 </div>
-              );
+              )
             })}
           </div>
 
@@ -123,7 +119,7 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
               {navigation.map((item) => {
-                const Icon = item.icon;
+                const Icon = item.icon
                 return (
                   <div key={item.name}>
                     <Link
@@ -155,7 +151,7 @@ const Navigation: React.FC = () => {
                       </div>
                     )}
                   </div>
-                );
+                )
               })}
               
               <div className="pt-4 border-t border-slate-700">
@@ -172,7 +168,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

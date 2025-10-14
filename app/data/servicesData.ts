@@ -1,16 +1,15 @@
 export interface ServiceData {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  features: string[];
+  id: string
+  name: string
+  description: string
+  category: string
+  features: string[]
   pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
+    starter: number
+    professional: number
+    enterprise: number
   }
-  icon: string;
-
+  icon: string
 export const servicesData: ServiceData[] = [
   {
     id: 'ai-solutions',
@@ -37,3 +36,4 @@ export const servicesData: ServiceData[] = [
       enterprise: 10000
     icon: 'cloud-upload'
 ]
+}}}

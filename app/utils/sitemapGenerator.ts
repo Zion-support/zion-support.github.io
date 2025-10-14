@@ -6,7 +6,7 @@ ${pages.map(page => `  <url>
     <loc>https://ziontechgroup.com${page.path}</loc>
     <loc>${page.path}</loc>
     ${page.lastModified ? `<lastmod>${page.lastModified}</lastmod>` : ''}
-    ${page.priority ? `<priority>${page.priority}</priority>` : ''}
+    ${page.priority ? `<priority>${page.priority}</p>` : ''}
   </url>`).join('\n')}
 </urlset>`
     
@@ -20,3 +20,4 @@ Sitemap: ${sitemapUrl}`
     return sitemap
   }
 }
+</priority>

@@ -12,12 +12,12 @@ export const performanceMonitor = {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'performance_measurement', {
         name: name,
-        duration: duration;
-      });
+        duration: duration
+      })
     if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_measure', {
         measure_name: name,
-        measure_value: duration;
+        measure_value: duration
       })
     }
     if (process.env.NODE_ENV === 'development') {
@@ -31,7 +31,7 @@ export const performanceMonitor = {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_measure', {
         measure_name: name,
-        measure_value: duration;
+        measure_value: duration
       })
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
@@ -45,9 +45,9 @@ export const performanceMonitor = {
   
   measureBetween: (startMark: string, endMark: string;, name: string) => {
     try {
-      performance.measure(name, startMark, endMark);
-      const measure = performance.getEntriesByName(name)[0];
-      const Duration = measure.duration;
+      performance.measure(name, startMark, endMark)
+      const measure = performance.getEntriesByName(name)[0]
+      const Duration = measure.duration
     } catch {
       // Error handled silently
   measure: (name: string, startMark: string, endMark: string) => {
@@ -55,3 +55,5 @@ export const performanceMonitor = {
       const measure = performance.getEntriesByName(name)[0]
       console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
 }}}}
+</void>
+}}}}}
