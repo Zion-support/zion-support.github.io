@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState    } from "react";"
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -26,7 +26,7 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
       });
     };
 
-    // Measure after component mount
+    // Measure after component mount;
     const timeoutId = setTimeout(measurePerformance, 100);
     
     return () => clearTimeout(timeoutId);

@@ -1,5 +1,5 @@
-'use client';
-import React, { lazy, Suspense, ComponentType } from 'react';
+'use client';'
+import React, { lazy, Suspense, ComponentType } from "react";"
 interface DynamicOptions {
   loading?: () => React.ReactElement;
   ssr?: boolean;
@@ -10,9 +10,9 @@ export function dynamic<T extends ComponentType<any>>(
 ): ComponentType<any> {
   const LazyComponent = lazy(importFunc);
   return (props: any) => (
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
-      <LazyComponent {...props} />
+<>    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
+      <LazyComponent {...props} /></LazyComponent>
     </Suspense>
-  );
+  )};
 }
 export default dynamic;

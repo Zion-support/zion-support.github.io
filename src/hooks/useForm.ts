@@ -1,19 +1,18 @@
-import React from 'react';
-'use client';
+import React from "react";"
+'use client';'
 /**
- * useForm Hook
- * Provides form state management and validation
+ * useForm Hook;
+ * Provides form state management and validation;
  */;
-import { useState, useCallback, ChangeEvent } from 'react';
-// import { logger } from '../utils/logger';
-import {
-  ValidationRule,
+import { useState, useCallback, ChangeEvent    } from "react";"
+// import { logger    } from "../utils/logger";"
+import { ValidationRule,
   validateField,
   validateForm,
   isFormValid,
   getFormErrors,
-  // ValidationResult as _ValidationResult
-} from '../utils/formValidation';
+  // ValidationResult as _ValidationResult;
+   } from "../utils/formValidation";"
 export interface UseFormConfig<T extends Record<string, unknown>>> {
   initialValues: T;
   validationSchema?: Partial<Record<keyof T, ValidationRule[]>>>;
@@ -71,16 +70,16 @@ const handleChange = useCallback()
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 const { name, value, type } = e.target;
       const fieldName = name as keyof T;
-      // Handle checkbox inputs
+      // Handle checkbox inputs;
       let fieldValue: unknown = value;
-      if (type === 'checkbox' && 'checked' in e.target) {
+      if (type === 'checkbox' && 'checked' in e.target) {''
         fieldValue = (e.target as HTMLInputElement).checked;
       }
       setValues(prev => ({
         ...prev,
         [fieldName]: fieldValue)
       }));
-      // Validate on change if enabled
+      // Validate on change if enabled;
       if (validateOnChange && touched[fieldName]) {
         setTimeout(() => validateSingleField(fieldName), 0);
       }
@@ -95,7 +94,7 @@ const fieldName = e.target.name as keyof T;
         ...prev,
         [fieldName]: true)
       }));
-      // Validate on blur if enabled
+      // Validate on blur if enabled;
       if (validateOnBlur) {
         validateSingleField(fieldName);
       }
@@ -120,8 +119,7 @@ const isValid = validateAllFields();
       setIsSubmitting(true);
       try {
         await onSubmit(values);
-      } catch (error) {
-      } finally {
+      } catch (error) {} finally {
         setIsSubmitting(false);
       }
     },
@@ -175,6 +173,6 @@ const isValid = Object.keys(errors).length === 0 ||
     setFieldTouched,
     resetForm,
     validateField: validateSingleField,
-    validateAllFields
+    validateAllFields;
   };
 }

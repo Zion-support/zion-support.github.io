@@ -1,14 +1,14 @@
-structuredData
+  structuredData;
 }) => {
   return (
-    <Helmet><title>{title}</title><meta name="description" content={description}  />
-      <meta name="keywords" content={keywords}  />
+  <>
+    <Helmet></Helmet>
+      <title>{title}</title>
       {structuredData && (
-        <script type="application/ld+json">)
-          {JSON.stringify(structuredData)
+        <script type="application/ld+json">""
+          {JSON.stringify(structuredData
+  </>
+);
         </script>
       )
     </Helmet>
-
-  )
-}}

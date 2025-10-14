@@ -1,7 +1,9 @@
-import React    from "react
-interface WebVitalsTrackerProps {
-  children: ReactNode;
-}
-const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {"
-  useEffect(() => {"
->>>>>>> origin/main
+          This page is under development.</p></div></div>
+  )
+        </p>
+      </div>
+    </div>
+  )}
+};
+
+export default WebVitalsTracker;

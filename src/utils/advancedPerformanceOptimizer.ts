@@ -1,9 +1,6 @@
-'use client';
-import React from 'react'
-/**
- * Advanced Performance Optimizer
- * Generated: 2025-10-08T02:06:22.084Z
- */
+'use client';'
+import React from "react";"
+
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number[]>;
@@ -14,14 +11,12 @@ export class PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer()
     }
-    return PerformanceOptimizer.instance
+    return PerformanceOptimizer.instance;
   }
-  /**
-   * Measure function execution time
-   */
+  
   measurePerformance<T>(
     name: string,
-    fn: () => T | Promise<T>
+    fn: () => T | Promise<T></T>
   ): T | Promise<T> {
     const start = performance.now()
     try {
@@ -29,49 +24,43 @@ export class PerformanceOptimizer {
       if (result instanceof Promise) {
         return result.finally(() => {
           this.recordMetric(name, performance.now() - start)
-        }) as Promise<T>
+        }) as Promise<T></T>
       } else {
         this.recordMetric(name, performance.now() - start)
-        return result
+        return result;
       }
     } catch (error) {
       this.recordMetric(name, performance.now() - start)
-      throw error
+      throw error;
     }
   }
-  /**
-   * Record performance metric
-   */
+  
   private recordMetric(name: string, duration: number): void {
     if (!this.metrics.has(name)) {
       this.metrics.set(name, [])
     }
     const metrics = this.metrics.get(name)!
     metrics.push(duration)
-    // Keep only last 100 measurements
+    // Keep only last 100 measurements;
     if (metrics.length > 100) {
       metrics.shift()
     }
   }
-  /**
-   * Get average performance metric
-   */
+  
   getAverageMetric(name: string): number {
     const metrics = this.metrics.get(name)
     if (!metrics || metrics.length === 0) {
-      return 0
+      return 0;
     }
     const sum = metrics.reduce((acc, val) => acc + val, 0)
-    return sum / metrics.length
+    return sum / metrics.length;
   }
-  /**
-   * Implement debounce for performance
-   */
+  
   debounce<T extends (...args: unknown[]) => unknown>(
     func: T,
     wait: number,
   ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout | null = null
+    let timeout: NodeJS.Timeout | null = null;
     return (...args: Parameters<T>) => {
       if (timeout) {
         clearTimeout(timeout)
@@ -81,29 +70,25 @@ export class PerformanceOptimizer {
       }, wait)
     }
   }
-  /**
-   * Implement throttle for performance
-   */
+  
   throttle<T extends (...args: unknown[]) => unknown>(
     func: T,
     limit: number,
   ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean = false
+    let inThrottle: boolean = false;
     return (...args: Parameters<T>) => {
       if (!inThrottle) {
         func(...args)
-        inThrottle = true
+        inThrottle = true;
         setTimeout(() => {
-          inThrottle = false
+          inThrottle = false;
         }, limit)
       }
     }
   }
-  /**
-   * Memoize function results
-   */
+  
   memoize<T extends (...args: unknown[]) => unknown>(
-    func: T
+    func: T;
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>()
     return (...args: Parameters<T>): ReturnType<T> => {
@@ -111,23 +96,22 @@ export class PerformanceOptimizer {
       if (cache.has(key)) {
         return cache.get(key)!
       }
-      const result = func(...args) as ReturnType<T>
+      const result = func(...args) as ReturnType<T></T>
       cache.set(key, result)
-      return result
+      return result;
     }
   }
-  /**
-   * Get all metrics summary
-   */
+  
   getMetricsSummary(): Record<string, { avg: number; count: number }> {
     const summary: Record<string, { avg: number; count: number }> = {}
     this.metrics.forEach((values, name) => {
       summary[name] = {
         avg: this.getAverageMetric(name),
-        count: values.length
+        count: values.length;
       }
     })
-    return summary
+    return summary;
   }
 }
 export default PerformanceOptimizer.getInstance()
+;

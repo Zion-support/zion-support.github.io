@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";"
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -16,13 +16,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true,
 }) => {
   useEffect(() => {
-    // Skip to main content functionality
+    // Skip to main content functionality;
     const addSkipLink = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50';
-      skipLink.style.cssText = `
+      const skipLink = document.createElement('a');'
+      skipLink.href = '#main-content';'
+      skipLink.textContent = 'Skip to main content';'
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50';'
+      skipLink.style.cssText = ````
         position: absolute;
         width: 1px;
         height: 1px;
@@ -32,55 +32,56 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;
         border: 0;
-      `;
+      `;```
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-    // Keyboard navigation enhancements
+    // Keyboard navigation enhancements;
     const enhanceKeyboardNavigation = () => {
       if (!enableKeyboardNavigation) return;
 
       const handleKeyDown = (e: KeyboardEvent) => {
-        // Escape key to close modals/dropdowns
-        if (e.key === 'Escape') {
+        // Escape key to close modals/dropdowns;
+        if (e.key === 'Escape') {''
           const activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
             activeElement.blur();
           }
         }
 
-        // Tab navigation improvements
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
+        // Tab navigation improvements;
+        if (e.key === 'Tab') {''
+          document.body.classList.add('keyboard-navigation');'
         }
       };
 
-      // Remove keyboard navigation class on mouse use
+      // Remove keyboard navigation class on mouse use;
       const handleMouseDown = () => {
-        document.body.classList.remove('keyboard-navigation');
+        document.body.classList.remove('keyboard-navigation');'
       };
 
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('mousedown', handleMouseDown);
+      document.addEventListener('keydown', handleKeyDown);'
+      document.addEventListener('mousedown', handleMouseDown);'
 
       return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
+        document.removeEventListener('keydown', handleKeyDown);'
+        document.removeEventListener('mousedown', handleMouseDown);'
       };
     };
 
-    // Focus management
+    // Focus management;
     const enhanceFocusManagement = () => {
       if (!enableFocusManagement) return () => {};
 
       const trapFocus = (element: HTMLElement) => {
         const focusableElements = element.querySelectorAll(
-          'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'"");
+          'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select''"'"
+        );
         const firstFocusableElement = focusableElements[0] as HTMLElement;
         const lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
         const handleTabKey = (e: KeyboardEvent) => {
-          if (e.key === 'Tab') {
+          if (e.key === 'Tab') {''
             if (e.shiftKey) {
               if (document.activeElement === firstFocusableElement) {
                 lastFocusableElement.focus();
@@ -95,38 +96,38 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         };
 
-        element.addEventListener('keydown', handleTabKey);
+        element.addEventListener('keydown', handleTabKey);'
         firstFocusableElement?.focus();
 
         return () => {
-          element.removeEventListener('keydown', handleTabKey);
+          element.removeEventListener('keydown', handleTabKey);'
         };
       };
 
       };
     };
 
-    // High contrast mode
+    // High contrast mode;
     const enhanceHighContrast = () => {
       if (!enableHighContrast) return () => {};
 
       const addHighContrastStyles = () => {
-        const style = document.createElement('style');
-        style.id = 'accessibility-high-contrast';
-        style.textContent = `
+        const style = document.createElement('style');'
+        style.id = 'accessibility-high-contrast';'
+        style.textContent = ````
           .high-contrast {
             filter: contrast(150%) brightness(110%);
           }
           .high-contrast * {
             border-color: currentColor !important;
           }
-        `;
+        `;```
         document.head.appendChild(style);
       };
 
 
       return () => {
-        const existingStyle = document.getElementById('accessibility-high-contrast');
+        const existingStyle = document.getElementById('accessibility-high-contrast');'
         if (existingStyle) {
           existingStyle.remove();
         }
@@ -136,38 +137,38 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
 
-      // Add ARIA landmarks
+      // Add ARIA landmarks;
       const addLandmarks = () => {
-        const main = document.querySelector('main');
-        if (main && !main.getAttribute('role')) {
-          main.setAttribute('role', 'main');
+        const main = document.querySelector('main');'
+        if (main && !main.getAttribute('role')) {''
+          main.setAttribute('role', 'main');'
         }
 
-        const nav = document.querySelector('nav');
-        if (nav && !nav.getAttribute('role')) {
-          nav.setAttribute('role', 'navigation');
+        const nav = document.querySelector('nav');'
+        if (nav && !nav.getAttribute('role')) {''
+          nav.setAttribute('role', 'navigation');'
         }
 
-        const header = document.querySelector('header');
-        if (header && !header.getAttribute('role')) {
-          header.setAttribute('role', 'banner');
+        const header = document.querySelector('header');'
+        if (header && !header.getAttribute('role')) {''
+          header.setAttribute('role', 'banner');'
         }
 
-        const footer = document.querySelector('footer');
-        if (footer && !footer.getAttribute('role')) {
-          footer.setAttribute('role', 'contentinfo');
+        const footer = document.querySelector('footer');'
+        if (footer && !footer.getAttribute('role')) {''
+          footer.setAttribute('role', 'contentinfo');'
         }
       };
 
-      // Add live regions for dynamic content
+      // Add live regions for dynamic content;
       const addLiveRegions = () => {
-        let liveRegion = document.getElementById('live-region');
+        let liveRegion = document.getElementById('live-region');'
         if (!liveRegion) {
-          liveRegion = document.createElement('div');
-          liveRegion.id = 'live-region';
-          liveRegion.setAttribute('aria-live', 'polite');
-          liveRegion.setAttribute('aria-atomic', 'true');
-          liveRegion.className = 'sr-only';
+          liveRegion = document.createElement('div');'
+          liveRegion.id = 'live-region';'
+          liveRegion.setAttribute('aria-live', 'polite');'
+          liveRegion.setAttribute('aria-atomic', 'true');'
+          liveRegion.className = 'sr-only';'
           document.body.appendChild(liveRegion);
         }
       };
@@ -176,14 +177,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       addLiveRegions();
 
       return () => {
-        const liveRegion = document.getElementById('live-region');
+        const liveRegion = document.getElementById('live-region');'
         if (liveRegion) {
           liveRegion.remove();
         }
       };
     };
 
-    // Initialize all enhancements
+    // Initialize all enhancements;
     addSkipLink();
     const cleanupKeyboard = enhanceKeyboardNavigation();
     const cleanupFocus = enhanceFocusManagement();
@@ -201,14 +202,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {children}
-      <style>{`
-        /* Keyboard navigation styles */
+      <style>{````
+        
         .keyboard-navigation *:focus {
           outline: 2px solid #06b6d4;
           outline-offset: 2px;
         }
 
-        /* Screen reader only content */
+        
         .sr-only {
           position: absolute;
           width: 1px;
@@ -232,7 +233,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           white-space: normal;
         }
 
-        /* High contrast mode */
+        
         .high-contrast {
           filter: contrast(150%) brightness(110%);
         }
@@ -241,20 +242,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           border-color: currentColor !important;
         }
 
-        /* Focus indicators */
+        
         .focus-visible:focus-visible {
           outline: 2px solid #06b6d4;
           outline-offset: 2px;
         }
 
-        /* Reduced motion */
+        
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
         }
 
-        /* Large text mode */
+        
         .large-text {
           font-size: 1.2em;
           line-height: 1.6;
@@ -266,7 +267,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         .large-text h4 { font-size: 1.5em; }
         .large-text h5 { font-size: 1.25em; }
         .large-text h6 { font-size: 1.1em; }
-      `}</style>
+      `}</style>```
     </>
   );
 };
