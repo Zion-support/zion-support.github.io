@@ -14,22 +14,22 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Event tracked:', eventName, properties);
+    if (process.env.NODE_ENV === &apos;development&apos;) {
+      console.warn(&apos;Event tracked:&apos;, eventName, properties);
     }
     // Add your analytics tracking logic here
   }, []);
 
   const trackPageView = useCallback((pageName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Page view tracked:', pageName, properties);
+    if (process.env.NODE_ENV === &apos;development&apos;) {
+      console.warn(&apos;Page view tracked:&apos;, pageName, properties);
     }
     // Add your page view tracking logic here
   }, []);
 
   const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('User identified:', userId, properties);
+    if (process.env.NODE_ENV === &apos;development&apos;) {
+      console.warn(&apos;User identified:&apos;, userId, properties);
     }
     // Add your user identification logic here
   }, []);
@@ -50,7 +50,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 export const useAnalytics = () => {
   const context = React.useContext(AnalyticsContext);
   if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error(&apos;useAnalytics must be used within an AnalyticsProvider&apos;);
   }
   return context;
 };

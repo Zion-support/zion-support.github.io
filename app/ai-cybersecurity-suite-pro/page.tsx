@@ -16,32 +16,28 @@ const AICybersecuritySuiteProPage: React.FC = () => {
             <h1 className="text-5xl font-bold text-white mb-6">
               AI Cybersecurity Suite Pro
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Protect your business with AI-powered cybersecurity solutions
-            </p>
+<p className="Protect your business with AI-powered cybersecurity solutions
+               ">$2</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+          <div className="grid md:grid-cols-3gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 borderborder-white/20">
               <Shield className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Threat Detection</h3>
-              <p className="text-gray-300">
-                AI-powered threat detection and prevention systems.
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3  ">Threat Detection</h3>
+<p className="AI-powered threat detection and prevention systems.
+                 ">$2</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 borderborder-white/20">
               <Lock className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Data Protection</h3>
-              <p className="text-gray-300">
-                Advanced encryption and data protection mechanisms.
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3  ">Data Protection</h3>
+<p className="Advanced encryption and data protection mechanisms.
+                 ">$2</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 borderborder-white/20">
               <Brain className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">AI Monitoring</h3>
-              <p className="text-gray-300">
-                Continuous AI monitoring and security analysis.
-              </p>
+              <h3 className="text-xl font-semibold text-white mb-3  ">AI Monitoring</h3>
+<p className="Continuous AI monitoring and security analysis.
+                 ">$2</p>
             </div>
           </div>
         </div>

@@ -13,9 +13,8 @@ const PrivacyPage: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Our privacy policy and data protection practices
-            </p>
+<p className="Our privacy policy and data protection practices
+               ">$2</p>
             <div className="text-gray-400">
               <p>Privacy policy content coming soon...</p>
               </div>

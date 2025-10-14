@@ -28,45 +28,45 @@ const stats = [
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Security & Trust',
+      title: &apos;Security & Trust&apos;,
       description: 'Your data and systems are protected with enterprise-grade security measures and compliance standards.'
     },
     {
       icon: UserGroupIcon,
       title: 'Client-Centric',
-      description: 'We prioritize our clients\' success, working closely with them to understand their unique needs and deliver tailored solutions.'
+      description: 'We prioritize our clients\' success, working closely with them to understand their unique needs and deliver tailored solutions.&apos;
     },
     {
       icon: RocketLaunchIcon,
       title: 'Results-Driven',
-      description: 'We measure our success by the tangible results and value we deliver to our clients\' businesses.'
+      description: 'We measure our success by the tangible results and value we deliver to our clients\' businesses.&apos;
     }
   ];
 
   const team = [
     {
-      name: 'Dr. Kleber Santos',
-      role: 'Founder & CEO',
+      name: &apos;Dr. Kleber Santos&apos;,
+      role: &apos;Founder & CEO&apos;,
       description: 'AI and Machine Learning expert with 15+ years of experience in technology leadership.',
-      image: '/team/kleber.jpg'
+      image: &apos;/team/kleber.jpg&apos;
     },
     {
-      name: 'Sarah Johnson',
-      role: 'CTO',
+      name: &apos;Sarah Johnson&apos;,
+      role: &apos;CTO&apos;,
       description: 'Cloud architecture specialist with expertise in scalable system design and implementation.',
-      image: '/team/sarah.jpg'
+      image: &apos;/team/sarah.jpg&apos;
     },
     {
-      name: 'Michael Chen',
-      role: 'Head of AI Research',
+      name: &apos;Michael Chen&apos;,
+      role: &apos;Head of AI Research&apos;,
       description: 'PhD in Computer Science, leading our AI research and development initiatives.',
-      image: '/team/michael.jpg'
+      image: &apos;/team/michael.jpg&apos;
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Cybersecurity Director',
+      name: &apos;Emily Rodriguez&apos;,
+      role: &apos;Cybersecurity Director&apos;,
       description: 'Cybersecurity expert with certifications in ethical hacking and security architecture.',
-      image: '/team/emily.jpg'
+      image: &apos;/team/emily.jpg&apos;
     }
   ];
 
@@ -78,39 +78,37 @@ const stats = [
         <meta name="keywords" content="about us, team, mission, AI experts, IT professionals, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-slate-900 text-white">
+      <div className="min-h-screen bg-slate-900text-white">
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          <div className="container mx-auto px-4text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-texttext-transparent">
               About Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We are a team of passionate AI and IT experts dedicated to transforming businesses 
+<p className="We are a team of passionate AI and IT experts dedicated to transforming businesses 
               through innovative technology solutions.
-            </p>
+               ">$2</p>
             </div>
         </div>
         </section>
 
         {/* Mission Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+        <section className=" py-20">
+          <div className="container mx-autopx-4">
+            <div className="max-w-4xl mx-autotext-center">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
                 Our Mission
               </h2>
-              <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
+<p className="To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
                 efficiency, and growth. We believe technology should be accessible, secure, and 
                 transformative for organizations of all sizes.
-              </p>
+                 ">$2</p>
               
-              <div className="grid md:grid-cols-4 gap-8">
+              <div className="grid md:grid-cols-4gap-8">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-4xl font-bold text-purple-400 mb-2">{stat.number}</div>
-                    <div className="text-gray-300">{stat.label}</div>
+                    <div className="text-4xl font-bold text-purple-400 mb-2  ">{stat.number}</div>
+                    <div className="text-gray-300  ">{stat.label}</div>
                     </div>
         </div>
                 ))}
@@ -123,27 +121,26 @@ const stats = [
         </section>
 
         {/* Values Section */}
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
+        <section className="py-20bg-slate-800/50">
+          <div className="container mx-autopx-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Our Values
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These core values guide everything we do and shape our approach to client success.
-              </p>
+<p className="These core values guide everything we do and shape our approach to client success.
+                 ">$2</p>
               </div>
         </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4gap-8">
               {values.map((value, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-6">
-                    <value.icon className="w-8 h-8 text-white" />
+                    <value.icon className="w-8 h-8text-white" />
                     </div>
         </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-4  ">{value.title}</h3>
+                  <p className="text-gray-300   ">{value.description}</p>
                   </div>
         </div>
               ))}
@@ -154,29 +151,28 @@ const stats = [
         </section>
 
         {/* Team Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className=" py-20">
+          <div className="container mx-autopx-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Meet Our Team
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our diverse team of experts brings together decades of experience in AI, 
+<p className="Our diverse team of experts brings together decades of experience in AI, 
                 cloud computing, cybersecurity, and business transformation.
-              </p>
+                 ">$2</p>
               </div>
         </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4gap-8">
               {team.map((member, index) => (
-                <div key={index} className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700 hover:border-purple-500 transition-all duration-300">
-                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <UserGroupIcon className="w-12 h-12 text-white" />
+                <div key={index} className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700 hover:border-purple-500 transition-allduration-300">
+                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-centerjustify-center">
+                    <UserGroupIcon className="w-12 h-12text-white" />
                     </div>
         </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <div className="text-purple-400 font-semibold mb-3">{member.role}</div>
-                  <p className="text-gray-300 text-sm">{member.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-2  ">{member.name}</h3>
+                  <div className="text-purple-400 font-semibold mb-3  ">{member.role}</div>
+                  <p className="text-gray-300text- sm   ">{member.description}</p>
                   </div>
         </div>
               ))}
@@ -187,21 +183,20 @@ const stats = [
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-20 bg-gradient-to-r from-purple-900/30to-cyan-900/30">
+          <div className="container mx-auto px-4text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Work With Us?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let&apos;s discuss how our team can help transform your business with 
+<p className="Let&apos;s discuss how our team can help transform your business with 
               cutting-edge AI and IT solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+               ">$2</p>
+            <div className="flex flex-col sm:flex-row gap-4justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-centergap-2">
                 Get Started
-                <ArrowRightIcon className="w-5 h-5" />
+                <ArrowRightIcon className="w-5h-5" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-allduration-300">
                 View Our Work
               </button>
               </div>
