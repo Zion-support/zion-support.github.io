@@ -3,9 +3,10 @@ import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+export default function Blog() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
   const categories = [
     { id: "all", name: "All Posts", count: 12 },
@@ -269,9 +270,6 @@ const BlogPage: React.FC = () => {
                     </span>
                   </div>
                   
-=======
-            Stay ahead with the latest insights on AI, cybersecurity, 5G technology, 
-            and business solutions from our team of experts.
           </p>
         </ResponsiveContainer>
       </section>
@@ -299,73 +297,119 @@ const BlogPage: React.FC = () => {
                         <User className="w-4 h-4" />
                         <span>{post.author}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{new Date(post.date).toLocaleDateString()}</span>
+                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-300 mb-6">{post.excerpt}</p>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4 text-sm text-gray-400">
+                          <div className="flex items-center space-x-1">
+                            <User className="w-4 h-4" />
+                            <span>{post.author}</span>
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <Calendar className="w-4 h-4" />
+                            <span>{post.date}</span>
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <Clock className="w-4 h-4" />
+                            <span>{post.readTime}</span>
+                          </div>
+                        </div>
+                        <Link
+                          to={`/blog/${post.id}`}
+                          className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                        >
+                          Read More
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1">
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Blog Posts Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Latest Articles</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
+                <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
+                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-48 flex items-center justify-center mb-6">
+                    <div className="text-4xl">📝</div>
+                  </div>
+                  <div className="flex items-center space-x-2 mb-4">
+                    <Tag className="w-4 h-4 text-cyan-400" />
+                    <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center space-x-1">
+                      <User className="w-4 h-4" />
+                      <span>{post.author}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
                       <Clock className="w-4 h-4" />
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {post.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
-                      >
-                        #{tag}
-                      </span>
-                    ))}
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">
+                      {new Date(post.date).toLocaleDateString()}
+                    </span>
+                    <Link
+                      to={`/blog/${post.id}`}
+                      className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                    >
+                      <span>Read</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
-                  
-                  <Link
-                    to={`/blog/${post.id}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:gap-2 transition-all duration-300"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          {/* No Results */}
-          {filteredPosts.length === 0 && (
-            <div className="text-center py-16">
-              <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No articles found</h3>
-              <p className="text-gray-400">Try adjusting your search terms or category filter.</p>
+                </article>
+              ))}
             </div>
-          )}
+            
+            {filteredPosts.length === 0 && searchTerm && (
+              <div className="text-center py-12">
+                <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
+              </div>
+            )}
+          </div>
+        </section>
 
-          {/* Newsletter Signup */}
-          <div className="mt-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 text-center">
-            <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get the latest tech insights and industry updates delivered straight to your inbox.
+        {/* Newsletter Signup */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Stay Updated
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Subscribe to our newsletter for the latest AI and IT insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
               />
-              <button className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
                 Subscribe
               </button>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>cursor/analyze-improve-and-deploy-application-30da
   );
 };
 
 export default BlogPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-=======

@@ -3,7 +3,6 @@
   cls: number | null;
   fcp: number | null;
   ttfb: number | null;export default PerformanceMonitor;cursor/analyze-improve-and-deploy-application-c573
-=======
 import React, { useEffect, ReactNode } from 'react';
 
 interface PerformanceMonitorProps {
@@ -61,4 +60,3 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
 };
 
 export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da

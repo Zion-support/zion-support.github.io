@@ -5,19 +5,10 @@ import { Loader2 } from 'lucide-react';
           <Loader2 className="w-16 h-16 text-cyan-400 animate-spin" />
         </div>
         <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-        <p className="text-gray-300">Please wait while we load the content</p><<<<<<< HEAD
-export default LoadingPage;cursor/analyze-improve-and-deploy-application-30da
+        <p className="text-gray-300">Please wait while we load the content</p>export default LoadingPage;cursor/analyze-improve-and-deploy-application-30da
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
-    <div className="animate-pulse">
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className="h-4 bg-gray-700 rounded mb-2"
-          style={{ width: `${Math.random() * 40 + 60}%` }}
-        />
-      ))}
-    </div>
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
   );
 };
 

@@ -1,85 +1,67 @@
-import React, { useState } from "react";
 import { Mail, CheckCircle } from "lucide-react";
 
-interface ContentNewsletterSignupProps {
-  className?: string;
-}
-
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  className = "",
-}) => {
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setIsSubscribed(true);
-      setEmail("");
-
-    } catch (error) {
-      } finally {
-      setIsLoading(false);
-    }
+const ContentNewsletterSignup: React.FC = () =>&apos;);
+    
+    // Reset after 3 seconds
+    setTimeout(() => setIsSubmitted(false), 3000);
   };
 
-  if (isSubscribed) {
+  if (isSubmitted) {
     return (
-      <div
-        className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
-      >
-        <CheckCircle className="w-8 h-8 mx-auto mb-2" />
-        <h3 className="text-lg font-semibold mb-2">
-          Thank you for subscribing!
-        </h3>
-        <p>You'll receive our latest updates and exclusive content.</p>
-      </div>
+      <section className="mb-16" aria-labelledby="newsletter-heading">
+        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
+          <div className="text-4xl mb-4">✅</div>
+          <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
+          <p className="text-green-100">&apos;ve been successfully subscribed to our newsletter.</p>
+        </div>
+      </section>
     );
   }
 
   return (
-    <div
-      className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
-    >
-      <div className="text-center mb-6">
-        <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-        <p className="text-gray-300">
-          Get the latest AI and tech insights delivered to your inbox.
-        </p>
-      </div>
-
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
-            required
-            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          />
+    <section className="mb-16" aria-labelledby="newsletter-heading">
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl">
+        <div className="max-w-2 xl mx-auto text-center">
+          <h2 id="newsletter-heading" className="text-2 xl sm:text-3 xl font-bold mb-4">
+            Stay Updated with AI Innovation
+          </h2>
+          <p className="text-purple-100 mb-6">
+            Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
+          </p>
+          
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex-1 relative">
+              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) =>&quot;
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+            >
+              {isSubmitting ? (
+                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
+              ) : (
+                <>
+                  Subscribe
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </>
+              )}
+            </button>
+          </form>
+          
+          <p className="text-xs text-purple-200 mt-4">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
         </div>
-
-        <button
-          type="submit"
-          disabled={isLoading}
-          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isLoading ? "Subscribing..." : "Subscribe Now"}
-        </button>
-      </form>
-
-      <p className="text-xs text-gray-400 text-center mt-4">
-        We respect your privacy. Unsubscribe at any time.
-      </p>
-    </div>
+      </div>
+    </section>
   );
-};
+</div></div></button></section></div></div></h2></section></div></div></h2></form></div></Mail></input></button></div></ArrowRight></section></div></div></h2></section></div></div></h2></form></div></Mail></input></button></div></ArrowRight>};
 
 export default ContentNewsletterSignup;
+"

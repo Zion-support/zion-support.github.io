@@ -1,15 +1,22 @@
-import React from "react";
+'use client'
+import React, { useEffect } from 'react'
 
-interface ServiceWorkerProps {
-  children?: React.ReactNode;
-  className?: string;
+const ServiceWorker: React.FC = () => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration)
+        })
+        .catch((error) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Service Worker registration failed:', error)
+          }
+        })
+    }
+  }, [])
+
+  return null
 }
 
-const ServiceWorker: React.FC<ServiceWorkerProps> = ({
-  children,
-  className = "",
-}) => {
-  return <div className={className}>{children}</div>;
-};
-
-export default ServiceWorker;
+export default ServiceWorker

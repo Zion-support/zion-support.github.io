@@ -98,11 +98,10 @@ import ResponsiveGrid from '../components/ResponsiveGrid';      id: "zion-analyt
       price: '$39/month',
       featured: false
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our powerful micro SAAS solutions designed to streamline your business operations. Analytics, security, cloud storage, and more." />
-        <meta name="keywords" content="micro saas, business software, analytics, security, cloud storage, productivity tools" />
+        <meta name="description" content="Comprehensive micro SAAS solutions for small and medium businesses." />
       </Helmet>
 
       <div className="min-h-screen pt-16">
@@ -114,7 +113,6 @@ import ResponsiveGrid from '../components/ResponsiveGrid';      id: "zion-analyt
                 <Zap className="w-10 h-10 text-white" />
               </div>
             </div>
-<<<<<<< HEAD
           </div>
         </div>cursor/analyze-improve-and-deploy-application-30da
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -344,7 +342,6 @@ const MicroSaasPage: React.FC = () => {
             >
               Schedule Demo
             </FuturisticButton>
-=======
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Micro SAAS Solutions
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -455,6 +452,3 @@ const MicroSaasPage: React.FC = () => {
                 Schedule a Demo
               </FuturisticButton>cursor/analyze-improve-and-deploy-application-c573
             </div>
-=======
-          </FuturisticCard>
-        </ResponsiveContainer>

@@ -33,7 +33,6 @@ const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 
 // AI Services Pages
-const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
 const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
 const AICybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
@@ -44,14 +43,10 @@ const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-a
 const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
-// IT Services Pages
-const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
-const DevOpsServicesPage = React.lazy(() => import("./app/devops/page"));
-const ITConsultingPage = React.lazy(() => import("./app/it-consulting/page"));
-const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page"));
-const SoftwareDevelopmentPage = React.lazy(() => import("./app/custom-software/page"));
-const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
-const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
+// Zion Services
+const ZionAnalyticsPage = React.lazy(() => import("./app/zion-analytics/page"));
+const ZionAIPlatformPage = React.lazy(() => import("./app/zion-ai-platform/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
 
 // 5G Services Pages
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
@@ -108,11 +103,21 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
-    }
+    // Simulate initial loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
 
   return (
     <GlobalErrorBoundary>

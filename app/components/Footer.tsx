@@ -86,8 +86,7 @@ const Footer = React.memo(() => {
     { number: "10,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
-  ], []);<<<<<<< HEAD
-    <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-gray-700">
+  ], []);    <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}

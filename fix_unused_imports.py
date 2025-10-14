@@ -5,14 +5,17 @@ Script to remove unused imports from TypeScript/React files
 import os
 import re
 import glob
-import ast
-import sys
 
 def remove_unused_imports(file_path):
     """Remove unused imports from a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
+        
+        # Skip if file has merge conflicts
+        if '' in content:
+            print(f"Skipping {file_path} - has merge conflicts")
+            return False
         
         # Find all import statements
         import_pattern = r'import\s+.*?from\s+[\'"][^\'"]+[\'"];?\s*\n'

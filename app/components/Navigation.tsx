@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, 
@@ -56,7 +56,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     return location.pathname === path;
   }, [location.pathname]);
 
-  const services = [
+  const services = useMemo(() => [
     {
       name: 'AI Services',
       path: '/ai-services',

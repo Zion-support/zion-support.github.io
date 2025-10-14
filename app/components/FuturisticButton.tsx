@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { LucideIcon } from 'lucide-react';=======
-  icon?: LucideIcon;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
+import { LucideIcon } from 'lucide-react';  icon?: LucideIcon;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';cursor/analyze-improve-and-deploy-application-30da
 }
 
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({
-  children,
-  variant = 'primary',
-  size = 'md',
-  href,
-  to,
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
+  children, 
+  className = '','
+  variant = 'primary','
+  size = 'md','
+  icon,
   onClick,
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
@@ -44,18 +42,28 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         rel="noopener noreferrer"
       >
         {content}
-=======
-        {icon && <span className="ml-2 group-hover:translate-x-1 transition-transform">{icon}</span>}<<<<<<< HEAD
-    <button onClick={onClick} className={classes} disabled={disabled}>
-      {children}
-      <ArrowRight className="w-4 h-4 ml-2" />cursor/analyze-improve-and-deploy-application-c573
-=======
     <button onClick={onClick} className={classes}>
       {children}
       {icon && <span className="ml-2 group-hover:translate-x-1 transition-transform">{icon}</span>}
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     </button>
   );
 };
 
+    </button>)
+  );
+export default FuturisticButton;
+"""
+    >{icon && <span className="mr-2">{icon}</span>}""
+      { children }
+
+    </button>
+  )
+}
+export default FuturisticButton;
+    >{icon && <span className="mr-2">{icon}</span>}
+      {children}
+    </button>
+)}
+export default FuturisticButton
+}
 export default FuturisticButton;

@@ -1,8 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';=======
-  fallback?: ReactNode;
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';  fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 }
 
 interface State {

@@ -13,6 +13,7 @@ interface EnhancedSEOProps {
     nofollow ? 'nofollow' : 'follow'
   ].join(', ');
 
+const EnhancedSEO: React.FC = () => {
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -75,12 +76,10 @@ interface EnhancedSEOProps {
       <meta name="msapplication-TileColor" content="#8b5cf6" />      {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />cursor/analyze-improve-and-deploy-application-c573
-=======
       {/* Favicon and Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/manifest.json" />
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     </Helmet>
   );
 };

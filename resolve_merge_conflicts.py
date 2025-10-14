@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to resolve merge conflicts by keeping the most recent version (after =======)
+Script to resolve merge conflicts by keeping the most recent version (after )
 """
 import os
 import re
@@ -13,21 +13,20 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        if '' not in content:
             return False
         
         # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD.*?\n(.*?)\n=======\n(.*?)\n>>>>>>> ', content, flags=re.DOTALL)
-        
+        parts = re.split(r'.*?\n(.*?)\n\n(.*?)\n        
         if len(parts) < 2:
             return False
         
-        # Keep the first part (before first conflict) and the parts after ======= (most recent)
+        # Keep the first part (before first conflict) and the parts after  (most recent)
         resolved_content = parts[0]
         
         for i in range(1, len(parts), 2):
             if i + 1 < len(parts):
-                # Keep the part after ======= (most recent version)
+                # Keep the part after  (most recent version)
                 resolved_content += parts[i + 1]
         
         # Write the resolved content back
