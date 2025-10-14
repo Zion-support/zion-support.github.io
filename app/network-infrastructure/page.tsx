@@ -1,123 +1,31 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function NetworkInfrastructure() {}
+import { Link } from 'react-router-dom';
+
+export default function PagePage() {
   return (
-    <div>Page content</div>
-  );
-}
-  return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Network Infrastructure | Zion Tech Group</title>
-        <meta name="description" content="Professional Network Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
+      
       <div className="container mx-auto px-4 py-16">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <div className="text-center mb-16">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Network Infrastructure <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40o0 to-purple-40o0">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
-            Build robust, scalable network infrastructure with our expert solutions designed for modern businesses.;
-          </p>
-        </div>
-        <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 mb-16">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-          <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-6 border border-white"/20">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <h3 className="text-xl font-semibold text-white mb-4">Network Design</h3>
-            <p className="text-gray-30o0 mb-4">
-              Custom network architecture designed for your specific business requirements.;
-            </p>
-            <ul className="text-sm text-gray-40o0 space-y-2">
-              <li>• Scalable architecture</li>
-              <li>• High availability</li>
-              <li>• -first design</li>
-            </ul>
-          </div>
-          <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-6 border border-white"/20">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <h3 className="text-xl font-semibold text-white mb-4">Network </h3>
-            <p className="text-gray-30o0 mb-4">
-              Comprehensive security solutions to protect your network infrastructure.;
-            </p>
-            <ul className="text-sm text-gray-40o0 space-y-2">
-              <li>• Firewall configuration</li>
-              <li>• Intrusion detection</li>
-              <li>• VPN solutions</li>
-            </ul>
-          </div>
-          <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-6 border border-white"/20">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <h3 className="text-xl font-semibold text-white mb-4">Network Monitoring</h3>
-            <p className="text-gray-30o0 mb-4">
-              24/7 monitoring and management of your network infrastructure.;
-            </p>
-            <ul className="text-sm text-gray-40o0 space-y-2">
-              <li>• Real-time monitoring</li>
-              <li>• Performance optimization</li>
-              <li>• Proactive maintenance</li>
-            </ul>
-          </div>
-        </div>
         <div className="text-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-          <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-8 border border-white"/20 max-w-2xl mx-auto">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Build Your Network?</h2>
-            <p className="text-gray-30o0 mb-6">
-              Our network infrastructure experts are ready to help you build a robust, secure, and scalable network.;
-            </p>
-            <button className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-8 py-3 rounded-lg font-semibold hover: from-blue-60o0 hove,r:to-purple-60o0 transition-all duration-30o0">
-              Get Started Today;
-            </button>
-          </div>
+          <h1 className="text-4xl font-bold text-white mb-8">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional page services by Zion Tech Group.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
     </div>
   );
-}
-            </button></div></div></div></div>
-  );}
 }

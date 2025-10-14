@@ -1,11 +1,31 @@
-'use client';
-import React from 'react';'; import { Helmet } from 'react-helmet-async';'; const PrivacyPage: React.FC = () => {} return ( <>Helme t><///Helme t><//titl e>PrivacyPage - Zion Tech Group</titl e><//meta nam e="description" conten t="PrivacyPage - Zion Tech Group" />"" </Helme t><//div classNam e="min-h-screen bg-slate-900 text-white flex items-center justify-center">"" <div classNam e="text-center">
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+export default function PrivacyPagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>PrivacyPage - Zion Tech Group</title>
+        <meta name="description" content="Professional PrivacyPage services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">
+            PrivacyPage
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional PrivacyPage services by Zion Tech Group.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us
+          </Link>
+        </div>
       </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>"" <h1 classNam e="text-4xl font-bold mb-4">PrivacyPage</h 1>"" <p classNam e="text-gray-300">This page is under construction.</p>"" </di v><///di v>"'
-) </>) ); }
+    </div>
+  );
 }
-export default PrivacyPag;e;'"'

@@ -1,82 +1,31 @@
-'use client';
 import React from 'react';
-;import { Helmet } from 'react-helmet-async';
-;const ServicesPage: "React.FC = () => {"
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+export default function ServicesPagePage() {
   return (
-    <div>Page content</div>
-  );
-    <></>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive AI solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
+        <title>ServicesPage - Zion Tech Group</title>
+        <meta name="description" content="Professional ServicesPage services by Zion Tech Group." />
       </Helmet>
       
-      <div className="min-h-screen bg-slate-90o0 text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">
+            ServicesPage
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ServicesPage services by Zion Tech Group.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us
+          </Link>
+        </div>
       </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,g:px-8 py-20">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-          <div className="text-center mb-16">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth
-            </p>
-          </div>
-          
-          <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <div className="bg-slate-80o0"/50 rounded-lg p-8">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-              <h3 className="text-2xl font-bold mb-4">AI Solutions</h3>
-              <p className="text-gray-30o0 mb-6">Advanced artificial intelligence and machine learning solutions to transform your business.</p>
-              <a href=""/ai-solutions" className="text-purple-40o0 hover:text-purple-30o0 font-semibold">Learn More →</a>
-            </div>
-            
-            <div className="bg-slate-80o0"/50 rounded-lg p-8">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-              <h3 className="text-2xl font-bold mb-4">Cybersecurity</h3>
-              <p className="text-gray-30o0 mb-6">Comprehensive security solutions to protect your digital assets and infrastructure.</p>
-              <a href=""/cybersecurity" className="text-purple-40o0 hover:text-purple-30o0 font-semibold">Learn More →</a>
-            </div>
-            
-            <div className="bg-slate-80o0"/50 rounded-lg p-8">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-              <h3 className="text-2xl font-bold mb-4">Cloud Solutions</h3>
-              <p className="text-gray-30o0 mb-6">Scalable cloud solutions and infrastructure management for modern businesses.</p>
-              <a href=""/cloud-solutions" className="text-purple-40o0 hover:text-purple-30o0 font-semibold">Learn More →</a>
-            </div>
-          </div>
-        </div>;
-      </div>;
-    </>;
+    </div>
   );
 }
-export default ServicesPage;

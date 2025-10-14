@@ -1,12 +1,21 @@
+import React from 'react';
 
-;import { Helmet } from 'react-helmet-async';
-;interface SEOProps {}
-  title: "string",description: "string"
-  keywords?: string
-  canonicalUrl?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noIndex?: boolean
-  noFollow?: boolean}
+interface EnhancedSEOProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedseo-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">EnhancedSEO</h3>
+          <p className="text-gray-600">This is the EnhancedSEO component.</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default EnhancedSEO;
