@@ -1,33 +1,33 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
+const BlogPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
-        <meta name="keywords" content="technology blog, AI insights, cybersecurity tips, cloud computing, digital transformation" />
-        <meta property="og:title" content="Blog - Zion Tech Group" />
-        <meta property="og:description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/blog" />
+        <title>Blog Page - Zion Tech Group</title>
+        <meta name="description" content="Professional blog page services by Zion Tech Group" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
-              Our Blog
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Blog Page
             </h1>
-            <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Insights, trends, and expert knowledge on AI, cybersecurity, cloud computing, and digital transformation.
+            <p className="text-xl text-gray-300 mb-8">
+              Professional blog page services
             </p>
+            <div className="bg-slate-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-gray-300">
+                This page is currently under development. Please check back soon for more information.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
-
+export default BlogPage;

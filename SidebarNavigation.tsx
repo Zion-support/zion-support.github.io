@@ -40,4 +40,3 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
 };
 
 export default SidebarNavigation;
-ursor/fix-errors-and-merge-to-main-94a7

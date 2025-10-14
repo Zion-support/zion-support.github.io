@@ -1,34 +1,35 @@
-
-
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-
-
-ursor/fix-errors-and-merge-to-main-94a7
+const MicroSaaSSolutionsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <React.Fragment>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services with competitive pricing." />
         <meta name="keywords" content="micro SaaS, AI tools, business automation, software solutions, SaaS pricing, business software" />
-        <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Micro SaaS Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Comprehensive micro SaaS solutions for modern businesses
+            </p>
+            <div className="bg-slate-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-gray-300">
+                This page is currently under development. Please check back soon for more information about our micro SaaS solutions.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
-
-ursor/fix-errors-and-merge-to-main-94a7
+const page = React.lazy(() => import('./page'));
+export default page;

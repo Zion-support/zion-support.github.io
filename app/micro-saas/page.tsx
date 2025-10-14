@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
-export default function Page() {
+function Page() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -47,12 +47,11 @@ export default function Page() {
               Get Started Today;
             </button>;
           </div>
-ursor/fix-errors-and-merge-to-main-94a7
         </div>
       </div>
     </div>
   );
 };
 
-export default MicroSaasPage;
-ursor/fix-errors-and-merge-to-main-94a7
+const page = React.lazy(() => import('./page'));
+export default page;

@@ -60,7 +60,6 @@ function fixJSXErrors(content) {
     '<>\n      <//Helmet>\n        <////title>$1</title>\n        <////meta name="description" content="$1" />\n      </Helmet>\n      <////div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <////h1 className="text-4xl font-bold text-gray-900 mb-8">$2</h1>\n          <////p className="text-xl text-gray-600">$3</p>\n        </////div>\n      </div>\n    </////>');
   
   return content;
-ursor/fix-errors-and-merge-to-main-94a7
 }
 
 // Function to process a single file;
@@ -100,7 +99,6 @@ async function main() {
       if (processFile(file)) {
         totalFixed++;
       }
-ursor/fix-errors-and-merge-to-main-94a7
     }
     filesProcessed++;
   });

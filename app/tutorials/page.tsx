@@ -1,5 +1,11 @@
 import React from 'react';
-import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
+import { Helmet } from 'lucide-react';
+import { Right } from 'lucide-react';
+import { Play } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Circle } from 'lucide-react';
+import { Clock } from 'lucide-react';
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,
@@ -201,4 +207,3 @@ const Page = () => {
 
 const page = React.lazy(() => import('./page'));
 export default page;
-ursor/fix-errors-and-merge-to-main-94a7

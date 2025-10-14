@@ -135,4 +135,3 @@ const observer = new IntersectionObserver()
   )};
 
 export default OptimizedImage
-ursor/fix-errors-and-merge-to-main-94a7

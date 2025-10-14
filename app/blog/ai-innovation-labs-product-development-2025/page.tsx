@@ -136,4 +136,5 @@ const InnovationLabsPage: React.FC = () => {
   );
 };
 
-export default InnovationLabsPage;
+const page = React.lazy(() => import('./page'));
+export default page;

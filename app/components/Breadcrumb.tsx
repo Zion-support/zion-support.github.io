@@ -1,44 +1,34 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
-
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();    return null;
-  }
-
-  const getBreadcrumbName = (pathname: string) => {
-    const nameMap: Record<string, string> = {
-      'about': 'About',
-      'services': 'Services',
-      'ai-services': 'AI Services',
-      'micro-saas': 'Micro SAAS',
-      '5g-solutions': '5G Solutions',
-      'blog': 'Blog',
-      'contact': 'Contact',
-      'privacy': 'Privacy Policy',
-      'terms': 'Terms of Service',
-      'tutorials': 'Tutorials',
-      'demo': 'Demo',
-      'support': 'Support'
-    };
-
-    return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1);
-  };
-
   return (
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-2" aria-label="Breadcrumb">
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-3">              <Home className="w-4 h-4" />
-              <span className="sr-only">Home</span>
-            </Link>
-          </li> cursor/analyze-improve-and-deploy-application-30da
-          {pathSegments.map((segment, index) => (
-            <li key={segment.path} className="flex items-center">
-              <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
-              {segment.isLast ? (
-                <span className="text-cyan-400 font-medium"
+    <React.Fragment>
+      <Helmet>
+        <title>Breadcrumb - Zion Tech Group</title>
+        <meta name="description" content="Professional Breadcrumb services by Zion Tech Group" />
+        <meta name="keywords" content="Breadcrumb" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Breadcrumb
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Breadcrumb services
+            </p>
+            <div className="bg-slate-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-gray-300">
+                This page is currently under development. Please check back soon for more information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default Breadcrumb;

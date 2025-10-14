@@ -1,23 +1,34 @@
-import React, { ReactNode } from "react";""
-ursor/fix-errors-and-merge-to-main-94a7
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const MetaManagerPage = () => {
+const MetaManager: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <React.Fragment>
       <Helmet>
         <title>MetaManager - Zion Tech Group</title>
-        <meta name="description" content="MetaManager - Zion Tech Group" />
+        <meta name="description" content="Professional MetaManager services by Zion Tech Group" />
+        <meta name="keywords" content="MetaManager" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">MetaManager</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              MetaManager
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional MetaManager services
+            </p>
+            <div className="bg-slate-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-gray-300">
+                This page is currently under development. Please check back soon for more information.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
+
 export default MetaManager;
-"""

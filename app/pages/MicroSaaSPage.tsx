@@ -1,65 +1,33 @@
-import React from 'react';;
-import { Link } from 'react-router-dom';;
-import SEO from '../components/SEO;
-import {
-  GlobeAltIcon,
-  CpuChipIcon,
-  ChartBarIcon,
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon';
-} from '@heroicons/react/24/outline;
-export default function MicroSaaSPage() {
-  const services = [
-    {
-      icon: GlobeAltIcon,
-      title: 'Custom Micro SaaS Development',
-      description: 'Tailored micro SaaS solutions designed to solve specific business challenges with scalable architecture.',
-      features: ['Custom development', 'Scalable architecture', 'API integration', 'Multi-tenant support']
-    },
-    {
-      icon: CpuChipIcon,
-      title: 'AI-Powered Micro SaaS',
-      description: 'Intelligent micro SaaS applications powered by artificial intelligence and machine learning.',
-      features: ['AI integration', 'Machine learning', 'Predictive analytics', 'Automated workflows']
-    },
-    {
-      icon: ChartBarIcon,
-      title: 'Analytics & Reporting',
-      description: 'Comprehensive analytics and reporting solutions for your micro SaaS applications.',
-      features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Business intelligence']
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Deployment & Scaling',
-      description: 'Seamless deployment and automatic scaling solutions for your micro SaaS applications.',
-      features: ['Cloud deployment', 'Auto-scaling', 'Load balancing', 'Performance optimization']
-    }
-  ]
-  const industries = [
-    { name: 'E-commerce', description: 'Online retail solutions' },
-    { name: 'Healthcare', description: 'Medical practice management' },
-    { name: 'Finance', description: 'Financial services tools' },
-    { name: 'Education', description: 'Learning management systems' },
-    { name: 'Real Estate', description: 'Property management tools' },
-    { name: 'Manufacturing', description: 'Production optimization' }
-  ]
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 const MicroSaaSPage: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <Helmet>
-        <title>MicroSaaSPage - Zion Tech Group</title>
-        <meta name="description" content="MicroSaaSPage - Zion Tech Group" />
+        <title>Micro Saa S Page - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saa s page services by Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Micro Saa S Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional micro saa s page services
+            </p>
+            <div className="bg-slate-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-gray-300">
+                This page is currently under development. Please check back soon for more information.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </>
-  )}
+    </React.Fragment>
+  );
+};
+
+export default MicroSaaSPage;

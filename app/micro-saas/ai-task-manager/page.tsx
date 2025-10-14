@@ -1,7 +1,38 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Target, BarChart3, CheckCircle2, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, Mail, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from 'lucide-react'
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { PenTool } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Eye } from 'lucide-react';
+import { EyeOff } from 'lucide-react';
+import { Key } from 'lucide-react';
+import { Fingerprint } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Laptop } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 const AITaskManagerPage: React.FC = () => {
   const features = [

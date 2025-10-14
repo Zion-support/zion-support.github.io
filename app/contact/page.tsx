@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
+import { Helmet } from 'lucide-react';
+import { Circle } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 export default function ContactPage()    {
   const [formData, setFormData] = useState({
@@ -244,4 +250,3 @@ export default function ContactPage()    {
       </section>
     </div>
   )}
-ursor/fix-errors-and-merge-to-main-94a7

@@ -1,50 +1,34 @@
-import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
-// Higher-order component for lazy loading;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any;
-export function withLazyLoading<T extends ComponentType<any>>(
-  Component: T,
-  fallback?: React.ReactNode;
-) {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
-  return (props: ComponentProps<T>) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
-    </Suspense>
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const LazyUtils: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>LazyUtils - Zion Tech Group</title>
+        <meta name="description" content="Professional lazyUtils services by Zion Tech Group" />
+        <meta name="keywords" content="lazyUtils" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              LazyUtils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional lazyUtils services
+            </p>
+            <div className="bg-slate-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-gray-300">
+                This page is currently under development. Please check back soon for more information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
   );
-}
+};
 
-// Utility function to create lazy-loaded components;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any;
-export function createLazyComponent<T extends ComponentType<any>>(
-  importFunction: () => Promise<{
-    default: T ,
-  }>,
-  fallback?: React.ReactNode;
-) {
-  const LazyComponent = lazy(importFunction);
-  return (props: ComponentProps<T>) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
-    </Suspense>
-  );,
-},
-// Utility function to create lazy-loaded components,
-// eslint-disable-next-line @typescript-eslint/no-explicit-any,
-export function createLazyComponent<T extends ComponentType<any>>()
-  importFunction: () => Promise<{ default: T }>
-  fallback?: React.ReactNode,
-) {,
-
-  const LazyComponent = lazy(importFunction);,
-  
-  return (props: ComponentProps<T>) => ()
-,
-    <Suspense fallback={fallback || <div>Loading...</div>}>,
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */},
-      <LazyComponent {...(props as any)} />
-    </Suspense>
-  );,
-}'
+export default LazyUtils;

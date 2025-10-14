@@ -112,4 +112,5 @@ const EnterpriseTransformationPage: React.FC = () => {
   );
 };
 
-export default EnterpriseTransformationPage;
+const page = React.lazy(() => import('./page'));
+export default page;

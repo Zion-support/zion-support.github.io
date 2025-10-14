@@ -44,7 +44,6 @@ const originalContent = content;
           console.log(`Fixed: ${filePath}`)```
 } catch (error) {
         console.error(`Error processing ${filePath}:`, error.message)```;
-ursor/fix-errors-and-merge-to-main-94a7
 }
 
 // Main execution
@@ -71,4 +70,3 @@ async function main() {
 console.log("Starting malformed file fixes...")"
 processFiles("./app")"
 console.log("Malformed file fixes completed!")"
-ursor/fix-errors-and-merge-to-main-94a7

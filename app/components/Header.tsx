@@ -1,147 +1,33 @@
 import React from 'react';
-{ useState } from 'react';
-import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react';
-ursor/fix-errors-and-merge-to-main-94a7
+import { Helmet } from 'react-helmet-async';
+
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-'}
-  const navigationItems = [{ name: 'Home', href: '/' },';
-    { name: 'About', href: '/about' },';
-    { '
-      name: 'Services',';
-      href: '/services',';'}
-      submenu: [{ name: 'AI Services', href: '/ai-services' },';
-        { name: 'IT Services', href: '/it-services' },';
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';
-        { name: 'Digital Transformation', href: '/digital-transformation' }';
-      ];
-    },'
-    { name: 'Solutions', href: '/solutions' },';
-    { name: 'Case Studies', href: '/case-studies' },';
-    { name: 'Blog', href: '/blog' },';
-    { name: 'Contact', href: '/contact' }';
-  ];
-
-  const navigationItems = [{ name: 'Home', href: '/' },'
-    { name: 'About', href: '/about' },'
-    { 
-      name: 'Services',';
-      href: '/services',';
-      submenu: [{ name: 'AI Services', href: '/ai-services' },';
-        { name: 'IT Services', href: '/it-services' },';
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';
-        { name: 'Digital Transformation', href: '/digital-transformation' }']},
-    { name: 'Solutions', href: '/solutions' },';
-    { name: 'Case Studies', href: '/case-studies' },';
-    { name: 'Blog', href: '/blog' },';
-    { name: 'Contact', href: '/contact' }'];
-
-export default function Header() {
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">;
-            <Link to="/" className="text-2xl font-bold text-white">;
-              Zion Tech Group;
-            </Link>;
-          </div>
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">;
-                  <Link>
-                    to={item.href}
-                    className="$1"
-onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >
-                    {item.name}
-                    {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
-                  </Link>
-                  {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
-                      {item.submenu.map((subItem) => (
-                        <Link>
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="$1"
-                        >
-                          {subItem.name}
-                        </Link>;
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+    <React.Fragment>
+      <Helmet>
+        <title>Header - Zion Tech Group</title>
+        <meta name="description" content="Professional Header services by Zion Tech Group" />
+        <meta name="keywords" content="Header" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Header
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Header services
+            </p>
+            <div className="bg-slate-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-gray-300">
+                This page is currently under development. Please check back soon for more information.
+              </p>
             </div>
-          </div>
-          {/* CTA Button */}
-          <div className="hidden md:block">;
-            <Link>
-              to="/contact";
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300";
-            >;
-              Get Started;
-            </Link>;
-          </div>
-          {/* Mobile menu button */}
-          <div className="md:hidden">;
-            <button>
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2";
-            >;
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>;
           </div>
         </div>
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">;
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;
-              {navigationItems.map((item) => (
-                <div key={item.name}>;
-                  <Link>
-                    to={item.href}
-                    className="$1"
-onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="pl-4 space-y-1">
-                      {item.submenu.map((subItem) => (
-                        <Link>
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="$1"
-onClick={() => setIsOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>;
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              <div className="pt-4">;
-                <Link>
-                  to="/contact";
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center";
-                  onClick={() => setIsOpen(false)}
-                >;
-                  Get Started;
-                </Link>;
-              </div>
-            </div>
-          </div>
-        )}
       </div>
-    </nav>;
+    </React.Fragment>
   );
 };
 

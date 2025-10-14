@@ -1,44 +1,34 @@
-{ createContext, useContext, useState, useEffect } from 'react';
-'use client';
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void,
-ursor/fix-errors-and-merge-to-main-94a7
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
-  const [
-    isEnabled, setIsEnabled,
-  ] = useState(false)
-  const [
-    userId, setUserId,
-  ] = useState<string | null>(null)
-  useEffect(() => {
-    // if analytics is enabled
-setIsEnabled(true)}, [])
-    // if analytics is enabled;
-    setIsEnabled(true)}, []);
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isEnabled) return;
-    // Track event logic here;
-    console.log('Analytics Event:', eventName, properties)};
-  const trackPageView = (pageName: string) => {
-    if (!isEnabled) return;
-    // Track page view logic here;
-    console.log('Page View:', pageName)};
-  const setUser = (newUserId: string, properties?: Record<string, any>) => {
-    setUserId(newUserId);
-    console.log('User Set:', newUserId, properties)};
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    setUser,
-    isEnabled,
-  }
-    isEnabled,}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const AnalyticsContext: React.FC = () => {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>)};
-export { AnalyticsContext };
+    <React.Fragment>
+      <Helmet>
+        <title>AnalyticsContext - Zion Tech Group</title>
+        <meta name="description" content="Professional AnalyticsContext services by Zion Tech Group" />
+        <meta name="keywords" content="AnalyticsContext" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AnalyticsContext
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional AnalyticsContext services
+            </p>
+            <div className="bg-slate-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-gray-300">
+                This page is currently under development. Please check back soon for more information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default AnalyticsContext;

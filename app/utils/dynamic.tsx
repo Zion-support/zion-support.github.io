@@ -1,15 +1,34 @@
 import React from 'react';
-'use client';
-export default function UtilsPage() {
+import { Helmet } from 'react-helmet-async';
+
+const Dynamic: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">;
-        <h1 className="text-4xl font-bold mb-8">Utils</h1>;
-        <p className="text-gray-300 text-lg">;
-          This page is under development.;
-        </p>;
+    <React.Fragment>
+      <Helmet>
+        <title>Dynamic - Zion Tech Group</title>
+        <meta name="description" content="Professional dynamic services by Zion Tech Group" />
+        <meta name="keywords" content="dynamic" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Dynamic
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional dynamic services
+            </p>
+            <div className="bg-slate-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-gray-300">
+                This page is currently under development. Please check back soon for more information.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  );}
-}
-'
+    </React.Fragment>
+  );
+};
+
+export default Dynamic;

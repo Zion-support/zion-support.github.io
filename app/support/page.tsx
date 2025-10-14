@@ -1,8 +1,26 @@
 import React, { useState } from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, MessageCircle, Phone, Mail, Clock, CheckCircle, Star, Users, Shield, Zap, Globe, BarChart3, Settings, HelpCircle, BookOpen, FileText, Calendar, Award, Target } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Target } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const SupportPage = () => {
@@ -181,7 +199,6 @@ const SupportPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Get 24/7 support from our expert team. Whether you need technical assistance, have questions about our services, or want to explore new possibilities, we're here for you.
-ursor/fix-errors-and-merge-to-main-94a7
           </p>
           
           {/* Search Bar */}
@@ -421,10 +438,9 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-ursor/fix-errors-and-merge-to-main-94a7
     </div>
   );
 };
 
-export default SupportPage;
-ursor/fix-errors-and-merge-to-main-94a7
+const page = React.lazy(() => import('./page'));
+export default page;

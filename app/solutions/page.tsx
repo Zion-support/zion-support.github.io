@@ -1,7 +1,7 @@
 "use client";""
 ";""
 import React from "react";"
-export default function Page() {
+function Page() {
   return (
     <div></div>"
       <h1>Page</h1>
@@ -9,4 +9,3 @@ export default function Page() {
     </div>)
   );
 }"""
-ursor/fix-errors-and-merge-to-main-94a7

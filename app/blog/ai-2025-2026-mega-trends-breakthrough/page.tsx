@@ -104,4 +104,5 @@ const AIMegaTrends20252026: React.FC = () => {
   );
 };
 
-export default AIMegaTrends20252026;
+const page = React.lazy(() => import('./page'));
+export default page;

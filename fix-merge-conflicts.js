@@ -1,32 +1,29 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Get all files with merge conflicts
-const filesWithConflicts = execSync('grep -r "" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" | cut -d: -f1 | sort -u', { encoding: 'utf8' }).trim().split('\n').filter(f => f);
+// Get all files with merge conflict markers
+const files = result.trim().split('\n').filter(f => f && !f.includes('node_modules') && !f.includes('.git'));
 
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+console.log(`Found ${files.length} files with merge conflict markers`);
 
-filesWithConflicts.forEach(filePath => {
+files.forEach(file => {
   try {
-    if (!fs.existsSync(filePath)) return;
+    let content = fs.readFileSync(file, 'utf8');
     
-    let content = fs.readFileSync(filePath, 'utf8');
+    // Remove the merge conflict marker line
+    content = content.replace(/.*ursor\/fix-errors-and-merge-to-main.*\n?/g, '');
     
-    // Remove merge conflict markers and keep the HEAD version (first part)
-    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
-    // Remove any remaining conflict markers
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
-    // Clean up any double newlines
-    content = content.replace(/\n\n\n+/g, '\n\n');
+    // Clean up any extra empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
+    fs.writeFileSync(file, content);
+    console.log(`Fixed: ${file}`);
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${file}:`, error.message);
   }
 });
 
-console.log('Merge conflicts resolution completed');
+console.log('Merge conflict markers cleanup completed');
