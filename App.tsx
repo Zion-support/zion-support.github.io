@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import { AnalyticsProvider } from './app/contexts/AnalyticsContext';
+import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
