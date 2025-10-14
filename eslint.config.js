@@ -45,7 +45,7 @@ export default tseslint.config(
       ],
       "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^[A-Z]" }],
       "@typescript-eslint/no-explicit-any": "warn",
-      "no-console": "warn"
+      "no-console": ["warn", { "allow": ["warn", "error"] }]
     }
   },
   {
@@ -81,7 +81,8 @@ export default tseslint.config(
     },
     rules: {
       "@typescript-eslint/no-unused-vars": "off",
-      "no-console": "off"
+      "no-console": "off",
+      "@typescript-eslint/no-require-imports": "off"
     }
   }
 )
