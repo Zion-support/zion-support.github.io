@@ -1,8 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const,
-  FiveGPrivateNetworksPage: React.FC = () => {  return (    <>
+const FiveGPrivateNetworksPage: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>5G Private Networks</title>
         <meta
@@ -55,6 +56,4 @@ const,
   );
 };
 
-export default 5gPrivateNetworksPage;
-
-
+export default FiveGPrivateNetworksPage;

@@ -1,8 +1,14 @@
 import React from 'react';
 
-const,
-  SEOOptimizer: React.FC = () => {
-  return null; // This component doesn't render anything visible};
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+}
 
 export default SEOOptimizer;
 =======

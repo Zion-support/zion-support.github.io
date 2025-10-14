@@ -16,7 +16,7 @@ export const enhancedLogger ={
         level,
         message,
         data,
-        timestamp: newDate().to ISOString()
+        timestamp: new Date().toISOString()
       })
     }
   },

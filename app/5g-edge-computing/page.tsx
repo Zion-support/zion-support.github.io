@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const,
-  FiveGEdgeComputingPage: React.FC = () => {  return (
+const FiveGEdgeComputingPage: React.FC = () => {
+  return (
     <>
       <Helmet>
         <title>5G Edge Computing</title>
@@ -56,4 +56,4 @@ const,
   );
 };
 
-export default FiveGEdgeComputing;
+export default FiveGEdgeComputingPage;

@@ -3,11 +3,12 @@
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-20c7
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
+<<<<<<< HEAD
 
 }
 
@@ -19,6 +20,16 @@ const,
   enableFocusManagemen t = true;
 })  => {
   useEffect(()  => {
+=======
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true
+}) => {
+  useEffect(() => {
     const root = document.documentElement;
     
     // High contrast mode;
@@ -49,10 +60,10 @@ if (event.ke y ==='Tab' && event.shiftKey && event.altKey) {
         }
       };
 
-      // Enhance focus management
-      const focusableElements = document.querySelectorAll(
-        'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-      );
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [enableKeyboardNavigation, enableHighContrast]);
 
   useEffect(()  => {
     if (enableScreenReaderSupport) {
@@ -70,12 +81,12 @@ const announceToScreenReader = (message: string)  => {
         }, 1000);
       };
 
-      // Announce page changes;
-const observer = new MutationObserver((mutations)  => {
-        mutations.forEach((mutation)  => {
-          if (mutation.type==='childList' && mutation.addedNodes.length > 0) {
-            const addedNode = mutation.addedNodes[0] asElement;
-            if (addedNode && addedNode.nodeTyp e === Node.ELEMENT_NODE) {
+      // Announce page changes
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+            const addedNode = mutation.addedNodes[0] as Element;
+            if (addedNode && addedNode.nodeType === Node.ELEMENT_NODE) {
               const heading = addedNode.querySelector('h1, h2, h3, h4, h5, h6');
               if (heading) {
                 announceToScreenReader(`Page,
@@ -97,12 +108,12 @@ const observer = new MutationObserver((mutations)  => {
 
   useEffect(()  => {
     if (enableFocusManagement) {
-      // Focus management for modals and dropdowns;
-const manageFocus = (event: FocusEvent)  => {
-        const target = event.target asElement;
-        if (target && target.closest('[role="dialog"],[role="menu"],[role="listbox"]')) {
-          const focusableElements = target.closest('[role="dialog"],[role="menu"],[role="listbox"]')?.querySelectorAll(
-            'button,[href], input, select, textarea,[tabindex]:not([tabinde x ="-1"])'
+      // Focus management for modals and dropdowns
+      const manageFocus = (event: FocusEvent) => {
+        const target = event.target as Element;
+        if (target && target.closest('[role="dialog"], [role="menu"], [role="listbox"]')) {
+          const focusableElements = target.closest('[role="dialog"], [role="menu"], [role="listbox"]')?.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
           );
           
           if (focusableElements && focusableElements.length > 0) {

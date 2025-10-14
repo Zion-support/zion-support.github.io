@@ -1,7 +1,8 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
 
+import { Component, ReactNode, ErrorInfo } from 'react';
+
 interface Props {
-  
   children: ReactNode;
 
 }
@@ -34,8 +35,8 @@ class ErrorBoundary extends Component<Props, State> {
               classNam e ="px-6 py-3 bg-purple-600 text-white rounded-lg,
   hover:bg-purple-700 transition-colors"
             >
-              Reload Page;
-            </butn>
+              Reload Page
+            </button>
           </div>
         </div>
       );

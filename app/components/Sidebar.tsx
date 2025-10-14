@@ -3,15 +3,19 @@ import { X, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface SidebarProps {
-  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-20c7
   isOpen: boolean;
   onClose: () => void;
 
 }
 
+<<<<<<< HEAD
 constSidebar: React.FC<SidebarProps> = ({ isOpen, onClose })  => {
   const,
   navigationItems: Array<{ name: string; href: string; icon: React.ComponentType<{ className?: string }> }> =[
+=======
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const navigationItems: Array<{ name: string; href: string; icon: React.ComponentType<{ className?: string }> }> = [
   ];
 
   return (
@@ -40,15 +44,15 @@ constSidebar: React.FC<SidebarProps> = ({ isOpen, onClose })  => {
         </div>
         <nav className="mt-6">
           <ul className="space-y-2 px-4">
-            {navigationItems.map((item)  => {
-              constIco n = item.icon;
+            {navigationItems.map((item) => {
+              const Icon = item.icon;
               return (
-                <like y ={item.name}>
-                  <Link to ={item.href}
-                    onClic k ={onClose}
-                    classNam e ="flexitems-centertext-gray-300,
-  hover:text-white py-2">
-                    <Icon className="w-5 h-5mr-3" />
+                <li key={item.name}>
+                  <Link to={item.href}
+                    onClick={onClose}
+                    className="flex items-center text-gray-300 hover:text-white py-2"
+                  >
+                    <Icon className="w-5 h-5 mr-3" />
                     {item.name}
                   </Link>
                 </li>

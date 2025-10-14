@@ -22,11 +22,11 @@ export const seoEnhancer ={
       twitterDescription: data.description || 'Leading technology solutions provider'
     }
   },
-  setMeta,
-  Tags: (data: EnhancedSEOData)  => {
-    if (typeof document !=='undefined') {
-      document.titl e = data.title;
-const metaDescription = document.querySelector('meta[name="description"]')
+  setMetaTags: (data: EnhancedSEOData) => {
+    if (typeof document !== 'undefined') {
+      document.title = data.title
+      
+      const metaDescription = document.querySelector('meta[name="description"]')
       if (metaDescription) {
         metaDescription.setAttribute('content', data.description)
       }

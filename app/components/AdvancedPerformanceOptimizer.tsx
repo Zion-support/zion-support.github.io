@@ -4,16 +4,14 @@ import React, { useEffect, useMemo } from 'react';
 import { usePerformanceMonitor  } from '../hooks/usePerformanceMonitor';
 
 interface AdvancedPerformanceOptimizerProps {
-  
-  enableImage Optimization?: boolean;
-  enableLazy Loading?: boolean;
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCode Splitting?: boolean;
-  enableService Worker?: boolean;
-  enableResource Hints?: boolean;
-  enableCritical CSS?: boolean;
-  enableBundle Analysis?: boolean;
-
+  enableCodeSplitting?: boolean;
+  enableServiceWorker?: boolean;
+  enableResourceHints?: boolean;
+  enableCriticalCSS?: boolean;
+  enableBundleAnalysis?: boolean;
 }
 
 const,
@@ -29,14 +27,14 @@ const,
 })  => {
   usePerformanceMonitor();
 
-  // Image optimization;
-useEffect(()  => {
-    if (!enableImage Optimization || typeof window ==='undefined') return;
+  // Image optimization
+  useEffect(() => {
+    if (!enableImageOptimization || typeof window === 'undefined') return;
 
-    const optimizeImages = ()  => {
-      const images = document.querySelector All('img[data-src]');
-      const imageObserver = newIntersection Observer((entries)  => {
-        entries.forEach((entry)  => {
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
@@ -47,37 +45,37 @@ useEffect(()  => {
             }
           }
         });
-      },{
-        rootMargin:'50 px 0 px',
-        threshold: 0.01;
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.01
       });
 
       images.forEach((img) => imageObserver.observe(img));
     };
 
-    // Run after DOM is ready;
-if (document.readyStat e ==='loading') {
-      document.addEvent Listener('DOMContent Loaded', optimizeImages);
+    // Run after DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', optimizeImages);
     } else {
       optimizeImages();
     }
 
-    return ()  => {
-      document.removeEvent Listener('DOMContent Loaded', optimizeImages);
+    return () => {
+      document.removeEventListener('DOMContentLoaded', optimizeImages);
     };
-  },[enableImageOptimization]);
+  }, [enableImageOptimization]);
 
-  // Lazy loading for components;
-useEffect(()  => {
-    if (!enableLazy Loading || typeof window ==='undefined') return;
+  // Lazy loading for components
+  useEffect(() => {
+    if (!enableLazyLoading || typeof window === 'undefined') return;
 
-    const lazyLoad Components = ()  => {
-      const components = document.querySelector All('[data-lazy-component]');
-      const componentObserver = newIntersection Observer((entries)  => {
-        entries.forEach((entry)  => {
+    const lazyLoadComponents = () => {
+      const components = document.querySelectorAll('[data-lazy-component]');
+      const componentObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const component = entry.target as HTMLElement;
-            const component = component.getAttribute('data-lazy-component');
+            const componentName = component.getAttribute('data-lazy-component');
             if (componentName) {
               // Load component dynamically;
 import(`../components/${componentName}.tsx`).then((_module)  => {
@@ -90,33 +88,34 @@ componentObserver.unobserve(component);
             }
           }
         });
-      },{
-        rootMargin:'100 px 0 px',
-        threshold: 0.1;
+      }, {
+        rootMargin: '100px 0px',
+        threshold: 0.1
       });
 
       components.forEach((component) => componentObserver.observe(component));
     };
 
-    if (document.readyState ==='loading') {
+    if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', lazyLoadComponents);
     } else {
       lazyLoadComponents();
     }
 
-    return ()  => {
-      document.removeEvent Listener('DOMContent Loaded', lazyLoad Components);
+    return () => {
+      document.removeEventListener('DOMContentLoaded', lazyLoadComponents);
     };
-  },[enableLazyLoading]);
+  }, [enableLazyLoading]);
 
   // Resource preloading;
 useEffect(()  => {
     if (!enablePreloading || typeof window ==='undefined') return;
 
-    const preloadCritical Resources = ()  => {
-      // Preload critical fonts;
-const fontPreloads =[
-    { href:'/fonts/inter-var.woff2', as:'font', type:'font/woff2', crossorigin:'anonymous' },{ href:'/fonts/inter-var.woff', as:'font', type:'font/woff', crossorigin:'anonymous' }
+    const preloadCriticalResources = () => {
+      // Preload critical fonts
+      const fontPreloads = [
+    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        { href: '/fonts/inter-var.woff', as: 'font', type: 'font/woff', crossorigin: 'anonymous' }
       ];
 
       fontPreloads.forEach((font)  => {
@@ -156,13 +155,13 @@ const scriptPreloads =[
     };
 
     preloadCriticalResources();
-  },[enablePreloading]);
+  }, [enablePreloading]);
 
-  // Service Worker registration;
-useEffect(()  => {
-    if (!enableService Worker || typeof window ==='undefined') return;
+  // Service Worker registration
+  useEffect(() => {
+    if (!enableServiceWorker || typeof window === 'undefined') return;
 
-    const registerService Worker = async ()  => {
+    const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
@@ -173,10 +172,8 @@ useEffect(()  => {
 console.warn('Service Worker,
   scope:', registration.scope);
         } catch (error) {
-          console.warn('Service Worker registration,
-  failed:', error);
-          console.warn('Service Worker error,
-  details:', error instanceofError ? error.message :'Unknown error');
+          console.warn('Service Worker registration failed:', error);
+          console.warn('Service Worker error details:', error instanceof Error ? error.message : 'Unknown error');
         }
       }
     };
@@ -184,17 +181,20 @@ console.warn('Service Worker,
     registerServiceWorker();
   },[enableServiceWorker]);
 
-  // Resource hints;
-useEffect(()  => {
-    if (!enableResource Hints || typeof window ==='undefined') return;
+  // Resource hints
+  useEffect(() => {
+    if (!enableResourceHints || typeof window === 'undefined') return;
 
-    const addResource Hints = ()  => {
-      // DNS prefetch for external domains;
-const dnsPrefetch Domains =[
-        'fonts.googleapis.com','fonts.gstatic.com','www.google-analytics.com','www.googletagmanager.com'
+    const addResourceHints = () => {
+      // DNS prefetch for external domains
+      const dnsPrefetchDomains = [
+        'fonts.googleapis.com',
+        'fonts.gstatic.com',
+        'www.google-analytics.com',
+        'www.googletagmanager.com'
       ];
 
-      dnsPrefetch Domains.forEach((domain)  => {
+      dnsPrefetchDomains.forEach((domain) => {
         const link = document.createElement('link');
         link.rel='dns-prefetch';
         link.hre f = `//${domain}`;
@@ -216,15 +216,15 @@ const preconnectOrigins =[
     };
 
     addResourceHints();
-  },[enableResourceHints]);
+  }, [enableResourceHints]);
 
-  // Critical CSS inlining;
-useEffect(()  => {
-    if (!enableCritical CSS || typeof window ==='undefined') return;
+  // Critical CSS inlining
+  useEffect(() => {
+    if (!enableCriticalCSS || typeof window === 'undefined') return;
 
-    const inlineCritical CSS = ()  => {
-      // Check if critical CSS is already inlined;
-if (document.querySelector('#critical-css')) return;
+    const inlineCriticalCSS = () => {
+      // Check if critical CSS is already inlined
+      if (document.querySelector('#critical-css')) return;
 
       const criticalCSS = `
         /* Critical CSS for above-the-fold content */
@@ -234,22 +234,22 @@ if (document.querySelector('#critical-css')) return;
       `;
 
       const style = document.createElement('style');
-      style.id ='critical-css';
+      style.id = 'critical-css';
       style.textContent = criticalCSS;
       document.head.insertBefore(style, document.head.firstChild);
     };
 
     inlineCriticalCSS();
-  },[enableCriticalCSS]);
+  }, [enableCriticalCSS]);
 
-  // Bundle analysis and optimization;
-useEffect(()  => {
-    if (!enableBundle Analysis || typeof window ==='undefined') return;
+  // Bundle analysis and optimization
+  useEffect(() => {
+    if (!enableBundleAnalysis || typeof window === 'undefined') return;
 
-    const analyzeBundle = ()  => {
-      // Track bundle size;
-const scripts = Array.from(document.scripts);
-      const totalScript Size = scripts.reduce((total, script)  => {
+    const analyzeBundle = () => {
+      // Track bundle size
+      const scripts = Array.from(document.scripts);
+      const totalScriptSize = scripts.reduce((total, script) => {
         return total + (script.src ? 0 : script.textContent?.length || 0);
       }, 0);
 
@@ -260,16 +260,16 @@ const scripts = Array.from(document.scripts);
         averageSize: totalScriptSize / scripts.length;
       });
 
-      // Track resource loading times;
-const resources = performance.getEntries By Type('resource');
-      const resourceMetrics = resources.reduce((acc, resource)  => {
+      // Track resource loading times
+      const resources = performance.getEntriesByType('resource');
+      const resourceMetrics = resources.reduce((acc, resource) => {
         const type = resource.name.split('.').pop() || 'unknown';
         if (!acc[type]) acc[type] ={ count: 0, totalSize: 0, totalTime: 0 };
         acc[type].count++;
         acc[type].totalSize += resource.transferSize || 0;
         acc[type].totalTime += resource.duration;
         return acc;
-      },{} as Record<string,{ count: number; totalSize: number; totalTime: number }>);
+      }, {} as Record<string, { count: number; totalSize: number; totalTime: number }>);
 
       console.warn('Resource,
   metrics:', resourceMetrics);
@@ -280,13 +280,12 @@ window.addEventListener('load', analyzeBundle);
     return () => window.removeEventListener('load', analyzeBundle);
   },[enableBundleAnalysis]);
 
-  // Memoized performance optimizations;
-const performanceOptimizations = useMemo(() => ({
-    // Debounce scroll events,
-  debounceScroll: (callback: () => void, delay: numbe r = 16)  => {
-      let,
-  timeoutId: Node JS.Timeout;
-      return ()  => {
+  // Memoized performance optimizations
+  const performanceOptimizations = useMemo(() => ({
+    // Debounce scroll events
+    debounceScroll: (callback: () => void, delay: number = 16) => {
+      let timeoutId: NodeJS.Timeout;
+      return () => {
         clearTimeout(timeoutId);
         timeoutI d = setTimeout(callback, delay);
       };
@@ -302,21 +301,21 @@ const performanceOptimizations = useMemo(() => ({
         }
       };
     },
-    // Optimize animations,
-  optimizeAnimations: ()  => {
-      const elements = document.querySelector All('[data-animate]');
-      elements.forEach((element)  => {
+    // Optimize animations
+    optimizeAnimations: () => {
+      const elements = document.querySelectorAll('[data-animate]');
+      elements.forEach((element) => {
         const htmlElement = element as HTMLElement;
         htmlElement.style.willChang e ='transform, opacity';
       });
     }
   }),[]);
 
-  // Apply performance optimizations;
-useEffect(()  => {
-    const debouncedScroll = performanceOptimizations.debounceScroll(()  => {
-      // Handle scroll optimizations;
-const scrolled = window.scroll Y > 100;
+  // Apply performance optimizations
+  useEffect(() => {
+    const debouncedScroll = performanceOptimizations.debounceScroll(() => {
+      // Handle scroll optimizations
+      const scrolled = window.scrollY > 100;
       document.body.classList.toggle('scrolled', scrolled);
     });
 
@@ -325,14 +324,14 @@ const scrolled = window.scroll Y > 100;
 const isMobile = window.innerWidth <768; document.body.classList.toggle('mobile', isMobile);
     });
 
-    window.addEventListener('scroll', debouncedScroll,{ passive: true });
-    window.addEventListener('resize', throttledResize,{ passive: true });
+    window.addEventListener('scroll', debouncedScroll, { passive: true });
+    window.addEventListener('resize', throttledResize, { passive: true });
 
     performanceOptimizations.optimizeAnimations();
 
-    return ()  => {
-      window.removeEvent Listener('scroll', debouncedScroll);
-      window.removeEvent Listener('resize', throttledResize);
+    return () => {
+      window.removeEventListener('scroll', debouncedScroll);
+      window.removeEventListener('resize', throttledResize);
     };
   },[performanceOptimizations]);
 

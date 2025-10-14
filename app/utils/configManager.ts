@@ -1,5 +1,5 @@
 interface Config {
-  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-20c7
   apiUrl: string;
   environment: string;
   features:{
@@ -17,6 +17,7 @@ export const configManager ={
     features:{
       analytics: process.env.NODE_ENV ==='production',
       seo: true,
+<<<<<<< HEAD
       performance: true}
   } asConfig,
   
@@ -24,6 +25,15 @@ export const configManager ={
     return key.split('.').reduce((obj: unknown, k: string)  => {
       if (obj && typeof obj ==='object' && k in obj) {
         return (obj asRecord<string, unknown>)[k];
+=======
+      performance: true,
+    }
+  } as Config,
+  
+  get: (key: string) => {
+    return key.split('.').reduce((obj: unknown, k: string) => {
+      if (obj && typeof obj === 'object' && k in obj) {
+        return (obj as Record<string, unknown>)[k];
       }
       return undefined;
     }, configManager.config);
@@ -35,8 +45,8 @@ export const configManager ={
       if (!(k in obj)) {
         obj[k] ={};
       }
-      return obj[k] asRecord<string, unknown>;
-    }, configManager.config asRecord<string, unknown>);
+      return obj[k] as Record<string, unknown>;
+    }, configManager.config as Record<string, unknown>);
     
     if (lastKey) {
       target[lastKey] = value;

@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const,
-  Ai3DGenerationPage: React.FC = () => {  return (
+const Ai3DGenerationPage: React.FC = () => {
+  return (
     <>
       <Helmet>
         <title>Ai 3d Generation</title>
@@ -54,4 +54,4 @@ const,
   );
 };
 
-export default Ai3DGeneration;
+export default Ai3DGenerationPage;
