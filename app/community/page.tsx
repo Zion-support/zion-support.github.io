@@ -85,7 +85,7 @@ const CommunityPage: React.FC = () => {
     {
       name: 'Showcase',
       description: 'Share your AI projects and achievements',
-      icon: Star,
+      icon: Share2,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
       posts: 320
@@ -138,21 +138,21 @@ const CommunityPage: React.FC = () => {
     }
   ];
 
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join our developer community. Share projects, get help, and connect with other AI developers using Zion Tech Group services." />
-        <meta name="keywords" content="developer community, AI community, developer forum, project showcase, technical discussions" />
+        <meta name="description" content="Community services and solutions from Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7 xl mx-auto text-center">
+          <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6">
             Developer Community
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
             Connect with fellow developers, share your projects, get help, and learn from the community.
           </p>
           
@@ -163,7 +163,7 @@ const CommunityPage: React.FC = () => {
                 <div className="flex items-center justify-center mb-2">
                   <stat.icon className="w-8 h-8 text-cyan-400 mr-2" />
                 </div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                <div className="text-3 xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
@@ -178,17 +178,16 @@ const CommunityPage: React.FC = () => {
               Browse Discussions
             </button>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Categories */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Discussion Categories</h2>
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xl font-bold text-white mb-12 text-center">Discussion Categories</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2 xl transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div className="flex items-center mb-4">
                   <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}>
                     <category.icon className={`w-6 h-6 ${category.color}`} />
@@ -205,20 +204,19 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Recent Discussions */}
       <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="text-3xl font-bold text-white">Recent Discussions</h2>
+            <h2 className="text-3 xl font-bold text-white">Recent Discussions</h2>
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
               Start Discussion
             </button>
           </div>
           
-          <div className="space-y-4">
+          <div className="space-y-6">
             {recentDiscussions.map((discussion) => (
               <div key={discussion.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
                 <div className="flex items-start justify-between">
@@ -245,7 +243,7 @@ const CommunityPage: React.FC = () => {
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {discussion.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                        <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
                           #{tag}
                         </span>
                       ))}
@@ -255,19 +253,18 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Featured Projects */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Projects</h2>
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xl font-bold text-white mb-12 text-center">Featured Projects</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2 xl transition-all duration-300 hover:scale-105">
                 <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
-                  <div className="text-4xl">🚀</div>
+                  <div className="text-4 xl">🚀</div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
@@ -287,7 +284,7 @@ const CommunityPage: React.FC = () => {
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
+                      <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
                         #{tag}
                       </span>
                     ))}
@@ -299,18 +296,15 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Join Community CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-3 xl font-bold text-white mb-6">
             Ready to Join Our Community?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Connect with thousands of developers building amazing AI applications.
-          </p>
+          <p className="text-white/90 mb-8">Connect with thousands of developers building amazing AI applications.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Sign Up Free
@@ -319,10 +313,7 @@ const CommunityPage: React.FC = () => {
               Learn More
             </button>
           </div>
-        </div>
-      </section>
+        </section>
     </div>
   );
-};
-
-export default CommunityPage;
+}

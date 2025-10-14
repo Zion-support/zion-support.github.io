@@ -1,41 +1,17 @@
+import { Users } from 'lucide-react';
 import React from 'react';
 import { CheckIcon, 
   UsersIcon, 
   TrophyIcon, 
   LightBulbIcon } from '@heroicons/react/24/outline';
 const About: React.FC = () => {
-  const stats = [
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients' },
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },
-    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }
-  ];
-
-  const values = [
-    {
-      title: 'Innovation',
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
-    },
-    {
-      title: 'Excellence',
-      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'
-    },
-    {
-      title: 'Partnership',
-      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'
-    },
-    {
-      title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
-    }
-  ];
-
   return (
     <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4 xl md:text-5 xl font-bold text-gray-900 mb-6">
               About Zion Tech Group
             </h2>
             <p className="text-xl text-gray-600 mb-8">
@@ -72,13 +48,13 @@ const About: React.FC = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="flex justify-center mb-2">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                     <stat.icon className="h-8 w-8 text-blue-600" />
                   </div>
-                  <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
+                  <div className="text-2 xl font-bold text-gray-900">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </div>
               ))}
@@ -87,35 +63,29 @@ const About: React.FC = () => {
 
           {/* Image/Visual */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2 xl p-8 text-white">
+              <h3 className="text-2 xl font-bold mb-4">Our Mission</h3>
               <p className="text-lg mb-6 opacity-90">
                 To democratize access to advanced technology and AI solutions, 
                 enabling businesses of all sizes to compete and thrive in the 
                 digital economy.
               </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
-                  <span>Innovation-driven approach</span>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h4>
+                  <p className="text-gray-600">{value.description}</p>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
-                  <span>Client-focused solutions</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
-                  <span>Sustainable growth strategies</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Values Section */}
         <div className="mt-20">
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h3 className="text-3 xl font-bold text-center text-gray-900 mb-12">
             Our Core Values
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -137,6 +107,6 @@ const About: React.FC = () => {
       </div>
     </section>
   );
-};
+</section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4></section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4>};
 
 export default About;

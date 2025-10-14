@@ -1,5 +1,6 @@
-// Dynamic utility functions
-
-export const Dynamic = {
-  // Add your utility functions here
-};
+          This page is under development.;
+        <div></div>;
+          This page is under development.</div></div>;
+  );
+        </div>;
+  )}

@@ -1,10 +1,6 @@
 import React from "react";
 
-interface FuturisticBackgroundProps {
-  children?: React.ReactNode;
-}
-
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
+const FuturisticBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       {/* Animated Grid */}
@@ -16,7 +12,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
               className="border border-cyan-500/20 animate-pulse"
               style={{
                 animationDelay: `${index * 0.1}s`,
-                animationDuration: '3s'
+                animationDuration: '3 s'
               }}
             ></div>
           ))}

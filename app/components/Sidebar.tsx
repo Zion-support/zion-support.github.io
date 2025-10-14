@@ -1,3 +1,4 @@
+import { Shield, ArrowRight, Globe, Database, Phone, Cpu } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -115,6 +116,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const isActive = (href: string) => location.pathname === href;
 
+const Sidebar: React.FC = () => {
   return (
     <>
       {/* Overlay */}
@@ -127,8 +129,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <div className={`
-        fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 
-        transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0
+        fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <div className="flex flex-col h-full">

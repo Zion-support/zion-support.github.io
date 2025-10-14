@@ -12,10 +12,10 @@ const LinkPage = () => {
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
             Link
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
             Professional link services designed to help your business grow and succeed.
           </p>
         </div>
@@ -45,6 +45,20 @@ const LinkPage = () => {
       </div>
     </div>
   );
-};
-
-export default LinkPage;
+export default;
+                We provide comprehensive link;
+                solutions tailored to your specific needs and requirements.</////p></div>;
+              <////div><ul className="space-y-3">";
+                <////li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Custom solutions</////li>;
+                <div><li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Expert consultation</////li>;
+                <div><li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Ongoing support</////li></ul></div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>";
+              <h3 className="text-2xl font-bold mb-4">Get Started</////h3>";
+              <p className="mb-6">;
+                Ready to transform your business with our link services?</////p>;

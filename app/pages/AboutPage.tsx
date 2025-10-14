@@ -1,7 +1,17 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const AboutPagePage = () => {
+import { Helmet    } from "react-helmet-async";
+import { 
+  CheckCircleIcon,;
+  UserGroupIcon,;
+  LightBulbIcon,;
+  ShieldCheckIcon,;
+  RocketLaunchIcon,;
+  HeartIcon,;
+  ArrowRightIcon,;
+  StarIcon,;
+  PhoneIcon,;
+  EnvelopeIcon,;
+  MapPinIcon;
+const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -12,10 +22,10 @@ const AboutPagePage = () => {
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
             AboutPage
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
             Professional AboutPage services designed to help your business grow and succeed.
           </p>
         </div>
