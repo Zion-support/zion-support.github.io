@@ -17,7 +17,6 @@ const FiveGConsultingPage = () => {
       title: 'Team Training',
       description: 'Expert training for your team on 5G technologies and best practices.',
     }
-  
   }];
   return (
     <div className="min-h-screen bg-gray-50">

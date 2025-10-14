@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const FiveGDataAnalyticsPage = () => {
-  const services = [
+  const _services = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
       title: 'Advanced Analytics',
