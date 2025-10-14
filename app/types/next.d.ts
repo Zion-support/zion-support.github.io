@@ -1,9 +1,5 @@
-declare module 'next' {
-  interface NextConfig {
-    experimental?: {
-      appDir?: boolean;
-    };
+declare module "next" {
+  export interface NextPageProps {
+    params: Record<string, string>;
   }
 }
-
-export {};

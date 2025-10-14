@@ -1,6 +1,4 @@
 // Image optimizer utility
-export function imageOptimizer() {
-  return true;
+export function optimizeImage(src: string) {
+  return src;
 }
-
-export default imageOptimizer;

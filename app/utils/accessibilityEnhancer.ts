@@ -1,6 +1,4 @@
 // Accessibility enhancer utility
-export function accessibilityEnhancer() {
+export function enhanceAccessibility() {
   return true;
 }
-
-export default accessibilityEnhancer;

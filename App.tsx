@@ -7,7 +7,6 @@ import { ErrorBoundary } from 'react-error-boundary';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
-// import LoadingStates from './app/components/LoadingStates';
 
 // Pages
 import HomePage from './app/page';
@@ -17,7 +16,7 @@ import ContactPage from './app/contact/page';
 
 function App() {
   return (
-    <ErrorBoundary fallback={<div>Something went wrong.</div>}>
+    <ErrorBoundary fallbackRender={() => <div>Something went wrong.</div>}>
       <HelmetProvider>
         <AnalyticsProvider>
           <Router>
