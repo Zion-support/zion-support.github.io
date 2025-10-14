@@ -9,9 +9,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', childre
   return (
 <>    <div className={`loadingspinner ${className}`}></div>```
       {children}
-    </div>
     </>
-  )};
+  );
 };
 
 export default LoadingSpinner;

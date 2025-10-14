@@ -37,7 +37,7 @@ export interface A11yIssue {
   severity: A11ySeverity;
   
   wcagLevel: WCAGLevel;
-  /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */""
+  /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */
   wcagCriterion: string;
   
   message: string;
@@ -125,7 +125,7 @@ const alt = img.getAttribute('alt');'
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',''
-          message: `Image ${index + 1} is missing alt text`,""``"`
+          message: `Image ${index + 1} is missing alt text`,``"`
           element: `img[src="${img['src']}"]`,'"``'"`
           fix: 'Add descriptive alt text to the image',"'"'"
           codeExample: '<img src="..." alt="Description of image" />')'"'"
@@ -138,10 +138,10 @@ const alt = img.getAttribute('alt');'
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',"'"'"
-          message: `Image ${index + 1} has empty alt without role="presentation"`,""``"`
+          message: `Image ${index + 1} has empty alt without role="presentation"`,``"`
           element: `img[src="${img['src']}"]`,"'"``'"`
           fix: 'Add role="presentation" to decorative images',"'"'"
-          codeExample: '<img src="..." alt="" role="presentation" />')'"'"
+          codeExample: '<img src="..." alt= role="presentation" />')'"'"
         });
       }
     });
@@ -243,7 +243,7 @@ const target = link.getAttribute('target');'
           message: `Link ${index + 1} opens in new window without warning`,")"``"`
           element: `a[href="${link.getAttribute('href')}"]`,'"``'"`
           fix: 'Add indication that link opens in new window',''
-          codeExample:"""
+          codeExample:"
             '<a href="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</a>''"'"
         });
       }
@@ -289,7 +289,7 @@ const label = id ? element.querySelector(`label[for="${id}"]`) : null;``"`
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.3.1',)''
-          message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,""``"`
+          message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,``"`
           element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,'"``'"`
           fix: 'Associate a label with the form control',"'"'"
           codeExample: '<label for="email">Email:</label><input id="email" name="email" />''"'"
@@ -330,7 +330,7 @@ const style = el.getAttribute('style');'
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.1.1',)''
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,```
-          element: el.tagName.toLowerCase(),"""
+          element: el.tagName.toLowerCase(),"
           fix: 'Remove tabindex="-1" or use tabindex="0"',"'"'"
           codeExample: '<button tabindex="0">Accessible button</button>''"'"
         });
@@ -471,4 +471,4 @@ const score = Math.max(0, 100 - totalPenalty);
     return `Found ${this.issues.length} accessibility issues. Please review and fix them.`;```
   }
 }
-"""
+"

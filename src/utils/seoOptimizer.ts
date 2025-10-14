@@ -300,4 +300,4 @@ const defaultConfig: SEOConfig = {
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID;
 };
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;""
+export default seoOptimizer;

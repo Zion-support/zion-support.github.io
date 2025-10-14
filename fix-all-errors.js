@@ -50,8 +50,8 @@ function fixMergeConflicts(filePath) {
     });
     
     // Fix unterminated string literals;
-    content = content.replace(/import React from "react";]*)/g, "import React from "react";);""
-    content = content.replace(/import { Helmet     } from "react-helmet-async";]*)/g, "import { Helmet     } from "react-helmet-async";);""
+    content = content.replace(/import React from "react";]*)/g, "import React from "react";);
+    content = content.replace(/import { Helmet     } from "react-helmet-async";]*)/g, "import { Helmet     } from "react-helmet-async";);
     content = content.replace(/'use client';/g, "'use client';);"'"
     
     // Fix malformed JSX;
@@ -113,9 +113,9 @@ function fixUnterminatedStrings(filePath) {
       let line = lines[i];
       
       // Fix unterminated string literals;
-      if (line.includes("import React from "react";react;/, "import React from "react";);""
+      if (line.includes("import React from "react";react;/, "import React from "react";);
       }
-      if (line.includes("import { Helmet     } from "react-helmet-async";react-helmet-async;/, "import { Helmet     } from "react-helmet-async";);""
+      if (line.includes("import { Helmet     } from "react-helmet-async";react-helmet-async;/, "import { Helmet     } from "react-helmet-async";);
       }
       if (line.includes("'use client';)) {'"'"
         line = line.replace(/'use client';/, "'use client';);"'"

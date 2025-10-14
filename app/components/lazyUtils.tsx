@@ -13,7 +13,7 @@ export function withLazyLoading<T extends ComponentType<any>>(
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
-  )};
+  );
 }
 
 // Utility function to create lazy-loaded components;
@@ -29,5 +29,5 @@ export function createLazyComponent<T extends ComponentType<any>>(
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
-  )};
+  );
 }

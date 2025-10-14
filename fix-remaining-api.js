@@ -50,4 +50,4 @@ const files = await glob(pattern, { cwd: process.cwd() })
 if (import.meta.url === `file://${process.argv[1]}`) ````
   main()
 }
-export { fixApiFile, processFile }"""
+export { fixApiFile, processFile }"

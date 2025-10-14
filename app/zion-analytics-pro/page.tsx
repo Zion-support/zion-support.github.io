@@ -445,7 +445,6 @@ export default function ZionAnalyticsPro() {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </>
   );
 }

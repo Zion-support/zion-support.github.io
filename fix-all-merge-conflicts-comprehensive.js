@@ -45,7 +45,7 @@ function resolveMergeConflicts(content) {
         i++;
       }
       // Skip until we find the end marker;
-        // Keep the "incoming" changes (after =======)""
+        // Keep the "incoming" changes (after =======)
         resolvedLines.push(lines[i]);
         i++;
       }

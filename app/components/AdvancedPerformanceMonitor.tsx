@@ -40,7 +40,7 @@ const entries = list.getEntries()
                 cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value;
               }))
           }
-        }"""
+        }"
         observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] })";"'"
         const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0";"'"
@@ -73,63 +73,62 @@ const timer = setTimeout(measurePerformance, 1000)
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
   return (
-<>    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>""
-      <div className="flex items-center justify-between mb-4"></div>""
-        <h3 className="text-lg font-semibold">Performance Monitor</h3>""
+<>    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>
+      <div className="flex items-center justify-between mb-4"></div>
+        <h3 className="text-lg font-semibold">Performance Monitor</h3>
         <button;
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"""
+          className="text-gray-400 hover:text-white"
         >
           ×
         </button>
-      </div>
-    </>
+      </>
 
-      <div className="space-y-2 text-sm"></div>""
-        <div className="flex justify-between"></div>""
+      <div className="space-y-2 text-sm"></div>
+        <div className="flex justify-between"></div>
           <span>Load Time:</span>
-          <span className="text-cyan-400"></span>""
+          <span className="text-cyan-400"></span>
             {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}'``'`
           </span>
         </div>
         
-        <div className="flex justify-between"></div>""
+        <div className="flex justify-between"></div>
           <span>FCP:</span>
-          <span className="text-green-400"></span>""
+          <span className="text-green-400"></span>
             {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(2)}ms` : 'N/A'}'``'`
           </span>
         </div>
         
-        <div className="flex justify-between"></div>""
+        <div className="flex justify-between"></div>
           <span>LCP:</span>
-          <span className="text-yellow-400"></span>""
+          <span className="text-yellow-400"></span>
             {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(2)}ms` : 'N/A'}'``'`
           </span>
         </div>
         
-        <div className="flex justify-between"></div>""
+        <div className="flex justify-between"></div>
           <span>FID:</span>
-          <span className="text-orange-400"></span>""
+          <span className="text-orange-400"></span>
             {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(2)}ms` : 'N/A'}'``'`
           </span>
         </div>
         
-        <div className="flex justify-between"></div>""
+        <div className="flex justify-between"></div>
           <span>CLS:</span>
-          <span className="text-red-400"></span>""
+          <span className="text-red-400"></span>
             {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}''
           </span>
         </div>
         
-        <div className="flex justify-between"></div>""
+        <div className="flex justify-between"></div>
           <span>Memory:</span>
-          <span className="text-purple-400"></span>""
+          <span className="text-purple-400"></span>
             {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(2)}MB` : 'N/A'}'``'`
           </span>
         </div>
       </div>
 
-      <div className="mt-4 flex gap-2"></div>""
+      <div className="mt-4 flex gap-2"></div>
         <button;
           onClick={isRecording ? stopRecording : startRecording}
           className={`px-3 py-1 rounded text-xs ${```
@@ -142,12 +141,12 @@ const timer = setTimeout(measurePerformance, 1000)
         
         <button;
           onClick={exportMetrics}
-          className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-xs"></button>""
+          className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-xs"></button>
           Export;
         </button>
       </div>
 
-      <div className="mt-2 text-xs text-gray-400"></div>""
+      <div className="mt-2 text-xs text-gray-400"></div>
         Press Ctrl+Shift+P to toggle;
       </div>
     </div>
@@ -156,47 +155,47 @@ const timer = setTimeout(measurePerformance, 1000)
           </button>
         </div>
       </div>
-      <div className="space-y-2 text-xs">"""
-        <div className="flex justify-between">"""
-          <span className="text-gray-400">Load Time:</span>"""
+      <div className="space-y-2 text-xs">"
+        <div className="flex justify-between">"
+          <span className="text-gray-400">Load Time:</span>"
           <span className={`font-mono ${getScoreColor(metrics.loadTime, { good: 1000, needsImprovement: 3000 })}`}>````
             {metrics.loadTime}ms;
           </span>
         </div>
-        <div className="flex justify-between">"""
-          <span className="text-gray-400">FCP:</span>"""
+        <div className="flex justify-between">"
+          <span className="text-gray-400">FCP:</span>"
           <span className={`font-mono ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>````
             {metrics.firstContentfulPaint}ms;
           </span>
         </div>
-        <div className="flex justify-between">"""
-          <span className="text-gray-400">LCP:</span>"""
+        <div className="flex justify-between">"
+          <span className="text-gray-400">LCP:</span>"
           <span className={`font-mono ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>````
             {metrics.largestContentfulPaint}ms;
           </span>
         </div>
           </span>
         </div>
-        <div className="flex justify-between">"""
-          <span className="text-gray-400">TBT:</span>"""
+        <div className="flex justify-between">"
+          <span className="text-gray-400">TBT:</span>"
           <span className={`font-mono ${getScoreColor(metrics.totalBlockingTime, { good: 200, needsImprovement: 600 })}`}>````
             {metrics.totalBlockingTime}ms;
           </span>
         </div>
-        <div className="flex justify-between">"""
-          <span className="text-gray-400">Memory:</span>"""
+        <div className="flex justify-between">"
+          <span className="text-gray-400">Memory:</span>"
           <span className={`font-mono ${getScoreColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}`}>````
             {metrics.memoryUsage}MB;
           </span>
         </div>
-        <div className="flex justify-between">"""
-          <span className="text-gray-400">Network:</span>"""
+        <div className="flex justify-between">"
+          <span className="text-gray-400">Network:</span>"
           <span className={`font-mono ${getScoreColor(metrics.networkLatency, { good: 500, needsImprovement: 1000 })}`}>````
             {metrics.networkLatency}ms;
           </span>
         </div>
       </div>
-      <div className="mt-3 pt-2 border-t border-slate-700 text-xs text-gray-500">"""
+      <div className="mt-3 pt-2 border-t border-slate-700 text-xs text-gray-500">"
         <div>Ctrl+Shift+P: Toggle</div>
         <div>Ctrl+Shift+R: Record</div>
       </div>

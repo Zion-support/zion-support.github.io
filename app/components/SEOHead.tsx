@@ -30,7 +30,7 @@
     <Helmet></Helmet>
       <title>{title}</title>
       {structuredData && (
-        <script type="application/ld+json">""
+        <script type="application/ld+json">
           {JSON.stringify(structuredData
   </>
 );

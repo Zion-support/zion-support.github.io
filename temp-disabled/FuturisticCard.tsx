@@ -3,7 +3,7 @@ interface FuturisticCardProps {}
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'glow' | 'gradient'}''''''
-const FuturisticCard: "React.FC<FuturisticCardProps> = ({"}"""
+const FuturisticCard: "React.FC<FuturisticCardProps> = ({"}"
   children,
   className = '',''''')''
   variant = 'default''}) => {'}''';'
@@ -17,11 +17,10 @@ const variantClasses = {}
   <>
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div>```
       {children}
-    </div>
-  </>
+    </>
 );
   )
 }
 export default FuturisticCard;
-</FuturisticCardProps>"""
+</FuturisticCardProps>"
 ;

@@ -9,9 +9,8 @@ const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ className
   return (
 <>    <div className={`advancedloadingstates ${className}`}></div>```
       {children}
-    </div>
     </>
-  )};
+  );
 };
 ;
-export default AdvancedLoadingStates;""
+export default AdvancedLoadingStates;

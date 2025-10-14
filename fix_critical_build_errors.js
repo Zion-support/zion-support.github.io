@@ -33,8 +33,8 @@ const fixes = [
       },
       // Fix malformed function parameters;
       {
-        pattern: /\(\{\s*children,\s*className\s*=\s*""\s*\}\s*\)\s*=>\s*\{/g,''"'"
-        replacement: '({ children, className = "" }) => {''"'"
+        pattern: /\(\{\s*children,\s*className\s*=\s*\s*\}\s*\)\s*=>\s*\{/g,''"'"
+        replacement: '({ children, className =  }) => {''"'"
       },
       // Fix malformed JSX attributes;
       {

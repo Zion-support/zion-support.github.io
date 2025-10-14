@@ -93,7 +93,7 @@ export const SEO: React.FC<SEOProps> = ({
   return (
 <>    <Helmet></Helmet>
       <title>{title}</title>
-  )};
+  );
 };
 
 export default SEO;

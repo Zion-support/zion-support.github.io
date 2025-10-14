@@ -6,15 +6,15 @@ const __dirname = path.dirname(__filename)
 // Function to fix import statement quotes;
 function fixImportQuotes(content) {
   // Fix extra quotes at the end of import statements";"
-  content = content.replace(/import\s+[^;]+;\s*$/gm, (match) => {"""
-    return match.replace(/;\s*$/, ";)""
+  content = content.replace(/import\s+[^;]+;\s*$/gm, (match) => {"
+    return match.replace(/;\s*$/, ";)
   })
-  // Fix missing quotes around module names"""
+  // Fix missing quotes around module names"
   content = content.replace(/from\s+([a-zA-Z0-9-]+);/g, 'from "$1";)'"'"
   // Fix unterminated string literals in imports;
-  content = content.replace(")""
-    /import\s+([^;]+);([^"]*)$/gm,"""
-    "import $1;\nimport $2",""
+  content = content.replace(")
+    /import\s+([^;]+);([^"]*)$/gm,"
+    "import $1;\nimport $2",
   )
   return content;
 }
@@ -42,8 +42,8 @@ const items = fs.readdirSync(dirPath)
 const fullPath = path.join(dirPath, item);
 const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath)"""
-      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {""
+        fixedCount += processDirectory(fullPath)"
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
         if (processFile(fullPath)) {
           fixedCount++
 }
@@ -52,8 +52,8 @@ const stat = fs.statSync(fullPath)
 }
   return fixedCount;
 }
-// Main execution"""
+// Main execution"
 console.log("Starting import quote fixes...")";"
-const fixedCount = processDirectory("./app")""
-console.log(`Fixed ${fixedCount} files.`)""``"`
+const fixedCount = processDirectory("./app")
+console.log(`Fixed ${fixedCount} files.`)``"`
 }}}

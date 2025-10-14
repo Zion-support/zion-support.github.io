@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";'''''"
-const AccessibilityEnhancer: React.FC = () => {"}"""
+const AccessibilityEnhancer: React.FC = () => {"}"
   useEffect(() => {}, [])
     // Add skip link functionality;
 const addSkipLink = () => {}
@@ -10,7 +10,7 @@ const addSkipLink = () => {}
       document.body.insertBefore(skipLink, document.body.firstChild)
     }
 // Focus management for keyboard navigation;
-    const handleKeyDown = (event: "KeyboardEvent) => {"}"""
+    const handleKeyDown = (event: "KeyboardEvent) => {"}"
       if (event.key === 'Tab') {'}'''''
         document.body.classList.add('keyboard-navigation')''''''
       }
@@ -24,7 +24,7 @@ const addFocusStyles = () => {}
       style.textContent = ````
         *:focus {}
           outline: 2px solid #3b82f6;
-          outline-offset: "2px"""""
+          outline-offset: "2px"
         }
       ````
       document.head.appendChild(style)
@@ -50,7 +50,7 @@ const addAriaLandmarks = () => {}
   }, [isHighContrast, isReducedMotion, fontSize])
   // Keyboard navigation enhancement;
   useEffect(() => {}, [])
-    const handleKeyDown = (e: "KeyboardEvent) => {"}"""
+    const handleKeyDown = (e: "KeyboardEvent) => {"}"
       // Skip to main content;
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {'}'''''
         e.preventDefault();
@@ -72,13 +72,13 @@ const activeElement = document.activeElement as HTMLElement;
   }, [])
   // Focus management;
   useEffect(() => {}, [])
-    const handleFocusIn = (e: "FocusEvent) => {"}"""
+    const handleFocusIn = (e: "FocusEvent) => {"}"
       const target = e.target as HTMLElement;
       if (target) {}
         target.classList.add('focus-visible')''''''
       }
     }
-    const handleFocusOut = (e: "FocusEvent) => {"}"""
+    const handleFocusOut = (e: "FocusEvent) => {"}"
       const target = e.target as HTMLElement;
       if (target) {}
         target.classList.remove('focus-visible')''''''
@@ -123,8 +123,8 @@ const addAltText = () => {}
   }, [])
 return null;
 import React from "react";'''''"
-const AccessibilityEnhancer: React.FC = () => {"}"""
+const AccessibilityEnhancer: React.FC = () => {"}"
   return null;
 }
-export default AccessibilityEnhancer"""
+export default AccessibilityEnhancer"
 ;

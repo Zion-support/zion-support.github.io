@@ -19,14 +19,14 @@ const jsxElements = body.match(/<[A-Z][^>]*>/g)
   )
   // Fix missing semicolons after JSX;
   content = content.replace()
-    /(<[A-Z][^>]*>[\s\S]*?<\/[A-Z][^>]*>)\s*$/gm,";""
-    "$1;",""
+    /(<[A-Z][^>]*>[\s\S]*?<\/[A-Z][^>]*>)\s*$/gm,";
+    "$1;",
   )
   // Fix JSX expressions that need proper wrapping;
   content = content.replace()
     /^(\s*)(<[A-Z][^>]*>[\s\S]*?<\/[A-Z][^>]*>)\s*$/gm,
-    (match, indent, jsx) => {"""
-      if (!jsx.includes("<>") && !jsx.includes("<div")) {""
+    (match, indent, jsx) => {"
+      if (!jsx.includes("<>") && !jsx.includes("<div")) {
         return `${indent}<>></div>```
 </div>\n${indent}  ${jsx}\n${indent}</>````
 }
@@ -36,29 +36,29 @@ const jsxElements = body.match(/<[A-Z][^>]*>/g)
   // Fix missing closing tags;
   content = content.replace()
     /<section([^>]*)>([\s\S]*?)(?=<section|$)/g,
-    (match, attrs, body) => {"""
-      if (!body.includes("</section>")) {""
+    (match, attrs, body) => {"
+      if (!body.includes("</section>")) {
         return `<section${attrs}>${body}</section>````
 }
       return match;
     },
   )
   // Fix JSX fragments;
-  content = content.replace(/<>\s*([\s\S]*?)\s*<\/>/g, (match, body) => {"""
-    if (body.trim().split("\n").length > 1) {""
+  content = content.replace(/<>\s*([\s\S]*?)\s*<\/>/g, (match, body) => {"
+    if (body.trim().split("\n").length > 1) {
       return `<div>${body}</div>````
 }
     return match;
   })
   return content;
 }
-// Find all TypeScript/TSX files in the app directory";""
-const files = glob.sync("app/**/*.{ts,tsx}", { cwd: process.cwd() })""
+// Find all TypeScript/TSX files in the app directory";
+const files = glob.sync("app/**/*.{ts,tsx}", { cwd: process.cwd() })
 console.log(`Found ${files.length} files to process...`)```
 let fixedCount = 0;
 files.forEach((file) => {
-  try {";""
-const content = fs.readFileSync(file, "utf8");""
+  try {";
+const content = fs.readFileSync(file, "utf8");
 const fixedContent = fixSyntaxErrors(content)
     if (content !== fixedContent) {
       fs.writeFileSync(file, fixedContent)
@@ -67,5 +67,5 @@ const fixedContent = fixSyntaxErrors(content)
 } catch (error) {
     console.error(`Error processing ${file}:`, error.message)```
 })
-console.log(`Fixed ${fixedCount} files.`)""``"`
+console.log(`Fixed ${fixedCount} files.`)``"`
 }}

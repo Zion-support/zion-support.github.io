@@ -176,10 +176,10 @@ const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTML
   private addSkipLinks(): void {;
 const skipLinks = document.createElement('div');'
     skipLinks.className = 'skip-links';'
-    skipLinks.innerHTML = `""``"`
-      <a href="#main-content" class="skip-link">>Skip to main content</a>"""
-      <a href="#navigation" class="skip-link">Skip to navigation</a>"""
-      <a href="#footer" class="skip-link">Skip to footer</a>""
+    skipLinks.innerHTML = ```"`
+      <a href="#main-content" class="skip-link">>Skip to main content</a>"
+      <a href="#navigation" class="skip-link">Skip to navigation</a>"
+      <a href="#footer" class="skip-link">Skip to footer</a>
     `;```
     // Add styles;
 const style = document.createElement('style');'
@@ -516,4 +516,4 @@ Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100;
 Screen Reader Score: ${metrics.screenReaderScore}/100;
 `;```
   }
-}"""
+}"

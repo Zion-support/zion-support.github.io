@@ -9,9 +9,8 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className =
   return (
 <>    <div className={`performancedashboard ${className}`}></div>```
       {children}
-    </div>
     </>
-  )};
+  );
 };
 
 export default PerformanceDashboard;

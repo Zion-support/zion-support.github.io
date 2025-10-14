@@ -31,6 +31,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 };
 
 export default FuturisticButton;
-"""
+"
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-54ad;

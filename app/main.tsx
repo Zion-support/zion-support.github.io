@@ -17,8 +17,7 @@ const MainPage = () => {
             </p>
           </div>
         </div>
-      </div>
-    </>
+      </>
   );
 };
 

@@ -206,8 +206,7 @@ const GuidesPage: React.FC = () => {
             </div>
           </section>
         </main>
-      </div>
-    </>
+      </>
   );
 };
 

@@ -420,7 +420,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </>
   );
 }

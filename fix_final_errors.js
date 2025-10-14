@@ -3,66 +3,66 @@ import React from "react";"
 import fs from "fs;";
 import path from ";path;";
 import { execSync     } from "child_process;";
-console.log(";🔧 Fixing final build errors...\n")""
+console.log(";🔧 Fixing final build errors...\n")
 // Function to fix final build errors;
 function fixFile(filePath) {
-  try {"""
-    let content = fs.readFileSync(filePath, "utf8")""
+  try {"
+    let content = fs.readFileSync(filePath, "utf8")
     let originalContent = content;
     let fixed = false;
     // Fix critical syntax errors that prevent building;
 const fixes = [
       // Fix unterminated string literals in function endings;
       {
-        pattern: /  \}\);$/gm,"""
-        replacement: "  );,""
+        pattern: /  \}\);$/gm,"
+        replacement: "  );,
       },
       {
         pattern: /  \}';$/gm,"'"'"
-        replacement: "  };,""
+        replacement: "  };,
       },
       {
         pattern: /  \}\);$/gm,"'"'"
-        replacement: "  );,""
+        replacement: "  );,
       },
       // Fix malformed export statements;
       {
         pattern: /export default PagePage';$/gm,"'"'"
-        replacement: "export default PagePage;,""
+        replacement: "export default PagePage;,
       },
       {
         pattern: /export default Page';$/gm,"'"'"
-        replacement: "export default Page;,""
+        replacement: "export default Page;,
       },
       // Fix malformed function endings;
       {
         pattern: /  \}';$/gm,"'"'"
-        replacement: "  };,""
+        replacement: "  };,
       },
       // Fix malformed JSX closing tags;
       {
-        pattern: /    <\/>$/gm,"""
-        replacement: "    </>",""
+        pattern: /    <\/>$/gm,"
+        replacement: "    </>",
       },
       // Fix malformed return statements;
       {
-        pattern: /  \}\);$/gm,"""
-        replacement: "  );,""
+        pattern: /  \}\);$/gm,"
+        replacement: "  );,
       },
       // Fix malformed variable declarations;
       {
         pattern: /const currentYear = new Date\(\)\.getFullYear\(\)';$/gm,"'"'"
-        replacement: "const currentYear = new Date().getFullYear();,""
+        replacement: "const currentYear = new Date().getFullYear();,
       },
       {
         pattern: /const \[isOpen, setIsOpen\] = useState\(false\)';$/gm,"'"'"
-        replacement: "const [isOpen, setIsOpen] = useState(false);,""
+        replacement: "const [isOpen, setIsOpen] = useState(false);,
       },
       {
         pattern:
           /const \[isServicesOpen, setIsServicesOpen\] = useState\(false\)';$/gm,''
-        replacement:"""
-          "const [isServicesOpen, setIsServicesOpen] = useState(false);,""
+        replacement:"
+          "const [isServicesOpen, setIsServicesOpen] = useState(false);,
       },
     ]
     // Apply fixes;
@@ -71,12 +71,12 @@ const fixes = [
         content = content.replace(fix.pattern, fix.replacement)
         fixed = true;
 })
-    // Additional specific fixes for common patterns"""
+    // Additional specific fixes for common patterns"
     if (content.includes("}';) || content.includes(");)) {"'"'"
       content = content.replace(/\}';/g, "};)"'"'"
       content = content.replace(/\);/g, ");)'"'"
       fixed = true;
-}"""
+}"
     if (content.includes("PagePage';) || content.includes("Page';)) {"'"'"
       content = content.replace(/PagePage';/g, "PagePage;)"'"'"
       content = content.replace(/Page';/g, "Page;)'"'"
@@ -93,7 +93,7 @@ const fixes = [
     return false;
 }
 // Function to find all TypeScript/JavaScript files;
-function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {""
+function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
   const files = []
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir)
@@ -102,7 +102,7 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {""
       const stat = fs.statSync(fullPath)
       if (
         stat.isDirectory() &&
-        !item.startsWith(".") &&""
+        !item.startsWith(".") &&
         item !== "node_modules;"
       ) {
         traverse(fullPath)
@@ -118,7 +118,7 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {""
 }
 // Main execution;
 try {";"
-const files = findFiles("./app")""
+const files = findFiles("./app")
   let fixedCount = 0;
   let totalCount = files.length;
   console.log(`Found ${totalCount} files to check...\n`)```
@@ -127,14 +127,14 @@ const files = findFiles("./app")""
       fixedCount++
 }
   console.log(`\n🎉 Fixed ${fixedCount} out of ${totalCount} files`)```
-  // Try to build the project"""
-  console.log("\n🔍 Attempting to build project...")""
-  try {"""
-    execSync("npm run build", { stdio: "pipe" })"""
-    console.log("✅ Build successful!")""
-  } catch (error) {"""
-    console.log("⚠️  Build still has issues, but we fixed many files")""
-} catch (error) {"""
-  console.error("❌ Error during fix process:", error.message)""
+  // Try to build the project"
+  console.log("\n🔍 Attempting to build project...")
+  try {"
+    execSync("npm run build", { stdio: "pipe" })"
+    console.log("✅ Build successful!")
+  } catch (error) {"
+    console.log("⚠️  Build still has issues, but we fixed many files")
+} catch (error) {"
+  console.error("❌ Error during fix process:", error.message)
   process.exit(1)
-}"""
+}"

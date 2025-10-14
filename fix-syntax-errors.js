@@ -1,104 +1,123 @@
-const fs = require('fs');'
-const path = require('path');'
+#!/usr/bin/env node
 
-// List of files with common syntax errors that need fixing;
-const filesToFix = [
-  'app/ai-3d-generation/page.tsx',''
-  'app/ai-automation-suite/page.tsx',''
-  'app/ai-automation/page.tsx',''
-  'app/ai-chatbot-builder/page.tsx',''
-  'app/ai-content-creation/page.tsx',''
-  'app/ai-content-generation/page.tsx',''
-  'app/ai-content-writer/page.tsx',''
-  'app/ai-customer-support-chatbot/page.tsx',''
-  'app/ai-customer-support/page.tsx',''
-  'app/ai-cybersecurity/page.tsx',''
-  'app/ai-data-visualization/page.tsx',''
-  'app/ai-document-processor/page.tsx',''
-  'app/ai-ecommerce-solutions/page.tsx',''
-  'app/ai-education-platform/page.tsx',''
-  'app/ai-fintech-solutions/page.tsx',''
-  'app/ai-healthcare/page.tsx',''
-  'app/ai-marketing/page.tsx',''
-  'app/ai-mobile-app-builder/page.tsx',''
-  'app/ai-mobile-builder/page.tsx',''
-  'app/ai-predictive-analytics/page.tsx',''
-  'app/ai-project-management/page.tsx',''
-  'app/ai-recommendation-engine/page.tsx',''
-  'app/ai-sales-automation/page.tsx',''
-  'app/ai-solutions/page.tsx',''
-  'app/ai-voice-assistant/page.tsx',''
-  'app/ai-workflow-automation/page.tsx',''
-  'app/analytics-tools/page.tsx',''
-  'app/api-docs/page.tsx',''
-  'app/autonomous-systems/page.tsx',''
-  'app/business-intelligence/page.tsx',''
-  'app/cloud-solutions/page.tsx',''
-  'app/cloud-services/page.tsx',''
-  'app/contact/page.tsx',''
-  'app/cookies/page.tsx',''
-  'app/custom-software/page.tsx',''
-  'app/cybersecurity/page.tsx',''
-  'app/database-management/page.tsx',''
-  'app/demo/page.tsx',''
-  'app/enterprise/page.tsx',''
-  'app/error.tsx',''
-  'app/gdpr/page.tsx',''
-  'app/global-error.tsx',''
-  'app/iot-edge-computing/page.tsx',''
-  'app/iot-edge/page.tsx',''
-  'app/it-micro-saas/page.tsx',''
-  'app/it-solutions/page.tsx',''
-  'app/legal-document-manager/page.tsx',''
-  'app/loading.tsx',''
-  'app/medical-records-manager/page.tsx'''
-];
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
-// Template for a basic page component;
-const pageTemplate = (title, description) => `import React from "react";``"`
-import { Helmet    } from "react-helmet-async";"
-
-export default function ${title.replace(/[^a-zA-Z0-9]/g, '')}Page() {''
-  return (
-<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-      <Helmet></Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />""
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">""
-        <div className="text-center">""
-          <h1 className="text-4xl font-bold text-white mb-8">${title}</h1>""
-          <p className="text-gray-300 text-lg">""
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-    </>
-      </div>
-    </div>
-  )};
-}`;```
-
-// Fix files;
-filesToFix.forEach(filePath => {
-  try {
-    const fullPath = path.join(__dirname, filePath);
-    const dir = path.dirname(fullPath);
+// Get all TypeScript and JavaScript files
+const getFiles = (dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) => {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    // Create directory if it doesn't exist''
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+    if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
+      files = files.concat(getFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+};
+
+// Fix common syntax errors
+const fixFile = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix unterminated string literals (remove extra quotes)
+    const originalContent = content;
+    content = content.replace(//g, '');
+    
+    // Fix malformed JSX closing tags
+    content = content.replace(/<\/[^>]+><\/[^>]+>/g, (match) => {
+      const tags = match.match(/<\/[^>]+>/g);
+      return tags[tags.length - 1];
+    });
+    
+    // Fix semicolons at end of lines
+    content = content.replace(/;$/gm, ';');
+    
+    // Fix malformed function declarations
+    content = content.replace(/\)\};/g, ');');
+    
+    // Fix malformed JSX fragments
+    content = content.replace(/<>[\s]*<div><\/div>/g, '<>');
+    content = content.replace(/<\/div>[\s]*<\/>/g, '</>');
+    
+    // Fix malformed imports
+    content = content.replace(/import\s+([^;]+);/g, 'import $1;');
+    
+    // Fix malformed exports
+    content = content.replace(/export\s+default\s+([^;]+);/g, 'export default $1;');
+    
+    // Fix malformed JSX attributes
+    content = content.replace(/=\{[^}]+\}\s*\/>/g, (match) => {
+      return match.replace(/\s*\/>/, ' />');
+    });
+    
+    // Fix malformed closing tags
+    content = content.replace(/<\/[^>]+><\/[^>]+>/g, (match) => {
+      const tags = match.match(/<\/[^>]+>/g);
+      return tags[tags.length - 1];
+    });
+    
+    // Fix malformed React fragments
+    content = content.replace(/<>[\s]*<\/>/g, '<></>');
+    
+    // Fix malformed component declarations
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{[\s]*return\s*\([\s]*<>[\s]*<div><\/div>[\s]*<\/>[\s]*\)[\s]*\};/g, 
+      'const $1 = () => {\n  return (\n    <div></div>\n  );\n};');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      modified = true;
     }
     
-    // Extract title from file path;
-    const title = path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());'
-    const description = `Professional ${title.toLowerCase()} services by Zion Tech Group.`;```
-    
-    // Write the fixed content;
-    fs.writeFileSync(fullPath, pageTemplate(title, description));
-    console.log(`Fixed: ${filePath}`);```
+    return modified;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);```
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-});
+};
 
-console.log('Syntax error fixing completed!');'
+// Main execution
+const main = () => {
+  console.log('Starting syntax error fixes...');
+  
+  const files = getFiles('.');
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`Fixed ${fixedCount} files`);
+  
+  // Run linting to check for remaining errors
+  try {
+    console.log('Running linting check...');
+    execSync('npm run lint', { stdio: 'pipe' });
+    console.log('Linting passed!');
+  } catch (error) {
+    console.log('Linting found remaining errors, continuing...');
+  }
+  
+  // Run type check
+  try {
+    console.log('Running type check...');
+    execSync('npm run type-check', { stdio: 'pipe' });
+    console.log('Type check passed!');
+  } catch (error) {
+    console.log('Type check found remaining errors, continuing...');
+  }
+};
+
+main();

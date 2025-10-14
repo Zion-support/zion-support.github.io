@@ -1,8 +1,8 @@
 import React from "react";''';'"
 import { useEffect, Node     } from "react";'''"'"
 interface PerformanceOptimizerProps {}
-  children: "Node"}""""
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {}""""
+  children: "Node"}
+const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {}
   useEffect(() => {}, [])
     // Performance optimization code''''';'
 const optimizeImages = () => {}
@@ -47,5 +47,5 @@ const criticalResources = ['/css/critical.css','''''''
   return <div>{children}</div>
 }
 export default PerformanceOptimizer;
-</PerformanceOptimizerProps>"""
+</PerformanceOptimizerProps>"
 ;

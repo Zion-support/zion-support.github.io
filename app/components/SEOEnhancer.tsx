@@ -18,14 +18,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   type = 'website'''
 }) => {
   return (
-<>    <div className="seo-enhancer"></div>""
+<>    <div className="seo-enhancer"></div>
       <h1>{title}</h1>
       <p>{description}</p>
       {keywords && (
-        <div className="keywords"></div>""
-    </>
+        <div className="keywords"></>
           {keywords.map((keyword, index) => (
-            <span key={index} className="keyword"></span>""
+            <span key={index} className="keyword"></span>
               {keyword}
             </span>
           ))}

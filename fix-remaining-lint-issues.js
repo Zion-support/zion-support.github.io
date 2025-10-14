@@ -54,7 +54,7 @@ const fullPath = path.join(__dirname, filePath);
       content = content.replace("import React from "react";, '');"'"
     }
     
-    // Fix unused Helmet imports"""
+    // Fix unused Helmet imports"
     if (content.includes("import { Helmet    } from "react-helmet-async";) && !content.includes('<Helmet')) {"'"'"
       content = content.replace("import { Helmet    } from "react-helmet-async";, '');"'"
     }

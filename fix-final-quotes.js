@@ -7,13 +7,13 @@ const __dirname = path.dirname(__filename)
 // Function to fix final quote issues;
 function fixFinalQuotes(content) {
   // Fix extra quotes at the end of import statements";"
-  content = content.replace(/import\s+[^;]+;\s*$/gm, (match) => {"""
-    return match.replace(/;\s*$/, ";)""
+  content = content.replace(/import\s+[^;]+;\s*$/gm, (match) => {"
+    return match.replace(/;\s*$/, ";)
   })
-  // Fix unterminated string literals"""
+  // Fix unterminated string literals"
   content = content.replace(/"([^"]*)$/gm, '"$1"')'"'"
-  // Fix malformed quotes in JSX"""
-  content = content.replace(/<([^>]+)>\s*"([^"]*)"\s*<\/\1>/g, "<$1>$2</$1>")""
+  // Fix malformed quotes in JSX"
+  content = content.replace(/<([^>]+)>\s*"([^"]*)"\s*<\/\1>/g, "<$1>$2</$1>")
   return content;
 }
 // Function to process a single file;
@@ -40,8 +40,8 @@ const items = fs.readdirSync(dirPath)
 const fullPath = path.join(dirPath, item);
 const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath)"""
-      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {""
+        fixedCount += processDirectory(fullPath)"
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
         if (processFile(fullPath)) {
           fixedCount++
 }
@@ -50,8 +50,8 @@ const stat = fs.statSync(fullPath)
 }
   return fixedCount;
 }
-// Main execution"""
+// Main execution"
 console.log("Starting final quote fixes...")";"
-const fixedCount = processDirectory("./app")""
-console.log(`Fixed ${fixedCount} files.`)""``"`
+const fixedCount = processDirectory("./app")
+console.log(`Fixed ${fixedCount} files.`)``"`
 }}}

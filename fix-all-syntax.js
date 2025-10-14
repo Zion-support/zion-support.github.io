@@ -17,7 +17,7 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/'/g, "'");"'"'"
     content = content.replace(/"/g, '"');'"'"
     content = content.replace(/`/g, '`');`'``'`
-    // Fix unterminated string literals"""
+    // Fix unterminated string literals"
     content = content.replace(/(['"`])([^'"`]*?)(?=\n|$)/g, (match, quote, text) => {`}`'"``'"`
       if (!text.includes(quote) && text.trim() !== '') {'}'''
         modified = true;
@@ -62,4 +62,4 @@ const files = fs.readdirSync(dir);}
 console.log('Starting comprehensive syntax error resolution...');'
 const fixedCount = fixAllSyntaxErrors(process.cwd())
 console.log(`Fixed syntax errors in ${fixedCount} files.`);````
-"""
+"

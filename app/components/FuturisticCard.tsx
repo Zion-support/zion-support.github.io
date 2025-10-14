@@ -17,8 +17,7 @@ export default FuturisticCard;
   return (
   <>
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div>{children}````
-    </div>
-  </>
+    </>
 );
   );
 export default FuturisticCard;

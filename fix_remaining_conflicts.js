@@ -77,4 +77,4 @@ if (resolvedCount > 0) {
   console.log('2. Run: git commit -m "Fix remaining conflict markers"');"'"
   console.log('3. Run: npm run health-check');'
 }
-"""
+"

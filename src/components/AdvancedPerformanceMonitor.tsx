@@ -9,9 +9,8 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   return (
 <>    <div className={`advancedperformancemonitor ${className}`}></div>```
       {children}
-    </div>
     </>
-  )};
+  );
 };
 
 export default AdvancedPerformanceMonitor;

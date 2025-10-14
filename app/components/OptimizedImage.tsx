@@ -51,19 +51,18 @@ const observer = new IntersectionObserver()
     return originalSrc}
   const optimizedSrc = getOptimizedSrc(src)
   return (
-<>    <div></div>
+<>
         </Helmet>
       )}
-      <div></div>
-    </>
+      <div></>
         { /* Placeholder */ }
         { !isLoaded && !isError && (
           <div></div>
-            <div className="text-gray-400 text-sm">Loading...</div>"""
+            <div className="text-gray-400 text-sm">Loading...</div>"
           </div>
           >
-            <div className="text-gray-400 text-sm text-center">"""
-              <div className="text-2xl mb-2">📷</div>"""
+            <div className="text-gray-400 text-sm text-center">"
+              <div className="text-2xl mb-2">📷</div>"
               <div>Image not available</div>
             </div>
           </div>

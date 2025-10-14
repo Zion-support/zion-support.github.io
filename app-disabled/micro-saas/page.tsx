@@ -126,20 +126,20 @@ import { Right, Circle, Star,    } from "lucide-react";"
     <div></div>
       <Helmet></Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
-        <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more. />""
-        <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software />""
+        <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more. />
+        <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software />
       </Helmet>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto>""
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto>
               {stats.map((stat, index) => (
 
-                <div key={index} className="text-center>""
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center>""
-                    <stat.icon className="w-8 h-8 text-slate-900 />""
+                <div key={index} className="text-center>
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center>
+                    <stat.icon className="w-8 h-8 text-slate-900 />
         {/* Category Filter */}
 
-        <section className="py-8 px-4>""
-          <div className="max-w-7xl mx-auto>""
-            <div className="flex flex-wrap justify-center gap-4>""
+        <section className="py-8 px-4>
+          <div className="max-w-7xl mx-auto>
+            <div className="flex flex-wrap justify-center gap-4>
               {categories.map((category) => (
 
                 <button;
@@ -152,16 +152,16 @@ import { Right, Circle, Star,    } from "lucide-react";"
                   }}
 
 
-        <section className="py-16 px-4>""
-          <div className="max-w-7xl mx-auto>""
-            <div className="text-center mb-16>""
-              <h2 className="text-3xl font-bold text-white mb-6>Our Micro SaaS Products</h2>""
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto>""
+        <section className="py-16 px-4>
+          <div className="max-w-7xl mx-auto>
+            <div className="text-center mb-16>
+              <h2 className="text-3xl font-bold text-white mb-6>Our Micro SaaS Products</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto>
                 Choose from our collection of specialized business tools designed to solve specific challenges.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>""
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
               {microSaasProducts.map((product) => (
 
                 <div;
@@ -172,39 +172,39 @@ import { Right, Circle, Star,    } from "lucide-react";"
                   }}></div>
                   {product.popular && (
 
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2>""
-                      <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2>""
-                        <Star className="w-4 h-4 fill-current />                        Most Popular""
-                  <ul className="space-y-3 mb-8>""
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2>
+                      <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2>
+                        <Star className="w-4 h-4 fill-current />                        Most Popular
+                  <ul className="space-y-3 mb-8>
                     {product.features.map((feature, index) => (
 
-                      <li key={index} className="flex items-center text-gray-300 text-sm>""
-                        <Circle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />""
+                      <li key={index} className="flex items-center text-gray-300 text-sm>
+                        <Circle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />
                         {feature}                      </li>
 
-        <section className="py-16 px-4>""
-          <div className="max-w-7xl mx-auto>""
-            <div className="text-center mb-16>""
-              <h2 className="text-3xl font-bold text-white mb-6>Why Choose Our Micro SaaS Solutions?</h2>""
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto>""
+        <section className="py-16 px-4>
+          <div className="max-w-7xl mx-auto>
+            <div className="text-center mb-16>
+              <h2 className="text-3xl font-bold text-white mb-6>Why Choose Our Micro SaaS Solutions?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto>
                 Weve designed our micro SaaS products to be simple, powerful, and accessible to businesses of all sizes.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20>""
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6>""
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6>
                 {benefits.map((benefit, index) => (
 
-                  <div key={index} className="flex items-start space-x-3>""
-                    <Circle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />                    <span className="text-gray-300>{benefit}</span>""
-                  to="/contact""
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 transform hover:scale-105""
+                  <div key={index} className="flex items-start space-x-3>
+                    <Circle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />                    <span className="text-gray-300>{benefit}</span>
+                  to="/contact
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 transform hover:scale-105
                 >
-                  <className="w-5 h-5 />""
+                  <className="w-5 h-5 />
                   Start Free Trial;
                 </div>
-                <to="/pricing""
-                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300""
+                <to="/pricing
+                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300
     </></to>
   );
 };
