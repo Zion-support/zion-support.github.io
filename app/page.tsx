@@ -102,4 +102,5 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+const page = React.lazy(() => import('./page'));
+export default page;

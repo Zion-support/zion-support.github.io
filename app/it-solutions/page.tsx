@@ -18,5 +18,6 @@ function ITSolutionsPage() {
   );
 }
 
-export default ITSolutionsPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 

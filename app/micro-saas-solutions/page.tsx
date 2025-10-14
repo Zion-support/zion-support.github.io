@@ -18,5 +18,6 @@ function MicroSaaSSolutionsPage() {
   );
 }
 
-export default MicroSaaSSolutionsPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 
