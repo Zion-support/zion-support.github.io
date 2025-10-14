@@ -1,5 +1,14 @@
-import { useState, useEffect, ReactNode } from 'react';
-import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContextDefinition';
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string) => void;
+  setUser: (userId: string, properties?: Record<string, unknown>) => void;
+  isEnabled: boolean;
+}
+
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
   children: ReactNode;
