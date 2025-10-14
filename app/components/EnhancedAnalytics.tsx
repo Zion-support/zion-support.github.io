@@ -22,13 +22,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
     // Track page view
     const trackPageView = () => {
-<<<<<<< HEAD
-      if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void }).gtag) {
-        (window as unknown as { gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-=======
       if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
         (window as unknown as { gtag: (command: string, id: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
->>>>>>> cursor/fix-errors-and-merge-to-main-0baa
           page_title: document.title,
           page_location: window.location.href
         });

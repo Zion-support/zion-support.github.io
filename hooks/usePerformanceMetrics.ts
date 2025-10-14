@@ -53,11 +53,7 @@ export const usePerformanceMetrics = () => {
       let clsValue = 0
       const entries = list.getEntries()
       entries.forEach(entry => {
-<<<<<<< HEAD
-        const layoutShiftEntry = entry as LayoutShift
-=======
         const layoutShiftEntry = entry as { hadRecentInput?: boolean; value?: number }
->>>>>>> cursor/fix-errors-and-merge-to-main-0baa
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0
         }

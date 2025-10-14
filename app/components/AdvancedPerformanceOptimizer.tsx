@@ -167,11 +167,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
-          // eslint-disable-next-line no-console
-          console.log('Service Worker registered successfully:', registration);
+          console.warn('Service Worker registered successfully:', registration);
           
           // Service worker registered successfully
-          console.log('Service Worker scope:', registration.scope);
+          console.warn('Service Worker scope:', registration.scope);
         } catch (error) {
           console.warn('Service Worker registration failed:', error);
           console.warn('Service Worker error details:', error instanceof Error ? error.message : 'Unknown error');
@@ -255,7 +254,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         return total + (script.src ? 0 : script.textContent?.length || 0);
       }, 0);
 
-      console.log('Bundle analysis:', { 
+      console.warn('Bundle analysis:', { 
         scriptCount: scripts.length,
         totalSize: totalScriptSize,
         averageSize: totalScriptSize / scripts.length
@@ -272,7 +271,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         return acc;
       }, {} as Record<string, { count: number; totalSize: number; totalTime: number }>);
 
-      console.log('Resource metrics:', resourceMetrics);
+      console.warn('Resource metrics:', resourceMetrics);
     };
 
     // Run analysis after page load
