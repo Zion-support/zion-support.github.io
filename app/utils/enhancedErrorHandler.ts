@@ -37,9 +37,10 @@ export const enhancedErrorHandler = {
     }
   },
   
-  getErrorMessage: (error: any) => {
-    if (error.response?.status) {
-      switch (error.response.status) {
+  getErrorMessage: (error: unknown) => {
+    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+    if (errorWithResponse.response?.status) {
+      switch (errorWithResponse.response.status) {
         case 400:
           return { message: 'Invalid request', code: 'BAD_REQUEST' };
         case 401:
@@ -51,10 +52,10 @@ export const enhancedErrorHandler = {
         case 500:
           return { message: 'Server error', code: 'SERVER_ERROR' };
         default:
-          return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+          return { message: errorWithResponse.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
       }
     }
     
-    return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+    return { message: errorWithResponse.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
   }
 }
