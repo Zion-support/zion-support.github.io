@@ -1,7 +1,6 @@
-'use client';'
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -9,217 +8,201 @@ import {
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';'
-const HomePage: React.FC = () => {
+  StarIcon,
+  UsersIcon,
+  GlobeAltIcon,
+  ChartBarIcon
+} from '@heroicons/react/24/outline';
+import FuturisticCard from './components/FuturisticCard';
+import FuturisticButton from './components/FuturisticButton';
+import ResponsiveContainer from './components/ResponsiveContainer';
+
+export default function HomePage() {
   const services = [
     {
       icon: CpuChipIcon,
-      title: 'AI Solutions','
-      description: 'Cutting-edge artificial intelligence solutions to transform your business.','
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions to transform your business.',
       href: '/ai-solutions'
     },
     {
       icon: CloudIcon,
-      title: 'Cloud Infrastructure','
-      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.','
-      href: '/cloud-infrastructure'
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and migration services.',
+      href: '/cloud-services'
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Cybersecurity','
-      description: 'Comprehensive cybersecurity solutions to protect your digital assets.','
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
       href: '/cybersecurity'
     },
     {
       icon: RocketLaunchIcon,
-      title: 'Digital Transformation','
-      description: 'Complete digital transformation services to modernize your business.','
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation strategies and implementation.',
       href: '/digital-transformation'
     }
   ];
 
   const features = [
-    '24/7 Expert Support','
-    'Custom Solutions','
-    'Scalable Architecture','
-    'Security First','
-    'Performance Optimized','
-    'Cost Effective''
+    '24/7 Expert Support',
+    'Cutting-edge Technology',
+    'Scalable Solutions',
+    'Enterprise Security',
+    'Custom Implementation',
+    'Proven Results'
+  ];
+
+  const stats = [
+    { label: 'Projects Completed', value: '500+' },
+    { label: 'Happy Clients', value: '200+' },
+    { label: 'Years Experience', value: '10+' },
+    { label: 'Success Rate', value: '99%' }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, cybersecurity, digital transformation" />
+        <title>Zion Tech Group - AI & Technology Solutions</title>
+        <meta name="description" content="Leading provider of AI, cloud, cybersecurity, and digital transformation solutions. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting" />
       </Helmet>
-      
-      <div className="min-h-screen bg-white">
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Transform Your Business with AI & IT Solutions
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              We deliver cutting-edge artificial intelligence and information technology solutions 
-              that drive growth, efficiency, and innovation for businesses of all sizes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" "
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/services" "
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                Learn More
-              </Link>
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <ResponsiveContainer>
+            <div className="text-center relative z-10">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+                Zion Tech Group
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Transforming businesses with cutting-edge AI, cloud, and cybersecurity solutions. 
+                Your trusted partner in digital innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Link to="/contact">
+                  <FuturisticButton size="lg">
+                    Get Started
+                    <ArrowRightIcon className="w-5 h-5 ml-2" />
+                  </FuturisticButton>
+                </Link>
+                <Link to="/about">
+                  <FuturisticButton variant="outline" size="lg">
+                    Learn More
+                  </FuturisticButton>
+                </Link>
+              </div>
+              
+              {/* Stats */}
+              <div className="flex flex-wrap justify-center gap-8">
+                {stats.map((stat, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
+                    <div className="text-2xl font-bold text-white">{stat.value}</div>
+                    <div className="text-sm text-gray-300">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
 
         {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Our Services
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to accelerate your business growth 
+                and digital transformation.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
-                <Link 
-                  key={index} 
-                  to={service.href}
-                  className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
+                <FuturisticCard key={index} className="text-center group hover:scale-105 transition-transform duration-300">
+                  <div className="text-blue-400 mb-4 flex justify-center">
+                    <service.icon className="w-12 h-12" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="flex items-center text-blue-600 font-medium">
-                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
-                  </div>
-                </Link>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <Link to={service.href}>
+                    <FuturisticButton className="w-full">
+                      Learn More
+                      <ArrowRightIcon className="w-4 h-4 ml-2" />
+                    </FuturisticButton>
+                  </Link>
+                </FuturisticCard>
               ))}
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Why Choose Us?
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3" />
-                  <span className="text-gray-700">{feature}</span>
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech?</h2>
+                <p className="text-xl text-gray-300 mb-8">
+                  We combine deep technical expertise with business acumen to deliver 
+                  solutions that drive real results for your organization.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3 text-gray-300">
+                      <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      {feature}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform?</h3>
+                <p className="text-gray-300 mb-6">
+                  Let's discuss how our solutions can accelerate your digital transformation 
+                  and drive business growth.
+                </p>
+                <Link to="/contact">
+                  <FuturisticButton size="lg" className="w-full">
+                    Start Your Journey
+                    <ArrowRightIcon className="w-5 h-5 ml-2" />
+                  </FuturisticButton>
+                </Link>
+              </div>
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our AI and IT solutions can help you achieve your goals.'
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" "
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Contact Us
-              </Link>
-              <Link 
-                to="/about" "
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                About Us
-              </Link>
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Join hundreds of satisfied clients who have transformed their businesses 
+                with our technology solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact">
+                  <FuturisticButton size="lg">
+                    Contact Us Today
+                    <ArrowRightIcon className="w-5 h-5 ml-2" />
+                  </FuturisticButton>
+                </Link>
+                <Link to="/case-studies">
+                  <FuturisticButton variant="outline" size="lg">
+                    View Case Studies
+                  </FuturisticButton>
+                </Link>
+              </div>
             </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
-                <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300 font-medium">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
-              Our Impact
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Numbers that speak to our commitment to excellence and client success
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-purple-400 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-300 text-sm lg:text-base">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12">
-            Let's discuss how our technology solutions can drive your business forward'
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact""
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Project
-            </Link>
-            <Link
-              to="/demo""
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+          </ResponsiveContainer>
+        </section>
+      </div>
     </>
   );
-};
-
-export default HomePage;
+}

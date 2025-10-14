@@ -1,12 +1,12 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 interface NeonButtonProps {
   children: React.ReactNode;
   to?: string;
   href?: string;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'accent';'
-  size?: 'sm' | 'md' | 'lg';'
+  variant?: 'primary' | 'secondary' | 'accent';
+  size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 

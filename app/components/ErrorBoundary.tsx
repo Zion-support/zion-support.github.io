@@ -1,6 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';'
-import { Link } from 'react-router-dom';'
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
 }
@@ -37,7 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {'
-      console.error('ErrorBoundary caught an error:', error, errorInfo);'
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // In production, you might want to log this to an error reporting service

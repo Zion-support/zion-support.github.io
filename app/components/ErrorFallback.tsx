@@ -66,7 +66,7 @@ const ErrorFallback: React.FC = () => {
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our error fallback';'
+            Let's discuss how our error fallback';
             services can help you achieve your goals.;
           </p>
           <a;

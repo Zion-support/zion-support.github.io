@@ -66,7 +66,7 @@ const LazyImage: React.FC = () => {
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our lazy image';'
+            Let's discuss how our lazy image';
             services can help you achieve your goals.;
           </p>
           <a;
@@ -81,7 +81,7 @@ const LazyImage: React.FC = () => {
   );
 }
 export default LazyImage;
-import React, { useState, useRef, useEffect } from 'react';'
+import React, { useState, useRef, useEffect } from 'react';
 interface LazyImageProps {
   src: string;
   alt: string;

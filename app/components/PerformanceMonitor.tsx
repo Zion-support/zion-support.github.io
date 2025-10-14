@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';'
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';'
+import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -25,10 +25,10 @@ const PerformanceMonitor: React.FC = () => {
 
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && window.performance) {'
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
-        const paint = window.performance.getEntriesByType('paint');'
+        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paint = window.performance.getEntriesByType('paint');
         const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;'
+        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
         // Memory usage (if available)
         const memoryUsage = (window as any).performance?.memory?.usedJSHeapSize || 0;
         
@@ -117,7 +117,7 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
-import React from 'react';'
+import React from 'react';
 const PerformanceMonitor: React.FC = () => {
   return null;
 }

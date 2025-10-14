@@ -62,7 +62,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Example: Send to error tracking service
       // errorTrackingService.captureException(error, { extra: errorData });
       ''
-      console.error('Error logged to service:', errorData);'
+      console.error('Error logged to service:', errorData);
     } catch (loggingError) {''
       console.error('Failed to log error to service:', loggingError);}'
     }
@@ -79,7 +79,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.reload();
   }
   private handleGoHome = () => {
-    window.location.href = '/';'
+    window.location.href = '/';
   }
     window.location.reload();}
   };
