@@ -4,7 +4,7 @@ export const enhancedLogger = {
       if (level === 'info') {
         console.warn(message, data);
       } else {
-        console[level](message, data);
+        console.warn(message, data);
       }
     }
     
