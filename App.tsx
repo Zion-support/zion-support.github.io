@@ -96,6 +96,10 @@ const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualiza
 const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
 const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
 
+// New Advanced AI Services
+const AIBusinessIntelligenceProPage = React.lazy(() => import("./app/ai-business-intelligence-pro/page"));
+const AICybersecuritySuiteProPage = React.lazy(() => import("./app/ai-cybersecurity-suite-pro/page"));
+
 // Additional IT Services Pages
 const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
 const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
@@ -186,6 +190,10 @@ if (typeof window !== 'undefined') {
                     <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                     <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
                     <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+                    
+                    {/* Advanced AI Services */}
+                    <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
+                    <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
 
                     {/* Catch all route */}
                     <Route path="*" element={
