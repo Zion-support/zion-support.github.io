@@ -11,9 +11,6 @@ import { useEffect } from 'react'
       }
       if (metaKeywords && keywords) {
         metaKeywords.setAttribute('content', keywords)
-      }
       
       document.title = title
-    }
   }, [title, description, keywords])
-}

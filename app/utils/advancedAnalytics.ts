@@ -15,7 +15,6 @@ export const advancedAnalytics = {
   },
   
   trackConversion: (conversionId: string, value?: number, currency?: string) => {
-    if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17d

@@ -11,11 +11,11 @@ import {
 
 
 const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' },
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' }
-  ];
+  { name: 'AI Solutions', href: '/ai-solutions' },
+  { name: 'IT Solutions', href: '/it-solutions' },
+  { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+  { name: 'Digital Transformation', href: '/digital-transformation' }
+];
 
   const Footer: React.FC = () => {
   
@@ -64,9 +64,7 @@ const services = [
             <Link to="/" className="flexitems-center space-x-3 mb-6 group">
               <div className="w-12h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
                 <span className="text-whitefont-bold text-xl">Z</span>
-              </div>
               <span className="text-xlfont-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
-            </Link>
             <p className="text-gray-400mb-6 max-w-sm">
               Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
               and digital transformation services for businesses worldwide.</p>
@@ -75,12 +73,8 @@ const services = [
               <div className="flexitems-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5h-5 text-purple-400" />
                 <span>+1-302-464-0950</span>
-              </div>
-              <div className="flexitems-center space-x-3 text-gray-300">
                 <EnvelopeIcon className="w-5h-5 text-purple-400" />
                 <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flexitems-center space-x-3 text-gray-300">
                 <MapPinIcon className="w-5h-5 text-purple-400" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
@@ -94,8 +88,7 @@ const services = [
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400hover:text-white transition-colors"
-                  aria-label={social.name}
-                >
+                  aria-label={social.name}>
                   {social.icon === 'facebook' && '📘'}
                   {social.icon === 'twitter' && '🐦'}
                   {social.icon === 'linkedin' && '💼'}
@@ -112,9 +105,8 @@ const services = [
                 <li key={service.name}>
                   <Link 
                     to={service.href} 
-                    className="text-gray-400hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group">
+                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
                 </li>
@@ -123,15 +115,11 @@ const services = [
           </div>
           {/* Company */}
           <div>
-            <h3 className="text-whitefont-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
+            <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-gray-400hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                  <Link to={item.href} className="text-gray-400 hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -140,26 +128,18 @@ const services = [
           </div>
           {/* Support & Legal */}
           <div>
-            <h3 className="text-whitefont-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
-            <ul className="space-y-3mb-8">
+            <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
+            <ul className="space-y-3 mb-8">
               {support.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-gray-400hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                  <Link to={item.href} className="text-gray-400 hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
               ))}
               {legal.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-gray-400hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                  <Link to={item.href} className="text-gray-400 hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -193,9 +173,9 @@ const services = [
             <HeartIcon className="w-4h-4 text-red-400" />
             <span>by Zion Tech Group</span>
           </div>
-          <div className="flexspace-x-6">
-            <Link to="/privacy" className="text-gray-400hover:text-white transition-colors text-sm">Privacy Policy</Link>
-            <Link to="/terms" className="text-gray-400hover:text-white transition-colors text-sm">Terms of Service</Link>
+          <div className="flex space-x-6">
+            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
+            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
           </div>
         </div>
       </div>

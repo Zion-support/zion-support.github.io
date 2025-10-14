@@ -17,7 +17,6 @@ export const errorHandlerEnhanced = {
       // eslint-disable-next-line no-console
       console.error('Error handled: ', errorInfo);
       console.error('Error handled: ', errorInfo)
-    }
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
@@ -26,12 +25,7 @@ export const errorHandlerEnhanced = {
         description: error.message,
         fatal: false;
       })
-    }
     
     return {
       message: 'Something went wrong. Please try again.',
       code: 'GENERIC_ERROR';
-    }
-  }
-}
-}

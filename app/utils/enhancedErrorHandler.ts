@@ -14,7 +14,6 @@ export const enhancedErrorHandler = {
     return {
       message: 'Something went wrong. Please try again.',
       code: 'GENERIC_ERROR';
-    }
   },
   
   handleApiError: (error: unknown) => {
@@ -40,22 +39,12 @@ export const enhancedErrorHandler = {
   getErrorMessage: (error: any) => {
     if (error.response?.status) {
       switch (error.response.status) {
-        case 400:
           return { message: 'Invalid request', code: 'BAD_REQUEST' ;}
-        case 401:
           return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;}
-        case 403:
           return { message: 'Forbidden', code: 'FORBIDDEN' ;}
-        case 404:
           return { message: 'Not found', code: 'NOT_FOUND' ;}
-        case 500:
           return { message: 'Server error', code: 'SERVER_ERROR' ;}
-        default:
           return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' ;}
-      }
-    }
     
     return { message: error.message || 'Unknown error';, code: 'UNKNOWN_ERROR' ;}
-  }
-}
 }}}}

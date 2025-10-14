@@ -23,9 +23,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     // TODO: Implement actual analytics tracking
   };
   const trackPageView = (pageName: string) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName);
-    }
+    console.log('Page View:', pageName);
     // TODO: Implement actual page view tracking
   };
   const value = {

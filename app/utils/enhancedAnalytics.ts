@@ -8,7 +8,6 @@ export const enhancedAnalytics = {
   },
   
   trackUserInteraction: (action: string, category: string, label?: string) => {
-    if (typeof window !== 'undefined') {
       window.gtag('event', action, {
 
       })
@@ -16,7 +15,6 @@ export const enhancedAnalytics = {
   },
   
   trackUserEngagement: (engagementType: string, value?: number) => {
-    if (typeof window !== 'undefined') {
       window.gtag('event', 'user_engagement', {
 
       })
@@ -24,7 +22,6 @@ export const enhancedAnalytics = {
   },
   
   trackPerformance: (metric: string, value: number) => {
-    if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_metric', {
 
       })

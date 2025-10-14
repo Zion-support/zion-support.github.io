@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
@@ -43,7 +42,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <ul className="space-y-2px-4">
             {navigationItems.map((item) => {
               const Icon = item.icon;
-              return (
                 <li key={item.name}>
                   <Link
                     to={item.href}
@@ -51,9 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   >
                     <Icon className="w-5h-5 mr-3" />
                     {item.name}
-                  </Link>
-                </li>
-              );
+              </>);
             })}
           </ul>
         </nav>
@@ -62,13 +58,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <div className="flexitems-center text-sm text-gray-300 mb-2">
               <MapPin className="w-4h-4 mr-2" />
               <span>Contact Info</span>
-              </div>
-        </div>
             <div className="flexitems-center text-sm text-gray-300 mb-1">
               <Phone className="w-4h-4 mr-2" />
               <span>+1 (555) 123-4567</span>
-              </div>
-        </div>
             <div className="flexitems-center text-sm text-gray-300">
               <Mail className="w-4h-4 mr-2" />
               <span>info@ziontechgroup.com</span>

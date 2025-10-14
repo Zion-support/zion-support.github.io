@@ -17,13 +17,11 @@ export const enhancedErrorTracking = {
     if (process.env.NODE_ENV === 'development') {
       // Development logging disabled
       console.error('Error tracked: ', errorInfo)
-    }
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
 
       })
-    }
   },
   
   trackPerformanceError: (_error: Error, performanceData: unknown) => {
@@ -38,8 +36,4 @@ export const enhancedErrorTracking = {
         metric,
         value,
         threshold
-      })
-    }
-  }
-}
 }}}}}}
