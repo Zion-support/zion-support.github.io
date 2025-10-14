@@ -1,6 +1,76 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Users, CheckCircle, Clock, Phone, Mail, MapPin } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+
+const consultationTypes = [
+  {
+    name: "Initial Consultation",
+    description: "Get started with a comprehensive assessment of your technology needs.",
+    duration: "1 hour",
+    price: "$150",
+    features: ["Technology audit", "Strategic recommendations", "Action plan", "Follow-up support"],
+    popular: false
+  },
+  {
+    name: "Strategic Planning",
+    description: "Develop a comprehensive technology roadmap for your business.",
+    duration: "2 hours",
+    price: "$300",
+    features: ["Business analysis", "Technology roadmap", "Implementation timeline", "Budget planning"],
+    popular: true
+  },
+  {
+    name: "Technical Review",
+    description: "Deep dive into your current systems and infrastructure.",
+    duration: "3 hours",
+    price: "$450",
+    features: ["System analysis", "Performance review", "Security audit", "Optimization plan"],
+    popular: false
+  },
+  {
+    name: "Ongoing Support",
+    description: "Monthly consultation and support for your technology initiatives.",
+    duration: "1 hour/month",
+    price: "$200/month",
+    features: ["Monthly check-ins", "Priority support", "Strategic guidance", "Technology updates"],
+    popular: false
+  }
+];
+
+const experts = [
+  {
+    name: "Dr. Sarah Chen",
+    role: "Chief Technology Officer",
+    experience: "15+ years",
+    expertise: ["AI/ML", "Cloud Architecture", "Data Science"]
+  },
+  {
+    name: "Michael Rodriguez",
+    role: "Senior Solutions Architect",
+    experience: "12+ years",
+    expertise: ["Enterprise Systems", "DevOps", "Security"]
+  },
+  {
+    name: "Emily Johnson",
+    role: "Digital Transformation Lead",
+    experience: "10+ years",
+    expertise: ["Process Optimization", "Change Management", "Innovation"]
+  }
+];
+
+const consultationServices = [
+  "Technology Strategy",
+  "Digital Transformation",
+  "Cloud Migration",
+  "Cybersecurity Assessment",
+  "AI Implementation",
+  "Process Optimization"
+];
+
+const handleBooking = (type: string) => {
+  // Handle booking logic
+  console.log(`Booking ${type}`);
+};
 
 export default function Consultation() {
   return (
@@ -12,16 +82,11 @@ export default function Consultation() {
           content="Professional consultation services from Zion Tech Group"
         />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Consultation</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional consultation services coming soon.
-=======
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
+  
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
@@ -58,6 +123,7 @@ export default function Consultation() {
 
         {/* Consultation Types */}
         <section className="py-16 px-4">
+  
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Choose Your Consultation Type</h2>
@@ -121,6 +187,7 @@ export default function Consultation() {
 
         {/* Expert Team */}
         <section className="py-16 px-4">
+  
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Meet Our Experts</h2>
@@ -153,6 +220,7 @@ export default function Consultation() {
 
         {/* Contact Information */}
         <section className="py-16 px-4">
+  
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <div className="text-center mb-12">
@@ -203,11 +271,11 @@ export default function Consultation() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Section */}
       <section className="py-16 px-4">
+  
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Consultation Services</h2>
@@ -230,6 +298,7 @@ export default function Consultation() {
 
       {/* Process Section */}
       <section className="py-16 px-4 bg-white/5">
+  
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Our Process</h2>
@@ -266,13 +335,13 @@ export default function Consultation() {
 
       {/* CTA Section */}
       <section className="py-16 px-4">
+  
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Schedule a consultation with our experts and discover how technology can drive your success.
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
           </p>
 
           <Link
@@ -283,6 +352,7 @@ export default function Consultation() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
+      </section>
       </div>
     </>
   );

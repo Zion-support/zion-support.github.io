@@ -1,30 +1,65 @@
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight, CheckCircle, ExternalLink, Handshake, TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+
+const partnershipTiers = [
+  {
+    name: "Strategic Partner",
+    description: "Deep integration and co-innovation opportunities",
+    benefits: ["Joint product development", "Co-marketing opportunities", "Priority support", "Revenue sharing"],
+    requirements: "Enterprise clients with 1000+ employees"
+  },
+  {
+    name: "Technology Partner",
+    description: "Technical integration and API partnerships",
+    benefits: ["API access", "Technical support", "Integration assistance", "Documentation"],
+    requirements: "Technology companies with proven track record"
+  },
+  {
+    name: "Channel Partner",
+    description: "Reseller and referral partnerships",
+    benefits: ["Reseller discounts", "Marketing materials", "Training programs", "Commission structure"],
+    requirements: "Established business with sales capabilities"
+  }
+];
+
+const partners = [
+  {
+    name: "Microsoft",
+    tier: "Strategic Partner",
+    logo: "/images/partners/microsoft.png",
+    description: "Cloud infrastructure and AI solutions partnership"
+  },
+  {
+    name: "Amazon Web Services",
+    tier: "Technology Partner",
+    logo: "/images/partners/aws.png",
+    description: "Cloud services and machine learning platform integration"
+  },
+  {
+    name: "Google Cloud",
+    tier: "Technology Partner",
+    logo: "/images/partners/google.png",
+    description: "AI and data analytics platform collaboration"
+  }
+];
+
+const benefits = [
+  "Access to cutting-edge technology",
+  "Joint marketing opportunities",
+  "Technical support and training",
+  "Revenue sharing programs",
+  "Co-innovation projects",
+  "Priority customer support"
+];
+
+const getTierInfo = (tier: string) => {
+  return partnershipTiers.find(t => t.name === tier) || partnershipTiers[0];
+};
 
 export default function PartnersZionTechGroup() {
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Partners - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Partners</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional partners services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Helmet>
           <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
@@ -171,7 +206,6 @@ export default function PartnersZionTechGroup() {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
       </div>
     </>
   );

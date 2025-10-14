@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -71,9 +66,6 @@ const CaseStudiesPage: React.FC = () => {
     { label: 'Team Members', value: '50+', icon: Users },
     { label: 'Industry Awards', value: '25+', icon: Award }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
-
-export default function CaseStudies() {
   return (
     <>
       <Helmet>
@@ -84,28 +76,12 @@ export default function CaseStudies() {
         />
       </Helmet>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Case Studies</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Success stories and case studies coming soon.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
 
         {/* Hero Section */}
         <section className="py-20 px-4">
+  
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
@@ -119,6 +95,7 @@ export default function CaseStudies() {
 
         {/* Stats Section */}
         <section className="py-16 px-4">
+  
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => {
@@ -139,6 +116,7 @@ export default function CaseStudies() {
 
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
+  
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -210,6 +188,7 @@ export default function CaseStudies() {
 
         {/* CTA Section */}
         <section className="py-16 px-4">
+  
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">
@@ -231,8 +210,9 @@ export default function CaseStudies() {
         </section>
 
         <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
       </div>
     </>
   );
 }
+
+export default CaseStudiesPage;

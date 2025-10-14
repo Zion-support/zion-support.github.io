@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -47,34 +41,7 @@ const CloudServicesPage: React.FC = () => {
     'Faster deployment and time-to-market',
     'Disaster recovery and business continuity'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
-
-export default function GDataAnalyticsZionTechGroupPage() {
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Cloud Services</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional cloud services services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Cloud Services | Zion Tech Group</title>
@@ -86,6 +53,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
+  
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         
@@ -115,6 +83,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
 
       {/* Services Section */}
       <section className="py-16 px-4">
+  
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -153,6 +122,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
+  
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -178,6 +148,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
 
       {/* CTA Section */}
       <section className="py-16 px-4">
+  
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -204,4 +175,3 @@ export default function GDataAnalyticsZionTechGroupPage() {
 };
 
 export default CloudServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
