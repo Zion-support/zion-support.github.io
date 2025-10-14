@@ -106,7 +106,7 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
