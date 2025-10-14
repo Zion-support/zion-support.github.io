@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -128,21 +127,11 @@ export default function ITSolutionsPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-=======
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Server, Cloud } from 'lucide-react';
-
-const ItSolutionsPage: React.FC = () => {
-  return (
-    <>
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cybersecurity, cloud solutions, and system integration services." />
         <meta name="keywords" content="IT solutions, infrastructure management, cybersecurity, cloud solutions, system integration, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relativepy-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -189,8 +178,7 @@ const ItSolutionsPage: React.FC = () => {
 
                 <Link
                   to={service.href}
-                  className="w-fullbg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="w-fullbg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2">
                   Learn More
                   <ArrowRightIcon className="w-4h-4" />
                 </Link>
@@ -212,14 +200,12 @@ const ItSolutionsPage: React.FC = () => {
           <div className="flexflex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-rfrom-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-            >
+              className="bg-gradient-to-rfrom-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
               Get Started
             </Link>
             <Link
               to="/demo"
-              className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
-            >
+              className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
               Schedule Demo
             </Link>
           </div>
@@ -228,40 +214,3 @@ const ItSolutionsPage: React.FC = () => {
     </div>
   );
 }
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xlfont-bold text-white mb-6">
-              IT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Comprehensive IT services to power your digital transformation
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Server className="w-12h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Infrastructure</h3>
-              <p className="text-gray-300">
-                Robust IT infrastructure solutions for scalable growth.
-              </p>
-            </div>
-            <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Cloud className="w-12h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
-              <p className="text-gray-300">
-                Secure and scalable cloud computing solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default ItSolutionsPage;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05

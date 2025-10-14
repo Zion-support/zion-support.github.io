@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -921,13 +920,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
     }
   });
 
-=======
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Target, Rocket } from 'lucide-react';
-
-const MicroSaasSolutionsPage: React.FC = () => {
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
   return (
     <>
       <Helmet>
@@ -951,7 +943,6 @@ const MicroSaasSolutionsPage: React.FC = () => {
             <div className="w-fullh-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
           </div>
           
-<<<<<<< HEAD
           {/* Floating Elements */}
           <div className="absolutetop-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
           <div className="absolutebottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
@@ -964,14 +955,6 @@ const MicroSaasSolutionsPage: React.FC = () => {
               </h1>
               <p className="text-xlmd:text-2xl text-gray-300 mb-8 leading-relaxed">
                 25+ AI-Powered Business Tools to Transform Your Operations
-=======
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Rocket className="w-12h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Rapid Development</h3>
-              <p className="text-gray-300">
-                Fast-track your SaaS product development with our expert team.
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
               </p>
               <p className="text-lgtext-gray-400 mb-12 max-w-3xl mx-auto">
                 Discover our comprehensive suite of intelligent micro SaaS solutions designed to automate, 
@@ -981,15 +964,13 @@ const MicroSaasSolutionsPage: React.FC = () => {
               <div className="flexflex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <Link 
                   to="/contact" 
-                  className="groupbg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect"
-                >
+                  className="groupbg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect">
                   Get Started Today
                   <ArrowRightIcon className="w-5h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
                   to="/demo" 
-                  className="groupborder-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glass"
-                >
+                  className="groupborder-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glass">
                   Schedule Demo
                   <ArrowRightIcon className="w-5h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -1032,8 +1013,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                       selectedCategory === category.id
                         ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white'
                         : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
-                    }`}
-                  >
+                    }`}>
                     {category.name} ({category.count})
                   </button>
                 ))}
@@ -1045,8 +1025,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-slate-700text-white px-4 py-2 rounded-lg border border-slate-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                >
+                  className="bg-slate-700text-white px-4 py-2 rounded-lg border border-slate-600 focus:outline-none focus:ring-2 focus:ring-purple-500">
                   <option value="popularity">Popularity</option>
                   <option value="rating">Rating</option>
                   <option value="price-low">Price: Low to High</option>
@@ -1064,8 +1043,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
               {sortedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="groupbg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark relative overflow-hidden"
-                >
+                  className="groupbg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark relative overflow-hidden">
                   {/* Badges */}
                   <div className="absolutetop-4 right-4 flex flex-col gap-2">
                     {product.isNew && (
@@ -1129,8 +1107,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                       {product.benefits.map((benefit, index) => (
                         <span
                           key={index}
-                          className="bg-gradient-to-rfrom-purple-500/20 to-cyan-500/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30"
-                        >
+                          className="bg-gradient-to-rfrom-purple-500/20 to-cyan-500/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30">
                           {benefit}
                         </span>
                       ))}
@@ -1178,8 +1155,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                   <div className="flexflex-col gap-3">
                     <Link
                       to={product.href}
-                      className="w-fullbg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105"
-                    >
+                      className="w-fullbg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105">
                       Learn More
                       <ArrowRightIcon className="w-4h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -1189,8 +1165,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                         href={product.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors flex items-center justify-center gap-2"
-                      >
+                        className="flex-1bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors flex items-center justify-center gap-2">
                         <EyeIcon className="w-4h-4" />
                         Demo
                       </a>
@@ -1198,8 +1173,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                         href={product.documentationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors flex items-center justify-center gap-2"
-                      >
+                        className="flex-1bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors flex items-center justify-center gap-2">
                         <DocumentTextIcon className="w-4h-4" />
                         Docs
                       </a>
@@ -1211,8 +1185,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                     {product.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="text-gray-400text-xs px-2 py-1 bg-slate-800 rounded border border-slate-600"
-                      >
+                        className="text-gray-400text-xs px-2 py-1 bg-slate-800 rounded border border-slate-600">
                         {tag}
                       </span>
                     ))}
@@ -1237,15 +1210,13 @@ const MicroSaasSolutionsPage: React.FC = () => {
               <div className="flexflex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-rfrom-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                >
+                  className="bg-gradient-to-rfrom-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                   Get Started Today
                   <ArrowRightIcon className="w-5h-5" />
                 </Link>
                 <Link
                   to="/pricing"
-                  className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2">
                   View Pricing
                   <CurrencyDollarIcon className="w-5h-5" />
                 </Link>
@@ -1254,17 +1225,11 @@ const MicroSaasSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 
-<<<<<<< HEAD
 export default MicroSaaSSolutionsPage;
-=======
-export default MicroSaasSolutionsPage;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
 
-        </div>
-        </div>
               </p>
               </p>

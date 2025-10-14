@@ -9,11 +9,10 @@ const FiveGSupportPage: React.FC = () => {
             5gSupport Services
           </h1>
 <p className="Professional services and solutions.
-             ">$2</p>
+           ">$2</p>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 export default FiveGSupportPage;

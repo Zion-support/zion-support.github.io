@@ -17,11 +17,7 @@ const CareersPage: React.FC = () => {
             Join Our <span className="text-transparentbg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Be part of a team that&apos;s shaping the future of AI and IT solutions.
-=======
-            Be part of a team that's shaping the future of AI and IT solutions.';
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
             Work on cutting-edge projects and make a real impact.
           </p>
           </div>
@@ -45,9 +41,6 @@ const CareersPage: React.FC = () => {
               );
             })}
             </div>
-        </div>
-          </div>
-        </div>
         {/* Open Positions */}
         <div className="mb-16">
           <h2 className="text-3xlfont-bold text-white text-center mb-12">Open Positions</h2>
@@ -60,25 +53,16 @@ const CareersPage: React.FC = () => {
                     {position.type}
                   </span>
                   </div>
-        </div>
                 <div className="flexitems-center text-gray-400 mb-3">
                   <MapPin className="w-4h-4 mr-2" />
                   <span className="text-sm">{position.location}</span>
                   <span className="mx-2">•</span>
                   <span className="text-sm">{position.department}</span>
-                  </div>
-        </div>
                 <p className="text-gray-300mb-4">{position.description}</p>
                 <button className="w-fullbg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
                   Apply Now
                 </button>
-                </div>
-        </div>
             ))}
-            </div>
-        </div>
-          </div>
-        </div>
         {/* Company Culture */}
         <div className="bg-white/10backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
           <h2 className="text-3xlfont-bold text-white text-center mb-8">Our Culture</h2>
@@ -86,37 +70,20 @@ const CareersPage: React.FC = () => {
             <div className="text-center">
               <div className="p-4bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
                 <Users className="w-8h-8 text-white" />
-                </div>
-        </div>
               <h3 className="text-xl font-semibold text-white mb-3">Collaborative</h3>
               <p className="text-gray-300">We believe in the power of teamwork and open communication to achieve great things.</p>
-              </div>
-        </div>
             <div className="text-center">
               <div className="p-4bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
                 <Zap className="w-8h-8 text-white" />
-                </div>
-        </div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovative</h3>
               <p className="text-gray-300">We encourage creative thinking and embrace new technologies to solve complex problems.</p>
-              </div>
-        </div>
             <div className="text-center">
               <div className="p-4bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
                 <Target className="w-8h-8 text-white" />
-                </div>
-        </div>
               <h3 className="text-xl font-semibold text-white mb-3">Impact-Driven</h3>
               <p className="text-gray-300">We focus on delivering real value to our clients and making a positive impact.</p>
-              </div>
-        </div>
-            </div>
-        </div>
-          </div>
-        </div>
         {/* CTA Section */}
         <div className="text-center">
-<<<<<<< HEAD
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Don&apos;t See Your Perfect Role?</h2>
             <p className="text-gray-300 mb-6">
@@ -124,22 +91,7 @@ const CareersPage: React.FC = () => {
             </p>
             <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
               Send Resume
-=======
-          <div className="bg-white/10backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xlfont-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
-            <p className="text-gray-300mb-6">
-              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
-            </p>
-            <button className="bg-gradient-to-rfrom-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
-              Send Resume;
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
             </button>
-            </div>
-        </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

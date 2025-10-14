@@ -14,17 +14,14 @@ const SupportPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Support</h1>
 <p className="Get help and support from our expert team
-               ">$2</p>
+             ">$2</p>
             <div className="text-gray-400">
               <p>Support information coming soon...</p>
               </div>
         </div>
             </div>
         </div>
-          </div>
-        </div>
-      </div>
-    </>
+    
   );
 };
 

@@ -14,17 +14,14 @@ const DemoPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Demo</h1>
 <p className="Experience our solutions with live demos
-               ">$2</p>
+             ">$2</p>
             <div className="text-gray-400">
               <p>Demos coming soon...</p>
               </div>
         </div>
             </div>
         </div>
-          </div>
-        </div>
-      </div>
-    </>
+    
   );
 };
 

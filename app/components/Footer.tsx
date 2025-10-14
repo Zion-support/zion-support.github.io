@@ -97,8 +97,7 @@ const services = [
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400hover:text-white transition-colors"
-                  aria-label={social.name}
-                >
+                  aria-label={social.name}>
                   {social.icon === 'facebook' && '📘'}
                   {social.icon === 'twitter' && '🐦'}
                   {social.icon === 'linkedin' && '💼'}
@@ -116,8 +115,7 @@ const services = [
                 <li key={service.name}>
                   <Link 
                     to={service.href} 
-                    className="text-gray-400hover:text-white transition-colors flex items-center group"
-                  >
+                    className="text-gray-400hover:text-white transition-colors flex items-center group">
                     <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
@@ -134,8 +132,7 @@ const services = [
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
-                    className="text-gray-400hover:text-white transition-colors flex items-center group"
-                  >
+                    className="text-gray-400hover:text-white transition-colors flex items-center group">
                     <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
@@ -152,8 +149,7 @@ const services = [
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
-                    className="text-gray-400hover:text-white transition-colors flex items-center group"
-                  >
+                    className="text-gray-400hover:text-white transition-colors flex items-center group">
                     <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
@@ -163,8 +159,7 @@ const services = [
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
-                    className="text-gray-400hover:text-white transition-colors flex items-center group"
-                  >
+                    className="text-gray-400hover:text-white transition-colors flex items-center group">
                     <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>

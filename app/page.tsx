@@ -75,15 +75,13 @@ const HomePage: React.FC = () => {
             <div className="flexflex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="/contact" 
-                className="groupbg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect"
-              >
+                className="groupbg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect">
                 Get Started Today
                 <ArrowRightIcon className="w-5h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
                 to="/services" 
-                className="groupborder-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glass"
-              >
+                className="groupborder-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glass">
                 Explore Services
                 <ArrowRightIcon className="w-5h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -229,7 +227,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       </div>
-    </>
+    
   );
 };
 

@@ -34,7 +34,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       />
       {text && (
 <p className="{text}
-           ">$2</p>
+         ">$2</p>
       )}
     </div>
   );
@@ -42,7 +42,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   if (fullScreen) {
     return (
       <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-centerz-50">
-        <div className="bg-slate-800 rounded-lg p-8shadow- xl  ">{spinner}
+        <div className="bg-slate-800 rounded-lg p-8shadow- xl">{spinner}
         </div>
       </div>
     );

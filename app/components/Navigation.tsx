@@ -99,8 +99,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         : 'text-gray-300 hover:text-white hover:bg-slate-800'
                     }`}
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >
+                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}>
                     <Icon className="w-4h-4" />
                     <span>{item.name}</span>
                     {item.submenu && <ChevronDownIcon className="w-4h-4 ml-1" />}
@@ -114,7 +113,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                           key={subItem.name}
                           to={subItem.href}
                           className="blockpx-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}                        >
+                          onClick={() => setIsServicesOpen(false)}>
                           {subItem.name}
                         </Link>
                       ))}
@@ -129,8 +128,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="hiddenlg:flex items-center space-x-4">
             <Link
               to="/contact"
-              className="bg-gradient-to-rfrom-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-            >
+              className="bg-gradient-to-rfrom-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">
               Get Started
             </Link>
           </div>
@@ -139,8 +137,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="lg:hiddenflex items-center space-x-2">
             <button
               onClick={onSidebarToggle}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            >
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="sr-only">Open sidebar</span>
               <Bars3Icon className="blockh-6 w-6" />
             </button>
@@ -161,8 +158,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
                         ? 'text-white bg-slate-700'
                         : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                    }`}
-                  >
+                    }`}>
                     <item.icon className="w-5h-5 mr-3" />
                     {item.name}
                     <ChevronDownIcon className="w-4h-4 ml-auto" />
@@ -179,8 +175,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                           setIsOpen(false);
                           setIsServicesOpen(false);
                           setIsSolutionsOpen(false);
-                        }}
-                      >
+                        }}>
                         <div className="w-4h-4 mr-3" />
                         {subItem.name}
                       </Link>
@@ -195,8 +190,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       ? 'text-white bg-slate-700'
                       : 'text-gray-300 hover:text-white hover:bg-slate-700'
                   }`}
-                  onClick={() => setIsOpen(false)}
-                >
+                  onClick={() => setIsOpen(false)}>
                   <item.icon className="w-5h-5 mr-3" />
                   {item.name}
                 </Link>

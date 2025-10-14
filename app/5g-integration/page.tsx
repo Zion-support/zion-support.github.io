@@ -50,8 +50,7 @@ title="5G Integration Services - Zion Tech Group"
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-              >
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
                 Learn More
                 <ArrowRight className="ml-2h-4 w-4" />
               </Link>
@@ -62,8 +61,7 @@ title="5G Integration Services - Zion Tech Group"
         <div className="text-center">
           <Link 
             to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-          >
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
             Get Started Today
             <ArrowRight className="ml-2h-5 w-5" />
           </Link>

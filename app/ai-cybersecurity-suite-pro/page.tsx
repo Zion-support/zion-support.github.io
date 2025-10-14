@@ -46,7 +46,7 @@ const AICybersecuritySuiteProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    
   );
 };
 

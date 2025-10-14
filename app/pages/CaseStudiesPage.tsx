@@ -107,9 +107,6 @@ const CaseStudiesPage: React.FC = () => {
         </div>
                     ))}
                     </div>
-        </div>
-                  </div>
-        </div>
 
                 <p className="text-gray-300text-sm mb-6">{study.description}</p>
 
@@ -117,13 +114,7 @@ const CaseStudiesPage: React.FC = () => {
                   Read Full Case Study
                   <ArrowRight className="w-4h-4" />
                 </button>
-                </div>
-        </div>
             ))}
-            </div>
-        </div>
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -143,12 +134,7 @@ const CaseStudiesPage: React.FC = () => {
             <button className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
               Schedule Consultation
             </button>
-            </div>
-        </div>
-          </div>
-        </div>
       </section>
-    </div>
   );
 };
 

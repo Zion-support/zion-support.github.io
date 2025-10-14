@@ -14,17 +14,14 @@ const MicroSaaSPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Micro SaaS Solutions</h1>
 <p className="Innovative micro SaaS solutions for modern businesses
-               ">$2</p>
+             ">$2</p>
             <div className="text-gray-400">
               <p>Micro SaaS solutions coming soon...</p>
               </div>
         </div>
             </div>
         </div>
-          </div>
-        </div>
-      </div>
-    </>
+    
   );
 };
 

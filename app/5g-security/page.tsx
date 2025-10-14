@@ -9,11 +9,10 @@ const FiveGSecurityPage: React.FC = () => {
             5gSecurity Services
           </h1>
 <p className="Professional services and solutions.
-             ">$2</p>
+           ">$2</p>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 export default FiveGSecurityPage;
