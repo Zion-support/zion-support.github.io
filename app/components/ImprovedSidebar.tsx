@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function ImprovedSidebar() {
+const ImprovedSidebar = () => {
   return (
-    <div>
-      <h1>ImprovedSidebar</h1>
-      <p>This component is under development.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">ImprovedSidebar</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default ImprovedSidebar;

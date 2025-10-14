@@ -1,36 +1,23 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ServicesPage from "./pages/ServicesPage";
-import ContactPage from "./pages/ContactPage";
-import BlogPage from "./pages/BlogPage";
-import DemoPage from "./pages/DemoPage";
+import { Helmet } from "react-helmet-async";
 
-function App() {
+const AppPage = () => {
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-900">
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-            </Routes>
-          </main>
-          <Footer />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>App - Zion Tech Group</title>
+        <meta name="description" content="App - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">App</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
         </div>
-      </Router>
-    </HelmetProvider>
+      </div>
+    </div>
   );
-}
+};
 
-export default App;
+export default AppPage;

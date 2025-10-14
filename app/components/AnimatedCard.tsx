@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function AnimatedCard() {
+const AnimatedCard = () => {
   return (
-    <div>
-      <h1>AnimatedCard</h1>
-      <p>This component is under development.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">AnimatedCard</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default AnimatedCard;

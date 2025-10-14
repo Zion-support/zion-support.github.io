@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function WebVitalsTracker() {
+const WebVitalsTracker = () => {
   return (
-    <div>
-      <h1>WebVitalsTracker</h1>
-      <p>This component is under development.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">WebVitalsTracker</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default WebVitalsTracker;

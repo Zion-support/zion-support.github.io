@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const LoadingStates = () => {
   return (
-    <div>
-      <div>
-        <h1>Loading States</h1>
-        <p>Loading component</p>
-      </div>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">LoadingStates</h2>
+      <p>This component is under construction.</p>
     </div>
   );
 };

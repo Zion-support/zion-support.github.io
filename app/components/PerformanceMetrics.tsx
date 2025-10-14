@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function PerformanceMetrics() {
+const PerformanceMetrics = () => {
   return (
-    <div>
-      <h1>PerformanceMetrics</h1>
-      <p>This component is under development.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">PerformanceMetrics</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default PerformanceMetrics;

@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function LazyWrapper() {
+const LazyWrapper = () => {
   return (
-    <div>
-      <h1>LazyWrapper</h1>
-      <p>This component is under development.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">LazyWrapper</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default LazyWrapper;

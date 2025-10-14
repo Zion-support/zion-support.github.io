@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function ServiceCardSkeleton() {
+const ServiceCardSkeleton = () => {
   return (
-    <div>
-      <h1>ServiceCardSkeleton</h1>
-      <p>This component is under development.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">ServiceCardSkeleton</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default ServiceCardSkeleton;

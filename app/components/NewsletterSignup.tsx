@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function NewsletterSignup() {
+const NewsletterSignup = () => {
   return (
-    <div>
-      <h1>NewsletterSignup</h1>
-      <p>This component is under development.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">NewsletterSignup</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default NewsletterSignup;

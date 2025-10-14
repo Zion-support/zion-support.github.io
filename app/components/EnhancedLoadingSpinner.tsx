@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function EnhancedLoadingSpinner() {
+const EnhancedLoadingSpinner = () => {
   return (
-    <div>
-      <h1>EnhancedLoadingSpinner</h1>
-      <p>This component is under development.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedLoadingSpinner</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default EnhancedLoadingSpinner;

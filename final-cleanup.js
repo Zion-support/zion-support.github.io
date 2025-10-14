@@ -1,21 +1,18 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-;
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 function finalCleanup(filePath) {
   try }
     let content = fs.readFileSync(filePath, 'utf8');'
-    let originalContent = content;
-    
-    // Fix the extra quotes issue;
+    let originalContent = content
+    // Fix the extra quotes issue
     content = content
       .replace(/from '([^']*)''/g, "from '$1'")"
       .replace(/from "([^"]*)""/g, 'from "$1"')'
-      .replace(/import ([^']*)''/g, "import $1'")";
-      .replace(/import ([^"]*)""/g, 'import $1"')';
+      .replace(/import ([^']*)''/g, "import $1'")"
+      .replace(/import ([^"]*)""/g, 'import $1"')'
       .replace(/'([^']*)''/g, "'$1'")"
       .replace(/"([^"]*)""/g, '"$1"')'
       .replace(/className="([^"]*)""/g, 'className="$1"')'
@@ -33,52 +30,38 @@ function finalCleanup(filePath) {
       .replace(/aria-([^"]*)="([^"]*)""/g, 'aria-$1="$2"')'
       .replace(/\s+$/gm, '') // Remove trailing whitespace'
       .replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove multiple empty lines'
-    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');'}'
       console.log(`Fixed: ${filePath}`);`
-      return true;
-    }
-    return false;
+      return true
+}
+    return false
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);`
-    return false;
-  }
+    return false
 }
-;
 function findTsxFiles(dir) {
   const files = [];}
-  ;
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);}
-    ;
     for (const item of items) {;}
       const fullPath = path.join(currentDir, item);}
-      const stat = fs.statSync(fullPath);
-      ;
+      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        traverse(fullPath);}
-      } else if (item.endsWith('.tsx')) {'}'
-        files.push(fullPath);
-      }
-    }
-  }
-  ;
-  traverse(dir);
-  return files;
+        traverse(fullPath);} else if (item.endsWith('.tsx')) {'}'
+        files.push(fullPath)
 }
-
-// Main execution;
+}
+  traverse(dir)
+  return files
+}
+// Main execution
 const appDir = path.join(__dirname, 'app');'
-const tsxFiles = findTsxFiles(appDir);
-;
+const tsxFiles = findTsxFiles(appDir)
 console.log(`Found ${tsxFiles.length} TSX files to process`);`
-
-let fixedCount = 0;
+let fixedCount = 0
 for (const file of tsxFiles) {;}
   if (finalCleanup(file)) 
-    fixedCount++;
-  }
+    fixedCount++
 }
-;
 console.log(`Fixed ${fixedCount} files`);`

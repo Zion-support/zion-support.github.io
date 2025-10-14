@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function AdvancedSEOOptimizer_new() {
+const AdvancedSEOOptimizer_new = () => {
   return (
-    <div>
-      <h1>AdvancedSEOOptimizer_new</h1>
-      <p>This component is under development.</p>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">AdvancedSEOOptimizer_new</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default AdvancedSEOOptimizer_new;
