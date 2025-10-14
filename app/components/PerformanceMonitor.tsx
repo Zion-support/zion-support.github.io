@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -16,10 +20,19 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+<<<<<<< HEAD
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     networkLatency: 0,
+=======
+    cls: null,
+    inp: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+    loadTime: null
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -44,6 +57,7 @@ const PerformanceMonitor: React.FC = () => {
         // Network latency (simplified)
         const networkLatency = navigation ? navigation.responseEnd - navigation.requestStart : 0;
 
+<<<<<<< HEAD
         setMetrics({
           loadTime: Math.round(loadTime),
           renderTime: Math.round(renderTime),
@@ -53,21 +67,47 @@ const PerformanceMonitor: React.FC = () => {
       }
 <<<<<<< HEAD
     }
+=======
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          value: Math.round(metric.value),
+          event_label: metric.id,
+          non_interaction: true,
+        });
+      }
+    };
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
     onCLS(handleMetric);
     onINP(handleMetric);
     onFCP(handleMetric);
     onLCP(handleMetric);
     onTTFB(handleMetric);
+
+    // Track page load time
+    const loadTime = performance.now();
+    setMetrics(prev => ({
+      ...prev,
+      loadTime
+    }));
   }, []);
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs max-w-xs">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
       <div className="space-y-1">
         <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
         <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>INP: {metrics.inp ? `${metrics.inp.toFixed(2)}ms` : 'Loading...'}</div>
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
+<<<<<<< HEAD
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>      </div>
 =======
     ttfb: null,
@@ -204,18 +244,29 @@ const PerformanceMonitor: React.FC = () => {
         >
           ✕
         </button>
+=======
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>Load: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
       </div>
       
-      <div className="space-y-2 text-xs">
+      <div className="space-y-2 text-xs mt-3">
         <div className="flex justify-between">
+<<<<<<< HEAD
           <span className="text-gray-400">Load Time:</span>
           <span className={`font-mono ${metrics.loadTime > 1000 ? 'text-red-400' : 'text-green-400'}`}>
             {metrics.loadTime}ms
+=======
+          <span>FCP:</span>
+          <span className={metrics.fcp && metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400'}>
+            {metrics.fcp ? (metrics.fcp < 1800 ? 'Good' : 'Needs Improvement') : 'Loading...'}
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
           </span>
         </div>
         
 >>>>>>> cursor/analyze-improve-and-deploy-application-4227
         <div className="flex justify-between">
+<<<<<<< HEAD
           <span className="text-gray-400">Render Time:</span>
           <span className={`font-mono ${metrics.renderTime > 100 ? 'text-red-400' : 'text-green-400'}`}>
             {metrics.renderTime}ms
@@ -226,10 +277,16 @@ const PerformanceMonitor: React.FC = () => {
           <span className="text-gray-400">Memory:</span>
           <span className={`font-mono ${metrics.memoryUsage > 50 ? 'text-red-400' : 'text-green-400'}`}>
             {metrics.memoryUsage}MB
+=======
+          <span>LCP:</span>
+          <span className={metrics.lcp && metrics.lcp < 2500 ? 'text-green-400' : 'text-red-400'}>
+            {metrics.lcp ? (metrics.lcp < 2500 ? 'Good' : 'Needs Improvement') : 'Loading...'}
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
           </span>
         </div>
         
         <div className="flex justify-between">
+<<<<<<< HEAD
           <span className="text-gray-400">Network:</span>
           <span className={`font-mono ${metrics.networkLatency > 500 ? 'text-red-400' : 'text-green-400'}`}>
             {metrics.networkLatency}ms
@@ -259,3 +316,16 @@ export default PerformanceMonitor;
 
 export default PerformanceMonitor;
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+          <span>CLS:</span>
+          <span className={metrics.cls && metrics.cls < 0.1 ? 'text-green-400' : 'text-red-400'}>
+            {metrics.cls ? (metrics.cls < 0.1 ? 'Good' : 'Needs Improvement') : 'Loading...'}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3

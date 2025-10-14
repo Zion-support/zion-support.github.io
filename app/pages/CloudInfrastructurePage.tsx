@@ -2,46 +2,52 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react;
+=======
+import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react';
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
 const CloudInfrastructurePage: React.FC = () => {
-  const services = [{
+  const services = [
+    {
       icon: Cloud,
-      title: 'Cloud Migration',';
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',';
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';
+      title: 'Cloud Migration',
+      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',
+      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']
     },
     {
       icon: Server,
-      title: 'Infrastructure as Code',';
-      description: 'Automate infrastructure provisioning and management using modern DevOps practices.',';
-      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']';
+      title: 'Infrastructure as Code',
+      description: 'Automate infrastructure provisioning and management using modern DevOps practices.',
+      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']
     },
     {
       icon: Database,
-      title: 'Database Solutions',';
-      description: 'Optimize your database performance and scalability in the cloud environment.',';
-      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']';
+      title: 'Database Solutions',
+      description: 'Optimize your database performance and scalability in the cloud environment.',
+      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']
     },
     {
       icon: Shield,
-      title: 'Security & Compliance',';
-      description: 'Implement robust security measures and ensure compliance with industry standards.',';
-      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']';
+      title: 'Security & Compliance',
+      description: 'Implement robust security measures and ensure compliance with industry standards.',
+      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']
     },
     {
       icon: Zap,
-      title: 'Auto-scaling',';
-      description: 'Automatically scale your resources based on demand to optimize costs and performance.',';
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']';
+      title: 'Auto-scaling',
+      description: 'Automatically scale your resources based on demand to optimize costs and performance.',
+      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
     },
     {
       icon: Globe,
-      title: 'Multi-cloud Strategy',';
-      description: 'Leverage multiple cloud providers for better resilience and vendor independence.',';
-      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']';
+      title: 'Multi-cloud Strategy',
+      description: 'Leverage multiple cloud providers for better resilience and vendor independence.',
+      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']
     }
   ];
-const CloudInfrastructurePage: React.FC = () => {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <Helmet>
@@ -49,6 +55,7 @@ const CloudInfrastructurePage: React.FC = () => {
         <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />
         <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />
       </Helmet>
+      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -57,15 +64,16 @@ const CloudInfrastructurePage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Build, migrate, and optimize your cloud infrastructure for maximum performance, 
-            security, and cost-effectiveness.;
+            security, and cost-effectiveness.
           </p>
         </div>
+
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, _index) => {
+          {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mr-4">
                     <Icon className="w-6 h-6 text-white" />
@@ -85,18 +93,20 @@ const CloudInfrastructurePage: React.FC = () => {
             );
           })}
         </div>
+
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Infrastructure?</h2>
             <p className="text-gray-300 mb-6">
-              Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.;
+              Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300">
-                Start Migration;
+                Start Migration
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+<<<<<<< HEAD
                 Get Assessment;
 =======
 
@@ -146,6 +156,9 @@ const CloudInfrastructurePage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started Today
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+                Get Assessment
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
               </button>
             </div>
           </div>
@@ -167,6 +180,7 @@ const CloudInfrastructurePage: React.FC = () => {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;  );
 }
 export default CloudInfrastructurePage;
@@ -177,3 +191,10 @@ export default CloudInfrastructurePage;
 
 export default CloudInfrastructurePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+    </div>
+  );
+};
+
+export default CloudInfrastructurePage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3

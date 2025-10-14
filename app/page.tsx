@@ -13,7 +13,9 @@ import {
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon
+  StarIcon,
+  ChartBarIcon,
+  GlobeAltIcon
 } from '@heroicons/react/24/outline';
 
 <<<<<<< HEAD
@@ -264,20 +266,66 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               Why Choose <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Zion Tech Group</span>?
+=======
+      {/* About Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+              With over 4 years of experience in cutting-edge technology solutions, 
+              we've helped businesses across various industries transform their operations 
+              and achieve unprecedented growth.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>
+                <div className="text-gray-300">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+                <div className="text-gray-300">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime Guarantee</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
+              Why Choose Zion Tech Group?
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We deliver exceptional results through innovative technology and expert guidance.
             </p>
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-4227
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
             {features.map((feature, index) => (
               <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
                 <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
@@ -288,6 +336,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -323,6 +372,16 @@ export default function HomePage() {
           </h2>
           <p className="text-xl text-gray-300 mb-12">
             Let's discuss how our technology solutions can drive your business forward
+=======
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our technology solutions can accelerate your growth and innovation.
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -340,6 +399,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+    </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
     </>
   );
 <<<<<<< HEAD

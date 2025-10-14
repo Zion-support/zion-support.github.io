@@ -10,10 +10,12 @@ interface LoadingSpinnerProps {
   text?: string;
   fullScreen?: boolean;
   className?: string;
+  color?: 'primary' | 'secondary' | 'white';
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   color = 'primary',
@@ -21,6 +23,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text,
   fullScreen = false,
   className = ''
+=======
+  text = 'Loading...',
+  fullScreen = false,
+  className = '',
+  color = 'primary'
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -47,6 +55,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   const colorClasses = {
     primary: 'text-purple-600',
     secondary: 'text-cyan-600',
+<<<<<<< HEAD
     white: 'text-white',
     gray: 'text-gray-400'
   };
@@ -87,6 +96,16 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       
       {text && (
         <p className={`mt-3 text-sm ${colorClasses[color]} animate-pulse`}>
+=======
+    white: 'text-white'
+  };
+
+  const spinner = (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <Loader2 className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`} />
+      {text && (
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
           {text}
         </p>
       )}
@@ -97,6 +116,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   if (fullScreen) {
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
 =======
       <div 
@@ -106,6 +126,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         aria-label="Loading page"
       >
 >>>>>>> cursor/analyze-improve-and-deploy-application-4227
+=======
+      <div className="fixed inset-0 bg-white dark:bg-slate-900 flex items-center justify-center z-50">
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
         {spinner}
       </div>
     );
@@ -114,4 +137,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return spinner;
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
+=======
+export default LoadingSpinner;
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3

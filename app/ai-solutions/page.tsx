@@ -10,22 +10,10 @@ import { Link } from 'react-router-dom'
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import { 
   CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  UserGroupIcon,
-  CogIcon,
   EyeIcon,
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
+<<<<<<< HEAD
   LightBulbIcon
 <<<<<<< HEAD
 } from '@heroicons/react/24/outline'
@@ -34,6 +22,14 @@ import {
 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
 export default function AISolutionsPage() {
+=======
+  LightBulbIcon,
+  ArrowRightIcon,
+  CheckCircleIcon
+} from '@heroicons/react/24/outline';
+
+const AISolutionsPage: React.FC = () => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
   const aiServices = [
     {
       title: "Machine Learning Models",
@@ -59,7 +55,10 @@ export default function AISolutionsPage() {
       icon: ChatBubbleLeftRightIcon,
       features: [
         "Sentiment analysis",
+<<<<<<< HEAD
         "Text classification",
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
         "Language translation",
         "Named entity recognition",
         "Text summarization",
@@ -72,14 +71,21 @@ export default function AISolutionsPage() {
       useCases: ["Customer support", "Content analysis", "Language translation"],
 =======
       color: "from-blue-500 to-indigo-500",
+<<<<<<< HEAD
       price: "Starting at $2,200/month",
       benefits: ["Multi-language support", "Real-time analysis", "High accuracy"],
       useCases: ["Customer feedback analysis", "Content moderation", "Chatbots"],
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
+=======
+      price: "Starting at $2,800/month",
+      benefits: ["Multi-language support", "High accuracy", "Real-time processing"],
+      useCases: ["Customer support", "Content analysis", "Language translation"],
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
       href: "/ai-nlp"
     },
     {
       title: "Computer Vision",
+<<<<<<< HEAD
       description: "Advanced computer vision solutions for image recognition, object detection, and visual analytics.",
       icon: EyeIcon,
       features: [
@@ -87,9 +93,16 @@ export default function AISolutionsPage() {
 =======
         "Object detection",
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
+=======
+      description: "Image and video analysis solutions for quality control, security, and enhanced user experiences.",
+      icon: EyeIcon,
+      features: [
+        "Object detection",
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
         "Image classification",
         "Object detection",
         "Facial recognition",
+<<<<<<< HEAD
         "OCR (Optical Character Recognition)",
         "Video analysis",
 <<<<<<< HEAD
@@ -321,9 +334,54 @@ export default function AISolutionsPage() {
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],
       href: "/ai-business-intelligence"
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
+=======
+        "Quality inspection",
+        "Video analytics"
+      ],
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $4,200/month",
+      benefits: ["Real-time processing", "High accuracy", "Custom models"],
+      useCases: ["Quality control", "Security systems", "Medical imaging"],
+      href: "/ai-computer-vision"
+    },
+    {
+      title: "AI Automation",
+      description: "Intelligent automation solutions to streamline business processes and reduce manual work.",
+      icon: LightBulbIcon,
+      features: [
+        "Process automation",
+        "Document processing",
+        "Data extraction",
+        "Workflow optimization",
+        "Intelligent routing"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $2,500/month",
+      benefits: ["Cost reduction", "Increased efficiency", "Error reduction"],
+      useCases: ["Document processing", "Customer service", "Data entry"],
+      href: "/ai-automation"
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Advanced analytics and forecasting solutions to help you make data-driven decisions.",
+      icon: DocumentTextIcon,
+      features: [
+        "Demand forecasting",
+        "Risk assessment",
+        "Trend analysis",
+        "Anomaly detection",
+        "Performance prediction"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $3,200/month",
+      benefits: ["Accurate predictions", "Real-time insights", "Custom models"],
+      useCases: ["Sales forecasting", "Risk management", "Inventory optimization"],
+      href: "/ai-predictive-analytics"
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
     }
 <<<<<<< HEAD
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -356,10 +414,23 @@ const AISolutionsPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
+=======
+
+  const benefits = [
+    "Custom AI solutions tailored to your business needs",
+    "Expert AI engineers and data scientists",
+    "Scalable and flexible AI infrastructure",
+    "24/7 monitoring and support",
+    "Continuous model improvement and updates",
+    "Integration with existing systems"
+  ];
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
   return (
-    <>
+    <div className="min-h-screen bg-slate-900 text-white">
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Explore our advanced AI solutions including machine learning, natural language processing, and predictive analytics." />
       </Helmet>
 <<<<<<< HEAD
@@ -367,10 +438,17 @@ const AISolutionsPage: React.FC = () => {
 =======
       
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
+=======
+        <meta name="description" content="Advanced AI solutions including machine learning, natural language processing, computer vision, and automation services." />
+        <meta name="keywords" content="AI solutions, machine learning, NLP, computer vision, AI automation, artificial intelligence" />
+      </Helmet>
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
               AI Solutions
             </h1>
@@ -380,7 +458,31 @@ const AISolutionsPage: React.FC = () => {
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               From machine learning models to conversational AI, our comprehensive AI solutions 
               help businesses automate processes, gain insights, and deliver exceptional customer experiences.
+=======
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              AI <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Transform your business with cutting-edge artificial intelligence solutions. 
+              From machine learning to computer vision, we deliver AI that drives real results.
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Started Today
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                to="/demo" 
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+              >
+                Schedule Demo
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -388,6 +490,7 @@ const AISolutionsPage: React.FC = () => {
       {/* AI Services Grid */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
+<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {aiServices.map((service, index) => {
               const Icon = service.icon;
@@ -422,14 +525,51 @@ const AISolutionsPage: React.FC = () => {
                   {/* Benefits */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
+=======
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">AI Services</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose from our comprehensive range of AI solutions designed to solve complex business challenges.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="flex items-center mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                        <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="mb-6">
+                    <div className="text-purple-400 font-semibold mb-2">{service.price}</div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
                     <div className="flex flex-wrap gap-2">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
+                        <span key={benefitIndex} className="text-xs bg-purple-900/30 text-purple-300 px-2 py-1 rounded">
                           {benefit}
                         </span>
                       ))}
                     </div>
                   </div>
+<<<<<<< HEAD
 
                   {/* Use Cases */}
                   <div className="mb-6">
@@ -457,6 +597,16 @@ const AISolutionsPage: React.FC = () => {
                       Get Started
                     </Link>
                   </div>
+=======
+                  
+                  <Link 
+                    to={service.href} 
+                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                  >
+                    Learn More
+                    <ArrowRightIcon className="w-4 h-4 ml-2" />
+                  </Link>
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
                 </div>
               );
             })}
@@ -464,6 +614,7 @@ const AISolutionsPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Why Choose Our AI Solutions */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -563,12 +714,35 @@ const AISolutionsPage: React.FC = () => {
               <p className="text-gray-300">
                 We deploy your AI solution and provide ongoing support, monitoring, and optimization.
               </p>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Why Choose Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">AI Solutions</span>?
+              </h2>
+              <p className="text-xl text-gray-300">
+                We deliver AI solutions that are not just technologically advanced, but also practical and results-driven.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -745,3 +919,36 @@ export default AISolutionsPage;
     </>
   )}
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Harness the Power of AI?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our AI solutions can transform your business and give you a competitive edge.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Start Your AI Journey
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/case-studies"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+            >
+              View Case Studies
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AISolutionsPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3

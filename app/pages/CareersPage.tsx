@@ -2,7 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {
+=======
+import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
+
+const CareersPage: React.FC = () => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-19e3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
       <Helmet>
@@ -105,7 +111,8 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
           </div>
         </div>
       </div>
-    </div>;  );
+      </div>
+    );
 }
 export default CareersPage;
 =======
