@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, ReactNode } from 'react';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
@@ -35,11 +35,5 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     </AnalyticsContext.Provider>
   );
 };
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
+// useAnalytics hook moved to hooks/useAnalytics.ts
 export default AnalyticsProvider;

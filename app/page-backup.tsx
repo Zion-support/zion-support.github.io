@@ -1,4 +1,4 @@
 // page-backup - Basic implementation
-export default function page-backup() {
+export default function PageBackup() {
   return null;
 }

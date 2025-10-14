@@ -17,7 +17,8 @@ export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerPro
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          onVitalsUpdate?.({ type: 'FID', value: entry.processingStart - entry.startTime });
+          const fidEntry = entry as any; // Type assertion for FID-specific properties
+          onVitalsUpdate?.({ type: 'FID', value: fidEntry.processingStart - fidEntry.startTime });
         });
       }).observe({ entryTypes: ['first-input'] });
       // Track CLS (Cumulative Layout Shift)
@@ -25,8 +26,9 @@ export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerPro
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+          const clsEntry = entry as any; // Type assertion for CLS-specific properties
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
           }
         });
         onVitalsUpdate?.({ type: 'CLS', value: clsValue });
