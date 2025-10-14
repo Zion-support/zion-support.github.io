@@ -1,11 +1,13 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function Pricing() {
+
+export default function Page() {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-        <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Pricing plans for Zion Tech Group AI solutions, cybersecurity, and cloud services." />
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Professional pricing services by Zion Tech Group." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
@@ -13,6 +15,6 @@ export default function Pricing() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }

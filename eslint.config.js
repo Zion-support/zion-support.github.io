@@ -39,10 +39,11 @@ export default tseslint.config(
         module: 'readonly',
         exports: 'readonly',
         fs: 'readonly',
+        __dirname: 'readonly',
         // Jest globals
         describe: 'readonly',
-        test: 'readonly',
         it: 'readonly',
+        test: 'readonly',
         expect: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
@@ -64,7 +65,10 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { 
+          allowConstantExport: true,
+          allowExportNames: ['AnalyticsContext', 'useAnalytics', 'AnalyticsProvider']
+        },
       ],
     },
   },

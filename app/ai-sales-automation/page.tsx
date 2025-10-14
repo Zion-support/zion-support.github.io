@@ -1,8 +1,10 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 export default function Page() {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ai Sales Automation - Zion Tech Group</title>
         <meta name="description" content="Professional ai sales automation services by Zion Tech Group." />
@@ -13,6 +15,6 @@ export default function Page() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </React.Fragment>
+</>
   );
 }

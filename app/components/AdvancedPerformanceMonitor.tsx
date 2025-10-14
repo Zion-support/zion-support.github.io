@@ -1,4 +1,5 @@
 import React from 'react';
+
 const AdvancedPerformanceMonitor = () => {
   return (
     <div className="advancedperformancemonitor-component">
@@ -7,4 +8,5 @@ const AdvancedPerformanceMonitor = () => {
     </div>
   );
 };
+
 export default AdvancedPerformanceMonitor;

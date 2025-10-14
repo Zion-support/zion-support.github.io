@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -10,6 +11,7 @@ interface SEOEnhancerProps {
   type?: string;
   structuredData?: unknown;
 }
+
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
@@ -17,7 +19,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   image = '/images/og-image.jpg',
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = 'website',
-  structuredData
+structuredData
 }) => {
   useEffect(() => {
     // Add structured data to the page
@@ -34,12 +36,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     }
     return undefined;
   }, [structuredData]);
+
   // Generate meta tags
   const metaTags = [
     { name: 'description', content: description },
     { name: 'keywords', content: keywords.join(', ') },
     { name: 'author', content: 'Zion Tech Group' },
-    { name: 'robots', content: 'index, follow' },
+{ name: 'robots', content: 'index, follow' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
     // Open Graph tags
     { property: 'og:title', content: title },
@@ -48,21 +51,22 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { property: 'og:url', content: url },
     { property: 'og:type', content: type },
     { property: 'og:site_name', content: 'Zion Tech Group' },
-    // Twitter tags
+// Twitter tags
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: title },
     { name: 'twitter:description', content: description },
     { name: 'twitter:image', content: image },
-    // Additional SEO tags
+// Additional SEO tags
     { name: 'theme-color', content: '#0066cc' },
     { name: 'msapplication-TileColor', content: '#0066cc' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
   ];
+
   return (
     <Helmet>
       <title>{title}</title>
-      {metaTags.map((tag, index) => (
+{metaTags.map((tag, index) => (
         <meta key={index} {...tag} />
       ))}
       {/* Canonical URL */}
@@ -81,32 +85,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </Helmet>
   );
 };
+
 // Default structured data for the organization
-export const defaultStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zion Tech Group",
-  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.",
-  "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/images/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-555-0123",
-    "contactType": "customer service",
-    "availableLanguage": "English"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup",
-    "https://github.com/ziontechgroup"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "123 Tech Street",
-    "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "postalCode": "94105",
-    "addressCountry": "US"
-  }
-};
+
 export default SEOEnhancer;

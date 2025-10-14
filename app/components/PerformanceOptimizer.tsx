@@ -4,16 +4,19 @@ interface PerformanceOptimizerProps {
 }
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
+    // Image optimization
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
         if (!img.hasAttribute('loading')) {
           img.setAttribute('loading', 'lazy');
         }
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
       });
     };
     const optimizeFonts = () => {
-      // Preload critical fonts
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = '/fonts/inter.woff2';

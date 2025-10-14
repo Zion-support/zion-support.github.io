@@ -1,43 +1,54 @@
 import { createContext, useState, useEffect, ReactNode } from 'react';
+
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, unknown>) => void;
   isEnabled: boolean;
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
+
 export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
   const [isEnabled, setIsEnabled] = useState(false);
+
   useEffect(() => {
-    // if analytics is enabled
+    // Check if analytics is enabled
     setIsEnabled(true);
   }, []);
+
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
     // Track event logic here
     console.log('Analytics Event:', eventName, properties);
   };
+
   const trackPageView = (pageName: string) => {
     if (!isEnabled) return;
     // Track page view logic here
     console.log('Page View:', pageName);
   };
+
   const setUser = (newUserId: string, properties?: Record<string, unknown>) => {
+    
     console.log('User Set:', newUserId, properties);
   };
-  const value = {
+
+  const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
     setUser,
     isEnabled
   };
+
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
-export { AnalyticsContext };
+

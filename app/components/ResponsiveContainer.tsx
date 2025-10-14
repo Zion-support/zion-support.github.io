@@ -1,8 +1,11 @@
 import React from 'react';
+
 interface ResponsiveContainerProps {
   children: React.ReactNode;
   className?: string;
+  breakpoint?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 }
+
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
   children,
   className = ''
@@ -13,4 +16,5 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
     </div>
   );
 };
+
 export default ResponsiveContainer;

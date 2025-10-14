@@ -12,9 +12,7 @@ if (typeof window !== 'undefined') {
   }
 }
 
-const root = createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
@@ -23,10 +21,10 @@ root.render(
 );
 
 // Register service worker for PWA functionality
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register("/sw.js")
+      .register('/sw.js')
       .then(() => {
         // Service worker registered successfully
         console.log('Service worker registered successfully');
