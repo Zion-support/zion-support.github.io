@@ -1,10 +1,10 @@
-'use client';'use client';
+'use client';use client';
 'use client';
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -159,10 +159,6 @@ export default function MicroSaaSSolutionsPage() {
       icon: UserGroupIcon
     }
   ];
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
   return (
     <>
       <Helmet>
@@ -221,7 +217,7 @@ import { Helmet } from 'react-helmet-async';
                     Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
-              ))}
+))}
             </div>
           </div>
         </section>
@@ -240,7 +236,7 @@ import { Helmet } from 'react-helmet-async';
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
-              ))}
+))}
             </div>
           </div>
         </section>
@@ -349,7 +345,7 @@ import { Helmet } from 'react-helmet-async';
                           <CheckCircleIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
                         </li>
-                      ))}
+))}
                     </ul>
                   </div>
                   {/* Benefits */}
@@ -360,7 +356,7 @@ import { Helmet } from 'react-helmet-async';
                         <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
                           {benefit}
                         </span>
-                      ))}
+))}
                     </div>
                   </div>
                   {/* Use Cases */}
@@ -371,7 +367,7 @@ import { Helmet } from 'react-helmet-async';
                         <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
                           {useCase}
                         </span>
-                      ))}
+))}
                     </div>
                   </div>
                   <div className="flex gap-2">
@@ -389,8 +385,8 @@ import { Helmet } from 'react-helmet-async';
                     </Link>
                   </div>
                 </div>
-              );
-            })}
+              )
+});
           </div>
         </div>
       </section>
@@ -485,8 +481,8 @@ import { Helmet } from 'react-helmet-async';
         </div>
       </section>
     </>
-  );
+  )
 }
 export default MicroSaaSSolutionsPage;
-};
+}
 export default MicroSaaSSolutionsPage;

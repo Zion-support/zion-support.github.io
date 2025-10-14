@@ -1,7 +1,7 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Wifi, Zap, Globe, Smartphone, Shield, Settings } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Globe, Smartphone, Shield, Settings } from 'lucide-react';
 
 export default function FiveGImplementationPage() {
   const features = [
@@ -131,10 +131,10 @@ export default function FiveGImplementationPage() {
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                       {benefit}
                     </li>
-                  ))}
+))}
                 </ul>
               </div>
-            ))}
+))}
           </div>
         </div>
       </div>
@@ -167,11 +167,11 @@ export default function FiveGImplementationPage() {
                         <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
                         {detail}
                       </li>
-                    ))}
+))}
                   </ul>
                 </div>
               </div>
-            ))}
+))}
           </div>
         </div>
       </div>

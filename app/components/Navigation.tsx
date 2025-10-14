@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
+import {
   HomeIcon,
   InformationCircleIcon,
   BriefcaseIcon,
@@ -21,23 +21,23 @@ import {
 } from '@heroicons/react/24/outline';
 
 const Navigation: React.FC = () => {
-  const location = useLocation();
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+  const location = useLocation()
+  const [expandedItems, setExpandedItems] = useState<string[]>([])
 
   const isActive = (href: string) => {
     if (href === '/') {
-      return location.pathname === '/';
+      return location.pathname === '/',
     }
-    return location.pathname.startsWith(href);
-  };
+    return location.pathname.startsWith(href)
+  }
 
   const toggleExpanded = (item: string) => {
     setExpandedItems(prev => 
       prev.includes(item) 
         ? prev.filter(i => i !== item)
         : [...prev, item]
-    );
-  };
+    )
+  }
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -87,14 +87,14 @@ const Navigation: React.FC = () => {
           {item.submenu ? (
             <div className="relative group">
               <button
-                onClick={() => toggleExpanded(item.name)}
+onClick={() => toggleExpanded(item.name)}
                 className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
               >
                 <item.icon className="w-4 h-4" />
                 <span>{item.name}</span>
                 <ChevronDownIcon 
                   className={`w-4 h-4 transition-transform ${
-                    expandedItems.includes(item.name) ? 'rotate-180' : ''
+                    expandedItems.includes(item.name) ? 'rotate-180' :;
                   }`} 
                 />
               </button>
@@ -111,28 +111,28 @@ const Navigation: React.FC = () => {
                         {subItem.icon && <subItem.icon className="w-4 h-4 mr-3" />}
                         {subItem.name}
                       </Link>
-                    ))}
+))}
                   </div>
                 </div>
-              )}
+)}
             </div>
           ) : (
             <Link
               to={item.href}
               className={`flex items-center space-x-1 px-3 py-2 text-sm font-medium transition-colors ${
                 isActive(item.href)
-                  ? 'text-blue-600'
-                  : 'text-gray-600 hover:text-gray-900'
+                  ? 'text-blue-600;
+                  : 'text-gray-600 hover:text-gray-900;
               }`}
             >
               <item.icon className="w-4 h-4" />
               <span>{item.name}</span>
             </Link>
-          )}
+)}
         </div>
-      ))}
+))}
     </nav>
-  );
-};
+  )
+}
 
 export default Navigation;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
+import {
   XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
@@ -23,24 +23,24 @@ import {
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: () => void,
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation();
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+  const location = useLocation()
+  const [expandedItems, setExpandedItems] = useState<string[]>([])
 
   const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+    return location.pathname === path,
+  }
 
   const toggleExpanded = (item: string) => {
     setExpandedItems(prev => 
       prev.includes(item) 
         ? prev.filter(i => i !== item)
         : [...prev, item]
-    );
-  };
+    )
+  }
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -83,7 +83,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               {link.submenu ? (
                 <div>
                   <button
-                    onClick={() => toggleExpanded(link.name)}
+onClick={() => toggleExpanded(link.name)}
                     className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded"
                   >
                     <div className="flex items-center">
@@ -92,7 +92,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     </div>
                     <ChevronDownIcon 
                       className={`w-4 h-4 transition-transform ${
-                        expandedItems.includes(link.name) ? 'rotate-180' : ''
+                        expandedItems.includes(link.name) ? 'rotate-180' :;
                       }`} 
                     />
                   </button>
@@ -104,36 +104,36 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                           to={subLink.href}
                           className={`flex items-center px-3 py-2 text-sm transition-colors ${
                             isActive(subLink.href)
-                              ? 'text-blue-400 bg-blue-900/20'
-                              : 'text-gray-400 hover:text-white hover:bg-slate-800'
+                              ? 'text-blue-400 bg-blue-900/20;
+                              : 'text-gray-400 hover:text-white hover:bg-slate-800;
                           }`}
                           onClick={onClose}
                         >
                           <subLink.icon className="w-4 h-4 mr-3" />
                           {subLink.name}
                         </Link>
-                      ))}
+))}
                     </div>
-                  )}
+)}
                 </div>
               ) : (
                 <Link
                   to={link.href}
                   className={`flex items-center px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded ${
-                    isActive(link.href) ? 'text-blue-400 bg-blue-900/20' : ''
+                    isActive(link.href) ? 'text-blue-400 bg-blue-900/20' :;
                   }`}
                   onClick={onClose}
                 >
                   <link.icon className="w-5 h-5 mr-3" />
                   {link.name}
                 </Link>
-              )}
+)}
             </div>
-          ))}
+))}
         </nav>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Sidebar;

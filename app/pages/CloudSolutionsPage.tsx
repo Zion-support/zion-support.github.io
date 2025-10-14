@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEO from '../components/SEO'
-import { 
+import React from 'react';;
+import { Link } from 'react-router-dom';;
+import SEO from '../components/SEO;
+import {
   CloudIcon,
   ServerIcon,
   CpuChipIcon,
@@ -10,8 +10,8 @@ import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'
+  MapPinIcon';
+} from '@heroicons/react/24/outline;
 export default function CloudSolutionsPage() {
   const services = [
     {
@@ -47,7 +47,6 @@ export default function CloudSolutionsPage() {
     { name: 'Oracle Cloud', logo: 'Oracle' },
     { name: 'DigitalOcean', logo: 'DO' }
   ]
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const CloudSolutionsPage: React.FC = () => {
   return (
@@ -63,7 +62,5 @@ const CloudSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  )}
-  );
-};
+)});
 export default CloudSolutionsPage;

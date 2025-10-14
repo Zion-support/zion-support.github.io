@@ -58,5 +58,5 @@ export default function 5GSolutionsPage() {
         </section>
       </div>
     </>
-  );
+  )
 }

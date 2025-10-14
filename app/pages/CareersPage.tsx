@@ -14,10 +14,9 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
           <h1 className="text-5xl font-bold text-white mb-6">
             Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">';
             Be part of a team that's shaping the future of AI and IT solutions.';
-            Work on cutting-edge projects and make a real impact.;
-          </p>
+            Work on cutting-edge projects and make a real impact.</p>
         </div>
         {/* Why Work With Us */}
         <div className="mb-16">
@@ -33,8 +32,8 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
-              );
-            })}
+              )
+});
           </div>
         </div>
         {/* Open Positions */}
@@ -56,11 +55,11 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
                   <span className="text-sm">{position.department}</span>
                 </div>
                 <p className="text-gray-300 mb-4">{position.description}</p>
-                <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
-                  Apply Now;
+                <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover: from-rose-600 hover:to-pink-600 transition-all duration-300">
+                  Apply Now,
                 </button>
               </div>
-            ))}
+))}
           </div>
         </div>
         {/* Company Culture */}
@@ -95,15 +94,14 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
             <p className="text-gray-300 mb-6">
-              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
-            </p>
-            <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
-              Send Resume;
+              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.'</p>
+            <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover: from-rose-600 hover:to-pink-600 transition-all duration-300">
+              Send Resume,
             </button>
           </div>
         </div>
       </div>
-    </div>;  );
+    </div>  )
 }
 export default CareersPage;
 const CareersPage: React.FC = () => {
@@ -168,6 +166,6 @@ const CareersPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 export default CareersPage;

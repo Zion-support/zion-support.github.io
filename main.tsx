@@ -7,20 +7,18 @@ import './index.css';
 if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
   if (!window.performance || !window.performance.now) {
-    window.performance = window.performance || {};
-    window.performance.now = window.performance.now || (() => Date.now());
+    window.performance = window.performance || {}
+    window.performance.now = window.performance.now || (() => Date.now())
   }
-}
-
 const root = createRoot(
   document.getElementById('root') as HTMLElement
-);
+)
 
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
+)
 
 // Register service worker for PWA functionality
 if ("serviceWorker" in navigator) {
@@ -29,11 +27,10 @@ if ("serviceWorker" in navigator) {
       .register("/sw.js")
       .then((registration) => {
         // Service worker registered successfully
-        console.log('Service worker registered:', registration);
-      })
+        console.log('Service worker registered:', registration)
+      });
       .catch((registrationError) => {
         // Service worker registration failed
-        console.log('Service worker registration failed:', registrationError);
-      });
-  });
+        console.log('Service worker registration failed:', registrationError)
+      });)
 }

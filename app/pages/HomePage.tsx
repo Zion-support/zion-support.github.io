@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEOHead from '../components/SEOHead'
-import { 
+import React from 'react';;
+import { Link } from 'react-router-dom';;
+import SEOHead from '../components/SEOHead;
+import {
   ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -11,7 +11,7 @@ import {
   MapPinIcon,
   RocketLaunchIcon,
   SparklesIcon,
-  BoltIcon
+  BoltIcon';
 } from '@heroicons/react/24/outline';
 import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';
@@ -30,32 +30,30 @@ export default function HomePage() {
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
-  };
-
   const features = [
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence and machine learning solutions to transform your business operations.',
-      href: '/ai-solutions'
+      href: '/ai-solutions;
     },
     {
       icon: ShieldCheckIcon,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      href: '/cybersecurity'
+      href: '/cybersecurity;
     },
     {
       icon: CloudIcon,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions'
+      href: '/cloud-solutions;
     },
     {
       icon: RocketLaunchIcon,
       title: 'Digital Transformation',
       description: 'Complete digital transformation services to modernize your business processes.',
-      href: '/digital-transformation'
+      href: '/digital-transformation;
     }
   ];
 
@@ -124,7 +122,7 @@ export default function HomePage() {
                     <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </Link>
                 </AnimatedCard>
-              ))}
+))}
             </div>
           </div>
         </div>
@@ -156,7 +154,7 @@ export default function HomePage() {
                     <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </Link>
                 </AnimatedCard>
-              ))}
+))}
             </div>
           </div>
         </div>
@@ -186,5 +184,5 @@ export default function HomePage() {
         </div>
       </div>
     </>
-  );
+  )
 }

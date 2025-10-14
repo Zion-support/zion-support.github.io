@@ -1,13 +1,9 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
-import EnhancedSEO from '../components/EnhancedSEO'
-import ResponsiveContainer from '../components/ResponsiveContainer'
-import FuturisticCard from '../components/FuturisticCard'
-import FuturisticButton from '../components/FuturisticButton'
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';'
-import EnhancedSEO from '../components/EnhancedSEO';'
-import ResponsiveContainer from '../components/ResponsiveContainer';'
-import FuturisticCard from '../components/FuturisticCard';'
-import FuturisticButton from '../components/FuturisticButton';
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';;
+import EnhancedSEO from '../components/EnhancedSEO';;
+import ResponsiveContainer from '../components/ResponsiveContainer';;
+import FuturisticCard from '../components/FuturisticCard';;
+import FuturisticButton from '../components/FuturisticButton';;
+import FuturisticCard from '../components/FuturisticCard;
 const AIAutomationPlatform = () => {
   const features = [
     {
@@ -36,7 +32,6 @@ const AIAutomationPlatform = () => {
       icon: <Zap className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
       color: "from-orange-500 to-red-500"}
-    }
   ]
   const benefits = [
     "70% process efficiency gain",
@@ -110,7 +105,7 @@ const AIAutomationPlatform = () => {
                     {feature.description}
                   </p>
                 </FuturisticCard>
-              ))}
+))}
             </div>
           </ResponsiveContainer>
         </section>
@@ -131,7 +126,7 @@ const AIAutomationPlatform = () => {
                   <Circle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-white font-medium">{benefit}</span>
                 </div>
-              ))}
+))}
             </div>
           </ResponsiveContainer>
         </section>
@@ -156,10 +151,11 @@ const AIAutomationPlatform = () => {
         </section>
       </div>
     </>
-  );
+  )
 }
 export default AIAutomationPlatform;
-  )}
+)}
 export default AIAutomationPlatform
-};
-export default AIAutomationPlatform;'
+}
+export default AIAutomationPlatform;
+';

@@ -1,11 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, User } from 'lucide-react';
-import React from 'react';'
+import React from 'react';;
 import { Helmet , Right,  User,  Calendar  } from 'lucide-react';
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, User, Calendar } from 'lucide-react'
+import { Right, User, Calendar } from 'lucide-react;
 const BlogPage: React.FC = () => {
   const categories = [}
     { id: "all", name: "All Posts", count: 12 },
@@ -74,7 +72,6 @@ const BlogPage: React.FC = () => {
       category: "cybersecurity",
       readTime: "9 min read",
       image: "🛡️"}
-    }
   ]
   return (
     <>
@@ -108,9 +105,9 @@ const BlogPage: React.FC = () => {
                   key={category.id}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
                 >
-                  {category.name} ({category.count})
+                  {category.name} ({category.count});
                 </button>
-              ))}
+))}
             </div>
           </div>
         </section>
@@ -124,7 +121,7 @@ const BlogPage: React.FC = () => {
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
                       <div className="w-4 h-4 mr-1" />
-                      {new Date(post.date).toLocaleDateString()}
+{new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
                       <User className="w-4 h-4 mr-1" />
@@ -143,7 +140,7 @@ const BlogPage: React.FC = () => {
                     </button>
                   </div>
                 </article>
-              ))}
+))}
             </div>
           </div>
         </section>
@@ -170,10 +167,11 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )
 }
 export default BlogPage;
-  )}
+)}
 export default BlogPage
-};
-export default BlogPage;'
+}
+export default BlogPage;
+';

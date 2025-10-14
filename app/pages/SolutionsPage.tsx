@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';;
+import { Helmet } from 'react-helmet-async;
 const SolutionsPage: React.FC = () => {
   return (
   <>
@@ -16,7 +16,7 @@ const SolutionsPage: React.FC = () => {
       </div>
 )
     </>)
-  );
-}
+  )
 }
 export default SolutionsPag;e;
+';

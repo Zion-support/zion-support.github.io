@@ -1,6 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
@@ -106,10 +106,10 @@ const FiveGSolutionsPage: React.FC = () => {
                       <Circle className="w-3 h-3 mr-2 fill-current" />
                       {benefit}
                     </li>
-                  ))}
+))}
                 </ul>
               </div>
-            ))}
+))}
           </div>
         </div>
       </div>
@@ -137,13 +137,13 @@ const FiveGSolutionsPage: React.FC = () => {
                       <Right className="w-5 h-5 text-green-400 mr-3" />
                       {feature}
                     </li>
-                  ))}
+))}
                 </ul>
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                   Get Started
                 </button>
               </div>
-            ))}
+))}
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react;
 const DigitalTransformationPage: React.FC = () => {
   const services = [{
-      icon: RefreshCw,
+      icon: RefreshCw,';
       title: 'Process Automation',';
       description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',';
       features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']';
@@ -55,8 +55,7 @@ const DigitalTransformationPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business for the digital age with comprehensive strategies, 
-            modern technologies, and innovative solutions.;
-          </p>
+            modern technologies, and innovative solutions.</p>
         </div>
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -77,25 +76,24 @@ const DigitalTransformationPage: React.FC = () => {
                       <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
                       {feature}
                     </li>
-                  ))}
+))}
                 </ul>
               </div>
-            );
-          })}
+            )
+});
         </div>
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-gray-300 mb-6">
-              Our digital transformation experts can help you modernize your operations and stay competitive.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              Our digital transformation experts can help you modernize your operations and stay competitive.</p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300">
                 Start Transformation;
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Get Assessment;
+                Get Assessment,
 const DigitalTransformationPage: React.FC = () => {
   return (
     <>
@@ -157,10 +155,10 @@ const DigitalTransformationPage: React.FC = () => {
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
-    </div>;  );
+    </div>  )
 }
 export default DigitalTransformationPage;
     </>
-  );
-};
+  )
+}
 export default DigitalTransformationPage;

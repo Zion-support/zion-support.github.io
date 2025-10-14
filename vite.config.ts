@@ -9,7 +9,7 @@ export default defineConfig({
       fastRefresh: true,
       // Optimize JSX runtime
       jsxRuntime: 'automatic',
-    })
+    });
   ],
   resolve: {
     alias: {
@@ -31,7 +31,7 @@ export default defineConfig({
           // Vendor chunks
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+              return 'vendor-react',
             }
             if (id.includes('react-router')) {
               return 'vendor-router';
@@ -57,10 +57,10 @@ export default defineConfig({
           }
         },
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
+          const info = assetInfo.name.split('.')
           const ext = info[info.length - 1];
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
-            return `assets/images/[name]-[hash][extname]`;
+            return `assets/images/[name]-[hash][extname]`,
           }
           if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
             return `assets/fonts/[name]-[hash][extname]`;
@@ -96,7 +96,7 @@ export default defineConfig({
       'react-helmet-async',
       '@heroicons/react/24/outline',
       'lucide-react',
-      'framer-motion'
+      'framer-motion;
     ],
     exclude: ['@vite/client', '@vite/env'],
   },

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [{
+  const caseStudies = [{';
       title: 'E-commerce Platform AI Optimization',';
       client: 'TechRetail Inc.',';
       industry: 'E-commerce',';
@@ -11,9 +11,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [{ metric: 'Conversion Rate', value: '+45%', icon: TrendingUp },';
         { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUp },';
         { metric: 'Customer Satisfaction', value: '+60%', icon: Users },';
-        { metric: 'Implementation Time', value: '3 months', icon: Clock }';
-      ],
-      description: 'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.'';
+        { metric: 'Implementation Time', value: '3 months', icon: Clock }'],
+      description: 'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.;;
     },
     {
       title: 'Manufacturing Process Automation',';
@@ -24,9 +23,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [{ metric: 'Quality Defects', value: '-75%', icon: TrendingUp },';
         { metric: 'Processing Speed', value: '+200%', icon: TrendingUp },';
         { metric: 'Cost Savings', value: '$2.5M/year', icon: DollarSign },';
-        { metric: 'Implementation Time', value: '4 months', icon: Clock }';
-      ],
-      description: 'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line, dramatically reducing defects while increasing throughput.'';
+        { metric: 'Implementation Time', value: '4 months', icon: Clock }'],
+      description: 'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line, dramatically reducing defects while increasing throughput.;;
     },
     {
       title: 'Healthcare Data Analytics Platform',';
@@ -37,9 +35,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [{ metric: 'Treatment Accuracy', value: '+40%', icon: TrendingUp },';
         { metric: 'Patient Outcomes', value: '+35%', icon: Users },';
         { metric: 'Cost Reduction', value: '$1.8M/year', icon: DollarSign },';
-        { metric: 'Implementation Time', value: '6 months', icon: Clock }';
-      ],
-      description: 'MediCare Systems now leverages our advanced analytics platform to provide better patient care through data-driven insights and predictive modeling.'';
+        { metric: 'Implementation Time', value: '6 months', icon: Clock }'],
+      description: 'MediCare Systems now leverages our advanced analytics platform to provide better patient care through data-driven insights and predictive modeling.;,
     },
     {
       title: 'Financial Services Cloud Migration',';
@@ -50,9 +47,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [{ metric: 'System Performance', value: '+300%', icon: TrendingUp },';
         { metric: 'Scalability', value: '10x', icon: TrendingUp },';
         { metric: 'Operational Costs', value: '-40%', icon: DollarSign },';
-        { metric: 'Implementation Time', value: '8 months', icon: Clock }';
-      ],
-      description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.'';
+        { metric: 'Implementation Time', value: '8 months', icon: Clock }'],
+      description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.;;
     }
   ];
 const CaseStudiesPage: React.FC = () => {
@@ -71,8 +67,7 @@ const CaseStudiesPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Discover how we've helped businesses across various industries transform';
-            their operations with cutting-edge AI and IT solutions.;
-          </p>
+            their operations with cutting-edge AI and IT solutions.</p>
         </div>
         {/* Case Studies Grid */}
         <div className="space-y-12">
@@ -112,28 +107,27 @@ const CaseStudiesPage: React.FC = () => {
                           <div className="text-2xl font-bold text-white mb-1">{result.value}</div>
                           <div className="text-sm text-gray-400">{result.metric}</div>
                         </div>
-                      );
-                    })}
+                      )
+});
                   </div>
                 </div>
               </div>
             </div>
-          ))}
+))}
         </div>
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Create Your Success Story?</h2>
             <p className="text-gray-300 mb-6">
-              Let us help you achieve similar results with our proven AI and IT solutions.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              Let us help you achieve similar results with our proven AI and IT solutions.</p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
                 Start Your Project;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View More Cases;
+                View More Cases,
 const CaseStudiesPage: React.FC = () => {
   return (
     <>
@@ -195,10 +189,10 @@ const CaseStudiesPage: React.FC = () => {
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
-    </div>;  );
+    </div>  )
 }
 export default CaseStudiesPage;
     </>
-  );
-};
+  )
+}
 export default CaseStudiesPage;

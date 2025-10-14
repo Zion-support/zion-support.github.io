@@ -9,8 +9,8 @@ interface EnhancedMetaTagsProps {
   ogImage?: string;
   ogType?: 'website' | 'article' | 'product';
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  noIndex?: boolean;
-  structuredData?: Record<string, any>;
+  noIndex?: boolean,
+  structuredData?: Record<string, any>
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -34,7 +34,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   section,
   tags = [],
 }) => {
-  const siteUrl = 'https://ziontechgroup.com';
+  const siteUrl = 'https: //ziontechgroup.com',
   const finalCanonical = canonical || `${siteUrl}${window.location.pathname}`;
   const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
@@ -65,7 +65,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       'https://linkedin.com/company/ziontechgroup',
       'https://github.com/ziontechgroup',
     ],
-  };
+  }
 
   const articleStructuredData = ogType === 'article' ? {
     '@context': 'https://schema.org',
@@ -95,7 +95,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
     ...(tags.length > 0 && { keywords: tags.join(', ') }),
   } : null;
 
-  const finalStructuredData = structuredData || (articleStructuredData || defaultStructuredData);
+  const finalStructuredData = structuredData || (articleStructuredData || defaultStructuredData)
 
   return (
     <Helmet>
@@ -125,21 +125,21 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       {/* Article specific meta tags */}
       {ogType === 'article' && publishedTime && (
         <meta property="article:published_time" content={publishedTime} />
-      )}
+)}
       {ogType === 'article' && modifiedTime && (
         <meta property="article:modified_time" content={modifiedTime} />
-      )}
+)}
       {ogType === 'article' && author && (
         <meta property="article:author" content={author} />
-      )}
+)}
       {ogType === 'article' && section && (
         <meta property="article:section" content={section} />
-      )}
+)}
       {ogType === 'article' && tags.length > 0 && (
         tags.map((tag, index) => (
           <meta key={index} property="article:tag" content={tag} />
         ))
-      )}
+)}
       
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
@@ -176,10 +176,10 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+{JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
-  );
-};
+  )
+}
 
 export default EnhancedMetaTags;

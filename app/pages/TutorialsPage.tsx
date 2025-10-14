@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';;
+import { Helmet } from 'react-helmet-async;
 const TutorialsPage: React.FC = () => {
   return (
   <>
@@ -16,7 +16,7 @@ const TutorialsPage: React.FC = () => {
       </div>
 )
     </>)
-  );
-}
+  )
 }
 export default TutorialsPag;e;
+';

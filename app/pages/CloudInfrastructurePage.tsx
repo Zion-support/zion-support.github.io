@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react;
 const CloudInfrastructurePage: React.FC = () => {
   const services = [{
-      icon: Cloud,
+      icon: Cloud,';
       title: 'Cloud Migration',';
       description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',';
       features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';
@@ -55,8 +55,7 @@ const CloudInfrastructurePage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Build, migrate, and optimize your cloud infrastructure for maximum performance, 
-            security, and cost-effectiveness.;
-          </p>
+            security, and cost-effectiveness.</p>
         </div>
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -77,25 +76,24 @@ const CloudInfrastructurePage: React.FC = () => {
                       <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
                       {feature}
                     </li>
-                  ))}
+))}
                 </ul>
               </div>
-            );
-          })}
+            )
+});
         </div>
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Infrastructure?</h2>
             <p className="text-gray-300 mb-6">
-              Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.</p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300">
                 Start Migration;
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Get Assessment;
+                Get Assessment,
 const CloudInfrastructurePage: React.FC = () => {
   return (
     <>
@@ -157,10 +155,10 @@ const CloudInfrastructurePage: React.FC = () => {
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
-    </div>;  );
+    </div>  )
 }
 export default CloudInfrastructurePage;
     </>
-  );
-};
+  )
+}
 export default CloudInfrastructurePage;

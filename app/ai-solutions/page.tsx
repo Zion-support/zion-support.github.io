@@ -1,10 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { 
+import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -23,7 +20,7 @@ import {
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';;
 } from '@heroicons/react/24/outline';
 export default function AISolutionsPage() {
   const aiServices = [
@@ -378,7 +375,7 @@ const AISolutionsPage: React.FC = () => {
                           <CheckCircleIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
                         </li>
-                      ))}
+))}
                     </ul>
                   </div>
                   {/* Benefits */}
@@ -389,7 +386,7 @@ const AISolutionsPage: React.FC = () => {
                         <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
                           {benefit}
                         </span>
-                      ))}
+))}
                     </div>
                   </div>
                   {/* Use Cases */}
@@ -400,7 +397,7 @@ const AISolutionsPage: React.FC = () => {
                         <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
                           {useCase}
                         </span>
-                      ))}
+))}
                     </div>
                   </div>
                   <div className="flex gap-2">
@@ -418,8 +415,8 @@ const AISolutionsPage: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              );
-            })}
+              )
+});
           </div>
         </div>
       </section>
@@ -563,7 +560,7 @@ const AISolutionsPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>;    </>
+      </section>    </>
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
@@ -591,7 +588,7 @@ const AISolutionsPage: React.FC = () => {
     </>
       </section>
     </>
-  );
+  )
 }
 export default AISolutionsPage;
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, and predictive analytics." />
@@ -642,7 +639,7 @@ export default AISolutionsPage;
                     Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
-              ))}
+))}
             </div>
           </div>
         </section>
@@ -661,7 +658,7 @@ export default AISolutionsPage;
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+))}
             </div>
           </div>
         </section>
@@ -686,4 +683,4 @@ export default AISolutionsPage;
         </section>
       </div>
     </>
-  )}
+)}

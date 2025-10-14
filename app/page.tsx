@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -41,31 +41,30 @@ export default function HomePage() {
         "https://twitter.com/ziontechgroup"
       ]
     }
-  };
   const services = [
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',
       description: 'Cutting-edge artificial intelligence solutions to transform your business.',
-      href: '/ai-solutions'
+      href: '/ai-solutions;
     },
     {
       icon: CloudIcon,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
-      href: '/cloud-infrastructure'
+      href: '/cloud-infrastructure;
     },
     {
       icon: ShieldCheckIcon,
       title: 'Cybersecurity',
       description: 'Comprehensive cybersecurity solutions to protect your digital assets.',
-      href: '/cybersecurity'
+      href: '/cybersecurity;
     },
     {
       icon: RocketLaunchIcon,
       title: 'Digital Transformation',
       description: 'Complete digital transformation services to modernize your business.',
-      href: '/digital-transformation'
+      href: '/digital-transformation;
     }
   ];
   const features = [
@@ -74,7 +73,7 @@ export default function HomePage() {
     'Scalable Architecture',
     'Security First',
     'Performance Optimized',
-    'Cost Effective'
+    'Cost Effective;
   ];
   return (
     <>
@@ -101,7 +100,7 @@ export default function HomePage() {
         <meta name="twitter:description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }
         />
       </Helmet>
       {/* Hero Section */}
@@ -164,7 +163,7 @@ export default function HomePage() {
                     Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </div>
                 </Link>
-              ))}
+))}
             </div>
           </div>
         </section>
@@ -180,7 +179,7 @@ export default function HomePage() {
                   <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3" />
                   <span className="text-gray-700">{feature}</span>
                 </div>
-              ))}
+))}
             </div>
           </div>
         </section>
@@ -234,7 +233,7 @@ export default function HomePage() {
                   Learn More <ArrowRightIcon className="w-4 h-4" />
                 </Link>
               </div>
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -255,7 +254,7 @@ export default function HomePage() {
                 <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300 font-medium">{feature}</span>
               </div>
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -280,7 +279,7 @@ export default function HomePage() {
                   {stat.label}
                 </div>
               </div>
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -310,7 +309,7 @@ export default function HomePage() {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 export default HomePage;
 }

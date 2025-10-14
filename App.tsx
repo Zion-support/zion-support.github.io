@@ -14,16 +14,16 @@ import ContactPage from './app/pages/ContactPage';
 import NotFoundPage from './app/404';
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const [sidebarOpen, setSidebarOpen] = React.useState(false)
   
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-slate-900 flex">
-            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+<Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             <div className="flex-1 flex flex-col">
-              <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
+<Navigation onSidebarToggle={() => setSidebarOpen(true)} />
               <main className="relative z-10 flex-1" id="main-content" role="main">
                 <ErrorBoundary>
                   <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
@@ -42,7 +42,7 @@ function App() {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
-  );
+  )
 }
 
 export default App;

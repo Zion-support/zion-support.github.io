@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react;
 
 const FuturisticBackground = () => {
   return (
@@ -15,11 +15,11 @@ const FuturisticBackground = () => {
                 key={i}
                 className="border border-purple-500/30 animate-pulse"
                 style={{
-                  animationDelay: `${i * 0.1}s`,
-                  animationDuration: '3s'
-                }}
+                  animationDelay: `${i * 0.1}s`,';
+                  animationDuration: '3s;
+                }
               ></div>
-            ))}
+))}
           </div>
         </div>
         
@@ -40,9 +40,9 @@ const FuturisticBackground = () => {
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
-              }}
+              }
             ></div>
-          ))}
+))}
         </div>
         
         {/* Gradient Overlay */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
+import {
   CpuChipIcon,
   EnvelopeIcon,
   PhoneIcon,
@@ -13,13 +13,11 @@ import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
   HeartIcon
 } from '@heroicons/react/24/outline';
 } from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
   GlobeAltIcon
 } from '@heroicons/react/24/outline';
 } from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'IT Solutions', href: '/it-solutions' },
@@ -85,7 +83,7 @@ const Footer: React.FC = () => {
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Cookie Policy', href: '/cookies' },
     ]
-  };
+  }
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: GlobeAltIcon },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: GlobeAltIcon },
@@ -109,7 +107,7 @@ const Footer: React.FC = () => {
       { name: 'Support', href: '/support' },
       { name: 'FAQ', href: '/faq' }
     ]
-  };
+  }
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -173,7 +171,7 @@ const Footer: React.FC = () => {
                   {social.icon === 'linkedin' && '💼'}
                   {social.icon === 'github' && '🐙'}
                 </a>
-              ))}            <div className="flex space-x-4">
+))}            <div className="flex space-x-4">
               <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
@@ -205,7 +203,7 @@ const Footer: React.FC = () => {
                     {social.icon === 'github' && <span className="text-xs">g</span>}
                   </div>
                 </a>
-              ))}
+))}
               <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
@@ -244,7 +242,7 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+))}
             </ul>
           </div>
           {/* Company */}
@@ -280,7 +278,7 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+))}
             </ul>
           </div>
           {/* Resources */}
@@ -311,7 +309,7 @@ const Footer: React.FC = () => {
                     {item.name}
                   </Link>
                 </li>
-              ))}
+))}
               {legal.map((item) => (
                 <li key={item.name}>
                   <Link
@@ -332,7 +330,7 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+))}
             </ul>
           </div>
         </div>
@@ -395,8 +393,8 @@ const Footer: React.FC = () => {
             <span>by Zion Tech Group</span>
           </div>
           {/* Copyright */}
-          <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-            <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
+          <div className="flex flex-col md: flex-row justify-between items-center text-gray-400 text-sm">
+            <p>&copy, {currentYear} Zion Tech Group. All rights reserved.</p>
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-slate-700/50">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -413,7 +411,7 @@ const Footer: React.FC = () => {
                 >
                   {link.name}
                 </Link>
-              ))}
+))}
             </div>
         <div className="mt-8 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
@@ -436,8 +434,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
+  )
 }
 export default Footer;
-};
+}
 export default Footer;

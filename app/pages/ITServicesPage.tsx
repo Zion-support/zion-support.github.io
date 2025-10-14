@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react;
 const ITServicesPage: React.FC = () => {
   const services = [{
-      icon: Server,
+      icon: Server,';
       title: 'Infrastructure Management',';
       description: 'Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.',';
       features: ['Server Configuration', 'Network Setup', 'Hardware Maintenance', 'Performance Monitoring']';
@@ -55,8 +55,7 @@ const ITServicesPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive IT solutions to keep your business running efficiently and securely.;
-            From infrastructure to support, we've got you covered.';
-          </p>
+            From infrastructure to support, we've got you covered.'</p>
         </div>
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -77,25 +76,24 @@ const ITServicesPage: React.FC = () => {
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                       {feature}
                     </li>
-                  ))}
+))}
                 </ul>
               </div>
-            );
-          })}
+            )
+});
         </div>
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Need Reliable IT Support?</h2>
             <p className="text-gray-300 mb-6">
-              Our IT experts are ready to help you maintain, secure, and optimize your technology infrastructure.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              Our IT experts are ready to help you maintain, secure, and optimize your technology infrastructure.</p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
                 Get Support;
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Request Quote;
+                Request Quote,
 const ITServicesPage: React.FC = () => {
   return (
     <>
@@ -157,10 +155,10 @@ const ITServicesPage: React.FC = () => {
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
-    </div>;  );
+    </div>  )
 }
 export default ITServicesPage;
     </>
-  );
-};
+  )
+}
 export default ITServicesPage;

@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEO from '../components/SEO'
-import { 
+import React from 'react';;
+import { Link } from 'react-router-dom';;
+import SEO from '../components/SEO;
+import {
   GlobeAltIcon,
   CpuChipIcon,
   ChartBarIcon,
@@ -10,8 +10,8 @@ import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'
+  MapPinIcon';
+} from '@heroicons/react/24/outline;
 export default function MicroSaaSPage() {
   const services = [
     {
@@ -47,7 +47,6 @@ export default function MicroSaaSPage() {
     { name: 'Real Estate', description: 'Property management tools' },
     { name: 'Manufacturing', description: 'Production optimization' }
   ]
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const MicroSaaSPage: React.FC = () => {
   return (
@@ -63,7 +62,5 @@ const MicroSaaSPage: React.FC = () => {
         </div>
       </div>
     </>
-  )}
-  );
-};
+)});
 export default MicroSaaSPage;

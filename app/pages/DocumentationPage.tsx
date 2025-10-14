@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEO from '../components/SEO'
-import { 
+import React from 'react';;
+import { Link } from 'react-router-dom';;
+import SEO from '../components/SEO;
+import {
   DocumentTextIcon,
   CodeBracketIcon,
   CogIcon,
@@ -9,8 +9,8 @@ import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'
+  MapPinIcon';
+} from '@heroicons/react/24/outline;
 export default function DocumentationPage() {
   const sections = [
     {
@@ -64,7 +64,6 @@ export default function DocumentationPage() {
     { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },
     { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
   ]
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const DocumentationPage: React.FC = () => {
   return (
@@ -134,7 +133,7 @@ const DocumentationPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                 <p className="text-gray-300">{step.description}</p>
               </div>
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -172,10 +171,10 @@ const DocumentationPage: React.FC = () => {
                         {link.name}
                       </Link>
                     </li>
-                  ))}
+))}
                 </ul>
               </div>
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -195,14 +194,14 @@ const DocumentationPage: React.FC = () => {
                 <code>{`// Initialize the client
 const client = new ZionTechClient({
   apiKey: 'your-api-key',
-  environment: 'production'
-})
+  environment: 'production;
+});
 // Make an API call
 const response = await client.ai.generateText({
   prompt: 'Hello, world!',
   maxTokens: 100
-})
-console.log(response.data);`}</code>
+});
+console.log(response.data)`}</code>
               </pre>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
@@ -273,9 +272,9 @@ console.log(response.data);`}</code>
         </div>
       </section>
     </>
-  )}
+)}
       </div>
     </>
-  );
-};
+  )
+}
 export default DocumentationPage;

@@ -1,13 +1,13 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';;
+import { Helmet } from 'react-helmet-async;
 
 interface SEOHeadProps {
   title?: string
   description?: string
   keywords?: string
   image?: string
-  url?: string
-  type?: 'website' | 'article' | 'product'
+  url?: string';
+  type?: 'website' | 'article' | 'product;
   structuredData?: any
 }
 
@@ -37,9 +37,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={url} />
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+{JSON.stringify(structuredData)}
         </script>
-      )}
+)}
     </Helmet>
   )
 }

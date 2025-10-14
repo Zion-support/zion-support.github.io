@@ -3,40 +3,35 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
 }
 
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
+  errorInfo: ErrorInfo | null,
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null
-    };
-  }
-
+    }
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
       errorInfo: null
-    };
-  }
-
+    }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo)
     this.setState({
       error,
       errorInfo
     });
-  }
 
   render() {
     if (this.state.hasError) {
@@ -57,19 +52,19 @@ class ErrorBoundary extends Component<Props, State> {
                   <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">
                     <h3 className="text-sm font-medium text-red-800">Error Details:</h3>
                     <pre className="mt-2 text-xs text-red-700 overflow-auto">
-                      {this.state.error.toString()}
+{this.state.error.toString()}
                     </pre>
                     {this.state.errorInfo && (
                       <pre className="mt-2 text-xs text-red-700 overflow-auto">
                         {this.state.errorInfo.componentStack}
                       </pre>
-                    )}
+)}
                   </div>
-                )}
+)}
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
                   <button
-                    onClick={() => window.location.reload()}
+onClick={() => window.location.reload()}
                     className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
                     <RefreshCw className="w-4 h-4 mr-2" />
@@ -87,11 +82,9 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;
   }
-}
-
 export default ErrorBoundary;
