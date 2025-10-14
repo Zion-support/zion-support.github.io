@@ -1,7 +1,0 @@
-';'
-      logger.debug(`Cache hit for key: ${key}`, {component: 'BaseService',});''
-      logger.debug(`GET request to ${endpoint}`, {component: 'BaseService',});''
-      logger.debug(`POST request to ${endpoint}`, {component: 'BaseService',});''
-      logger.debug(`PUT request to ${endpoint}`, {component: 'BaseService',});''
-      logger.debug(`PATCH request to ${endpoint}`, {component: 'BaseService',});''
-      logger.debug(`DELETE request to ${endpoint}`, {component: 'BaseService',});''

@@ -8,6 +8,9 @@ export default [
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    ignores: ["dist/**", "node_modules/**", "*.min.js", "*.bundle.js"]
+  },
+  {
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -24,9 +27,15 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
-      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "no-console": "off"
     },
   },
+  {
+    files: ["**/*.cjs", "**/*.js"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off"
+    }
+  }
 ];
