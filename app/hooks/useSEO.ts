@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export const useSEO = (structuredData?: Record<string, unknown>) => {
   useEffect(() => {
