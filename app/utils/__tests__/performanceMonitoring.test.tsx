@@ -1,22 +1,22 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AccessibilityCheckerPage = () => {
+const PerformanceMonitoringTestPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AccessibilityChecker - Zion Tech Group</title>
-        <meta name="description" content="Professional accessibilityChecker services by Zion Tech Group." />
-        <meta name="keywords" content="accessibilityChecker, AI solutions, IT services" />
+        <title>PerformanceMonitoring.Test - Zion Tech Group</title>
+        <meta name="description" content="Professional performanceMonitoring.test services by Zion Tech Group." />
+        <meta name="keywords" content="performanceMonitoring.test, AI solutions, IT services" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AccessibilityChecker
+            PerformanceMonitoring.Test
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional accessibilityChecker services designed to help your business grow and succeed.
+            Professional performanceMonitoring.test services designed to help your business grow and succeed.
           </p>
         </div>
         
@@ -47,4 +47,4 @@ const AccessibilityCheckerPage = () => {
   );
 };
 
-export default AccessibilityCheckerPage;
+export default PerformanceMonitoringTestPage;
