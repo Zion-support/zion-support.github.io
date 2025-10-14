@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
-export default function NotFoundPage() {
+const NotFoundPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -46,4 +46,5 @@ export default function NotFoundPage() {
       </div>;
     </>
   );
-}
+};
+export default NotFoundPage;

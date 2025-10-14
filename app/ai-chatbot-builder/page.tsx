@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function AiChatbotBuilder() {
+const AiChatbotBuilder: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">;
       <Helmet>
@@ -27,4 +27,5 @@ export default function AiChatbotBuilder() {
       </div>;
     </div>;
   );
-}
+};
+export default AiChatbotBuilder;

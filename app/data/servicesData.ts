@@ -22,7 +22,6 @@ export interface Service {
   href: string;
   glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' | 'red' | 'orange';
 }
-
 export const services: Service[] = [
   // AI Services
   {
@@ -160,7 +159,6 @@ export const services: Service[] = [
     href: '/ai-data-analytics-pro',
     glowColor: 'green'
   },
-
   // Micro SaaS Services
   {
     id: 'project-management-saas',
@@ -297,7 +295,6 @@ export const services: Service[] = [
     href: '/inventory-management-saas',
     glowColor: 'yellow'
   },
-
   // IT Services
   {
     id: 'cloud-migration-service',
@@ -434,7 +431,6 @@ export const services: Service[] = [
     href: '/5g-network-solutions',
     glowColor: 'green'
   },
-
   // Blockchain Services
   {
     id: 'blockchain-development',
@@ -481,7 +477,6 @@ export const services: Service[] = [
     href: '/blockchain-development',
     glowColor: 'blue'
   },
-
   // IoT Services
   {
     id: 'iot-platform-solution',
@@ -528,7 +523,6 @@ export const services: Service[] = [
     href: '/iot-platform-solution',
     glowColor: 'yellow'
   },
-
   // Additional AI Services
   {
     id: 'ai-code-assistant-pro',
@@ -665,7 +659,6 @@ export const services: Service[] = [
     href: '/ai-automated-testing',
     glowColor: 'green'
   },
-
   // Additional Micro SaaS Services
   {
     id: 'email-marketing-automation',
@@ -847,7 +840,6 @@ export const services: Service[] = [
     href: '/financial-accounting-saas',
     glowColor: 'green'
   },
-
   // Additional IT Services
   {
     id: 'devops-automation-service',
@@ -984,7 +976,6 @@ export const services: Service[] = [
     href: '/database-optimization-service',
     glowColor: 'blue'
   },
-
   // Additional Cybersecurity Services
   {
     id: 'penetration-testing-service',
@@ -1076,7 +1067,6 @@ export const services: Service[] = [
     href: '/security-awareness-training',
     glowColor: 'orange'
   },
-
   // Additional Cloud Services
   {
     id: 'cloud-cost-optimization',
@@ -1169,11 +1159,9 @@ export const services: Service[] = [
     glowColor: 'blue'
   }
 ];
-
 export const getServicesByCategory = (category: Service['category']) => {
   return services.filter(service => service.category === category);
 };
-
 export const getServiceById = (id: string) => {
   return services.find(service => service.id === id);
 };

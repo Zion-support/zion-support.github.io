@@ -81,5 +81,4 @@ const ErrorFallback: React.FC = () => {
     </div>;
   );
 };
-
 export default ErrorFallback;

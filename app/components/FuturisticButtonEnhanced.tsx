@@ -81,5 +81,4 @@ const FuturisticButtonEnhanced: React.FC = () => {
     </div>;
   );
 };
-
 export default FuturisticButtonEnhanced;

@@ -81,5 +81,4 @@ const ServiceTemplate: React.FC = () => {
     </div>;
   );
 };
-
 export default ServiceTemplate;

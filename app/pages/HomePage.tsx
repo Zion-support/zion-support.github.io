@@ -19,15 +19,8 @@ import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
-
-<<<<<<< HEAD
-export default function HomePage()  {
-
-  const structuredData = {
-=======
-export default function HomePage() {
+const HomePage: React.FC = () => {
 const structuredData = {
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
@@ -35,11 +28,10 @@ const structuredData = {
     "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
+      "target": "https://ziontechgroup.com/search?q={search_term_string} HomePage;",
       "query-input": "required name=search_term_string"
     }
   };
-
   return (
     <>
       <SEOHead 
@@ -48,9 +40,7 @@ const structuredData = {
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
         structuredData={structuredData}
       />
-      
       <FuturisticBackground />
-      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -66,7 +56,6 @@ const structuredData = {
                 <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200" />
               </div>
             </div>
-            
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">
               Advanced AI and IT Solutions for Modern Businesses
             </p>
@@ -74,7 +63,6 @@ const structuredData = {
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <NeonButton to="/contact" variant="primary" size="lg">
                 Get Started Today
@@ -88,7 +76,6 @@ const structuredData = {
           </div>
         </div>
       </section>
-
       {/* Featured Services Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
@@ -100,7 +87,6 @@ const structuredData = {
               Comprehensive technology solutions designed to accelerate your business growth with real, proven results
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {featuredServices.map((service, index) => (
               <AnimatedCard key={service.id} glowColor={service.glowColor} className="group">
@@ -109,7 +95,6 @@ const structuredData = {
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.shortDescription}</p>
                 </div>
-                
                 <div className="space-y-3 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-gray-300">
@@ -118,7 +103,6 @@ const structuredData = {
                     </div>
                   ))}
                 </div>
-                
                 <div className="mb-6">
                   <div className="text-center">
                     <span className="text-3xl font-bold text-white">${service.pricing.basic}</span>
@@ -126,7 +110,6 @@ const structuredData = {
                   </div>
                   <p className="text-gray-400 text-sm text-center mt-1">Starting from</p>
                 </div>
-                
                 <div className="flex flex-col gap-3">
                   <NeonButton to={service.href} variant="primary" size="sm">
                     Learn More
@@ -139,7 +122,6 @@ const structuredData = {
               </AnimatedCard>
             ))}
           </div>
-          
           <div className="text-center mt-12">
             <NeonButton to="/services" variant="primary" size="lg">
               View All Services
@@ -148,7 +130,6 @@ const structuredData = {
           </div>
         </div>
       </section>
-
       {/* About Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900"></div>
@@ -164,7 +145,6 @@ const structuredData = {
                 and achieve unprecedented growth.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               <AnimatedCard glowColor="purple" className="text-center">
                 <div className="text-6xl font-bold text-purple-400 mb-4 animate-pulse">50+</div>
@@ -182,7 +162,6 @@ const structuredData = {
                 <div className="text-gray-400 text-sm">Projects delivered on time and within budget</div>
               </AnimatedCard>
             </div>
-            
             <div className="text-center">
               <NeonButton to="/about" variant="primary" size="lg">
                 Learn More About Us
@@ -192,7 +171,6 @@ const structuredData = {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-slate-900"></div>
@@ -206,7 +184,6 @@ const structuredData = {
                 Let's discuss how our technology solutions can drive your business forward
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               <AnimatedCard glowColor="purple" className="text-center">
                 <PhoneIcon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
@@ -227,7 +204,6 @@ const structuredData = {
                 <p className="text-gray-400 text-sm mt-2">364 E Main St STE 1008</p>
               </AnimatedCard>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <NeonButton to="/contact" variant="primary" size="lg">
                 Get In Touch

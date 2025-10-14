@@ -81,5 +81,4 @@ const ImprovedFooter: React.FC = () => {
     </div>;
   );
 };
-
 export default ImprovedFooter;

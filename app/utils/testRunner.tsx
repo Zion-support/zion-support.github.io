@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 /* global describe, test, expect, it, beforeEach */
 'use client';
-export default function Page() {
+const Page: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">;
       <Helmet>
@@ -52,4 +52,5 @@ export default function Page() {
       </div>;
     </div>;
   );
-}
+};
+export default Page;

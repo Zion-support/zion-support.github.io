@@ -80,5 +80,4 @@ const ImprovedNavigation: React.FC = () => {
     </div>;
   );
 };
-
 export default ImprovedNavigation;

@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -15,7 +14,6 @@ interface OptimizedImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -34,10 +32,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [isError, setIsError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
     if (priority) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -50,41 +46,32 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         rootMargin: '50px'
       }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, [priority]);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
     setIsError(true);
     onError?.();
   };
-
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
       return originalSrc;
     }
-    
     // For external images, return as-is
     if (originalSrc.startsWith('http')) {
       return originalSrc;
     }
-    
     // For local images, you could implement WebP conversion here
     return originalSrc;
   };
-
   const optimizedSrc = getOptimizedSrc(src);
-
   return (
     <>
       {priority && (
@@ -106,7 +93,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             <div className="text-gray-400 text-sm">Loading...</div>
           </div>
         )}
-
         {/* Error state */}
         {isError && (
           <div
@@ -119,7 +105,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             </div>
           </div>
         )}
-
         {/* Actual image */}
         {isInView && !isError && (
           <img
@@ -145,5 +130,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     </>
   );
 };
-
 export default OptimizedImage;

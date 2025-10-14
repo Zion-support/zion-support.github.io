@@ -1,3 +1,3 @@
-
-export default function AIMobileBuilder() {
-}
+const AIMobileBuilder: React.FC = () => {
+};
+export default AIMobileBuilder;

@@ -81,5 +81,4 @@ const ImprovedErrorBoundary: React.FC = () => {
     </div>;
   );
 };
-
 export default ImprovedErrorBoundary;

@@ -1,6 +1,6 @@
 import React from 'react';
 'use client';
-export default function AiDataAnalyticsPage() {
+const AiDataAnalyticsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">;
       <div className="container mx-auto px-4">;
@@ -11,4 +11,5 @@ export default function AiDataAnalyticsPage() {
       </div>;
     </div>;
   );
-}
+};
+export default AiDataAnalyticsPage;

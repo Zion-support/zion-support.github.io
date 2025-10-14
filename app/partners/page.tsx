@@ -40,7 +40,6 @@ const PartnersPage: React.FC = () => {
       category: ''';
     }
   ];
-
   const benefits = ['Access to cutting-edge technology',';
     'Joint go-to-market opportunities',';
     'Technical support and training',';
@@ -48,7 +47,6 @@ const PartnersPage: React.FC = () => {
     'Priority access to new features',';
     'Dedicated partner success manager'';
   ];
-
   return (
     <>
       <Helmet>
@@ -143,5 +141,4 @@ const PartnersPage: React.FC = () => {
     </>
   );
 };
-
 export default PartnersPage;

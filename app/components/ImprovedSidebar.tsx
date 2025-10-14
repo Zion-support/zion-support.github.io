@@ -81,5 +81,4 @@ const ImprovedSidebar: React.FC = () => {
     </div>;
   );
 };
-
 export default ImprovedSidebar;

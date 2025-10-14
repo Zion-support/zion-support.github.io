@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOProps {
   title?: string;
   description?: string;
@@ -14,7 +13,6 @@ interface SEOProps {
   section?: string;
   tags?: string[];
 }
-
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
@@ -31,7 +29,6 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -57,7 +54,6 @@ const SEO: React.FC<SEOProps> = ({
       'https://github.com/ziontechgroup'
     ]
   };
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -67,7 +63,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="author" content={author} />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={fullUrl} />
-
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
@@ -76,7 +71,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={fullImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={fullUrl} />
@@ -85,7 +79,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={fullImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-
       {/* Article specific meta tags */}
       {type === 'article' && publishedTime && (
         <meta property="article:published_time" content={publishedTime} />
@@ -104,7 +97,6 @@ const SEO: React.FC<SEOProps> = ({
           <meta key={index} property="article:tag" content={tag} />
         ))
       )}
-
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
@@ -112,7 +104,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta name="color-scheme" content="dark light" />
-
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
@@ -120,5 +111,4 @@ const SEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 };
-
 export default SEO;

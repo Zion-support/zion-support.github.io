@@ -81,5 +81,4 @@ const CriticalResourcePreloader: React.FC = () => {
     </div>;
   );
 };
-
 export default CriticalResourcePreloader;

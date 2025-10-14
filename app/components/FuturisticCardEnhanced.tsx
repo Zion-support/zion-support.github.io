@@ -81,5 +81,4 @@ const FuturisticCardEnhanced: React.FC = () => {
     </div>;
   );
 };
-
 export default FuturisticCardEnhanced;

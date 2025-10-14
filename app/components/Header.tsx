@@ -5,7 +5,6 @@ import { Menu, X, ChevronDown } from 'lucide-react;
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-
   const navigationItems = [{ name: 'Home', href: '/' },';
     { name: 'About', href: '/about' },';
     { 
@@ -22,7 +21,6 @@ const Header: React.FC = () => {
     { name: 'Blog', href: '/blog' },';
     { name: 'Contact', href: '/contact' }';
   ];
-
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -129,5 +127,4 @@ const Header: React.FC = () => {
     </nav>;
   );
 };
-
 export default Header;

@@ -1,6 +1,6 @@
 import React from 'react';
 'use client';
-export default function AiNlpTextAnalysisPage() {
+const AiNlpTextAnalysisPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">;
       <div className="container mx-auto px-4">;
@@ -11,4 +11,5 @@ export default function AiNlpTextAnalysisPage() {
       </div>;
     </div>;
   );
-}
+};
+export default AiNlpTextAnalysisPage;

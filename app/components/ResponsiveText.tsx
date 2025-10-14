@@ -81,5 +81,4 @@ const ResponsiveText: React.FC = () => {
     </div>;
   );
 };
-
 export default ResponsiveText;

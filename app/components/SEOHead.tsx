@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -10,7 +9,6 @@ interface SEOHeadProps {
   type?: 'website' | 'article' | 'product';
   structuredData?: any;
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
@@ -65,9 +63,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       ]
     }
   };
-
   const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -79,10 +75,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <meta name="theme-color" content="#8b5cf6" />
       <meta name="color-scheme" content="dark light" />
-      
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
@@ -93,7 +87,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
@@ -102,32 +95,26 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="twitter:image" content={image} />
       <meta property="twitter:site" content="@ziontechgroup" />
       <meta property="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="referrer" content="origin-when-cross-origin" />
-      
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
-      
       {/* Favicon and Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/logo192.png" />
       <link rel="manifest" href="/manifest.json" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
       {/* Additional Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Helmet>
   );
 };
-
 export default SEOHead;

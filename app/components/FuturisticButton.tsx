@@ -8,7 +8,6 @@ interface FuturisticButtonProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
 }
-
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
   children, 
   className = '',';
@@ -24,13 +23,11 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     secondary: 'bg-white/10 text-white border border-white/20 hover:bg-white/20 focus:ring-white/50',';
     outline: 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white focus:ring-blue-500'';
   };
-
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',';
     md: 'px-6 py-3 text-base',';
     lg: 'px-8 py-4 text-lg'';
   };
-
   return (
     <button;
       type={type}
@@ -42,5 +39,4 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     </button>;
   );
 };
-
 export default FuturisticButton;

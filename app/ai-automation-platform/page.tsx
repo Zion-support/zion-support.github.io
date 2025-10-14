@@ -3,7 +3,6 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-
 const AIAutomationPlatform = () => {
   const features = [
     {
@@ -15,47 +14,28 @@ const AIAutomationPlatform = () => {
     {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
-<<<<<<< HEAD
-
-      icon: <Brain className="w-6 h-6" />,
-
-=======
 icon: <Brain className="w-6 h-6" />,
 icon: <Circle className="w-6 h-6" />,
 icon: <div className="w-6 h-6" />,
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
-<<<<<<< HEAD
-
-      icon: <Settings className="w-6 h-6" />,
-
-=======
 icon: <Settings className="w-6 h-6" />,
 icon: <Circle className="w-6 h-6" />,
 icon: <div className="w-6 h-6" />,
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-<<<<<<< HEAD
-
-      icon: <Zap className="w-6 h-6" />,
-
-=======
 icon: <Zap className="w-6 h-6" />,
 icon: <Circle className="w-6 h-6" />,
 icon: <div className="w-6 h-6" />,
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const benefits = [
     "70% process efficiency gain",
     "Automated decision making",
@@ -64,7 +44,6 @@ icon: <div className="w-6 h-6" />,
     "Scalable workflows",
     "Cost reduction"
   ];
-
   return (
     <>
       <EnhancedSEO
@@ -72,7 +51,6 @@ icon: <div className="w-6 h-6" />,
         description="Transform your business with AI-powered automation. Workflow automation, smart decision making, and process optimization for modern enterprises."
         keywords="AI automation, workflow automation, process optimization, business automation, intelligent automation, RPA"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
@@ -80,27 +58,18 @@ icon: <div className="w-6 h-6" />,
           <ResponsiveContainer>
             <div className="relative z-10 text-center py-20">
               <div className="flex items-center justify-center mb-6">
-<<<<<<< HEAD
-
-                <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-
-=======
 <Brain className="w-4 h-4 text-cyan-400 mr-2" />
 <Circle className="w-4 h-4 text-cyan-400 mr-2" />
 <div className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
-              
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Automation Platform
               </h1>
-              
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Transform your business with AI-powered automation. 
                 Automate workflows, optimize processes, and make intelligent decisions at scale.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton
                   icon={<Right className="w-5 h-5" />}
@@ -109,15 +78,9 @@ icon: <div className="w-6 h-6" />,
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-<<<<<<< HEAD
-
-                  icon={<Play className="w-5 h-5" />}
-
-=======
 icon={<Play className="w-5 h-5" />}
 icon={<Circle className="w-5 h-5" />}
 icon={<div className="w-5 h-5" />}
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                 >
                   View Demo
                 </FuturisticButton>
@@ -125,7 +88,6 @@ icon={<div className="w-5 h-5" />}
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <ResponsiveContainer>
@@ -137,7 +99,6 @@ icon={<div className="w-5 h-5" />}
                 Everything you need to automate and optimize your business processes.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <FuturisticCard key={index} className="text-center">
@@ -155,7 +116,6 @@ icon={<div className="w-5 h-5" />}
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
           <ResponsiveContainer>
@@ -167,7 +127,6 @@ icon={<div className="w-5 h-5" />}
                 Experience intelligent automation that transforms your business operations.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
@@ -178,7 +137,6 @@ icon={<div className="w-5 h-5" />}
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <ResponsiveContainer>
@@ -191,15 +149,9 @@ icon={<div className="w-5 h-5" />}
               </p>
               <FuturisticButton
                 size="lg"
-<<<<<<< HEAD
-
-                icon={<Zap className="w-6 h-6" />}
-
-=======
 icon={<Zap className="w-6 h-6" />}
 icon={<Circle className="w-6 h-6" />}
 icon={<div className="w-6 h-6" />}
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
               >
                 Start Your Automation Journey
               </FuturisticButton>
@@ -210,5 +162,4 @@ icon={<div className="w-6 h-6" />}
     </>
   );
 };
-
 export default AIAutomationPlatform;

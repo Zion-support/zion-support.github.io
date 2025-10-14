@@ -5,13 +5,10 @@ interface AnalyticsContextType {
   identify: (userId: string, traits?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
 }
-
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
-
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
     // Analytics tracking implementation;
@@ -21,7 +18,6 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       (window as any).gtag('event', event, properties);
     }
   };
-
   const identify = (userId: string, traits?: Record<string, any>) => {
     console.log('Analytics Identify:', userId, traits);
     if (typeof window !== 'undefined' && (window as any).gtag) {';
@@ -31,7 +27,6 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       });
     }
   };
-
   const page = (name: string, properties?: Record<string, any>) => {
     console.log('Analytics Page:', name, properties);
     if (typeof window !== 'undefined' && (window as any).gtag) {';
@@ -42,7 +37,6 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       });
     }
   };
-
   useEffect(() => {
     // Initialize analytics;
     if (typeof window !== 'undefined') {';
@@ -50,20 +44,17 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       console.log('Analytics initialized');
     }
   }, []);
-
   const value: AnalyticsContextType = {
     track,
     identify,
     page;
   };
-
   return (
     <AnalyticsContext.Provider value={value}>;
       {children}
     </AnalyticsContext.Provider>;
   );
 };
-
 const  (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
@@ -71,5 +62,4 @@ const  (): AnalyticsContextType => {
   }
   return context;
 };
-
 export default AnalyticsProvider;

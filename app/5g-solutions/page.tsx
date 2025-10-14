@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
-
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -24,28 +23,14 @@ const FiveGSolutionsPage: React.FC = () => {
     },
     {
       icon: Wifi,
-<<<<<<< HEAD
-
-      title: 'IoT Connectivity',
-      description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-
-=======
 title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
   ];
-
   const solutions = [
     {
-<<<<<<< HEAD
-
-      title: '5G Network Infrastructure',
-=======
 title: '5G Network Infrastructure',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
@@ -61,13 +46,8 @@ title: '5G Network Infrastructure',
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -75,7 +55,6 @@ title: '5G Network Infrastructure',
         <meta name="description" content="Advanced 5G solutions for ultra-fast connectivity and IoT integration" />
         <meta name="keywords" content="5G, connectivity, IoT, mobile, enterprise, solutions" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
@@ -85,16 +64,13 @@ title: '5G Network Infrastructure',
               <Wifi className="w-4 h-4 text-blue-400 mr-2" />
               <span className="text-blue-400 text-sm font-medium">Next-Gen Connectivity</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               5G <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
             </h1>
-            
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Transform your business with ultra-fast 5G connectivity. Experience lightning-fast speeds, 
               low latency, and seamless IoT integration for the digital future.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -107,7 +83,6 @@ title: '5G Network Infrastructure',
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -119,7 +94,6 @@ title: '5G Network Infrastructure',
               Our 5G technology delivers unmatched performance, reliability, and innovation for your business needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
@@ -144,7 +118,6 @@ title: '5G Network Infrastructure',
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
@@ -156,7 +129,6 @@ title: '5G Network Infrastructure',
               Choose the perfect 5G solution for your business size and requirements.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300">
@@ -178,7 +150,6 @@ title: '5G Network Infrastructure',
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -196,5 +167,4 @@ title: '5G Network Infrastructure',
     </div>
   );
 };
-
 export default FiveGSolutionsPage;

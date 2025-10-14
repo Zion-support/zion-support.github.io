@@ -81,5 +81,4 @@ const StructuredData: React.FC = () => {
     </div>;
   );
 };
-
 export default StructuredData;

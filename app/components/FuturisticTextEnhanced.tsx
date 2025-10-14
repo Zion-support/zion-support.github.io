@@ -81,5 +81,4 @@ const FuturisticTextEnhanced: React.FC = () => {
     </div>;
   );
 };
-
 export default FuturisticTextEnhanced;

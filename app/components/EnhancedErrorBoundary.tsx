@@ -1,19 +1,16 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
 }
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -24,7 +21,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: ''
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -32,27 +28,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
-
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
-
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
     }
   }
-
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error tracking service
     // like Sentry, LogRocket, or Bugsnag
@@ -66,16 +57,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         userAgent: navigator.userAgent,
         url: window.location.href
       };
-
       // Example: Send to error tracking service
       // errorTrackingService.captureException(error, { extra: errorData });
-      
       console.error('Error logged to service:', errorData);
     } catch (loggingError) {
       console.error('Failed to log error to service:', loggingError);
     }
   };
-
   private handleRetry = () => {
     this.setState({
       hasError: false,
@@ -84,22 +72,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: ''
     });
   };
-
   private handleReload = () => {
     window.location.reload();
   };
-
   private handleGoHome = () => {
     window.location.href = '/';
   };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       // Default error UI
       return (
         <>
@@ -107,7 +91,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <title>Error - Zion Tech Group</title>
             <meta name="robots" content="noindex, nofollow" />
           </Helmet>
-          
           <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
             <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
               {/* Error Icon */}
@@ -127,18 +110,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   />
                 </svg>
               </div>
-
               {/* Error Title */}
               <h1 className="text-2xl font-bold text-white mb-4">
                 Oops! Something went wrong
               </h1>
-
               {/* Error Message */}
               <p className="text-gray-300 mb-6 leading-relaxed">
                 We're sorry, but something unexpected happened. Our team has been notified 
                 and is working to fix this issue.
               </p>
-
               {/* Error ID for support */}
               {this.state.errorId && (
                 <div className="bg-slate-700 rounded-lg p-3 mb-6">
@@ -148,7 +128,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   </code>
                 </div>
               )}
-
               {/* Action Buttons */}
               <div className="space-y-3">
                 <button
@@ -157,7 +136,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 >
                   Try Again
                 </button>
-                
                 <div className="flex space-x-3">
                   <button
                     onClick={this.handleGoHome}
@@ -165,7 +143,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   >
                     Go Home
                   </button>
-                  
                   <button
                     onClick={this.handleReload}
                     className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
@@ -174,7 +151,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   </button>
                 </div>
               </div>
-
               {/* Support Information */}
               <div className="mt-8 pt-6 border-t border-slate-700">
                 <p className="text-sm text-gray-400 mb-2">
@@ -185,7 +161,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <p>Phone: +1-302-464-0950</p>
                 </div>
               </div>
-
               {/* Development Error Details */}
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mt-6 text-left">
@@ -218,9 +193,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;

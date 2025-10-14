@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
-
-export default function ContactPage()    {
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,37 +9,27 @@ export default function ContactPage()    {
     phone: '',
     subject: '',
     message: ''
-  });
-
+};
+export default ContactPage;);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     setIsSubmitted(true);
     setIsSubmitting(false);
   };
-
   const contactInfo = [
     {
-<<<<<<< HEAD
-
-      icon: 'Phone',
-=======
 icon: 'Phone',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       title: 'Phone',
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
@@ -59,10 +48,6 @@ icon: 'Phone',
     },
     {
       icon: 'Clock',
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-=======
 icon: Phone,
       title: 'Phone',
       value: '+1 (555) 123-4567',
@@ -86,11 +71,9 @@ icon: Phone,
       value: 'Monday - Friday',
 value: 'Monday - Friday',
 value: 'Monday - Friday',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       description: '9:00 AM - 6:00 PM EST'
     }
   ];
-
   const subjects = [
     'AI Services',
     'IT Services',
@@ -100,7 +83,6 @@ value: 'Monday - Friday',
     '5G Implementation',
     'Other'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -108,7 +90,6 @@ value: 'Monday - Friday',
         <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
         <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
       </Helmet>
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -124,7 +105,6 @@ value: 'Monday - Friday',
           </p>
         </div>
       </section>
-
       {/* Contact Info */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -148,14 +128,12 @@ value: 'Monday - Friday',
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">
             Send us a Message
           </h2>
-          
           {isSubmitted ? (
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6">
@@ -216,7 +194,6 @@ value: 'Monday - Friday',
                   />
                 </div>
               </div>
-
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="company" className="block text-white font-medium mb-2">
@@ -247,7 +224,6 @@ value: 'Monday - Friday',
                   />
                 </div>
               </div>
-
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
                   Subject *
@@ -268,7 +244,6 @@ value: 'Monday - Friday',
                   ))}
                 </select>
               </div>
-
               <div className="mb-8">
                 <label htmlFor="message" className="block text-white font-medium mb-2">
                   Message *
@@ -284,7 +259,6 @@ value: 'Monday - Friday',
                   placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
-
               <div className="text-center">
                 <button
                   type="submit"

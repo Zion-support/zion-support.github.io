@@ -1,12 +1,10 @@
 import React from 'react';
-
 interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string;
   glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
   hoverEffect?: boolean;
 }
-
 const AnimatedCard: React.FC<AnimatedCardProps> = ({
   children,
   className = '',
@@ -21,7 +19,6 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     blue: 'shadow-blue-500/25 hover:shadow-blue-500/40',
     yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40'
   };
-
   const borderColors = {
     purple: 'border-purple-500/30 hover:border-purple-500/60',
     cyan: 'border-cyan-500/30 hover:border-cyan-500/60',
@@ -30,7 +27,6 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     blue: 'border-blue-500/30 hover:border-blue-500/60',
     yellow: 'border-yellow-500/30 hover:border-yellow-500/60'
   };
-
   return (
     <div
       className={`
@@ -45,7 +41,6 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     >
       {/* Animated border gradient */}
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      
       {/* Content */}
       <div className="relative z-10">
         {children}
@@ -53,5 +48,4 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     </div>
   );
 };
-
 export default AnimatedCard;

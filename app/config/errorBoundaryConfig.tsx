@@ -81,5 +81,4 @@ const ErrorBoundaryConfig: React.FC = () => {
     </div>;
   );
 };
-
 export default ErrorBoundaryConfig;

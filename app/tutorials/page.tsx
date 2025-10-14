@@ -69,7 +69,6 @@ const TutorialsPage: React.FC = () => {
       thumbnail: "📊";
     }
   ];
-
   const categories = [{ name: "All", count: 24 },
     { name: "AI & ML", count: 8 },
     { name: "Computing", count: 6 },
@@ -77,7 +76,6 @@ const TutorialsPage: React.FC = () => {
     { name: "DevOps", count: 3 },
     { name: "Data Science", count: 3 }
   ];
-
   return (
     <>
       <Helmet>
@@ -194,5 +192,4 @@ const TutorialsPage: React.FC = () => {
     </>
   );
 };
-
 export default TutorialsPage;

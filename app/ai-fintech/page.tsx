@@ -1,5 +1,5 @@
 import React from 'react';
-export default function AiFintechPage() {
+const AiFintechPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">;
       <div className="container mx-auto px-4">;
@@ -10,4 +10,5 @@ export default function AiFintechPage() {
       </div>;
     </div>;
   );
-}
+};
+export default AiFintechPage;

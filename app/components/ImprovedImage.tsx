@@ -81,5 +81,4 @@ const ImprovedImage: React.FC = () => {
     </div>;
   );
 };
-
 export default ImprovedImage;

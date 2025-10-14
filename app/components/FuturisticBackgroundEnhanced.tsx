@@ -81,5 +81,4 @@ const FuturisticBackgroundEnhanced: React.FC = () => {
     </div>;
   );
 };
-
 export default FuturisticBackgroundEnhanced;

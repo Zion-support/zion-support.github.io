@@ -20,16 +20,13 @@ import {
   UserGroupIcon,
   XMarkIcon
 } from '@heroicons/react/24/outline';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
@@ -64,17 +61,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
-
   const additionalLinks = [
     { name: 'Our Team', href: '/team', icon: UserGroupIcon },
     { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
     { name: 'Careers', href: '/careers', icon: BriefcaseIcon }
   ];
-
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-
   const toggleSection = (sectionName: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionName) 
@@ -82,11 +76,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         : [...prev, sectionName]
     );
   };
-
   const isExpanded = (sectionName: string) => {
     return expandedSections.includes(sectionName);
   };
-
   return (
     <>
       {/* Overlay */}
@@ -96,7 +88,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
       <div className={`fixed inset-y-0 left-0 z-50 w-80 bg-slate-900 border-r border-slate-700 transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -117,7 +108,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <XMarkIcon className="w-5 h-5" />
             </button>
           </div>
-
           {/* Navigation */}
           <nav className="flex-1 overflow-y-auto py-4">
             <div className="px-4 space-y-2">
@@ -139,7 +129,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                           isExpanded(item.name) ? 'rotate-180' : ''
                         }`} />
                       </button>
-                      
                       {/* Submenu */}
                       <div className={`pl-6 mt-1 space-y-1 ${isExpanded(item.name) ? 'block' : 'hidden'}`}>
                         {item.submenu.map((subItem) => (
@@ -176,7 +165,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </div>
               ))}
             </div>
-
             {/* Additional Links */}
             <div className="px-4 mt-8">
               <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
@@ -201,7 +189,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             </div>
           </nav>
-
           {/* Footer */}
           <div className="p-4 border-t border-slate-700">
             <div className="text-center">
@@ -222,5 +209,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </>
   );
 };
-
 export default Sidebar;

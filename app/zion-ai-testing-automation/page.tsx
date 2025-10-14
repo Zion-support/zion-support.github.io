@@ -1,7 +1,7 @@
 import React from 'react';
 /* global describe, test, expect, it, beforeEach */
 'use client';
-export default function ZionAiTestingAutomationPage() {
+const ZionAiTestingAutomationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">;
       <div className="container mx-auto px-4">;
@@ -12,4 +12,5 @@ export default function ZionAiTestingAutomationPage() {
       </div>;
     </div>;
   );
-}
+};
+export default ZionAiTestingAutomationPage;
