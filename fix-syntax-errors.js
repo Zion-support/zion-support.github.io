@@ -1,102 +1,95 @@
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+#!/usr/bin/env node
 
-// Common patterns to fix
-const fixes = [
-  // Fix unterminated string literals with single quotes
-  {
-    pattern: /'([^']*),'/g,
-    replacement: "'$1'"
-  },
-  // Fix malformed object properties
-  {
-    pattern: /(\w+),'(\w+)',/g,
-    replacement: "$1: '$2',"
-  },
-  // Fix missing commas in object literals
-  {
-    pattern: /'(\w+)','(\w+)',/g,
-    replacement: "'$1', '$2',"
-  },
-  // Fix numeric literal issues
-  {
-    pattern: /(\d+),'(\w+)',/g,
-    replacement: "$1, '$2',"
-  },
-  // Fix JSX fragment closing issues
-  {
-    pattern: /<>\s*$/gm,
-    replacement: "<>"
-  },
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix double quotes in import statements
+  fixed = fixed.replace(/import\s+([^'"]+)\s+from\s+['"]([^'"]+)['"]''/g, 'import $1 from \'$2\'');
+  fixed = fixed.replace(/import\s+([^'"]+)\s+from\s+['"]([^'"]+)['"]""/g, 'import $1 from "$2"');
+  
+  // Fix unterminated string literals in import statements
+  fixed = fixed.replace(/import\s+([^'"]+)\s+from\s+['"]([^'"]+);/g, 'import $1 from \'$2\';');
+  
+  // Fix malformed JSX - add missing opening tags
+  fixed = fixed.replace(/<div className="([^"]*)"[^>]*><\/div>/g, '<div className="$1"></div>');
+  
+  // Fix broken JSX structure
+  fixed = fixed.replace(/<div className="([^"]*)"[^>]*>\s*<\/div>\s*<([^>]+)><\/\2>/g, '<div className="$1">\n        <$2></$2>\n      </div>');
+  
+  // Fix missing semicolons after import statements
+  fixed = fixed.replace(/import\s+([^'"]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from \'$2\';');
+  
+  // Fix 'use client' directive
+  fixed = fixed.replace(/'use client;/g, '\'use client\';');
+  fixed = fixed.replace(/'use client/g, '\'use client\';');
+  
+  // Fix malformed export statements
+  fixed = fixed.replace(/export default function\s+([^(]+)\([^)]*\)\s*{\s*return\s*\(\s*<div[^>]*><\/div>\s*\)\s*}/g, 
+    'export default function $1() {\n  return (\n    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <div className="container mx-auto px-4 py-16">\n        <div className="text-center">\n          <h1 className="text-4xl font-bold text-white mb-8">$1</h1>\n          <p className="text-xl text-gray-300 mb-8">Coming soon...</p>\n        </div>\n      </div>\n    </div>\n  );\n}');
+  
+  // Fix broken JSX tags
+  fixed = fixed.replace(/<([^>]+)><\/\1>/g, '<$1></$1>');
+  
   // Fix missing closing tags
-  {
-    pattern: /<(\w+)([^>]*)>\s*$/gm,
-    replacement: "<$1$2></$1>"
-  },
-  // Remove git branch names from code
-  {
-    pattern: /[a-z0-9-]+\/[a-z0-9-]+-[a-z0-9-]+/g,
-    replacement: ""
-  },
-  // Fix empty object properties
-  {
-    pattern: /{\s*}/g,
-    replacement: "{}"
-  }
-];
+  fixed = fixed.replace(/<div([^>]*)>\s*<h1([^>]*)>\s*([^<]+)\s*<\/h1>\s*<p([^>]*)>\s*([^<]+)\s*<\/p>\s*<\/div>/g, 
+    '<div$1>\n        <h1$2>$3</h1>\n        <p$4>$5</p>\n      </div>');
+  
+  return fixed;
+}
 
-function fixFile(filePath) {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-async function main() {
-  console.log('Starting syntax error fixes...');
-  
-  // Find all TypeScript and JSX files
+// Main function
+function main() {
   const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
+    '**/*.tsx',
+    '**/*.ts',
+    '**/*.jsx',
+    '**/*.js'
   ];
   
   let totalFiles = 0;
   let fixedFiles = 0;
   
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixFile(file)) {
-        totalFixed++;
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, {
+      ignore: ['node_modules/**', 'dist/**', '.next/**', '**/*.d.ts']
+    });
+    
+    files.forEach(file => {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
       }
-    }
-  }
+    });
+  });
   
-  console.log(`\nFixed ${totalFixed} files`);
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
 }
 
-main().catch(console.error);
+if (require.main === module) {
+  main();
+}
 
-export { fixFile, fixes };
+module.exports = { fixSyntaxErrors, processFile };
