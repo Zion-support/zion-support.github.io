@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function ServiceWorkerRegistration() {
@@ -49,3 +50,17 @@ export default function ServiceWorkerRegistration() {
     </>
   );
 }
+=======
+
+const ServiceWorkerRegistration = () => {
+  return (
+    <div className="serviceworkerregistration-component">
+      <h2>ServiceWorkerRegistration</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default ServiceWorkerRegistration;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

@@ -26,6 +26,7 @@ export default function ContactPage() {
                   Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
+<<<<<<< HEAD
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-green-900 mb-2">
                   Custom Implementation
@@ -41,6 +42,60 @@ export default function ContactPage() {
                 <p className="text-purple-700">
                   Round-the-clock support for all your needs.
                 </p>
+=======
+              <div>
+                <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>"
+                <form className="space-y-4">"
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">"
+                      Name;
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+
+                      required
+
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">"
+                      Email;
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+
+                      required
+
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">"
+                      Message;
+                    </label>
+                    <textarea;
+                      id="message""
+                      name="message""
+                      rows={4}
+                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+
+                      required
+
+                    ></textarea>
+                  </div>
+                  <button;
+                    type="submit""
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors""
+                  >
+                    Send Message;
+                  </button>
+                </form>
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function DynamicContentShowcase() {
@@ -49,3 +50,17 @@ export default function DynamicContentShowcase() {
     </>
   );
 }
+=======
+
+const DynamicContentShowcase = () => {
+  return (
+    <div className="dynamiccontentshowcase-component">
+      <h2>DynamicContentShowcase</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default DynamicContentShowcase;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

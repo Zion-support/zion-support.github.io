@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function AdAnalytics() {
@@ -49,3 +50,17 @@ export default function AdAnalytics() {
     </>
   );
 }
+=======
+
+const AdAnalytics = () => {
+  return (
+    <div className="adanalytics-component">
+      <h2>AdAnalytics</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default AdAnalytics;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

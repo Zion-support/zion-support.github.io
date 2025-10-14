@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function ContentCarousel() {
@@ -49,3 +50,17 @@ export default function ContentCarousel() {
     </>
   );
 }
+=======
+
+const ContentCarousel = () => {
+  return (
+    <div className="contentcarousel-component">
+      <h2>ContentCarousel</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default ContentCarousel;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

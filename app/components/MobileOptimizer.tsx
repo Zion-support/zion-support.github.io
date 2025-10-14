@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function MobileOptimizer() {
@@ -49,3 +50,17 @@ export default function MobileOptimizer() {
     </>
   );
 }
+=======
+
+const MobileOptimizer = () => {
+  return (
+    <div className="mobileoptimizer-component">
+      <h2>MobileOptimizer</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default MobileOptimizer;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

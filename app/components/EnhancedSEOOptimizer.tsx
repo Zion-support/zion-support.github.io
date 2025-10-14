@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function EnhancedSEOOptimizer() {
@@ -49,3 +50,17 @@ export default function EnhancedSEOOptimizer() {
     </>
   );
 }
+=======
+
+const EnhancedSEOOptimizer = () => {
+  return (
+    <div className="enhancedseooptimizer-component">
+      <h2>EnhancedSEOOptimizer</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default EnhancedSEOOptimizer;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

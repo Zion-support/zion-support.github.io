@@ -48,4 +48,11 @@ export default function ErrorFallback() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default ErrorFallback;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

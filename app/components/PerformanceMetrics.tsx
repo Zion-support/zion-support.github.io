@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function PerformanceMetrics() {
@@ -49,3 +50,17 @@ export default function PerformanceMetrics() {
     </>
   );
 }
+=======
+
+const PerformanceMetrics = () => {
+  return (
+    <div className="performancemetrics-component">
+      <h2>PerformanceMetrics</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default PerformanceMetrics;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

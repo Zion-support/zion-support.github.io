@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react
 
 interface PerformanceMetrics {
@@ -136,6 +137,17 @@ const AdvancedPerformanceMonitor = () => {
         <div>Memory: <span className="text-blue-400">{metrics.memoryUsage}MB</span></div>
         <div>Network: <span className="text-blue-400">{metrics.networkLatency}ms</span></div>
       </div>
+=======
+import React from 'react';
+
+
+const AdvancedPerformanceMonitor = () => {
+  return (
+    <div className="advancedperformancemonitor-component">
+      <h2>AdvancedPerformanceMonitor</h2>
+      <p>This component is under construction.</p>
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
     </div>
   )
 }

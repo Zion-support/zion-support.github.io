@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function FuturisticServiceCard() {
@@ -49,3 +50,17 @@ export default function FuturisticServiceCard() {
     </>
   );
 }
+=======
+
+const FuturisticServiceCard = () => {
+  return (
+    <div className="futuristicservicecard-component">
+      <h2>FuturisticServiceCard</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default FuturisticServiceCard;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

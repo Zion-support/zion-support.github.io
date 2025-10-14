@@ -48,4 +48,11 @@ export default function LoadingStates() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default LoadingStates;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

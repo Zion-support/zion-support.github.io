@@ -26,6 +26,7 @@ export default function BlogPage() {
                   Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
+<<<<<<< HEAD
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-green-900 mb-2">
                   Custom Implementation
@@ -33,6 +34,25 @@ export default function BlogPage() {
                 <p className="text-green-700">
                   Tailored implementations for your specific requirements.
                 </p>
+=======
+            </section>
+            <section>
+              <h2 className="text-2xl font-semibold mb-6">Stay Updated</h2>"
+              <p className="text-gray-300 mb-6">"
+                Subscribe to our newsletter for the latest insights and updates.
+              </p>
+              <div className="flex space-x-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+
+
+                />
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors">"
+                  Subscribe;
+                </button>
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
               </div>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">

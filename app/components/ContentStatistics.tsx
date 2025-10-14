@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function ContentStatistics() {
@@ -49,3 +50,17 @@ export default function ContentStatistics() {
     </>
   );
 }
+=======
+
+const ContentStatistics = () => {
+  return (
+    <div className="contentstatistics-component">
+      <h2>ContentStatistics</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default ContentStatistics;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

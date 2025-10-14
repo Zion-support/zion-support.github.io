@@ -17,6 +17,7 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 mb-8">
               Professional homepage services by Zion Tech Group.
             </p>
+<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
@@ -24,6 +25,34 @@ export default function HomePage() {
                 </h3>
                 <p className="text-blue-700">
                   Our team of experts delivers cutting-edge solutions.
+=======
+            <div className="flex justify-center space-x-4">
+              <a
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+
+
+              >
+                Get Started;
+              </a>
+              <a
+                href="/solutions"
+                className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+
+
+              >
+                Our Solutions;
+              </a>
+            </div>
+          </section>
+          <section className="mb-16">"
+            <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>"
+            <div className="grid md:grid-cols-3 gap-8">"
+              <div className="bg-gray-800 p-6 rounded-lg">"
+                <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>"
+                <p className="text-gray-300">"
+                  Advanced artificial intelligence solutions for your business needs.
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
                 </p>
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
@@ -43,8 +72,27 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
+=======
+          </section>
+          <section className="text-center">"
+            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>"
+            <p className="text-xl text-gray-300 mb-8">"
+              Contact us today to learn how we can help you achieve your goals.
+            </p>
+            <a
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+
+
+            >
+              Contact Us;
+            </a>
+          </section>
+        </main>
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
       </div>
     </>
   );

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import crypto from 'crypto';,';,
 enabled: process.env.ANALYZE === 'true
 /** @type {} import( 'next'';,';,
@@ -7,6 +8,11 @@ formats: ['image/webp', '';,
 contentSecurityPolicy: "default-src 'self'; script-src 'none'';)
 }
 ]
+=======
+import withBundleAnalyzer from '; import crypto from ';crypto;,';,enabled: process.env.ANALYZE === 'true'
+/** @type {} import( 'next,';,domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com,';,formats: ['image/webp', ,'
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
 );,
 contentSecurityPolicy: "default-src 'self'; script-src 'none)
 }
@@ -31,4 +37,10 @@ const nextConfig = {
   }
 }
 
+<<<<<<< HEAD
 module.exports = nextConfig
+=======
+module.exports = nextConfig;
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

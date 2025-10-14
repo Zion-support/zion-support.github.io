@@ -48,4 +48,11 @@ export default function FuturisticCard() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default FuturisticCard;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function EnhancedServicesShowcase() {
@@ -49,3 +50,17 @@ export default function EnhancedServicesShowcase() {
     </>
   );
 }
+=======
+
+const EnhancedServicesShowcase = () => {
+  return (
+    <div className="enhancedservicesshowcase-component">
+      <h2>EnhancedServicesShowcase</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default EnhancedServicesShowcase;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function Page() {
   return (
     <>
@@ -9,6 +10,17 @@ export default function Page() {
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
       <div className="min-h-screen bg-white">
+=======
+const PagePage = () => {
+  return (
+    <>
+      <Helmet>
+        <title>PagePage - Zion Tech Group</title>
+        <meta name="description" content="PagePage - Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
@@ -45,7 +57,18 @@ export default function Page() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </>
   );
 }
+=======
+
+      </div>
+    </>
+  );
+};
+
+export default PagePage;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function ServiceCardSkeleton() {
@@ -49,3 +50,17 @@ export default function ServiceCardSkeleton() {
     </>
   );
 }
+=======
+
+const ServiceCardSkeleton = () => {
+  return (
+    <div className="servicecardskeleton-component">
+      <h2>ServiceCardSkeleton</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default ServiceCardSkeleton;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

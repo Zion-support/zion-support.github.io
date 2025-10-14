@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function LoadingOptimizer() {
@@ -49,3 +50,17 @@ export default function LoadingOptimizer() {
     </>
   );
 }
+=======
+
+const LoadingOptimizer = () => {
+  return (
+    <div className="loadingoptimizer-component">
+      <h2>LoadingOptimizer</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default LoadingOptimizer;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

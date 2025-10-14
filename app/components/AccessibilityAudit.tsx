@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function AccessibilityAudit() {
@@ -49,3 +50,17 @@ export default function AccessibilityAudit() {
     </>
   );
 }
+=======
+
+const AccessibilityAudit = () => {
+  return (
+    <div className="accessibilityaudit-component">
+      <h2>AccessibilityAudit</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default AccessibilityAudit;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

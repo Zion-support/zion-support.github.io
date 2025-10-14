@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function PerformanceEnhancer() {
@@ -49,3 +50,17 @@ export default function PerformanceEnhancer() {
     </>
   );
 }
+=======
+
+const PerformanceEnhancer = () => {
+  return (
+    <div className="performanceenhancer-component">
+      <h2>PerformanceEnhancer</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default PerformanceEnhancer;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

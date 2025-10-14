@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function SEOAudit() {
@@ -49,3 +50,17 @@ export default function SEOAudit() {
     </>
   );
 }
+=======
+
+const SEOAudit = () => {
+  return (
+    <div className="seoaudit-component">
+      <h2>SEOAudit</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default SEOAudit;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

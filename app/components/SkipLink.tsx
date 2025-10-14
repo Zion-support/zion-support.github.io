@@ -48,4 +48,11 @@ export default function SkipLink() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default SkipLink;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

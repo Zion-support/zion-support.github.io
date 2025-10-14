@@ -48,4 +48,11 @@ export default function ImprovedFooter() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default ImprovedFooter;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

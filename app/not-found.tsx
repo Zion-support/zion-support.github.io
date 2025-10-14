@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -49,3 +50,10 @@ export default function not-found() {
     </>
   );
 }
+=======
+// not-found - Basic implementation
+export default function not-found() {
+  return null;
+}
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

@@ -33,6 +33,11 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 function fixMergeConflicts(content) {
   // Remove merge conflict markers and keep the HEAD version
   let fixed = content
+<<<<<<< HEAD
+=======
+    .replace(/
+    .replace(/
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
   
   return fixed
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -48,4 +49,10 @@ export default function loading() {
       </div>
     </>
   );
+=======
+// loading - Basic implementation
+export default function loading() {
+  return null;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
 }

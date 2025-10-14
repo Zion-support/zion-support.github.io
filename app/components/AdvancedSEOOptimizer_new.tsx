@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function AdvancedSEOOptimizer_new() {
@@ -49,3 +50,17 @@ export default function AdvancedSEOOptimizer_new() {
     </>
   );
 }
+=======
+
+const AdvancedSEOOptimizer_new = () => {
+  return (
+    <div className="advancedseooptimizer_new-component">
+      <h2>AdvancedSEOOptimizer_new</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default AdvancedSEOOptimizer_new;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

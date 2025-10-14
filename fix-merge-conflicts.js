@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs
@@ -132,3 +133,6 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message)
   process.exit(1)
 }
+=======
+') || !content.includes('
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

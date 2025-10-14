@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function NewContentAdvertisingBanner() {
@@ -49,3 +50,17 @@ export default function NewContentAdvertisingBanner() {
     </>
   );
 }
+=======
+
+const NewContentAdvertisingBanner = () => {
+  return (
+    <div className="newcontentadvertisingbanner-component">
+      <h2>NewContentAdvertisingBanner</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default NewContentAdvertisingBanner;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

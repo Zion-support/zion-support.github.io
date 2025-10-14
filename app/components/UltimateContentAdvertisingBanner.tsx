@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function UltimateContentAdvertisingBanner() {
@@ -49,3 +50,17 @@ export default function UltimateContentAdvertisingBanner() {
     </>
   );
 }
+=======
+
+const UltimateContentAdvertisingBanner = () => {
+  return (
+    <div className="ultimatecontentadvertisingbanner-component">
+      <h2>UltimateContentAdvertisingBanner</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default UltimateContentAdvertisingBanner;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

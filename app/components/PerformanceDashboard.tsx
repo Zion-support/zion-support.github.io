@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function PerformanceDashboard() {
@@ -49,3 +50,17 @@ export default function PerformanceDashboard() {
     </>
   );
 }
+=======
+
+const PerformanceDashboard = () => {
+  return (
+    <div className="performancedashboard-component">
+      <h2>PerformanceDashboard</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default PerformanceDashboard;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

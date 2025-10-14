@@ -1,13 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function Page() {
+=======
+const PagePage = () => {
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
   return (
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -44,8 +50,25 @@ export default function Page() {
               </div>
             </div>
           </div>
+=======
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-8">PagePage</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
         </div>
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default PagePage;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function EnhancedHero() {
@@ -49,3 +50,17 @@ export default function EnhancedHero() {
     </>
   );
 }
+=======
+
+const EnhancedHero = () => {
+  return (
+    <div className="enhancedhero-component">
+      <h2>EnhancedHero</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default EnhancedHero;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

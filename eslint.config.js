@@ -4,7 +4,12 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 export default tseslint.config(
+<<<<<<< HEAD
 { ignores: ['dist', 'app-broken/**', 'app-disabled/**'] },
+=======
+  { ignores: ['dist', 'app-broken/**', 'app-disabled/**', 'scripts/**', '*.js', '*.cjs'] },
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -48,4 +49,10 @@ export default function sitemap-Page() {
       </div>
     </>
   );
+=======
+// sitemap-page - Basic implementation
+export default function sitemap-page() {
+  return null;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
 }

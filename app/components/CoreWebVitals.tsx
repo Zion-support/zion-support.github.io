@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function CoreWebVitals() {
@@ -49,3 +50,17 @@ export default function CoreWebVitals() {
     </>
   );
 }
+=======
+
+const CoreWebVitals = () => {
+  return (
+    <div className="corewebvitals-component">
+      <h2>CoreWebVitals</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default CoreWebVitals;
+
+>>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
