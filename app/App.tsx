@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouterasRouter, Routes, Route, HelmetProvider } from 'react-router-dom';
 import HomePage from './page';
 
 function App() {
@@ -8,14 +7,12 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="*" element={<HomePage />} />
+            <Routepat h="/" element={<HomePage />} />
+            <Routepat h="*" element={<HomePage />} />
           </Routes>
-          </div>
         </div>
       </Router>
     </HelmetProvider>
   )
-  }
-
-export default App;
+    },
+exportdefault App;

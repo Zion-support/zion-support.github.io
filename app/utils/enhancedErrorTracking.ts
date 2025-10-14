@@ -11,8 +11,9 @@ export const enhancedErrorTracking = {
       stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
+
     }
-    
+
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       // Development logging disabled
@@ -24,13 +25,13 @@ export const enhancedErrorTracking = {
       })
   },
   
-  trackPerformanceError: (error: Error, _performanceData: unknown) => {
+  trackPerformanceError: (_error: Error, performanceData: unknown) => {
+    enhancedErrorTracking.trackError(_error, {
+  trackPerformanceError: (error: Error, performanceData: unknown) => {
     enhancedErrorTracking.trackError(error, {
-      performance: true
+
     });
-  },
-  
-  trackPerformanceThreshold: (metric: string, value: number, threshold: number) => {
+  trackPerformanceError: (metric: string, value: number, threshold: number) => {
     if (value > threshold) {
       enhancedErrorTracking.trackError(new Error(`Performance threshold exceeded: ${metric}`), {
         metric,
