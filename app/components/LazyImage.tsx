@@ -1,95 +1,50 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: React.ReactNode;
-  fallback?: React.ReactNode;
-  onLoad?: () => void;
-  onError?: () => void;
-  loading?: 'lazy' | 'eager';
-  sizes?: string;
-  srcSet?: string;
-}
-
-const LazyImage: React.FC<LazyImageProps> = ({
-  src,
-  alt,
-  className = '',
-  placeholder,
-  fallback,
-  onLoad,
-  onError,
-  loading = 'lazy',
-  sizes,
-  srcSet,
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px',
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setIsError(true);
-    onError?.();
-  };
-
-  if (isError && fallback) {
-    return <>{fallback}</>;
-  }
-
+const LazyImagePage = () => {
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {!isLoaded && !isError && placeholder && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700">
-          {placeholder}
-        </div>
-      )}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>LazyImage - Zion Tech Group</title>
+        <meta name="description" content="Professional LazyImage services by Zion Tech Group." />
+        <meta name="keywords" content="LazyImage, AI solutions, IT services" />
+      </Helmet>
       
-      {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          } ${className}`}
-          loading={loading}
-          sizes={sizes}
-          srcSet={srcSet}
-          onLoad={handleLoad}
-          onError={handleError}
-          decoding="async"
-        />
-      )}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            LazyImage
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional LazyImage services designed to help your business grow and succeed.
+          </p>
+        </div>
+        
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Our team of experts provides cutting-edge solutions tailored to your specific needs.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your systems run smoothly at all times.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+            <p className="text-gray-300">
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default LazyImage;
+export default LazyImagePage;

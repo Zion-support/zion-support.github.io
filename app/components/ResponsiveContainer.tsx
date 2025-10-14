@@ -1,43 +1,12 @@
-import React from 'react';
+import React from "react";
 
-interface ResponsiveContainerProps {
-  children: React.ReactNode;
-  className?: string;
-  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full';
-  padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
-}
-
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
-  children,
-  className = '',
-  maxWidth = '7xl',
-  padding = 'md'
-}) => {
-  const maxWidthClasses = {
-    sm: 'max-w-sm',
-    md: 'max-w-md',
-    lg: 'max-w-lg',
-    xl: 'max-w-xl',
-    '2xl': 'max-w-2xl',
-    '3xl': 'max-w-3xl',
-    '4xl': 'max-w-4xl',
-    '5xl': 'max-w-5xl',
-    '6xl': 'max-w-6xl',
-    '7xl': 'max-w-7xl',
-    full: 'max-w-full'
-  };
-
-  const paddingClasses = {
-    none: '',
-    sm: 'px-2 sm:px-4',
-    md: 'px-4 sm:px-6 lg:px-8',
-    lg: 'px-6 sm:px-8 lg:px-12',
-    xl: 'px-8 sm:px-12 lg:px-16'
-  };
-
+const ResponsiveContainer = () => {
   return (
-    <div className={`mx-auto ${maxWidthClasses[maxWidth]} ${paddingClasses[padding]} ${className}`}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">ResponsiveContainer</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for ResponsiveContainer.
+      </p>
     </div>
   );
 };

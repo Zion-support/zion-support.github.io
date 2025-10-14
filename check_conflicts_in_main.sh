@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Checking for merge conflict markers in main branch..."
-echo "======================================================="
+echo "======"
 echo ""
 
 files=(
@@ -33,5 +33,5 @@ for file in "${files[@]}"; do
 done
 
 echo ""
-echo "======================================================="
+echo "======"
 echo "Total files with conflicts: $conflict_count / ${#files[@]}"

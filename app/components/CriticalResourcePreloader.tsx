@@ -1,145 +1,49 @@
-'use client'
-import { useEffect } from 'react'
-
-const CriticalResourcePreloader = () => {
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Critical fonts
-      const criticalFonts = [
-        {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
-          as: 'style',
-          crossorigin: 'anonymous'
-        },
-        {
-          href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: 'anonymous'
-        }
-      ]
-
-      // Critical CSS
-      const criticalCSS = [
-        '/styles/critical.css',
-        '/styles/animations.css'
-      ]
-
-      // Critical JavaScript
-      const criticalJS = [
-        '/scripts/performance.js',
-        '/scripts/analytics.js'
-      ]
-
-      // Critical images
-      const criticalImages = [
-        '/images/logo.svg',
-        '/images/hero-bg.webp',
-        '/images/cta-bg.webp'
-      ]
-
-      // Preload fonts
-      criticalFonts.forEach(font => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = font.href
-        link.as = font.as
-        if (font.type) link.type = font.type
-        if (font.crossorigin) link.crossOrigin = font.crossorigin
-        document.head.appendChild(link)
-      })
-
-      // Preload CSS
-      criticalCSS.forEach(css => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = css
-        link.as = 'style'
-        document.head.appendChild(link)
-      })
-
-      // Preload JavaScript
-      criticalJS.forEach(js => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = js
-        link.as = 'script'
-        document.head.appendChild(link)
-      })
-
-      // Preload images
-      criticalImages.forEach(img => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = img
-        link.as = 'image'
-        document.head.appendChild(link)
-      })
-    }
-
-    // Preconnect to external domains
-    const preconnectDomains = () => {
-      const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com',
-        'https://cdn.jsdelivr.net'
-      ]
-
-      domains.forEach(domain => {
-        const link = document.createElement('link')
-        link.rel = 'preconnect'
-        link.href = domain
-        link.crossOrigin = 'anonymous'
-        document.head.appendChild(link)
-      })
-    }
-
-    // DNS prefetch for additional domains
-    const dnsPrefetchDomains = () => {
-      const domains = [
-        'https://api.ziontechgroup.com',
-        'https://cdn.ziontechgroup.com',
-        'https://analytics.ziontechgroup.com'
-      ]
-
-      domains.forEach(domain => {
-        const link = document.createElement('link')
-        link.rel = 'dns-prefetch'
-        link.href = domain
-        document.head.appendChild(link)
-      })
-    }
-
-    // Initialize preloading
-    preloadCriticalResources()
-    preconnectDomains()
-    dnsPrefetchDomains()
-
-    // Preload next page resources on hover
-    const preloadOnHover = () => {
-      const links = document.querySelectorAll('a[href^="/"]')
+import React from "react";
+import { Helmet } from 'react-helmet-async';
+const CriticalResourcePreloaderPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet></Helmet>
+        <title>CriticalResourcePreloader - Zion Tech Group</title>
+        <meta name="description" content="Professional CriticalResourcePreloader services by Zion Tech Group." />
+        <meta name="keywords" content="CriticalResourcePreloader, AI solutions, IT services" />
+      </Helmet>
       
-      links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-          const href = link.getAttribute('href')
-          if (href && !document.querySelector(`link[href="${href}"]`)) {
-            const preloadLink = document.createElement('link')
-            preloadLink.rel = 'prefetch'
-            preloadLink.href = href
-            document.head.appendChild(preloadLink)
-          }
-        })
-      })
-    }
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            CriticalResourcePreloader
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional CriticalResourcePreloader services designed to help your business grow and succeed.
+          </p>
+        </div>
+        
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Our team of experts provides cutting-edge solutions tailored to your specific needs.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your systems run smoothly at all times.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+            <p className="text-gray-300">
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-    // Initialize hover preloading after a delay
-    setTimeout(preloadOnHover, 2000)
-
-  }, [])
-
-  return null
-}
-
-export default CriticalResourcePreloader
+export default CriticalResourcePreloaderPage;

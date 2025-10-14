@@ -1,51 +1,50 @@
-import React from 'react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface ResponsiveGridProps {
-  children: React.ReactNode;
-  className?: string;
-  cols?: {
-    default?: number;
-    sm?: number;
-    md?: number;
-    lg?: number;
-    xl?: number;
-    '2xl'?: number;
-  };
-  gap?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
-}
-
-const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
-  children,
-  className = '',
-  cols = { default: 1, sm: 2, md: 3, lg: 4 },
-  gap = 'md'
-}) => {
-  const getGridCols = () => {
-    const colClasses = [];
-    
-    if (cols.default) colClasses.push(`grid-cols-${cols.default}`);
-    if (cols.sm) colClasses.push(`sm:grid-cols-${cols.sm}`);
-    if (cols.md) colClasses.push(`md:grid-cols-${cols.md}`);
-    if (cols.lg) colClasses.push(`lg:grid-cols-${cols.lg}`);
-    if (cols.xl) colClasses.push(`xl:grid-cols-${cols.xl}`);
-    if (cols['2xl']) colClasses.push(`2xl:grid-cols-${cols['2xl']}`);
-    
-    return colClasses.join(' ');
-  };
-
-  const gapClasses = {
-    none: 'gap-0',
-    sm: 'gap-2',
-    md: 'gap-4 sm:gap-6 lg:gap-8',
-    lg: 'gap-6 sm:gap-8 lg:gap-12',
-    xl: 'gap-8 sm:gap-12 lg:gap-16'
-  };
-
+const ResponsiveGridPage = () => {
   return (
-    <div className={`grid ${getGridCols()} ${gapClasses[gap]} ${className}`}>
-      {children}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>ResponsiveGrid - Zion Tech Group</title>
+        <meta name="description" content="Professional ResponsiveGrid services by Zion Tech Group." />
+        <meta name="keywords" content="ResponsiveGrid, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            ResponsiveGrid
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ResponsiveGrid services designed to help your business grow and succeed.
+          </p>
+        </div>
+        
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Our team of experts provides cutting-edge solutions tailored to your specific needs.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your systems run smoothly at all times.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+            <p className="text-gray-300">
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default ResponsiveGrid;
+export default ResponsiveGridPage;

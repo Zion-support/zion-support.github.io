@@ -1,47 +1,27 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by keeping the newer version (after =======)
-
-echo "Resolving merge conflicts in all files..."
+# Resolve merge conflicts by choosing the latest version (HEAD)
+echo "Resolving merge conflicts by choosing the latest version..."
 
 # Find all files with merge conflicts
-files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+conflicted_files=$(git diff --name-only --diff-filter=U)
 
-for file in $files; do
-    echo "Processing: $file"
-    
-    # Create a temporary file
-    temp_file="${file}.tmp"
-    
-    # Process the file to resolve conflicts
-    awk '
-    /<<<<<<< HEAD/ {
-        in_conflict = 1
-        next
-    }
-    /=======/ {
-        if (in_conflict) {
-            in_conflict = 2
-            next
-        }
-    }
-    />>>>>>> / {
-        if (in_conflict == 2) {
-            in_conflict = 0
-            next
-        }
-    }
-    {
-        if (in_conflict == 0) {
-            print
-        } else if (in_conflict == 2) {
-            print
-        }
-    }
-    ' "$file" > "$temp_file"
-    
-    # Replace original file with processed version
-    mv "$temp_file" "$file"
+if [ -z "$conflicted_files" ]; then
+    echo "No merge conflicts found."
+    exit 0
+fi
+
+echo "Found conflicted files:"
+echo "$conflicted_files"
+
+# Resolve conflicts by choosing the latest version (HEAD)
+for file in $conflicted_files; do
+    echo "Resolving conflicts in: $file"
+    git checkout --theirs "$file"
+    git add "$file"
 done
 
-echo "Merge conflicts resolved in all files."
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Resolve merge conflicts by choosing latest version"
+
+echo "Merge conflicts resolved successfully!"

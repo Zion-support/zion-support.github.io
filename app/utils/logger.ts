@@ -1,15 +1,5 @@
 // Logger utility functions
 
 export const Logger = {
-  init: () => {
-    },
-
-  process: (data: any) => {
-    return data;
-  },
-
-  cleanup: () => {
-    },
+  // Add your utility functions here
 };
-
-export default Logger;

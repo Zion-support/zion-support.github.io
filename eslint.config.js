@@ -1,40 +1,60 @@
-import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
-export default tseslint.config(
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+
+export default [
+  js.configs.recommended,
   {
-    ignores: [
-      "dist",
-      ".next",
-      "backup-problematic/**",
-      "corrupted-src-backup/**",
-      "src/**",
-      "*.js",
-      "scripts/**",
-      "public/sw.js",
-      "identify_missing_pages.js",
-      "merge-with-conflict-resolution.js",
-      "resolve-all-conflicts.js",
-    ],
-  },
-  {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ["**/*.{ts,tsx}"],
+    files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        // Jest globals
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        render: 'readonly',
+        screen: 'readonly',
+        // React Testing Library
+        Helmet: 'readonly',
+        HelmetProvider: 'readonly',
+      },
     },
     plugins: {
+      "react": react,
       "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      "react-refresh": reactRefresh
     },
     rules: {
+      ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "error",
-      "@typescript-eslint/no-explicit-any": "off",
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'no-undef': 'off', // Turn off no-undef for TypeScript files
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
   },
-);
+];

@@ -1,91 +1,136 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive branch merge process..."
+# Comprehensive Branch Merger Script
+# Merges all unmerged branches into main with automatic conflict resolution
 
-# Set git configuration
-git config pull.rebase false
+set -e
 
-# Fetch all branches
-echo "📥 Fetching all branches..."
-git fetch --all
+echo "====="
+echo "Comprehensive Branch Merger Script"
+echo "====="
+echo ""
 
-# Get current branch
-current_branch=$(git branch --show-current)
-echo "📍 Current branch: $current_branch"
+# Colors for output
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
 
-# Ensure we're on main
-if [ "$current_branch" != "main" ]; then
-    echo "🔄 Switching to main branch..."
-    git checkout main
-fi
+# Ensure we're on main and up to date
+echo "Step 1: Ensuring we're on main branch..."
+git checkout main
+git pull origin main
 
-# List of branches to merge (prioritized)
-branches=(
-    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d9b6"
-    "origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe"
-    "origin/merge-error-fixes"
-    "origin/cursor/delete-old-data-records-c826"
-)
+echo ""
+echo "Step 2: Getting list of unmerged branches..."
 
-# Add all fix-error branches
-for branch in $(git branch -r | grep "cursor/fix-errors-and-merge-to-main-" | head -10); do
-    branches+=("$branch")
-done
+# Get unmerged branches, prioritizing recent ones
+UNMERGED_BRANCHES=($(git branch -r --no-merged main | grep -E "(cursor/fix-errors|add-new|ai-)" | head -20))
 
-echo "📋 Found ${#branches[@]} branches to merge:"
-for branch in "${branches[@]}"; do
-    echo "  - $branch"
-done
+echo "Found ${#UNMERGED_BRANCHES[@]} branches to merge"
+echo ""
 
-# Merge each branch
-for branch in "${branches[@]}"; do
-    echo ""
-    echo "🔄 Attempting to merge: $branch"
+MERGED=0
+FAILED=0
+SKIPPED=0
+
+for branch in "${UNMERGED_BRANCHES[@]}"; do
+  # Extract branch name without origin/
+  BRANCH_NAME=${branch#origin/}
+  
+  echo "----------------------------------------"
+  echo "Processing branch: $BRANCH_NAME"
+  echo "----------------------------------------"
+  
+  # Fetch the branch
+  if ! git fetch origin "$BRANCH_NAME"; then
+    echo -e "${RED}❌ Failed to fetch branch $BRANCH_NAME${NC}"
+    ((FAILED++))
+    continue
+  fi
+  
+  # Check if branch exists
+  if ! git rev-parse "origin/$BRANCH_NAME" >/dev/null 2>&1; then
+    echo -e "${YELLOW}⚠️  Branch $BRANCH_NAME not found, skipping${NC}"
+    ((SKIPPED++))
+    continue
+  fi
+  
+  # Try to merge
+  echo "Attempting to merge origin/$BRANCH_NAME into main..."
+  
+  if git merge "origin/$BRANCH_NAME" --no-edit -m "Merge $BRANCH_NAME: Fix errors and improvements"; then
+    echo -e "${GREEN}✅ Successfully merged $BRANCH_NAME${NC}"
+    ((MERGED++))
+  else
+    echo -e "${YELLOW}⚠️  Merge conflict detected for $BRANCH_NAME${NC}"
     
-    # Check if branch exists
-    if git show-ref --verify --quiet refs/remotes/$branch; then
-        echo "✅ Branch exists, attempting merge..."
-        
-        # Try to merge
-        if git merge "$branch" --no-ff -m "Merge: $branch"; then
-            echo "✅ Successfully merged: $branch"
-        else
-            echo "⚠️  Merge conflict in: $branch"
-            echo "🔧 Attempting to resolve conflicts..."
-            
-            # Check for conflict markers
-            if git grep -l "<<<<<<< HEAD" -- .; then
-                echo "🔍 Found conflict markers, attempting resolution..."
-                
-                # Try to resolve common conflicts automatically
-                git add . || true
-                git commit -m "Resolve merge conflicts for $branch" || true
-                
-                if [ $? -eq 0 ]; then
-                    echo "✅ Conflicts resolved for: $branch"
-                else
-                    echo "❌ Could not resolve conflicts for: $branch"
-                    echo "🔄 Aborting merge and continuing..."
-                    git merge --abort || true
-                fi
-            else
-                echo "✅ No conflict markers found, continuing..."
-            fi
+    # Auto-resolve conflicts
+    echo "Auto-resolving conflicts..."
+    
+    # Get list of conflicted files
+    CONFLICTED_FILES=$(git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}')
+    
+    if [ -n "$CONFLICTED_FILES" ]; then
+      echo "Conflicted files:"
+      echo "$CONFLICTED_FILES"
+      
+      # Resolve conflicts by accepting incoming changes for most files
+      echo "$CONFLICTED_FILES" | while read -r conflict_file; do
+        if [ -n "$conflict_file" ]; then
+          echo "   Resolving conflict in: $conflict_file"
+          
+          # For deleted files, remove them
+          if [[ "$conflict_file" == *"deleted"* ]] || ! [ -f "$conflict_file" ]; then
+            git rm "$conflict_file" 2>/dev/null || true
+          else
+            # For other files, accept incoming changes
+            git checkout --theirs "$conflict_file" 2>/dev/null || git checkout --ours "$conflict_file" 2>/dev/null || true
+            git add "$conflict_file" 2>/dev/null || true
+          fi
         fi
+      done
+      
+      # Complete the merge
+      if git commit --no-edit -m "Merge $BRANCH_NAME: Fix errors and improvements (auto-resolved conflicts)"; then
+        echo -e "${GREEN}✅ Successfully merged $BRANCH_NAME (with conflict resolution)${NC}"
+        ((MERGED++))
+      else
+        echo -e "${RED}❌ Failed to complete merge for $BRANCH_NAME${NC}"
+        git merge --abort 2>/dev/null || true
+        ((FAILED++))
+      fi
     else
-        echo "❌ Branch does not exist: $branch"
+      echo -e "${RED}❌ No conflicted files found, aborting merge${NC}"
+      git merge --abort 2>/dev/null || true
+      ((FAILED++))
     fi
+  fi
+  
+  echo ""
 done
 
 echo ""
-echo "📤 Pushing all changes to main..."
-if git push origin main; then
-    echo "✅ Successfully pushed to main"
-else
-    echo "❌ Failed to push to main"
+echo "====="
+echo "Merge Summary"
+echo "====="
+echo "Total branches processed: ${#UNMERGED_BRANCHES[@]}"
+echo -e "${GREEN}Successfully merged: $MERGED${NC}"
+echo -e "${RED}Failed: $FAILED${NC}"
+echo -e "${YELLOW}Skipped: $SKIPPED${NC}"
+echo ""
+
+# Push changes to main
+if [ $MERGED -gt 0 ]; then
+  echo ""
+  echo "Pushing merged changes to origin/main..."
+  if git push origin main; then
+    echo -e "${GREEN}✅ Successfully pushed all changes to main${NC}"
+  else
+    echo -e "${RED}❌ Failed to push changes. Please push manually.${NC}"
+    exit 1
+  fi
 fi
 
 echo ""
-echo "🎉 Branch merge process completed!"
-echo "📊 Final status:"
-git status --short
+echo -e "${GREEN}✅ All operations completed!${NC}"

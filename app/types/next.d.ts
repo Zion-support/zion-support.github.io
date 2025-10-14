@@ -1,38 +1,12 @@
-// Next.js type definitions
+// Type definitions for Next.js
 
-declare module "next" {
-  export interface NextPageProps {
-    params: { [key: string]: string };
-    searchParams: { [key: string]: string | string[] | undefined };
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      NODE_ENV: 'development' | 'production' | 'test';
+      // Add your environment variables here
+    }
   }
 }
 
-declare module "*.svg" {
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-  export default content;
-}
-
-declare module "*.png" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpeg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.gif" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.webp" {
-  const content: string;
-  export default content;
-}
+export {};

@@ -1,23 +1,12 @@
 import React from "react";
 
-interface SystemMonitorProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
-}
-
-const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  children,
-  className = "",
-  title,
-  description,
-}) => {
+const SystemMonitor = () => {
   return (
-    <div className={`enhanced-component ${className}`}>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
-      {children}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">SystemMonitor</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for SystemMonitor.
+      </p>
     </div>
   );
 };

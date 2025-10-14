@@ -1,106 +1,50 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-export default function Partners() {
-  const partners = [
-    {
-      name: "Microsoft",
-      logo: "/images/partners/microsoft.png",
-      description: "Leading cloud and productivity solutions",
-      category: "Technology Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Amazon Web Services",
-      logo: "/images/partners/aws.png",
-      description: "Comprehensive cloud computing platform",
-      category: "Cloud Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Google Cloud",
-      logo: "/images/partners/google-cloud.png",
-      description: "AI and machine learning cloud services",
-      category: "AI Partner",
-      tier: "Gold"
-    },
-    {
-      name: "Salesforce",
-      logo: "/images/partners/salesforce.png",
-      description: "Customer relationship management platform",
-      category: "CRM Partner",
-      tier: "Gold"
-    },
-    {
-      name: "IBM",
-      logo: "/images/partners/ibm.png",
-      description: "Enterprise AI and hybrid cloud solutions",
-      category: "Enterprise Partner",
-      tier: "Silver"
-    },
-    {
-      name: "Oracle",
-      logo: "/images/partners/oracle.png",
-      description: "Database and enterprise software solutions",
-      category: "Database Partner",
-      tier: "Silver"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Joint Marketing",
-      description: "Collaborative marketing campaigns and co-branded content"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Access to our worldwide network of clients and opportunities"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Technical Support",
-      description: "Dedicated technical resources and training programs"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Innovation Labs",
-      description: "Joint innovation initiatives and R&D projects"
-    }
-  ];
-
-  const tiers = [
-    {
-      name: "Platinum",
-      color: "from-gray-400 to-gray-600",
-      requirements: "Strategic partnership with significant revenue commitment",
-      benefits: ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
-    },
-    {
-      name: "Gold",
-      color: "from-yellow-400 to-yellow-600",
-      requirements: "Strong partnership with regular collaboration",
-      benefits: ["Priority support", "Training programs", "Marketing support", "Technical resources"]
-    },
-    {
-      name: "Silver",
-      color: "from-gray-300 to-gray-500",
-      requirements: "Partnership with mutual business opportunities",
-      benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
-    }
-  ];
-
+const PagePage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Partners - Zion Tech Group | Strategic Partnerships</title>
-        <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
-        <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <meta name="keywords" content="page, AI solutions, IT services" />
       </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional page services designed to help your business grow and succeed.
+          </p>
+        </div>
+        
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Our team of experts provides cutting-edge solutions tailored to your specific needs.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your systems run smoothly at all times.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+            <p className="text-gray-300">
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default PagePage;

@@ -1,33 +1,4 @@
-import fs from 'fs';
-#!/usr/bin/env node;
-// Function to fix the app/App.tsx file;
-function fixAppTsx() {
-  const filePath = '/workspace/app/App.tsx';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Fix malformed JSX syntax;
-    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}');
-    content = content.replace(/element="\{<([^"]+)" \/&gt;}/g, 'element={<$1 /&gt;}');
-    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}');
-    // Fix malformed JSX attributes;
-    content = content.replace(/fallback="\{<([^"]+)" \/ \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/ \/>/g, '<$1 />');
-    content = content.replace(/fallback="\{<([^"]+)" \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/>/g, '<$1 />');
-    // Fix malformed self-closing tags;
-    // Fix malformed closing tags;
-    content = content.replace(/<\/ ([^>]+)>/g, '</$1>');
-    // Fix specific patterns;
-    content = content.replace(/<Routes \/>/g, '<Routes>');
-    content = content.replace(/<BrowserRouter \/>/g, '<BrowserRouter>');
-    content = content.replace(/<HelmetProvider \/>/g, '<HelmetProvider>');
-    content = content.replace(/<ErrorBoundary \/>/g, '<ErrorBoundary>');
-    // Add missing closing tags at the end;
-    content = content.replace(/(\s*)<\/Suspense>\s*<\/div>\s*<\/BrowserRouter>\s*<\/HelmetProvider>\s*<\/ErrorBoundary>\s*\);/g, 
-      '$1</Suspense>\n          </div>\n        </BrowserRouter>\n      </HelmetProvider>\n    </ErrorBoundary>\n  );');
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log('Fixed app/App.tsx');
-    return true;
-  } catch (error) {
-    console.error('Error fixing app/App.tsx:', error.message);
-    return false;
-// Run the fix;
-fixAppTsx();
+import React from 'react'
+#!/usr/bin/env node import fs from 'fs'; function fixAppTsx() {} const filePath = 'App.tsx'; try {} let content = fs.readFileSync(filePath, 'utf8'); // Fix import statements - remove stray semicolons and quotes content = content .replace(/import\s+([^;]+);/g, 'import $1;)' .replace(/import\s+([^;]+);/g, 'import $1;)' .replace(/import\s+([^;]+);/g, 'import $1;)' .replace(/from\s+'([^']+)';/gfrom '$1';)' .replace(/from\s+'([^']+)';/gfrom '$1';)' .replace(/from\s+'([^']+)';/gfrom '$1';); // Fix JSX className attributes content = content .replace(/<div classNam e=/g, '<div classNam e=')' .replace(/<button onClic k=/g, '<button onClic k=')' .replace(/<svg classNam e=/g, '<svg classNam e=')' .replace(/<h3 classNam e=/g, '<h3 classNam e=')' .replace(/<p classNam e=/g, '<p classNam e=')' .replace(/classNam e="([^"]*)>></div>
+      </div>([^>]*?)>/g, 'classNam e="$1"$2>')' .replace(/classNam e="([^"]*)>([^>]*?)/g, 'classNam e="$1"$2>'); // Fix unterminated strings in JSX content = content .replace(/"([^"]*?)\n/g, '"$1"\n')' .replace(/'([^']*?)\n/g'$1'\n")' .replace(/"([^"]*?)$/g, '"$1"')' .replace(/'([^']*?)$/g'$1'"); // Fix stray semicolons and quotes content = content .replace(/;\s*;/g, ';)' .replace(/;\s*'/g, ';)' .replace(/;\s*"/g, ';)' .replace(/\s+;/g, ';)' .replace(/;\s+/g, ';); // Fix JSX closing tags content = content .replace(/>\s*;/g, '>')' .replace(/;\s*>/g, '>'); // Fix specific patterns content = content .replace(/classNam e="([^"]*?)>([^>]*?)/g, 'classNam e="$1"$2>')' .replace(/onClic k={([^}]*?)}\s*classNam e=/g, 'onClic k={$1} classNam e=')' .replace(/classNam e="([^"]*?)>\s*>/g, 'classNam e="$1">'); // Clean up multiple spaces and newlines content = content .replace(/\s{2,}/g, ' ')' .replace(/\n{3,}/g, '\n\n')' .replace(/\s+\n/g, '\n')' .replace(/\n\s+/g, '\n'); fs.writeFileSync(filePath, content, 'utf8'); console.log('Fixed App.tsx'); return true; } catch (error) {} console.error('Error fixing App.tsx:', error.message); return false; }''
+} fixAppTsx();''
