@@ -1,68 +1,97 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Function to fix a single page file
-function fixPageFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has the problematic pattern
-    if (content.includes('return (\n    <div>Page content</div>\n  );\n\n  return (')) {
-      // Extract the page title from the h1 tag
-      const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
-      const pageTitle = titleMatch ? titleMatch[1] : 'Page';
-      
-      // Create a clean page template
-      const cleanContent = `'use client';
-import React from 'react';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-export default function Page() {
+// List of page files that need fixing
+const pageFiles = [
+  'app/ai-data-analytics-pro/page.tsx',
+  'app/ai-financial-analysis/page.tsx',
+  'app/ai-healthcare-diagnostics/page.tsx',
+  'app/ai-holographic-workspace/page.tsx',
+  'app/ai-hr-recruitment-pro/page.tsx',
+  'app/ai-image-recognition-pro/page.tsx',
+  'app/ai-powered-devops/page.tsx',
+  'app/ai-services/page.tsx',
+  'app/ai-solutions/page.tsx',
+  'app/blog/page.tsx',
+  'app/consultation/page.tsx',
+  'app/cookies/page.tsx',
+  'app/custom-software/page.tsx',
+  'app/cybersecurity-solutions/page.tsx',
+  'app/demo/page.tsx',
+  'app/enterprise/page.tsx',
+  'app/iot-edge-computing/page.tsx',
+  'app/iot-edge/page.tsx',
+  'app/it-micro-saas/page.tsx',
+  'app/it-solutions/page.tsx',
+  'app/micro-saas-solutions/page.tsx',
+  'app/micro-saas/page.tsx',
+  'app/network-infrastructure/page.tsx',
+  'app/news/page.tsx'
+];
+
+// Function to generate page name from file path
+function getPageName(filePath) {
+  const parts = filePath.split('/');
+  const pageDir = parts[parts.length - 2];
+  return pageDir
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ') + ' Page';
+}
+
+// Function to generate component name from file path
+function getComponentName(filePath) {
+  const parts = filePath.split('/');
+  const pageDir = parts[parts.length - 2];
+  return pageDir
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('') + 'Page';
+}
+
+// Template for fixed page files
+function getPageTemplate(filePath) {
+  const pageName = getPageName(filePath);
+  const componentName = getComponentName(filePath);
+  
+  return `import React from 'react'
+import { Helmet } from 'react-helmet-async'
+
+const ${componentName} = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">${pageTitle}</h1>
-          <p className="text-gray-600 text-lg">
-            This page is under development.
-          </p>
+    <>
+      <Helmet>
+        <title>${pageName} - Zion Tech Group</title>
+        <meta name="description" content="${pageName} - Zion Tech Group" />
+      </Helmet>
+      <div>
+        <div>
+          <h1>${pageName}</h1>
+          <p>This page is under development.</p>
         </div>
       </div>
-    </div>
+    </>
   );
-}`;
-      
-      fs.writeFileSync(filePath, cleanContent);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-  return false;
 }
 
-// Function to recursively find and fix page files
-function fixPageFiles(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixedCount += fixPageFiles(filePath);
-    } else if (file === 'page.tsx' && filePath.includes('/app/')) {
-      if (fixPageFile(filePath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
+export default ${componentName}`;
 }
 
-// Run the fix
-const appDir = './app';
-const fixedCount = fixPageFiles(appDir);
-console.log(`Fixed ${fixedCount} page files`);
+// Fix all page files
+pageFiles.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  
+  if (fs.existsSync(fullPath)) {
+    const content = getPageTemplate(filePath);
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed: ${filePath}`);
+  } else {
+    console.log(`File not found: ${filePath}`);
+  }
+});
+
+console.log('All page files have been fixed!');

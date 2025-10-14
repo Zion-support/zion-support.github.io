@@ -1,15 +1,21 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-const PagePage = () => {
+
+const PartnersPage = () => {
   return (
     <>
       <Helmet>
-        <title>PagePage - Zion Tech Group</title>
-        <meta name="description" content="PagePage - Zion Tech Group" /></Helmet>"      "      <div>
-        <div></>
-          
-        
+        <title>Partners - Zion Tech Group</title>
+        <meta name="description" content="Partners - Zion Tech Group" />
+      </Helmet>
+      <div>
+        <div>
+          <h1>Partners</h1>
+          <p>This page is under development.</p>
+        </div>
+      </div>
+    </>
   );
 }
 
-export default PagePage</div>
+export default PartnersPage

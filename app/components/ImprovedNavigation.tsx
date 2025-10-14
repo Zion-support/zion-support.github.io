@@ -1,5 +1,18 @@
-import React from 'react;'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDownIcon, XMarkIcon, Bars3Icon } from '@heroicons/react/24/outline';
+
 const ImprovedNavigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const services = [
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'IT Services', href: '/it-solutions' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+  ];
+
   return (
     <nav className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +52,7 @@ const ImprovedNavigation = () => {
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
                   Services
-                  <ChevronDown className="ml-1 w-4 h-4" />
+                  <ChevronDownIcon className="ml-1 w-4 h-4" />
                 </button>
                 
                 {isServicesOpen && (
@@ -90,7 +103,7 @@ const ImprovedNavigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -158,4 +171,5 @@ const ImprovedNavigation = () => {
     </nav>
   );
 };
-export default ImprovedNavigation
+
+export default ImprovedNavigation;

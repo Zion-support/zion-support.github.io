@@ -1,11 +1,14 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+
 const PrivacyPage = () => {
   return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group privacy policy and data protection information." /></Helmet>"      "      <div>
+        <meta name="description" content="Zion Tech Group privacy policy and data protection information." />
+      </Helmet>
+      <div>
         <div>
           <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
           <div>
@@ -15,9 +18,11 @@ const PrivacyPage = () => {
             <p className="text-gray-300">
               For any privacy-related questions, please contact us at kleber@ziontechgroup.com
             </p>
-          </div></>
-        
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
-export default PagePage</div>
+export default PrivacyPage

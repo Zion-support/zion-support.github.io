@@ -5,18 +5,24 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// List of pages directory files that need fixing
+// List of all remaining pages files that need fixing
 const pagesFiles = [
   'app/pages/5GSolutionsPage.tsx',
-  'app/pages/AIServicesPage.tsx',
-  'app/pages/AboutPage.tsx',
-  'app/pages/BlogPage.tsx',
-  'app/pages/CareersPage.tsx',
-  'app/pages/CaseStudiesPage.tsx',
-  'app/pages/CloudInfrastructurePage.tsx',
-  'app/pages/CloudSolutionsPage.tsx',
-  'app/pages/ContactPage.tsx',
-  'app/pages/CybersecurityPage.tsx'
+  'app/pages/DemoPage.tsx',
+  'app/pages/DigitalTransformationPage.tsx',
+  'app/pages/DocumentationPage.tsx',
+  'app/pages/FiveGSolutionsPage.tsx',
+  'app/pages/HomePage.tsx',
+  'app/pages/ITServicesPage.tsx',
+  'app/pages/MicroSaaSPage.tsx',
+  'app/pages/PricingPage.tsx',
+  'app/pages/PrivacyPage.tsx',
+  'app/pages/ServicesPage.tsx',
+  'app/pages/SolutionsPage.tsx',
+  'app/pages/SupportPage.tsx',
+  'app/pages/TeamPage.tsx',
+  'app/pages/TermsPage.tsx',
+  'app/pages/TutorialsPage.tsx'
 ];
 
 // Function to generate page name from file path
@@ -72,4 +78,4 @@ pagesFiles.forEach(filePath => {
   }
 });
 
-console.log('All pages directory files have been fixed!');
+console.log('All remaining pages files have been fixed!');

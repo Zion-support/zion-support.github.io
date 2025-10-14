@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function Page() {
+const AiDocumentProcessorPage = () => {
   return (
     <>
       <Helmet>
@@ -38,13 +38,22 @@ export default function Page() {
             <p className="text-xl text-gray-600">Powerful AI-driven document processing capabilities</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                <feature.icon className="w-12 h-12 text-sky-600 mx-auto mb-4"/>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
+            <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Processing</h3>
+              <p className="text-gray-600">Intelligent document analysis and data extraction</p>
+            </div>
+            <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Automation</h3>
+              <p className="text-gray-600">Automated workflow processing and management</p>
+            </div>
+            <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Accuracy</h3>
+              <p className="text-gray-600">High-precision document recognition and parsing</p>
+            </div>
+            <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Integration</h3>
+              <p className="text-gray-600">Seamless integration with existing systems</p>
+            </div>
           </div>
         </div>
       </section>
@@ -86,7 +95,7 @@ export default function Page() {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default AiDocumentProcessorPage
+export default AiDocumentProcessorPage;

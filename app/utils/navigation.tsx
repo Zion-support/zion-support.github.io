@@ -1,3 +1,12 @@
-// navigation - Basic implementation
-export default function navigation() {
-  return null
+import React from 'react';
+
+const Navigation = () => {
+  return (
+    <div>
+      <h1>Navigation</h1>
+      <p>This utility is under development.</p>
+    </div>
+  );
+};
+
+export default Navigation;

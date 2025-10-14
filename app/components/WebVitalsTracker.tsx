@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface WebVitalsTrackerProps {
   onVitalsUpdate?: (vitals: unknown) => void;
@@ -10,15 +11,10 @@ export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerPro
   useEffect(() => {
     const trackWebVitals = () => {
       // Track Core Web Vitals
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(onVitalsUpdate);
-          getFID(onVitalsUpdate);
-          getFCP(onVitalsUpdate);
-          getLCP(onVitalsUpdate);
-          getTTFB(onVitalsUpdate);
-        });
-      }
+      onCLS(onVitalsUpdate || (() => {}));
+      onFCP(onVitalsUpdate || (() => {}));
+      onLCP(onVitalsUpdate || (() => {}));
+      onTTFB(onVitalsUpdate || (() => {}));
     };
 
     trackWebVitals();

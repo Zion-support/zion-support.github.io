@@ -1,5 +1,16 @@
-import React from 'react;'
-const FuturisticServiceCard = () => {
+import React from 'react';
+
+interface FuturisticServiceCardProps {
+  icon?: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ 
+  icon, 
+  title = "Service", 
+  description = "Service description" 
+}) => {
   return (
     <div className="bg-gray-800 p-6 rounded-lg">
       {icon && <div className="mb-4">{icon}</div>}
@@ -8,4 +19,5 @@ const FuturisticServiceCard = () => {
     </div>
   );
 };
-export default FuturisticServiceCard
+
+export default FuturisticServiceCard;

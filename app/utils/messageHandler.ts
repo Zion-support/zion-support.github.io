@@ -1,3 +1,4 @@
-'use client;'
-// messageHandler utility; export const messageHandler = () => {}; // Implementation; return true;};
-}; export default messageHandler
+export const messageHandler = () => {
+  // Utility implementation
+  return true;
+};

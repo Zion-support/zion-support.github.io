@@ -1,17 +1,21 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-const PagePage = () => {
 
+const QuantumComputingPage = () => {
   return (
     <>
       <Helmet>
-        <title>PagePage - Zion Tech Group</title>
-        <meta name="description" content="PagePage - Zion Tech Group" /></Helmet>"      "      <div>
-        <div></>
-          
-
-        
+        <title>Quantum Computing - Zion Tech Group</title>
+        <meta name="description" content="Quantum Computing - Zion Tech Group" />
+      </Helmet>
+      <div>
+        <div>
+          <h1>Quantum Computing</h1>
+          <p>This page is under development.</p>
+        </div>
+      </div>
+    </>
   );
 }
 
-export default PagePage</div>
+export default QuantumComputingPage
