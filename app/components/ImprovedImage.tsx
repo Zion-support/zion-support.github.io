@@ -1,88 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ImageIcon } from 'lucide-react';
-
-interface ImprovedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  placeholder?: string;
-  lazy?: boolean;
-  priority?: boolean;
-  quality?: number;
-  sizes?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-const ImprovedImage: React.FC<ImprovedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  placeholder,
-  lazy = true,
-  priority = false,
-  quality = 75,
-  sizes,
-  onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(!lazy || priority);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    if (!lazy || priority) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px'
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [lazy, priority]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
-  // Generate optimized src with quality parameter
-  const getOptimizedSrc = (originalSrc: string) => {
-    // If it's an external URL, return as is
-    if (originalSrc.startsWith('http')) {
-      return originalSrc;
-    }
-    
-    // For local images, you could add optimization parameters
-    // This is a placeholder - in a real app, you'd use a service like Cloudinary or Next.js Image
-    return originalSrc;
-  };
-
-  const optimizedSrc = getOptimizedSrc(src);
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
+const ImprovedImage: React.FC = () => {
   return (
     <div
       ref={imgRef}
@@ -102,80 +21,106 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
             <ImageIcon className="w-8 h-8 text-gray-400" />
           )}
         </div>
-      )}
+      </section>
+      { /* Content Section */ }
+            Improved Image</h1>"""
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"""
+            Professional improved image services
 
-      {/* Error State */}
-      {hasError && (
-        <div className="absolute inset-0 bg-slate-800 flex items-center justify-center">
-          <div className="text-center">
-            <ImageIcon className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-            <p className="text-gray-400 text-sm">Failed to load image</p>
+            designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }"
+      <section className="py-16 px-4">"
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive improved image;
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support;
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our improved image services?</p>
+              <a;
+                href="$1"
+                className="$1"
+              >
+                Contact Us,
+              </a>
+            </div>
           </div>
         </div>
-      )}
+      </section>
 
-      {/* Actual Image */}
-      {isInView && !hasError && (
-        <img
-          src={optimizedSrc}
-          alt={alt}
-          width={width}
-          height={height}
-          sizes={sizes}
-          loading={lazy && !priority ? 'lazy' : 'eager'}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{
-            width: width ? `${width}px` : '100%',
-            height: height ? `${height}px` : 'auto'
-          }}
-        />
-      )}
+      { /* CTA Section */ }"""
+      <section className="py-16 px-4 bg-blue-600">"""
+        <div className=max-w-4xl mx-auto text-center></div>
+          <h2 className="text-3xl font-bold text-white mb-6">""
 
-      {/* Loading Spinner */}
-      {isInView && !isLoaded && !hasError && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our improved image 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today;
+          </a>
         </div>
-      )}
+      </section>
     </div>
-  );
-};
-
-// Preload component for critical images
-export const PreloadImage: React.FC<{ src: string; as?: string }> = ({ 
-  src, 
-  as = 'image' 
-}) => {
-  useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = src;
-    link.as = as;
-    document.head.appendChild(link);
-
-    return () => {
-      document.head.removeChild(link);
-    };
-  }, [src, as]);
-
-  return null;
-};
-
-// Image with blur placeholder
-export const BlurImage: React.FC<ImprovedImageProps & { blurDataURL?: string }> = ({
-  blurDataURL,
-  ...props
-}) => {
-  return (
-    <ImprovedImage
-      {...props}
-      placeholder={blurDataURL}
-    />
-  );
-};
-
+  )
+}
+export default ImprovedImage;
+                We provide comprehensive improved image
+                solutions tailored to your specific needs and requirements.</p>"""
+              <ul className="space-y-3">""""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Custom solutions</li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation</li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support</li></ul></div>"""
+            <div className=bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white></div>"""
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>""""
+              <p className="mb-6">"""
+                Ready to transform your business with our improved image services?</p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our improved image;
+            services can help you achieve your goals.</p>
+          <a"""
+            href="/contact"""""
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"""
+            Get Started Today</a></div></section></div>
+)}
+export default ImprovedImage
+}
 export default ImprovedImage;

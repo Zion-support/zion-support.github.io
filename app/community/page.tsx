@@ -1,214 +1,317 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
 
-export default function Community() {
-  const events = [
+const CommunityPage: React.FC = () => {
+  const communityStats = [
+    { label: 'Active Members', value: '2,500+', icon: Users },
+    { label: 'Discussions', value: '15,000+', icon: MessageCircle },
+    { label: 'Solutions', value: '8,500+', icon: Lightbulb },
+    { label: 'Projects Shared', value: '1,200+', icon: Share2 }
+  ];
+
+  const recentDiscussions = [
     {
-      title: "AI Innovation Summit 2024",
-      date: "March 15, 2024",
-      time: "9:00 AM - 5:00 PM",
-      location: "Virtual Event",
-      description: "Join industry leaders as we explore the latest trends in artificial intelligence and machine learning.",
-      attendees: 500
+      id: 1,
+      title: 'Best practices for AI model deployment in production',
+      author: 'Sarah Chen',
+      replies: 24,
+      views: 156,
+      lastActivity: '2 hours ago',
+      category: 'AI Development',
+      tags: ['deployment', 'production', 'best-practices'],
+      solved: true
     },
     {
-      title: "Tech Talk: Cloud Security Best Practices",
-      date: "March 22, 2024",
-      time: "2:00 PM - 3:00 PM",
-      location: "Online Webinar",
-      description: "Learn about the latest cloud security strategies and how to protect your digital assets.",
-      attendees: 150
+      id: 2,
+      title: 'Custom sentiment analysis model not performing well',
+      author: 'Mike Rodriguez',
+      replies: 12,
+      views: 89,
+      lastActivity: '4 hours ago',
+      category: 'Machine Learning',
+      tags: ['sentiment-analysis', 'model-performance', 'troubleshooting'],
+      solved: false
     },
     {
-      title: "Developer Workshop: React & TypeScript",
-      date: "March 29, 2024",
-      time: "10:00 AM - 4:00 PM",
-      location: "Zion Tech Office",
-      description: "Hands-on workshop covering advanced React patterns and TypeScript best practices.",
-      attendees: 25
+      id: 3,
+      title: 'Showcase: AI-powered customer service chatbot',
+      author: 'Alex Johnson',
+      replies: 18,
+      views: 203,
+      lastActivity: '6 hours ago',
+      category: 'Showcase',
+      tags: ['chatbot', 'customer-service', 'showcase'],
+      solved: false
+    },
+    {
+      id: 4,
+      title: 'API rate limiting strategies for high-traffic applications',
+      author: 'David Kim',
+      replies: 31,
+      views: 178,
+      lastActivity: '8 hours ago',
+      category: 'API Usage',
+      tags: ['rate-limiting', 'scaling', 'performance'],
+      solved: true
     }
   ];
 
-  const initiatives = [
+  const categories = [
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Tech Mentorship Program",
-      description: "Connect with experienced professionals and get guidance on your career journey.",
-      participants: "200+ mentees"
+      name: 'AI Development',
+      description: 'General AI development discussions',
+      icon: Code,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
+      posts: 1250
     },
     {
-      icon: <MessageCircle className="w-8 h-8" />,
-      title: "Developer Forums",
-      description: "Join our active community forums to discuss technology trends and share knowledge.",
-      participants: "1,500+ members"
+      name: 'Machine Learning',
+      description: 'ML algorithms, models, and techniques',
+      icon: TrendingUp,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
+      posts: 890
     },
     {
-      icon: <Award className="w-8 h-8" />,
-      title: "Innovation Challenges",
-      description: "Participate in hackathons and coding challenges to showcase your skills.",
-      participants: "500+ participants"
+      name: 'API Usage',
+      description: 'API integration and usage questions',
+      icon: BookOpen,
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
+      posts: 650
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Open Source Projects",
-      description: "Contribute to our open source initiatives and make a global impact.",
-      participants: "100+ contributors"
+      name: 'Showcase',
+      description: 'Share your AI projects and achievements',
+      icon: Share2,
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
+      posts: 320
+    },
+    {
+      name: 'Troubleshooting',
+      description: 'Get help with technical issues',
+      icon: Lightbulb,
+      color: 'text-red-600',
+      bgColor: 'bg-red-50',
+      posts: 480
+    },
+    {
+      name: 'Feature Requests',
+      description: 'Suggest new features and improvements',
+      icon: MessageCircle,
+      color: 'text-indigo-600',
+      bgColor: 'bg-indigo-50',
+      posts: 150
     }
   ];
 
-  const stats = [
-    { number: "5,000+", label: "Community Members", icon: <Users className="w-6 h-6" /> },
-    { number: "50+", label: "Events Hosted", icon: <Calendar className="w-6 h-6" /> },
-    { number: "100+", label: "Open Source Projects", icon: <Globe className="w-6 h-6" /> },
-    { number: "95%", label: "Member Satisfaction", icon: <Star className="w-6 h-6" /> }
+  const featuredProjects = [
+    {
+      title: 'AI-Powered E-commerce Recommendation Engine',
+      author: 'Emma Wilson',
+      description: 'Built a sophisticated recommendation system using our AI API that increased sales by 35%',
+      image: '/images/projects/recommendation-engine.jpg',
+      likes: 45,
+      comments: 12,
+      tags: ['recommendation-engine', 'e-commerce', 'machine-learning']
+    },
+    {
+      title: 'Real-time Sentiment Analysis Dashboard',
+      author: 'James Park',
+      description: 'Created a live dashboard for monitoring social media sentiment using our NLP API',
+      image: '/images/projects/sentiment-dashboard.jpg',
+      likes: 38,
+      comments: 8,
+      tags: ['sentiment-analysis', 'dashboard', 'real-time']
+    },
+    {
+      title: 'Automated Content Moderation System',
+      author: 'Lisa Zhang',
+      description: 'Developed an AI system for automatically moderating user-generated content',
+      image: '/images/projects/content-moderation.jpg',
+      likes: 52,
+      comments: 15,
+      tags: ['content-moderation', 'automation', 'nlp']
+    }
   ];
 
+export default function Page() {
   return (
     <>
       <Helmet>
-        <title>Community - Zion Tech Group | Tech Community & Events</title>
-        <meta
-          name="description"
-          content="Join our vibrant tech community. Connect with like-minded professionals, attend events, participate in workshops, and grow your career with Zion Tech Group."
-        />
-        <meta
-          name="keywords"
-          content="tech community, developer community, tech events, workshops, mentorship, open source, networking, professional development"
-        />
+        <title>Community - Zion Tech Group</title>
+        <meta name="description" content="Community services and solutions from Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Join Our Community
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Connect with thousands of tech professionals, attend exclusive events, 
-              and be part of a community that's shaping the future of technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Join Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/events"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View Events
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 px-4 bg-gray-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
-                    {stat.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7 xl mx-auto text-center">
+          <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6">
+            Developer Community
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
+            Connect with fellow developers, share your projects, get help, and learn from the community.
+          </p>
+          
+          {/* Community Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {communityStats.map((stat, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <div className="flex items-center justify-center mb-2">
+                  <stat.icon className="w-8 h-8 text-cyan-400 mr-2" />
                 </div>
-              ))}
-            </div>
+                <div className="text-3 xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Join Community
+            </button>
+            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Browse Discussions
+            </button>
           </div>
         </section>
 
-        {/* Events Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Upcoming Events</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join our upcoming events and workshops to learn, network, and grow
-              </p>
-            </div>
+      {/* Categories */}
+      <section className="py-16 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xl font-bold text-white mb-12 text-center">Discussion Categories</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {categories.map((category, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2 xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                <div className="flex items-center mb-4">
+                  <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}>
+                    <category.icon className={`w-6 h-6 ${category.color}`} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
+                    <p className="text-sm text-gray-500">{category.posts} posts</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">{category.description}</p>
+                <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors">
+                  View Discussions
+                </button>
+              </div>
+            ))}
+          </div>
+      </section>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {events.map((event, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+      {/* Recent Discussions */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7 xl mx-auto">
+          <div className="flex items-center justify-between mb-12">
+            <h2 className="text-3 xl font-bold text-white">Recent Discussions</h2>
+            <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+              Start Discussion
+            </button>
+          </div>
+          
+          <div className="space-y-6">
+            {recentDiscussions.map((discussion) => (
+              <div key={discussion.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
+                        {discussion.category}
+                      </span>
+                      {discussion.solved && (
+                        <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center">
+                          <Award className="w-3 h-3 mr-1" />
+                          Solved
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-purple-600 cursor-pointer">
+                      {discussion.title}
+                    </h3>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                      <span>by {discussion.author}</span>
+                      <span>{discussion.replies} replies</span>
+                      <span>{discussion.views} views</span>
+                      <span>{discussion.lastActivity}</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {discussion.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="py-16 px-4">
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xl font-bold text-white mb-12 text-center">Featured Projects</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProjects.map((project, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2 xl transition-all duration-300 hover:scale-105">
+                <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
+                  <div className="text-4 xl">🚀</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex items-center justify-between mb-4">
-                    <Calendar className="w-5 h-5 text-cyan-400" />
-                    <span className="text-sm text-gray-400">{event.date}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
-                  <p className="text-gray-300 mb-4">{event.description}</p>
-                  <div className="space-y-2 text-sm text-gray-400">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {event.time}
-                    </div>
-                    <div className="flex items-center">
-                      <Globe className="w-4 h-4 mr-2" />
-                      {event.location}
-                    </div>
-                    <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-2" />
-                      {event.attendees} attendees
+                    <span className="text-sm text-gray-500">by {project.author}</span>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <span className="flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
+                        {project.likes}
+                      </span>
+                      <span className="flex items-center">
+                        <MessageCircle className="w-4 h-4 mr-1" />
+                        {project.comments}
+                      </span>
                     </div>
                   </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                  <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                    View Project
+                  </button>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Join Community CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-3 xl font-bold text-white mb-6">
+            Ready to Join Our Community?
+          </h2>
+          <p className="text-white/90 mb-8">Connect with thousands of developers building amazing AI applications.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Sign Up Free
+            </button>
+            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Learn More
+            </button>
           </div>
         </section>
-
-        {/* Initiatives Section */}
-        <section className="py-20 px-4 bg-gray-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Community Initiatives</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Get involved in our community programs and make a difference
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {initiatives.map((initiative, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300 text-center">
-                  <div className="text-cyan-400 mb-4 flex justify-center">
-                    {initiative.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{initiative.title}</h3>
-                  <p className="text-gray-300 mb-4">{initiative.description}</p>
-                  <div className="text-cyan-400 font-semibold">{initiative.participants}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Connect with thousands of professionals, attend exclusive events, and be part of something bigger.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Join Our Community
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
-        </section>
-      </div>
-    </>
+    </div>
   );
 }
-

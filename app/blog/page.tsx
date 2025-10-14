@@ -5,9 +5,10 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+export default function Blog() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
   const categories = [
     { id: "all", name: "All Posts" },

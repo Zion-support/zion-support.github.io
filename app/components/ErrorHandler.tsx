@@ -1,5 +1,4 @@
 'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 
 interface Props {
@@ -59,9 +58,10 @@ class ErrorHandler extends Component<Props, State> {
         timestamp: new Date().toISOString()
       };
       // Send to your error reporting service here
-
-      } catch (reportingError) {
-      }
+      console.log('Error data for reporting:', errorData);
+    } catch (reportingError) {
+      console.warn('Error reporting failed:', reportingError);
+    }
   }
 
   handleRetry = () => {

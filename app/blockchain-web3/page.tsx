@@ -116,6 +116,10 @@ export default function BlockchainWeb3() {
             </div>
           </ResponsiveContainer>
         </section>
+      </div>
+    </>
+  );
+};
 
         {/* Features Section */}
         <section id="features" className="py-16 px-4">

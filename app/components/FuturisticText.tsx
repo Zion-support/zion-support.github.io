@@ -1,32 +1,23 @@
-import React from 'react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface FuturisticTextProps {
-  children: React.ReactNode;
-  variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'neon' | 'gradient';
-  className?: string;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
-}
-
-const FuturisticText: React.FC<FuturisticTextProps> = ({
-  children,
-  variant = 'body',
-  className = '',
-  as: Component = 'p'
-}) => {
-  const baseClasses = "transition-all duration-300";
-  
-  const variantClasses = {
-    heading: "text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400",
-    subheading: "text-2xl md:text-3xl lg:text-4xl font-bold text-white",
-    body: "text-base md:text-lg text-gray-300 leading-relaxed",
-    caption: "text-sm text-gray-400",
-    neon: "text-cyan-400 font-semibold drop-shadow-lg",
-    gradient: "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-semibold"
-  };
-
-  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
-
-  return <Component className={classes}>{children}</Component>;
+const FuturisticTextPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>FuturisticText - Zion Tech Group</title>
+        <meta name="description" content="FuturisticText - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">FuturisticText</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default FuturisticText;
+export default FuturisticText

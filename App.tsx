@@ -34,7 +34,6 @@ const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 
 // AI Services Pages
-const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
 const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
 const AICybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
@@ -115,11 +114,21 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
-    }
+    // Simulate initial loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
 
   return (
     <GlobalErrorBoundary>
@@ -146,7 +155,6 @@ function App() {
                                 <Route path="/contact" element={<ContactPage />} />
                                 <Route path="/services" element={<ServicesPage />} />
                                 <Route path="/blog" element={<BlogPage />} />
-                                <Route path="/demo" element={<DemoPage />} />
                                 <Route path="/privacy" element={<PrivacyPage />} />
                                 <Route path="/terms" element={<TermsPage />} />
                                 <Route path="/ai-services" element={<AIServicesPage />} />
@@ -216,6 +224,15 @@ function App() {
                                 <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
                                 <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage />} />
 
+                                {/* IT Services Routes */}
+                                <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+                                <Route path="/devops-services" element={<DevOpsServicesPage />} />
+                                <Route path="/it-consulting" element={<ITConsultingPage />} />
+                                <Route path="/network-security" element={<NetworkSecurityPage />} />
+                                <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
+                                <Route path="/system-integration" element={<SystemIntegrationPage />} />
+                                <Route path="/web-development" element={<WebDevelopmentPage />} />
+
                                 {/* Additional IT Services Routes */}
                                 <Route path="/cloud-consulting" element={<CloudConsultingPage />} />
                                 <Route path="/data-center-solutions" element={<DataCenterSolutionsPage />} />
@@ -224,6 +241,28 @@ function App() {
                                 <Route path="/managed-services" element={<ManagedServicesPage />} />
                                 <Route path="/security-audit" element={<SecurityAuditPage />} />
                                 <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
+
+                                {/* 5G Services Routes */}
+                                <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+                                <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                                <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
+                                <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                                <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                                <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+                                <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
+
+                                {/* Micro SAAS Services Routes */}
+                                <Route path="/micro-saas-services" element={<MicroSaaSServicesPage />} />
+                                <Route path="/project-management-tool" element={<ProjectManagementToolPage />} />
+                                <Route path="/customer-relationship-manager" element={<CustomerRelationshipManagerPage />} />
+                                <Route path="/inventory-management-system" element={<InventoryManagementSystemPage />} />
+                                <Route path="/financial-reporting-tool" element={<FinancialReportingToolPage />} />
+                                <Route path="/employee-time-tracker" element={<EmployeeTimeTrackerPage />} />
+                                <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
+                                <Route path="/email-marketing-platform" element={<EmailMarketingPlatformPage />} />
+                                <Route path="/website-analytics-tool" element={<WebsiteAnalyticsToolPage />} />
+                                <Route path="/task-automation-workflow" element={<TaskAutomationWorkflowPage />} />
 
                                 {/* Catch all route */}
                                 <Route path="*" element={
