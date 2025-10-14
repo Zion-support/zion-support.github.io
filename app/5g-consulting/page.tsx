@@ -6,16 +6,16 @@ import EnhancedSEO from '../components/EnhancedSEO';
 const FiveGConsultingPage = () => {
   const services = [
     {
-      title: '5G Strategy Development';,
-      description: 'Comprehensive 5G implementation strategies tailored to your business needs.';
+      title: '5G Strategy Development',
+      description: 'Comprehensive 5G implementation strategies tailored to your business needs.',
     },
     {
-      title: 'Security Assessment';,
-      description: 'Complete security evaluation for 5G network implementation.';
+      title: 'Security Assessment',
+      description: 'Complete security evaluation for 5G network implementation.',
     },
     {
-      title: 'Team Training';,
-      description: 'Expert training for your team on 5G technologies and best practices.';
+      title: 'Team Training',
+      description: 'Expert training for your team on 5G technologies and best practices.',
     }
   ];
 
@@ -47,7 +47,7 @@ const FiveGConsultingPage = () => {
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium";
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -59,7 +59,7 @@ const FiveGConsultingPage = () => {
         <div className="text-center">
           <Link 
             to="/contact" 
-            className="inline-flex items-center bg-blue-600 hover: bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors";
+            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
           >
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />
