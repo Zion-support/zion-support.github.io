@@ -202,7 +202,7 @@ onChange={() => setFontSize(size)}
             </p>
           </div>
           <button
-            onClick={toggleVisibility;
+            onClick={toggleVisibility}
             className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""
           >
             Close

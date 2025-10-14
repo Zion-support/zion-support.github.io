@@ -112,7 +112,7 @@ const ContactPage: React.FC = () => {
                   <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>'
                   <button;
                     onClick={() => {
-                      setIsSubmitted(false);
+                      setIsSubmitted(false)}
                       setFormData({
                         name: ,'
                         email: ,'

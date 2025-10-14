@@ -8,7 +8,7 @@ const Contact: React.FC = () => {,
     name: ''
     email: ''
     company: ''
-    message: '',
+    message: '')
   });
   const handleChange = () => {
     setFormData({

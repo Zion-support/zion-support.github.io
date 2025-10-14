@@ -124,7 +124,7 @@ export default function ContactPage()    {
               </p>
               <button
                 onClick={() => {
-                  setIsSubmitted(false);
+                  setIsSubmitted(false)}
                   setFormData({
                     name: '',
                     email: '',

@@ -67,7 +67,8 @@ const Page = () => {
               <p>Description of feature 3</p>
             </div>
           </div>
-</section>
+        </div>
+      </div>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">

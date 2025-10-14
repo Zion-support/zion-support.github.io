@@ -19,7 +19,7 @@ const PrivacyPage: React.FC = () => {
         'Communication: To send you updates, notifications, and respond to your inquiries.','
         'Billing and Payments: To process payments and manage your account.','
         'Analytics: To analyze usage patterns and improve our services.','
-        'Legal Compliance: 'To comply with applicable laws and regulations.,'
+        'Legal Compliance: 'To comply with applicable laws and regulations.'
       ]
     },
     {
@@ -48,7 +48,7 @@ const PrivacyPage: React.FC = () => {
         'Correction: You can request correction of inaccurate or incomplete information.','
         'Deletion: You can request deletion of your personal information.','
         'Portability: You can request a copy of your data in a portable format.','
-        'Opt-out: 'You can opt-out of marketing communications at any time.,'
+        'Opt-out: 'You can opt-out of marketing communications at any time.'
       ]
     },
     {

@@ -193,7 +193,7 @@ name: 'AI Services',
           <div className="hidden lg: 'flex space-x-8 items-center">"','
             {/* Search Button */}
 <button
-              onClick={toggleSearch;
+              onClick={toggleSearch}
               className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
               aria-label="Search"
             ></button>
@@ -210,7 +210,7 @@ name: 'AI Services',
             {mainNavItems.map((item) => (
 <Link
                 key={item.name;
-                to={item.path;
+                to={item.path}
                 className={`relative group hover:text-cyan-400 transition-all duration-300 font-medium ${
                   location.pathname === item.path ? 'text-cyan-400' : 'text-white'
                 }`}
@@ -225,7 +225,7 @@ name: 'AI Services',
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
-                onClick={toggleAiServices;
+                onClick={toggleAiServices}
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
                 <span>AI Services</span>
@@ -267,7 +267,7 @@ name: 'AI Services',
             {/* IT Services Dropdown */}
             <div className="relative">
               <button
-                onClick={toggleItServices;
+                onClick={toggleItServices}
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
                 <span>IT Services</span>
@@ -298,7 +298,7 @@ name: 'AI Services',
             {/* Micro SAAS Dropdown */}
             <div className="relative">
               <button
-                onClick={toggleMicroSaas;
+                onClick={toggleMicroSaas}
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
                 <span>Micro SAAS</span>
@@ -348,7 +348,7 @@ name: 'AI Services',
           {/* Mobile menu button */}
 <div className="lg:hidden">
             <button
-              onClick={toggleMenu;
+              onClick={toggleMenu}
               className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -386,14 +386,14 @@ name: 'AI Services',
                   }`}
                   onClick={toggleMenu;
                 >
-                  {item.name;
+                  {item.name}
                 </Link>
               ))}
               
               {/* Mobile AI Services */}
               <div>
                 <button
-                  onClick={toggleAiServices;
+                  onClick={toggleAiServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
                 >
                   <span>AI Services</span>
@@ -423,7 +423,7 @@ name: 'AI Services',
               {/* Mobile IT Services */}
               <div>
                 <button
-                  onClick={toggleItServices;
+                  onClick={toggleItServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"
                 >
                   <span>IT Services</span>
@@ -452,7 +452,7 @@ name: 'AI Services',
               {/* Mobile Micro SAAS */}
               <div>
                 <button
-                  onClick={toggleMicroSaas;
+                  onClick={toggleMicroSaas}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
                 >
                   <span>Micro SAAS</span>
@@ -483,7 +483,7 @@ name: 'AI Services',
                 variant="primary"
                 size="lg"
                 className="mt-4 flex items-center justify-center space-x-2"
-onClick={toggleMenu;
+onClick={toggleMenu}
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />"`

@@ -56,7 +56,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
         method: 'POST','
         headers: {
 'Content-Type': 'application/json',
-        },
+        })
         body: JSON.stringify(errorData),
       });
     } catch (reportingError) {
@@ -166,7 +166,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
             </div>
             {this.state.errorId && (
 <p className="text-xs text-gray-400 mt-4">
-                Error ID: {this.state.errorId;
+                Error ID: {this.state.errorId}
               </p>
             )}
           </div>
