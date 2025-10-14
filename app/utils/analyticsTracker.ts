@@ -10,6 +10,7 @@ export const analyticsTracker = {
   },
   
   trackClick: (element: string, location: string) => {
+    if (typeof window !== 'undefined') {
       window.gtag('event', 'click', {
         event_category: 'engagement',
         event_label: element,
@@ -19,6 +20,7 @@ export const analyticsTracker = {
   },
   
   trackFormSubmit: (formName: string, success: boolean) => {
+    if (typeof window !== 'undefined') {
       window.gtag('event', 'form_submit', {
         event_category: 'engagement',
         event_label: formName,
@@ -28,6 +30,7 @@ export const analyticsTracker = {
   },
   
   trackConversion: (conversionId: string, value?: number) => {
+    if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
         send_to: conversionId,
         value: value;
