@@ -42,55 +42,27 @@ const PagePage = () => {
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* Metrics Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {metrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center mb-4">
-                  {metric.icon}
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {metric.value}
-                </div>
-                <div className="text-gray-300">
-                  {metric.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Analytics Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI-driven analytics tools that help you understand your data and make informed decisions.
+        
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Predictive Analytics</h3>
+            <p className="text-gray-300">
+              Leverage machine learning to predict future trends and make data-driven decisions.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-4">
-                    {feature.title}
-                  </h3>
-                </div>
-                <p className="text-gray-300">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Real-time Insights</h3>
+            <p className="text-gray-300">
+              Get instant analytics and monitoring with our real-time data processing capabilities.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Custom Dashboards</h3>
+            <p className="text-gray-300">
+              Visualize your data with interactive dashboards tailored to your business needs.
+            </p>
           </div>
         </div>
       </section>
