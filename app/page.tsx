@@ -224,42 +224,43 @@ const HomePage: React.FC = () => {
             </div>
           </section>
 
-        {/* Contact Section */}
-        <section className="py-20 bg-gray-900">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Contact us today to discuss how our AI and IT solutions can accelerate your success.
-              </p>
-            </div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
-                    <Phone className="w-8 h-8 text-white" />
+          {/* Contact Section */}
+          <section className="py-20 bg-gray-900">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Transform Your Business?
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Contact us today to discuss how our AI and IT solutions can accelerate your success.
+                </p>
+              </div>
+              
+              <div className="max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8 text-center">
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+                      <Phone className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+                    <p className="text-gray-300">+1 (555) 123-4567</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
-                </div>
-                
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
-                    <Mail className="w-8 h-8 text-white" />
+                  
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
+                      <Mail className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+                    <p className="text-gray-300">info@ziontech.com</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300">info@ziontech.com</p>
-                </div>
-                
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                    <MapPin className="w-8 h-8 text-white" />
+                  
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                      <MapPin className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+                    <p className="text-gray-300">123 Tech Street, Innovation City</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300">123 Tech Street, Innovation City</p>
                 </div>
               </div>
             </div>
