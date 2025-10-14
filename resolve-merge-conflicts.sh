@@ -1,40 +1,20 @@
 #!/bin/bash
 
-# Script to resolve all merge conflicts by removing conflict markers
-# This script will clean up all merge conflict markers from the codebase
-
 echo "Resolving merge conflicts..."
 
-# Find all files with merge conflict markers
-CONFLICT_FILES=$(grep -r "<<<<<<< HEAD" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" | cut -d: -f1 | sort -u)
+# Accept our version for content conflicts
+git checkout --ours App.tsx
+git checkout --ours App_minimal.tsx
+git checkout --ours App_test.tsx
+git checkout --ours EnhancedFooter.tsx
+git checkout --ours SidebarNavigation.tsx
 
-echo "Found conflict files:"
-echo "$CONFLICT_FILES"
+# Remove files that were deleted in our branch (accept deletion)
+git rm api/create-payment-intent.js
+git rm -rf app-broken/
+git rm -rf app-disabled/
 
-# Process each file
-for file in $CONFLICT_FILES; do
-    echo "Processing $file..."
-    
-    # Create a backup
-    cp "$file" "$file.backup"
-    
-    # Remove merge conflict markers and keep the content after =======
-    # This is a simple strategy - in production you'd want more sophisticated conflict resolution
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-    
-    echo "Resolved conflicts in $file"
-done
+# Add resolved files
+git add App.tsx App_minimal.tsx App_test.tsx EnhancedFooter.tsx SidebarNavigation.tsx
 
-echo "Merge conflict resolution completed!"
-
-# Check if there are any remaining conflict markers
-REMAINING_CONFLICTS=$(grep -r "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" | wc -l)
-
-if [ $REMAINING_CONFLICTS -gt 0 ]; then
-    echo "Warning: $REMAINING_CONFLICTS conflict markers still remain"
-    echo "Files with remaining conflicts:"
-    grep -r "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" | cut -d: -f1 | sort -u
-else
-    echo "All merge conflicts resolved successfully!"
-fi
+echo "Merge conflicts resolved. Ready to commit."

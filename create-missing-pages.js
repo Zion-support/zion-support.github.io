@@ -1,62 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import React from 'react';
-export default ${title}Page;`;
-// List of pages that need to be created based on App.tsx imports;
-const missingPages = [
-  'pricing', 'blog', 'case-studies', 'careers', 'ai-services', 'it-services', 
-  'micro-saas', 'consultation', 'support', 'privacy', 'terms', 'cookies', 
-  'sitemap', 'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 
-  'ai-cybersecurity', 'ai-crm', 'ai-data-analytics', 'ai-healthcare', 
-  'ai-financial-services', 'ai-computer-vision', 'ai-voice-solutions', 
-  'ai-ecommerce-solutions', 'ai-hr-solutions', 'ai-content-generation', 
-  'ai-workflow-automation', 'ai-document-processing', 'ai-predictive-analytics', 
-  'ai-edge-computing', 'ai-video-analysis', 'ai-speech-synthesis', 
-  'ai-recommendation-engine', 'ai-sentiment-analysis', 'ai-chatbot-enterprise', 
-  'ai-content-moderation', 'ai-predictive-modeling', 'ai-document-intelligence', 
-  'ai-conversation-analytics', 'ai-supply-chain-ai', 'ai-healthcare-diagnostics', 
-  'ai-financial-forecasting', 'ai-iot-analytics', 'ai-conversational-ai', 
-  'ai-automated-testing', 'ai-knowledge-management', 'ai-customer-churn', 
-  'ai-automated-reporting', 'ai-voice-assistant', 'ai-content-generation-pro',
-  'cloud-infrastructure', 'cybersecurity-solutions', 'web-development', 
-  'mobile-development', 'api-development', 'database-management', 'devops-cicd', 
-  'it-support', 'data-analytics-bi', 'custom-software', 'network-infrastructure', 
-  'it-asset-management', 'it-security-services', 'it-project-management', 
-  'cloud-native-development', 'ai-integration-services', 'blockchain-development', 
-  'iot-development', 'e-commerce-development', 'api-development-advanced', 
-  'data-engineering', 'cybersecurity-advanced', 'cloud-migration-advanced', 
-  'devops-advanced', 'machine-learning-ops', 'enterprise-integration', 
-  'performance-optimization', 'disaster-recovery-advanced', 'compliance-automation', 
-  'cloud-cost-optimization', 'security-automation', 'data-visualization', 
-  'workflow-automation', 'cloud-native-security', 'team', 'partners', 'status', 
-  'faq', 'docs', 'api-docs', 'community', 'compliance';
-];
-// Template for page components;
- `'use client';
-  return (
-    <div>Content</div>
-  );
-        <title>${title} - Zion Tech Group</title>
-                ${title}
-              Professional ${title.toLowerCase()} services by Zion Tech Group.
-            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
-              We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
-              Contact us to learn more about our services.;
-              Contact Us;
-  );
-};
-
-// Create missing pages;
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-  const pageDir = path.join('/workspace/app', pageName);
-const pageFile = path.join(pageDir, 'page.tsx');
-  // Create directory if it doesn't exist;
-  if (!fs.existsSync(pageDir)) {
-    fs.mkdirSync(pageDir, { recursive: true });
-  // Create page file if it doesn't exist;
-  if (!fs.existsSync(pageFile)) {
-    fs.writeFileSync(pageFile, pageTemplate(pageName, title));
-    console.log(`Created: ${pageFile}`);
-});
-console.log('Missing pages creation completed!');
+'use client';';
+ import { Helmet } from 'react-helmet-async'; export default function CreateMissingPages.js() {} return ( <>Helme t><//titl e>Create Missing Pages.js - Zion Tech Group</titl e><//meta nam e="description" conten t="Professional create missing pages.js services by Zion Tech Group." />"" </Helme t><//div classNam e="min-h-screen bg-white">"" {/* Hero Section */} <section classNam e="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"" <div classNam e="max-w-6xl mx-auto text-center"></div>""
+      </div>"" <h1 classNam e="text-5xl font-bold text-gray-900 mb-6">"; Create Missing Pages.js </h 1><//p classNam e="text-xl text-gray-600 max-w-3xl mx-auto">"; Professional create missing pages.js services by Zion Tech Group. </p><///di v><///sectio n> {/* Content Section */} <section classNam e="py-20 px-4">"" <div classNam e="max-w-6xl mx-auto"></div>""
+      </div>"" <div classNam e="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>""
+      </div>"" <div classNam e="bg-white p-6 rounded-lg shadow-lg"></div>""
+      </div>"" <h3 classNam e="text-2xl font-bold text-gray-900 mb-4">Professional Service</h 3>"" <p classNam e="text-gray-600">High-quality professional services tailored to your needs.</p>"" </di v><//div classNam e="bg-white p-6 rounded-lg shadow-lg">"" <h3 classNam e="text-2xl font-bold text-gray-900 mb-4">Expert Team</h 3>"" <p classNam e="text-gray-600">Experienced professionals with deep industry knowledge.</p>"" </di v><//div classNam e="bg-white p-6 rounded-lg shadow-lg">"" <h3 classNam e="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h 3>"" <p classNam e="text-gray-600">Round-the-clock support to ensure your success.</p>"" </di v><///di v><///di v><///sectio n> {/* CTA Section */} <section classNam e="py-20 px-4 bg-gray-900">"" <div classNam e="max-w-4xl mx-auto text-center"></div>"")
+      </div>"" <h2 classNam e="text-4xl font-bold text-white mb-6">"; Ready to Get Started? </h 2><//p classNam e="text-xl text-gray-300 mb-8">"; Contact us today to learn more about our services and how they can benefit your organization. </p><//button classNam e="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">"; Get Started </butto n><///di v><///sectio n><///di v><///> ); }'""'"''
+"

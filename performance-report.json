@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T05:28:44.669Z",
-=======
-  "timestamp": "2025-10-13T05:29:31.527Z",
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
+  "timestamp": "2025-10-14T00:24:52.536Z",
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",

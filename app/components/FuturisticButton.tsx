@@ -1,104 +1,185 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { LucideIcon } from 'lucide-react';
+
+interface FuturisticButtonProps {
+  children: React.ReactNode;
+  href?: string;
+  to?: string;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  icon?: LucideIcon;
+  iconPosition?: 'left' | 'right';
+  disabled?: boolean;
+  loading?: boolean;
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
+  children, 
+  className = '',''
+  variant = 'primary',''
+  size = 'md',''
+  icon,
+  onClick,)
+  type = 'button''}) => {';
+const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2'';
+const variantClasses = {
+
+    primary: "bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 focus:ring-blue-500",';"
+    secondary: "bg-white/10 text-white border border-white/20 hover:bg-white/20 focus:ring-white/50",';
+    outline: 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white focus:ring-blue-500'';
+  }";
+const sizeClasses = { sm: "px-4 py-2 text-sm",';"
+    md: "px-6 py-3 text-base",';
+    lg: 'px-8 py-4 text-lg''; }"
+    primary: "bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 focus:ring-blue-500",'"
+    secondary: "bg-white/10 text-white border border-white/20 hover:bg-white/20 focus:ring-white/50",'
+    outline: 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white focus:ring-blue-500''}";
+const sizeClasses = { sm: "px-4 py-2 text-sm",'"
+    md: "px-6 py-3 text-base",'
+    lg: 'px-8 py-4 text-lg'' }
+  children: React.ReactNode;
+  className?: string;'
+  variant?: 'primary' | 'secondary' | 'outline';'
+  size?: 'sm' | 'md' | 'lg';
+  icon?: React.ReactNode;
+  onClick?: () => void;'
+  type?: 'button' | 'submit' | 'reset';}
+}
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ children, '
+  className = '',';'
+  variant = 'primary',';'
+  size = 'md',';
+  icon,
+  onClick,'
+  type = 'button''; })
+}) => {';
+const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const variantClasses = {'"
+    primary: "bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 focus:ring-blue-500",';'"
+    secondary: "bg-white/10 text-white border border-white/20 hover:bg-white/20 focus:ring-white/50",';'
+    outline: 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white focus:ring-blue-500'';}
+  };
+  const sizeClasses = { '"
+    sm: "px-4 py-2 text-sm",';'"
+    md: "px-6 py-3 text-base",';'
+    lg: 'px-8 py-4 text-lg''; }
+  };
+  return (
+    <button
+      type={ type }
+      onClick={ onClick }
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+    >"
+      {icon && <span className="mr-2">{icon}</span>}
+      { children }
+
+    </button>)
+  );
+export default FuturisticButton;
+"
+    >{icon && <span className="mr-2">{icon}</span>}
+      { children }
+
+    </button>
+  );
+export default FuturisticButton
+
+};
+export default FuturisticButton;'
+=======
+import React from 'react';
 
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  href?: string;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-  icon?: React.ReactNode;
-  className?: string;
   disabled?: boolean;
+>>>>>>> origin/main
+  className?: string;
 }
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children,
-  onClick,
+<<<<<<< HEAD
   href,
+  to,
+  onClick,
+  type = 'button',
   variant = 'primary',
   size = 'md',
-  icon,
-  className = '',
-  disabled = false
+  icon: Icon,
+  iconPosition = 'right',
+  disabled = false,
+  loading = false,
+  className = ''
 }) => {
-  const baseClasses = `
-    relative group inline-flex items-center justify-center font-semibold
-    transition-all duration-300 ease-out transform
-    ${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105 active:scale-95'}
-    ${className}
-  `;
-
+  const baseClasses = "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 disabled:opacity-50 disabled:cursor-not-allowed";
+  
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    sm: "px-4 py-2 text-sm",
+    md: "px-6 py-3 text-base",
+    lg: "px-8 py-4 text-lg"
   };
-
+  
   const variantClasses = {
-    primary: `
-      bg-gradient-to-r from-cyan-500 to-purple-500 
-      text-white 
-      rounded-lg 
-      shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl
-      before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-cyan-400 before:to-purple-400 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100
-      after:absolute after:inset-0 after:rounded-lg after:bg-gradient-to-r after:from-cyan-500 after:to-purple-500 after:blur-sm after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-50 hover:after:-z-10
-    `,
-    secondary: `
-      bg-gradient-to-r from-slate-700 to-slate-800 
-      text-white 
-      rounded-lg 
-      border border-white/20
-      shadow-lg hover:shadow-white/10 hover:shadow-2xl
-      hover:border-white/40
-    `,
-    outline: `
-      border-2 border-cyan-400 
-      text-cyan-400 
-      rounded-lg 
-      hover:bg-cyan-400 hover:text-white
-      shadow-lg hover:shadow-cyan-400/25 hover:shadow-2xl
-    `,
-    ghost: `
-      text-white/80 
-      rounded-lg 
-      hover:bg-white/10 hover:text-white
-      backdrop-blur-sm
-    `
+    primary: "bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 focus:ring-cyan-400 shadow-lg hover:shadow-xl",
+    secondary: "bg-gradient-to-r from-slate-700 to-slate-800 text-white hover:from-slate-600 hover:to-slate-700 focus:ring-slate-400 shadow-lg hover:shadow-xl",
+    outline: "border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 focus:ring-cyan-400",
+    ghost: "text-cyan-400 hover:bg-cyan-400/10 focus:ring-cyan-400"
   };
-
-  const buttonClasses = `
-    ${baseClasses}
-    ${sizeClasses[size]}
-    ${variantClasses[variant]}
-  `;
-
+  
+  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+  
   const content = (
     <>
-      {icon && <span className="mr-2">{icon}</span>}
-      <span className="relative z-10">{children}</span>
-      {variant === 'primary' && (
-        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+        </div>
       )}
-      
-      {/* Animated background */}
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10"></div>
+      <span className={loading ? 'opacity-0' : 'flex items-center space-x-2'}>
+        {Icon && iconPosition === 'left' && <Icon className="w-4 h-4" />}
+        {children}
+        {Icon && iconPosition === 'right' && <Icon className="w-4 h-4" />}
+        {!Icon && iconPosition === 'right' && <ArrowRight className="w-4 h-4" />}
+      </span>
     </>
   );
-
+  
   if (href) {
     return (
-      <a href={href} className={buttonClasses}>
+      <a
+        href={href}
+        className={classes}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {content}
       </a>
     );
   }
-
+  
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={classes}
+        onClick={onClick}
+      >
+        {content}
+      </Link>
+    );
+  }
+  
   return (
     <button
+      type={type}
+      className={classes}
       onClick={onClick}
-      disabled={disabled}
-      className={buttonClasses}
+      disabled={disabled || loading}
     >
       {content}
     </button>
@@ -106,3 +187,8 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 };
 
 export default FuturisticButton;
+>>>>>>> origin/main
+>>>>>>> origin/main
+=======
+"
+>>>>>>> origin/main

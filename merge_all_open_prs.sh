@@ -5,9 +5,9 @@
 
 set -e
 
-echo "=========================================="
+echo ""
 echo "Starting Comprehensive PR Merge Process"
-echo "=========================================="
+echo ""
 echo ""
 
 # List of PRs to merge (from newest to oldest)
@@ -100,14 +100,14 @@ for pr_info in "${PRS[@]}"; do
   echo ""
 done
 
-echo "=========================================="
+echo ""
 echo "Merge Summary"
-echo "=========================================="
+echo ""
 echo "Total PRs processed: ${#PRS[@]}"
 echo "Successfully merged: $MERGED"
 echo "Failed: $FAILED"
 echo "Skipped: $SKIPPED"
-echo "=========================================="
+echo ""
 
 # Push changes to main
 if [ $MERGED -gt 0 ]; then

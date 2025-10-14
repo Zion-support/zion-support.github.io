@@ -1,304 +1,231 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import {
-  Cloud,
-  Shield,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-} from "lucide-react";
+
+import { Cloud, Shield,  } from "lucide-react";
 
 const CloudMigrationProPage = () => {
   const features = [
     {
-      icon: Cloud,
-      title: "Seamless Migration",
-      description:
-        "Zero-downtime migration to cloud infrastructure with minimal disruption",
+      icon: <Cloud className="w-6 h-6 text-cyan-400" />,
+      title: 'Seamless Migration',
+      description: 'Zero-downtime migration to cloud platforms with minimal business disruption'
     },
     {
-      icon: Zap,
-      title: "Performance Optimization",
-      description:
-        "Optimize your cloud resources for maximum performance and cost efficiency",
+      icon: <Shield className="w-6 h-6 text-purple-400" />,
+      title: 'Security First',
+      description: 'Enterprise-grade security protocols throughout the migration process'
     },
     {
-      icon: Shield,
-      title: "Security First",
-      description: "Enterprise-grade security throughout the migration process",
+      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      title: 'Fast Migration',
+      description: 'Accelerated migration timelines with automated tools and processes'
     },
+    {
+      icon: <Database className="w-6 h-6 text-green-400" />,
+      title: 'Data Migration',
+      description: 'Safe and secure migration of databases and data warehouses'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-orange-400" />,
+      title: '24/7 Support',
+      description: 'Round-the-clock support during and after migration'
+    },
+    {
+      icon: <Target className="w-6 h-6 text-pink-400" />,
+      title: 'Custom Solutions',
+      description: 'Tailored migration strategies for your specific business needs'
+    }
+  ];
+
+  const migrationSteps = [
+    {
+      step: '01',
+      title: 'Assessment',
+      description: 'Comprehensive analysis of your current infrastructure and requirements'
+    },
+    {
+      step: '02',
+      title: 'Planning',
+      description: 'Detailed migration strategy and timeline development'
+    },
+    {
+      step: '03',
+      title: 'Migration',
+      description: 'Seamless execution of the migration with minimal downtime'
+    },
+    {
+      step: '04',
+      title: 'Optimization',
+      description: 'Post-migration optimization and performance tuning'
+    }
+  ];
+
+  const migrationFeatures = [
+    {
+      category: 'Migration Types',
+      items: ['Lift & Shift', 'Replatforming', 'Refactoring', 'Hybrid Cloud', 'Multi-Cloud', 'Cloud-to-Cloud']
+    },
+    {
+      category: 'Platforms',
+      items: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Private Cloud', 'Hybrid Solutions', 'Multi-Cloud']
+    },
+    {
+      category: 'Services',
+      items: ['Application Migration', 'Database Migration', 'Data Migration', 'Workload Migration', 'Legacy Modernization', 'Cloud Native Development']
+    },
+    {
+      category: 'Support',
+      items: ['24/7 Monitoring', 'Migration Support', 'Training & Documentation', 'Post-Migration Support', 'Performance Optimization', 'Cost Optimization']
+    }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$2,999",
-      period: "/project",
-      description: "Perfect for small to medium businesses",
+      name: 'Basic Migration',
+      price: '$2,999',
+      period: '/project',
+      description: 'Perfect for small applications',
       features: [
-        "Up to 10 servers",
-        "Basic migration planning",
-        "Email support",
-        "Standard documentation",
+        'Up to 5 applications',
+        'Basic migration support',
+        'Email support',
+        'Standard security',
+        '30-day warranty'
       ],
-      popular: false,
+      popular: false
     },
     {
-      name: "Professional",
-      price: "$7,999",
-      period: "/project",
-      description: "Ideal for growing enterprises",
+      name: 'Professional Migration',
+      price: '$7,999',
+      period: '/project',
+      description: 'Ideal for medium businesses',
       features: [
-        "Up to 50 servers",
-        "Advanced migration planning",
-        "Priority support",
-        "Custom integrations",
-        "Performance optimization",
-        "Security assessment",
+        'Up to 20 applications',
+        'Advanced migration tools',
+        '24/7 phone support',
+        'Enhanced security',
+        '90-day warranty',
+        'Performance optimization'
       ],
-      popular: true,
+      popular: true
     },
     {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored for large organizations",
+      name: 'Enterprise Migration',
+      price: '$19,999',
+      period: '/project',
+      description: 'For large organizations',
       features: [
-        "Unlimited servers",
-        "Custom migration strategy",
-        "Dedicated support team",
-        "White-label options",
-        "API access",
-        "Custom reporting",
-        "24/7 monitoring",
+        'Unlimited applications',
+        'Custom migration strategy',
+        'Dedicated support team',
+        'Enterprise security',
+        '1-year warranty',
+        'Custom integrations',
+        'SLA guarantee'
       ],
-      popular: false,
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO",
-      company: "TechCorp Inc.",
-      content:
-        "The cloud migration was seamless. Our performance improved by 40% and costs reduced by 30%.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      role: "IT Director",
-      company: "Global Solutions Ltd.",
-      content:
-        "Outstanding expertise and support throughout the entire migration process.",
-      rating: 5,
-    },
+      popular: false
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <Layout>
       <Helmet>
-        <title>Cloud Migration Pro | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Professional cloud migration services with zero downtime, security-first approach, and performance optimization."
-        />
+        <title>Cloud Migration Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional cloud migration services with zero downtime. Expert migration to AWS, Azure, Google Cloud with enterprise-grade security." />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Cloud Migration
-            </span>
-            <br />
-            <span className="text-white">Pro</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Seamlessly migrate your infrastructure to the cloud with our expert
-            team. Zero downtime, maximum security, and optimized performance
-            guaranteed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cloud Migration Pro?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cloud migration experts deliver seamless, secure, and
-              optimized solutions.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Migration Packages
-            </h2>
-            <p className="text-gray-300 text-lg">
-              Choose the migration package that fits your needs
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 relative ${plan.popular ? "border-cyan-400" : ""}`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {plan.name}
-                </h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">
-                  {plan.price}
-                  <span className="text-lg text-gray-400">{plan.period}</span>
-                </div>
-                <p className="text-gray-300 mb-6">{plan.description}</p>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-center text-sm text-gray-300"
-                    >
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <div className="relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Cloud Migration
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  {" "}Pro
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Seamlessly migrate your applications and data to the cloud with zero downtime. 
+                Our expert team ensures a smooth transition with enterprise-grade security.
+>>>>>>> origin/main
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className={`w-full block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700"
-                      : "border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900"
-                  }`}
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Get Started
+                  Start Migration
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                >
+                  Get Free Assessment
                 </Link>
               </div>
-            ))}
+            </div>
+          </div>
+          <div className="mt-12">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+              Get Started Today;
+            </button>
           </div>
         </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join hundreds of companies that have successfully migrated to the
-              cloud.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                <div className="font-semibold text-white">
-                  {testimonial.name}
-                </div>
-                <div className="text-sm text-gray-400">{testimonial.role}</div>
-                <div className="text-sm text-gray-500">
-                  {testimonial.company}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Ready to Migrate to the Cloud?
-          </h2>
-          <p className="text-gray-300 text-lg mb-8">
-            Let our experts handle your cloud migration with zero downtime and
-            maximum security
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Your Migration
-            </Link>
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Schedule Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
-  );
-};
+  )
 
-export default CloudMigrationProPage;
+const HomePage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  ); }
+>>>>>>> origin/main
+            Page</h1>
+          <p className="text-xl text-gray-600 mb-8">"
+            Professional page solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+                Expert Solutions</h3>
+              <p className="text-blue-700">"
+                Our team of experts delivers cutting-edge page solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">"
+                Custom Implementation</h3>
+              <p className="text-green-700">"
+                Tailored page implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+                24/7 Support</h3>
+              <p className="text-purple-700">"
+                Round-the-clock support for all your page needs.</p></div></div>
+          <div className="mt-12">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+              Get Started Today</button></div></div></div></div>
+  )
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+<<<<<<< HEAD
+}''
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main

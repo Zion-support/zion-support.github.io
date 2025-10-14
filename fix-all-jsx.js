@@ -1,48 +1,89 @@
-import fs from 'fs';
-#!/usr/bin/env node;
-// Function to fix all remaining JSX issues;
+import React from "react"";
+import fs from "fs"";
+import path from "path"";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename)
+// Function to fix all JSX and syntax issues;
 function fixAllJSX(content) {
-  let fixed = content;
-  // Fix missing closing div tags - look for patterns where divs are not properly closed;
-  // This is a more aggressive approach to fix JSX structure;
-  // Fix common patterns where closing divs are missing;
-  fixed = fixed.replace(/(\s*)<\/Link>\s*<\/div>\s*<\/div>\s*\);/g, '$1</Link>\n      </div>\n    </div>\n  );');
-  // Fix patterns where the main container div is missing its closing tag;
-  fixed = fixed.replace(/(\s*)<\/div>\s*\);/g, '$1</div>\n  );');
-  // Fix patterns where multiple divs are missing closing tags;
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*\);/g, '$1</div>\n    </div>\n  );');
-  // Fix specific patterns for 5G pages;
-  fixed = fixed.replace(/(\s*)<\/Link>\s*<\/div>\s*\);/g, '$1</Link>\n      </div>\n    </div>\n  );');
-  // Fix footer patterns;
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/footer>/g, '$1</div>\n      </div>\n    </footer>');
-  // Fix patterns where the grid container is missing closing div;
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </footer>');
-  // Fix patterns where contact section is missing closing div;
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>');
-  return fixed;
+  // Fix extra quotes at the end of lines"
+  content = content.replace(/"\s*$/gm, "")
+  // Fix malformed JSX fragments"
+  content = content.replace(/<React\.Fragment><\/React>/g, "<React.Fragment>")"
+  content = content.replace(/<\/React>/g, "</React.Fragment>")
+  // Fix malformed Helmet tags"
+  content = content.replace(/<Helmet></Helmet>"<\/Helmet>/g, "<Helmet></Helmet>")"
+  content = content.replace(/<\/Helmet>/g, "</Helmet>")
+  // Fix malformed div tags"
+  content = content.replace(/<div></div><\/div>/g, "<div></div>")"
+  content = content.replace(/<\/div>/g, "</div>")
+  // Fix malformed title tags"
+  content = content.replace(/<title>([^<]*)<\/title>>"""/g, "<title>$1</title>")"
+  content = content.replace(/<title>([^<]*)<\/title>>"/g, "<title>$1</title>")
+  // Fix malformed meta tags
+  content = content.replace(")
+    /<meta\s+name="([^"]*)"\s+content="([^"]*)"\s*\/><\/Helmet>/g,"
+    '<meta name="$1" content="$2" />',
+  )
+  // Fix malformed JSX structure
+  content = content.replace(")
+    /<React\.Fragment>\s*<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)"\s+content="([^"]*)"\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>/g,"
+    '<React.Fragment>\n      <Helmet></Helmet>\n        <title>$1</title>\n        <meta name="$2" content="$3" />\n      </Helmet>\n      <div></div>\n        <div></div>\n          <h1 className="text-4xl font-bold text-white mb-8">$1</h1>\n          <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>\n        </div>\n      </div>\n    </React.Fragment>',
+  )
+  // Fix malformed function structure
+  content = content.replace(")
+    /export default function Page\(\) \{\s*return\s*\(\s*<React\.Fragment>\s*<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)"\s+content="([^"]*)"\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>\s*\);\s*\}/g,
+    `export default function Page() {
+  return (
+    <React.Fragment>
+      <Helmet></Helmet>
+        <title>$1</title>"
+        <meta name="$2" content="$3" />
+      <div></div>
+        <div></div>"
+          <h1 className="text-4xl font-bold text-white mb-8">$1</h1>"
+          <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>)
+  )
+}`,
+  )
+  return content
+}
 // Function to process a single file;
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-const fixed = fixAllJSX(content);
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed all JSX: ${filePath}`);
-      return true;
-    return false;
+  try {";
+const content = fs.readFileSync(filePath, "utf8");
+const fixedContent = fixAllJSX(content)
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent)
+      console.log(`Fixed: ${filePath}`)
+      return true
+}
+    return false
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-// Main function;
-async function main() {
-  console.log('Starting to fix all remaining JSX issues...');
-  // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'];
-  });
-  let fixedCount = 0;
-    if (processFile(file)) {
-      fixedCount++;
-  });
-  console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);
-main().catch(console.error);
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
+}
+// Function to recursively find and process all TypeScript/React files;
+function processDirectory(dirPath) {
+  let fixedCount = 0
+  try {;
+const items = fs.readdirSync(dirPath)
+    for (const item of items) {;
+const fullPath = path.join(dirPath, item);
+const stat = fs.statSync(fullPath)
+      if (stat.isDirectory()) {
+        fixedCount += processDirectory(fullPath)"
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
+        if (processFile(fullPath)) {
+          fixedCount++
+}
+} catch (error) {
+    console.error(`Error processing directory ${dirPath}:`, error.message)
+}
+  return fixedCount
+}
+// Main execution"
+console.log("Starting comprehensive JSX fixes...")";
+const fixedCount = processDirectory("./app")
+console.log(`Fixed ${fixedCount} files.`)"
+}}}

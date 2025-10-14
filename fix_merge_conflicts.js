@@ -1,46 +1,68 @@
-import fs from 'fs';
-import path from 'path';
-
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflicts
-    // Clean up any remaining conflict markers
-    content = content.replace(/.*?    
-    // Write the cleaned content back
-    fs.writeFileSync(filePath, content, 'utf8');
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+import React from "react"";
+import fs from "fs"";
+import { glob } from "glob"
+// Fix merge conflict artifacts in files;
+function fixMergeConflicts(content) {
+  // Remove merge conflict markers"
+  content = content.replace(/[\s\S]*? [^\n]+/g, "")
+  // Fix broken import statements
+  content = content.replace(/import[^;]+;export/g, (match) => {"
+    return match.replace(";export", ";\n\nexport")
+  })
+  // Fix missing newlines after imports
+  content = content.replace(/import[^;]+;([^<])/g, (match, after) => {"
+    return match.replace(";" + after, ";\n\n" + after)
+  })
+  // Fix broken function declarations
+  content = content.replace()
+    /export default function[^{]*{([^}]*return[^}]*<[^>]*>)/g,
+    (match) => {"
+      return match.replace(/(return[^<]*<[^>>]*>)/, "$1\n  );")
+    },
+  )
+  // Fix JSX without proper wrapping
+  content = content.replace()
+    /return\s*\(\s*<([A-Z][^>]*>[\s\S]*?<\/[A-Z][^>]*>)\s*\)/g,
+    (match, jsx) => {
+      return `return (\n    <div>\n      ${jsx}\n    </div>\n  )`
+    },
+  )
+  // Fix missing closing parentheses and braces
+  content = content.replace(
+    /return\s*\(\s*<[^>]*>[\s\S]*?<[^>]*>\s*$/gm,)
+    (match) => {"
+      if (!match.includes(");")) {"
+        return match + "\n  );"
 }
-
-// Function to recursively find and fix merge conflicts
-function fixAllMergeConflicts(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixedCount += fixAllMergeConflicts(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
-      if (fixMergeConflicts(filePath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
+      return match
+    },
+  )
+  // Fix missing closing braces for functions
+  content = content.replace(
+    /export default function[^{]*{[\s\S]*?return[^}]*<[^>]*>[\s\S]*?<[^>]*>\s*$/gm,)
+    (match) => {"
+      if (!match.includes("}")) {"
+        return match + "\n}"
 }
-
-// Fix merge conflicts in the app directory
-const appDir = './app';
-const fixedCount = fixAllMergeConflicts(appDir);
-
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+      return match
+    },
+  )
+  return content
+}
+// Find all TypeScript/TSX files in the app directory";
+const files = glob.sync("app/**/*.{ts,tsx}", { cwd: process.cwd() })
+console.log(`Found ${files.length} files to process...`)
+let fixedCount = 0
+files.forEach((file) => {
+  try {";
+const content = fs.readFileSync(file, "utf8");
+const fixedContent = fixMergeConflicts(content)
+    if (content !== fixedContent) {
+      fs.writeFileSync(file, fixedContent)
+      console.log(`Fixed: ${file}`)
+      fixedCount++
+} catch (error) {
+    console.error(`Error processing ${file}:`, error.message)
+})
+console.log(`Fixed ${fixedCount} files.`)"
+}

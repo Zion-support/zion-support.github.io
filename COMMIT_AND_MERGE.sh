@@ -5,9 +5,9 @@
 
 set -e
 
-echo "========================================="
+echo "======"
 echo " COMMIT AND MERGE SCRIPT"
-echo "========================================="
+echo "======"
 echo ""
 
 # Stage files
@@ -57,9 +57,9 @@ git push origin main
 echo "✓ Pushed to remote"
 echo ""
 
-echo "========================================="
+echo "======"
 echo " ✓ MERGE COMPLETE"
-echo "========================================="
+echo "======"
 echo ""
 echo "Next steps:"
 echo "1. Check GitHub for open PRs"

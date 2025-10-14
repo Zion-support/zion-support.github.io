@@ -1,4 +1,5 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, ReactNode } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface WebVitalsData {
   name: string;
@@ -8,7 +9,11 @@ interface WebVitalsData {
   navigationType: string;
 }
 
-const CoreWebVitals: React.FC = () => {
+interface CoreWebVitalsProps {
+  children: ReactNode;
+}
+
+const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
   const reportWebVitals = useCallback((data: WebVitalsData) => {
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -17,46 +22,61 @@ const CoreWebVitals: React.FC = () => {
         metric_value: Math.round(data.value),
         metric_delta: Math.round(data.delta),
         metric_id: data.id,
-        metric_navigation_type: data.navigationType
+        metric_navigation_type: data.navigationType,
       });
     }
 
-    // Send to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Web Vitals', {
-        metric: data.name,
-        value: data.value,
-        delta: data.delta,
-        id: data.id
-      });
-    }
-
-    // Log in development
+    // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data.name, data.value);
+      console.log('Web Vital:', data);
     }
   }, []);
 
   useEffect(() => {
-    const measureWebVitals = async () => {
-      try {
-        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
-
-        onCLS(reportWebVitals);
-        onFID(reportWebVitals);
-        onFCP(reportWebVitals);
-        onLCP(reportWebVitals);
-        onTTFB(reportWebVitals);
-        onINP(reportWebVitals);
-      } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
-      }
-    };
-
-    measureWebVitals();
+    // Track Core Web Vitals using web-vitals library
+    if (typeof window !== 'undefined') {
+      onCLS(reportWebVitals);
+      onINP(reportWebVitals);
+      onFCP(reportWebVitals);
+      onLCP(reportWebVitals);
+      onTTFB(reportWebVitals);
+    }
   }, [reportWebVitals]);
 
-  return null; // This component doesn't render anything
+  return <>{children}</>;
 };
 
 export default CoreWebVitals;
+            CoreWebVitals</h1>
+          <p className="text-xl text-gray-600 mb-8">"
+            Professional corewebvitals solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+                Expert Solutions</h3>
+              <p className="text-blue-700">"
+                Our team of experts delivers cutting-edge corewebvitals solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">"
+                Custom Implementation</h3>
+              <p className="text-green-700">"
+                Tailored corewebvitals implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+                24/7 Support</h3>
+              <p className="text-purple-700">"
+                Round-the-clock support for all your corewebvitals needs.</p></div></div>
+          <div className="mt-12">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+              Get Started Today</button></div></div></div></div>
+  )
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}''
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
