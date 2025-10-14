@@ -1,3 +1,4 @@
+import { ArrowRight, Play, Star } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline';
@@ -18,15 +19,15 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+      <div className="relative z-10 max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4 xl mx-auto">
+          <h1 className="text-5 xl md:text-7 xl font-bold text-white mb-6 leading-tight">
             Transform Your Business with
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               AI & Technology
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-xl md:text-2 xl text-gray-300 mb-8 leading-relaxed">
             Leading provider of AI and IT solutions, empowering businesses to scale, 
             innovate, and succeed in the digital age.
           </p>
@@ -45,21 +46,21 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4 xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-3 xl md:text-4 xl font-bold text-white mb-2">500+</div>
               <div className="text-gray-300">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>
+              <div className="text-3 xl md:text-4 xl font-bold text-white mb-2">1000+</div>
               <div className="text-gray-300">Happy Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-3 xl md:text-4 xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-300">Uptime</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+              <div className="text-3 xl md:text-4 xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-300">Support</div>
             </div>
           </div>

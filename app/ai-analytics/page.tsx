@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, TrendingUp, Users, Target, Brain, Zap } from 'lucide-react';
+import { BarChart3, TrendingUp, Brain, Zap, Users, Target, ArrowRight, Star } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import Footer from '../components/Footer';
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -30,7 +30,7 @@ const AIAnalyticsPage: React.FC = () => {
   ];
 
   const metrics = [
-    { label: "Data Points Analyzed", value: "10M+", icon: <BarChart3 className="w-8 h-8 text-cyan-400" /> },
+    { label: "Data Points Analyzed", value: "10 M+", icon: <BarChart3 className="w-8 h-8 text-cyan-400" /> },
     { label: "Predictive Accuracy", value: "95%", icon: <Target className="w-8 h-8 text-purple-400" /> },
     { label: "Time Saved", value: "80%", icon: <TrendingUp className="w-8 h-8 text-yellow-400" /> },
     { label: "Client Satisfaction", value: "98%", icon: <Users className="w-8 h-8 text-green-400" /> }
@@ -49,11 +49,11 @@ const AIAnalyticsPage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7 xl mx-auto text-center">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
             AI Analytics
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
             Transform your data into actionable insights with our advanced AI-powered analytics platform. 
             Make smarter decisions with predictive analytics and real-time intelligence.
           </p>
@@ -77,14 +77,14 @@ const AIAnalyticsPage: React.FC = () => {
 
       {/* Metrics Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center mb-4">
                   {metric.icon}
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <div className="text-3 xl md:text-4 xl font-bold text-white mb-2">
                   {metric.value}
                 </div>
                 <div className="text-gray-300">
@@ -98,12 +98,12 @@ const AIAnalyticsPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Advanced Analytics Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Powerful AI-driven analytics tools that help you understand your data and make informed decisions.
             </p>
           </div>
@@ -128,9 +128,9 @@ const AIAnalyticsPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Unlock Your Data&apos;s Potential?
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6">
+            Ready to Unlock Your Data's Potential?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let our AI analytics platform transform your data into actionable insights. 

@@ -1,7 +1,7 @@
+import { Brain, Shield, Zap, Users, Target, BarChart3, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Target, CheckCircle } from "lucide-react";
 import FuturisticBackground from "../components/FuturisticBackground";
 
 const AIServicesPage = () => {
@@ -89,11 +89,11 @@ const AIServicesPage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7 xl mx-auto text-center">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
             AI Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
             Transform your business with our comprehensive suite of AI services. 
             From content generation to cybersecurity, we provide intelligent solutions 
             that drive growth and efficiency.
@@ -118,14 +118,14 @@ const AIServicesPage = () => {
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center mb-4">
                   {stat.icon}
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <div className="text-3 xl md:text-4 xl font-bold text-white mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-300">
@@ -139,12 +139,12 @@ const AIServicesPage = () => {
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Our AI Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Comprehensive AI solutions designed to transform your business operations and drive innovation.
             </p>
           </div>
@@ -177,12 +177,12 @@ const AIServicesPage = () => {
 
       {/* Process Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Our Process
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               A proven methodology for successful AI implementation and transformation.
             </p>
           </div>
@@ -207,12 +207,12 @@ const AIServicesPage = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6">
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let&apos;s discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
+            Let's discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Database, Bell, PieChart, Mail, Phone, MapPin, Play, FileText } from "lucide-react";
+import { Shield, Users, BarChart3, ArrowRight, CheckCircle, TrendingUp, FileText, Database, PieChart, Bell, Clock, Play, Star, Mail, Phone, MapPin } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -53,7 +53,7 @@ export default function ZionAnalyticsPro() {
         "Basic dashboards",
         "Standard reports",
         "Email support",
-        "1GB data storage",
+        "1 GB data storage",
         "API access"
       ],
       popular: false
@@ -68,7 +68,7 @@ export default function ZionAnalyticsPro() {
         "Advanced dashboards",
         "Custom reports",
         "Priority support",
-        "10GB data storage",
+        "10 GB data storage",
         "Advanced analytics",
         "Team collaboration",
         "White-label options"
@@ -149,7 +149,7 @@ export default function ZionAnalyticsPro() {
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7 xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
@@ -157,7 +157,7 @@ export default function ZionAnalyticsPro() {
                   <span className="text-blue-400 text-sm font-medium">Most Popular Analytics Platform</span>
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6 leading-tight">
                   Zion Analytics
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 animate-pulse">
                     {" "}Pro
@@ -201,9 +201,9 @@ export default function ZionAnalyticsPro() {
               </div>
               
               <div className="relative">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2 xl p-8 border border-white/20">
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">Live Dashboard Preview</h3>
+                    <h3 className="text-2 xl font-bold text-white mb-2">Live Dashboard Preview</h3>
                     <p className="text-gray-300">See your data in action</p>
                   </div>
                   
@@ -214,7 +214,7 @@ export default function ZionAnalyticsPro() {
                         <span className="text-white font-semibold">Revenue</span>
                         <span className="text-green-400 text-sm">+12.5%</span>
                       </div>
-                      <div className="text-2xl font-bold text-white">$125,430</div>
+                      <div className="text-2 xl font-bold text-white">$125,430</div>
                     </div>
                     
                     <div className="grid grid-cols-2 gap-4">
@@ -233,7 +233,7 @@ export default function ZionAnalyticsPro() {
                         <span className="text-white font-semibold">Active Sessions</span>
                         <span className="text-yellow-400 text-sm">Live</span>
                       </div>
-                      <div className="text-2xl font-bold text-white">1,234</div>
+                      <div className="text-2 xl font-bold text-white">1,234</div>
                     </div>
                   </div>
                 </div>
@@ -244,14 +244,14 @@ export default function ZionAnalyticsPro() {
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                   Powerful Features
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
                 Everything you need to transform your data into actionable business insights.
               </p>
             </div>
@@ -260,7 +260,7 @@ export default function ZionAnalyticsPro() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2 xl hover:shadow-blue-500/10"
                 >
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
@@ -287,14 +287,14 @@ export default function ZionAnalyticsPro() {
 
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
                   Simple Pricing
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
                 Choose the plan that fits your business needs. All plans include our core features.
               </p>
             </div>
@@ -305,7 +305,7 @@ export default function ZionAnalyticsPro() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular 
-                      ? 'border-blue-500/50 shadow-2xl shadow-blue-500/25' 
+                      ? 'border-blue-500/50 shadow-2 xl shadow-blue-500/25' 
                       : 'border-white/20 hover:border-blue-500/30'
                   }`}
                 >
@@ -318,9 +318,9 @@ export default function ZionAnalyticsPro() {
                   )}
                   
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                      <span className="text-4 xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                     <p className="text-gray-300 mt-2">{plan.description}</p>
@@ -354,12 +354,12 @@ export default function ZionAnalyticsPro() {
 
         {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
                 What Our Customers Say
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
                 Join thousands of businesses already using Zion Analytics Pro to drive growth.
               </p>
             </div>
@@ -393,9 +393,9 @@ export default function ZionAnalyticsPro() {
 
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <div className="max-w-4 xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 border border-white/10">
+              <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">

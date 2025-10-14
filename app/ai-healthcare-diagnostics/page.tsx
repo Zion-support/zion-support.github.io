@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Heart, Brain, Shield, Activity, Target, Zap } from 'lucide-react';
+import { Heart, Activity, Brain, Shield, Zap, Target, ArrowRight, Star } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import Footer from '../components/Footer';
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -39,10 +39,10 @@ const AIHealthcareDiagnosticsPage: React.FC = () => {
   ];
 
   const stats = [
-    { label: "Diagnoses Processed", value: "1M+", icon: <Brain className="w-8 h-8 text-cyan-400" /> },
+    { label: "Diagnoses Processed", value: "1 M+", icon: <Brain className="w-8 h-8 text-cyan-400" /> },
     { label: "Accuracy Rate", value: "98.5%", icon: <Target className="w-8 h-8 text-purple-400" /> },
     { label: "Time Saved", value: "70%", icon: <Zap className="w-8 h-8 text-yellow-400" /> },
-    { label: "Lives Impacted", value: "50K+", icon: <Heart className="w-8 h-8 text-green-400" /> }
+    { label: "Lives Impacted", value: "50 K+", icon: <Heart className="w-8 h-8 text-green-400" /> }
   ];
 
   return (
@@ -58,11 +58,11 @@ const AIHealthcareDiagnosticsPage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7 xl mx-auto text-center">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
             AI Healthcare Diagnostics
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
             Revolutionize healthcare with our advanced AI-powered diagnostic solutions. 
             Improve accuracy, speed, and patient outcomes with intelligent medical technology.
           </p>
@@ -86,14 +86,14 @@ const AIHealthcareDiagnosticsPage: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center mb-4">
                   {stat.icon}
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <div className="text-3 xl md:text-4 xl font-bold text-white mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-300">
@@ -107,12 +107,12 @@ const AIHealthcareDiagnosticsPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Advanced Healthcare AI Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Cutting-edge AI technology designed specifically for healthcare professionals and medical institutions.
             </p>
           </div>
@@ -137,12 +137,12 @@ const AIHealthcareDiagnosticsPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Transform Healthcare Outcomes
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Our AI solutions deliver measurable improvements in healthcare delivery and patient care.
             </p>
           </div>
@@ -166,8 +166,8 @@ const AIHealthcareDiagnosticsPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6">
             Ready to Revolutionize Healthcare?
           </h2>
           <p className="text-xl text-gray-300 mb-8">

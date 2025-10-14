@@ -1,23 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
 
-const BlogPage: React.FC = () => {
+const Page = () => {
   return (
-    <>
-      <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Read our latest insights on AI, technology, and digital transformation." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white mb-8">Our Blog</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Stay updated with the latest trends in technology and AI.
-          </p>
-        </div>
-      </div>
-    </>
+    <div className="p-4">
+      <h2 className="text-2 xl font-bold text-white mb-4">Page</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for Page.
+      </p>
+    </div>
   );
 };
 
-export default BlogPage;
+export default Page;

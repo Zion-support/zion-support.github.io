@@ -1,3 +1,4 @@
+import { Clock, Phone, MapPin } from 'lucide-react';
 import React, { useState } from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
 
@@ -33,7 +34,7 @@ const Contact: React.FC = () => {
       icon: PhoneIcon,
       title: 'Phone',
       details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 9am to 6pm'
+      description: 'Mon-Fri from 9 am to 6 pm'
     },
     {
       icon: MapPinIcon,
@@ -51,13 +52,13 @@ const Contact: React.FC = () => {
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4 xl md:text-5 xl font-bold text-gray-900 mb-6">
             Get In Touch
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your business? Let&apos;s discuss how our solutions 
+          <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+            Ready to transform your business? Let's discuss how our solutions 
             can help you achieve your goals.
           </p>
         </div>
@@ -142,12 +143,12 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2 xl font-bold text-gray-900 mb-6">
                 Contact Information
               </h3>
               <p className="text-gray-600 mb-8">
-                We&apos;re here to help! Reach out to us through any of the channels below, 
-                and we&apos;ll get back to you as soon as possible.
+                We're here to help! Reach out to us through any of the channels below, 
+                and we'll get back to you as soon as possible.
               </p>
             </div>
 

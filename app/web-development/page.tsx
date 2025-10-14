@@ -1,3 +1,4 @@
+import { ArrowRight, Globe, Database, Star, Phone } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -65,11 +66,11 @@ const WebDevelopmentPage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7 xl mx-auto text-center">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
             Web Development Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
             Build modern, scalable web applications that drive business growth. 
             From frontend interfaces to backend systems, we create digital solutions that work.
           </p>
@@ -93,11 +94,11 @@ const WebDevelopmentPage = () => {
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <div className="text-3 xl md:text-4 xl font-bold text-white mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-300">
@@ -111,12 +112,12 @@ const WebDevelopmentPage = () => {
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Our Web Development Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Comprehensive web development solutions tailored to your business needs and goals.
             </p>
           </div>
@@ -149,12 +150,12 @@ const WebDevelopmentPage = () => {
 
       {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Technologies We Use
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               We work with the latest technologies and frameworks to build modern, efficient web applications.
             </p>
           </div>
@@ -171,8 +172,8 @@ const WebDevelopmentPage = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6">
             Ready to Build Your Next Web Application?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
