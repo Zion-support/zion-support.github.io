@@ -1,9 +1,22 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-  return new Intl.DateTimeFormat('en-US'
-    year: 'numeric'
-    month: 'long'
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+export function formatDate(date: Date) {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
     day: 'numeric'
-    .replace(/[^\w\s-]/g, ''
-    .replace(/[\s_-]+/g, '-'
-    .replace(/^-+|-+$/g, ''
+  }).format(date)
+}
+
+export function slugify(str: string) {
+  return str
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}

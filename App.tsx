@@ -18,17 +18,25 @@ const LoadingSpinner = () => (
 );
 
 // Simple error boundary
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
@@ -50,19 +58,22 @@ function App() {
 // Performance monitoring
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
-  import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-    getCLS(console.log);
-    getFID(console.log);
-    getFCP(console.log);
-    getLCP(console.log);
-    getTTFB(console.log);
+  import('web-vitals').then((vitals) => {
+    // Use dynamic imports to avoid TypeScript errors
+    const { getCLS, getFID, getFCP, getLCP, getTTFB } = vitals as any;
+    if (getCLS) getCLS(console.log);
+    if (getFID) getFID(console.log);
+    if (getFCP) getFCP(console.log);
+    if (getLCP) getLCP(console.log);
+    if (getTTFB) getTTFB(console.log);
   });
 
   // Monitor bundle size
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
-        console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart, 'ms');
+        const navEntry = entry as PerformanceNavigationTiming;
+        console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
       }
     }
   });

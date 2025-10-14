@@ -6,8 +6,17 @@ export const errorLogger = {
       timestamp: new Date().toISOString(),
       context: context || {}
     }
+    
     // Log to console in development
-    if (process.env.NODE_ENV === 'development'
-      console.error('Error logged:'
-    if (typeof window !== 'undefined'
-      window.gtag('event', 'exception'
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error logged:', errorInfo)
+    }
+    
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      })
+    }
+  }
+}
