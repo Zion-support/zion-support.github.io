@@ -20,8 +20,7 @@ export const errorTracking = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-
-      });
         description: error.message,
-        fatal: false;
-      })
+        fatal: false
+      });
+    }

@@ -8,7 +8,7 @@ export interface ServiceData {
     starter: number;
     professional: number;
     enterprise: number;
-  }
+  };
   icon: string;
 
 export const servicesData: ServiceData[] = [

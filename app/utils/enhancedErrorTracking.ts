@@ -20,13 +20,14 @@ export const enhancedErrorTracking = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-
-      })
+        description: error.message,
+        fatal: false
+      });
+    }
   },
   
-  trackPerformanceError: (_error: Error, performanceData: unknown) => {
-    enhancedErrorTracking.trackError(_error, {
   trackPerformanceError: (error: Error, performanceData: unknown) => {
+    enhancedErrorTracking.trackError(error, {
     enhancedErrorTracking.trackError(error, {
 
     });

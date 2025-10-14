@@ -16,6 +16,7 @@ export const performanceMonitor = {
     }
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
+    }
     return duration
   },
   
