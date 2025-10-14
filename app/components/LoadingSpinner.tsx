@@ -3,10 +3,7 @@ import { Loader2 } from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-<<<<<<< HEAD
-=======
   color?: 'primary' | 'secondary' | 'white' | 'gray';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   text?: string;
   fullScreen?: boolean;
   className?: string;
@@ -14,31 +11,13 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-<<<<<<< HEAD
-=======
   color = 'primary',
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   text,
   fullScreen = false,
   className = ''
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
-<<<<<<< HEAD
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  };
-
-  const spinner = (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div className="flex flex-col items-center space-y-2">
-        <Loader2 className={`animate-spin text-blue-600 ${sizeClasses[size]}`} />
-        {text && (
-          <p className="text-sm text-gray-600">{text}</p>
-        )}
-      </div>
-=======
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
@@ -90,22 +69,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </p>
       )}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
     </div>
   );
 
   if (fullScreen) {
     return (
-<<<<<<< HEAD
-      <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
-=======
       <div 
         className="fixed inset-0 bg-slate-900/95 backdrop-blur-sm flex items-center justify-center z-50"
         role="dialog"
         aria-modal="true"
         aria-label="Loading page"
       >
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
         {spinner}
       </div>
     );

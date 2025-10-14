@@ -3,111 +3,110 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon, 
+  ChartBarIcon, 
   CheckCircleIcon, 
   ArrowRightIcon,
   StarIcon,
   ClockIcon,
   CurrencyDollarIcon,
   ShieldCheckIcon,
-  SparklesIcon,
+  CpuChipIcon,
   DocumentTextIcon,
   GlobeAltIcon,
-  ChartBarIcon
+  SignalIcon,
+  UserGroupIcon
 } from '@heroicons/react/24/outline';
 
-export default function AIContentGeneratorPage() {
+export default function BusinessIntelligenceDashboardPage() {
   const features = [
-    '50+ Professional Content Templates',
-    'Multi-language Support (25+ Languages)',
-    'SEO Optimization & Keyword Research',
-    'Brand Voice Training & Consistency',
-    'Plagiarism Detection & Originality Check',
-    'Real-time Content Generation',
-    'Bulk Content Creation',
-    'Social Media Optimization',
-    'Content Calendar Integration',
-    'Analytics & Performance Tracking'
+    'Real-time Data Visualization',
+    'Custom KPI Dashboards',
+    'Automated Report Generation',
+    'Multi-source Data Integration',
+    'Advanced Analytics & Insights',
+    'Mobile-responsive Design',
+    'Role-based Access Control',
+    'Data Export & Sharing',
+    'Alert & Notification System',
+    'API Integration Support'
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$29',
+      name: 'Basic',
+      price: '$49',
       period: '/month',
-      description: 'Perfect for small businesses and freelancers',
+      description: 'Perfect for small businesses',
       features: [
-        '10,000 words/month',
-        '20+ Templates',
-        '5 Languages',
-        'Basic SEO Tools',
-        'Email Support'
+        '5 Data Sources',
+        '10 Custom Dashboards',
+        'Basic Analytics',
+        'Email Reports',
+        'Standard Support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$149',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Ideal for growing companies',
       features: [
-        '50,000 words/month',
-        '50+ Templates',
-        '15 Languages',
-        'Advanced SEO Tools',
-        'Brand Voice Training',
-        'Priority Support',
-        'API Access'
+        '25 Data Sources',
+        'Unlimited Dashboards',
+        'Advanced Analytics',
+        'Real-time Alerts',
+        'API Access',
+        'Priority Support'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$399',
       period: '/month',
-      description: 'For large organizations with high-volume needs',
+      description: 'For large organizations',
       features: [
-        'Unlimited words',
-        'All Templates',
-        '25+ Languages',
-        'Custom Templates',
+        'Unlimited Data Sources',
+        'Custom Integrations',
         'White-label Solution',
         'Dedicated Support',
-        'Custom Integrations'
+        'On-premise Deployment',
+        'Custom Training'
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const integrations = [
     {
-      title: 'Blog Content Creation',
-      description: 'Generate engaging blog posts with SEO optimization',
-      icon: DocumentTextIcon
+      name: 'Salesforce',
+      description: 'CRM data integration',
+      icon: UserGroupIcon
     },
     {
-      title: 'Social Media Posts',
-      description: 'Create platform-specific social media content',
-      icon: GlobeAltIcon
-    },
-    {
-      title: 'Marketing Copy',
-      description: 'Write compelling ad copy and marketing materials',
+      name: 'Google Analytics',
+      description: 'Website performance data',
       icon: ChartBarIcon
     },
     {
-      title: 'Product Descriptions',
-      description: 'Create detailed and persuasive product descriptions',
-      icon: StarIcon
+      name: 'Stripe',
+      description: 'Payment and revenue data',
+      icon: CurrencyDollarIcon
+    },
+    {
+      name: 'Slack',
+      description: 'Team communication data',
+      icon: SignalIcon
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Content Generator Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered content creation platform with 50+ templates, multi-language support, and SEO optimization. Start your free trial today!" />
-        <meta name="keywords" content="AI content generator, content creation, SEO optimization, multi-language, brand voice, content marketing" />
+        <title>Business Intelligence Dashboard - Zion Tech Group</title>
+        <meta name="description" content="Real-time analytics and reporting dashboard with custom KPIs, automated insights, and data visualization. Transform your data into actionable insights." />
+        <meta name="keywords" content="business intelligence, analytics dashboard, KPI tracking, data visualization, reporting, business metrics" />
       </Helmet>
 
       {/* Hero Section */}
@@ -119,36 +118,36 @@ export default function AIContentGeneratorPage() {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                <CpuChipIcon className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                <ChartBarIcon className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-5xl md:text-6xl font-bold gradient-text neon-text">
-                AI Content Generator Pro
+                Business Intelligence Dashboard
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create high-quality, SEO-optimized content at scale with our advanced AI platform. 
-              <span className="text-purple-400 font-semibold"> 50+ templates, 25+ languages, unlimited creativity.</span>
+              Transform your data into actionable insights with our powerful BI dashboard. 
+              <span className="text-cyan-400 font-semibold"> Real-time analytics, custom KPIs, automated reporting.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <Link 
                 to="/demo" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                Watch Demo
+                View Demo
               </Link>
             </div>
             <div className="flex items-center justify-center space-x-8 text-gray-400">
               <div className="flex items-center">
                 <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                <span>No Credit Card Required</span>
+                <span>30-Day Free Trial</span>
               </div>
               <div className="flex items-center">
                 <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                <span>14-Day Free Trial</span>
+                <span>No Setup Fees</span>
               </div>
             </div>
           </div>
@@ -160,17 +159,17 @@ export default function AIContentGeneratorPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Powerful Features
+              Powerful Analytics Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create professional content that converts
+              Everything you need to make data-driven decisions
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex items-start space-x-4 p-6 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-colors">
-                <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <CheckCircleIcon className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300 text-lg">{feature}</span>
               </div>
             ))}
@@ -178,26 +177,26 @@ export default function AIContentGeneratorPage() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Integrations Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Perfect For
+              Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Whether you're a solo entrepreneur or a large enterprise, our AI content generator adapts to your needs
+              Connect with your favorite tools and data sources
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <useCase.icon className="w-8 h-8 text-white" />
+            {integrations.map((integration, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover-lift text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <integration.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4">{integration.name}</h3>
+                <p className="text-gray-300">{integration.description}</p>
               </div>
             ))}
           </div>
@@ -209,21 +208,21 @@ export default function AIContentGeneratorPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Simple, Transparent Pricing
+              Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your content creation needs
+              Choose the plan that fits your data needs
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border transition-all duration-300 hover-lift relative ${
-                plan.popular ? 'border-purple-500 shadow-lg shadow-purple-500/25' : 'border-slate-600'
+                plan.popular ? 'border-cyan-500 shadow-lg shadow-cyan-500/25' : 'border-slate-600'
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -232,21 +231,21 @@ export default function AIContentGeneratorPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-purple-400">{plan.price}</span>
+                    <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircleIcon className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular 
-                    ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 transform hover:scale-105'
+                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700 transform hover:scale-105'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   Get Started
@@ -261,13 +260,13 @@ export default function AIContentGeneratorPage() {
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Transform Your Content Creation?
+            Ready to Unlock Your Data's Potential?
           </h2>
           <p className="text-xl text-gray-300 mb-12">
-            Join thousands of businesses already using AI Content Generator Pro to create better content faster
+            Join thousands of businesses making smarter decisions with our BI dashboard
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
             <Link

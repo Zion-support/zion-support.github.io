@@ -3,152 +3,151 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon, 
+  ShieldCheckIcon, 
   CheckCircleIcon, 
   ArrowRightIcon,
   StarIcon,
   ClockIcon,
   CurrencyDollarIcon,
-  ShieldCheckIcon,
-  SparklesIcon,
+  CpuChipIcon,
   DocumentTextIcon,
   GlobeAltIcon,
-  ChartBarIcon
+  ChartBarIcon,
+  ExclamationTriangleIcon,
+  LockClosedIcon
 } from '@heroicons/react/24/outline';
 
-export default function AIContentGeneratorPage() {
+export default function CybersecurityMonitorProPage() {
   const features = [
-    '50+ Professional Content Templates',
-    'Multi-language Support (25+ Languages)',
-    'SEO Optimization & Keyword Research',
-    'Brand Voice Training & Consistency',
-    'Plagiarism Detection & Originality Check',
-    'Real-time Content Generation',
-    'Bulk Content Creation',
-    'Social Media Optimization',
-    'Content Calendar Integration',
-    'Analytics & Performance Tracking'
+    '24/7 Real-time Threat Monitoring',
+    'AI-Powered Threat Detection',
+    'Automated Incident Response',
+    'Compliance Reporting (SOC2, GDPR, HIPAA)',
+    'Vulnerability Assessment & Scanning',
+    'Security Awareness Training',
+    'Dark Web Monitoring',
+    'Email Security Protection',
+    'Network Traffic Analysis',
+    'Mobile Device Management'
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$29',
+      name: 'Essential',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for small businesses and freelancers',
+      description: 'Perfect for small businesses',
       features: [
-        '10,000 words/month',
-        '20+ Templates',
-        '5 Languages',
-        'Basic SEO Tools',
+        'Basic Threat Monitoring',
+        'Email Security',
+        'Vulnerability Scanning',
+        'Monthly Reports',
         'Email Support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Ideal for growing companies',
       features: [
-        '50,000 words/month',
-        '50+ Templates',
-        '15 Languages',
-        'Advanced SEO Tools',
-        'Brand Voice Training',
+        'Advanced AI Monitoring',
+        'Real-time Alerts',
+        'Compliance Reporting',
+        'Security Training',
         'Priority Support',
-        'API Access'
+        'API Integration'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$799',
       period: '/month',
-      description: 'For large organizations with high-volume needs',
+      description: 'For large organizations',
       features: [
-        'Unlimited words',
-        'All Templates',
-        '25+ Languages',
-        'Custom Templates',
+        'Complete Security Suite',
+        'Custom Integrations',
+        'Dedicated Security Team',
+        'On-premise Deployment',
         'White-label Solution',
-        'Dedicated Support',
-        'Custom Integrations'
+        '24/7 Phone Support'
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const securityFeatures = [
     {
-      title: 'Blog Content Creation',
-      description: 'Generate engaging blog posts with SEO optimization',
+      title: 'Threat Detection',
+      description: 'AI-powered detection of advanced threats',
+      icon: CpuChipIcon
+    },
+    {
+      title: 'Compliance',
+      description: 'Automated compliance reporting',
       icon: DocumentTextIcon
     },
     {
-      title: 'Social Media Posts',
-      description: 'Create platform-specific social media content',
-      icon: GlobeAltIcon
+      title: 'Incident Response',
+      description: 'Automated response to security incidents',
+      icon: ExclamationTriangleIcon
     },
     {
-      title: 'Marketing Copy',
-      description: 'Write compelling ad copy and marketing materials',
-      icon: ChartBarIcon
-    },
-    {
-      title: 'Product Descriptions',
-      description: 'Create detailed and persuasive product descriptions',
-      icon: StarIcon
+      title: 'Data Protection',
+      description: 'Advanced data encryption and protection',
+      icon: LockClosedIcon
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Content Generator Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered content creation platform with 50+ templates, multi-language support, and SEO optimization. Start your free trial today!" />
-        <meta name="keywords" content="AI content generator, content creation, SEO optimization, multi-language, brand voice, content marketing" />
+        <title>Cybersecurity Monitor Pro - Zion Tech Group</title>
+        <meta name="description" content="24/7 threat detection and response system with automated security scanning and compliance reporting. Protect your business with advanced AI cybersecurity." />
+        <meta name="keywords" content="cybersecurity, threat detection, security monitoring, compliance, SOC2, GDPR, HIPAA, AI security" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
+          <div className="w-full h-full bg-gradient-to-br from-red-900/20 to-orange-900/20 animated-grid"></div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                <CpuChipIcon className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mr-4">
+                <ShieldCheckIcon className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-5xl md:text-6xl font-bold gradient-text neon-text">
-                AI Content Generator Pro
+                Cybersecurity Monitor Pro
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create high-quality, SEO-optimized content at scale with our advanced AI platform. 
-              <span className="text-purple-400 font-semibold"> 50+ templates, 25+ languages, unlimited creativity.</span>
+              Protect your business with 24/7 AI-powered threat detection and automated response. 
+              <span className="text-red-400 font-semibold"> Advanced security monitoring, compliance reporting, incident response.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <Link 
                 to="/demo" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                Watch Demo
+                Security Assessment
               </Link>
             </div>
             <div className="flex items-center justify-center space-x-8 text-gray-400">
               <div className="flex items-center">
                 <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                <span>No Credit Card Required</span>
+                <span>30-Day Free Trial</span>
               </div>
               <div className="flex items-center">
                 <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
-                <span>14-Day Free Trial</span>
+                <span>No Setup Fees</span>
               </div>
             </div>
           </div>
@@ -160,17 +159,17 @@ export default function AIContentGeneratorPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Powerful Features
+              Comprehensive Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create professional content that converts
+              Advanced protection against evolving cyber threats
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex items-start space-x-4 p-6 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-colors">
-                <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <CheckCircleIcon className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300 text-lg">{feature}</span>
               </div>
             ))}
@@ -178,26 +177,26 @@ export default function AIContentGeneratorPage() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+      {/* Security Features Section */}
+      <section className="py-20 bg-gradient-to-r from-red-900/30 to-orange-900/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Perfect For
+              Advanced Security Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Whether you're a solo entrepreneur or a large enterprise, our AI content generator adapts to your needs
+              Multi-layered security approach to protect your digital assets
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <useCase.icon className="w-8 h-8 text-white" />
+            {securityFeatures.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-600 hover:border-red-500 transition-all duration-300 hover-lift text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -209,21 +208,21 @@ export default function AIContentGeneratorPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Simple, Transparent Pricing
+              Security That Scales
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your content creation needs
+              Choose the security level that matches your business needs
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border transition-all duration-300 hover-lift relative ${
-                plan.popular ? 'border-purple-500 shadow-lg shadow-purple-500/25' : 'border-slate-600'
+                plan.popular ? 'border-red-500 shadow-lg shadow-red-500/25' : 'border-slate-600'
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -232,21 +231,21 @@ export default function AIContentGeneratorPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-purple-400">{plan.price}</span>
+                    <span className="text-5xl font-bold text-red-400">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircleIcon className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular 
-                    ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 transform hover:scale-105'
+                    ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700 transform hover:scale-105'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   Get Started
@@ -258,23 +257,23 @@ export default function AIContentGeneratorPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+      <section className="py-20 bg-gradient-to-r from-red-900/30 to-orange-900/30">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Transform Your Content Creation?
+            Don't Wait for a Security Breach
           </h2>
           <p className="text-xl text-gray-300 mb-12">
-            Join thousands of businesses already using AI Content Generator Pro to create better content faster
+            Protect your business today with our advanced cybersecurity monitoring
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
             <Link
               to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
-              Contact Sales
+              Security Consultation
             </Link>
           </div>
           <div className="mt-8 text-gray-400">
