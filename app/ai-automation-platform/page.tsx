@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
 
-import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Target, Workflow } from "lucide-react";
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
-=======
->>>>>>> origin/main
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
 import EnhancedSEO from '../components/EnhancedSEO'
 import ResponsiveContainer from '../components/ResponsiveContainer'

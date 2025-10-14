@@ -69,9 +69,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/main
     }
 >>>>>>> origin/main
-=======
-)
->>>>>>> origin/main
+
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -83,8 +81,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Default error UI
       return (
 
-          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4"></div>"
-            <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center"></div>
+          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
+        <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center"></div>
               { /* Error Icon */ }"
               <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6"></div>
 
@@ -115,8 +113,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </p>
               { /* Error ID for support */ }
               { this.state.errorId && ("
-                <div className="bg-slate-700 rounded-lg p-3 mb-6"></div>"
-                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>"
+                <div className="bg-slate-700 rounded-lg p-3 mb-6">
+          <p className="text-sm text-gray-400 mb-1">Error ID:</p>"
                   <code className="text-xs text-cyan-400 font-mono break-all"> }
                     { this.state.errorId }
                   </code>
@@ -152,13 +150,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </div>
 
               { /* Support Information */ }"
-              <div className="mt-8 pt-6 border-t border-slate-700"></div>"
-                <p className="text-sm text-gray-400 mb-2">
+              <div className="mt-8 pt-6 border-t border-slate-700">
+          <p className="text-sm text-gray-400 mb-2">
 
                   Still having trouble? Contact our support team:
                 </p>"
-                <div className="text-sm text-cyan-400"></div>"
-                  <p>Email: kleber@ziontechgroup.com</p>
+                <div className="text-sm text-cyan-400">
+          <p>Email: kleber@ziontechgroup.com</p>
                   <p>Phone: +1-302-464-0950</p>
                 </div>
               </div>
@@ -169,8 +167,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">)
                     Error Details (Development)
                   </summary>"
-                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40"></div>"
-                    <div className="mb-2"></div> }
+                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">
+        <div className="mb-2"></div> }
                       <strong>Error:</strong> { this.state.error.message }
 
                     </div>"
@@ -206,8 +204,8 @@ export default EnhancedErrorBoundary';
               )}
 
         </div>
-      );
-    }
+  );
+}
 
     return this.props.children;
   }
@@ -215,6 +213,4 @@ export default EnhancedErrorBoundary';
 ;
 export default EnhancedErrorBoundary;
 >>>>>>> origin/main
-=======
-"
->>>>>>> origin/main
+

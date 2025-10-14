@@ -90,11 +90,11 @@ const ConsultationPage: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
-                      <p className="text-gray-300">{service.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                      <p>{service.description}</p>
+        </div>
+      </div>
+    </div>
+  );)}
             </div>
 
             <div className="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -234,12 +234,7 @@ const ConsultationPage: React.FC = () => {
               <div className="flex justify-center space-x-4">
                 <a 
                   href="/" 
-=======
-</p>
-              <div className="flex justify-center space-x-4"></div>
-                <a "
-                  href="/" "
->>>>>>> origin/main
+
                   className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Go Home

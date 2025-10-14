@@ -1,4 +1,4 @@
-import React from "react";";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
     {"
@@ -95,10 +95,10 @@ import React from 'react';';
 import { Helmet } from 'react-helmet-async';'
 
   return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
 
-        <title>Home - Zion Tech Group</title>"
+        <title>Home - Zion Tech Group</title>
         <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
 
@@ -106,8 +106,8 @@ import { Helmet } from 'react-helmet-async';'
             </h2>"
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")
               {solutions.map((solution, index) => ("
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"></div>"
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center mb-4`}></div>`"
+                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+        <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center mb-4`}></div>`"
                     <solution.icon className="w-6 h-6 text-white" />"
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>""
@@ -197,8 +197,8 @@ import { Helmet } from 'react-helmet-async';'
             {itServices.map((service, index) => {;
 const Icon = service.icon;
               return ("
-                <div key={service.title} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark"></div>"
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}></div>`"
+                <div key={service.title} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark">
+        <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}></div>`"
                     <Icon className="w-8 h-8 text-white" />"
                   </div>
 "

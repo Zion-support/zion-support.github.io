@@ -142,8 +142,8 @@ const ServicesPage: React.FC = () => {
 const Icon = category.icon
             return (
 "
-              <div key={categoryIndex} className="mb-20"></div>"
-                <div className="flex items-center mb-12"></div>
+              <div key={categoryIndex} className="mb-20">
+        <div className="flex items-center mb-12"></div>
                   <div className={`w-16 h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`}></div>
                     <Icon className={`w-8 h-8 ${category.color}`} />
 
@@ -153,8 +153,8 @@ const Icon = category.icon
 "
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
                   { category.services.map((service, serviceIndex) => ( }"
-                    <div key={serviceIndex} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"></div>"
-                      <div className="flex justify-between items-start mb-4"></div>"
+                    <div key={serviceIndex} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+        <div className="flex justify-between items-start mb-4"></div>"
                         <h4 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
                           { service.name }
                         </h4>"

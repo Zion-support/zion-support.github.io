@@ -1,6 +1,6 @@
 return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
 "
       title: "Live Chat","
       description: "Get instant help from our support team","
@@ -61,8 +61,8 @@ icon: Phone,"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         { /* Hero Section */ }"
         <section className="relative py-20 px-4">"
-          <div className="max-w-7xl mx-auto text-center"></div>"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
 
               Support;"
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">"
@@ -89,8 +89,8 @@ icon: Phone,"
               {supportOptions.map((option, _index) => {;
 const Icon = option.icon;
                 return ("
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center group"></div>"
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${option.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}></div>`"
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+        <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${option.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}></div>`"
                       <Icon className="w-8 h-8 text-white" />"
                     </div>"
                     <h3 className="text-xl font-semibold text-white mb-2">{option.title}</h3>""
@@ -164,8 +164,8 @@ const Icon = option.icon;
             </h2>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>{ /* Hero Section */ }"
         <section className="relative py-20 px-4">"
-          <div className="max-w-7xl mx-auto text-center"></div>"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
 
               Support"
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">"

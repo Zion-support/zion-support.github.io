@@ -192,8 +192,8 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
-    }
+  );
+}
 
     return this.props.children;
   }

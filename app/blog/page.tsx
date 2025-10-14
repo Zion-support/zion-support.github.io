@@ -299,8 +299,8 @@ const categories = [
 ;
 export default function Page() {
   return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -406,21 +406,4 @@ export default function Page() {
   );
 };
 
-<<<<<<< HEAD
-export default BlogPage;
-                >
-                  Go Home
-                </a>
-                <a 
-                  href="/contact" 
-                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
-                >
-                  Contact Us
-                </a>
-              </div>
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-=======
-"
->>>>>>> origin/main
+

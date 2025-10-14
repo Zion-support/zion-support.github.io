@@ -241,6 +241,5 @@ const WebDevelopmentPage: React.FC = () => {
 };
 
 export default WebDevelopmentPage;
-=======
->>>>>>> origin/main
+
 >>>>>>> origin/main

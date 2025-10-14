@@ -135,9 +135,9 @@ const AIHolographicWorkspace = () => {
 import { Helmet } from "react-helmet-async";
 ;
 const HomePage = () => {"
-  return (""
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>"
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>"
         <title>Home - Zion Tech Group</title>""
         <meta name="description" content="Home - Zion Tech Group" />"
       </Helmet>""

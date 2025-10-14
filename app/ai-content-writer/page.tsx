@@ -1,20 +1,20 @@
-import React from "react";";
-import { Helmet } from "react-helmet-async";";
-import { Phone } from "lucide-react";";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Phone } from "lucide-react";
 import Footer from "../components/Footer";
 ;
 const AIContentWriterPage = () => {
   return (
     <>
       <Helmet></Helmet>
-        <title>AI Content Writer - Zion Tech Group</title>"
+        <title>AI Content Writer - Zion Tech Group</title>
         <meta name="description" content="AI Content Writer - Zion Tech Group" />
-      </Helmet>"
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <main className="container mx-auto px-4 py-16">"
-          <div className="text-center mb-16"></div>"
-            <h1 className="text-4xl font-bold text-white mb-8">AI Content Writer</h1>"
-            <p className="text-gray-300 text-lg">
+          <div className="text-center mb-16">
+          <h1>AI Content Writer</h1>
+          <p className="text-gray-300 text-lg">
               This page is under construction. Please check back later.
             </p>
           </div>

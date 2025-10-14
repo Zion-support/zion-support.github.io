@@ -1,4 +1,4 @@
-import React from "react";";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
     'AI Services','
@@ -23,9 +23,9 @@ const subjects = [''
 
   return (
 "
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
-        <title>Contact - Zion Tech Group</title>"
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Contact - Zion Tech Group</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions" />
       </Helmet>
 
@@ -41,8 +41,8 @@ const subjects = [''
 const Icon = info.icon
               return (
 "
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center"></div>"
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4"></div>"
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4"></div>"
                     <Icon className="w-6 h-6 text-white" />
 
                   </div>"
@@ -82,8 +82,8 @@ const Icon = info.icon
             </div>)
           ) : ("
             <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">""
-              <div className="grid md:grid-cols-2 gap-6 mb-6"></div>"
-                <div></div>"
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div></div>"
                   <label htmlFor="name" className="block text-white font-medium mb-2">"
                     Full Name *
                   </label>
@@ -222,7 +222,6 @@ const Icon = info.icon
       </section>
 
     </div>
-
   );
 };
 ;

@@ -107,22 +107,16 @@ const getOptimizedSrc = (originalSrc: string) => {''
         { !isLoaded && !isError && (
           <div
 "
-            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center" }
-            style={{ width, height }}
-
-          ></div>"
-            <div className="text-gray-400 text-sm"></div>Loading...</div>"
+            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+        <div className="text-gray-400 text-sm"></div>Loading...</div>"
           </div>
 )
         )}
         { /* Error state */ }
         { isError && (
           <div"
-            className="absolute inset-0 bg-gray-100 flex items-center justify-center" }
-            style={{ width, height }}
-
-          ></div>"
-            <div className="text-gray-400 text-sm text-center"></div>""
+            className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+        <div className="text-gray-400 text-sm text-center"></div>""
               <div className="text-2xl mb-2"></div>📷</div>"
               <div></div>Image not available</div>
             </div>

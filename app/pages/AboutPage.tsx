@@ -25,8 +25,8 @@ import {
       <div className="min-h-screen bg-slate-900 text-white"></div>
 
               </p>"
-              <div className="space-y-4"></div>"
-                <div className="flex items-start"></div>"
+              <div className="space-y-4">
+        <div className="flex items-start"></div>"
                   <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"
                   <span className="text-gray-300">Innovation-driven approach</span>
                 </div>"

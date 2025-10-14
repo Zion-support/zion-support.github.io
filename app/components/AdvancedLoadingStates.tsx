@@ -20,8 +20,8 @@ const getLoadingIcon = () => {
       case 'skeleton':"
         return <div className="animate-pulse rounded h-12 w-12 bg-gray-400 mx-auto mb-4"></div></div>;
       case 'dots':"
-        return <div className="flex space-x-1 justify-center mb-4"></div>"
-          <div className="animate-bounce w-2 h-2 bg-white rounded-full"></div></div>"
+        return <div className="flex space-x-1 justify-center mb-4">
+        <div className="animate-bounce w-2 h-2 bg-white rounded-full"></div></div>"
           <div className="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.1s' }}></div></div>"
           <div className="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.2s' }}></div></div>
         </div>;

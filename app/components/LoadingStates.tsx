@@ -19,8 +19,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <span className="text-white">{message}</span>
         </div>
       </div>
-    );
-  }
+  );
+}
 
   if (variant === 'default') {
     return (
@@ -31,8 +31,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <p className="text-gray-400">Please wait while we load the content</p>
         </div>
       </div>
-    );
-  }
+  );
+}
 
   // Futuristic variant (default)
   return (
@@ -152,30 +152,26 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
 );
             </div>
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div>
-=======
 
-            </div>
-            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div></div>
->>>>>>> origin/main
           </div>
 "
           <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>"
           <p className="text-gray-300 mb-6">{message || getDefaultMessage()}</p>"
-          <div className="flex justify-center space-x-2"></div>"
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div></div>"
+          <div className="flex justify-center space-x-2">
+        <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div></div>"
             <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div></div>"
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div></div>
 
           </div>
         </div>
       </div>
-    );
-  }
+  );
+}
 
   return (
 "
-    <div className="flex items-center justify-center p-4"></div>"
-      <div className="text-center"></div>
+    <div className="flex items-center justify-center p-4">
+        <div className="text-center"></div>
         <Loader2 className={`${sizeClasses[size]} text-cyan-500 animate-spin mx-auto mb-2`} />")
         <p className="text-gray-600 text-sm">{message || getDefaultMessage()}</p>
       </div>

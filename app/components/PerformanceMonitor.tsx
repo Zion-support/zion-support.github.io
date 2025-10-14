@@ -252,7 +252,7 @@ export default PerformanceMonitor;
         </button>
       </div>
 
-      <div className="space-y-2 text-sm"></div>"
+      <div className="space-y-2 text-sm">
         <div className="flex justify-between"></div>
           <span>Load Time:</span>"
           <span className="text-cyan-400">
@@ -294,10 +294,7 @@ export default PerformanceMonitor;
       </div>
     </div>
   );
-=======
-import React from 'react';
-const PerformanceMonitor: React.FC = () => { return null; }
->>>>>>> origin/main
+
 export default PerformanceMonitor;
       )
     </div>

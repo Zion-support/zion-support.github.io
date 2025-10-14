@@ -1,4 +1,4 @@
-import React from "react";";";
+import React from "react";";
 import { Helmet } from "react-helmet-async";
 "
     {""
@@ -101,9 +101,9 @@ const features = ["
 
   ]
 "
-  return (""
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>"
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>"
 ""
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Helmet>"
@@ -130,8 +130,8 @@ const features = ["
 )
             {aiServices.map((service, index) => {;
 const Icon = service.icon;"
-              return (""
-                <div key={service.title} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark"></div>""
+              return (
+    <div key={service.title} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark"></div>""
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}></div>`""
                     <Icon className="w-8 h-8 text-white" />"
                   </div>"

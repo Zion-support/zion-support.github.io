@@ -91,8 +91,8 @@ interface SidebarProps {isOpen: boolean;
 
   return (
     <div className="fixed inset-0 z-50 md:hidden">"
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>"
-      <div className="relative flex flex-col w-64 h-full bg-slate-900">"
+      <div className="fixed inset-0 bg-black bg-opacity-50">
+        <div className="relative flex flex-col w-64 h-full bg-slate-900">"
         <div className="flex items-center justify-between p-4 border-b border-slate-700">"
           <span className="text-xl font-bold text-white">Menu</span>"
           <button onClick={onClose} className="text-gray-400 hover:text-white">"

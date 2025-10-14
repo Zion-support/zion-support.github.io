@@ -30,7 +30,7 @@ const navigationItems = [{ name: "Home", href: "/" },';'"
   ];
   return ("
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16"></div>
           { /* Logo */ }"
           <div className="flex-shrink-0"></div>"
@@ -39,11 +39,11 @@ const navigationItems = [{ name: "Home", href: "/" },';'"
             </Link>
           </div>
           { /* Desktop Navigation */ }"
-          <div className="hidden md:block"></div>"
-            <div className="ml-10 flex items-baseline space-x-4"></div>)
+          <div className="hidden md:block">
+        <div className="ml-10 flex items-baseline space-x-4"></div>)
               {navigationItems.map((item) => ("
-                <div key={item.name} className="relative group"></div>"
-          <div className="hidden md:block"></div>;"
+                <div key={item.name} className="relative group">
+        <div className="hidden md:block"></div>;"
             <div className="ml-10 flex items-baseline space-x-4"></div>;)
               { navigationItems.map((item) => ( }"
                 <div key={item.name} className="relative group"></div>;
