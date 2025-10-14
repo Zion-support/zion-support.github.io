@@ -5,6 +5,7 @@ import React, { Suspense } from 'react';
 import { Shield } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
+import React, { Suspense } from 'react';
 
 const AICybersecuritySuiteProPage: React.FC = () => {
   return (

@@ -6,6 +6,7 @@ import { Target, Rocket } from 'lucide-react';
 import React, { Suspense } from 'react';
 const MicroSaasSolutionsPage: React.FC = () => {
 
+import React, { Suspense } from 'react';
   return (
     <>
       <Helmet>

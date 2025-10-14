@@ -6,6 +6,7 @@ import { Brain } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 
 const AIBusinessIntelligenceProPage: React.FC = () => {
   return (

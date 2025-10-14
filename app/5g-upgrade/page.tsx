@@ -5,6 +5,7 @@ import React from 'react';
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 
 const FiveGUpgradePage: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const FiveGUpgradePage: React.FC = () => {
     </div>
   );
 }
+import React, { Suspense } from 'react';
 
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';

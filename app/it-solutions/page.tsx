@@ -6,6 +6,7 @@ import { Server, Cloud } from 'lucide-react';
 import React, { Suspense } from 'react';
 const ItSolutionsPage: React.FC = () => {
 
+import React, { Suspense } from 'react';
   return (
     <>
       <Helmet>

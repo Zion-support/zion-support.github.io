@@ -6,6 +6,7 @@ import { Brain, Zap } from 'lucide-react';
 import React, { Suspense } from 'react';
 const AiSolutionsPage: React.FC = () => {
 
+import React, { Suspense } from 'react';
   return (
     <>
       <Helmet>

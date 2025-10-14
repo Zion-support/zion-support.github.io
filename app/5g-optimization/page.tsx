@@ -6,6 +6,7 @@ import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
 
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 const FiveGOptimizationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -52,6 +53,7 @@ export default FiveGOptimizationPage;
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
+import React, { Suspense } from 'react';
         </div>
       </section>
 

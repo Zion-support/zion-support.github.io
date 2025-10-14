@@ -5,6 +5,7 @@ import React from 'react';
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 
 const FiveGReliabilityPage: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const FiveGReliabilityPage: React.FC = () => {
     </div>
   );
 }
+import React, { Suspense } from 'react';
 
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';

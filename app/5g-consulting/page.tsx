@@ -9,6 +9,7 @@ import EnhancedSEO from '../components/EnhancedSEO'
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 const FiveGConsultingPage = () => {
   const services = [
     {
@@ -76,6 +77,7 @@ import React, { Suspense } from 'react';
           </Link>
         </div>
       </div>
+import React, { Suspense } from 'react';
     </div>
   )
 }
