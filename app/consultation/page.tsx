@@ -1,129 +1,306 @@
-import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, Award, Clock, Mail, Phone, MapPin } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function Consultation() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    industry: '',
-    projectSize: '',
-    timeline: '',
-    message: '',
-    consultationType: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    // Handle form submission logic here
-  };
-
   const consultationTypes = [
     {
-      title: "AI Strategy",
-      description: "Strategic planning for AI implementation and digital transformation.",
-      price: "Free",
-      duration: "30 min",
-      color: "from-blue-500 to-cyan-500",
-      icon: <Zap className="w-8 h-8 text-white" />,
+      title: 'Technology Strategy',
+      description: 'Comprehensive technology roadmap and digital transformation strategy',
+      duration: '2-4 weeks',
+      price: 'Starting at $5,000',
       features: [
-        "AI readiness assessment",
-        "Technology roadmap",
-        "ROI analysis",
-        "Implementation timeline"
+        'Current state assessment',
+        'Technology gap analysis',
+        'Strategic roadmap development',
+        'Implementation timeline'
       ]
     },
     {
-      title: "Cloud Migration",
-      description: "Expert guidance on cloud infrastructure and migration strategies.",
-      price: "Free",
-      duration: "45 min",
-      color: "from-purple-500 to-pink-500",
-      icon: <Globe className="w-8 h-8 text-white" />,
+      title: 'AI & Machine Learning',
+      description: 'AI readiness assessment and implementation strategy',
+      duration: '3-6 weeks',
+      price: 'Starting at $8,000',
       features: [
-        "Infrastructure audit",
-        "Migration strategy",
-        "Cost optimization",
-        "Security assessment"
+        'AI readiness evaluation',
+        'Use case identification',
+        'Model selection guidance',
+        'Implementation planning'
       ]
     },
     {
-      title: "Cybersecurity",
-      description: "Comprehensive security audit and protection strategy.",
-      price: "Free",
-      duration: "60 min",
-      color: "from-red-500 to-orange-500",
-      icon: <CheckCircle className="w-8 h-8 text-white" />,
+      title: 'Cloud Migration',
+      description: 'Cloud strategy and migration planning',
+      duration: '4-8 weeks',
+      price: 'Starting at $10,000',
       features: [
-        "Security assessment",
-        "Vulnerability analysis",
-        "Compliance review",
-        "Protection strategy"
+        'Cloud readiness assessment',
+        'Migration strategy',
+        'Cost optimization analysis',
+        'Security and compliance review'
       ]
     },
     {
-      title: "Digital Transformation",
-      description: "Complete digital strategy and modernization planning.",
-      price: "Free",
-      duration: "90 min",
-      color: "from-green-500 to-teal-500",
-      icon: <Calendar className="w-8 h-8 text-white" />,
+      title: 'Cybersecurity Audit',
+      description: 'Comprehensive security assessment and recommendations',
+      duration: '2-3 weeks',
+      price: 'Starting at $3,000',
       features: [
-        "Digital audit",
-        "Technology stack review",
-        "Process optimization",
-        "Change management"
+        'Security vulnerability assessment',
+        'Compliance review',
+        'Risk analysis',
+        'Remediation roadmap'
       ]
     }
   ];
 
-  const benefits = [
+  const processSteps = [
     {
-      title: "Expert Guidance",
-      description: "Get insights from certified technology professionals with years of experience.",
-      icon: <CheckCircle className="w-8 h-8 text-cyan-400" />
+      step: '01',
+      title: 'Initial Consultation',
+      description: 'We discuss your business goals, challenges, and technology needs in a free 30-minute call.'
     },
     {
-      title: "No Obligation",
-      description: "Completely free consultation with no strings attached or hidden costs.",
-      icon: <Zap className="w-8 h-8 text-purple-400" />
+      step: '02',
+      title: 'Assessment & Analysis',
+      description: 'Our experts analyze your current systems and identify opportunities for improvement.'
     },
     {
-      title: "Actionable Insights",
-      description: "Receive practical recommendations you can implement immediately.",
-      icon: <ArrowRight className="w-8 h-8 text-green-400" />
+      step: '03',
+      title: 'Strategy Development',
+      description: 'We create a customized technology strategy tailored to your specific requirements.'
     },
     {
-      title: "Customized Solutions",
-      description: "Tailored advice based on your specific business needs and challenges.",
-      icon: <Globe className="w-8 h-8 text-blue-400" />
+      step: '04',
+      title: 'Implementation Planning',
+      description: 'We provide detailed implementation plans with timelines and resource requirements.'
     }
   ];
 
-  const industries = [
-    "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Education", "Government", "Other"
-  ];
+  return (
+    <>
+      <Helmet>
+        <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
+        <meta
+          name="description"
+          content="Get expert IT consultation from Zion Tech Group. Technology strategy, AI implementation, cloud migration, and cybersecurity consulting services."
+        />
+        <meta
+          name="keywords"
+          content="IT consultation, technology consulting, AI consulting, cloud migration, cybersecurity audit, digital transformation"
+        />
+      </Helmet>
 
-  const projectSizes = [
-    "Small (1-10 employees)", "Medium (11-100 employees)", "Large (101-1000 employees)", "Enterprise (1000+ employees)"
-  ];
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Get personalized guidance from our experienced team of IT experts. Transform your business with strategic technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+              >
+                Schedule Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
+              >
+                View Our Services
+              </Link>
+            </div>
+          </div>
+        </section>
 
-  const timelines = [
-    "Immediate (1-3 months)", "Short-term (3-6 months)", "Medium-term (6-12 months)", "Long-term (12+ months)"
-  ];
+        {/* Consultation Types */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Consultation Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose from our comprehensive range of consulting services designed to address your specific technology needs.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {consultationTypes.map((type, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 group">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                    {type.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {type.description}
+                  </p>
+                  
+                  <div className="mb-4">
+                    <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
+                      <span>Duration:</span>
+                      <span>{type.duration}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm text-gray-400">
+                      <span>Price:</span>
+                      <span className="text-blue-400 font-semibold">{type.price}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {type.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+                    to="/contact"
+                    className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                  >
+                    Get Started
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Consultation Process
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                A structured approach to delivering exceptional consulting results.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                    {step.step}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Consultation?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We bring decades of experience and proven methodologies to every consulting engagement.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Expert Team</h3>
+                <p className="text-gray-300">
+                  Our consultants have 10+ years of experience in enterprise technology and digital transformation.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+                <p className="text-gray-300">
+                  We've helped 500+ companies achieve their technology goals and digital transformation objectives.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Fast Delivery</h3>
+                <p className="text-gray-300">
+                  We deliver actionable insights and recommendations within 2-4 weeks of project initiation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to schedule your free consultation and take the first step towards digital transformation.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">Email</h3>
+                <p className="text-blue-400">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">Phone</h3>
+                <p className="text-blue-400">+1 302 464 0950</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">Address</h3>
+                <p className="text-blue-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+              >
+                Schedule Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
