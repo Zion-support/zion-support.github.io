@@ -1,7 +1,7 @@
 import React from 'react';
 const EnhancedServicesShowcase = () => {
   return (
-    <div className="enhancedservicesshowcase-component">
+    <div>
       <h2>EnhancedServicesShowcase</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const EnhancedServicesShowcase = () => {
 };
 
 export default EnhancedServicesShowcase;
-'

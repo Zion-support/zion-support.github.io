@@ -6,5 +6,3 @@ const  createContext<AnalyticsContextType | undefined>(undefined);
 export type { AnalyticsContextType }
 export type { AnalyticsContextType };
 </AnalyticsContextType>
-
-'

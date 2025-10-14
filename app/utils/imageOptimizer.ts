@@ -18,8 +18,9 @@ export const optimizeImage = ();
 };
 export const generateResponsiveImages = (;
   src: "string",;;
-  sizes: "number[] = [320", 640, 768, 10o24, 1280, 1920];;
-): string => {}
-  return sizes;}
-    .map(size => `${optimizeImage(src, { width: "size"})} ${size}w`).join(', ');;
-};;
+  sizes: "number[] = [320", 640, 768, 10o24, 1280, 1920];;`
+): string => {}``
+  return sizes;}```
+    .map(size => `${optimizeImage(src, { width: "size"})} ${size}w`).join(', ');;`
+};;``
+```

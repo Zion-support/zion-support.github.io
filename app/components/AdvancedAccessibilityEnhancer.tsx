@@ -1,7 +1,7 @@
 import React from 'react';
 const AdvancedAccessibilityEnhancer = () => {
   return (
-    <div className="advancedaccessibilityenhancer-component">
+    <div>
       <h2>AdvancedAccessibilityEnhancer</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const AdvancedAccessibilityEnhancer = () => {
 };
 
 export default AdvancedAccessibilityEnhancer;
-'

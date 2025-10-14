@@ -1,7 +1,7 @@
 import React from 'react';
 const CriticalResourcePreloader = () => {
   return (
-    <div className="criticalresourcepreloader-component">
+    <div>
       <h2>CriticalResourcePreloader</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const CriticalResourcePreloader = () => {
 };
 
 export default CriticalResourcePreloader;
-'

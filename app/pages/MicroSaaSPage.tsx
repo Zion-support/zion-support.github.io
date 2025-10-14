@@ -1,6 +1,6 @@
-'use client;;
+'use client';
 import React from 'react';
-;import { Link   } from 'react-router-dom
+import { Link   } from 'react-router-dom'
 ';import SEO from '../components/SEO;'
 ';import {}
   GlobeAltIcon,
@@ -13,7 +13,7 @@ import React from 'react';
   EnvelopeIcon,
   MapPinIcon'
 } from '@heroicons/react/24/outline;
-export default function MicroSaaSPage() {}
+export default function Component() {
   return (
     <div>Page content</div>
   );
@@ -62,17 +62,9 @@ export default function MicroSaaSPage() {}
         <meta name="description" content="MicroSaaSPage - Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
+      <div>
       </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <div className="text-center">
-      </div>
-      </div>
-      </div>
-      </div>
+        <div>
       </div>
           <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>
           <p className="text-gray-30o0">This page is under construction.</p>

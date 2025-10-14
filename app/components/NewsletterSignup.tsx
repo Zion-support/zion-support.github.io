@@ -1,7 +1,7 @@
 import React from 'react';
 const NewsletterSignup = () => {
   return (
-    <div className="newslettersignup-component">
+    <div>
       <h2>NewsletterSignup</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const NewsletterSignup = () => {
 };
 
 export default NewsletterSignup;
-'

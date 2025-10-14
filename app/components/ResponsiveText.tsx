@@ -1,7 +1,7 @@
 import React from 'react';
 const ResponsiveText = () => {
   return (
-    <div className="responsivetext-component">
+    <div>
       <h2>ResponsiveText</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const ResponsiveText = () => {
 };
 
 export default ResponsiveText;
-'

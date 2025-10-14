@@ -1,7 +1,7 @@
 import React from 'react';
 const SEOAudit = () => {
   return (
-    <div className="seoaudit-component">
+    <div>
       <h2>SEOAudit</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const SEOAudit = () => {
 };
 
 export default SEOAudit;
-'

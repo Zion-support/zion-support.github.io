@@ -1,7 +1,7 @@
 import React from 'react';
 const ContentCarousel = () => {
   return (
-    <div className="contentcarousel-component">
+    <div>
       <h2>ContentCarousel</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const ContentCarousel = () => {
 };
 
 export default ContentCarousel;
-'

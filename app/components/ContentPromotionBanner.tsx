@@ -1,7 +1,7 @@
 import React from 'react';
 const ContentPromotionBanner = () => {
   return (
-    <div className="contentpromotionbanner-component">
+    <div>
       <h2>ContentPromotionBanner</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const ContentPromotionBanner = () => {
 };
 
 export default ContentPromotionBanner;
-'

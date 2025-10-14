@@ -1,7 +1,7 @@
 import React from 'react';
 const AnimatedCard = () => {
   return (
-    <div className="animatedcard-component">
+    <div>
       <h2>AnimatedCard</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const AnimatedCard = () => {
 };
 
 export default AnimatedCard;
-'

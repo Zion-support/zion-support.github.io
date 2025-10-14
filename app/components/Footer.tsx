@@ -15,12 +15,12 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <div>
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+          <div>
+            <div>
+              <div>
                 <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
@@ -28,7 +28,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
             </p>
-            <div className="flex space-x-4">
+            <div>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -75,16 +75,16 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
+            <div>
+              <div>
                 <Mail size={16} className="text-blue-400" />
                 <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div>
                 <Phone size={16} className="text-blue-400" />
                 <span className="text-gray-300">+1-302-464-0950</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div>
                 <MapPin size={16} className="text-blue-400" />
                 <span className="text-gray-300">Middletown, DE</span>
 
@@ -94,7 +94,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+        <div>
           <p className="text-gray-400">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>

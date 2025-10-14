@@ -1,7 +1,7 @@
 import React from 'react';
 const ErrorFallback = () => {
   return (
-    <div className="errorfallback-component">
+    <div>
       <h2>ErrorFallback</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const ErrorFallback = () => {
 };
 
 export default ErrorFallback;
-'

@@ -1,164 +1,100 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
+import { glob } from 'glob';
 
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        results = results.concat(findFiles(filePath, extensions));
-      }
-    } else {
-      const ext = path.extname(file);
-      if (extensions.includes(ext)) {
-        results.push(filePath);
-      }
-    }
-  });
-  
-  return results;
-}
-
-// Function to fix unterminated string literals
-function fixUnterminatedStrings(content) {
+// Function to fix remaining syntax errors
+function fixRemainingErrors(content) {
   let fixed = content;
   
-  // Fix unterminated single quotes
-  fixed = fixed.replace(/(['"])([^'"]*?)(\n|$)/g, (match, quote, str, newline) => {
-    if (str.includes(quote)) return match;
-    return quote + str + quote + ';' + newline;
+  // Remove stray single quotes at the end of files
+  fixed = fixed.replace(/\n'+\s*$/g, '');
+  fixed = fixed.replace(/\n'+\s*$/gm, '');
+  
+  // Fix unterminated string literals by adding closing quotes
+  const lines = fixed.split('\n');
+  const fixedLines = lines.map((line, index) => {
+    // Skip empty lines and comments
+    if (line.trim() === '' || line.trim().startsWith('//') || line.trim().startsWith('*')) {
+      return line;
+    }
+    
+    // Check for unterminated string literals
+    const singleQuotes = (line.match(/'/g) || []).length;
+    const doubleQuotes = (line.match(/"/g) || []).length;
+    
+    // If odd number of quotes, likely unterminated
+    if (singleQuotes % 2 !== 0) {
+      // Look for the last single quote and add closing quote
+      const lastSingleQuote = line.lastIndexOf("'");
+      if (lastSingleQuote !== -1) {
+        // Check if it's already properly closed
+        const afterQuote = line.substring(lastSingleQuote + 1).trim();
+        if (afterQuote && !afterQuote.endsWith(';') && !afterQuote.endsWith(',') && !afterQuote.endsWith(')') && !afterQuote.endsWith('}') && !afterQuote.endsWith(']')) {
+          line = line + "'";
+        }
+      }
+    }
+    
+    if (doubleQuotes % 2 !== 0) {
+      // Look for the last double quote and add closing quote
+      const lastDoubleQuote = line.lastIndexOf('"');
+      if (lastDoubleQuote !== -1) {
+        // Check if it's already properly closed
+        const afterQuote = line.substring(lastDoubleQuote + 1).trim();
+        if (afterQuote && !afterQuote.endsWith(';') && !afterQuote.endsWith(',') && !afterQuote.endsWith(')') && !afterQuote.endsWith('}') && !afterQuote.endsWith(']')) {
+          line = line + '"';
+        }
+      }
+    }
+    
+    return line;
   });
   
-  // Fix double semicolons
-  fixed = fixed.replace(/;;+/g, ';');
+  fixed = fixedLines.join('\n');
+  
+  // Fix malformed JSX and function declarations
+  fixed = fixed.replace(/export default function\s+\w+\(\)\s*\{\s*\}\s*return\s*\(/g, 'export default function Component() {\n  return (');
+  fixed = fixed.replace(/const\s+\w+\s*=\s*\(\)\s*=>\s*\{\s*\}\s*return\s*\(/g, 'const Component = () => {\n  return (');
+  
+  // Fix missing closing braces and parentheses
+  fixed = fixed.replace(/\}\s*\)\s*;\s*\}\s*$/gm, '});');
+  fixed = fixed.replace(/\}\s*\)\s*;\s*\}\s*'$/gm, '});');
   
   // Fix malformed imports
-  fixed = fixed.replace(/import\s+([^;]+);;+/g, 'import $1;');
+  fixed = fixed.replace(/import\s+React[^;]*;\s*;\s*/g, 'import React from \'react\';\n');
+  
+  // Fix unterminated template literals
+  fixed = fixed.replace(/`([^`]*)$/gm, '`$1`');
+  
+  // Fix malformed JSX return statements
+  fixed = fixed.replace(/return\s*\(\s*<div[^>]*>\s*<\/div>\s*\)\s*;\s*return\s*\(\s*<div[^>]*>\s*<\/div>\s*\)\s*;/g, 'return (\n    <div>Page content</div>\n  );');
+  
+  // Clean up extra closing braces and parentheses
+  fixed = fixed.replace(/\}\s*\)\s*;\s*\}\s*$/gm, '});');
+  fixed = fixed.replace(/\}\s*\)\s*;\s*\}\s*'$/gm, '});');
+  
+  // Fix malformed function declarations
+  fixed = fixed.replace(/export default function\s+\w+\(\)\s*\{\s*\}\s*return\s*\(/g, 'export default function Component() {\n  return (');
+  
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(/<div[^>]*>\s*$/gm, '<div>');
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*$/gm, '</div>');
   
   return fixed;
 }
 
-// Function to fix JSX issues
-function fixJSX(content) {
-  let fixed = content;
-  
-  // Fix unclosed JSX tags
-  const openTags = [];
-  const lines = fixed.split('\n');
-  let result = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    let line = lines[i];
-    
-    // Find opening tags
-    const openTagMatches = line.match(/<(\w+)(?:\s[^>]*)?(?!\/)>/g);
-    if (openTagMatches) {
-      openTagMatches.forEach(match => {
-        const tagName = match.match(/<(\w+)/)[1];
-        if (!['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-          openTags.push(tagName);
-        }
-      });
-    }
-    
-    // Find closing tags
-    const closeTagMatches = line.match(/<\/(\w+)>/g);
-    if (closeTagMatches) {
-      closeTagMatches.forEach(match => {
-        const tagName = match.match(/<\/(\w+)>/)[1];
-        const index = openTags.lastIndexOf(tagName);
-        if (index !== -1) {
-          openTags.splice(index, 1);
-        }
-      });
-    }
-    
-    result.push(line);
-  }
-  
-  // Close any remaining open tags
-  while (openTags.length > 0) {
-    const tag = openTags.pop();
-    result.push(`</${tag}>`);
-  }
-  
-  return result.join('\n');
-}
-
-// Function to fix specific file patterns
-function fixFileSpecific(content, filePath) {
-  let fixed = content;
-  
-  // Fix common React patterns
-  if (filePath.includes('App.tsx') || filePath.includes('main.tsx')) {
-    // Ensure proper React imports
-    if (!fixed.includes("import React from 'react'") && fixed.includes('React.')) {
-      fixed = "import React from 'react';\n" + fixed;
-    }
-    
-    // Fix Router imports
-    if (fixed.includes('Router') && !fixed.includes("import { BrowserRouter as Router }")) {
-      fixed = fixed.replace(/import.*Router.*from.*react-router-dom.*;/, "import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';");
-    }
-  }
-  
-  // Fix component exports
-  if (filePath.includes('components/') && fixed.includes('export default function') && !fixed.includes('return')) {
-    fixed = fixed.replace(/(export default function[^{]+{)([\s\S]*?)(})/g, '$1\n  return <div>Component placeholder</div>;\n$3');
-  }
-  
-  return fixed;
-}
-
-// Function to fix HTML files
-function fixHTML(content) {
-  let fixed = content;
-  
-  // Fix malformed meta tags
-  fixed = fixed.replace(/<,\s*meta/g, '<meta');
-  fixed = fixed.replace(/<meta\s+property="og:\s*"/g, '<meta property="og:title"');
-  
-  // Fix malformed script tags
-  fixed = fixed.replace(/<script\s+src="([^"]*)"\s*>\s*<\/script>/g, '<script src="$1"></script>');
-  
-  return fixed;
-}
-
-// Main function to process files
+// Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixRemainingErrors(content);
     
-    // Fix unterminated strings
-    content = fixUnterminatedStrings(content);
-    
-    // Fix JSX issues
-    content = fixJSX(content);
-    
-    // Fix file-specific patterns
-    content = fixFileSpecific(content, filePath);
-    
-    // Fix HTML if it's an HTML file
-    if (filePath.endsWith('.html')) {
-      content = fixHTML(content);
-    }
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -166,27 +102,31 @@ function processFile(filePath) {
   }
 }
 
-// Main execution
-console.log('Starting remaining error fix...');
-
-const files = findFiles('./app');
-let fixedCount = 0;
-
-files.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-});
-
-// Also fix root level files
-const rootFiles = ['./App.tsx', './main.tsx', './index.html'];
-rootFiles.forEach(file => {
-  if (fs.existsSync(file)) {
-    if (processFile(file)) {
-      fixedCount++;
+// Main function
+async function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'app/**/*.jsx',
+    'app/**/*.js'
+  ];
+  
+  let totalFixed = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      if (processFile(file)) {
+        totalFixed++;
+      }
     }
   }
-});
+  
+  console.log(`\nFixed ${totalFixed} files`);
+}
 
-console.log(`\nFixed ${fixedCount} files.`);
-console.log('Remaining error fixing completed!');
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { fixRemainingErrors, processFile };

@@ -1,7 +1,7 @@
 import React from 'react';
 const FuturisticBackground = () => {
   return (
-    <div className="futuristicbackground-component">
+    <div>
       <h2>FuturisticBackground</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const FuturisticBackground = () => {
 };
 
 export default FuturisticBackground;
-'

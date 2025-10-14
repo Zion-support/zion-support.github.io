@@ -1,7 +1,7 @@
 import React from 'react';
 const NeonButton = () => {
   return (
-    <div className="neonbutton-component">
+    <div>
       <h2>NeonButton</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const NeonButton = () => {
 };
 
 export default NeonButton;
-'

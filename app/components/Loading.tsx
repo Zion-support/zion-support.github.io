@@ -1,7 +1,7 @@
 import React from 'react';
 const Loading = () => {
   return (
-    <div className="loading-component">
+    <div>
       <h2>Loading</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const Loading = () => {
 };
 
 export default Loading;
-'

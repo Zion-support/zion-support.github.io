@@ -1,7 +1,7 @@
 import React from 'react';
 const SEOHead = () => {
   return (
-    <div className="seohead-component">
+    <div>
       <h2>SEOHead</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const SEOHead = () => {
 };
 
 export default SEOHead;
-'

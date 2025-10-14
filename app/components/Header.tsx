@@ -1,7 +1,7 @@
 import React from 'react';
 const Header = () => {
   return (
-    <div className="header-component">
+    <div>
       <h2>Header</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const Header = () => {
 };
 
 export default Header;
-'

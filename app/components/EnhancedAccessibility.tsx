@@ -1,7 +1,7 @@
 import React from 'react';
 const EnhancedAccessibility = () => {
   return (
-    <div className="enhancedaccessibility-component">
+    <div>
       <h2>EnhancedAccessibility</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const EnhancedAccessibility = () => {
 };
 
 export default EnhancedAccessibility;
-'

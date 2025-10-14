@@ -1,7 +1,7 @@
 import React from 'react';
 const EnhancedErrorBoundary = () => {
   return (
-    <div className="enhancederrorboundary-component">
+    <div>
       <h2>EnhancedErrorBoundary</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const EnhancedErrorBoundary = () => {
 };
 
 export default EnhancedErrorBoundary;
-'

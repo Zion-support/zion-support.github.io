@@ -1,7 +1,7 @@
 import React from 'react';
 const AdvertisingBanner = () => {
   return (
-    <div className="advertisingbanner-component">
+    <div>
       <h2>AdvertisingBanner</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const AdvertisingBanner = () => {
 };
 
 export default AdvertisingBanner;
-'

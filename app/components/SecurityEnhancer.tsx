@@ -1,7 +1,7 @@
 import React from 'react';
 const SecurityEnhancer = () => {
   return (
-    <div className="securityenhancer-component">
+    <div>
       <h2>SecurityEnhancer</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const SecurityEnhancer = () => {
 };
 
 export default SecurityEnhancer;
-'

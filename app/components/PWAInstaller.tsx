@@ -1,7 +1,7 @@
 import React from 'react';
 const PWAInstaller = () => {
   return (
-    <div className="pwainstaller-component">
+    <div>
       <h2>PWAInstaller</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const PWAInstaller = () => {
 };
 
 export default PWAInstaller;
-'

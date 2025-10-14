@@ -1,7 +1,7 @@
 import React from 'react';
 const PerformanceMetrics = () => {
   return (
-    <div className="performancemetrics-component">
+    <div>
       <h2>PerformanceMetrics</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const PerformanceMetrics = () => {
 };
 
 export default PerformanceMetrics;
-'

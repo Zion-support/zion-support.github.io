@@ -1,7 +1,7 @@
 import React from 'react';
 const LazyImage = () => {
   return (
-    <div className="lazyimage-component">
+    <div>
       <h2>LazyImage</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const LazyImage = () => {
 };
 
 export default LazyImage;
-'

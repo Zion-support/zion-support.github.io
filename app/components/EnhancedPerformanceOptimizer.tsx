@@ -1,7 +1,7 @@
 import React from 'react';
 const EnhancedPerformanceOptimizer = () => {
   return (
-    <div className="enhancedperformanceoptimizer-component">
+    <div>
       <h2>EnhancedPerformanceOptimizer</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const EnhancedPerformanceOptimizer = () => {
 };
 
 export default EnhancedPerformanceOptimizer;
-'

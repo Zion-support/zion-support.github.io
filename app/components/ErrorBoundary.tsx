@@ -1,7 +1,7 @@
 import React from 'react';
 const ErrorBoundary = () => {
   return (
-    <div className="errorboundary-component">
+    <div>
       <h2>ErrorBoundary</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const ErrorBoundary = () => {
 };
 
 export default ErrorBoundary;
-'

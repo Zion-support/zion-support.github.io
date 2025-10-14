@@ -1,7 +1,7 @@
 import React from 'react';
 const EnhancedSkipLink = () => {
   return (
-    <div className="enhancedskiplink-component">
+    <div>
       <h2>EnhancedSkipLink</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const EnhancedSkipLink = () => {
 };
 
 export default EnhancedSkipLink;
-'

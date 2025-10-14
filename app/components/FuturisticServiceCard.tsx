@@ -1,7 +1,7 @@
 import React from 'react';
 const FuturisticServiceCard = () => {
   return (
-    <div className="futuristicservicecard-component">
+    <div>
       <h2>FuturisticServiceCard</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const FuturisticServiceCard = () => {
 };
 
 export default FuturisticServiceCard;
-'

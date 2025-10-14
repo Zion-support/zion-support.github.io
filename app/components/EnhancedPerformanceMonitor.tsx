@@ -1,7 +1,7 @@
 import React from 'react';
 const EnhancedPerformanceMonitor = () => {
   return (
-    <div className="enhancedperformancemonitor-component">
+    <div>
       <h2>EnhancedPerformanceMonitor</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const EnhancedPerformanceMonitor = () => {
 };
 
 export default EnhancedPerformanceMonitor;
-'

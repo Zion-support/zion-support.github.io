@@ -1,7 +1,7 @@
 import React from 'react';
 const SEOOptimizer = () => {
   return (
-    <div className="seooptimizer-component">
+    <div>
       <h2>SEOOptimizer</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const SEOOptimizer = () => {
 };
 
 export default SEOOptimizer;
-'

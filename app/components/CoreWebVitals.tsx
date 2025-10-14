@@ -1,7 +1,7 @@
 import React from 'react';
 const CoreWebVitals = () => {
   return (
-    <div className="corewebvitals-component">
+    <div>
       <h2>CoreWebVitals</h2>
       <p>This component is under construction.</p>
     </div>
@@ -9,4 +9,3 @@ const CoreWebVitals = () => {
 };
 
 export default CoreWebVitals;
-'
