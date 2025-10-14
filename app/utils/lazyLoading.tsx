@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import LoadingStates from './LoadingStates';
+import LoadingStates from '../components/LoadingStates';
 
 interface LazyWrapperProps {
   children: React.ReactNode;
