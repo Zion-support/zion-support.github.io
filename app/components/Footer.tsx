@@ -56,14 +56,14 @@ const Footer: React.FC = () => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
-            <div className="flexspace-x-4">
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-whitetransition-colors" target="_blank" rel="noopenernoreferrer">
+            <div className="flex space-x-4">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-whitetransition-colors" target="_blank" rel="noopenernoreferrer">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-whitetransition-colors" target="_blank" rel="noopenernoreferrer">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
