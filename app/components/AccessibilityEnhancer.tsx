@@ -15,6 +15,7 @@ const AccessibilityEnhancer: React.FC = () => {
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
+    } else {
       root.classList.remove('reduced-motion');
     }
     // Font size adjustment
@@ -24,6 +25,7 @@ const AccessibilityEnhancer: React.FC = () => {
       fontSize === 'small' ? '0.9' : '1'
     );
   }, [isHighContrast, isReducedMotion, fontSize]);
+
   // Keyboard navigation enhancement
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -71,6 +73,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
     addAltText();
   }, []);
+
   return (
     <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
       <h3 className="text-white font-semibold mb-3">Accessibility</h3>
