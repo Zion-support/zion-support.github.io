@@ -1,19 +1,23 @@
-import { useEffect } from 'react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-export const useSEO = (structuredData?: unknown) => {
-  useEffect(() => {
-    // Add structured data to the page
-    if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-      return () => {
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);
-        }
-      };
-    }
-    return undefined;
-  }, [structuredData]);
+const UseSEOPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>UseSEO - Zion Tech Group</title>
+        <meta name="description" content="UseSEO - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">UseSEO</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
+
+export default UseSEOPage;

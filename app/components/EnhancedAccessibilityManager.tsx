@@ -1,10 +1,23 @@
 import React from "react";
-;
-const EnhancedAccessibilityManager = () => {
-  return ("
-    <div className="p-4"></div>"
-      <h2 className="text-xl font-semibold mb-2">EnhancedAccessibilityManager</h2>
-      <p>This component is under construction.</p>
+import { Helmet } from "react-helmet-async";
+
+const EnhancedAccessibilityManagerPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedAccessibilityManager - Zion Tech Group</title>
+        <meta name="description" content="EnhancedAccessibilityManager - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">EnhancedAccessibilityManager</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
-")
-}
+  );
+};
+
+export default EnhancedAccessibilityManagerPage;
