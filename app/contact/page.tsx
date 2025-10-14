@@ -1,26 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-    'AI Services','
-    'IT Services','
-    'Services','
-    'Micro SAAS','
-    'Digital Transformation','
-    '5G Implementation','
-      description: '9:00 AM - 6:00 PM EST'}'
-    }
-  ];
-;
-const subjects = [''
-    'AI Services',''
-    'IT Services',''
-    'Services',''
-    'Micro SAAS',''
-    'Digital Transformation',''
-    '5G Implementation',''
-    'Other''
-  ]
-
+const PagePage = () => {
   return (
 "
     <div className="min-h-screen bg-white">
@@ -28,7 +9,11 @@ const subjects = [''
         <title>Contact - Zion Tech Group</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions" />
       </Helmet>
-
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
           </p>
         </div>
 
@@ -224,7 +209,5 @@ const Icon = info.icon
     </div>
   );
 };
-;
-export default ContactPage;
-"
-}
+
+export default PagePage;

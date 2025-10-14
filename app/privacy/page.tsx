@@ -20,5 +20,4 @@ const PrivacyPage = () => {
   );
   );
 };
-;
-export default PrivacyPage;"
+export default PrivacyPage;

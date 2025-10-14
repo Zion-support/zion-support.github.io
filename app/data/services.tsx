@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-;
 export default function Services() {
   return (
     <div className="min-h-screen bg-white">
@@ -29,14 +28,14 @@ export default function Services() {
               <h3 className="text-lg font-semibold text-purple-900 mb-2">24/7 Support</h3>"
               <p className="text-purple-700">Round-the-clock support for all your needs.</p>
             </div>
-          </div>"
-          <div className="mt-12"></div>"
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+          </div>"""
+          <div className=mt-12></div>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">""
               Get Started Today
             </button>
           </div>
         </div>
       </div>
-    </div>)
+    </div>
   );
-}"
+}"""

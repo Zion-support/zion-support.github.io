@@ -20,5 +20,4 @@ const FiveGSolutionsPage = () => {
   );
   );
 };
-;
-export default FiveGSolutionsPage;"
+export default FiveGSolutionsPage;

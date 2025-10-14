@@ -19,7 +19,6 @@ const AppPage = () => {
     </div>
   );
   );
-};
-;
-export default AppPage;
-"
+}
+
+export default App;

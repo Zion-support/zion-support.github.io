@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 const BlogPage: React.FC = () => {
   return (
     <React.Fragment>
-      <Helmet></Helmet>
+      <Helmet>
 
         <title>BlogPage - Zion Tech Group</title>
         <meta name="description" content="BlogPage - Zion Tech Group" />"
@@ -24,4 +24,4 @@ const BlogPage: React.FC = () => {
 }
 ;
 export default BlogPag;e;
-"
+"""

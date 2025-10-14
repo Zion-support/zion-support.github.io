@@ -1,83 +1,88 @@
-import fs from "fs"";
-import path from "path"";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename)
-// Function to fix corrupted page files;
-function fixPageFile(filePath) {
-  try {"
-    let content = fs.readFileSync(filePath, "utf8")
-    // Fix common corruption patterns
-    content = content
-      // Remove extra semicolons and quotes"
-      .replace(/';';/g, "")"
-      .replace(/";";/g, "")"
-      .replace(/";/g, "")"
-      .replace(/';/g, "")
-      // Fix malformed JSX attributes"
-      .replace(/className="([^"]*?)";/g, 'className="$1"')"
-      .replace(/content="([^"]*?)";/g, 'content="$1"')"
-      .replace(/href="([^"]*?)";/g, 'href="$1"')"
-      .replace(/src="([^"]*?)";/g, 'src="$1"')
-      // Fix malformed closing tags"
-      .replace(/<\/div>";/g, "</div>")"
-      .replace(/<\/h1>";/g, "</h1>")"
-      .replace(/<\/p>";/g, "</p>")"
-      .replace(/<\/a>";/g, "</a>")"
-      .replace(/<\/button>";/g, "</button>")
-      // Fix malformed opening tags"
-      .replace(/<div className="([^"]*?)"></div>"
-</div>";/g, '<div className="$1"></div>
-</div>')"
-      .replace(/<h1 className="([^"]*?)">";/g, '<h1 className="$1">')"
-      .replace(/<p className="([^"]*?)">";/g, '<p className="$1">')"
-      .replace(/<a className="([^"]*?)">";/g, '<a className="$1">')"
-      .replace(/<button className="([^"]*?)">";/g, '<button className="$1">')
-      // Fix malformed meta tags
-      .replace(")
-        /<meta name="([^"]*?)" content="([^"]*?)" \/>";/g,"
-        '<meta name="$1" content="$2" />',
-      )
-      .replace(")
-        /<meta property="([^"]*?)" content="([^"]*?)" \/>";/g,"
-        '<meta property="$1" content="$2" />',
-      )
-      // Clean up extra whitespace and newlines"
-      .replace(/\n\s*\n\s*\n/g, "\n\n")"
-      .replace(/\s+$/gm, "")
-      .trim()
-    fs.writeFileSync(filePath, content)
-    console.log(`Fixed: ${filePath}`)
-    return true
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+
+console.log('🔧 Fixing page files...');
+
+// Function to recursively find all page files
+function getAllPageFiles(dir) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
+      files = files.concat(getAllPageFiles(fullPath));
+    } else if (stat.isFile() && item === 'page.tsx') {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Function to create a proper page template
+function createPageTemplate(filePath) {
+  const fileName = path.basename(path.dirname(filePath));
+  const title = fileName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  
+  return `'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${title} services and solutions from Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">${title}</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our ${title.toLowerCase()} services.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
+`;
+}
+
+// Main function
+function main() {
+  try {
+    const files = getAllPageFiles('/workspace/app');
+    let fixedCount = 0;
+    let errorCount = 0;
+    
+    console.log(`📁 Found ${files.length} page files to process...`);
+    
+    for (const filePath of files) {
+      try {
+        const content = createPageTemplate(filePath);
+        fs.writeFileSync(filePath, content, 'utf8');
+        fixedCount++;
+        console.log(`✅ Fixed: ${filePath}`);
+      } catch (error) {
+        errorCount++;
+        console.error(`❌ Error processing ${filePath}:`, error.message);
+      }
+    }
+    
+    console.log(`\n🎉 Page fixing complete!`);
+    console.log(`✅ Fixed: ${fixedCount} files`);
+    console.log(`❌ Errors: ${errorCount} files`);
+    
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
+    console.error('❌ Fatal error:', error.message);
+    process.exit(1);
+  }
 }
-// Function to find all page.tsx files;
-function findPageFiles(dir) {;
-const files = [];
-function traverse(currentDir) {;
-const items = fs.readdirSync(currentDir)
-    for (const item of items) {;
-const fullPath = path.join(currentDir, item);
-const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-        traverse(fullPath)"
-      } else if (item === "page.tsx") {
-        files.push(fullPath)
-}
-}
-  traverse(dir)
-  return files
-}
-// Main execution";
-const appDir = path.join(__dirname, "app");
-const pageFiles = findPageFiles(appDir)
-console.log(`Found ${pageFiles.length} page.tsx files`)
-let fixedCount = 0
-for (const file of pageFiles) {
-  if (fixPageFile(file)) {
-    fixedCount++
-}
-console.log(`Fixed ${fixedCount} out of ${pageFiles.length} files`)"
-}}}
+
+main();

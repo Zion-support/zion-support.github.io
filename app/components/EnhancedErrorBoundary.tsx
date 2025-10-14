@@ -14,7 +14,6 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> origin/main
 }
 
 interface State {
@@ -30,10 +29,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
->>>>>>> origin/main
 }
 
->>>>>>> origin/main
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -44,7 +41,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
->>>>>>> origin/main
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -66,9 +62,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a logging service
       console.error('Production error:', error);
->>>>>>> origin/main
     }
->>>>>>> origin/main
 
   render() {
     if (this.state.hasError) {
@@ -194,7 +188,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </details>
               )
             </div>
->>>>>>> origin/main
           </div>
         </>
       )
@@ -203,6 +196,19 @@ export default EnhancedErrorBoundary
 export default EnhancedErrorBoundary';
               )}
 
+const EnhancedErrorBoundaryPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="EnhancedErrorBoundary - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">EnhancedErrorBoundary</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
         </div>
   );
 }
@@ -212,5 +218,4 @@ export default EnhancedErrorBoundary';
 }
 ;
 export default EnhancedErrorBoundary;
->>>>>>> origin/main
 

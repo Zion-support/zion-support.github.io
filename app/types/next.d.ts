@@ -1,34 +1,33 @@
-  export interface NextPageProps {
-  export default content;
-// Next.js type definitions
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-declare module "next" {
+declare module "next" {""
     params: { [key: string]: string };
     searchParams: { [key: string]: string | string[] | undefined };
   }
 }
 
-declare module "*.svg" {
+declare module "*.svg" {""
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
 }
 
-declare module "*.png" {
+declare module "*.png" {""
   const content: string;
 }
 
-declare module "*.jpg" {
+declare module "*.jpg" {""
   const content: string;
 }
 
-declare module "*.jpeg" {
+declare module "*.jpeg" {""
   const content: string;
 }
 
-declare module "*.gif" {
+declare module "*.gif" {""
   const content: string;
 }
 
-declare module "*.webp" {
+declare module "*.webp" {""
   const content: string;
 }
   }

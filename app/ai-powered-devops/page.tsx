@@ -1,8 +1,5 @@
+import React from "react";
 import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Award as AwardIcon, Rocket, Phone, Star as StarIcon } from "lucide-react";
-import { Link } from "react-router-dom";
-import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function AiPoweredDevops() {
   const features = [
@@ -117,13 +114,9 @@ const HomePage = () => {"
             This page is under construction. Please check back later.
           </p>
         </div>
-
-      </div>)
-    </div>)
+      </div>
+    </div>
   );
-
 };
-;
-export default HomePage;"
-"
-"'
+
+export default PagePage;

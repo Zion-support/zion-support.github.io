@@ -1,4 +1,4 @@
-// add-missing-routes - Basic implementation
-export default function add-missing-routes() {
+// add-missing-routes - Basic implementation;
+export default function addMissingRoutes() {
   return null;
-}
+};

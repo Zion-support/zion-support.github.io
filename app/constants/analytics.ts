@@ -1,4 +1,4 @@
-// Analytics constants
+// Analytics constants;
 export const ANALYTICS_EVENTS = {
   PAGE_VIEW: 'page_view',
   CLICK: 'click',
@@ -6,4 +6,4 @@ export const ANALYTICS_EVENTS = {
   FORM_SUBMIT: 'form_submit',
 } as const;
 
-export const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID';
+export const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID'

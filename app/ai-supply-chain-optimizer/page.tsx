@@ -1,91 +1,12 @@
-<<<<<<< HEAD
-import { Globe, Target, CheckCircle, TrendingUp } from "lucide-react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { TrendingUp, Shield, Target, Globe, Clock, CheckCircle } from "lucide-react";
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
-export default function AISupplyChainOptimizerPage() {
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small to medium businesses',
-      features: [
-        'Up to 5 warehouses',
-        'Basic demand forecasting',
-        'Email support',
-        'Standard analytics',
-        'Monthly reports'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Up to 20 warehouses',
-        'Advanced AI forecasting',
-        '24/7 phone support',
-        'Real-time analytics',
-        'Weekly reports',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited warehouses',
-        'AI-powered optimization',
-        'Dedicated support',
-        'Custom analytics',
-        'Daily reports',
-        'Custom integrations',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ];
-
-  const features = [
-    {
-      icon: <Shield className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Forecasting',
-      description: 'Advanced machine learning algorithms predict demand with 95% accuracy'
-    },
-    {
-      icon: <Target className="w-6 h-6 text-purple-400" />,
-      title: 'Inventory Optimization',
-      description: 'Automatically optimize stock levels to reduce costs and prevent stockouts'
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-green-400" />,
-      title: 'Global Supply Chain',
-      description: 'Manage complex multi-country supply chains with real-time visibility'
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-orange-400" />,
-      title: 'Real-time Monitoring',
-      description: '24/7 monitoring of your entire supply chain with instant alerts'
-    }
-  ];
-
+const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Supply Chain Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Optimize your supply chain with AI-powered forecasting, inventory management, and real-time monitoring solutions." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" />
       </Helmet>
       
       <FuturisticBackground />
@@ -126,11 +47,9 @@ const HomePage = () => {"
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>)
-    </div>)
+      </div>
+    </div>
   );
 };
 
-export default HomePage;
->>>>>>> origin/main
->>>>>>> origin/main
+export default PagePage;

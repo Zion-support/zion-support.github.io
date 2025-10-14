@@ -20,6 +20,5 @@ const CloudSolutionsPage = () => {
   );
   );
 };
-;
 export default CloudSolutionsPage;
-"
+"""

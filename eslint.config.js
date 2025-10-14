@@ -64,6 +64,8 @@ export default tseslint.config(
         jest: "readonly",
       },
       parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },

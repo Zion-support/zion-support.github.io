@@ -1,10 +1,4 @@
-
-import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3,  } from "lucide-react";
-import Layout from "../layout";
-
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight, CheckCircle } from 'lucide-react';
-import Layout from '../layout';
+import React from "react";
 import { Helmet } from "react-helmet-async";
 ;
 const HomePage = () => {
@@ -27,79 +21,4 @@ const HomePage = () => {
   );
 };
 
-  const managementFeatures = [
-    {
-      category: 'Infrastructure Management',
-      items: ['Server Provisioning', 'Load Balancing', 'Auto Scaling', 'Resource Monitoring', 'Backup & Recovery', 'Disaster Recovery']
-    },
-    {
-      category: 'Security & Compliance',
-      items: ['Identity Management', 'Access Control', 'Encryption', 'Vulnerability Scanning', 'Compliance Auditing', 'Security Monitoring']
-    },
-    {
-      category: 'Cost Management',
-      items: ['Cost Analysis', 'Resource Optimization', 'Budget Alerts', 'Usage Tracking', 'Cost Forecasting', 'Right-sizing Recommendations']
-    },
-    {
-      category: 'Support & Maintenance',
-      items: ['24/7 Support', 'Proactive Monitoring', 'Incident Response', 'Performance Tuning', 'Capacity Planning', 'Health Checks']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 10 servers',
-        'Basic monitoring',
-        'Email support',
-        'Standard security',
-        'Monthly reports'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$599',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Up to 50 servers',
-        'Advanced monitoring',
-        '24/7 phone support',
-        'Enhanced security',
-        'Weekly reports',
-        'Auto-scaling'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited servers',
-        'Real-time monitoring',
-        'Dedicated support',
-        'Enterprise security',
-        'Daily reports',
-        'Custom integrations',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ];
-
-<<<<<<< HEAD
-  const enterpriseFeatures = [
-    'Unlimited servers',
-        'Custom monitoring',
-        'Dedicated support',
-        'White-label options',
-        'Real-time reports',
-        'Custom integrations'
->>>>>>> origin/main
+export default PagePage;

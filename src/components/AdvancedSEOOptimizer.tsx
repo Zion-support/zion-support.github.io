@@ -1,12 +1,12 @@
-import React from "react"";
-import { Helmet } from "react-helmet-async";
-export default function AdvancedSEOOptimizer() {
+import React from "react"";"
+import { Helmet } from "react-helmet-async";""
+export default function AdvancedSEOOptimizer() {}
   return (
     <div></div>
       <Helmet></Helmet>
         <title>Advanced SEO Optimizer - Zion Tech Group</title>
-        <meta"
-          name="description""
+        <meta">"
+          name="description"""
           content="Professional advanced SEO optimization services by Zion Tech Group."
         />
       </Helmet>
@@ -17,4 +17,4 @@ export default function AdvancedSEOOptimizer() {
   )
 
 }
-"
+""

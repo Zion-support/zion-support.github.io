@@ -1,106 +1,19 @@
-import React, { useEffect, useState, ReactNode } from 'react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
-
-interface PerformanceMonitorProps {
-  children: ReactNode;
-  showDetails?: boolean;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children, showDetails = false }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null
-  });
-
->>>>>>> origin/main
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const measurePerformance = () => {
-      // Get Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({
-                ...prev,
-                fcp: entry.startTime
-              }));
-            }
-          } else if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({
-              ...prev,
-              lcp: entry.startTime
-            }));
-          } else if (entry.entryType === 'first-input') {
-            setMetrics(prev => ({
-              ...prev,
-              fid: (entry as any).processingStart - entry.startTime
-            }));
-          } else if (entry.entryType === 'layout-shift') {
-            setMetrics(prev => ({
-              ...prev,
-              cls: (prev?.cls || 0) + (entry as any).value
-            }));
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-      // Get TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({
-          ...prev,
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart
-        }));
-      }
-
-      return () => observer.disconnect();
-    };
-
-    const cleanup = measurePerformance();
-
-    // Show performance monitor after 2 seconds
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 2000);
-
-    return () => {
-      if (cleanup) cleanup();
-      clearTimeout(timer);
-    };
-  }, []);
-
-  if (!isVisible || !showDetails) {
-    return <>{children}</>;
-  }
-
+const PerformanceMonitorPage = () => {
   return (
-    <>
-      {children}
-      <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm rounded-lg p-4 text-white text-xs font-mono border border-cyan-500/20 z-50">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-cyan-400 font-semibold">Performance Monitor</span>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-white"
-          >
-            ×
-          </button>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>PerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="PerformanceMonitor - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">PerformanceMonitor</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
         </div>
         <div className="space-y-1">
           {metrics?.fcp && (
@@ -246,7 +159,6 @@ export default PerformanceMonitor;
         <button
           onClick={ () => setIsVisible(false) }
           className="text-gray-400 hover:text-white text-xs"
->>>>>>> origin/main
         >
           ×
         </button>
@@ -298,12 +210,8 @@ export default PerformanceMonitor;
 export default PerformanceMonitor;
       )
     </div>
-<<<<<<< HEAD
   )
 export default PerformanceMonitor;
 };
 
->>>>>>> origin/main
-export default PerformanceMonitor;
->>>>>>> origin/main
->>>>>>> origin/main
+export default PerformanceMonitorPage;
