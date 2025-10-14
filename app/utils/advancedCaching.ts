@@ -1,12 +1,13 @@
-export const advancedCaching ={
-  setCache: (key: string, value: unknown, ttl: numbe r = 3600) => {
-    const item ={
+export const advancedCaching = {
+  setCache: (key: string, value: unknown, ttl: number = 3600) => {
+    const item = {
       value,
       timestamp: Date.now(),
       ttl: ttl * 1000
     };
     localStorage.setItem(key, JSON.stringify(item));
   },
+  
   getCache: (key: string) => {
     const item = localStorage.getItem(key);
     if (!item) return null;
@@ -21,10 +22,11 @@ export const advancedCaching ={
     
     return parsed.value;
   },
+  
   clearCache: (pattern?: string) => {
     if (pattern) {
       const keys = Object.keys(localStorage);
-      keys.forEach(ke y => {
+      keys.forEach(key => {
         if (key.includes(pattern)) {
           localStorage.removeItem(key);
         }

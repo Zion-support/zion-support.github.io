@@ -1,27 +1,27 @@
-import { useState, useEffect  } from 'react';
+import { useState, useEffect } from 'react';
 
-export const usePerformance Monitor = () => {
+export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    if (typeof window !=='undefined' && 'performance' in window) {
-      const observer = newPerformance Observer((list) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         if (entries.length > 0) {
           setMetrics((prev: Record<string, number>) => ({
-            ...prev,[entries[0].name]: entries[0].startTime
+            ...prev, [entries[0].name]: entries[0].startTime
           }));
         }
       });
 
-      observer.observe({ entryTypes:['measure','navigation'] });
+      observer.observe({ entryTypes: ['measure', 'navigation'] });
 
       return () => {
         observer.disconnect();
       };
     }
     return undefined;
-  },[]);
+  }, []);
 
   return { metrics };
 };

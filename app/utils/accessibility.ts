@@ -1,27 +1,27 @@
-export const accessibilityUtils ={
-  addSkip Link: () => {
+export const accessibilityUtils = {
+  addSkipLink: () => {
     const skipLink = document.createElement('a');
-    skipLink.hre f ='#main-content';
-    skipLink.textConten t ='Skip to main content';
-    skipLink.classNam e ='sr-only focus:not-sr-only';
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only';
     document.body.insertBefore(skipLink, document.body.firstChild);
   },
   trapFocus: (element: HTMLElement) => {
-    const focusableElements = element.querySelector All(
-      'button,[href], input, select, textarea,[tabindex]:not([tabinde x ="-1"])'
+    const focusableElements = element.querySelectorAll(
+      'button,[href], input, select, textarea,[tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
     
-    const handleTab Key = (e: Keyboard Event) => {
-      if (e.ke y ==='Tab') {
+    const handleTabKey = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
         if (e.shiftKey) {
-          if (document.activeElemen t === firstElement) {
+          if (document.activeElement === firstElement) {
             lastElement.focus();
             e.preventDefault();
           }
         } else {
-          if (document.activeElemen t === lastElement) {
+          if (document.activeElement === lastElement) {
             firstElement.focus();
             e.preventDefault();
           }
@@ -29,12 +29,12 @@ export const accessibilityUtils ={
       }
     };
     
-    element.addEvent Listener('keydown', handleTab Key);
+    element.addEventListener('keydown', handleTabKey);
     return () => {
-      element.removeEvent Listener('keydown', handleTab Key);
+      element.removeEventListener('keydown', handleTabKey);
     };
   },
-  addAria Labels: (element: HTMLElement, label: string) => {
+  addAriaLabels: (element: HTMLElement, label: string) => {
     element.setAttribute('aria-label', label);
   },
   addRole: (element: HTMLElement, role: string) => {

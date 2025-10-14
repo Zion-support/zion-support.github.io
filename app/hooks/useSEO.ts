@@ -1,4 +1,4 @@
-import { useEffect  } from 'react';
+import { useEffect } from 'react';
 
 interface UseSEOProps {
   title: string;
@@ -8,7 +8,7 @@ interface UseSEOProps {
 
 export const useSEO = ({ title, description, keywords }: UseSEOProps) => {
   useEffect(() => {
-    if (typeof document !=='undefined') {
+    if (typeof document !== 'undefined') {
       const metaDescription = document.querySelector('meta[name="description"]');
       const metaKeywords = document.querySelector('meta[name="keywords"]');
       
@@ -19,7 +19,7 @@ export const useSEO = ({ title, description, keywords }: UseSEOProps) => {
         metaKeywords.setAttribute('content', keywords);
       }
       
-      document.titl e = title;
+      document.title = title;
     }
-  },[title, description, keywords]);
+  }, [title, description, keywords]);
 };
