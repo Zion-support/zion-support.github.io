@@ -9,7 +9,6 @@ export default function Page() {
         <title>Ai Mobile Builder - Zion Tech Group</title>
         <meta name="description" content="Ai Mobile Builder services and solutions from Zion Tech Group" />
       </Helmet>
-      </Helmet>
       
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
@@ -18,7 +17,6 @@ export default function Page() {
             This page is under development. Please check back soon for more information about our ai mobile builder services.
           </p>
         </div>
-      </div>
     </>
   );
 }

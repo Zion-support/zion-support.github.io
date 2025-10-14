@@ -12,20 +12,18 @@
 <>"
         <div className="text-center"></div>"
             </div>"
-            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div></div>"
+            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div>"
 
           </div>"
 "
           <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
           <p className="text-gray-300 mb-6">{message || getDefaultMessage()}</p>
           <div className="flex justify-center space-x-2"></div>
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div></div>'"
-            <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div></div>"'"'"'"
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div></div>'"'"
+            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div>'"
+            <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>"'"'"'"
+            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>'"'"
 
           </div>
-        </div>
-      </div>
     )}
   }
 
@@ -49,15 +47,12 @@
               <h3 className="text-lg font-semibold text-purple-900 mb-2">
                 24/7 Support</h3>"
               <p className="text-purple-700">
-                Round-the-clock support for all your loadingstates needs.</p></div></div>"
+                Round-the-clock support for all your loadingstates needs.</p></div>"
           <div className="mt-12">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started Today</button></div></div></div></div>
+              Get Started Today</button></div>
   )}
             </button>
           </div>
-        </div>
-      </div>
-    </div>
   )}
 '"

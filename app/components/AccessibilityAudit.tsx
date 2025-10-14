@@ -10,7 +10,6 @@ const AccessibilityAudit = () => {
             This component is under construction. Please check back later.
           </p>
         </div>
-      </div>
     </>
   );
 };

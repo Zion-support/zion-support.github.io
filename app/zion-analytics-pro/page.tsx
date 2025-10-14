@@ -184,7 +184,6 @@ export default function ZionAnalyticsPro() {
                 <div>{stats.map((stat, index) => (</div>
                     <div key={index} className="text-center group">
                       <div>{stat.icon}</div>
-                      </div>
                       <div className="text-xl font-bold text-white mb-1">{stat.number}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
                   ))}
@@ -236,7 +235,6 @@ export default function ZionAnalyticsPro() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
                 >
                   <div>{feature.icon}</div>
-                  </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">
                     {feature.title}
                   </h3>
@@ -322,7 +320,6 @@ export default function ZionAnalyticsPro() {
                   <p>&ldquo;{testimonial.content}&rdquo;</p>
                   <div className="flex items-center">
                     <div>{testimonial.avatar}</div>
-                    </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>

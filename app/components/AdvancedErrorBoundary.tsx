@@ -232,7 +232,6 @@ class AdvancedErrorBoundary extends Component<
                       </pre>
                     </details>
                   </div>
-                </div>
               )}
 
               <div className='mt-6 space-y-3'>
@@ -274,9 +273,6 @@ class AdvancedErrorBoundary extends Component<
                   </a>
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
       );
     }
 

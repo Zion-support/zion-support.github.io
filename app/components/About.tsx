@@ -51,16 +51,12 @@ const About: React.FC = () => {
                     <h3 className="text-lg font-semibold text-gray-900">Expert Team</h3>
                     <p className="text-gray-600">Our team of experienced professionals brings deep expertise in AI and IT solutions.</p>
                   </div>
-                </div>
                 <div className="flex items-start">
                   <CheckIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Client-Focused</h3>
                     <p className="text-gray-600">We prioritize our clients&apos; success and work closely with them to achieve their goals.</p>
                   </div>
-                </div>
-              </div>
-            </div>
 
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -71,10 +67,8 @@ const About: React.FC = () => {
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
-                </div>
               ))}
             </div>
-          </div>
 
           {/* Values Section */}
           <div className="mt-20">
@@ -93,8 +87,6 @@ const About: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
       </section>
     </>
   );

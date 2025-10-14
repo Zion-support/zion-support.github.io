@@ -127,7 +127,6 @@ const timer = setTimeout(measurePerformance, 1000)
             {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(2)}MB` : 'N/A'}'``'`
           </span>
         </div>
-      </div>
 
       <div className="mt-4 flex gap-2"></div>"
         <button
@@ -150,12 +149,10 @@ const timer = setTimeout(measurePerformance, 1000)
       <div className="mt-2 text-xs text-gray-400"></div>"
         Press Ctrl+Shift+P to toggle
       </div>
-    </div>
           >
             ✕
           </button>
         </div>
-      </div>
       <div className="space-y-2 text-xs">
         <div className="flex justify-between">
           <span className="text-gray-400">Load Time:</span>
@@ -163,7 +160,6 @@ const timer = setTimeout(measurePerformance, 1000)
 
         <div>Ctrl+Shift+P: Toggle</div>
         <div>Ctrl+Shift+R: Record</div>
-      </div>
   )}
 }
 

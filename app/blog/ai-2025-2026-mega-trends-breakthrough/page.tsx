@@ -60,15 +60,12 @@ const AIMegaTrends20252026: React.FC = () => {
               <div className="bg-indigo-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-indigo-600 mb-2">$100B+</div>
                 <div className="text-gray-700">Market Value</div>
-              </div>
               <div className="bg-green-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">95%</div>
                 <div className="text-gray-700">Process Automation</div>
-              </div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-purple-600 mb-2">10x</div>
                 <div className="text-gray-700">Efficiency Gains</div>
-              </div>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Future Outlook</h2>
@@ -95,11 +92,8 @@ const AIMegaTrends20252026: React.FC = () => {
                   Explore AI Services
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 

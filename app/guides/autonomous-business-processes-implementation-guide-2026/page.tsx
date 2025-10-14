@@ -102,7 +102,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
             <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg border-l-4 border-green-500">
               <div className="flex items-center mb-4">
                 <div>1</div>
-                </div>
                 <h3 className="text-2xl font-semibold text-gray-900">
                   Process Discovery & Analysis (Months 1-3)
                 </div>
@@ -132,7 +131,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg border-l-4 border-blue-500">
               <div className="flex items-center mb-4">
                 <div>2</div>
-                </div>
                 <h3 className="text-2xl font-semibold text-gray-900">
                   Automation Design & Development (Months 4-9)
                 </div>
@@ -162,7 +160,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-lg border-l-4 border-purple-500">
               <div className="flex items-center mb-4">
                 <div>3</div>
-                </div>
                 <h3 className="text-2xl font-semibold text-gray-900">
                   Testing & Deployment (Months 10-12)
                 </div>
@@ -192,7 +189,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
             <div className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-lg border-l-4 border-orange-500">
               <div className="flex items-center mb-4">
                 <div>4</div>
-                </div>
                 <h3 className="text-2xl font-semibold text-gray-900">
                   Optimization & Scale (Months 13-18)
                 </div>

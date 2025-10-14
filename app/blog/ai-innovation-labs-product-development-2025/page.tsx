@@ -27,15 +27,12 @@ const InnovationLabsPage: React.FC = () => {
               <div className="bg-blue-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">10x</div>
                 <div className="text-gray-700">Faster Time-to-Market</div>
-              </div>
               <div className="bg-green-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">85%</div>
                 <div className="text-gray-700">Cost Reduction</div>
-              </div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-purple-600 mb-2">300%</div>
                 <div className="text-gray-700">Innovation Speed</div>
-              </div>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏭 Lab Overview</h2>
@@ -120,11 +117,8 @@ const InnovationLabsPage: React.FC = () => {
                   Explore AI Services
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 

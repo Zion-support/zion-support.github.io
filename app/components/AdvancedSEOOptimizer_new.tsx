@@ -44,9 +44,6 @@ const AdvancedSEOOptimizerNew: React.FC<AdvancedSEOOptimizerNewProps> = ({ class
               Ongoing SEO monitoring and optimization to ensure peak performance.
             </p>
           </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

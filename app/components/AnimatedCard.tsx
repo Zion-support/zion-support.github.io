@@ -21,7 +21,6 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
 <>
       <div>````
       {children}</div>
-    </div>
     </>
   )}
     </div>

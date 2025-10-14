@@ -41,9 +41,7 @@ const NotFoundPage = () => {
               Track record of delivering successful projects and exceeding client expectations.
             </p>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 

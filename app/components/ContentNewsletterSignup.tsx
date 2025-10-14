@@ -79,7 +79,6 @@ const ContentNewsletterSignup: React.FC = () => {
             We respect your privacy. Unsubscribe at any time.
           </p>
         </div>
-      </div>
     </section>
   );
 };

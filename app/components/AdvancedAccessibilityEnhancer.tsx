@@ -36,9 +36,6 @@ const AdvancedAccessibilityEnhancer = () => {
                 Comprehensive features and capabilities for your business needs.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

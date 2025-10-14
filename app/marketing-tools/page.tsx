@@ -137,7 +137,6 @@ const MarketingToolsPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
                   <p>{tool.description}</p>
                   <div>{tool.category}</div>
-                  </div>
 
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features:</h4>

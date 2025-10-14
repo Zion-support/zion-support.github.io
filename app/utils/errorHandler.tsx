@@ -42,7 +42,6 @@
                 Contact Us
               </a>
             </div>
-          </div>
         </div>
       </section>
             Ready to Get Started?

@@ -207,14 +207,11 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
                 </label>
               )})
             </div>
-          </div>
           <div></div>
           >
             Close
           </button>
         </div>
-      </div>
-    </div>
   )
 export default EnhancedAccessibility
   )

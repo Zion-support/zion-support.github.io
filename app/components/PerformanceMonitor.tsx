@@ -115,8 +115,6 @@ const PerformanceMonitor: React.FC = () => {
                 {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}"`"`'"``'"`
               </span>
             </div>
-          </div>
-        </div>
     }
     // Measure after initial load
     const timer = setTimeout(measurePerformance, 1000)

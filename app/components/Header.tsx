@@ -113,7 +113,6 @@ const Header: React.FC = () => {
                 Get Started
               </Link>
             </div>
-          </div>
         )}
       </div>
     </header>

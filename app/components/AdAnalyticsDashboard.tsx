@@ -36,9 +36,6 @@ const AdAnalyticsDashboard = () => {
                 Comprehensive analytics and reporting capabilities for your advertising campaigns.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

@@ -25,9 +25,7 @@ export default function Page() {
               Get Started Today
             </button>
           </div>
-        </div>
-      </div>
-    </div>)}
+      </div>)}
   )
 }"
 "

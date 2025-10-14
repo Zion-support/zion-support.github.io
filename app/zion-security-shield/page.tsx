@@ -198,7 +198,6 @@ export default function ZionSecurityShield() {
                   
                   <div className="relative z-10">
                     <div>{feature.icon}</div>
-                    </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-300 transition-colors">
                       {feature.title}
                     </h3>
@@ -252,7 +251,6 @@ export default function ZionSecurityShield() {
                 <div>{plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div>Most Popular</div>
-                      </div>
                   )}
                   
                   <div className="text-center mb-6">
@@ -302,9 +300,7 @@ export default function ZionSecurityShield() {
                 >
                   <div className="text-2xl mb-2">🛡️</div>
                   <div>{standard.name}</div>
-                  </div>
                   <div>{standard.description}</div>
-                  </div>
               ))}
             </div>
         </section>

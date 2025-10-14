@@ -149,7 +149,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-        </div>
 
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-slate-700">"
@@ -167,8 +166,6 @@ const Footer = () => {
                 <ArrowRight className="w-4 h-4 ml-2" />"
               </button>
             </div>
-          </div>
-        </div>
 
       {/* Bottom Footer */}
       <div className="bg-slate-800 border-t border-slate-700">"
@@ -190,9 +187,6 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-          </div>
-        </div>
-      </div>
     </footer>
   )
 }

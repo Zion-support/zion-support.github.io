@@ -30,8 +30,6 @@
                 Contact Us
               </a>
             </div>
-          </div>
-        </div>
       </section>
                 We provide comprehensive skip link
                 solutions tailored to your specific needs and requirements.</p>"

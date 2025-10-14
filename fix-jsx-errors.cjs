@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
 // Function to fix common JSX errors
 function fixJSXErrors(content) {
@@ -30,15 +30,10 @@ function fixJSXErrors(content) {
   // Fix missing closing section tag
   fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g, '</div></div></div></div></section>');
   
-  // Fix unterminated string literals in components
-  fixed = fixed.replace(/import React from "react";\s*import { Helmet } from "react-helmet-async";\s*const [^=]+ = \(\) => \{[\s\S]*?return \(\s*<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<\/Helmet>\s*([\s\S]*?)<\/div>\s*<\/div>\s*<\/>\s*\);\s*\};/g, (match, content) => {
-    return match.replace(/<\/Helmet>\s*<\/Helmet>/, '</Helmet>');
-  });
-  
   return fixed;
 }
 
-// Function to fix specific file patterns
+// Function to fix specific files
 function fixSpecificFiles() {
   const patterns = [
     'app/**/*.tsx',
@@ -47,8 +42,8 @@ function fixSpecificFiles() {
     'app/components/**/*.ts'
   ];
   
-  patterns.forEach(async pattern => {
-    const files = await glob(pattern, { cwd: process.cwd() });
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
     
     files.forEach(file => {
       try {

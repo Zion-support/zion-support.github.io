@@ -36,13 +36,10 @@ const CaseStudiesPage: React.FC = () => {
                           <Icon className="w-8 h-8 text-violet-400 mx-auto mb-2" />
                           <div className="text-2xl font-bold text-white mb-1">{result.value}</div>
                           <div className="text-sm text-gray-400">{result.metric}</div>
-                        </div>
                       )}
                     }
                   </div>
-                </div>
               </div>
-            </div>
           )})
         </div>
               Let us help you achieve similar results with our proven AI and IT solutions.
@@ -94,14 +91,12 @@ const CaseStudiesPage: React.FC = () => {
                 <p className="text-purple-700">
                   Comprehensive security overhaul for a financial services company.
                 </p>
-              </div>
-            </div>"
+              </div>"
             <div className="mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View All Case Studies
               </button>
             </div>
-          </div>
 const CaseStudiesPage: React.FC = () => {
   return (
     <>

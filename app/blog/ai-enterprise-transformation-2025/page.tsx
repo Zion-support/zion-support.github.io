@@ -30,15 +30,12 @@ const EnterpriseTransformationPage: React.FC = () => {
               <div className="bg-green-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">$50M</div>
                 <div className="text-gray-700">Annual Savings</div>
-              </div>
               <div className="bg-blue-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
                 <div className="text-gray-700">Process Automation</div>
-              </div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-purple-600 mb-2">300%</div>
                 <div className="text-gray-700">ROI</div>
-              </div>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏢 Company Profile</h2>
@@ -109,11 +106,8 @@ const EnterpriseTransformationPage: React.FC = () => {
                   Explore AI Services
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
 }
 

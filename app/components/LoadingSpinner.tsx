@@ -21,7 +21,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           }></div>
           <Loader2 className="w-full h-full" />
         </div>
-      </div>
       {text && (
     </div>
   )

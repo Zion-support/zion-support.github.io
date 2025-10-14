@@ -44,9 +44,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               Ongoing performance monitoring and optimization to ensure peak efficiency.
             </p>
           </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

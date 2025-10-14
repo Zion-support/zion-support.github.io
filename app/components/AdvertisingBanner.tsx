@@ -27,7 +27,6 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           {ctaText}
         </a>
       </div>
-    </div>
   );
 };
 

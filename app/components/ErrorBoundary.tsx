@@ -38,7 +38,6 @@ class ErrorBoundary extends Component<Props, State> {
               Reload Page
             </button>
           </div>
-        </div>
       );
     }
 

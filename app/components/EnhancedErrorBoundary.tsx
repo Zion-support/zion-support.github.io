@@ -135,7 +135,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     Reload Page
                   </button>
                 </div>
-              </div>
 
               { /* Support Information */ }"
               <div className="mt-8 pt-6 border-t border-slate-700"></div>
@@ -180,8 +179,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </details>
               )
             </div>
-
-          </div>
     </>
       )
     return this.props.children}

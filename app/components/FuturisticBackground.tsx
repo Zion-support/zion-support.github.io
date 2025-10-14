@@ -20,7 +20,6 @@ const FuturisticBackground = () => {
                 style={{}}></div>
             ))
           </div>
-        </div>
         "
         <div className="absolute inset-0"></div>"
           {Array.from({ length: 20 }).map((_, i) => (
@@ -32,7 +31,6 @@ const FuturisticBackground = () => {
 
         {/* Gradient Overlay */}"
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div>
-      </div>
 
       {/* Content */}
       {children && ("

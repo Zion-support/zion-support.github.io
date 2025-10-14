@@ -92,7 +92,6 @@ const Services: React.FC = () => {
                   Learn More →
                 </button>
               </div>
-            </div>
           ))}
         </div>
 
@@ -109,8 +108,6 @@ const Services: React.FC = () => {
               Get Free Consultation
             </button>
           </div>
-        </div>
-      </div>
     </section>
   )
 }

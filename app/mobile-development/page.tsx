@@ -9,7 +9,6 @@ export default function Page() {
         <title>Mobile Development - Zion Tech Group</title>
 
         </div>
-      </div>
     </>
   );
 }

@@ -80,7 +80,6 @@ const HomePage = () => {
                 <ArrowRightIcon className="w-5 h-5 ml-2" />"
               </NeonButton>
             </div>
-          </div>
         </div>
       </section>
 
@@ -97,7 +96,6 @@ const HomePage = () => {
               <ArrowRightIcon className="w-5 h-5 ml-2" />"
             </NeonButton>
           </div>
-        </div>
       </section>
 
       {/* About Section */}"
@@ -140,7 +138,6 @@ const HomePage = () => {
                 <ArrowRightIcon className="w-5 h-5 ml-2" />"
               </NeonButton>
             </div>
-          </div>
         </div>
       </section>
 
@@ -189,7 +186,6 @@ const HomePage = () => {
                 <ArrowRightIcon className="w-5 h-5 ml-2" />"
               </NeonButton>
             </div>
-          </div>
         </div>
       </section>
     </div>
