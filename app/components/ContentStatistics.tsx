@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
+import { Users, Award, TrendingUp, Clock, Globe, BarChart3, Brain, Zap, Shield, Star, Target, Rocket, CheckCircle } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({

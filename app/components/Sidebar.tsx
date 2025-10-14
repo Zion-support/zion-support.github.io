@@ -1,9 +1,5 @@
-import React from 'react';
-import { X } from 'lucide-react';
-import { Home } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Mail } from 'lucide-react';
+
+import { X, Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';

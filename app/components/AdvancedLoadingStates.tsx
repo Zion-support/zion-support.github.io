@@ -1,52 +1,70 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 
-const ComponentsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Components</title>
-        <meta name="description" content="Professional components solutions and services" />
-        <meta name="keywords" content="components" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Components</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional components solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
+interface AdvancedLoadingStatesProps {
+  type?: 'spinner' | 'skeleton' | 'dots' | 'pulse';
+  fullScreen?: boolean;
+  message?: string;
+}
+
+const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({
+  type = 'spinner',
+  fullScreen = false,
+  message = 'Loading...'
+}) => {
+  const containerClass = fullScreen 
+    ? 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'
+    : 'flex items-center justify-center p-8';
+
+  const renderLoadingContent = () => {
+    switch (type) {
+      case 'spinner':
+        return (
+          <div className="flex flex-col items-center space-y-4">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            <p className="text-white text-lg">{message}</p>
           </div>
-        </div>
-      </div>
-    </>
+        );
+      case 'skeleton':
+        return (
+          <div className="flex flex-col items-center space-y-4">
+            <div className="animate-pulse bg-gray-300 rounded h-12 w-12"></div>
+            <div className="animate-pulse bg-gray-300 rounded h-4 w-32"></div>
+            <p className="text-white text-lg">{message}</p>
+          </div>
+        );
+      case 'dots':
+        return (
+          <div className="flex flex-col items-center space-y-4">
+            <div className="flex space-x-2">
+              <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce"></div>
+              <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+              <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            </div>
+            <p className="text-white text-lg">{message}</p>
+          </div>
+        );
+      case 'pulse':
+        return (
+          <div className="flex flex-col items-center space-y-4">
+            <div className="animate-pulse bg-blue-500 rounded-full h-12 w-12"></div>
+            <p className="text-white text-lg">{message}</p>
+          </div>
+        );
+      default:
+        return (
+          <div className="flex flex-col items-center space-y-4">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            <p className="text-white text-lg">{message}</p>
+          </div>
+        );
+    }
+  };
+
+  return (
+    <div className={containerClass}>
+      {renderLoadingContent()}
+    </div>
   );
 };
 
-export default ComponentsPage;
+export default AdvancedLoadingStates;

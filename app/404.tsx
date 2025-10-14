@@ -1,3 +1,2 @@
-import React, { Suspense } from 'react';
 // import React from 'react'
 // import { Helmet } from 'react-helmet-async'

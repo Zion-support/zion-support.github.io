@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+
 
 export const errorBoundaryConfig = {
   fallback: <div>Something went wrong</div>,

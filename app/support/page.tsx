@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Clock, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
+
 
 interface FAQ {
   question: string;
@@ -14,6 +15,27 @@ const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+
+  const resources = [
+    {
+      title: 'Documentation',
+      description: 'Comprehensive guides and API documentation',
+      link: '/docs',
+      icon: BookOpen
+    },
+    {
+      title: 'Community Forum',
+      description: 'Connect with other users and get help',
+      link: '/community',
+      icon: Users
+    },
+    {
+      title: 'Status Page',
+      description: 'Check system status and uptime',
+      link: '/status',
+      icon: Zap
+    }
+  ];
 
   const faqs: FAQ[] = [
     {
