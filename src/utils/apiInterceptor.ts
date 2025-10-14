@@ -1,7 +1,0 @@
-';'
-// console.error('Network error:'
-  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';'
-      baseURL: config.baseURL || '','
-    if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {'
-      if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {'
-let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL,}${config.url}`;''
