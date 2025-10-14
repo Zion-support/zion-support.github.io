@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiQuantumComputingSimulatorPage: React.FC = () => {
+const Ai Quantum Computing Simulator Page: React.FC = () => {
   return (
     <>
       <Helmet>

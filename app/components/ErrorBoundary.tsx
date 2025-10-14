@@ -10,7 +10,7 @@ interface State {
   error?: Error;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+class Error Boundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -22,7 +22,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Error logged
   }
   render() {
-    if (this.state.hasError) {
+    if (this.state.has Error) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center">
@@ -32,7 +32,7 @@ class ErrorBoundary extends Component<Props, State> {
               className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
             >
               Reload Page
-            </button>
+            </butn>
           </div>
         </div>
       );

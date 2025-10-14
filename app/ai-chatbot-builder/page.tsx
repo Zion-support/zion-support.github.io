@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiChatbotBuilderPage: React.FC = () => {
+const Ai Chatbot Builder Page: React.FC = () => {
   return (
     <>
       <Helmet>

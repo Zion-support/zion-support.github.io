@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiPredictiveMaintenancePage: React.FC = () => {
+const Ai Predictive Maintenance Page: React.FC = () => {
   return (
     <>
       <Helmet>

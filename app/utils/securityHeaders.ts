@@ -1,4 +1,4 @@
-export const securityHeaders = {
+export const security Headers = {
   csp: {
     'default-src': ["'self'"],
     'script-src': ["'self'", "'unsafe-inline'"],

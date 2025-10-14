@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const FiveGEdgeComputingPage: React.FC = () => {
+const Five GEdge Computing Page: React.FC = () => {
   return (
     <>
       <Helmet>

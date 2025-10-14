@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const TaskAutomationWorkflowPage: React.FC = () => {
+const Task Automation Workflow Page: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiQuantumTaskOptimizerPage: React.FC = () => {
+const Ai Quantum Task Optimizer Page: React.FC = () => {
   return (
     <>
       <Helmet>

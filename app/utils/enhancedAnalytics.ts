@@ -20,7 +20,7 @@ export const enhancedAnalytics = {
   trackUserEngagement: (engagementType: string, value?: number) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'user_engagement', {
-        engagement_type: engagementType,
+        engagement_type: engagement Type,
         value: value
       });
     }

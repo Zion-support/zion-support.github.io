@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiTaskManagerPage: React.FC = () => {
+const Ai Task Manager Page: React.FC = () => {
   return (
     <>
       <Helmet>

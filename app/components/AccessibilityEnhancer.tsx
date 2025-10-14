@@ -1,19 +1,19 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { use Effect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
+interface Accessibility Enhancer Props {
+  enable Keyboard Navigation?: boolean;
+  enable Screen Reader Support?: boolean;
+  enable High Contrast?: boolean;
+  enable Focus Management?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableFocusManagement = true
+  enable Keyboard Navigation = true,
+  enable Screen Reader Support = true,
+  enable High Contrast = true,
+  enable Focus Management = true
 }) => {
   useEffect(() => {
     const root = document.documentElement;
@@ -46,8 +46,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
+      document.add Event Listener('keydown', handle Key Down);
+      return () => document.remove Event Listener('keydown', handle Key Down);
     }
   }, [enableKeyboardNavigation, enableHighContrast]);
 

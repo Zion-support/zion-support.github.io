@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const TermsOfServicePage: React.FC = () => {
+const Terms Of Service Page: React.FC = () => {
   return (
     <>
       <Helmet>

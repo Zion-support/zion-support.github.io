@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { use Effect } from 'react';
 
 interface EnhancedAnalyticsProps {
   eventName?: string;
@@ -6,10 +6,10 @@ interface EnhancedAnalyticsProps {
 }
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
-  eventName,
-  eventProperties
+  event Name,
+  event Properties
 }) => {
-  useEffect(() => {
+  use Effect(() => {
     // Enhanced analytics tracking
     const trackEvent = (event: string, properties?: Record<string, unknown>) => {
       if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
@@ -31,14 +31,14 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     };
 
     // Track user engagement
-    const trackEngagement = () => {
-      let startTime = Date.now();
-      let maxScrollDepth = 0;
-      let isActive = true;
+    const track Engagement = () => {
+      let start Time = Date.now();
+      let max Scroll Depth = 0;
+      let is Active = true;
 
-      const trackScroll = () => {
-        const scrollDepth = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      const track Scroll = () => {
+        const scroll Depth = Math.round(
+          (window.scroll Y / (document.document Element.scroll Height - window.inner Height)) * 100
         );
         maxScrollDepth = Math.max(maxScrollDepth, scrollDepth);
       };
@@ -56,8 +56,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         }
       };
 
-      window.addEventListener('scroll', trackScroll);
-      document.addEventListener('visibilitychange', trackVisibility);
+      window.add Event Listener('scroll', track Scroll);
+      document.add Event Listener('visibilitychange', track Visibility);
 
       // Track when user leaves page
       window.addEventListener('beforeunload', () => {
@@ -75,8 +75,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     };
 
     // Initialize tracking
-    trackPageView();
-    const cleanup = trackEngagement();
+    track Page View();
+    const cleanup = track Engagement();
 
     // Track custom event if provided
     if (eventName) {

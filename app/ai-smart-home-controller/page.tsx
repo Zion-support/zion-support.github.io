@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiSmartHomeControllerPage: React.FC = () => {
+const Ai Smart Home Controller Page: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -1,9 +1,9 @@
 export const errorReporter = {
   report: (error: Error, context?: Record<string, unknown>) => {
-    const errorInfo = {
+    const error Info = {
       message: error.message,
       stack: error.stack,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().to ISOString(),
       context: context || {}
     }
     

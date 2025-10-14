@@ -1,7 +1,10 @@
-export const seoUtils = {
-  generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group') => {
-    return `${pageTitle} | ${siteName}`
+export const seo Utils = {
+  generate Title: (page Title: string, site Name: string = 'Zion Tech Group') => {
+    return `${page Title} | ${site Name}`
   },
+  generate Description: (content: string, max Length: number = 160) => {
+    if (content.length <= max Length) return content
+    return content.substring(0, max Length - 3) + '...'
   
   generateDescription: (content: string, maxLength: number = 160) => {
     if (content.length <= maxLength) return content
@@ -16,8 +19,8 @@ export const seoUtils = {
     return `${baseUrl}${path}`
   },
   
-  generateOgImage: (title: string, description: string) => {
-    const params = new URLSearchParams({
+  generate Og Image: (title: string, description: string) => {
+    const params = new URLSearch Params({
       title,
       description,
       site: 'Zion Tech Group'
@@ -25,7 +28,7 @@ export const seoUtils = {
     return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`
   },
   
-  generateStructuredData: (data: Record<string, unknown>) => {
+  generate Structured Data: (data: Record<string, unknown>) => {
     return {
       '@context': 'https://schema.org',
       '@type': 'Organization',

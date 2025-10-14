@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiVideoGeneratorPage: React.FC = () => {
+const Ai Video Generator Page: React.FC = () => {
   return (
     <>
       <Helmet>

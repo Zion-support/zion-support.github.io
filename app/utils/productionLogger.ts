@@ -1,4 +1,4 @@
-export const productionLogger = {
+export const production Logger = {
   log: (level: 'info' | 'warn' | 'error', message: string, data?: unknown) => {
     if (process.env.NODE_ENV === 'production') {
       if (level === 'error') {
@@ -18,8 +18,7 @@ export const productionLogger = {
       }
     }
   },
-  
-  info: (message: string, data?: unknown) => productionLogger.log('info', message, data),
-  warn: (message: string, data?: unknown) => productionLogger.log('warn', message, data),
-  error: (message: string, data?: unknown) => productionLogger.log('error', message, data)
+  info: (message: string, data?: unknown) => production Logger.log('info', message, data),
+  warn: (message: string, data?: unknown) => production Logger.log('warn', message, data),
+  error: (message: string, data?: unknown) => production Logger.log('error', message, data)
 }

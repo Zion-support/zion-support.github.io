@@ -1,5 +1,5 @@
-export const performanceMonitor = {
-  measureFunction: (name: string, fn: () => void) => {
+export const performance Monitor = {
+  measure Function: (name: string, fn: () => void) => {
     const start = performance.now()
     fn()
     const end = performance.now()
@@ -27,7 +27,7 @@ export const performanceMonitor = {
     const duration = end - start
     
     if (process.env.NODE_ENV === 'development') {
-      console.warn(`${name} took ${duration.toFixed(2)}ms`)
+      console.warn(`${name} took ${duration.to Fixed(2)}ms`)
     }
     
     if (typeof window !== 'undefined') {
@@ -39,14 +39,13 @@ export const performanceMonitor = {
     
     return duration
   },
-  
   mark: (name: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name)
     }
   },
   
-  measureBetween: (startMark: string, endMark: string, name: string) => {
+  measure Between: (start Mark: string, end Mark: string, name: string) => {
     try {
       performance.measure(name, startMark, endMark)
       const measure = performance.getEntriesByName(name)[0]

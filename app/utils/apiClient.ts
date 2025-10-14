@@ -1,5 +1,5 @@
-export const apiClient = {
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
+export const api Client = {
+  base URL: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
   
   async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
     const url = `${this.baseURL}${endpoint}`;
@@ -35,7 +35,6 @@ export const apiClient = {
       body: JSON.stringify(data),
     });
   },
-  
   async delete<T>(endpoint: string): Promise<T> {
     return this.request<T>(endpoint, { method: 'DELETE' });
   }

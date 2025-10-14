@@ -8,29 +8,25 @@ export const cacheManager = {
       ttl
     });
   },
-  
   get: (key: string) => {
-    const item = cacheManager.cache.get(key);
+    const item = cache Manager.cache.get(key);
     if (!item) return null;
     
     const now = Date.now();
     if (now - item.timestamp > item.ttl) {
-      cacheManager.cache.delete(key);
+      cache Manager.cache.delete(key);
       return null;
     }
     
     return item.data;
   },
-  
   clear: () => {
-    cacheManager.cache.clear();
+    cache Manager.cache.clear();
   },
-  
   delete: (key: string) => {
-    cacheManager.cache.delete(key);
+    cache Manager.cache.delete(key);
   },
-  
   has: (key: string) => {
-    return cacheManager.cache.has(key);
+    return cache Manager.cache.has(key);
   }
 };

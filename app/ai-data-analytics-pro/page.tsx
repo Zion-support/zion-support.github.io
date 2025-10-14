@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiDataAnalyticsProPage: React.FC = () => {
+const Ai Data Analytics Pro Page: React.FC = () => {
   return (
     <>
       <Helmet>

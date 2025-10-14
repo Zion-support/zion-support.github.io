@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiNeuralMemoryAssistantPage: React.FC = () => {
+const Ai Neural Memory Assistant Page: React.FC = () => {
   return (
     <>
       <Helmet>

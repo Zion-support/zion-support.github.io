@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionAiWorkflowAutomatorPage: React.FC = () => {
+const Zion Ai Workflow Automator Page: React.FC = () => {
   return (
     <>
       <Helmet>

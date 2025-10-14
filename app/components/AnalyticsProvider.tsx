@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 import { AnalyticsContext } from '../contexts/AnalyticsContext';
 
-interface AnalyticsProviderProps {
-  children: ReactNode;
+interface Analytics Provider Props {
+  children: React Node;
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
@@ -23,6 +23,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>
+    </Analytics Context.Provider>
   );
 };

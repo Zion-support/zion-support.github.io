@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { use Effect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface MetaManagerProps {
+interface Meta Manager Props {
   title?: string;
   description?: string;
   keywords?: string;
@@ -16,11 +16,11 @@ const MetaManager: React.FC<MetaManagerProps> = ({
   description,
   keywords,
   canonical,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+  og Image,
+  og Type = 'website',
+  twitter Card = 'summary_large_image'
 }) => {
-  useEffect(() => {
+  use Effect(() => {
     // Update document title
     if (title) {
       document.title = title;
@@ -69,22 +69,22 @@ const MetaManager: React.FC<MetaManagerProps> = ({
   return (
     <Helmet>
       {title && <title>{title}</title>}
-      {description && <meta name="description" content={description} />}
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
+      {description && <meta="description" content={description} />}
+      {keywords && <meta="keywords" content={keywords} />}
+      {canonical && <linkrel="canonical" href={canonical} />}
       
       {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
-      {title && <meta property="og:title" content={title} />}
-      {description && <meta property="og:description" content={description} />}
-      {ogImage && <meta property="og:image" content={ogImage} />}
-      {canonical && <meta property="og:url" content={canonical} />}
+      <metaproperty="og:type" content={og Type} />
+      {title && <metaproperty="og:title" content={title} />}
+      {description && <metaproperty="og:description" content={description} />}
+      {og Image && <metaproperty="og:image" content={og Image} />}
+      {canonical && <metaproperty="og:url" content={canonical} />}
       
       {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      {title && <meta name="twitter:title" content={title} />}
-      {description && <meta name="twitter:description" content={description} />}
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
+      <meta="twitter:card" content={twitter Card} />
+      {title && <meta="twitter:title" content={title} />}
+      {description && <meta="twitter:description" content={description} />}
+      {og Image && <meta="twitter:image" content={og Image} />}
     </Helmet>
   );
 };

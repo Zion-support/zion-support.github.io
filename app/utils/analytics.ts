@@ -4,7 +4,6 @@ export const analytics = {
       window.gtag('event', event, properties);
     }
   },
-  
   page: (page: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {

@@ -1,4 +1,4 @@
-export const seoOptimizer = {
+export const seo Optimizer = {
   optimize: (data: { title?: string; description?: string; keywords?: string }) => {
     const optimized = { ...data }
     
@@ -14,7 +14,6 @@ export const seoOptimizer = {
     
     return optimized
   },
-  
   validate: (data: { title?: string; description?: string; keywords?: string }) => {
     const errors: string[] = [];
     

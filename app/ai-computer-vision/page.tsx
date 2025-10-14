@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiComputerVisionPage: React.FC = () => {
+const Ai Computer Vision Page: React.FC = () => {
   return (
     <>
       <Helmet>

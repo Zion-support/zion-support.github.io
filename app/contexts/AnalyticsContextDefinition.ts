@@ -4,11 +4,11 @@ export interface AnalyticsContextType {
   identifyUser: (userId: string, properties?: Record<string, unknown>) => void;
 }
 
-export interface AnalyticsProviderProps {
-  children: React.ReactNode;
+export interface Analytics Provider Props {
+  children: React.React Node;
 }
 
-export interface AnalyticsEvent {
+export interface Analytics Event {
   name: string;
   properties?: Record<string, unknown>;
   timestamp: number;

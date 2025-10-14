@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiTelepathicInterfacePage: React.FC = () => {
+const Ai Telepathic Interface Page: React.FC = () => {
   return (
     <>
       <Helmet>

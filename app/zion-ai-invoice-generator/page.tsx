@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionAiInvoiceGeneratorPage: React.FC = () => {
+const Zion Ai Invoice Generator Page: React.FC = () => {
   return (
     <>
       <Helmet>

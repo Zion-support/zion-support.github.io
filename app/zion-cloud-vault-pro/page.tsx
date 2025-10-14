@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionCloudVaultProPage: React.FC = () => {
+const Zion Cloud Vault Pro Page: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiQuantumFinancialOraclePage: React.FC = () => {
+const Ai Quantum Financial Oracle Page: React.FC = () => {
   return (
     <>
       <Helmet>

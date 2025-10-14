@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const FiveGNetworkInfrastructurePage: React.FC = () => {
+const Five GNetwork Infrastructure Page: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -14,7 +14,7 @@ const FiveGNetworkInfrastructurePage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">5G Network Infrastructure</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional 5g network infrastructure solutions and services
+              Professional 5 g network infrastructure solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">

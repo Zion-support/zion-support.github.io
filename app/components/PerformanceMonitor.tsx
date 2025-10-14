@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {
+interface Performance Metrics {
   lcp?: number;
   fid?: number;
   cls?: number;
@@ -88,7 +88,7 @@ const PerformanceMonitor = () => {
     };
 
     // Send metrics when page is about to unload
-    window.addEventListener('beforeunload', sendMetrics);
+    window.add Event Listener('beforeunload', send Metrics);
 
     // Cleanup observers
     return () => {
@@ -107,7 +107,7 @@ const PerformanceMonitor = () => {
 
   // Development mode: show performance metrics
 
-  const getScoreColor = (value: number | undefined, thresholds: { good: number; poor: number }) => {
+  const get Score Color = (value: number | undefined, thresholds: { good: number; poor: number }) => {
     if (!value) return 'text-gray-500';
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.poor) return 'text-yellow-500';

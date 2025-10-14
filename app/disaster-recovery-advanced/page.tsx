@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DisasterRecoveryAdvancedPage: React.FC = () => {
+const Disaster Recovery Advanced Page: React.FC = () => {
   return (
     <>
       <Helmet>

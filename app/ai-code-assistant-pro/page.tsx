@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiCodeAssistantProPage: React.FC = () => {
+const Ai Code Assistant Pro Page: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -1,5 +1,5 @@
 interface Config {
-  apiUrl: string;
+  api Url: string;
   environment: string;
   features: {
     analytics: boolean;
@@ -9,9 +9,9 @@ interface Config {
   [key: string]: unknown;
 }
 
-export const configManager = {
+export const config Manager = {
   config: {
-    apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
+    api Url: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
     environment: process.env.NODE_ENV || 'development',
     features: {
       analytics: process.env.NODE_ENV === 'production',
@@ -28,7 +28,6 @@ export const configManager = {
       return undefined;
     }, configManager.config);
   },
-  
   set: (key: string, value: unknown) => {
     const keys = key.split('.');
     const lastKey = keys.pop();

@@ -12,11 +12,10 @@ export const errorHandler = {
       code: 'GENERIC_ERROR'
     };
   },
-  
-  handleApiError: (error: unknown) => {
-    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
-    const status = errorWithResponse.response?.status;
-    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+  handle Api Error: (error: unknown) => {
+    const error With Response = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+    const status = error With Response.response?.status;
+    const message = error With Response.response?.data?.message || error With Response.message;
     
     switch (status) {
       case 400:

@@ -1,5 +1,5 @@
-export const dataTransformers = {
-  transformToTableData: (data: unknown[]) => {
+export const data Transformers = {
+  transform To Table Data: (data: unknown[]) => {
     return data.map((item, index) => {
       const itemObj = item as Record<string, unknown>;
       return {

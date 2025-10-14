@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiLeadGenerationPage: React.FC = () => {
+const Ai Lead Generation Page: React.FC = () => {
   return (
     <>
       <Helmet>

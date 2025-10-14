@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionComplianceManagerPage: React.FC = () => {
+const Zion Compliance Manager Page: React.FC = () => {
   return (
     <>
       <Helmet>

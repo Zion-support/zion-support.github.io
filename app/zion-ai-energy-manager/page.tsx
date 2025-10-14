@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionAiEnergyManagerPage: React.FC = () => {
+const Zion Ai Energy Manager Page: React.FC = () => {
   return (
     <>
       <Helmet>
