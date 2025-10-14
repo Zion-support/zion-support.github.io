@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const LoadingStates = () => {
   return (
@@ -9,3 +9,4 @@ const LoadingStates = () => {
 };
 
 export default LoadingStates;
+f7f852c0f7415181a1b362c4aa5a784585ad5828;

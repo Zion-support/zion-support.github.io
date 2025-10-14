@@ -1,67 +1,74 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Define all the routes that should exist based on navigation and footer
 const requiredRoutes = [
-  '/',
-  '/about',
-  '/services',
-  '/ai-solutions',
-  '/it-solutions',
-  '/micro-saas-solutions',
-  '/cybersecurity',
-  '/cloud-solutions',
-  '/digital-transformation',
-  '/5g-solutions',
-  '/solutions',
-  '/blog',
-  '/tutorials',
-  '/demo',
-  '/support',
-  '/contact',
-  '/team',
-  '/careers',
-  '/case-studies',
-  '/docs',
-  '/privacy',
-  '/terms',
-  '/cookies'
+  "/",
+  "/about",
+  "/services",
+  "/ai-solutions",
+  "/it-solutions",
+  "/micro-saas-solutions",
+  "/cybersecurity",
+  "/cloud-solutions",
+  "/digital-transformation",
+  "/5g-solutions",
+  "/solutions",
+  "/blog",
+  "/tutorials",
+  "/demo",
+  "/support",
+  "/contact",
+  "/team",
+  "/careers",
+  "/case-studies",
+  "/docs",
+  "/privacy",
+  "/terms",
+  "/cookies",
 ];
 
 function checkPageExists(route) {
-  if (route === '/') {
-    return fs.existsSync('./app/page.tsx');
+  if (route === "/") {
+    return fs.existsSync("./app/page.tsx");
   }
-  
+
   const pagePath = `./app${route}/page.tsx`;
   return fs.existsSync(pagePath);
 }
 
 function findMissingPages() {
   const missingPages = [];
-  
-  requiredRoutes.forEach(route => {
+
+  requiredRoutes.forEach((route) => {
     if (!checkPageExists(route)) {
       missingPages.push(route);
     }
   });
-  
+
   return missingPages;
 }
 
 function createMissingPage(route) {
-  const pageName = route === '/' ? 'Home' : route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  const fileName = route === '/' ? 'page.tsx' : 'page.tsx';
-  const filePath = route === '/' ? './app/page.tsx' : `./app${route}/page.tsx`;
-  
+  const pageName =
+    route === "/"
+      ? "Home"
+      : route
+          .split("/")
+          .pop()
+          .replace(/-/g, " ")
+          .replace(/\b\w/g, (l) => l.toUpperCase());
+  const fileName = route === "/" ? "page.tsx" : "page.tsx";
+  const filePath = route === "/" ? "./app/page.tsx" : `./app${route}/page.tsx`;
+
   // Create directory if it doesn't exist
-  if (route !== '/') {
+  if (route !== "/") {
     const dirPath = `./app${route}`;
     if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath, { recursive: true });
     }
   }
-  
+
   const pageContent = `'use client';
 
 import React from 'react';
@@ -72,7 +79,7 @@ import {
   CheckCircleIcon
 } from '@heroicons/react/24/outline';
 
-export default function ${pageName.replace(/\s+/g, '')}Page() {
+export default function ${pageName.replace(/\s+/g, "")}Page() {
   return (
     <>
       <Helmet>
@@ -170,21 +177,21 @@ export default function ${pageName.replace(/\s+/g, '')}Page() {
   );
 }`;
 
-  fs.writeFileSync(filePath, pageContent, 'utf8');
+  fs.writeFileSync(filePath, pageContent, "utf8");
   console.log(`Created missing page: ${filePath}`);
 }
 
 // Main execution
-console.log('Checking for missing pages...');
+console.log("Checking for missing pages...");
 const missingPages = findMissingPages();
 
 if (missingPages.length === 0) {
-  console.log('All required pages exist!');
+  console.log("All required pages exist!");
 } else {
   console.log(`Found ${missingPages.length} missing pages:`);
-  missingPages.forEach(page => console.log(`- ${page}`));
-  
-  console.log('\nCreating missing pages...');
+  missingPages.forEach((page) => console.log(`- ${page}`));
+
+  console.log("\nCreating missing pages...");
   missingPages.forEach(createMissingPage);
-  console.log('All missing pages created!');
+  console.log("All missing pages created!");
 }

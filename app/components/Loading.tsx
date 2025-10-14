@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function LoadingPage() {
   return (
@@ -12,3 +12,4 @@ export default function LoadingPage() {
     </div>
   );
 }
+f7f852c0f7415181a1b362c4aa5a784585ad5828;

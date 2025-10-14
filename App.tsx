@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Footer from './app/components/Footer';
 import Navigation from './app/components/Navigation';
+
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import SEOEnhancer from './app/components/SEOEnhancer';
@@ -17,14 +18,6 @@ import MetaManager from './app/components/MetaManager';
 import EnhancedAnalytics from './app/components/EnhancedAnalytics';
 import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
-// Pages
-import HomePage from './app/pages/HomePage';
-import AboutPage from './app/pages/AboutPage';
-import ServicesPage from './app/pages/ServicesPage';
-import ContactPage from './app/pages/ContactPage';
-
-const App: React.FC = () => {
-  return (
     <ErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
@@ -76,6 +69,7 @@ const App: React.FC = () => {
         </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
+ f7f852c0f7415181a1b362c4aa5a784585ad5828
   );
 };
 

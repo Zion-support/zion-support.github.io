@@ -1,47 +1,49 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+const fs = require("fs");
+const path = require("path");
+const glob = require("glob");
 
 // Get all TypeScript files
-const files = glob.sync('app/**/*.tsx', { cwd: process.cwd() });
+const files = glob.sync("app/**/*.tsx", { cwd: process.cwd() });
 
 let replacedCount = 0;
 let errorCount = 0;
 
 console.log(`Found ${files.length} TypeScript files to check...`);
 
-files.forEach(file => {
+files.forEach((file) => {
   try {
-    let content = fs.readFileSync(file, 'utf8');
-    
+    let content = fs.readFileSync(file, "utf8");
+
     // Check if file has any TypeScript errors or syntax issues
-    const hasErrors = content.includes('error TS') || 
-                     content.includes('Unterminated string literal') || 
-                     content.includes('Unexpected token') ||
-                     content.includes('Declaration or statement expected') ||
-                     content.includes('Expression expected') ||
-                     content.includes('Expected corresponding') ||
-                     content.includes('JSX element') ||
-                     content.includes('Unexpected keyword') ||
-                     content.includes('An identifier or keyword cannot immediately follow') ||
-                     content.includes('Unknown keyword') ||
-                     content.includes('Property assignment expected') ||
-                     content.includes('Identifier expected') ||
-                     content.includes('Unexpected keyword or identifier') ||
-                     content.includes('JSX fragment has no corresponding closing tag') ||
-                     content.includes('JSX element') ||
-                     content.includes('Unterminated string literal') ||
-                     content.includes('Expected corresponding JSX closing tag') ||
-                     content.includes('Unexpected token. Did you mean') ||
-                     content.includes('Variable declaration expected') ||
-                     content.includes('JSX expressions must have one parent element');
-    
+    const hasErrors =
+      content.includes("error TS") ||
+      content.includes("Unterminated string literal") ||
+      content.includes("Unexpected token") ||
+      content.includes("Declaration or statement expected") ||
+      content.includes("Expression expected") ||
+      content.includes("Expected corresponding") ||
+      content.includes("JSX element") ||
+      content.includes("Unexpected keyword") ||
+      content.includes("An identifier or keyword cannot immediately follow") ||
+      content.includes("Unknown keyword") ||
+      content.includes("Property assignment expected") ||
+      content.includes("Identifier expected") ||
+      content.includes("Unexpected keyword or identifier") ||
+      content.includes("JSX fragment has no corresponding closing tag") ||
+      content.includes("JSX element") ||
+      content.includes("Unterminated string literal") ||
+      content.includes("Expected corresponding JSX closing tag") ||
+      content.includes("Unexpected token. Did you mean") ||
+      content.includes("Variable declaration expected") ||
+      content.includes("JSX expressions must have one parent element");
+
     if (hasErrors) {
-      const fileName = path.basename(file, '.tsx');
-      const pageName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ');
-      
+      const fileName = path.basename(file, ".tsx");
+      const pageName =
+        fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, " ");
+
       // Create a clean, working version
       const cleanContent = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -148,8 +150,8 @@ export default function ${pageName}() {
     </div>
   );
 }`;
-      
-      fs.writeFileSync(file, cleanContent, 'utf8');
+
+      fs.writeFileSync(file, cleanContent, "utf8");
       console.log(`Replaced: ${file}`);
       replacedCount++;
     }
@@ -161,4 +163,4 @@ export default function ${pageName}() {
 
 console.log(`\nReplaced ${replacedCount} files`);
 console.log(`Errors: ${errorCount} files`);
-console.log('Done!');
+console.log("Done!");

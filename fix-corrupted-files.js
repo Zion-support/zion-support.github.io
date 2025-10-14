@@ -1,119 +1,119 @@
+import React from 'react'
 #!/usr/bin/env node
-
-import fs from 'fs';
-import { glob } from 'glob';
-
+import fs from "fs"
+import { glob } from "glob"
 // Function to fix corrupted files with >>>> characters
 function fixCorruptedContent(content) {
-  let fixed = content;
-
+  let fixed = content
   // Remove >>>> characters that have been inserted
-  fixed = fixed.replace(/>+>/g, '');
-  fixed = fixed.replace(/>+</g, '<');
-  fixed = fixed.replace(/>+"/g, '"');
-  fixed = fixed.replace(/>+ /g, ' ');
-  fixed = fixed.replace(/>+\n/g, '\n');
-  fixed = fixed.replace(/>+$/g, '');
-  
+  fixed = fixed.replace(/>+>/g, "")
+  fixed = fixed.replace(/>+</g, "<")
+  fixed = fixed.replace(/>+"/g, '"')
+  fixed = fixed.replace(/>+ /g, " ")
+  fixed = fixed.replace(/>+\n/g, "\n")
+  fixed = fixed.replace(/>+$/g, "")
   // Fix malformed JSX structure
-  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<\/div>/g, '<div>');
-  fixed = fixed.replace(/<main[^>]*>\s*<\/main>\s*<\/main>/g, '<main>');
-  fixed = fixed.replace(/<section[^>]*>\s*<\/section>\s*<\/section>/g, '<section>');
-  
+  fixed = fixed.replace(/<div[^>
+</div>]*>\s*<\/div>\s*<\/div>/g, "<div>
+</div>")
+  fixed = fixed.replace(/<main[^>]*>\s*<\/main>\s*<\/main>/g, "<main>")
+  fixed = fixed.replace(
+    /<section[^>]*>\s*<\/section>\s*<\/section>/g,
+    "<section>",
+  )
   // Fix malformed function returns
-  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g, 'return (');
-  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, 'return (');
-  
+  fixed = fixed.replace(
+    /return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g,
+    "return (",
+  )
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, "return (")
   // Fix multiple closing parentheses and semicolons
-  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;/g, ');');
-  fixed = fixed.replace(/\)\s*;\s*\)\s*;/g, ');');
-  
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;/g, ");")
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;/g, ");")
   // Fix orphaned semicolons and braces
-  fixed = fixed.replace(/;\s*}\s*;\s*}\s*;\s*}/g, '}');
-  fixed = fixed.replace(/;\s*}\s*;\s*}/g, '}');
-  
+  fixed = fixed.replace(/;\s*}\s*;\s*}\s*;\s*}/g, "}")
+  fixed = fixed.replace(/;\s*}\s*;\s*}/g, "}")
   // Fix malformed JSX structure
-  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, '<$1>');
-  
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, "<$1>")
   // Fix unterminated JSX elements
-  fixed = fixed.replace(/<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g, (match, tagName) => {
-    if (match.includes('=') && !match.includes('/>')) {
-      return match + '>';
-    }
-    return match;
-  });
-
-  // Fix specific malformed patterns
-  fixed = fixed.replace(/export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g, 
-    'export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  );');
-  
-  // Fix malformed JSX with orphaned closing tags
-  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<\/div>/g, '<div>');
-  fixed = fixed.replace(/<main[^>]*>\s*<\/main>\s*<\/main>/g, '<main>');
-  fixed = fixed.replace(/<section[^>]*>\s*<\/section>\s*<\/section>/g, '<section>');
-  
-  // Fix malformed function returns
-  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g, 'return (');
-  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, 'return (');
-  
-  // Fix malformed JSX structure
-  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, '<$1>');
-  
-  // Fix unterminated JSX elements
-  fixed = fixed.replace(/<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g, (match, tagName) => {
-    if (match.includes('=') && !match.includes('/>')) {
-      return match + '>';
-    }
-    return match;
-  });
-
-  return fixed;
+  fixed = fixed.replace(
+    /<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g,
+    (match, tagName) => {
+      if (match.includes("=") && !match.includes("/>")) {
+        return match + ">"
 }
-
+      return match
+    },
+  )
+  // Fix specific malformed patterns
+  fixed = fixed.replace(
+    /export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g,
+    "export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  );",
+  )
+  // Fix malformed JSX with orphaned closing tags
+  fixed = fixed.replace(/<div[^>
+</div>]*>\s*<\/div>\s*<\/div>/g, "<div>
+</div>")
+  fixed = fixed.replace(/<main[^>]*>\s*<\/main>\s*<\/main>/g, "<main>")
+  fixed = fixed.replace(
+    /<section[^>]*>\s*<\/section>\s*<\/section>/g,
+    "<section>",
+  )
+  // Fix malformed function returns
+  fixed = fixed.replace(
+    /return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g,
+    "return (",
+  )
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, "return (")
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, "<$1>")
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(
+    /<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g,
+    (match, tagName) => {
+      if (match.includes("=") && !match.includes("/>")) {
+        return match + ">"
+}
+      return match
+    },
+  )
+  return fixed
+}
 // Function to fix specific file patterns
 function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixCorruptedContent(content);
-    
+    const content = fs.readFileSync(filePath, "utf8")
+    const fixed = fixCorruptedContent(content)
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+      fs.writeFileSync(filePath, fixed, "utf8")
+      console.log(`Fixed: ${filePath}`)
+      return true
 }
-
+    return false
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
+}
 // Main execution
 async function main() {
-  console.log('Starting corrupted file fixes...');
-
+  console.log("Starting corrupted file fixes...")
   // Get all TypeScript/JavaScript files
   const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'app/**/*.jsx',
-    'app/**/*.js',
-    '__tests__/**/*.tsx',
-    '__tests__/**/*.ts'
-  ];
-
-  let totalFixed = 0;
-
+    "app/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.jsx",
+    "app/**/*.js",
+    "__tests__/**/*.tsx",
+    "__tests__/**/*.ts",
+  ]
+  let totalFixed = 0
   for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
+    const files = await glob(pattern, { cwd: process.cwd() })
     for (const file of files) {
       if (fixFile(file)) {
-        totalFixed++;
-      }
-    }
-  }
-
-  console.log(`Fixed ${totalFixed} files.`);
+        totalFixed++
 }
-
-main().catch(console.error);
+}
+  console.log(`Fixed ${totalFixed} files.`)
+}
+main().catch(console.error)

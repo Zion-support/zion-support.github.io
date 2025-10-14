@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext } from 'react';
 
 interface AnalyticsContextType {
@@ -27,12 +28,7 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     trackPageView,
   };
 
-  return (
-    <AnalyticsContext.Provider value={contextValue}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-}
+
 
 export function useAnalytics() {
   const context = useContext(AnalyticsContext);
@@ -41,3 +37,4 @@ export function useAnalytics() {
   }
   return context;
 }
+ f7f852c0f7415181a1b362c4aa5a784585ad5828
