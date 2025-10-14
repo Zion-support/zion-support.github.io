@@ -1,5 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock, Heart, DollarSign, BookOpen } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 // Loading skeleton component
@@ -37,36 +37,52 @@ const HomePage: React.FC = () => {
       link: "/ai-code-assistant-pro"
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "AI Cloud Infrastructure",
-      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization.",
-      price: "$499/month",
-      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime"],
-      link: "/ai-cloud-infrastructure"
-    },
-    {
-      icon: <Wifi className="w-8 h-8" />,
-      title: "5G Implementation",
-      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity.",
-      price: "$999/month",
-      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring"],
-      link: "/5g-implementation"
+      icon: <Users className="w-8 h-8" />,
+      title: "AI Voice Assistant Enterprise",
+      description: "Advanced conversational AI with 99.5% accuracy, 50+ languages, and enterprise-grade security.",
+      price: "$199/month",
+      features: ["99.5% Accuracy", "50+ Languages", "Natural Language Processing", "Enterprise Security"],
+      link: "/ai-voice-assistant-enterprise"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Advanced Security Suite",
-      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
-      price: "$399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
-      link: "/advanced-security-suite"
+      title: "AI Cybersecurity Platform",
+      description: "Advanced threat protection with AI-powered detection, 24/7 monitoring, and compliance management.",
+      price: "$299/month",
+      features: ["AI Threat Detection", "24/7 Monitoring", "HIPAA Compliance", "Real-time Protection"],
+      link: "/ai-cybersecurity-platform"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "AI Chatbot Enterprise",
-      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities.",
-      price: "$149/month",
-      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
-      link: "/ai-chatbot-enterprise"
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI E-commerce Platform",
+      description: "Intelligent online stores with AI recommendations, analytics, and automation for modern businesses.",
+      price: "$199/month",
+      features: ["AI Recommendations", "Smart Search", "Analytics Dashboard", "Mobile Optimization"],
+      link: "/ai-ecommerce-platform"
+    },
+    {
+      icon: <Heart className="w-8 h-8" />,
+      title: "AI Healthcare Platform",
+      description: "Revolutionary healthcare delivery with AI diagnosis assistance, telemedicine, and patient care.",
+      price: "$399/month",
+      features: ["AI Diagnosis", "Telemedicine", "EHR System", "HIPAA Compliance"],
+      link: "/ai-healthcare-platform"
+    },
+    {
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "AI Financial Platform",
+      description: "Intelligent financial operations with AI analytics, payment processing, and investment management.",
+      price: "$299/month",
+      features: ["AI Analytics", "Payment Processing", "Fraud Detection", "Investment Management"],
+      link: "/ai-financial-platform"
+    },
+    {
+      icon: <BookOpen className="w-8 h-8" />,
+      title: "AI Education Platform",
+      description: "Transform education with personalized learning, virtual classrooms, and smart assessment tools.",
+      price: "$199/month",
+      features: ["Personalized Learning", "Virtual Classrooms", "Smart Assessment", "Learning Analytics"],
+      link: "/ai-education-platform"
     }
   ];
 
@@ -243,7 +259,7 @@ const HomePage: React.FC = () => {
                       <Phone className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                    <p className="text-gray-300">+1 302 464 0950</p>
                   </div>
                   
                   <div className="flex flex-col items-center">
@@ -251,7 +267,7 @@ const HomePage: React.FC = () => {
                       <Mail className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                    <p className="text-gray-300">info@ziontech.com</p>
+                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
                   </div>
                   
                   <div className="flex flex-col items-center">
@@ -259,7 +275,7 @@ const HomePage: React.FC = () => {
                       <MapPin className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                    <p className="text-gray-300">123 Tech Street, Innovation City</p>
+                    <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
                   </div>
                 </div>
               </div>

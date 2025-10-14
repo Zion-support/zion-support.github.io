@@ -32,11 +32,17 @@ const Header: React.FC = () => {
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+        { name: 'AI Voice Assistant Enterprise', href: '/ai-voice-assistant-enterprise' },
+        { name: 'AI Cybersecurity Platform', href: '/ai-cybersecurity-platform' },
+        { name: 'AI E-commerce Platform', href: '/ai-ecommerce-platform' },
+        { name: 'AI Healthcare Platform', href: '/ai-healthcare-platform' },
+        { name: 'AI Financial Platform', href: '/ai-financial-platform' },
+        { name: 'AI Education Platform', href: '/ai-education-platform' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
       ]
     },
