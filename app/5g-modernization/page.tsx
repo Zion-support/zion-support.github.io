@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 const FiveGModernizationPage = () => {
   const services = [
     {
-      title: '5G Network Modernization',
-      description: 'Complete modernization of legacy networks to 5G technology.'
+      title: &apos;5G Network Modernization&apos;,
+      description: &apos;Complete modernization of legacy networks to 5G technology.&apos;
     },
     {
-      title: 'Security Modernization',
-      description: 'Upgrade security infrastructure to support 5G requirements.'
+      title: &apos;Security Modernization&apos;,
+      description: &apos;Upgrade security infrastructure to support 5G requirements.&apos;
     },
     {
-      title: 'Team Training',
-      description: 'Comprehensive training for modernized 5G network operations.'
+      title: &apos;Team Training&apos;,
+      description: &apos;Comprehensive training for modernized 5G network operations.&apos;
     }
   ]
 

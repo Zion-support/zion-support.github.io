@@ -15,19 +15,7 @@ const FiveGOptimizationPage: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-rfrom-emerald-900 to-teal-900 text-white py-20">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              5G Optimization Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-emerald-100">
-=======
-          <div className="max-w-4xlmx-auto text-center">
-            <h1 className="text-4xlmd: text-6xl font-bold mb-6">;
-              5G Optimization Services
-            </h1>
-            <p className="text-xlmd: text-2xl mb-8 text-emerald-100">;
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+ursor/fix-errors-and-merge-to-main-c17d
               Maximize your 5G network performance with our expert optimization services
             </p>
             <Link 

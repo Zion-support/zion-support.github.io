@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 const FiveGIntegrationPage = () => {
   const services = [
     {
-      title: '5G System Integration',
-      description: 'Seamless integration of 5G technology with existing systems.'
+      title: &apos;5G System Integration&apos;,
+      description: &apos;Seamless integration of 5G technology with existing systems.&apos;
     },
     {
-      title: 'Security Integration',
-      description: 'Comprehensive security integration for 5G networks.'
+      title: &apos;Security Integration&apos;,
+      description: &apos;Comprehensive security integration for 5G networks.&apos;
     },
     {
-      title: 'Team Training',
-      description: 'Expert training for 5G integration and maintenance.'
+      title: &apos;Team Training&apos;,
+      description: &apos;Expert training for 5G integration and maintenance.&apos;
     }
   ]
 

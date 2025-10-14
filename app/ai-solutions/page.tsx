@@ -10,7 +10,7 @@ import {
   CogIcon,
   ChatBubbleLeftRightIcon,
   EyeIcon
-} from '@heroicons/react/24/outline';
+} from &apos;@heroicons/react/24/outline&apos;;
 
 export default function AISolutionsPage() {
   const aiServices = [
@@ -207,7 +207,7 @@ export default function AISolutionsPage() {
 
                 <div className="mb-6">
                   <div className="text-2xlfont-bold text-purple-400 mb-2">{service.price}</div>
-                  <div className="text-gray-400text-sm mb-4">Benefits: {service.benefits.join(', ')}</div>
+                  <div className="text-gray-400text-sm mb-4">Benefits: {service.benefits.join(&apos;, &apos;)}</div>
                 </div>
 
                 <Link
