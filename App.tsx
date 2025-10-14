@@ -7,7 +7,10 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import { AnalyticsProvider } from './app/contexts/AnalyticsContext';
 import LoadingSpinner from './app/components/LoadingSpinner';
-
+import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import SEOOptimizer from './app/components/SEOOptimizer';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';
 import EnhancedAnalytics from './app/components/EnhancedAnalytics';
