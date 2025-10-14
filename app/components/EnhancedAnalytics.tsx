@@ -1,5 +1,10 @@
 import React, { useEffect, useCallback } from 'react';
 
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 interface AnalyticsEvent {
   action: string;
   category: string;
@@ -206,8 +211,9 @@ const EnhancedAnalytics: React.FC = () => {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          trackPerformance('FID', entry.processingStart - entry.startTime);
+        entries.forEach((entry: PerformanceEntry) => {
+          const fidEntry = entry as PerformanceEventTiming;
+          trackPerformance('FID', fidEntry.processingStart - fidEntry.startTime);
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -216,9 +222,10 @@ const EnhancedAnalytics: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        entries.forEach((entry: PerformanceEntry) => {
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
             trackPerformance('CLS', clsValue);
           }
         });
@@ -240,16 +247,16 @@ const EnhancedAnalytics: React.FC = () => {
 
   // Expose tracking functions globally for manual tracking
   useEffect(() => {
-    (window as any).trackEvent = trackEvent;
-    (window as any).trackUserInteraction = trackUserInteraction;
-    (window as any).trackPerformance = trackPerformance;
-    (window as any).trackError = trackError;
+    (window as unknown as { [key: string]: unknown }).trackEvent = trackEvent;
+    (window as unknown as { [key: string]: unknown }).trackUserInteraction = trackUserInteraction;
+    (window as unknown as { [key: string]: unknown }).trackPerformance = trackPerformance;
+    (window as unknown as { [key: string]: unknown }).trackError = trackError;
 
     return () => {
-      delete (window as any).trackEvent;
-      delete (window as any).trackUserInteraction;
-      delete (window as any).trackPerformance;
-      delete (window as any).trackError;
+      delete (window as unknown as { [key: string]: unknown }).trackEvent;
+      delete (window as unknown as { [key: string]: unknown }).trackUserInteraction;
+      delete (window as unknown as { [key: string]: unknown }).trackPerformance;
+      delete (window as unknown as { [key: string]: unknown }).trackError;
     };
   }, [trackEvent, trackUserInteraction, trackPerformance, trackError]);
 
