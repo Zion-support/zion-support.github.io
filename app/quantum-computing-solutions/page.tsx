@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const QuantumComputingSolutionsPage: React.FC = () => {
-  return (
+const QuantumComputingSolutionsPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Quantum computing solutions - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const QuantumComputingSolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default QuantumComputingSolutionsPage;
 

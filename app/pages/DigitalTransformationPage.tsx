@@ -1,44 +1,43 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from &apos;lucide-react&apos;;
 
 const DigitalTransformationPage: React.FC = () => {
-  const services = [
-    {
+  const services = [{
       icon: RefreshCw,
-      title: 'Process Automation',
-      description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',
-      features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']
+      title: &apos;Process Automation&apos;,
+      description: &apos;Streamline and automate business processes to improve efficiency and reduce manual errors.&apos;,
+      features: [&apos;Workflow Analysis&apos;, &apos;Process Mapping&apos;, &apos;Automation Implementation&apos;, &apos;Performance Monitoring&apos]
     },
     {
       icon: Users,
-      title: 'Change Management',
-      description: 'Guide your team through digital transformation with comprehensive change management strategies.',
-      features: ['Training Programs', 'Communication Plans', 'Resistance Management', 'Success Metrics']
+      title: &apos;Change Management&apos;,
+      description: &apos;Guide your team through digital transformation with comprehensive change management strategies.&apos;,
+      features: [&apos;Training Programs&apos;, &apos;Communication Plans&apos;, &apos;Resistance Management&apos;, &apos;Success Metrics&apos]
     },
     {
       icon: Target,
-      title: 'Strategic Planning',
-      description: 'Develop comprehensive digital transformation strategies aligned with your business objectives.',
-      features: ['Digital Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']
+      title: &apos;Strategic Planning&apos;,
+      description: &apos;Develop comprehensive digital transformation strategies aligned with your business objectives.&apos;,
+      features: [&apos;Digital Assessment&apos;, &apos;Technology Roadmap&apos;, &apos;ROI Analysis&apos;, &apos;Implementation Planning&apos]
     },
     {
       icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimize your digital infrastructure and processes for maximum performance and scalability.',
-      features: ['Performance Analysis', 'System Optimization', 'Scalability Planning', 'Monitoring Setup']
+      title: &apos;Performance Optimization&apos;,
+      description: &apos;Optimize your digital infrastructure and processes for maximum performance and scalability.&apos;,
+      features: [&apos;Performance Analysis&apos;, &apos;System Optimization&apos;, &apos;Scalability Planning&apos;, &apos;Monitoring Setup&apos]
     },
     {
       icon: Lightbulb,
-      title: 'Innovation Consulting',
-      description: 'Identify and implement innovative technologies to drive business growth and competitiveness.',
-      features: ['Technology Research', 'Innovation Workshops', 'Pilot Programs', 'Implementation Support']
+      title: &apos;Innovation Consulting&apos;,
+      description: &apos;Identify and implement innovative technologies to drive business growth and competitiveness.&apos;,
+      features: [&apos;Technology Research&apos;, &apos;Innovation Workshops&apos;, &apos;Pilot Programs&apos;, &apos;Implementation Support&apos]
     },
     {
       icon: CheckCircle,
-      title: 'Quality Assurance',
-      description: 'Ensure the quality and reliability of your digital transformation initiatives.',
-      features: ['Testing Strategies', 'Quality Metrics', 'Compliance Checking', 'Continuous Improvement']
+      title: &apos;Quality Assurance&apos;,
+      description: &apos;Ensure the quality and reliability of your digital transformation initiatives.&apos;,
+      features: [&apos;Testing Strategies&apos;, &apos;Quality Metrics&apos;, &apos;Compliance Checking&apos;, &apos;Continuous Improvement&apos]
     }
   ];
 
@@ -116,7 +115,7 @@ const DigitalTransformationPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 };
 

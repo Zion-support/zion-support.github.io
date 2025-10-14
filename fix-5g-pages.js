@@ -1,66 +1,60 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from &apos;fs&apos;;
+import path from &apos;path&apos;;
+import { fileURLToPath } from &apos;url&apos;;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const fiveGPages = [
-  'app/5g-deployment/page.tsx',
-  'app/5g-integration/page.tsx',
-  'app/5g-maintenance/page.tsx',
-  'app/5g-migration/page.tsx',
-  'app/5g-modernization/page.tsx',
-  'app/5g-monitoring/page.tsx',
-  'app/5g-optimization/page.tsx',
-  'app/5g-performance/page.tsx',
-  'app/5g-reliability/page.tsx',
-  'app/5g-scalability/page.tsx',
-  'app/5g-security/page.tsx',
-  'app/5g-support/page.tsx',
-  'app/5g-testing/page.tsx',
-  'app/5g-training/page.tsx',
-  'app/5g-transformation/page.tsx',
-  'app/5g-upgrade/page.tsx'
-];
+const fiveGPages = [&apos;app/5g-deployment/page.tsx&apos;,
+  &apos;app/5g-integration/page.tsx&apos;,
+  &apos;app/5g-maintenance/page.tsx&apos;,
+  &apos;app/5g-migration/page.tsx&apos;,
+  &apos;app/5g-modernization/page.tsx&apos;,
+  &apos;app/5g-monitoring/page.tsx&apos;,
+  &apos;app/5g-optimization/page.tsx&apos;,
+  &apos;app/5g-performance/page.tsx&apos;,
+  &apos;app/5g-reliability/page.tsx&apos;,
+  &apos;app/5g-scalability/page.tsx&apos;,
+  &apos;app/5g-security/page.tsx&apos;,
+  &apos;app/5g-support/page.tsx&apos;,
+  &apos;app/5g-testing/page.tsx&apos;,
+  &apos;app/5g-training/page.tsx&apos;,
+  &apos;app/5g-transformation/page.tsx&apos;,
+  &apos;app/5g-upgrade/page.tsx&apos;];
 
-const pageTitles = {
-  '5g-deployment': '5G Deployment Services',
-  '5g-integration': '5G Integration Services',
-  '5g-maintenance': '5G Maintenance Services',
-  '5g-migration': '5G Migration Services',
-  '5g-modernization': '5G Modernization Services',
-  '5g-monitoring': '5G Monitoring Services',
-  '5g-optimization': '5G Optimization Services',
-  '5g-performance': '5G Performance Services',
-  '5g-reliability': '5G Reliability Services',
-  '5g-scalability': '5G Scalability Services',
-  '5g-security': '5G Security Services',
-  '5g-support': '5G Support Services',
-  '5g-testing': '5G Testing Services',
-  '5g-training': '5G Training Services',
-  '5g-transformation': '5G Transformation Services',
-  '5g-upgrade': '5G Upgrade Services'
-};
+const pageTitles = {&apos;5g-deployment&apos;: &apos;5G Deployment Services&apos;,
+  &apos;5g-integration&apos;: &apos;5G Integration Services&apos;,
+  &apos;5g-maintenance&apos;: &apos;5G Maintenance Services&apos;,
+  &apos;5g-migration&apos;: &apos;5G Migration Services&apos;,
+  &apos;5g-modernization&apos;: &apos;5G Modernization Services&apos;,
+  &apos;5g-monitoring&apos;: &apos;5G Monitoring Services&apos;,
+  &apos;5g-optimization&apos;: &apos;5G Optimization Services&apos;,
+  &apos;5g-performance&apos;: &apos;5G Performance Services&apos;,
+  &apos;5g-reliability&apos;: &apos;5G Reliability Services&apos;,
+  &apos;5g-scalability&apos;: &apos;5G Scalability Services&apos;,
+  &apos;5g-security&apos;: &apos;5G Security Services&apos;,
+  &apos;5g-support&apos;: &apos;5G Support Services&apos;,
+  &apos;5g-testing&apos;: &apos;5G Testing Services&apos;,
+  &apos;5g-training&apos;: &apos;5G Training Services&apos;,
+  &apos;5g-transformation&apos;: &apos;5G Transformation Services&apos;,
+  &apos;5g-upgrade&apos;: &apos;5G Upgrade Services&apos;};
 
-function createFiveGPage(filePath) {
-  const fileName = path.basename(path.dirname(filePath));
-  const title = pageTitles[fileName] || '5G Services';
+function createFiveGPage(filePath) {const fileName = path.basename(path.dirname(filePath));
+  const title = pageTitles[fileName] || &apos;5G Services&apos;;
   
   // Convert 5g-xxx to FiveGXxx format
   const componentName = fileName
-    .split('-')
+    .split(&apos;-&apos;)
     .map((part, index) => {
-      if (index === 0 && part === '5g') {
-        return 'FiveG';
-      }
+      if (index === 0 && part === &apos;5g&apos;) {;
+        return &apos;FiveG&apos;}
       return part.charAt(0).toUpperCase() + part.slice(1);
     })
-    .join('');
-const content = `import React from 'react'
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
+    .join('&apos;);
+const content = `import React from &apos;react&apos;
+import { ArrowRight, CheckCircle, Shield, Users } from &apos;lucide-react&apos;
+import { Link } from &apos;react-router-dom&apos;
+import { Helmet } from &apos;react-helmet-async&apos;
 
 const ${componentName}Page: React.FC = () => {
   return (
@@ -121,7 +115,7 @@ const ${componentName}Page: React.FC = () => {
   )
 }
 
-export default ${componentName}Page
+export default ${componentName}Page;
 `;
 
   fs.writeFileSync(path.join(__dirname, filePath), content);
@@ -130,4 +124,4 @@ export default ${componentName}Page
 
 // Create all 5G pages
 fiveGPages.forEach(createFiveGPage);
-console.log('All 5G pages created successfully!');
+console.log(&apos;All 5G pages created successfully!');

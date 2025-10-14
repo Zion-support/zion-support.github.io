@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const DataCenterPage: React.FC = () => {
-  return (
+const DataCenterPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Data center - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const DataCenterPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default DataCenterPage;
 

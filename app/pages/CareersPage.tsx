@@ -1,40 +1,34 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 import {
   UserGroupIcon as Users,
   BoltIcon as Zap,
   FlagIcon as Target,
   MapPinIcon as MapPin
-} from '@heroicons/react/24/outline';
+} from &apos;@heroicons/react/24/outline&apos;;
 
 
 
 const benefits = [
-    { icon: Users, title: 'Competitive salary and equity', description: 'We offer competitive compensation packages' },
-    { icon: Zap, title: 'Health, dental, and vision insurance', description: 'Comprehensive health coverage for you and your family' },
-    { icon: Target, title: 'Flexible work arrangements', description: 'Work from home or our modern office' },
-    { icon: MapPin, title: 'Professional development opportunities', description: 'Continuous learning and growth opportunities' }
+    {icon: Users, title: &apos;Competitive salary and equity&apos;, description: &apos;We offer competitive compensation packages&apos},
+    {icon: Zap, title: &apos;Health, dental, and vision insurance&apos;, description: &apos;Comprehensive health coverage for you and your family&apos},
+    {icon: Target, title: &apos;Flexible work arrangements&apos;, description: &apos;Work from home or our modern office&apos},
+    {icon: MapPin, title: &apos;Professional development opportunities&apos;, description: &apos;Continuous learning and growth opportunities&apos}
   ];
 
   const openPositions = [
-    {
-      title: 'Senior Full Stack Developer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time'
-    },
-    {
-      title: 'AI/ML Engineer',
-      department: 'Engineering', 
-      location: 'San Francisco, CA',
-      type: 'Full-time'
-    },
-    {
-      title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time'
-    }
+    {title: &apos;Senior Full Stack Developer&apos;,
+      department: &apos;Engineering&apos;,
+      location: &apos;Remote&apos;,
+      type: &apos;Full-time&apos},
+    {title: &apos;AI/ML Engineer&apos;,
+      department: &apos;Engineering&apos;, 
+      location: &apos;San Francisco, CA&apos;,
+      type: &apos;Full-time&apos},
+    {title: &apos;DevOps Engineer&apos;,
+      department: &apos;Engineering&apos;,
+      location: &apos;Remote&apos;,
+      type: &apos;Full-time&apos}
   ];
 
   const CareersPage: React.FC = () => {
@@ -51,8 +45,8 @@ const benefits = [
           <h1 className="text-5xl font-bold text-white mb-6">
             Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Be part of a team that's shaping the future of AI and IT solutions.';
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+            Be part of a team that&apos;s shaping the future of AI and IT solutions.&apos;;
             Work on cutting-edge projects and make a real impact.
           </p>
         </div>
@@ -60,7 +54,7 @@ const benefits = [
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {(benefits || []).map((benefit, _index) => {
+            {(benefits || []).map((benefit, _index) => {;
               const Icon = benefit.icon;
               return (
                 <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
@@ -69,7 +63,7 @@ const benefits = [
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
+                </div>;
               );
             })}
           </div>
@@ -129,12 +123,12 @@ const benefits = [
         </div>
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
-            <p className="text-gray-300 mb-6">
-              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">;
+            <h2 className="text-2xl font-bold text-white mb-4">Don&apos;t See Your Perfect Role?</h2>&apos;;
+            <p className="text-gray-300 mb-6">;
+              We&apos;re always looking for talented individuals. Send us your resume and we&apos;ll keep you in mind for future opportunities.';
             </p>
-            <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
+            <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">;
               Send Resume;
             </button>
           </div>

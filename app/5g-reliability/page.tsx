@@ -1,6 +1,5 @@
-import React, { Suspense } from 'react';
-const FiveGReliabilityPage: React.FC = () => {
-  return (
+import React, { Suspense } from &apos;react&apos;;
+const FiveGReliabilityPage: React.FC = () => {return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -12,7 +11,6 @@ const FiveGReliabilityPage: React.FC = () => {
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div>;
+  )}
 export default FiveGReliabilityPage;

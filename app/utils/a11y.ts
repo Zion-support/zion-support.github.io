@@ -4,10 +4,10 @@ export const accessibilityUtils = {
   },
   
   announceToScreenReader: (message: string) => {
-    const announcement = document.createElement('div')
-    announcement.setAttribute('aria-live', 'polite')
-    announcement.setAttribute('aria-atomic', 'true')
-    announcement.className = 'sr-only'
+    const announcement = document.createElement(&apos;div&apos;)
+    announcement.setAttribute(&apos;aria-live&apos;, &apos;polite&apos;)
+    announcement.setAttribute(&apos;aria-atomic&apos;, &apos;true&apos;)
+    announcement.className = &apos;sr-only&apos;
     announcement.textContent = message
     document.body.appendChild(announcement)
     
@@ -21,7 +21,7 @@ export const accessibilityUtils = {
 
   getFocusableElements: (container: HTMLElement) => {
     return container.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      &apos;button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])&apos;
     )
   }
 }

@@ -1,44 +1,43 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { Server, Cloud, Shield, Wrench, Monitor, Database } from &apos;lucide-react&apos;;
 
 const ITServicesPage: React.FC = () => {
-  const services = [
-    {
+  const services = [{
       icon: Server,
-      title: 'Infrastructure Management',
-      description: 'Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.',
-      features: ['Server Configuration', 'Network Setup', 'Hardware Maintenance', 'Performance Monitoring']
+      title: &apos;Infrastructure Management&apos;,
+      description: &apos;Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.&apos;,
+      features: [&apos;Server Configuration&apos;, &apos;Network Setup&apos;, &apos;Hardware Maintenance&apos;, &apos;Performance Monitoring&apos]
     },
     {
       icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Migrate to the cloud with our expert cloud architecture and management services.',
-      features: ['Cloud Migration', 'Multi-cloud Strategy', 'Cost Optimization', 'Security Implementation']
+      title: &apos;Cloud Solutions&apos;,
+      description: &apos;Migrate to the cloud with our expert cloud architecture and management services.&apos;,
+      features: [&apos;Cloud Migration&apos;, &apos;Multi-cloud Strategy&apos;, &apos;Cost Optimization&apos;, &apos;Security Implementation&apos]
     },
     {
       icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Protect your business with advanced security solutions and threat monitoring.',
-      features: ['Security Audits', 'Threat Detection', 'Incident Response', 'Compliance Management']
+      title: &apos;Cybersecurity&apos;,
+      description: &apos;Protect your business with advanced security solutions and threat monitoring.&apos;,
+      features: [&apos;Security Audits&apos;, &apos;Threat Detection&apos;, &apos;Incident Response&apos;, &apos;Compliance Management&apos]
     },
     {
       icon: Wrench,
-      title: 'Technical Support',
-      description: '24/7 technical support and maintenance to keep your systems running smoothly.',
-      features: ['24/7 Monitoring', 'Remote Support', 'Preventive Maintenance', 'Emergency Response']
+      title: &apos;Technical Support&apos;,
+      description: &apos;24/7 technical support and maintenance to keep your systems running smoothly.&apos;,
+      features: [&apos;24/7 Monitoring&apos;, &apos;Remote Support&apos;, &apos;Preventive Maintenance&apos;, &apos;Emergency Response&apos]
     },
     {
       icon: Monitor,
-      title: 'System Integration',
-      description: 'Seamlessly integrate different systems and applications for improved efficiency.',
-      features: ['API Integration', 'Data Migration', 'System Customization', 'Workflow Automation']
+      title: &apos;System Integration&apos;,
+      description: &apos;Seamlessly integrate different systems and applications for improved efficiency.&apos;,
+      features: [&apos;API Integration&apos;, &apos;Data Migration&apos;, &apos;System Customization&apos;, &apos;Workflow Automation&apos]
     },
     {
       icon: Database,
-      title: 'Data Management',
-      description: 'Secure and efficient data storage, backup, and recovery solutions.',
-      features: ['Database Design', 'Data Backup', 'Recovery Planning', 'Data Security']
+      title: &apos;Data Management&apos;,
+      description: &apos;Secure and efficient data storage, backup, and recovery solutions.&apos;,
+      features: [&apos;Database Design&apos;, &apos;Data Backup&apos;, &apos;Recovery Planning&apos;, &apos;Data Security&apos]
     }
   ];
 
@@ -58,7 +57,7 @@ const ITServicesPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive IT solutions to keep your business running smoothly and securely. 
-            From infrastructure to cloud, we've got you covered.
+            From infrastructure to cloud, we&apos;ve got you covered.
           </p>
         </div>
       </section>
@@ -104,7 +103,7 @@ const ITServicesPage: React.FC = () => {
             Ready to Optimize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our IT services can improve your business operations and security.
+            Let&apos;s discuss how our IT services can improve your business operations and security.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
@@ -116,7 +115,7 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 };
 

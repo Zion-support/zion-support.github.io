@@ -6,7 +6,7 @@ export const performanceMonitoring = {
   end: (name: string) => {
     performance.mark(`${name}-end`)
     performance.measure(name, `${name}-start`, `${name}-end`)
-    
+    ;
     const measure = performance.getEntriesByName(name)[0];
     if (measure) {
       // Performance measurement logged
@@ -14,9 +14,9 @@ export const performanceMonitoring = {
       console.log(`${name} took ${measure.duration.toFixed(2)}ms`);
       
       // Send to analytics
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'performance_measurement', {
-          name: name;,
+      if (typeof window !== &apos;undefined&apos; && window.gtag) {
+        window.gtag(&apos;event&apos;, &apos;performance_measurement&apos;, {
+          name: name,
           duration: measure.duration
         });
       }

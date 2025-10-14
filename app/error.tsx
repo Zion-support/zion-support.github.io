@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const ErrorPage: React.FC = () => {
-  return (
+const ErrorPage: React.FC = () => {return (
     <>
       <Helmet>
 <title>Error - Zion Tech Group</title>
@@ -14,8 +13,7 @@ const ErrorPage: React.FC = () => {
           <p className="text-gray-600">Please try again later.</p>
         </div>
       </div>
-    </>
-  );
-};
+    </>;
+  )};
 
 export default ErrorPage;

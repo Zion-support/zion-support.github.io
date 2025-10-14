@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const BusinessAppsPage: React.FC = () => {
-  return (
+const BusinessAppsPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Business apps - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const BusinessAppsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default BusinessAppsPage;
 

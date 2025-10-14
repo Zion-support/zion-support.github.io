@@ -1,49 +1,45 @@
-require('@testing-library/jest-dom');
-const React = require('react');
+require(&apos;@testing-library/jest-dom&apos;);
+const React = require(&apos;react&apos;);
 
 // Polyfill for TextEncoder/TextDecoder
-const { TextEncoder, TextDecoder } = require('util');
+const { TextEncoder, TextDecoder } = require(&apos;util&apos;);
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 // Mock react-router-dom
-global.jest = {
-  mock: jest.mock,
+global.jest = {mock: jest.mock,
   requireActual: jest.requireActual,
-  fn: jest.fn
-};
+  fn: jest.fn};
 
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
+jest.mock(&apos;react-router-dom&apos;, () => {
+  const actual = jest.requireActual(&apos;react-router-dom&apos;);
 
   return {
     ...actual,
     useNavigate: () => jest.fn(),
     useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
+      pathname: &apos;/&apos;,
+      search: '&apos;,
+      hash: '&apos;,
       state: null
     }),
     useParams: () => ({}),
     Link: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
+      return React.createElement(&apos;a&apos;, { href: to, ...props }, children);
     },
     NavLink: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
+      return React.createElement(&apos;a&apos;, { href: to, ...props }, children);
     },
     BrowserRouter: ({ children }) => children,
     MemoryRouter: ({ children }) => {
       const { createMemoryRouter, RouterProvider } = actual;
       const router = createMemoryRouter([
         {
-          path: '/',
+          path: &apos;/&apos;,
           element: children
         }
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0
-      });
+      ], {initialEntries: [&apos;/&apos],
+        initialIndex: 0});
       return React.createElement(RouterProvider, { router });
     },
     RouterProvider: () => null
@@ -60,25 +56,19 @@ global.IntersectionObserver = class IntersectionObserver {
 
 // Suppress console errors in tests
 const originalError = console.error;
-global.beforeAll = (fn) => {
-  fn();
-};
-global.afterAll = (fn) => {
-  fn();
-};
+global.beforeAll = (fn) => {;
+  fn()};
+global.afterAll = (fn) => {;
+  fn()};
 
-beforeAll(() => {
-  console.error = (...args) => {
+beforeAll(() => {console.error = (...args) => {
     if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
-    ) {
-      return;
-    }
+      typeof args[0] === &apos;string&apos; &&
+      args[0].includes(&apos;Warning: ReactDOM.render is no longer supported&apos;)
+    ) {;
+      return}
     originalError.call(console, ...args);
   };
 });
 
-afterAll(() => {
-  console.error = originalError;
-});
+afterAll(() => {console.error = originalError});

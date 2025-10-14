@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const SystemStatusPage: React.FC = () => {
-  return (
+const SystemStatusPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>System status - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const SystemStatusPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default SystemStatusPage;
 

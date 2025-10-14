@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const SmartInventoryOptimizerPage: React.FC = () => {
-  return (
+const SmartInventoryOptimizerPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Smart inventory optimizer - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const SmartInventoryOptimizerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default SmartInventoryOptimizerPage;
 

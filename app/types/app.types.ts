@@ -1,12 +1,9 @@
-export interface User {
-  id: string;
+export interface User {id: string;
   name: string;
   email: string;
-  role: 'admin' | 'user' | 'guest';
-}
+  role: &apos;admin&apos; | &apos;user&apos; | &apos;guest&apos;}
 
-export interface Service {
-  id: string;
+export interface Service {id: string;
   name: string;
   description: string;
   category: string;
@@ -14,49 +11,38 @@ export interface Service {
   pricing: {
     starter: number;
     professional: number;
-    enterprise: number;
-  };
+    enterprise: number};
   icon: string;
 }
 
-export interface AnalyticsEvent {
-  action: string;
+export interface AnalyticsEvent {action: string;
   category: string;
   label?: string;
-  value?: number;
-}
+  value?: number}
 
-export interface ContactForm {
-  name: string;
+export interface ContactForm {name: string;
   email: string;
   company: string;
   message: string;
-  phone?: string;
-}
+  phone?: string}
 
-export interface BlogPost {
-  id: string;
+export interface BlogPost {id: string;
   title: string;
   content: string;
   excerpt: string;
   author: string;
   publishedAt: string;
   tags: string[];
-  slug: string;
-}
+  slug: string}
 
-export interface Testimonial {
-  id: string;
+export interface Testimonial {id: string;
   name: string;
   company: string;
   content: string;
   avatar?: string;
-  rating: number;
-}
+  rating: number}
 
-export interface FAQ {
-  id: string;
+export interface FAQ {id: string;
   question: string;
   answer: string;
-  category: string;
-}
+  category: string}

@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const BlockchainWeb3Page: React.FC = () => {
-  return (
+const BlockchainWeb3Page: React.FC = () => {return (
     <>
       <Helmet>
         <title>Blockchain web3 - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const BlockchainWeb3Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default BlockchainWeb3Page;
 

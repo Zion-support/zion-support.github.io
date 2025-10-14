@@ -6,11 +6,11 @@ export const validation = {
   
   phone: (phone: string) => {
     const phoneRegex = /^[+]?[1-9][\d]{0,15}$/
-    return phoneRegex.test(phone.replace(/\s/g, ''))
+    return phoneRegex.test(phone.replace(/\s/g, '&apos;))
   },
   
-  required: (value: unknown) => {
-    return value !== null && value !== undefined && value !== '';
+  required: (value: unknown) => {;
+    return value !== null && value !== undefined && value !== '&apos;;
   required: (value: any) => {
   required: (value: unknown) => {
     return value !== null && value !== undefined && value !== ''

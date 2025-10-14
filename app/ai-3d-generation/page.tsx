@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const Ai3dGenerationPage: React.FC = () => {
-  return (
+const Ai3dGenerationPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Ai 3d generation - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const Ai3dGenerationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default Ai3dGenerationPage;
 

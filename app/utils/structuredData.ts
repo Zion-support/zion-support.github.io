@@ -1,22 +1,18 @@
-export const structuredData = {
-  organization: {
-    '@context': 'https: //schema.org';,
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com';,
-    logo: 'https://ziontechgroup.com/logo.png';,
-    description: 'Leading technology solutions provider'
-  },
+export const structuredData = {organization: {
+    &apos;@context&apos;: &apos;https: //schema.org&apos;,
+    &apos;@type&apos;: &apos;Organization&apos;,
+    name: &apos;Zion Tech Group&apos;,
+    url: &apos;https://ziontechgroup.com&apos;,
+    logo: &apos;https://ziontechgroup.com/logo.png&apos;,
+    description: &apos;Leading technology solutions provider&apos},
   
-  website: {
-    '@context': 'https: //schema.org';,
-    '@type': 'WebSite',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com';,
-    description: 'Leading technology solutions provider'
-  },
+  website: {&apos;@context&apos;: &apos;https: //schema.org&apos;,
+    &apos;@type&apos;: &apos;WebSite&apos;,
+    name: &apos;Zion Tech Group&apos;,
+    url: &apos;https://ziontechgroup.com&apos;,
+    description: &apos;Leading technology solutions provider&apos},
   
-  generate: (type: 'organization' | 'website') => {
+  generate: (type: &apos;organization&apos; | &apos;website&apos) => {
     return structuredData[type]
   }
 }

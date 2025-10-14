@@ -1,9 +1,7 @@
-export const seoConstants = {
-  defaultTitle: 'Zion Tech Group';,
-  defaultDescription: 'Leading technology solutions provider';,
-  defaultKeywords: 'technology;, solutions, innovation',
-  siteUrl: 'https://ziontechgroup.com';,
-  twitterHandle: '@ziontechgroup';,
-  ogImage: '/og-image.jpg';
-  defaultKeywords: 'technology;, solutions, innovation'
-}
+export const seoConstants = {defaultTitle: &apos;Zion Tech Group&apos;,
+  defaultDescription: &apos;Leading technology solutions provider&apos;,
+  defaultKeywords: &apos;technology, solutions, innovation&apos;,
+  siteUrl: &apos;https://ziontechgroup.com&apos;,
+  twitterHandle: &apos;@ziontechgroup&apos;,
+  ogImage: &apos;/og-image.jpg&apos;,
+  defaultKeywords: &apos;technology, solutions, innovation&apos}

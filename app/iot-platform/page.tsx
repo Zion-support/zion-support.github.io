@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const IotPlatformPage: React.FC = () => {
-  return (
+const IotPlatformPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Iot platform - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const IotPlatformPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default IotPlatformPage;
 

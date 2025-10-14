@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import HomePage from './page';
+import { BrowserRouter as Router, Routes, Route } from &apos;react-router-dom&apos;;
+import { HelmetProvider } from &apos;react-helmet-async&apos;;
+import HomePage from &apos;./page&apos;;
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </HelmetProvider>
+    </HelmetProvider>;
   );
 }
 

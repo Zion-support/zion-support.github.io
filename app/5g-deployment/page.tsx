@@ -1,22 +1,16 @@
-import React, { Suspense } from 'react';
-import EnhancedSEO from '../components/EnhancedSEO'
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { Suspense } from &apos;react&apos;;
+import EnhancedSEO from &apos;../components/EnhancedSEO&apos;
+import { CheckCircle, ArrowRight } from &apos;lucide-react&apos;;
+import { Link } from &apos;react-router-dom&apos;;
 
-const FiveGDeploymentPage = () => {
-  const services = [
+const FiveGDeploymentPage = () => {const services = [
     {
-      title: '5G Network Deployment',
-      description: 'Complete 5G network infrastructure deployment and configuration.'
-    },
-    {
-      title: 'Security Implementation',
-      description: 'Advanced security measures for 5G network protection.'
-    },
-    {
-      title: 'Team Training',
-      description: 'Comprehensive training for your team on 5G deployment best practices.'
-    }
+      title: &apos;5G Network Deployment&apos;,
+      description: &apos;Complete 5G network infrastructure deployment and configuration.&apos},
+    {title: &apos;Security Implementation&apos;,
+      description: &apos;Advanced security measures for 5G network protection.&apos},
+    {title: &apos;Team Training&apos;,
+      description: &apos;Comprehensive training for your team on 5G deployment best practices.&apos}
   ]
 
   return (
@@ -61,7 +55,7 @@ title="5G Deployment Services - Zion Tech Group"
 
         <div className="text-center">
           <Link 
-            to="/contact"
+            to="/contact";
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
           >
             Get Started Today
@@ -74,3 +68,4 @@ title="5G Deployment Services - Zion Tech Group"
 }
 
 export default FiveGDeploymentPage
+;

@@ -1,69 +1,54 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from &apos;react&apos;;
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC = () => {;
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
+  const [fontSize, setFontSize] = useState<&apos;small&apos; | &apos;normal&apos; | &apos;large&apos; | &apos;extra-large&apos;>(&apos;normal&apos;);
 
   useEffect(() => {
     const root = document.documentElement;
 
     // High contrast mode
     if (isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+      root.classList.add(&apos;high-contrast&apos;)} else {root.classList.remove(&apos;high-contrast&apos;)}
 
     // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+    if (isReducedMotion) {root.classList.add(&apos;reduced-motion&apos;)} else {root.classList.remove(&apos;reduced-motion&apos;)}
 
     // Font size adjustment
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'large' ? '1.2' : 
-      fontSize === 'extra-large' ? '1.4' : 
-      fontSize === 'small' ? '0.9' : '1'
+    root.style.setProperty(&apos;--font-size-multiplier&apos;, 
+      fontSize === &apos;large&apos; ? &apos;1.2&apos; : 
+      fontSize === &apos;extra-large&apos; ? &apos;1.4&apos; : 
+      fontSize === &apos;small&apos; ? &apos;0.9&apos; : &apos;1&apos;;
     );
   }, [isHighContrast, isReducedMotion, fontSize]);
 
   // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+  useEffect(() => {const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+      if (e.key === &apos;Tab&apos; && e.shiftKey && e.target === document.body) {;
         e.preventDefault();
-        const main = document.querySelector('main');
+        const main = document.querySelector(&apos;main&apos;);
         if (main) {
-          (main as HTMLElement).focus();
-        }
+          (main as HTMLElement).focus()}
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener(&apos;keydown&apos;, handleKeyDown);
+    return () => document.removeEventListener(&apos;keydown&apos;, handleKeyDown);
   }, []);
 
   // Add ARIA landmarks
-  useEffect(() => {
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
+  useEffect(() => {const addAriaLandmarks = () => {;
+      const main = document.querySelector(&apos;main&apos;);
+      if (main && !main.getAttribute(&apos;role&apos;)) {
+        main.setAttribute(&apos;role&apos;, &apos;main&apos;)}
 
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
+      const nav = document.querySelector(&apos;nav&apos;);
+      if (nav && !nav.getAttribute(&apos;role&apos;)) {nav.setAttribute(&apos;role&apos;, &apos;navigation&apos;)}
 
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
+      const footer = document.querySelector(&apos;footer&apos;);
+      if (footer && !footer.getAttribute(&apos;role&apos;)) {footer.setAttribute(&apos;role&apos;, &apos;contentinfo&apos;)}
     };
 
     addAriaLandmarks();
@@ -71,11 +56,11 @@ const AccessibilityEnhancer: React.FC = () => {
 
   // Add alt text to images without alt attributes
   useEffect(() => {
-    const addAltText = () => {
-      const images = document.querySelectorAll('img:not([alt])');
+    const addAltText = () => {;
+      const images = document.querySelectorAll(&apos;img:not([alt])&apos;);
       images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
+        if (!img.getAttribute(&apos;alt&apos;)) {
+          img.setAttribute(&apos;alt&apos;, `Image ${index + 1}`);
         }
       });
     };
@@ -112,7 +97,7 @@ const AccessibilityEnhancer: React.FC = () => {
           <label className="text-white text-sm">Font Size</label>
           <select
             value={fontSize}
-            onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large')}
+            onChange={(e) => setFontSize(e.target.value as &apos;small&apos; | &apos;normal&apos; | &apos;large&apos;)}
             className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm"
           >
             <option value="small">Small</option>
@@ -122,7 +107,7 @@ const AccessibilityEnhancer: React.FC = () => {
           </select>
         </div>
       </div>
-    </div>
+    </div>;
   );
 };
 

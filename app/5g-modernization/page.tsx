@@ -1,22 +1,16 @@
-import React, { Suspense } from 'react';
-import EnhancedSEO from '../components/EnhancedSEO'
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { Suspense } from &apos;react&apos;;
+import EnhancedSEO from &apos;../components/EnhancedSEO&apos;
+import { CheckCircle, ArrowRight } from &apos;lucide-react&apos;;
+import { Link } from &apos;react-router-dom&apos;;
 
-const FiveGModernizationPage = () => {
-  const services = [
+const FiveGModernizationPage = () => {const services = [
     {
-      title: '5G Network Modernization',
-      description: 'Complete modernization of legacy networks to 5G technology.'
-    },
-    {
-      title: 'Security Modernization',
-      description: 'Upgrade security infrastructure to support 5G requirements.'
-    },
-    {
-      title: 'Team Training',
-      description: 'Comprehensive training for modernized 5G network operations.'
-    }
+      title: &apos;5G Network Modernization&apos;,
+      description: &apos;Complete modernization of legacy networks to 5G technology.&apos},
+    {title: &apos;Security Modernization&apos;,
+      description: &apos;Upgrade security infrastructure to support 5G requirements.&apos},
+    {title: &apos;Team Training&apos;,
+      description: &apos;Comprehensive training for modernized 5G network operations.&apos}
   ]
 
   return (
@@ -61,7 +55,7 @@ title="5G Modernization Services - Zion Tech Group"
 
         <div className="text-center">
           <Link 
-            to="/contact"
+            to="/contact";
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
           >
             Get Started Today
@@ -74,3 +68,4 @@ title="5G Modernization Services - Zion Tech Group"
 }
 
 export default FiveGModernizationPage
+;

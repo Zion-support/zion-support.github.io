@@ -1,7 +1,7 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+'use client&apos;;
+import React, { useState } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { Link } from &apos;react-router-dom&apos;;
 import {
   ShieldCheckIcon,
   CloudIcon,
@@ -31,22 +31,22 @@ import {
   WrenchScrewdriverIcon,
   SparklesIcon,
   BoltIcon
-} from '@heroicons/react/24/outline';
+} from &apos;@heroicons/react/24/outline&apos;;
 
 
 
-const MicroSaaSSolutionsPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
+const MicroSaaSSolutionsPage: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos;);
+  const [sortBy, setSortBy] = useState(&apos;popularity&apos;);
 
   const categories = [
-    { id: 'all', name: 'All Solutions', count: 25 },
-    { id: 'ai', name: 'AI & Machine Learning', count: 15 },
-    { id: 'business', name: 'Business Intelligence', count: 8 },
-    { id: 'marketing', name: 'Marketing & Sales', count: 6 },
-    { id: 'productivity', name: 'Productivity Tools', count: 4 },
-    { id: 'security', name: 'Security & Compliance', count: 3 },
-    { id: 'industry', name: 'Industry Specific', count: 5 }
+    { id: &apos;all&apos;, name: &apos;All Solutions&apos;, count: 25 },
+    { id: &apos;ai&apos;, name: &apos;AI & Machine Learning&apos;, count: 15 },
+    { id: &apos;business&apos;, name: &apos;Business Intelligence&apos;, count: 8 },
+    { id: &apos;marketing&apos;, name: &apos;Marketing & Sales&apos;, count: 6 },
+    { id: &apos;productivity&apos;, name: &apos;Productivity Tools&apos;, count: 4 },
+    { id: &apos;security&apos;, name: &apos;Security & Compliance&apos;, count: 3 },
+    { id: &apos;industry&apos;, name: &apos;Industry Specific&apos;, count: 5 }
   ];
 
   const microSaaSProducts = [
@@ -55,7 +55,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI-Powered Analytics Dashboard Pro",
       description: "Revolutionary business intelligence platform with real-time AI-driven insights, predictive analytics, and automated reporting for data-driven decision making.",
       icon: ChartBarIcon,
-      category: 'ai',
+      category: &apos;ai&apos;,
       features: [
         "Real-time data visualization with 50+ chart types",
         "AI-powered predictive analytics and forecasting",
@@ -89,7 +89,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Content Studio Pro",
       description: "Next-generation content management system with AI-powered content generation, SEO optimization, multi-language support, and automated publishing workflows.",
       icon: DocumentTextIcon,
-      category: 'ai',
+      category: &apos;ai&apos;,
       features: [
         "AI content generation with GPT-4 integration",
         "Advanced SEO optimization and keyword research",
@@ -123,7 +123,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Customer Success Platform",
       description: "Intelligent customer support automation with advanced NLP, sentiment analysis, multi-channel support, and predictive customer success management.",
       icon: ChatBubbleLeftRightIcon,
-      category: 'ai',
+      category: &apos;ai&apos;,
       features: [
         "24/7 AI chatbot with human-like conversations",
         "Advanced sentiment analysis and emotion detection",
@@ -157,7 +157,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Project Management Suite Pro",
       description: "Advanced project management platform with AI-powered task optimization, resource allocation, deadline prediction, and risk assessment capabilities.",
       icon: CogIcon,
-      category: 'productivity',
+      category: &apos;productivity&apos;,
       features: [
         "AI task optimization and priority scoring",
         "Intelligent resource allocation and capacity planning",
@@ -191,7 +191,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI E-commerce Intelligence Suite",
       description: "Comprehensive e-commerce optimization platform with AI-powered product recommendations, dynamic pricing, inventory management, and customer behavior analysis.",
       icon: ChartBarIcon,
-      category: 'business',
+      category: &apos;business&apos;,
       features: [
         "AI product recommendations with 95% accuracy",
         "Dynamic pricing optimization and A/B testing",
@@ -225,7 +225,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI HR Management System Pro",
       description: "Intelligent human resources platform with AI-powered recruitment, employee analytics, performance optimization, and predictive workforce planning.",
       icon: UserGroupIcon,
-      category: 'business',
+      category: &apos;business&apos;,
       features: [
         "AI resume screening with 90% accuracy",
         "Advanced employee analytics and insights",
@@ -259,7 +259,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Financial Intelligence Platform",
       description: "Advanced financial analytics platform with AI-powered forecasting, risk assessment, automated reporting, and investment analysis capabilities.",
       icon: CurrencyDollarIcon,
-      category: 'business',
+      category: &apos;business&apos;,
       features: [
         "AI financial forecasting with 95% accuracy",
         "Advanced risk assessment and modeling",
@@ -293,7 +293,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Marketing Automation Pro",
       description: "Comprehensive marketing automation platform with AI-powered campaign optimization, lead scoring, personalization, and multi-channel orchestration.",
       icon: RocketLaunchIcon,
-      category: 'marketing',
+      category: &apos;marketing&apos;,
       features: [
         "AI campaign optimization and A/B testing",
         "Advanced lead scoring and qualification",
@@ -327,7 +327,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Inventory Intelligence System",
       description: "Smart inventory management platform with AI-powered demand forecasting, automated reordering, supplier optimization, and cost reduction analytics.",
       icon: CloudIcon,
-      category: 'business',
+      category: &apos;business&apos;,
       features: [
         "AI demand forecasting with 92% accuracy",
         "Automated reordering and supplier management",
@@ -361,7 +361,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Document Intelligence Platform",
       description: "Advanced document processing platform with AI-powered OCR, data extraction, workflow automation, and intelligent document classification.",
       icon: DocumentTextIcon,
-      category: 'productivity',
+      category: &apos;productivity&apos;,
       features: [
         "AI OCR with 99% accuracy for 100+ languages",
         "Intelligent data extraction and validation",
@@ -395,7 +395,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Social Media Intelligence Suite",
       description: "Comprehensive social media management platform with AI-powered content creation, optimal posting times, engagement optimization, and brand monitoring.",
       icon: GlobeAltIcon,
-      category: 'marketing',
+      category: &apos;marketing&apos;,
       features: [
         "AI content creation and curation",
         "Optimal posting time prediction",
@@ -429,7 +429,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Email Intelligence Platform",
       description: "Advanced email marketing platform with AI-powered personalization, send time optimization, subject line testing, and performance analytics.",
       icon: EnvelopeIcon,
-      category: 'marketing',
+      category: &apos;marketing&apos;,
       features: [
         "AI personalization with behavioral targeting",
         "Optimal send time prediction",
@@ -463,7 +463,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Voice Intelligence Platform",
       description: "Advanced voice assistant platform with natural language processing, multi-language support, custom voice training, and business integration capabilities.",
       icon: PhoneIcon,
-      category: 'ai',
+      category: &apos;ai&apos;,
       features: [
         "Natural language processing with 98% accuracy",
         "Multi-language support (50+ languages)",
@@ -497,7 +497,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Video Intelligence Suite",
       description: "Advanced video analytics platform with AI-powered content analysis, engagement tracking, sentiment analysis, and performance optimization.",
       icon: VideoCameraIcon,
-      category: 'marketing',
+      category: &apos;marketing&apos;,
       features: [
         "AI content analysis and tagging",
         "Engagement tracking and heat mapping",
@@ -531,7 +531,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Legal Intelligence Platform",
       description: "Advanced legal document analysis platform with contract review, compliance checking, risk assessment, and automated legal research capabilities.",
       icon: ScaleIcon,
-      category: 'security',
+      category: &apos;security&apos;,
       features: [
         "AI contract analysis and review",
         "Compliance checking and monitoring",
@@ -565,7 +565,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Real Estate Intelligence Suite",
       description: "Comprehensive real estate platform with property valuation, market analysis, lead generation, investment insights, and client management tools.",
       icon: HomeIcon,
-      category: 'industry',
+      category: &apos;industry&apos;,
       features: [
         "AI property valuation with 95% accuracy",
         "Market analysis and trend prediction",
@@ -599,7 +599,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Healthcare Intelligence Platform",
       description: "Advanced healthcare analytics platform with patient insights, treatment optimization, predictive diagnostics, and clinical decision support.",
       icon: BeakerIcon,
-      category: 'industry',
+      category: &apos;industry&apos;,
       features: [
         "Patient analytics and risk stratification",
         "Treatment optimization and recommendations",
@@ -633,7 +633,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Supply Chain Intelligence",
       description: "Intelligent supply chain management platform with demand forecasting, route optimization, cost analysis, and supplier performance monitoring.",
       icon: TruckIcon,
-      category: 'business',
+      category: &apos;business&apos;,
       features: [
         "AI demand forecasting with 94% accuracy",
         "Route optimization and logistics planning",
@@ -667,7 +667,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Energy Intelligence System",
       description: "Smart energy management platform with consumption optimization, cost reduction, sustainability tracking, and predictive maintenance.",
       icon: LightBulbIcon,
-      category: 'industry',
+      category: &apos;industry&apos;,
       features: [
         "Energy consumption optimization",
         "Cost analysis and reduction strategies",
@@ -701,7 +701,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Fraud Intelligence Platform",
       description: "Advanced fraud detection platform with real-time monitoring, pattern recognition, automated alerts, and machine learning-based risk scoring.",
       icon: ShieldCheckIcon,
-      category: 'security',
+      category: &apos;security&apos;,
       features: [
         "Real-time fraud monitoring and detection",
         "Advanced pattern recognition and ML models",
@@ -735,7 +735,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Learning Intelligence Platform",
       description: "Intelligent learning management system with personalized content, adaptive learning paths, progress tracking, and skill assessment capabilities.",
       icon: AcademicCapIcon,
-      category: 'productivity',
+      category: &apos;productivity&apos;,
       features: [
         "Personalized content and learning paths",
         "Adaptive learning and skill assessment",
@@ -769,7 +769,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Quality Intelligence Platform",
       description: "Automated quality assurance platform with AI-powered testing, defect detection, performance monitoring, and continuous quality improvement.",
       icon: ClipboardDocumentCheckIcon,
-      category: 'productivity',
+      category: &apos;productivity&apos;,
       features: [
         "AI-powered automated testing",
         "Defect detection and analysis",
@@ -803,7 +803,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Event Intelligence Suite",
       description: "Comprehensive event management platform with AI-powered planning, attendee insights, performance optimization, and networking facilitation.",
       icon: CalendarDaysIcon,
-      category: 'business',
+      category: &apos;business&apos;,
       features: [
         "AI event planning and optimization",
         "Attendee insights and behavior analysis",
@@ -837,7 +837,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI Cybersecurity Intelligence Suite",
       description: "Advanced cybersecurity platform with AI-powered threat detection, vulnerability assessment, incident response, and security monitoring.",
       icon: ShieldCheckIcon,
-      category: 'security',
+      category: &apos;security&apos;,
       features: [
         "AI threat detection and analysis",
         "Vulnerability assessment and scanning",
@@ -871,7 +871,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       title: "AI IoT Intelligence Platform",
       description: "Comprehensive IoT management platform with device monitoring, data analytics, predictive maintenance, and automated optimization.",
       icon: WrenchScrewdriverIcon,
-      category: 'industry',
+      category: &apos;industry&apos;,
       features: [
         "IoT device monitoring and management",
         "Real-time data analytics and insights",
@@ -903,21 +903,19 @@ const MicroSaaSSolutionsPage: React.FC = () => {
   ];
 
   const filteredProducts = microSaaSProducts.filter(product => 
-    selectedCategory === 'all' || product.category === selectedCategory
+    selectedCategory === &apos;all&apos; || product.category === selectedCategory;
   );
 
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return parseInt(a.price.replace('$', '').replace('/month', '')) - parseInt(b.price.replace('$', '').replace('/month', ''));
-      case 'price-high':
-        return parseInt(b.price.replace('$', '').replace('/month', '')) - parseInt(a.price.replace('$', '').replace('/month', ''));
-      case 'rating':
+  const sortedProducts = [...filteredProducts].sort((a, b) => {switch (sortBy) {
+      case &apos;price-low&apos;:;
+        return parseInt(a.price.replace(&apos;$&apos;, '&apos;).replace(&apos;/month&apos;, '&apos;)) - parseInt(b.price.replace(&apos;$&apos;, '&apos;).replace(&apos;/month&apos;, '&apos;));
+      case &apos;price-high&apos;:
+        return parseInt(b.price.replace(&apos;$&apos;, '&apos;).replace(&apos;/month&apos;, '&apos;)) - parseInt(a.price.replace(&apos;$&apos;, '&apos;).replace(&apos;/month&apos;, '&apos;));
+      case &apos;rating&apos;:
         return b.rating - a.rating;
-      case 'popularity':
+      case &apos;popularity&apos;:
       default:
-        return b.popularity - a.popularity;
-    }
+        return b.popularity - a.popularity}
   });
 
   return (
@@ -945,8 +943,8 @@ const MicroSaaSSolutionsPage: React.FC = () => {
           
           {/* Floating Elements */}
           <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
-          <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: &apos;1s&apos}}></div>
+          <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: &apos;2s&apos}}></div>
           
           <div className="relative z-10 container mx-auto px-4 text-center">
             <div className="max-w-4xl mx-auto">
@@ -1013,9 +1011,8 @@ const MicroSaaSSolutionsPage: React.FC = () => {
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white'
-                        : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
-                    }`}
+                        ? &apos;bg-gradient-to-r from-purple-600 to-cyan-600 text-white&apos;
+                        : &apos;bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white&apos}`}
                   >
                     {category.name} ({category.count})
                   </button>
@@ -1142,8 +1139,8 @@ const MicroSaaSSolutionsPage: React.FC = () => {
                             key={i}
                             className={`w-4 h-4 ${
                               i < Math.floor(product.rating)
-                                ? 'text-yellow-400 fill-current'
-                                : 'text-gray-400'
+                                ? &apos;text-yellow-400 fill-current&apos;
+                                : &apos;text-gray-400'
                             }`}
                           />
                         ))}
@@ -1237,7 +1234,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </>;
   );
 };
 

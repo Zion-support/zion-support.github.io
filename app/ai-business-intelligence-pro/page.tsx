@@ -1,10 +1,9 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-const AIBusinessIntelligenceProPage: React.FC = () => {
-  return (
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { Brain } from &apos;lucide-react&apos;;
+import { BarChart3 } from &apos;lucide-react&apos;;
+import { TrendingUp } from &apos;lucide-react&apos;;
+const AIBusinessIntelligenceProPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>AI Business Intelligence Pro - Zion Tech Group</title>
@@ -47,8 +46,7 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
+    </>;
+  )};
 
 export default AIBusinessIntelligenceProPage;

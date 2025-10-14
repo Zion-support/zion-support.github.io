@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const AiEnergyGridManagementProPage: React.FC = () => {
-  return (
+const AiEnergyGridManagementProPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Ai energy grid management pro - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const AiEnergyGridManagementProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default AiEnergyGridManagementProPage;
 

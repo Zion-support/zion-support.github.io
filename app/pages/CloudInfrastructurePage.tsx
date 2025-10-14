@@ -1,44 +1,43 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Shield, Zap, Database, Globe } from 'lucide-react';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { Cloud, Server, Shield, Zap, Database, Globe } from &apos;lucide-react&apos;;
 
 const CloudInfrastructurePage: React.FC = () => {
-  const services = [
-    {
+  const services = [{
       icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']
+      title: &apos;Cloud Migration&apos;,
+      description: &apos;Seamlessly migrate your applications and data to the cloud with minimal downtime.&apos;,
+      features: [&apos;Assessment & Planning&apos;, &apos;Data Migration&apos;, &apos;Application Modernization&apos;, &apos;Testing & Validation&apos]
     },
     {
       icon: Server,
-      title: 'Cloud Architecture',
-      description: 'Design and implement scalable, secure, and cost-effective cloud architectures.',
-      features: ['Multi-cloud Strategy', 'Auto-scaling', 'Load Balancing', 'Disaster Recovery']
+      title: &apos;Cloud Architecture&apos;,
+      description: &apos;Design and implement scalable, secure, and cost-effective cloud architectures.&apos;,
+      features: [&apos;Multi-cloud Strategy&apos;, &apos;Auto-scaling&apos;, &apos;Load Balancing&apos;, &apos;Disaster Recovery&apos]
     },
     {
       icon: Shield,
-      title: 'Cloud Security',
-      description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
-      features: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Monitoring']
+      title: &apos;Cloud Security&apos;,
+      description: &apos;Comprehensive security solutions to protect your cloud infrastructure and data.&apos;,
+      features: [&apos;Identity Management&apos;, &apos;Data Encryption&apos;, &apos;Compliance&apos;, &apos;Threat Monitoring&apos]
     },
     {
       icon: Zap,
-      title: 'DevOps & Automation',
-      description: 'Streamline your development and deployment processes with modern DevOps practices.',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automated Testing']
+      title: &apos;DevOps & Automation&apos;,
+      description: &apos;Streamline your development and deployment processes with modern DevOps practices.&apos;,
+      features: [&apos;CI/CD Pipelines&apos;, &apos;Infrastructure as Code&apos;, &apos;Monitoring&apos;, &apos;Automated Testing&apos]
     },
     {
       icon: Database,
-      title: 'Cloud Databases',
-      description: 'Managed database services with high availability, scalability, and performance.',
-      features: ['Database Migration', 'Backup & Recovery', 'Performance Tuning', 'Security Hardening']
+      title: &apos;Cloud Databases&apos;,
+      description: &apos;Managed database services with high availability, scalability, and performance.&apos;,
+      features: [&apos;Database Migration&apos;, &apos;Backup & Recovery&apos;, &apos;Performance Tuning&apos;, &apos;Security Hardening&apos]
     },
     {
       icon: Globe,
-      title: 'Global Infrastructure',
-      description: 'Worldwide cloud infrastructure to ensure low latency and high availability.',
-      features: ['CDN Setup', 'Edge Computing', 'Global Load Balancing', 'Multi-region Deployment']
+      title: &apos;Global Infrastructure&apos;,
+      description: &apos;Worldwide cloud infrastructure to ensure low latency and high availability.&apos;,
+      features: [&apos;CDN Setup&apos;, &apos;Edge Computing&apos;, &apos;Global Load Balancing&apos;, &apos;Multi-region Deployment&apos]
     }
   ];
 
@@ -116,7 +115,7 @@ const CloudInfrastructurePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 };
 

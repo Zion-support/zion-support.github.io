@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const DigitalTransformationPage: React.FC = () => {
-  return (
+const DigitalTransformationPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Digital transformation - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const DigitalTransformationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default DigitalTransformationPage;
 

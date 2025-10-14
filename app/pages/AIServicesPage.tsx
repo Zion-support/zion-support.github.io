@@ -1,44 +1,43 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { Brain, Bot, BarChart3, Shield, Zap, Target } from &apos;lucide-react&apos;;
 
 const AIServicesPage: React.FC = () => {
-  const services = [
-    {
+  const services = [{
       icon: Brain,
-      title: 'AI Strategy & Consulting',
-      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',
-      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']
+      title: &apos;AI Strategy & Consulting&apos;,
+      description: &apos;Develop comprehensive AI strategies tailored to your business objectives and industry requirements.&apos;,
+      features: [&apos;AI Readiness Assessment&apos;, &apos;Technology Roadmap&apos;, &apos;ROI Analysis&apos;, &apos;Implementation Planning&apos]
     },
     {
       icon: Bot,
-      title: 'Conversational AI',
-      description: 'Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.',
-      features: ['Natural Language Processing', 'Multi-channel Integration', 'Sentiment Analysis', '24/7 Availability']
+      title: &apos;Conversational AI&apos;,
+      description: &apos;Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.&apos;,
+      features: [&apos;Natural Language Processing&apos;, &apos;Multi-channel Integration&apos;, &apos;Sentiment Analysis&apos;, &apos;24/7 Availability&apos]
     },
     {
       icon: BarChart3,
-      title: 'Predictive Analytics',
-      description: 'Leverage machine learning to predict trends, behaviors, and outcomes for better decision making.',
-      features: ['Data Mining', 'Pattern Recognition', 'Forecasting Models', 'Real-time Insights']
+      title: &apos;Predictive Analytics&apos;,
+      description: &apos;Leverage machine learning to predict trends, behaviors, and outcomes for better decision making.&apos;,
+      features: [&apos;Data Mining&apos;, &apos;Pattern Recognition&apos;, &apos;Forecasting Models&apos;, &apos;Real-time Insights&apos]
     },
     {
       icon: Shield,
-      title: 'AI Security Solutions',
-      description: 'Advanced AI-powered security systems to protect your digital assets and detect threats in real-time.',
-      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Compliance Monitoring']
+      title: &apos;AI Security Solutions&apos;,
+      description: &apos;Advanced AI-powered security systems to protect your digital assets and detect threats in real-time.&apos;,
+      features: [&apos;Threat Detection&apos;, &apos;Anomaly Detection&apos;, &apos;Automated Response&apos;, &apos;Compliance Monitoring&apos]
     },
     {
       icon: Zap,
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation that reduces costs and improves efficiency.',
-      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Quality Control']
+      title: &apos;Process Automation&apos;,
+      description: &apos;Streamline operations with intelligent automation that reduces costs and improves efficiency.&apos;,
+      features: [&apos;Workflow Automation&apos;, &apos;Document Processing&apos;, &apos;Data Entry Automation&apos;, &apos;Quality Control&apos]
     },
     {
       icon: Target,
-      title: 'Custom AI Development',
-      description: 'Bespoke AI solutions designed specifically for your unique business challenges and opportunities.',
-      features: ['Custom Algorithms', 'API Development', 'Integration Services', 'Ongoing Support']
+      title: &apos;Custom AI Development&apos;,
+      description: &apos;Bespoke AI solutions designed specifically for your unique business challenges and opportunities.&apos;,
+      features: [&apos;Custom Algorithms&apos;, &apos;API Development&apos;, &apos;Integration Services&apos;, &apos;Ongoing Support&apos]
     }
   ];
 
@@ -116,7 +115,7 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 };
 

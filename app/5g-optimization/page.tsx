@@ -1,7 +1,7 @@
-import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React from &apos;react&apos;;
+import { ArrowRight, CheckCircle } from &apos;lucide-react&apos;;
+import { Link } from &apos;react-router-dom&apos;;
+import EnhancedSEO from &apos;../components/EnhancedSEO&apos;;
 
 const FiveGOptimizationPage: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const FiveGOptimizationPage: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-emerald-900 to-teal-900 text-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">;
             <h1 className="text-4xl md: text-6xl font-bold mb-6">;
               5G Optimization Services
             </h1>
@@ -23,7 +23,7 @@ const FiveGOptimizationPage: React.FC = () => {
               Maximize your 5G network performance with our expert optimization services
             </p>
             <Link 
-              to="/contact" 
+              to="/contact" ;
               className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors";
             >
               Optimize Now
@@ -36,7 +36,7 @@ const FiveGOptimizationPage: React.FC = () => {
       {/* Services Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16">;
             <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">;
               Our Optimization Services
             </h2>
@@ -44,7 +44,7 @@ const FiveGOptimizationPage: React.FC = () => {
               Comprehensive 5G network optimization to ensure peak performance and efficiency
             </p>
           </div>
-
+;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
@@ -87,7 +87,7 @@ const FiveGOptimizationPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="bg-gray-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center">;
           <h2 className="text-3xl md: text-4xl font-bold mb-6">;
             Ready to Optimize Your 5G Network?
           </h2>
@@ -103,7 +103,7 @@ const FiveGOptimizationPage: React.FC = () => {
           </Link>
         </div>
       </section>
-    </div>
+    </div>;
   );
 };
 

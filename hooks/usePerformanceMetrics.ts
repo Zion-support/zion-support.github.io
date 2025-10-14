@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from &apos;react&apos;
 
 export const usePerformanceMetrics = () => {
   const [metrics, setMetrics] = useState({
@@ -10,16 +10,16 @@ export const usePerformanceMetrics = () => {
   })
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
+    if (typeof window === &apos;undefined&apos; || !(&apos;PerformanceObserver&apos; in window)) return
 
     // First Contentful Paint
     new PerformanceObserver((list) => {
       const entries = list.getEntries()
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
+      const fcpEntry = entries.find(entry => entry.name === &apos;first-contentful-paint&apos;)
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))
       }
-    }).observe({ entryTypes: ['paint'] })
+    }).observe({ entryTypes: [&apos;paint&apos] })
 
     // Largest Contentful Paint
     new PerformanceObserver((list) => {
@@ -28,7 +28,7 @@ export const usePerformanceMetrics = () => {
       if (lcpEntry) {
         setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }))
       }
-    }).observe({ entryTypes: ['largest-contentful-paint'] })
+    }).observe({ entryTypes: [&apos;largest-contentful-paint&apos] })
 
     // First Input Delay
     new PerformanceObserver((list) => {
@@ -37,7 +37,7 @@ export const usePerformanceMetrics = () => {
       if (fidEntry && fidEntry.processingStart) {
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))
       }
-    }).observe({ entryTypes: ['first-input'] })
+    }).observe({ entryTypes: [&apos;first-input&apos] })
 
     // Cumulative Layout Shift
     new PerformanceObserver((list) => {
@@ -50,7 +50,7 @@ export const usePerformanceMetrics = () => {
         }
       })
       setMetrics(prev => ({ ...prev, cls: clsValue }))
-    }).observe({ entryTypes: ['layout-shift'] })
+    }).observe({ entryTypes: [&apos;layout-shift&apos] })
 
     // Time to First Byte
     new PerformanceObserver((list) => {
@@ -59,19 +59,19 @@ export const usePerformanceMetrics = () => {
       if (navEntry && navEntry.responseStart && navEntry.requestStart) {
         setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }))
       }
-    }).observe({ entryTypes: ['navigation'] })
+    }).observe({ entryTypes: [&apos;navigation&apos] })
   const [metrics, setMetrics] = useState<Record<string, number>>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+    if (typeof window === &apos;undefined&apos; || !(&apos;PerformanceObserver&apos; in window)) {
       return
     }
 
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries()
       entries.forEach(entry => {
-        if (entry.entryType === 'paint') {
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
+        if (entry.entryType === &apos;paint&apos;) {
+          const fcpEntry = entries.find(entry => entry.name === &apos;first-contentful-paint&apos;)
           if (fcpEntry) {
             setMetrics((prev: Record<string, number>) => ({ ...prev, fcp: fcpEntry.startTime }))
           }
@@ -79,11 +79,11 @@ export const usePerformanceMetrics = () => {
       })
     })
 
-    observer.observe({ entryTypes: ['paint'] })
-    observer.observe({ entryTypes: ['largest-contentful-paint'] })
-    observer.observe({ entryTypes: ['first-input'] })
-    observer.observe({ entryTypes: ['layout-shift'] })
-    observer.observe({ entryTypes: ['navigation'] })
+    observer.observe({ entryTypes: [&apos;paint&apos] })
+    observer.observe({ entryTypes: [&apos;largest-contentful-paint&apos] })
+    observer.observe({ entryTypes: [&apos;first-input&apos] })
+    observer.observe({ entryTypes: [&apos;layout-shift&apos] })
+    observer.observe({ entryTypes: [&apos;navigation&apos] })
 
     return () => observer.disconnect()
   }, [])

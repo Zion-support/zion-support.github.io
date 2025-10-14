@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const CookiePolicyPage: React.FC = () => {
-  return (
+const CookiePolicyPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Cookie policy - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const CookiePolicyPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default CookiePolicyPage;
 

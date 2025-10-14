@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+'use client&apos;;
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { Link } from &apos;react-router-dom&apos;;
 import {
   CpuChipIcon,
   ShieldCheckIcon,
@@ -9,7 +9,7 @@ import {
   ArrowRightIcon,
   ChartBarIcon,
   GlobeAltIcon
-} from '@heroicons/react/24/outline';
+} from &apos;@heroicons/react/24/outline&apos;;
 
 
 
@@ -48,16 +48,16 @@ const HomePage: React.FC = () => {
         
         {/* Floating Elements with Neon Effects */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating cyber-glow"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating cyber-glow" style={{animationDelay: '3s'}}></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: &apos;1s&apos}}></div>
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: &apos;2s&apos}}></div>
+        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating cyber-glow" style={{animationDelay: &apos;3s&apos}}></div>
         
         {/* Cyber Grid Overlay */}
         <div className="absolute inset-0 cyber-grid opacity-10"></div>
         
         {/* Data Streams */}
         <div className="absolute top-1/3 left-0 w-full h-1 data-stream"></div>
-        <div className="absolute top-2/3 left-0 w-full h-1 data-stream" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-2/3 left-0 w-full h-1 data-stream" style={{animationDelay: &apos;1.5s&apos}}></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -207,7 +207,7 @@ const HomePage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
               With over 4 years of experience in cutting-edge technology solutions, 
-              we've helped businesses across various industries transform their operations 
+              we&apos;ve helped businesses across various industries transform their operations 
               and achieve unprecedented growth.
             </p>
             
@@ -229,7 +229,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       </div>
-    </>
+    </>;
   );
 };
 

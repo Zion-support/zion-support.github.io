@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const WebsiteAnalyticsToolPage: React.FC = () => {
-  return (
+const WebsiteAnalyticsToolPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Website analytics tool - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const WebsiteAnalyticsToolPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default WebsiteAnalyticsToolPage;
 

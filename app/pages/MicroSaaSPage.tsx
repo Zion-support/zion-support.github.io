@@ -1,8 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const MicroSaaSPage: React.FC = () => {
-  return (
+const MicroSaaSPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
@@ -22,8 +21,7 @@ const MicroSaaSPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
+    </>;
+  )};
 
 export default MicroSaaSPage;

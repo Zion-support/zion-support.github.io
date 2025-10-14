@@ -1,22 +1,16 @@
-import React, { Suspense } from 'react';
-import EnhancedSEO from '../components/EnhancedSEO'
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { Suspense } from &apos;react&apos;;
+import EnhancedSEO from &apos;../components/EnhancedSEO&apos;
+import { CheckCircle, ArrowRight } from &apos;lucide-react&apos;;
+import { Link } from &apos;react-router-dom&apos;;
 
-const FiveGMaintenancePage = () => {
-  const services = [
+const FiveGMaintenancePage = () => {const services = [
     {
-      title: '5G Network Maintenance',
-      description: 'Ongoing maintenance and optimization of 5G network infrastructure.'
-    },
-    {
-      title: 'Security Monitoring',
-      description: 'Continuous security monitoring and threat detection for 5G networks.'
-    },
-    {
-      title: 'Team Training',
-      description: 'Comprehensive training for 5G network maintenance and troubleshooting.'
-    }
+      title: &apos;5G Network Maintenance&apos;,
+      description: &apos;Ongoing maintenance and optimization of 5G network infrastructure.&apos},
+    {title: &apos;Security Monitoring&apos;,
+      description: &apos;Continuous security monitoring and threat detection for 5G networks.&apos},
+    {title: &apos;Team Training&apos;,
+      description: &apos;Comprehensive training for 5G network maintenance and troubleshooting.&apos}
   ]
 
   return (
@@ -61,7 +55,7 @@ title="5G Maintenance Services - Zion Tech Group"
 
         <div className="text-center">
           <Link 
-            to="/contact"
+            to="/contact";
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
           >
             Get Started Today
@@ -74,3 +68,4 @@ title="5G Maintenance Services - Zion Tech Group"
 }
 
 export default FiveGMaintenancePage
+;

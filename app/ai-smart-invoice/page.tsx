@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const AiSmartInvoicePage: React.FC = () => {
-  return (
+const AiSmartInvoicePage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Ai smart invoice - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const AiSmartInvoicePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default AiSmartInvoicePage;
 

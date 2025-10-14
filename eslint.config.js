@@ -9,8 +9,7 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: [
-      'app-broken/**',
+    ignores: ['app-broken/**',
       'app-disabled/**',
       'dist/**',
       'node_modules/**',
@@ -22,8 +21,7 @@ export default tseslint.config(
       'scripts/**',
       'validate-jsx.js',
       'fix-lint-*.js',
-      'fix-numeric-components.js'
-    ]
+      'fix-numeric-components.js']
   },
   js.configs.recommended,
   {
@@ -82,8 +80,7 @@ export default tseslint.config(
       },
     },
   },
-  {
-    files: ['public/sw.js'],
+  {files: ['public/sw.js'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -93,16 +90,12 @@ export default tseslint.config(
         fetch: 'readonly',
         URL: 'readonly',
         location: 'readonly',
-        clients: 'readonly'
-      }
+        clients: 'readonly'}
     },
-    rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
-      'no-console': 'off'
-    }
+    rules: {'@typescript-eslint/no-unused-vars': 'off',
+      'no-console': 'off'}
   },
-  {
-    files: ['jest.setup.js'],
+  {files: ['jest.setup.js'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -110,13 +103,10 @@ export default tseslint.config(
         global: 'readonly',
         console: 'readonly',
         beforeAll: 'readonly',
-        afterAll: 'readonly'
-      }
+        afterAll: 'readonly'}
     },
-    rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
+    rules: {'@typescript-eslint/no-unused-vars': 'off',
       'no-console': 'off',
-      '@typescript-eslint/no-require-imports': 'off'
-    }
+      '@typescript-eslint/no-require-imports': 'off'}
   }
 );

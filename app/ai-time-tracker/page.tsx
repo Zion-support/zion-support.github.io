@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const AiTimeTrackerPage: React.FC = () => {
-  return (
+const AiTimeTrackerPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Ai time tracker - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const AiTimeTrackerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default AiTimeTrackerPage;
 

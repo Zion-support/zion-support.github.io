@@ -1,22 +1,16 @@
-import React, { Suspense } from 'react';
-import EnhancedSEO from '../components/EnhancedSEO'
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { Suspense } from &apos;react&apos;;
+import EnhancedSEO from &apos;../components/EnhancedSEO&apos;
+import { CheckCircle, ArrowRight } from &apos;lucide-react&apos;;
+import { Link } from &apos;react-router-dom&apos;;
 
-const FiveGIntegrationPage = () => {
-  const services = [
+const FiveGIntegrationPage = () => {const services = [
     {
-      title: '5G System Integration',
-      description: 'Seamless integration of 5G technology with existing systems.'
-    },
-    {
-      title: 'Security Integration',
-      description: 'Comprehensive security integration for 5G networks.'
-    },
-    {
-      title: 'Team Training',
-      description: 'Expert training for 5G integration and maintenance.'
-    }
+      title: &apos;5G System Integration&apos;,
+      description: &apos;Seamless integration of 5G technology with existing systems.&apos},
+    {title: &apos;Security Integration&apos;,
+      description: &apos;Comprehensive security integration for 5G networks.&apos},
+    {title: &apos;Team Training&apos;,
+      description: &apos;Expert training for 5G integration and maintenance.&apos}
   ]
 
   return (
@@ -61,7 +55,7 @@ title="5G Integration Services - Zion Tech Group"
 
         <div className="text-center">
           <Link 
-            to="/contact"
+            to="/contact";
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
           >
             Get Started Today
@@ -74,3 +68,4 @@ title="5G Integration Services - Zion Tech Group"
 }
 
 export default FiveGIntegrationPage
+;

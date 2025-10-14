@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from &apos;react&apos;;
 
-export const usePerformanceMonitor = (name: string) => {
+export const usePerformanceMonitor = (name: string) => {;
   const startTime = useRef<number>();
   
   useEffect(() => {
@@ -16,9 +16,9 @@ export const usePerformanceMonitor = (name: string) => {
         console.log(`${name} took ${duration.toFixed(2)}ms`);
         
         // Send to analytics
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'performance_measurement', {
-            name: name;,
+        if (typeof window !== &apos;undefined&apos; && window.gtag) {
+          window.gtag(&apos;event&apos;, &apos;performance_measurement&apos;, {
+            name: name,
             duration: duration
           });
         }

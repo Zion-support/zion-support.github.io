@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const FiveGMobileApplicationsPage: React.FC = () => {
-  return (
+const FiveGMobileApplicationsPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>5g mobile applications - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const FiveGMobileApplicationsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default FiveGMobileApplicationsPage;
 

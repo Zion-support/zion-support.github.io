@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const AiDataMiningProPage: React.FC = () => {
-  return (
+const AiDataMiningProPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Ai data mining pro - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const AiDataMiningProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default AiDataMiningProPage;
 

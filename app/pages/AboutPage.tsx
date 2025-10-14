@@ -1,80 +1,62 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 import {
   CpuChipIcon,
   ShieldCheckIcon,
   RocketLaunchIcon,
   ArrowRightIcon,
   UserGroupIcon
-} from '@heroicons/react/24/outline';
+} from &apos;@heroicons/react/24/outline&apos;;
 
 
 
 const stats = [
-    { label: 'Projects Completed', value: '500+', number: '500+' },
-    { label: 'Happy Clients', value: '200+', number: '200+' },
-    { label: 'Team Members', value: '50+', number: '50+' },
-    { label: 'Years Experience', value: '10+', number: '10+' }
+    {label: &apos;Projects Completed&apos;, value: &apos;500+&apos;, number: &apos;500+&apos},
+    {label: &apos;Happy Clients&apos;, value: &apos;200+&apos;, number: &apos;200+&apos},
+    {label: &apos;Team Members&apos;, value: &apos;50+&apos;, number: &apos;50+&apos},
+    {label: &apos;Years Experience&apos;, value: &apos;10+&apos;, number: &apos;10+&apos}
   ];
 
-  const AboutPage: React.FC = () => {
-  
-
-  const values = [
+  const AboutPage: React.FC = () => {const values = [
     {
       icon: CpuChipIcon,
-      title: 'Innovation First',
-      description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to solve complex business challenges.'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Security & Trust',
-      description: 'Your data and systems are protected with enterprise-grade security measures and compliance standards.'
-    },
-    {
-      icon: UserGroupIcon,
-      title: 'Client-Centric',
-      description: 'We prioritize our clients\' success, working closely with them to understand their unique needs and deliver tailored solutions.'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Results-Driven',
-      description: 'We measure our success by the tangible results and value we deliver to our clients\' businesses.'
-    }
+      title: &apos;Innovation First&apos;,
+      description: &apos;We stay at the forefront of technology, constantly exploring new AI and IT solutions to solve complex business challenges.&apos},
+    {icon: ShieldCheckIcon,
+      title: &apos;Security & Trust&apos;,
+      description: &apos;Your data and systems are protected with enterprise-grade security measures and compliance standards.&apos},
+    {icon: UserGroupIcon,
+      title: &apos;Client-Centric&apos;,
+      description: 'We prioritize our clients\' success, working closely with them to understand their unique needs and deliver tailored solutions.&apos},
+    {icon: RocketLaunchIcon,
+      title: &apos;Results-Driven&apos;,
+      description: &apos;We measure our success by the tangible results and value we deliver to our clients\' businesses.&apos}
   ];
 
   const team = [
-    {
-      name: 'Dr. Kleber Santos',
-      role: 'Founder & CEO',
-      description: 'AI and Machine Learning expert with 15+ years of experience in technology leadership.',
-      image: '/team/kleber.jpg'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      description: 'Cloud architecture specialist with expertise in scalable system design and implementation.',
-      image: '/team/sarah.jpg'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Head of AI Research',
-      description: 'PhD in Computer Science, leading our AI research and development initiatives.',
-      image: '/team/michael.jpg'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Cybersecurity Director',
-      description: 'Cybersecurity expert with certifications in ethical hacking and security architecture.',
-      image: '/team/emily.jpg'
-    }
+    {name: &apos;Dr. Kleber Santos&apos;,
+      role: &apos;Founder & CEO&apos;,
+      description: &apos;AI and Machine Learning expert with 15+ years of experience in technology leadership.&apos;,
+      image: &apos;/team/kleber.jpg&apos},
+    {name: &apos;Sarah Johnson&apos;,
+      role: &apos;CTO&apos;,
+      description: &apos;Cloud architecture specialist with expertise in scalable system design and implementation.&apos;,
+      image: &apos;/team/sarah.jpg&apos},
+    {name: &apos;Michael Chen&apos;,
+      role: &apos;Head of AI Research&apos;,
+      description: &apos;PhD in Computer Science, leading our AI research and development initiatives.&apos;,
+      image: &apos;/team/michael.jpg&apos},
+    {name: &apos;Emily Rodriguez&apos;,
+      role: &apos;Cybersecurity Director&apos;,
+      description: &apos;Cybersecurity expert with certifications in ethical hacking and security architecture.&apos;,
+      image: &apos;/team/emily.jpg&apos}
   ];
 
   return (
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions." />
+        <meta name="description" content="Learn about Zion Tech Group&apos;s mission, team, and commitment to delivering cutting-edge AI and IT solutions." />
         <meta name="keywords" content="about us, team, mission, AI experts, IT professionals, Zion Tech Group" />
       </Helmet>
 
@@ -193,7 +175,7 @@ const stats = [
           </div>
         </section>
       </div>
-    </>
+    </>;
   );
 };
 

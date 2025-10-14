@@ -1,58 +1,53 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from &apos;react&apos;;
+import { Link } from &apos;react-router-dom&apos;;
 import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,
   HeartIcon
-} from '@heroicons/react/24/outline';
+} from &apos;@heroicons/react/24/outline&apos;;
 
 
 
 const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' },
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' }
+    {name: &apos;AI Solutions&apos;, href: &apos;/ai-solutions&apos},
+    {name: &apos;IT Solutions&apos;, href: &apos;/it-solutions&apos},
+    {name: &apos;Cloud Infrastructure&apos;, href: &apos;/cloud-solutions&apos},
+    {name: &apos;Digital Transformation&apos;, href: &apos;/digital-transformation&apos}
   ];
 
-  const Footer: React.FC = () => {
-  
-
-  
-
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' }
+  const Footer: React.FC = () => {const company = [
+    { name: &apos;About Us&apos;, href: &apos;/about&apos},
+    {name: &apos;Solutions&apos;, href: &apos;/solutions&apos},
+    {name: &apos;Pricing&apos;, href: &apos;/pricing&apos},
+    {name: &apos;Blog&apos;, href: &apos;/blog&apos},
+    {name: &apos;Careers&apos;, href: &apos;/careers&apos},
+    {name: &apos;Case Studies&apos;, href: &apos;/case-studies&apos}
   ];
 
   const support = [
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Documentation', href: '/docs' }
+    {name: &apos;Contact&apos;, href: &apos;/contact&apos},
+    {name: &apos;Support&apos;, href: &apos;/support&apos},
+    {name: &apos;Tutorials&apos;, href: &apos;/tutorials&apos},
+    {name: &apos;Demo&apos;, href: &apos;/demo&apos},
+    {name: &apos;Documentation&apos;, href: &apos;/docs&apos}
   ];
 
   const legal = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR', href: '/gdpr' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    {name: &apos;Privacy Policy&apos;, href: &apos;/privacy&apos},
+    {name: &apos;Terms of Service&apos;, href: &apos;/terms&apos},
+    {name: &apos;Cookie Policy&apos;, href: &apos;/cookies&apos},
+    {name: &apos;GDPR&apos;, href: &apos;/gdpr&apos},
+    {name: &apos;Security&apos;, href: &apos;/security&apos},
+    {name: &apos;Compliance&apos;, href: &apos;/compliance&apos}
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' }
+    {name: &apos;LinkedIn&apos;, href: &apos;https://linkedin.com/company/ziontechgroup&apos;, icon: &apos;linkedin&apos},
+    {name: &apos;Twitter&apos;, href: &apos;https://twitter.com/ziontechgroup&apos;, icon: &apos;twitter&apos},
+    {name: &apos;GitHub&apos;, href: &apos;https://github.com/ziontechgroup&apos;, icon: &apos;github&apos},
+    {name: &apos;Facebook&apos;, href: &apos;https://facebook.com/ziontechgroup&apos;, icon: &apos;facebook&apos}
   ];
 
   return (
@@ -99,10 +94,10 @@ const services = [
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label={social.name}
                 >
-                  {social.icon === 'facebook' && '📘'}
-                  {social.icon === 'twitter' && '🐦'}
-                  {social.icon === 'linkedin' && '💼'}
-                  {social.icon === 'github' && '🐙'}
+                  {social.icon === &apos;facebook&apos; && &apos;📘&apos}
+                  {social.icon === &apos;twitter&apos; && &apos;🐦&apos}
+                  {social.icon === &apos;linkedin&apos; && &apos;💼&apos}
+                  {social.icon === &apos;github&apos; && &apos;🐙&apos}
                 </a>
               ))}
             </div>
@@ -208,7 +203,7 @@ const services = [
           </div>
         </div>
       </div>
-    </footer>
+    </footer>;
   );
 };
 

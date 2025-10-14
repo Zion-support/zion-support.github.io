@@ -1,10 +1,10 @@
 export const apiInterceptor = {
   request: (config: Record<string, unknown>) => {
-    // Add auth token if available
-    const token = localStorage.getItem('authToken');
-    if (token && config.headers && typeof config.headers === 'object') {
+    // Add auth token if available;
+    const token = localStorage.getItem(&apos;authToken&apos;);
+    if (token && config.headers && typeof config.headers === &apos;object&apos;) {;
       (config.headers as Record<string, string>).Authorization = `Bearer ${token}`;
-    const token = localStorage.getItem('authToken')
+    const token = localStorage.getItem(&apos;authToken&apos;)
     if (token) {
       config.headers = {
         ...config.headers,
@@ -14,30 +14,25 @@ export const apiInterceptor = {
     return config
   },
   
-  response: (response: unknown) => {
-    return response;
-  },
+  response: (response: unknown) => {;
+    return response},
   
   error: (error: unknown) => {
-    if (error && typeof error === 'object' && 'response' in error) {
+    if (error && typeof error === &apos;object&apos; && &apos;response&apos; in error) {;
       const errorWithResponse = error as { response?: { status?: number } };
-      if (errorWithResponse.response?.status === 401) {
-        // Handle unauthorized access
-        localStorage.removeItem('authToken');
-        window.location.href = '/login';
-      }
+      if (errorWithResponse.response?.status === 401) {// Handle unauthorized access;
+        localStorage.removeItem(&apos;authToken&apos;);
+        window.location.href = &apos;/login&apos;}
   response: (response: any) => {
     // Handle successful responses
     return response
   },
   
-  error: (error: any) => {
-    // Handle errors
+  error: (error: any) => {// Handle errors
     if (error.response?.status === 401) {
       // Unauthorized - redirect to login
-      localStorage.removeItem('authToken')
-      window.location.href = '/login'
-    }
+      localStorage.removeItem(&apos;authToken&apos;)
+      window.location.href = &apos;/login&apos}
     return Promise.reject(error)
   }
 }

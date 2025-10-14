@@ -1,13 +1,11 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-interface EnhancedSEOProps {
-title: string;
+interface EnhancedSEOProps {title: string;
   description: string;
   keywords?: string;
   canonicalUrl?: string;
-  ogImage?: string;
-}
+  ogImage?: string}
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
@@ -25,7 +23,7 @@ canonicalUrl,
       
       {/* Open Graph */}
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={description} />;
 <meta property="og: type" content="website" />;
       {ogImage && <meta property="og:image" content={ogImage} />}
       
@@ -34,7 +32,7 @@ canonicalUrl,
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
-    </Helmet>
+    </Helmet>;
   );
 };
 

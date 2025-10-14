@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from &apos;vite&apos;;
+import react from &apos;@vitejs/plugin-react&apos;;
+import path from &apos;path&apos;;
 
 const resolve = path.resolve;
 
@@ -13,8 +13,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@app': resolve(__dirname, './app'),
+      &apos;@&apos;: resolve(__dirname, &apos;./src&apos;),
+      &apos;@app&apos;: resolve(__dirname, &apos;./app&apos;),
     },
   },
   build: {
@@ -35,7 +35,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        pure_funcs: [&apos;console.log&apos;, &apos;console.info&apos;, &apos;console.debug&apos;, &apos;console.warn&apos],
         passes: 3, // More passes for better optimization
         unsafe: true,
         unsafe_comps: true,
@@ -66,35 +66,27 @@ export default defineConfig({
       }
     },
     // Enhanced build optimizations
-    rollupOptions: {
-      output: {
+    rollupOptions: {output: {
         manualChunks: (id: string) => {
           // Split vendor chunks for better caching
-          if (id.includes('node_modules')) {
+          if (id.includes(&apos;node_modules&apos;)) {
             // React ecosystem
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
-            }
+            if (id.includes(&apos;react&apos;) || id.includes(&apos;react-dom&apos;) || id.includes(&apos;react-router&apos;)) {
+              return &apos;react-vendor&apos;}
             // UI libraries
-            if (id.includes('lucide-react') || id.includes('framer-motion')) {
-              return 'ui-vendor';
-            }
+            if (id.includes(&apos;lucide-react&apos;) || id.includes(&apos;framer-motion&apos;)) {return &apos;ui-vendor&apos;}
             // Other vendor libraries
-            return 'vendor';
+            return &apos;vendor&apos;;
           }
           // App chunks
-          if (id.includes('/app/')) {
-            return 'app';
-          }
+          if (id.includes(&apos;/app/&apos;)) {return &apos;app&apos;}
           return undefined;
         },
-        assetFileNames: (assetInfo) => {
-          if (
+        assetFileNames: (assetInfo) => {if (
             assetInfo.name &&
             /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
           ) {
-            return `assets/images/[name]-[hash][extname]`;
-          }
+            return `assets/images/[name]-[hash][extname]`}
           return `assets/[name]-[hash][extname]`;
         },
         chunkFileNames: "assets/js/[name]-[hash].js",
@@ -111,6 +103,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: [&apos;react&apos;, &apos;react-dom&apos;, &apos;react-router-dom&apos],
   },
 });

@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const Ai20252026MegaTrendsBreakthroughPage: React.FC = () => {
-  return (
+const Ai20252026MegaTrendsBreakthroughPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Ai 2025 2026 mega trends breakthrough - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const Ai20252026MegaTrendsBreakthroughPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default Ai20252026MegaTrendsBreakthroughPage;
 

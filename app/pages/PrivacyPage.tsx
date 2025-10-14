@@ -1,8 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const PrivacyPage: React.FC = () => {
-  return (
+const PrivacyPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
@@ -22,8 +21,7 @@ const PrivacyPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
+    </>;
+  )};
 
 export default PrivacyPage;

@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const AiSocialMediaSchedulerPage: React.FC = () => {
-  return (
+const AiSocialMediaSchedulerPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Ai social media scheduler - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default AiSocialMediaSchedulerPage;
 

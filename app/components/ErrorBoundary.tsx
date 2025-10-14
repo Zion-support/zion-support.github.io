@@ -1,12 +1,8 @@
-import React, { Component, ErrorInfo, ReactNode, Suspense } from 'react';
-interface Props {
-  children: ReactNode;
-}
+import React, { Component, ErrorInfo, ReactNode, Suspense } from &apos;react&apos;;
+interface Props {children: ReactNode}
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
+interface State {hasError: boolean;
+  error?: Error}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {

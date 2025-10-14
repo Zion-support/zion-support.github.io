@@ -1,31 +1,23 @@
-import React from 'react';
+import React from &apos;react&apos;;
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+interface LoadingSpinnerProps {size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos;;
   text?: string;
   fullScreen?: boolean;
   className?: string;
-  color?: 'primary' | 'secondary' | 'white';
-}
+  color?: &apos;primary&apos; | &apos;secondary&apos; | &apos;white&apos;}
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  text = 'Loading...',
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = &apos;md&apos;,
+  text = &apos;Loading...&apos;,
   fullScreen = false,
-  className = '',
-  color = 'primary'
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
+  className = '&apos;,
+  color = &apos;primary&apos}) => {const sizeClasses = {
+    sm: &apos;w-4 h-4&apos;,
+    md: &apos;w-8 h-8&apos;,
+    lg: &apos;w-12 h-12&apos;};
 
-  const colorClasses = {
-    primary: 'border-purple-500',
-    secondary: 'border-cyan-500',
-    white: 'border-white'
-  };
+  const colorClasses = {primary: &apos;border-purple-500&apos;,
+    secondary: &apos;border-cyan-500&apos;,
+    white: &apos;border-white'};
 
   const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>
@@ -37,7 +29,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </p>
       )}
-    </div>
+    </div>;
   );
 
   if (fullScreen) {
@@ -46,7 +38,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
           {spinner}
         </div>
-      </div>
+      </div>;
     );
   }
 

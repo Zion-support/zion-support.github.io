@@ -35,91 +35,84 @@ interface SEOConfig {
   structuredData?: Record<string, unknown>
 }
 
-export const defaultSEOConfig: SEOConfig = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
-  keywords: [
-    'AI solutions',
-    'artificial intelligence',
-    'IT services',
-    'cloud computing',
-    'cybersecurity',
-    'digital transformation',
-    'machine learning',
-    'data analytics',
-    'automation',
-    'business intelligence'
-  ],
-  canonicalUrl: 'https://zion.app',
-  ogImage: '/images/og-image.jpg',
-  ogImage: 'https://zion.app/og-image.jpg',
-  ogType: 'website',
-  twitterCard: 'summary_large_image',
-  robots: 'index, follow',
-  author: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  language: 'en-US',
-  viewport: 'width=device-width, initial-scale=1.0',
-  charset: 'UTF-8',
-  ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-  ogDescription: 'Leading provider of advanced AI and IT solutions for businesses worldwide.',
-  twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-  twitterDescription: 'Leading provider of advanced AI and IT solutions for businesses worldwide.',
-  twitterImage: '/images/og-image.jpg',
+export const defaultSEOConfig: SEOConfig = {title: &apos;Zion Tech Group - Advanced AI and IT Solutions&apos;,
+  description: &apos;Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.&apos;,
+  keywords: [&apos;AI solutions&apos;,
+    &apos;artificial intelligence&apos;,
+    &apos;IT services&apos;,
+    &apos;cloud computing&apos;,
+    &apos;cybersecurity&apos;,
+    &apos;digital transformation&apos;,
+    &apos;machine learning&apos;,
+    &apos;data analytics&apos;,
+    &apos;automation&apos;,
+    &apos;business intelligence&apos],
+  canonicalUrl: &apos;https://zion.app&apos;,
+  ogImage: &apos;/images/og-image.jpg&apos;,
+  ogImage: &apos;https://zion.app/og-image.jpg&apos;,
+  ogType: &apos;website&apos;,
+  twitterCard: &apos;summary_large_image&apos;,
+  robots: &apos;index, follow&apos;,
+  author: &apos;Zion Tech Group&apos;,
+  publisher: &apos;Zion Tech Group&apos;,
+  language: &apos;en-US&apos;,
+  viewport: &apos;width=device-width, initial-scale=1.0&apos;,
+  charset: &apos;UTF-8&apos;,
+  ogTitle: &apos;Zion Tech Group - Advanced AI and IT Solutions&apos;,
+  ogDescription: &apos;Leading provider of advanced AI and IT solutions for businesses worldwide.&apos;,
+  twitterTitle: &apos;Zion Tech Group - Advanced AI and IT Solutions&apos;,
+  twitterDescription: &apos;Leading provider of advanced AI and IT solutions for businesses worldwide.&apos;,
+  twitterImage: &apos;/images/og-image.jpg&apos;,
   geo: {
-    latitude: '40.7128',
-    longitude: '-74.0060',
-    region: 'US-NY',
-    placename: 'New York'
-  },
+    latitude: &apos;40.7128&apos;,
+    longitude: &apos;-74.0060&apos;,
+    region: &apos;US-NY&apos;,
+    placename: &apos;New York&apos},
   alternate: [
-    { href: 'https://zion.app/en', hreflang: 'en' },
-    { href: 'https://zion.app/es', hreflang: 'es' }
+    {href: &apos;https://zion.app/en&apos;, hreflang: &apos;en&apos},
+    {href: &apos;https://zion.app/es&apos;, hreflang: &apos;es&apos}
   ],
-  structuredData: {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://zion.app',
-    logo: 'https://zion.app/images/logo.png'
-  }
+  structuredData: {&apos;@context&apos;: &apos;https://schema.org&apos;,
+    &apos;@type&apos;: &apos;Organization&apos;,
+    name: &apos;Zion Tech Group&apos;,
+    url: &apos;https://zion.app&apos;,
+    logo: &apos;https://zion.app/images/logo.png&apos}
 }
 
 export const generateSEOTags = (config: SEOConfig) => {
   const tags = [
-    { name: 'title', content: config.title },
-    { name: 'description', content: config.description },
-    { name: 'keywords', content: config.keywords.join(', ') },
-    { property: 'og:title', content: config.ogTitle || config.title },
-    { property: 'og:description', content: config.ogDescription || config.description },
-    { property: 'og:image', content: config.ogImage },
-    { property: 'og:type', content: config.ogType },
-    { property: 'og:url', content: config.canonicalUrl },
-    { name: 'twitter:card', content: config.twitterCard },
-    { name: 'twitter:title', content: config.twitterTitle || config.title },
-    { name: 'twitter:description', content: config.twitterDescription || config.description },
-    { name: 'twitter:image', content: config.twitterImage || config.ogImage }
+    { name: &apos;title&apos;, content: config.title },
+    { name: &apos;description&apos;, content: config.description },
+    { name: &apos;keywords&apos;, content: config.keywords.join(&apos;, &apos;) },
+    { property: &apos;og:title&apos;, content: config.ogTitle || config.title },
+    { property: &apos;og:description&apos;, content: config.ogDescription || config.description },
+    { property: &apos;og:image&apos;, content: config.ogImage },
+    { property: &apos;og:type&apos;, content: config.ogType },
+    { property: &apos;og:url&apos;, content: config.canonicalUrl },
+    { name: &apos;twitter:card&apos;, content: config.twitterCard },
+    { name: &apos;twitter:title&apos;, content: config.twitterTitle || config.title },
+    { name: &apos;twitter:description&apos;, content: config.twitterDescription || config.description },
+    { name: &apos;twitter:image&apos;, content: config.twitterImage || config.ogImage }
   ]
 
   if (config.geo) {
     tags.push(
-      { name: 'geo.region', content: config.geo.region },
-      { name: 'geo.placename', content: config.geo.placename },
-      { name: 'geo.position', content: `${config.geo.latitude};${config.geo.longitude}` }
+      { name: &apos;geo.region&apos;, content: config.geo.region },
+      { name: &apos;geo.placename&apos;, content: config.geo.placename },;
+      { name: &apos;geo.position&apos;, content: `${config.geo.latitude};${config.geo.longitude}` }
     )
   }
 
   return tags
 }
 
-export const generateImageAlt = (imagePath: string, alt?: string) => {
-  return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`
+export const generateImageAlt = (imagePath: string, alt?: string) => {return alt || `Zion Tech Group - ${imagePath.split(&apos;/&apos;).pop()?.split(&apos;.&apos;)[0] || &apos;image&apos}`
 }
 
-export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
-  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`
-  viewport: 'width=device-width, initial-scale=1',
-  charset: 'UTF-8'
+export const generateCanonicalUrl = (path: string, baseUrl: string = &apos;https://zion.app&apos) => {
+  return `${baseUrl}${path.startsWith(&apos;/&apos;) ? path : `/${path}`}`
+  viewport: &apos;width=device-width, initial-scale=1&apos;,
+  charset: &apos;UTF-8&apos;
 }
 
 export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
@@ -128,7 +121,7 @@ export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
   return {
     title: seoConfig.title,
     description: seoConfig.description,
-    keywords: seoConfig.keywords.join(', '),
+    keywords: seoConfig.keywords.join(&apos;, &apos;),
     canonical: seoConfig.canonicalUrl,
     openGraph: {
       title: seoConfig.ogTitle || seoConfig.title,

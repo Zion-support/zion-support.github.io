@@ -1,50 +1,50 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from &apos;lucide-react&apos;;
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
-      title: 'E-commerce Platform AI Optimization',
-      client: 'TechRetail Inc.',
-      industry: 'E-commerce',
-      challenge: 'Low conversion rates and high cart abandonment',
-      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',
+      title: &apos;E-commerce Platform AI Optimization&apos;,
+      client: &apos;TechRetail Inc.&apos;,
+      industry: &apos;E-commerce&apos;,
+      challenge: &apos;Low conversion rates and high cart abandonment&apos;,
+      solution: &apos;Implemented AI-powered recommendation engine and personalized shopping experience&apos;,
       results: [
-        { metric: 'Conversion Rate', value: '+45%', icon: TrendingUp },
-        { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUp },
-        { metric: 'Customer Satisfaction', value: '+60%', icon: Users },
-        { metric: 'Implementation Time', value: '3 months', icon: Clock }
+        { metric: &apos;Conversion Rate&apos;, value: &apos;+45%&apos;, icon: TrendingUp },
+        { metric: &apos;Cart Abandonment&apos;, value: &apos;-30%&apos;, icon: TrendingUp },
+        { metric: &apos;Customer Satisfaction&apos;, value: &apos;+60%&apos;, icon: Users },
+        { metric: &apos;Implementation Time&apos;, value: &apos;3 months&apos;, icon: Clock }
       ],
-      description: 'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.'
+      description: &apos;We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.&apos;
     },
     {
-      title: 'Manufacturing Process Automation',
-      client: 'AutoParts Manufacturing',
-      industry: 'Manufacturing',
-      challenge: 'Manual quality control processes causing delays and errors',
-      solution: 'Deployed computer vision and AI-powered quality control systems',
+      title: &apos;Manufacturing Process Automation&apos;,
+      client: &apos;AutoParts Manufacturing&apos;,
+      industry: &apos;Manufacturing&apos;,
+      challenge: &apos;Manual quality control processes causing delays and errors&apos;,
+      solution: &apos;Deployed computer vision and AI-powered quality control systems&apos;,
       results: [
-        { metric: 'Quality Defects', value: '-80%', icon: TrendingUp },
-        { metric: 'Production Speed', value: '+35%', icon: TrendingUp },
-        { metric: 'Cost Savings', value: '$2.5M', icon: DollarSign },
-        { metric: 'Implementation Time', value: '6 months', icon: Clock }
+        { metric: &apos;Quality Defects&apos;, value: &apos;-80%&apos;, icon: TrendingUp },
+        { metric: &apos;Production Speed&apos;, value: &apos;+35%&apos;, icon: TrendingUp },
+        { metric: &apos;Cost Savings&apos;, value: &apos;$2.5M&apos;, icon: DollarSign },
+        { metric: &apos;Implementation Time&apos;, value: &apos;6 months&apos;, icon: Clock }
       ],
-      description: 'Our AI-powered quality control system reduced defects by 80% while increasing production speed by 35%, saving the client $2.5M annually.'
+      description: &apos;Our AI-powered quality control system reduced defects by 80% while increasing production speed by 35%, saving the client $2.5M annually.&apos;
     },
     {
-      title: 'Healthcare Data Analytics Platform',
-      client: 'MedCenter Health System',
-      industry: 'Healthcare',
-      challenge: 'Fragmented patient data and inefficient treatment planning',
-      solution: 'Built comprehensive AI analytics platform for patient data integration and predictive treatment recommendations',
+      title: &apos;Healthcare Data Analytics Platform&apos;,
+      client: &apos;MedCenter Health System&apos;,
+      industry: &apos;Healthcare&apos;,
+      challenge: &apos;Fragmented patient data and inefficient treatment planning&apos;,
+      solution: &apos;Built comprehensive AI analytics platform for patient data integration and predictive treatment recommendations&apos;,
       results: [
-        { metric: 'Treatment Accuracy', value: '+55%', icon: TrendingUp },
-        { metric: 'Patient Outcomes', value: '+40%', icon: Users },
-        { metric: 'Cost Reduction', value: '$1.8M', icon: DollarSign },
-        { metric: 'Implementation Time', value: '8 months', icon: Clock }
+        { metric: &apos;Treatment Accuracy&apos;, value: &apos;+55%&apos;, icon: TrendingUp },
+        { metric: &apos;Patient Outcomes&apos;, value: &apos;+40%&apos;, icon: Users },
+        { metric: &apos;Cost Reduction&apos;, value: &apos;$1.8M&apos;, icon: DollarSign },
+        { metric: &apos;Implementation Time&apos;, value: &apos;8 months&apos;, icon: Clock }
       ],
-      description: 'The AI analytics platform improved treatment accuracy by 55% and patient outcomes by 40%, while reducing operational costs by $1.8M.'
+      description: &apos;The AI analytics platform improved treatment accuracy by 55% and patient outcomes by 40%, while reducing operational costs by $1.8M.&apos;
     }
   ];
 
@@ -52,7 +52,7 @@ const CaseStudiesPage: React.FC = () => {
     <div className="min-h-screen bg-slate-900 text-white">
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful AI and IT implementation case studies. See how we've helped businesses across industries achieve remarkable results." />
+        <meta name="description" content="Explore our successful AI and IT implementation case studies. See how we&apos;ve helped businesses across industries achieve remarkable results." />
         <meta name="keywords" content="case studies, AI implementation, IT solutions, success stories, business transformation, Zion Tech Group" />
       </Helmet>
 
@@ -63,7 +63,7 @@ const CaseStudiesPage: React.FC = () => {
             Success Stories
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover how we've helped businesses across industries achieve remarkable results 
+            Discover how we&apos;ve helped businesses across industries achieve remarkable results 
             with our AI and IT solutions.
           </p>
         </div>
@@ -136,7 +136,7 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 };
 

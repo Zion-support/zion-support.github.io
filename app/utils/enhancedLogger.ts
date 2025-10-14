@@ -1,24 +1,24 @@
 export const enhancedLogger = {
-  log: (level: 'info' | 'warn' | '_error', message: string, data?: unknown) => {
+  log: (level: &apos;info&apos; | &apos;warn&apos; | &apos;_error&apos;, message: string, data?: unknown) => {
     const LogEntry = {
       level,
       message,
       data,
       timestamp: new Date().toISOString()
     };
-  log: (_level: 'info' | 'warn' | 'error', _message: string, _data?: unknown) => {
+  log: (_level: &apos;info&apos; | &apos;warn&apos; | &apos;error&apos;, _message: string, _data?: unknown) => {
     // Logging logic
     
-  log: (level: 'info' | 'warn' | 'error', message: string, data?: any) => {
-    if (process.env.NODE_ENV === 'development') {
+  log: (level: &apos;info&apos; | &apos;warn&apos; | &apos;error&apos;, message: string, data?: any) => {
+    if (process.env.NODE_ENV === &apos;development&apos;) {
       // Development logging disabled
       console[level](message, data)
     }
     
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === &apos;production&apos;) {
       // Implementation would depend on the logging service
       }
-      console.log('Log entry: ', {
+      console.log(&apos;Log entry: &apos;, {
         level,
         message,
         data,
@@ -27,13 +27,13 @@ export const enhancedLogger = {
     }
   },
   
-  info: (message: string, data?: unknown) => enhancedLogger.log('info', message, data),
-  warn: (message: string, data?: unknown) => enhancedLogger.log('warn', message, data),
-  error: (message: string, data?: unknown) => enhancedLogger.log('_error', message, data)
+  info: (message: string, data?: unknown) => enhancedLogger.log(&apos;info&apos;, message, data),
+  warn: (message: string, data?: unknown) => enhancedLogger.log(&apos;warn&apos;, message, data),
+  error: (message: string, data?: unknown) => enhancedLogger.log(&apos;_error&apos;, message, data)
 };
-  error: (message: string, data?: unknown) => enhancedLogger.log('error', message, data)
+  error: (message: string, data?: unknown) => enhancedLogger.log(&apos;error&apos;, message, data)
 };
-  info: (message: string, data?: any) => enhancedLogger.log('info', message, data),
-  warn: (message: string, data?: any) => enhancedLogger.log('warn', message, data),
-  error: (message: string, data?: any) => enhancedLogger.log('error', message, data)
+  info: (message: string, data?: any) => enhancedLogger.log(&apos;info&apos;, message, data),
+  warn: (message: string, data?: any) => enhancedLogger.log(&apos;warn&apos;, message, data),
+  error: (message: string, data?: any) => enhancedLogger.log(&apos;error&apos;, message, data)
 }

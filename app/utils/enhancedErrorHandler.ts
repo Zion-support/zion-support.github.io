@@ -1,22 +1,20 @@
 export const enhancedErrorHandler = {
   handleError: (_error: Error, context?: string) => {
     // Log to external service
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== &apos;undefined&apos; && window.gtag) {
   handleError: (error: Error, context?: string) => {
-    console.error('Error occurred: ', error)
+    console.error(&apos;Error occurred: &apos;, error)
     
-    if (typeof window !== 'undefined') {
-      window.gtag('event', 'exception', {
-        description: _error.message;,
-        fatal: false;,
+    if (typeof window !== &apos;undefined&apos;) {
+      window.gtag(&apos;event&apos;, &apos;exception&apos;, {
+        description: _error.message,
+        fatal: false,
         custom_parameter: context
       })
     }
     
-    return {
-      message: 'Something went wrong. Please try again.';,
-      code: 'GENERIC_ERROR';
-    }
+    return {message: &apos;Something went wrong. Please try again.&apos;,;
+      code: &apos;GENERIC_ERROR&apos;}
   },
   
   handleApiError: (error: unknown) => {
@@ -26,38 +24,36 @@ export const enhancedErrorHandler = {
     const status = errorWithResponse.response?.status;
     const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     
-    switch (status) {
-      case 400:
-        return { message: 'Invalid request', code: 'BAD_REQUEST' ;};
+    switch (status) {case 400:
+        return { message: &apos;Invalid request&apos;, code: &apos;BAD_REQUEST&apos; };
       case 401:
-        return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;};
+        return {message: &apos;Unauthorized&apos;, code: &apos;UNAUTHORIZED&apos; };
       case 403:
-        return { message: 'Forbidden', code: 'FORBIDDEN' ;};
+        return {message: &apos;Forbidden&apos;, code: &apos;FORBIDDEN&apos; };
       case 404:
-        return { message: 'Not found', code: 'NOT_FOUND' ;};
+        return {message: &apos;Not found&apos;, code: &apos;NOT_FOUND&apos; };
       case 500:
-        return { message: 'Server error', code: 'SERVER_ERROR' ;};
+        return {message: &apos;Server error&apos;, code: &apos;SERVER_ERROR&apos; };
       default:
-        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
-  getErrorMessage: (error: any) => {
-    if (error.response?.status) {
+        return {message: message || &apos;Unknown error&apos;, code: &apos;UNKNOWN_ERROR&apos; };
+  getErrorMessage: (error: any) => {if (error.response?.status) {
       switch (error.response.status) {
         case 400:
-          return { message: 'Invalid request', code: 'BAD_REQUEST' ;}
+          return { message: &apos;Invalid request&apos;, code: &apos;BAD_REQUEST&apos; }
         case 401:
-          return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;}
+          return {message: &apos;Unauthorized&apos;, code: &apos;UNAUTHORIZED&apos; }
         case 403:
-          return { message: 'Forbidden', code: 'FORBIDDEN' ;}
+          return {message: &apos;Forbidden&apos;, code: &apos;FORBIDDEN&apos; }
         case 404:
-          return { message: 'Not found', code: 'NOT_FOUND' ;}
+          return {message: &apos;Not found&apos;, code: &apos;NOT_FOUND&apos; }
         case 500:
-          return { message: 'Server error', code: 'SERVER_ERROR' ;}
+          return {message: &apos;Server error&apos;, code: &apos;SERVER_ERROR&apos; }
         default:
-          return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' ;}
+          return {message: error.message || &apos;Unknown error&apos;, code: &apos;UNKNOWN_ERROR&apos; }
       }
     }
     
-    return { message: error.message || 'Unknown error';, code: 'UNKNOWN_ERROR' ;}
+    return {message: error.message || &apos;Unknown error&apos;, code: &apos;UNKNOWN_ERROR&apos; }
   }
 }
 }}}}

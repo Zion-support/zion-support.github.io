@@ -1,27 +1,27 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { BrowserRouter as Router, Routes, Route } from &apos;react-router-dom&apos;;
+import { HelmetProvider } from &apos;react-helmet-async&apos;;
 
 // Components
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import { AnalyticsProvider } from './app/components/AnalyticsProvider';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import SEOEnhancer from './app/components/SEOEnhancer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-// import LoadingStates from './app/components/LoadingStates';
+import Navigation from &apos;./app/components/Navigation&apos;;
+import Footer from &apos;./app/components/Footer&apos;;
+import { AnalyticsProvider } from &apos;./app/components/AnalyticsProvider&apos;;
+import PerformanceOptimizer from &apos;./app/components/PerformanceOptimizer&apos;;
+import SEOEnhancer from &apos;./app/components/SEOEnhancer&apos;;
+import AccessibilityEnhancer from &apos;./app/components/AccessibilityEnhancer&apos;;
+import ErrorBoundary from &apos;./app/components/ErrorBoundary&apos;;
+// import LoadingStates from &apos;./app/components/LoadingStates&apos;;
 
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import MetaManager from './app/components/MetaManager';
-import EnhancedAnalytics from './app/components/EnhancedAnalytics';
-import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
+import PerformanceMonitor from &apos;./app/components/PerformanceMonitor&apos;;
+import MetaManager from &apos;./app/components/MetaManager&apos;;
+import EnhancedAnalytics from &apos;./app/components/EnhancedAnalytics&apos;;
+import AdvancedLoadingStates from &apos;./app/components/AdvancedLoadingStates&apos;;
 
 // Pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
+import HomePage from &apos;./app/page&apos;;
+import AboutPage from &apos;./app/about/page&apos;;
+import ServicesPage from &apos;./app/services/page&apos;;
+import ContactPage from &apos;./app/contact/page&apos;;
 
 const App: React.FC = () => {
 
@@ -34,7 +34,7 @@ const App: React.FC = () => {
             <SEOEnhancer
               title="Zion Tech Group - Advanced AI and IT Solutions"
               description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
-              keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
+              keywords={[&apos;AI&apos;, &apos;IT solutions&apos;, &apos;automation&apos;, &apos;digital transformation&apos;, &apos;cybersecurity&apos;, &apos;cloud infrastructure&apos]}
               type="website"
               structuredData={{
                 "@context": "https://schema.org",
@@ -72,7 +72,7 @@ const App: React.FC = () => {
           </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>
-    </ErrorBoundary>
+    </ErrorBoundary>;
   );
 };
 

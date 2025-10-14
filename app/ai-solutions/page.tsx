@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { Link } from &apos;react-router-dom&apos;;
 import {
   CpuChipIcon,
   CheckCircleIcon,
@@ -10,7 +10,7 @@ import {
   CogIcon,
   ChatBubbleLeftRightIcon,
   EyeIcon
-} from '@heroicons/react/24/outline';
+} from &apos;@heroicons/react/24/outline&apos;;
 
 
 
@@ -268,6 +268,6 @@ export default function AISolutionsPage() {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 }

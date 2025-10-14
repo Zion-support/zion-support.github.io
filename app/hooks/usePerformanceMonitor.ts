@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from &apos;react&apos;;
 
-export const usePerformanceMonitor = () => {
+export const usePerformanceMonitor = () => {;
   const [metrics, setMetrics] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
+    if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {
+      const observer = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         if (entries.length > 0) {
           setMetrics((prev: Record<string, number>) => ({
@@ -15,11 +15,9 @@ export const usePerformanceMonitor = () => {
         }
       });
 
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
+      observer.observe({ entryTypes: [&apos;measure&apos;, &apos;navigation&apos] });
 
-      return () => {
-        observer.disconnect();
-      };
+      return () => {observer.disconnect()};
     }
   }, []);
 

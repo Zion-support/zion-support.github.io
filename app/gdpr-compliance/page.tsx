@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const GdprCompliancePage: React.FC = () => {
-  return (
+const GdprCompliancePage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Gdpr compliance - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const GdprCompliancePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default GdprCompliancePage;
 

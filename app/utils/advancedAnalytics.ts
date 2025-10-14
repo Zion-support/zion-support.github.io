@@ -1,34 +1,34 @@
 export const advancedAnalytics = {
   trackPageView: (page: string) => {
-    if (typeof window !== 'undefined') {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title;,
+    if (typeof window !== &apos;undefined&apos;) {
+      window.gtag(&apos;config&apos;, &apos;GA_MEASUREMENT_ID&apos;, {
+        page_title: document.title,
         page_location: window.location.href
       })
     }
   },
   
   trackEvent: (_eventName: string, parameters: Record<string, unknown> = {}) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', _eventName, parameters);
+    if (typeof window !== &apos;undefined&apos; && window.gtag) {;
+      window.gtag(&apos;event&apos;, _eventName, parameters);
   trackEvent: (eventName: string, parameters: Record<string, unknown> = {}) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
+    if (typeof window !== &apos;undefined&apos; && window.gtag) {
+      window.gtag(&apos;event&apos;, eventName, parameters);
   trackEvent: (action: string, category: string, label?: string, value?: number) => {
-    if (typeof window !== 'undefined') {
-      window.gtag('event', action, {
-        event_category: category;,
-        event_label: label;,
+    if (typeof window !== &apos;undefined&apos;) {
+      window.gtag(&apos;event&apos;, action, {
+        event_category: category,
+        event_label: label,
         value: value
       })
     }
   },
   
   trackConversion: (conversionId: string, value?: number, currency?: string) => {
-    if (typeof window !== 'undefined') {
-      window.gtag('event', 'conversion', {
-        send_to: conversionId;,
-        value: value;,
+    if (typeof window !== &apos;undefined&apos;) {
+      window.gtag(&apos;event&apos;, &apos;conversion&apos;, {
+        send_to: conversionId,
+        value: value,
         currency: currency
       })
     }
@@ -36,10 +36,10 @@ export const advancedAnalytics = {
   
   setUserProperties: (_properties: Record<string, unknown>) => {
   setUserProperties: (properties: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== &apos;undefined&apos; && window.gtag) {
   trackCustomEvent: (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== &apos;undefined&apos;) {
+      window.gtag(&apos;config&apos;, &apos;GA_MEASUREMENT_ID&apos;, {
         user__properties: _properties
       });
         custom_map: parameters;

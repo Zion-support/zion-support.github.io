@@ -7,14 +7,14 @@ export const envValidator = {
     return value
   },
   
-  optional: (key: string, defaultValue: string = ''): string => {
+  optional: (key: string, defaultValue: string = '&apos;): string => {
     return process.env[key] || defaultValue
   },
   
   boolean: (key: string, defaultValue: boolean = false): boolean => {
     const value = process.env[key]
     if (value === undefined) return defaultValue
-    return value.toLowerCase() === 'true'
+    return value.toLowerCase() === &apos;true'
   },
   
   number: (key: string, defaultValue: number = 0): number => {

@@ -1,22 +1,16 @@
-import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React from &apos;react&apos;;
+import { ArrowRight, CheckCircle } from &apos;lucide-react&apos;;
+import { Link } from &apos;react-router-dom&apos;;
+import EnhancedSEO from &apos;../components/EnhancedSEO&apos;;
 
-const FiveGConsultingPage = () => {
-  const services = [
+const FiveGConsultingPage = () => {const services = [
     {
-      title: '5G Strategy Development',
-      description: 'Comprehensive 5G implementation strategies tailored to your business needs.'
-    },
-    {
-      title: 'Security Assessment',
-      description: 'Complete security evaluation for 5G network implementation.'
-    },
-    {
-      title: 'Team Training',
-      description: 'Expert training for your team on 5G technologies and best practices.'
-    }
+      title: &apos;5G Strategy Development&apos;,
+      description: &apos;Comprehensive 5G implementation strategies tailored to your business needs.&apos},
+    {title: &apos;Security Assessment&apos;,
+      description: &apos;Complete security evaluation for 5G network implementation.&apos},
+    {title: &apos;Team Training&apos;,
+      description: &apos;Expert training for your team on 5G technologies and best practices.&apos}
   ];
 
   return (
@@ -58,7 +52,7 @@ const FiveGConsultingPage = () => {
 
         <div className="text-center">
           <Link 
-            to="/contact" 
+            to="/contact" ;
             className="inline-flex items-center bg-blue-600 hover: bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors";
           >
             Get Started
@@ -66,7 +60,7 @@ const FiveGConsultingPage = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </div>;
   );
 };
 

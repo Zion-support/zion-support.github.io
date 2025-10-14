@@ -1,22 +1,16 @@
-import React, { Suspense } from 'react';
-import EnhancedSEO from '../components/EnhancedSEO'
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { Suspense } from &apos;react&apos;;
+import EnhancedSEO from &apos;../components/EnhancedSEO&apos;
+import { CheckCircle, ArrowRight } from &apos;lucide-react&apos;;
+import { Link } from &apos;react-router-dom&apos;;
 
-const FiveGMigrationPage = () => {
-  const services = [
+const FiveGMigrationPage = () => {const services = [
     {
-      title: '5G Migration Planning',
-      description: 'Strategic planning for migrating from legacy networks to 5G.'
-    },
-    {
-      title: 'Security Migration',
-      description: 'Secure migration of security protocols to 5G infrastructure.'
-    },
-    {
-      title: 'Team Training',
-      description: 'Comprehensive training for 5G migration and new technology adoption.'
-    }
+      title: &apos;5G Migration Planning&apos;,
+      description: &apos;Strategic planning for migrating from legacy networks to 5G.&apos},
+    {title: &apos;Security Migration&apos;,
+      description: &apos;Secure migration of security protocols to 5G infrastructure.&apos},
+    {title: &apos;Team Training&apos;,
+      description: &apos;Comprehensive training for 5G migration and new technology adoption.&apos}
   ]
 
   return (
@@ -61,7 +55,7 @@ title="5G Migration Services - Zion Tech Group"
 
         <div className="text-center">
           <Link 
-            to="/contact"
+            to="/contact";
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
           >
             Get Started Today
@@ -74,3 +68,4 @@ title="5G Migration Services - Zion Tech Group"
 }
 
 export default FiveGMigrationPage
+;

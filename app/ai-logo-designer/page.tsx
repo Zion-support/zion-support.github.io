@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
-const AiLogoDesignerPage: React.FC = () => {
-  return (
+const AiLogoDesignerPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Ai logo designer - Zion Tech Group</title>
@@ -45,9 +44,8 @@ const AiLogoDesignerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </>;
+  )}
 
 export default AiLogoDesignerPage;
 

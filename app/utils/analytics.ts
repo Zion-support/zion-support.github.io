@@ -1,14 +1,12 @@
 export const analytics = {
   track: (event: string, _properties: Record<string, unknown> = {}) => {
-  track: (event: string, properties: Record<string, unknown> = {}) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', event, _properties);
-    }
+  track: (event: string, properties: Record<string, unknown> = {}) => {if (typeof window !== &apos;undefined&apos; && window.gtag) {;
+      window.gtag(&apos;event&apos;, event, _properties)}
   },
   
   page: (page: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== &apos;undefined&apos; && window.gtag) {
+      window.gtag(&apos;config&apos;, &apos;GA_MEASUREMENT_ID&apos;, {
         page_path: page
       });
     }
@@ -16,9 +14,9 @@ export const analytics = {
   
   identify: (_userId: string, _traits: Record<string, unknown> = {}) => {
   identify: (userId: string, traits: Record<string, unknown> = {}) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        user_id: _userId;,
+    if (typeof window !== &apos;undefined&apos; && window.gtag) {
+      window.gtag(&apos;config&apos;, &apos;GA_MEASUREMENT_ID&apos;, {
+        user_id: _userId,
         custom_map: _traits
       });
     }
