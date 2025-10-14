@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ErrorPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Error - Zion Tech Group</title>
+<title>Error - Zion Tech Group</title>
         <meta name="description" content="An error occurred" />
       </Helmet>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">

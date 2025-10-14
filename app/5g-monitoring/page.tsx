@@ -1,28 +1,28 @@
-import React from 'react'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import React, { Suspense } from 'react';
 import EnhancedSEO from '../components/EnhancedSEO'
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FiveGMonitoringPage = () => {
   const services = [
     {
-      title: '5G Network Monitoring',
-      description: 'Real-time monitoring and analysis of 5G network performance.'
+      title: '5G Network Monitoring';,
+      description: 'Real-time monitoring and analysis of 5G network performance.';
     },
     {
-      title: 'Security Monitoring',
-      description: 'Advanced security monitoring and threat detection for 5G networks.'
+      title: 'Security Monitoring';,
+      description: 'Advanced security monitoring and threat detection for 5G networks.';
     },
     {
-      title: 'Team Training',
-      description: 'Comprehensive training for 5G network monitoring and management.'
+      title: 'Team Training';,
+      description: 'Comprehensive training for 5G network monitoring and management.';
     }
   ]
 
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-        title="5G Monitoring Services - Zion Tech Group"
+title="5G Monitoring Services - Zion Tech Group"
         description="Professional 5G monitoring services to ensure optimal network performance and security."
       />
       
@@ -36,7 +36,7 @@ const FiveGMonitoringPage = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md: grid-cols-3 gap-8 mb-16">;
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-4">
@@ -50,7 +50,7 @@ const FiveGMonitoringPage = () => {
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium";
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -62,14 +62,14 @@ const FiveGMonitoringPage = () => {
         <div className="text-center">
           <Link 
             to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
           >
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </div>
-    </div>
+</div>
   )
 }
 

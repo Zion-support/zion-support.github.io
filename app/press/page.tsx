@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const PressPage: React.FC = () => {
@@ -16,7 +16,7 @@ const PressPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Professional Press solutions and services
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions

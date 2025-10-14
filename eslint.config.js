@@ -38,6 +38,7 @@ export default tseslint.config(
         },
       },
       globals: {
+        ...globals.browser,
         console: 'readonly',
         PerformanceObserver: 'readonly',
         describe: 'readonly',
@@ -65,7 +66,10 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': ['error', { 
+        "argsIgnorePattern": "^_", 
+        "varsIgnorePattern": "^[A-Z]" 
+      }],
       '@typescript-eslint/no-require-imports': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-undef': 'off', // TypeScript handles this

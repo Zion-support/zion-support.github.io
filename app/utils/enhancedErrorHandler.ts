@@ -3,19 +3,19 @@ export const enhancedErrorHandler = {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
   handleError: (error: Error, context?: string) => {
-    console.error('Error occurred:', error)
+    console.error('Error occurred: ';, error)
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-        description: _error.message,
-        fatal: false,
-        custom_parameter: context
+        description: _error.message;,
+        fatal: false;,
+        custom_parameter: context;
       })
     }
     
     return {
-      message: 'Something went wrong. Please try again.',
-      code: 'GENERIC_ERROR'
+      message: 'Something went wrong. Please try again.';,
+      code: 'GENERIC_ERROR';
     }
   },
   
@@ -28,35 +28,36 @@ export const enhancedErrorHandler = {
     
     switch (status) {
       case 400:
-        return { message: 'Invalid request', code: 'BAD_REQUEST' };
+        return { message: 'Invalid request', code: 'BAD_REQUEST' ;};
       case 401:
-        return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
+        return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;};
       case 403:
-        return { message: 'Forbidden', code: 'FORBIDDEN' };
+        return { message: 'Forbidden', code: 'FORBIDDEN' ;};
       case 404:
-        return { message: 'Not found', code: 'NOT_FOUND' };
+        return { message: 'Not found', code: 'NOT_FOUND' ;};
       case 500:
-        return { message: 'Server error', code: 'SERVER_ERROR' };
+        return { message: 'Server error', code: 'SERVER_ERROR' ;};
       default:
-        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
   getErrorMessage: (error: any) => {
     if (error.response?.status) {
       switch (error.response.status) {
         case 400:
-          return { message: 'Invalid request', code: 'BAD_REQUEST' }
+          return { message: 'Invalid request', code: 'BAD_REQUEST' ;}
         case 401:
-          return { message: 'Unauthorized', code: 'UNAUTHORIZED' }
+          return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;}
         case 403:
-          return { message: 'Forbidden', code: 'FORBIDDEN' }
+          return { message: 'Forbidden', code: 'FORBIDDEN' ;}
         case 404:
-          return { message: 'Not found', code: 'NOT_FOUND' }
+          return { message: 'Not found', code: 'NOT_FOUND' ;}
         case 500:
-          return { message: 'Server error', code: 'SERVER_ERROR' }
+          return { message: 'Server error', code: 'SERVER_ERROR' ;}
         default:
-          return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' }
+          return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' ;}
       }
     }
     
-    return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' }
+    return { message: error.message || 'Unknown error';, code: 'UNKNOWN_ERROR' ;}
   }
 }
+}}}}
