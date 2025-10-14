@@ -112,6 +112,7 @@ export default function ZionAnalyticsPro() {
     { number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" /> }
   ];
 
+const Page = () => {
   return (
     <>
       <Helmet>
@@ -421,7 +422,8 @@ export default function ZionAnalyticsPro() {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </>
   );
-}
+};
+
+export default Page;

@@ -1,27 +1,12 @@
 // Learn more: https://github.com/testing-library/jest-dom
-require('@testing-library/jest-dom');
+require("@testing-library/jest-dom");
 
 // Polyfills for Node.js environment
-const { TextEncoder, TextDecoder } = require('util');
+const { TextEncoder, TextDecoder } = require("util");
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-// Mock CSS imports
-jest.mock('react-lazy-load-image-component/src/effects/blur.css', () => ({}));
-
-// Mock react-lazy-load-image-component
-jest.mock('react-lazy-load-image-component', () => {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const React = require('react');
-  return {
-    LazyLoadImage: ({ children, ...props }) => {
-      // Filter out non-DOM props
-      const { ...domProps } = props;
-      return React.createElement('img', domProps, children);
-    },
-  };
-});
-
+// Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
@@ -41,14 +26,9 @@ global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
+  takeRecords() {
+    return [];
+  }
   unobserve() {}
 };
 
