@@ -11,12 +11,12 @@ interface SEOOptimizerProps {
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Leading provider of AI, IT, and cloud solutions for businesses worldwide.',
-  keywords = ['AI', 'IT', 'Cloud', 'Technology', 'Solutions'],
-  type = 'website',
-  url = 'https://ziontechgroup.com',
-  image = 'https://ziontechgroup.com/og-image.jpg'
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered IT solutions, custom software development, and digital transformation services.",
+  keywords = ["AI", "IT Solutions", "Software Development", "Digital Transformation", "Machine Learning", "Cloud Computing"],
+  type = "website",
+  url = "https://zion.app",
+  image = "https://zion.app/og-image.jpg"
 }) => {
   return (
     <Helmet>
