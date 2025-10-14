@@ -55,15 +55,20 @@ const ITSolutionsPage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
+  ];
   return (
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
-        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
+        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, network management, and software development. Expert IT services for modern businesses." />
+        <meta name="keywords" content="IT solutions, cloud computing, cybersecurity, network infrastructure, software development, IT consulting" />
+        <meta property="og:title" content="IT Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, network management, and software development." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
@@ -131,19 +136,19 @@ const ITSolutionsPage: React.FC = () => {
                   <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3" />
                   <span className="text-gray-700">{benefit}</span>
                 </div>
-              ))}
+))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your IT Infrastructure?
+        <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Modernize Your IT Infrastructure?
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our IT solutions can help you achieve your business goals.
+            <p className="text-lg text-gray-300 mb-8">
+              Let's discuss how our IT solutions can help you optimize your technology stack and achieve your business objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -156,13 +161,32 @@ const ITSolutionsPage: React.FC = () => {
                 to="/demo" 
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
-                Schedule Demo
+                Learn More About Us
               </Link>
             </div>
           </div>
         </section>
+
+      </div>"""
+        <meta name=description content=Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, database management, and more. Expert IT services for modern businesses. />"""
+        <meta name=keywords content=IT solutions, infrastructure management, cloud migration, cybersecurity, database management, IT support, network security />""
+      </Helmet>
+
+      {/* Hero Section */}
+
+              IT Solutions
+            </h1>"""
+            <p className=text-xl text-gray-300 mb-8 leading-relaxed>
+              Comprehensive IT solutions to power your business infrastructure
+            </p>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">"""
+              From infrastructure management to cybersecurity, our expert IT solutions 
+              ensure your technology infrastructure is secure, scalable, and optimized for performance.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

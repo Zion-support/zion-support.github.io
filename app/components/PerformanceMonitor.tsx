@@ -21,14 +21,12 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-
     const handleMetric = (metric: any) => {
       setMetrics(prev => ({
         ...prev,
         [metric.name]: metric.value
       }));
+    };
 
       // Send to analytics service
       if (typeof window !== 'undefined' && window.gtag) {

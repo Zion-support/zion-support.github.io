@@ -1,18 +1,19 @@
+'use client'
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'sm' | 'md' | 'lg' | 'xl'
   text?: string;
   fullScreen?: boolean;
   className?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  text,
+  size = 'md'
+text = 'Loading...'
   fullScreen = false,
-  className = ''
+  className =;
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -30,17 +31,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         )}
       </div>
     </div>
-  );
+  )
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
+
         {spinner}
       </div>
-    );
+    )
   }
 
   return spinner;
 }
 
-export default LoadingSpinner;
+}

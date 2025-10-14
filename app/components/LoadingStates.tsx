@@ -1,7 +1,7 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-export default function Page() {
+import React from 'react';
+import { Loader2 } from 'lucide-react';
+
+export const LoadingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -48,6 +48,8 @@ export default function Page() {
             </button>
           </div>
         </div>
+        <h2 className="text-2xl font-bold text-white mb-2">Loading...</h2>
+        <p className="text-gray-300">Please wait while we prepare your experience</p>
       </div>
     </div>
   );

@@ -110,7 +110,7 @@ const BlogPage: React.FC = () => {
   const popularTags = ['AI', 'Cloud Computing', 'Security', 'Digital Transformation', '5G', 'Micro SaaS']
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and digital transformation from Zion Tech Group experts." />

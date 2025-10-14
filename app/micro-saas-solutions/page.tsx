@@ -73,7 +73,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         <meta name="keywords" content="micro SaaS, custom SaaS, SaaS development, business applications, scalable software, AI-powered SaaS" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
@@ -158,7 +158,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
                   <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3" />
                   <span className="text-gray-700">{benefit}</span>
                 </div>
-              ))}
+))}
             </div>
           </div>
         </section>
@@ -183,13 +183,32 @@ const MicroSaaSSolutionsPage: React.FC = () => {
                 to="/demo" 
                 className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
-                Schedule Demo
+                Learn More About Us
               </Link>
             </div>
           </div>
         </section>
+
+      </div>"""
+        <meta name=description content=Comprehensive micro SaaS solutions including AI-powered analytics, content management, customer support, and more. Transform your business with our innovative software solutions. />"""
+        <meta name=keywords content=micro SaaS, software solutions, AI analytics, content management, customer support, business automation />""
+      </Helmet>
+
+      {/* Hero Section */}
+
+              Micro SaaS Solutions
+            </h1>"""
+            <p className=text-xl text-gray-300 mb-8 leading-relaxed>
+              Innovative micro SaaS products designed to solve specific business challenges
+            </p>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">"""
+              From AI-powered analytics to automated customer support, our micro SaaS solutions 
+              provide powerful, cost-effective tools to accelerate your business growth.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,11 +1,10 @@
 import React from 'react';
-import { User, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
 
 interface SidebarNavigationProps {
   isOpen: boolean;
-  onClose: () => void;
-}
-
+  onClose: () => void,}
 const navigationItems = [
   { name: 'Home', href: '/', icon: User },
   { name: 'Profile', href: '/profile', icon: User },
@@ -33,24 +32,26 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           <h2 className="text-lg font-semibold">Navigation</h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-md"
+            className="p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100"
           >
-            <X className="w-5 h-5" />
+            <X className="h-6 w-6" />
           </button>
         </div>
         <nav className="mt-4">
           {navigationItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"            >
               <item.icon className="w-5 h-5 mr-3" />
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
     </>
-  );
+  )
+}
+export default SidebarNavigation;
 }
 export default SidebarNavigation;

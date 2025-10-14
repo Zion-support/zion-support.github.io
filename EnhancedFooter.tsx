@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
+'use client';
 const EnhancedFooter: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">

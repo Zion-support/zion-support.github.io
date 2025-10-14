@@ -53,20 +53,19 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <footer className="bg-slate-900/95 backdrop-blur-md border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+            <Link to="/" className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 mb-6 max-w-sm">
-              Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
-              and digital transformation services for businesses worldwide.
+            </Link>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services for modern businesses.
             </p>
             
             {/* Contact Info */}

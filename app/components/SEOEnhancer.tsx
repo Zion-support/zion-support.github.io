@@ -1,14 +1,15 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOEnhancerProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  image?: string
-  url?: string
-  type?: string
-  structuredData?: unknown}
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: string;
+  structuredData?: unknown;
+}
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions','
   description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.','
@@ -16,19 +17,20 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   image = '/images/og-image.jpg','
   url = typeof window !== 'undefined' ? window.location.href : '','
   type = 'website','
-  structuredData}) => {
+  structuredData;
+}) => {
   useEffect(() => {
-    // Add structured data to the page
-    if (structuredData) {
-      const script = document.createElement('script')
+    // Add structured data to the page;
+    if (structuredData) {;
+      const script = document.createElement('script');
       script.type = 'application/ld+json'
-      script.text = JSON.stringify(structuredData)
-      document.head.appendChild(script)
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
       return () => {
         if (document.head.contains(script)) {
           document.head.removeChild(script);
         }
-      }
+      };
     }
     return undefined;
   }, [structuredData]);
@@ -58,9 +60,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   ];  return (
     <Helmet>
       <title>{title}</title>
-      {metaTags.map((tag, _index) => (
+      {metaTags.map((tag, _index) => (}
         <meta key={_index} {...tag} />
-      ))}
+))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       {/* Favicon */}
@@ -75,7 +77,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
-  );
+  )
 }
 // Default structured data for the organization;const  {
   "@context": "https://schema.org",
