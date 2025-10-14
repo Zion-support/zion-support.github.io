@@ -113,9 +113,7 @@ const BlogPage: React.FC = () => {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Stay ahead of the curve with insights, tutorials, and industry trends from our expert team.
               </p>
-            </div>
           </ResponsiveContainer>
-        </section>
 
         {/* Search and Filter Section */}
         <section className="py-12">
@@ -143,9 +141,7 @@ const BlogPage: React.FC = () => {
                     </option>
                   ))}
                 </select>
-              </div>
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* Featured Post */}
@@ -169,7 +165,6 @@ const BlogPage: React.FC = () => {
                           Featured
                         </span>
                         <span className="text-purple-400 text-sm">{featuredPost.category}</span>
-                      </div>
                       <h3 className="text-2xl font-bold text-white mb-4">{featuredPost.title}</h3>
                       <p className="text-gray-300 mb-6">{featuredPost.excerpt}</p>
                       <div className="flex items-center justify-between">
@@ -186,18 +181,13 @@ const BlogPage: React.FC = () => {
                             <Clock className="w-4 h-4" />
                             {featuredPost.readTime}
                           </div>
-                        </div>
                         <FuturisticButton>
                           Read More
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </FuturisticButton>
-                      </div>
                     </div>
-                  </div>
                 </FuturisticCard>
-              </div>
             </ResponsiveContainer>
-          </section>
         )}
 
         {/* Blog Posts Grid */}
@@ -235,18 +225,14 @@ const BlogPage: React.FC = () => {
                           <Clock className="w-4 h-4" />
                           {post.readTime}
                         </div>
-                      </div>
                       <FuturisticButton className="w-full justify-center">
                         Read Article
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </FuturisticButton>
-                    </div>
                   </FuturisticCard>
                 ))}
               </div>
-            </div>
           </ResponsiveContainer>
-        </section>
 
         {/* Newsletter Section */}
         <section className="py-20">
@@ -268,14 +254,26 @@ const BlogPage: React.FC = () => {
                     Subscribe
                     <Zap className="w-4 h-4 ml-2" />
                   </FuturisticButton>
-                </div>
               </FuturisticCard>
-            </div>
           </ResponsiveContainer>
-        </section>
       </div>
-    </>
-  );
+    </>);
 };
 
-export default BlogPage;
+export default BlogPage</div>
+        </section>
+                    </div>
+              </div>
+            </div>
+        </section>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </section>
+            </div>
+          </ResponsiveContainer>
+            </div>
+        </section>
+      </div>

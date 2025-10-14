@@ -23,12 +23,18 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     window.addEventListener('resize', resizeCanvas);
 
     // Animated particles
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
+    const particles: Array<{,
+
+      x: number;,
+
+      y: number;,
+
+      vx: number;,
+
+      vy: number;,
+
+      size: number;,
+
       opacity: number;
     }> = [];
 
@@ -128,14 +134,21 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         </div>
 
         {/* Gradient Overlay */}"""
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>"""
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div>"""
       </div>
       
       {/* Content */}
       <div className="relative z-10">
         {children}
       </div>
-    </div>
   );
 }
 export default FuturisticBackground
+
+}
+}
+      </canvas>
+    </div>
+</FuturisticBackgroundProps>
+  </HTMLCanvasElement>
+</FuturisticBackgroundProps>

@@ -13,8 +13,9 @@ export default function Page() {
           <p className="text-xl text-gray-600">
             This page is under development. Please check back soon for more information about our productivity services.
           </p>
-        </div>
       </div>
     </>
   );
 }
+
+      </div>

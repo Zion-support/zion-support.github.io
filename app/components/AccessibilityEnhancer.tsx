@@ -3,7 +3,7 @@
   enableHighContrast?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({ 
   children,
   enableKeyboardNavigation = true,
   enableScreenReader = true,
@@ -108,4 +108,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return null;
 };
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer</AccessibilityEnhancerProps>

@@ -5,7 +5,8 @@ import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-reac
 
 const GuidesPage: React.FC = () => {
   const guides = [
-    {
+    {,
+
       title: 'AI 2026 Implementation Roadmap',
       description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026',
       url: '/guides/ai-2026-implementation-roadmap',
@@ -48,7 +49,8 @@ const GuidesPage: React.FC = () => {
       case 'Beginner': return 'text-green-400 bg-green-400/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20';
       case 'Advanced': return 'text-orange-400 bg-orange-400/20';
-      case 'Expert': return 'text-red-400 bg-red-400/20';
+      case 'Expert': return 'text-red-400 bg-red-400/20';,
+
       default: return 'text-gray-400 bg-gray-400/20';
     }
   };
@@ -65,7 +67,6 @@ const Page = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8"></h1>
             <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
-          </div>
         </nav>
 
         <main className="container mx-auto px-4 py-16">
@@ -75,13 +76,11 @@ const Page = () => {
               <BookOpen className="w-16 h-16 text-cyan-400" />
               <h1 className="text-4xl md:text-6xl font-bold text-white">
                 Implementation <span className="text-cyan-400">Guides</span>
-              </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Step-by-step guides to help you implement AI, automation, and digital transformation 
               solutions in your enterprise with confidence.
             </p>
-          </div>
 
           {/* Categories */}
           <section className="mb-16">
@@ -91,10 +90,8 @@ const Page = () => {
                 <div key={index} className="bg-slate-800 rounded-lg p-4 text-center hover:bg-slate-700 transition-colors">
                   <category.icon className={`w-8 h-8 mx-auto mb-2 ${category.color}`} />
                   <h3 className="text-white font-semibold text-sm">{category.name}</h3>
-                </div>
               ))}
             </div>
-          </section>
 
           {/* Guides Grid */}
           <section className="mb-16">
@@ -109,7 +106,6 @@ const Page = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{guide.title}</h3>
                       <p className="text-gray-300 text-sm mb-3">{guide.description}</p>
-                    </div>
                   </div>
                   
                   <div className="flex items-center justify-between mb-4">
@@ -117,7 +113,6 @@ const Page = () => {
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}>
                       {guide.difficulty}
                     </span>
-                  </div>
                   
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">{guide.duration}</span>
@@ -127,11 +122,9 @@ const Page = () => {
                     >
                       Read Guide →
                     </Link>
-                  </div>
                 </div>
               ))}
             </div>
-          </section>
 
           {/* Getting Started */}
           <section className="mb-16">
@@ -149,7 +142,6 @@ const Page = () => {
                     <li>• Plan your implementation strategy</li>
                     <li>• Choose the right technologies</li>
                     <li>• Measure success and ROI</li>
-                  </ul>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Ready for Advanced Topics?</h3>
@@ -162,11 +154,8 @@ const Page = () => {
                     <li>• Advanced AI architectures</li>
                     <li>• Enterprise automation strategies</li>
                     <li>• Future-ready implementations</li>
-                  </ul>
                 </div>
-              </div>
             </div>
-          </section>
 
           {/* Call to Action */}
           <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
@@ -190,11 +179,28 @@ const Page = () => {
               >
                 View Our Services
               </Link>
-            </div>
           </section>
-        </main>
       </>
   );
 };
 
 export default Page;
+
+}
+            </div>
+                  </ul>
+                  </ul>
+            </div>
+          </section>
+                  </div>
+                </div>
+            </div>
+          </section>
+            </div>
+          </section>
+              </h1>
+          </div>
+        </main>
+          </div>
+        </div>
+      </div>

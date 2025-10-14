@@ -116,12 +116,10 @@ const AICustomerSentimentTrackerPage = () => {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
               <Heart className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Customer Intelligence</span>
-            </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Understand Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Customers Better</span>
-            </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Monitor customer sentiment across all channels with AI-powered analysis, real-time alerts, 
@@ -144,9 +142,7 @@ const AICustomerSentimentTrackerPage = () => {
               >
                 View Demo
               </motion.button>
-            </div>
           </motion.div>
-        </div>
       </section>
 
       {/* Stats Section */}
@@ -167,10 +163,8 @@ const AICustomerSentimentTrackerPage = () => {
                 <div className="text-gray-400 font-medium">
                   {stat.label}
                 </div>
-              </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -188,7 +182,6 @@ const AICustomerSentimentTrackerPage = () => {
               Our AI-powered sentiment tracking delivers measurable improvements in customer satisfaction, 
               loyalty, and business growth.
             </p>
-          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -208,10 +201,8 @@ const AICustomerSentimentTrackerPage = () => {
                 <p className="text-gray-300 leading-relaxed">
                   {benefit.description}
                 </p>
-              </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -230,7 +221,6 @@ const AICustomerSentimentTrackerPage = () => {
               Leverage cutting-edge artificial intelligence to understand and respond to customer sentiment 
               across all touchpoints.
             </p>
-          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -250,10 +240,8 @@ const AICustomerSentimentTrackerPage = () => {
                 <p className="text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
-              </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Pricing Section */}
@@ -272,7 +260,6 @@ const AICustomerSentimentTrackerPage = () => {
               Choose the perfect plan for your business needs. All plans include our core AI features 
               with no hidden fees or long-term contracts.
             </p>
-          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -292,7 +279,6 @@ const AICustomerSentimentTrackerPage = () => {
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
-                  </div>
                 )}
 
                 <div className="text-center mb-8">
@@ -301,7 +287,6 @@ const AICustomerSentimentTrackerPage = () => {
                   <div className="flex items-baseline justify-center">
                     <span className="text-5xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
-                  </div>
                 </div>
 
                 <ul className="space-y-4 mb-8">
@@ -309,7 +294,6 @@ const AICustomerSentimentTrackerPage = () => {
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
-                    </li>
                   ))}
                 </ul>
 
@@ -324,10 +308,8 @@ const AICustomerSentimentTrackerPage = () => {
                 >
                   Get Started
                 </motion.button>
-              </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -362,9 +344,7 @@ const AICustomerSentimentTrackerPage = () => {
               >
                 Contact Sales
               </motion.button>
-            </div>
           </motion.div>
-        </div>
       </section>
 
       {/* Contact Information */}
@@ -378,16 +358,27 @@ const AICustomerSentimentTrackerPage = () => {
             <div className="flex items-center">
               <Heart className="w-5 h-5 mr-2 text-cyan-400" />
               <span>kleber@ziontechgroup.com</span>
-            </div>
             <div className="flex items-center">
               <Globe className="w-5 h-5 mr-2 text-cyan-400" />
               <span>https://ziontechgroup.com</span>
-            </div>
           </div>
-        </div>
-      </section>
-    </div>
-  );
+      </section>);
 };
 
-export default AICustomerSentimentTrackerPage;
+export default AICustomerSentimentTrackerPage</div>
+          </div>
+        </div>
+            </div>
+        </div>
+                    </li>
+                  </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+            </div>
+            </h1>
+            </div>
+        </div>
+    </div>

@@ -29,3 +29,5 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>{children}
     </div>
 export default FuturisticCard
+
+</FuturisticCardProps>

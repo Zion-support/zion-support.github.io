@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
+  loadTime: number;,
+
+  renderTime: number;,
+
+  memoryUsage: number;,
+
   networkLatency: number;
 }
 
@@ -54,7 +57,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
         >
           Performance
         </button>
-      </div>
     );
   }
 
@@ -68,7 +70,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
         >
           ✕
         </button>
-      </div>
       
       <div className="space-y-2 text-xs">
         <div className="flex justify-between">
@@ -76,35 +77,36 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
           <span className={`font-mono ${metrics.loadTime > 1000 ? 'text-red-400' : 'text-green-400'}`}>
             {metrics.loadTime}ms
           </span>
-        </div>
         
         <div className="flex justify-between">
           <span className="text-gray-400">Render Time:</span>
           <span className={`font-mono ${metrics.renderTime > 100 ? 'text-red-400' : 'text-green-400'}`}>
             {metrics.renderTime}ms
           </span>
-        </div>
         
         <div className="flex justify-between">
           <span className="text-gray-400">Memory:</span>
           <span className={`font-mono ${metrics.memoryUsage > 50 ? 'text-red-400' : 'text-green-400'}`}>
             {metrics.memoryUsage}MB
           </span>
-        </div>
         
         <div className="flex justify-between">
           <span className="text-gray-400">Network:</span>
           <span className={`font-mono ${metrics.networkLatency > 500 ? 'text-red-400' : 'text-green-400'}`}>
             {metrics.networkLatency}ms
           </span>
-        </div>
       </div>
       
       <div className="mt-3 pt-2 border-t border-slate-700 text-xs text-gray-500">
         Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
-  );
+      </div>);
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor</div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+      </div>
+</PerformanceMonitorProps>

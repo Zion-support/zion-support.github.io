@@ -7,16 +7,20 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  hasError: boolean;,
+
+  error: Error | null;,
+
+  errorInfo: ErrorInfo | null;,
+
   errorId: string;
 }
 
 class ComprehensiveErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
+    this.state = {,
+
       hasError: false,
       error: null,
       errorInfo: null,
@@ -25,7 +29,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
+    return {,
+
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -122,7 +127,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                       <pre className="text-red-300 text-xs mt-2 overflow-auto">
                         {this.state.error.stack}
                       </pre>
-                    </details>
                   )}
                 </div>
               )}
@@ -143,7 +147,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
                   Reload Page
                 </button>
-              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -161,7 +164,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                   Contact Support
                 </Link>
-              </div>
 
               {this.state.errorId && (
                 <p className="text-gray-400 text-sm mt-6">
@@ -169,13 +171,15 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 </p>
               )}
             </div>
-          </div>
-        </div>
-      );
+        </div>);
     }
 
     return this.props.children;
   }
 }
 
-export default ComprehensiveErrorBoundary;
+export default ComprehensiveErrorBoundary</details>
+            </div>
+          </div>
+        </div>
+  </State>

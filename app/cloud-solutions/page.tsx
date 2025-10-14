@@ -14,11 +14,12 @@ const CloudSolutionsPage = () => {
           <p>
             This page is under construction. Please check back later.
           </p>
-        </div>
       </div>
-    </div>
   );
   );
 };
 export default CloudSolutionsPage;
 """
+
+      </div>
+    </div>

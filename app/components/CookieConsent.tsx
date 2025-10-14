@@ -70,11 +70,9 @@ const CookieConsent: React.FC = () => {
                       <span className="text-gray-300">Marketing Cookies</span>
                       <input type="checkbox" className="rounded" />
                     </label>
-                  </div>
                 </div>
               )}
             </div>
-          </div>
 
           <div className="flex flex-col sm:flex-row gap-2 ml-4">
             <button
@@ -96,11 +94,11 @@ const CookieConsent: React.FC = () => {
             >
               Accept All
             </button>
-          </div>
+        </div>
+    </div>);
+};
+
+export default CookieConsent</div>
         </div>
       </div>
     </div>
-  );
-};
-
-export default CookieConsent;

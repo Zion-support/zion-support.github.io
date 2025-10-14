@@ -17,7 +17,6 @@ const Pagebroken2Page = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
               Page Broken2
             </span>
-          </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional page broken2 services by Zion Tech Group
           </p>
@@ -35,11 +34,10 @@ const Pagebroken2Page = () => {
             >
               Learn More
             </Link>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    </div>);
 };
 
-export default Pagebroken2Page;
+export default Pagebroken2Page</h1>
+      </div>
+    </div>

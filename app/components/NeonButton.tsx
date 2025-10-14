@@ -19,9 +19,10 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   size = 'md'
   className = ''
 }) => {
-  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
   
-  const variantClasses = {
+  const variantClasses = {,
+
     primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 focus:ring-blue-500',
     secondary: 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 focus:ring-purple-500',
     accent: 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 focus:ring-cyan-500;
@@ -75,3 +76,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   );
 }
 export default NeonButton
+
+}
+</NeonButtonProps>

@@ -10,6 +10,7 @@ export default function FuturisticLoader() {
         Contact Us
         <ArrowRight className="w-5 h-5 ml-2" />
       </Link>
-    </div>
   );
 }
+
+    </div>

@@ -70,9 +70,7 @@ class ErrorBoundary extends Component<Props, State> {
                     <pre className="whitespace-pre-wrap mt-1">
                       {this.state.error.stack}
                     </pre>
-                  </div>
                 </div>
-              </details>
             )}
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -91,7 +89,6 @@ class ErrorBoundary extends Component<Props, State> {
                 <HomeIcon className="w-4 h-4 mr-2" />
                 Go Home
               </Link>
-            </div>
 
             <div className="mt-6 pt-4 border-t border-slate-700">
               <p className="text-sm text-gray-400">
@@ -102,15 +99,16 @@ class ErrorBoundary extends Component<Props, State> {
                 >
                   kleber@ziontechgroup.com
                 </a>
-              </p>
             </div>
-          </div>
-        </div>
-      )
+        </div>)
     }
 
     return this.props.children;
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary</p>
+                </div>
+              </details>
+          </div>
+        </div>

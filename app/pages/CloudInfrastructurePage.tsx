@@ -4,7 +4,8 @@ import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react';
 
 const CloudInfrastructurePage: React.FC = () => {
   const services = [
-    {
+    {,
+
       icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',
@@ -77,9 +78,7 @@ const CloudInfrastructurePage: React.FC = () => {
               <button className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
-            </div>
           </div>
-        </section>
 
         {/* Services Section */}
         <section className="py-20 px-4">
@@ -107,10 +106,8 @@ const CloudInfrastructurePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -124,10 +121,8 @@ const CloudInfrastructurePage: React.FC = () => {
                 <div key={index} className="flex items-center">
                   <div className="w-6 h-6 bg-green-500 rounded-full mr-4 flex-shrink-0"></div>
                   <span className="text-gray-300">{benefit}</span>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -146,12 +141,16 @@ const CloudInfrastructurePage: React.FC = () => {
               <button className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                 View Case Studies
               </button>
+          </div>
+      </div>
+    </>);
+};
+
+export default CloudInfrastructurePage</section>
             </div>
+          </div>
+            </div>
+          </div>
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
-export default CloudInfrastructurePage;

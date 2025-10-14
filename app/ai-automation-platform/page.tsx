@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Workflow } from 'lucide-react';
+import { ArrowRight, CheckCircle, Workflow, Brain, Settings, Zap } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -8,30 +8,26 @@ import FuturisticButton from '../components/FuturisticButton';
 const AIAutomationPlatform = () => {
   const features = [
     {
-      title: "Workflow Automation",""
-      description: "Automate complex business processes with AI-powered workflows",""
-      icon: <Workflow className="w-6 h-6" />,"
-""
+      title: "Workflow Automation",
+      description: "Automate complex business processes with AI-powered workflows",
+      icon: <Workflow className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
-
       icon: <Brain className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
-
       icon: <Settings className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-
       icon: <Zap className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
@@ -57,7 +53,6 @@ const AIAutomationPlatform = () => {
 
                 <Brain className="w-4 h-4 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
-              </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Automation Platform
               </h1>
@@ -78,9 +73,7 @@ const AIAutomationPlatform = () => {
                 >
                   View Demo
                 </FuturisticButton>
-              </div>
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* Features Section */}
@@ -93,7 +86,6 @@ const AIAutomationPlatform = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Everything you need to automate and optimize your business processes.
               </p>
-            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -107,10 +99,8 @@ const AIAutomationPlatform = () => {
                   <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
                     {feature.description}
                   </p>
-                </FuturisticCard>
               ))}
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* Benefits Section */}
@@ -123,17 +113,14 @@ const AIAutomationPlatform = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience intelligent automation that transforms your business operations.
               </p>
-            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
                   <Circle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-white font-medium">{benefit}</span>
-                </div>
               ))}
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* CTA Section */}
@@ -153,12 +140,23 @@ const AIAutomationPlatform = () => {
               >
                 Start Your Automation Journey
               </FuturisticButton>
-            </div>
           </ResponsiveContainer>
-        </section>
       </div>
     </>
   );
 };
 
 export default AIAutomationPlatform
+
+        </section>
+            </div>
+            </div>
+          </ResponsiveContainer>
+                </FuturisticCard>
+            </div>
+          </ResponsiveContainer>
+              </div>
+            </div>
+          </ResponsiveContainer>
+      </div>
+      </EnhancedSEO>

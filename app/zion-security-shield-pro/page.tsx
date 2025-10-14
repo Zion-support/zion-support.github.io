@@ -172,13 +172,11 @@ const ZionSecurityShieldProPage = () => {
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
                   <Shield className="w-4 h-4 text-red-400 mr-2" />
                   <span className="text-red-400 text-sm font-medium">#1 AI Cybersecurity Platform 2024</span>
-                </div>
                 
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400">
                     Zion Security Shield Pro
                   </span>
-                </h1>
                 
                 <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
                   Protect your business with advanced AI-powered cybersecurity. Get 24/7 threat detection, 
@@ -200,7 +198,6 @@ const ZionSecurityShieldProPage = () => {
                     Watch Demo
                     <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                   </Link>
-                </div>
                 
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-6">
@@ -211,10 +208,8 @@ const ZionSecurityShieldProPage = () => {
                       </div>
                       <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
-                    </div>
                   ))}
                 </div>
-              </div>
               
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -224,25 +219,20 @@ const ZionSecurityShieldProPage = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">Starting at $499/month</h3>
                     <p className="text-gray-300">Advanced AI cybersecurity protection</p>
-                  </div>
                   
                   <div className="space-y-4">
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3" />
                       <span>AI threat detection</span>
-                    </div>
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3" />
                       <span>24/7 monitoring</span>
-                    </div>
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3" />
                       <span>Automated response</span>
-                    </div>
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3" />
                       <span>Compliance reporting</span>
-                    </div>
                   </div>
                   
                   <div className="mt-6">
@@ -253,11 +243,8 @@ const ZionSecurityShieldProPage = () => {
                       Get Started Now
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -268,11 +255,9 @@ const ZionSecurityShieldProPage = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
                   Advanced Security Features
                 </span>
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive cybersecurity protection powered by artificial intelligence
               </p>
-            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -294,13 +279,10 @@ const ZionSecurityShieldProPage = () => {
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 flex-shrink-0"></div>
                         <span>{benefit}</span>
-                      </div>
                     ))}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Pricing Section */}
@@ -311,11 +293,9 @@ const ZionSecurityShieldProPage = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
                   Flexible Security Plans
                 </span>
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the security plan that fits your organization's needs and budget
               </p>
-            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
@@ -332,7 +312,6 @@ const ZionSecurityShieldProPage = () => {
                       <span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
                   )}
                   
                   <div className="text-center mb-6">
@@ -341,7 +320,6 @@ const ZionSecurityShieldProPage = () => {
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-red-400">${plan.price}</span>
                       <span className="text-gray-300 ml-1">/{plan.period}</span>
-                    </div>
                   </div>
                   
                   <div className="space-y-4 mb-8">
@@ -349,7 +327,6 @@ const ZionSecurityShieldProPage = () => {
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </div>
                     ))}
                   </div>
                   
@@ -364,10 +341,8 @@ const ZionSecurityShieldProPage = () => {
                     Get Started
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Testimonials Section */}
@@ -378,11 +353,9 @@ const ZionSecurityShieldProPage = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
                   Trusted by Security Professionals
                 </span>
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See what security experts say about Zion Security Shield Pro
               </p>
-            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
@@ -403,12 +376,9 @@ const ZionSecurityShieldProPage = () => {
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Contact Section */}
@@ -431,21 +401,18 @@ const ZionSecurityShieldProPage = () => {
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-red-400">kleber@ziontechgroup.com</p>
-                </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-red-400">+1 302 464 0950</p>
-                </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Globe className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-red-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -462,11 +429,47 @@ const ZionSecurityShieldProPage = () => {
                 >
                   Schedule Demo
                 </Link>
-              </div>
             </div>
-          </div>
         </section>
-      </div>
     </>
   );
 } cursor/analyze-improve-and-deploy-application-9c39
+
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                </div>
+            </div>
+              </h2>
+            </div>
+          </div>
+                  </div>
+                    </div>
+                </div>
+            </div>
+              </h2>
+            </div>
+          </div>
+                </div>
+            </div>
+              </h2>
+            </div>
+          </div>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+                </div>
+                </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </Helmet>
+    </div>

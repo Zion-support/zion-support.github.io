@@ -14,10 +14,14 @@ import {
 import React from 'react'
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
-    {
-      title: 'AI & Machine Learning'
-      color: 'text-purple-600'
-      bgColor: 'bg-purple-50'
+    {,
+
+      title: 'AI & Machine Learning',
+
+      color: 'text-purple-600',
+
+      bgColor: 'bg-purple-50',
+
       icon: CpuChipIcon,
       services: [
         { name: 'AI Consulting & Strategy', price: '$2,500/month', description: 'Comprehensive AI strategy development and implementation planning', features: ['AI Roadmap Development', 'Technology Assessment', 'ROI Analysis', 'Implementation Planning'] },
@@ -29,9 +33,12 @@ const ServicesPage: React.FC = () => {
       ]
     },
     {
-      title: 'Cybersecurity'
-      color: 'text-red-600'
-      bgColor: 'bg-red-50'
+      title: 'Cybersecurity',
+
+      color: 'text-red-600',
+
+      bgColor: 'bg-red-50',
+
       icon: ShieldCheckIcon,
       services: ['}
         { name: 'Security Assessment', price: '$1,200/month', description: 'Comprehensive security evaluation and vulnerability assessment', features: ['Penetration Testing', 'Security Audit', 'Risk Assessment', 'Compliance Check'] },;
@@ -41,9 +48,12 @@ const ServicesPage: React.FC = () => {
       ]
     },
     {
-      title: 'Cloud Infrastructure'
-      color: 'text-blue-600'
-      bgColor: 'bg-blue-50'
+      title: 'Cloud Infrastructure',
+
+      color: 'text-blue-600',
+
+      bgColor: 'bg-blue-50',
+
       icon: CloudIcon,
       services: ['}
         { name: 'Cloud Migration', price: '$3,000/month', description: 'Seamless migration to cloud platforms with minimal downtime', features: ['Migration Planning', 'Data Transfer', 'Application Migration', 'Performance Optimization'] },;
@@ -53,9 +63,12 @@ const ServicesPage: React.FC = () => {
       ]
     },
     {
-      title: 'Digital Transformation'
-      color: 'text-green-600'
-      bgColor: 'bg-green-50'
+      title: 'Digital Transformation',
+
+      color: 'text-green-600',
+
+      bgColor: 'bg-green-50',
+
       icon: ChartBarIcon,
       services: ['}
         { name: 'Digital Strategy', price: '$2,500/month', description: 'Comprehensive digital transformation strategy and planning', features: ['Strategy Development', 'Technology Roadmap', 'Change Management', 'Implementation Planning'] },;
@@ -65,9 +78,12 @@ const ServicesPage: React.FC = () => {
       ]
     },
     {
-      title: 'Micro SaaS Solutions'
-      color: 'text-pink-600'
-      bgColor: 'bg-pink-50'
+      title: 'Micro SaaS Solutions',
+
+      color: 'text-pink-600',
+
+      bgColor: 'bg-pink-50',
+
       icon: GlobeAltIcon,
       services: ['}
         { name: 'Custom SaaS Development', price: '$3,500/month', description: 'Tailored software-as-a-service solutions for specific business needs', features: ['Custom Development', 'API Integration', 'User Management', 'Subscription Billing'] },;
@@ -77,9 +93,12 @@ const ServicesPage: React.FC = () => {
       ]
     },
     {
-      title: '5G Solutions'
-      color: 'text-indigo-600'
-      bgColor: 'bg-indigo-50'
+      title: '5G Solutions',
+
+      color: 'text-indigo-600',
+
+      bgColor: 'bg-indigo-50',
+
       icon: GlobeAltIcon,
       services: ['}
         { name: '5G Network Planning', price: '$4,000/month', description: 'Comprehensive 5G network design and implementation planning', features: ['Network Design', 'Coverage Planning', 'Capacity Planning', 'Implementation Strategy'] },;
@@ -101,7 +120,6 @@ const ServicesPage: React.FC = () => {
           <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>
-        </div>
       </section>
 
       {/* Services Categories */}
@@ -111,7 +129,6 @@ const ServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
               Explore our comprehensive range of technology services designed to meet your business needs
             </p>
-          </div>
 )
           {serviceCategories.map((category, categoryIndex) => {;
 const Icon = category.icon
@@ -136,7 +153,6 @@ const Icon = category.icon
                         <span className="text-purple-400 font-semibold text-lg">
                           { service.price }
                         </span>
-                      </div>
                       "
                       <p className="text-gray-300 mb-6 leading-relaxed">
                         { service.description }
@@ -147,7 +163,6 @@ const Icon = category.icon
                           <li key={featureIndex} className="flex items-center text-gray-300">"
                             <CheckIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />"
                             <span className="text-sm">{feature}</span>
-                          </li>
 ))}
                       </ul>
 
@@ -159,13 +174,8 @@ const Icon = category.icon
                       >"
                         Learn More <ArrowRightIcon className="w-4 h-4 ml-2" />"
                       </Link>
-                    </div>
 ))}
-                </div>
-              </div>
-)});
-        </div>
-      </section>
+                </div>)})</div>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
@@ -194,10 +204,14 @@ const Icon = category.icon
                 Schedule Demo"
                 <ArrowRightIcon className="w-5 h-5" />"
               </Link>
-            </div>
           </div>
-        </div>
       </section>
     </>
   );
 }
+
+          </div>
+        </div>
+                          </li>
+      </div>
+    </div>

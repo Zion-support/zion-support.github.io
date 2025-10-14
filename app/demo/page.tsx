@@ -26,12 +26,10 @@ const PagePage: React.FC = () => {
               <button className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
-            </div>
           </div>
-        </section>
       </div>
-    </>
-  );
+    </>);
 };
 
-export default PagePage;
+export default PagePage</section>
+      </div>

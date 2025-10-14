@@ -179,9 +179,7 @@ const SupportPage: React.FC = () => {
                   className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-            </div>
           </div>
-        </section>
 
         {/* Support Channels */}
         <section className="py-16 px-4">
@@ -201,19 +199,15 @@ const SupportPage: React.FC = () => {
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-500">Availability:</span>
                       <span className="font-medium">{channel.availability}</span>
-                    </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-500">Response Time:</span>
                       <span className="font-medium">{channel.responseTime}</span>
-                    </div>
                   </div>
                   <button className="w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors">
                     {channel.contact}
                   </button>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Resources */}
@@ -234,10 +228,8 @@ const SupportPage: React.FC = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{resource.title}</h3>
                   <p className="text-gray-600 text-sm">{resource.description}</p>
-                </Link>
               ))}
             </div>
-          </div>
         </section>
 
         {/* FAQ Section */}
@@ -276,17 +268,14 @@ const SupportPage: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                </div>
               ))}
             </div>
 
             {filteredFaqs.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg">No FAQs found matching your criteria.</p>
-              </div>
             )}
           </div>
-        </section>
 
         {/* Contact Support */}
         <section className="py-16 px-4 bg-blue-600">
@@ -310,9 +299,7 @@ const SupportPage: React.FC = () => {
               >
                 Call Now
               </a>
-            </div>
           </div>
-        </section>
 
         {/* Contact Info */}
         <section className="py-16 px-4 bg-gray-50">
@@ -324,21 +311,35 @@ const SupportPage: React.FC = () => {
               <div className="flex items-center justify-center space-x-3 text-gray-600">
                 <PhoneIcon className="w-6 h-6 text-blue-600" />
                 <span>+1-302-464-0950</span>
-              </div>
               <div className="flex items-center justify-center space-x-3 text-gray-600">
                 <EnvelopeIcon className="w-6 h-6 text-blue-600" />
                 <span>kleber@ziontechgroup.com</span>
-              </div>
               <div className="flex items-center justify-center space-x-3 text-gray-600">
                 <MapPinIcon className="w-6 h-6 text-blue-600" />
                 <span>Middletown, DE</span>
-              </div>
             </div>
-          </div>
         </section>
-      </div>
     </>
   );
 };
 
 export default SupportPage
+
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+            </div>
+          </div>
+        </section>
+                </Link>
+          </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          </div>
+        </section>
+      </div>

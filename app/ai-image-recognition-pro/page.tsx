@@ -49,19 +49,16 @@ const AIImageRecognitionPro = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Camera className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Computer Vision AI</span>
-          </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               AI Image Recognition Pro
             </span>
-          </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Transform images into actionable insights with AI-powered recognition. 
@@ -85,9 +82,7 @@ const AIImageRecognitionPro = () => {
             >
               Try Demo
             </FuturisticButton>
-          </div>
         </ResponsiveContainer>
-      </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -99,7 +94,6 @@ const AIImageRecognitionPro = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Everything you need to build intelligent image recognition systems.
             </p>
-          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <FuturisticCard
@@ -117,10 +111,8 @@ const AIImageRecognitionPro = () => {
                 <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
                   {feature.description}
                 </p>
-              </FuturisticCard>
             ))}
           </div>
-        </ResponsiveContainer>
       </section>
 
       {/* Benefits Section */}
@@ -133,16 +125,13 @@ const AIImageRecognitionPro = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of computer vision that delivers accurate results.
             </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-white font-medium">{benefit}</span>
-              </div>
             ))}
           </div>
-        </ResponsiveContainer>
       </section>
 
       {/* CTA Section */}
@@ -172,12 +161,22 @@ const AIImageRecognitionPro = () => {
               >
                 View Pricing
               </FuturisticButton>
-            </div>
           </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
-  );
+      </section>);
 };
 
-export default AIImageRecognitionPro;
+export default AIImageRecognitionPro</div>
+        </ResponsiveContainer>
+          </div>
+          </div>
+        </ResponsiveContainer>
+              </FuturisticCard>
+          </div>
+        </ResponsiveContainer>
+          </div>
+          </h1>
+          </div>
+        </div>
+      </section>
+      </EnhancedSEO>
+    </div>

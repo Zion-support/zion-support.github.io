@@ -1,16 +1,20 @@
 import logger from '../../utils/logger';
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
+  highContrast: boolean;,
+
+  largeText: boolean;,
+
+  reducedMotion: boolean;,
+
   screenReader: boolean;
 }
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
-    fontSize: 'normal'
+    fontSize: 'normal',
+
     reducedMotion: false,
     screenReader: false
   });
@@ -38,37 +42,56 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           outline-offset: 2px !important,
         }
         .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
+          position: absolute;,
+
+          width: 1px;,
+
+          height: 1px;,
+
+          padding: 0;,
+
+          margin: -1px;,
+
           overflow: hidden,
           clip: rect(0, 0, 0, 0)
-          white-space: nowrap;
+          white-space: nowrap;,
+
           border: 0,
         }
         .focus\\:not-sr-only: focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: 8px;
-          margin: 0;
-          overflow: visible;
+          position: static;,
+
+          width: auto;,
+
+          height: auto;,
+
+          padding: 8px;,
+
+          margin: 0;,
+
+          overflow: visible;,
+
           clip: auto;
           white-space: normal,
         }
       `;
       document.head.appendChild(style);
     }
-          position: absolute
-          width: 1px
-          height: 1px
-          padding: 0
-          margin: -1px
-          overflow: hidden
+          position: absolute,
+
+          width: 1px,
+
+          height: 1px,
+
+          padding: 0,
+
+          margin: -1px,
+
+          overflow: hidden,
+
           clip: rect(0, 0, 0, 0)
-          white-space: nowrap
+          white-space: nowrap,
+
           border: 0}
       `
       document.head.appendChild(style)}
@@ -194,34 +217,52 @@ filter: contrast(150%) brightness(110%)}
         animation-duration: 0.01ms !important
         animation-iteration-count: 1 !important
         transition-duration: 0.01ms !important }
-      .accessibility-panel { position: fixed
-        top: 50%
-        right: -300px
-        transform: translateY(-50%)
-        width: 300px
-        background: #1e293b
+      .accessibility-panel { position: fixed,
+
+        top: 50%,
+
+        right: -300px,
+
+        transform: translateY(-50%),
+
+        width: 300px,
+
+        background: #1e293b,
+
         border: 1px solid #334155
-        border-radius: 8px 0 0 8px
+        border-radius: 8px 0 0 8px,
+
         padding: 1rem
-        z-index: 1000
-        transition: right 0.3s ease
+        z-index: 1000,
+
+        transition: right 0.3s ease,
+
         color: white }
       .accessibility-panel.visible { right: 0 }
-      .accessibility-toggle { position: fixed
-        top: 50%
-        right: 0
-        transform: translateY(-50%)
-        background: #8b5cf6
-        color: white
-        border: none
+      .accessibility-toggle { position: fixed,
+
+        top: 50%,
+
+        right: 0,
+
+        transform: translateY(-50%),
+
+        background: #8b5cf6,
+
+        color: white,
+
+        border: none,
+
         padding: 0.5rem
-        border-radius: 8px 0 0 8px
+        border-radius: 8px 0 0 8px,
+
         cursor: pointer
         z-index: 1001
         font-size: 0.875rem
         writing-mode: vertical-rl
         text-orientation: mixed}
-      .accessibility-toggle:hover {
+      .accessibility-toggle: hover {,
+
         background: #7c3aed}
     ``
     document.head.appendChild(style)
@@ -257,7 +298,6 @@ filter: contrast(150%) brightness(110%)}
                 className="rounded""
               />
               <span>High Contrast</span>
-            </label>
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">Font Size</label>"
@@ -276,7 +316,6 @@ onChange={() => setFontSize(size)}
                 </label>
 ))}
             </div>
-          </div>
           <div>
             <p className="text-sm text-gray-300">"
               Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}'
@@ -284,17 +323,21 @@ onChange={() => setFontSize(size)}
             <p className="text-sm text-gray-300">"
               Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}'
             </p>
-          </div>
           <button
             onClick={toggleVisibility}
             className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""
           >
             Close
           </button>
-        </div>
       </div>
     </>
   );
 };
 
 export default EnhancedAccessibility
+
+          </div>
+            </label>
+        </div>
+      </div>
+  </AccessibilitySettings>

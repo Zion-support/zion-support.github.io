@@ -131,9 +131,7 @@ const CareersPage = () => {
                 <FuturisticButton variant="outline">
                   Learn About Us
                 </FuturisticButton>
-              </div>
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* Values Section */}
@@ -144,7 +142,6 @@ const CareersPage = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 These core values guide everything we do and shape our company culture.
               </p>
-            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <FuturisticCard key={index} className="text-center">
@@ -153,10 +150,8 @@ const CareersPage = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
-                </FuturisticCard>
               ))}
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* Benefits Section */}
@@ -167,7 +162,6 @@ const CareersPage = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We offer comprehensive benefits and a supportive work environment.
               </p>
-            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <FuturisticCard key={index} className="text-center">
@@ -176,10 +170,8 @@ const CareersPage = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
-                </FuturisticCard>
               ))}
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* Job Openings Section */}
@@ -190,7 +182,6 @@ const CareersPage = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our current job openings and find the perfect role for you.
               </p>
-            </div>
             <div className="space-y-8">
               {jobOpenings.map((job, index) => (
                 <FuturisticCard key={index} className="p-8">
@@ -214,14 +205,11 @@ const CareersPage = () => {
                           <Award className="w-4 h-4" />
                           {job.experience}
                         </div>
-                      </div>
                       <p className="text-gray-300 mb-4">{job.description}</p>
-                    </div>
                     <FuturisticButton className="lg:ml-8">
                       Apply Now
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </FuturisticButton>
-                  </div>
                   
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
@@ -234,7 +222,6 @@ const CareersPage = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
                       <ul className="space-y-2">
@@ -245,12 +232,9 @@ const CareersPage = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
                   </div>
-                </FuturisticCard>
               ))}
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* CTA Section */}
@@ -269,13 +253,27 @@ const CareersPage = () => {
                 <FuturisticButton variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600">
                   Contact HR
                 </FuturisticButton>
-              </div>
             </div>
-          </ResponsiveContainer>
         </section>
-      </div>
-    </>
-  );
+    </>);
 };
 
-export default CareersPage;
+export default CareersPage</div>
+          </ResponsiveContainer>
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </FuturisticCard>
+            </div>
+            </div>
+          </ResponsiveContainer>
+                </FuturisticCard>
+            </div>
+          </ResponsiveContainer>
+                </FuturisticCard>
+            </div>
+          </ResponsiveContainer>
+            </div>
+          </ResponsiveContainer>
+      </div>

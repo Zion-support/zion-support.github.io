@@ -199,7 +199,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             >
               ×
             </button>
-          </div>
 
           {/* Performance Score */}
           <div className="mb-4">
@@ -208,7 +207,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               <span className={`font-bold ${getScoreColor(performanceScore)}`}>
                 {performanceScore}/100
               </span>
-            </div>
             <div className="w-full bg-slate-700 rounded-full h-2">
               <div
                 className={`h-2 rounded-full transition-all duration-300 ${
@@ -221,7 +219,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <p className="text-xs text-gray-400 mt-1">
               {getScoreLabel(performanceScore)}
             </p>
-          </div>
 
           {/* Metrics */}
           <div className="space-y-2 text-sm">
@@ -231,7 +228,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.lcp.toFixed(0)}ms
                 </span>
-              </div>
             )}
             {metrics.fid && (
               <div className="flex justify-between">
@@ -239,7 +235,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className={metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.fid.toFixed(0)}ms
                 </span>
-              </div>
             )}
             {metrics.cls && (
               <div className="flex justify-between">
@@ -247,7 +242,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.cls.toFixed(3)}
                 </span>
-              </div>
             )}
             {metrics.fcp && (
               <div className="flex justify-between">
@@ -255,7 +249,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.fcp.toFixed(0)}ms
                 </span>
-              </div>
             )}
             {metrics.ttfb && (
               <div className="flex justify-between">
@@ -263,7 +256,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.ttfb.toFixed(0)}ms
                 </span>
-              </div>
             )}
             {metrics.memory && (
               <div className="flex justify-between">
@@ -271,7 +263,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-cyan-400">
                   {metrics.memory.toFixed(1)}MB
                 </span>
-              </div>
             )}
             {metrics.connection && (
               <div className="flex justify-between">
@@ -279,13 +270,24 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-cyan-400">
                   {metrics.connection}
                 </span>
-              </div>
             )}
           </div>
-        </div>
       )}
-    </div>
-  );
+    </div>);
 };
 
-export default ImprovedPerformanceMonitor;
+export default ImprovedPerformanceMonitor</div>
+              </div>
+              </div>
+              </div>
+              </div>
+          </div>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </PerformanceMetrics>
+  </PerformanceMetrics>
+</PerformanceMonitorProps>

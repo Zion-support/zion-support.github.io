@@ -55,7 +55,6 @@ const Services: React.FC = () => {
             We provide comprehensive technology solutions to help your business
             thrive in the digital age.
           </p>
-        </div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>,
           {services.map((service, index) => ()
@@ -70,7 +69,6 @@ const Services: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 ml-4">,
                   {service.title},
                 </h3>
-              </div>
               "
               <p className="text-gray-600 mb-6">
                 {service.description},
@@ -89,7 +87,6 @@ const Services: React.FC = () => {
                 <button className="text-blue-600 font-semibold hover: text-blue-700 transition-colors group-hover:underline"></button>
                   Learn More →
                 </button>
-              </div>
             </div>,
           ))},
         </div>
@@ -106,11 +103,11 @@ const Services: React.FC = () => {
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors"></button>
               Get Free Consultation
             </button>
-          </div>
         </div>
-      </div>
-    </section>
-  );,
+    </section>);,
 };
 "'
-export default Services;
+export default Services</div>
+            </div>
+        </div>
+      </div>

@@ -141,41 +141,33 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Package className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory</span>
-          </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Zion AI Inventory Manager
             </span>
-          </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Optimize your inventory with AI-powered management. 
             Smart tracking, predictive analytics, and automated reordering for modern businesses.
           </p>
-        </div>
-            Zion AI Inventory Manager <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span></h1>
+            Zion AI Inventory Manager <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            AI-powered inventory management solutions for modern businesses.</p></div>
+            AI-powered inventory management solutions for modern businesses.</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Smart Inventory Tracking</h3>
-            <p className="text-gray-300 mb-4">
-              AI-powered inventory tracking and management capabilities.;
-            </p>
+            <p className="text-gray-300 mb-4">AI-powered inventory tracking and management capabilities.</p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Real-time tracking</li>
               <li>• Predictive analytics</li>
               <li>• Automated reordering</li>
-            </ul>
-          </div>
-        </ResponsiveContainer>        <div className="max-w-7xl mx-auto">
+          </div>        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Powerful AI-Driven Features
@@ -184,7 +176,6 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
               Leverage cutting-edge artificial intelligence to optimize your inventory management 
               and reduce costs while improving customer satisfaction.
             </p>
-          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -205,15 +196,13 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
                   <CheckCircle className="w-4 h-4 mr-2" />
                   {feature.benefit}
                 </div>
-              </div>
             ))}
           </div>
-        </div>
               AI-powered inventory tracking and management capabilities.</p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Real-time tracking</li>
               <li>• Predictive analytics</li>
-              <li>• Automated reordering</li></ul></div>
+              <li>• Automated reordering</li></div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Demand Forecasting</h3>
             <p className="text-gray-300 mb-4">
@@ -221,7 +210,7 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• ML-based predictions</li>
               <li>• Seasonal adjustments</li>
-              <li>• Trend analysis</li></ul></div>
+              <li>• Trend analysis</li></div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Cost Optimization</h3>
             <p className="text-gray-300 mb-4">
@@ -229,14 +218,11 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Cost analysis</li>
               <li>• Waste reduction</li>
-              <li>• Efficiency metrics</li></ul></div></div>
+              <li>• Efficiency metrics</li></div>
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Inventory?</h2>
-            <p className="text-gray-300 mb-6">
-              Our AI inventory management experts are ready to help you streamline your operations.;
-            </p>
-          </div>
+            <p className="text-gray-300 mb-6">Our AI inventory management experts are ready to help you streamline your operations.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -253,7 +239,6 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
-                  </div>
                 )}
                 
                 <div className="text-center mb-8">
@@ -262,7 +247,6 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-300 ml-2">{plan.period}</span>
-                  </div>
                 </div>
                 
                 <ul className="space-y-4 mb-8">
@@ -284,10 +268,8 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
                 >
                   Start Free Trial
                 </Link>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Testimonials Section */}
@@ -300,7 +282,6 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how businesses are transforming their inventory management with our AI-powered solution.
             </p>
-          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -318,15 +299,12 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
                   <div className="text-cyan-400 text-sm font-medium bg-cyan-400/10 px-3 py-1 rounded-full">
                     {testimonial.savings}
                   </div>
-                </div>
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -354,24 +332,45 @@ import FuturisticButton from '../components/FuturisticButton';      title: "AI-P
             >
               Schedule Demo
             </Link>
-          </div>
         </div> cursor/analyze-improve-and-deploy-application-9c39
       </section>
-    </div>
   )
 }
               Our AI inventory management experts are ready to help you streamline your operations.</p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-              Get Started Today</button></div></div></div></div>
+              Get Started Today</button></div></div>
 )}
             </button>
-          </div>
         </div>
-      </div>
     </div>
   );
 }
               Our AI inventory management experts are ready to help you streamline your operations.</p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-              Get Started Today</button></div></div></div></div>
+              Get Started Today</button></div></div>
   )}
+
+          </div>
+          </div>
+        </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </div>
+            </ul>
+          </div>
+            </ul>
+          </div>
+            </ul>
+          </div>
+          </div>
+            </ul>
+          </div>
+        </div>
+          </h1>
+          </div>
+        </ResponsiveContainer>
+        </div>
+      </EnhancedSEO>
+    </div>

@@ -183,12 +183,9 @@ const AIServices = () => {
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
                     <div className="text-2xl font-bold text-white">{stat.value}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
-                  </div>
                 ))}
               </div>
-            </div>
           </ResponsiveContainer>
-        </section>
 
         {/* Features Section */}
         <section className="py-20">
@@ -198,7 +195,6 @@ const AIServices = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI solutions are built with enterprise-grade technology and designed for scalability, security, and performance.
               </p>
-            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <FuturisticCard key={index} className="text-center">
@@ -207,10 +203,8 @@ const AIServices = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </FuturisticCard>
               ))}
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* Services Grid */}
@@ -221,7 +215,6 @@ const AIServices = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose from our comprehensive suite of AI services designed to meet your specific business needs.
               </p>
-            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
                 <FuturisticCard key={index} className={`${service.featured ? 'ring-2 ring-purple-400' : ''}`}>
@@ -233,7 +226,6 @@ const AIServices = () => {
                       <div className="flex items-center text-yellow-400">
                         <Star className="w-4 h-4 fill-current" />
                         <span className="ml-1 text-sm font-medium">Featured</span>
-                      </div>
                     )}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
@@ -248,7 +240,6 @@ const AIServices = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
                   <FuturisticButton
                     as={Link}
                     to={service.link}
@@ -257,10 +248,8 @@ const AIServices = () => {
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </FuturisticButton>
-                </FuturisticCard>
               ))}
             </div>
-          </ResponsiveContainer>
         </section>
 
         {/* CTA Section */}
@@ -288,13 +277,22 @@ const AIServices = () => {
                 >
                   View Demo
                 </FuturisticButton>
-              </div>
             </div>
-          </ResponsiveContainer>
         </section>
-      </div>
-    </>
-  );
+    </>);
 };
 
-export default AIServices;
+export default AIServices</div>
+          </ResponsiveContainer>
+                  </div>
+                </FuturisticCard>
+            </div>
+            </div>
+          </ResponsiveContainer>
+                </FuturisticCard>
+            </div>
+          </ResponsiveContainer>
+              </div>
+            </div>
+        </section>
+      </div>

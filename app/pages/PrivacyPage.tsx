@@ -117,7 +117,6 @@ const PrivacyPage: React.FC = () => {
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                 <ShieldCheckIcon className="w-10 h-10 text-white" />
               </div>
-            </div>
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Privacy Policy
             </h1>
@@ -129,9 +128,7 @@ const PrivacyPage: React.FC = () => {
               <p className="text-gray-600">
                 <strong>Last Updated:</strong> {lastUpdated}
               </p>
-            </div>
           </div>
-        </section>
 
         {/* Introduction */}
         <section className="py-16 px-4">
@@ -144,7 +141,6 @@ const PrivacyPage: React.FC = () => {
                 disclose, and safeguard your information when you use our AI and IT solutions, visit our 
                 website, or interact with our services.
               </p>
-            </div>
 
             {/* Privacy Principles */}
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -152,19 +148,15 @@ const PrivacyPage: React.FC = () => {
                 <EyeIcon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Transparency</h3>
                 <p className="text-gray-600">We are transparent about how we collect and use your information.</p>
-              </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-200">
                 <LockClosedIcon className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Security</h3>
                 <p className="text-gray-600">We implement robust security measures to protect your data.</p>
-              </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-200">
                 <DocumentTextIcon className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Control</h3>
                 <p className="text-gray-600">You have control over your personal information and privacy settings.</p>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* Main Content */}
@@ -179,13 +171,10 @@ const PrivacyPage: React.FC = () => {
                       <li key={itemIndex} className="flex items-start">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         <span className="text-gray-700">{item}</span>
-                      </li>
                     ))}
                   </ul>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Your Rights Section */}
@@ -203,7 +192,6 @@ const PrivacyPage: React.FC = () => {
                     <li>• Right to restrict processing</li>
                     <li>• Right to data portability</li>
                     <li>• Right to object to processing</li>
-                  </ul>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-3">Under CCPA (California Residents)</h3>
@@ -214,11 +202,8 @@ const PrivacyPage: React.FC = () => {
                     <li>• Right to access your personal information</li>
                     <li>• Right to equal service and price</li>
                     <li>• Right to delete personal information</li>
-                  </ul>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* Contact Information */}
@@ -238,17 +223,13 @@ const PrivacyPage: React.FC = () => {
                     <div className="flex items-center space-x-3">
                       <EnvelopeIcon className="w-5 h-5 text-blue-600" />
                       <span className="text-gray-700">{contactInfo.email}</span>
-                    </div>
                     <div className="flex items-center space-x-3">
                       <PhoneIcon className="w-5 h-5 text-blue-600" />
                       <span className="text-gray-700">{contactInfo.phone}</span>
-                    </div>
                     <div className="flex items-center space-x-3">
                       <MapPinIcon className="w-5 h-5 text-blue-600" />
                       <span className="text-gray-700">{contactInfo.address}</span>
-                    </div>
                   </div>
-                </div>
                 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Data Protection Officer</h3>
@@ -262,11 +243,8 @@ const PrivacyPage: React.FC = () => {
                     <p className="text-gray-700">
                       <strong>Subject Line:</strong> "Data Protection Inquiry"
                     </p>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* Updates */}
@@ -282,12 +260,35 @@ const PrivacyPage: React.FC = () => {
               <p className="text-gray-700">
                 <strong>Last Updated:</strong> {lastUpdated}
               </p>
-            </div>
           </div>
-        </section>
       </div>
     </>
   );
 };
 
 export default PrivacyPage
+
+        </section>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  </ul>
+                  </ul>
+            </div>
+          </div>
+                      </li>
+            </div>
+          </div>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </section>
+      </div>

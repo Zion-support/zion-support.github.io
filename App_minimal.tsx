@@ -21,4 +21,6 @@ const App: React.FC = () => {
       </Router>
     </HelmetProvider>
   );
-}export default App;
+};
+
+export default App;

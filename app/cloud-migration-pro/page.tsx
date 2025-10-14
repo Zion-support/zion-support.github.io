@@ -91,21 +91,12 @@
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Page;
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Professional page solutions tailored to your business needs.;
-          </p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Page</h1>
+          <p className="text-xl text-gray-600 mb-8">Professional page solutions tailored to your business needs.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions;
-              </h3>
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge page solutions.;
-              </p>
-            </div>
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">Expert Solutions</h3>
+              <p className="text-blue-700">Our team of experts delivers cutting-edge page solutions.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -115,7 +106,11 @@
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </FuturisticCard>
               ))}
+            </div> cursor/website-audit-and-update-with-deployment-1ef3
+
+                </FuturisticCard>
             </div>
-          </div> cursor/website-audit-and-update-with-deployment-1ef3
+          </div>
+        </div>
+      </div>

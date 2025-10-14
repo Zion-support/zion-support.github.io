@@ -15,7 +15,6 @@ const InnovationLabsPage: React.FC = () => {
               AI Innovation Labs: Product Development Revolution 2025
             </h1>
             <p>January 28, 2025 · 45 min read · AI Innovation</p>
-          </div>
 
           <div className="prose max-w-none">
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🎯 Innovation Results</h2>
@@ -28,15 +27,12 @@ const InnovationLabsPage: React.FC = () => {
               <div className="bg-blue-50 p-6 rounded-lg text-center">
                 <div className="text-3 xl font-bold text-blue-600 mb-2">10 x</div>
                 <div className="text-gray-700">Faster Time-to-Market</div>
-              </div>
               <div className="bg-green-50 p-6 rounded-lg text-center">
                 <div className="text-3 xl font-bold text-green-600 mb-2">85%</div>
                 <div className="text-gray-700">Cost Reduction</div>
-              </div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
                 <div className="text-3 xl font-bold text-purple-600 mb-2">300%</div>
                 <div className="text-gray-700">Innovation Speed</div>
-              </div>
             </div>
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🏭 Lab Overview</h2>
@@ -46,7 +42,6 @@ const InnovationLabsPage: React.FC = () => {
               <li><strong>Team:</strong> 200+ AI researchers and product engineers</li>
               <li><strong>Projects:</strong> 50+ active AI-powered product initiatives</li>
               <li><strong>Impact:</strong> $2 B+ in new product revenue generated</li>
-            </ul>
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🚀 Innovation Methodology</h2>
             <p className="text-gray-700 mb-6">
@@ -60,7 +55,6 @@ const InnovationLabsPage: React.FC = () => {
               <li>• Customer need identification through AI sentiment analysis</li>
               <li>• Competitive landscape mapping with AI-powered research</li>
               <li>• Concept generation using generative AI models</li>
-            </ul>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Rapid Prototyping</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
@@ -68,7 +62,6 @@ const InnovationLabsPage: React.FC = () => {
               <li>• Automated code generation and testing</li>
               <li>• Virtual prototyping and simulation</li>
               <li>• Real-time performance optimization</li>
-            </ul>
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">💰 ROI & Impact Metrics</h2>
             <p className="text-gray-700 mb-6">
@@ -81,7 +74,6 @@ const InnovationLabsPage: React.FC = () => {
               <li>• <strong>85% cost savings</strong> in R&D expenses</li>
               <li>• <strong>95% accuracy</strong> in market demand prediction</li>
               <li>• <strong>80% faster</strong> time from concept to market</li>
-            </ul>
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
@@ -102,7 +94,6 @@ const InnovationLabsPage: React.FC = () => {
     ├── Cloud-native Architecture
     ├── Kubernetes & Docker
     └── CI/CD Automation`}</pre>
-            </div>
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🚀 Getting Started with AI Innovation</h2>
             <p className="text-gray-700 mb-6">
@@ -126,13 +117,28 @@ const InnovationLabsPage: React.FC = () => {
                 >
                   Explore AI Services
                 </Link>
+            </div>
+        </div>
+    </div>);
+};
+
+export default InnovationLabsPage</li>
+              </li>
+              </li>
+              </li>
+            </ul>
+            </ul>
+            </ul>
+              </li>
+              </li>
+              </li>
+              </li>
+            </ul>
+              </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
-
-export default InnovationLabsPage;

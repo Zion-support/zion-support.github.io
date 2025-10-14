@@ -2,12 +2,18 @@ import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Build
 
 interface FormData {
   name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  service: string;
-  budget: string;
+  email: string;,
+
+  phone: string;,
+
+  company: string;,
+
+  message: string;,
+
+  service: string;,
+
+  budget: string;,
+
   timeline: string;
 }
 
@@ -176,7 +182,6 @@ const ImprovedContactForm: React.FC = () => {
         >
           Send Another Message
         </button>
-      </div>
     );
   }
 
@@ -189,7 +194,6 @@ const ImprovedContactForm: React.FC = () => {
         <div>
           <h3 className="text-2xl font-bold text-white">Get In Touch</h3>
           <p className="text-gray-300">We'd love to hear from you. Send us a message!</p>
-        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -242,7 +246,6 @@ const ImprovedContactForm: React.FC = () => {
               </p>
             )}
           </div>
-        </div>
 
         {/* Phone and Company Row */}
         <div className="grid md:grid-cols-2 gap-4">
@@ -285,7 +288,6 @@ const ImprovedContactForm: React.FC = () => {
               placeholder="Your company name"
             />
           </div>
-        </div>
 
         {/* Service Selection */}
         <div>
@@ -349,7 +351,6 @@ const ImprovedContactForm: React.FC = () => {
                 </option>
               ))}
             </select>
-          </div>
 
           <div>
             <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
@@ -369,7 +370,6 @@ const ImprovedContactForm: React.FC = () => {
                 </option>
               ))}
             </select>
-          </div>
         </div>
 
         {/* Message */}
@@ -415,9 +415,17 @@ const ImprovedContactForm: React.FC = () => {
             </>
           )}
         </button>
-      </form>
-    </div>
-  );
+    </div>);
 };
 
-export default ImprovedContactForm;
+export default ImprovedContactForm</textarea>
+        </div>
+        </div>
+        </div>
+      </form>
+      </div>
+    </div>
+      </div>
+    </HTMLInputElement>
+  </FormErrors>
+  </FormData>

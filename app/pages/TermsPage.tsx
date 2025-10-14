@@ -152,7 +152,6 @@ const TermsPage: React.FC = () => {
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                 <ScaleIcon className="w-10 h-10 text-white" />
               </div>
-            </div>
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Terms of Service
             </h1>
@@ -164,9 +163,7 @@ const TermsPage: React.FC = () => {
               <p className="text-gray-600">
                 <strong>Last Updated:</strong> {lastUpdated}
               </p>
-            </div>
           </div>
-        </section>
 
         {/* Introduction */}
         <section className="py-16 px-4">
@@ -179,7 +176,6 @@ const TermsPage: React.FC = () => {
                 ("us", "we", or "our"). By accessing or using our Service, you agree to be bound by 
                 these Terms. If you disagree with any part of these terms, then you may not access the Service.
               </p>
-            </div>
 
             {/* Key Points */}
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -187,19 +183,15 @@ const TermsPage: React.FC = () => {
                 <DocumentTextIcon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Clear Terms</h3>
                 <p className="text-gray-600">We provide clear, understandable terms for our services.</p>
-              </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-200">
                 <ShieldCheckIcon className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Fair Use</h3>
                 <p className="text-gray-600">We promote fair and responsible use of our services.</p>
-              </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-200">
                 <ExclamationTriangleIcon className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Compliance</h3>
                 <p className="text-gray-600">We ensure compliance with applicable laws and regulations.</p>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* Main Content */}
@@ -214,13 +206,10 @@ const TermsPage: React.FC = () => {
                       <li key={itemIndex} className="flex items-start">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         <span className="text-gray-700">{item}</span>
-                      </li>
                     ))}
                   </ul>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Important Notices */}
@@ -237,7 +226,6 @@ const TermsPage: React.FC = () => {
                       We reserve the right to modify or discontinue the service at any time without notice. 
                       We shall not be liable to you or any third party for any modification, suspension, or discontinuance of the service.
                     </p>
-                  </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircleIcon className="w-6 h-6 mr-3 mt-1 flex-shrink-0" />
@@ -247,11 +235,8 @@ const TermsPage: React.FC = () => {
                       Your continued use of the service after any changes to these terms constitutes acceptance of those changes. 
                       If you do not agree to the changes, you must stop using the service.
                     </p>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* Contact Information */}
@@ -268,21 +253,16 @@ const TermsPage: React.FC = () => {
                   <EnvelopeIcon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
                   <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
                   <p className="text-gray-700">{contactInfo.email}</p>
-                </div>
                 <div className="text-center">
                   <PhoneIcon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
                   <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
                   <p className="text-gray-700">{contactInfo.phone}</p>
-                </div>
                 <div className="text-center">
                   <MapPinIcon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
                   <h3 className="font-semibold text-gray-900 mb-2">Address</h3>
                   <p className="text-gray-700">{contactInfo.address}</p>
-                </div>
               </div>
-            </div>
           </div>
-        </section>
 
         {/* Updates */}
         <section className="py-16 px-4">
@@ -297,12 +277,33 @@ const TermsPage: React.FC = () => {
               <p className="text-gray-700">
                 <strong>Last Updated:</strong> {lastUpdated}
               </p>
-            </div>
           </div>
-        </section>
       </div>
     </>
   );
 };
 
 export default TermsPage
+
+        </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+                </div>
+              </div>
+            </div>
+          </div>
+                      </li>
+            </div>
+          </div>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </section>
+      </div>

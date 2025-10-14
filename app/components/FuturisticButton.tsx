@@ -28,9 +28,10 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   type = 'button',
   ...props
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
-  const variantClasses = {
+  const variantClasses = {,
+
     primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl',
     secondary: 'bg-gray-700 text-white hover:bg-gray-600 focus:ring-gray-500',
     outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
@@ -86,8 +87,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       {...props}
     >
       {content}
-    </button>
-  );
+    </button>);
 };
 
-export default FuturisticButton;
+export default FuturisticButton</FuturisticButtonProps>

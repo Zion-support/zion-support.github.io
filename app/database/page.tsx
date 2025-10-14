@@ -17,7 +17,6 @@ const DatabasePage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
               Database Solutions
             </span>
-          </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional database management and optimization services
           </p>
@@ -35,11 +34,10 @@ const DatabasePage = () => {
             >
               Learn More
             </Link>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    </div>);
 };
 
-export default DatabasePage;
+export default DatabasePage</h1>
+      </div>
+    </div>

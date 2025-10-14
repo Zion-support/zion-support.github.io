@@ -41,22 +41,32 @@ const SEO: React.FC<SEOProps> = ({
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
   const structuredData = {
-    '@context': 'https://schema.org'
-    '@type': 'Organization'
-    name: 'Zion Tech Group'
-    url: 'https://ziontechgroup.com'
-    logo: 'https://ziontechgroup.com/logo.svg'
+    '@context': 'https: //schema.org'
+    '@type': 'Organization',
+
+    name: 'Zion Tech Group',
+
+    url: 'https://ziontechgroup.com',
+
+    logo: 'https://ziontechgroup.com/logo.svg',
+
     description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.'
     address: {
-      '@type': 'PostalAddress'
-      addressLocality: 'Middletown'
-      addressRegion: 'DE'
+      '@type': 'PostalAddress',
+
+      addressLocality: 'Middletown',
+
+      addressRegion: 'DE',
+
       addressCountry: 'US'
     },
     contactPoint: {
-      '@type': 'ContactPoint'
-      telephone: '+1-302-464-0950'
-      contactType: 'customer service'
+      '@type': 'ContactPoint',
+
+      telephone: '+1-302-464-0950',
+
+      contactType: 'customer service',
+
       email: 'kleber@ziontechgroup.com'
     },
     sameAs: [
@@ -88,3 +98,5 @@ const SEO: React.FC<SEOProps> = ({
   );
 }
 export default SEO
+
+</SEOProps>

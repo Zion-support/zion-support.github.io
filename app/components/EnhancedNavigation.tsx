@@ -154,7 +154,6 @@ const EnhancedNavigation = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300">
               Zion Tech Group
             </span>
-          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
@@ -188,7 +187,6 @@ const EnhancedNavigation = () => {
                         </Link>
                       ))}
                     </div>
-                  </div>
                 )}
               </div>
             ))}
@@ -214,7 +212,6 @@ const EnhancedNavigation = () => {
               Contact Us
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -223,7 +220,6 @@ const EnhancedNavigation = () => {
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-        </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -238,7 +234,6 @@ const EnhancedNavigation = () => {
                   >
                     {item.icon}
                     <span className="font-medium">{item.label}</span>
-                  </Link>
                   <div className="ml-6 space-y-2">
                     {item.dropdown.slice(0, 4).map((dropdownItem) => (
                       <Link
@@ -260,7 +255,6 @@ const EnhancedNavigation = () => {
                       </Link>
                     )}
                   </div>
-                </div>
               ))}
               
               <div className="pt-4 border-t border-white/10">
@@ -276,13 +270,18 @@ const EnhancedNavigation = () => {
                     </Link>
                   ))}
                 </div>
-              </div>
             </div>
-          </div>
         )}
-      </div>
-    </header>
-  );
+      </div>);
 };
 
-export default EnhancedNavigation;
+export default EnhancedNavigation</Link>
+            </div>
+          </div>
+          </div>
+              </div>
+          </Link>
+        </div>
+      </div>
+    </header>
+  </string>

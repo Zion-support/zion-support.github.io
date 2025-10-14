@@ -1,17 +1,21 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
-// https://vitejs.dev/config/
-export default defineConfig({
+// https: //vitejs.dev/config/
+export default defineConfig({,
+
   plugins: [
     react({
-      // Enable React Fast Refresh;
+      // Enable React Fast Refresh;,
+
       fastRefresh: true,
-      // Optimize JSX runtime
+      // Optimize JSX runtime,
+
       jsxRuntime: 'automatic',
     });
   ],
-  resolve: {
+  resolve: {,
+
     alias: {
       '@': resolve(__dirname, './app'),
       '@/components': resolve(__dirname, './app/components'),
@@ -24,23 +28,30 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content'),
     },
   },
-  build: {
+  build: {,
+
     outDir: 'dist',
     sourcemap: false,
     minify: 'esbuild',
     target: 'es2020',
     cssCodeSplit: true,
-    modulePreload: {
+    modulePreload: {,
+
       polyfill: false,
     },
-    // Performance optimizations
-    chunkSizeWarningLimit: 150, // Balanced threshold for better performance
+    // Performance optimizations,
+
+    chunkSizeWarningLimit: 150, // Balanced threshold for better performance,
+
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
-    // Enable compression
+    // Enable compression,
+
     reportCompressedSize: true,
     // Optimize for production;
-    terserOptions: {
-      compress: {
+    terserOptions: {,
+
+      compress: {,
+
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
@@ -61,21 +72,26 @@ export default defineConfig({
         side_effects: false,
         unused: true,
       },
-      mangle: {
+      mangle: {,
+
         safari10: true, // Better Safari compatibility;
         toplevel: true,
-        properties: {
+        properties: {,
+
           regex: /^_/
         }
       },
-      format: {
+      format: {,
+
         comments: false,
         ascii_only: true
       }
     },
     // Enhanced build optimizations;
-    rollupOptions: {
-      output: {
+    rollupOptions: {,
+
+      output: {,
+
         manualChunks: (id) => {
           // Vendor chunks
           if (id.includes('node_modules')) {
@@ -185,22 +201,26 @@ export default defineConfig({
     // Enable tree shaking;
     treeshake: true,
   },
-  server: {
+  server: {,
+
     port: 3000,
     open: true,
     host: true,
     // Enable HMR;
-    hmr: {
+    hmr: {,
+
       overlay: true,
     },
   },
-  preview: {
+  preview: {,
+
     port: 4173,
     open: true,
     host: true,
   },
   // Optimize dependencies;
-  optimizeDeps: {
+  optimizeDeps: {,
+
     include: [
       'react',
       'react-dom',
@@ -212,7 +232,8 @@ export default defineConfig({
     ],
   },
   // CSS optimization;
-  css: {
+  css: {,
+
     devSourcemap: true,
   },
 });

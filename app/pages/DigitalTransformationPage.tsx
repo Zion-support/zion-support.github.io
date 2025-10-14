@@ -4,7 +4,8 @@ import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lu
 
 const DigitalTransformationPage: React.FC = () => {
   const services = [
-    {
+    {,
+
       icon: RefreshCw,
       title: 'Process Automation',
       description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',
@@ -77,9 +78,7 @@ const DigitalTransformationPage: React.FC = () => {
               <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
-            </div>
           </div>
-        </section>
 
         {/* Services Section */}
         <section className="py-20 px-4">
@@ -107,10 +106,8 @@ const DigitalTransformationPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -124,10 +121,8 @@ const DigitalTransformationPage: React.FC = () => {
                 <div key={index} className="flex items-center">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Process Section */}
@@ -140,33 +135,24 @@ const DigitalTransformationPage: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">1</span>
-                </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Assessment</h3>
                 <p className="text-gray-300">Analyze current state and identify transformation opportunities</p>
-              </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
-                </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Strategy</h3>
                 <p className="text-gray-300">Develop comprehensive digital transformation roadmap</p>
-              </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
-                </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Implementation</h3>
                 <p className="text-gray-300">Execute transformation initiatives with agile methodology</p>
-              </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">4</span>
-                </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Optimization</h3>
                 <p className="text-gray-300">Monitor performance and continuously improve processes</p>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -186,12 +172,25 @@ const DigitalTransformationPage: React.FC = () => {
               <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Schedule Consultation
               </button>
+          </div>
+      </div>
+    </>);
+};
+
+export default DigitalTransformationPage</section>
+              </div>
+                </div>
+              </div>
+                </div>
+              </div>
+                </div>
+              </div>
             </div>
+          </div>
+            </div>
+          </div>
+            </div>
+          </div>
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
-export default DigitalTransformationPage;

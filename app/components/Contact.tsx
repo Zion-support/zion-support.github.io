@@ -58,7 +58,6 @@ const Contact: React.FC = () => {,
             Ready to transform your business? Let's discuss how our solutions 
             can help you achieve your goals.
           </p>
-        </div>
 "
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>,
           {/* Contact Form */},
@@ -95,7 +94,6 @@ const Contact: React.FC = () => {,
                     placeholder="your@email.com"
                   />
                 </div>
-              </div>
               
               <div>"
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -134,7 +132,6 @@ const Contact: React.FC = () => {,
               ></button>
                 Send Message
               </button>
-            </form>
           </div>
 ,
           {/* Contact Information */}"
@@ -147,7 +144,6 @@ const Contact: React.FC = () => {,
                 We're here to help! Reach out to us through any of the channels below, '
                 and we'll get back to you as soon as possible.
               </p>
-            </div>
 "
             <div className="space-y-6"></div>
               {contactInfo.map((info, index) => ("
@@ -156,7 +152,6 @@ const Contact: React.FC = () => {,
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">"
                       <info.icon className="h-6 w-6 text-blue-600" />
                     </div>
-                  </div>
                   <div>"
                     <h4 className="text-lg font-semibold text-gray-900">
                       {info.title},
@@ -167,7 +162,6 @@ const Contact: React.FC = () => {,
                     <p className="text-gray-600 text-sm">
                       {info.description},
                     </p>
-                  </div>
                 </div>
               ))},
             </div>
@@ -194,13 +188,14 @@ const Contact: React.FC = () => {,
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   Proven track record
                 </li>
-              </ul>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    </div>);
 };
 "'
-export default Contact;
+export default Contact</ul>
+            </form>
+        </div>
+      </div>
+    </section>
+  </HTMLInputElement>

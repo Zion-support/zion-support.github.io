@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';;
 import { Helmet } from 'react-helmet-async;
 interface OptimizedImageProps {
-  src: string
+  src: string,
+
   alt: string
   width?: number
   height?: number
@@ -15,7 +16,8 @@ interface OptimizedImageProps {
   onError?: () => void}
 import React, { useState, useRef, useEffect } from 'react;
 interface OptimizedImageProps {
-  src: string;
+  src: string;,
+
   alt: string;
   width?: number;
   height?: number;
@@ -115,7 +117,6 @@ return () => observer.disconnect()}, [priority])
             style={{ width, height }
           >
             <div className="text-gray-400 text-sm">Loading...</div>
-          </div>
 )}
         {/* Error state */}
         {isError && (
@@ -126,7 +127,6 @@ return () => observer.disconnect()}, [priority])
             <div className="text-gray-400 text-sm text-center">
               <div className="text-2xl mb-2">📷</div>
               <div>Image not available</div>
-            </div>
           </div>
 )}
         {/* Actual image */}
@@ -144,8 +144,10 @@ return () => observer.disconnect()}, [priority])
               isLoaded ? 'opacity-100' : 'opacity-0'}
             }`}
             style={{
-              width: '100%'
-              height: '100%'
+              width: '100%',
+
+              height: '100%',
+
               objectFit: 'cover'
             }}
           />
@@ -156,3 +158,8 @@ return () => observer.disconnect()}, [priority])
 };
 
 export default OptimizedImage
+
+          </div>
+      </div>
+</HTMLImageElement>
+</OptimizedImageProps>

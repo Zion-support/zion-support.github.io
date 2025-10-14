@@ -46,4 +46,21 @@ const EnhancedHeader: React.FC = () => {
         )}
   )
 }
-export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>
+export default EnhancedHeader</div></div></span></Link></Link></Link></Link></Link></nav>
+              </Link>
+              </Link>
+              </Link>
+              </Link>
+            </nav>
+            </Link>
+            </Link>
+            </Link>
+            </Link>
+          </nav>
+            </span>
+              </span>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </header>

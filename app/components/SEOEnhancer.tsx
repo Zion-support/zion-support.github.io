@@ -131,3 +131,5 @@ const  {
 };
 
 export default SEOEnhancer
+
+</SEOEnhancerProps>

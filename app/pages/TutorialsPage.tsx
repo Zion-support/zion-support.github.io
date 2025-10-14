@@ -165,28 +165,22 @@ const TutorialsPage: React.FC = () => {
                   className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-            </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
                 <div className="text-gray-600">Tutorials</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">5,000+</div>
                 <div className="text-gray-600">Students</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">4.8</div>
                 <div className="text-gray-600">Average Rating</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
                 <div className="text-gray-600">Hours of Content</div>
-              </div>
             </div>
-          </div>
         </section>
 
         <div className="max-w-7xl mx-auto px-4 py-16">
@@ -210,10 +204,8 @@ const TutorialsPage: React.FC = () => {
                     >
                       <category.icon className="w-4 h-4" />
                       <span>{category.name}</span>
-                    </button>
                   ))}
                 </div>
-              </div>
             </div>
 
             {/* Level Filter */}
@@ -234,7 +226,6 @@ const TutorialsPage: React.FC = () => {
                   </button>
                 ))}
               </div>
-            </div>
           </div>
 
           {/* Featured Tutorial */}
@@ -250,22 +241,18 @@ const TutorialsPage: React.FC = () => {
                       </span>
                       <span className="text-blue-100">{featuredTutorial.duration}</span>
                       <span className="text-blue-100">{featuredTutorial.level}</span>
-                    </div>
                     <h3 className="text-3xl font-bold mb-4">{featuredTutorial.title}</h3>
                     <p className="text-xl text-blue-100 mb-6">{featuredTutorial.description}</p>
                     <div className="flex items-center space-x-6 mb-6">
                       <div className="flex items-center space-x-2">
                         <StarIcon className="w-5 h-5 text-yellow-400" />
                         <span>{featuredTutorial.rating}</span>
-                      </div>
                       <div className="flex items-center space-x-2">
                         <UserIcon className="w-5 h-5" />
                         <span>{featuredTutorial.students} students</span>
-                      </div>
                       <div className="flex items-center space-x-2">
                         <ClockIcon className="w-5 h-5" />
                         <span>{featuredTutorial.duration}</span>
-                      </div>
                     </div>
                     <Link
                       to={`/tutorials/${featuredTutorial.id}`}
@@ -274,14 +261,11 @@ const TutorialsPage: React.FC = () => {
                       <PlayIcon className="w-5 h-5 mr-2" />
                       Start Learning
                     </Link>
-                  </div>
                   <div className="relative">
                     <div className="aspect-video bg-black/20 rounded-lg flex items-center justify-center">
                       <PlayIcon className="w-16 h-16 text-white" />
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
           )}
 
@@ -300,7 +284,6 @@ const TutorialsPage: React.FC = () => {
                     <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-medium">
                       {tutorial.level}
                     </span>
-                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                     {tutorial.title}
                   </h3>
@@ -311,16 +294,13 @@ const TutorialsPage: React.FC = () => {
                       <div className="flex items-center space-x-1">
                         <UserIcon className="w-4 h-4" />
                         <span>{tutorial.instructor}</span>
-                      </div>
                       <div className="flex items-center space-x-1">
                         <ClockIcon className="w-4 h-4" />
                         <span>{tutorial.duration}</span>
-                      </div>
                     </div>
                     <div className="flex items-center space-x-1">
                       <StarIcon className="w-4 h-4 text-yellow-400" />
                       <span>{tutorial.rating}</span>
-                    </div>
                   </div>
 
                   <div className="flex items-center justify-between">
@@ -332,16 +312,13 @@ const TutorialsPage: React.FC = () => {
                       Start Learning
                       <ArrowRightIcon className="w-4 h-4 ml-1" />
                     </Link>
-                  </div>
                 </div>
-              </div>
             ))}
           </div>
 
           {filteredTutorials.length === 0 && (
             <div className="text-center py-12">
               <p className="text-gray-500 text-lg">No tutorials found matching your criteria.</p>
-            </div>
           )}
         </div>
 
@@ -367,12 +344,36 @@ const TutorialsPage: React.FC = () => {
               >
                 Watch Demo
               </Link>
-            </div>
           </div>
-        </section>
       </div>
     </>
   );
 };
 
 export default TutorialsPage
+
+        </section>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                    </button>
+            </div>
+          </div>
+        </div>
+              </div>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>

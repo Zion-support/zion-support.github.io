@@ -23,13 +23,11 @@ const SocialMediaManagementSAAS = () => {
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </FuturisticButton>
-              </Link>
             </div>
-          </ResponsiveContainer>
         </section>
-      </div>
-    </>
-  );
+    </>);
 };
 
-export default SocialMediaManagementSAAS;
+export default SocialMediaManagementSAAS</Link>
+          </ResponsiveContainer>
+      </div>

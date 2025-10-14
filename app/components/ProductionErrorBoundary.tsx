@@ -20,7 +20,8 @@ class ProductionErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): State {
     // Update state so the next render will show the fallback UI
-    return { 
+    return { ,
+
       hasError: true, 
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -47,7 +48,8 @@ class ProductionErrorBoundary extends Component<Props, State> {
 
   private logErrorToService = async (error: Error, errorInfo: ErrorInfo) => {
     try {
-      const errorData = {
+      const errorData = {,
+
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
@@ -55,7 +57,8 @@ class ProductionErrorBoundary extends Component<Props, State> {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-        userId: 'anonymous', // You would get this from your auth context
+        userId: 'anonymous', // You would get this from your auth context,
+
         sessionId: this.getSessionId(),
       };
 
@@ -148,9 +151,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
                     <pre className="whitespace-pre-wrap mt-1">
                       {this.state.error.stack}
                     </pre>
-                  </div>
                 </div>
-              </details>
             )}
 
             <div className="space-y-3">
@@ -160,7 +161,6 @@ class ProductionErrorBoundary extends Component<Props, State> {
               >
                 <RefreshCw className="w-5 h-5" />
                 <span>Try Again</span>
-              </button>
 
               <button
                 onClick={this.handleReload}
@@ -168,7 +168,6 @@ class ProductionErrorBoundary extends Component<Props, State> {
               >
                 <RefreshCw className="w-5 h-5" />
                 <span>Reload Page</span>
-              </button>
 
               <button
                 onClick={this.handleGoHome}
@@ -176,7 +175,6 @@ class ProductionErrorBoundary extends Component<Props, State> {
               >
                 <Home className="w-5 h-5" />
                 <span>Go Home</span>
-              </button>
 
               <button
                 onClick={this.handleReportError}
@@ -184,7 +182,6 @@ class ProductionErrorBoundary extends Component<Props, State> {
               >
                 <Mail className="w-5 h-5" />
                 <span>Report Error</span>
-              </button>
             </div>
 
             {this.state.errorId && (
@@ -192,13 +189,17 @@ class ProductionErrorBoundary extends Component<Props, State> {
                 Error ID: {this.state.errorId}
               </p>
             )}
-          </div>
-        </div>
-      );
+          </div>);
     }
 
     return this.props.children;
   }
 }
 
-export default ProductionErrorBoundary;
+export default ProductionErrorBoundary</button>
+              </button>
+              </button>
+              </button>
+              </details>
+          </div>
+        </div>

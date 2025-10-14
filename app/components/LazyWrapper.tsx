@@ -30,3 +30,7 @@ export const withLazyLoading = <P extends object>(
   );
 }
 export default LazyWrapper
+
+  </P>
+</P>
+</LazyWrapperProps>

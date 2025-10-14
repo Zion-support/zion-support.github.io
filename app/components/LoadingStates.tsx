@@ -28,8 +28,7 @@ export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }
   };
 
   return (
-    <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
-  );
+    <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />);
 };
 
-export default LoadingPage;
+export default LoadingPage</div>

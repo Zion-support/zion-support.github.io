@@ -26,4 +26,4 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 export default AnalyticsProvider;
 };
 
-export default AnalyticsProvider;
+export default AnalyticsProvider</AnalyticsProviderProps>

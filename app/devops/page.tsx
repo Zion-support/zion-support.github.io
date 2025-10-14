@@ -17,7 +17,6 @@ const DevOpsPage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
               DevOps
             </span>
-          </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Streamline your development and operations with our DevOps solutions
           </p>
@@ -35,11 +34,10 @@ const DevOpsPage = () => {
             >
               Learn More
             </Link>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    </div>);
 };
 
-export default DevOpsPage;
+export default DevOpsPage</h1>
+      </div>
+    </div>

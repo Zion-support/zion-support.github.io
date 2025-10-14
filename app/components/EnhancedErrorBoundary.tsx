@@ -15,8 +15,10 @@ import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
   render() {
     if (this.state.hasError) {
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  error: Error | null;,
+
+  errorInfo: ErrorInfo | null;,
+
   retryCount: number;
 }
 
@@ -24,7 +26,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private retryTimeoutId: NodeJS.Timeout | null = null;
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
+    return {,
+
       hasError: true,
       error
     };
@@ -82,10 +85,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               >
                 <Bug className="w-4 h-4" />
                 Contact Support
-              </button>
-            </div> cursor/analyze-improve-and-deploy-application-30da
+              </button> cursor/analyze-improve-and-deploy-application-30da
           </div>
-        </div>
       );
     }
 
@@ -108,4 +109,9 @@ export default EnhancedErrorBoundary;
               <p className="mt-2">
                 Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
               </p>
+
+}
+}
+}
             </div>
+  </State>

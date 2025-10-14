@@ -4,7 +4,8 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const positions = [
-    {
+    {,
+
       title: 'Senior AI Engineer',
       location: 'Remote',
       type: 'Full-time',
@@ -61,7 +62,6 @@ const CareersPage: React.FC = () => {
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-white mb-6">
               Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>
-            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Be part of a team that's shaping the future of AI and IT solutions. 
               We're looking for passionate individuals who want to make a difference.
@@ -73,9 +73,7 @@ const CareersPage: React.FC = () => {
               <button className="border border-rose-400 text-rose-400 px-8 py-3 rounded-lg hover:bg-rose-400 hover:text-white transition-all duration-300">
                 Learn About Us
               </button>
-            </div>
           </div>
-        </section>
 
         {/* Open Positions */}
         <section className="py-20 px-4">
@@ -100,12 +98,10 @@ const CareersPage: React.FC = () => {
                           <Clock className="w-4 h-4 mr-1" />
                           {position.type}
                         </div>
-                      </div>
                     </div>
                     <span className="bg-rose-500/20 text-rose-400 px-3 py-1 rounded-full text-sm">
                       {position.department}
                     </span>
-                  </div>
                   
                   <p className="text-gray-300 mb-4">
                     {position.description}
@@ -121,15 +117,12 @@ const CareersPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
                   
                   <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 rounded-lg hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
                     Apply Now
                   </button>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -143,10 +136,8 @@ const CareersPage: React.FC = () => {
                 <div key={index} className="flex items-center">
                   <Heart className="w-6 h-6 text-rose-400 mr-4 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Culture Section */}
@@ -165,17 +156,13 @@ const CareersPage: React.FC = () => {
                   <div className="flex items-center">
                     <Zap className="w-5 h-5 text-rose-400 mr-3" />
                     <span className="text-gray-300">Innovation-driven mindset</span>
-                  </div>
                   <div className="flex items-center">
                     <Users className="w-5 h-5 text-rose-400 mr-3" />
                     <span className="text-gray-300">Collaborative team environment</span>
-                  </div>
                   <div className="flex items-center">
                     <Target className="w-5 h-5 text-rose-400 mr-3" />
                     <span className="text-gray-300">Clear growth opportunities</span>
-                  </div>
                 </div>
-              </div>
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Ready to Join Us?
@@ -187,13 +174,25 @@ const CareersPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
                   Send Resume
                 </button>
+            </div>
+        </section>
+    </>);
+}
+
+export default CareersPage</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+            </div>
+          </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+            </h1>
+          </div>
         </section>
       </div>
-    </>
-  );
-}
-
-export default CareersPage;

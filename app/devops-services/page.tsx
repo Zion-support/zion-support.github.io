@@ -21,12 +21,10 @@ const DevOpsServicesPage = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 DevOps Services
               </span>
-            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Accelerate your software delivery with our comprehensive DevOps solutions. 
               From CI/CD pipelines to infrastructure automation, we help you achieve faster, more reliable deployments.
             </p>
-          </div>
         </section>
 
         {/* Services Grid */}
@@ -44,7 +42,6 @@ const DevOpsServicesPage = () => {
                 <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 flex items-center">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
-              </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
@@ -57,7 +54,6 @@ const DevOpsServicesPage = () => {
                 <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 flex items-center">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
-              </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
@@ -70,7 +66,6 @@ const DevOpsServicesPage = () => {
                 <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 flex items-center">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
-              </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
@@ -83,7 +78,6 @@ const DevOpsServicesPage = () => {
                 <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 flex items-center">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
-              </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
@@ -96,7 +90,6 @@ const DevOpsServicesPage = () => {
                 <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 flex items-center">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
-              </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
@@ -109,9 +102,7 @@ const DevOpsServicesPage = () => {
                 <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 flex items-center">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
-              </div>
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -136,10 +127,20 @@ const DevOpsServicesPage = () => {
               >
                 View All Services
               </Link>
-            </div>
-          </div>
-        </section> cursor/analyze-improve-and-deploy-application-9c39
+          </div> cursor/analyze-improve-and-deploy-application-9c39
       </div>
     </>
   );
 }
+
+        </section>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+            </h1>
+          </div>
+      </div>

@@ -23,13 +23,11 @@ const CustomerRelationshipSAAS = () => {
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </FuturisticButton>
-              </Link>
             </div>
-          </ResponsiveContainer>
         </section>
-      </div>
-    </>
-  );
+    </>);
 };
 
-export default CustomerRelationshipSAAS;
+export default CustomerRelationshipSAAS</Link>
+          </ResponsiveContainer>
+      </div>

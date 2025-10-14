@@ -25,41 +25,5 @@ export default function MicroSaaSPage() {
       title: 'AI-Powered Micro SaaS',
       description: 'Intelligent micro SaaS applications powered by artificial intelligence and machine learning.',
       features: ['AI integration', 'Machine learning', 'Predictive analytics', 'Automated workflows']
-    },
-    {
-      icon: ChartBarIcon,
-      title: 'Analytics & Reporting',
-      description: 'Comprehensive analytics and reporting solutions for your micro SaaS applications.',
-      features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Business intelligence']
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Deployment & Scaling',
-      description: 'Seamless deployment and automatic scaling solutions for your micro SaaS applications.',
-      features: ['Cloud deployment', 'Auto-scaling', 'Load balancing', 'Performance optimization']
     }
-  ]
-  const industries = [
-    { name: 'E-commerce', description: 'Online retail solutions' },
-    { name: 'Healthcare', description: 'Medical practice management' },
-    { name: 'Finance', description: 'Financial services tools' },
-    { name: 'Education', description: 'Learning management systems' },
-    { name: 'Real Estate', description: 'Property management tools' },
-    { name: 'Manufacturing', description: 'Production optimization' }
-  ]
-import { Helmet } from 'react-helmet-async';
-const MicroSaaSPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>MicroSaaSPage - Zion Tech Group</title>
-        <meta name="description" content="MicroSaaSPage - Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
-      </div>
-    </>
-  )}
+}

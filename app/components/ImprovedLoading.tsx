@@ -56,7 +56,6 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
               <div className="absolute inset-0 flex items-center justify-center">
                 <Brain className="w-8 h-8 text-cyan-400 animate-pulse" />
               </div>
-            </div>
           </div>
 
           <h2 className="text-2xl font-bold text-white mb-4">
@@ -70,11 +69,9 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
                   style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
                 ></div>
-              </div>
               <div className="text-sm text-gray-400 mt-2">
                 {Math.round(progress)}% complete
               </div>
-            </div>
           )}
 
           {/* Service Icons Animation */}
@@ -91,12 +88,10 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
             <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center animate-bounce" style={{ animationDelay: '0.6s' }}>
               <Globe className="w-4 h-4 text-white" />
             </div>
-          </div>
 
           <p className="text-gray-400 text-sm mt-6">
             Preparing your experience...
           </p>
-        </div>
       </div>
     )
   }
@@ -107,7 +102,6 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
       <div className="relative">
         <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
         <div className="absolute inset-0 border-2 border-cyan-400/30 rounded-full animate-ping"></div>
-      </div>
       {message && (
         <span className={`mt-4 text-gray-300 ${textSizeClasses[size]}`}>
           {message}
@@ -120,7 +114,6 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
               className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
               style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
             ></div>
-          </div>
         </div>
       )}
     </div>
@@ -128,3 +121,11 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
 }
 
 export default ImprovedLoading
+      </div>
+    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</ImprovedLoadingProps>

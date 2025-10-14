@@ -1,11 +1,16 @@
 import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
+  highContrast: boolean;,
+
+  largeText: boolean;,
+
+  reducedMotion: boolean;,
+
+  screenReader: boolean;,
+
+  keyboardNavigation: boolean;,
+
   focusVisible: boolean;
 }
 
@@ -174,7 +179,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
             >
               ×
             </button>
-          </div>
 
           <div className="space-y-4">
             {/* High Contrast */}
@@ -182,7 +186,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
               <div className="flex items-center gap-2">
                 <Eye className="w-4 h-4" />
                 <span className="text-sm">High Contrast</span>
-              </div>
               <button
                 onClick={() => toggleSetting('highContrast')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -196,14 +199,12 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   }`}
                 />
               </button>
-            </div>
 
             {/* Large Text */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Type className="w-4 h-4" />
                 <span className="text-sm">Large Text</span>
-              </div>
               <button
                 onClick={() => toggleSetting('largeText')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -217,14 +218,12 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   }`}
                 />
               </button>
-            </div>
 
             {/* Reduced Motion */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <MousePointer className="w-4 h-4" />
                 <span className="text-sm">Reduced Motion</span>
-              </div>
               <button
                 onClick={() => toggleSetting('reducedMotion')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -238,14 +237,12 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   }`}
                 />
               </button>
-            </div>
 
             {/* Screen Reader */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 {settings.screenReader ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
                 <span className="text-sm">Screen Reader</span>
-              </div>
               <button
                 onClick={() => toggleSetting('screenReader')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -259,14 +256,12 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   }`}
                 />
               </button>
-            </div>
 
             {/* Keyboard Navigation */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Keyboard className="w-4 h-4" />
                 <span className="text-sm">Keyboard Navigation</span>
-              </div>
               <button
                 onClick={() => toggleSetting('keyboardNavigation')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -280,7 +275,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   }`}
                 />
               </button>
-            </div>
           </div>
 
           {/* Keyboard Shortcuts */}
@@ -291,9 +285,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
               <p>Alt + Ctrl + Tab: Toggle this panel</p>
               <p>Tab: Navigate elements</p>
               <p>Enter/Space: Activate elements</p>
-            </div>
           </div>
-        </div>
       )}
 
       {/* Skip to main content link */}
@@ -320,7 +312,8 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         }
         
         .high-contrast * {
-          background-color: var(--tw-bg-opacity) !important;
+          background-color: var(--tw-bg-opacity) !important;,
+
           color: var(--tw-text-opacity) !important;
           border-color: currentColor !important;
         }
@@ -353,30 +346,61 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         }
         
         .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
+          position: absolute;,
+
+          width: 1px;,
+
+          height: 1px;,
+
+          padding: 0;,
+
+          margin: -1px;,
+
+          overflow: hidden;,
+
           clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
+          white-space: nowrap;,
+
           border: 0;
         }
         
-        .focus\\:not-sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: 0.5rem 1rem;
-          margin: 0;
-          overflow: visible;
+        .focus\\:not-sr-only: focus {
+          position: static;,
+
+          width: auto;,
+
+          height: auto;,
+
+          padding: 0.5rem 1rem;,
+
+          margin: 0;,
+
+          overflow: visible;,
+
           clip: auto;
           white-space: normal;
         }
       `}</style>
-    </>
-  );
+    </>);
 };
 
-export default ImprovedAccessibility;
+export default ImprovedAccessibility</div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+  </AccessibilitySettings>
+</ImprovedAccessibilityProps>

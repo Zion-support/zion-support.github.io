@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface EnhancedMetaTagsProps {
-  title: string;
+  title: string;,
+
   description: string;
   keywords?: string;
   canonical?: string;
@@ -177,9 +178,8 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
 {JSON.stringify(finalStructuredData)}
-      </script>
-    </Helmet>
-  )
+      </script>)
 }
 
-export default EnhancedMetaTags;
+export default EnhancedMetaTags</Helmet>
+</EnhancedMetaTagsProps>

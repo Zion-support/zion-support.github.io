@@ -37,7 +37,6 @@ const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
-  </div>
 );
 
 // Main App Component
@@ -47,56 +46,5 @@ export default function App() {
       <BrowserRouter>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/team" element={<TeamPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="/cookies" element={<CookiesPage />} />
-
-            {/* 5G Solutions Routes */}
-            <Route
-              path="/5g-data-analytics"
-              element={<FiveGDataAnalyticsPage />}
-            />
-            <Route
-              path="/5g-edge-computing"
-              element={<FiveGEdgeComputingPage />}
-            />
-            <Route
-              path="/5g-implementation"
-              element={<FiveGImplementationPage />}
-            />
-            <Route
-              path="/5g-iot-solutions"
-              element={<FiveGIoTSolutionsPage />}
-            />
-            <Route
-              path="/5g-mobile-applications"
-              element={<FiveGMobileApplicationsPage />}
-            />
-            <Route
-              path="/5g-network-infrastructure"
-              element={<FiveGNetworkInfrastructurePage />}
-            />
-            <Route
-              path="/5g-private-networks"
-              element={<FiveGPrivateNetworksPage />}
-            />
-            <Route
-              path="/5g-smart-city-solutions"
-              element={<FiveGSmartCitySolutionsPage />}
-            />
-            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </HelmetProvider>
-  );
+            <Route path="/" element={<HomePage />}
 }

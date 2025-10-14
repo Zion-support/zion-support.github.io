@@ -18,8 +18,6 @@ const EnhancedFooter: React.FC = () => {
             Professional enhanced footer services
             designed to help your business grow and succeed.
           </p>
-        </div>
-      </section>
+      </section>);
+}export default EnhancedFooter</div>
     </div>
-  );
-}export default EnhancedFooter;

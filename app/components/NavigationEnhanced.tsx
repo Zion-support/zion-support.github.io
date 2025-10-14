@@ -169,19 +169,16 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
               <div className="flex items-center text-cyan-400">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
                 <span>Live Support Available</span>
-              </div>
               <div className="flex items-center text-cyan-400">
                 <span className="mr-2">📞</span>
                 <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
                 </a>
-              </div>
               <div className="flex items-center text-cyan-400">
                 <span className="mr-2">✉️</span>
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
-              </div>
             </div>
             <div className="flex items-center space-x-4">
               <FuturisticButton
@@ -192,9 +189,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
               >
                 Get Quote
               </FuturisticButton>
-            </div>
           </div>
-        </div>
       </div>
 
       {/* Main Navigation */}
@@ -240,7 +235,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 ${
                   location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}></span>
-              </Link>
             ))}
             
             {/* AI Services Dropdown */}
@@ -257,7 +251,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">AI Services</h3>
-                  </div>
                   {aiServices.map((service) => (
                     <Link
                       key={service.name}
@@ -276,10 +269,8 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                           <div className="flex items-center mt-1">
                             <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
                             <span className="text-xs text-yellow-400">Featured</span>
-                          </div>
                         )}
                       </div>
-                    </Link>
                   ))}
                 </div>
               )}
@@ -299,7 +290,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-green-400 uppercase tracking-wider">IT Services</h3>
-                  </div>
                   {itServices.map((service) => (
                     <Link
                       key={service.name}
@@ -311,7 +301,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                         {service.icon}
                       </div>
                       <span className="font-medium">{service.name}</span>
-                    </Link>
                   ))}
                 </div>
               )}
@@ -331,7 +320,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions</h3>
-                  </div>
                   {microSaasServices.map((service) => (
                     <Link
                       key={service.name}
@@ -350,10 +338,8 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                           <div className="flex items-center mt-1">
                             <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
                             <span className="text-xs text-yellow-400">Featured</span>
-                          </div>
                         )}
                       </div>
-                    </Link>
                   ))}
                 </div>
               )}
@@ -367,7 +353,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
             >
               Get Started
             </FuturisticButton>
-          </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
@@ -377,7 +362,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-          </div>
         </div>
 
         {/* Search Bar */}
@@ -393,7 +377,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
-          </div>
         )}
 
         {/* Mobile menu */}
@@ -470,7 +453,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                       >
                         {service.icon}
                         <span>{service.name}</span>
-                      </Link>
                     ))}
                   </div>
                 )}
@@ -517,14 +499,33 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />
               </FuturisticButton>
-            </div>
           </div>
         )}
       </div>
-    </nav>
   )
 })
 
 NavigationEnhanced.displayName = 'NavigationEnhanced'
 
 export default NavigationEnhanced
+                      </Link>
+          </div>
+                    </Link>
+                </div>
+            </div>
+                    </Link>
+            </div>
+                    </Link>
+                </div>
+            </div>
+              </Link>
+          </div>
+        </div>
+      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+</NavigationEnhancedProps>

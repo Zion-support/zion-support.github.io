@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
 
 interface SidebarNavigationProps {
-  isOpen: boolean;
+  isOpen: boolean;,
+
   onClose: () => void,}
 const navigationItems = [
   { name: 'Home', href: '/', icon: User },
@@ -36,7 +37,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           >
             <X className="h-6 w-6" />
           </button>
-        </div>
         <nav className="mt-4">
           {navigationItems.map((item) => (
             <Link
@@ -48,10 +48,11 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
             </Link>
           ))}
         </nav>
+    </>)
+}
+export default SidebarNavigation;
+}
+export default SidebarNavigation</div>
       </div>
-    </>
-  )
-}
-export default SidebarNavigation;
-}
-export default SidebarNavigation;
+        </div>
+</SidebarNavigationProps>

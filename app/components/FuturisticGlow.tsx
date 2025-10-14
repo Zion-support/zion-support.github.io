@@ -5,7 +5,6 @@ export default function FuturisticGlow() {
     <>
       <Helmet>
         <title>Futuristic Glow - Zion Tech Group</title>
-      </Helmet>
       <div className="futuristic-glow-container">
         <Link
           to="/contact"
@@ -14,7 +13,9 @@ export default function FuturisticGlow() {
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
-      </div>
     </>
   );
 }
+
+      </div>
+      </Helmet>

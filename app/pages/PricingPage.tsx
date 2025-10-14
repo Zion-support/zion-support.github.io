@@ -175,7 +175,6 @@ const PricingPage: React.FC = () => {
                 </span>
               )}
             </div>
-          </div>
         </section>
 
         {/* Pricing Plans */}
@@ -194,7 +193,6 @@ const PricingPage: React.FC = () => {
                       <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
-                    </div>
                   )}
                   
                   <div className="text-center mb-8">
@@ -207,7 +205,6 @@ const PricingPage: React.FC = () => {
                       <span className="text-gray-600 ml-2">
                         /{billingCycle === 'monthly' ? 'month' : 'year'}
                       </span>
-                    </div>
                     {billingCycle === 'yearly' && (
                       <p className="text-sm text-green-600 font-medium">
                         Save ${(plan.monthlyPrice * 12) - plan.yearlyPrice} per year
@@ -220,13 +217,11 @@ const PricingPage: React.FC = () => {
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
-                      </li>
                     ))}
                     {plan.limitations.map((limitation, limitationIndex) => (
                       <li key={limitationIndex} className="flex items-center">
                         <XMarkIcon className="w-5 h-5 text-gray-400 mr-3 flex-shrink-0" />
                         <span className="text-gray-500">{limitation}</span>
-                      </li>
                     ))}
                   </ul>
 
@@ -240,10 +235,8 @@ const PricingPage: React.FC = () => {
                   >
                     Get Started
                   </Link>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Add-ons Section */}
@@ -260,11 +253,9 @@ const PricingPage: React.FC = () => {
                   <div className="text-2xl font-bold text-blue-600">
                     ${addOn.price}
                     <span className="text-sm font-normal text-gray-500 ml-1">{addOn.unit}</span>
-                  </div>
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* FAQ Section */}
@@ -278,10 +269,8 @@ const PricingPage: React.FC = () => {
                 <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
                   <p className="text-gray-600">{faq.answer}</p>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -306,9 +295,7 @@ const PricingPage: React.FC = () => {
               >
                 Schedule Demo
               </Link>
-            </div>
           </div>
-        </section>
 
         {/* Contact Info */}
         <section className="py-16 px-4 bg-gray-50">
@@ -320,21 +307,36 @@ const PricingPage: React.FC = () => {
               <div className="flex items-center justify-center space-x-3 text-gray-600">
                 <PhoneIcon className="w-6 h-6 text-blue-600" />
                 <span>+1-302-464-0950</span>
-              </div>
               <div className="flex items-center justify-center space-x-3 text-gray-600">
                 <EnvelopeIcon className="w-6 h-6 text-blue-600" />
                 <span>kleber@ziontechgroup.com</span>
-              </div>
               <div className="flex items-center justify-center space-x-3 text-gray-600">
                 <MapPinIcon className="w-6 h-6 text-blue-600" />
                 <span>Middletown, DE</span>
-              </div>
             </div>
-          </div>
         </section>
-      </div>
     </>
   );
 };
 
 export default PricingPage
+
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+            </div>
+          </div>
+            </div>
+          </div>
+                      </li>
+                      </li>
+                    </div>
+                </div>
+            </div>
+          </div>
+                </span>
+          </div>
+      </div>

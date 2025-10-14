@@ -181,9 +181,7 @@ const DemoPage: React.FC = () => {
               >
                 Schedule Live Demo
               </Link>
-            </div>
           </div>
-        </section>
 
         {/* Demo Selection */}
         <section className="py-16 px-4">
@@ -215,12 +213,9 @@ const DemoPage: React.FC = () => {
                     <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
                       <ClockIcon className="w-4 h-4" />
                       <span>{demo.duration}</span>
-                    </div>
                   </div>
-                </button>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Selected Demo */}
@@ -242,10 +237,8 @@ const DemoPage: React.FC = () => {
                       <li key={index} className="flex items-center">
                         <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3" />
                         <span className="text-gray-700">{feature}</span>
-                      </li>
                     ))}
                   </ul>
-                </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center">
@@ -258,7 +251,6 @@ const DemoPage: React.FC = () => {
                   >
                     Get Custom Demo
                   </Link>
-                </div>
               </div>
 
               <div className="relative">
@@ -266,16 +258,12 @@ const DemoPage: React.FC = () => {
                   <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
                     <PlayIcon className="w-20 h-20 text-white" />
                   </div>
-                </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <button className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors">
                     <PlayIcon className="w-8 h-8 text-blue-600 ml-1" />
                   </button>
-                </div>
               </div>
-            </div>
           </div>
-        </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
@@ -295,10 +283,8 @@ const DemoPage: React.FC = () => {
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Testimonials */}
@@ -317,7 +303,6 @@ const DemoPage: React.FC = () => {
                     <div>
                       <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                       <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
-                    </div>
                   </div>
                   <div className="flex items-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -325,10 +310,8 @@ const DemoPage: React.FC = () => {
                     ))}
                   </div>
                   <p className="text-gray-600 italic">"{testimonial.content}"</p>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -353,9 +336,7 @@ const DemoPage: React.FC = () => {
               >
                 Explore Services
               </Link>
-            </div>
           </div>
-        </section>
 
         {/* Contact Info */}
         <section className="py-16 px-4 bg-gray-50">
@@ -367,21 +348,41 @@ const DemoPage: React.FC = () => {
               <div className="flex items-center justify-center space-x-3 text-gray-600">
                 <PhoneIcon className="w-6 h-6 text-blue-600" />
                 <span>+1-302-464-0950</span>
-              </div>
               <div className="flex items-center justify-center space-x-3 text-gray-600">
                 <EnvelopeIcon className="w-6 h-6 text-blue-600" />
                 <span>kleber@ziontechgroup.com</span>
-              </div>
               <div className="flex items-center justify-center space-x-3 text-gray-600">
                 <MapPinIcon className="w-6 h-6 text-blue-600" />
                 <span>Middletown, DE</span>
-              </div>
             </div>
-          </div>
         </section>
-      </div>
     </>
   );
 };
 
 export default DemoPage
+
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+                </div>
+            </div>
+          </div>
+            </div>
+          </div>
+              </div>
+                      </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+                </button>
+            </div>
+          </div>
+          </div>
+        </section>
+      </div>

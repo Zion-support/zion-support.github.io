@@ -138,8 +138,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
           })}
         </script>
       )}
-    </Helmet>
-  );
+    </Helmet>);
 };
 
-export default ImprovedSEO;
+export default ImprovedSEO</ImprovedSEOProps>

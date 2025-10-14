@@ -89,3 +89,6 @@ img.setAttribute('loading', 'lazy')}
   return <>{children}</>
 }
 export default PerformanceOptimizer
+
+</PerformanceOptimizerProps>
+</PerformanceOptimizerProps>

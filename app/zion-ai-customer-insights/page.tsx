@@ -9,7 +9,8 @@ import FuturisticButton from '../components/FuturisticButton';
 
 const ZionAICustomerInsightsPage: React.FC = () => {
   const features = [
-    {
+    {,
+
       title: "Sentiment Analysis",
       description: "Analyze customer emotions and satisfaction levels across all touchpoints in real-time",
       icon: <Heart className="w-8 h-8" />,
@@ -159,19 +160,16 @@ const ZionAICustomerInsightsPage: React.FC = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 mb-6">
             <Brain className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Analytics</span>
-          </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               Zion AI Customer Insights
             </span>
-          </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your customer data into actionable insights with AI-powered analytics. 
@@ -195,7 +193,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
             >
               View Demo
             </FuturisticButton>
-          </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -206,10 +203,8 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{metric.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{metric.label}</div>
-              </div>
             ))} cursor/analyze-improve-and-deploy-application-c573
           </div>
-        </ResponsiveContainer>
       </section>
 
         {/* Features Section */}
@@ -222,7 +217,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Transform customer data into actionable insights with cutting-edge AI analytics and machine learning.
               </p>
-            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <FuturisticCard
@@ -240,10 +234,8 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                   <p className="text-gray-300 text-center leading-relaxed">
                     {feature.description}
                   </p>
-                </FuturisticCard>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Pricing Section */}
@@ -256,7 +248,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Flexible pricing options to fit your customer analytics needs
               </p>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -270,7 +261,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
                   )}
                   
                   <div className="text-center mb-8">
@@ -279,7 +269,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-300 ml-2">{plan.period}</span>
-                    </div>
                   </div>
                   
                   <ul className="space-y-4 mb-8">
@@ -287,7 +276,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                       <li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>
                     ))}
                   </ul>
                   
@@ -300,10 +288,8 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                   >
                     Get Started
                   </FuturisticButton>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Testimonials Section */}
@@ -316,7 +302,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See what our users say about Zion AI Customer Insights
               </p>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -336,12 +321,9 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -366,3 +348,27 @@ const ZionAICustomerInsightsPage: React.FC = () => {
               >
                 View All Services
               </FuturisticButton>export default ZionAiCustomerInsights; cursor/analyze-improve-and-deploy-application-c573
+
+}
+            </p>
+          </div>
+        </section>
+                </div>
+            </div>
+            </div>
+          </div>
+                      </li>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+                </FuturisticCard>
+            </div>
+          </div>
+          </div>
+          </div>
+          </h1>
+          </div>
+        </ResponsiveContainer>
+        </div>

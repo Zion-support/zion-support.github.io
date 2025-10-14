@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 
 interface AdvancedSEOProps {
-  title: string;
+  title: string;,
+
   description: string;
   keywords?: string;
   canonical?: string;
@@ -249,9 +250,8 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
             }
           ]
         })}
-      </script>
-    </Helmet>
-  );
+      </script>);
 };
 
-export default AdvancedSEO;
+export default AdvancedSEO</Helmet>
+</AdvancedSEOProps>

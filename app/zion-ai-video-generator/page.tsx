@@ -9,7 +9,8 @@ import FuturisticButton from '../components/FuturisticButton';
 
 const ZionAIVideoGeneratorPage: React.FC = () => {
   const features = [
-    {
+    {,
+
       title: "AI-Powered Video Creation",
       description: "Generate professional videos from text prompts using advanced AI technology",
       icon: <Video className="w-8 h-8" />,
@@ -124,7 +125,8 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
       content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce professional videos 10x faster than before.",      name: "Emily Johnson",
       company: "StartupXYZ",
       role: "Founder",
-      content: "As a startup, we needed professional videos without the budget. This tool gave us enterprise-quality content at a fraction of the cost.", cursor/analyze-improve-and-deploy-application-c573
+      content: "As a startup, we needed professional videos without the budget. This tool gave us enterprise-quality content at a fraction of the cost.", cursor/analyze-improve-and-deploy-application-c573,
+
       rating: 5,
       avatar: "EJ"
     }
@@ -167,13 +169,11 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">#1 AI Video Generator 2024</span>
-            </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Zion AI Video Generator
               </span>
-            </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Transform text into stunning, professional videos in minutes. Our AI-powered platform creates engaging content with natural voiceovers, custom branding, and multiple formats.
@@ -196,7 +196,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
               >
                 Watch Demo
               </FuturisticButton>
-            </div>
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -207,7 +206,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-                </div>
               ))}      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -218,7 +216,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Our advanced AI technology handles every aspect of video creation, from script writing to final editing
             </p>
-          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -239,11 +236,9 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400">
                     {feature.stats}
                   </span>
-                </div>
               </FuturisticCard>
             ))}
           </div>
-        </ResponsiveContainer>
       </section>
 
       {/* Use Cases Section */}
@@ -256,7 +251,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Whether you're creating marketing content, educational videos, or corporate communications
             </p>
-          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
@@ -281,10 +275,8 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </FuturisticCard>
             ))}
           </div>
-        </ResponsiveContainer>
       </section>
 
       {/* Pricing Section */}
@@ -297,7 +289,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your needs. All plans include a 14-day free trial.
             </p>
-          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
@@ -312,7 +303,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
-                  </div>
                 )}
                 
                 <div className="text-center mb-6">
@@ -321,7 +311,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
                 </div>
                 
                 <ul className="space-y-3 mb-8">
@@ -341,10 +330,8 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                 >
                   {plan.cta}
                 </FuturisticButton>
-              </FuturisticCard>
             ))} cursor/analyze-improve-and-deploy-application-c573
           </div>
-        </ResponsiveContainer>
       </section>
 
         {/* Testimonials Section */}
@@ -357,7 +344,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See what our users say about Zion AI Video Generator
               </p>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -377,9 +363,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
                   </div>
-                </div>
               ))}
             </div>      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
@@ -400,21 +384,18 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
-              </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-cyan-400">+1 302 464 0950</p>
-              </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -429,16 +410,45 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
               >
                 Contact Sales
               </FuturisticButton>
-            </div>
             
             <div className="mt-8 text-sm text-gray-400">
               <p>14-day free trial • No credit card required • Cancel anytime</p> cursor/analyze-improve-and-deploy-application-c573
             </div>
-          </div>
         </ResponsiveContainer>
-      </section>
     </div>
   );
 };
 
 export default ZionAIVideoGeneratorPage; cursor/analyze-improve-and-deploy-application-c573
+
+              </div>
+              </div>
+            </div>
+          </div>
+      </section>
+                </div>
+            </div>
+            </div>
+          </div>
+        </section>
+                  </div>
+              </FuturisticCard>
+          </div>
+          </div>
+        </ResponsiveContainer>
+              </FuturisticCard>
+          </div>
+        </ResponsiveContainer>
+          </div>
+          </div>
+        </ResponsiveContainer>
+                </div>
+            </div>
+            </div>
+            </h1>
+            </div>
+          </div>
+        </section>
+      </div>
+      </EnhancedSEO>
+    </div>

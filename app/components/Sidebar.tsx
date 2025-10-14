@@ -19,7 +19,8 @@ import {
 } from '@heroicons/react/24/outline';
 
 interface SidebarProps {
-  isOpen: boolean
+  isOpen: boolean,
+
   onClose: () => void
 }
 
@@ -74,16 +75,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
-            </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
-          </div>
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white lg:hidden"
           >
             <XMarkIcon className="w-6 h-6" />
           </button>
-        </div>
 
         <nav className="mt-8 px-4">
           <ul className="space-y-2">
@@ -100,7 +98,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 >
                   <item.icon className="w-5 h-5" />
                   <span>{item.name}</span>
-                </Link>
                 
                 {/* Submenu */}
                 {item.submenu && (
@@ -118,7 +115,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         >
                           <subItem.icon className="w-4 h-4" />
                           <span>{subItem.name}</span>
-                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -126,7 +122,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </li>
             ))}
           </ul>
-        </nav>
 
         {/* Contact Info */}
         <div className="absolute bottom-4 left-4 right-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700">
@@ -134,11 +129,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="space-y-1 text-xs text-gray-300">
             <div>+1 302 464 0950</div>
             <div>kleber@ziontechgroup.com</div>
+        </div>
+    </>);
+};
+
+export default Sidebar</div>
+                        </Link>
+                </Link>
+        </nav>
+            </div>
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default Sidebar;
+      </div>
+  </string>
+</SidebarProps>

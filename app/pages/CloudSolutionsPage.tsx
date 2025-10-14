@@ -25,41 +25,5 @@ export default function CloudSolutionsPage() {
       title: 'Infrastructure Management',
       description: 'Complete management of your cloud infrastructure with 24/7 monitoring and support.',
       features: ['Server provisioning', 'Load balancing', 'Auto-scaling', 'Backup & recovery']
-    },
-    {
-      icon: CpuChipIcon,
-      title: 'Container Solutions',
-      description: 'Docker and Kubernetes solutions for modern application deployment and management.',
-      features: ['Container orchestration', 'Microservices architecture', 'CI/CD pipelines', 'Service mesh']
-    },
-    {
-      icon: ChartBarIcon,
-      title: 'Cloud Analytics',
-      description: 'Advanced analytics and monitoring solutions for your cloud infrastructure and applications.',
-      features: ['Performance monitoring', 'Cost optimization', 'Security analytics', 'Predictive insights']
     }
-  ]
-  const platforms = [
-    { name: 'Amazon Web Services (AWS)', logo: 'AWS' },
-    { name: 'Microsoft Azure', logo: 'Azure' },
-    { name: 'Google Cloud Platform', logo: 'GCP' },
-    { name: 'IBM Cloud', logo: 'IBM' },
-    { name: 'Oracle Cloud', logo: 'Oracle' },
-    { name: 'DigitalOcean', logo: 'DO' }
-  ]
-import { Helmet } from 'react-helmet-async';
-const CloudSolutionsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>CloudSolutionsPage - Zion Tech Group</title>
-        <meta name="description" content="CloudSolutionsPage - Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">CloudSolutionsPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
-      </div>
-    </>
-  )}
+}

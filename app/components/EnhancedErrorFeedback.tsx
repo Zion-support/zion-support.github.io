@@ -88,7 +88,6 @@ const ErrorFallback: React.FC<{ error?: Error }> = ({ error }) => {
                 {error.message}
                 {error.stack && `\n\n${error.stack}`}
               </pre>
-            </div>
           </details>
         )}
 
@@ -99,7 +98,6 @@ const ErrorFallback: React.FC<{ error?: Error }> = ({ error }) => {
           >
             <RefreshCw className="w-4 h-4" />
             <span>Try Again</span>
-          </button>
           
           <button
             onClick={handleGoHome}
@@ -107,7 +105,6 @@ const ErrorFallback: React.FC<{ error?: Error }> = ({ error }) => {
           >
             <Home className="w-4 h-4" />
             <span>Go Home</span>
-          </button>
           
           <button
             onClick={handleReportError}
@@ -115,7 +112,6 @@ const ErrorFallback: React.FC<{ error?: Error }> = ({ error }) => {
           >
             <Mail className="w-4 h-4" />
             <span>Report Issue</span>
-          </button>
         </div>
 
         <div className="mt-6 pt-6 border-t border-gray-700">
@@ -127,11 +123,20 @@ const ErrorFallback: React.FC<{ error?: Error }> = ({ error }) => {
             >
               kleber@ziontechgroup.com
             </a>
-          </p>
         </div>
-      </div>
     </div>
   );
 };
 
 export default GlobalErrorBoundary;
+
+}
+}
+          </p>
+          </button>
+          </button>
+          </button>
+      </div>
+    </div>
+          </div>
+        </div>

@@ -75,9 +75,7 @@ const Footer = React.memo(() => {
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
-              </div>
               <span className="text-2xl font-bold text-white">Zion Tech Group</span>
-            </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
               and digital transformation services for businesses worldwide.
@@ -93,7 +91,6 @@ const Footer = React.memo(() => {
                 >
                   +1 302 464 0950
                 </a>
-              </div>
               <div className="flex items-center space-x-3">
                 <EnvelopeIcon className="w-5 h-5 text-purple-400" />
                 <a 
@@ -102,22 +99,18 @@ const Footer = React.memo(() => {
                 >
                   kleber@ziontechgroup.com
                 </a>
-              </div>
               <div className="flex items-start space-x-3">
                 <MapPinIcon className="w-5 h-5 text-purple-400 mt-1" />
                 <div className="text-gray-300">
                   <div>364 E Main St STE 1008</div>
                   <div>Middletown DE 19709</div>
-                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <ClockIcon className="w-5 h-5 text-purple-400" />
                 <div className="text-gray-300">
                   <div>Mon - Fri: 9:00 AM - 6:00 PM EST</div>
                   <div>24/7 Emergency Support</div>
-                </div>
               </div>
-            </div>
 
             {/* Social Links */}
             <div className="mt-8">
@@ -135,10 +128,8 @@ const Footer = React.memo(() => {
                     <span className="text-lg group-hover:scale-110 transition-transform">
                       {social.icon}
                     </span>
-                  </a>
                 ))}
               </div>
-            </div>
           </div>
 
           {/* Services */}
@@ -153,17 +144,15 @@ const Footer = React.memo(() => {
                   >
                     <service.icon className="w-4 h-4 text-purple-400 group-hover:text-purple-300" />
                     <span>{service.name}</span>
-                  </Link>
                 </li>
               ))}          <div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4> cursor/analyze-improve-and-deploy-application-c573
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
-              <li><Link to="/demo" className="text-gray-300 hover:text-white transition-colors">Demo</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
+              <li><Link to="/demo" className="text-gray-300 hover:text-white transition-colors">Demo</Link>
             </ul>
-          </div>
 
           {/* Company */}
           <div>
@@ -177,10 +166,8 @@ const Footer = React.memo(() => {
                   >
                     {item.name}
                   </Link>
-                </li>
               ))}
             </ul>
-          </div>
 
           {/* Resources & Legal */}
           <div>
@@ -194,7 +181,6 @@ const Footer = React.memo(() => {
                   >
                     {item.name}
                   </Link>
-                </li>
               ))}
             </ul>
 
@@ -209,12 +195,9 @@ const Footer = React.memo(() => {
                     <ArrowRightIcon className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {item.name}
                   </Link>
-                </li>
               ))}
             </ul>
-          </div>
         </div>
-      </div>
 
       {/* Newsletter Signup */}
       <div className="border-t border-slate-700/50 bg-slate-800/30">
@@ -223,7 +206,6 @@ const Footer = React.memo(() => {
             <div className="mb-4 md:mb-0">
               <h3 className="text-xl font-semibold text-white mb-2">Stay Updated</h3>
               <p className="text-gray-300">Get the latest news and updates about our services.</p>
-            </div>
             <div className="flex w-full md:w-auto">
               <input
                 type="email"
@@ -233,9 +215,7 @@ const Footer = React.memo(() => {
               <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-r-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold">
                 Subscribe
               </button>
-            </div>
           </div>
-        </div>
       </div>
 
       {/* Bottom Footer */}
@@ -251,9 +231,7 @@ const Footer = React.memo(() => {
               <span>SOC 2 Type II</span>
               <span>•</span>
               <span>GDPR Compliant</span>
-            </div>
           </div>
-        </div>
       </div>
 
       {/* Futuristic Background Effects */}
@@ -262,9 +240,34 @@ const Footer = React.memo(() => {
         <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
         <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
         <div className="absolute bottom-0 right-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '3s'}}></div>
-      </div>
-    </footer>
-  );
+    </footer>);
 };
 
-export default Footer;
+export default Footer</div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+                </li>
+                </li>
+                </li>
+          </div>
+              </li>
+              </li>
+              </li>
+              </li>
+              </div>
+            </ul>
+          </div>
+                  </a>
+              </div>
+              </div>
+              </div>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

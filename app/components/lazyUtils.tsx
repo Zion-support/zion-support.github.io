@@ -45,3 +45,10 @@ export function createLazyComponent<T extends ComponentType<any>>()
     </Suspense>
   );,
 }'
+
+  </T>
+</T>
+  </T>
+</T>
+  </T>
+</T>

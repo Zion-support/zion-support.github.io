@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, useEffect } from 'react;
-'use client'
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void,
@@ -56,3 +55,6 @@ setIsEnabled(true)}
     </AnalyticsContext.Provider>
   )}
 export { AnalyticsContext }
+
+  </string>
+</AnalyticsContextType>

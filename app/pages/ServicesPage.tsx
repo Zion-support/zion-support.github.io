@@ -16,7 +16,8 @@ import {
 
 const ServicesPage: React.FC = () => {
   const mainServices = [
-    {
+    {,
+
       icon: CpuChipIcon,
       title: 'AI Solutions',
       description: 'Cutting-edge artificial intelligence solutions to transform your business operations.',
@@ -161,7 +162,6 @@ const ServicesPage: React.FC = () => {
               From artificial intelligence and cloud infrastructure to cybersecurity and digital transformation, 
               we provide end-to-end technology solutions that help businesses thrive in the digital age.
             </p>
-          </div>
         </section>
 
         {/* Main Services */}
@@ -197,10 +197,8 @@ const ServicesPage: React.FC = () => {
                     Learn More
                     <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </Link>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Additional Services */}
@@ -225,10 +223,8 @@ const ServicesPage: React.FC = () => {
                   <p className="text-gray-600 text-sm">
                     {service.description}
                   </p>
-                </Link>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Process Section */}
@@ -249,10 +245,8 @@ const ServicesPage: React.FC = () => {
                   <p className="text-gray-600">
                     {step.description}
                   </p>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Why Choose Us */}
@@ -273,10 +267,8 @@ const ServicesPage: React.FC = () => {
                   <p className="text-gray-600">
                     {reason.description}
                   </p>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -301,12 +293,22 @@ const ServicesPage: React.FC = () => {
               >
                 View Pricing
               </Link>
-            </div>
           </div>
-        </section>
       </div>
     </>
   );
 };
 
 export default ServicesPage
+
+        </section>
+            </div>
+          </div>
+            </div>
+          </div>
+                </Link>
+          </div>
+            </div>
+          </div>
+          </div>
+      </div>

@@ -1,12 +1,17 @@
 import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
 
 interface GenericServicePageProps {
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  features: string[];
+  title: string;,
+
+  description: string;,
+
+  icon: React.ComponentType<any>;,
+
+  features: string[];,
+
   benefits: string[];
-  pricing?: string;
+  pricing?: string;,
+
   category: "AI" | "IT" | "MicroSAAS" | "Emerging";
 }
 
@@ -49,7 +54,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               >
                 <Icon className="w-12 h-12 text-white" />
               </div>
-            </div>
             <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               {description}
@@ -74,7 +78,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 <Phone className="w-5 h-5 mr-2" />
                 Call (302) 464-0950
               </a>
-            </div>
           </section>
 
           {/* Features Section */}
@@ -87,7 +90,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 Comprehensive {title.toLowerCase()} solutions designed to drive
                 your business forward
               </p>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <div
@@ -99,11 +101,9 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                     <h3 className="text-lg font-semibold text-white">
                       {feature}
                     </h3>
-                  </div>
                 </div>
               ))}
             </div>
-          </section>
 
           {/* Benefits Section */}
           <section className="py-16">
@@ -115,7 +115,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 Experience the difference with our proven expertise and
                 cutting-edge technology
               </p>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -130,11 +129,9 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                       Leverage our expertise to maximize your business potential
                       with {title.toLowerCase()}
                     </p>
-                  </div>
                 </div>
               ))}
             </div>
-          </section>
 
           {/* Stats Section */}
           <section className="py-16">
@@ -145,27 +142,22 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                     500+
                   </div>
                   <div className="text-gray-300">Happy Clients</div>
-                </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     99%
                   </div>
                   <div className="text-gray-300">Success Rate</div>
-                </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     24/7
                   </div>
                   <div className="text-gray-300">Support</div>
-                </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     10+
                   </div>
                   <div className="text-gray-300">Years Experience</div>
-                </div>
               </div>
-            </div>
           </section>
 
           {/* CTA Section */}
@@ -192,12 +184,25 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
               </a>
-            </div>
           </section>
-        </main>
       </div>
-    </>
-  );
+    </>);
 };
 
-export default GenericServicePage;
+export default GenericServicePage</div>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+          </section>
+            </div>
+            </div>
+          </section>
+            </div>
+            </div>
+        </main>
+      </div>
+</GenericServicePageProps>
+  </any>

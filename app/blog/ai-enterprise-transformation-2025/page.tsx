@@ -15,7 +15,6 @@ const EnterpriseTransformationPage: React.FC = () => {
               AI Enterprise Transformation: $50 M Annual Savings Blueprint
             </h1>
             <p>January 28, 2025 · 50 min read · Enterprise AI</p>
-          </div>
 
           <div className="prose max-w-none">
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🎯 Transformation Results</h2>
@@ -28,15 +27,12 @@ const EnterpriseTransformationPage: React.FC = () => {
               <div className="bg-green-50 p-6 rounded-lg text-center">
                 <div className="text-3 xl font-bold text-green-600 mb-2">$50 M</div>
                 <div className="text-gray-700">Annual Savings</div>
-              </div>
               <div className="bg-blue-50 p-6 rounded-lg text-center">
                 <div className="text-3 xl font-bold text-blue-600 mb-2">95%</div>
                 <div className="text-gray-700">Process Automation</div>
-              </div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
                 <div className="text-3 xl font-bold text-purple-600 mb-2">300%</div>
                 <div className="text-gray-700">ROI</div>
-              </div>
             </div>
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🏢 Company Profile</h2>
@@ -46,7 +42,6 @@ const EnterpriseTransformationPage: React.FC = () => {
               <li><strong>Size:</strong> 50,000+ employees across 40 countries</li>
               <li><strong>Revenue:</strong> $15B+ annual revenue</li>
               <li><strong>Challenge:</strong> Manual processes, legacy systems, operational inefficiencies</li>
-            </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Transformation Strategy</h2>
             <p className="text-gray-700 mb-6">&apos;s the proven roadmap:
@@ -58,7 +53,6 @@ const EnterpriseTransformationPage: React.FC = () => {
               <li>• Legacy system audit and modernization roadmap</li>
               <li>• Data quality assessment and governance framework establishment</li>
               <li>• Executive leadership alignment and change management strategy</li>
-            </ul>
             <p className="text-gray-700 mb-6"><strong>Results:</strong> Identified $15M in immediate optimization opportunities</p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Quick Wins & Pilots (Months 4-8)</h3>
@@ -67,7 +61,6 @@ const EnterpriseTransformationPage: React.FC = () => {
               <li>• Automated invoice processing reducing manual work by 80%</li>
               <li>• Implemented predictive maintenance reducing downtime by 60%</li>
               <li>• Launched customer service chatbots handling 70% of inquiries</li>
-            </ul>
             <p className="text-gray-700 mb-6"><strong>Results:</strong> $8M in cost savings and 45% process automation achieved</p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 Detailed ROI Analysis</h2>
@@ -81,7 +74,6 @@ const EnterpriseTransformationPage: React.FC = () => {
               <li>• <strong>$8M:</strong> Decreased downtime and maintenance costs</li>
               <li>• <strong>$7M:</strong> Improved energy efficiency and resource utilization</li>
               <li>• <strong>$5M:</strong> Reduced compliance and audit costs</li>
-            </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with Your Transformation</h2>
             <p className="text-gray-700 mb-6">Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations. 
@@ -103,13 +95,30 @@ const EnterpriseTransformationPage: React.FC = () => {
                 >
                   Explore AI Services
                 </Link>
+            </div>
+        </div>
+    </div>);
+};
+
+export default EnterpriseTransformationPage</li>
+              </li>
+              </li>
+              </li>
+              </li>
+            </ul>
+            </p>
+            </ul>
+            </p>
+            </ul>
+              </li>
+              </li>
+              </li>
+              </li>
+            </ul>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
-
-export default EnterpriseTransformationPage;
