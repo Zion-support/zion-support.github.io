@@ -49,5 +49,6 @@ const OfflinePage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default OfflinePage;
 

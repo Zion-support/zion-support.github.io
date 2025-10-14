@@ -49,5 +49,6 @@ const DevopsSolutionsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default DevopsSolutionsPage;
 

@@ -1,134 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  UserGroupIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
+import { Server, Cloud } from 'lucide-react';
 
-export default function ITSolutionsPage() {
-  const itServices = [
-    {
-      title: "Infrastructure Management",
-      description: "Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance and reliability.",
-      icon: CpuChipIcon,
-      features: [
-        "Server configuration and management",
-        "Network setup and optimization",
-        "Hardware maintenance and upgrades",
-        "Performance monitoring and tuning",
-        "Disaster recovery planning",
-        "24/7 technical support"
-      ],
-      color: "from-blue-500 to-indigo-500",
-      price: "Starting at $2,500/month",
-      benefits: ["99.9% uptime", "Scalable infrastructure", "Expert support"],
-      useCases: ["Enterprise infrastructure", "Cloud migration", "System optimization"],
-      href: "/it-infrastructure"
-    },
-    {
-      title: "Cybersecurity Solutions",
-      description: "Advanced security solutions to protect your digital assets and ensure compliance with industry standards.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Security audits and assessments",
-        "Threat detection and prevention",
-        "Incident response planning",
-        "Compliance management",
-        "Security training",
-        "Penetration testing"
-      ],
-      color: "from-red-500 to-pink-500",
-      price: "Starting at $3,200/month",
-      benefits: ["Advanced protection", "Compliance ready", "24/7 monitoring"],
-      useCases: ["Security audits", "Threat protection", "Compliance"],
-      href: "/it-cybersecurity"
-    },
-    {
-      title: "Cloud Solutions",
-      description: "Migrate to the cloud with our expert cloud architecture and management services for optimal performance.",
-      icon: CloudIcon,
-      features: [
-        "Cloud migration planning",
-        "Multi-cloud strategy",
-        "Cost optimization",
-        "Security implementation",
-        "Performance monitoring",
-        "Disaster recovery"
-      ],
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $2,800/month",
-      benefits: ["Scalable solutions", "Cost effective", "High availability"],
-      useCases: ["Cloud migration", "Multi-cloud setup", "Cost optimization"],
-      href: "/it-cloud-solutions"
-    },
-    {
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights with our advanced analytics and business intelligence solutions.",
-      icon: ChartBarIcon,
-      features: [
-        "Data warehouse design",
-        "ETL process development",
-        "Business intelligence dashboards",
-        "Predictive analytics",
-        "Data visualization",
-        "Real-time reporting"
-      ],
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $2,200/month",
-      benefits: ["Data-driven insights", "Real-time analytics", "Custom dashboards"],
-      useCases: ["Business intelligence", "Data visualization", "Predictive analytics"],
-      href: "/it-data-analytics"
-    },
-    {
-      title: "System Integration",
-      description: "Seamlessly integrate different systems and applications for improved efficiency and data flow.",
-      icon: CogIcon,
-      features: [
-        "API development and integration",
-        "Data migration services",
-        "System customization",
-        "Workflow automation",
-        "Third-party integrations",
-        "Legacy system modernization"
-      ],
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $2,600/month",
-      benefits: ["Seamless integration", "Improved efficiency", "Custom solutions"],
-      useCases: ["System integration", "API development", "Workflow automation"],
-      href: "/it-system-integration"
-    },
-    {
-      title: "Compliance & Governance",
-      description: "Ensure your IT systems meet regulatory requirements and industry standards with our compliance solutions.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Compliance assessment",
-        "Policy development",
-        "Audit preparation",
-        "Risk management",
-        "Documentation",
-        "Training programs"
-      ],
-      color: "from-emerald-500 to-teal-500",
-      price: "Starting at $2,800/month",
-      benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
-      useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
-      href: "/it-compliance"
-    }
-  ];
+const ItSolutionsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -171,8 +45,10 @@ export default function ITSolutionsPage() {
       </div>
     </>
   );
+import React, { Suspense } from 'react';
 };
 
+import React, { Suspense } from 'react';
 export default ItSolutionsPage;
 =======
 

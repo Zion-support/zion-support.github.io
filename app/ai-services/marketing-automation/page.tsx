@@ -49,5 +49,6 @@ const MarketingAutomationPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default MarketingAutomationPage;
 

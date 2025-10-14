@@ -49,5 +49,6 @@ const RoboticsIntegrationPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default RoboticsIntegrationPage;
 

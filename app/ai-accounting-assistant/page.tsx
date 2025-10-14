@@ -49,5 +49,6 @@ const AiAccountingAssistantPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiAccountingAssistantPage;
 

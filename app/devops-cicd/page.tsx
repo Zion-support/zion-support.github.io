@@ -49,5 +49,6 @@ const DevopsCicdPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default DevopsCicdPage;
 

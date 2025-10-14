@@ -49,5 +49,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiVoiceSolutionsPage;
 

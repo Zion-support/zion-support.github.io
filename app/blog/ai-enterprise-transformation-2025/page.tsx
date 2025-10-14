@@ -49,5 +49,6 @@ const AiEnterpriseTransformation2025Page: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiEnterpriseTransformation2025Page;
 

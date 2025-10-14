@@ -49,5 +49,6 @@ const AiSpaceTechnologyPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiSpaceTechnologyPage;
 

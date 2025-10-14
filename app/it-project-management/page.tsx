@@ -49,5 +49,6 @@ const ItProjectManagementPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ItProjectManagementPage;
 

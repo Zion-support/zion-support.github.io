@@ -49,5 +49,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiCloudInfrastructurePage;
 

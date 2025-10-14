@@ -49,5 +49,6 @@ const AiContentManagementPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiContentManagementPage;
 

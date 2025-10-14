@@ -49,5 +49,6 @@ const ProjectManagementProPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ProjectManagementProPage;
 

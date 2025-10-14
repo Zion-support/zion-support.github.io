@@ -49,5 +49,6 @@ const AiSpaceMissionOptimizerPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiSpaceMissionOptimizerPage;
 

@@ -49,5 +49,6 @@ const ApiDocsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ApiDocsPage;
 

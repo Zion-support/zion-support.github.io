@@ -49,5 +49,6 @@ const AiTimeSeriesForecastingPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiTimeSeriesForecastingPage;
 

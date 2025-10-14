@@ -49,5 +49,6 @@ const ZionAiWorkflowAutomationPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionAiWorkflowAutomationPage;
 

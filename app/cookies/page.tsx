@@ -49,5 +49,6 @@ const CookiesPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default CookiesPage;
 

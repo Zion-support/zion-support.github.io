@@ -49,5 +49,6 @@ const AiInventoryManagerPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiInventoryManagerPage;
 

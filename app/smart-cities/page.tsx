@@ -49,5 +49,6 @@ const SmartCitiesPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default SmartCitiesPage;
 

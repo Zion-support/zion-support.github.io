@@ -49,5 +49,6 @@ const CustomDevelopmentPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default CustomDevelopmentPage;
 

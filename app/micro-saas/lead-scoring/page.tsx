@@ -49,5 +49,6 @@ const LeadScoringPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default LeadScoringPage;
 

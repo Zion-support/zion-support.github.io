@@ -49,5 +49,6 @@ const QuantumComputingSolutionsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default QuantumComputingSolutionsPage;
 

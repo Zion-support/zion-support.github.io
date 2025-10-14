@@ -49,5 +49,6 @@ const AiDataVisualizationPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiDataVisualizationPage;
 

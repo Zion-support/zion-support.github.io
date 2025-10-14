@@ -49,5 +49,6 @@ const CustomerExperiencePage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default CustomerExperiencePage;
 

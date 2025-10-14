@@ -49,5 +49,6 @@ const SocialMediaManagementSaasPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default SocialMediaManagementSaasPage;
 

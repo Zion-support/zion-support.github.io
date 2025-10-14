@@ -49,5 +49,6 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiHealthcareDiagnosticsPage;
 

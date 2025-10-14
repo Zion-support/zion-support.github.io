@@ -1,7 +1,7 @@
-import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React, { Suspense } from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
 
 const FiveGConsultingPage = () => {
   const services = [
@@ -70,4 +70,5 @@ const FiveGConsultingPage = () => {
   );
 };
 
-export default FiveGConsultingPage;
+import React, { Suspense } from 'react';
+export default FiveGConsultingPage

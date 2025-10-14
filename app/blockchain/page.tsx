@@ -49,5 +49,6 @@ const BlockchainPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default BlockchainPage;
 

@@ -49,5 +49,6 @@ const NetworkSolutionsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default NetworkSolutionsPage;
 

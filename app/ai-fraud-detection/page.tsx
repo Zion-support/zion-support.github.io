@@ -49,5 +49,6 @@ const AiFraudDetectionPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiFraudDetectionPage;
 

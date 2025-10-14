@@ -49,5 +49,6 @@ const CareersPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default CareersPage;
 

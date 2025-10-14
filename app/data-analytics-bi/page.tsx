@@ -49,5 +49,6 @@ const DataAnalyticsBiPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default DataAnalyticsBiPage;
 

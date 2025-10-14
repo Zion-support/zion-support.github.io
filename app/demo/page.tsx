@@ -49,5 +49,6 @@ const DemoPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default DemoPage;
 

@@ -2,8 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Find all TypeScript/JavaScript files in the app directory
-const files = glob.sync('app/**/*.{ts,tsx}', { cwd: process.cwd() });
+// Find all TypeScript/JavaScript files
+const files = glob.sync('**/*.{ts,tsx}', { 
+  cwd: process.cwd(),
+  ignore: ['node_modules/**', 'dist/**', 'build/**']
+});
 
 let fixedFiles = 0;
 
@@ -16,7 +19,7 @@ files.forEach(filePath => {
     const lines = content.split('\n');
     const newLines = [];
     const seenImports = new Set();
-    let inImportBlock = false;
+    let inImportBlock = true;
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
@@ -29,8 +32,6 @@ files.forEach(filePath => {
             modified = true;
             continue; // Skip this duplicate line
           }
-        } else {
-          inImportBlock = true;
         }
         
         // Track React imports
@@ -49,9 +50,25 @@ files.forEach(filePath => {
       }
     }
 
+    // Fix malformed JSX in specific files
+    if (filePath.includes('5g-deployment') || filePath.includes('5g-integration') || 
+        filePath.includes('5g-maintenance') || filePath.includes('5g-migration')) {
+      let newContent = newLines.join('\n');
+      
+      // Fix common syntax errors
+      newContent = newContent.replace(/import React, { Suspense } from 'react';\s*import React, { Suspense } from 'react';/g, 'import React, { Suspense } from \'react\';');
+      newContent = newContent.replace(/import React, { Suspense } from 'react';\s*export default/g, 'export default');
+      newContent = newContent.replace(/import React, { Suspense } from 'react';\s*const/g, 'const');
+      newContent = newContent.replace(/import React, { Suspense } from 'react';\s*return/g, 'return');
+      
+      if (newContent !== content) {
+        modified = true;
+        fs.writeFileSync(filePath, newContent);
+      }
+    }
+
     if (modified) {
-      fs.writeFileSync(filePath, newLines.join('\n'));
-      console.log(`Fixed duplicate imports in: ${filePath}`);
+      console.log(`Fixed issues in: ${filePath}`);
       fixedFiles++;
     }
   } catch (error) {
@@ -59,4 +76,4 @@ files.forEach(filePath => {
   }
 });
 
-console.log(`Fixed ${fixedFiles} files with duplicate imports`);
+console.log(`Fixed ${fixedFiles} files`);

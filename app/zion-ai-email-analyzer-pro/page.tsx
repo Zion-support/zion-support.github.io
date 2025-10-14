@@ -49,5 +49,6 @@ const ZionAiEmailAnalyzerProPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionAiEmailAnalyzerProPage;
 

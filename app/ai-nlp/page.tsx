@@ -49,5 +49,6 @@ const AiNlpPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiNlpPage;
 

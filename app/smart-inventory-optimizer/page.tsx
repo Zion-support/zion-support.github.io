@@ -49,5 +49,6 @@ const SmartInventoryOptimizerPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default SmartInventoryOptimizerPage;
 

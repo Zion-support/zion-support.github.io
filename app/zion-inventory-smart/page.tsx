@@ -49,5 +49,6 @@ const ZionInventorySmartPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionInventorySmartPage;
 

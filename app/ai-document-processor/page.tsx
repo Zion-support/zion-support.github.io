@@ -49,5 +49,6 @@ const AiDocumentProcessorPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiDocumentProcessorPage;
 

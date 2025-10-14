@@ -49,5 +49,6 @@ const DataCenterSolutionsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default DataCenterSolutionsPage;
 

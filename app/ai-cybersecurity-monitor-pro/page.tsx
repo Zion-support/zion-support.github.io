@@ -49,5 +49,6 @@ const AiCybersecurityMonitorProPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiCybersecurityMonitorProPage;
 

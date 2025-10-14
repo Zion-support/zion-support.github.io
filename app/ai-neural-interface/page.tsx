@@ -49,5 +49,6 @@ const AiNeuralInterfacePage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiNeuralInterfacePage;
 

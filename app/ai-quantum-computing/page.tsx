@@ -49,5 +49,6 @@ const AiQuantumComputingPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiQuantumComputingPage;
 

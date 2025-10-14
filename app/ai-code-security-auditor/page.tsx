@@ -49,5 +49,6 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiCodeSecurityAuditorPage;
 

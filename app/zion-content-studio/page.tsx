@@ -49,5 +49,6 @@ const ZionContentStudioPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionContentStudioPage;
 

@@ -49,5 +49,6 @@ const CybersecurityConsultingPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default CybersecurityConsultingPage;
 

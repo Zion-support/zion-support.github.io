@@ -49,5 +49,6 @@ const CloudMigrationServicesPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default CloudMigrationServicesPage;
 

@@ -2,7 +2,8 @@ import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOProps {
-title: string;
+import React, { Suspense } from 'react';
+  title: string;
   description: string;
   keywords?: string;
   canonicalUrl?: string;
@@ -20,7 +21,8 @@ canonicalUrl,
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-{keywords && <meta name="keywords" content={keywords} />}
+import React, { Suspense } from 'react';
+      {keywords && <meta name="keywords" content={keywords} />}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Open Graph */}

@@ -49,5 +49,6 @@ const HelpPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default HelpPage;
 

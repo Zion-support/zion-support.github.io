@@ -49,5 +49,6 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiProjectManagementProPage;
 

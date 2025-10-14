@@ -49,5 +49,6 @@ const ZionLeadMagnetPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionLeadMagnetPage;
 

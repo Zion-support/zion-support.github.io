@@ -49,5 +49,6 @@ const ArVrSolutionsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ArVrSolutionsPage;
 

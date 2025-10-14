@@ -49,5 +49,6 @@ const ZionAiBusinessIntelligenceProPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionAiBusinessIntelligenceProPage;
 

@@ -49,5 +49,6 @@ const LegalDocumentManagerPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default LegalDocumentManagerPage;
 

@@ -49,5 +49,6 @@ const NetworkSecurityPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default NetworkSecurityPage;
 

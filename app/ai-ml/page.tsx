@@ -49,5 +49,6 @@ const AiMlPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiMlPage;
 

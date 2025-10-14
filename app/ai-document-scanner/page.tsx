@@ -49,5 +49,6 @@ const AiDocumentScannerPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiDocumentScannerPage;
 

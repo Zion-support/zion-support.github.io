@@ -49,5 +49,6 @@ const PenetrationTestingPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default PenetrationTestingPage;
 

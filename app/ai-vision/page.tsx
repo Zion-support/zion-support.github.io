@@ -49,5 +49,6 @@ const AiVisionPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiVisionPage;
 

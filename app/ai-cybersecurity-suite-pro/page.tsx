@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Shield } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
+
 const AICybersecuritySuiteProPage: React.FC = () => {
   return (
     <>
@@ -51,4 +52,5 @@ const AICybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
+import React, { Suspense } from 'react';
 export default AICybersecuritySuiteProPage;

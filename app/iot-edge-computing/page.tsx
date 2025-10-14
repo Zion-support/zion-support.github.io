@@ -49,5 +49,6 @@ const IotEdgeComputingPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default IotEdgeComputingPage;
 

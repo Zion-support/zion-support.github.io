@@ -49,5 +49,6 @@ const ContractManagerPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ContractManagerPage;
 

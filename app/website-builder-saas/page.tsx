@@ -49,5 +49,6 @@ const WebsiteBuilderSaasPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default WebsiteBuilderSaasPage;
 

@@ -49,5 +49,6 @@ const ZionChatAiPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionChatAiPage;
 

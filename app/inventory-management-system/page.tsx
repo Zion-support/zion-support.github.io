@@ -49,5 +49,6 @@ const InventoryManagementSystemPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default InventoryManagementSystemPage;
 

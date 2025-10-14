@@ -18,7 +18,8 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true;, error };
   }
 
-componentDidCatch(_error: Error;, _errorInfo: ErrorInfo) {
+import React, { Suspense } from 'react';
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     // Error logged
   }
 

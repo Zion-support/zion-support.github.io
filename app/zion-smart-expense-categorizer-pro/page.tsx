@@ -49,5 +49,6 @@ const ZionSmartExpenseCategorizerProPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionSmartExpenseCategorizerProPage;
 

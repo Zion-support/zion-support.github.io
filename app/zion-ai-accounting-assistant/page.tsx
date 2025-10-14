@@ -49,5 +49,6 @@ const ZionAiAccountingAssistantPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionAiAccountingAssistantPage;
 

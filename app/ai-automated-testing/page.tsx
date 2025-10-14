@@ -49,5 +49,6 @@ const AiAutomatedTestingPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiAutomatedTestingPage;
 

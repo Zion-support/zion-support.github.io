@@ -49,5 +49,6 @@ const AiBusinessIntelligencePage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiBusinessIntelligencePage;
 

@@ -49,5 +49,6 @@ const AiChatbotEnterprisePage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiChatbotEnterprisePage;
 

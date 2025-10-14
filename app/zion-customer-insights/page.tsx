@@ -49,5 +49,6 @@ const ZionCustomerInsightsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionCustomerInsightsPage;
 

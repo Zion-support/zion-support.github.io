@@ -49,5 +49,6 @@ const AiTranslationServicesPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiTranslationServicesPage;
 

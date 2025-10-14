@@ -1,175 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  UserGroupIcon,
-  CogIcon,
-  EyeIcon,
-  ChatBubbleLeftRightIcon,
-  DocumentTextIcon,
-  LightBulbIcon
-} from '@heroicons/react/24/outline';
+import { Brain, Zap } from 'lucide-react';
 
-export default function AISolutionsPage() {
-  const aiServices = [
-    {
-      title: "Machine Learning Models",
-      description: "Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.",
-      icon: CpuChipIcon,
-      features: [
-        "Custom algorithm development",
-        "Real-time model training",
-        "A/B testing framework",
-        "Model performance monitoring",
-        "Automated retraining",
-        "Edge deployment"
-      ],
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $3,500/month",
-      benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],
-      useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],
-      href: "/ai-machine-learning"
-    },
-    {
-      title: "Natural Language Processing",
-      description: "Advanced NLP solutions for text analysis, sentiment analysis, language translation, and conversational AI.",
-      icon: ChatBubbleLeftRightIcon,
-      features: [
-        "Text analysis and processing",
-        "Sentiment analysis",
-        "Language translation",
-        "Conversational AI",
-        "Document summarization",
-        "Intent recognition"
-      ],
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $2,800/month",
-      benefits: ["Multi-language support", "High accuracy", "Real-time processing"],
-      useCases: ["Customer service", "Content analysis", "Language translation"],
-      href: "/ai-nlp"
-    },
-    {
-      title: "Computer Vision",
-      description: "Image and video analysis solutions for object detection, facial recognition, and visual content understanding.",
-      icon: EyeIcon,
-      features: [
-        "Object detection and recognition",
-        "Facial recognition",
-        "Image classification",
-        "Video analysis",
-        "Quality inspection",
-        "Visual search"
-      ],
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $3,200/month",
-      benefits: ["High precision", "Real-time processing", "Custom models"],
-      useCases: ["Security systems", "Quality control", "Medical imaging"],
-      href: "/ai-computer-vision"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Data-driven insights and forecasting solutions to help you make informed business decisions.",
-      icon: ChartBarIcon,
-      features: [
-        "Data forecasting",
-        "Trend analysis",
-        "Risk assessment",
-        "Demand prediction",
-        "Anomaly detection",
-        "Custom dashboards"
-      ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $2,500/month",
-      benefits: ["Accurate predictions", "Real-time insights", "Custom models"],
-      useCases: ["Sales forecasting", "Risk management", "Inventory optimization"],
-      href: "/ai-predictive-analytics"
-    },
-    {
-      title: "AI Chatbots",
-      description: "Intelligent conversational agents that provide 24/7 customer support and automate interactions.",
-      icon: ChatBubbleLeftRightIcon,
-      features: [
-        "Natural conversations",
-        "Multi-channel support",
-        "Custom training",
-        "Integration capabilities",
-        "Analytics and reporting",
-        "Human handoff"
-      ],
-      color: "from-pink-500 to-rose-500",
-      price: "Starting at $1,800/month",
-      benefits: ["24/7 availability", "Instant responses", "Scalable"],
-      useCases: ["Customer support", "Lead generation", "FAQ automation"],
-      href: "/ai-chatbots"
-    },
-    {
-      title: "Content Generation",
-      description: "AI-powered content creation for blogs, social media, marketing materials, and documentation.",
-      icon: DocumentTextIcon,
-      features: [
-        "Blog and article writing",
-        "Social media content",
-        "Marketing copy",
-        "Technical documentation",
-        "Performance analytics",
-        "Brand voice consistency"
-      ],
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $2,200/month",
-      benefits: ["High-quality content", "Brand consistency", "Time savings"],
-      useCases: ["Content marketing", "Social media", "Documentation"],
-      href: "/ai-content-generation"
-    },
-    {
-      title: "Data Analytics",
-      description: "Advanced data analysis and visualization solutions to extract meaningful insights from your data.",
-      icon: ChartBarIcon,
-      features: [
-        "Data processing and cleaning",
-        "Statistical analysis",
-        "Data visualization",
-        "Custom reports",
-        "Real-time dashboards",
-        "Data integration"
-      ],
-      color: "from-teal-500 to-cyan-500",
-      price: "Starting at $2,000/month",
-      benefits: ["Comprehensive insights", "Real-time data", "Custom reports"],
-      useCases: ["Business intelligence", "Performance tracking", "Data-driven decisions"],
-      href: "/ai-data-analytics"
-    },
-    {
-      title: "Process Automation",
-      description: "Intelligent automation solutions to streamline workflows and reduce manual tasks.",
-      icon: CogIcon,
-      features: [
-        "Workflow automation",
-        "Document processing",
-        "Data entry automation",
-        "Quality control",
-        "Scalable architecture",
-        "Integration capabilities"
-      ],
-      color: "from-yellow-500 to-orange-500",
-      price: "Starting at $2,600/month",
-      benefits: ["Efficiency gains", "Cost reduction", "Error reduction"],
-      useCases: ["Document processing", "Workflow optimization", "Quality control"],
-      href: "/ai-process-automation"
-    }
-  ];
-
+const AiSolutionsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
 >>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
@@ -211,8 +44,10 @@ export default function AISolutionsPage() {
       </div>
     </>
   );
+import React, { Suspense } from 'react';
 };
 
+import React, { Suspense } from 'react';
 export default AiSolutionsPage;
 =======
 

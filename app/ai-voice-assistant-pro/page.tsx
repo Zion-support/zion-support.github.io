@@ -49,5 +49,6 @@ const AiVoiceAssistantProPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiVoiceAssistantProPage;
 

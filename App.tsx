@@ -60,57 +60,51 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 }
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    // Performance monitoring
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('CLS:', metric);
+          }
+        });
+        onFCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('FCP:', metric);
+          }
+        });
+        onLCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('LCP:', metric);
+          }
+        });
+        onTTFB((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('TTFB:', metric);
+          }
+        });
+      });
 
-    return () => clearTimeout(timer);
-=======
-import React, { Suspense } from 'react';
-// Performance monitoring
-if (typeof window !== 'undefined') {
-  // Monitor Core Web Vitals
-  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-    onCLS((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('CLS:', metric);
-      }
-    });
-    onFCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('FCP:', metric);
-      }
-    });
-    onLCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('LCP:', metric);
-      }
-    });
-    onTTFB((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('TTFB:', metric);
-      }
-    });
-  });
-
-  // Monitor bundle size
-  const observer = new PerformanceObserver((list) => {
-    for (const entry of list.getEntries()) {
-      if (entry.entryType === 'navigation') {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+      // Monitor bundle size
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            if (process.env.NODE_ENV === 'development') {
+              console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+            }
+          }
         }
-      }
-    }
+      });
 
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-import React, { Suspense } from 'react';
-      console.warn('Zion Tech Group App initialized');
+      observer.observe({ entryTypes: ['navigation'] });
+
+      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+        console.warn('Zion Tech Group App initialized');
+      }
     }
 >>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
   }, []);
@@ -123,7 +117,7 @@ import React, { Suspense } from 'react';
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="App">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />

@@ -49,5 +49,6 @@ const TermsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default TermsPage;
 

@@ -49,5 +49,6 @@ const ZionAiInventoryManagerPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionAiInventoryManagerPage;
 

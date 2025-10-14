@@ -49,5 +49,6 @@ const ZionAiEmailAssistantPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionAiEmailAssistantPage;
 

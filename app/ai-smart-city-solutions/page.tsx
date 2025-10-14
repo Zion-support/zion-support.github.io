@@ -49,5 +49,6 @@ const AiSmartCitySolutionsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiSmartCitySolutionsPage;
 
