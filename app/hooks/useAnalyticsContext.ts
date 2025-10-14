@@ -1,3 +1,3 @@
-import { useAnalyticsContext as useAnalyticsHook } from '../contexts/AnalyticsContext';
+import { useAnalytics } from '../contexts/AnalyticsContext';
 
-export const useAnalytics = useAnalyticsHook;
+export { useAnalytics };

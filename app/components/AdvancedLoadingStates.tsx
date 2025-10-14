@@ -1,10 +1,18 @@
 import React from "react";
 
-const AdvancedLoadingStates = () => {
+interface AdvancedLoadingStatesProps {
+  type?: string;
+  fullScreen?: boolean;
+  message?: string;
+}
+
+const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ type, fullScreen, message }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AdvancedLoadingStates</h2>
-      <p>This component is under construction.</p>
+    <div className={`${fullScreen ? 'fixed inset-0' : ''} flex items-center justify-center bg-slate-900 text-white`}>
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+        <p>{message || 'Loading...'}</p>
+      </div>
     </div>
   );
 };

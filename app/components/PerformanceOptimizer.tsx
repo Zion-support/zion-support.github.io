@@ -1,12 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const PerformanceOptimizer = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">PerformanceOptimizer</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
+interface PerformanceOptimizerProps {
+  children: ReactNode;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default PerformanceOptimizer;

@@ -1,4 +1,10 @@
-import React from 'react';'// testRunner - Basic implementation'export default function testRunner() {;
-  return null;
+import React from 'react';
+
+export default function TestRunner() {
+  return (
+    <div>
+      <h1>TestRunner</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 }
-;

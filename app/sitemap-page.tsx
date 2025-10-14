@@ -1,5 +1,10 @@
-// sitemap-page - Basic implementation;
-export default function sitemapPage() {;
-  return null;
+import React from 'react';
+
+export default function SitemapPage() {
+  return (
+    <div>
+      <h1>SitemapPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 }
-f7f852c0f7415181a1b362c4aa5a784585ad5828;

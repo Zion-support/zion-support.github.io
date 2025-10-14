@@ -1,12 +1,8 @@
-declare module '*.svg' {;
-  const content: "stringexportdefaultcontent"}";
-declare module '*.png' {;
-  const content: "stringexportdefaultcontent"}";
-declare module '*.jpg' {;
-  const content: "stringexportdefaultcontent"}";
-declare module '*.jpeg' {;
-  const content: "stringexportdefaultcontent"}";
-declare module '*.gif' {;
-  const content: "stringexportdefaultcontent"}";
-declare module '*.webp' {;
-  const content: "stringexportdefaultcontent"}";
+// Type definitions for app/types/next.d.ts
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+export {};

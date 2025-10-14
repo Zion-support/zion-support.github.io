@@ -1,5 +1,12 @@
-// ITServicesPage - Basic implementation;
-export default function ITServicesPage() {;
-  return null;
+"use client";
+
+import React from "react";
+
+export default function ITServicesPage() {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">ITServicesPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
+  );
 }
-f7f852c0f7415181a1b362c4aa5a784585ad5828;

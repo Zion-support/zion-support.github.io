@@ -1,5 +1,10 @@
-// global-error - Basic implementation;
-export default function globalError() {;
-  return null;
+import React from 'react';
+
+export default function GlobalError() {
+  return (
+    <div>
+      <h1>GlobalError</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 }
-f7f852c0f7415181a1b362c4aa5a784585ad5828;
