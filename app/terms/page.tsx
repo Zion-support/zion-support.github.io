@@ -1,4 +1,8 @@
-import React from "react";import { Helmet } from "react-helmet-async";const TermsPage = () => {'  return ('    <div>
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+export default function TermsPage() {
+  return (
+    <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group terms of service and legal information." /></Helmet>"      "      <div>

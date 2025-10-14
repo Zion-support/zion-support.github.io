@@ -1,4 +1,8 @@
-import React from "react";import { Helmet } from "react-helmet-async";const PrivacyPage = () => {'  return ('    <div>
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+export default function PrivacyPage() {
+  return (
+    <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group privacy policy and data protection information." /></Helmet>"      "      <div>

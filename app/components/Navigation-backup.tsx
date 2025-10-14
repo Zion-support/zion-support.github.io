@@ -1,14 +1,22 @@
-"use client;import React from react;export default function Navigation-backup() {
-  return (
-    <div>Page content</div>
-  );
+'use client';
+import React from 'react';
 
-    <div>Page content</div>
+export default function NavigationBackup() {
+  return (
+    <div className="bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center">
+            <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
+          </div>
+          <nav className="hidden md:flex space-x-8">
+            <a href="/" className="text-gray-700 hover:text-gray-900">Home</a>
+            <a href="/services" className="text-gray-700 hover:text-gray-900">Services</a>
+            <a href="/about" className="text-gray-700 hover:text-gray-900">About</a>
+            <a href="/contact" className="text-gray-700 hover:text-gray-900">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </div>
   );
-    <div>
-      </div>
-      <div>
-      </div>
-        <h1 className: ""text-4xl font-bold mb-8">Components</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.</p></div>
-  )</p></div></div>
-  )}
+}
