@@ -6,7 +6,7 @@ interface FuturisticButtonProps {}
   size?: 'sm' | 'md' | 'lg'''''
   icon?: React.ReactNode
   onClick?: () => void
-  type?: 'button' | 'submit' | 'reset'}'''';
+  type?: 'button' | 'submit' | 'reset'}''''
 const FuturisticButton: "React.FC<FuturisticButtonProps> = ({"}""
   children,
   className = '','''''
@@ -14,8 +14,8 @@ const FuturisticButton: "React.FC<FuturisticButtonProps> = ({"}""
   size = 'md','''''
   icon,
   onClick,)
-  type = 'button''}) => {'}''';
-const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2''''';
+  type = 'button''}) => {'}'''
+const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2'''''
 const variantClasses = {}
     primary: 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 focus:ring-blue-500','''''
     secondary: 'bg-white/10 text-white border border-white/20 hover:bg-white/20 focus:ring-white/50','''''

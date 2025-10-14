@@ -6,6 +6,5 @@
         {spinner}
       </div>
     )
-  return spinner;
-
-};
+  return spinner
+}

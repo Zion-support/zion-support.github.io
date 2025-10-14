@@ -1,6 +1,6 @@
-import React from 'react'''';
-import { Helmet } from 'react-helmet-async'''';
-import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react''';
+import React from 'react''''
+import { Helmet } from 'react-helmet-async''''
+import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react'''
 const ITServicesPage: React.FC = () => {}
   const services = [{}
       icon: "Server",""
@@ -38,15 +38,15 @@ const ITServicesPage: React.FC = () => {}
       description: 'Organize, secure, and optimize your data infrastructure for better insights and compliance.',''''
       features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']''''
     }
-  ];
+  ]
 const ITServicesPage: React.FC = () => {}
-  return ("
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>"""
       <Helmet></Helmet>
-        <title>IT Services | Zion Tech Group</title>"
+        <title>IT Services | Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including infrastructure management, cloud solutions, cybersecurity, and technical support." />""""
         <meta name="keywords" content="IT services, infrastructure, cloud computing, cybersecurity, technical support, system integration" />"""
-      </Helmet>"
+      </Helmet>
       <div className="container mx-auto px-4 py-16"></div>"""
         {/* Hero Section */}"
         <div className="text-center mb-16"></div>""""
@@ -62,8 +62,8 @@ const ITServicesPage: React.FC = () => {}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>""")
           {services.map((service, _index) => {}
             const Icon = service.icon
-            return ("
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>""""
+            return (
+    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>""""
                 <div className="flex items-center mb-4"></div>""""
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg mr-4"></div>""""
                     <Icon className="w-6 h-6 text-white" />"""

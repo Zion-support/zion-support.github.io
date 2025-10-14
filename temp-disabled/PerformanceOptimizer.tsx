@@ -1,10 +1,10 @@
-import React from 'react''''';
+import React from 'react'''''
 import { useEffect, Node } from 'react''''
 interface PerformanceOptimizerProps {}
-  children: "Node"}"""";
+  children: "Node"}""""
 const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {}"""
   useEffect(() => {}, [])
-    // Performance optimization code''''';
+    // Performance optimization code'''''
 const optimizeImages = () => {}
       const images = document.querySelectorAll('img')''''
       images.forEach((img) => {}
@@ -14,7 +14,7 @@ const optimizeImages = () => {}
       })
     }
     const optimizeFonts = () => {}
-      // Preload critical fonts;
+      // Preload critical fonts
 const link = document.createElement('link')''''
       link.rel = 'preload'''''
       link.href = '/fonts/inter.woff2'''''
@@ -24,7 +24,7 @@ const link = document.createElement('link')''''
       document.head.appendChild(link)
     }
     const optimizeResources = () => {}
-      // Preload critical resources;
+      // Preload critical resources
 const criticalResources = ['/css/critical.css','''''
         '/js/critical.js''''''
       ]

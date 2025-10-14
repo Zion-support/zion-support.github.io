@@ -1,17 +1,13 @@
 if (to) {
     return (
-      <Link to={to} className={classes}>
+      <Link to={to} className="{classes}">
         {children}
       </Link>
 )
-    )
   return (
     <button
       onClick={onClick}
-      className={classes}
+      className="{classes};"
     >
       {children}
-    </button>)
-  )
-
-}
+    </button>)}

@@ -1,49 +1,49 @@
-'use client';
+'use client'
 import React from 'react'
 /**
  * Enhanced Error Monitoring System for Zion Tech Group Website
  * Provides comprehensive error tracking, reporting, and recovery
  */
 interface ErrorContext {
-  userId?: string;
-  sessionId: string;
-  url: string;
-  userAgent: string;
-  timestamp: string;
-  component?: string;
-  action?: string;
-  metadata?: Record<string, unknown>;
-  filename?: string;
-  lineno?: number;
-  colno?: number;
-  reason?: any;
-  resource?: string;
-  status?: number;
-  statusText?: string;
-  category?: string;
-  duration?: number;
-  startTime?: number;
-  memoryUsage?: number;
+  userId?: string
+  sessionId: string
+  url: string
+  userAgent: string
+  timestamp: string
+  component?: string
+  action?: string
+  metadata?: Record<string, unknown>
+  filename?: string
+  lineno?: number
+  colno?: number
+  reason?: any
+  resource?: string
+  status?: number
+  statusText?: string
+  category?: string
+  duration?: number
+  startTime?: number
+  memoryUsage?: number
 }
 interface ErrorReport {
-  id: string;
-  message: string;
-  stack?: string;
-  context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';
-  resolved: boolean;
-  occurrences: number;
-  firstSeen: string;
-  lastSeen: string;
+  id: string
+  message: string
+  stack?: string
+  context: ErrorContext
+  severity: 'low' | 'medium' | 'high' | 'critical'
+  category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom'
+  resolved: boolean
+  occurrences: number
+  firstSeen: string
+  lastSeen: string
 }
 class EnhancedErrorMonitoring {
-  private static instance: EnhancedErrorMonitoring;
-  private errorQueue: ErrorReport[] = [];
-  private maxQueueSize = 1000;
-  private sessionId: string;
-  private userId?: string;
-  private isOnline = true;
+  private static instance: EnhancedErrorMonitoring
+  private errorQueue: ErrorReport[] = []
+  private maxQueueSize = 1000
+  private sessionId: string
+  private userId?: string
+  private isOnline = true
   private constructor() {
     this.sessionId = this.generateSessionId()
     this.initializeMonitoring()
@@ -67,14 +67,14 @@ class EnhancedErrorMonitoring {
         lineno: event.lineno,
         colno: event.colno,
         category: 'javascript'
-      });
+      })
     })
     // Unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       this.handleError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
         reason: event.reason,
         category: 'promise'
-      });
+      })
     })
     // Resource loading errors
     window.addEventListener('error', (event) => {
@@ -103,7 +103,7 @@ class EnhancedErrorMonitoring {
             status: response.status,
             statusText: response.statusText,
             category: 'network'
-          });
+          })
         }
         return response
       } catch (error) {
@@ -136,7 +136,7 @@ class EnhancedErrorMonitoring {
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'memory') {
-            const memoryInfo = (entry as any).memory;
+            const memoryInfo = (entry as any).memory
             if (memoryInfo && memoryInfo.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
               this.handleError(new Error(`High memory usage detected: ${memoryInfo.usedJSHeapSize / 1024 / 1024}MB`), {
                 memoryUsage: memoryInfo.usedJSHeapSize,

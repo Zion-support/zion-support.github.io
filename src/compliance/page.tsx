@@ -1,17 +1,17 @@
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
-const CompliancePage: React.FC = () => {;
+'use client'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react'
+const CompliancePage: React.FC = () => {
 const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
-  ];
+  ]
 const complianceFrameworks = [
     {
       name: 'SOC 2 Type II',
@@ -52,7 +52,7 @@ const complianceFrameworks = [
         'Breach notification procedures'
       ]
     }
-  ];
+  ]
 const complianceAreas = [
     {
       title: 'Data Protection',
@@ -78,7 +78,7 @@ const complianceAreas = [
       icon: Users,
       frameworks: ['HIPAA', 'HITECH', 'FDA']
     }
-  ];
+  ]
 const auditSchedule = [
     {
       quarter: 'Q1 2024',
@@ -116,8 +116,10 @@ const auditSchedule = [
         
         {/* Header */}"
         <section className="bg-white shadow-sm border-b">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"></div>"
-            <div className="flex items-center"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      
+            
+      <div className="flex items-center"></div>
               <Link "
                 to="/privacy" "
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
@@ -127,8 +129,8 @@ const auditSchedule = [
               </Link>
             </div>
             <div></div>"
-              <h1 className="text-3xl font-bold text-gray-900">Compliance</h1>"
-              <p className="text-gray-600 mt-1">
+              <h1 className="text-4xl font-bold text-white mb-8">Compliance</h1>
+          <p className="text-gray-600 mt-1">
                 Our commitment to regulatory compliance and industry standards
               </p>
             </div>
@@ -137,8 +139,10 @@ const auditSchedule = [
 
         {/* Hero Section */}"
         <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
-            <div className="text-center"></div>"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+            
+      <div className="text-center"></div>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Compliance Excellence
               </h2>"
@@ -165,8 +169,10 @@ const auditSchedule = [
 
         {/* Compliance Frameworks */}"
         <section className="py-16 bg-white">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
-            <div className="text-center mb-12"></div>"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+            
+      <div className="text-center mb-12"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Compliance Frameworks
               </h2>"
@@ -176,8 +182,8 @@ const auditSchedule = [
             </div>"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>)
               {complianceFrameworks.map((framework, index) => ("
-                <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-8"></div>"
-                  <div className="flex items-center mb-6"></div>"
+                <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-8">
+        <div className="flex items-center mb-6"></div>"
                     <framework.icon className="w-8 h-8 text-blue-600 mr-4" />
                     <div></div>"
                       <h3 className="text-2xl font-semibold text-gray-900">{framework.name}</h3>"
@@ -210,8 +216,10 @@ const auditSchedule = [
 
         {/* Compliance Areas */}"
         <section className="py-16 bg-gray-50">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
-            <div className="text-center mb-12"></div>"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+            
+      <div className="text-center mb-12"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Compliance Areas
               </h2>"
@@ -221,9 +229,11 @@ const auditSchedule = [
             </div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {complianceAreas.map((area, index) => ("
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6"></div>"
-                  <div className="text-center"></div>"
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+        <div className="text-center">
+      
+                    
+      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                       <area.icon className="w-8 h-8 text-blue-600" />
                     </div>"
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{area.title}</h3>"
@@ -244,8 +254,10 @@ const auditSchedule = [
 
         {/* Audit Schedule */}"
         <section className="py-16 bg-white">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
-            <div className="text-center mb-12"></div>"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+            
+      <div className="text-center mb-12"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Audit Schedule
               </h2>"
@@ -255,8 +267,8 @@ const auditSchedule = [
             </div>"
             <div className="space-y-6"></div>
               {auditSchedule.map((quarter, index) => ("
-                <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-6"></div>"
-                  <div className="flex items-center justify-between mb-4"></div>"
+                <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-6">
+        <div className="flex items-center justify-between mb-4"></div>"
                     <h3 className="text-xl font-semibold text-gray-900">{quarter.quarter}</h3>
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
                       quarter.status === 'Completed' 
@@ -282,8 +294,10 @@ const auditSchedule = [
 
         {/* Compliance Reports */}"
         <section className="py-16 bg-gray-50">"
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
-            <div className="text-center mb-12"></div>"
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+            
+      <div className="text-center mb-12"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Compliance Reports
               </h2>"
@@ -291,9 +305,11 @@ const auditSchedule = [
                 Access our latest compliance reports and certifications
               </p>
             </div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>"
-              <div className="bg-white rounded-lg shadow-lg p-6"></div>"
-                <div className="flex items-center mb-4"></div>"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+              
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="flex items-center mb-4"></div>"
                   <Award className="w-8 h-8 text-blue-600 mr-3" />"
                   <h3 className="text-xl font-semibold text-gray-900">SOC 2 Report</h3>
                 </div>"
@@ -304,8 +320,10 @@ const auditSchedule = [
                   Download Report
                 </button>
               </div>"
-              <div className="bg-white rounded-lg shadow-lg p-6"></div>"
-                <div className="flex items-center mb-4"></div>"
+              <div className="bg-white rounded-lg shadow-lg p-6">
+      
+                
+      <div className="flex items-center mb-4"></div>"
                   <FileText className="w-8 h-8 text-green-600 mr-3" />"
                   <h3 className="text-xl font-semibold text-gray-900">ISO 27001 Certificate</h3>
                 </div>"
@@ -343,5 +361,5 @@ const auditSchedule = [
     </>
   )
 }
-;
+
 export default CompliancePage"

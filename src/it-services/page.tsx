@@ -1,10 +1,9 @@
-'use client';
-import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const ITServicesPage: React.FC = () => {;
+'use client'
+import React from 'react'
+import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+const ITServicesPage: React.FC = () => {
 const itServices = [
     // Infrastructure & Cloud Services
     {
@@ -221,8 +220,7 @@ const itServices = [
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
-;
+  ]
 const categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
@@ -236,8 +234,7 @@ const categories = [
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-  ];
-;
+  ]
 const additionalServices = [
     {
       icon: Users,
@@ -275,8 +272,7 @@ const additionalServices = [
       description: 'Firewall configuration and network security implementation.',
       price: 'Starting at $399/month'
     }
-  ];
-;
+  ]
 const benefits = [
     {
       icon: Star,
@@ -298,8 +294,7 @@ const benefits = [
       title: 'Certified Professionals',
       description: 'Microsoft, AWS, and Google certified engineers'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -337,8 +332,8 @@ const benefits = [
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {itServices.map((service, index) => ("
-              <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300"></div>"
-                <div className="text-cyan-400 mb-4"></div>")
+              <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
+        <div className="text-cyan-400 mb-4"></div>")
                   {React.createElement(service.icon, { className: "w-8 h-8" })}
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>"
@@ -365,8 +360,10 @@ const benefits = [
                     ))}
                   </ul>
                 </div>"
-                <div className="mb-4"></div>"
-                  <div className="text-2xl font-bold text-cyan-400 mb-2"></div>{service.price}</div>
+                <div className="mb-4">
+      
+                  
+      <div className="text-2xl font-bold text-cyan-400 mb-2"></div>{service.price}</div>
                 </div>"
                 <div className="mb-4"></div>"
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>"
@@ -387,8 +384,10 @@ const benefits = [
                     </li>)
                   ))}
                 </ul>"
-                <div className="text-center"></div>"
-                  <div className="text-lg font-bold text-cyan-400 mb-2"></div>{service.price}</div>
+                <div className="text-center">
+      
+                  
+      <div className="text-lg font-bold text-cyan-400 mb-2"></div>{service.price}</div>
                   <a"
                     href="/contact""
                     className="inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity"
@@ -406,8 +405,8 @@ const benefits = [
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {additionalServices.map((service, index) => ("
-              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300"></div>"
-                <div className="flex items-center mb-3"></div>"
+              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
+        <div className="flex items-center mb-3"></div>"
                   <service.icon className="w-6 h-6 text-cyan-400 mr-3" />"
                   <h3 className="text-lg font-bold text-white">{service.title}</h3>
                 </div>"
@@ -421,8 +420,10 @@ const benefits = [
         {/* Support Tiers */}"
         <section className="mb-16">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>"
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+            
+      <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Basic Support</h3>"
               <div className="text-3xl font-bold text-cyan-400 mb-4"></div>$199/month</div>"
               <ul className="space-y-2 mb-6">"
@@ -532,7 +533,6 @@ const benefits = [
 
       <Footer />
     </div>
-  );
-};
-;
-export default ITServicesPage;"
+  )
+}
+export default ITServicesPage

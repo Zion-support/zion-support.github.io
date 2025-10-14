@@ -4,6 +4,5 @@ export const ANALYTICS_EVENTS = {
   CLICK: 'click',
   SCROLL: 'scroll',
   FORM_SUBMIT: 'form_submit',
-} as const;
-
-export const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID';
+} as const
+export const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID'

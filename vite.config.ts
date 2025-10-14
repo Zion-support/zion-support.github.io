@@ -1,7 +1,6 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
-
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
+import { resolve } from "path"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -120,17 +119,17 @@ export default defineConfig({
           }
           // AI service pages - split into smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/ai-')[1]?.split('/')[0];
+            const serviceName = id.split('/ai-')[1]?.split('/')[0]
             return `ai-${serviceName || 'services'}`
           }
           // Zion service pages
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
+            const serviceName = id.split('/zion-')[1]?.split('/')[0]
             return `zion-${serviceName || 'services'}`
           }
           // 5G service pages
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/5g-')[1]?.split('/')[0];
+            const serviceName = id.split('/5g-')[1]?.split('/')[0]
             return `5g-${serviceName || 'services'}`
           }
           // Other service pages
@@ -178,4 +177,4 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
-});
+})

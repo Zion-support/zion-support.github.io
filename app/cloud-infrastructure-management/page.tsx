@@ -1,31 +1,31 @@
 
-import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3,  } from "lucide-react";
-import Layout from "../layout";
-
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight, CheckCircle } from 'lucide-react';
-import Layout from '../layout';
-import { Helmet } from "react-helmet-async";
-;
+import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3,    } from "lucide-react"
+import Layout from ../layout
+import { Link } from 'react-router-dom'
+import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight, CheckCircle } from 'lucide-react'
+import Layout from '../layout'
+import { Helmet } from "react-helmet-async"
 const HomePage = () => {
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title>Home - Zion Tech Group</title>"
-        <meta name="description" content="Home - Zion Tech Group" />
-      </Helmet>"
-      <div className="container mx-auto px-4 py-16"></div>"
-        <div className="text-center"></div>"
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>"
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home" - Zion Tech Group />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+      
+        
+      <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
           <p className="text-gray-300 text-lg">
+            
             This page is under construction. Please check back later.
+          
           </p>
-        </div>
-      </div>
-    </div>)
-  );
-};
-
+        </div>"
+      </div>"
+    </div>
+  )}
   const managementFeatures = [
     {
       category: 'Infrastructure Management',
@@ -43,8 +43,7 @@ const HomePage = () => {
       category: 'Support & Maintenance',
       items: ['24/7 Support', 'Proactive Monitoring', 'Incident Response', 'Performance Tuning', 'Capacity Planning', 'Health Checks']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -91,14 +90,4 @@ const HomePage = () => {
       ],
       popular: false
     }
-  ];
-
-<<<<<<< HEAD
-  const enterpriseFeatures = [
-    'Unlimited servers',
-        'Custom monitoring',
-        'Dedicated support',
-        'White-label options',
-        'Real-time reports',
-        'Custom integrations'
->>>>>>> origin/main
+  ]

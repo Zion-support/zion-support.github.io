@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import SEOHead from '../components/SEOHead'
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -12,12 +12,12 @@ import {
   RocketLaunchIcon,
   SparklesIcon,
   BoltIcon
-} from '@heroicons/react/24/outline";";
-import FuturisticBackground from '../components/FuturisticBackground";";
-import NeonButton from '../components/NeonButton";";
-import AnimatedCard from '../components/AnimatedCard";";
-import { services } from '../data/servicesData";
-export default function HomePage() {;
+} from '@heroicons/react/24/outline"
+import FuturisticBackground from '../components/FuturisticBackground"
+import NeonButton from '../components/NeonButton"
+import AnimatedCard from '../components/AnimatedCard"
+import { services } from '../data/servicesData"
+export default function HomePage() {
 const structuredData = {"
     "@context": "https://schema.org",""
     "@type": "WebSite",""
@@ -54,8 +54,7 @@ const structuredData = {"
       description: 'Complete digital transformation services to modernize your business processes.','
       href: '/digital-transformation''
     }
-  ];
-
+  ]
   return (
     <>
       <SEOHead "
@@ -72,10 +71,10 @@ const structuredData = {"
         <div className="relative z-10"></div>""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>""
             <div className="text-center"></div>""
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">"
+              <h1 className="text-4xl font-bold text-white mb-8">"
                 Transform Your Business with AI
-              </h1>"
-              <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">"
+              </h1>
+          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">"
                 Leading provider of advanced AI solutions, cybersecurity, and digital transformation services
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>""

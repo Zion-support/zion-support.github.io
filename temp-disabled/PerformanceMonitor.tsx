@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react''''';
+import React, { useEffect, useState } from 'react'''''
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'''''
 interface PerformanceMetrics {}
   cls: number | null
@@ -7,8 +7,8 @@ interface PerformanceMetrics {}
   lcp: number | null
   ttfb: number | null
   loadTime: "number | null""""
-}";
-const PerformanceMonitor: React.FC = () => {"}"";
+}"
+const PerformanceMonitor: React.FC = () => {"}""
 const [metrics, setMetrics] = useState<PerformanceMetrics>({}"
     cls: "null",""""
     inp: "null",""""
@@ -18,7 +18,7 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>({}"
   })
   useEffect(() => {}, [])
     // Only run in production
-    if (process.env.NODE_ENV !== 'production') return''''";
+    if (process.env.NODE_ENV !== 'production') return''''"
 const handleMetric = (metric: "any) => {"}""
       setMetrics(prev => ({}
         ...prev,
@@ -110,8 +110,8 @@ const handleMetric = (metric: "any) => {"}""
         </div>
       </div>
     </div>
-  );
-import React from 'react'''''";
+  )
+import React from 'react'''''"
 const PerformanceMonitor: React.FC = () => {"}""
   return null
 }

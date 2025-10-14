@@ -1,6 +1,6 @@
-import React from 'react'''';
-import { Helmet } from 'react-helmet-async'''';
-import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react''';
+import React from 'react''''
+import { Helmet } from 'react-helmet-async''''
+import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react'''
 const DigitalTransformationPage: React.FC = () => {}
   const services = [{}
       icon: "RefreshCw",""
@@ -38,15 +38,15 @@ const DigitalTransformationPage: React.FC = () => {}
       description: 'Assess and improve your organization\'s digital maturity across all business functions.',''''
       features: ['Maturity Assessment', 'Gap Analysis', 'Improvement Plans', 'Progress Tracking']''''
     }
-  ];
+  ]
 const DigitalTransformationPage: React.FC = () => {}
-  return ("
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>"""
       <Helmet></Helmet>
-        <title>Digital Transformation | Zion Tech Group</title>"
+        <title>Digital Transformation | Zion Tech Group</title>
         <meta name="description" content="Comprehensive digital transformation services to modernize your business processes and technology infrastructure." />""""
         <meta name="keywords" content="digital transformation, process automation, change management, digital strategy, innovation" />"""
-      </Helmet>"
+      </Helmet>
       <div className="container mx-auto px-4 py-16"></div>"""
         {/* Hero Section */}"
         <div className="text-center mb-16"></div>""""
@@ -62,8 +62,8 @@ const DigitalTransformationPage: React.FC = () => {}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>""")
           {services.map((service, _index) => {}
             const Icon = service.icon
-            return ("
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>""""
+            return (
+    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>""""
                 <div className="flex items-center mb-4"></div>""""
                   <div className="p-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg mr-4"></div>""""
                     <Icon className="w-6 h-6 text-white" />"""

@@ -1,6 +1,6 @@
-import React from 'react'''';
-import { Helmet } from 'react-helmet-async'''';
-import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react''';
+import React from 'react''''
+import { Helmet } from 'react-helmet-async''''
+import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react'''
 const CloudInfrastructurePage: React.FC = () => {}
   const services = [{}
       icon: "Cloud",""
@@ -38,15 +38,15 @@ const CloudInfrastructurePage: React.FC = () => {}
       description: 'Leverage multiple cloud providers for better resilience and vendor independence.',''''
       features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']''''
     }
-  ];
+  ]
 const CloudInfrastructurePage: React.FC = () => {}
-  return ("
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900"></div>"""
       <Helmet></Helmet>
-        <title>Cloud Infrastructure | Zion Tech Group</title>"
+        <title>Cloud Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />""""
         <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />"""
-      </Helmet>"
+      </Helmet>
       <div className="container mx-auto px-4 py-16"></div>"""
         {/* Hero Section */}"
         <div className="text-center mb-16"></div>""""
@@ -62,8 +62,8 @@ const CloudInfrastructurePage: React.FC = () => {}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>""")
           {services.map((service, _index) => {}
             const Icon = service.icon
-            return ("
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>""""
+            return (
+    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>""""
                 <div className="flex items-center mb-4"></div>""""
                   <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mr-4"></div>""""
                     <Icon className="w-6 h-6 text-white" />"""

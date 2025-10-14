@@ -1,72 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, Check } from 'lucide-react';
-;
-const Navigation: React.FC = () => {;
-const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isAIOpen, setIsAIOpen] = useState(false);
-  const [isITOpen, setIsITOpen] = useState(false);
-  const [isSpecializedOpen, setIsSpecializedOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {;
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, Check } from 'lucide-react'
+const Navigation: React.FC = () => {
+const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isAIOpen, setIsAIOpen] = useState(false)
+  const [isITOpen, setIsITOpen] = useState(false)
+  const [isSpecializedOpen, setIsSpecializedOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  useEffect(() => {
 const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-;
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 const closeAllMenus = () => {
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-    setIsAIOpen(false);
-    setIsITOpen(false);
-    setIsSpecializedOpen(false);
-  };
-;
+    setIsMenuOpen(false)
+    setIsServicesOpen(false)
+    setIsAIOpen(false)
+    setIsITOpen(false)
+    setIsSpecializedOpen(false)
+  }
 const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen)
     if (isMenuOpen) {
-      closeAllMenus();
+      closeAllMenus()
     }
-  };
-;
+  }
 const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
+    setIsServicesOpen(!isServicesOpen)
     if (isServicesOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
+      setIsAIOpen(false)
+      setIsITOpen(false)
+      setIsSpecializedOpen(false)
     }
-  };
-;
+  }
 const toggleAI = () => {
-    setIsAIOpen(!isAIOpen);
+    setIsAIOpen(!isAIOpen)
     if (isAIOpen) {
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
+      setIsITOpen(false)
+      setIsSpecializedOpen(false)
     }
-  };
-;
+  }
 const toggleIT = () => {
-    setIsITOpen(!isITOpen);
+    setIsITOpen(!isITOpen)
     if (isITOpen) {
-      setIsAIOpen(false);
-      setIsSpecializedOpen(false);
+      setIsAIOpen(false)
+      setIsSpecializedOpen(false)
     }
-  };
-;
+  }
 const toggleSpecialized = () => {
-    setIsSpecializedOpen(!isSpecializedOpen);
+    setIsSpecializedOpen(!isSpecializedOpen)
     if (isSpecializedOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
+      setIsAIOpen(false)
+      setIsITOpen(false)
     }
-  };
-;
+  }
 const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText },
@@ -99,8 +89,7 @@ const microSAASServices = [
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
     { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
-  ];
-;
+  ]
 const aiServices = [
     { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
     { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
@@ -125,8 +114,7 @@ const aiServices = [
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
-  ];
-;
+  ]
 const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
     { name: 'Enterprise Security Solutions', href: '/enterprise-security', icon: Shield },
@@ -150,8 +138,7 @@ const itServices = [
     { name: 'Developer Tools', href: '/developer-tools', icon: Code },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
     { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
-  ];
-;
+  ]
 const specializedServices = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
@@ -165,14 +152,15 @@ const specializedServices = [
     { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
     { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
-  ];
-
+  ]
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4"></div>"
-        <div className="flex items-center justify-between h-16"></div>
+      <div className="container mx-auto px-4">
+      
+        
+      <div className="flex items-center justify-between h-16"></div>
           {/* Logo */}"
           <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>"
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"></div>"
@@ -182,8 +170,10 @@ const specializedServices = [
           </a>
 
           {/* Desktop Navigation */}"
-          <div className="hidden lg:flex items-center space-x-8"></div>"
-            <div className="relative group"></div>
+          <div className="hidden lg:flex items-center space-x-8">
+      
+            
+      <div className="relative group"></div>
               <button
                 onClick={toggleServices}"
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
@@ -193,8 +183,10 @@ const specializedServices = [
               </button>
               
               {isServicesOpen && ("
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6"></div>"
-                  <div className="grid grid-cols-3 gap-6"></div>
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+      
+                  
+      <div className="grid grid-cols-3 gap-6"></div>
                     <div></div>"
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">"
                         <Zap className="w-4 h-4 mr-2" />
@@ -251,8 +243,10 @@ const specializedServices = [
                       </div>
                     </div>
                   </div>"
-                  <div className="mt-4 pt-4 border-t border-gray-700"></div>"
-                    <div className="grid grid-cols-2 gap-4"></div>
+                  <div className="mt-4 pt-4 border-t border-gray-700">
+      
+                    
+      <div className="grid grid-cols-2 gap-4"></div>
                       <a"
                         href="/services""
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
@@ -318,8 +312,10 @@ const specializedServices = [
 
         {/* Mobile Menu */}
         {isMenuOpen && ("
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20"></div>"
-            <div className="px-4 py-6 space-y-4"></div>
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+      
+            
+      <div className="px-4 py-6 space-y-4"></div>
               <div></div>
                 <button
                   onClick={toggleServices}"
@@ -405,7 +401,6 @@ const specializedServices = [
         )}
       </div>
     </nav>
-  );
-};
-;
-export default Navigation;"
+  )
+}
+export default Navigation

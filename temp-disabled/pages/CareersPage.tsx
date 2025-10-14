@@ -1,13 +1,13 @@
-import React from 'react'''';
-import { Helmet } from 'react-helmet-async'''';
+import React from 'react''''
+import { Helmet } from 'react-helmet-async''''
 import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {'}''
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900"></div>"""
       <Helmet></Helmet>
-        <title>Careers | Zion Tech Group</title>"
+        <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />""""
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />"""
-      </Helmet>"
+      </Helmet>
       <div className="container mx-auto px-4 py-16"></div>"""
         {/* Hero Section */}"
         <div className="text-center mb-16"></div>""""
@@ -25,8 +25,8 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>""")
             {benefits.map((benefit, _index) => {}
               const Icon = benefit.icon
-              return ("
-                <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>""""
+              return (
+    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>""""
                   <div className="p-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4"></div>""""
                     <Icon className="w-6 h-6 text-white" />"""
                   </div>"

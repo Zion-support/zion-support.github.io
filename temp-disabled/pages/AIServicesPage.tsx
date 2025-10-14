@@ -1,6 +1,6 @@
-import React from 'react'''';
-import { Helmet } from 'react-helmet-async'''';
-import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react''';
+import React from 'react''''
+import { Helmet } from 'react-helmet-async''''
+import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react'''
 const AIServicesPage: React.FC = () => {}
   const services = [{}
       icon: "Brain",""
@@ -38,15 +38,15 @@ const AIServicesPage: React.FC = () => {}
       description: 'Implement visual recognition systems for quality control, security, and enhanced user experiences.',''''
       features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Inspection']''''
     }
-  ];
+  ]
 const AIServicesPage: React.FC = () => {}
-  return ("
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"""
       <Helmet></Helmet>
-        <title>AI Services | Zion Tech Group</title>"
+        <title>AI Services | Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation solutions." />""""
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, automation, artificial intelligence" />"""
-      </Helmet>"
+      </Helmet>
       <div className="container mx-auto px-4 py-16"></div>"""
         {/* Hero Section */}"
         <div className="text-center mb-16"></div>""""
@@ -62,8 +62,8 @@ const AIServicesPage: React.FC = () => {}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>""")
           {services.map((service, _index) => {}
             const Icon = service.icon
-            return ("
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>""""
+            return (
+    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>""""
                 <div className="flex items-center mb-4"></div>""""
                   <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mr-4"></div>""""
                     <Icon className="w-6 h-6 text-white" />"""

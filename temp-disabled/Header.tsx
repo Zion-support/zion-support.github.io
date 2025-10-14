@@ -1,10 +1,10 @@
-import React from 'react''''';
-import { useState } from 'react''''';
-import { Link } from 'react-router-dom''''';
-import { Menu, X, ChevronDown } from 'lucide-react'''';
-const Header: React.FC = () => {"}"";
-const [isOpen, setIsOpen] = useState(false);
-const [isServicesOpen, setIsServicesOpen] = useState(false)''''';
+import React from 'react'''''
+import { useState } from 'react'''''
+import { Link } from 'react-router-dom'''''
+import { Menu, X, ChevronDown } from 'lucide-react''''
+const Header: React.FC = () => {"}""
+const [isOpen, setIsOpen] = useState(false)
+const [isServicesOpen, setIsServicesOpen] = useState(false)'''''
 const navigationItems = [{ name: 'Home', href: '/' },'{ name: 'About', href: '/about' },'{'}'''
       name: 'Services','''''
       href: '/services','''''

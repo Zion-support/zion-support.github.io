@@ -1,15 +1,11 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
-
+import React from 'react'
+import { Link, useLocation   } from "'react-router-dom'"
+import { ChevronRight, Home } from "'lucide-react'"
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
-
-  if (pathnames.length === 0) {
-    return null;
-  }
-
+  const location = useLocation()
+  const pathnames = location.pathname.split('/').filter((x) => x)
+  if (pathnames.length === 0) {"
+    return null"}
   const getBreadcrumbName = (pathname: string) => {
     const nameMap: Record<string, string> = {
       'ai-services': 'AI Services',
@@ -38,58 +34,50 @@ const Breadcrumb: React.FC = () => {
       'blog': 'Blog',
       'privacy': 'Privacy Policy',
       'terms': 'Terms of Service'
-    };
-
-    return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1);
-  };
-
+    }
+    return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1)
+  }
   return (
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-3 px-4">
-      <div className="max-w-7xl mx-auto">
-        <ol className="flex items-center space-x-2 text-sm">
+    <nav className="bg-slate-800/50" backdrop-blur-sm border-b border-white/10 py-3 px-4>
+      <div className="max-w-7xl" mx-auto>
+        <ol className="flex" items-center space-x-2 text-sm>
           <li>
             <Link
-              to="/"
-              className="flex items-center text-gray-400 hover:text-white transition-colors duration-200"
+              to=/
+              className="flex" items-center text-gray-400 hover:text-white transition-colors duration-200
             >
-              <Home className="w-4 h-4 mr-1" />
+              <Home className="w-4" h-4 mr-1 />
               Home
             </Link>
           </li>
           {pathnames.map((pathname, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
-            const name = getBreadcrumbName(pathname);
-
+            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`
+            const isLast = index === pathnames.length - 1
+            const name = getBreadcrumbName(pathname)
             return (
-              <li key={pathname} className="flex items-center space-x-2">
-                <ChevronRight className="w-4 h-4 text-gray-500" />
+              <li key={pathname} className="flex" items-center space-x-2>
+                <ChevronRight className="w-4" h-4 text-gray-500 />
                 {isLast ? (
-                  <span className="text-white font-medium">{name}</span>
+                  <span className="text-white" font-medium>{name}</span>
                 ) : (
                   <Link
                     to={routeTo}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-gray-400" hover:text-white transition-colors duration-200
                   >
                     {name}
                   </Link>
                 )}
               </li>
-            );
+            )
           })}
         </ol>
       </div>
     </nav>
-  );
-};
-
-export default Breadcrumb;
-      <h2 className="text-xl font-semibold mb-2">Breadcrumb</h2>
+  )}
+export default Breadcrumb
+      <h2 className="text-xl" font-semibold mb-2">Breadcrumb</h2>
       <p>This component is under construction.</p>
-    </div>)
-  );
-};
-;
-export default Breadcrumb;
->>>>>>> origin/main
->>>>>>> origin/main
+    </div>)}
+export default Breadcrumb
+
+

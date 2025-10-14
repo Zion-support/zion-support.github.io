@@ -1,5 +1,5 @@
-import React from 'react''''';
-import { Link } from 'react-router-dom''''';
+import React from 'react'''''
+import { Link } from 'react-router-dom'''''
 import {}
   PhoneIcon,
   EnvelopeIcon,
@@ -7,12 +7,12 @@ import {}
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';  ArrowRightIcon''''
-} from '@heroicons/react/24/outline''''';
+} from '@heroicons/react/24/outline'''''
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react'''''
   HeartIcon
-} from '@heroicons/react/24/outline''''';
-const Footer: React.FC = () => {"}"";
-const currentYear = new Date().getFullYear();
+} from '@heroicons/react/24/outline'''''
+const Footer: React.FC = () => {"}""
+const currentYear = new Date().getFullYear()
 const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },''''
     { name: 'IT Solutions', href: '/it-solutions' },''''
@@ -23,7 +23,7 @@ const services = [
     { name: '5G Solutions', href: '/5g-solutions' },''''
   ];    { name: 'Micro SaaS', href: '/micro-saas' },''''
     { name: '5G Solutions', href: '/5g-solutions' }''''
-  ];
+  ]
 const company = [
     { name: 'About Us', href: '/about' },''''
     { name: 'Solutions', href: '/solutions' },''''
@@ -31,14 +31,14 @@ const company = [
     { name: 'Blog', href: '/blog' },''''
     { name: 'Careers', href: '/careers' },''''
     { name: 'Case Studies', href: '/case-studies' }''''
-  ];
+  ]
 const support = [
     { name: 'Contact', href: '/contact' },''''
     { name: 'Support', href: '/support' },''''
     { name: 'Tutorials', href: '/tutorials' },''''
     { name: 'Demo', href: '/demo' },''''
     { name: 'Documentation', href: '/docs' }''''
-  ];
+  ]
 const legal = [
     { name: 'Privacy Policy', href: '/privacy' },''''
     { name: 'Terms of Service', href: '/terms' },''''
@@ -46,7 +46,7 @@ const legal = [
     { name: 'GDPR', href: '/gdpr' },''''
     { name: 'Security', href: '/security' },''''
     { name: 'Compliance', href: '/compliance' },''''
-  ];
+  ]
 const socialLinks = [
     { name: 'Facebook', href: '#', icon: 'facebook' },''''
     { name: 'Twitter', href: '#', icon: 'twitter' },''''
@@ -54,21 +54,21 @@ const socialLinks = [
     { name: 'GitHub', href: '#', icon: 'github' }    { name: 'Terms of Service', href: '/terms' }''''
     { name: 'Micro SaaS', href: '/micro-saas-solutions' },''''
     { name: '5G Solutions', href: '/5g-solutions' }''''
-  ];
+  ]
 const company = [
     { name: 'About Us', href: '/about' },''''
     { name: 'Careers', href: '/careers' },''''
     { name: 'Case Studies', href: '/case-studies' },''''
     { name: 'Blog', href: '/blog' },''''
     { name: 'Tutorials', href: '/tutorials' }''''
-  ];
+  ]
 const support = [
     { name: 'Contact', href: '/contact' },''''
     { name: 'Support', href: '/support' },''''
     { name: 'Demo', href: '/demo' },''''
     { name: 'Privacy Policy', href: '/privacy' },''''
     { name: 'Terms of Service', href: '/terms' }''''
-  ];
+  ]
 const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },''''
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },''''

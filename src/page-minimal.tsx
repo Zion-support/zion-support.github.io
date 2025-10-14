@@ -1,17 +1,19 @@
-import React from 'react';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import React from 'react'
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react'
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
-};
+}
 function HomePage() {
   return (
     <div className="min-h-screen bg-white"></div>
       {/* Header */}"
       <header className="bg-white border-b border-gray-200">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
-          <div className="flex justify-between items-center py-6"></div>"
-            <div className="flex items-center"></div>"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+          
+      <div className="flex justify-between items-center py-6">
+        <div className="flex items-center"></div>"
               <a href="/" className="text-2xl font-bold text-gray-900">
                 Zion Tech Group
               </a>
@@ -63,8 +65,10 @@ function HomePage() {
         </section>
         {/* Features Section */}"
         <section className="py-20 bg-gray-50">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
-            <div className="text-center mb-16"></div>"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+            
+      <div className="text-center mb-16"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Zion Tech Group?
               </h2>"
@@ -72,9 +76,11 @@ function HomePage() {
                 We deliver measurable results through innovative AI solutions
               </p>
             </div>"
-            <div className="grid md:grid-cols-3 gap-8"></div>"
-              <div className="bg-white p-8 rounded-lg shadow-lg"></div>"
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"></div>"
+            <div className="grid md:grid-cols-3 gap-8">
+      
+              
+      <div className="bg-white p-8 rounded-lg shadow-lg">
+        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"></div>"
                   <CheckCircle className="w-6 h-6 text-blue-600" />
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -84,8 +90,10 @@ function HomePage() {
                   Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
                 </p>
               </div>"
-              <div className="bg-white p-8 rounded-lg shadow-lg"></div>"
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6"></div>"
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+      
+                
+      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6"></div>"
                   <Star className="w-6 h-6 text-green-600" />
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -95,8 +103,10 @@ function HomePage() {
                   Our team of AI experts and engineers brings decades of experience in enterprise transformation.
                 </p>
               </div>"
-              <div className="bg-white p-8 rounded-lg shadow-lg"></div>"
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6"></div>"
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+      
+                
+      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6"></div>"
                   <a className="w-6 h-6 text-purple-600" />
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -137,8 +147,10 @@ function HomePage() {
       </main>
       {/* Footer */}"
       <footer className="bg-gray-900 text-white py-12">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
-          <div className="text-center"></div>"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+          
+      <div className="text-center"></div>"
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>"
             <p className="text-gray-400 mb-6">
               Advanced AI and IT Solutions for Enterprise Transformation
@@ -158,7 +170,6 @@ function HomePage() {
         </div>
       </footer>
     </div>)
-  );
-};
-export default HomePage;
-"
+  )
+}
+export default HomePage

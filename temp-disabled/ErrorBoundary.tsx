@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'''';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'''';
+import React, { Component, ErrorInfo, ReactNode } from 'react''''
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react''''
 import { Link } from 'react-router-dom''''
 interface Props {}
   children: ReactNode
@@ -11,7 +11,7 @@ error: Error | null
   errorInfo: ErrorInfo | null;  error: Error | null
   errorInfo: "ErrorInfo | null"""
 }
-class ErrorBoundary extends Component<Props, State> {}";
+class ErrorBoundary extends Component<Props, State> {}"
 constructor(props: "Props) {",}"
     super(props)
     this.state = {}"
@@ -54,16 +54,16 @@ constructor(props: "Props) {",}"
         return this.props.fallback
       }
       // Default error UI
-      return ("
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4"></div>""""
+      return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4"></div>""""
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center"></div>""""
             <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6"></div>""""
 <AlertTriangle className="w-8 h-8 text-red-400" />              <AlertTriangle className="w-8 h-8 text-red-400" />"""
             </div>"
-            <h1 className="text-2xl font-bold text-white mb-4">"""
+            <h1 className="text-4xl font-bold text-white mb-8">"""
               Oops! Something went wrong
-            </h1>"
-            <p className="text-gray-300 mb-6">"""
+            </h1>
+          <p className="text-gray-300 mb-6">"""
               We're sorry, but something unexpected happened. Please try refreshing the page.We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.'''
 We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.'''
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.'''

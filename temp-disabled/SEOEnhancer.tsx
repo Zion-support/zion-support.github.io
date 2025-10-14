@@ -1,5 +1,5 @@
-import React from 'react''''';
-import { useEffect } from 'react''''';
+import React from 'react'''''
+import { useEffect } from 'react'''''
 import { Helmet } from 'react-helmet-async'''''
 interface SEOEnhancerProps {}
   title?: string
@@ -32,7 +32,7 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}""
     }
     return undefined
   }, [structuredData])
-  // Generate meta tags";
+  // Generate meta tags"
 const metaTags = [{ name: 'description', content: "description"},'''''"
     { name: 'keywords', content: "keywords.join('", ') },'''''
     { name: 'author', content: 'Zion Tech Group' },'''''
@@ -78,7 +78,7 @@ const metaTags = [{ name: 'description', content: "description"},'''''"
     </Helmet>
   )
 }
-// Default structured data for the organization;
+// Default structured data for the organization
 const  {}"
   "@context": "https: "//schema.org"","""""
   "@type": "Organization","""""

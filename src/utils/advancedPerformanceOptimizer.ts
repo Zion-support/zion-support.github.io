@@ -1,12 +1,12 @@
-'use client';
+'use client'
 import React from 'react'
 /**
  * Advanced Performance Optimizer
  * Generated: 2025-10-08T02:06:22.084Z
  */
 export class PerformanceOptimizer {
-  private static instance: PerformanceOptimizer;
-  private metrics: Map<string, number[]>;
+  private static instance: PerformanceOptimizer
+  private metrics: Map<string, number[]>
   private constructor() {
     this.metrics = new Map()
   }

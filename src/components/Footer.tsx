@@ -1,31 +1,31 @@
-import { memo } from "react"";
-import { Link } from "react-router-dom"";
-import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from "lucide-react";
-const Footer = memo(() => {;
+import { memo } from "react""
+import { Link } from "react-router-dom""
+import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from "lucide-react"
+const Footer = memo(() => {
 const services = ["
     { name: "AI Services", url: "/ai-services" },"
     { name: "IT Solutions", url: "/it-services" },"
     { name: "Cloud Services", url: "/cloud-services" },"
     { name: "Cybersecurity", url: "/cybersecurity" }
-  ];
+  ]
 const solutions = ["
     { name: "Quantum Computing", url: "/quantum-computing" },"
     { name: "Autonomous Systems", url: "/autonomous-systems" },"
     { name: "Blockchain Web3", url: "/blockchain-web3" },"
     { name: "IoT Edge Computing", url: "/iot-edge-computing" }
-  ];
+  ]
 const company = ["
     { name: "About Us", url: "/about" },"
     { name: "Team", url: "/team" },"
     { name: "Careers", url: "/careers" },"
     { name: "News", url: "/news" }
-  ];
+  ]
 const support = ["
     { name: "Documentation", url: "/documentation" },"
     { name: "Support", url: "/support" },"
     { name: "FAQ", url: "/faq" },"
     { name: "Contact", url: "/contact" }
-  ];
+  ]
 const socialLinks = ["
     { name: "Facebook", icon: Facebook, url: "#" },"
     { name: "Twitter", icon: Twitter, url: "#" },"
@@ -37,8 +37,10 @@ const socialLinks = ["
 
   return ("
     <footer className="bg-gray-900 text-white">"
-      <div className="max-w-7xl mx-auto px-4 py-12"></div>"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+      <div className="max-w-7xl mx-auto px-4 py-12">
+      
+        
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           {/* Company Info */}"
           <div className="space-y-4"></div>"
             <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
@@ -138,9 +140,11 @@ const socialLinks = ["
         </div>
 
         {/* Social Links */}"
-        <div className="border-t border-gray-800 mt-8 pt-8"></div>"
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"></div>"
-            <div className="flex space-x-4"></div>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+      
+          
+      <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="flex space-x-4"></div>
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -173,6 +177,6 @@ const socialLinks = ["
   )
 })
 "
-Footer.displayName = "Footer";
+Footer.displayName = "Footer"
 export default Footer
 "

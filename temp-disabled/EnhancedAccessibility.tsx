@@ -1,16 +1,16 @@
 import React from 'react';'react''''
 interface EnhancedAccessibilityProps {}
-  children: "Node"}"""";
-const EnhancedAccessibility: React.FC = () => {"}"";
+  children: "Node"}""""
+const EnhancedAccessibility: React.FC = () => {"}""
 const [settings, setSettings] = useState<AccessibilitySettings>({}"
     highContrast: "false","""
     fontSize: 'normal',''''"
     reducedMotion: "false",""""
     screenReader: "false"""")
-  });
+  })
 const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {}, [])
-    // Enhanced accessibility features;
+    // Enhanced accessibility features
 const addSkipLinks = () => {}
       const skipLink = document.createElement('a')''''
       skipLink.href = '#main-content'''''
@@ -19,7 +19,7 @@ const addSkipLinks = () => {}
       document.body.insertBefore(skipLink, document.body.firstChild)
     }
     const enhanceFocusManagement = () => {}
-      // Add focus indicators;
+      // Add focus indicators
 const style = document.createElement('style')''''
       style.textContent = `
         *:focus {}
@@ -40,7 +40,7 @@ const style = document.createElement('style')''''
       document.head.appendChild(style)
     }
     const addAriaLabels = () => {}
-      // Add ARIA labels to interactive elements;
+      // Add ARIA labels to interactive elements
 const buttons = document.querySelectorAll('button:not([aria-label])')''''
       buttons.forEach((button) => {}
         if (!button.textContent?.trim()) {}
@@ -48,12 +48,12 @@ const buttons = document.querySelectorAll('button:not([aria-label])')''''
       })
     // Apply accessibility settings
     applyAccessibilitySettings(settings)
-    // Listen for system preference changes;
-const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'''';
+    // Listen for system preference changes
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')''''
 const handleChange = () => {}"
       setSettings(prev => ({ ...prev, reducedMotion: "mediaQuery.matches"}))"""
     }
-    mediaQuery.addEventListener('change', handleChange)'''';
+    mediaQuery.addEventListener('change', handleChange)''''
 const setupKeyboardNavigation = () => {}
       // Enhanced keyboard navigation
       document.addEventListener('keydown', (e) => {''}'''
@@ -77,8 +77,8 @@ const setupKeyboardNavigation = () => {}
   }, [])
   useEffect(() => {}, [])
     applyAccessibilitySettings(settings)
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])''''";
-const applyAccessibilitySettings = (settings: "AccessibilitySettings) => {"}"";
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])''''"
+const applyAccessibilitySettings = (settings: "AccessibilitySettings) => {"}""
 const root = document.documentElement
     // Apply high contrast
     if (settings.highContrast) {}
@@ -97,7 +97,7 @@ const root = document.documentElement
   }
   const toggleHighContrast = () => {}"
     setSettings(prev => ({ ...prev, highContrast: "!prev.highContrast"}))"""
-  }";
+  }"
 const setFontSize = (size: "AccessibilitySettings['fontSize']) => {'"}'''"
     setSettings(prev => ({ ...prev, fontSize: "size"}))"""
   }
@@ -105,7 +105,7 @@ const setFontSize = (size: "AccessibilitySettings['fontSize']) => {'"}'''"
     setIsVisible(prev => !prev)
   }
   // Add CSS for accessibility features
-  useEffect(() => {}, []);
+  useEffect(() => {}, [])
 const style = document.createElement('style')''''
     style.id = 'enhanced-accessibility-styles'''''
     style.textContent = `

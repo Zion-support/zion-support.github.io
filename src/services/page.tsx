@@ -1,11 +1,10 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, PieChart, TrendingDown, Activity } from 'lucide-react';
-;
-const ServicesPage: React.FC = () => {;
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, PieChart, TrendingDown, Activity } from 'lucide-react'
+const ServicesPage: React.FC = () => {
 const aiServices = [
     {
       icon: Brain,
@@ -39,8 +38,7 @@ const aiServices = [
       price: 'Starting at $1,800/month',
       popular: false
     }
-  ];
-;
+  ]
 const itServices = [
     {
       icon: Cloud,
@@ -74,8 +72,7 @@ const itServices = [
       price: 'Starting at $2,000/month',
       popular: false
     }
-  ];
-;
+  ]
 const microSaasServices = [
     {
       icon: Code,
@@ -109,8 +106,7 @@ const microSaasServices = [
       price: 'Starting at $30/month',
       popular: false
     }
-  ];
-;
+  ]
 const benefits = [
     {
       icon: TrendingUp,
@@ -132,15 +128,13 @@ const benefits = [
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
     }
-  ];
-;
+  ]
 const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '100+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
-  ];
-
+  ]
   return (
     <>
       <SEOOptimizer
@@ -181,11 +175,13 @@ const stats = [
 
         {/* Stats */}"
         <section className="py-16 px-4">"
-          <div className="container mx-auto"></div>"
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>)
+          <div className="container mx-auto">
+      
+            
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>)
               {stats.map((stat, index) => ("
-                <div key={index} className="text-center"></div>"
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
+                <div key={index} className="text-center">
+        <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
                     {stat.number}
                   </div>"
                   <div className="text-gray-300 font-medium"></div>{stat.label}</div>
@@ -197,8 +193,10 @@ const stats = [
 
         {/* AI Services */}"
         <section className="py-16 px-4">"
-          <div className="container mx-auto"></div>"
-            <div className="text-center mb-12"></div>"
+          <div className="container mx-auto">
+      
+            
+      <div className="text-center mb-12"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                 AI <span className="text-purple-400">Services</span>
               </h2>"
@@ -208,9 +206,11 @@ const stats = [
             </div>"
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {aiServices.map((service, index) => ("
-                <div key={index} className="cyber-card group"></div>"
-                  <div className="flex items-center mb-4"></div>"
-                    <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4"></div>"
+                <div key={index} className="cyber-card group">
+        <div className="flex items-center mb-4">
+      
+                    
+      <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4"></div>"
                       <service.icon className="w-6 h-6 text-purple-400" />
                     </div>
                     <div></div>"
@@ -245,8 +245,10 @@ const stats = [
 
         {/* IT Services */}"
         <section className="py-16 px-4">"
-          <div className="container mx-auto"></div>"
-            <div className="text-center mb-12"></div>"
+          <div className="container mx-auto">
+      
+            
+      <div className="text-center mb-12"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                 IT <span className="text-blue-400">Services</span>
               </h2>"
@@ -256,9 +258,11 @@ const stats = [
             </div>"
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {itServices.map((service, index) => ("
-                <div key={index} className="cyber-card group"></div>"
-                  <div className="flex items-center mb-4"></div>"
-                    <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4"></div>"
+                <div key={index} className="cyber-card group">
+        <div className="flex items-center mb-4">
+      
+                    
+      <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4"></div>"
                       <service.icon className="w-6 h-6 text-blue-400" />
                     </div>
                     <div></div>"
@@ -288,8 +292,10 @@ const stats = [
 
         {/* Micro SAAS Services */}"
         <section className="py-16 px-4">"
-          <div className="container mx-auto"></div>"
-            <div className="text-center mb-12"></div>"
+          <div className="container mx-auto">
+      
+            
+      <div className="text-center mb-12"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                 Micro <span className="text-green-400">SAAS</span>
               </h2>"
@@ -299,9 +305,11 @@ const stats = [
             </div>"
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {microSaasServices.map((service, index) => ("
-                <div key={index} className="cyber-card group"></div>"
-                  <div className="flex items-center mb-4"></div>"
-                    <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mr-4"></div>"
+                <div key={index} className="cyber-card group">
+        <div className="flex items-center mb-4">
+      
+                    
+      <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mr-4"></div>"
                       <service.icon className="w-6 h-6 text-green-400" />
                     </div>
                     <div></div>"
@@ -336,8 +344,10 @@ const stats = [
 
         {/* Benefits Section */}"
         <section className="py-16 px-4">"
-          <div className="container mx-auto"></div>"
-            <div className="text-center mb-12"></div>"
+          <div className="container mx-auto">
+      
+            
+      <div className="text-center mb-12"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                 Why Choose <span className="text-cyan-400">Us</span>
               </h2>"
@@ -347,8 +357,8 @@ const stats = [
             </div>"
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {benefits.map((benefit, index) => ("
-                <div key={index} className="text-center"></div>"
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
+                <div key={index} className="text-center">
+        <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>"
@@ -361,8 +371,10 @@ const stats = [
 
         {/* CTA Section */}"
         <section className="py-16 px-4">"
-          <div className="container mx-auto text-center"></div>"
-            <div className="cyber-card max-w-4xl mx-auto"></div>"
+          <div className="container mx-auto text-center">
+      
+            
+      <div className="cyber-card max-w-4xl mx-auto"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>"
@@ -390,7 +402,6 @@ const stats = [
 
       <Footer />
     </>
-  );
-};
-;
-export default ServicesPage;"
+  )
+}
+export default ServicesPage

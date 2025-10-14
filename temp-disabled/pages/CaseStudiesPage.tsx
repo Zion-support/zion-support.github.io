@@ -1,6 +1,6 @@
-import React from 'react'''';
-import { Helmet } from 'react-helmet-async'''';
-import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react''';
+import React from 'react''''
+import { Helmet } from 'react-helmet-async''''
+import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react'''
 const CaseStudiesPage: React.FC = () => {}
   const caseStudies = [{}
       title: 'E-commerce Platform AI Optimization',''''
@@ -54,15 +54,15 @@ const CaseStudiesPage: React.FC = () => {}
       ],
       description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.'''''
     }
-  ];
+  ]
 const CaseStudiesPage: React.FC = () => {}
-  return ("
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></div>"""
       <Helmet></Helmet>
-        <title>Case Studies | Zion Tech Group</title>"
+        <title>Case Studies | Zion Tech Group</title>
         <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />""""
         <meta name="keywords" content="case studies, success stories, AI implementation, IT solutions, business transformation" />"""
-      </Helmet>"
+      </Helmet>
       <div className="container mx-auto px-4 py-16"></div>"""
         {/* Hero Section */}"
         <div className="text-center mb-16"></div>""""
@@ -106,8 +106,8 @@ const CaseStudiesPage: React.FC = () => {}
                   <div className="grid grid-cols-2 gap-4"></div>""")
                     {study.results.map((result, resultIndex) => {}
                       const Icon = result.icon
-                      return ("
-                        <div key={resultIndex} className="bg-white/5 rounded-lg p-4 text-center"></div>""""
+                      return (
+    <div key={resultIndex} className="bg-white/5 rounded-lg p-4 text-center"></div>""""
                           <Icon className="w-8 h-8 text-violet-400 mx-auto mb-2" />""""
                           <div className="text-2xl font-bold text-white mb-1"></div>{result.value}</div>""""
                           <div className="text-sm text-gray-400"></div>{result.metric}</div>"""

@@ -1,29 +1,29 @@
-'use client';
+'use client'
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
- */;
-import { performanceConfig } from '../../performance.config';
+ */
+import { performanceConfig } from '../../performance.config'
 export interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
+  lcp?: number
+  fid?: number
+  cls?: number
+  fcp?: number
+  ttfb?: number
+  inp?: number
 }
 export interface ErrorReport {
-  message: string;
-  stack?: string;
-  component?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
+  message: string
+  stack?: string
+  component?: string
+  timestamp: number
+  userAgent: string
+  url: string
 }
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
-  private observer: PerformanceObserver | null = null;
+  private observer: PerformanceObserver | null = null
 constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
@@ -42,53 +42,53 @@ constructor() {
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
-        // Largest Contentful Paint;
-const lcpObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
+        // Largest Contentful Paint
+const lcpObserver = new PerformanceObserver((list) => {
+const entries = list.getEntries()
 const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-        // First Input Delay;
-const fidObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
+        // First Input Delay
+const fidObserver = new PerformanceObserver((list) => {
+const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = ((entry as any).processingStart || 0) - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid);
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+            this.metrics.fid = ((entry as any).processingStart || 0) - entry.startTime
+            this.reportMetric('fid', this.metrics.fid)
+          })
+        })
+        fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {);
-const entries = list.getEntries();
+        let clsValue = 0
+        const clsObserver = new PerformanceObserver(list => {)
+const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value || 0;
-              this.metrics.cls = clsValue;
-              this.reportMetric('cls', clsValue);
+              clsValue += (entry as any).value || 0
+              this.metrics.cls = clsValue
+              this.reportMetric('cls', clsValue)
             }
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
-        // First Contentful Paint;
-const fcpObserver = new PerformanceObserver(list => {);
-const entries = list.getEntries();
+        // First Contentful Paint
+const fcpObserver = new PerformanceObserver(list => {)
+const entries = list.getEntries()
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;)
-            this.reportMetric('fcp', entry.startTime);
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+            this.reportMetric('fcp', entry.startTime)
+          })
+        })
+        fcpObserver.observe({ entryTypes: ['paint'] })
       } catch (error) {
-        // console.error('Error setting up performance observers:', error);
+        // console.error('Error setting up performance observers:', error)
       }
     }
   }
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {;
+      try {
 const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             // console.warn('Long task detected:', {
@@ -105,9 +105,9 @@ const longTaskObserver = new PerformanceObserver((list) => {
   }
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
-      try {;
-const resourceObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
+      try {
+const resourceObserver = new PerformanceObserver((list) => {
+const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             if (entry.duration > 1000) {
               // console.warn('Slow resource detected:', {
@@ -116,11 +116,11 @@ const entries = list.getEntries();
               //   type: entry.initiatorType)
               // })
             }
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+          })
+        })
+        resourceObserver.observe({ entryTypes: ['resource'] })
       } catch (_error) {
-        // console.error('Error monitoring resources:', _error);
+        // console.error('Error monitoring resources:', _error)
       }
     }
   }
@@ -151,7 +151,7 @@ const entries = list.getEntries();
       return
     }
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {;
+    if (thresholds) {
 const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
       // console.log(`[Performance] ${name}:`, {
       //   value,
@@ -186,7 +186,7 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
     this.errors = []
   }
   public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
+    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
 const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
         // console.log('[Memory]', {)
@@ -198,7 +198,7 @@ const memory = (performance as Performance & { memory?: { usedJSHeapSize: number
     }
   }
   public measureNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType' in performance) {;
+    if ('performance' in window && 'getEntriesByType' in performance) {
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
         // console.log('[Navigation Timing]', {)
@@ -214,6 +214,6 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
     }
   }
 }
-// Singleton instance;
-const monitoring = new MonitoringService();
+// Singleton instance
+const monitoring = new MonitoringService()
 export default monitoring

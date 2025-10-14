@@ -1,10 +1,9 @@
-import React from 'react';
-
+import React from 'react'
 interface SidebarNavigationProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
 }
-;
+
 const navigationItems = [
 
   { name: "Home", href: "/", icon: User },"
@@ -13,8 +12,7 @@ const navigationItems = [
   { name: "Help", href: "/help", icon: User },"
   { name: "About", href: "/about", icon: User }
 
-];
-;
+]
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   return (
 
@@ -30,8 +28,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         </nav>
       </div>
     </div>
-  );
-};
-;
-export default SidebarNavigation;
-"
+  )
+}
+export default SidebarNavigation

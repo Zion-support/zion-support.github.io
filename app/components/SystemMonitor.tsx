@@ -1,10 +1,8 @@
-import React from "react";
-;
+import React from "react"
 const SystemMonitor = () => {
-  return ("
-    <div className="p-4"></div>"
-      <h2 className="text-xl font-semibold mb-2">SystemMonitor</h2>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <h2 className="text-xl" font-semibold mb-2">SystemMonitor</h2>
       <p>This component is under construction.</p>
     </div>
-")
-}
+")"}

@@ -1,32 +1,31 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
-
+import React, { Component, ErrorInfo, ReactNode } from "react"
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableRetry?: boolean;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  enableRetry?: boolean
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  retryCount: number;
+  hasError: boolean
+  error?: Error
+  retryCount: number
 }
 
-class AdvancedErrorBoundary extends Component<Props, State> {;
+class AdvancedErrorBoundary extends Component<Props, State> {
 constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false, retryCount: 0 };
+    super(props)
+    this.state = { hasError: false, retryCount: 0 }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error, retryCount: 0 };
+    return { hasError: true, error, retryCount: 0 }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {"
-    console.error("Error caught by boundary:", error, errorInfo);
+    console.error("Error caught by boundary:", error, errorInfo)
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
   }
 
@@ -35,9 +34,8 @@ constructor(props: Props) {
       hasError: false,
       error: undefined,
       retryCount: this.state.retryCount + 1,)
-    });
-  };
-
+    })
+  }
   render() {
     if (this.state.hasError) {
       return (
@@ -52,11 +50,10 @@ constructor(props: Props) {
             )}
           </div>
         )
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-;
-export default AdvancedErrorBoundary;
-"
+
+export default AdvancedErrorBoundary

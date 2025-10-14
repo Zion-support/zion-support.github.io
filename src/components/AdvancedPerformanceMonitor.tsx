@@ -1,4 +1,4 @@
-"use client"";
+"use client""
 import React, { useEffect, useState, useCallback } from "react"
 
 interface PerformanceMetrics {
@@ -14,11 +14,11 @@ interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void
   enableRealTimeMonitoring?: boolean
 }
-;
+
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,)
-}) => {;
+}) => {
 const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -26,22 +26,22 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
     ttfb: null,
     memory: null,)
-  });
+  })
 const measureWebVitals = useCallback(() => {"
     if (typeof window === "undefined" || !("performance" in window)) return"
-    if (typeof PerformanceObserver === "undefined") return;
+    if (typeof PerformanceObserver === "undefined") return
 const observers: PerformanceObserver[] = []
 
-    // Measure First Contentful Paint (FCP);
+    // Measure First Contentful Paint (FCP)
 const fcpEntries ="
-      performance.getEntriesByName("first-contentful-paint") || [];
+      performance.getEntriesByName("first-contentful-paint") || []
 const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null
 
     // Measure Largest Contentful Paint (LCP)"
     if ("PerformanceObserver" in window) {
-      try {;
-const lcpObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
+      try {
+const lcpObserver = new PerformanceObserver((list) => {
+const entries = list.getEntries()
 const lastEntry = entries[entries.length - 1]
           setMetrics((prev) => ({ ...prev, lcp: lastEntry.startTime }))
         })"
@@ -55,15 +55,15 @@ const lastEntry = entries[entries.length - 1]
 
     // Measure First Input Delay (FID)"
     if ("PerformanceObserver" in window) {
-      try {;
-const fidObserver = new PerformanceObserver((list) => {;
+      try {
+const fidObserver = new PerformanceObserver((list) => {
 const entries = list.getEntries()
           entries.forEach((entry) => {
             if ("
               entry.entryType === "first-input" &&"
               "processingStart" in entry &&"
               "startTime" in entry)
-            ) {;
+            ) {
 const fidEntry = entry as PerformanceEventTiming
               setMetrics((prev) => ({
                 ...prev,
@@ -83,15 +83,15 @@ const fidEntry = entry as PerformanceEventTiming
     // Measure Cumulative Layout Shift (CLS)"
     if ("PerformanceObserver" in window) {
       try {
-        let clsValue = 0;
-const clsObserver = new PerformanceObserver((list) => {;
+        let clsValue = 0
+const clsObserver = new PerformanceObserver((list) => {
 const entries = list.getEntries()
           entries.forEach((entry) => {
             if ("
               entry.entryType === "layout-shift" &&"
               "hadRecentInput" in entry &&"
               "value" in entry)
-            ) {;
+            ) {
 const clsEntry = entry as LayoutShift
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value
@@ -109,16 +109,16 @@ const clsEntry = entry as LayoutShift
     }
 
     // Measure Time to First Byte (TTFB)
-    try {;
+    try {
 const navigationEntries ="
-        performance.getEntriesByType?.("navigation") || [];
+        performance.getEntriesByType?.("navigation") || []
 const navigationEntry =
-        navigationEntries[0] as PerformanceNavigationTiming;
+        navigationEntries[0] as PerformanceNavigationTiming
 const ttfb = navigationEntry
         ? navigationEntry.responseStart - navigationEntry.requestStart
         : null
 
-      // Measure Memory Usage;
+      // Measure Memory Usage
 const memory =
         (performance as Performance & { memory?: { usedJSHeapSize: number } })
           .memory?.usedJSHeapSize || null
@@ -145,11 +145,11 @@ const memory =
         }
       })
     }
-  }, []);
+  }, [])
 const measureResourceTiming = useCallback(() => {"
     if (typeof window === "undefined" || !("performance" in window)) return
-";
-const resources = performance.getEntriesByType("resource");
+"
+const resources = performance.getEntriesByType("resource")
 const slowResources = resources.filter()
       (resource: PerformanceResourceTiming) => resource.duration > 1000,
     )
@@ -165,14 +165,14 @@ const slowResources = resources.filter()
         })),
       )
     }
-  }, []);
+  }, [])
 const measureCoreWebVitals = useCallback(() => {"
     if (typeof window === "undefined") return
 
     // Use web-vitals library if available
-    try {";
+    try {"
 import("web-vitals")
-        .then((webVitals) => {;
+        .then((webVitals) => {
 const { onCLS, onFCP, onLCP, onTTFB } = webVitals
 
           if (onCLS) {
@@ -208,12 +208,12 @@ const { onCLS, onFCP, onLCP, onTTFB } = webVitals
   }, [])
 
   useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
+    if (!enableRealTimeMonitoring) return
 const cleanup = measureWebVitals()
     measureResourceTiming()
     measureCoreWebVitals()
 
-    // Monitor performance every 5 seconds;
+    // Monitor performance every 5 seconds
 const interval = setInterval(() => {
       measureResourceTiming()
     }, 5000)
@@ -235,8 +235,8 @@ const interval = setInterval(() => {
     }
   }, [metrics, onMetricsUpdate])
 
-  // Performance recommendations;
-const getPerformanceRecommendations = useCallback(() => {;
+  // Performance recommendations
+const getPerformanceRecommendations = useCallback(() => {
 const recommendations: string[] = []
 
     if (metrics.fcp && metrics.fcp > 1800) {
@@ -270,18 +270,20 @@ const recommendations: string[] = []
     }
 
     return recommendations
-  }, [metrics]);
+  }, [metrics])
 const recommendations = getPerformanceRecommendations()
 "
   if (process.env["NODE_ENV"] === "development") {
-    return ("
-      <div className="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50"></div>"
+    return (
+    <div className="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50"></div>"
         <h3 className="font-semibold text-sm mb-2">Performance Monitor</h3>"
-        <div className="text-xs space-y-1"></div>")
-          <div></div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : "N/A"}</div>"
-          <div></div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : "N/A"}</div>"
-          <div></div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : "N/A"}</div>"
-          <div></div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : "N/A"}</div>
+        <div className="text-xs space-y-1">
+      )
+          
+      <div></div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : "N/A"}</div>
+      </div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : "N/A"}</div>
+      </div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : "N/A"}</div>
+      </div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : "N/A"}</div>
           <div></div>"
             TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : "N/A"}
           </div>
@@ -310,5 +312,5 @@ const recommendations = getPerformanceRecommendations()
 
   return null
 }
-;
+
 export default AdvancedPerformanceMonitor"

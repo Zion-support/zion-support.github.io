@@ -1,4 +1,4 @@
-export const services = () => { // Implementation;
-  return true; }
-};
-export default services;
+export const services = () => { // Implementation
+  return true}
+}
+export default services

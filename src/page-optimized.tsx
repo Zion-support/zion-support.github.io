@@ -1,27 +1,27 @@
-'use client';
-import React from 'react';
-import { lazy } from 'react';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-// Fallback component;
-const EmptyComponent = () => null;
-// Lazy load heavy components - these may not exist, so make them optional;
-const UnifiedBanner = lazy(() =>;
-import('./components/NewestContent2025Banner').catch(() =>;
+'use client'
+import React from 'react'
+import { lazy } from 'react'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import PerformanceMonitor from './components/PerformanceMonitor'
+// Fallback component
+const EmptyComponent = () => null
+// Lazy load heavy components - these may not exist, so make them optional
+const UnifiedBanner = lazy(() =>
+import('./components/NewestContent2025Banner').catch(() =>
 import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
   )
-);
-const ContentPromotion = lazy(() =>;
+)
+const ContentPromotion = lazy(() =>
 import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-    return { default: EmptyComponent };
+    return { default: EmptyComponent }
   })
-);
-const ContentShowcase = lazy(() =>;
+)
+const ContentShowcase = lazy(() =>
 import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({)
     default: () => <div></div>Loading...</div>
   }))
-);
+)
 function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white"></div>
@@ -33,8 +33,10 @@ function OptimizedHomePage() {
         {/* Hero Section */}"
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">"
           <div className="absolute inset-0 bg-black opacity-20"></div></div>"
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"></div>"
-            <div className="text-center"></div>"
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      
+            
+      <div className="text-center"></div>"
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                 AI Enterprise Transformation"
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -65,7 +67,6 @@ function OptimizedHomePage() {
         </section>
       </main>
     </div>)
-  );
-};
-export default OptimizedHomePage;
-"
+  )
+}
+export default OptimizedHomePage

@@ -1,68 +1,59 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Server, Network, Layers } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
-
-// Dynamically import heavy components for better performance;
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
-// Preload critical components;
+'use client'
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Server, Network, Layers } from 'lucide-react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import Analytics from './components/Analytics'
+import SecurityEnhancer from './components/SecurityEnhancer'
+import { initializePerformanceOptimizations } from './utils/performanceOptimizations'
+// Dynamically import heavy components for better performance
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
+// Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
-    setTimeout(() => {;
-import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+    setTimeout(() => {
+import('./components/ContentPromotionBanner')
+      import('./components/ContentCarousel')
+    }, 100)
   }
-};
-
-// Loading skeleton component;
+}
+// Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>"
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div></div>"
     <div className="h-4 bg-gray-200 rounded mb-2"></div></div>"
     <div className="h-4 bg-gray-200 rounded w-5/6"></div></div>
   </div>)
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-;
-const HomePage: React.FC = () => {;
-const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
+))
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
+const HomePage: React.FC = () => {
+const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsLoaded(true);
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    preloadComponents();
-    
+    setIsLoaded(true)
+    const timer = setTimeout(() => setIsVisible(true), 100)
+    preloadComponents()
     // Initialize performance optimizations
-    initializePerformanceOptimizations();
-    
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Analytics tracking for phone clicks - optimized;
+    initializePerformanceOptimizations()
+    return () => clearTimeout(timer)
+  }, [])
+  // Analytics tracking for phone clicks - optimized
 const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number')
-      });
+      })
     }
-  }, []);
-
-  // Enhanced Micro SAAS Services with real functionality and pricing;
+  }, [])
+  // Enhanced Micro SAAS Services with real functionality and pricing
 const microSAASServices = [
     {
       title: 'AI Project Manager Pro',
@@ -272,9 +263,8 @@ const microSAASServices = [
       marketPrice: '$499',
       savings: '40%'
     }
-  ];
-
-  // Enhanced AI Services with real capabilities and market pricing;
+  ]
+  // Enhanced AI Services with real capabilities and market pricing
 const aiServices = [
     {
       title: 'Machine Learning Solutions',
@@ -372,9 +362,8 @@ const aiServices = [
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     }
-  ];
-
-  // Enhanced IT Services with comprehensive capabilities;
+  ]
+  // Enhanced IT Services with comprehensive capabilities
 const itServices = [
     {
       title: 'Cloud Migration & Management',
@@ -472,9 +461,8 @@ const itServices = [
       savings: '43%',
       contact: '+1 302 464 0950'
     }
-  ];
-
-  // Specialized Services;
+  ]
+  // Specialized Services
 const specializedServices = [
     {
       title: 'AI-Powered Business Intelligence',
@@ -548,9 +536,8 @@ const specializedServices = [
       savings: '46%',
       contact: '+1 302 464 0950'
     }
-  ];
-
-  return ("
+  ]
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Performance Optimizer */}
       <PerformanceOptimizer />
@@ -587,14 +574,16 @@ const specializedServices = [
 "
         <div className="relative z-10 container mx-auto px-4 text-center"></div>
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></div>"
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+            <h1 className="text-4xl font-bold text-white mb-8">
               ZION TECH GROUP
-            </h1>"
-            <p className="text-2xl md:text-3xl text-white mb-8 font-light">
+            </h1>
+          <p className="text-2xl md:text-3xl text-white mb-8 font-light">
               AI-Powered Enterprise Solutions & Digital Transformation
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"></div>"
-              <div className="flex items-center text-cyan-400 text-lg"></div>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+      
+              
+      <div className="flex items-center text-cyan-400 text-lg"></div>"
                 <Phone className="w-6 h-6 mr-2" />"
                 <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
@@ -611,19 +600,25 @@ const specializedServices = [
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>"
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105"></div>"
-                <div className="text-4xl mb-4"></div>🚀</div>"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      
+              
+      <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105">
+        <div className="text-4xl mb-4"></div>🚀</div>"
                 <h3 className="text-xl font-bold text-white mb-2">300% ROI</h3>"
                 <p className="text-gray-300">Average return on AI investments</p>
               </div>"
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105"></div>"
-                <div className="text-4xl mb-4"></div>⚡</div>"
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105">
+      
+                
+      <div className="text-4xl mb-4"></div>⚡</div>"
                 <h3 className="text-xl font-bold text-white mb-2">70% Cost Reduction</h3>"
                 <p className="text-gray-300">Through intelligent automation</p>
               </div>"
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 hover:scale-105"></div>"
-                <div className="text-4xl mb-4"></div>🎯</div>"
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 hover:scale-105">
+      
+                
+      <div className="text-4xl mb-4"></div>🎯</div>"
                 <h3 className="text-xl font-bold text-white mb-2">90% Efficiency</h3>"
                 <p className="text-gray-300">Gains with our AI solutions</p>
               </div>
@@ -634,8 +629,10 @@ const specializedServices = [
 
       {/* Micro SAAS Services Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">"
-        <div className="container mx-auto px-4"></div>"
-          <div className="text-center mb-16"></div>"
+        <div className="container mx-auto px-4">
+      
+          
+      <div className="text-center mb-16"></div>"
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Micro SAAS Services
             </h2>"
@@ -649,15 +646,19 @@ const specializedServices = [
             {microSAASServices.map((service, index) => ("
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"></div>
                 {service.popular && ("
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
-                    <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg"></div>
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+      
+                    
+      <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg"></div>
                       🔥 POPULAR
                     </div>
                   </div>)
                 )}
                 "
-                <div className="text-center mb-4"></div>"
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+                <div className="text-center mb-4">
+      
+                  
+      <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                     {service.icon}
                   </div>"
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -668,8 +669,10 @@ const specializedServices = [
                   </p>
                 </div>
                 "
-                <div className="text-center mb-6"></div>"
-                  <div className="flex items-center justify-center gap-2 mb-2"></div>"
+                <div className="text-center mb-6">
+      
+                  
+      <div className="flex items-center justify-center gap-2 mb-2"></div>"
                     <span className="text-3xl font-bold text-cyan-400">{service.price}</span>"
                     <span className="text-sm text-gray-400">/month</span>
                   </div>"
@@ -721,8 +724,10 @@ const specializedServices = [
 
       {/* AI Services Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">"
-        <div className="container mx-auto px-4"></div>"
-          <div className="text-center mb-16"></div>"
+        <div className="container mx-auto px-4">
+      
+          
+      <div className="text-center mb-16"></div>"
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               AI Services & Solutions
             </h2>"
@@ -734,8 +739,8 @@ const specializedServices = [
           "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {aiServices.map((service, index) => ("
-              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"></div>"
-                <div className="text-center mb-6"></div>
+              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+        <div className="text-center mb-6"></div>
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}></div>
                     <service.icon className={`w-8 h-8 ${service.color}`} />
                   </div>"
@@ -747,8 +752,10 @@ const specializedServices = [
                   </p>
                 </div>
                 "
-                <div className="text-center mb-6"></div>"
-                  <div className="flex items-center justify-center gap-2 mb-2"></div>"
+                <div className="text-center mb-6">
+      
+                  
+      <div className="flex items-center justify-center gap-2 mb-2"></div>"
                     <span className="text-3xl font-bold text-purple-400">{service.price}</span>"
                     <span className="text-sm text-gray-400">/month</span>
                   </div>"
@@ -800,8 +807,10 @@ const specializedServices = [
 
       {/* IT Services Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">"
-        <div className="container mx-auto px-4"></div>"
-          <div className="text-center mb-16"></div>"
+        <div className="container mx-auto px-4">
+      
+          
+      <div className="text-center mb-16"></div>"
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               IT Services & Solutions
             </h2>"
@@ -813,8 +822,8 @@ const specializedServices = [
           "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {itServices.map((service, index) => ("
-              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"></div>"
-                <div className="text-center mb-6"></div>
+              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+        <div className="text-center mb-6"></div>
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}></div>
                     <service.icon className={`w-8 h-8 ${service.color}`} />
                   </div>"
@@ -826,8 +835,10 @@ const specializedServices = [
                   </p>
                 </div>
                 "
-                <div className="text-center mb-6"></div>"
-                  <div className="flex items-center justify-center gap-2 mb-2"></div>"
+                <div className="text-center mb-6">
+      
+                  
+      <div className="flex items-center justify-center gap-2 mb-2"></div>"
                     <span className="text-3xl font-bold text-green-400">{service.price}</span>"
                     <span className="text-sm text-gray-400">/month</span>
                   </div>"
@@ -879,8 +890,10 @@ const specializedServices = [
 
       {/* Specialized Services Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">"
-        <div className="container mx-auto px-4"></div>"
-          <div className="text-center mb-16"></div>"
+        <div className="container mx-auto px-4">
+      
+          
+      <div className="text-center mb-16"></div>"
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
               Specialized Solutions
             </h2>"
@@ -892,8 +905,8 @@ const specializedServices = [
           "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {specializedServices.map((service, index) => ("
-              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20"></div>"
-                <div className="text-center mb-6"></div>
+              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20">
+        <div className="text-center mb-6"></div>
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}></div>
                     <service.icon className={`w-8 h-8 ${service.color}`} />
                   </div>"
@@ -905,8 +918,10 @@ const specializedServices = [
                   </p>
                 </div>
                 "
-                <div className="text-center mb-6"></div>"
-                  <div className="flex items-center justify-center gap-2 mb-2"></div>"
+                <div className="text-center mb-6">
+      
+                  
+      <div className="flex items-center justify-center gap-2 mb-2"></div>"
                     <span className="text-3xl font-bold text-orange-400">{service.price}</span>"
                     <span className="text-sm text-gray-400">/month</span>
                   </div>"
@@ -958,8 +973,10 @@ const specializedServices = [
 
       {/* Contact Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">"
-        <div className="container mx-auto px-4"></div>"
-          <div className="text-center mb-16"></div>"
+        <div className="container mx-auto px-4">
+      
+          
+      <div className="text-center mb-16"></div>"
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>"
@@ -968,8 +985,10 @@ const specializedServices = [
             </p>
           </div>
           "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>"
-            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      
+            
+      <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>"
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>"
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>"
@@ -1003,8 +1022,6 @@ const specializedServices = [
       {/* Footer */}
       <Footer />
     </div>
-  );
-};
-;
-export default HomePage;
-"
+  )
+}
+export default HomePage

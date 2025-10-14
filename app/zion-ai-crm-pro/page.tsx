@@ -1,16 +1,21 @@
-export default function Page() {
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { ArrowRight, Users, Brain, CheckCircle, Star, Zap, Globe, Mail, Phone, TrendingUp, Sparkles, BarChart3, Activity, MessageSquare, Mail as EmailIcon, TrendingUp as TrendingUpIcon } from "lucide-react";
-=======
->>>>>>> origin/main
-
-      <Helmet></Helmet>
-
-        <meta name="description" content="Professional services by Zion Tech Group." />
-"
-}
+import React from "react"
+import { Helmet } from "react-helmet-async"
+const AboutPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to excellence in AI and IT solutions." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">About Zion Tech Group</h1>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI and IT solutions, 
+            committed to delivering excellence and innovation to our clients.
+          </p>
+        </div>
+      </div>
+    </div>
+  )}
+export default AboutPage
