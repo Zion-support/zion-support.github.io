@@ -67,7 +67,6 @@ export default function AboutPage() {
   //   { number: "99.9%", label: "Uptime Guarantee" },
   //   { number: "24/7", label: "Support Available" }
   // ];
->>>>>>> 637011ddd746d60b1c14efdab42f1946adbc808e
 
 const AboutPage: React.FC = () => {
   return (
