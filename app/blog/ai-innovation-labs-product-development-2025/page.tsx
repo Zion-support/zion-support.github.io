@@ -51,5 +51,6 @@ const AiInnovationLabsProductDevelopment2025Page: React.FC = () => {
 }
 
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 export default AiInnovationLabsProductDevelopment2025Page;
 

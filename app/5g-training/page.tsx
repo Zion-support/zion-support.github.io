@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
 import React from 'react';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 
 const FiveGTrainingPage: React.FC = () => {
   return (
@@ -20,4 +21,5 @@ const FiveGTrainingPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default FiveGTrainingPage;
