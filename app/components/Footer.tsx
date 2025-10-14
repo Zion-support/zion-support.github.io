@@ -6,11 +6,8 @@ import {
   MapPinIcon,
   ArrowRightIcon,
   HeartIcon
-} from '@heroicons/react/24/outline';  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-  HeartIcon
-} from '@heroicons/react/24/outline';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -22,8 +19,6 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: '5G Solutions', href: '/5g-solutions' },
-  ];    { name: 'Micro SaaS', href: '/micro-saas' },
     { name: '5G Solutions', href: '/5g-solutions' }
   ];
 

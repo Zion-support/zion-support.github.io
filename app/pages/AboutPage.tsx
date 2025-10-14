@@ -13,15 +13,7 @@ import { Helmet } from 'react-helmet-async';import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage()    {
-return (    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
-      </Helmet>
-    }
-  ];
-
+const AboutPage: React.FC = () => {
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
@@ -220,6 +212,7 @@ Let's discuss how we can help transform your business with our innovative soluti
           </p>
         </div>
       </div>
+    </div>
     </>
   );
 }
