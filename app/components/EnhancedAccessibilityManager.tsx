@@ -10,4 +10,3 @@ const EnhancedAccessibilityManager = () => {
 };
 
 export default EnhancedAccessibilityManager;
-

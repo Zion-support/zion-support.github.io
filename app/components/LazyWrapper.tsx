@@ -10,4 +10,3 @@ const LazyWrapper = () => {
 };
 
 export default LazyWrapper;
-

@@ -10,7 +10,7 @@ import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import SEOOptimizer from './app/components/SEOOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import LoadingStates from './app/components/LoadingStates';
+// import LoadingStates from './app/components/LoadingStates';
 import CustomErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';

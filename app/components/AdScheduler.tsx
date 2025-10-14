@@ -10,4 +10,3 @@ const AdScheduler = () => {
 };
 
 export default AdScheduler;
-

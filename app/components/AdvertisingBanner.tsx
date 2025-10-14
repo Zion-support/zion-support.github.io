@@ -10,4 +10,3 @@ const AdvertisingBanner = () => {
 };
 
 export default AdvertisingBanner;
-

@@ -10,4 +10,3 @@ const UltimateContentAdvertisingBanner = () => {
 };
 
 export default UltimateContentAdvertisingBanner;
-

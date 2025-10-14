@@ -10,4 +10,3 @@ const ServiceCardSkeleton = () => {
 };
 
 export default ServiceCardSkeleton;
-

@@ -10,4 +10,3 @@ const AnimatedCard = () => {
 };
 
 export default AnimatedCard;
-

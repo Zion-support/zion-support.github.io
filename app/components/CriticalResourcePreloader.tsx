@@ -10,4 +10,3 @@ const CriticalResourcePreloader = () => {
 };
 
 export default CriticalResourcePreloader;
-

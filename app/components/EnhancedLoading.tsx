@@ -10,4 +10,3 @@ const EnhancedLoading = () => {
 };
 
 export default EnhancedLoading;
-

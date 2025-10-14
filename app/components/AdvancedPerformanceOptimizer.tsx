@@ -10,4 +10,3 @@ const AdvancedPerformanceOptimizer = () => {
 };
 
 export default AdvancedPerformanceOptimizer;
-

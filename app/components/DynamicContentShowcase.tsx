@@ -10,4 +10,3 @@ const DynamicContentShowcase = () => {
 };
 
 export default DynamicContentShowcase;
-

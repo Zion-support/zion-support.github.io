@@ -10,4 +10,3 @@ const AccessibilityAudit = () => {
 };
 
 export default AccessibilityAudit;
-

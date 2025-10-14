@@ -10,4 +10,3 @@ const ResponsiveText = () => {
 };
 
 export default ResponsiveText;
-

@@ -10,4 +10,3 @@ const CoreWebVitals = () => {
 };
 
 export default CoreWebVitals;
-

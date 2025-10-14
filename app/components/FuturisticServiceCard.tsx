@@ -10,4 +10,3 @@ const FuturisticServiceCard = () => {
 };
 
 export default FuturisticServiceCard;
-

@@ -10,4 +10,3 @@ const AdvancedAccessibilityEnhancer = () => {
 };
 
 export default AdvancedAccessibilityEnhancer;
-

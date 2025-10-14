@@ -10,4 +10,3 @@ const ResponsiveGrid = () => {
 };
 
 export default ResponsiveGrid;
-

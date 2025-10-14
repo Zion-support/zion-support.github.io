@@ -10,4 +10,3 @@ const FuturisticButton = () => {
 };
 
 export default FuturisticButton;
-

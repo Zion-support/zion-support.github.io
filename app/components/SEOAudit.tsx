@@ -10,4 +10,3 @@ const SEOAudit = () => {
 };
 
 export default SEOAudit;
-

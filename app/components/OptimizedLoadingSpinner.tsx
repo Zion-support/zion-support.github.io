@@ -10,4 +10,3 @@ const OptimizedLoadingSpinner = () => {
 };
 
 export default OptimizedLoadingSpinner;
-

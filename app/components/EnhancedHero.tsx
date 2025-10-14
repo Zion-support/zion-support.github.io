@@ -10,4 +10,3 @@ const EnhancedHero = () => {
 };
 
 export default EnhancedHero;
-

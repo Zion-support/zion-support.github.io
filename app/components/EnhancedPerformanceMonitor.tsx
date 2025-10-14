@@ -10,4 +10,3 @@ const EnhancedPerformanceMonitor = () => {
 };
 
 export default EnhancedPerformanceMonitor;
-

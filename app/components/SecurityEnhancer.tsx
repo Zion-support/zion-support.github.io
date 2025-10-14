@@ -10,4 +10,3 @@ const SecurityEnhancer = () => {
 };
 
 export default SecurityEnhancer;
-

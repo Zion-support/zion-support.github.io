@@ -10,4 +10,3 @@ const PWAInstaller = () => {
 };
 
 export default PWAInstaller;
-

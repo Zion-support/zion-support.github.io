@@ -10,4 +10,3 @@ const ImprovedErrorBoundary = () => {
 };
 
 export default ImprovedErrorBoundary;
-

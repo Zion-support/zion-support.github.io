@@ -10,4 +10,3 @@ const ImprovedFooter = () => {
 };
 
 export default ImprovedFooter;
-

@@ -10,4 +10,3 @@ const EnhancedMetaTags = () => {
 };
 
 export default EnhancedMetaTags;
-

@@ -10,4 +10,3 @@ const LoadingOptimizer = () => {
 };
 
 export default LoadingOptimizer;
-

@@ -9,4 +9,3 @@ export default function DigitalTransformationPage() {
     </div>
   );
 }
-

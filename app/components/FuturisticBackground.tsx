@@ -10,4 +10,3 @@ const FuturisticBackground = () => {
 };
 
 export default FuturisticBackground;
-

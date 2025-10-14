@@ -10,4 +10,3 @@ const ServiceWorkerRegistration = () => {
 };
 
 export default ServiceWorkerRegistration;
-

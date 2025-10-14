@@ -10,4 +10,3 @@ const FuturisticTextEnhanced = () => {
 };
 
 export default FuturisticTextEnhanced;
-

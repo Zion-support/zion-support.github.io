@@ -10,4 +10,3 @@ const ImprovedNavigation = () => {
 };
 
 export default ImprovedNavigation;
-

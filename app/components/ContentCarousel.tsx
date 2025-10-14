@@ -10,4 +10,3 @@ const ContentCarousel = () => {
 };
 
 export default ContentCarousel;
-

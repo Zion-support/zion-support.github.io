@@ -10,4 +10,3 @@ const FuturisticBackgroundEnhanced = () => {
 };
 
 export default FuturisticBackgroundEnhanced;
-

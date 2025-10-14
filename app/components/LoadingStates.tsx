@@ -12,4 +12,3 @@ const LoadingStates = () => {
 };
 
 export default LoadingStates;
-

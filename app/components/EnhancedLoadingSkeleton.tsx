@@ -10,4 +10,3 @@ const EnhancedLoadingSkeleton = () => {
 };
 
 export default EnhancedLoadingSkeleton;
-

@@ -10,4 +10,3 @@ const AdManagementSystem = () => {
 };
 
 export default AdManagementSystem;
-

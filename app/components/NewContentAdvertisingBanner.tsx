@@ -10,4 +10,3 @@ const NewContentAdvertisingBanner = () => {
 };
 
 export default NewContentAdvertisingBanner;
-

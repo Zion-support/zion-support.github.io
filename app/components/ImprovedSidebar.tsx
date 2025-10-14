@@ -10,4 +10,3 @@ const ImprovedSidebar = () => {
 };
 
 export default ImprovedSidebar;
-

@@ -10,4 +10,3 @@ const PerformanceEnhancer = () => {
 };
 
 export default PerformanceEnhancer;
-

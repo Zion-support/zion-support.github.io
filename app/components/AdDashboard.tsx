@@ -10,4 +10,3 @@ const AdDashboard = () => {
 };
 
 export default AdDashboard;
-

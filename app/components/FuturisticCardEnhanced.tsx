@@ -10,4 +10,3 @@ const FuturisticCardEnhanced = () => {
 };
 
 export default FuturisticCardEnhanced;
-

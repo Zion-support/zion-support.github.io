@@ -10,4 +10,3 @@ const MobileOptimizer = () => {
 };
 
 export default MobileOptimizer;
-

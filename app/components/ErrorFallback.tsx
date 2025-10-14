@@ -10,4 +10,3 @@ const ErrorFallback = () => {
 };
 
 export default ErrorFallback;
-

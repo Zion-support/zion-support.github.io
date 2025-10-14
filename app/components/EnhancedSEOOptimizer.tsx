@@ -10,4 +10,3 @@ const EnhancedSEOOptimizer = () => {
 };
 
 export default EnhancedSEOOptimizer;
-

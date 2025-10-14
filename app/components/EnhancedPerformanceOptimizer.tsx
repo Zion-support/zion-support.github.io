@@ -10,4 +10,3 @@ const EnhancedPerformanceOptimizer = () => {
 };
 
 export default EnhancedPerformanceOptimizer;
-

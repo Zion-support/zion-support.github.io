@@ -10,4 +10,3 @@ const AdAnalytics = () => {
 };
 
 export default AdAnalytics;
-

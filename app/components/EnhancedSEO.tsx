@@ -10,4 +10,3 @@ const EnhancedSEO = () => {
 };
 
 export default EnhancedSEO;
-

@@ -10,4 +10,3 @@ const AdTemplates = () => {
 };
 
 export default AdTemplates;
-

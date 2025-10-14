@@ -10,4 +10,3 @@ const ContentStatistics = () => {
 };
 
 export default ContentStatistics;
-

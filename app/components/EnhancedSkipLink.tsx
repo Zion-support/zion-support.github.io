@@ -10,4 +10,3 @@ const EnhancedSkipLink = () => {
 };
 
 export default EnhancedSkipLink;
-

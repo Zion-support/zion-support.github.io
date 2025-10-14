@@ -10,4 +10,3 @@ const ContentPromotionBanner = () => {
 };
 
 export default ContentPromotionBanner;
-

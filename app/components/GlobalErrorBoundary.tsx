@@ -10,4 +10,3 @@ const GlobalErrorBoundary = () => {
 };
 
 export default GlobalErrorBoundary;
-
