@@ -34,6 +34,7 @@ const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => {
   );
 };
 
+// Main router component - removed as it's not used
 
 // Router content component that has access to location
 const RouterContent: React.FC = () => {
