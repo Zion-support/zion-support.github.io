@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 
 // Components
+import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
