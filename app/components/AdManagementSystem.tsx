@@ -1,10 +1,11 @@
 import React from "react";
 
-const AdManagementSystem = () => {
+type AdManagementSystemProps = Record<string, unknown>;
+
+const AdManagementSystem: React.FC<AdManagementSystemProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AdManagementSystem</h2>
-      <p>This component is under construction.</p>
+    <div className="admanagementsystem">
+      {/* Component content */}
     </div>
   );
 };

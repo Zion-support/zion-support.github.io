@@ -1,10 +1,11 @@
 import React from "react";
 
-const ErrorBoundary = () => {
+type ErrorBoundaryProps = Record<string, unknown>;
+
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ErrorBoundary</h2>
-      <p>This component is under construction.</p>
+    <div className="errorboundary">
+      {/* Component content */}
     </div>
   );
 };

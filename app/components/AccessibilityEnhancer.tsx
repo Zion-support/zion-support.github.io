@@ -1,10 +1,11 @@
 import React from "react";
 
-const AccessibilityEnhancer = () => {
+type AccessibilityEnhancerProps = Record<string, unknown>;
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AccessibilityEnhancer</h2>
-      <p>This component is under construction.</p>
+    <div className="accessibilityenhancer">
+      {/* Component content */}
     </div>
   );
 };

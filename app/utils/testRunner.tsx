@@ -1,4 +1,4 @@
-import React from 'react';'// testRunner - Basic implementation'export default function testRunner() {;
+// testRunner - Basic implementation
+export default function TestRunner() {
   return null;
 }
-;

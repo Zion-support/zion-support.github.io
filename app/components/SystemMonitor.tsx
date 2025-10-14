@@ -1,10 +1,11 @@
 import React from "react";
 
-const SystemMonitor = () => {
+type SystemMonitorProps = Record<string, unknown>;
+
+const SystemMonitor: React.FC<SystemMonitorProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SystemMonitor</h2>
-      <p>This component is under construction.</p>
+    <div className="systemmonitor">
+      {/* Component content */}
     </div>
   );
 };

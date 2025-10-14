@@ -1,11 +1,13 @@
 import React from "react";
 
-const EnhancedAnalytics = () => {
+type EnhancedAnalyticsProps = Record<string, unknown>;
+
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">EnhancedAnalytics</h2>
-      <p>This component is under construction.</p>
+    <div className="enhancedanalytics">
+      {/* Component content */}
     </div>
   );
 };
+
 export default EnhancedAnalytics;

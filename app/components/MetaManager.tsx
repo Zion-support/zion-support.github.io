@@ -1,11 +1,13 @@
 import React from "react";
 
-const MetaManager = () => {
+type MetaManagerProps = Record<string, unknown>;
+
+const MetaManager: React.FC<MetaManagerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">MetaManager</h2>
-      <p>This component is under construction.</p>
+    <div className="metamanager">
+      {/* Component content */}
     </div>
   );
 };
+
 export default MetaManager;

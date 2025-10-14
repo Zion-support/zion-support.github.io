@@ -1,10 +1,11 @@
 import React from "react";
 
-const ErrorFallback = () => {
+type ErrorFallbackProps = Record<string, unknown>;
+
+const ErrorFallback: React.FC<ErrorFallbackProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ErrorFallback</h2>
-      <p>This component is under construction.</p>
+    <div className="errorfallback">
+      {/* Component content */}
     </div>
   );
 };

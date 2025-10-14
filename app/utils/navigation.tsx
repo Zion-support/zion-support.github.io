@@ -1,4 +1,4 @@
-import React from 'react';'// navigation - Basic implementation'export default function navigation() {;
+// navigation - Basic implementation
+export default function Navigation() {
   return null;
 }
-;

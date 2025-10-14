@@ -1,10 +1,11 @@
 import React from "react";
 
-const NewsletterSignup = () => {
+type NewsletterSignupProps = Record<string, unknown>;
+
+const NewsletterSignup: React.FC<NewsletterSignupProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">NewsletterSignup</h2>
-      <p>This component is under construction.</p>
+    <div className="newslettersignup">
+      {/* Component content */}
     </div>
   );
 };

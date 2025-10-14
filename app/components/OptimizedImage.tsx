@@ -1,10 +1,11 @@
 import React from "react";
 
-const OptimizedImage = () => {
+type OptimizedImageProps = Record<string, unknown>;
+
+const OptimizedImage: React.FC<OptimizedImageProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">OptimizedImage</h2>
-      <p>This component is under construction.</p>
+    <div className="optimizedimage">
+      {/* Component content */}
     </div>
   );
 };

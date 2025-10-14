@@ -1,10 +1,11 @@
 import React from "react";
 
-const ContentStatistics = () => {
+type ContentStatisticsProps = Record<string, unknown>;
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ContentStatistics</h2>
-      <p>This component is under construction.</p>
+    <div className="contentstatistics">
+      {/* Component content */}
     </div>
   );
 };

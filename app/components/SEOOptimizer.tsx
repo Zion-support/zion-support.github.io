@@ -1,10 +1,11 @@
 import React from "react";
 
-const SEOOptimizer = () => {
+type SEOOptimizerProps = Record<string, unknown>;
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SEOOptimizer</h2>
-      <p>This component is under construction.</p>
+    <div className="seooptimizer">
+      {/* Component content */}
     </div>
   );
 };

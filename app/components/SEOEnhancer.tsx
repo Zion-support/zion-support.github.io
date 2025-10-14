@@ -1,10 +1,11 @@
 import React from "react";
 
-const SEOEnhancer = () => {
+type SEOEnhancerProps = Record<string, unknown>;
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SEOEnhancer</h2>
-      <p>This component is under construction.</p>
+    <div className="seoenhancer">
+      {/* Component content */}
     </div>
   );
 };

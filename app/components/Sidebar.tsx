@@ -1,10 +1,11 @@
 import React from "react";
 
-const Sidebar = () => {
+type SidebarProps = Record<string, unknown>;
+
+const Sidebar: React.FC<SidebarProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">Sidebar</h2>
-      <p>This component is under construction.</p>
+    <div className="sidebar">
+      {/* Component content */}
     </div>
   );
 };

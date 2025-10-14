@@ -1,10 +1,11 @@
 import React from "react";
 
-const EnhancedHero = () => {
+type EnhancedHeroProps = Record<string, unknown>;
+
+const EnhancedHero: React.FC<EnhancedHeroProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">EnhancedHero</h2>
-      <p>This component is under construction.</p>
+    <div className="enhancedhero">
+      {/* Component content */}
     </div>
   );
 };

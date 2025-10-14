@@ -1,10 +1,11 @@
 import React from "react";
 
-const CriticalResourcePreloader = () => {
+type CriticalResourcePreloaderProps = Record<string, unknown>;
+
+const CriticalResourcePreloader: React.FC<CriticalResourcePreloaderProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">CriticalResourcePreloader</h2>
-      <p>This component is under construction.</p>
+    <div className="criticalresourcepreloader">
+      {/* Component content */}
     </div>
   );
 };

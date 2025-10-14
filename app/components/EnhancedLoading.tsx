@@ -1,10 +1,11 @@
 import React from "react";
 
-const EnhancedLoading = () => {
+type EnhancedLoadingProps = Record<string, unknown>;
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">EnhancedLoading</h2>
-      <p>This component is under construction.</p>
+    <div className="enhancedloading">
+      {/* Component content */}
     </div>
   );
 };
