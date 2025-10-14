@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Users, Clock, DollarSign } from 'lucide-react';
@@ -205,7 +203,3 @@ const WebDevelopmentPage = () => {
 };
 
 export default WebDevelopmentPage;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da

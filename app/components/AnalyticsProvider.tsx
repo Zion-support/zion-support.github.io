@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-import React, { useEffect } from 'react';
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    }, []);
-
-<<<<<<< HEAD
-  return <>{children}</>;
-<<<<<<< HEAD
-};
-
-export default AnalyticsProvider;
-=======
-import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
@@ -29,21 +7,10 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     // Track event with Google Analytics or other analytics service
@@ -91,28 +58,14 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       {children}
     </AnalyticsContext.Provider>
   );
-=======
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-}) => {
-  useEffect(() => {
-    // Initialize Google Analytics if available
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-    }
-  }, []);
+};
 
-  return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
 };
 
 export default AnalyticsProvider;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-};
-
-export default AnalyticsProvider;
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39

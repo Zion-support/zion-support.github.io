@@ -127,10 +127,50 @@ export default function CaseStudies() {
     { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
   ];
 
-              </Link>
-            </div>
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Case Studies
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how we've helped businesses transform their operations with our innovative solutions.
+            </p>
           </div>
-        </section>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  {stat.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">{stat.number}</h3>
+                <p className="text-gray-300">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Case Studies Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300">
+                <h3 className="text-xl font-bold text-white mb-3">{study.title}</h3>
+                <p className="text-gray-300 mb-4">{study.description}</p>
+                <div className="space-y-2">
+                  {study.results.map((result, resultIndex) => (
+                    <div key={resultIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {result}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );

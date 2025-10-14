@@ -3,15 +3,14 @@ import os
 import re
 import glob
 
-def fix_unused_imports(file_path):
-    """Fix unused imports in a TypeScript/JavaScript file"""
+def fix_unused_imports_advanced(file_path):
+    """Fix unused imports in a TypeScript/JavaScript file with better detection"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Skip if file has merge conflicts
         if '<<<<<<< HEAD' in content:
-            print(f"Skipping {file_path} - has merge conflicts")
             return False
         
         # Find all import statements
@@ -57,6 +56,9 @@ def fix_unused_imports(file_path):
                     rf'{var_name}\s*\?', # Optional chaining
                     rf'{var_name}\s*\|', # Union type
                     rf'{var_name}\s*&',  # Intersection type
+                    rf'icon:\s*<{var_name}', # Icon in object
+                    rf'icon:\s*{var_name}', # Icon in object
+                    rf'className="[^"]*{var_name}[^"]*"', # CSS class
                 ]
                 
                 is_used = any(re.search(pattern, content) for pattern in usage_patterns)
@@ -106,7 +108,7 @@ def main():
                 continue
                 
             files_processed += 1
-            if fix_unused_imports(file_path):
+            if fix_unused_imports_advanced(file_path):
                 files_modified += 1
     
     print(f"\nProcessed {files_processed} files")
