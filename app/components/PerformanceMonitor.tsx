@@ -71,7 +71,7 @@ const PerformanceMonitor = () => {
       if (Object.keys(metrics).length > 0) {
         // Send to analytics service
         if (process.env.NODE_ENV === 'development') {
-          console.log('Performance Metrics:', metrics);
+          console.warn('Performance Metrics:', metrics);
         }
         
         // You can send to your analytics service here
