@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zion-tech-v1''
+const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
@@ -33,17 +33,15 @@ self.addEventListener('fetch', (event) => {
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
-
           }
         })
-      )
+      );
     })
   );
 });
@@ -58,5 +56,4 @@ self.addEventListener('sync', (event) => {
 async function doBackgroundSync() {
   // Handle offline form submissions or other background tasks
   console.log('Background sync triggered');
-
 }

@@ -1,35 +1,25 @@
-'use client';';';
-import React from 'react';';';
-export default function ComponentsPage() {}
-  return (
-    <div>Page content</div>
-  );
-}
-  return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="container mx-auto px-4">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>";";
-        <p className="text-gray-30o0 text-lg">";";
-          This page is under development.;
-        </p>
+'use client';
 
-      </div>
-    </>
-  );
-}
-        </p></div></div>
-  );}
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
 }
 
+export default function EnhancedLoadingSpinner({ 
+  size = 'md', 
+  className = '' 
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  return (
+    <div className={`flex items-center justify-center ${className}`}>
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>
+    </div>
+  );
+}
