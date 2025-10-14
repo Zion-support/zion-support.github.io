@@ -1,67 +1,114 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      }
-
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a logging service
-      }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
-            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
+<<<<<<< HEAD
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+'use client''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+"use client"
+export default function Page() {return (
+    <div className="min-h-screen bg-white">"
+      <Helmet>
+        <title>GlobalErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="Professional globalerrorboundary services by Zion Tech Group." />"
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
+            GlobalErrorBoundary;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">"
+            Professional globalerrorboundary solutions tailored to your business needs.;
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">"
+                Our team of experts delivers cutting-edge globalerrorboundary solutions.;
+              </p>
             </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We're experiencing technical difficulties. Please try again later.
-            </p>
-            
-            <button
-              onClick={() => window.location.reload()}
-              className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-            >
-              Try Again
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">"
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">"
+                Tailored globalerrorboundary implementations for your specific requirements.;
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">"
+                Round-the-clock support for all your globalerrorboundary needs.;
+              </p>
+            </div>
+          </div>
+          <div className="mt-12">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+              Get Started Today;
             </button>
           </div>
         </div>
-      );
-    }
+      </div>
+    </div>
+  )
+=======
+import React from "react";
 
-    return this.props.children;
-  }
-}
+const GlobalErrorBoundary = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">GlobalErrorBoundary</h2>
+      <p>This component is under construction.</p>
+    </div>
+<<<<<<< HEAD
+  ); }
+>>>>>>> origin/main
+            GlobalErrorBoundary</h1>
+          <p className="text-xl text-gray-600 mb-8">"
+            Professional globalerrorboundary solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+                Expert Solutions</h3>
+              <p className="text-blue-700">"
+                Our team of experts delivers cutting-edge globalerrorboundary solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">"
+                Custom Implementation</h3>
+              <p className="text-green-700">"
+                Tailored globalerrorboundary implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+                24/7 Support</h3>
+              <p className="text-purple-700">"
+                Round-the-clock support for all your globalerrorboundary needs.</p></div></div>
+          <div className="mt-12">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+              Get Started Today</button></div></div></div></div>
+  )
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+<<<<<<< HEAD
+}''
+=======
+            </button>;
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}'
+=======
+  );
+};
 
 export default GlobalErrorBoundary;
+>>>>>>> origin/main
+>>>>>>> origin/main

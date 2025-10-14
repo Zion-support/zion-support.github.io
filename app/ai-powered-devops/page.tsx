@@ -1,31 +1,35 @@
+<<<<<<< HEAD
 import React from "react";
+=======
+
+>>>>>>> origin/main
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Award as AwardIcon, Rocket, Phone, Star as StarIcon } from "lucide-react";
+=======
+<<<<<<< HEAD
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
+>>>>>>> origin/main
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function AiPoweredDevops() {
   const features = [
-    "AI-powered automated testing and quality assurance",
-    "Intelligent deployment orchestration and rollback",
-    "Predictive infrastructure scaling and optimization",
-    "Automated security vulnerability detection and patching",
-    "AI-driven performance monitoring and alerting",
-    "Intelligent log analysis and anomaly detection",
-    "Automated code review and optimization suggestions",
-    "Smart resource allocation and cost optimization",
-    "AI-powered incident response and resolution",
-    "Automated compliance checking and reporting",
-    "Intelligent capacity planning and forecasting",
-    "AI-driven continuous integration and deployment"
+    "AI-powered automated testing and quality assurance",Intelligent deployment orchestration and rollback",Predictive infrastructure scaling and optimization",Automated security vulnerability detection and patching",AI-driven performance monitoring and alerting",Intelligent log analysis and anomaly detection",Automated code review and optimization suggestions",Smart resource allocation and cost optimization",AI-powered incident response and resolution",Automated compliance checking and reporting",Intelligent capacity planning and forecasting",AI-driven continuous integration and deployment"
   ];
 
+<<<<<<< HEAD
   const benefits = [
-    "Reduce deployment time by 80%",
-    "Eliminate 95% of manual DevOps tasks",
-    "Improve system reliability by 99.9%",
-    "Cut infrastructure costs by 40%"
+    "Reduce deployment time by 80%",Eliminate 95% of manual DevOps tasks",Improve system reliability by 99.9%",Cut infrastructure costs by 40%"
   ];
+=======
+  // const benefits = [
+  //   "Reduce deployment time by 80%",
+  //   "Eliminate 95% of manual DevOps tasks",
+  //   "Improve system reliability by 99.9%",
+  //   "Cut infrastructure costs by 40%"
+  // ];
+>>>>>>> origin/main
 
   const pricingPlans = [
     {
@@ -34,13 +38,7 @@ export default function AiPoweredDevops() {
       period: "/month",
       description: "Perfect for small development teams and startups",
       features: [
-        "Up to 10 applications",
-        "Basic AI automation",
-        "Standard monitoring",
-        "Email support",
-        "Basic reporting",
-        "5 team members",
-        "Cloud deployment only"
+        "Up to 10 applications",Basic AI automation",Standard monitoring",Email support",Basic reporting",5 team members",Cloud deployment only"
       ],
       popular: false
     },
@@ -50,16 +48,7 @@ export default function AiPoweredDevops() {
       period: "/month",
       description: "Ideal for growing companies and development teams",
       features: [
-        "Up to 100 applications",
-        "Advanced AI automation",
-        "Comprehensive monitoring",
-        "Priority support",
-        "Advanced analytics",
-        "25 team members",
-        "Multi-cloud deployment",
-        "API access",
-        "Custom integrations",
-        "24/7 monitoring"
+        "Up to 100 applications",Advanced AI automation",Comprehensive monitoring",Priority support",Advanced analytics",25 team members",Multi-cloud deployment",API access",Custom integrations",24/7 monitoring"
       ],
       popular: true
     },
@@ -69,18 +58,7 @@ export default function AiPoweredDevops() {
       period: "/month",
       description: "For large organizations with complex DevOps needs",
       features: [
-        "Unlimited applications",
-        "Full AI automation suite",
-        "Enterprise monitoring",
-        "24/7 dedicated support",
-        "Custom analytics",
-        "Unlimited team members",
-        "Hybrid cloud deployment",
-        "Advanced API access",
-        "Custom AI model training",
-        "Dedicated DevOps engineers",
-        "White-label solution",
-        "On-premise deployment"
+        "Unlimited applications",Full AI automation suite",Enterprise monitoring",24/7 dedicated support",Custom analytics",Unlimited team members",Hybrid cloud deployment",Advanced API access",Custom AI model training",Dedicated DevOps engineers",White-label solution",On-premise deployment"
       ],
       popular: false
     }
@@ -139,21 +117,17 @@ export default function AiPoweredDevops() {
       color: "from-orange-500 to-red-500"
     }
   ];
+=======
+>>>>>>> origin/main
 
+const HomePage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-        />
-        <meta
-          name="keywords"
-          content="AI DevOps, automated testing, intelligent deployment, predictive scaling, DevOps automation, CI/CD, infrastructure automation, monitoring AI"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       <SEOOptimizer
         title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
         description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
@@ -163,7 +137,7 @@ export default function AiPoweredDevops() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]></div>
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
@@ -174,7 +148,7 @@ export default function AiPoweredDevops() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               AI-Powered
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}DevOps
+                {"}DevOps
               </span>
             </h1>
             
@@ -315,8 +289,7 @@ export default function AiPoweredDevops() {
                 <div
                   key={index}
                   className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400' : ''
-                  }`}
+                    plan.popular ? 'ring-2 ring-cyan-400' :}`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -349,8 +322,7 @@ export default function AiPoweredDevops() {
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900}`}
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -384,7 +356,7 @@ export default function AiPoweredDevops() {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                       {testimonial.avatar}
@@ -446,15 +418,30 @@ export default function AiPoweredDevops() {
               </Link>
               <Link
                 to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                className=border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105
               >
                 View Demo
-                <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Monitor className=w-5 h-5 ml-2 group-hover:scale-110 transition-transform />
               </Link>
             </div>
           </div>
         </section>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+>>>>>>> origin/main
       </div>
-    </>
+    </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default HomePage;
+>>>>>>> origin/main

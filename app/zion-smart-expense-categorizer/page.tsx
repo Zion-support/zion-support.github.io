@@ -1,45 +1,168 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function ZionSmartExpenseCategorizer() {
-  return (
-    <>
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
+'use client''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+"use client"
+export default function ZionSmartExpenseCategorizer() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       <Helmet>
-        <title>Zion Smart Expense Categorizer - Zion Tech Group</title>
-        <meta name="description" content="AI-powered expense categorization and financial management solution. Automatically categorize and track business expenses with intelligent AI." />
+        <title>Zion Smart Expense Categorizer | Zion Tech Group</title>
+        <meta name="description" content="Professional Smart Expense Categorizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Zion Smart Expense Categorizer
+      <div className="container mx-auto px-4 py-16">"
+        <div className="text-center mb-16">"
+          <h1 className="text-5xl font-bold text-white mb-6">"
+            Zion Smart Expense Categorizer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>"
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            AI-powered expense categorization and financial management solution that automatically categorizes and tracks business expenses.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+            Advanced AI-powered solutions for modern businesses.;
           </p>
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Auto Categorization</h3>
-              <p className="text-gray-300">Automatically categorize expenses using advanced AI algorithms.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Receipt Processing</h3>
-              <p className="text-gray-300">Process receipts and invoices with OCR and AI analysis.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Financial Reports</h3>
-              <p className="text-gray-300">Generate detailed financial reports and insights.</p>
-            </div>
+        </div>
+            Zion Smart Expense Categorizer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span></h1>"
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+            Advanced AI-powered solutions for modern businesses.</p></div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Features</h3>"
+            <p className="text-gray-300 mb-4">"
+              Cutting-edge AI technology for enhanced business operations.;
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">"
+              <li>• Machine learning</li>
+              <li>• Predictive analytics</li>
+              <li>• Automated processes</li>
+            </ul>
           </div>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-lg"
-          >
-            Get Started Today
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold text-white mb-4">Smart Integration</h3>"
+            <p className="text-gray-300 mb-4">"
+              Seamless integration with your existing business systems.;
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">"
+              <li>• API integration</li>
+              <li>• Data synchronization</li>
+              <li>• Real-time updates</li>
+            </ul>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>"
+            <p className="text-gray-300 mb-4">"
+              Round-the-clock support for all your business needs.;
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">"
+              <li>• Expert support</li>
+              <li>• Quick response</li>
+              <li>• Proactive monitoring</li>
+            </ul>
+          </div>
+        </div>
+              Cutting-edge AI technology for enhanced business operations.</p>
+            <ul className="text-sm text-gray-400 space-y-2">"
+              <li>• Machine learning</li>
+              <li>• Predictive analytics</li>
+              <li>• Automated processes</li></ul></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold text-white mb-4">Smart Integration</h3>"
+            <p className="text-gray-300 mb-4">"
+              Seamless integration with your existing business systems.</p>
+            <ul className="text-sm text-gray-400 space-y-2">"
+              <li>• API integration</li>
+              <li>• Data synchronization</li>
+              <li>• Real-time updates</li></ul></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>"
+            <p className="text-gray-300 mb-4">"
+              Round-the-clock support for all your business needs.</p>
+            <ul className="text-sm text-gray-400 space-y-2">"
+              <li>• Expert support</li>
+              <li>• Quick response</li>
+              <li>• Proactive monitoring</li></ul></div></div>
+        <div className="text-center">"
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>"
+            <p className="text-gray-300 mb-6">"
+              Our AI experts are ready to help you implement cutting-edge solutions.;
+            </p>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">"
+              Get Started Today;
+            </button>
+          </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
+=======
+<<<<<<< HEAD
+'use client'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+'use client';
+export default function ZionSmartExpenseCategorizer() { return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Zion Smart Expense Categorizer | Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+=======
+export default function ZionSmartExpenseCategorizer() {
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/main
+
+const HomePage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
+>>>>>>> origin/main
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+  ); }
+>>>>>>> origin/main
+              Our AI experts are ready to help you implement cutting-edge solutions.</p>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">"
+              Get Started Today</button></div></div></div></div>
+  )
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+<<<<<<< HEAD
+''
+=======
+            </button>;
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
 }
+'
+=======
+  );
+<<<<<<< HEAD
+}
+  );
+=======
+};
+
+export default HomePage;
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main

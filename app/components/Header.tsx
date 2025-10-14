@@ -1,33 +1,399 @@
-import React from "react";
+<<<<<<< HEAD
+import React from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X, ChevronDown } from 'lucide-react'
+const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
+<<<<<<< HEAD
+  const [isServicesOpen, setIsServicesOpen] = useState(false)''
+  const navigationItems = [{ name: 'Home', href: '/' },'{ name: 'About', href: '/about' },'{ '
+      name: 'Services',''
+      href: '/services',''
+      submenu: [{ name: 'AI Services', href: '/ai-services' },'{ name: 'IT Services', href: '/it-services' },'{ name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },'{ name: 'Digital Transformation', href: '/digital-transformation' }''
+      ]},
+    { name: 'Solutions', href: '/solutions' },'{ name: 'Case Studies', href: '/case-studies' },'{ name: 'Blog', href: '/blog' },'{ name: 'Contact', href: '/contact' }''
+  ]
+import React from 'react';
+{ useState } from 'react';
+import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react";
+const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+'}'
+  const navigationItems = [{ name: 'Home', href: '/' },'
+    { name: 'About', href: '/about" },"
+    {''
+      name: 'Services','
+      href: '/services',''}'
+      submenu: [{ name: 'AI Services', href: '/ai-services' },'
+        { name: 'IT Services', href: '/it-services' },'
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },'
+        { name: 'Digital Transformation', href: '/digital-transformation" }"
+      ];
+    },''
+    { name: 'Solutions', href: '/solutions' },'
+    { name: 'Case Studies', href: '/case-studies' },'
+    { name: 'Blog', href: '/blog' },'
+    { name: 'Contact', href: '/contact" }"
+  ];
+  return (
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="flex justify-between items-center h-16">"
+          {/* Logo */}
+          <div className="flex-shrink-0">"
+            <Link to="/" className="text-2xl font-bold text-white">"
+              Zion Tech Group;
+            </Link>
+          </div>
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">"
+            <div className="ml-10 flex items-baseline space-x-4">"
+              {navigationItems.map((item) => (
+                <div key={item.name} className="relative group">"
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navigationItems.map((item) => (}
+                <div key={item.name} className="relative group">
+                  <Link;
+                    to={item.href}
+                    className="$1""
+                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)
+                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)
+                  >
+                    {item.name}
+                    {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}"
+=======
+  const [isServicesOpen, setIsServicesOpen] = useState(false)'
+  const navigationItems = [{ name: "Home", href: "/" },'{ name: "About", href: "/about" },'{ 
+      name: "Services",'
+      href: "/services",'
+      submenu: [{ name: "AI Services", href: "/ai-services" },'{ name: "IT Services", href: "/it-services" },'{ name: "Cloud Infrastructure", href: "/cloud-infrastructure" },'{ name: "Digital Transformation", href: "/digital-transformation" }'
+      ]},
+    { name: "Solutions", href: "/solutions" },'{ name: "Case Studies", href: "/case-studies" },'{ name: "Blog", href: "/blog" },'{ name: "Contact", href: "/contact" }'
+  ]
+import React from 'react';'
+{ useState } from 'react';'
+import { Link  , Menu,  X,  ChevronDown } from 'lucide-react';
+const Header: React.FC = () => { const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+' }
+  const navigationItems = [{ name: "Home", href: "/" },';'
+    { name: "About", href: "/about" },';
+    { '
+      name: "Services",';'
+      href: "/services",';' }
+      submenu: [{ name: "AI Services", href: "/ai-services" },';'
+        { name: "IT Services", href: "/it-services" },';'
+        { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },';'
+        { name: "Digital Transformation", href: "/digital-transformation" }';
+      ];
+    },'
+    { name: "Solutions", href: "/solutions" },';'
+    { name: "Case Studies", href: "/case-studies" },';'
+    { name: "Blog", href: "/blog" },';'
+    { name: "Contact", href: "/contact" }';
+  ];
+  return (
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          { /* Logo */ }
+          <div className="flex-shrink-0">
+            <Link to="/" className="text-2xl font-bold text-white">
+              Zion Tech Group;
+            </Link>
+          </div>
+          { /* Desktop Navigation */ }
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navigationItems.map((item) => (
+                <div key={item.name} className="relative group">
+          <div className="hidden md:block">;
+            <div className="ml-10 flex items-baseline space-x-4">;
+              { navigationItems.map((item) => ( }
+                <div key={item.name} className="relative group">;
+                  <Link;
+                    to={ item.href }
+                    className="$1"
+                    onMouseEnter={ () => item.submenu && setIsServicesOpen(true) }
+                    onMouseLeave={ () => item.submenu && setIsServicesOpen(false) }
+                  >
+                    { item.name }
+                    { item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" /> }
+>>>>>>> origin/main
+                  </Link>
+                  { /* Dropdown Menu */ }
+                  {item.submenu && isServicesOpen && (
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">"
+                      {item.submenu.map((subItem) => (
+<<<<<<< HEAD
+                        <Link}
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="$1""
+                        >
+                          {subItem.name}
+        <div className="flex justify-between items-center h-16">{/* Logo */}"
+          <div className="flex-shrink-0">"
+            <Link to="/" className="text-2xl font-bold text-white">"
+              Zion Tech Group</Link></div>{/* Desktop Navigation */}
+          <div className="hidden md:block">"
+            <div className="ml-10 flex items-baseline space-x-4">{navigationItems.map((item) => ("
+                <div key={item.name} className="relative group">"
+                  <Link
+                    to={item.href}
+                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors""
+                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)
+                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)
+                  >{item.name}
+                    {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}"
+                  </Link>{/* Dropdown Menu */}
+=======
+                        <Link;}
+                          key={ subItem.name }
+                          to={ subItem.href }
+                          className="$1"
+                        >
+                          { subItem.name }
+        <div className="flex justify-between items-center h-16">{ /* Logo */ }
+          <div className="flex-shrink-0">
+            <Link to="/" className="text-2xl font-bold text-white">
+              Zion Tech Group</Link></div>{ /* Desktop Navigation */ }
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">{navigationItems.map((item) => (
+                <div key={item.name} className="relative group">
+                  <Link
+                    to={ item.href }
+                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    onMouseEnter={ () => item.submenu && setIsServicesOpen(true) }
+                    onMouseLeave={ () => item.submenu && setIsServicesOpen(false) }
+                  >{ item.name }
+                    { item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" /> }
+                  </Link>{ /* Dropdown Menu */ }
+>>>>>>> origin/main
+                  {item.submenu && isServicesOpen && (
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">{item.submenu.map((subItem) => ("
+                        <Link
+                          key={subItem.name}
+<<<<<<< HEAD
+                          to={subItem.href}
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">{subItem.name}"
+=======
+                          to={ subItem.href }
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">{ subItem.name }
+>>>>>>> origin/main
+                        </Link>
+                      ))
+                    </div>
+                  )
+                </div>
+              ))
+            </div>
+          </div>
+<<<<<<< HEAD
+          {/* CTA Button */}
+          <div className="hidden md:block">"
+=======
+          { /* CTA Button */ }
+          <div className="hidden md:block">
+>>>>>>> origin/main
+            <Link;
+              to="$1""
+              className="$1""
+            >
+              Get Started;
+            </Link>
+          </div>
+<<<<<<< HEAD
+          {/* Mobile menu button */}
+          <div className="md:hidden">"
+            <button;
+              onClick={() => setIsOpen(!isOpen)
+              className="$1""
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
+=======
+          { /* Mobile menu button */ }
+          <div className="md:hidden">
+            <button;
+              onClick={ () => setIsOpen(!isOpen) }
+              className="$1"
+            >
+              { isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /> }
+>>>>>>> origin/main
+            </button>
+          </div>
+        </div>
+        { /* Mobile Navigation */ }
+        {isOpen && (
+          <div className="md:hidden">"
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">"
+              {navigationItems.map((item) => (
+                <div key={item.name}>
+<<<<<<< HEAD
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
+              {navigationItems.map((item) => (}
+                <div key={item.name}>
+                  <Link;
+                    to={item.href}
+                    className="$1""
+                    onClick={() => setIsOpen(false)
+=======
+          <div className="md:hidden">;
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;
+              { navigationItems.map((item) => ( }
+                <div key={item.name}>;
+                  <Link;
+                    to={ item.href }
+                    className="$1"
+                    onClick={ () => setIsOpen(false) }
+>>>>>>> origin/main
+                  >
+                    { item.name }
+                  </Link>
+                  {item.submenu && (
+                    <div className="ml-4 space-y-1">"
+                      {item.submenu.map((subItem) => (
+<<<<<<< HEAD
+                        <Link}
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="$1""
+                          onClick={() => setIsOpen(false)
+                        >
+                          {subItem.name}
+            </div></div>{/* CTA Button */}
+          <div className="hidden md:block">"
+            <Link
+              to="/contact""
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">"
+              Get Started</Link></div>{/* Mobile menu button */}
+          <div className="md:hidden">"
+            <button
+              onClick={() => setIsOpen(!isOpen)
+              className="text-gray-300 hover:text-white p-2">{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
+            </button></div></div>{/* Mobile Navigation */}
+=======
+                        <Link;}
+                          key={ subItem.name }
+                          to={ subItem.href }
+                          className="$1"
+                          onClick={ () => setIsOpen(false) }
+                        >
+                          { subItem.name }
+            </div></div>{ /* CTA Button */ }
+          <div className="hidden md:block">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+              Get Started</Link></div>{ /* Mobile menu button */ }
+          <div className="md:hidden">
+            <button
+              onClick={ () => setIsOpen(!isOpen) }
+              className="text-gray-300 hover:text-white p-2">{ isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /> }
+            </button></div></div>{ /* Mobile Navigation */ }
+>>>>>>> origin/main
+        {isOpen && (
+          <div className="md:hidden">"
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">{navigationItems.map((item) => ("
+                <div key={item.name}>
+                  <Link
+<<<<<<< HEAD
+                    to={item.href}
+                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium""
+                    onClick={() => setIsOpen(false)
+                  >{item.name}
+=======
+                    to={ item.href }
+                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    onClick={ () => setIsOpen(false) }
+                  >{ item.name }
+>>>>>>> origin/main
+                  </Link>{item.submenu && (
+                    <div className="ml-4 space-y-1">{item.submenu.map((subItem) => ("
+                        <Link
+                          key={subItem.name}
+<<<<<<< HEAD
+                          to={subItem.href}
+                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm""
+                          onClick={() => setIsOpen(false)
+                        >{subItem.name}
+=======
+                          to={ subItem.href }
+                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
+                          onClick={ () => setIsOpen(false) }
+                        >{ subItem.name }
+>>>>>>> origin/main
+                        </Link>
+                      ))
+                    </div>
+                  )
+                </div>
+              ))
+              <div className="pt-4">"
+                <Link;
+<<<<<<< HEAD
+                  to="$1""
+                  className="$1""
+                  onClick={() => setIsOpen(false)
+=======
+                  to="$1"
+                  className="$1"
+                  onClick={ () => setIsOpen(false) }
+>>>>>>> origin/main
+                >
+                  Get Started;
+                </Link>
+              </div>
+            </div>
+          </div>
+        )
+      </div>
+    </nav>
+  )
+export default Header;
+                <Link
+<<<<<<< HEAD
+                  to="/contact""
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center""
+                  onClick={() => setIsOpen(false)
+=======
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+                  onClick={ () => setIsOpen(false) }
+>>>>>>> origin/main
+                >
+                  Get Started</Link></div></div></div>
+        )
+      </div></nav>
+  )
+export default Header
+<<<<<<< HEAD
+}
+export default Header';
+=======
+=======
+<<<<<<< HEAD
+
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+=======
+import React from "react";
+>>>>>>> origin/main
 
-export default function Header() {
+const Header = () => {
   return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Professional components services by Zion Tech Group. Transform your business with our expert solutions."
-        />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional components services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">Header</h2>
+      <p>This component is under construction.</p>
+    </div>
   );
-}
+>>>>>>> origin/main
+};
+
+export default Header;
+>>>>>>> origin/main

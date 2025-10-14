@@ -1,28 +1,72 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+<<<<<<< HEAD
+import React, { Suspense, lazy, ComponentType } from 'react'
+import LoadingSpinner from './LoadingSpinner'
+<<<<<<< HEAD
+interface LazyWrapperProps {
+  children: React.ReactNode
+  fallback?: React.ReactNode}
+import React, { Suspense, lazy, ComponentType } from 'react';
+import LoadingSpinner from './LoadingSpinner";
+interface LazyWrapperProps {children: React.ReactNode;
+  fallback?: React.ReactNode}
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
+  children, 
+  fallback = <LoadingSpinner size="lg" text="Loading component..." /> }"
+}) => {
+  return (}
+    <Suspense fallback={fallback}>
+=======
+interface LazyWrapperProps { children: React.ReactNode
+  fallback?: React.ReactNode }
+import React, { Suspense, lazy, ComponentType } from 'react';'
+import LoadingSpinner from './LoadingSpinner';
+interface LazyWrapperProps { children: React.ReactNode;
+  fallback?: React.ReactNode; }
+}
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ children, 
+  fallback = <LoadingSpinner size="lg" text="Loading component..." /> }
+}) => { return ( }
+    <Suspense fallback={fallback}>
+      { children }
+=======
+import React, { Suspense } from "react";
 
 interface LazyWrapperProps {
   children: React.ReactNode;
-  className?: string;
+  fallback?: React.ReactNode;
 }
 
-export default function LazyWrapper({
-  children,
-  className = "",
-}: LazyWrapperProps) {
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ children, fallback }) => {
   return (
-    <>
-      <div className={`lazy-wrapper ${className}`}>
-        {children}
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </>
-  );
+    <Suspense fallback={fallback || <div className="p-4">Loading...</div>}>
+>>>>>>> origin/main
+      {children}
+>>>>>>> origin/main
+    </Suspense>
+<<<<<<< HEAD
+  )
+  )
+// Higher-order component for lazy loading
+export const withLazyLoading = <P extends object>(
+  Component: ComponentType<P>,
+  fallback?: React.ReactNode
+) => {
+  const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
+) => {}
+  const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
+  return (props: P) => (
+    <LazyWrapper fallback={fallback}>
+      <LazyComponent {...props} />
+    </LazyWrapper>
+  )
+export default LazyWrapper;
+  )
+export default LazyWrapper
 }
+export default LazyWrapper';
+=======
+  );
+};
+
+export default LazyWrapper;
+>>>>>>> origin/main

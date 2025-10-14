@@ -1,15 +1,12 @@
 #!/bin/bash
 
-echo "================================================"
+echo "======"
 echo "Complete Solution: Fix All Errors and Merge PRs"
-echo "================================================"
+echo "======"
 
 # Step 1: Clean all remaining merge conflict markers
 echo "Step 1: Cleaning merge conflict markers..."
-sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' /workspace/app/components/ErrorBoundary.tsx
-sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' /workspace/app/components/UnifiedContentPromotion.tsx
-sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' /workspace/app/contact/page.tsx
-
+sed -i '/^<<<<<<< /d; /^/d; /^sed -i '/^<<<<<<< /d; /^/d; /^sed -i '/^<<<<<<< /d; /^/d; /^
 # Step 2: Verify type-check passes
 echo "Step 2: Running type-check..."
 cd /workspace
@@ -43,9 +40,9 @@ git push origin cursor/fix-errors-and-merge-to-main-bfaf
 
 # Step 6: Display PR information
 echo ""
-echo "================================================"
+echo "======"
 echo "GitHub PR Status"
-echo "================================================"
+echo "======"
 echo "Current branch: cursor/fix-errors-and-merge-to-main-bfaf"
 echo "Repository: Zion-Holdings/zion.app"
 echo ""
@@ -67,6 +64,6 @@ echo ""
 echo "  # Merge the final PR"
 echo "  gh pr merge 25983 --repo Zion-Holdings/zion.app --merge"
 echo ""
-echo "================================================"
+echo "======"
 echo "Script completed successfully!"
-echo "================================================"
+echo "======"
