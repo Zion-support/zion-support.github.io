@@ -84,6 +84,7 @@ export default defineConfig({
           }
           // App chunks
           if (id.includes('/app/')) {
+<<<<<<< HEAD
             return 'app'
           }
           return undefined
@@ -92,3 +93,35 @@ export default defineConfig({
     }
   }
 })
+=======
+            return 'app';
+          }
+          return undefined;
+        },
+        assetFileNames: (assetInfo) => {
+          if (
+            assetInfo.name &&
+            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
+          ) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+      },
+    },
+  },
+  server: {
+    port: 3000,
+    open: false,
+    cors: true,
+    hmr: {
+      overlay: true,
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17d

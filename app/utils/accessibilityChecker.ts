@@ -6,8 +6,18 @@ export const accessibilityChecker = {
     images.forEach((img) => {
       if (!img.getAttribute('alt')) {
         issues.push({
+<<<<<<< HEAD
           element: img as HTMLElement,
           issue: 'Missing alt text'
+=======
+<<<<<<< HEAD
+          element: img as HTMLElement;,
+          issue: 'Missing alt text'
+=======
+          element: img as HTMLElement,
+          issue: 'Missing alt text';
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17d
         })
       }
     })
@@ -24,8 +34,18 @@ export const accessibilityChecker = {
       const currentLevel = parseInt(heading.tagName.charAt(1))
       if (currentLevel > previousLevel + 1) {
         issues.push({
+<<<<<<< HEAD
           element: heading as HTMLElement,
           issue: 'Heading level skipped'
+=======
+<<<<<<< HEAD
+          element: heading as HTMLElement;,
+          issue: 'Heading level skipped'
+=======
+          element: heading as HTMLElement,
+          issue: 'Heading level skipped';
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17d
         })
       }
       previousLevel = currentLevel

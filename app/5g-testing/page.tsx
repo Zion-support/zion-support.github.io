@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+
 const FiveGTestingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -10,6 +11,7 @@ const FiveGTestingPage: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional services and solutions.
           </p>
+          </div>
         </div>
       </div>
     </div>

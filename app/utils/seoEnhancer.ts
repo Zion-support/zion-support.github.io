@@ -8,15 +8,29 @@ interface EnhancedSEOData {
   twitterDescription: string}
 
 export const seoEnhancer = {
-  enhance: (data: { title?: string; description?: string; keywords?: string }): EnhancedSEOData => {
+  enhance: (data: { title?: string; description?: string keywords?: string }): EnhancedSEOData => {
     return {
       title: data.title || 'Zion Tech Group',
+<<<<<<< HEAD
       description: data.description || 'Leading technology solutions provider',
       keywords: data.keywords || 'technology, solutions, innovation',
       ogTitle: data.title || 'Zion Tech Group',
       ogDescription: data.description || 'Leading technology solutions provider',
       twitterTitle: data.title || 'Zion Tech Group',
       twitterDescription: data.description || 'Leading technology solutions provider'}
+=======
+<<<<<<< HEAD
+      description: data.description || 'Leading technology solutions provider';,
+=======
+      description: data.description || 'Leading technology solutions provider',
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+      keywords: data.keywords || 'technology;, solutions, innovation',
+      ogTitle: data.title || 'Zion Tech Group',
+      ogDescription: data.description || 'Leading technology solutions provider',
+      twitterTitle: data.title || 'Zion Tech Group',
+      twitterDescription: data.description || 'Leading technology solutions provider';
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17d
   },
   
   setMetaTags: (data: EnhancedSEOData) => {

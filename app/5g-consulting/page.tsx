@@ -36,7 +36,7 @@ const FiveGConsultingPage = () => {
           </p>
         </div>
 
-        <div className="grid md: grid-cols-3 gap-8 mb-16">;
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
