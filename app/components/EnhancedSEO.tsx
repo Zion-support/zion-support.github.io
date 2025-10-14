@@ -5,33 +5,33 @@ interface EnhancedSEOProps {
   title: string;
   description: string;
   keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string
+  canonical Url?: string;
+  og Image?: string
   }
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
   keywords,
-canonicalUrl,
-  ogImage
+canonical Url,
+  og Image
 }) => {
   return (
     <Helmet>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <meta="description" content={description} />
+      {keywords && <meta="keywords" content={keywords} />}
+      {canonical Url && <linkrel="canonical" href={canonical Url} />}
       
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-<meta property="og: type" content="website" />;
-      {ogImage && <meta property="og:image" content={ogImage} />}
+      <metaproperty="og:title" content={title} />
+      <metaproperty="og:description" content={description} />
+<metaproperty="og:type" content="website" />;
+      {og Image && <metaproperty="og:image" content={og Image} />}
       {/* Twitter Card */}
-      <meta name="twitter: card" content="summary_large_image" />;
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
+      <meta name="twitter:card" content="summary_large_image" />;
+      <meta="twitter:title" content={title} />
+      <meta="twitter:description" content={description} />
+      {og Image && <meta="twitter:image" content={og Image} />}
     </Helmet>
   )
   };

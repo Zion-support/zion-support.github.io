@@ -1,5 +1,5 @@
-export const enhancedErrorHandler = {
-  handleError: (error: Error, context?: string) => {
+export const enhanced Error Handler = {
+  handle Error: (error: Error, context?: string) => {
     console.error('Error occurred: ', error)
     
     if (typeof window !== 'undefined' && window.gtag) {
@@ -15,11 +15,10 @@ export const enhancedErrorHandler = {
       code: 'GENERIC_ERROR'
     }
   },
-  
-  handleApiError: (error: unknown) => {
-    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
-    const status = errorWithResponse.response?.status;
-    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+  handle Api Error: (error: unknown) => {
+    const error With Response = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+    const status = error With Response.response?.status;
+    const message = error With Response.response?.data?.message || error With Response.message;
     
     switch (status) {
       case 400:
@@ -36,11 +35,10 @@ export const enhancedErrorHandler = {
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
     }
   },
-  
-  getErrorMessage: (error: unknown) => {
-    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
-    if (errorWithResponse.response?.status) {
-      switch (errorWithResponse.response.status) {
+  get Error Message: (error: unknown) => {
+    const error With Response = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+    if (error With Response.response?.status) {
+      switch (error With Response.response.status) {
         case 400:
           return { message: 'Invalid request', code: 'BAD_REQUEST' };
         case 401:
@@ -52,10 +50,10 @@ export const enhancedErrorHandler = {
         case 500:
           return { message: 'Server error', code: 'SERVER_ERROR' };
         default:
-          return { message: errorWithResponse.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+          return { message: error With Response.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
       }
     }
     
-    return { message: errorWithResponse.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+    return { message: error With Response.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
   }
 }

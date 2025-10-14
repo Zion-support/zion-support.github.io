@@ -1,4 +1,4 @@
-export const envValidator = {
+export const env Validator = {
   required: (key: string): string => {
     const value = process.env[key];
     if (!value) {
@@ -6,21 +6,18 @@ export const envValidator = {
     }
     return value;
   },
-  
-  optional: (key: string, defaultValue: string = ''): string => {
-    return process.env[key] || defaultValue;
+  optional: (key: string, default Value: string = ''): string => {
+    return process.env[key] || default Value;
   },
-  
-  boolean: (key: string, defaultValue: boolean = false): boolean => {
+  boolean: (key: string, default Value: boolean = false): boolean => {
     const value = process.env[key];
-    if (value === undefined) return defaultValue;
-    return value.toLowerCase() === 'true';
+    if (value === undefined) return default Value;
+    return value.to Lower Case() === 'true';
   },
-  
-  number: (key: string, defaultValue: number = 0): number => {
+  number: (key: string, default Value: number = 0): number => {
     const value = process.env[key];
-    if (value === undefined) return defaultValue;
-    const parsed = parseInt(value, 10);
-    return isNaN(parsed) ? defaultValue : parsed;
+    if (value === undefined) return default Value;
+    const parsed = parse Int(value, 10);
+    return is Na N(parsed) ? default Value : parsed;
   }
 };

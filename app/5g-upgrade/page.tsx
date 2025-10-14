@@ -3,10 +3,10 @@ import React, { Suspense } from 'react';
 const FiveGUpgradePage: React.FC = () => {
   return (
     <div className="min-h-screenbg-gray-50">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-autopx-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xlfont-bold text-gray-900 mb-6">
-            5gUpgrade Services
+          <h1 className="text-4 xlfont-boldtext-gray-900 mb-6">
+            5 g Upgrade Services
           </h1>
           <p className="text-xltext-gray-600 max-w-3xl mx-auto">
             Professional services and solutions.

@@ -1,5 +1,5 @@
-export const advancedAnalytics = {
-  trackPageView: (page: string) => {
+export const advanced Analytics = {
+  track Page View: (page: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_path: page
@@ -7,26 +7,23 @@ export const advancedAnalytics = {
     }
 
   },
-  
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
+  track Event: (event Name: string, parameters?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
-      window.gtag('event', eventName, parameters)
+      window.gtag('event', event Name, parameters)
     }
 
   },
-  
-  trackConversion: (conversionId: string, value?: number, currency?: string) => {
+  track Conversion: (conversion Id: string, value?: number, currency?: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
-        send_to: conversionId,
+        send_to: conversion Id,
         value: value,
         currency: currency
       })
     }
 
   },
-  
-  setUserProperties: (properties: Record<string, unknown>) => {
+  set User Properties: (properties: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         custom_map: properties

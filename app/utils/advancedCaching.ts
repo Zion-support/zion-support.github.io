@@ -1,38 +1,36 @@
-export const advancedCaching = {
-  setCache: (key: string, value: unknown;, ttl: number = 3600) => {
+export const advanced Caching = {
+  set Cache: (key: string, value: unknown;, ttl: number = 3600) => {
     const item = {
       value,
       timestamp: Date.now(),
       ttl: ttl * 1000;
     };
-    localStorage.setItem(key, JSON.stringify(item));
+    local Storage.set Item(key, JSON.stringify(item));
   },
-  
-  getCache: (key: string) => {
-    const item = localStorage.getItem(key);
+  get Cache: (key: string) => {
+    const item = local Storage.get Item(key);
     if (!item) return null;
     
     const parsed = JSON.parse(item);
     const now = Date.now();
     
     if (now - parsed.timestamp > parsed.ttl) {
-      localStorage.removeItem(key);
+      local Storage.remove Item(key);
       return null;
     }
     
     return parsed.value;
   },
-  
-  clearCache: (pattern?: string) => {
+  clear Cache: (pattern?: string) => {
     if (pattern) {
-      const keys = Object.keys(localStorage);
-      keys.forEach(key => {
+      const keys = Object.keys(local Storage);
+      keys.for Each(key => {
         if (key.includes(pattern)) {
-          localStorage.removeItem(key);
+          local Storage.remove Item(key);
         }
       });
     } else {
-      localStorage.clear();
+      local Storage.clear();
     }
   }
 };

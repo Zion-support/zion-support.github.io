@@ -43,20 +43,20 @@ const ITServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screenbg-slate-90 0text-white">
+    <div className="min-h-screenbg-slate-900 text-white">
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including infrastructure management, cloud solutions, cybersecurity, and technical support." />
-        <meta name="keywords" content="IT services, infrastructure management, cloud solutions, cybersecurity, technical support, Zion Tech Group" />
+        <meta name="description" content="ComprehensiveIT services including infrastructure management, cloud solutions, cybersecurity, and technical support." />
+        <meta name="keywords" content="ITservices, infrastructure management, cloud solutions, cybersecurity, technical support, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relativepy-20bg-gradient-to-brfrom-slate-9 00via-cyan-9 0 0to-slate-9 0 0">
-        <div className="containermx-autopx-4text-center">
-          <h1 className="text-5xl md:text-6xlfont-boldmb-6bg-gradient-to-rfrom-cyan-4 0 0to-purple-4 0 0bg-clip-text text-transparent">
+      <section className="relativepy-20 bg-gradient-to-brfrom-slate-900 via-cyan-9 0 0 to-slate-9 0 0">
+        <div className="container mx-autopx-4 text-center">
+          <h1 className="text-5 xlmd:text-6 xlfont-boldmb-6 bg-gradient-to-rfrom-cyan-4 0 0 to-purple-4 0 0 bg-clip-text text-transparent">
             IT Services
           </h1>
-          <p className="text-xl text-gray-300mb-8max-w-3xlmx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-auto">
             Comprehensive IT solutions to keep your business running smoothly and securely. 
             From infrastructure to cloud, we&apos;ve got you covered.
           </p>
@@ -66,24 +66,24 @@ const ITServicesPage: React.FC = () => {
 
       {/* Services Grid */}
       <section className="py-20">
-        <div className="containermx-autopx-4">
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3gap-8">
+        <div className="container mx-autopx-4">
+          <div className="gridgrid-cols-1 md:grid-cols-2lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-8 00 rounded-xl p-8borderborder-slate-7 00hover:border-cyan-5 00transition-all duration-300hover:transformhover:scale-1 0 5">
-                </div><div className="w-1 6 h-1 6 bg-gradient-to-rfrom-cyan-5 0 0to-purple-5 0 0rounded-lgflexitems-centerjustify-centermb-6">
-                  <service.icon className="w-8h-8 text-white" />
+              <divkey={index} className="bg-slate-800 rounded-xl p-8 borderborder-slate-7 00 hover:border-cyan-5 00 transition-all duration-300 hover:transformhover:scale-1 0 5">
+                </div><div className="w-16 h-1 6 bg-gradient-to-rfrom-cyan-5 0 0 to-purple-5 0 0 rounded-lgflexitems-centerjustify-centermb-6">
+                  <service.icon className="w-8 h-8text-white" />
                   </div>
         </div>
                 
-                <h3 className="text-2xlfont-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-30 0mb-6">{service.description}</p>
+                <h3 className="text-2 xlfont-boldtext-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
                 
                 <div className="mb-6">
                   <h4 className="text-whitefont-semiboldmb-3">Key Features</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-gray-30 0text-smflexitems-center">
-                        <div className="w-2h-2bg-cyan-40 0rounded-fullmr-3"></div>
+                    {service.features.map((feature, feature Index) => (
+                      <likey={feature Index} className="text-gray-300 text-smflexitems-center">
+                        <div className="w-2 h-2bg-cyan-40 0 rounded-fullmr-3"></div>
                         {feature}
                       </li>
                     ))}
@@ -91,9 +91,9 @@ const ITServicesPage: React.FC = () => {
                   </div>
         </div>
 
-                <button className="w-full bg-gradient-to-r from-cyan-6 00 to-purple-6 00 text-white py-3px-6rounded-lgfont-semiboldhover:from-cyan-7 00hover:to-purple-7 0 0transition-all duration-300">
+                <but ton className="w-fullbg-gradient-to-rfrom-cyan-6 00 to-purple-6 00 text-white py-3 px-6 rounded-lgfont-semiboldhover:from-cyan-7 00 hover:to-purple-7 0 0 transition-all duration-300">
                   Learn More
-                </button>
+                </butn>
                 </div>
         </div>
             ))}
@@ -104,21 +104,21 @@ const ITServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20bg-gradient-to-rfrom-cyan-9 0 0/3 0to-purple-9 0 0/3 0">
-        <div className="containermx-autopx-4text-center">
-          <h2 className="text-4xlmd:text-5xlfont-boldtext-whitemb-6">
+      <section className="py-20 bg-gradient-to-rfrom-cyan-90 0/3 0 to-purple-9 0 0/3 0">
+        <div className="container mx-autopx-4 text-center">
+          <h2 className="text-4 xlmd:text-5xlfont-boldtext-whitemb-6">
             Ready to Optimize Your IT Infrastructure?
           </h2>
-          <p className="text-xl text-gray-300mb-8max-w-3xlmx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-auto">
             Let&apos;s discuss how our IT services can improve your business operations and security.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4justify-center">
-            <button className="bg-gradient-to-r from-cyan-6 00 to-purple-6 00 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-cyan-7 00hover:to-purple-7 00transition-all duration-300transformhover:scale-1 0 5">
+          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <but ton className="bg-gradient-to-rfrom-cyan-600 to-purple-6 00 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-cyan-7 00 hover:to-purple-7 00 transition-all duration-300 transformhover:scale-1 0 5">
               Get Started
-            </button>
-            <button className="border-2 border-white text-white px-8py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-9 0 0transition-all duration-300">
+            </butn>
+            <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lgfont-semiboldhover:bg-whitehover:text-slate-9 0 0 transition-all duration-300">
               Schedule Consultation
-            </button>
+            </butn>
             </div>
         </div>
           </div>

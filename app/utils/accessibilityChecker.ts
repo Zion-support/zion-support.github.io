@@ -1,11 +1,11 @@
-export const accessibilityChecker = {
-  checkAltText: () => {
-    const images = document.querySelectorAll('img')
+export const accessibility Checker = {
+  check Alt Text: () => {
+    const images = document.query Selector All('img')
     const issues: Array<{ element: HTMLElement,
   issue: string }> = []
     
-    images.forEach((img) => {
-      if (!img.getAttribute('alt')) {
+    images.for Each((img) => {
+      if (!img.get Attribute('alt')) {
         issues.push({
           element: img as HTMLElement,
           issue: 'Missing alt text'
@@ -16,29 +16,27 @@ export const accessibilityChecker = {
     
     return issues
   },
-  
-  checkHeadingStructure: () => {
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+  check Heading Structure: () => {
+    const headings = document.query Selector All('h 1, h 2, h 3, h 4, h 5, h 6')
     const issues: Array<{ element: HTMLElement,
   issue: string }> = []
-    let previousLevel = 0
+    let previous Level = 0
     
-    headings.forEach((heading) => {
-      const currentLevel = parseInt(heading.tagName.charAt(1))
-      if (currentLevel > previousLevel + 1) {
+    headings.for Each((heading) => {
+      const current Level = parse Int(heading.tag Name.char At(1))
+      if (current Level > previous Level + 1) {
         issues.push({
           element: heading as HTMLElement,
           issue: 'Heading level skipped'
         })
       }
 
-      previousLevel = currentLevel
+      previous Level = current Level
     })
     
     return issues
   },
-  
-  checkColorContrast: () => {
+  check Color Contrast: () => {
     // This would require a more complex implementation
     // For now, return empty array
     return []

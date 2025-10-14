@@ -6,13 +6,13 @@ const BlogPage: React.FC = () => {
     <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights and updates from Zion Tech Group" />
-        <meta name="keywords" content="blog, tech insights, AI, IT solutions" />
+        <meta name="description" content="Latestinsights and updates from Zion Tech Group" />
+        <meta name="keywords" content="blog,tech insights, AI, IT solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-autopx-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Blog</h1>
+            <h1 className="text-4 xlfont-bold text-white mb-8">Blog</h1>
             <div className="text-gray-400">
               <p>Blog posts coming soon...</p>
             </div>

@@ -6,12 +6,12 @@ const ErrorPage: React.FC = () => {
     <>
       <Helmet>
 <title>Error - Zion Tech Group</title>
-        <meta name="description" content="An error occurred" />
+        <meta name="description" content="Anerror occurred" />
       </Helmet>
-      <div className="min-h-screenbg-gray-50flexitems-centerjustify-center">
+      <div className="min-h-screenbg-gray-50 flexitems-centerjustify-center">
         <div className="text-center">
-          <h1 className="text-4xlfont-boldtext-gray-90 0mb-4">Something went wrong</h1>
-          <p className="text-gray-60 0">Please try again later.</p>
+          <h1 className="text-4 xlfont-boldtext-gray-900 mb-4">Something went wrong</h1>
+          <p className="text-gray-600">Please try again later.</p>
           </div>
         </div>
       </div>

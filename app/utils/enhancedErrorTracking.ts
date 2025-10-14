@@ -1,15 +1,15 @@
-export const enhancedErrorTracking = {
-  trackError: (_error: Error, context?: Record<string, unknown>) => {
+export const enhanced Error Tracking = {
+  track Error: (_error: Error, context?: Record<string, unknown>) => {
     const ErrorInfo = {
       message: _error.message,
       stack: _error.stack,
-  trackError: (error: Error, context?: Record<string, unknown>) => {
+  track Error: (error: Error, context?: Record<string, unknown>) => {
     // Error tracking logic
-  trackError: (error: Error, context?: Record<string, any>) => {
-    const errorInfo = {
+  track Error: (error: Error, context?: Record<string, any>) => {
+    const error Info = {
       message: error.message,
       stack: error.stack,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().to ISOString(),
       context: context || {}
 
     }
@@ -17,23 +17,22 @@ export const enhancedErrorTracking = {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       // Development logging disabled
-      console.error('Error tracked: ', errorInfo)
+      console.error('Error tracked: ', error Info)
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
 
       })
   },
-  
-  trackPerformanceError: (_error: Error, performanceData: unknown) => {
-    enhancedErrorTracking.trackError(_error, {
-  trackPerformanceError: (error: Error, performanceData: unknown) => {
-    enhancedErrorTracking.trackError(error, {
+  track Performance Error: (_error: Error, performance Data: unknown) => {
+    enhanced Error Tracking.track Error(_error, {
+  track Performance Error: (error: Error, performance Data: unknown) => {
+    enhanced Error Tracking.track Error(error, {
 
     });
-  trackPerformanceError: (metric: string, value: number, threshold: number) => {
+  track Performance Error: (metric: string, value: number, threshold: number) => {
     if (value > threshold) {
-      enhancedErrorTracking.trackError(new Error(`Performance threshold exceeded: ${metric}`), {
+      enhanced Error Tracking.track Error(new Error(`Performance threshold exceeded: ${metric}`), {
         metric,
         value,
         threshold

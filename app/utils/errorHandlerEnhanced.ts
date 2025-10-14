@@ -1,13 +1,13 @@
-export const errorHandlerEnhanced = {
+export const error Handler Enhanced = {
   handle: (_error: Error, context?: Record<string, unknown>) => {
     const ErrorInfo = {
       message: _error.message,
       stack: _error.stack,
   handle: (error: Error, context?: Record<string, unknown>) => {
-    const errorInfo = {
+    const error Info = {
       message: error.message,
       stack: error.stack,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().to ISOString(),
       context: context || {}
 
     }
@@ -16,8 +16,8 @@ export const errorHandlerEnhanced = {
     if (process.env.NODE_ENV === 'development') {
       // Development logging disabled
       // eslint-disable-next-line no-console
-      console.error('Error handled: ', errorInfo);
-      console.error('Error handled: ', errorInfo)
+      console.error('Error handled: ', error Info);
+      console.error('Error handled: ', error Info)
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {

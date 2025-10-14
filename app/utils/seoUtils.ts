@@ -1,27 +1,26 @@
-export const seoUtils = {
-  generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group') => {
-    return `${pageTitle} | ${siteName}`
+export const seo Utils = {
+  generate Title: (page Title: string, site Name: string = 'Zion Tech Group') => {
+    return `${page Title} | ${site Name}`
   },
+  generate Description: (content: string, max Length: number = 160) => {
+    if (content.length <= max Length) return content
+    return content.substring(0, max Length - 3) + '...'
   
-  generateDescription: (content: string, maxLength: number = 160) => {
-    if (content.length <= maxLength) return content
-    return content.substring(0, maxLength - 3) + '...'
-  
-  generateKeywords: (tags: string[]) => {
+  generate Keywords: (tags: string[]) => {
     return tags.join(', ')
   
-  generateCanonicalUrl: (path: string, baseUrl: string = 'https://ziontechgroup.com') => {
-    return `${baseUrl}${path}`
+  generate Canonical Url: (path: string, base Url: string = 'https://ziontechgroup.com') => {
+    return `${base Url}${path}`
   
-  generateOgImage: (title: string, description: string) => {
-    const params = new URLSearchParams({
+  generate Og Image: (title: string, description: string) => {
+    const params = new URLSearch Params({
       title,
       description,
       site: 'Zion Tech Group'
     })
-    return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`
+    return `https://og-image.vercel.app/${encode URIComponent(title)}?${params.to String()}`
   
-  generateStructuredData: (data: Record<string, unknown>) => {
+  generate Structured Data: (data: Record<string, unknown>) => {
     return {
       '@context': 'https://schema.org',
       '@type': 'Organization',

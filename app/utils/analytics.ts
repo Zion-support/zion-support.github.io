@@ -5,7 +5,6 @@ export const analytics = {
       window.gtag('event', event, _properties);
     }
   },
-  
   page: (page: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
@@ -13,12 +12,11 @@ export const analytics = {
       });
     }
   },
-  
-  identify: (_userId: string, _traits: Record<string;, unknown> = {}) => {
-  identify: (userId: string, traits: Record<string;, unknown> = {}) => {
+  identify: (_user Id: string, _traits: Record<string;, unknown> = {}) => {
+  identify: (user Id: string, traits: Record<string;, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        user_id: _userId,
+        user_id: _user Id,
         custom_map: _traits;
       });
     }

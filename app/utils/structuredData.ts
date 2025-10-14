@@ -1,17 +1,15 @@
-export const structuredData = {
+export const structured Data = {
   organization: {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
 
   },
-  
   website: {
-    '@type': 'WebSite',
+    '@type': 'Web Site',
     name: 'Zion Tech Group',
 
   },
-  
   generate: (type: 'organization' | 'website') => {
-    return structuredData[type]
+    return structured Data[type]
   }

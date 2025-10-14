@@ -1,4 +1,4 @@
-export const errorHandler = {
+export const error Handler = {
   handle: (_error: Error, context?: string) => {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
@@ -14,11 +14,10 @@ export const errorHandler = {
       code: 'GENERIC_ERROR'
     };
   },
-  
-  handleApiError: (error: unknown) => {
-    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
-    const status = errorWithResponse.response?.status;
-    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+  handle Api Error: (error: unknown) => {
+    const error With Response = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+    const status = error With Response.response?.status;
+    const message = error With Response.response?.data?.message || error With Response.message;
     
     switch (status) {
       case 400:
@@ -35,12 +34,10 @@ export const errorHandler = {
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
     }
   },
-  
   log: (_error: Error, _context?: Record<string, unknown>) => {
     // Error logging logic
     console.error('Error logged:', _error, _context);
   },
-  
   report: (_error: Error, _context?: Record<string, unknown>) => {
     // Error reporting logic
     console.error('Error reported:', _error, _context);

@@ -2,9 +2,9 @@ declare global {
   interface Window {
     gtag: (
       command: string,
-      targetId: string,
+      target Id: string,
       config?: Record<string, unknown>
     ) => void,
-  dataLayer: unknown[]}
+  data Layer: unknown[]}
 
 export {}

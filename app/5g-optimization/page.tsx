@@ -6,28 +6,26 @@ import EnhancedSEO from '../components/EnhancedSEO';
 const FiveGOptimizationPage: React.FC = () => {
   return (
     <div className="min-h-screenbg-gray-50">
-      <EnhancedSEO 
-        title="5G Optimization Services | Zion Tech Group"
-        description="Expert 5G network optimization services to maximize performance, efficiency, and cost-effectiveness."
-        keywords="5G optimization, network optimization, performance tuning, 5G efficiency"
+      <EnhancedSEOtitle="5G Optimization Services | Zion Tech Group"
+        description="Expert5 G network optimization services to maximize performance, efficiency, and cost-effectiveness."
+        keywords="5G optimization, network optimization, performance tuning, 5 G efficiency"
       />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-rfrom-emerald-90 0to-teal-9 0 0text-whitepy-2 0">
-        <div className="containermx-autopx-4">
-          <div className="max-w-4xlmx-autotext-center">
-            <h1 className="text-4xlmd:text-6xlfont-boldmb-6">
-              5G Optimization Services
+      <section className="bg-gradient-to-rfrom-emerald-900 to-teal-9 0 0 text-whitepy-2 0">
+        <div className="container mx-autopx-4">
+          <div className="max-w-4 xlmx-autotext-center">
+            <h1 className="text-4 xlmd:text-6xlfont-boldmb-6">
+              5 G Optimization Services
             </h1>
-            <p className="text-xlmd:text-2xlmb-8text-emerald-10 0">
-              Maximize your 5G network performance with our expert optimization services
+            <p className="text-xlmd:text-2 xlmb-8text-emerald-10 0">
+              Maximize your 5 G network performance with our expert optimization services
             </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center bg-emerald-6 0 0hover:bg-emerald-7 0 0text-whitefont-semiboldpy-4px-8rounded-lgtransition-colors"
+            <Link to="/contact" 
+              className="inline-flexitems-centerbg-emerald-6 0 0 hover:bg-emerald-7 0 0 text-whitefont-semiboldpy-4 px-8 rounded-lgtransition-colors"
             >
               Optimize Now
-              <ArrowRight className="ml-2w-5h-5" />
+              <ArrowRight className="ml-2 w-5h-5" />
             </Link>
             </div>
         </div>
@@ -37,46 +35,46 @@ const FiveGOptimizationPage: React.FC = () => {
 
       {/* Services Section */}
       <section className="py-20">
-        <div className="containermx-autopx-4">
+        <div className="container mx-autopx-4">
           <div className="text-centermb-16">
-            <h2 className="text-3xlfont-boldtext-gray-90 0mb-6">
-              Our 5G Optimization Services
+            <h2 className="text-3 xlfont-boldtext-gray-900 mb-6">
+              Our 5 G Optimization Services
             </h2>
             <p className="text-xltext-gray-600 max-w-3xl mx-auto">
-              Comprehensive optimization solutions to enhance your 5G network performance
+              Comprehensive optimization solutions to enhance your 5 G network performance
             </p>
             </div>
         </div>
 
-          <div className="gridmd:grid-cols-3gap-8">
-            <div className="bg-whitep-8rounded-lgshadow-lg">
-              <CheckCircle className="w-1 2h-1 2 text-emerald-6 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-gray-90 0mb-4">
+          <div className="gridmd:grid-cols-3 gap-8">
+            <div className="bg-whitep-8 rounded-lgshadow-lg">
+              <CheckCircle className="w-12 h-1 2 text-emerald-6 0 0 mb-4" />
+              <h3 className="text-xlfont-semiboldtext-gray-900 mb-4">
                 Network Performance Tuning
               </h3>
-              <p className="text-gray-60 0">
+              <p className="text-gray-600">
                 Advanced performance optimization to maximize throughput and minimize latency
               </p>
               </div>
         </div>
 
-            <div className="bg-whitep-8rounded-lgshadow-lg">
-              <CheckCircle className="w-1 2h-1 2 text-emerald-6 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-gray-90 0mb-4">
+            <div className="bg-whitep-8 rounded-lgshadow-lg">
+              <CheckCircle className="w-12 h-1 2 text-emerald-6 0 0 mb-4" />
+              <h3 className="text-xlfont-semiboldtext-gray-900 mb-4">
                 Coverage Optimization
               </h3>
-              <p className="text-gray-60 0">
+              <p className="text-gray-600">
                 Strategic antenna placement and power optimization for maximum coverage
               </p>
               </div>
         </div>
 
-            <div className="bg-whitep-8rounded-lgshadow-lg">
-              <CheckCircle className="w-1 2h-1 2 text-emerald-6 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-gray-90 0mb-4">
+            <div className="bg-whitep-8 rounded-lgshadow-lg">
+              <CheckCircle className="w-12 h-1 2 text-emerald-6 0 0 mb-4" />
+              <h3 className="text-xlfont-semiboldtext-gray-900 mb-4">
                 Capacity Planning
               </h3>
-              <p className="text-gray-60 0">
+              <p className="text-gray-600">
                 Intelligent capacity management to handle peak loads efficiently
               </p>
               </div>
@@ -88,20 +86,19 @@ const FiveGOptimizationPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-90 0text-whitepy-2 0">
-        <div className="containermx-autopx-4text-center">
-          <h2 className="text-3xlfont-boldmb-6">
-            Ready to Optimize Your 5G Network?
+      <section className="bg-gray-900 text-whitepy-2 0">
+        <div className="container mx-autopx-4 text-center">
+          <h2 className="text-3 xlfont-boldmb-6">
+            Ready to Optimize Your 5 G Network?
           </h2>
-          <p className="text-xlmb-8text-gray-30 0">
-            Contact us today for a comprehensive 5G optimization assessment
+          <p className="text-xlmb-8 text-gray-300">
+            Contact us today for a comprehensive 5 G optimization assessment
           </p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center bg-emerald-6 0 0hover:bg-emerald-7 0 0text-whitefont-semiboldpy-4px-8rounded-lgtransition-colors"
+          <Link to="/contact" 
+            className="inline-flexitems-centerbg-emerald-6 0 0 hover:bg-emerald-7 0 0 text-whitefont-semiboldpy-4 px-8 rounded-lgtransition-colors"
           >
             Get Started
-            <ArrowRight className="ml-2w-5h-5" />
+            <ArrowRight className="ml-2 w-5h-5" />
           </Link>
           </div>
         </div>

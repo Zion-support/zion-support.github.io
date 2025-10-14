@@ -1,250 +1,141 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { use Effect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
+interface Accessibility Enhancer Props {
+  enable Keyboard Navigation?: boolean;
+  enable Screen Reader Support?: boolean;
+  enable High Contrast?: boolean;
+  enable Focus Management?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableFocusManagement = true
+  enable Keyboard Navigation = true,
+  enable Screen Reader Support = true,
+  enable High Contrast = true,
+  enable Focus Management = true
 }) => {
-  useEffect(() => {
-<<<<<<< HEAD
-    const root = document.documentElement;
-    // High contrast mode
-    if (isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-    // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-    // Font size adjustment
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'large' ? '1.2' : 
-      fontSize === 'extra-large' ? '1.4' : 
-      fontSize === 'small' ? '0.9' : '1'
-    );
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
-  // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();
-        const main = document.querySelector('main');
-        if (main) {
-          (main as HTMLElement).focus();
-        }
-      }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Add ARIA landmarks
-  useEffect(() => {
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-    addAriaLandmarks();
-  }, []);
-
-  // Add alt text to images without alt attributes
-  useEffect(() => {
-    const addAltText = () => {
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
-        }
-      });
-    };
-    addAltText();
-  }, []);
-
-  return (
-    <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
-      <h3 className="text-white font-semibold mb-3">Accessibility</h3>
-      <div className="space-y-3">
-        <label className="flex items-center space-x-2 text-white text-sm">
-          <input
-            type="checkbox"
-            checked={isHighContrast}
-            onChange={(e) => setIsHighContrast(e.target.checked)}
-            className="rounded"
-          />
-          <span>High Contrast</span>
-        </label>
-        <label className="flex items-center space-x-2 text-white text-sm">
-          <input
-            type="checkbox"
-            checked={isReducedMotion}
-            onChange={(e) => setIsReducedMotion(e.target.checked)}
-            className="rounded"
-          />
-          <span>Reduce Motion</span>
-        </label>
-        <div className="space-y-1">
-          <label className="text-white text-sm">Font Size</label>
-          <select
-            value={fontSize}
-            onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large' | 'extra-large')}
-            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm">
-            <option value="small">Small</option>
-            <option value="normal">Normal</option>
-            <option value="large">Large</option>
-            <option value="extra-large">Extra Large</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  );
-=======
+  use Effect(() => {
     // Keyboard navigation enhancements
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {
+    if (enable Keyboard Navigation && typeof window !== 'undefined') {
+      const handle Key Down = (event: Keyboard Event) => {
         // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
+        if (event.key === 'Tab' && event.shift Key && event.target === document.body) {
+          const skip Link = document.query Selector('a[href="#main-content"]') as HTMLAnchor Element;
+          if (skip Link) {
+            skip Link.focus();
+            event.prevent Default();
           }
         }
 
         // Close dropdowns with Escape key
         if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+          const open Dropdowns = document.query Selector All('[aria-expanded="true"]');
+          open Dropdowns.for Each(dropdown => {
+            (dropdown as HTMLElement).set Attribute('aria-expanded', 'false');
           });
         }
       };
 
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
+      document.add Event Listener('keydown', handle Key Down);
+      return () => document.remove Event Listener('keydown', handle Key Down);
     }
 
     // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    if (enable Focus Management && typeof window !== 'undefined') {
+      const focusable Elements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
-      const trapFocus = (container: HTMLElement) => {
-        const focusableContent = container.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0] as HTMLElement;
-        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
+      const trap Focus = (container: HTMLElement) => {
+        const focusable Content = container.query Selector All(focusable Elements);
+        const first Focusable Element = focusable Content[0] as HTMLElement;
+        const last Focusable Element = focusable Content[focusable Content.length - 1] as HTMLElement;
 
-        const handleTabKey = (e: KeyboardEvent) => {
+        const handle Tab Key = (e: Keyboard Event) => {
           if (e.key !== 'Tab') return;
 
-          if (e.shiftKey) {
-            if (document.activeElement === firstFocusableElement) {
-              lastFocusableElement.focus();
-              e.preventDefault();
+          if (e.shift Key) {
+            if (document.active Element === first Focusable Element) {
+              last Focusable Element.focus();
+              e.prevent Default();
             }
           } else {
-            if (document.activeElement === lastFocusableElement) {
-              firstFocusableElement.focus();
-              e.preventDefault();
+            if (document.active Element === last Focusable Element) {
+              first Focusable Element.focus();
+              e.prevent Default();
             }
           }
         };
 
-        container.addEventListener('keydown', handleTabKey);
-        firstFocusableElement?.focus();
+        container.add Event Listener('keydown', handle Tab Key);
+        first Focusable Element?.focus();
 
-        return () => container.removeEventListener('keydown', handleTabKey);
+        return () => container.remove Event Listener('keydown', handle Tab Key);
       };
 
       // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
+      const modals = document.query Selector All('[role="dialog"], [aria-modal="true"]');
+      modals.for Each(modal => trap Focus(modal as HTMLElement));
     }
 
     // Screen reader support
-    if (enableScreenReaderSupport && typeof window !== 'undefined') {
+    if (enable Screen Reader Support && typeof window !== 'undefined') {
       // Add live region for dynamic content updates
-      const liveRegion = document.createElement('div');
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      liveRegion.id = 'live-region';
-      document.body.appendChild(liveRegion);
+      const live Region = document.create Element('div');
+      live Region.set Attribute('aria-live', 'polite');
+      live Region.set Attribute('aria-atomic', 'true');
+      live Region.className = 'sr-only';
+      live Region.id = 'live-region';
+      document.body.append Child(live Region);
 
       // Announce page changes
-      const announcePageChange = (message: string) => {
-        const liveRegion = document.getElementById('live-region');
-        if (liveRegion) {
-          liveRegion.textContent = message;
+      const announce Page Change = (message: string) => {
+        const live Region = document.get Element By Id('live-region');
+        if (live Region) {
+          live Region.text Content = message;
         }
       };
 
       // Listen for route changes (if using React Router)
-      const originalPushState = history.pushState;
-      const originalReplaceState = history.replaceState;
+      const original Push State = history.push State;
+      const original Replace State = history.replace State;
 
-      history.pushState = function(...args) {
-        originalPushState.apply(history, args);
-        announcePageChange('Page changed');
+      history.push State = function(...args) {
+        original Push State.apply(history, args);
+        announce Page Change('Page changed');
       };
 
-      history.replaceState = function(...args) {
-        originalReplaceState.apply(history, args);
-        announcePageChange('Page updated');
+      history.replace State = function(...args) {
+        original Replace State.apply(history, args);
+        announce Page Change('Page updated');
       };
 
       return () => {
-        document.body.removeChild(liveRegion);
-        history.pushState = originalPushState;
-        history.replaceState = originalReplaceState;
+        document.body.remove Child(live Region);
+        history.push State = original Push State;
+        history.replace State = original Replace State;
       };
     }
 
     // High contrast mode support
-    if (enableHighContrast && typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+    if (enable High Contrast && typeof window !== 'undefined') {
+      const prefers High Contrast = window.match Media('(prefers-contrast: high)');
       
-      const updateHighContrast = (e: MediaQueryListEvent) => {
+      const update High Contrast = (e: Media Query List Event) => {
         if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
+          document.document Element.class List.add('high-contrast');
         } else {
-          document.documentElement.classList.remove('high-contrast');
+          document.document Element.class List.remove('high-contrast');
         }
       };
 
-      prefersHighContrast.addEventListener('change', updateHighContrast);
-      updateHighContrast(prefersHighContrast);
+      prefers High Contrast.add Event Listener('change', update High Contrast);
+      update High Contrast(prefers High Contrast);
 
-      return () => prefersHighContrast.removeEventListener('change', updateHighContrast);
+      return () => prefers High Contrast.remove Event Listener('change', update High Contrast);
     }
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
+  }, [enable Keyboard Navigation, enable Screen Reader Support, enable High Contrast, enable Focus Management]);
 
   return null;
->>>>>>> 7c403644bad909cfd6e23ad37c52c4b81893395b
 };
 
 export default AccessibilityEnhancer;

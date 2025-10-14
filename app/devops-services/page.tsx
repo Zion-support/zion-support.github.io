@@ -6,19 +6,19 @@ const DevopsServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>Devops services - Zion Tech Group</title>
-        <meta name="description" content="Professional Devops services solutions and services" />
-        <meta name="keywords" content="devops, services" />
+        <meta name="description" content="ProfessionalDevops services solutions and services" />
+        <meta name="keywords" content="devops,services" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-        <div className="container mx-auto px-4 py-16">
+      <div className="min-h-screenbg-gradient-to-brfrom-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
+        <div className="container mx-autopx-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Devops services</h1>
+            <h1 className="text-4 xlfont-bold text-white mb-8">Devops services</h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional Devops services solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900mb-2">
+              <div className="bg-blue-50 borderborder-blue-200 rounded-lg p-6">
+                <h3 className="text-lgfont-semiboldtext-blue-900 mb-2">
                   Expert Solutions
                 </h3>
                 <p className="text-blue-700">
@@ -26,13 +26,13 @@ const DevopsServicesPage: React.FC = () => {
                 </p>
                 </div>
         </div>
-              <div className="bg-green-50border border-green-20 0rounded-lgp-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+              <div className="bg-green-50 borderborder-green-20 0 rounded-lgp-6">
+                <h3 className="text-lgfont-semiboldtext-purple-900 mb-2">
                 </h3>
                 <p className="[^"]*">
                   Tailored implementations for your specific requirements.
-              </p><div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+              </p><div className="bg-purple-50 borderborder-purple-200 rounded-lg p-6">
+                <h3 className="text-lgfont-semiboldtext-purple-900 mb-2">
                 </h3>
                 <p className="[^"]*">
                   Round-the-clock support for all your needs.
