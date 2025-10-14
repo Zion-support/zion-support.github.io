@@ -15,7 +15,8 @@ import {
   CurrencyDollarIcon,
   CogIcon,
   ChevronDownIcon,
-  GlobeAltIcon
+  GlobeAltIcon,
+  CpuChipIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
@@ -32,16 +33,39 @@ const Navigation = () => {
       icon: BriefcaseIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'IT Solutions', href: '/it-solutions' },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+        { name: '5G Solutions', href: '/5g-solutions' },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: '5G Solutions', href: '/5g-solutions' }
+        { name: 'Digital Transformation', href: '/digital-transformation' }
       ]
     },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+    { 
+      name: 'AI Services', 
+      href: '/ai-services', 
+      icon: CpuChipIcon,
+      submenu: [
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
+        { name: 'Customer Insights Platform', href: '/ai-customer-insights-platform' },
+        { name: 'Document Intelligence Suite', href: '/ai-document-intelligence-suite' },
+        { name: 'Social Media Command Center', href: '/ai-social-media-command-center' },
+        { name: 'Machine Learning Models', href: '/ai-solutions' },
+        { name: 'Computer Vision', href: '/ai-solutions' }
+      ]
+    },
+    { 
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions', 
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'Analytics Dashboard', href: '/ai-analytics-dashboard' },
+        { name: 'Content Management', href: '/ai-content-management' },
+        { name: 'Customer Support Bot', href: '/ai-customer-support-bot' },
+        { name: 'Project Management Suite', href: '/ai-project-management' },
+        { name: 'E-commerce Optimizer', href: '/ai-ecommerce-optimizer' },
+        { name: 'HR Management System', href: '/ai-hr-management' }
+      ]
+    },
   ];
 
   const isActive = (path: string) => {

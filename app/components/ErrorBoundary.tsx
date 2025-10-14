@@ -9,7 +9,7 @@ interface Props {
 
 interface State {
   hasError: boolean;
-error: Error | null;
+  error: Error | null;
   errorInfo: ErrorInfo | null;
 }
 
@@ -32,30 +32,12 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-<<<<<<< HEAD
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-=======
-console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
     this.setState({
       error,
       errorInfo
     });
-// Log error to console in development
+
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
@@ -93,23 +75,7 @@ console.error('ErrorBoundary caught an error:', error, errorInfo);
             </h1>
             
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-=======
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-=======
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-=======
-              We're sorry, but something unexpected happened. Please try refreshing the page.
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -144,7 +110,7 @@ Error Details (Development Only)
               
               <Link
                 to="/"
-className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+                className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 <Home className="w-4 h-4" />
                 Go Home
