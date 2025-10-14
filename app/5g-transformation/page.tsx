@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-function FiveGTransformationPage() {
+export default function FiveGTransformationPage() {
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
@@ -114,6 +114,4 @@ function FiveGTransformationPage() {
       </div>
     </>
   );
-};
-
-
+}

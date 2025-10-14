@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-function FiveGMigrationPage() {
+export default function FiveGMigrationPage() {
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
@@ -114,6 +114,4 @@ function FiveGMigrationPage() {
       </div>
     </>
   );
-};
-
-
+}

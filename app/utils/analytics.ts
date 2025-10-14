@@ -1,5 +1,5 @@
 export const analytics = {
-  track: (event: string, properties: Record<string, any> = {}) => {
+  track: (event: string, properties: Record<string, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties);
     }
@@ -13,7 +13,7 @@ export const analytics = {
     }
   },
   
-  identify: (userId: string, traits: Record<string, any> = {}) => {
+  identify: (userId: string, traits: Record<string, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         user_id: userId,
