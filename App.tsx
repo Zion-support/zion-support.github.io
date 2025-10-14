@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
+import Navigation from './app/components/Navigation';
 
 // Lazy load main pages for better code splitting
 const HomePage = React.lazy(() => import('./app/page'));
@@ -102,6 +103,7 @@ const App: React.FC = () => {
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Header />
+            <Navigation />
             <main className="relative z-10 pt-20" id="main-content" role="main">
               <RouterContent />
             </main>
