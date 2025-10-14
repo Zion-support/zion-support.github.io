@@ -1,158 +1,119 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-interface EnhancedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;  ogUrl?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-';
-  title,';
-  description,';
-  keywords,';
-  canonical,'
-  ogImage = '/og-image.jpg',
-  ogUrl,'
-  ogType = 'website','
-  twitterCard = 'summary_large_image',
-  twitterTitle,
-  twitterDescription,}
-  twitterImage = "https://ziontechgroup..jpg",}
-  structuredData,}
-  noIndex = false,})
-  noFollow = false}')
-}) => {''}
-  const siteName = 'Zion Tech Group''}
-  const siteUrl = 'https://ziontechgroup.com';}'
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl''
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-  
-  // Enhanced meta description with better length control
-  const optimizedDescription = description.length > 160 '
-    ? description.substring(0, 157) + '...' 
-    : description;
-'
-  const defaultStructuredData = {''}
-    '@context': 'https://schema.org'''}
-    '@type': 'Organization',}
-    name: siteName,}
-    url: siteUrl,}'
-    logo: `${siteUrl}/logo.png`''
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.','
-    address: {''}
-      '@type': 'PostalAddress'''}
-      addressLocality: 'Middletown'''}
-      addressRegion: 'DE'''}
-      addressCountry: 'US'}
-    },'
-    contactPoint: {''}
-      '@type': 'ContactPoint'''}
-      telephone: '+1-302-464-0950'''}
-      contactType: 'customer service'''}
-      email: 'kleber@ziontechgroup.com'}
-    },'
-    sameAs: [''
-      'https://www.linkedin.com/'''
-      'https://github.com/ziontechgroup''']
-      'https://twitter.com/ziontechgroup']
-    ]
-  };
-  const mergedStructuredData = structuredData || defaultStructuredData;
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ];
+
   return (
-    <Helmet></Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content="{optimizedDescription}" /></meta>
-      {keywords && <meta name="keywords" content="{keywords}" />}
-      <link rel="canonical" href="{fullCanonical}" /></link>
-      <html lang="{lang}" /></html>
-      {/* Enhanced Performance Meta Tags */}
-      <meta name="viewport" content="width="device-width," initial-scale="1.0," maximum-scale=5.0" /></meta>
-      <meta name="theme-color" content="#0f172a" /></meta>
-      <meta name="color-scheme" content="dark" /></meta>
-      {/* Robots */}'
-      <meta name="robots" content="{`${noIndex" ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} /></meta>'
-      <meta name="googlebot" content="{`${noIndex" ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} /></meta>
-      {/* Open Graph */}
-      <meta property="og:title" content="{ogTitle" || title} /></meta>
-      <meta property="og:description" content="{ogDescription" || description} /></meta>
-      <meta property="og:image" content="{fullOgImage}" /></meta>
-      <meta property="og:url" content="{fullOgUrl}" /></meta>
-      <meta property="og:type" content="{ogType}" /></meta>
-      <meta property="og:site_name" content="Zion Tech Group" /></meta>
-      <meta property="og:locale" content="en_US" /></meta>
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="{twitterCard}" /></meta>
-      <meta name="twitter:title" content="{twitterTitle" || title} /></meta>
-      <meta name="twitter:description" content="{twitterDescription" || description} /></meta>
-      <meta name="twitter:image" content="{twitterImage}" /></meta>
-      <meta name="twitter:site" content="@ziontechgroup" /></meta>
-      <meta name="twitter:creator" content="@ziontechgroup" /> 
-      
-      {/* Article Specific Meta Tags */}
-      {publishedTime && (}
-        <></>}
-          <meta property="article:published_time" content="{publishedTime}" /></meta>
-          {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}" />}
-          <meta property="article:author" content="{author}" /></meta>)
-          {section && <meta property="article:section" content="{section}" />})
-          {tags.map((tag, index) => (})
-            <meta key="{index}" property="article:tag" content="{tag}" /></meta>)
-          ))}
-        </>
-      )}
-      
-      {/* Additional Meta Tags */}
-      <meta name="author" content="Zion Tech Group" /></meta>
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" /></meta>
-      <meta name="theme-color" content="#0ea5e9" /></meta>
-      <meta name="msapplication-TileColor" content="#0ea5e9" /></meta>
-      {/* Favicon */}
-      <link rel="icon" type="" href="/favicon.ico" /></link>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>
-      <link rel="manifest" href="/site.webmanifest" /></link>
-      {/* Structured Data */}
-      {structuredData && (})
-        <script type="application/ld+json"></script>})
-          {JSON.stringify(structuredData, null, 2)}
-        </script>
-      )}
-      
-      {/* Default Structured Data */}
-      {!structuredData && (
-        <script type="application/ld+json"></script>
-          {JSON.stringify({
-            "@context": "https://schema.org",}
-            "@type": "Organization",}
-            "name": "Zion Tech Group",}
-            "url": baseUrl,}
-            "logo": `${baseUrl}/logo.png`,
-            "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-            "contactPoint": {
-              "@type": "ContactPoint",}
-              "telephone": "+1-555-123-4567",}
-              "contactType": "customer service",}
-              "availableLanguage": "English"}
-            },
-            "sameAs": [
-              "https://twitter.com/ziontechgroup",
-              "https://linkedin.com/company/ziontechgroup",]
-              "https://github.com/ziontechgroup"])
-            ])
-          }, null, 2)}
-        </script>
-      )}
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
 
-    </Helmet>
-  )};
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-export default EnhancedSEO;
-'
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default Page;

@@ -1,83 +1,119 @@
-import React, { useState, useEffect } from 'react;
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-interface PerformanceMetrics {
-  cls: number | null;
-  fcp: number | null;}
-  lcp: number | null;}
-  ttfb: number | null;}
-  loadTime: number | null;}
-}
-
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,}
-    largestContentfulPaint: null,}
-    firstInputDelay: null,})
-    cumulativeLayoutShift: null;})
-  });';
->>>>>>> origin/main;';
-  const [isVisible, setIsVisible] = useState(false);';
-  useEffect(() => {';}
-    // Only run in development'}
-    if (process.env.NODE_ENV !="=" 'development') {}
-      return;}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
+  ];
 
-    // Simulate performance metrics for development
-    const simulateMetrics = () => {
-      setMetrics({)
-        cls: Math.random() * 0.1,
-        fcp: Math.random() * 1000 + 500,}
-        lcp: Math.random() * 2000 + 1000,}
-        ttfb: Math.random() * 500 + 200,}
-        loadTime: Math.random() * 3000 + 1000}
-      });
-    };
-
-    // Simulate metrics after a delay
-    const timer = setTimeout(simulateMetrics, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-'
-  // Don't render anything in production'
-  if (process.env.NODE_ENV ="==" 'production') {}
-    return null;}
-  }
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    // Only run in browser;
-    if (typeof window ="==" 'undefined') return'"
-    // Get performance metrics;
-    const getPerformanceMetrics = () => {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming'";
-      const paintEntries = performance.getEntriesByType('paint')'";
-      const fcp = paintEntries.find(entry => entry.name ="==" 'first-contentful-paint')'";
-      const lcp = performance.getEntriesByType('largest-contentful-paint')'";
-      setMetrics({
-        cls: 0, // Would need to be calculated with observer;
-        inp: 0, // Would need to be calculated with observer;
-        fcp: fcp ? fcp.startTime : null,}
-        lcp: lcp.length > 0 ? lcp[lcp.length - 1].startTime : null,}
-        ttfb: navigation ? navigation.responseStart - navigation.requestStart : null,}
-        loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : null;}
-      }
-    // Wait for page load;
   return (
-    <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs"></div>
-      <h3 className="font-bold mb-2">Performance Metrics</h3>)
-      <div className="space-y-1 text-sm"></div>')
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>'
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>'
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>'
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>'
-        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 };
 
-export default PerformanceMonitor;
-'
+export default Page;

@@ -1,59 +1,119 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-export default function 5GSolutionsPage() {
-  return (';
-    <></>';
-      <Helmet></Helmet>';
-        <title>5GSolutionsPage - Zion Tech Group</title>';
-        <meta name="description" content="Professional 5gsolutionspage services by Zion Tech Group." /></meta>}
-      </Helmet>}
-      }
-      <div className="min-h-screen bg-white"></div>}
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ];
+
+  return (
+    <>
+      <EnhancedSEO 
+        title="Pages - Zion Tech Group"
+        description="Professional pages services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="pages, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100"></section>
-          <div className="max-w-6xl mx-auto text-center"></div>
-            <h1 className="text-5xl font-bold text-gray-900 mb-6"></h1>
-              5GSolutionsPage
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Pages
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
-              Professional 5gsolutionspage services by Zion Tech Group.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional pages services designed to help your business succeed and grow.
             </p>
-          </div>
-        </section>
-        {/* Content Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-6xl mx-auto"></div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              <div className="bg-white p-6 rounded-lg shadow-lg"></div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
-                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg"></div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>
-                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg"></div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
             </div>
           </div>
         </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-900"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Contact us today to learn more about our services and how they can benefit your organization.
-            </p>
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"></button>
-              Get Started
-            </button>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Pages Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
-      </div>)
-    </>)
-  )}
-'
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our pages services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default Page;

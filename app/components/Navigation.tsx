@@ -1,168 +1,119 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom;
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-import { 
-  Menu, 
-  X, ;
-  Brain, ';
-  Shield, ;';}
-  Zap, ';}
-  Globe,';}
-  ChevronDown'}
-} from 'lucide-react;
-
-interface NavigationProps {}
-  onSidebarToggle?: () => void;}
-}
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
-const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
-  const [isITServicesOpen, setIsITServicesOpen] = useState(false);
-  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);}
-  const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);';}
-';}
-  const navigation = ['}
-    { name: 'Home', href: '/', icon: HomeIcon },'
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { '
-      name: 'Services', '}
-      href: '/services', }
-      icon: BriefcaseIcon,}
-      submenu: ['}
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },'
-        { name: 'IT Solutions', href: '/it-solutions', icon: BriefcaseIcon },'
-        { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: GlobeAltIcon },'
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },'
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },']
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }]
-      ]
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
-    { '
-      name: 'Solutions', '}
-      href: '/solutions', }
-      icon: CogIcon,}
-      submenu: ['}
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },'
-        { name: 'IT Services', href: '/it-services', icon: BriefcaseIcon },'
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },']
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }]
-      ]
-    },'
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },'
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },'
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },'
-    { name: 'Demo', href: '/demo', icon: PlayIcon },'
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },'
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
-  ];
-
-  const isActive = (path: string) => {}
-    return location.pathname ="==" path;}
-  };
-
-  const itServices = ['
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },'
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },'
-    { name: 'Web Development', href: '/web-development', icon: <Globe className="w-4 h-4" /> },'
-    { name: 'Mobile Development', href: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },'
-    { name: 'Database Management', href: '/database-management', icon: <Database className="w-4 h-4" /> },']
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: <Network className="w-4 h-4" /> }]
-  ];
-
-  const microSaasServices = ['
-    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },'
-    { name: 'Zion Security Shield', href: '/zion-security-shield', icon: <Shield className="w-4 h-4" /> },'
-    { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" /> },']
-    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: <FileText className="w-4 h-4" /> }]
-  ];
-
-  const fiveGServices = ['
-    { name: '5G Implementation', href: '/5g-implementation', icon: <Cpu className="w-4 h-4" /> },'
-    { name: '5G Edge Computing', href: '/5g-edge-computing', icon: <Zap className="w-4 h-4" /> },'
-    { name: '5G IoT Solutions', href: '/5g-iot-solutions', icon: <Wifi className="w-4 h-4" /> },']
-    { name: '5G Smart City', href: '/5g-smart-city-solutions', icon: <Building2 className="w-4 h-4" /> }]
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
   ];
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50"></nav>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-        <div className="flex justify-between items-center h-16"></div>
-          {/* Logo */}
-          <div className="flex items-center"></div>
-            <Link to="/" className="flex items-center space-x-2"></Link>
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center"></div>
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>
-            </Link>
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
+        </section>
 
-          {/* Desktop Navigation */})
-          <div className="hidden lg:flex items-center space-x-1"></div>)
-            {navigation.map((item) => {}
-              const Icon = item.icon;}
-              return (}
-                <div key="{item.name}" className="relative group"></div>
-                  <Link
-                    to="{item.href;")
-                    className="{`flex" items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${)}
-                      isActive(item.href)'}
-                        ? 'bg-purple-600 text-white''}
-                        : 'text-gray-300 hover:text-white hover:bg-slate-800'}
-                    }`}
-                    onMouseEnter="{()" => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
-                  >
-                    <Icon className="w-4 h-4" /></Icon>
-                    <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
-                  </Link>
-                  
-                  {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && ()
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"></div>)
-                      {item.submenu.map((subItem) => (
-                        <Link key="{subItem.name;"}
-                          to="{subItem.href;"}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"}
-                        ></Link>}
-                          {subItem.name})
-                        </Link>)
-                      ))}
-                    </div>
-                  )}
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
+        </section>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4"></div>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-            ></Link>
-              Get Started
-            </Link>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
           </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2"></div>
-            <button
-              onClick="{onSidebarToggle}"
-              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
-            ></button>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" /></path>
-              </svg>
-            </button>
-          </div>
-        </div>
+        </section>
       </div>
-    </nav>
-  )};
+    </>
+  );
+};
 
-export default Navigation;
-'
+export default Page;

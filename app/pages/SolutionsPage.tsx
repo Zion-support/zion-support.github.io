@@ -1,216 +1,119 @@
-
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom;
-import { CpuChipIcon, 
-  CloudIcon,
-  ShieldCheckIcon,
-  CloudIcon,;
-  GlobeAltIcon,';
-  SignalIcon,;';}
-  BriefcaseIcon,';}
-  ArrowRightIcon,';}
-  CheckIcon'}
-} from '@heroicons/react/24/outline;
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-const SolutionsPage: React.FC = () => {';
-  const solutions = [';
-    {'
-      title: 'AI-Powered Solutions','
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
-      icon: CpuChipIcon,
-      features: ['
-        'Machine Learning Models','
-        'Natural Language Processing','
-        'Computer Vision','
-        'Predictive Analytics','
-        'Automated Decision Making','}]
-        'Intelligent Automation']}
-      ],'}
-      href: '/ai-solutions'}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
-    {'
-      title: 'Cybersecurity Solutions','
-      description: 'Protect your digital assets with comprehensive security solutions and threat detection systems.',
-      icon: ShieldCheckIcon,
-      features: ['
-        'Threat Detection & Response','
-        'Vulnerability Assessment','
-        'Security Monitoring','
-        'Compliance Management','
-        'Incident Response','}]
-        'Security Training']}
-      ],'}
-      href: '/cybersecurity'}
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
-    {'
-      title: 'Cloud Infrastructure','
-      description: 'Build scalable, secure, and reliable cloud infrastructure for your business needs.',
-      icon: CloudIcon,
-      features: ['
-        'Cloud Migration','
-        'Infrastructure as Code','
-        'Auto-scaling','
-        'Disaster Recovery','
-        'Cost Optimization','}]
-        'Multi-cloud Strategy']}
-      ],'}
-      href: '/cloud-infrastructure'}
-    },
-    {'
-      title: 'Micro SaaS Solutions','
-      description: 'Custom micro SaaS applications tailored to your specific business requirements.',
-      icon: GlobeAltIcon,
-      features: ['
-        'Custom Development','
-        'API Integration','
-        'Scalable Architecture','
-        'User Management','
-        'Payment Processing','}]
-        'Analytics & Reporting']}
-      ],'}
-      href: '/micro-saas-solutions'}
-    },
-    {'
-      title: '5G Technology','
-      description: 'Leverage next-generation 5G technology for ultra-fast connectivity and IoT solutions.',
-      icon: SignalIcon,
-      features: ['
-        '5G Network Implementation','
-        'IoT Device Management','
-        'Edge Computing','
-        'Real-time Data Processing','
-        'Low Latency Applications','}]
-        'Network Optimization']}
-      ],'}
-      href: '/5g-solutions'}
-    },
-    {'
-      title: 'IT Services','
-      description: 'Complete IT infrastructure management and support services for your business.',
-      icon: BriefcaseIcon,
-      features: ['
-        'IT Infrastructure Management','
-        'Help Desk Support','
-        'System Administration','
-        'Network Management','
-        'Software Deployment','}]
-        'Technical Consulting']}
-      ],'}
-      href: '/it-solutions'}
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ];
+
   return (
-    <></>
-      <Helmet></Helmet>
-        <title>Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology solutions including AI, cybersecurity, cloud infrastructure, micro SaaS, 5G technology, and IT services." /></meta>
-        <meta name="keywords" content="technology solutions, AI solutions, cybersecurity, cloud computing, micro SaaS, 5G technology, IT services" /></meta>
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
-        <div className="absolute inset-0 opacity-20"></div>
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center"></div>
-          <div className="max-w-4xl mx-auto"></div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></h1>
-              Technology Solutions
+    <>
+      <EnhancedSEO 
+        title="Pages - Zion Tech Group"
+        description="Professional pages services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="pages, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Pages
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
-              Comprehensive Solutions for Modern Businesses
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional pages services designed to help your business succeed and grow.
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto"></p>
-              From AI and cybersecurity to cloud infrastructure and 5G technology, 
-              we provide end-to-end solutions that drive digital transformation and business growth.
-            </p>
-            <Link;
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"
-            ></Link>
-              Get Started
-              <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-      {/* Solutions Grid */}
-      <section className="py-20 bg-slate-900"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text"></h2>
-              Technology Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Comprehensive technology solutions designed to meet your business needs
-            </p>
-          </div>
-          )
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
-            {solutions.map((solution, index) => (}
-              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
-                <div className="flex items-center mb-6"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"></div>
-                    <solution.icon className="w-8 h-8 text-white" /></solution>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Pages Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{solution.title}</h3>"
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed"></p>
-                  {solution.description}
-                </p>
-                )
-                <ul className="space-y-3 mb-6"></ul>)
-                  {solution.features.map((feature, featureIndex) => (}
-                    <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
-                      <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                      {feature})
-                    </li>)
-                  ))}
-                </ul>
-                
-                <Link
-                  to="{solution.href;"
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
-                ></Link>
-                  Learn More}
-                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
-                </Link>}
-              </div>}
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8"></p>'
-            Let's discuss how our solutions can help you achieve your business goals
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
-              to="/contact"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            ></Link>
-              Get Started Today
-            </Link>
-            <Link;
-              to="/demo"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-            ></Link>
-              Schedule Demo
-            </Link>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our pages services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };
 
-export default SolutionsPage;
-'
+export default Page;

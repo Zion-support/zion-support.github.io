@@ -1,271 +1,119 @@
-import React from 'react;';
-import { Activity, TrendingUp } from 'lucide-react;
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;}
-  ttfb?: number;}
-  memory?: number;}
-  connection?: string;}
-}
-interface PerformanceMonitorProps {}
-  showDetails?: boolean;}
-  logMetrics?: boolean;}
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;}
-}
-const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
-  showDetails = false,}
-  logMetrics = false,})
-  onMetricsUpdate;})
-}) => {}
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
-  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {}
-    setMetrics(prev => {})
-      const updated = { ...prev, ...newMetrics };)
-      onMetricsUpdate?.(updated);
-      return updated;';
-    });';
-  }, [onMetricsUpdate]);';
-  useEffect(() => {';
-    // Only run in browser'
-    if (typeof window ="==" 'undefined') return;
-}
-    // Load web-vitals library dynamically}
-    const loadWebVitals = async () => {}
-      try {'}
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
-        // Measure Core Web Vitals
-        getCLS((metric) => {}
-          updateMetrics({ cls: metric.value })'
-          if (logMetrics) console.log('CLS:', metric);
-        });
-        getFID((metric) => {}
-          updateMetrics({ fid: metric.value })'
-          if (logMetrics) console.log('FID:', metric);
-        });
-        getFCP((metric) => {}
-          updateMetrics({ fcp: metric.value })'
-          if (logMetrics) console.log('FCP:', metric);
-        });
-        getLCP((metric) => {}
-          updateMetrics({ lcp: metric.value })'
-          if (logMetrics) console.log('LCP:', metric);
-        });
-        getTTFB((metric) => {}
-          updateMetrics({ ttfb: metric.value })'
-          if (logMetrics) console.log('TTFB:', metric);
-        });
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-      } catch (error) {'}
-        console.warn('Failed to load web-vitals:', error);}
-      }
-    };
-
-    // Monitor memory usage
-    const monitorMemory = () => {'
-      if ('memory' in performance) {}
-        const memory = (performance as any).memory;}
-        updateMetrics({})
-          memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB;})
-        });
-      }
-    };
-
-    // Monitor connection
-    const monitorConnection = () => {'}
-      if ('connection' in navigator) {}
-        const connection = (navigator as any).connection;}
-        updateMetrics({})
-          connection: `${connection.effectiveType} (${connection.downlink}Mbps)`
-        });
-      }
-    };
-    // Monitor performance entries;
-    const observer = new PerformanceObserver((list) => {}
-      for (const entry of list.getEntries()) {'}
-        if (entry.entryType ="==" 'largest-contentful-paint') {}
-          updateMetrics({ lcp: entry.startTime })'
-        } else if (entry.entryType ="==" 'first-input') {}
-          updateMetrics({ fid: entry.processingStart - entry.startTime })'
-        } else if (entry.entryType ="==" 'layout-shift') {}
-          if (!(entry as any).hadRecentInput) {}
-            updateMetrics({)}
-              cls: (metrics.cls || 0) + (entry as any).value ;}
-            });
-          }'
-        } else if (entry.entryType ="==" 'paint') {'}
-          if (entry.name ="==" 'first-contentful-paint') {}
-            updateMetrics({ fcp: entry.startTime });
-          }
-        }
-      }
-    });
-    // Initialize monitoring;
-    loadWebVitals();
-    monitorMemory();
-    monitorConnection();
-
-    // Set up observers
-    try {'}
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (e) {'}
-      console.warn('Performance Observer not supported:', e);}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
-    // Monitor memory every 5 seconds;
-    const memoryInterval = setInterval(monitorMemory, 5000);
+  ];
 
-    // Monitor connection changes'
-    if ('connection' in navigator) {}
-      const connection = (navigator as any).connection'}
-      connection.addEventListener('change', monitorConnection);}
-    }
-    return () => {
-      observer.disconnect();
-      clearInterval(memoryInterval)'}
-      if ('connection' in navigator) {}
-        const connection = (navigator as any).connection'}
-        connection.removeEventListener('change', monitorConnection);}
-      }
-    };
-  }, [updateMetrics, logMetrics, metrics.cls]);
-  // Performance score calculation;
-  const getPerformanceScore = () => {
-    let score = 100;
-    if (metrics.lcp && metrics.lcp > 2500) score -= 20;
-    if (metrics.fid && metrics.fid > 100) score -= 20;
-    if (metrics.cls && metrics.cls > 0.1) score -= 20;}
-    if (metrics.fcp && metrics.fcp > 1800) score -= 20;}
-    if (metrics.ttfb && metrics.ttfb > 600) score -= 20;}
-    return Math.max(0, score);}
-  };
-
-  const getScoreColor = (score: number) => {'}
-    if (score >= 90) return 'text-green-400''}
-    if (score >= 70) return 'text-yellow-400''}
-    return 'text-red-400';}
-  };
-
-  const getScoreLabel = (score: number) => {'
-    if (score >= 90) return 'Excellent''}
-    if (score >= 70) return 'Good''}
-    if (score >= 50) return 'Needs Improvement''}
-    return 'Poor';}
-  };
-  const performanceScore = getPerformanceScore();
-  if (!showDetails) {}
-    return null;}
-  }
   return (
-    <div className="fixed bottom-4 right-4 z-50"></div>)
-      <button)
-        onClick="{()" => setIsVisible(!isVisible)}
-        className="bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover: 'bg-slate-700/90 transition-colors"','
-        title="Performance Monitor"
-      >
-        <Activity className="w-5 h-5" /></Activity>
-      </button>
-      {isVisible && (
-        <div className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white"></div>
-          <div className="flex items-center justify-between mb-4"></div>
-            <h3 className="text-lg font-semibold flex items-center gap-2"></h3>
-              <TrendingUp className="w-5 h-5" /></TrendingUp>}
-              Performance}
-            </h3>})
-            <button})
-              onClick="{()" => setIsVisible(false)}
-              className="text-gray-400 hover:text-white"
-            >
-              ×
-            </button>
-          </div>
-
-          {/* Performance Score */}
-          <div className="mb-4"></div>
-            <div className="flex items-center justify-between mb-2"></div>
-              <span className="text-sm text-gray-300">Overall Score</span>
-              <span className="{`font-bold" ${getScoreColor(performanceScore)}`}></span>
-                {performanceScore}/100
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
               </span>
-            </div>
-            <div className="w-full bg-slate-700 rounded-full h-2"></div>
-              <div
-                className="{`h-2" rounded-full transition-all duration-300 ${'}
-                  performanceScore >= 90 ? 'bg-green-400' :'}
-                  performanceScore >= 70 ? 'bg-yellow-400' : 'bg-red-400'}
-                }`}
-                style="{{" width: `${performanceScore}%` }}
-              />
-            </div>
-            <p className="text-xs text-gray-400 mt-1"></p>
-              {getScoreLabel(performanceScore)}
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-          {/* Metrics */}
-          <div className="space-y-2 text-sm"></div>
-            {metrics.lcp && (}
-              <div className="flex justify-between"></div>}
-                <span className="text-gray-300">LCP</span>'})
-                <span className="{metrics.lcp" > 2500 ? 'text-red-400' : 'text-green-400'}>)
-                  {metrics.lcp.toFixed(0)}ms
-                </span>
-              </div>
-            )}
-            {metrics.fid && (}
-              <div className="flex justify-between"></div>}
-                <span className="text-gray-300">FID</span>'})
-                <span className="{metrics.fid" > 100 ? 'text-red-400' : 'text-green-400'}>)
-                  {metrics.fid.toFixed(0)}ms
-                </span>
-              </div>
-            )}
-            {metrics.cls && (}
-              <div className="flex justify-between"></div>}
-                <span className="text-gray-300">CLS</span>'})
-                <span className="{metrics.cls" > 0.1 ? 'text-red-400' : 'text-green-400'}>)
-                  {metrics.cls.toFixed(3)}
-                </span>
-              </div>
-            )}
-            {metrics.fcp && (}
-              <div className="flex justify-between"></div>}
-                <span className="text-gray-300">FCP</span>'})
-                <span className="{metrics.fcp" > 1800 ? 'text-red-400' : 'text-green-400'}>)
-                  {metrics.fcp.toFixed(0)}ms
-                </span>
-              </div>
-            )}
-            {metrics.ttfb && (}
-              <div className="flex justify-between"></div>}
-                <span className="text-gray-300">TTFB</span>'})
-                <span className="{metrics.ttfb" > 600 ? 'text-red-400' : 'text-green-400'}>)
-                  {metrics.ttfb.toFixed(0)}ms
-                </span>
-              </div>
-            )}
-            {metrics.memory && (}
-              <div className="flex justify-between"></div>}
-                <span className="text-gray-300">Memory</span>})
-                <span className="text-cyan-400"></span>})
-                  {metrics.memory.toFixed(1)}MB
-                </span>
-              </div>
-            )}
-            {metrics.connection && (}
-              <div className="flex justify-between"></div>}
-                <span className="text-gray-300">Connection</span>}
-                <span className="text-cyan-400"></span>}
-                  {metrics.connection}
-                </span>)
-              </div>)
-            )}
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
-export default ImprovedPerformanceMonitor'
+export default Page;

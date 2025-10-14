@@ -1,278 +1,119 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom;
-import { ArrowPathIcon,
-  UserGroupIcon,;
-  CloudIcon,';
-  CpuChipIcon,;';}
-  ArrowRightIcon,';}
-  CheckIcon,';}
-  ChartBarIcon'}
-} from '@heroicons/react/24/outline;
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-
-const DigitalTransformationPage: React.FC = () => {
-  const services = [';
-    {';
-      icon: ArrowPathIcon,'
-      title: 'Process Automation','
-      description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',
-      features: ['
-        'Workflow Analysis','
-        'Process Mapping','}
-        'Automation Implementation','}]
-        'Performance Monitoring'}]
-      ]}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: UserGroupIcon,'
-      title: 'Change Management','
-      description: 'Guide your team through digital transformation with comprehensive change management strategies.',
-      features: ['
-        'Training Programs','
-        'Change Communication','}
-        'Adoption Strategies','}]
-        'Performance Metrics'}]
-      ]}
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: CloudIcon,'
-      title: 'Cloud Migration','
-      description: 'Migrate your infrastructure to the cloud for improved scalability, security, and cost efficiency.',
-      features: ['
-        'Cloud Strategy','
-        'Data Migration','}
-        'Security Implementation','}]
-        'Cost Optimization'}]
-      ]}
-    },
-    {
-      icon: CpuChipIcon,'
-      title: 'AI Integration','
-      description: 'Integrate artificial intelligence into your business processes for enhanced decision-making and automation.',
-      features: ['
-        'AI Strategy','
-        'Model Development','}
-        'Integration Services','}]
-        'Performance Monitoring'}]
-      ]}
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ];
 
-  const benefits = [
-    {'
-      title: 'Increased Efficiency','}
-      description: 'Streamline operations and reduce manual work',}
-      icon: ChartBarIcon,'}
-      value: '40%'}
-    },
-    {'
-      title: 'Cost Reduction','}
-      description: 'Optimize processes and reduce operational costs',}
-      icon: ChartBarIcon,'}
-      value: '30%'}
-    },
-    {'
-      title: 'Better Customer Experience','}
-      description: 'Improve customer satisfaction and engagement',}
-      icon: ChartBarIcon,'}
-      value: '85%'}
-    },
-    {'
-      title: 'Data-Driven Decisions','}
-      description: 'Make informed decisions with real-time analytics',}
-      icon: ChartBarIcon,'}
-      value: '90%'}]
-    }]
-  ];
-
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Digital Transformation - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our comprehensive digital transformation services. Process automation, cloud migration, AI integration, and change management." /></meta>
-        <meta name="keywords" content="digital transformation, process automation, cloud migration, AI integration, change management, business transformation" /></meta>
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
-        <div className="absolute inset-0 opacity-20"></div>
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center"></div>
-          <div className="max-w-4xl mx-auto"></div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></h1>
-
-              Digital Transformation
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
-              Transform Your Business for the Digital Age
-            </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto"></p>
-              Embrace digital transformation with our comprehensive services that modernize your business processes, '
-              improve efficiency, and drive growth in today's competitive landscape.
-            </p>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"
-            ></Link>
-              Start Your Transformation
-              <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 bg-slate-900"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Our Digital Transformation Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Comprehensive solutions to modernize your business operations
-            </p>
-          </div>
-          )
-          <div className="grid md:grid-cols-2 gap-8"></div>)
-            {services.map((service, index) => (}
-              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
-                <div className="flex items-center mb-6"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"></div>
-                    <service.icon className="w-8 h-8 text-white" /></service>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                </div>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed"></p>
-                  {service.description}
-                </p>
-                )
-                <ul className="space-y-3 mb-6"></ul>)
-                  {service.features.map((feature, featureIndex) => (}
-                    <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
-                      <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                      {feature})
-                    </li>)
-                  ))}
-                </ul>
-                
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
-                ></Link>
-                  Learn More
-                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Transformation Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              See the measurable impact of digital transformation on your business
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit, index) => (}
-              <div key="{index}" className="text-center"></div>
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-                  <benefit.icon className="w-10 h-10 text-white" /></benefit>
-                </div>
-                <div className="text-4xl font-bold text-purple-400 mb-2">{benefit.value}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>)
-              </div>)
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-slate-900"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Our Transformation Process
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              A structured approach to ensure successful digital transformation
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8"></div>
-            {['}
-              { step: '01', title: 'Assessment', description: 'Analyze current processes and identify transformation opportunities' },'
-              { step: '02', title: 'Strategy', description: 'Develop a comprehensive digital transformation roadmap' },'
-              { step: '03', title: 'Implementation', description: 'Execute the transformation plan with expert guidance' },']
-              { step: '04', title: 'Optimization', description: 'Monitor performance and continuously improve processes' }]
-            ].map((phase, index) => (
-              <div key="{index}" className="text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <span className="text-2xl font-bold text-white">{phase.step}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{phase.title}</h3>
-                <p className="text-gray-300">{phase.description}</p>
-              </div>
-            </div>
-            <div className="mt-12"></div>
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
-                Get Started Today;
-              </button>
-            </div>)
-          </div>;)
-const DigitalTransformationPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
-    </>
-        <title>DigitalTransformationPage - Zion Tech Group</title>
-        <meta name="description" content="DigitalTransformationPage - Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1>DigitalTransformationPage</h1>
-          <p>This page is under construction.</p>}
-        </div>}
-      </section>}
-}
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8"></p>'
-            Let's discuss how digital transformation can drive your business forward
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
-              to="/contact"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            ></Link>
-              Start Your Journey
-            </Link>
-            <Link
-              to="/demo"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-            ></Link>
-              Schedule Demo
-            </Link>
+      <EnhancedSEO 
+        title="Pages - Zion Tech Group"
+        description="Professional pages services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="pages, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Pages
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional pages services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>)
-    </>)
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Pages Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our pages services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-export default DigitalTransformationPage;
-'
+};
+
+export default Page;

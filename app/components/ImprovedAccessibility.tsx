@@ -1,361 +1,119 @@
-import React from 'react;';
-import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react;';
-interface AccessibilitySettings {';
-  highContrast: 'boolean','
-  largeText: 'boolean','
-  reducedMotion: 'boolean','}
-  screenReader: 'boolean','}
-  keyboardNavigation: 'boolean','}
-  focusVisible: boolean;}
-}
-interface ImprovedAccessibilityProps {
-  children: 'React.ReactNode','
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;}
-  enableHighContrast?: boolean;}
-  enableLargeText?: boolean;}
-  enableReducedMotion?: boolean;}
-}
-const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,}
-  enableHighContrast = false,}
-  enableLargeText = false,})
-  enableReducedMotion = false;})
-}) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: enableHighContrast,
-    largeText: enableLargeText,
-    reducedMotion: enableReducedMotion,}
-    screenReader: enableScreenReader,}
-    keyboardNavigation: enableKeyboardNavigation,})
-    focusVisible: false;})
-  });
-  const [isVisible, setIsVisible] = useState(false);
-  // Apply accessibility settings;
-  useEffect(() => {
-    const root = document.documentElement;
-    }
-    // High contrast}
-    if (settings.highContrast) {'}
-      root.classList.add('high-contrast');}
-    } else {'}
-      root.classList.remove('high-contrast');}
-    }
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-    // Large text
-    if (settings.largeText) {'}
-      root.classList.add('large-text');}
-    } else {'}
-      root.classList.remove('large-text');}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
+  ];
 
-    // Reduced motion
-    if (settings.reducedMotion) {'}
-      root.classList.add('reduced-motion');}
-    } else {'}
-      root.classList.remove('reduced-motion');}
-    }
-
-    // Screen reader
-    if (settings.screenReader) {'}
-      root.setAttribute('aria-live', 'polite');}
-    } else {'}
-      root.removeAttribute('aria-live');}
-    }
-
-    // Keyboard navigation
-    if (settings.keyboardNavigation) {'}
-      root.classList.add('keyboard-navigation');}
-    } else {'}
-      root.classList.remove('keyboard-navigation');}
-    }
-
-    // Focus visible
-    if (settings.focusVisible) {'}
-      root.classList.add('focus-visible');}
-    } else {'}
-      root.classList.remove('focus-visible');}
-    }
-  }, [settings]);
-  // Handle keyboard navigation;
-  useEffect(() => {
-    if (!settings.keyboardNavigation) return;
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content'
-      if (event.key ="==" 'Tab' && event.shiftKey && event.altKey) {
-        event.preventDefault()'}
-        const mainContent = document.getElementById('main-content');}
-        if (mainContent) {}
-          mainContent.focus()'}
-          mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-
-      // Toggle accessibility panel'
-      if (event.key ="==" 'Tab' && event.altKey && event.ctrlKey) {}
-        event.preventDefault();}
-        setIsVisible(!isVisible);}
-      }
-
-      // Focus visible'
-      if (event.key ="==" 'Tab') {}
-        setSettings(prev => ({ ...prev, focusVisible: true }));
-      }
-    };
-    const handleMouseDown = () => {}
-      setSettings(prev => ({ ...prev, focusVisible: false }));
-    };
-'
-    document.addEventListener('keydown', handleKeyDown)'
-    document.addEventListener('mousedown', handleMouseDown);
-
-    return () => {'}
-      document.removeEventListener('keydown', handleKeyDown)'}
-      document.removeEventListener('mousedown', handleMouseDown);}
-    };
-  }, [settings.keyboardNavigation, isVisible]);
-  // Announce changes to screen readers;
-  const announceToScreenReader = useCallback((message: string) => {
-    if (settings.screenReader) {'
-      const announcement = document.createElement('div')'
-      announcement.setAttribute('aria-live', 'polite')'
-      announcement.setAttribute('aria-atomic', 'true')'
-      announcement.className = 'sr-only';
-      announcement.textContent = message;}
-      document.body.appendChild(announcement);}
-      setTimeout(() => {}
-        document.body.removeChild(announcement);}
-      }, 1000);
-    }
-  }, [settings.screenReader]);
-  const toggleSetting = (key: keyof AccessibilitySettings) => {}
-    setSettings(prev => {})
-      const newSettings = { ...prev, [key]: !prev[key] }')
-      announceToScreenReader(`${key} ${newSettings[key] ? 'enabled' : 'disabled'}`);
-      return newSettings;
-    });
-  };
   return (
-    <></>
-      {children}
-      
-      {/* Accessibility Toggle Button */})
-      <button;)
-        onClick="{()" => setIsVisible(!isVisible)}
-        className="fixed top-4 right-4 z-50 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover: 'bg-slate-700/90 transition-colors"','
-        title="Accessibility Settings"
-        aria-label="Open accessibility settings"
-      >
-        <Eye className="w-5 h-5" /></Eye>
-      </button>
-      {/* Accessibility Panel */}
-      {isVisible && (
-        <div className="fixed top-16 right-4 z-50 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white"></div>}
-          <div className="flex items-center justify-between mb-4"></div>}
-            <h3 className="text-lg font-semibold">Accessibility Settings</h3>})
-            <button})
-              onClick="{()" => setIsVisible(false)}
-              className="text-gray-400 hover: 'text-white"','
-              aria-label="Close accessibility settings"
-            >
-              ×
-            </button>
-          </div>
-
-          <div className="space-y-4"></div>
-            {/* High Contrast */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                <Eye className="w-4 h-4" /></Eye>
-                <span className="text-sm">High Contrast</span>
-              </div>
-              <button'
-                onClick="{()" => toggleSetting('highContrast')}
-                className="{`w-12" h-6 rounded-full transition-colors ${'}
-                  settings.highContrast ? 'bg-cyan-500' : 'bg-gray-600'}
-                }`}'
-                aria-label="{`${settings.highContrast" ? 'Disable' : 'Enable'} high contrast`}
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
               >
-                <div
-                  className="{`w-5" h-5 bg-white rounded-full transition-transform ${'}
-                    settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'}
-                  }`}
-                /></div>
-              </button>
-            </div>
-
-            {/* Large Text */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                <Type className="w-4 h-4" /></Type>
-                <span className="text-sm">Large Text</span>
-              </div>
-              <button'
-                onClick="{()" => toggleSetting('largeText')}
-                className="{`w-12" h-6 rounded-full transition-colors ${'}
-                  settings.largeText ? 'bg-cyan-500' : 'bg-gray-600'}
-                }`}'
-                aria-label="{`${settings.largeText" ? 'Disable' : 'Enable'} large text`}
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               >
-                <div
-                  className="{`w-5" h-5 bg-white rounded-full transition-transform ${'}
-                    settings.largeText ? 'translate-x-6' : 'translate-x-0.5'}
-                  }`}
-                /></div>
-              </button>
-            </div>
-
-            {/* Reduced Motion */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                <MousePointer className="w-4 h-4" /></MousePointer>
-                <span className="text-sm">Reduced Motion</span>
-              </div>
-              <button'
-                onClick="{()" => toggleSetting('reducedMotion')}
-                className="{`w-12" h-6 rounded-full transition-colors ${'}
-                  settings.reducedMotion ? 'bg-cyan-500' : 'bg-gray-600'}
-                }`}'
-                aria-label="{`${settings.reducedMotion" ? 'Disable' : 'Enable'} reduced motion`}
-              >
-                <div
-                  className="{`w-5" h-5 bg-white rounded-full transition-transform ${'}
-                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'}
-                  }`}
-                /></div>
-              </button>
-            </div>
-
-            {/* Screen Reader */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                {settings.screenReader ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
-                <span className="text-sm">Screen Reader</span>
-              </div>
-              <button'
-                onClick="{()" => toggleSetting('screenReader')}
-                className="{`w-12" h-6 rounded-full transition-colors ${'}
-                  settings.screenReader ? 'bg-cyan-500' : 'bg-gray-600'}
-                }`}'
-                aria-label="{`${settings.screenReader" ? 'Disable' : 'Enable'} screen reader`}
-              >
-                <div
-                  className="{`w-5" h-5 bg-white rounded-full transition-transform ${'}
-                    settings.screenReader ? 'translate-x-6' : 'translate-x-0.5'}
-                  }`}
-                /></div>
-              </button>
-            </div>
-
-            {/* Keyboard Navigation */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                <Keyboard className="w-4 h-4" /></Keyboard>
-                <span className="text-sm">Keyboard Navigation</span>
-              </div>
-              <button'
-                onClick="{()" => toggleSetting('keyboardNavigation')}
-                className="{`w-12" h-6 rounded-full transition-colors ${'}
-                  settings.keyboardNavigation ? 'bg-cyan-500' : 'bg-gray-600'}
-                }`}'
-                aria-label="{`${settings.keyboardNavigation" ? 'Disable' : 'Enable'} keyboard navigation`}
-              >
-                <div
-                  className="{`w-5" h-5 bg-white rounded-full transition-transform ${'}
-                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'}
-                  }`}
-                /></div>
-              </button>
+                View Demo
+              </Link>
             </div>
           </div>
-          {/* Keyboard Shortcuts */}
-          <div className="mt-6 pt-4 border-t border-white/10"></div>
-            <h4 className="text-sm font-semibold mb-2">Keyboard Shortcuts</h4>
-            <div className="text-xs text-gray-400 space-y-1"></div>
-              <p>Alt + Shift + Tab: Skip to main content</p>
-              <p>Alt + Ctrl + Tab: Toggle this panel</p>
-              <p>Tab: Navigate elements</p>
-              <p>Enter/Space: Activate elements</p>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      )}
-      {/* Skip to main content link */}
-      <a;
-        href="#main-content"
-        className="sr-only focus: 'not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50"','
-        onClick="{(e)" => {
-          e.preventDefault()'}
-          const mainContent = document.getElementById('main-content');}
-          if (mainContent) {}
-            mainContent.focus()'}
-            mainContent.scrollIntoView({ behavior: 'smooth' });
-          }
-        }}
-      >
-        Skip to main content
-      </a>
+        </section>
 
-      {/* Accessibility Styles */}
-      <style jsx global>{`}
-        .high-contrast {}
-          --tw-bg-opacity: '1','}
-          --tw-text-opacity: 1;}
-        }
-        .high-contrast * {}
-          background-color: var(--tw-bg-opacity) !important;}
-          color: var(--tw-text-opacity) !important;}
-          border-color: currentColor !important;}
-        }
-        .large-text {}
-          font-size: 1.125rem;}
-        }
-        .large-text h1 { font-size: 3.5rem; }
-        .large-text h2 { font-size: 2.5rem; }
-        .large-text h3 { font-size: 2rem; }
-        .large-text h4 { font-size: 1.5rem; }
-        .large-text h5 { font-size: 1.25rem; }
-        .large-text h6 { font-size: 1.125rem; }
-        .reduced-motion * {}
-          animation-duration: '0.01ms !important','}
-          animation-iteration-count: '1 !important','}
-          transition-duration: 0.01ms !important;}
-        }
-        .keyboard-navigation *:focus {}
-          outline: '2px solid #06b6d4 !important','}
-          outline-offset: 2px !important;}
-        }
-        .focus-visible *:focus {}
-          outline: '2px solid #06b6d4 !important','}
-          outline-offset: 2px !important;}
-        }
-        .sr-only {
-          position: 'absolute','
-          width: '1px','
-          height: '1px','
-          padding: '0','
-          margin: '-1px','
-          overflow: 'hidden','}
-          clip: rect(0, 0, 0, 0);}
-          white-space: 'nowrap','}
-          border: 0;}
-        }
-        
-        .focus\\:not-sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: 0.5rem 1rem;
-          margin: 0;}
-          overflow: visible;}
-          clip: auto;}
-          white-space: normal;}
-        }
-      `}</style>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };
 
-export default ImprovedAccessibility'
+export default Page;

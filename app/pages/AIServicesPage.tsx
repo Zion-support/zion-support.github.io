@@ -1,166 +1,119 @@
-import React from 'react;
-';
-';
-const AIServicesPage: React.FC = () => {';
-  const services = [{';}
-      icon: Brain,'}
-      title: 'AI Strategy & Consulting'''}]
-      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.'''}]
-      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']';}
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
-    {'}
-      icon: Bot''}
-      title: 'Conversational AI'''}
-      description: 'Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.'''}
-      features: ['Natural Language Processing', 'Multi-channel Integration', 'Sentiment Analysis', '24/7 Availability']';}
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
-    {'}
-      icon: BarChart3''}
-      title: 'Predictive Analytics'''}
-      description: 'Leverage machine learning to predict trends, behaviors, and outcomes for better decision making.'''}
-      features: ['Data Mining', 'Pattern Recognition', 'Forecasting Models', 'Real-time Insights']';}
-    },
-    {'}
-      icon: Shield''}
-      title: 'AI Security Solutions'''}
-      description: 'Protect your AI systems and data with advanced security measures and compliance frameworks.'''}
-      features: ['Threat Detection', 'Data Privacy', 'Model Security', 'Compliance Management']';}
-    },
-    {'}
-      icon: Zap''}
-      title: 'Process Automation'''}
-      description: 'Automate repetitive tasks and workflows using AI to increase efficiency and reduce costs.'''}
-      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Quality Control']';}
-    },
-    {'}
-      icon: Target''}
-      title: 'Computer Vision'''}
-      description: 'Implement visual recognition systems for quality control, security, and enhanced user experiences.'''}
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Inspection']';}
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ];
-const AIServicesPage: React.FC = () => {
+
   return (
-  <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title>AI Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation solutions." />}
-        <meta name="keywords" content="AI services, machine learning, NLP, computer vision, automation, artificial intelligence" />}
-      </Helmet>}
-      <div className="container mx-auto px-4 py-16"></div>}
+    <>
+      <EnhancedSEO 
+        title="Pages - Zion Tech Group"
+        description="Professional pages services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="pages, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <div className="text-center mb-16"></div>
-          <h1 className="text-5xl font-bold text-white mb-6"></h1>
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
-          </h1>
-          <p></p>
-            Transform your business with cutting-edge artificial intelligence solutions.;
-            From strategy to implementation, we help you harness the power of AI.;
-          </p>
-        </div>
-          {services.map((service, _index)
-  </>)
-); => {}
-            const Icon = service.icon;}
-            return (}
-  <>}
-    <div key="{_index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>
-                <div className="flex items-center mb-4"></div>
-                  <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mr-4"></div>
-                    <Icon className="w-6 h-6 text-white" /></Icon>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                </div>
-                <p>{service.description}</p>
-                <ul className="space-y-2"></ul>
-                  {service.features.map((feature, featureIndex)
-  </>;)
-); => ()
-                    </li>)
-                  ))}
-                </ul>}
-              </div>}
-            )}
-          }
-        </div>;
-              Our AI experts are ready to help you implement the right solutions for your specific needs.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"></button>
-                Get Started Today;
-              </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"></button>
-                Schedule Consultation;
-const AIServicesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet></Helmet>
-    </>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Professional AI services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-white"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center"></div>
-            <h1></h1>
-              AI Services;
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Pages
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
             </h1>
-            <p></p>
-              Professional AI services tailored to your business needs.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional pages services designed to help your business succeed and grow.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
-                <h3 className="text-lg font-semibold text-blue-900 mb-2"></h3>
-                  Expert Solutions;
-                </h3>
-                <p></p>
-                  Our team of experts delivers cutting-edge AI solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>
-                <h3 className="text-lg font-semibold text-green-900 mb-2"></h3>
-                  Custom Implementation;
-                </h3>
-                <p></p>
-                  Tailored AI implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>
-                <h3 className="text-lg font-semibold text-purple-900 mb-2"></h3>
-                  24/7 Support;
-                </h3>
-                <p></p>
-                  Round-the-clock support for all your AI needs.
-                </p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
             </div>
-            <div className="mt-12"></div>
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
-                Get Started Today;
-              </button>
-            </div>)
-          </div>;)
-const AIServicesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet></Helmet>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Pages Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our pages services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
-        <title>AIServicesPage - Zion Tech Group</title>
-        <meta name="description" content="AIServicesPage - Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1>AIServicesPage</h1>
-          <p>This page is under construction.</p>
-        </div>)
-      </div>;)
-    </div>;  );}
-export default AIServicesPage;}
-    </>}
-  );}
+  );
 };
 
-
-
-'
+export default Page;

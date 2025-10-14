@@ -1,99 +1,119 @@
-import React from 'react;';
-import { Cookie, Settings } from "lucide-react";
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-const CookieConsent: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  useEffect(() => {}
-    const consent = localStorage.getItem("cookie-consent");"}
-    if (!consent) {}
-      setIsVisible(true);}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
-  }, []);
-  const handleAccept = () => {}
-    localStorage.setItem("cookie-consent", "accepted");"}
-    setIsVisible(false);}
-  };
-  const handleReject = () => {}
-    localStorage.setItem("cookie-consent", "rejected");"}
-    setIsVisible(false);}
-  };
-  const handleSettings = () => {}
-    setShowSettings(!showSettings);}
-  };
-  if (!isVisible) return null;
+  ];
+
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4"></div>
-      <div className="max-w-6xl mx-auto"></div>
-        <div className="flex items-start justify-between"></div>
-          <div className="flex items-start space-x-4"></div>
-            <Cookie className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" /></Cookie>
-            <div className="flex-1"></div>
-              <h3 className="text-lg font-semibold text-white mb-2"></h3>
-                We use cookies
-              </h3>
-              <p className="text-gray-300 text-sm mb-4"></p>
-                We use cookies to enhance your browsing experience, serve
-                personalized content, and analyze our traffic. By clicking
-                "Accept All", you consent to our use of cookies.
-              </p>
-              {showSettings && (
-                <div className="bg-gray-800 rounded-lg p-4 mb-4"></div>
-                  <h4 className="text-white font-semibold mb-3"></h4>
-                    Cookie Preferences
-                  </h4>
-                  <div className="space-y-3"></div>
-                    <label className="flex items-center justify-between"></label>
-                      <span className="text-gray-300">Essential Cookies</span>
-                      <input
-                        type="checkbox"
-                        defaultChecked;
-                        disabled;
-                        className="rounded"
-                      /></input>
-                    </label>
-                    <label className="flex items-center justify-between"></label>
-                      <span className="text-gray-300">Analytics Cookies</span>
-                      <input
-                        type="checkbox"
-                        defaultChecked;
-                        className="rounded"
-                      /></input>
-                    </label>
-                    <label className="flex items-center justify-between"></label>
-                      <span className="text-gray-300">Marketing Cookies</span>
-                      <input type="checkbox" className="rounded" /></input>}
-                    </label>}
-                  </div>})
-                </div>})
-              )}
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
             </div>
           </div>
+        </section>
 
-          <div className="flex flex-col sm:flex-row gap-2 ml-4"></div>
-            <button
-              onClick="{handleSettings;"
-              className="flex items-center px-4 py-2 text-gray-300 hover:text-white transition-colors"
-            ></button>
-              <Settings className="w-4 h-4 mr-2" /></Settings>
-              Settings
-            </button>
-            <button
-              onClick="{handleReject;"
-              className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors"
-            ></button>
-              Reject All
-            </button>
-            <button
-              onClick="{handleAccept;"
-              className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-            ></button>
-              Accept All
-            </button>
-          </div>}
-        </div>}
-      </div>}
-    </div>}
-  )}
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
 };
-export default CookieConsent;
+
+export default Page;

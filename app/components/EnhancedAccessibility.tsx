@@ -1,278 +1,119 @@
-import React from 'react'
-    highContrast: false''
-    fontSize: 'normal',;
-    reducedMotion: false,;
-    screenReader: false;
-  }
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    // Enhanced accessibility features'
-    const addSkipLinks = () => {''
-      const skipLink = document.createElement('a')''}
-      skipLink.href = '#main-content''}
-      skipLink.textContent = 'Skip to main content''}
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';}
-      document.body.insertBefore(skipLink, document.body.firstChild)};
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-    const enhanceFocusManagement = () => {
-    // Add focus indicators'
-      const style = document.createElement('style')
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-outline-offset: 2px !important;
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);}
-          white-space: nowrap;}
-border: 0;}
-      `;}
-      document.head.appendChild(style)};
-    const addAriaLabels = () => {
-      // Add ARIA labels to interactive elements'}
-      const buttons = document.querySelectorAll('button:not([aria-label])')'}
-      buttons.forEach((button) => {}
-        if (!button.textContent?.trim()) {'}
-          button.setAttribute('aria-label', 'Button')}
-      });
-    // Apply accessibility settings
-    applyAccessibilitySettings(settings)
-    // Listen for system preference changes'
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'
-    const handleChange = () => {}
-      setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))}'
-    mediaQuery.addEventListener('change', handleChange);
-
-    const setupKeyboardNavigation = () => {'}
-      // Enhanced keyboard navigation''}
-      document.addEventListener('keydown', (e) => {''}
-        if (e.key ="==" 'Tab') {''}
-          document.body.classList.add('keyboard-navigation');}
-        }
-      })'
-''
-      document.addEventListener('mousedown', () => {''}
-        document.body.classList.remove('keyboard-navigation');}
-      });
-    };
-
-    // Initialize accessibility enhancements;
-    addSkipLinks();
-    enhanceFocusManagement();
-    addAriaLabels();
-    setupKeyboardNavigation();
-    applyAccessibilityEnhancements()
-    // Listen for preference changes;
-    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'";
-    const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)')'";
-    const handleMotionChange = () => {
-      setIsReducedMotion(e.matches);
-    const handleContrastChange = () => {
-    const setupKeyboardNavigation = () => {}
-      // Enhanced keyboard navigation;}
-      document.addEventListener('keydown', (e) => {;}
-        if (e.key ="==" 'Tab') {;}
-          document.body.classList.add('keyboard-navigation')}'
-      }
-      document.addEventListener('mousedown', () => {;}
-        document.body.classList.remove('keyboard-navigation')})}'
-    // Initialize accessibility enhancements;
-    addSkipLinks();
-    enhanceFocusManagement();
-    addAriaLabels();
-    setupKeyboardNavigation()
-    // Cleanup;
-    return () => {}
-      // Cleanup if needed}}, []);
-
-      setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))}'
-    mediaQuery.addEventListener('change', handleChange)
-    const setupKeyboardNavigation = () => {}
-      // Enhanced keyboard navigation'}
-      document.addEventListener('keydown', (e) => {''}
-        if (e.key ="==" 'Tab') {''}
-          document.body.classList.add('keyboard-navigation')}
-      })'
-      document.addEventListener('mousedown', () => {''}
-        document.body.classList.remove('keyboard-navigation')})}
-    // Initialize accessibility enhancements
-    addSkipLinks()
-    enhanceFocusManagement()
-    addAriaLabels()
-    setupKeyboardNavigation()
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
-    applyAccessibilityEnhancements()
-    // Listen for preference changes'
-    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'
-    const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)')
-    const handleMotionChange = (e: MediaQueryListEvent) => {}
-      setIsReducedMotion(e.matches)}
-    }
-    const handleContrastChange = (e: MediaQueryListEvent) => {}
-      setIsHighContrast(e.matches)}
-    }'
-    motionMediaQuery.addEventListener('change', handleMotionChange)'
-    contrastMediaQuery.addEventListener('change', handleContrastChange)
-    return () => {}
-      // Cleanup if needed}}, [])
-  useEffect(() => {}
-    applyAccessibilitySettings(settings)'}
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
+  ];
 
-  const applyAccessibilitySettings = (settings: AccessibilitySettings) => {}
-    const root = document.documentElement}
-    // Apply high contrast}
-    if (settings.highContrast) {'}
-      root.classList.add('high-contrast')} else {'}
-      root.classList.remove('high-contrast')}
-
-    // Apply font size'
-    root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')'
-    if (settings.fontSize !="=" 'normal') {}
-      root.classList.add(`font-size-${settings.fontSize}`)}
-
-    // Apply reduced motion
-    if (settings.reducedMotion) {'}
-      root.classList.add('reduced-motion')} else {'}
-      root.classList.remove('reduced-motion')}
-  };
-
-  const toggleHighContrast = () => {}
-    setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))};
-'
-  const setFontSize = (size: AccessibilitySettings['fontSize']) => {}
-    setSettings(prev => ({ ...prev, fontSize: size }))};
-
-  const toggleVisibility = () => {}
-    setIsVisible(prev => !prev)};
-
-  // Add CSS for accessibility features
-  useEffect(() => {'
-    const style = document.createElement('style')'}
-    style.id = 'enhanced-accessibility-styles'}
-    style.textContent = `}
-      .high-contrast {}
-filter: contrast(150%) brightness(110%)}
-
-      .font-size-small {
-        font-size: 0.875rem;
-      .font-size-large {
-        font-size: 1.125rem;
-      .font-size-extra-large {
-        font-size: 1.25rem;
-      .reduced-motion * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      .accessibility-panel {
-        position: fixed;
-        top: 50%;
-        right: -300px;
-        transform: translateY(-50%);
-        width: 300px;
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 8px 0 0 8px;
-        padding: 1rem;
-        z-index: 1000;
-        transition: right 0.3s ease;
-color: white;
-      .accessibility-panel.visible {
-        right: 0;
-      .accessibility-toggle {
-        position: fixed;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        background: #8b5cf6;
-        color: white;
-        border: none;
-        padding: 0.5rem;
-        border-radius: 8px 0 0 8px;
-        cursor: pointer;
-        z-index: 1001;
-        font-size: 0.875rem;
-        writing-mode: vertical-rl;
-text-orientation: mixed;
-      .accessibility-toggle:hover {
-        background: #7c3aed;
-    `;
-    document.head.appendChild(style);
-}
-    return () => {'}
-      const existingStyle = document.getElementById('enhanced-accessibility-styles')'}
-      if (existingStyle) {}
-        existingStyle.remove()}
-    }}, []);
-
-        existingStyle.remove()}
-    }}, [])
   return (
-    <></>
-      <button
-        className="accessibility-toggle""
-        onClick="{toggleVisibility}"
-        aria-label="Toggle accessibility options""
-        title="Accessibility Options""
-      ></button>
-        ♿ A11y
-      </button>'
-      <div className="{`accessibility-panel" ${isVisible ? 'visible' :;}`}></div>
-        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
-        <div className="space-y-4"></div>
-          <div></div>
-            <label className="flex items-center space-x-2">"
-              <input
-                type="checkbox""
-                checked="{settings.highContrast}"
-                onChange="{toggleHighContrast}"
-                className="rounded""
-              /></input>
-              <span>High Contrast</span>
-            </label>
-          </div>
-          <div></div>
-            <label className="block text-sm font-medium mb-2">Font Size</label>")
-            <div className="space-y-2">"')
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('}
-                <label key="{size}" className="flex items-center space-x-2">"
-<input
-                    type="radio""
-                    name="fontSize""
-                    value="{size;"})
-                    checked="{settings.fontSize" ="==" size;})
-onChange="{()" => setFontSize(size)}
-                    className="rounded"
-                  />
-                  <span className="capitalize">{size}</span>"
-                </label>
-              )})
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
             </div>
           </div>
-          <div></div>
-            <p className="text-sm text-gray-300">"'
-              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}'
-            </p>
-            <p className="text-sm text-gray-300">"'
-              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}'
-            </p>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <button
-            onClick="{toggleVisibility}"
-            className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""
-          ></button>
-            Close
-          </button>
-        </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
-  )};
+  );
+};
 
-export default EnhancedAccessibility
-
-'
+export default Page;

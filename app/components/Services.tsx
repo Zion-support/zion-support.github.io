@@ -1,117 +1,119 @@
-import { Shield } from 'lucide-react';
-import React from 'react;
-import { CpuChipIcon,';
-  CloudIcon,;';
-  CogIcon,';}
-';}
-  ChartBarIcon,'}
-  ShieldCheckIcon''}
-  RocketLaunchIcon } from '@heroicons/react/24/outline;';
-const Services: React.FC = () => {';
-  const services = [{,'
-      icon: CpuChipIcon''}
-      title: 'AI Solutions'''}]
-      description: 'Cutting-edge artificial intelligence solutions to automate processes and drive innovation.'''}]
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']}
-    },
-    {'
-      icon: CloudIcon''}
-      title: 'Cloud Infrastructure'''}
-      description: 'Scalable and secure cloud solutions to power your business growth.'''}
-      features: ['AWS/Azure/GCP', 'DevOps & CI/CD', 'Container Orchestration', 'Cloud Migration']}
-    },
-    {'
-      icon: CogIcon''}
-      title: 'IT Services'''}
-      description: 'Comprehensive IT support and management to keep your systems running smoothly.'''}
-      features: ['System Administration', 'Network Security', 'Data Backup', '24/7 Monitoring']}
-    },
-    {'
-      icon: ChartBarIcon''}
-      title: 'Data Analytics'''}
-      description: 'Transform your data into actionable insights with advanced analytics solutions.'''}
-      features: ['Business Intelligence', 'Data Visualization', 'Real-time Dashboards', 'Custom Reports']}
-    },
-    {'
-      icon: ShieldCheckIcon''}
-      title: 'Cybersecurity'''}
-      description: 'Protect your business with comprehensive security solutions and best practices.'''}
-      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']}
-    },
-    {'
-      icon: RocketLaunchIcon''}
-      title: 'Digital Transformation'''}
-      description: 'Complete digital transformation strategies to modernize your business processes.'''}
-      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training & Support']}
-    }];
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-  return ()
-    <section className="py-20 bg-white">"
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-        <div className="text-center mb-16">"
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"></h2>
-            Our Services
-          </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
-            We provide comprehensive technology solutions to help your business
-            thrive in the digital age.
-          </p>
-        </div>
-"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-          {services.map((service, index) => ()}
-            <div}
-              key={index}"
-              className="group bg-white border border-gray-200 rounded-xl p-8 hover: shadow-xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2"
-            >"
-              <div className="flex items-center mb-6">"
-                <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors">"
-                  <service.icon className="h-8 w-8 text-blue-600" /></service>
-                </div>"
-                <h3 className="text-xl font-semibold text-gray-900 ml-4">,
-                  {service.title},
-                </h3>
-              </div>
-              "
-              <p className="text-gray-600 mb-6"></p>
-                {service.description},
-              </p>
-              "
-              <ul className="space-y-2"></ul>
-                {service.features.map((feature, featureIndex) => ("}
-                  <li key="{featureIndex}" className="flex items-center text-sm text-gray-500">"
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    {feature})
-                  </li>)
-                )})}
-              </ul>
-              <div className="mt-6"></div>
-                <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline"></button>
-                  Learn More →
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ];
 
-        {/* CTA Section */}"
-        <div className="text-center mt-16">"
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">"
-            <h3 className="text-3xl font-bold mb-4"></h3>
-              Ready to Transform Your Business?
-            </h3>"'
-            <p className="text-xl mb-6 opacity-90">''
-              Let's discuss how our solutions can help you achieve your goals.
+  return (
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"></button>
-              Get Free Consultation;
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-  );,
-}'
-"'
-export default Services;
-'
+    </>
+  );
+};
+
+export default Page;

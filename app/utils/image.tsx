@@ -1,85 +1,119 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-const Image: React.FC = () => {
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-white"></div>}
-      <Helmet></Helmet>}
-        <title>Image - Zion Tech Group</title>}
-        <meta name="description" content="Professional image services by Zion Tech Group." /></meta>}
-      </Helmet> }
-      { /* Hero Section */ }"
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
-        <div className="max-w-6xl mx-auto text-center"></div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-6"></h1>
-            Image;
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
-            Professional image services;
-            designed to help your business grow and succeed.;
-          </p>
-        </div>
-      </section>;
-      {/* Content Section */}
-            Image</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
-            Professional image services
-            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
-      <section className="py-16 px-4"></section>
-        <div className="max-w-6xl mx-auto"></div>
-          <div className="grid md: grid-cols-2 gap-12 items-center"></div>
-            <div></div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6"></p>
-                We provide comprehensive image;
-                solutions tailored to your specific needs and requirements.</p>
-              <ul className="space-y-3"></ul>
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions;
-                </li>"
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
-                  Expert consultation;
-                </li>"
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
-                  Ongoing support;
-                </li>
-              </ul>
-            </div>"
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p>"
-                Ready to transform your business with our image services?;
-              </p>;
-              <a></a>
-                href="/contact";
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
-              >;
-                Contact Us;
-              </a>
+    <>
+      <EnhancedSEO 
+        title="Utils - Zion Tech Group"
+        description="Professional utils services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="utils, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Utils
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional utils services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
             </div>
           </div>
-        </div>
-      </section>;
-            Ready to Get Started?;
-          </h2>
-          <p className="text-xl text-blue-100 mb-8"></p>
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">'
-            Let's discuss how our image'
-            services can help you achieve your goals.;
-          </p>;
-          <a></a>
-            href="/contact";
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
-          >;
-            Get Started Today;
-          </a>
-        </div>)
-      </section>)
-    </div>)
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our utils services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-export default Image;
-'
+};
+
+export default Page;

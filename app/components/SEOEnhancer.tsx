@@ -1,123 +1,119 @@
 import React from 'react';
-{ useEffect } from 'react';
-import { Helmet } from 'react-helmet-async;
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-
-interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];}
-  image?: string;';}
-  url?: string;}';
-  type?: string;';}
-  structuredData?: unknown;}';
-}'
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({''
-  title = 'Zion Tech Group - Advanced AI and IT Solutions'''
-  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.'''
-  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group']''}
-  image = '/.jpg'''}
-  url = typeof window !="=" 'undefined' ? window.location.href : ''''})
-  type = 'website'';})
-  structuredData}) => {
-  useEffect(() => {
-    // Add structured data to the page;
-    if (structuredData) {'
-      const script = document.createElement('script')'
-      script.type = 'application/ld+json'
-      script.text = JSON.stringify(structuredData);}
-      document.head.appendChild(script);}
-      return () => {}
-        if (document.head.contains(script)) {}
-          document.head.removeChild(script);}
-        }
-      };
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
-    return undefined;
-  }, [structuredData])'
-  // Generate meta tags;''
-  const metaTags = [{ name: 'description', content: description }''
-    { name: 'keywords', content: keywords.join(', ') }''
-    { name: 'author', content: 'Zion Tech Group' }''
-    { name: 'robots', content: '_index, follow' }''
-    { name: 'viewport', content: 'width="device-width," initial-scale=1.0' }''
-    // Open Graph tags;''
-    { property: 'og:title', content: title }''
-    { property: 'og:description', content: description }''
-    { property: 'og:image', content: image }''
-    { property: 'og:url', content: url }''
-    { property: 'og:type', content: type }''
-    { property: 'og:site_name', content: 'Zion Tech Group' }''
-    // Twitter d tags;''
-    { name: 'twitter:card', content: 'summary_large_image' }''
-    { name: 'twitter:title', content: title }''
-    { name: 'twitter:description', content: description }''
-    { name: 'twitter:image', content: image }''
-    // Additional SEO tags;''
-    { name: 'theme-color', content: '#0066cc' }''
-    { name: 'msapplication-TileColor', content: '#0066cc' }''
-    { name: 'apple-mobile-web-app-capable', content: 'yes' }'']
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }';]
   ];
+
   return (
-    <Helmet></Helmet>)
-      <title>{title}</title>)
-      {metaTags.map((tag, _index) => (})
-        <meta key="{_index}" {...tag} /></meta>)
-))}
-      {/* Canonical URL */}
-      <link rel="canonical" href="{url}" /></link>
-      {/* Favicon */}
-      <link rel="icon" type="" href="/favicon.ico" /></link>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
-      {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
-    </Helmet>
-  )};
-// Default structured data for the organization;
-      <link rel="canonical" href="{url}" />{/* Favicon */}
-      <link rel="icon" type="" href="/favicon.ico" /></link>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />{/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />{/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></Helmet>
-  )}
-// Default structured data for the organization
-const  {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zion Tech Group",
-  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.",
-  "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/images/logo.png",
-  "contactPoint": {}
-    "@type": "ContactPoint",}
-    "telephone": "+1-555-0123",}
-    "contactType": "customer service",}
-    "availableLanguage": "English"},
-  "sameAs": ["https://www.linkedin.com/",]
-    "https://twitter.com/ziontechgroup",]
-    "https://github."],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "123 Tech Street",}
-    "addressLocality": "San Francisco",}
-    "addressRegion": "CA",}
-    "postalCode": "94105",}
-    "addressCountry": "US"}
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
 };
 
-    "addressCountry": "US"
-};
-
-export default SEOEnhancer
-'
+export default Page;

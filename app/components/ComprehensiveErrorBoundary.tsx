@@ -1,167 +1,119 @@
-import React from 'react;';
-import { Link } from 'react-router-dom;';
-interface Props {';}
-  children: 'ReactNode','}
-  fallback?: ReactNode;}
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;}
-}
-interface State {
-  hasError: 'boolean','}
-  error: 'Error | null','}
-  errorInfo: 'ErrorInfo | null','}
-  errorId: string;}
-}
-class ComprehensiveErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,}
-      error: null,}
-      errorInfo: null,'}
-      errorId: ''}
-    };
-  }
-  static getDerivedStateFromError(error: Error): Partial<State> {}
-    return {}
-      hasError: true,}
-      error,}
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    this.setState({}
-      error,})
-      errorInfo;})
-    });
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-    // Log error to console in development'
-    if (process.env.NODE_ENV ="==" 'development') {}
-
-    // Log error to external service in production'
-    if (process.env.NODE_ENV ="==" 'production') {}
-      this.logErrorToService(error, errorInfo);}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
-    // Call custom error handler if provided;
-    if (this.props.onError) {}
-      this.props.onError(error, errorInfo);}
-    }
-  }
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to an error reporting service;
-    // like Sentry, LogRocket, or Bugsnag;
-    const errorData = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,}
-      timestamp: new Date().toISOString(),}
-      userAgent: navigator.userAgent,}
-      url: window.location.href;}
-    };
-    // For now, just log to console;
-    };
-  handleRetry = () => {
-    this.setState({
-      hasError: false,}
-      error: null,}
-      errorInfo: null,'})
-      errorId: ''})
-    });
-  };
-  handleReload = () => {}
-    window.location.reload();}
-  };
-  render() {
-    if (this.state.hasError) {}
-      // Custom fallback UI;}
-      if (this.props.fallback) {}
-        return this.props.fallback;}
-      }
-      // Default error UI;
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div>
-          <div className="max-w-2xl mx-auto text-center"></div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
-              <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center"></div>
-                <AlertTriangle className="w-8 h-8 text-red-400" /></AlertTriangle>
-              </div>
-              
-              <h1 className="text-3xl font-bold text-white mb-4"></h1>
-                Oops! Something went wrong
-              </h1>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed"></p>'
-                We're sorry, but something unexpected happened. Our team has been notified 
-                and is working to fix the issue. In the meantime, you can try refreshing 
-                the page or returning to the homepage.
-              </p>
-'
-              {process.env.NODE_ENV ="==" 'development' && this.state.error && (}
-                <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left"></div>}
-                  <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>}
-                  <p className="text-red-300 text-sm font-mono break-all"></p>}
-                    {this.state.error.message}
-                  </p>
-                  {this.state.error.stack && (
-                    <details className="mt-2"></details>
-                      <summary className="text-red-400 cursor-pointer text-sm"></summary>}
-                        Stack Trace}
-                      </summary>}
-                      <pre className="text-red-300 text-xs mt-2 overflow-auto"></pre>}
-                        {this.state.error.stack}
-                      </pre>)
-                    </details>)
-                  )}
-                </div>
-              )}
+  ];
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6"></div>
-                <button
-                  onClick="{this.handleRetry;"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-                ></button>
-                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" /></RefreshCw>
-                  Try Again
-                </button>
-                
-                <button
-                  onClick="{this.handleReload;"
-                  className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
-                ></button>
-                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" /></RefreshCw>
-                  Reload Page
-                </button>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <Link
-                  to="/"
-                  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
-                ></Link>
-                  <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /></Home>
-                  Go Home
-                </Link>
-                <Link;
-                  to="/contact"
-                  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
-                ></Link>
-                  <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /></Mail>
-                  Contact Support
-                </Link>}
-              </div>}
-              {this.state.errorId && (}
-                <p className="text-gray-400 text-sm mt-6"></p>}
-                  Error ID: {this.state.errorId})
-                </p>)
-              )}
+  return (
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
             </div>
           </div>
-        </div>
-      );
-    }
+        </section>
 
-    return this.props.children;
-  }
-}
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-export default ComprehensiveErrorBoundary'
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default Page;

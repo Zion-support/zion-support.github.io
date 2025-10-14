@@ -1,211 +1,119 @@
-import React, { useState } from 'react;';
-import { EnvelopeIcon, ';}
-  PhoneIcon, '}
-  MapPinIcon''}
-  ClockIcon } from '@heroicons/react/24/outline;';
-const Contact: React.FC = () => {,'
-  const [formData, setFormData] = useState({''
-    name: ''''}
-    email: ''''}
-    company: ''''})
-    message: '',})
-  });
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {}
-    setFormData({,}
-      ...formData,})
-      [e.target.name]: e.target.value;})
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {}
-    e.preventDefault()'}
-    // Handle form submission','}
-    console.log('Form submitted:', formData);}
-  };
-
-  const contactInfo = [{'
-      icon: EnvelopeIcon''}
-      title: 'Email'''}
-      details: 'contact@ziontech.com'''}
-      description: 'Send us an email anytime',}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
-    {'
-      icon: PhoneIcon''}
-      title: 'Phone'''}
-      details: '+1 (555) 123-4567'''}
-      description: 'Mon-Fri from 9am to 6pm',}
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
-    {'
-      icon: MapPinIcon''}
-      title: 'Office'''}
-      details: 'San Francisco, CA'''}
-      description: 'Visit our headquarters',}
-    },'
-    {icon: ClockIcon''}
-      title: 'Response Time'''}]
-      details: '< 24 hours'''}]
-      description: 'We respond quickly'}];
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ];
 
-  return ()
-    <section className="py-20 bg-white">"
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-        <div className="text-center mb-16">"
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"></h2>
-            Get In Touch
-          </h2>"'
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">''
-            Ready to transform your business? Let's discuss how our solutions 
-            can help you achieve your goals.
-          </p>
-        </div>
-"
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>,
-          {/* Contact Form */},
-          <div>"
-            <form onSubmit="{handleSubmit}" className="space-y-6">"
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
-                <div>"
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2"></label>
-                    Full Name *
-                  </label>
-                  <input;
-                    type="text"
-                    id="name"
-                    name="name"
-                    value="{formData.name}"
-                    onChange="{handleChange}"
-                    required;
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  /></input>
-                </div>
-                <div>"
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2"></label>
-                    Email Address *
-                  </label>
-                  <input;
-                    type="email"
-                    id="email"
-                    name="email"
-                    value="{formData.email}"
-                    onChange="{handleChange}"
-                    required;
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your@email.com"
-                  /></input>
-                </div>
-              </div>
-              
-              <div>"
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2"></label>
-                  Company
-                </label>
-                <input;
-                  type="text"
-                  id="company"
-                  name="company"
-                  value="{formData.company}"
-                  onChange="{handleChange}"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Your company name"
-                /></input>
-              </div>
-              
-              <div>"
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2"></label>
-                  Message *
-                </label>
-                <textarea;
-                  id="message"
-                  name="message"
-                  value="{formData.message}"
-                  onChange="{handleChange}"
-                  required;
-                  rows="{6}"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project or requirements..."
-                /></textarea>
-              </div>
-              
-              <button"
-                type="submit""
-                className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              ></button>
-
-                Send Message
-              </button>
-            </form>
+  return (
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-,
-          {/* Contact Information */}"
-          <div className="space-y-8"></div>
-            <div>"
-              <h3 className="text-2xl font-bold text-gray-900 mb-6"></h3>
-                Contact Information
-              </h3>"'
-              <p className="text-gray-600 mb-8">''
-                We're here to help! Reach out to us through any of the channels below, ''
-                and we'll get back to you as soon as possible.
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-"
-            <div className="space-y-6"></div>
-              {contactInfo.map((info, index) => ("}
-                <div key="{index}" className="flex items-start space-x-4">"
-                  <div className="flex-shrink-0">"
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">"
-                      <info.icon className="h-6 w-6 text-blue-600" /></info>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
                   </div>
-                  <div>"
-                    <h4 className="text-lg font-semibold text-gray-900"></h4>
-                      {info.title},
-                    </h4>"
-                    <p className="text-gray-900 font-medium"></p>
-                      {info.details},
-                    </p>"
-                    <p className="text-gray-600 text-sm"></p>
-                      {info.description},
-                    </p>
-                  </div>)
-                </div>)
-              )})}
-            </div>
-
-            {/* Additional Info */}"
-            <div className="bg-gray-50 rounded-lg p-6">"
-              <h4 className="text-lg font-semibold text-gray-900 mb-3"></h4>
-                Why Choose Us?
-              </h4>
-              <ul className="space-y-2 text-gray-600"></ul>
-                <li className="flex items-center"></li>
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Free initial consultation;
-                </li>
-                <li className="flex items-center"></li>
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Customized solutions;
-                </li>
-                <li className="flex items-center"></li>
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  24/7 support available;
-                </li>
-                <li className="flex items-center"></li>
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Proven track record;
-                </li>
-              </ul>
-
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}'
-"'
-export default Contact;
+        </section>
 
-'
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default Page;

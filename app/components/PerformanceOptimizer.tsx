@@ -1,273 +1,119 @@
-import React, { useEffect, useState, useCallback } from 'react;
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-interface PerformanceOptimizerProps {}
-  children: Node}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const [isOptimized, setIsOptimized] = useState(false);
-';
-  // Preload critical resources';
-  useEffect(() => {';
-    const preloadCriticalResources = () => {';
-      // Preload critical fonts'
-      const fontLink = document.createElement('link')'
-      fontLink.rel = 'preload''
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap''
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-
-      // Preload critical images
-      const criticalImages = ['
-        '/logo.svg','
-        '/og-image.svg','
-        '/api/placeholder/1200/630', // Hero image']
-        '/api/placeholder/800/600',  // Service images]
-      ];
-
-      criticalImages.forEach(src => {')
-        const link = document.createElement('link')'
-        link.rel = 'preload';}
-        link.href = src'}
-        link.as = 'image';}
-        document.head.appendChild(link);}
-      });
-    };
-
-    // Optimize images
-    const optimizeImages = () => {'}
-      const images = document.querySelectorAll('img')'}
-      images.forEach((img) => {''}
-        if (!img.hasAttribute('loading')) {''}
-          img.setAttribute('loading', 'lazy');}
-        }
-      });
-    };
-'
-        if (!img.hasAttribute('loading')) {''}
-          img.setAttribute('loading', 'lazy')'}
-{ useEffect, Node } from 'react';
-interface PerformanceOptimizerProps {}
-  children: Node,}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Performance optimization code;
-    const optimizeImages = () => {'}
-      const images = document.querySelectorAll('img')}
-      images.forEach((img) => {'}
-        if (!img.hasAttribute('loading')) {'}
-img.setAttribute('loading', 'lazy')}
-      });
-    const optimizeFonts = () => {'
-      // Preload critical fonts''
-      const link = document.createElement('link')''
-      link.rel = 'preload''
-      link.href = '/fonts/inter.woff2''}
-      link.as = 'font''}
-      link.type = 'font/woff2''}
-      link.crossOrigin = 'anonymous';}
-      document.head.appendChild(link)};
-
-    const optimizeResources = () => {'
-      // Preload critical resources''
-      const criticalResources = ['/css/critical.css''']
-        '/js/critical.js'';]
-      ];
-
-      criticalResources.forEach((resource) => {'
-        const link = document.createElement('link')'}
-        link.rel = 'preload'}
-        link.href = resource'}
-        link.as = resource.endsWith('.css') ? 'style' : 'script';}
-        document.head.appendChild(link)})};
-
-    // Run optimizations;
-    optimizeImages()
-    optimizeFonts()
-    optimizeResources()
-    // Cleanup function;
-    return () => {}
-      // Cleanup if needed}}, []);
-
-    // Initialize optimizations
-    const initializeOptimizations = () => {
-      preloadCriticalResources();
-      preconnectExternalDomains();}
-      optimizeImages();}
-      optimizeThirdPartyScripts();}
-      setIsOptimized(true);}
-    };
-
-    // Run optimizations after component mount
-    const timer = setTimeout(initializeOptimizations, 100);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events
-    let ticking = false;
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
-    const updateScrollPosition = () => {}
-      // Add scroll-based optimizations here}
-      ticking = false;}
-    };
-
-    if (!ticking) {}
-      requestAnimationFrame(updateScrollPosition);}
-      ticking = true;}
-    }
-  }, []);
-
-  useEffect(() => {'}
-    window.addEventListener('scroll', handleScroll, { passive: true })'
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  // Optimize resize performance
-  const handleResize = useCallback(() => {
-    let ticking = false;
-    }
-    const updateLayout = () => {}
-      // Add resize-based optimizations here}
-      ticking = false;}
-    };
-
-    if (!ticking) {}
-      requestAnimationFrame(updateLayout);}
-      ticking = true;}
-    }
-  }, []);
-
-  useEffect(() => {'}
-    window.addEventListener('resize', handleResize, { passive: true })'
-    return () => window.removeEventListener('resize', handleResize);
-  }, [handleResize]);
-
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    if (!isOptimized) return;
-
-    const observerOptions = {}
-      root: null,'}
-      rootMargin: '50px',}
-      threshold: 0.1}
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {)
-        if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          
-          // Add animation classes when element comes into view'
-          element.classList.add('animate-fade-in');}
-          }
-          // Unobserve after animation}
-          observer.unobserve(element);}
-        }
-      });
-    }, observerOptions);
-
-    // Observe elements with data-lazy attribute'
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, [isOptimized]);
-
-  // Resource hints for better performance
-  useEffect(() => {
-    if (!isOptimized) return;
-
-    // DNS prefetch for external resources
-    const dnsPrefetchDomains = ['
-      '//fonts.googleapis.com','
-      '//fonts.gstatic.com',']
-      '//www.google-analytics.com']
-    ];
-
-    dnsPrefetchDomains.forEach(domain => {')
-      const link = document.createElement('link')'}
-      link.rel = 'dns-prefetch';}
-      link.href = domain;}
-      document.head.appendChild(link);}
-    });
-
-    // Module preload for critical JavaScript
-    const criticalModules = ['
-      '/',']
-      '/']
-    ];
-
-    criticalModules.forEach(module => {')}
-      const link = document.createElement('link')'}
-      link.rel = 'modulepreload';}
-      link.href = `${module}.js`;
-      document.head.appendChild(link);
-    });
-  }, [isOptimized]);
+  ];
 
   return (
-    <></>
-      {children}
-      
-      {/* Performance monitoring styles */}
-      <style jsx>{`
-        @keyframes fade-in {}
-          from {})
-            opacity: 0;)}
-            transform: translateY(20px);}
-          }
-          to {}
-            opacity: 1;}
-            transform: translateY(0);}
-          }
-        }
-        
-        .animate-fade-in {}
-          animation: fade-in 0.6s ease-out forwards;}
-        }
-        
-        /* Optimize font loading */
-        @font-face {'
-          font-family: 'Inter';
-          font-style: normal;}
-          font-weight: 400;}
-          font-display: swap'}
-          src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');}
-        }
-        
-        /* Critical CSS for above-the-fold content */
-        .hero-section {}
-          contain: layout style paint;}
-        }
-        
-        .navigation {}
-          contain: layout style;}
-        }
-        
-        /* Optimize animations for better performance */
-        .transition-transform {}
-          will-change: transform;}
-        }
-        
-        .transition-opacity {}
-          will-change: opacity;}
-        }
-        
-        /* Reduce motion for users who prefer it */
-        @media (prefers-reduced-motion: reduce) {
-          * {}
-            animation-duration: 0.01ms !important;}
-            animation-iteration-count: 1 !important;}
-            transition-duration: 0.01ms !important;}
-          }
-        }
-      `}</style>
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };
 
-export default PerformanceOptimizer;
-'
+export default Page;

@@ -1,215 +1,119 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom;
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-import { 
-  UserGroupIcon,
-  CpuChipIcon,
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  HeartIcon,;
-  ArrowRightIcon,';
-  StarIcon,;';}
-  PhoneIcon,';}
-  EnvelopeIcon,';}
-  MapPinIcon'}
-} from '@heroicons/react/24/outline;
-
-const AboutPage: React.FC = () => {';
-  const values = [';
-    {'}
-      title: 'Innovation','}
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.',}
-      icon: CpuChipIcon}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
-    {'}
-      title: 'Security','}
-      description: 'Your data and systems are protected with enterprise-grade security measures.',}
-      icon: ShieldCheckIcon}
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
-    {'
-      title: 'Reliability','
-      description: 'We deliver consistent, high-quality solutions that you can depend on.',]
-      icon: CloudIcon;]}
-  ];}
-}
-  const stats = ['}
-    { number: '50+', label: 'Projects Completed' },'
-    { number: '25+', label: 'Happy Clients' },'
-    { number: '99%', label: 'Success Rate' },']
-    { number: '4+', label: 'Years Experience' }]
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
   ];
 
-  const team = [
-    {'
-      name: 'Kleber Santos','}
-      role: 'Founder & CEO','}
-      description: 'Technology visionary with 10+ years in AI and IT solutions.','}
-      image: '/team/kleber.jpg'}
-    },
-    {'
-      name: 'Sarah Johnson','}
-      role: 'CTO','}
-      description: 'Expert in cloud architecture and cybersecurity solutions.','}
-      image: '/team/sarah.jpg'}
-    },
-    {'
-      name: 'Michael Chen','}
-      role: 'Lead AI Engineer','}
-      description: 'Specialist in machine learning and artificial intelligence.','}
-      image: '/team/michael.jpg'}]
-    }]
-  ];
   return (
-    <></>
-      <Helmet></Helmet>
-        <title>About Us - Zion Tech Group</title>'
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions." /></meta>
-        <meta name="keywords" content="about us, team, mission, values, AI company, IT solutions" /></meta>
-
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
-        <div className="absolute inset-0 opacity-20"></div>
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center"></div>
-          <div className="max-w-4xl mx-auto"></div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></h1>
-              About Zion Tech Group
+    <>
+      <EnhancedSEO 
+        title="Pages - Zion Tech Group"
+        description="Professional pages services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="pages, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Pages
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
-              Pioneering the Future of Technology
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional pages services designed to help your business succeed and grow.
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto"></p>
-              Founded in 2020, Zion Tech Group has been at the forefront of technological innovation, 
-              delivering cutting-edge AI and IT solutions that transform businesses and drive growth.
-            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Mission Section */}
-      <section className="py-20 bg-slate-900"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Our Mission
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
-              To empower businesses with innovative technology solutions that drive digital transformation, 
-              enhance security, and accelerate growth in an ever-evolving digital landscape.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20 bg-slate-800/50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Our Values
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              The principles that guide everything we do
-            </p>
-          </div>
-          )
-          <div className="grid md:grid-cols-3 gap-8"></div>)
-            {values.map((value, index) => (}
-              <div key="{index}" className="text-center"></div>
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-                  <value.icon className="w-10 h-10 text-white" /></value>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Pages Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{value.description}</p>)
-              </div>)
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-slate-900"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Our Impact
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Numbers that reflect our commitment to excellence
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our pages services can help your business succeed.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => (}
-              <div key="{index}" className="text-center"></div>
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2"></div>
-                  {stat.number}
-                </div>
-                <div className="text-gray-300 text-lg"></div>
-                  {stat.label}
-                </div>)
-              </div>)
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-slate-800/50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              The experts behind our innovative solutions
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8"></div>
-            {team.map((member, index) => (}
-              <div key="{index}" className="bg-slate-800 rounded-xl p-8 text-center hover:bg-slate-700 transition-all duration-300"></div>
-                <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-                  <UserGroupIcon className="w-12 h-12 text-white" /></UserGroupIcon>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-purple-400 font-semibold mb-4">{member.role}</p>
-                <p className="text-gray-300">{member.description}</p>
-              </div>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-            Ready to Work With Us?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8"></p>'
-            Let's discuss how we can help transform your business with our technology solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
-              to="/contact"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            ></Link>
-              Get In Touch
-            </Link>
-            <Link
-              to="/careers"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-            ></Link>
-              Join Our Team
-            </Link>
-          </div>
-        </div>
-      </section>)
-    </>)
+        </section>
+      </div>
+    </>
   );
 };
 
-export default AboutPage;
-'
+export default Page;

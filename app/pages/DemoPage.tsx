@@ -1,207 +1,119 @@
-
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom;
-import { PlayIcon,
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  GlobeAltIcon,;
-  SignalIcon,';
-  ArrowRightIcon,;';}
-  CheckIcon,';}
-  PhoneIcon,';}
-  EnvelopeIcon'}
-} from '@heroicons/react/24/outline;
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-const DemoPage: React.FC = () => {';
-  const demos = [';
-    {'
-      title: 'AI Solutions Demo','
-      description: 'Experience our AI-powered solutions in action with interactive demonstrations.',
-      icon: CpuChipIcon,
-      features: ['
-        'Machine Learning Models','
-        'Natural Language Processing','
-        'Computer Vision','}]
-        'Predictive Analytics']}
-      ],'}
-      duration: '15 minutes'}
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
-    {'
-      title: 'Cybersecurity Demo','
-      description: 'See how our security solutions protect your digital assets in real-time.',
-      icon: ShieldCheckIcon,
-      features: ['
-        'Threat Detection','
-        'Vulnerability Assessment','
-        'Security Monitoring','}]
-        'Incident Response']}
-      ],'}
-      duration: '20 minutes'}
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
-    {'
-      title: 'Cloud Infrastructure Demo','
-      description: 'Explore our cloud solutions and infrastructure management capabilities.',
-      icon: CloudIcon,
-      features: ['
-        'Cloud Migration','
-        'Auto-scaling','
-        'Disaster Recovery','}]
-        'Cost Optimization']}
-      ],'}
-      duration: '25 minutes'}
-    },
-    {'
-      title: 'Micro SaaS Demo','
-      description: 'Discover our custom micro SaaS applications and their capabilities.',
-      icon: GlobeAltIcon,
-      features: ['
-        'Custom Development','
-        'API Integration','
-        'User Management','}]
-        'Analytics Dashboard']}
-      ],'}
-      duration: '18 minutes'}
-    },
-    {'
-      title: '5G Technology Demo','
-      description: 'Experience the power of 5G technology and IoT solutions.',
-      icon: SignalIcon,
-      features: ['
-        '5G Network Implementation','
-        'IoT Device Management','
-        'Edge Computing','}]
-        'Real-time Processing']}
-      ],'}
-      duration: '22 minutes'}
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ];
 
   return (
-    <React.Fragment></React>
-      <Helmet></Helmet>
-        <title>Demo - Zion Tech Group</title>
-        <meta name="description" content="Experience our technology solutions with interactive demos. See AI, cybersecurity, cloud infrastructure, and more in action." /></meta>
-        <meta name="keywords" content="demo, technology demo, AI demo, cybersecurity demo, cloud demo, micro SaaS demo" /></meta>
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
-        <div className="absolute inset-0 opacity-20"></div>
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center"></div>
-          <div className="max-w-4xl mx-auto"></div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></h1>
-              Experience Our Solutions
+    <>
+      <EnhancedSEO 
+        title="Pages - Zion Tech Group"
+        description="Professional pages services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="pages, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Pages
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
-              Interactive Demos of Our Technology
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional pages services designed to help your business succeed and grow.
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto"></p>
-              See our AI, cybersecurity, cloud infrastructure, and other solutions in action. 
-              Schedule a personalized demo to explore how our technology can transform your business.
-            </p>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"
-            ></Link>
-              Schedule Demo
-              <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Demo Grid */}
-      <section className="py-20 bg-slate-900"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Available Demos
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Choose from our comprehensive range of technology demonstrations
-            </p>
-          </div>
-          )
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
-            {demos.map((demo, index) => (}
-              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
-                <div className="flex items-center mb-6"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"></div>
-                    <demo.icon className="w-8 h-8 text-white" /></demo>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Pages Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
                   </div>
-                  <div></div>
-                    <h3 className="text-2xl font-bold text-white">{demo.title}</h3>
-                    <p className="text-purple-400 text-sm">{demo.duration}</p>
-                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed"></p>
-                  {demo.description}
-                </p>
-                )
-                <ul className="space-y-3 mb-6"></ul>)
-                  {demo.features.map((feature, featureIndex) => (}
-                    <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
-                      <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                      {feature})
-                    </li>)
-                  ))}
-                </ul>
-                
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
-                ></Link>
-                  Schedule Demo
-                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
-                </Link>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-slate-800/50"></section>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h2 className="text-4xl font-bold mb-6">Ready to See Our Solutions in Action?</h2>
-          <p className="text-xl text-gray-300 mb-8"></p>
-            Schedule a personalized demo tailored to your business needs
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-12"></div>
-            <div className="bg-slate-800 rounded-xl p-6"></div>
-              <PhoneIcon className="w-12 h-12 text-purple-400 mx-auto mb-4" /></PhoneIcon>
-              <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300 text-lg">+1-302-464-0950</p>
-              <p className="text-gray-400 text-sm">Available 24/7</p>
-            </div>
-            <div className="bg-slate-800 rounded-xl p-6"></div>
-              <EnvelopeIcon className="w-12 h-12 text-purple-400 mx-auto mb-4" /></EnvelopeIcon>
-              <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300 text-lg">kleber@ziontechgroup.com</p>
-              <p className="text-gray-400 text-sm">Quick response guaranteed</p>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our pages services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
             </div>
           </div>
-          
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"
-          ></Link>
-            Schedule Your Demo
-            <PlayIcon className="w-5 h-5" /></PlayIcon>
-          </Link>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };
 
-export default DemoPage;
-'
+export default Page;

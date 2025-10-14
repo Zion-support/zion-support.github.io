@@ -1,201 +1,119 @@
 import React from 'react';
-{ useState } from 'react';
-import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react;';
-';
-const Header: React.FC = () => {';}
-  const [isOpen, setIsOpen] = useState(false);';}
-  const [isServicesOpen, setIsServicesOpen] = useState(false)'}'
-  const navigationItems = [{ name: 'Home', href: '/' }''
-    { name: 'About', href: '/about' }''
-    { ''}
-      name: 'Services'''}
-      href: '/services'''}'
-      submenu: [{ name: 'AI Services', href: '/ai-services' }''
-        { name: 'IT Services', href: '/it-services' }''
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' }'']
-        { name: 'Digital Transformation', href: '/digital-transformation' }';]
-      ]'
-    }''
-    { name: 'Solutions', href: '/solutions' }''
-    { name: 'Case Studies', href: '/case-studies' }''
-    { name: 'Blog', href: '/blog' }''
-    { name: 'Contact', href: '/contact' }';
-  ];
-'
-  const navigationItems = [{ name: 'Home', href: '/' }''
-    { name: 'About', href: '/about' }'
-    { '}
-      name: 'Services'''}
-      href: '/services'''}
-      submenu: [{ name: 'AI Services', href: '/ai-services' }''
-        { name: 'IT Services', href: '/it-services' }'']
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' }'']
-        { name: 'Digital Transformation', href: '/digital-transformation' }']},'
-    { name: 'Solutions', href: '/solutions' }''
-    { name: 'Case Studies', href: '/case-studies' }''
-    { name: 'Blog', href: '/blog' }''
-    { name: 'Contact', href: '/contact' }'];
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-export default function Header() {
-  return (}
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50"></nav>}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>}
-        <div className="flex justify-between items-center h-16"></div>}
-          {/* Logo */}
-<div className="flex-shrink-0">;
-            <Link to="/" className="text-2xl font-bold text-white">;
-              Zion Tech Group;
-            </Link>;
-          </div>
-          {/* Desktop Navigation */}
-          <div className="hidden md:block"></div>)
-            <div className="ml-10 flex items-baseline space-x-4"></div>)
-              {navigationItems.map((item) => (}
-                <div key="{item.name}" className="relative group">;
-                  <Link></Link>
-                    to="{item.href}")
-                    className="$1")
-onMouseEnter="{()" => item.submenu && setIsServicesOpen(true)}
-onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
-                  >
-                    {item.name;}
-                    {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
-                  </Link>
-                  {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && ()}
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"></div>)}
-                      {item.submenu.map((subItem) => (}
-                        <Link></Link>}
-                          key="{subItem.name}"
-                          to="{subItem.href}"
-                          className="$1"
-                        >
-                          {subItem.name;})
-                        </Link>;})
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-    </>
-            <span className="text-white font-bold text-xl">Zion Tech Group</span>
-          </Link>
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8"></nav>
-            {navigationItems.map((item) => (}
-              <div key="{item.name}" className="relative group"></div>
-                <Link;
-                  to="{item.href}")
-                  className="text-gray-300 hover:text-white transition-colors flex items-center")
-                  onMouseEnter="{()" => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
-                >
-                  {item.name}
-                  {item.submenu && <ChevronDown className="w-4 h-4 ml-1" />}
-                </Link>
-                {item.submenu && isServicesOpen && ()}
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg py-2 z-50"></div>)}
-                    {item.submenu.map((subItem) => (}
-                      <Link;}
-                        key="{subItem.name}"
-                        to="{subItem.href}"
-                        className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">"
-                        {subItem.name})
-                      </Link>)
-                    ))}
-                  </div>
-                )}}
-              </div>
-            ))}
-          </nav>
-          {/* CTA Button */}
-          <div className="hidden md:block">;
-            <Link></Link>
-              to="/contact";
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300";
-            >;
-              Get Started;
-            </Link>
-          </div>
-          {/* Mobile menu button */}
-          <div className="md:hidden">;
-            <button></button>
-              onClick="{()" => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2";
-            >;
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>;
-          </div>
-        </div>
-        {/* Mobile Navigation */}
-        {isOpen && (}
-<div className="md:hidden">;})
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;)}
-              {navigationItems.map((item) => (}
-                <div key="{item.name}">;
-                  <Link></Link>
-                    to="{item.href}")
-                    className="$1")
-onClick="{()" => setIsOpen(false)}
-                  >
-                    {item.name;
-                  </Link>
-                  {item.submenu && ()}
-                    <div className="pl-4 space-y-1"></div>)}
-                      {item.submenu.map((subItem) => (}
-                        <Link></Link>}
-                          key="{subItem.name}"
-                          to="{subItem.href}")
-                          className="$1")
-onClick="{()" => setIsOpen(false)}
-                        >
-                          {subItem.name;}
-                        </Link>;}
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              <div className="pt-4">;
-                <Link></Link>
-                  to="/contact";
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center";
-                  onClick="{()" => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                {item.submenu && ()}
-                  <div className="ml-4"></div>)}
-                    {item.submenu.map((subItem) => (}
-                      <Link;}
-                        key="{subItem.name}"
-                        to="{subItem.href}")
-                        className="block py-1 text-gray-400 hover:text-white transition-colors")
-                        onClick="{()" => setIsOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            <div className="pt-4"></div>
-              <Link;
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ];
+
+  return (
+    <>
+      <EnhancedSEO 
+        title="Components - Zion Tech Group"
+        description="Professional components services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="components, business solutions, technology services, professional services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional components services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
                 to="/contact"
-                className="block w-full text-center px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
-                onClick="{()" => setIsOpen(false)}
-              >;
-                Get Started;
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
               </Link>
             </div>
           </div>
-        )}
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Components Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our components services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
-    </header>
+    </>
   );
 };
 
-export default Header;
-'
+export default Page;
