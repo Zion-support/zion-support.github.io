@@ -1,5 +1,5 @@
-'use client';';
-import React from "react";";
+';';
+import React from 'react';";
 
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
@@ -16,7 +16,7 @@ export class PerformanceOptimizer {
   ;
   measurePerformance<T>(;
     name: string,
-    fn: () => T | Promise<T></T>
+    fn: () => T | Promise<T />
   ): T | Promise<T> {
     const start = performance.now();
     try {
@@ -24,7 +24,7 @@ export class PerformanceOptimizer {
       if (result instanceof Promise) {
         return result.finally(() => {
           this.recordMetric(name, performance.now() - start)
-        }) as Promise<T></T>
+        }) as Promise<T />
       } else {
         this.recordMetric(name, performance.now() - start);
         return result;
@@ -96,7 +96,7 @@ export class PerformanceOptimizer {
       if (cache.has(key)) {
         return cache.get(key)!
       }
-      const result = func(...args) as ReturnType<T></T>;
+      const result = func(...args) as ReturnType<T />;
       cache.set(key, result);
       return result;
     }

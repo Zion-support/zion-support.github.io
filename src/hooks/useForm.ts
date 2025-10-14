@@ -1,8 +1,6 @@
-import React from "react";"
-'use client';'
-/**
- * useForm Hook;
- * Provides form state management and validation;
+import React from 'react';"
+';'
+
  */;
 import { useState, useCallback, ChangeEvent    } from "react";"
 // import { logger    } from "../utils/logger";";
@@ -72,7 +70,7 @@ const { name, value, type } = e.target;
       const fieldName = name as keyof T;
       // Handle checkbox inputs;
       let fieldValue: unknown = value;
-      if (type === 'checkbox' && 'checked' in e.target) {'';
+      if (type === 'checkbox' && 'checked' in e.target) {';
         fieldValue = (e.target as HTMLInputElement).checked;
       }
       setValues(prev => ({

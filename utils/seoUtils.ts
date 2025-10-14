@@ -35,8 +35,9 @@ interface SEOConfig {
 }
 
 export const defaultSEOConfig: SEOConfig = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions','
-  description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.','
+      title: 'Zion Tech Group - Advanced AI and IT Solutions','
+      description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.'
+  },'
   keywords: ['AI solutions','
     'artificial intelligence','
     'IT services','
@@ -46,9 +47,9 @@ export const defaultSEOConfig: SEOConfig = {
     'machine learning','
     'data analytics','
     'automation','
-    'business intelligence''
+    'business intelligence';
   ],
-  canonicalUrl: 'https://zion.app','
+  canonicalUrl: 'https://zion.app',;
   ogImage: '/images/og-image.jpg','
   ogType: 'website','
   twitterCard: 'summary_large_image','
@@ -67,17 +68,17 @@ export const defaultSEOConfig: SEOConfig = {
     latitude: '40.7128','
     longitude: '-74.0060','
     region: 'US-NY','
-    placename: 'New York''
+    placename: 'New York';
   },
-  alternate: [{ href: 'https://zion.app/en', hreflang: 'en' },'
-    { href: 'https://zion.app/es', hreflang: 'es' }'
+  alternate: [{ href: 'https://zion.app/en', hreflang: 'en' },;
+    { href: 'https://zion.app/es', hreflang: 'es' };
   ],
   structuredData: {
-    '@context': 'https://schema.org','
+    '@context': 'https://schema.org',;
     '@type': 'Organization','
     name: 'Zion Tech Group','
-    url: 'https://zion.app','
-    logo: 'https://zion.app/images/logo.png''
+    url: 'https://zion.app',;
+    logo: 'https://zion.app/images/logo.png';
   }
 }
 export const generateSEOMeta = (config: SEOConfig) => {
@@ -119,12 +120,12 @@ export const generateStructuredData = (config: SEOConfig) => {
 export const generateImageAlt = (imagePath: string, alt: string) => {
   return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`
 }
-export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {'
+export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {;
   return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`
 }
 
 export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; priority?: number }>) => {
-  const baseUrl = 'https://zion.app'
+  const baseUrl = 'https://zion.app;
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${pages.map(page => `
@@ -133,7 +134,7 @@ export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; p
       <lastmod>${page.lastmod || new Date().toISOString().split('T')[0]}</lastmod>'
       <priority>${page.priority || 0.5}</priority>
     </url>4605
-  `).join('')}'
+  ').join(';)}'
 </urlset>`
 }
 export const generateRobotsTxt = (config: SEOConfig) => {

@@ -6,7 +6,7 @@ const filePath = '/workspace/app/components/Footer.tsx';
 let content = fs.readFileSync(filePath, 'utf8');
 
 // Fix malformed JSX structure;
-content = content.replace(/className="text-gray-300 hover:text-white text-sm transition-colors"\s*\n\s*>\s*<ArrowRightIcon className="w-4 h-4 mr-2" \/>\s*{link\.name}/g, 
+content = content.replace(/className="text-gray-300 hover:text-white text-sm transition-colors">\s*<ArrowRightIcon className="w-4 h-4 mr-2">\s*{link\.name}/g, 
   'className="text-gray-300 hover:text-white text-sm transition-colors">\n                    {service.name}');
 
 // Fix duplicate h3 tags;
@@ -18,8 +18,8 @@ content = content.replace(/<\/Link>\s*<\/li>\s*\)\)\}\s*<\/ul>\s*<\/div>/g,
   '                  </Link>\n                </li>\n              ))}\n            </ul>\n          </div>');
 
 // Fix malformed social links structure;
-content = content.replace(/<a href="#" className="text-gray-400 hover:text-white transition-colors">\s*<Linkedin className="w-5 h-5" \/>\s*<\/a>\s*<a href="#" className="text-gray-400 hover:text-white transition-colors">\s*<Github className="w-5 h-5" \/>\s*<\/a>\s*<span className="sr-only">\{social\.name\}<\/span>/g, 
-  '<a href="#" className="text-gray-400 hover: 'text-white transition-colors">\n                <Linkedin className="w-5 h-5" />\n              </a>\n              <a href="#" className="text-gray-400 hover:text-white transition-colors">\n                <Github className="w-5 h-5" />\n              </a>');',
+content = content.replace(/<a href="#" className="text-gray-400 hover:text-white transition-colors">\s*<Linkedin className="w-5 h-5">\s*<\/a>\s*<a href="#" className="text-gray-400 hover:text-white transition-colors">\s*<Github className="w-5 h-5">\s*<\/a>\s*<span className="sr-only">\{social\.name\}<\/span>/g, 
+  '<a href="#" className="text-gray-400 hover: 'text-white transition-colors">\n                <Linkedin className="w-5 h-5">\n              </a>\n              <a href="#" className="text-gray-400 hover:text-white transition-colors">\n                <Github className="w-5 h-5">\n              </a>');',
 
 // Fix malformed social links mapping;
 content = content.replace(/\{socialLinks\.map\(\(social\) => \(\s*<a key=\{social\.name\} href=\{social\.href\} className="text-gray-400 hover:text-white transition-colors">\s*<span className="sr-only">\{social\.name\}<\/span>\s*<div className="w-6 h-6 bg-gray-600 rounded flex items-center justify-center">\s*\{social\.icon === 'linkedin' && <span className="text-xs">in<\/span>\}\s*\{social\.icon === 'twitter' && <span className="text-xs">t<\/span>\}\s*\{social\.icon === 'github' && <span className="text-xs">g<\/span>\}\s*<\/div>\s*<\/a>\s*\)\)\}/g, 

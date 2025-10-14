@@ -4,11 +4,13 @@ import fs from 'fs'
 import { glob } from 'glob'
 // Function to create a proper page structure
 function createProperPage(title, description) {
-  return `'use client'
+  return `'
 import React from "react"
 import { Helmet } from "react-helmet-async"
 export default function Page() {
+  
   return (
+    
     <>
       <Helmet>
         <title>${title} - Zion Tech Group</title>
@@ -70,19 +72,7 @@ function processFile(filePath) {
 
 // Main execution
 async function main() {
+  
   console.log('Starting comprehensive fix for all broken files...')
   // Get all TypeScript/TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() })
-  let totalFixed = 0
-  let filesProcessed = 0
-  files.forEach(file => {
-    if (processFile(file)) {
-      totalFixed++
-    }
-    filesProcessed++
-  })
-  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`)
-  console.log('Comprehensive fix completed!')
-}
-
-main().catch(console.error)
+  const files = await glob('app/**

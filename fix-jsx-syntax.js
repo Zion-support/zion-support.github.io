@@ -34,14 +34,14 @@ function fixJSXSyntax(content, filename) {
   if (fixed.includes('<div className="container mx-auto px-4 py-16"></div>') && !fixed.includes('min-h-screen')) {
     fixed = fixed.replace(
       /<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<div className="container mx-auto px-4 py-16"><\/div>\s*<\/>/g,
-      `<>      <Helmet></Helmet>
+      `<>      <Helmet />
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Page - Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+      <div>
+    <div className="container mx-auto px-4 py-16"></div>
+          <div>
+    <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
             <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
           </div>
         </div>
@@ -67,23 +67,24 @@ function fixPageFile(filePath) {
     let fixed = content;
     
     // Extract page name from filename;
-    const pageName = filename.replace('.tsx', '').replace('page', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const pageName = filename.replace('.tsx', ';).replace('page', ';).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     
     // Create a proper page structure;
-    const properStructure = `import React from "react";
+    const properStructure = `import React from 'react';
 import { Helmet } from "react-helmet-async";
 
 const ${pageName.replace(/\s+/g, '')}Page = () => {
   return (
+    
     <>
-      <Helmet></Helmet>
+      <Helmet />
         <title>${pageName} - Zion Tech Group</title>
         <meta name="description" content="${pageName} - Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl font-bold text-white mb-8">${pageName}</h1>
+      <div>
+    <div className="container mx-auto px-4 py-16"></div>
+          <div>
+    <h1 className="text-4xl font-bold text-white mb-8">${pageName}</h1>
             <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
           </div>
         </div>
@@ -106,6 +107,7 @@ export default ${pageName.replace(/\s+/g, '')}Page;`;
 
 // Main function;
 async function main() {
+  
   // Find all page.tsx files in the app directory;
   const pageFiles = await glob('app/**/page.tsx');
 

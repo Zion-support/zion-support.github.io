@@ -3,13 +3,12 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-/**
- * SEO audit script for Zion Tech Group website
- * This script checks for SEO best practices and generates recommendations
+
  */
 console.log('🔍 Starting SEO audit...')
 // Check HTML structure
 function auditHTMLStructure() {
+  
   console.log('📄 Auditing HTML structure...')
   const issues = []
   const recommendations = []
@@ -89,6 +88,7 @@ function auditHTMLStructure() {
 
 // Check sitemap
 function auditSitemap() {
+  
   console.log('🗺️ Auditing sitemap...')
   const issues = []
   const recommendations = []
@@ -121,6 +121,7 @@ function auditSitemap() {
 
 // Check robots.txt
 function auditRobots() {
+  
   console.log('🤖 Auditing robots.txt...')
   const issues = []
   const recommendations = []
@@ -148,6 +149,7 @@ function auditRobots() {
 
 // Check performance metrics
 function auditPerformance() {
+  
   console.log('⚡ Auditing performance...')
   const issues = []
   const recommendations = []
@@ -223,6 +225,7 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
 
 // Main audit function
 async function audit() {
+  
   try {
     const htmlAudit = auditHTMLStructure()
     const sitemapAudit = auditSitemap()

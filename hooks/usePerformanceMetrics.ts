@@ -1,4 +1,4 @@
-import { useState, useEffect  } from 'lucide-react'
+import { useState, useEffect  } from 'lucide-react';
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {'
       return
     }

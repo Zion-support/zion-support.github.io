@@ -11,7 +11,7 @@ function fixFinalQuotes(content) {
     return match.replace(/;\s*$/, ";)
   })
   // Fix unterminated string literals"
-  content = content.replace(/"([^"]*)$/gm, '"$1"')'"'"
+  content = content.replace(/"([^']*)$/gm, ';$1';)';';
   // Fix malformed quotes in JSX"
   content = content.replace(/<([^>]+)>\s*"([^"]*)"\s*<\/\1>/g, "<$1>$2</$1>")
   return content
@@ -53,5 +53,5 @@ const stat = fs.statSync(fullPath)
 // Main execution"
 console.log("Starting final quote fixes...")";"
 const fixedCount = processDirectory("./app")
-console.log(`Fixed ${fixedCount} files.`)``"`
+console.log(`Fixed ${fixedCount} files.')';`
 }}}

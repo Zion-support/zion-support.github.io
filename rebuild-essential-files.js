@@ -45,21 +45,23 @@ const essentialPages = [
 ];
 
 // Template for a basic page;
-const pageTemplate = (title, description, content = '') => `import React from "react";
+const pageTemplate = (title, description, content = '') => `import React from 'react';
 import { Helmet } from "react-helmet-async";
 
 export default function Page() {
+  
   return (
+    
     <>
-      <Helmet></Helmet>
+      <Helmet />
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl font-bold text-white mb-8">${title}</h1>
+      <div>
+    <div className="container mx-auto px-4 py-16"></div>
+          <div>
+    <h1 className="text-4xl font-bold text-white mb-8">${title}</h1>
             <p className="text-gray-300 text-lg mb-8"></p>
               ${description}
             </p>
@@ -72,14 +74,16 @@ export default function Page() {
 }`;
 
 // Home page template;
-const homePageTemplate = `import React from "react";
+const homePageTemplate = `import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Globe, Mail, Phone } from "lucide-react";
 
 export default function HomePage() {
+  
   return (
+    
     <>
-      <Helmet></Helmet>
+      <Helmet />
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI solutions, IT services, and digital transformation for businesses worldwide." />
       </Helmet>
@@ -87,8 +91,8 @@ export default function HomePage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="py-20 px-4"></section>
-          <div className="container mx-auto text-center"></div>
-            <h1 className="text-6xl font-bold text-white mb-6"></h1>
+          <div>
+    <h1 className="text-6xl font-bold text-white mb-6"></h1>
               Welcome to Zion Tech Group;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
@@ -97,32 +101,32 @@ export default function HomePage() {
             </p>
             <button className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
               Get Started;
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2">
             </button>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4"></section>
-          <div className="container mx-auto"></div>
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Our Services</h2>
+          <div>
+    <h2 className="text-4xl font-bold text-white text-center mb-12">Our Services</h2>
             <div className="grid grid-cols-1 md: 'grid-cols-3 gap-8">',
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>
-                <Globe className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <div>
+    <Globe className="w-12 h-12 text-purple-400 mx-auto mb-4">
                 <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
                 <p className="text-gray-300"></p>
                   Cutting-edge artificial intelligence solutions to transform your business.
                 </p>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>
-                <CheckCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <div>
+    <CheckCircle className="w-12 h-12 text-purple-400 mx-auto mb-4">
                 <h3 className="text-2xl font-bold text-white mb-4">IT Services</h3>
                 <p className="text-gray-300"></p>
                   Comprehensive IT services to keep your business running smoothly.
                 </p>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>
-                <Star className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <div>
+    <Star className="w-12 h-12 text-purple-400 mx-auto mb-4">
                 <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
                 <p className="text-gray-300"></p>
                   Transform your business with our digital solutions and strategies.
@@ -134,8 +138,8 @@ export default function HomePage() {
 
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
-          <div className="container mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
+          <div>
+    <h2 className="text-4xl font-bold text-white mb-6"></h2>
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8"></p>
@@ -143,11 +147,11 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm: 'flex-row gap-4 justify-center">',
               <button className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2">
                 Contact Us;
               </button>
               <button className="border border-purple-400 text-purple-400 hover: 'bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2">
                 Call Now;
               </button>
             </div>
@@ -159,31 +163,33 @@ export default function HomePage() {
 }`;
 
 // Error page template;
-const errorPageTemplate = (title, description) => `import React from "react";
+const errorPageTemplate = (title, description) => `import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Home, ArrowLeft } from "lucide-react";
 
 export default function ErrorPage() {
+  
   return (
+    
     <>
-      <Helmet></Helmet>
+      <Helmet />
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-        <div className="text-center"></div>
+      <div>
+    <div className="text-center"></div>
           <h1 className="text-6xl font-bold text-white mb-6">${title}</h1>
           <p className="text-xl text-gray-300 mb-8"></p>
             ${description}
           </p>
           <div className="flex flex-col sm: 'flex-row gap-4 justify-center">',
             <button className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
-              <Home className="w-5 h-5 mr-2" />
+              <Home className="w-5 h-5 mr-2">
               Go Home;
             </button>
             <button className="border border-purple-400 text-purple-400 hover: 'bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
-              <ArrowLeft className="w-5 h-5 mr-2" />
+              <ArrowLeft className="w-5 h-5 mr-2">
               Go Back;
             </button>
           </div>
@@ -210,6 +216,7 @@ function createPage(filePath, content) {
 
 // Main execution;
 async function main() {
+  
   console.log('Rebuilding essential files...');
   
   // Create home page;

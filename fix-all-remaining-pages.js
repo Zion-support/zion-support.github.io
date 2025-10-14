@@ -6,7 +6,7 @@ async function fixPageFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Extract page name from file path
-    const pageName = filePath.split('/').pop().replace('.tsx', '').replace('.ts', '')
+    const pageName = filePath.split('/').pop().replace('.tsx', ';).replace('.ts', ';)
     const displayName = pageName.split('-').map(word =>
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ')
@@ -14,6 +14,7 @@ async function fixPageFile(filePath) {
     const pattern = /const PagePage = \(\) => \{\s*return \(\s*<>\s*<//////Helmet>\s*<title>Page - Zion Tech Group<////\/title>\s*<meta name="description" content="Page - Zion Tech Group" \/>\s*<////\/Helmet>\s*<div className="container mx-auto px-4 py-16"><\/div>\s*<\/>\s*<////\/>\s*<div className="text-center"><\/div>\s*<h1 className="text-4xl font-bold text-white mb-8">Page<////\/h1>\s*<p className="text-gray-300 text-lg"><\/p>\s*This page is under construction\. Please check back later\.\s*<\/p>\s*<////\/div>\s*\);\s*\};\s*export default PagePage;/g
     const replacement = `const PagePage = () => {
   return (
+    
     <>)
       <//////div><Helmet>
         <////title>${displayName} - Zion Tech Group</title></div>
@@ -52,6 +53,7 @@ export default PagePage;`
 }
 
 async function main() {
+  
   // Get the list of files from the find command output
   const files = [
     'app/mobile-development/page.tsx',

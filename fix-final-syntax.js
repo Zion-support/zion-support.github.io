@@ -3,9 +3,13 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix all remaining syntax errors
-function fixAllRemaining(content) {
+// Function to fix final syntax errors
+function fixFinalSyntax(content) {
   let fixed = content;
+  
+  // Fix malformed JSX self-closing tags
+  fixed = fixed.replace(/<(\w+[^>]*)\s*\/\s*\/>/g, '<$1 />');
+  fixed = fixed.replace(/<(\w+[^>]*)\s*\/\s*\/>/g, '<$1 />');
   
   // Fix unterminated string literals in imports
   fixed = fixed.replace(/import\s+([^'"`\s]+)\s+from\s+['"`]([^'"`]+)['"`];/g, "import $1 from '$2';");
@@ -52,7 +56,7 @@ function fixAllRemaining(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixAllRemaining(content);
+    const fixed = fixFinalSyntax(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
