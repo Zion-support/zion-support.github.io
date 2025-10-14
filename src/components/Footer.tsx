@@ -47,11 +47,24 @@ const Footer = memo(() => {
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
-            <p className="text-sm text-cyan-400">AI & IT Solutions</p>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
-              and digital transformation services. Transform your business with cutting-edge technology.
+            <p className="text-gray-400 text-sm">
+              Leading provider of AI and IT solutions for modern businesses.
             </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                    aria-label={social.name}
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           {/* Services */}
@@ -121,54 +134,41 @@ const Footer = memo(() => {
                 </li>
               ))}
             </ul>
-            
-            <h4 className="text-lg font-semibold text-white mt-6">Support</h4>
-            <ul className="space-y-2">
-              {support.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-6">
+              <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
+              <ul className="space-y-2">
+                {support.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.url}
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
-        {/* Social Links */}
+        {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-            
-            <div className="flex space-x-6 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Cookie Policy
               </Link>
             </div>
-          </div>
-          
-          <div className="text-center text-gray-400 text-sm mt-4">
-            © 2024 Zion Tech Group. All rights reserved.
           </div>
         </div>
       </div>
@@ -177,4 +177,5 @@ const Footer = memo(() => {
 });
 
 Footer.displayName = 'Footer';
+
 export default Footer;

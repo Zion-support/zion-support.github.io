@@ -1,60 +1,56 @@
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
 
-'use client'
-export default function Page() {
-
-  return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>SEOOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional seooptimizer services by Zion Tech Group." />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-90o0 mb-8">
-            SEOOptimizer;
-          </h1>
-          <p className="text-xl text-gray-60o0 mb-8">
-            Professional seooptimizer solutions tailored to your business needs.;
-          </p>
-          <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-20o0 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-90o0 mb-2">
-                Expert Solutions;
-              </h3>
-              <p className="text-blue-70o0">
-                Our team of experts delivers cutting-edge seooptimizer solutions.;
-              </p>
-            </div>
-            <div className="bg-green-50 border border-green-20o0 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-90o0 mb-2">
-                Custom Implementation;
-              </h3>
-              <p className="text-green-70o0">
-                Tailored seooptimizer implementations for your specific requirements.;
-              </p>
-            </div>
-            <div className="bg-purple-50 border border-purple-20o0 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-90o0 mb-2">
-                24/7 Support;
-              </h3>
-              <p className="text-purple-70o0">
-                Round-the-clock support for all your seooptimizer needs.;
-              </p>
-            </div>
-          </div>
-          <div className="mt-12">
-            <button className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors">
-              Get Started Today;
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  type?: string;
+  url?: string;
+  image?: string;
 }
-            </button></div></div></div></div>
-  );}
-}''
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered IT solutions, custom software development, and digital transformation services.",
+  keywords = ["AI", "IT Solutions", "Software Development", "Digital Transformation", "Machine Learning", "Cloud Computing"],
+  type = "website",
+  url = "https://zion.app",
+  image = "https://zion.app/og-image.jpg"
+}) => {
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Additional SEO Tags */}
+      <link rel="canonical" href={url} />
+      <meta name="theme-color" content="#8b5cf6" />
+      <meta name="msapplication-TileColor" content="#8b5cf6" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+    </Helmet>
+  );
+};
+export default SEOOptimizer;
