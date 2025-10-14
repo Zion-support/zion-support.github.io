@@ -31,10 +31,12 @@ const Footer: React.FC = () => {
       services: [
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
-        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
+        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Security Suite', href: '/ai-security-suite' },
+        { name: 'AI Customer Analytics Pro', href: '/ai-customer-analytics-pro' }
       ]
     },
     {
@@ -65,12 +67,14 @@ const Footer: React.FC = () => {
       title: 'Micro SAAS',
       icon: <Cloud className="w-5 h-5 text-orange-400" />,
       services: [
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
         { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Customer Analytics Pro', href: '/ai-customer-analytics-pro' }
       ]
     }
   ];
