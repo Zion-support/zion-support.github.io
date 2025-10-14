@@ -1,26 +1,16 @@
-<<<<<<< HEAD
-import React, { Component, ReactNode } from 'react';
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> origin/cursor/resolve-all-prs-and-merge
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-<<<<<<< HEAD
-=======
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> origin/cursor/resolve-all-prs-and-merge
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-<<<<<<< HEAD
-=======
   errorInfo?: ErrorInfo;
->>>>>>> origin/cursor/resolve-all-prs-and-merge
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -33,25 +23,6 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-<<<<<<< HEAD
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">We&apos;re sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
-            >
-              Reload Page
-            </button>
-=======
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
     
@@ -157,7 +128,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </a>
               </p>
             </div>
->>>>>>> origin/cursor/resolve-all-prs-and-merge
           </div>
         </div>
       );

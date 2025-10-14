@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SEO = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">SEO</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for SEO.
-      </p>
-    </div>
-  );
-};
-
-export default SEO;
-=======
 'use client';
 
 /**
@@ -121,8 +105,15 @@ export const SEO: React.FC<SEOProps> = ({
   };
 
   return (
-    );
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateStructuredData()),
+        }}
+      />
+    </>
+  );
 };
 
 export default SEO;
->>>>>>> origin/cursor/resolve-all-prs-and-merge
