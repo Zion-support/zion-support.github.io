@@ -9,7 +9,7 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  // const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
