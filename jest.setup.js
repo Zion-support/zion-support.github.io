@@ -1,64 +1,52 @@
-// Learn more: https://github.com/testing-library/jest-dom;
+// Learn more: https://github.com/testing-library/jest-dom
 require("@testing-library/jest-dom");
-;
-// Polyfills for Node.js environment;";
+
+// Polyfills for Node.js environment
 const { TextEncoder, TextDecoder } = require("util");
-global.TextEncoder = TextEncoder:;
-global.TextDecoder = TextDecoder:;
-// Mock window.matchMedia;";
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+// Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {
-  ;
-writable: true,;
-value: jest.fn().mockImplementation((query) => ({;
-matches: false,;
-media: query,;
-onchange: null,;
-addListener: jest.fn(),;
-removeListener: jest.fn(),;
-addEventListener: jest.fn(),;
-removeEventListener: jest.fn(),;
-dispatchEvent: jest.fn(),;
-}
-  })),;
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
 });
-;
-// Mock IntersectionObserver;
+
+// Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-  ;
-}
-constructor() {}
+  constructor() {}
   disconnect() {}
   observe() {}
   takeRecords() {
-  ;
-return [];
-}
+    return [];
   }
   unobserve() {}
 };
-;
-// Suppress console errors in tests;
-const originalError = console.error:;
+
+// Suppress console errors in tests
+const originalError = console.error;
 beforeAll(() => {
-  ;
-console.error = jest.fn((...args) => {;
-if (;";
-typeof args[0] === "string" &&";
-      (args[0].includes("Warning: ReactDOM.render") ||;";
-args[0].includes("Not implemented: HTMLFormElement.prototype.submit"));
-    ) {;
-return:;
-}
-}
+  console.error = jest.fn((...args) => {
+    if (
+      typeof args[0] === "string" &&
+      (args[0].includes("Warning: ReactDOM.render") ||
+        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
+    ) {
+      return;
     }
     originalError.call(console, ...args);
   });
 });
-;
+
 afterAll(() => {
-  ;
-console.error = originalError:;
-}
-}
+  console.error = originalError;
 });
-"
