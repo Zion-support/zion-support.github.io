@@ -11,7 +11,7 @@ export const usePerformanceMonitor = (name: string) => {
         const endTime = performance.now();
         const duration = endTime - startTime.current;
         
-        console.log(`${name} took ${duration.toFixed(2)}ms`);
+        // Performance measurement logged to analytics
         
         // Send to analytics
         if (typeof window !== 'undefined' && window.gtag) {

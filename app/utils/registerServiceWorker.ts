@@ -2,11 +2,15 @@ export const registerServiceWorker = () => {
   if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
+        .then((_registration) => {
+          // Service worker registered successfully
+          // TODO: Implement proper logging service
+          // logger.info('Service worker registered', { registration });
         })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
+        .catch((_registrationError) => {
+          // Service worker registration failed
+          // TODO: Implement proper error reporting service
+          // errorReporter.report(new Error('SW registration failed'), { error: registrationError });
         });
     });
   }

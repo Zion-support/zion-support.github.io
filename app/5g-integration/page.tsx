@@ -92,4 +92,5 @@ function FiveGIntegrationPage() {
   );
 }
 
-export default FiveGIntegrationPage;
+const page = React.lazy(() => import('./page'));
+export default page;

@@ -92,4 +92,5 @@ function FiveGMonitoringPage() {
   );
 }
 
-export default FiveGMonitoringPage;
+const page = React.lazy(() => import('./page'));
+export default page;

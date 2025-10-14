@@ -1,5 +1,5 @@
 export const apiInterceptor = {
-  request: (config: any) => {
+  request: (config: Record<string, unknown>) => {
     // Add auth token if available
     const token = localStorage.getItem('authToken');
     if (token) {
@@ -8,11 +8,11 @@ export const apiInterceptor = {
     return config;
   },
   
-  response: (response: any) => {
+  response: (response: unknown) => {
     return response;
   },
   
-  error: (error: any) => {
+  error: (error: { response?: { status: number } }) => {
     if (error.response?.status === 401) {
       // Handle unauthorized access
       localStorage.removeItem('authToken');

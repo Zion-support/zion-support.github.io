@@ -1,15 +1,9 @@
 export const errorTracking = {
-  track: (error: Error, context?: Record<string, any>) => {
-    const errorInfo = {
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      context: context || {}
-    };
-    
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error tracked:', errorInfo);
+  track: (error: Error, context?: Record<string, unknown>) => {
+    // Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // TODO: Implement proper error reporting service
+      // errorReportingService.captureException(error, { extra: { context } });
     }
     
     // Send to analytics

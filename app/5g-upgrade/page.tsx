@@ -92,4 +92,5 @@ function FiveGUpgradePage() {
   );
 }
 
-export default FiveGUpgradePage;
+const page = React.lazy(() => import('./page'));
+export default page;

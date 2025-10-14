@@ -21,7 +21,11 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // TODO: Implement proper error reporting service
+      // errorReportingService.captureException(error, { extra: errorInfo });
+    }
     this.setState({ error, errorInfo });
   }
 

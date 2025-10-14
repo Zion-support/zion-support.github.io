@@ -1,5 +1,5 @@
 export const enhancedErrorTracking = {
-  trackError: (error: Error, context?: Record<string, any>) => {
+  trackError: (error: Error, context?: Record<string, unknown>) => {
     // Error tracking logic
     
     // Log to console in development
@@ -17,7 +17,7 @@ export const enhancedErrorTracking = {
     }
   },
   
-  trackPerformanceError: (error: Error, performanceData: any) => {
+  trackPerformanceError: (error: Error, performanceData: Record<string, unknown>) => {
     enhancedErrorTracking.trackError(error, {
       performance: performanceData,
       error_type: 'performance'

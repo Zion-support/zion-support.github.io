@@ -1,15 +1,15 @@
 export const performanceOptimizations = {
-  debounce: <T extends (...args: any[]) => any>(func: T, wait: number): T => {
+  debounce: <T extends (...args: unknown[]) => unknown>(func: T, wait: number): T => {
     let timeout: NodeJS.Timeout;
-    return ((...args: any[]) => {
+    return ((...args: unknown[]) => {
       clearTimeout(timeout);
       timeout = setTimeout(() => func.apply(this, args), wait);
     }) as T;
   },
   
-  throttle: <T extends (...args: any[]) => any>(func: T, limit: number): T => {
+  throttle: <T extends (...args: unknown[]) => unknown>(func: T, limit: number): T => {
     let inThrottle: boolean;
-    return ((...args: any[]) => {
+    return ((...args: unknown[]) => {
       if (!inThrottle) {
         func.apply(this, args);
         inThrottle = true;
@@ -18,9 +18,9 @@ export const performanceOptimizations = {
     }) as T;
   },
   
-  memoize: <T extends (...args: any[]) => any>(func: T): T => {
+  memoize: <T extends (...args: unknown[]) => unknown>(func: T): T => {
     const cache = new Map();
-    return ((...args: any[]) => {
+    return ((...args: unknown[]) => {
       const key = JSON.stringify(args);
       if (cache.has(key)) {
         return cache.get(key);

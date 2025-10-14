@@ -18,7 +18,7 @@ export const enhancedErrorHandler = {
     };
   },
   
-  handleApiError: (error: any) => {
+  handleApiError: (error: { response?: { status: number; data?: { message?: string } }; message?: string }) => {
     const status = error.response?.status;
     const message = error.response?.data?.message || error.message;
     
