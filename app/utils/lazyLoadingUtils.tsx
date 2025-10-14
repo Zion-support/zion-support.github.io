@@ -9,7 +9,7 @@ export const withLazyLoading = <P extends object>(
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
   return (props: P) => (
-    <LazyWrapper fallback={fallback}>
+    <LazyWrapper>
       <Suspense fallback={fallback}>
         {/* @ts-expect-error - Complex generic type inference issue with lazy components */}
         <LazyComponent {...props} />
@@ -26,7 +26,7 @@ export const createLazyComponent = <P extends object>(
   const LazyComponent = lazy(importFunction);
   
   return (props: P) => (
-    <LazyWrapper fallback={fallback}>
+    <LazyWrapper>
       <Suspense fallback={fallback}>
         {/* @ts-expect-error - Complex generic type inference issue with lazy components */}
         <LazyComponent {...props} />
