@@ -1,7 +1,7 @@
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/pages/(.*)$': '<rootDir>/app/$1',
@@ -13,20 +13,29 @@ export default {
     '^@/content/(.*)$': '<rootDir>/app/content/$1'
   },
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      useESM: true
+    }],
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
-  testMatch: '[',
+  testMatch: [
     '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)'
   ],
+  testPathIgnorePatterns: [
+    '<rootDir>/app-broken/',
+    '<rootDir>/app-disabled/',
+    '<rootDir>/temp-disabled/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/'
+  ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  globals: {
-    'ts-jest': {
-      useESM: true;
-    }
-  },
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  preset: 'ts-jest'
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  globals: {
+    TextEncoder: TextEncoder,
+    TextDecoder: TextDecoder
+  }
 }

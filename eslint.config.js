@@ -37,6 +37,7 @@ export default tseslint.config(
       'api/**',
       'src/**',
       'temp-broken/**',
+      'temp-disabled/**',
       'utils/**',
       'hooks/**'
     ]

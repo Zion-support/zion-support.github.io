@@ -1,9 +1,32 @@
-import { useState, useEffect  } from 'lucide-react'
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {'
+import { useState, useEffect } from 'react'
+
+interface PerformanceMetrics {
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  ttfb?: number
+}
+
+interface PerformanceEntryExtended extends PerformanceEntry {
+  processingStart?: number
+  responseStart?: number
+  requestStart?: number
+  hadRecentInput?: boolean
+  value?: number
+}
+
+export const usePerformanceMetrics = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
+  const [isSupported, setIsSupported] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return
     }
 
     setIsSupported(true)
+    
     // First Contentful Paint
     new PerformanceObserver(list => {
       const entries = list.getEntries()
@@ -12,6 +35,7 @@ import { useState, useEffect  } from 'lucide-react'
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))
       }
     }).observe({ entryTypes: ['paint'] })
+    
     // Largest Contentful Paint
     new PerformanceObserver(list => {
       const entries = list.getEntries()
@@ -20,6 +44,7 @@ import { useState, useEffect  } from 'lucide-react'
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
       }
     }).observe({ entryTypes: ['largest-contentful-paint'] })
+    
     // First Input Delay
     new PerformanceObserver(list => {
       const entries = list.getEntries() as PerformanceEntryExtended[]
@@ -32,6 +57,7 @@ import { useState, useEffect  } from 'lucide-react'
         }
       })
     }).observe({ entryTypes: ['first-input'] })
+    
     // Cumulative Layout Shift
     let clsValue = 0
     new PerformanceObserver(list => {
@@ -43,6 +69,7 @@ import { useState, useEffect  } from 'lucide-react'
       })
       setMetrics(prev => ({ ...prev, cls: clsValue }))
     }).observe({ entryTypes: ['layout-shift'] })
+    
     // Time to First Byte
     new PerformanceObserver(list => {
       const entries = list.getEntries() as PerformanceEntryExtended[]
@@ -56,5 +83,6 @@ import { useState, useEffect  } from 'lucide-react'
       })
     }).observe({ entryTypes: ['navigation'] })
   }, [])
+  
   return { metrics, isSupported }
 }
