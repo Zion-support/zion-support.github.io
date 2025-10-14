@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+export function useSEO(title: string, description: string, keywords: string) {
 export const useSEO = (title: string, description: string, keywords: string) => {
 export const useSEO = (title: string, description: string, keywords?: string) => {
   useEffect(() => {
