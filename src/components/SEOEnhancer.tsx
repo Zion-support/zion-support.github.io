@@ -1,6 +1,6 @@
 import React from 'react';
-import { Node } from 'react;
-import { Helmet } from 'react-helmet-async';
+// import from 'react;
+import {} from '; // Empty import removedreact-helmet-async';
 interface SEOEnhancerProps {
   title: string;
   description: string;
@@ -10,14 +10,7 @@ interface SEOEnhancerProps {
   children?: Node;
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title,
-  description,
-  keywords,
-  noIndex = false,
-  structuredData,
-  children;
-}) => {
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -36,32 +29,33 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   return (
     <.Fragment>
       <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{title}
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />';
-        <meta name="author" content="Zion Tech Group" />
+        {}
+        <title>{}
+        <meta name="description" content={} />'
+        <meta name="keywords" content={} />';
+        <meta name="author" content="Zion Tech Group" />'
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />';
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
-        {/* Open Graph Tags */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        {}
+        <meta property="og:title" content={} />
+        <meta property="og:description" content={} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
-        {/* Twitter d Tags */}
+        {}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        {/* Structured Data */}
+        <meta name="twitter:title" content={} />
+        <meta name="twitter:description" content={} />
+        {}
         <script type="application/ld+json">
-          {JSON.stringify(finalStructuredData)}
-      {children}
+          {}
+      {}
   );
 }
 export default SEOEnhancer;
+'

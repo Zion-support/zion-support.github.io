@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
+import React from 'react';
+// import from 'react-helmet-async'; // Empty import removed
+// import from 'lucide-react'; // Empty import removed
 export default function ContactPage()    {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
+  const [formData, setFormData] = useState({'
+    name: '','
+    email: '','
+    company: '','
+    phone: '','
+    subject: '','
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -15,67 +15,41 @@ export default function ContactPage()    {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-<<<<<<< HEAD
+      [e.target.name]: e.target.value;
     });
   }
-=======
-    })}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission
-<<<<<<< HEAD
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-  }
+  const handleSubmit = async (e: React.FormEvent) => {}
   const contactInfo = [
     {
-
-      icon: 'Phone',      title: 'Phone',
-=======
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitted(true)
-    setIsSubmitting(false)}
-  const contactInfo = [
-    {
-
-      title: 'Phone',
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-      value: '+1 (555) 123-4567',
+'
+      icon: 'Phone',      title: 'Phone','
+      value: '+1 (555) 123-4567','
       description: 'Mon-Fri 9AM-6PM EST'
     },
-    {
-      icon: 'Email',
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
+    {'
+      icon: 'Email','
+      title: 'Email','
+      value: 'contact@ziontechgroup.com','
       description: 'We respond within 24 hours'
     },
-    {
-      icon: 'Location',
-      title: 'Address',
-      value: '123 Tech Street, Suite 100',
+    {'
+      icon: 'Location','
+      title: 'Address','
+      value: '123 Tech Street, Suite 100','
       description: 'San Francisco, CA 94105'
     },
-    {
+    {'
       icon: 'Clock',
 
-<<<<<<< HEAD
-=======
-      description: '9:00 AM - 6:00 PM EST'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
-  const subjects = [
-    'AI Services',
-    'IT Services',
-    'Services',
-    'Micro SAAS',
-    'Digital Transformation',
-    '5G Implementation',
+  const subjects = ['
+    'AI Services','
+    'IT Services','
+    'Services','
+    'Micro SAAS','
+    'Digital Transformation','
+    '5G Implementation','
     'Other'
   ]
   return (
@@ -86,7 +60,7 @@ export default function ContactPage()    {
         <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
       </Helmet>
       
-      {/* Hero Section */}
+      {}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -102,30 +76,27 @@ export default function ContactPage()    {
         </div>
       </section>
 
-      {/* Contact Info */}
+      {}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">
             Get in Touch
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => {
-              const Icon = info.icon
-              return (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
+            {} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                  <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
-                  <p className="text-gray-400 text-sm">{info.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">{}</h3>
+                  <p className="text-cyan-400 font-medium mb-1">{}</p>
+                  <p className="text-gray-400 text-sm">{}</p>
                 </div>
               )})}
           </div>
         </div>
       </section>
 
-      {/* Contact Form */}
+      {}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">
@@ -138,18 +109,18 @@ export default function ContactPage()    {
                 <Circle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6">'
                 Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {
                   setIsSubmitted(false)
-                  setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
+                  setFormData({'
+                    name: '','
+                    email: '','
+                    company: '','
+                    phone: '','
+                    subject: '','
                     message: ''
                   })}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -158,7 +129,7 @@ export default function ContactPage()    {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+            <form onSubmit={} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-white font-medium mb-2">
@@ -168,8 +139,8 @@ export default function ContactPage()    {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    value={}
+                    onChange={}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Your full name"
@@ -183,8 +154,8 @@ export default function ContactPage()    {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    value={}
+                    onChange={}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="your.email@company.com"
@@ -201,8 +172,8 @@ export default function ContactPage()    {
                     type="text"
                     id="company"
                     name="company"
-                    value={formData.company}
-                    onChange={handleChange}
+                    value={}
+                    onChange={}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Your company name"
                   />
@@ -215,8 +186,8 @@ export default function ContactPage()    {
                     type="tel"
                     id="phone"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
+                    value={}
+                    onChange={}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
@@ -230,15 +201,14 @@ export default function ContactPage()    {
                 <select
                   id="subject"
                   name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
+                  value={}
+                  onChange={}
                   required
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
-                  {subjects.map((subject, index) => (
-                    <option key={index} value={subject}>
-                      {subject}
+                  {} value={}>
+                      {}
                     </option>
                   ))}
                 </select>
@@ -251,10 +221,10 @@ export default function ContactPage()    {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                  value={}
+                  onChange={}
                   required
-                  rows={6}
+                  rows={}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or how we can help you..."
                 />
@@ -263,7 +233,7 @@ export default function ContactPage()    {
               <div className="text-center">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={}
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {isSubmitting ? (
@@ -284,4 +254,4 @@ export default function ContactPage()    {
         </div>
       </section>
     </div>
-  )}
+  )}'

@@ -14,7 +14,7 @@ function fixFile(filePath) {
       if (line.trim().startsWith('import ') && line.includes("';)) {
         return line.replace(/';$/g, ';);
       }
-      if (line.trim().startsWith('import ') && line.includes('";')) {
+      if (line.trim().startsWith('import ') && line.includes('";)) {
         return line.replace(/";$/g, ';);
       }
       return line;

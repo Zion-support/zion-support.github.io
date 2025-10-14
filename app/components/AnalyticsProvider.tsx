@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import React, {} from 'react';
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
@@ -12,27 +12,27 @@ interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}) => {
   const track = (event: string, properties?: Record<string, any>) => {
-    // Analytics tracking implementation
+    // Analytics tracking implementation'
     console.log('Analytics Event:', event, properties);
-    // In a real implementation, you would send this to your analytics service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    // In a real implementation, you would send this to your analytics service'
+    if (typeof window !== 'undefined' && (window as any).gtag) {'
       (window as any).gtag('event', event, properties);
     }
   }
-  const identify = (userId: string, traits?: Record<string, any>) => {
-    console.log('Analytics Identify:', userId, traits);
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+  const identify = (userId: string, traits?: Record<string, any>) => {'
+    console.log('Analytics Identify:', userId, traits);'
+    if (typeof window !== 'undefined' && (window as any).gtag) {'
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         user_id: userId,
         custom_map: traits
       });
     }
   }
-  const page = (name: string, properties?: Record<string, any>) => {
-    console.log('Analytics Page:', name, properties);
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+  const page = (name: string, properties?: Record<string, any>) => {'
+    console.log('Analytics Page:', name, properties);'
+    if (typeof window !== 'undefined' && (window as any).gtag) {'
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: name,
         page_location: window.location.href,
@@ -40,42 +40,17 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       });
     }
   }
-  useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== 'undefined') {
-      // Load Google Analytics or other analytics scripts here
-      console.log('Analytics initialized');
-    }
+  useEffect(() => {}
   }, []);
 
-  const value: AnalyticsContextType = {
-    track,
-    identify,
-<<<<<<< HEAD
-    page;
-  }
-=======
-    page
-  };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+  const value: AnalyticsContextType = {}
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
+    <AnalyticsContext.Provider value={}>
+      {}
     </AnalyticsContext.Provider>
   );
-<<<<<<< HEAD
 }
-const  (): AnalyticsContextType => {
-=======
-};
-
-export const useAnalytics = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
+const  (): AnalyticsContextType => {}
   return context;
 }
-export default AnalyticsProvider;
+export default AnalyticsProvider;'

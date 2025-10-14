@@ -16,11 +16,6 @@ const SupportPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default SupportPage;
-=======
-  )}
-export default SupportPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

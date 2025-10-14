@@ -1,18 +1,15 @@
 import React from 'react';
-import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+// import from '@testing-library/react'; // Empty import removed
+// import from 'react-router-dom'; // Empty import removed
 
 // Custom render function with providers
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <BrowserRouter>
-      {children}
+const AllTheProviders = ({}: { children: React.ReactNode }) => {}
     </BrowserRouter>
   );
 };
 
 const customRender = (
-  ui: Element,
+  ui: Element,'
   options?: Omit<RenderOptions, 'wrapper'>
 ): RenderResult => {
   return render(ui, { wrapper: AllTheProviders, ...options });
@@ -39,6 +36,6 @@ export interface TestConfig {
   parallel: boolean;
 }
 
-// Re-export everything
+// Re-export everything'
 export * from '@testing-library/react';
-export { customRender as render };
+export {};'

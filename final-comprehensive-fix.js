@@ -15,8 +15,8 @@ function fixFileComprehensively(filePath) {
     // Fix merge conflict markers
     content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    
     // Fix unterminated string literals
-    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
+    content = content.replace(/import React from 'react';]*)/g, "import React from 'react';");
+    content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';");
     content = content.replace(/'use client';/g, "'use client';");
     
     // Fix malformed JSX
@@ -28,8 +28,8 @@ function fixFileComprehensively(filePath) {
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
     
     // Fix unterminated string constants
-    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
+    content = content.replace(/import React from 'react';]*)/g, "import React from 'react';");
+    content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';");
     
     // Fix malformed function declarations
     content = content.replace(/export default function ([^ {]+)\s*{/g, 'export default function $1  {');
@@ -114,8 +114,8 @@ function findProblematicFiles(dir) {
           if (content.includes('') || 
               content.includes('') ||
               content.includes('>>>>>>>') ||
-              content.includes('import React from \'react;') ||
-              content.includes('import { Helmet } from \'react-helmet-async;') ||
+              content.includes('import React from \'react;) ||
+              content.includes('import { Helmet } from \'react-helmet-async;) ||
               content.includes('<>') ||
               content.includes('</>') ||
               content.includes('Unterminated string') ||

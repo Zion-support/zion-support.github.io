@@ -13,9 +13,9 @@ function fixFile(filePath) {
     const originalContent = content;
     
     // Fix unterminated string literals
-    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
+    content = content.replace(/import React from 'react';]*)/g, "import React from 'react';");
+    content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';");
+    content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';");
     
     // Fix malformed JSX
     content = content.replace(/<>/g, '<>');
@@ -96,8 +96,8 @@ function findProblematicFiles(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('import React from \'react;') || 
-              content.includes('import { Helmet } from \'react-helmet-async;') ||
+          if (content.includes('import React from \'react;) || 
+              content.includes('import { Helmet } from \'react-helmet-async;) ||
               content.includes('<>') ||
               content.includes('</>') ||
               content.includes('') ||

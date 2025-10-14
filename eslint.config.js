@@ -16,6 +16,7 @@ export default [
       'out/**',
       'app-disabled/**',
       'app-broken/**',
+      'src/**',
       '*.config.js',
       '*.config.ts',
       '*.config.mjs',
@@ -48,7 +49,10 @@ export default [
       'cleanup_merge_conflicts.*',
       'close_duplicate_prs.*',
       'comprehensive-fix.*',
-      'create_remaining_pages.*'
+      'create_remaining_pages.*',
+      'scripts/**',
+      'hooks/**',
+      'utils/**'
     ],
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {

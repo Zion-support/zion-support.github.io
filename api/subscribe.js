@@ -19,10 +19,7 @@ export default async function handler(req, res) {
   }
 
   let subscribers = [];
-<<<<<<< HEAD
   
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   try {
     const data = fs.readFileSync(file, 'utf8');
     subscribers = JSON.parse(data);
@@ -51,11 +48,7 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-<<<<<<< HEAD
       message: 'Successfully subscribed!'
-=======
-      message: 'Successfully subscribed to newsletter' 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }));
   } catch (error) {
     console.error('Error saving subscriber:', error);

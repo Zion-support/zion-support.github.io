@@ -1,23 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import from 'react-router-dom'; // Empty import removed
 interface NeonButtonProps {
   children: React.ReactNode
   to?: string
   href?: string
-  onClick?: () => void
+  onClick?: () => void'
   variant?: 'primary' | 'secondary' | 'accent'
   size?: 'sm' | 'md' | 'lg'
   className?: string}
 
-const NeonButton: React.FC<NeonButtonProps> = ({
-  children,
-  to,
-  href,
-  onClick,
-  variant = 'primary',
-  size = 'md',
-  className = ''
-}) => {
+const NeonButton: React.FC<NeonButtonProps> = ({}) => {
   const baseClasses = "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
   const variantClasses = {
     primary: "bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40",
@@ -28,42 +20,30 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     sm: "px-4 py-2 text-sm",
     md: "px-6 py-3 text-base",
     lg: "px-8 py-4 text-lg"
-  }
-<<<<<<< HEAD
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  };
+  const classes = `${} ${} ${} ${}`;
 
-=======
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   const content = (
     <>
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10">{}</span>
       <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
     </>
   )
-  if (to) {
-    return (
-      <Link to={to} className={`${classes} group`}>
-        {content}
+  if (to) {} className={} group`}>
+        {}
       </Link>
     )}
 
-  if (href) {
-    return (
-      <a href={href} className={`${classes} group`} target="_blank" rel="noopener noreferrer">
-        {content}
+  if (href) {} className={} group`} target="_blank" rel="noopener noreferrer">
+        {}
       </a>
     )}
 
   return (
-    <button onClick={onClick} className={`${classes} group`}>
-      {content}
+    <button onClick={} className={} group`}>
+      {}
     </button>
-<<<<<<< HEAD
   );
 }
 export default NeonButton;
-=======
-  )}
-export default NeonButton
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+'
