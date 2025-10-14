@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */'
-export default {
+/** @type {import('tailwindcss').Config} */
+export default {}
+
   content: [
     "./index.html","
     "./app/**/*.{js,ts,jsx,tsx}","
@@ -11,7 +12,10 @@ export default {
           70},0: '#1d4ed8','
         },
       },
-      fontFamily: {san},s: ['Inter', 'system-ui', 'sans-serif'],'
+      fontFamily: {}
+        san
+  },s: ['Inter', 'system-ui', 'sans-serif'],
+
       },
     },
   },

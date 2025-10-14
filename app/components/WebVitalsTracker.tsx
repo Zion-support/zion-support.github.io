@@ -1,50 +1,40 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-export default function ComponentsPage() {
-  return (
-    <>
-      <Helmet>
-        <title>ComponentsPage - Zion Tech Group</title>
-        <meta name="description" content="Professional componentspage services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              ComponentsPage
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Professional componentspage services by Zion Tech Group.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+'use client';
+import { useEffect } from 'react';
+interface WebVitalsTrackerProps {
+  onVitalsUpdate?: (vitals: { type: string; value: number }) => void;
+}
+export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerProps) {
+  useEffect(() => {
+    // Track Core Web Vitals
+    const trackWebVitals = () => {
+      // Track LCP (Largest Contentful Paint)
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        onVitalsUpdate?.({ type: 'LCP', value: lastEntry.startTime });
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
+      // Track FID (First Input Delay)
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          const fidEntry = entry as unknown as { processingStart: number; startTime: number };
+          onVitalsUpdate?.({ type: 'FID', value: fidEntry.processingStart - fidEntry.startTime });
+        });
+      }).observe({ entryTypes: ['first-input'] });
+      // Track CLS (Cumulative Layout Shift)
+      let clsValue = 0;
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          const clsEntry = entry as unknown as { hadRecentInput?: boolean; value: number };
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
+          }
+        });
+        onVitalsUpdate?.({ type: 'CLS', value: clsValue });
+      }).observe({ entryTypes: ['layout-shift'] });
+    };
+    trackWebVitals();
+  }, [onVitalsUpdate]);
+  return null; // This component doesn't render anything
 }

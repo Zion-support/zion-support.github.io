@@ -1,16 +1,7 @@
 module.exports = {
   testEnvironment: 'jsdom',
-<<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
-=======
-<<<<<<< HEAD
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-=======
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
->>>>>>> cursor/fix-errors-and-merge-to-main-e238
   moduleNameMapper: {
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
@@ -22,11 +13,16 @@ module.exports = {
     '^@/content/(.*)$': '<rootDir>/src/content/$1'
   },
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: 'tsconfig.jest.json'
+    }],
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/src/**/*.(test|spec).(ts|tsx|js|jsx)'
+    '<rootDir>/src/**/*.(test|spec).(ts|tsx|js|jsx)',
+    '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
   ],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
@@ -34,10 +30,17 @@ module.exports = {
     '!src/**/*.stories.{ts,tsx}',
     '!src/**/index.{ts,tsx}'
   ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/.next/',
+    '<rootDir>/out/'
+  ],
   transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$))',
+    'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   globals: {

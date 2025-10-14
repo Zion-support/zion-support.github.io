@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -12,4 +13,5 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
+
 export default App;

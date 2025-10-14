@@ -1,21 +1,11 @@
-import crypto from 'crypto';,';,'''
-enabled: process.env.ANALYZE === 'true''''
-/** @type {} import( 'next'';,';,'''
-domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'';,';,'''
-formats: ['image/webp', '';,''''
-);,
-contentSecurityPolicy: "default-src 'self'; script-src 'none'';)'""'"'"'
-}
-]'""'"'"'
-import withBundleAnalyzer from '; import crypto from 'crypto;,';,''
-enabled: process.env.ANALYZE === 'true''
-/** @type {} import( 'next'';,';,''
-domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'';,';,''
-formats: ['image/webp', '';,'''
+import withBundleAnalyzer from '; import crypto from ';crypto;,';,enabled: process.env.ANALYZE === 'true'
+/** @type {} import( 'next,';,domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com,';,formats: ['image/webp', ,'
+
 );,
 contentSecurityPolicy: "default-src 'self'; script-src 'none)'""'"'
 }
 ]'""'"'
+=======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -37,3 +27,5 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

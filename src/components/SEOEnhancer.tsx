@@ -4,10 +4,11 @@ export default function; SEOEnhancer() {
   return (
     <>
       <Helmet>
+        </Helmet>
+        </Helmet>
         <title>SEOEnhancer - Zion Tech Group</title>
         <meta name="description" content="Professional seoenhancer services by Zion Tech Group." />"
       </Helmet>
-      
       <div className="min-h-screen bg-white">"
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
@@ -20,7 +21,6 @@ export default function; SEOEnhancer() {
             </p>
           </div>
         </section>
-
         {/* Content Section */}
         <section className="py-20 px-4">"
           <div className="max-w-6xl mx-auto">"
@@ -40,7 +40,6 @@ export default function; SEOEnhancer() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-900">"
           <div className="max-w-4xl mx-auto text-center">"
@@ -56,6 +55,6 @@ export default function; SEOEnhancer() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 }
