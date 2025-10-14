@@ -7,11 +7,13 @@ interface EnhancedSEOProps {
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
+}
+
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
   keywords,
-canonicalUrl,
+  canonicalUrl,
   ogImage
 }) => {
   return (

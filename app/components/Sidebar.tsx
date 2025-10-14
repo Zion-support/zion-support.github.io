@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
+}
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [

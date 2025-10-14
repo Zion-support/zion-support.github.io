@@ -1,6 +1,12 @@
 import { useEffect } from 'react'
 
+interface UseSEOProps {
+  title: string;
+  description: string;
+  keywords?: string;
+}
 
+export const useSEO = ({ title, description, keywords }: UseSEOProps) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
       const metaDescription = document.querySelector('meta[name="description"]')
@@ -11,6 +17,9 @@ import { useEffect } from 'react'
       }
       if (metaKeywords && keywords) {
         metaKeywords.setAttribute('content', keywords)
+      }
       
       document.title = title
+    }
   }, [title, description, keywords])
+}
