@@ -1,6 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Brain } from 'lucide-react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Lock } from 'lucide-react';
 
 const AICybersecuritySuiteProPage: React.FC = () => {
   return (
@@ -50,5 +54,5 @@ const AICybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-// const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
+import React, { Suspense } from 'react';
 export default AICybersecuritySuiteProPage;

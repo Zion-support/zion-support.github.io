@@ -1,71 +1,80 @@
-import React from 'react';
-import { CheckCircle, Shield, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React from 'react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
 
-function FiveGMaintenancePage() {
-  const features = [
+import React, { Suspense } from 'react';
+const FiveGMaintenancePage = () => {
+  const services = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Strategy Development',
-      description: 'Comprehensive implementation strategies tailored to your business needs.'
+      title: '5G Network Maintenance',
+      description: 'Ongoing maintenance and optimization of 5G network infrastructure.'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Security Assessment',
-      description: 'Complete security evaluation for network implementation.'
+      title: 'Security Monitoring',
+      description: 'Continuous security monitoring and threat detection for 5G networks.'
     },
     {
-      icon: <Users className="w-8 h-8" />,
       title: 'Team Training',
-      description: 'Expert training for your team on technologies and best practices.'
+      description: 'Comprehensive training for 5G network maintenance and troubleshooting.'
     }
-  ];
+  ]
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-        title="FiveGMaintenance - Zion Tech Group"
-        description="Professional fivegmaintenance services"
+        title="5G Maintenance Services - Zion Tech Group"
+        description="Professional 5G maintenance services to keep your network running optimally."
       />
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              FiveGMaintenance Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional fivegmaintenance solutions for your business needs.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 shadow-lg">
-                <div className="text-blue-600 mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5G Maintenance Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Keep your 5G network running smoothly with our comprehensive maintenance services.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-4">
+                <CheckCircle className="h-8 w-8 text-blue-600 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {service.title}
+                </h3>
               </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
+              <p className="text-gray-600 mb-6">
+                {service.description}
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Learn More
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Link 
+            to="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+          >
+            Get Started Today
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
-// const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
-export default FiveGMaintenancePage;
-
+import React, { Suspense } from 'react';
+export default FiveGMaintenancePage

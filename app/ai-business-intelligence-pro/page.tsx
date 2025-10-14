@@ -1,6 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, BarChart3, TrendingUp } from 'lucide-react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import { Brain } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 const AIBusinessIntelligenceProPage: React.FC = () => {
   return (
@@ -50,5 +54,5 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
   );
 };
 
-// const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
+import React, { Suspense } from 'react';
 export default AIBusinessIntelligenceProPage;

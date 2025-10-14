@@ -1,8 +1,0 @@
-';'
-  logger.info('Request started', {'
-    component: 'RequestMiddleware','
-    logger.info('Request completed', {'
-      component: 'RequestMiddleware','
-    logger.error('Request failed', error as Error, {'
-      component: 'RequestMiddleware','
-    context.request.headers['Authorization'] = `Bearer ${_token}`;''

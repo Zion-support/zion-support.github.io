@@ -1,6 +1,7 @@
 import React, { useEffect, Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import React, { Suspense } from 'react';
 
 // Lazy load pages
 const HomePage = lazy(() => import('./app/page'));
@@ -32,12 +33,18 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     this.state = { hasError: false };
   }
 
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
   static getDerivedStateFromError(): ErrorBoundaryState {
     return { hasError: true };
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+import React, { Suspense } from 'react';
+    // Log error to monitoring service in production
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
   }
 
   render() {
@@ -58,26 +65,48 @@ function App() {
 // Performance monitoring
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
+import React, { Suspense } from 'react';
   import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-    onCLS(console.log);
-    onFCP(console.log);
-    onLCP(console.log);
-    onTTFB(console.log);
+    onCLS((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+import React, { Suspense } from 'react';
+        console.warn('CLS:', metric);
+      }
+    });
+    onFCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('FCP:', metric);
+      }
+    });
+    onLCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('LCP:', metric);
+      }
+    });
+    onTTFB((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('TTFB:', metric);
+      }
+    });
   });
 
   // Monitor bundle size
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
-        console.log('Page load time:', (entry as any).loadEventEnd - (entry as any).loadEventStart, 'ms');
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+        }
       }
     }
   });
   observer.observe({ entryTypes: ['navigation'] });
 }
 
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+      console.warn('Zion Tech Group App initialized');
     }
   }, []);
 

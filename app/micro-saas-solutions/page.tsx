@@ -1,8 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, Target, Rocket } from 'lucide-react';
+import React, { Suspense } from 'react';
+import { Target, Rocket } from 'lucide-react';
 
-const Page: React.FC = () => {
+import React, { Suspense } from 'react';
+const MicroSaasSolutionsPage: React.FC = () => {
 
   return (
     <>
@@ -44,5 +46,7 @@ const Page: React.FC = () => {
   );
 };
 
-// const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
-export default Page;
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+export default MicroSaasSolutionsPage;

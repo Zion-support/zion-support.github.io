@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOProps {
+import React, { Suspense } from 'react';
   title: string;
   description: string;
   keywords?: string;
@@ -20,6 +21,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+import React, { Suspense } from 'react';
       {keywords && <meta name="keywords" content={keywords} />}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
