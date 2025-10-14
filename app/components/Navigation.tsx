@@ -22,7 +22,6 @@ import {
   ChevronDown,
   Menu,
   X,
-<<<<<<< HEAD
   SidebarIcon,
   Package,
   Heart,
@@ -33,13 +32,7 @@ import {
   FileText,
   Clock
 } from 'lucide-react';
-<<<<<<< HEAD
 import FuturisticButton from './FuturisticButton';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
-} from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
 interface NavigationProps {
   onSidebarToggle: () => void;
