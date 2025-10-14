@@ -1,6 +1,8 @@
 import React from 'react';
-import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { DEFAULT_SEO, META_TAGS } from '../constants/seo';
+import { useSEO } from '../hooks/useSEO';
+
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -10,37 +12,24 @@ interface SEOEnhancerProps {
   type?: string;
   structuredData?: unknown;
 }
+
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
-  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
-  image = '/images/og-image.jpg',
+  title = DEFAULT_SEO.title,
+  description = DEFAULT_SEO.description,
+  keywords = DEFAULT_SEO.keywords,
+  image = DEFAULT_SEO.image,
   url = typeof window !== 'undefined' ? window.location.href : '',
-  type = 'website',
+  type = DEFAULT_SEO.type,
   structuredData
 }) => {
-  useEffect(() => {
-    // Add structured data to the page
-    if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-      return () => {
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);
-        }
-      };
-    }
-    return undefined;
-  }, [structuredData]);
+  useSEO(structuredData);
   // Generate meta tags
   const metaTags = [
     { name: 'description', content: description },
     { name: 'keywords', content: keywords.join(', ') },
-    { name: 'author', content: 'Zion Tech Group' },
-    { name: 'robots', content: 'index, follow' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+    { name: 'author', content: META_TAGS.AUTHOR },
+    { name: 'robots', content: META_TAGS.ROBOTS },
+    { name: 'viewport', content: META_TAGS.VIEWPORT },
     // Open Graph tags
     { property: 'og:title', content: title },
     { property: 'og:description', content: description },

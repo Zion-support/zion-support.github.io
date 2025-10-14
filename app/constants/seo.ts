@@ -1,4 +1,18 @@
-// Default structured data for the organization
+// SEO constants
+export const DEFAULT_SEO = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
+  keywords: ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
+  image: '/images/og-image.jpg',
+  type: 'website',
+} as const;
+
+export const META_TAGS = {
+  AUTHOR: 'Zion Tech Group',
+  ROBOTS: 'index, follow',
+  VIEWPORT: 'width=device-width, initial-scale=1.0',
+} as const;
+
 export const defaultStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -15,14 +29,6 @@ export const defaultStructuredData = {
   "sameAs": [
     "https://www.linkedin.com/company/zion-tech-group",
     "https://twitter.com/ziontechgroup",
-    "https://github.com/ziontechgroup"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "123 Tech Street",
-    "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "postalCode": "94105",
-    "addressCountry": "US"
-  }
+    "https://www.facebook.com/ziontechgroup"
+  ]
 };
