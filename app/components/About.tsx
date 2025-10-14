@@ -1,11 +1,8 @@
 import React from 'react';
-import { 
-  CheckIcon, 
+import { CheckIcon, 
   UsersIcon, 
   TrophyIcon, 
-  LightBulbIcon 
-} from '@heroicons/react/24/outline';
-
+  LightBulbIcon } from '@heroicons/react/24/outline';
 const About: React.FC = () => {
   const stats = [
     { icon: UsersIcon, value: '500+', label: 'Happy Clients' },

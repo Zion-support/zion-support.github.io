@@ -1,42 +1,37 @@
-<<<<<<< HEAD
-'use client'
-interface AnalyticsContextType { trackEvent: (eventName: string, properties?: Record<string, any>) => void
+import React, { createContext, useContext, ReactNode } from 'react';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
-  trackPageView: (pageName: string) => void
-  setUser: (userId: string, properties?: Record<string, any>) => void
-  isEnabled: boolean }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
-<<<<<<< HEAD
-
-{ createContext, useContext, useState, useEffect } from 'react';'
-'use client';
-interface AnalyticsContextType { trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean; }
-=======
+interface AnalyticsContextContextType {
+  trackEvent: (_event: string, _properties?: Record<string, unknown>) => void;
+  trackPageView: (_page: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
-  const [isEnabled, setIsEnabled] = useState(false)
-  const [userId, setUserId] = useState<string | null>(null)
-  useEffect(() => {
-    // if analytics is enabled
-    setIsEnabled(true)}, [])
-    // if analytics is enabled;
-    setIsEnabled(true);}
-    trackPageView,
-    setUser,
-    isEnabled, }
-    isEnabled,}
+const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
+
+export const useAnalyticsContext = () => {
+  const context = useContext(AnalyticsContextContext);
+  if (!context) {
+    throw new Error(`useAnalyticsContext must be used within a AnalyticsContextProvider`);
+  }
+  return context;
+};
+
+interface AnalyticsContextProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
+  const value = {
+    trackEvent: (_event: string, _properties?: Record<string, unknown>) => {
+      // Analytics tracking implementation
+    },
+    trackPageView: (_page: string) => {
+      // Page view tracking implementation
+    }
+  };
+
   return (
-    <AnalyticsContext.Provider value={value}>
-      { children }
-    </AnalyticsContext.Provider>
-    </AnalyticsContext.Provider>
-  )
-export { AnalyticsContext }
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
+    <AnalyticsContextContext.Provider value={value}>
+      {children}
+    </AnalyticsContextContext.Provider>
+  );
+};

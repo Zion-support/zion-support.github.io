@@ -1,33 +1,5 @@
-<<<<<<< HEAD
-export default function Page() {
-
-              </p>
-              <div className="flex justify-center space-x-4"></div>
-                <a "
-                  href="/" "
-                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
-                >
-                  Go Home
-                </a>
-                <a "
-                  href="/contact" "
-                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
-                >
-                  Contact Us
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-"
-}
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
-
 const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -46,6 +18,4 @@ const PagePage = () => {
     </div>
   );
 };
-
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad

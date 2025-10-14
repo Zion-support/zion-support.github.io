@@ -1,31 +1,14 @@
-<<<<<<< HEAD
-structuredData
-=======
-  structuredData
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
-}) => {
+import React from "react";
+
+const SEOHead = () => {
   return (
-    <Helmet></Helmet>
-      <title>{title}</title>
-<<<<<<< HEAD
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">SEOHead</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for SEOHead.
+      </p>
+    </div>
+  );
+};
 
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords} />
-
-      {structuredData && ("
-        <script type="application/ld+json">")
-=======
-      {structuredData && (
-        <script type="application/ld+json">"
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
-          {JSON.stringify(structuredData)
-        </script>
-      )
-    </Helmet>
-<<<<<<< HEAD
-
-  )
-"
-}}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
+export default SEOHead;

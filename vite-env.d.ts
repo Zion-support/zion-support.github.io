@@ -1,18 +1,11 @@
-<<<<<<< HEAD
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly DEV: boolean;
-  readonly PROD: boolean;
-  readonly SSR: boolean;
+  readonly VITE_API_URL: string
+  readonly VITE_APP_TITLE: string
+  // more env variables...
 }
 
 interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}"
-=======
+  readonly env: ImportMetaEnv
 }
-interface ImportMeta {readonly env: ImportMetaEnv}
-}
-/// <reference types="vite/client" />
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad

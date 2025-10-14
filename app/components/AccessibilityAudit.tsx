@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-;
-const AccessibilityAudit = () => {
-  return ("
-    <div className="p-4"></div>"
-      <h2 className="text-xl font-semibold mb-2">AccessibilityAudit</h2>
-      <p>This component is under construction.</p>
-    </div>
-")
-}
-=======
 import React from 'react';
-
 const AccessibilityAudit = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -26,6 +13,4 @@ const AccessibilityAudit = () => {
     </div>
   );
 };
-
 export default AccessibilityAudit;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad

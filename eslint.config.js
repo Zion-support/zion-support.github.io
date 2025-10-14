@@ -1,85 +1,45 @@
-<<<<<<< HEAD
-import js from "@eslint/js";";
-import globals from "globals";";
-import reactHooks from "eslint-plugin-react-hooks";";
-import reactRefresh from "eslint-plugin-react-refresh";";
-import tseslint from "typescript-eslint";
-export default tseslint.config(
-  {
-    ignores: ["
-      "dist","
-      "app-broken/**","
-      "app-disabled/**","
-      "scripts/**","
-      "src/**","
-      "temp-broken/**","
-      "coverage/**","
-      "*.js","
-      "*.cjs",
-    ],
-  },
-  {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],"
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {"
-      ecmaVersion: "latest","
-      sourceType: "module",
-      globals: {
-        ...globals.browser,"
-        window: "readonly","
-        document: "readonly","
-        console: "readonly","
-        process: "readonly","
-        global: "readonly","
-        HTMLElement: "readonly","
-        Event: "readonly","
-        KeyboardEvent: "readonly","
-        MediaQueryListEvent: "readonly","
-        PerformanceObserver: "readonly","
-        PerformanceNavigationTiming: "readonly","
-        HTMLInputElement: "readonly","
-        HTMLTextAreaElement: "readonly","
-        HTMLSelectElement: "readonly","
-        setTimeout: "readonly","
-        clearTimeout: "readonly","
-        setInterval: "readonly","
-        clearInterval: "readonly","
-        performance: "readonly","
-        localStorage: "readonly","
-        sessionStorage: "readonly","
-        require: "readonly","
-        module: "readonly",";
-exports: "readonly","
-        fs: "readonly","
-        __dirname: "readonly",
-        // Jest globals"
-        describe: "readonly","
-        it: "readonly","
-        test: "readonly","
-        expect: "readonly","
-        beforeEach: "readonly","
-        afterEach: "readonly","
-        beforeAll: "readonly","
-        afterAll: "readonly","
-        jest: "readonly",
-      },
-=======
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '**/*.cjs',
+      '**/*.mjs',
+      '**/build-*.js',
+      '**/check-*.js',
+      '**/clean-*.js',
+      '**/cleanup-*.js',
+      '**/comprehensive-*.js',
+      '**/final-*.js',
+      '**/fix-*.js',
+      '**/app-broken/**',
+      '**/app-disabled/**',
+      '**/__tests__/**',
+      '**/src/**',
+      '**/temp-disabled/**',
+      '**/scripts/**',
+      '**/*.setup.js',
+      '**/resolve*.js',
+      '**/tailwind.config.js',
+      '**/vite-env.d.ts'
+    ]
+  },
   js.configs.recommended,
+  {
+    ignores: ['dist/**', 'node_modules/**', 'build/**', 'out/**'],
+  },
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       parser: typescriptParser,
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
@@ -106,42 +66,21 @@ export default [
         HelmetProvider: 'readonly',
       },
     },
-<<<<<<< HEAD
-    plugins: {"
-      "react-hooks": reactHooks,"
-      "react-refresh": reactRefresh,
-    },
-    rules: {
-      ...reactHooks.configs.recommended.rules,"
-      "react-refresh/only-export-components": ["
-        "warn",
-        {
-          allowConstantExport: true,
-          allowExportNames: ["
-            "AnalyticsContext","
-            "useAnalytics","
-            "AnalyticsProvider",
-          ],
-        },
-      ],
-    },
-  },)
-);
-"
-=======
     plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
+      "@typescript-eslint": typescript,
+      "react": react,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh
     },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
+      'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'no-undef': 'off', // Turn off no-undef for TypeScript files
+      'no-undef': 'off',
     },
     settings: {
       react: {
@@ -150,4 +89,3 @@ export default [
     },
   },
 ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad

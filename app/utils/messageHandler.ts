@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-export const messageHandler = () => { // Implementation;
-  return true; }
+// MessageHandler utility functions
+
+export const MessageHandler = {
+  // Add your utility functions here
 };
-export default messageHandler;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,207 +1,202 @@
-<<<<<<< HEAD
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Cloud, Shield, Zap, Server, Database, Globe } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import Footer from '../components/Footer';
+import FuturisticBackground from '../components/FuturisticBackground';
 
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Cloud, Server, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Clock, Award, Star, Activity, Lock, Network } from "lucide-react";
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
+const CloudInfrastructurePage: React.FC = () => {
+  const features = [
+    {
+      title: "Scalable Cloud Architecture",
+      description: "Build and deploy applications on a robust, scalable cloud infrastructure that grows with your business needs.",
+      icon: <Cloud className="w-12 h-12 text-cyan-400" />
+    },
+    {
+      title: "High Availability & Reliability",
+      description: "Ensure your applications are always available with our 99.9% uptime guarantee and redundant systems.",
+      icon: <Shield className="w-12 h-12 text-purple-400" />
+    },
+    {
+      title: "Auto-Scaling Solutions",
+      description: "Automatically scale your resources based on demand to optimize costs and performance.",
+      icon: <Zap className="w-12 h-12 text-yellow-400" />
+    },
+    {
+      title: "Database Management",
+      description: "Comprehensive database solutions with backup, replication, and optimization services.",
+      icon: <Database className="w-12 h-12 text-green-400" />
+    }
+  ];
 
-const CloudInfrastructure = () => {
   const services = [
-    {
-      title: "Cloud Migration",
-      description: "Seamlessly migrate your applications and data to the cloud with zero downtime and minimal risk",
-      icon: <Cloud className="w-8 h-8" />,
-      features: ["Zero-downtime migration", "Data integrity assurance", "Cost optimization", "Security compliance"],
-      price: "From $2,999/month"
-    },
-    {
-      title: "Infrastructure as Code",
-      description: "Automate infrastructure provisioning and management using modern IaC tools and best practices",
-      icon: <Settings className="w-8 h-8" />,
-      features: ["Terraform automation", "Version control", "Environment consistency", "Disaster recovery"],
-      price: "From $1,999/month"
-    },
-    {
-      title: "Cloud Security",
-      description: "Comprehensive security solutions to protect your cloud infrastructure from threats and vulnerabilities",
-      icon: <Shield className="w-8 h-8" />,
-      features: ["Identity management", "Network security", "Data encryption", "Compliance monitoring"],
-      price: "From $1,499/month"
-    },
-    {
-      title: "Auto Scaling",
-      description: "Dynamic resource scaling based on demand to optimize costs and ensure optimal performance",
-      icon: <Activity className="w-8 h-8" />,
-      features: ["Automatic scaling", "Cost optimization", "Performance monitoring", "Load balancing"],
-      price: "From $999/month"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$1,999",
-      period: "/month",
-      description: "Perfect for small businesses starting their cloud journey",
-      features: [
-        "Up to 10 servers",
-        "Basic monitoring",
-        "Standard support",
-        "Cloud migration assistance",
-        "Security baseline",
-        "Monthly reporting"
-      ],
-      popular: false,
-      cta: "Get Started"
-    },
-    {
-      name: "Professional",
-      price: "$4,999",
-      period: "/month",
-      description: "Ideal for growing businesses with complex infrastructure needs",
-      features: [
-        "Up to 50 servers",
-        "Advanced monitoring",
-        "Priority support",
-        "Full cloud migration",
-        "Advanced security",
-        "Weekly reporting",
-        "Auto-scaling setup",
-        "Disaster recovery"
-      ],
-      popular: true,
-      cta: "Get Started"
-    },
-    {
-      name: "Enterprise",
-      price: "$9,999",
-      period: "/month",
-      description: "Comprehensive solution for large organizations with mission-critical infrastructure",
-      features: [
-        "Unlimited servers",
-        "Real-time monitoring",
-        "24/7 dedicated support",
-        "Custom migration strategy",
-        "Enterprise security",
-        "Daily reporting",
-        "Custom auto-scaling",
-        "Multi-region setup",
-        "Dedicated account manager"
-      ],
-      popular: false,
-      cta: "Contact Sales"
-    }
-  ];
-
-  const capabilities = [
-    {
-      title: "Multi-Cloud Strategy",
-      description: "Design and implement hybrid and multi-cloud architectures for maximum flexibility and redundancy",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "99.99% uptime"
-    },
-    {
-      title: "Cost Optimization",
-      description: "Reduce cloud costs by up to 40% through intelligent resource management and optimization",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stats: "40% cost reduction"
-    },
-    {
-      title: "Security First",
-      description: "Implement enterprise-grade security measures to protect your cloud infrastructure",
-      icon: <Lock className="w-6 h-6" />,
-      stats: "Zero security incidents"
-    },
-    {
-      title: "24/7 Monitoring",
-      description: "Continuous monitoring and alerting to ensure optimal performance and availability",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-second response"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Chen",
-      company: "TechStart Solutions",
-      role: "CTO",
-      content: "Zion's cloud infrastructure services transformed our operations. We achieved 99.99% uptime and reduced costs by 35% in the first year.",
-      rating: 5,
-      avatar: "DC"
-    },
-    {
-      name: "Sarah Rodriguez",
-      company: "E-commerce Plus",
-      role: "VP of Engineering",
-      content: "The migration was seamless and the ongoing support is exceptional. Our applications now scale automatically and perform better than ever.",
-      rating: 5,
-      avatar: "SR"
-    },
-    {
-      name: "Michael Johnson",
-      company: "Financial Services Corp",
-      role: "IT Director",
-      content: "Enterprise-grade security and compliance features gave us confidence to move our critical systems to the cloud. Highly recommended.",
-      rating: 5,
-      avatar: "MJ"
-    }
+    "Cloud migration and modernization",
+    "Container orchestration with Kubernetes",
+    "Serverless architecture implementation",
+    "Multi-cloud strategy and management",
+    "Disaster recovery and backup solutions",
+    "Performance monitoring and optimization",
+    "Security compliance and auditing",
+    "24/7 technical support and maintenance"
   ];
 
   const stats = [
-    { number: "500+", label: "Infrastructure Projects", icon: <Server className="w-6 h-6" /> },
-    { number: "99.99%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Savings", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring & Support", icon: <Clock className="w-6 h-6" /> }
+    { label: "Infrastructure Managed", value: "500+", icon: <Server className="w-8 h-8 text-cyan-400" /> },
+    { label: "Uptime Guarantee", value: "99.9%", icon: <Shield className="w-8 h-8 text-purple-400" /> },
+    { label: "Cost Savings", value: "40%", icon: <Zap className="w-8 h-8 text-yellow-400" /> },
+    { label: "Global Reach", value: "50+", icon: <Globe className="w-8 h-8 text-green-400" /> }
   ];
->>>>>>> origin/main
 
-=======
->>>>>>> origin/main
-const HomePage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title>Home - Zion Tech Group</title>"
-        <meta name="description" content="Home - Zion Tech Group" />
-      </Helmet>"
-      <div className="container mx-auto px-4 py-16"></div>"
-        <div className="text-center"></div>"
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>"
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-
-        </div>
-      </div>
-    </div>
-)
-  );
-"
-}
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Page - Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
+      <EnhancedSEO 
+        title="Cloud Infrastructure - Zion Tech Group | Scalable Cloud Solutions"
+        description="Transform your business with our comprehensive cloud infrastructure services. Scalable, secure, and reliable cloud solutions for modern enterprises."
+        keywords="cloud infrastructure, cloud migration, cloud services, scalable architecture, cloud security, cloud management"
+        canonical="https://ziontechgroup.com/cloud-infrastructure"
+      />
+      
+      <FuturisticBackground />
+      
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Cloud Infrastructure
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Build and scale your applications on a robust, secure, and reliable cloud infrastructure. 
+            Transform your business with enterprise-grade cloud solutions.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link 
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex items-center justify-center mb-4">
+                  {stat.icon}
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-gray-300">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive Cloud Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              End-to-end cloud infrastructure services designed to meet the unique needs of your business.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  {feature.icon}
+                  <h3 className="text-xl font-semibold text-white ml-4">
+                    {feature.title}
+                  </h3>
+                </div>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Cloud Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Complete cloud infrastructure management and optimization services.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+                <p className="text-gray-300">
+                  {service}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Scale Your Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our cloud experts help you build a robust, scalable infrastructure. 
+            Get a free consultation and discover the power of cloud technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <span>Start Cloud Journey</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link 
+              to="/pricing"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
 
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
+export default CloudInfrastructurePage;
