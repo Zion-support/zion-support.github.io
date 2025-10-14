@@ -1,132 +1,138 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { PieChart } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Wifi } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function CaseStudies() {
-  const caseStudies = [
+const Page = () => {
+  const features = [
     {
-      id: 1,
-      title: "E-commerce Platform AI Transformation",
-      company: "TechStart Inc.",
-      industry: "E-commerce",
-      challenge: "Manual inventory management and customer service bottlenecks",
-      solution: "AI-powered inventory optimization and automated customer support",
-      results: [
-        "60% reduction in inventory costs",
-        "40% increase in customer satisfaction",
-        "80% faster response times",
-        "35% increase in sales"
-      ],
-      image: "/images/case-studies/ecommerce-ai.jpg",
-      duration: "6 months",
-      services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: true
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      id: 2,
-      title: "Healthcare Data Analytics Implementation",
-      company: "MedTech Solutions",
-      industry: "Healthcare",
-      challenge: "Complex patient data analysis and treatment optimization",
-      solution: "Advanced AI analytics platform for predictive healthcare insights",
-      results: [
-        "45% improvement in diagnosis accuracy",
-        "30% reduction in treatment costs",
-        "50% faster data processing",
-        "25% increase in patient outcomes"
-      ],
-      duration: "8 months",
-      services: ["AI Analytics", "Data Engineering", "Machine Learning"],
-      image: "/api/placeholder/600/400",
-      featured: false
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      id: 3,
-      title: "Manufacturing Process Automation",
-      company: "Industrial Corp",
-      industry: "Manufacturing",
-      challenge: "Inefficient production processes and quality control issues",
-      solution: "AI-driven process optimization and automated quality monitoring",
-      results: [
-        "55% increase in production efficiency",
-        "70% reduction in defects",
-        "40% decrease in downtime",
-        "25% cost savings"
-      ],
-      duration: "10 months",
-      services: ["AI Automation", "IoT Solutions", "Process Optimization"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Financial Services Risk Management",
-      company: "FinanceFirst",
-      industry: "Financial Services",
-      challenge: "Manual fraud detection and risk assessment processes",
-      solution: "AI-powered fraud detection and real-time risk analysis",
-      results: [
-        "85% improvement in fraud detection",
-        "60% reduction in false positives",
-        "90% faster risk assessment",
-        "50% decrease in financial losses"
-      ],
-      duration: "7 months",
-      services: ["AI Fraud Detection", "Risk Analytics", "Cybersecurity"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Retail Customer Experience Enhancement",
-      company: "RetailMax",
-      industry: "Retail",
-      challenge: "Personalized customer experience and inventory management",
-      solution: "AI-driven personalization and demand forecasting",
-      results: [
-        "65% increase in customer engagement",
-        "40% improvement in inventory turnover",
-        "50% boost in average order value",
-        "30% increase in customer retention"
-      ],
-      duration: "5 months",
-      services: ["AI Marketing", "Recommendation Engine", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Logistics Optimization with 5G",
-      company: "LogiTech",
-      industry: "Logistics",
-      challenge: "Real-time tracking and route optimization challenges",
-      solution: "5G-enabled IoT network with AI-powered route optimization",
-      results: [
-        "45% reduction in delivery times",
-        "35% decrease in fuel costs",
-        "80% improvement in tracking accuracy",
-        "25% increase in customer satisfaction"
-      ],
-      duration: "9 months",
-      services: ["5G Solutions", "IoT Integration", "AI Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: false
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ];
 
-  const stats = [
-    { number: "50+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
-    { number: "95%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Reduction", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
-  ];
+  return (
+    <>
+      <EnhancedSEO 
+        title="Page - Zion Tech Group"
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="page, business solutions, technology services, professional services"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional page services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our page services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
               </Link>
             </div>
           </div>
@@ -134,4 +140,7 @@ export default function CaseStudies() {
       </div>
     </>
   );
-}
+};
+
+const page = React.lazy(() => import('./page'));
+export default page;

@@ -1,125 +1,146 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { PieChart } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Wifi } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-export default function Partners() {
-  const partners = [
+const Page = () => {
+  const features = [
     {
-      name: "Microsoft",
-      logo: "/images/partners/microsoft.png",
-      description: "Leading cloud and productivity solutions",
-      category: "Technology Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Amazon Web Services",
-      logo: "/images/partners/aws.png",
-      description: "Comprehensive cloud computing platform",
-      category: "Cloud Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Google Cloud",
-      logo: "/images/partners/google-cloud.png",
-      description: "AI and machine learning cloud services",
-      category: "AI Partner",
-      tier: "Gold"
-    },
-    {
-      name: "Salesforce",
-      logo: "/images/partners/salesforce.png",
-      description: "Customer relationship management platform",
-      category: "CRM Partner",
-      tier: "Gold"
-    },
-    {
-      name: "IBM",
-      logo: "/images/partners/ibm.png",
-      description: "Enterprise AI and hybrid cloud solutions",
-      category: "Enterprise Partner",
-      tier: "Silver"
-    },
-    {
-      name: "Oracle",
-      logo: "/images/partners/oracle.png",
-      description: "Database and enterprise software solutions",
-      category: "Database Partner",
-      tier: "Silver"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Joint Marketing",
-      description: "Collaborative marketing campaigns and co-branded content"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Access to our worldwide network of clients and opportunities"
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Technical Support",
-      description: "Dedicated technical resources and training programs"
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Innovation Labs",
-      description: "Joint innovation initiatives and R&D projects"
-    }
-  ];
-
-  const tiers = [
-    {
-      name: "Platinum",
-      color: "from-gray-400 to-gray-600",
-      requirements: "Strategic partnership with significant revenue commitment",
-      benefits: ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
-    },
-    {
-      name: "Gold",
-      color: "from-yellow-400 to-yellow-600",
-      requirements: "Strong partnership with regular collaboration",
-      benefits: ["Priority support", "Training programs", "Marketing support", "Technical resources"]
-    },
-    {
-      name: "Silver",
-      color: "from-gray-300 to-gray-500",
-      requirements: "Partnership with mutual business opportunities",
-      benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>Partners - Zion Tech Group | Strategic Partnerships</title>
-        <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
-        <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
-      </Helmet>
+      <EnhancedSEO 
+        title="Page - Zion Tech Group"
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="page, business solutions, technology services, professional services"
+      />
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Our Partners
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Strategic partnerships that drive innovation and deliver exceptional value to our clients.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional page services designed to help your business succeed and grow.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Our Partners</h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
-            Strategic partnerships that drive innovation and growth
-          </p>
-        </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our page services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
-}
+};
+
+const page = React.lazy(() => import('./page'));
+export default page;

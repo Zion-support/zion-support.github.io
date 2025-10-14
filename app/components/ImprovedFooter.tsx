@@ -1,32 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Facebook, 
-  Instagram,
-  Youtube,
-  Star,
-  Award,
-  Users,
-  Shield,
-  Zap,
-  Brain,
-  BarChart3,
-  Cloud,
-  Settings,
-  HelpCircle,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Clock
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Twitter } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+import { Github } from 'lucide-react';
+import { Facebook } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+import { Youtube } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();

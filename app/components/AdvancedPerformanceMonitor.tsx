@@ -30,7 +30,6 @@ const AdvancedPerformanceMonitor = () => {
   const [isRecording, setIsRecording] = useState(false)
 
   useEffect(() => {
-<<<<<<< HEAD
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
@@ -72,8 +71,6 @@ const AdvancedPerformanceMonitor = () => {
         const loadTime = performance.now()
         setMetrics(prev => ({ ...prev, loadTime }))
       }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
     }
 
     // Report metrics to analytics
@@ -85,7 +82,6 @@ const AdvancedPerformanceMonitor = () => {
     measureMemory()
     measureLoadTime()
 
-<<<<<<< HEAD
     // Set up performance observer for additional metrics
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -108,8 +104,6 @@ const AdvancedPerformanceMonitor = () => {
           setMetrics(prev => ({ ...prev, fid: metric.value }))
           reportMetric('INP', metric.value)
         })
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
         onFCP((metric: any) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
