@@ -171,13 +171,22 @@ if (typeof window !== 'undefined') {
                     <Route path="/support" element={<SupportPage />} />
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/micro-saas" element={<MicroSaaSPage />} />
-                    <Route path="/it-services" element={<ITServicesPage />} />
+                    <Route path="/cookies" element={<CookiesPage />} />
+                    <Route path="/sitemap" element={<SitemapPage />} />
+                    <Route path="/micro-saas" element={<MicroSaasPage />} />
+                    <Route path="/it-services" element={<ItServicesPage />} />
+                    <Route path="/cloud-services" element={<CloudServicesPage />} />
                     <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                     <Route path="/case-studies" element={<CaseStudiesPage />} />
                     <Route path="/careers" element={<CareersPage />} />
                     
+                    {/* New Innovative Micro SAAS Services */}
+                    <Route path="/ai-powered-email-analyzer" element={<AIPoweredEmailAnalyzerPage />} />
+                    <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
+                    <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
+                    <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+
                     {/* Catch all route */}
                     <Route path="*" element={
                       <div className="min-h-screen flex items-center justify-center bg-slate-900">
