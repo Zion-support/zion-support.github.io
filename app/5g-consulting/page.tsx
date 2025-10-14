@@ -1,7 +1,7 @@
-import React from 'react'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
+import React, { Suspense } from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
 const FiveGConsultingPage = () => {
   const services = [
@@ -17,60 +17,56 @@ const FiveGConsultingPage = () => {
       title: 'Team Training',
       description: 'Expert training for your team on 5G technologies and best practices.'
     }
-  ]
-
+  ];
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=" min-h-screenbg-gray-50">
       <EnhancedSEO 
         title="5G Consulting Services - Zion Tech Group"
         description="Expert 5G consulting services to help your business leverage next-generation wireless technology."
       />
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+      <div className=" contain e r mx-autopx-4py-16">
+        <div className=" text-centermb-16">
+          <h1 className=" text-4xlfont-boldtext-gray-900mb-6">
             5G Consulting Services
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform your business with expert 5G consulting services designed to maximize your network potential.
+          <p className=" text-xltext-gray-600max-w-3xlmx-auto">
+            Expert guidance for your 5G transformation journey
           </p>
+          </div>
         </div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className=" gridmd:grid-cols-3gap-8mb-16">;
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {service.title}
-                </h3>
-              </div>
-              <p className="text-gray-600 mb-6">
+            <div key={index} className=" bg-whiterounded-lgshadow-lgp-6">
+              <h3 className=" text-xlfont-semiboldtext-gray-900mb-4">
+                {service.title}
+              </h3>
+              <p className=" text-gray-600mb-4">
                 {service.description}
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flexitems-centertext-blue-600hover:text-blue-800font-medium";
               >
                 Learn More
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className=" ml-2w-4h-4" />
               </Link>
-            </div>
+              </div>
+        </div>
           ))}
-        </div>
-
-        <div className="text-center">
+        <div className=" text-center">
           <Link 
-            to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            to="/contact" 
+            className=" inline-fle x items-center bg-blue-600hover:bg-blue-700text-whitefont-semiboldpy-3px-6rounded-lgtransition-colors";
           >
-            Get Started Today
-            <ArrowRight className="ml-2 h-5 w-5" />
+            Get Started
+            <ArrowRight className=" ml-2w-5h-5" />
           </Link>
-        </div>
       </div>
     </div>
-  )
-}
-
+  );
+};
 export default FiveGConsultingPage
+
+</ArrowRight>
+</ArrowRight>

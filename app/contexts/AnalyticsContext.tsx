@@ -1,44 +1,50 @@
-import React, { createContext, ReactNode, useCallback } from 'react'
+import React, { Suspense } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void
   trackPageView: (pageName: string, properties?: Record<string, unknown>) => void
   identifyUser: (userId: string, properties?: Record<string, unknown>) => void
 }
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
-
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 interface AnalyticsProviderProps {
-  children: ReactNode
-}
-
+  children: ReactNode;
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = useCallback((_eventName: string, _properties?: Record<string, unknown>) => {
-    // Analytics events are tracked silently
+  const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Event tracked: ', eventName, properties);
+    }
     // Add your analytics tracking logic here
-  }, [])
-
-  const trackPageView = useCallback((_pageName: string, _properties?: Record<string, unknown>) => {
-    // Page views are tracked silently
+  }, []);
+  const trackPageView = useCallback((pageName: string;, properties?: Record<string, unknown>) => {
+      console.warn('Page view tracked: ', pageName, properties);
     // Add your page view tracking logic here
-  }, [])
-
-  const identifyUser = useCallback((_userId: string, _properties?: Record<string, unknown>) => {
-    // User identification is handled silently
+  const identifyUser = useCallback((userId: string;, properties?: Record<string, unknown>) => {
+      console.warn('User identified: ', userId, properties);
     // Add your user identification logic here
-  }, [])
-
-  const value = {
+  const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-    identifyUser
-  }
-
+    identifyUser,
+  };
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   )
-}
+export const useAnalytics = () => {
+  const context = React.useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
 
-export { AnalyticsContext }
+</AnalyticsContext>
+</string>
+</string>
+</string>
+</AnalyticsProviderProps>
+</AnalyticsContextType>
+</string>
+</string>
+</string>

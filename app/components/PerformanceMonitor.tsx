@@ -78,20 +78,15 @@ const PerformanceMonitor = () => {
     // Send metrics after page load
     const sendMetrics = () => {
       if (Object.keys(metrics).length > 0) {
-        // Send to analytics service
-        if (process.env.NODE_ENV === 'development') {
-          // Performance metrics logged in development
-        }
-        
-        // You can send to your analytics service here
-        // Example: analytics.track('performance_metrics', metrics);
+        // In a real application, you would send these metrics to your analytics service
+        console.log('Performance Metrics:', metrics);
       }
     };
 
     // Send metrics when page is about to unload
     window.addEventListener('beforeunload', sendMetrics);
 
-    // Cleanup
+    // Cleanup observers
     return () => {
       lcpObserver.disconnect();
       fidObserver.disconnect();
@@ -101,7 +96,64 @@ const PerformanceMonitor = () => {
     };
   }, []);
 
-  return null;
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+
+  // Development mode: show performance metrics
+  const metrics: PerformanceMetrics = {};
+
+  const getScoreColor = (value: number | undefined, thresholds: { good: number; poor: number }) => {
+    if (!value) return 'text-gray-500';
+    if (value <= thresholds.good) return 'text-green-500';
+    if (value <= thresholds.poor) return 'text-yellow-500';
+    return 'text-red-500';
+  };
+
+  return (
+    <div className=" fixe d bottom-4 right-4bg-blackbg-opacity-75text-whitep-4rounded-lgtext-xsfont-mono">
+      <div className=" font-boldmb-2">Performance Metrics</div>
+      <div className=" space-y-1">
+        <div className=" flexjustify-between">
+          <span>FCP:</span>
+          <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
+            {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
+          </span>
+        </div>
+        <div className=" flexjustify-between">
+          <span>LCP:</span>
+          <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
+            {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
+          </span>
+        </div>
+        <div className=" flexjustify-between">
+          <span>FID:</span>
+          <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
+            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
+          </span>
+        </div>
+        <div className=" flexjustify-between">
+          <span>CLS:</span>
+          <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
+            {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+          </span>
+        </div>
+        <div className=" flexjustify-between">
+          <span>TTFB:</span>
+          <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
+            {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;
+</spa>
+</spa>
+</spa>
+</spa>
+</spa>
+</di>

@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from "react";
+import React, { useEffect, Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -46,8 +46,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <div className="text-white text-xl">Something went wrong.</div>
+        <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 flex items-center justify-center">
+          <div className="text-white text-center">
+            <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+            <p className="text-lg">Please refresh the page or try again later.</p>
+          </div>
         </div>
       );
     }
@@ -57,50 +60,20 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-// Performance monitoring
-if (typeof window !== 'undefined') {
-  // Monitor Core Web Vitals
-  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-    onCLS((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('CLS:', metric);
-      }
-    });
-    onFCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('FCP:', metric);
-      }
-    });
-    onLCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('LCP:', metric);
-      }
-    });
-    onTTFB((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('TTFB:', metric);
-      }
-    });
-  });
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
 
-  // Monitor bundle size
-  const observer = new PerformanceObserver((list) => {
-    for (const entry of list.getEntries()) {
-      if (entry.entryType === 'navigation') {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
-        }
-      }
-    }
-  });
-  observer.observe({ entryTypes: ['navigation'] });
-}
-
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-      console.warn('Zion Tech Group App initialized');
-    }
+    return () => clearTimeout(timer);
   }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <ErrorBoundary>
@@ -115,7 +88,6 @@ if (typeof window !== 'undefined') {
                 <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
                 <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
                 <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
-                <Route path="*" element={<HomePage />} />
               </Routes>
             </Suspense>
           </div>

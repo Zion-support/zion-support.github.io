@@ -68,7 +68,7 @@ export default defineConfig({
     // Enhanced build optimizations
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
+        manualChunks: (id: string) => {
           // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
             // React ecosystem
