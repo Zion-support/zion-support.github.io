@@ -3,27 +3,54 @@
 import fs from 'fs';
 import path from 'path';
 
-// Get all files with remaining syntax errors
+// Get all files with syntax errors from the lint output
 const filesToFix = [
+  './app/contexts/AnalyticsContextDefinition.tsx',
+  './app/create-ad/page.tsx',
+  './app/data/services.tsx',
+  './app/data/servicesData.tsx',
+  './app/ecommerce-analytics-pro/page.tsx',
+  './app/error.tsx',
+  './app/global-error.tsx',
   './app/it-infrastructure/page.tsx',
   './app/legal-document-manager/page.tsx',
+  './app/loading.tsx',
   './app/main.tsx',
   './app/medical-records-manager/page.tsx',
+  './app/micro-saas-services/microSaasServices.tsx',
+  './app/micro-saas-services/services.tsx',
   './app/micro-saas/page.tsx',
+  './app/not-found.tsx',
   './app/offline/page.tsx',
   './app/online-learning-platform/page.tsx',
+  './app/page-backup.tsx',
+  './app/page-optimized.tsx',
+  './app/pages/5GSolutionsPage.tsx',
+  './app/pages/AIServicesPage.tsx',
   './app/pages/BlogPage.tsx',
+  './app/pages/CareersPage.tsx',
+  './app/pages/CaseStudiesPage.tsx',
+  './app/pages/CloudInfrastructurePage.tsx',
+  './app/pages/ContactPage.tsx',
   './app/pages/DemoPage.tsx',
+  './app/pages/DigitalTransformationPage.tsx',
+  './app/pages/DocumentationPage.tsx',
+  './app/pages/FiveGSolutionsPage.tsx',
+  './app/pages/ITServicesPage.tsx',
   './app/pages/PricingPage.tsx',
   './app/pages/PrivacyPage.tsx',
+  './app/pages/ServicesPage.tsx',
   './app/pages/SolutionsPage.tsx',
   './app/pages/SupportPage.tsx',
+  './app/pages/TeamPage.tsx',
   './app/pages/TermsPage.tsx',
   './app/pages/TutorialsPage.tsx',
   './app/partners/page.tsx',
   './app/penetration-testing/page.tsx',
   './app/pricing/page.tsx',
   './app/property-management-ai/page.tsx',
+  './app/service-template.tsx',
+  './app/sitemap-page.tsx',
   './app/solutions/page.tsx',
   './app/supply-chain-optimizer/page.tsx',
   './app/support/page.tsx',
@@ -33,8 +60,11 @@ const filesToFix = [
   './app/utils/accessibilityEnhancer.ts',
   './app/utils/analytics.ts',
   './app/utils/dynamic.tsx',
+  './app/utils/errorHandler.tsx',
+  './app/utils/image.tsx',
   './app/utils/imageOptimizer.ts',
   './app/utils/lazyLoading.tsx',
+  './app/utils/link.tsx',
   './app/utils/navigation.tsx',
   './app/utils/seoConstants.ts',
   './app/utils/seoData.ts',
@@ -127,25 +157,6 @@ function fixFile(filePath) {
     // Fix missing quotes in other attributes
     content = content.replace(/(\w+)=([^"'][^>\s]*)/g, '$1="$2"');
     
-    // Fix specific patterns for page files
-    if (filePath.includes('/page.tsx') || filePath.includes('/pages/')) {
-      // Fix common page patterns
-      const pagePattern = /"use client";import React from "react";export default function Page\(\) \{\s*return \(\s*<div>Page content<\/div>\s*\)\s*<div>Page content<\/div>\s*\)\s*<div>\s*<\/div>\s*<div>\s*<\/div>"/g;
-      const pageReplacement = '"use client";\n\nimport React from "react";\n\nexport default function Page() {\n  return (\n    <div className="min-h-screen bg-gray-900">\n      <div className="container mx-auto px-4 py-8">\n        <div className="text-center">\n          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>\n          <p className="text-gray-300 text-lg">This page is under development.</p>\n        </div>\n      </div>\n    </div>\n  );\n}';
-      content = content.replace(pagePattern, pageReplacement);
-    }
-    
-    // Fix specific patterns for type definition files
-    if (filePath.includes('.d.ts')) {
-      content = content.replace(/declare module '([^']*) \{\s*const content: "stringexportdefaultcontent\}"'/g, "declare module '$1' {\n  const content: string;\n  export default content;\n}");
-    }
-    
-    // Fix specific patterns for utility files
-    if (filePath.includes('/utils/')) {
-      // Fix common utility patterns
-      content = content.replace(/export\s+const\s+([^=]+)=\s*([^;]+);/g, 'export const $1 = $2;');
-    }
-    
     // Clean up multiple empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
@@ -163,6 +174,6 @@ function fixFile(filePath) {
 }
 
 // Fix all files
-console.log('Starting to fix final syntax errors...');
+console.log('Starting to fix remaining syntax errors...');
 filesToFix.forEach(fixFile);
-console.log('Finished fixing final syntax errors.');
+console.log('Finished fixing remaining syntax errors.');

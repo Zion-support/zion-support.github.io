@@ -1,117 +1,126 @@
 #!/usr/bin/env node
-import fs from "fs"
-import path from "path"
-import { execSync } from "child_process"
-console.log("🔧 Fixing all remaining syntax errors...")
-// Function to fix all syntax errors in a file
-function fixAllSyntaxErrors(filePath) {
+
+import fs from 'fs';
+import path from 'path';
+
+// List of files with git hash corruption
+const corruptedFiles = [
+  './temp-broken/about/page.tsx',
+  './temp-broken/contact/page.tsx',
+  './next.config.js',
+  './fix-all-merge-conflicts.js',
+  './app/sitemap-page.tsx',
+  './app/partners/page.tsx',
+  './app/service-template.tsx',
+  './app/support/page.tsx',
+  './app/pricing/page.tsx',
+  './main.tsx',
+  './app/micro-saas/page.tsx',
+  './app/utils/link.tsx',
+  './app/micro-saas-services/services.tsx',
+  './app/micro-saas-services/microSaasServices.tsx',
+  './app/main.tsx',
+  './app/pages/DigitalTransformationPage.tsx',
+  './app/pages/AIServicesPage.tsx',
+  './app/pages/ITServicesPage.tsx',
+  './app/pages/TeamPage.tsx',
+  './app/pages/CaseStudiesPage.tsx',
+  './app/pages/5GSolutionsPage.tsx',
+  './app/pages/ServicesPage.tsx',
+  './app/pages/CareersPage.tsx',
+  './app/pages/DocumentationPage.tsx',
+  './app/pages/FiveGSolutionsPage.tsx',
+  './app/pages/ContactPage.tsx',
+  './app/pages/CloudInfrastructurePage.tsx',
+  './app/not-found.tsx',
+  './app/case-studies/page.tsx',
+  './app/page-optimized.tsx',
+  './app/page-backup.tsx',
+  './app/components/ContentPromotionBanner.tsx',
+  './SidebarNavigation.tsx',
+  './app/utils/image.tsx',
+  './app/utils/errorHandler.tsx',
+  './app/config/errorBoundaryConfig.tsx',
+  './app/error.tsx',
+  './app/loading.tsx',
+  './app/consultation/page.tsx',
+  './app/global-error.tsx',
+  './App-minimal.tsx',
+  './fix-remaining-issues.js'
+];
+
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8")
-    let modified = false
+    if (!fs.existsSync(filePath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
+    }
+
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove git hash at the end
+    content = content.replace(/\s+f7f852c0f7415181a1b362c4aa5a784585ad5828\s*$/, '');
+    
+    // Fix common syntax issues
+    content = content.replace(/;\s*$/gm, ''); // Remove trailing semicolons
+    content = content.replace(/;\s*{/g, ' {'); // Fix semicolon before opening brace
+    content = content.replace(/;\s*return\s*\(/g, ' return ('); // Fix semicolon before return
+    content = content.replace(/;\s*export/g, ' export'); // Fix semicolon before export
+    
+    // Fix JSX syntax issues
+    content = content.replace(/;\s*<div/g, ' <div'); // Fix semicolon before JSX
+    content = content.replace(/;\s*<\/div>/g, ' </div>'); // Fix semicolon before closing JSX
+    content = content.replace(/;\s*<h1/g, ' <h1'); // Fix semicolon before h1
+    content = content.replace(/;\s*<p/g, ' <p'); // Fix semicolon before p
+    content = content.replace(/;\s*<span/g, ' <span'); // Fix semicolon before span
+    
+    // Fix string literal issues
+    content = content.replace(/'([^']*)'([^']*)'/g, "'$1$2'"); // Fix broken string literals
+    content = content.replace(/"([^"]*)"([^"]*)"/g, '"$1$2"'); // Fix broken string literals
+    
+    // Fix object syntax
+    content = content.replace(/{\s*;\s*/g, '{ '); // Fix semicolon after opening brace
+    content = content.replace(/;\s*}/g, ' }'); // Fix semicolon before closing brace
+    
+    // Fix array syntax
+    content = content.replace(/\[\s*;\s*/g, '[ '); // Fix semicolon after opening bracket
+    content = content.replace(/;\s*\]/g, ' ]'); // Fix semicolon before closing bracket
+    
+    // Fix function syntax
+    content = content.replace(/\(\s*;\s*/g, '( '); // Fix semicolon after opening parenthesis
+    content = content.replace(/;\s*\)/g, ' )'); // Fix semicolon before closing parenthesis
+    
     // Fix import statements
-    content = content.replace(
-      /import\s+React\s+from\s+['"]react['"]?$/gm,
-      "import React from 'react';",
-    )
-    content = content.replace(
-      /import\s+{\s*Helmet\s*}\s+from\s+['"]react-helmet-async['"]?$/gm,
-      "import { Helmet } from 'react-helmet-async';",
-    )
-    // Fix malformed JSX attributes
-    content = content.replace(/content="[^"]*";+"/g, (match) => {
-      modified = true
-      return match.replace(/;+"/, '"')
-    })
-    // Fix malformed JSX elements
-    content = content.replace(/<[^>]*;+[^>]*>/g, (match) => {
-      modified = true
-      return match.replace(/;+/g, "")
-    })
-    // Fix missing semicolons in function returns
-    content = content.replace(/^\s*\)\s*$/gm, "  );")
-    // Fix missing semicolons in function declarations
-    content = content.replace(/^\s*}\s*$/gm, "}")
-    // Remove any remaining merge conflict markers
-    // Additional cleanup
-    content = content.replace(/;+$/gm, "")
-    content = content.replace(/^;+/gm, "")
-    content = content.replace(/\s+;+\s+/g, " ")
-    content = content.replace(/['"]+$/gm, "")
-    content = content.replace(/^['"]+/gm, "")
-    // Fix malformed function declarations
-    content = content.replace(
-      /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s+null;\s*}/g,
-      (match, funcName) => {
-        modified = true
-        return `export default function ${funcName}() {
-  return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">${funcName}</h1>
-        <p className="text-xl text-gray-600">Coming soon...</p>
-  )
-}`
-      },
-    )
-    if (modified) {
-      fs.writeFileSync(filePath, content)
-      console.log(`✅ Fixed syntax errors in: ${filePath}`)
-      return true
-}
-    return false
+    content = content.replace(/import\s+([^;]+);\s*$/gm, 'import $1;');
+    
+    // Fix export statements
+    content = content.replace(/export\s+([^;]+);\s*$/gm, 'export $1;');
+    
+    // Fix React component patterns
+    if (content.includes('React.FC') || content.includes('function') || content.includes('const') && content.includes('=')) {
+      // Ensure proper JSX return structure
+      if (content.includes('return') && !content.includes('return (')) {
+        content = content.replace(/return\s+([^;]+);/g, 'return ($1);');
+      }
+    }
+    
+    // Clean up multiple empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    // Ensure file ends with newline
+    if (!content.endsWith('\n')) {
+      content += '\n';
+    }
+    
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed: ${filePath}`);
+    
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message)
-    return false
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
 }
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = [".tsx", ".ts", ".jsx", ".js"]) {
-  let files = []
-  try {
-    const items = fs.readdirSync(dir)
-    for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
-      if (
-        stat.isDirectory() &&
-        !item.startsWith(".") &&
-        item !== "node_modules"
-      ) {
-        files = files.concat(findFiles(fullPath, extensions))
-      } else if (
-        stat.isFile() &&
-        extensions.some((ext) => item.endsWith(ext))
-      ) {
-        files.push(fullPath)
-}
-  } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message)
-}
-  return files
-}
-// Main execution
-try {
-  console.log("📁 Scanning for files with syntax errors...")
-  const files = findFiles(".")
-  let fixedCount = 0
-  let totalFiles = 0
-  for (const file of files) {
-    totalFiles++
-    if (fixAllSyntaxErrors(file)) {
-      fixedCount++
-}
-  console.log(`\n📊 Summary:`)
-  console.log(`   Total files processed: ${totalFiles}`)
-  console.log(`   Files with syntax errors fixed: ${fixedCount}`)
-  if (fixedCount > 0) {
-    console.log("\n🔍 Running type check to verify fixes...")
-    try {
-      execSync("npm run type-check", { stdio: "inherit" })
-      console.log("✅ Type check passed!")
-    } catch (error) {
-      console.log("⚠️  Type check still has issues, continuing with build...")
-}
-  console.log("\n🎉 Syntax error fixes completed!")
-} catch (error) {
-  console.error("❌ Error during syntax error fixes:", error.message)
-  process.exit(1)
-}
+
+// Fix all corrupted files
+console.log('Starting to fix corrupted files...');
+corruptedFiles.forEach(fixFile);
+console.log('Finished fixing corrupted files.');
