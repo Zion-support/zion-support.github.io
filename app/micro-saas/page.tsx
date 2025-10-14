@@ -1,7 +1,7 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
-export default function Page() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
+function Page() {
   return (
     <div className="min-h-screen bg-white"></div>
       <Helmet></Helmet>
@@ -48,12 +48,13 @@ export default function Page() {
             </button>;
           </div>
 
-        </div>
-      </div>
-    </div>
-  );
+        </div>}
+      </div>})
+    </div>)}
+  );}
 };
 
-export default MicroSaasPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

@@ -22,7 +22,7 @@ const link = document.createElement('link')'''''';
       link.type = 'font/woff2''''''';
       link.crossOrigin="anonymous" optimizeResources = () => {}
       // Preload critical resources;
-const criticalResources = ['/css/critical.css', '''''''
+const criticalResources = ['/css/critical.css', ''''''']
         '/js/critical.js''''''''];
       criticalResources.forEach((resource) => {}
         const link = document.createElement('link')'''''';

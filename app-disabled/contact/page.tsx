@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client
@@ -12,33 +13,73 @@ const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(i
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
     setFormData(prev => ({
     message: '';)
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
+const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
+    name: '',    email: ',
+    company: ',}
+    phone: ',})
+    service: ',)}
+    message: ';)}
+})const [isSubmitting, setIsSubmitting] = useState(false);
+
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
+
+const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;}
+}
+    setFormData(prev => ({)}
+    message: '';)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 })
 const [isSubmitting, setIsSubmitting] = useState(false)
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
-    setFormData(prev => ({}
-      ...prev,
+    setFormData(prev => ({})
+      ...prev,)
       [e.target.name]: e.target.value;)
 })))
+<<<<<<< HEAD
 }, [])
 const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({
   const handleSubmit = useCallback(async (e: .FormEvent) => {
   const handleSubmit = useCallback (async (e: .FormEvent) => {
     e.preventDefault();    setIsSubmitting(true)
+=======
+}, []);
+
+const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({;)
+  const handleSubmit = useCallback(async (e: .FormEvent) => {;
+  const handleSubmit = useCallback (async (e: .FormEvent) => {;
+    e.preventDefault();    setIsSubmitting(true);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
       setFormData({
         name: ',
         email: ',
-        company: ',
-        phone: ',
-        service: ',
-message: ']
+        company: ',}
+        phone: ',}
+        service: ',})
+message: ']})
     });]
+<<<<<<< HEAD
     } catch (error) {
       setSubmitStatus('error)]
       setSubmitStatus('error)
     } finally {
       setIsSubmitting(false)
   }, [])
+=======
+    } catch (error) {}
+      setSubmitStatus('error)]}
+      setSubmitStatus('error);}
+}
+    } finally {}
+      setIsSubmitting(false);}
+}
+  }, []);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
 
         <title>Contact Us - Zion Tech Group | Get in Touch<
@@ -46,6 +87,7 @@ message: ']
         <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support 
       <
 
+<<<<<<< HEAD
       <{/* Hero Section *
       <section className="relative py-20 px-4 overflow-hidden>)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
@@ -68,11 +110,14 @@ message: ']
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Helmet>
 
+=======
+      <{/* */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
       {/* Hero Section */}
-
-      <section className="relative py-20 px-4 overflow-hidden></section>
+)
+      <section className="relative py-20 px-4 overflow-hidden></section>)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{" animationDelay: '1s }} />
         <div className="relative max-w-7xl mx-auto text-center></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight></h1>
             Get in
@@ -99,8 +144,8 @@ message: ']
                         <input
                           type="email"
                           name="email"
-                          value={formData.email}
-                          onChange={handleChange}
+                          value="{formData.email}"
+                          onChange="{handleChange}"
                           required
                           className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="your@email.com"
@@ -113,8 +158,8 @@ message: ']
                         <input
                           type="tel"
                           name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
+                          value="{formData.phone}"
+                          onChange="{handleChange}"
                           className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="+1 (555) 123-4567"
                         />
@@ -141,19 +186,20 @@ message: ']
                       <option value="consulting">Consulting</option>
                       <option value="other">Other</option>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      rows={5}
+                      rows="{5}"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                       placeholder="Tell us about your project and how we can help..."
-                    disabled={isLoading}
+                    disabled="{isLoading}"
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
                   >
                     {isLoading ? (
                       <>
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        <span>Sending...</span>
-                      </>
+                        <span>Sending...</span>)
+                      </>)
                     ) : (
                       <>
+<<<<<<< HEAD
                         <Send className="w-5 h-5 mr-2" />
                         Send Message
         </div>
@@ -267,3 +313,12 @@ message: ']
 }
 
 export default ContactPage;}
+=======
+                        <Send className="w-5 h-5 mr-2" /></Send>
+                        Send Message}
+        </div>})
+      </div>)}
+  );}
+}
+      {/* */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1

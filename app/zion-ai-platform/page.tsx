@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const ZionAIPlatform = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Zion AI Platform - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Zion AI Platform - Zion Tech Group</title>';
         <meta name="description" content="Comprehensive AI platform powered by Zion technology." /></meta>
       </Helmet>
 
@@ -25,10 +25,10 @@ const ZionAIPlatform = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
 export default ZionAIPlatform'

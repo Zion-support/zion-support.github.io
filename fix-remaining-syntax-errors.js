@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Remove any remaining merge conflict markers;
-    if (content.includes('<<<<<<<') || content.includes('
+    let modified = false;}
+}
+    // Remove any remaining merge conflict markers;}
+    if (content.includes('<<<<<<<') || content.includes('})

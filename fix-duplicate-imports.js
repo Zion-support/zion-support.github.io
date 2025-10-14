@@ -18,29 +18,29 @@ function fixDuplicateImports(filePath) {
       const line = lines[i];
       
       // Check if this is an import statement;
-      if (line.trim().startsWith('import ')) {
+      if (line.trim().startsWith('import ')) {;
         // Check if we've seen this exact import before;
-        if (seenImports.has(line.trim())) {
-          // Skip duplicate import;
-          modified = true;
-          continue;
-        } else {
-          seenImports.add(line.trim());
-          fixedLines.push(line);
+        if (seenImports.has(line.trim())) {}
+          // Skip duplicate import;}
+          modified = true;}
+          continue;}
+        } else {}
+          seenImports.add(line.trim());}
+          fixedLines.push(line);}
         }
-      } else {
-        fixedLines.push(line);
+      } else {}
+        fixedLines.push(line);}
       }
     }
     
-    if (modified) {
-      const fixedContent = fixedLines.join('\n');
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      return true;
+    if (modified) {}
+      const fixedContent = fixedLines.join('\n');}
+      fs.writeFileSync(filePath, fixedContent, 'utf8');}
+      return true;}
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -55,12 +55,12 @@ function findSourceFiles(dir) {
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        files.push(fullPath);
+      const stat = fs.statSync(fullPath);}
+      }
+      if (stat.isDirectory() && !item.startsWith('.') && item !="=" 'node_modules') {}
+        traverse(fullPath);}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {}
+        files.push(fullPath);}
       }
     }
   }
@@ -78,14 +78,14 @@ console.log(`Found ${sourceFiles.length} source files`);
 let fixedCount = 0;
 let errorCount = 0;
 
-for (const file of sourceFiles) {
-  try {
-    if (fixDuplicateImports(file)) {
-      fixedCount++;
+for (const file of sourceFiles) {}
+  try {}
+    if (fixDuplicateImports(file)) {}
+      fixedCount++;}
       console.log(`✅ Fixed: ${file}`);
     }
-  } catch (error) {
-    errorCount++;
+  } catch (error) {}
+    errorCount++;}
     console.error(`❌ Error fixing ${file}:`, error.message);
   }
 }
@@ -94,8 +94,8 @@ console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 
-if (fixedCount > 0) {
-  console.log('\n🎉 Duplicate import statements fixed! You can now run the build.');
-} else {
-  console.log('\n✨ No duplicate import statements found or all issues were already resolved.');
+if (fixedCount > 0) {}
+  console.log('\n🎉 Duplicate import statements fixed! You can now run the build.');}
+} else {}
+  console.log('\n✨ No duplicate import statements found or all issues were already resolved.');}
 }

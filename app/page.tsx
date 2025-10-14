@@ -1,19 +1,19 @@
-import React from 'react''
-import { Link } from 'react-router-dom''
-import { Helmet } from 'react-helmet-async''
+import React from 'react'
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { ArrowRightIcon, 
-  ShieldCheckIcon, 
-  CloudIcon,
-  ArrowRightIcon,
-  GlobeAltIcon,
-  SignalIcon,
-  BriefcaseIcon'
-} from '@heroicons/react/24/outline''
-import FuturisticBackground from './components/FuturisticBackground;
-
-const HomePage: React.FC = () => {
-  const structuredData = {
+  ShieldCheckIcon, ;
+  CloudIcon,';
+  ArrowRightIcon,;';}
+  GlobeAltIcon,';}
+  SignalIcon,';}
+  BriefcaseIcon'}
+} from '@heroicons/react/24/outline'
+import FuturisticBackground from './components/FuturisticBackground;';
+';
+const HomePage: React.FC = () => {';
+  const structuredData = {';
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -22,87 +22,87 @@ const HomePage: React.FC = () => {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+      "addressLocality": "Middletown",}
+      "addressRegion": "DE",}
+      "postalCode": "19709",}
+      "addressCountry": "US"}
     },
     "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "@type": "ContactPoint",}
+      "telephone": "+1-302-464-0950",}
+      "contactType": "customer service",}
+      "email": "kleber@ziontechgroup.com"}
     },
     "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup",]
+      "https://twitter.com/ziontechgroup"]
     ]
   };
 
   const features = [
     {
-      icon: CpuChipIcon,
-      title: "AI Solutions",
-      description: "Cutting-edge artificial intelligence solutions for your business needs",
-      color: "from-purple-500 to-pink-500"
+      icon: CpuChipIcon,}
+      title: "AI Solutions",}
+      description: "Cutting-edge artificial intelligence solutions for your business needs",}
+      color: "from-purple-500 to-pink-500"}
     },
     {
-      icon: CloudIcon,
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions for modern businesses",
-      color: "from-blue-500 to-cyan-500"
+      icon: CloudIcon,}
+      title: "Cloud Infrastructure",}
+      description: "Scalable and secure cloud solutions for modern businesses",}
+      color: "from-blue-500 to-cyan-500"}
     },
     {
-      icon: ShieldCheckIcon,
-      title: "Cybersecurity",
-      description: "Advanced security solutions to protect your digital assets",
-      color: "from-green-500 to-emerald-500"
+      icon: ShieldCheckIcon,}
+      title: "Cybersecurity",}
+      description: "Advanced security solutions to protect your digital assets",}
+      color: "from-green-500 to-emerald-500"}
     },
     {
-      icon: ChartBarIcon,
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights",
-      color: "from-orange-500 to-red-500"
-    }
+      icon: ChartBarIcon,}
+      title: "Data Analytics",}
+      description: "Transform your data into actionable insights",}
+      color: "from-orange-500 to-red-500"}]
+    }]
   ];
 
   const services = [
     {'
-      title: 'AI Solutions','
-      description: 'Advanced artificial intelligence services including machine learning, natural language processing, and predictive analytics.',
-      icon: CpuChipIcon,'
-      href: '/ai-solutions'
+      title: 'AI Solutions','}
+      description: 'Advanced artificial intelligence services including machine learning, natural language processing, and predictive analytics.',}
+      icon: CpuChipIcon,'}
+      href: '/ai-solutions'}
     },
     {'
-      title: 'Cybersecurity','
-      description: 'Comprehensive security solutions to protect your business from threats and vulnerabilities.',
-      icon: ShieldCheckIcon,'
-      href: '/cybersecurity'
+      title: 'Cybersecurity','}
+      description: 'Comprehensive security solutions to protect your business from threats and vulnerabilities.',}
+      icon: ShieldCheckIcon,'}
+      href: '/cybersecurity'}
     },
     {'
-      title: 'Cloud Infrastructure','
-      description: 'Scalable cloud solutions for modern businesses with high availability and performance.',
-      icon: CloudIcon,'
-      href: '/cloud-infrastructure'
+      title: 'Cloud Infrastructure','}
+      description: 'Scalable cloud solutions for modern businesses with high availability and performance.',}
+      icon: CloudIcon,'}
+      href: '/cloud-infrastructure'}
     },
     {'
-      title: 'Micro SaaS Solutions','
-      description: 'Custom micro SaaS applications tailored to your specific business needs.',
-      icon: GlobeAltIcon,'
-      href: '/micro-saas-solutions'
+      title: 'Micro SaaS Solutions','}
+      description: 'Custom micro SaaS applications tailored to your specific business needs.',}
+      icon: GlobeAltIcon,'}
+      href: '/micro-saas-solutions'}
     },
     {'
-      title: '5G Solutions','
-      description: 'Next-generation 5G technology implementation for ultra-fast connectivity.',
-      icon: SignalIcon,'
-      href: '/5g-solutions'
+      title: '5G Solutions','}
+      description: 'Next-generation 5G technology implementation for ultra-fast connectivity.',}
+      icon: SignalIcon,'}
+      href: '/5g-solutions'}
     },
     {'
-      title: 'IT Services','
-      description: 'Complete IT infrastructure management and support services.',
-      icon: BriefcaseIcon,'
-      href: '/it-solutions'
-    }
+      title: 'IT Services','}
+      description: 'Complete IT infrastructure management and support services.',}
+      icon: BriefcaseIcon,'}
+      href: '/it-solutions'}]
+    }]
   ];
 
   return (
@@ -114,16 +114,16 @@ const HomePage: React.FC = () => {
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
             keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
             canonical="https://ziontechgroup.com"
-            structuredData={structuredData}
+            structuredData="{structuredData}"
           /></EnhancedSEO>
-          <StructuredData type="Organization" data={structuredData} /></StructuredData>
+          <StructuredData type="Organization" data="{structuredData}" /></StructuredData>
           <StructuredData 
             type="WebSite" 
-            data={{
-              name: "Zion Tech Group",
-              url: "https://ziontechgroup.com",
-              potentialAction: {
-                "@type": "SearchAction",
+            data="{{"
+              name: "Zion Tech Group",}
+              url: "https://ziontechgroup.com",}
+              potentialAction: {}
+                "@type": "SearchAction",}
                 "target": "https://ziontechgroup.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
@@ -141,9 +141,9 @@ const HomePage: React.FC = () => {
         
         {/* Floating Elements with Neon Effects */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>'
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>'
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>'
-        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: '3s'}}></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style="{{animationDelay:" '1s'}}></div>'
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style="{{animationDelay:" '2s'}}></div>'
+        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style="{{animationDelay:" '3s'}}></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center"></div>
           <div className="max-w-4xl mx-auto"></div>
@@ -189,10 +189,10 @@ const HomePage: React.FC = () => {
               Comprehensive technology solutions designed to accelerate your business growth
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {services.map((service, index) => (
-              <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark"></div>
+          )
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
+            {services.map((service, index) => (}
+              <div key="{index}" className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating"></div>
                   <service.icon className="w-8 h-8 text-white" /></service>
                 </div>
@@ -200,10 +200,10 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-6"></p>
                   {service.description}
                 </p>
-                <Link to={service.href} className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect"></Link>
+                <Link to="{service.href}" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect"></Link>
                   Learn More <ArrowRightIcon className="w-4 h-4" /></ArrowRightIcon>
-                </Link>
-              </div>
+                </Link>)
+              </div>)
             ))}
           </div>
         </div>
@@ -222,15 +222,15 @@ const HomePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center"></div>
+            {stats.map((stat, index) => (}
+              <div key="{index}" className="text-center"></div>
                 <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2"></div>
                   {stat.number}
                 </div>
                 <div className="text-gray-300 text-lg"></div>
                   {stat.label}
-                </div>
-              </div>
+                </div>)
+              </div>)
             ))}
           </div>
         </div>
@@ -265,6 +265,7 @@ const HomePage: React.FC = () => {
   )};
 };
 
-export default HomePage;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

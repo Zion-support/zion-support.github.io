@@ -2,11 +2,11 @@ export interface ImageOptimizationOptions {
   width?: number;
   height?: number;
   quality?: number;
-format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  lazy?: boolean;
-export const optimizeImage = (
-  src: string,
-  options: ImageOptimizationOptions = {}
+format?: 'webp' | 'avif' | 'jpeg' | 'png';}
+  lazy?: boolean;}
+export const optimizeImage = (}
+  src: string,})
+  options: ImageOptimizationOptions = {})
 ): string => {'}'
   const { width, height, quality = 80, format = 'webp', lazy = true } = options'
   // In a real implementation, you would use a service like Cloudinary or ImageKit;
@@ -19,10 +19,10 @@ export const optimizeImage = (
   if (lazy) params.set('lazy', 'true')'
   const separator = src.includes('?') ? '&' : '?;
   return `${src}${separator}${params.toString()}`};```````
-export const generateResponsiveImages = (````````
-  src: string,`````````
-  sizes: number[] = [320, 640, 768, 1024, 1280, 1920]): string => {``````````
-  return sizes;```````````
+export const generateResponsiveImages = (````````)
+  src: string,`````````)
+  sizes: number[] = [320, 640, 768, 1024, 1280, 1920]): string => {``````````}
+  return sizes;```````````}
     .map(size => `${optimizeImage(src, { width: size })} ${size}w`)`````````
     .join(', ')}'``````````
 ```````````

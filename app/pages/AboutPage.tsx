@@ -1,5 +1,5 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 
 import { 
@@ -7,58 +7,58 @@ import {
   CpuChipIcon,
   ShieldCheckIcon,
   RocketLaunchIcon,
-  HeartIcon,
-  ArrowRightIcon,
-  StarIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon'
+  HeartIcon,;
+  ArrowRightIcon,';
+  StarIcon,;';}
+  PhoneIcon,';}
+  EnvelopeIcon,';}
+  MapPinIcon'}
 } from '@heroicons/react/24/outline;
 
-const AboutPage: React.FC = () => {
-  const values = [
-    {'
-      title: 'Innovation','
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.',
-      icon: CpuChipIcon
+const AboutPage: React.FC = () => {';
+  const values = [';
+    {'}
+      title: 'Innovation','}
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.',}
+      icon: CpuChipIcon}
     },
-    {'
-      title: 'Security','
-      description: 'Your data and systems are protected with enterprise-grade security measures.',
-      icon: ShieldCheckIcon
+    {'}
+      title: 'Security','}
+      description: 'Your data and systems are protected with enterprise-grade security measures.',}
+      icon: ShieldCheckIcon}
     },
     {'
       title: 'Reliability','
-      description: 'We deliver consistent, high-quality solutions that you can depend on.',
-      icon: CloudIcon;
-  ];
-
-  const stats = ['
+      description: 'We deliver consistent, high-quality solutions that you can depend on.',]
+      icon: CloudIcon;]}
+  ];}
+}
+  const stats = ['}
     { number: '50+', label: 'Projects Completed' },'
     { number: '25+', label: 'Happy Clients' },'
-    { number: '99%', label: 'Success Rate' },'
-    { number: '4+', label: 'Years Experience' }
+    { number: '99%', label: 'Success Rate' },']
+    { number: '4+', label: 'Years Experience' }]
   ];
 
   const team = [
     {'
-      name: 'Kleber Santos','
-      role: 'Founder & CEO','
-      description: 'Technology visionary with 10+ years in AI and IT solutions.','
-      image: '/team/kleber.jpg'
+      name: 'Kleber Santos','}
+      role: 'Founder & CEO','}
+      description: 'Technology visionary with 10+ years in AI and IT solutions.','}
+      image: '/team/kleber.jpg'}
     },
     {'
-      name: 'Sarah Johnson','
-      role: 'CTO','
-      description: 'Expert in cloud architecture and cybersecurity solutions.','
-      image: '/team/sarah.jpg'
+      name: 'Sarah Johnson','}
+      role: 'CTO','}
+      description: 'Expert in cloud architecture and cybersecurity solutions.','}
+      image: '/team/sarah.jpg'}
     },
     {'
-      name: 'Michael Chen','
-      role: 'Lead AI Engineer','
-      description: 'Specialist in machine learning and artificial intelligence.','
-      image: '/team/michael.jpg'
-    }
+      name: 'Michael Chen','}
+      role: 'Lead AI Engineer','}
+      description: 'Specialist in machine learning and artificial intelligence.','}
+      image: '/team/michael.jpg'}]
+    }]
   ];
   return (
     <></>
@@ -117,16 +117,16 @@ const AboutPage: React.FC = () => {
               The principles that guide everything we do
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8"></div>
-            {values.map((value, index) => (
-              <div key={index} className="text-center"></div>
+          )
+          <div className="grid md:grid-cols-3 gap-8"></div>)
+            {values.map((value, index) => (}
+              <div key="{index}" className="text-center"></div>
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <value.icon className="w-10 h-10 text-white" /></value>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{value.description}</p>
-              </div>
+                <p className="text-gray-300 leading-relaxed">{value.description}</p>)
+              </div>)
             ))}
           </div>
         </div>
@@ -145,15 +145,15 @@ const AboutPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center"></div>
+            {stats.map((stat, index) => (}
+              <div key="{index}" className="text-center"></div>
                 <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2"></div>
                   {stat.number}
                 </div>
                 <div className="text-gray-300 text-lg"></div>
                   {stat.label}
-                </div>
-              </div>
+                </div>)
+              </div>)
             ))}
           </div>
         </div>
@@ -172,8 +172,8 @@ const AboutPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8"></div>
-            {team.map((member, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 text-center hover:bg-slate-700 transition-all duration-300"></div>
+            {team.map((member, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-8 text-center hover:bg-slate-700 transition-all duration-300"></div>
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <UserGroupIcon className="w-12 h-12 text-white" /></UserGroupIcon>
                 </div>
@@ -206,8 +206,8 @@ const AboutPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </section>)
+    </>)
   );
 };
 

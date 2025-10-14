@@ -1,54 +1,54 @@
-import React from 'react''
-import { ArrowRight } from 'lucide-react''
-import { CheckCircle } from 'lucide-react''
-import { Star } from 'lucide-react''
-import { Users } from 'lucide-react''
-import { Clock } from 'lucide-react''
-import { DollarSign } from 'lucide-react''
-import { Shield } from 'lucide-react''
-import { Code } from 'lucide-react''
-import { Database } from 'lucide-react''
-import { Mail } from 'lucide-react''
-import { Settings } from 'lucide-react''
-import { Target } from 'lucide-react''
-import { TrendingUp } from 'lucide-react''
-import { PieChart } from 'lucide-react''
-import { MessageSquare } from 'lucide-react''
-import { Heart } from 'lucide-react''
-import { Globe } from 'lucide-react''
-import { Smartphone } from 'lucide-react''
-import { Network } from 'lucide-react''
-import { Lock } from 'lucide-react''
-import { Cpu } from 'lucide-react''
-import { Wifi } from 'lucide-react''
-import { Building2 } from 'lucide-react''
-import { Briefcase } from 'lucide-react''
-import { Lightbulb } from 'lucide-react''
-import { Link } from 'react-router-dom''
-import EnhancedSEO from '../components/EnhancedSEO;
-const Page = () => {
-  const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,'
-      title: 'Advanced Features','
-      description: 'Cutting-edge technology for maximum efficiency'
+import React from 'react'
+import { ArrowRight } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { Star } from 'lucide-react'
+import { Users } from 'lucide-react'
+import { Clock } from 'lucide-react'
+import { DollarSign } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Code } from 'lucide-react'
+import { Database } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Settings } from 'lucide-react'
+import { Target } from 'lucide-react'
+import { TrendingUp } from 'lucide-react'
+import { PieChart } from 'lucide-react'
+import { MessageSquare } from 'lucide-react'
+import { Heart } from 'lucide-react'
+import { Globe } from 'lucide-react'
+import { Smartphone } from 'lucide-react'
+import { Network } from 'lucide-react'
+import { Lock } from 'lucide-react'
+import { Cpu } from 'lucide-react'
+import { Wifi } from 'lucide-react'
+import { Building2 } from 'lucide-react'
+import { Briefcase } from 'lucide-react'
+import { Lightbulb } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO;';
+const Page = () => {';
+  const features = [';
+    {';}
+      icon: <CheckCircle className="w-8 h-8" />,'}
+      title: 'Advanced Features','}
+      description: 'Cutting-edge technology for maximum efficiency'}
     },
-    {
-      icon: <Shield className="w-8 h-8" />,'
-      title: 'Secure & Reliable','
-      description: 'Enterprise-grade security and 99.9% uptime'
+    {}
+      icon: <Shield className="w-8 h-8" />,'}
+      title: 'Secure & Reliable','}
+      description: 'Enterprise-grade security and 99.9% uptime'}
     },
-    {
-      icon: <Users className="w-8 h-8" />,'
-      title: 'Expert Support','
-      description: '24/7 support from our team of specialists'
-    }
+    {}
+      icon: <Users className="w-8 h-8" />,'}
+      title: 'Expert Support','}
+      description: '24/7 support from our team of specialists'}]
+    }]
   ];
   const stats = [
     { number: "10,000+", label: "Videos Generated", icon: <Video className="w-6 h-6" /> },"
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },"
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },"
-    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }"
+    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },"]
+    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }"]
   ];
   return (
     <></>
@@ -101,7 +101,7 @@ const Page = () => {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Play className="w-5 h-5" />}"
+                icon="{<Play" className="w-5 h-5" />}"
               >
                 Start Free Trial;
               </FuturisticButton>
@@ -109,21 +109,21 @@ const Page = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}"
+                icon="{<Video" className="w-5 h-5" />}"
               >
                 Watch Demo;
               </FuturisticButton>
             </div>
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"></div>
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center group"></div>
+            {/* Stats */})
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"></div>)
+              {stats.map((stat, index) => (}
+                <div key="{index}" className="text-center group"></div>
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                     {stat.icon}
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>"
-                  <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>"
-                </div>
+                  <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>")
+                </div>)
               ))}      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
@@ -139,10 +139,10 @@ const Page = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
 <FuturisticCard
-                key={index;
-                className="group hover:scale-105 transition-all duration-300"
-              ></FuturisticCard>
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"></div>
+                key="{index;"}
+                className="group hover:scale-105 transition-all duration-300"}
+              ></FuturisticCard>}
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"></div>}
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-purple-400 transition-colors"></h3>
@@ -155,8 +155,8 @@ const Page = () => {
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400"></span>
                     {feature.stats}
                   </span>
-                </div>
-              </FuturisticCard>
+                </div>)
+              </FuturisticCard>)
             ))}
           </div>
         </ResponsiveContainer>
@@ -174,14 +174,14 @@ const Page = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
+              {features.map((feature, index) => (}
+                <div key="{index}" className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-                  <p>{feature.description}</p>"
-                </div>
+                  <p>{feature.description}</p>")
+                </div>)
               ))}
             </div>
           </div>

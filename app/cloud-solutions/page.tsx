@@ -17,11 +17,12 @@ const CloudSolutionsPage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>
-    </div>
-  );
-  );
+      </div>)}
+    </div>)}
+  );}
+  );}
 };
-export default CloudSolutionsPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 """
 

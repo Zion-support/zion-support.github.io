@@ -2,78 +2,78 @@
 
 import { CacheManager, CacheStorage    } from "./cacheManager";";
 interface ApiCacheConfig {
-  ttl?: number;
-  maxRetries?: number;
-  retryDelay?: number;
-  deduplicate?: boolean;
+  ttl?: number;}
+  maxRetries?: number;}
+  retryDelay?: number;}
+  deduplicate?: boolean;}
 }
-interface PendingRequest<T> {
-  promise: Promise<T>;
-  timestamp: number;
+interface PendingRequest<T> {}
+  promise: Promise<T>;}
+  timestamp: number;}
 }
 
-export class ApiCache {
-  private cache: CacheManager;
-  private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
-  private config: Required<ApiCacheConfig>;
-  constructor(config: ApiCacheConfig = {}) {
-    this.cache = new CacheManager({
-      defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes;
-      storage: CacheStorage.Memory;
+export class ApiCache {}
+  private cache: CacheManager;}
+  private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();}
+  private config: Required<ApiCacheConfig>;}
+  constructor(config: ApiCacheConfig = {}) {}
+    this.cache = new CacheManager({}
+      defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes;})
+      storage: CacheStorage.Memory;})
     });
     this.config = {
-      ttl: config.ttl || 5 * 60 * 1000,
-      maxRetries: config.maxRetries || 3,
-      retryDelay: config.retryDelay || 1000,
-      deduplicate: config.deduplicate ?? true;
+      ttl: config.ttl || 5 * 60 * 1000,}
+      maxRetries: config.maxRetries || 3,}
+      retryDelay: config.retryDelay || 1000,}
+      deduplicate: config.deduplicate ?? true;}
     };
     // Auto-cleanup every 5 minutes;
-    setInterval(() => {
-      this.cleanupPendingRequests();
+    setInterval(() => {}
+      this.cleanupPendingRequests();}
     }, 5 * 60 * 1000);
   }
   ;
   async fetch<T>(;
     url: string,
-    options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
-  ): Promise<T> {
-    const cacheKey = this.getCacheKey(url, options);
+    options: RequestInit = {},)
+    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>)
+  ): Promise<T> {}
+    const cacheKey = this.getCacheKey(url, options);}
     const mergedConfig = { ...this.config, ...cacheConfig };
     // Check cache first;
-    if (this.cache.has(cacheKey)) {
-      return this.cache.get(cacheKey) as T;
+    if (this.cache.has(cacheKey)) {}
+      return this.cache.get(cacheKey) as T;}
     }
     // Check if there's a pending request'';
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {
-      const pending = this.pendingRequests.get(cacheKey);
-      if (pending && Date.now() - pending.timestamp < 30000) {
-        // Reuse pending request if less than 30 seconds old;
-        return pending.promise as Promise<T>;
+      const pending = this.pendingRequests.get(cacheKey);}
+      if (pending && Date.now() - pending.timestamp < 30000) {}
+        // Reuse pending request if less than 30 seconds old;}
+        return pending.promise as Promise<T>;}
       }
     }
     // Create new request with retry logic;
     const requestPromise = this.fetchWithRetry<T>(;
       url,
       options,
-      mergedConfig.maxRetries,
-      mergedConfig.retryDelay;
+      mergedConfig.maxRetries,)
+      mergedConfig.retryDelay;)
     );
     // Store pending request;
-    if (mergedConfig.deduplicate) {
-      this.pendingRequests.set(cacheKey, {
-        promise: requestPromise,
-timestamp: Date.now(),
+    if (mergedConfig.deduplicate) {}
+      this.pendingRequests.set(cacheKey, {})
+        promise: requestPromise,)}
+timestamp: Date.now(),}
       });
     }
-    try {
-      const data = await requestPromise;
-      // Cache successful response;
+    try {}
+      const data = await requestPromise;}
+      // Cache successful response;}
       this.cache.set(cacheKey, data, { ttl: mergedConfig.ttl });
       return data;
-    } finally {
-      // Clean up pending request;
-      this.pendingRequests.delete(cacheKey);
+    } finally {}
+      // Clean up pending request;}
+      this.pendingRequests.delete(cacheKey);}
     }
   }
   ;
@@ -81,25 +81,25 @@ timestamp: Date.now(),
     url: string,
     options: RequestInit,
     maxRetries: number,
-    retryDelay: number,
-    attempt = 1;
+    retryDelay: number,)
+    attempt = 1;)
   ): Promise<T> {
     try {
       const response = await fetch(url, options);
       if (!response.ok) {
         // Retry on 5xx errors and 429 (rate limit);
-        if (
-          (response.status >= 500 || response.status === 429) &&;
+        if ()
+          (response.status >= 500 || response.status ="==" 429) &&;
           attempt < maxRetries;
         ) {
           await this.delay(retryDelay * attempt); // Exponential backoff;
           return this.fetchWithRetry<T>(;
             url,
             options,
-            maxRetries,
-            retryDelay,
-            attempt + 1;
-          );
+            maxRetries,}
+            retryDelay,})
+            attempt + 1;)}
+          );}
         }
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);```
       }
@@ -112,93 +112,93 @@ timestamp: Date.now(),
         return this.fetchWithRetry<T>(;
           url,
           options,
-          maxRetries,
-          retryDelay,
-          attempt + 1;
-        );
+          maxRetries,}
+          retryDelay,})
+          attempt + 1;)}
+        );}
       }
       throw error;
     }
   }
   ;
-  invalidate(pattern: string | RegExp): number {
-    // Simple implementation - clear all cache;
-    this.cache.clear();
-    return 0;
+  invalidate(pattern: string | RegExp): number {}
+    // Simple implementation - clear all cache;}
+    this.cache.clear();}
+    return 0;}
   }
   ;
-  clear(): void {
-    this.cache.clear();
-    this.pendingRequests.clear();
+  clear(): void {}
+    this.cache.clear();}
+    this.pendingRequests.clear();}
   }
   ;
-  getStats() {
-    return {
-      ...this.cache.getStats(),
-      pendingRequests: this.pendingRequests.size;
+  getStats() {}
+    return {}
+      ...this.cache.getStats(),}
+      pendingRequests: this.pendingRequests.size;}
     };
   }
   ;
   async prefetch<T>(;
     url: string,
-    options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
-  ): Promise<void> {
-    try {
-      await this.fetch<T>(url, options, cacheConfig);
-    } catch (error) {
-      // Silent fail for prefetch;
+    options: RequestInit = {},)
+    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>)
+  ): Promise<void> {}
+    try {}
+      await this.fetch<T>(url, options, cacheConfig);}
+    } catch (error) {}
+      // Silent fail for prefetch;}
       }
   }
   ;
-  private getCacheKey(url: string, options: RequestInit): string {
-    const method = options.method || 'GET';';
-    const body = options.body ? JSON.stringify(options.body) : '';';
+  private getCacheKey(url: string, options: RequestInit): string {}
+    const method = options.method || 'GET';';}
+    const body = options.body ? JSON.stringify(options.body) : '';';}
     return `${method}:${url}:${body}`;```
   }
   ;
-  private delay(ms: number): Promise<void> {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+  private delay(ms: number): Promise<void> {}
+    return new Promise((resolve) => setTimeout(resolve, ms));}
   }
   ;
   private cleanupPendingRequests(): void {
     const now = Date.now();
-    const timeout = 60000; // 1 minute;
-    for (const [key, pending] of this.pendingRequests.entries()) {
-      if (now - pending.timestamp > timeout) {
-        this.pendingRequests.delete(key);
+    const timeout = 60000; // 1 minute;}
+    for (const [key, pending] of this.pendingRequests.entries()) {}
+      if (now - pending.timestamp > timeout) {}
+        this.pendingRequests.delete(key);}
       }
     }
   }
 }
 
 export const defaultApiCache = new ApiCache({
-  ttl: 5 * 60 * 1000, // 5 minutes;
-  maxRetries: 3,
-  retryDelay: 1000,
-  deduplicate: true;
+  ttl: 5 * 60 * 1000, // 5 minutes;}
+  maxRetries: 3,}
+  retryDelay: 1000,})
+  deduplicate: true;})
 });
 
 export async function cachedFetch<T>(;
   url: string,
-  options?: RequestInit,
-  cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
-): Promise<T> {
-  return defaultApiCache.fetch<T>(url, options, cacheConfig);
+  options?: RequestInit,)
+  cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>)
+): Promise<T> {}
+  return defaultApiCache.fetch<T>(url, options, cacheConfig);}
 }
 
-export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {
-  const cache = new ApiCache();
-  return {
-    get: <T>(path: string, options?: RequestInit) =>;
+export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {}
+  const cache = new ApiCache();}
+  return {}
+    get: <T>(path: string, options?: RequestInit) =>;}
       cache.fetch<T>(`${baseUrl}${path}`, {...defaultOptions, ...options, method: 'GET',}),'``'`;
     post: <T>(path: string, body: unknown, options?: RequestInit) =>;
       cache.fetch<T>(`${baseUrl}${path}`, {```
         ...defaultOptions,
-        ...options,
-        method: 'POST','';
-        headers: {
-          'Content-Type': 'application/json',''
+        ...options,}
+        method: 'POST','';}
+        headers: {})
+          'Content-Type': 'application/json',''})
           ...(defaultOptions.headers || {}),
           ...(options?.headers || {})
         },
@@ -207,10 +207,10 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
     put: <T>(path: string, body: unknown, options?: RequestInit) =>;
       cache.fetch<T>(`${baseUrl}${path}`, {```
         ...defaultOptions,
-        ...options,
-        method: 'PUT','';
-        headers: {
-          'Content-Type': 'application/json',''
+        ...options,}
+        method: 'PUT','';}
+        headers: {})
+          'Content-Type': 'application/json',''})
           ...(defaultOptions.headers || {}),
           ...(options?.headers || {})
         },

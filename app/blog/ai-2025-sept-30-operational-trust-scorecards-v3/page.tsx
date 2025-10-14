@@ -1,7 +1,7 @@
-import React from 'react;
-const OperationalTrustScorecardsPage: React.FC = () => {
-  return (
-    <></>
+import React from 'react;';
+const OperationalTrustScorecardsPage: React.FC = () => {';
+  return (';
+    <></>';
       <main className="min-h-screen bg-slate-950 text-white"></main>
       <section className="py-16 border-b border-white/10"></section>
         <div className="max-w-3 xl mx-auto px-4"></div>
@@ -28,10 +28,10 @@ const OperationalTrustScorecardsPage: React.FC = () => {
       <section className="py-12"></section>
         <div className="max-w-3 xl mx-auto px-4 space-y-10"></div>
           <div></div>
-            <h2 className="text-2xl font-bold mb-3">Why Operational Trust</h2>
-            <p>Enterprise AI fails without measurable trust. Scorecards unify
+            <h2 className="text-2xl font-bold mb-3">Why Operational Trust</h2>)
+            <p>Enterprise AI fails without measurable trust. Scorecards unify)
               KPIs across reliability (accuracy, grounding, latency), safety
-              (policy adherence), cost (per task, per user), and value (business
+              (policy adherence), cost (per task, per user), and value (business)
               outcomes) so leaders can make tradeoffs responsibly.
             </p>
           </div>
@@ -67,12 +67,13 @@ const OperationalTrustScorecardsPage: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
-    </main>
-    </>
-  );
+      </section>}
+    </main>}
+    </>}
+  );}
 };
 
-export default OperationalTrustScorecardsPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

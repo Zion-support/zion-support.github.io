@@ -1,6 +1,6 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 export default function Page() {
   return (
     <div className="min-h-screen bg-white"></div>
@@ -37,10 +37,10 @@ export default function Page() {
                 24/7 Support;
               </h3>;
               <p className="text-purple-700">;
-                Round-the-clock support for all your contentstatistics needs.;
-              </p>;
-            </div>
-          </div>
+                Round-the-clock support for all your contentstatistics needs.;}
+              </p>;}
+            </div>})
+          </div>})
         ))}
       </div>
     </div>

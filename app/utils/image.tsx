@@ -1,12 +1,12 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 const Image: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
-        <title>Image - Zion Tech Group</title>
-        <meta name="description" content="Professional image services by Zion Tech Group." /></meta>
+    <div className="min-h-screen bg-white"></div>}
+      <Helmet></Helmet>}
+        <title>Image - Zion Tech Group</title>}
+        <meta name="description" content="Professional image services by Zion Tech Group." /></meta>}
       </Helmet> }
       { /* Hero Section */ }"
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
@@ -77,8 +77,8 @@ const Image: React.FC = () => {
           >;
             Get Started Today;
           </a>
-        </div>
-      </section>
+        </div>)
+      </section>)
     </div>)
   );
 export default Image;

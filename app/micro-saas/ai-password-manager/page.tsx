@@ -1,83 +1,110 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-import { Link } from 'react-router-dom''
-import { ArrowRight, Lock, Brain, Shield, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Zap, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle, FileText, Mail, MessageSquare, Calendar, DollarSign } from 'lucide-react'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Eye } from 'lucide-react';
+import { EyeOff } from 'lucide-react';
+import { Key } from 'lucide-react';
+import { Fingerprint } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Laptop } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
 
 const AIPasswordManagerPage: React.FC = () => {
   const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,'
-      title: 'AI Password Generation','
-      description: 'Generate ultra-secure passwords using AI algorithms that adapt to each site\'s requirements and your preferences.'
+    {}
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,'}
+      title: 'AI Password Generation','}
+      description: 'Generate ultra-secure passwords using AI algorithms that adapt to each site\'s requirements and your preferences.'}
     },
-    {
-      icon: <Shield className="w-6 h-6 text-emerald-400" />,'
-      title: 'Advanced Security','
-      description: 'Military-grade encryption with zero-knowledge architecture ensures your passwords are never accessible to anyone but you.'
+    {}
+      icon: <Shield className="w-6 h-6 text-emerald-400" />,'}
+      title: 'Advanced Security','}
+      description: 'Military-grade encryption with zero-knowledge architecture ensures your passwords are never accessible to anyone but you.'}
     },
-    {
-      icon: <Eye className="w-6 h-6 text-purple-400" />,'
-      title: 'Breach Monitoring','
-      description: 'AI-powered monitoring scans the dark web and alerts you immediately if any of your accounts are compromised.'
+    {}
+      icon: <Eye className="w-6 h-6 text-purple-400" />,'}
+      title: 'Breach Monitoring','}
+      description: 'AI-powered monitoring scans the dark web and alerts you immediately if any of your accounts are compromised.'}
     },
-    {
-      icon: <Key className="w-6 h-6 text-orange-400" />,'
-      title: 'Auto-Fill & Sync','
-      description: 'Seamlessly fill passwords across all your devices with intelligent auto-fill that learns your patterns.'
+    {}
+      icon: <Key className="w-6 h-6 text-orange-400" />,'}
+      title: 'Auto-Fill & Sync','}
+      description: 'Seamlessly fill passwords across all your devices with intelligent auto-fill that learns your patterns.'}
     },
-    {
-      icon: <Fingerprint className="w-6 h-6 text-pink-400" />,'
-      title: 'Biometric Access','
-      description: 'Secure access using fingerprint, face ID, or other biometric authentication methods.'
+    {}
+      icon: <Fingerprint className="w-6 h-6 text-pink-400" />,'}
+      title: 'Biometric Access','}
+      description: 'Secure access using fingerprint, face ID, or other biometric authentication methods.'}
     },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,'
-      title: 'Security Analytics','
-      description: 'Detailed security reports and insights to help you understand and improve your password hygiene.'
-    }
+    {}
+      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,'}
+      title: 'Security Analytics','}
+      description: 'Detailed security reports and insights to help you understand and improve your password hygiene.'}]
+    }]
   ]
   const securityFeatures = [
     {
       icon: <Lock className="w-8 h-8 text-cyan-400" />,'
-      title: 'Password Vault','
-      description: 'Store unlimited passwords with end-to-end encryption and secure cloud backup.','
-      price: 'Included','
-      features: ['Unlimited storage', 'End-to-end encryption', 'Cloud backup', 'Offline access']
+      title: 'Password Vault','}
+      description: 'Store unlimited passwords with end-to-end encryption and secure cloud backup.','}]
+      price: 'Included','}]
+      features: ['Unlimited storage', 'End-to-end encryption', 'Cloud backup', 'Offline access']}
     },
     {
       icon: <Brain className="w-8 h-8 text-emerald-400" />,'
-      title: 'AI Security Scan','
-      description: 'AI-powered analysis of your passwords to identify weak, reused, or compromised credentials.','
-      price: 'Included','
-      features: ['Weak password detection', 'Reuse analysis', 'Breach monitoring', 'Security scoring']
+      title: 'AI Security Scan','}
+      description: 'AI-powered analysis of your passwords to identify weak, reused, or compromised credentials.','}
+      price: 'Included','}
+      features: ['Weak password detection', 'Reuse analysis', 'Breach monitoring', 'Security scoring']}
     },
     {
       icon: <Shield className="w-8 h-8 text-purple-400" />,'
-      title: 'Two-Factor Auth','
-      description: 'Built-in 2FA support with TOTP generation and secure backup codes.','
-      price: 'Included','
-      features: ['TOTP support', 'Backup codes', 'QR code scanning', 'Multiple devices']
+      title: 'Two-Factor Auth','}
+      description: 'Built-in 2FA support with TOTP generation and secure backup codes.','}
+      price: 'Included','}
+      features: ['TOTP support', 'Backup codes', 'QR code scanning', 'Multiple devices']}
     },
     {
       icon: <Users className="w-8 h-8 text-orange-400" />,'
-      title: 'Family Sharing','
-      description: 'Secure password sharing with family members and trusted contacts.','
-      price: '$2.99/month','
-      features: ['Family vault', 'Secure sharing', 'Permission controls', 'Activity monitoring']
+      title: 'Family Sharing','}
+      description: 'Secure password sharing with family members and trusted contacts.','}
+      price: '$2.99/month','}
+      features: ['Family vault', 'Secure sharing', 'Permission controls', 'Activity monitoring']}
     },
     {
       icon: <Globe className="w-8 h-8 text-pink-400" />,'
-      title: 'Dark Web Monitoring','
-      description: 'Continuous monitoring of the dark web for your personal information and credentials.','
-      price: '$4.99/month','
-      features: ['Dark web scanning', 'Identity monitoring', 'Credit monitoring', 'Alert system']
+      title: 'Dark Web Monitoring','}
+      description: 'Continuous monitoring of the dark web for your personal information and credentials.','}
+      price: '$4.99/month','}
+      features: ['Dark web scanning', 'Identity monitoring', 'Credit monitoring', 'Alert system']}
     },
     {
       icon: <Database className="w-8 h-8 text-blue-400" />,'
-      title: 'Business Features','
-      description: 'Advanced features for businesses including team management and admin controls.','
-      price: '$9.99/month','
-      features: ['Team management', 'Admin dashboard', 'SSO integration', 'Compliance reporting']
+      title: 'Business Features','}
+      description: 'Advanced features for businesses including team management and admin controls.','}
+      price: '$9.99/month','}
+      features: ['Team management', 'Admin dashboard', 'SSO integration', 'Compliance reporting']}
     }
   ]
   const pricingPlans = [
@@ -91,10 +118,10 @@ const AIPasswordManagerPage: React.FC = () => {
         'AI password generation','
         'Auto-fill & sync','
         'Biometric access','
-        'Breach monitoring','
-        'Email support'
-      ],
-      popular: false;
+        'Breach monitoring','}]
+        'Email support'];}
+      ],;}
+      popular: false;}
     },
     {'
       name: 'Family','
@@ -106,10 +133,10 @@ const AIPasswordManagerPage: React.FC = () => {
         'Up to 6 family members','
         'Secure sharing','
         'Family vault','
-        'Priority support','
-        'Dark web monitoring'
-      ],
-      popular: true;
+        'Priority support','}]
+        'Dark web monitoring']}
+      ],}
+      popular: true;}
     },
     {'
       name: 'Business','
@@ -121,11 +148,11 @@ const AIPasswordManagerPage: React.FC = () => {
         'Team management','
         'Admin dashboard','
         'SSO integration','
-        'Compliance reporting','
-        'Dedicated support'
-      ],
-      popular: false;
-=======
+        'Compliance reporting',']
+        'Dedicated support']}
+      ],}
+      popular: false;}
+="======"}
     }
 >>>>>>> origin/main
   ]
@@ -133,27 +160,27 @@ const AIPasswordManagerPage: React.FC = () => {
   const stats = ['
     { number: '99.9%', label: 'Security Uptime', icon: <Shield className="w-6 h-6 text-cyan-400" /> },'
     { number: '256-bit', label: 'Encryption', icon: <Lock className="w-6 h-6 text-emerald-400" /> },'
-    { number: '24/7', label: 'Monitoring', icon: <Eye className="w-6 h-6 text-purple-400" /> },'
-    { number: '1M+', label: 'Users Protected', icon: <Users className="w-6 h-6 text-orange-400" /> }
+    { number: '24/7', label: 'Monitoring', icon: <Eye className="w-6 h-6 text-purple-400" /> },']
+    { number: '1M+', label: 'Users Protected', icon: <Users className="w-6 h-6 text-orange-400" /> }]
   ]
   const testimonials = [
     {'
-      name: 'Sarah Johnson','
-      company: 'Tech Professional','
-      content: 'Zion Tech Group\'s AI Password Manager has completely transformed how I handle passwords. The AI generation is incredibly smart and the breach monitoring gives me peace of mind.',
-      rating: 5
+      name: 'Sarah Johnson','}
+      company: 'Tech Professional','}
+      content: 'Zion Tech Group\'s AI Password Manager has completely transformed how I handle passwords. The AI generation is incredibly smart and the breach monitoring gives me peace of mind.',}
+      rating: 5}
     },
     {'
-      name: 'Michael Chen','
-      company: 'Small Business Owner','
-      content: 'The family sharing features are perfect for our household. We can securely share important accounts while maintaining individual privacy. The AI security scan caught several weak passwords we didn\'t even know about.',
-      rating: 5
+      name: 'Michael Chen','}
+      company: 'Small Business Owner','}
+      content: 'The family sharing features are perfect for our household. We can securely share important accounts while maintaining individual privacy. The AI security scan caught several weak passwords we didn\'t even know about.',}
+      rating: 5}
     },
     {'
       name: 'Emily Rodriguez','
       company: 'IT Manager','
-      content: 'The business features are exactly what we needed. The team management and admin controls make it easy to ensure our employees are following security best practices.',
-      rating: 5;
+      content: 'The business features are exactly what we needed. The team management and admin controls make it easy to ensure our employees are following security best practices.',]
+      rating: 5;]
   ]
   return (
     <></>
@@ -161,10 +188,10 @@ const AIPasswordManagerPage: React.FC = () => {
         <title>AI Password Manager - Advanced Password Security | Zion Tech Group</title>
         <meta name="description" content="Secure your digital life with our AI-powered password manager. Advanced encryption, breach monitoring, and intelligent password generation with 99.9% security uptime." /></meta>
         <meta name="keywords" content="AI password manager, password security, password generator, breach monitoring, two-factor authentication, password vault" /></meta>
-        <link rel="canonical" href="https://ziontechgroup./ai-password-manager" /></link>
-      </Helmet>
-
-      <div className="min-h-screen bg-gray-900 text-white"></div>
+        <link rel="canonical" href="https://ziontechgroup./ai-password-manager" /></link>}
+      </Helmet>}
+}
+      <div className="min-h-screen bg-gray-900 text-white"></div>}
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10" /></div>
@@ -213,10 +240,10 @@ const AIPasswordManagerPage: React.FC = () => {
                 Experience the power of AI-driven password security with our proven track record.
               </p>
             </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-              {stats.map((stat, index) => (
-                <div key={index} className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"></div>
+            )
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>)
+              {stats.map((stat, index) => (}
+                <div key="{index}" className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"></div>
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                     {stat.icon}
                   </div>
@@ -225,8 +252,8 @@ const AIPasswordManagerPage: React.FC = () => {
                   </div>
                   <div className="text-gray-300 text-sm group-hover:text-white transition-colors"></div>
                     {stat.label}
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               ))}
             </div>
           </div>
@@ -245,8 +272,8 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"></div>
+              {features.map((feature, index) => (}
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"></div>
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300"></div>
                     {feature.icon}
                   </div>
@@ -255,8 +282,8 @@ const AIPasswordManagerPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300 leading-relaxed"></p>
                     {feature.description}
-                  </p>
-                </div>
+                  </p>)
+                </div>)
               ))}
             </div>
           </div>
@@ -274,8 +301,8 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {securityFeatures.map((feature, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"></div>
+              {securityFeatures.map((feature, index) => (}
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"></div>
                   <div className="flex items-center justify-between mb-4"></div>
                     <div className="flex items-center space-x-3"></div>
                       <div className="p-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110 transition-transform duration-300"></div>
@@ -292,13 +319,13 @@ const AIPasswordManagerPage: React.FC = () => {
                   <div className="space-y-3"></div>
                     <div className="text-2xl font-bold text-cyan-400 mb-2"></div>
                       {feature.price}
-                    </div>
-                    <div className="space-y-1"></div>
-                      {feature.features.map((feat, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-2 text-gray-400 text-xs"></div>
+                    </div>)
+                    <div className="space-y-1"></div>)
+                      {feature.features.map((feat, featureIndex) => (}
+                        <div key="{featureIndex}" className="flex items-center space-x-2 text-gray-400 text-xs"></div>
                           <CheckCircle className="w-3 h-3 text-green-400" /></CheckCircle>
-                          <span>{feat}</span>
-                        </div>
+                          <span>{feat}</span>)
+                        </div>)
                       ))}
                     </div>
                     <Link ;
@@ -327,18 +354,18 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                  plan.popular '
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20' '
-                    : 'border-white/20 hover:border-cyan-400/30'
+              {pricingPlans.map((plan, index) => (}
+                <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${}
+                  plan.popular '}
+                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20' '}
+                    : 'border-white/20 hover:border-cyan-400/30'}
                 }`}></div>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold"></div>
-                        Most Popular
-                      </div>
-                    </div>
+                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold"></div>}
+                        Most Popular}
+                      </div>})
+                    </div>})
                   )}
                   
                   <div className="text-center mb-8"></div>
@@ -351,20 +378,20 @@ const AIPasswordManagerPage: React.FC = () => {
                   </div>
                   
                   <ul className="space-y-4 mb-8"></ul>
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3"></li>
+                    {plan.features.map((feature, featureIndex) => (}
+                      <li key="{featureIndex}" className="flex items-center space-x-3"></li>
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /></CheckCircle>
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
+                        <span className="text-gray-300">{feature}</span>)
+                      </li>)
                     ))}
                   </ul>
                   
                   <Link 
                     to="/contact" 
-                    className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
-                      plan.popular'
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700''
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900'
+                    className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${}
+                      plan.popular'}
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700''}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900'}
                     }`}
                   ></Link>
                     Get Started
@@ -387,11 +414,11 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
-                  <div className="flex items-center mb-4"></div>
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" /></Star>
+              {testimonials.map((testimonial, index) => (}
+                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>)
+                  <div className="flex items-center mb-4"></div>)
+                    {[...Array(testimonial.rating)].map((_, i) => (})
+                      <Star key="{i}" className="w-5 h-5 text-yellow-400 fill-current" /></Star>)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed"></p>

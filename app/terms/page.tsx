@@ -1,14 +1,14 @@
-import React from 'react''
+import React from 'react';
 import { Helmet } from 'react-helmet-async;
-const TermsPage: React.FC = () => {
-  return (
-    <></>
-      <EnhancedSEO 
+const TermsPage: React.FC = () => {';
+  return (';
+    <></>';
+      <EnhancedSEO ';
         title="Page - Zion Tech Group"
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
-        keywords="page, business solutions, technology services, professional services"
-      /></EnhancedSEO>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."}
+        keywords="page, business solutions, technology services, professional services"}
+      /></EnhancedSEO>}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>}
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -70,8 +70,8 @@ const TermsPage: React.FC = () => {
                   <a href="mailto:legal@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">;
                     legal@ziontechgroup.com;
                   </a>.;
-                </p>;
-                <p className="text-gray-400 text-sm mt-8">;
+                </p>;)
+                <p className="text-gray-400 text-sm mt-8">;)
                   Last updated: {new Date().toLocaleDateString()}
                 </p>;
               </div>
@@ -97,14 +97,14 @@ const TermsPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
+              {features.map((feature, index) => (}
+                <div key="{index}" className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                  <p className="text-gray-300">{feature.description}</p>)
+                </div>)
               ))}
             </div>
           </div>

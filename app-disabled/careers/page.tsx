@@ -2,8 +2,8 @@ import { useState    } from "react;";
 
 import { Helmet   } from ";react-helmet-async";lucide-react;";
 
-interface JobPosition {
-  // Add properties here;
+interface JobPosition {}
+  // Add properties here;}
 }
   id: number;
 
@@ -31,8 +31,8 @@ const eersPage: React.FC = () => {
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,'';
       requirements: ['Master\'s degree in Computer Science or related field, ''
         '5+ years experience in AI/ML development, ''
-        'Expertise in Python, TensorFlow, PyTorch, ''
-        'Experience with cloud platforms (AWS, Azure, GCP), ''
+        'Expertise in Python, TensorFlow, PyTorch, '']
+        'Experience with cloud platforms (AWS, Azure, GCP), '']
         'Strong problem-solving and communication skills''],
       benefits: [
         'Competitive salary and equity,''
@@ -51,8 +51,8 @@ const eersPage: React.FC = () => {
         'PhD in Physics, Computer Science, or related field,''
         '3+ years quantum computing research experience,''
         'Knowledge of quantum algorithms and programming,''
-        'Experience with quantum simulators and hardware,''
-        'Strong publication record''
+        'Experience with quantum simulators and hardware,'']
+        'Strong publication record'']
       ],
       benefits: [
         'Research autonomy and resources,''
@@ -71,10 +71,10 @@ const eersPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join our team and help shape the future of AI and IT solutions.
-          </p>
-        </div>
-      </div>
-    </div>
+          </p>}
+        </div>}
+      </div>})
+    </div>})
   )};
 };
 import { Right, Circle, Star,    } from "lucide-react";"
@@ -92,8 +92,8 @@ import { Right, Circle, Star,    } from "lucide-react";"
         'Bachelor\'s degree in Computer Science or related field,''
         '3+ years DevOps experience,''
         'Expertise in Kubernetes, Docker, CI/CD,''
-        'Experience with cloud platforms,''
-        'Knowledge of monitoring and logging tools''
+        'Experience with cloud platforms,'']
+        'Knowledge of monitoring and logging tools'']
       ],
       benefits: [
         'Competitive salary,''
@@ -112,8 +112,8 @@ import { Right, Circle, Star,    } from "lucide-react";"
         'Bachelor\'s degree in Business, Engineering, or related field,''
         '4+ years product management experience,''
         'Experience with AI/ML products,''
-        'Strong analytical and communication skills,''
-        'Experience with agile development''
+        'Strong analytical and communication skills,'']
+        'Experience with agile development'']
       ],
       benefits: [
         'Competitive salary and equity,''
@@ -131,8 +131,8 @@ import { Right, Circle, Star,    } from "lucide-react";"
         'Bachelor\'s degree in Cybersecurity or related field,''
         '4+ years cybersecurity experience,''
         'Certifications (CISSP, CISM, etc.),''
-        'Experience with security tools and frameworks,''
-        'Knowledge of AI security best practices''
+        'Experience with security tools and frameworks,'']
+        'Knowledge of AI security best practices'']
       ],
       benefits: [
         'Competitive salary,''
@@ -151,8 +151,8 @@ import { Right, Circle, Star,    } from "lucide-react";"
         'Master\'s degree in Data Science, Statistics, or related field,''
         '3+ years data science experience,''
         'Expertise in Python, R, SQL,''
-        'Experience with machine learning,''
-        'Strong statistical analysis skills''
+        'Experience with machine learning,'']
+        'Strong statistical analysis skills'']
       ],
       benefits: [
         'Competitive salary and equity,''
@@ -161,10 +161,10 @@ import { Right, Circle, Star,    } from "lucide-react";"
         'Access to cutting-edge tools,''
         'Collaborative team environment'';
   const filteredPositions = positions.filter(position => {;
-    const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment;';
+    const matchesDepartment = selectedDepartment ="==" 'all || position.department ="==" selectedDepartment;';
 
-    const matchesLocation = selectedLocation === 'all || position.location === selectedLocation;';
-
+    const matchesLocation = selectedLocation ="==" 'all || position.location ="==" selectedLocation;';)
+)
   const featuredPositions = filteredPositions.filter(position => position.featured);
 ;
   const regularPositions = filteredPositions.filter(position => !position.featured);
@@ -179,15 +179,15 @@ import { Right, Circle, Star,    } from "lucide-react";"
         '5+ years experience in AI/ML development,''
         'Expertise in Python, TensorFlow, PyTorch,''
         'Experience with cloud platforms (AWS, Azure, GCP),''
-        'Strong understanding of deep learning algorithms,'';
-        Previous experience in production AI systems;
+        'Strong understanding of deep learning algorithms,'';]
+        Previous experience in production AI systems;]
       ],
       benefits: [
         'Competitive salary: $120,000 - $180,000,''
         'Equity participation,''
         'Flexible remote work,'';
-        Professional development budget;
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.','';
+        Professional development budget;]
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.','';]
       requirements: []
         '5+ years experience in AI/ML development',''
         'Expertise in Python, TensorFlow, PyTorch',''
@@ -198,10 +198,10 @@ import { Right, Circle, Star,    } from "lucide-react";"
       benefits: []
         'Competitive salary: $120,000 - $180,000',''
         'Equity participation',''
-        'Flexible remote work',''
-        'Professional development budget'''
-      ],
-      posted: '2 days ago,'';
+        'Flexible remote work',''}
+        'Professional development budget'''}
+      ],}
+      posted: '2 days ago,'';}
       featured: true});
 
 },
@@ -213,25 +213,25 @@ import { Right, Circle, Star,    } from "lucide-react";"
 ;
     {
   const culture = [;
-;
-    {
-      stat: '98%,'';
-      label: 'Employee Satisfaction,'';
+;}
+    {}
+      stat: '98%,'';}
+      label: 'Employee Satisfaction,'';}
       description: 'Our team loves working here});)''
 },
-    {
-      stat: '50+,'';
-      label: 'Team Members,'';
+    {}
+      stat: '50+,'';}
+      label: 'Team Members,'';}
       description: 'Growing team of experts});)''
 },
-    {
-      stat: '15+,'';
-      label: 'Countries,'';
+    {}
+      stat: '15+,'';}
+      label: 'Countries,'';}
       description: 'Global remote team});)''
 },
-    {
-      stat: '4.9/5,'';
-      label: 'Glassdoor Rating,'';
+    {}
+      stat: '4.9/5,'';}
+      label: 'Glassdoor Rating,'';}
       description: 'Highly rated workplace});)''
         <title>eers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us. />""
@@ -258,9 +258,9 @@ import { Right, Circle, Star,    } from "lucide-react";"
 
             <div className="flex flex-wrap justify-center gap-4 mb-8>""
               <select;
-                value={selectedDepartment}
+                value="{selectedDepartment}"
 
-                onChange={(e) => setSelectedDepartment(e.target.value)}
+                onChange="{(e)" => setSelectedDepartment(e.target.value)}
 
                 className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
               >
@@ -268,10 +268,10 @@ import { Right, Circle, Star,    } from "lucide-react";"
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.;
 
-              Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.';
-
-Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.';
-Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.''
+              Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.';}
+}
+Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.';}
+Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.''}
           {/* Why Work With Us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">""
             <div></div>
@@ -287,16 +287,16 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                       Work with the latest AI, quantum computing, and cloud technologies ;
                       that are shaping the future.
                     </p>
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               ))}
             </div>
           </div>
 
-                  <option key={dept.id} value={dept.id} className="bg-slate-800>""
-                {locations.map((loc) => (
-
-                  <option key={loc.id} value={loc.id} className="bg-slate-800>""
+                  <option key="{dept.id}" value="{dept.id}" className="bg-slate-800>""
+                {locations.map((loc) => (}
+}
+                  <option key="{loc.id}" value="{loc.id}" className="bg-slate-800>""
         </section>;
   return (
   <>
@@ -313,11 +313,11 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                     <div></div>
                       <h3 className="text-xl font-bold text-white mb-2">{position.title}</h3>""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>""
-        <section className="relative py-20 px-4 overflow-hidden>"
-  </>;
-);}""
+        <section className="relative py-20 px-4 overflow-hidden>")
+  </>;)]
+);}""]
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse ""
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(59, 130, 246, 0.3)_0%, transparent_50%)] animate-pulse" style={{ animationDelay: '1s,}}'"'"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(59, 130, 246, 0.3)_0%, transparent_50%)] animate-pulse" style="{{" animationDelay: '1s,}}'"'"
 
           <div className="relative max-w-7xl mx-auto text-center>""
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6>
@@ -335,17 +335,17 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
 
           <section className="py-16 px-4>""
             <div className="max-w-7xl mx-auto>""
-              <h2 className="text-3xl font-bold text-white mb-12 text-center>Featured Positions</h2>""
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8>"",
-                {featuredPositions.map((position) => (
-
-                  <div key={position.id} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 hover:border-cyan-400/50 transition-all duration-300 group>""
-                    <div className="flex items-start justify-between mb-6>""
-              {values.map((value, index) => (
-
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"",
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">""
+              <h2 className="text-3xl font-bold text-white mb-12 text-center>Featured Positions</h2>"")}
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8>"",)}
+                {featuredPositions.map((position) => (}
+}
+                  <div key="{position.id}" className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 hover:border-cyan-400/50 transition-all duration-300 group>"")
+                    <div className="flex items-start justify-between mb-6>"")
+              {values.map((value, index) => (}
+})
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"",)}
+              {benefits.map((benefit, index) => (}
+                <div key="{index}" className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">""
                   <div className="flex justify-center mb-4">""
                     {benefit.icon}
                   </div>
@@ -356,8 +356,8 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                     {benefit.description}
                   </p>
         </div>
-      </div>
-    </>
+      </div>)
+    </>)
   );
 };
 
@@ -375,28 +375,28 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
             <h2 className="text-3xl font-bold text-white mb-12 text-center>All Open Positions</h2>""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6>""
               {regularPositions.map((position) => (
-            {regularPositions.length === 0 && (
+            {regularPositions.length ="==" 0 && (
 
               <div className="text-center py-16>""
                 <div className="text-6xl mb-4>🔍</div>""
                 <h3 className="text-2xl font-bold text-white mb-4>No positions found</h3>""
-                <p className="text-gray-300 mb-8>Try adjusting your filters or check back later for new opportunities</p>""
-                <button;
-                  onClick={() => {
+                <p className="text-gray-300 mb-8>Try adjusting your filters or check back later for new opportunities</p>"")
+                <button;)
+                  onClick="{()" => {
                     setSelectedDepartment('all);';
 
-                    setSelectedLocation('all);';
-
-                  className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20''
+                    setSelectedLocation('all);';}
+}
+                  className="{bg-white/10" backdrop-blur-lg rounded-2xl p-8 border ${}
+                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20''}
                   } hover:border-purple-400 transition-all duration-300 group}
 
                 >                <div></div>
-                  {position.featured && (
-
+                  {position.featured && (}
+}
                   <p className="text-gray-300 mb-6>{position.description}</p>" > 3 && (
-
-                        <li className="text-sm text-gray-400>
+)
+                        <li className="text-sm text-gray-400>)
             </div>  )););
 export default eersPage;
 ;

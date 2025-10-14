@@ -1,29 +1,29 @@
-import React from 'react;
+import React from 'react;';
 import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
 
 interface GenericServicePageProps {
   title: 'string','
   description: 'string','
   icon: 'React.ComponentType<any>','
-  features: 'string[]','
-  benefits: 'string[]','
-  pricing?: string;
-  category: "AI" | "IT" | "MicroSAAS" | "Emerging;
+  features: 'string[]','}
+  benefits: 'string[]','}
+  pricing?: string;}
+  category: "AI" | "IT" | "MicroSAAS" | "Emerging;}
 }
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
   title,
   description,
   icon: Icon,
-  features,
-  benefits,
-  pricing,
-  category,
+  features,}
+  benefits,}
+  pricing,})
+  category,})
 }) => {
   const categoryColors = {
-    AI: "from-purple-500 to-pink-600","
-    IT: "from-blue-500 to-cyan-600","
-    MicroSAAS: "from-green-500 to-emerald-600","
-    Emerging: "from-orange-500 to-red-600","
+    AI: "from-purple-500 to-pink-600","}
+    IT: "from-blue-500 to-cyan-600","}
+    MicroSAAS: "from-green-500 to-emerald-600","}
+    Emerging: "from-orange-500 to-red-600","}
   };
   const categoryColor =
     categoryColors[category] || "from-cyan-500 to-purple-600;
@@ -31,10 +31,10 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
     <></>
       <Helmet></Helmet>
         <title>{title} | Zion Tech Group</title>
-        <meta name="description" content={description} /></meta>
-        <meta
-          name="keywords"
-          content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`}
+        <meta name="description" content="{description}" /></meta>
+        <meta)
+          name="keywords")
+          content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`}
         /></meta>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -43,7 +43,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
           <section className="text-center py-16"></section>
             <div className="flex justify-center mb-8"></div>
               <div
-                className={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
+                className="{`p-4" rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
               ></div>
                 <Icon className="w-12 h-12 text-white" /></Icon>
               </div>
@@ -52,10 +52,10 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               {description}
             </p>
-            {pricing && (
-              <div className="text-2xl font-semibold text-cyan-400 mb-8"></div>
-                Starting at {pricing}
-              </div>
+            {pricing && (}
+              <div className="text-2xl font-semibold text-cyan-400 mb-8"></div>}
+                Starting at {pricing})
+              </div>)
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
@@ -88,16 +88,16 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {features.map((feature, index) => (
 <div
-                  key={index;
+                  key="{index;"
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
-                ></div>
-                  <div className="flex items-center mb-4"></div>
-                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" /></CheckCircle>
-                    <h3 className="text-lg font-semibold text-white"></h3>
+                ></div>}
+                  <div className="flex items-center mb-4"></div>}
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" /></CheckCircle>}
+                    <h3 className="text-lg font-semibold text-white"></h3>}
                       {feature}
                     </h3>
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               ))}
             </div>
           </section>
@@ -113,8 +113,8 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4"></div>
+              {benefits.map((benefit, index) => (}
+                <div key="{index}" className="flex items-start space-x-4"></div>
                   <div className="flex-shrink-0"></div>
                     <Star className="w-6 h-6 text-yellow-400" /></Star>
                   </div>
@@ -122,8 +122,8 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                     <h3 className="text-lg font-semibold text-white mb-2"></h3>
                       {benefit}
                     </h3>
-                    <p className="text-gray-300"></p>
-                      Leverage our expertise to maximize your business potential
+                    <p className="text-gray-300"></p>)
+                      Leverage our expertise to maximize your business potential)
                       with {title.toLowerCase()}
                     </p>
                   </div>

@@ -1,30 +1,30 @@
-import { Users } from 'lucide-react''
-import React from 'react;
-import { CheckIcon, 
-  UsersIcon, '
-  TrophyIcon, ''
-  LightBulbIcon } from '@heroicons/react/24/outline;
-const About: React.FC = () => {'
-  const stats = [','
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients' }''
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' }''
+import { Users } from 'lucide-react';
+import React from 'react;';
+import { CheckIcon, ';}
+  UsersIcon, '}
+  TrophyIcon, ''}
+  LightBulbIcon } from '@heroicons/react/24/outline;';
+const About: React.FC = () => {'}
+  const stats = [','}
+    { icon: UsersIcon, value: '500+', label: 'Happy Clients' }'']
+    { icon: TrophyIcon, value: '50+', label: 'Awards Won' }'']
     { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }];
 '
-  const values = [{''
-      title: 'Innovation'''
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
+  const values = [{''}
+      title: 'Innovation'''}
+      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'}
     },'
-    {''
-      title: 'Excellence'''
-      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'
+    {''}
+      title: 'Excellence'''}
+      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'}
     },'
-    {''
-      title: 'Partnership'''
-      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'
+    {''}
+      title: 'Partnership'''}
+      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'}
     },'
-    {''
-      title: 'Integrity'''
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
+    {''}
+      title: 'Integrity'''}]
+      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'}]
     }];
 
   return ()
@@ -43,7 +43,7 @@ const About: React.FC = () => {'
             </p>
             <div className="space-y-4 mb-8"></div>
               <div className="flex items-start"></div>
-                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" /></CheckIcon>
                 <p className="text-gray-600"></p>
                   <strong className="text-gray-900">Expert Team:</strong> Our team consists of
                   highly skilled professionals with deep expertise in AI, cloud computing, ;
@@ -52,7 +52,7 @@ const About: React.FC = () => {'
               </div>
     </>
               <div className="flex items-start"></div>
-                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" /></CheckIcon>
                 <p className="text-gray-600"></p>
                   <strong className="text-gray-900">Proven Track Record:</strong> We have
                   successfully delivered hundreds of projects for clients across various ;
@@ -60,7 +60,7 @@ const About: React.FC = () => {'
                 </p>
               </div>
               <div className="flex items-start"></div>
-                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" /></CheckIcon>
                 <p className="text-gray-600"></p>
                   <strong className="text-gray-900">Cutting-Edge Technology:</strong> We
                   leverage the latest technologies and best practices to deliver ;
@@ -71,14 +71,14 @@ const About: React.FC = () => {'
 ,
             {/* Stats */}"
             <div className="grid grid-cols-3 gap-6"></div>
-              {stats.map((stat, index) => ("
-                <div key={index} className="text-center">"
+              {stats.map((stat, index) => ("}
+                <div key="{index}" className="text-center">"
                   <div className="flex justify-center mb-2">"
                     <stat.icon className="h-8 w-8 text-blue-600" /></stat>
                   </div>"
                   <div className="text-2xl font-bold text-gray-900">{stat.value}</div>"
-                  <div className="text-sm text-gray-600">{stat.label}</div>
-                </div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>)
+                </div>)
               )})}
             </div>
           </div>
@@ -116,8 +116,8 @@ const About: React.FC = () => {'
             Our Core Values
           </h3>"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {values.map((value, index) => ("
-              <div key={index} className="text-center">"
+            {values.map((value, index) => ("}
+              <div key="{index}" className="text-center">"
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <div className="w-8 h-8 bg-blue-600 rounded-full"></div>
                 </div>"
@@ -126,8 +126,8 @@ const About: React.FC = () => {'
                 </h4>"
                 <p className="text-gray-600"></p>
                   {value.description},
-                </p>
-              </div>
+                </p>)
+              </div>)
             ))}
           </div>
         </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { render, RenderOptions, RenderResult } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 // Custom render function with providers
+<<<<<<< HEAD
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
     <BrowserRouter>
@@ -36,6 +37,42 @@ export interface TestConfig {
   timeout: number
   retries: number
   parallel: boolean
+=======
+const AllTheProviders = ({ children }: { children: React.ReactNode }) => {}
+  return (}
+    <BrowserRouter ></BrowserRouter>}
+      {children})
+    </BrowserRouter>)
+  );
+}
+
+const customRender = (
+  ui: Element,)
+  options?: Omit<RenderOptions , 'wrapper'></RenderOptions>)
+): RenderResult => {}
+  return render(ui, { wrapper: AllTheProviders, ...options });
+}
+
+// Test result types
+export interface PerformanceMetrics {}
+  loadTime: number;}
+  renderTime: number;}
+  memoryUsage: number;}
+}
+
+export interface CoverageMetrics {
+  statements: number;}
+  branches: number;}
+  functions: number;}
+  lines: number;}
+}
+
+// Test configuration interface
+export interface TestConfig {}
+  timeout: number;}
+  retries: number;}
+  parallel: boolean;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 
 // Re-export everything

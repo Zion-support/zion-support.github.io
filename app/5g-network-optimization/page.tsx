@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const FiveGNetworkOptimization = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>5G Network Optimization - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>5G Network Optimization - Zion Tech Group</title>';
         <meta name="description" content="Advanced 5G network optimization solutions." /></meta>
       </Helmet>
 
@@ -25,10 +25,10 @@ const FiveGNetworkOptimization = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
 export default FiveGNetworkOptimization'

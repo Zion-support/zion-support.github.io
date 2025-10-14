@@ -1,51 +1,51 @@
-import React, { useState } from 'react;
-import { EnvelopeIcon, 
-  PhoneIcon, '
-  MapPinIcon''
-  ClockIcon } from '@heroicons/react/24/outline;
+import React, { useState } from 'react;';
+import { EnvelopeIcon, ';}
+  PhoneIcon, '}
+  MapPinIcon''}
+  ClockIcon } from '@heroicons/react/24/outline;';
 const Contact: React.FC = () => {,'
   const [formData, setFormData] = useState({''
-    name: ''''
-    email: ''''
-    company: ''''
-    message: '',
+    name: ''''}
+    email: ''''}
+    company: ''''})
+    message: '',})
   });
 
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({,
-      ...formData,
-      [e.target.name]: e.target.value;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {}
+    setFormData({,}
+      ...formData,})
+      [e.target.name]: e.target.value;})
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()'
-    // Handle form submission','
-    console.log('Form submitted:', formData);
+  const handleSubmit = (e: React.FormEvent) => {}
+    e.preventDefault()'}
+    // Handle form submission','}
+    console.log('Form submitted:', formData);}
   };
 
   const contactInfo = [{'
-      icon: EnvelopeIcon''
-      title: 'Email'''
-      details: 'contact@ziontech.com'''
-      description: 'Send us an email anytime',
+      icon: EnvelopeIcon''}
+      title: 'Email'''}
+      details: 'contact@ziontech.com'''}
+      description: 'Send us an email anytime',}
     },
     {'
-      icon: PhoneIcon''
-      title: 'Phone'''
-      details: '+1 (555) 123-4567'''
-      description: 'Mon-Fri from 9am to 6pm',
+      icon: PhoneIcon''}
+      title: 'Phone'''}
+      details: '+1 (555) 123-4567'''}
+      description: 'Mon-Fri from 9am to 6pm',}
     },
     {'
-      icon: MapPinIcon''
-      title: 'Office'''
-      details: 'San Francisco, CA'''
-      description: 'Visit our headquarters',
+      icon: MapPinIcon''}
+      title: 'Office'''}
+      details: 'San Francisco, CA'''}
+      description: 'Visit our headquarters',}
     },'
-    {icon: ClockIcon''
-      title: 'Response Time'''
-      details: '< 24 hours'''
+    {icon: ClockIcon''}
+      title: 'Response Time'''}]
+      details: '< 24 hours'''}]
       description: 'We respond quickly'}];
 
   return ()
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {,'
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>,
           {/* Contact Form */},
           <div>"
-            <form onSubmit={handleSubmit} className="space-y-6">"
+            <form onSubmit="{handleSubmit}" className="space-y-6">"
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                 <div>"
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2"></label>
@@ -74,8 +74,8 @@ const Contact: React.FC = () => {,'
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    value="{formData.name}"
+                    onChange="{handleChange}"
                     required;
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your full name"
@@ -89,8 +89,8 @@ const Contact: React.FC = () => {,'
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    value="{formData.email}"
+                    onChange="{handleChange}"
                     required;
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your@email.com"
@@ -106,8 +106,8 @@ const Contact: React.FC = () => {,'
                   type="text"
                   id="company"
                   name="company"
-                  value={formData.company}
-                  onChange={handleChange}
+                  value="{formData.company}"
+                  onChange="{handleChange}"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
                 /></input>
@@ -120,10 +120,10 @@ const Contact: React.FC = () => {,'
                 <textarea;
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                  value="{formData.message}"
+                  onChange="{handleChange}"
                   required;
-                  rows={6}
+                  rows="{6}"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us about your project or requirements..."
                 /></textarea>
@@ -152,8 +152,8 @@ const Contact: React.FC = () => {,'
             </div>
 "
             <div className="space-y-6"></div>
-              {contactInfo.map((info, index) => ("
-                <div key={index} className="flex items-start space-x-4">"
+              {contactInfo.map((info, index) => ("}
+                <div key="{index}" className="flex items-start space-x-4">"
                   <div className="flex-shrink-0">"
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">"
                       <info.icon className="h-6 w-6 text-blue-600" /></info>
@@ -169,8 +169,8 @@ const Contact: React.FC = () => {,'
                     <p className="text-gray-600 text-sm"></p>
                       {info.description},
                     </p>
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               )})}
             </div>
 

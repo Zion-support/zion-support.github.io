@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const EmployeeManagementSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Employee Management SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Employee Management SAAS - Zion Tech Group</title>';
         <meta name="description" content="Comprehensive HR and employee management platform." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const EmployeeManagementSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default EmployeeManagementSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

@@ -1,7 +1,7 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
-export default function Page() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
+function Page() {
   return (
     <div className="min-h-screen bg-white"></div>
       <Helmet></Helmet>
@@ -33,10 +33,10 @@ export default function Page() {
               <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
               <p>Description of feature 3</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div>}
+        </div>}
+      </div>})
+    </div>})
   );}'
 }'
 

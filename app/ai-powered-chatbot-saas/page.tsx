@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const AIPoweredChatbotSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>AI-Powered Chatbot SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>AI-Powered Chatbot SAAS - Zion Tech Group</title>';
         <meta name="description" content="Advanced AI chatbot solution for customer service and support." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const AIPoweredChatbotSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default AIPoweredChatbotSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

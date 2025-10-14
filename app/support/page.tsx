@@ -1,160 +1,179 @@
-import React, { useState } from 'react;
-
+import React, { useState } from 'react;';
+';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, MessageCircle, Phone, Mail, Clock, CheckCircle, Star, Users, Shield, Zap, Globe, BarChart3, Settings, HelpCircle, BookOpen, FileText, Calendar, Award, Target } from "lucide-react"'
-import EnhancedSEO from '../components/EnhancedSEO;
-
+import { ArrowRight } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Target } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO;';
+';
 const SupportPage = () => {'
-  const [searchQuery, setSearchQuery] = useState('')'
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const supportCategories = ['
+  const [searchQuery, setSearchQuery] = useState('')'}
+  const [selectedCategory, setSelectedCategory] = useState('all');}
+}
+  const supportCategories = ['}
     { id: 'all', label: 'All Topics', icon: <HelpCircle className="w-5 h-5" /> },'
     { id: 'getting-started', label: 'Getting Started', icon: <Zap className="w-5 h-5" /> },'
     { id: 'ai-services', label: 'AI Services', icon: <BarChart3 className="w-5 h-5" /> },'
     { id: 'cloud', label: 'Cloud & Infrastructure', icon: <Globe className="w-5 h-5" /> },'
-    { id: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },'
-    { id: 'billing', label: 'Billing & Account', icon: <Settings className="w-5 h-5" /> }
+    { id: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },']
+    { id: 'billing', label: 'Billing & Account', icon: <Settings className="w-5 h-5" /> }]
   ];
 
   const faqItems = [
     {
       id: 1,
-      question: "How do I get started with Zion Tech Group services?",'
-      answer: "Getting started is easy! Simply contact us through our consultation form or call us directly. We'll schedule a free consultation to understand your needs and recommend the best solutions for your business.",
-      category: "getting-started",
-      featured: true
+      question: "How do I get started with Zion Tech Group services?",'}
+      answer: "Getting started is easy! Simply contact us through our consultation form or call us directly. We'll schedule a free consultation to understand your needs and recommend the best solutions for your business.",}
+      category: "getting-started",}
+      featured: true}
     },
     {
       id: 2,
-      question: "What AI services do you offer?",
-      answer: "We offer comprehensive AI services including business intelligence, customer support chatbots, content generation, cybersecurity monitoring, data analytics, and custom AI solutions tailored to your specific needs.",
-      category: "ai-services",
-      featured: false
+      question: "What AI services do you offer?",}
+      answer: "We offer comprehensive AI services including business intelligence, customer support chatbots, content generation, cybersecurity monitoring, data analytics, and custom AI solutions tailored to your specific needs.",}
+      category: "ai-services",}
+      featured: false}
     },
     {
       id: 3,
-      question: "How secure are your cloud solutions?",
-      answer: "Security is our top priority. We implement enterprise-grade security measures including encryption, multi-factor authentication, regular security audits, and compliance with industry standards like SOC 2, ISO 27001, and GDPR.",
-      category: "cloud",
-      featured: false
+      question: "How secure are your cloud solutions?",}
+      answer: "Security is our top priority. We implement enterprise-grade security measures including encryption, multi-factor authentication, regular security audits, and compliance with industry standards like SOC 2, ISO 27001, and GDPR.",}
+      category: "cloud",}
+      featured: false}
     },
     {
       id: 4,
-      question: "Do you provide 24/7 support?",
-      answer: "Yes! We offer 24/7 technical support for all our clients. Our support team is available around the clock to help you with any issues or questions you may have.",
-      category: "getting-started",
-      featured: true
+      question: "Do you provide 24/7 support?",}
+      answer: "Yes! We offer 24/7 technical support for all our clients. Our support team is available around the clock to help you with any issues or questions you may have.",}
+      category: "getting-started",}
+      featured: true}
     },
     {
       id: 5,
-      question: "What is your typical project timeline?",
-      answer: "Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while complex AI solutions may require 3-6 months. We provide detailed timelines during our initial consultation.",
-      category: "getting-started",
-      featured: false
+      question: "What is your typical project timeline?",}
+      answer: "Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while complex AI solutions may require 3-6 months. We provide detailed timelines during our initial consultation.",}
+      category: "getting-started",}
+      featured: false}
     },
     {
       id: 6,
-      question: "How do you ensure data privacy and compliance?",
-      answer: "We follow strict data privacy protocols and are compliant with GDPR, CCPA, and other major privacy regulations. All data is encrypted in transit and at rest, and we never share your data with third parties without explicit consent.",
-      category: "security",
-      featured: false
+      question: "How do you ensure data privacy and compliance?",}
+      answer: "We follow strict data privacy protocols and are compliant with GDPR, CCPA, and other major privacy regulations. All data is encrypted in transit and at rest, and we never share your data with third parties without explicit consent.",}
+      category: "security",}
+      featured: false}
     },
     {
       id: 7,
-      question: "Can I integrate your solutions with my existing systems?",
-      answer: "Absolutely! Our solutions are designed to integrate seamlessly with your existing infrastructure. We support most major platforms and can create custom integrations as needed.",
-      category: "ai-services",
-      featured: false
+      question: "Can I integrate your solutions with my existing systems?",}
+      answer: "Absolutely! Our solutions are designed to integrate seamlessly with your existing infrastructure. We support most major platforms and can create custom integrations as needed.",}
+      category: "ai-services",}
+      featured: false}
     },
     {
       id: 8,
       question: "What happens if I need to scale my solution?",
       answer: "Our solutions are built to scale with your business. We can easily adjust capacity, add new features, or expand functionality as your needs grow. We also provide ongoing optimization and performance monitoring.",
-      category: "cloud",
-      featured: false;
+      category: "cloud",]
+      featured: false;]
   ];
 
   const supportChannels = [
     {
       title: "Live Chat",
       description: "Get instant help from our support team",
-      icon: <MessageCircle className="w-6 h-6" />,
-      availability: "24/7",
-      responseTime: "Immediate",
-      link: "#chat"
+      icon: <MessageCircle className="w-6 h-6" />,}
+      availability: "24/7",}
+      responseTime: "Immediate",}
+      link: "#chat"}
     },
     {
       title: "Phone Support",
       description: "Speak directly with our technical experts",
-      icon: <Phone className="w-6 h-6" />,
-      availability: "24/7",
-      responseTime: "Immediate",
-      link: "tel:+13024640950"
+      icon: <Phone className="w-6 h-6" />,}
+      availability: "24/7",}
+      responseTime: "Immediate",}
+      link: "tel:+13024640950"}
     },
     {
       title: "Email Support",
       description: "Send us detailed questions and get comprehensive answers",
-      icon: <Mail className="w-6 h-6" />,
-      availability: "24/7",
-      responseTime: "Within 2 hours",
-      link: "mailto:support@ziontechgroup.com"
+      icon: <Mail className="w-6 h-6" />,}
+      availability: "24/7",}
+      responseTime: "Within 2 hours",}
+      link: "mailto:support@ziontechgroup.com"}
     },
     {
       title: "Documentation",
       description: "Browse our comprehensive knowledge base",
-      icon: <BookOpen className="w-6 h-6" />,
-      availability: "24/7",
-      responseTime: "Immediate",
-      link: "/docs"
-    }
+      icon: <BookOpen className="w-6 h-6" />,}
+      availability: "24/7",}
+      responseTime: "Immediate",}
+      link: "/docs"}]
+    }]
   ];
 
   const resources = [
     {
       title: "Getting Started Guide",
-      description: "Complete guide to setting up your Zion Tech Group services",
-      type: "Guide",
-      icon: <BookOpen className="w-6 h-6" />,
-      link: "/"
+      description: "Complete guide to setting up your Zion Tech Group services",}
+      type: "Guide",}
+      icon: <BookOpen className="w-6 h-6" />,}
+      link: "/"}
     },
     {
       title: "API Documentation",
-      description: "Comprehensive API reference for developers",
-      type: "Technical",
-      icon: <FileText className="w-6 h-6" />,
-      link: "/api"
+      description: "Comprehensive API reference for developers",}
+      type: "Technical",}
+      icon: <FileText className="w-6 h-6" />,}
+      link: "/api"}
     },
     {
       title: "Video Tutorials",
-      description: "Step-by-step video guides for common tasks",
-      type: "Video",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/tutorials"
+      description: "Step-by-step video guides for common tasks",}
+      type: "Video",}
+      icon: <Calendar className="w-6 h-6" />,}
+      link: "/tutorials"}
     },
     {
       title: "Best Practices",
-      description: "Industry best practices and recommendations",
-      type: "Guide",
-      icon: <Award className="w-6 h-6" />,
-      link: "/best-practices"
-    }
+      description: "Industry best practices and recommendations",}
+      type: "Guide",}
+      icon: <Award className="w-6 h-6" />,}
+      link: "/best-practices"}]
+    }]
   ];
 
   const stats = [
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "< 2 min", label: "Average Response Time", icon: <Clock className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Users className="w-6 h-6" /> },
-    { number: "95%", label: "Customer Satisfaction", icon: <Star className="w-6 h-6" /> }
+    { number: "24/7", label: "Support Available", icon: <Users className="w-6 h-6" /> },]
+    { number: "95%", label: "Customer Satisfaction", icon: <Star className="w-6 h-6" /> }]
   ];
 '
-  const filteredFAQs = selectedCategory === 'all' 
+  const filteredFAQs = selectedCategory ="==" 'all' 
     ? faqItems 
-    : faqItems.filter(item => item.category === selectedCategory);
+    : faqItems.filter(item => item.category ="==" selectedCategory);
 
   const searchResults = searchQuery 
-    ? faqItems.filter(item => 
+    ? faqItems.filter(item => )
         item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
@@ -187,9 +206,9 @@ const SupportPage = () => {'
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
               <input
                 type="text"
-                placeholder="Search for help, documentation, or answers..."
-                value={searchQuery;
-                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search for help, documentation, or answers...")
+                value="{searchQuery;"})
+                onChange="{(e)" => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-lg"
               />
             </div>
@@ -201,14 +220,14 @@ const SupportPage = () => {'
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group"></div>
+            {stats.map((stat, index) => (}
+              <div key="{index}" className="text-center group"></div>
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
+                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>)
+              </div>)
             ))}
           </div>
         </div>
@@ -231,12 +250,12 @@ const SupportPage = () => {'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {supportChannels.map((channel, index) => (
               <div
-                key={index;
+                key="{index;"
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
-              ></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10"></div>
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg"></div>
+              ></div>}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>}
+                <div className="relative z-10"></div>}
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg"></div>}
                     {channel.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors"></h3>
@@ -256,14 +275,14 @@ const SupportPage = () => {'
                     </div>
                   </div>
                   <a
-                    href={channel.link;
+                    href="{channel.link;"
                     className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                   ></a>
                     Get Help
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
-                  </a>
-                </div>
-              </div>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>}
+                  </a>}
+                </div>})
+              </div>})
             ))}
           </div>
         </div>
@@ -285,17 +304,17 @@ const SupportPage = () => {'
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
-            {supportCategories.map((category) => (
-              <button
-                key={category.id;
-                onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                  selectedCategory === category.id'
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg''
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+            {supportCategories.map((category) => (}
+              <button})
+                key="{category.id;"})
+                onClick="{()" => setSelectedCategory(category.id)}
+                className="{`flex" items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${}
+                  selectedCategory ="==" category.id'}
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg''}
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'}
                 }`}
               >
-                {category.icon;
+                {category.icon;}
                 <span>{category.label}</span>
               </button>
             ))}
@@ -303,19 +322,19 @@ const SupportPage = () => {'
 
           {/* FAQ Items */}
           <div className="space-y-6"></div>
-            {searchResults.map((item) => (
-              <div
-                key={item.id}
-                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${'
-                  item.featured ? 'ring-2 ring-cyan-500/50' : ''
+            {searchResults.map((item) => (}
+              <div}
+                key="{item.id}"
+                className="{`group" bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${'}
+                  item.featured ? 'ring-2 ring-cyan-500/50' : ''}
                 }`}
               ></div>
                 {item.featured && (
                   <div className="absolute top-4 right-4"></div>
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold"></span>
-                      Popular
-                    </span>
-                  </div>
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold"></span>}
+                      Popular}
+                    </span>})
+                  </div>})
                 )}
                 
                 <div className="pr-20"></div>
@@ -330,12 +349,12 @@ const SupportPage = () => {'
             ))}
           </div>
 
-          {searchResults.length === 0 && (
+          {searchResults.length ="==" 0 && (
             <div className="text-center py-12"></div>
-              <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" /></HelpCircle>
-              <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
-              <p className="text-gray-300">Try searching with different keywords or browse our categories.</p>
-            </div>
+              <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" /></HelpCircle>}
+              <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>}
+              <p className="text-gray-300">Try searching with different keywords or browse our categories.</p>})
+            </div>})
           )}
         </div>
       </section>
@@ -357,13 +376,13 @@ const SupportPage = () => {'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {resources.map((resource, index) => (
               <div
-                key={index;
+                key="{index;"
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               ></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10"></div>
-                  <div className="flex items-center space-x-3 mb-4"></div>
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>}
+                <div className="relative z-10"></div>}
+                  <div className="flex items-center space-x-3 mb-4"></div>}
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>}
                       {resource.icon}
                     </div>
                     <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs font-medium"></span>
@@ -377,14 +396,14 @@ const SupportPage = () => {'
                     {resource.description}
                   </p>
                   <a
-                    href={resource.link;
+                    href="{resource.link;"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
                   ></a>
                     Learn More
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRight>
-                  </a>
-                </div>
-              </div>
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRight>}
+                  </a>}
+                </div>})
+              </div>})
             ))}
           </div>
         </div>
@@ -423,6 +442,7 @@ const SupportPage = () => {'
   )};
 };
 
-export default SupportPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

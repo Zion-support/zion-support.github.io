@@ -16,16 +16,16 @@ function fixOverEscapedQuotes(content) {
   content = content.replace(/&gt;/g, '>');
   content = content.replace(/&lt;/g, '<');
   
-  // Fix over-escaped ampersands;
-  content = content.replace(/&amp;/g, '&');
-  
-  return content;
+  // Fix over-escaped ampersands;}
+  content = content.replace(/&amp;/g, '&');}
+  }
+  return content;}
 }
 
 // Function to fix parsing errors;
-function fixParsingErrors(content) {
-  // Fix common parsing issues;
-  content = content.replace(/,\s*\)/g, ')');
+function fixParsingErrors(content) {}
+  // Fix common parsing issues;}
+  content = content.replace(/,\s*\)/g, ')');}
   content = content.replace(/,\s*}/g, '}');
   
   // Fix numeric literal issues;
@@ -44,26 +44,26 @@ function removeUnusedImports(content) {
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    
-    // Check if this is an import line;
-    if (line.includes('import') && line.includes('from')) {
-      // Check if any imported items are actually used;
+    }
+    // Check if this is an import line;}
+    if (line.includes('import') && line.includes('from')) {}
+      // Check if any imported items are actually used;}
       const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
       if (importMatch) {
         const importedItems = importMatch[1].split(',').map(item => item.trim());
-        const usedItems = importedItems.filter(item => {
-          // Check if the item is used in the content (excluding the import line)
-          const contentWithoutImport = content.replace(line, '');
-          return contentWithoutImport.includes(item);
+        const usedItems = importedItems.filter(item => {)}
+          // Check if the item is used in the content (excluding the import line);}
+          const contentWithoutImport = content.replace(line, '');}
+          return contentWithoutImport.includes(item);}
         });
         
-        if (usedItems.length === 0) {
-          // Skip this import line;
-          continue;
-        } else if (usedItems.length < importedItems.length) {
-          // Update the import to only include used items;
-          const newImport = line.replace(
-            /{\s*[^}]+\s*}/,
+        if (usedItems.length ="==" 0) {}
+          // Skip this import line;}
+          continue;}
+        } else if (usedItems.length < importedItems.length) {}
+          // Update the import to only include used items;}
+          const newImport = line.replace(})
+            /{\s*[^}]+\s*}/,)
             `{ ${usedItems.join(', ')} }`
           );
           newLines.push(newImport);
@@ -81,24 +81,24 @@ function removeUnusedImports(content) {
 // Function to fix unused variables;
 function fixUnusedVariables(content) {
   // Fix unused variable assignments;
-  content = content.replace(/const\s+error\s*=/g, 'const _error =');
-  content = content.replace(/let\s+error\s*=/g, 'let _error =');
-  
-  return content;
+  content = content.replace(/const\s+error\s*="/g," 'const _error =');}
+  content = content.replace(/let\s+error\s*="/g," 'let _error =');}
+  }
+  return content;}
 }
 
 // Main function to process files;
 async function processFiles() {
   const patterns = [
     'app/**/*.tsx',
-    'app/**/*.ts',
-    'api/**/*.js'
+    'app/**/*.ts',]
+    'api/**/*.js']
   ];
   
-  let processedCount = 0;
-  let errorCount = 0;
-  
-  for (const pattern of patterns) {
+  let processedCount = 0;}
+  let errorCount = 0;}
+  }
+  for (const pattern of patterns) {}
     const files = await glob(pattern, { cwd: process.cwd() });
     
     for (const file of files) {
@@ -112,11 +112,11 @@ async function processFiles() {
         content = removeUnusedImports(content);
         content = fixUnusedVariables(content);
         
-        // Write back the fixed content;
-        fs.writeFileSync(filePath, content, 'utf8');
-        processedCount++;
-        
-      } catch (error) {
+        // Write back the fixed content;}
+        fs.writeFileSync(filePath, content, 'utf8');}
+        processedCount++;}
+        }
+      } catch (error) {}
         console.error(`Error processing ${file}:`, error.message);
         errorCount++;
       }
@@ -124,7 +124,7 @@ async function processFiles() {
   }
   
   console.log(`\nProcessed ${processedCount} files`);
-  if (errorCount > 0) {
+  if (errorCount > 0) {}
     console.log(`Encountered ${errorCount} errors`);
   }
 }

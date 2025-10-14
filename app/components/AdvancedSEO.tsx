@@ -1,6 +1,6 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-interface AdvancedSEOProps {
+import React from 'react;';
+import { Helmet } from 'react-helmet-async;';
+interface AdvancedSEOProps {';
   title: 'string','
   description: 'string','
   keywords?: string;
@@ -20,10 +20,10 @@ interface AdvancedSEOProps {
   lang?: string;
   author?: string;
   publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  readingTime?: number;
+  modifiedTime?: string;}
+  section?: string;}
+  tags?: string[];}
+  readingTime?: number;}
 }
 const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   title,
@@ -45,11 +45,11 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   lang = 'en','
   author = 'Zion Tech Group',
   publishedTime,
-  modifiedTime,'
-  section = 'Technology',
-  tags = [],
-  readingTime
-}) => {'
+  modifiedTime,'}
+  section = 'Technology',}
+  tags = [],})
+  readingTime})
+}) => {'}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;
   const fullOgDescription = ogDescription || description;
@@ -57,7 +57,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   const fullTwitterDescription = twitterDescription || description'
   const fullOgImage = ogImage || 'https://ziontechgroup.com/api/placeholder/1200/630';
   const fullTwitterImage = twitterImage || fullOgImage'
-  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  const fullCanonical = canonical || (typeof window !="=" 'undefined' ? window.location.href : '');
   const currentDate = new Date().toISOString();
   // Default structured data for organization;
   const defaultStructuredData = {
@@ -71,42 +71,42 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     "address": {"
       "@type": "PostalAddress","
       "streetAddress": "364 E Main St STE 1008","
-      "addressLocality": "Middletown","
-      "addressRegion": "DE","
-      "postalCode": "19709","
-      "addressCountry": "US"
+      "addressLocality": "Middletown","}
+      "addressRegion": "DE","}
+      "postalCode": "19709","}
+      "addressCountry": "US"}
     },
     "contactPoint": {"
       "@type": "ContactPoint","
-      "telephone": "+1-302-464-0950","
-      "contactType": "customer service","
-      "email": "kleber@ziontechgroup.com","
-      "availableLanguage": ["English"]"
+      "telephone": "+1-302-464-0950","}
+      "contactType": "customer service","}
+      "email": "kleber@ziontechgroup.com","}
+      "availableLanguage": ["English"]"}
     },
     "sameAs": ["
       "https://twitter.com/ziontechgroup","
-      "https://linkedin.com/company/ziontechgroup","
-      "https: '//github.com/ziontechgroup"','
+      "https://linkedin.com/company/ziontechgroup","]
+      "https: '//github.com/ziontechgroup"',']
     ],
     "offers": ["
       {
-        "@type": "Offer","
-        "name": "AI Solutions","
-        "description": "Artificial intelligence and machine learning services","
-        "category": "Technology Services"
+        "@type": "Offer","}
+        "name": "AI Solutions","}
+        "description": "Artificial intelligence and machine learning services","}
+        "category": "Technology Services"}
       },
       {
-        "@type": "Offer","
-        "name": "IT Services","
-        "description": "Information technology consulting and implementation","
-        "category": "Technology Services"
+        "@type": "Offer","}
+        "name": "IT Services","}
+        "description": "Information technology consulting and implementation","}
+        "category": "Technology Services"}
       },
       {
-        "@type": "Offer","
-        "name": "Micro SAAS","
-        "description": "Ready-to-use software solutions","
-        "category": "Software"
-      }
+        "@type": "Offer","}
+        "name": "Micro SAAS","}
+        "description": "Ready-to-use software solutions","}
+        "category": "Software"}]
+      }]
     ]
   };
   // Article structured data if publishedTime is provided;
@@ -116,24 +116,24 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     "headline": fullTitle,"
     "description": description,"
     "image": fullOgImage,"
-    "author": {"
-      "@type": "Organization","
-      "name": author,"
-      "url": "https://ziontechgroup.com"
+    "author": {"}
+      "@type": "Organization","}
+      "name": author,"}
+      "url": "https://ziontechgroup.com"}
     },
     "publisher": {"
       "@type": "Organization","
-      "name": "Zion Tech Group","
-      "logo": {"
-        "@type": "ImageObject","
-        "url": "https://ziontechgroup.com/logo.svg"
+      "name": "Zion Tech Group","}
+      "logo": {"}
+        "@type": "ImageObject","}
+        "url": "https://ziontechgroup.com/logo.svg"}
       }
     },
     "datePublished": publishedTime,"
     "dateModified": modifiedTime || publishedTime,"
-    "mainEntityOfPage": {"
-      "@type": "WebPage","
-      "@id": fullCanonical"
+    "mainEntityOfPage": {"}
+      "@type": "WebPage","}
+      "@id": fullCanonical"}
     },
     "articleSection": section,'
     "keywords": tags.join(', '),
@@ -144,43 +144,43 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={description} /></meta>
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="language" content={lang} /></meta>'
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /></meta>
-      <link rel="canonical" href={fullCanonical} /></link>
+      <meta name="description" content="{description}" /></meta>
+      {keywords && <meta name="keywords" content="{keywords}" />}
+      <meta name="language" content="{lang}" /></meta>'
+      <meta name="robots" content="{`${noindex" ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /></meta>
+      <link rel="canonical" href="{fullCanonical}" /></link>
       {/* Author and Publishing */}
-      <meta name="author" content={author} /></meta>
-      {publishedTime && <meta name="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta name="article:modified_time" content={modifiedTime} />}
-      {section && <meta name="article:section" content={section} />}'
+      <meta name="author" content="{author}" /></meta>
+      {publishedTime && <meta name="article:published_time" content="{publishedTime}" />}
+      {modifiedTime && <meta name="article:modified_time" content="{modifiedTime}" />})
+      {section && <meta name="article:section" content="{section}" />}')
       {tags.length > 0 && <meta name="article:tag" content={tags.join(', ')} />}
       {readingTime && <meta name="twitter:label1" content="Reading time" />}
-      {readingTime && <meta name="twitter:data1" content={`${readingTime} min read`} />}
+      {readingTime && <meta name="twitter:data1" content="{`${readingTime}" min read`} />}
 
       {/* Open Graph Meta Tags */}
-      <meta property="og:type" content={ogType} /></meta>
-      <meta property="og:title" content={fullOgTitle} /></meta>
-      <meta property="og:description" content={fullOgDescription} /></meta>
-      <meta property="og:image" content={fullOgImage} /></meta>
-      <meta property="og:url" content={ogUrl || fullCanonical} /></meta>
+      <meta property="og:type" content="{ogType}" /></meta>
+      <meta property="og:title" content="{fullOgTitle}" /></meta>
+      <meta property="og:description" content="{fullOgDescription}" /></meta>
+      <meta property="og:image" content="{fullOgImage}" /></meta>
+      <meta property="og:url" content="{ogUrl" || fullCanonical} /></meta>
       <meta property="og:site_name" content="Zion Tech Group" /></meta>'
-      <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} /></meta>
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} /></meta>
+      <meta property="og:locale" content="{lang" ="==" 'en' ? 'en_US' : lang} /></meta>
+      {publishedTime && <meta property="article:published_time" content="{publishedTime}" />}
+      {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}" />}
+      {section && <meta property="article:section" content="{section}" />}
+      {tags.length > 0 && tags.map(tag => (})
+        <meta key="{tag}" property="article:tag" content="{tag}" /></meta>)
       ))}
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} /></meta>
-      <meta name="twitter:title" content={fullTwitterTitle} /></meta>
-      <meta name="twitter:description" content={fullTwitterDescription} /></meta>
-      <meta name="twitter:image" content={fullTwitterImage} /></meta>
+      <meta name="twitter:card" content="{twitterCard}" /></meta>
+      <meta name="twitter:title" content="{fullTwitterTitle}" /></meta>
+      <meta name="twitter:description" content="{fullTwitterDescription}" /></meta>
+      <meta name="twitter:image" content="{fullTwitterImage}" /></meta>
       <meta name="twitter:site" content="@ziontechgroup" /></meta>
       <meta name="twitter:creator" content="@ziontechgroup" /></meta>
       {/* Additional SEO Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
+      <meta name="viewport" content="width="device-width," initial-scale=1.0" /></meta>
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>
       <meta name="theme-color" content="#0f172a" /></meta>
       <meta name="msapplication-TileColor" content="#0f172a" /></meta>
@@ -211,8 +211,8 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
       {/* Article structured data if applicable */}
-      {articleStructuredData && (
-        <script type="application/ld+json"></script>
+      {articleStructuredData && (})
+        <script type="application/ld+json"></script>})
           {JSON.stringify(articleStructuredData)}
         </script>
       )}
@@ -223,17 +223,17 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
           "@type": "BreadcrumbList","
           "itemListElement": ["
             {
-              "@type": "ListItem","
-              "position": 1,"
-              "name": "Home","
-              "item": "https://ziontechgroup.com"
+              "@type": "ListItem","}
+              "position": 1,"}
+              "name": "Home","}
+              "item": "https://ziontechgroup.com"}
             },
             {
 "@type": "ListItem",
-              "position": 2,
-              "name": title,
-              "item": fullCanonical;
-          ]
+              "position": 2,}
+              "name": title,}]
+              "item": fullCanonical;}])
+          ]})
         })}
       </script>
     </Helmet>

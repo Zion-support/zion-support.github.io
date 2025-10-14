@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 const Page: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta
           name="$1"
@@ -56,6 +56,7 @@ const Page: React.FC = () => {
                 </p>
               </div>
             </div>
+<<<<<<< HEAD
           </section>
           <section className="text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -73,5 +74,24 @@ const Page: React.FC = () => {
       </div>
     </>
   )
+=======
+          </section>;
+          <section className="text-center">;
+            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>;
+            <p className="text-xl text-gray-300 mb-8">;
+              Contact us today to learn how we can help you achieve your goals.;
+            </p>;
+            <a;
+              href="/contact";
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors";
+            >;
+              Contact Us;
+            </a>;
+          </section>;
+        </main>;}
+      </div>})
+    </>)}
+  );}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 export default Page

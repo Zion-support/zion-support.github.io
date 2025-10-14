@@ -1,7 +1,7 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async;
-export default function Services() {
-  return (
+import React from 'react';
+import { Helmet } from 'react-helmet-async;';
+export default function Services() {';
+  return (';
     <div className="min-h-screen bg-white"></div>
       <Helmet></Helmet>
         <title>Services - Zion Tech Group</title>
@@ -33,10 +33,10 @@ export default function Services() {
           <div className="mt-12"></div>"
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
               Get Started Today;
-            </button>
-          </div>
-        </div>
-      </div>
+            </button>}
+          </div>}
+        </div>})
+      </div>})
     </div>)}
   );
 }"""

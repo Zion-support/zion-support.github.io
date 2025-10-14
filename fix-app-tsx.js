@@ -81,14 +81,14 @@ const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const handleSidebarToggle = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);}
+}
+  const handleSidebarToggle = () => {}
+    setIsSidebarOpen(!isSidebarOpen);}
   };
 
-  const handleSidebarClose = () => {
-    setIsSidebarOpen(false);
+  const handleSidebarClose = () => {}
+    setIsSidebarOpen(false);}
   };
 
   return (
@@ -98,86 +98,86 @@ function App() {
           <AccessibilityEnhancer></AccessibilityEnhancer>
             <Router></Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-                <FuturisticBackground />
-                <Navigation onSidebarToggle={handleSidebarToggle} />
-                <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
-                <Breadcrumb />
+                <FuturisticBackground /></FuturisticBackground>
+                <Navigation onSidebarToggle="{handleSidebarToggle}" /></Navigation>
+                <Sidebar isOpen="{isSidebarOpen}" onClose="{handleSidebarClose}" /></Sidebar>
+                <Breadcrumb /></Breadcrumb>
                 <main id="main-content" role="main"></main>
-                  <Suspense fallback={<LoadingPage />}>
+                  <Suspense fallback="{<LoadingPage" />}>
                     <Routes></Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/pricing" element={<PricingPage />} />
-                      <Route path="/blog" element={<BlogPage />} />
-                      <Route path="/ai-services" element={<AIServicesPage />} />
-                      <Route path="/tutorials" element={<TutorialsPage />} />
-                      <Route path="/demo" element={<DemoPage />} />
-                      <Route path="/support" element={<SupportPage />} />
-                      <Route path="/privacy" element={<PrivacyPage />} />
-                      <Route path="/terms" element={<TermsPage />} />
-                      <Route path="/cookies" element={<CookiesPage />} />
-                      <Route path="/sitemap" element={<SitemapPage />} />
-                      <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                      <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
-                      <Route path="/consultation" element={<ConsultationPage />} />
-                      <Route path="/careers" element={<CareersPage />} />
+                      <Route path="/" element="{<HomePage" />} />
+                      <Route path="/about" element="{<AboutPage" />} />
+                      <Route path="/contact" element="{<ContactPage" />} />
+                      <Route path="/services" element="{<ServicesPage" />} />
+                      <Route path="/pricing" element="{<PricingPage" />} />
+                      <Route path="/blog" element="{<BlogPage" />} />
+                      <Route path="/ai-services" element="{<AIServicesPage" />} />
+                      <Route path="/tutorials" element="{<TutorialsPage" />} />
+                      <Route path="/demo" element="{<DemoPage" />} />
+                      <Route path="/support" element="{<SupportPage" />} />
+                      <Route path="/privacy" element="{<PrivacyPage" />} />
+                      <Route path="/terms" element="{<TermsPage" />} />
+                      <Route path="/cookies" element="{<CookiesPage" />} />
+                      <Route path="/sitemap" element="{<SitemapPage" />} />
+                      <Route path="/case-studies" element="{<CaseStudiesPage" />} />
+                      <Route path="/data-analytics" element="{<DataAnalyticsPage" />} />
+                      <Route path="/network-infrastructure" element="{<NetworkInfrastructurePage" />} />
+                      <Route path="/consultation" element="{<ConsultationPage" />} />
+                      <Route path="/careers" element="{<CareersPage" />} />
                       {/* Service Pages */}
-                      <Route path="/micro-saas" element={<MicroSaasPage />} />
-                      <Route path="/it-services" element={<ItServicesPage />} />
-                      <Route path="/cloud-services" element={<CloudServicesPage />} />
-                      <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                      <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                      <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
-                      <Route path="/custom-development" element={<CustomDevelopmentPage />} />
-                      <Route path="/web-development" element={<WebDevelopmentPage />} />
-                      <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-                      <Route path="/database-management" element={<DatabaseManagementPage />} />
+                      <Route path="/micro-saas" element="{<MicroSaasPage" />} />
+                      <Route path="/it-services" element="{<ItServicesPage" />} />
+                      <Route path="/cloud-services" element="{<CloudServicesPage" />} />
+                      <Route path="/cloud-infrastructure" element="{<CloudInfrastructurePage" />} />
+                      <Route path="/cybersecurity" element="{<CybersecurityPage" />} />
+                      <Route path="/cybersecurity-solutions" element="{<CybersecuritySolutionsPage" />} />
+                      <Route path="/custom-development" element="{<CustomDevelopmentPage" />} />
+                      <Route path="/web-development" element="{<WebDevelopmentPage" />} />
+                      <Route path="/mobile-development" element="{<MobileDevelopmentPage" />} />
+                      <Route path="/database-management" element="{<DatabaseManagementPage" />} />
                       {/* 5G Solutions */}
-                      <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                      <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                      <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                      <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+                      <Route path="/5g-solutions" element="{<FiveGSolutionsPage" />} />
+                      <Route path="/5g-implementation" element="{<FiveGImplementationPage" />} />
+                      <Route path="/5g-edge-computing" element="{<FiveGEdgeComputingPage" />} />
+                      <Route path="/5g-iot-solutions" element="{<FiveGIotSolutionsPage" />} />
                       {/* AI Services */}
-                      <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
-                      <Route path="/ai-automation" element={<AIAutomationPage />} />
-                      <Route path="/ai-automation-platform" element={<AIAutomationPlatformPage />} />
-                      <Route path="/ai-automation-suite" element={<AIAutomationSuitePage />} />
-                      <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
-                      <Route path="/ai-content-creation" element={<AIContentCreationPage />} />
-                      <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                      <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-                      <Route path="/ai-ecommerce-solutions" element={<AIEcommerceSolutionsPage />} />
-                      <Route path="/ai-mobile-app-development" element={<AIMobileAppDevelopmentPage />} />
+                      <Route path="/ai-analytics" element="{<AIAnalyticsPage" />} />
+                      <Route path="/ai-automation" element="{<AIAutomationPage" />} />
+                      <Route path="/ai-automation-platform" element="{<AIAutomationPlatformPage" />} />
+                      <Route path="/ai-automation-suite" element="{<AIAutomationSuitePage" />} />
+                      <Route path="/ai-chatbot-builder" element="{<AIChatbotBuilderPage" />} />
+                      <Route path="/ai-content-creation" element="{<AIContentCreationPage" />} />
+                      <Route path="/ai-content-generation" element="{<AIContentGenerationPage" />} />
+                      <Route path="/ai-data-analytics" element="{<AIDataAnalyticsPage" />} />
+                      <Route path="/ai-ecommerce-solutions" element="{<AIEcommerceSolutionsPage" />} />
+                      <Route path="/ai-mobile-app-development" element="{<AIMobileAppDevelopmentPage" />} />
                     </Routes>
                   </Suspense>
                 </main>
-                <Footer />
-                <AnalyticsProvider />
-                <PerformanceMonitor />
-                <WebVitalsTracker />
-                <AdvancedPerformanceEnhancer />
-                <AdvancedPerformanceOptimizer />
-                <EnhancedSEOOptimizer />
-                <EnhancedAccessibilityManager />
-                <EnhancedAccessibility />
+                <Footer /></Footer>
+                <AnalyticsProvider /></AnalyticsProvider>
+                <PerformanceMonitor /></PerformanceMonitor>
+                <WebVitalsTracker /></WebVitalsTracker>
+                <AdvancedPerformanceEnhancer /></AdvancedPerformanceEnhancer>
+                <AdvancedPerformanceOptimizer /></AdvancedPerformanceOptimizer>
+                <EnhancedSEOOptimizer /></EnhancedSEOOptimizer>
+                <EnhancedAccessibilityManager /></EnhancedAccessibilityManager>
+                <EnhancedAccessibility /></EnhancedAccessibility>
               </div>
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </GlobalErrorBoundary>
+      </EnhancedErrorBoundary>)
+    </GlobalErrorBoundary>)
   );
 }
 
 export default App;
 `;
 
-try {
-  fs.writeFileSync('/workspace/App.tsx', content, 'utf8');
-  console.log('✅ Fixed App.tsx');
-} catch (error) {
-  console.error('❌ Error fixing App.tsx: ', error.message);'
+try {}
+  fs.writeFileSync('/workspace/App.tsx', content, 'utf8');}
+  console.log('✅ Fixed App.tsx');}
+} catch (error) {}
+  console.error('❌ Error fixing App.tsx: ', error.message);'}
 }

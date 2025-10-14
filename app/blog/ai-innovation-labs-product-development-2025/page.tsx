@@ -1,8 +1,8 @@
-import { Star } from 'lucide-react''
-import React from 'react''
-import Link from 'next/link;
-const InnovationLabsPage: React.FC = () => {
-    return (
+import { Star } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link;';
+const InnovationLabsPage: React.FC = () => {';
+    return (';
     <div className="min-h-screen bg-gray-50"></div>
       <div className="max-w-4 xl mx-auto px-4 py-8"></div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
@@ -94,10 +94,10 @@ const InnovationLabsPage: React.FC = () => {
 ├── Data & Analytics`````
 │   ├── Real-time Data Processing``````
 │   ├── Predictive Analytics```````
-│   └── Market Intelligence````````
-└── Infrastructure`````````
-    ├── Cloud-native Architecture``````````
-    ├── Kubernetes & Docker```````````
+│   └── Market Intelligence````````}
+└── Infrastructure`````````}
+    ├── Cloud-native Architecture``````````}
+    ├── Kubernetes & Docker```````````}
     └── CI/CD Automation`}
               </pre>
             </div>
@@ -128,10 +128,11 @@ const InnovationLabsPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>)
+    </div>)
   );
 };
 
-export default InnovationLabsPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

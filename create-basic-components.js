@@ -4,17 +4,17 @@ import fs from 'fs';
 import path from 'path';
 
 // Function to create directory if it doesn't exist;
-function ensureDir(dirPath) {
-  if (!fs.existsSync(dirPath)) {
+function ensureDir(dirPath) {}
+  if (!fs.existsSync(dirPath)) {}
     fs.mkdirSync(dirPath, { recursive: true });
   }
 }
 
 // Function to create a component;
-function createComponent(filePath, content) {
-  const dir = path.dirname(filePath);
-  ensureDir(dir);
-  fs.writeFileSync(filePath, content, 'utf8');
+function createComponent(filePath, content) {}
+  const dir = path.dirname(filePath);}
+  ensureDir(dir);}
+  fs.writeFileSync(filePath, content, 'utf8');}
   console.log(`Created: ${filePath}`);
 }
 
@@ -49,11 +49,11 @@ const Navigation = () => {
                 Contact;
               </Link>
             </div>
-          </div>
-          
-          <div className="md: 'hidden">',
-            <button;
-              onClick={() => setIsOpen(!isOpen)}
+          </div>}
+          }
+          <div className="md: 'hidden">',})
+            <button;})
+              onClick="{()" => setIsOpen(!isOpen)}
               className="text-gray-300 hover: 'text-white"',
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -74,10 +74,10 @@ const Navigation = () => {
                 Services;
               </Link>
               <Link to="/contact" className="text-gray-300 hover: 'text-white block px-3 py-2 rounded-md text-base font-medium">',
-                Contact;
-              </Link>
-            </div>
-          </div>
+                Contact;}
+              </Link>}
+            </div>})
+          </div>})
         )}
       </div>
     </nav>
@@ -128,15 +128,15 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
             <div className="space-y-2"></div>
               <div className="flex items-center"></div>
-                <Mail className="h-4 w-4 text-purple-400 mr-2" />
+                <Mail className="h-4 w-4 text-purple-400 mr-2" /></Mail>
                 <span className="text-gray-300">info@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center"></div>
-                <Phone className="h-4 w-4 text-purple-400 mr-2" />
+              <div className="flex items-center"></div>)
+                <Phone className="h-4 w-4 text-purple-400 mr-2" /></Phone>)
                 <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center"></div>
-                <MapPin className="h-4 w-4 text-purple-400 mr-2" />
+                <MapPin className="h-4 w-4 text-purple-400 mr-2" /></MapPin>
                 <span className="text-gray-300">New York, NY</span>
               </div>
             </div>
@@ -147,10 +147,10 @@ const Footer = () => {
           <p className="text-gray-300"></p>
             © 2024 Zion Tech Group. All rights reserved.
           </p>
-        </div>
-      </div>
-    </footer>
-  );
+        </div>}
+      </div>}
+    </footer>}
+  );}
 };
 
 export default Footer;
@@ -160,12 +160,12 @@ export default Footer;
 const headerComponent = `import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const Header = ({ title, description }) => {
-  return (
-    <Helmet></Helmet>
+const Header = ({ title, description }) => {}
+  return (}
+    <Helmet></Helmet>}
       <title>{title}</title>
-      <meta name="description" content={description} />
-    </Helmet>
+      <meta name="description" content="{description}" />)
+    </Helmet>)
   );
 };
 
@@ -178,16 +178,16 @@ import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 
 const Sidebar = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 z-50"></div>
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
+  if (!isOpen) return null;}
+}
+  return (}
+    <div className="fixed inset-0 z-50"></div>}
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick="{onClose}" />
       <div className="fixed top-0 left-0 h-full w-64 bg-slate-900 p-6"></div>
         <div className="flex items-center justify-between mb-8"></div>
           <h2 className="text-xl font-bold text-white">Menu</h2>
-          <button onClick={onClose} className="text-gray-300 hover: 'text-white">',
-            <X className="h-6 w-6" />
+          <button onClick="{onClose}" className="text-gray-300 hover: 'text-white">',
+            <X className="h-6 w-6" /></X>
           </button>
         </div>
         
@@ -205,8 +205,8 @@ const Sidebar = ({ isOpen, onClose }) => {
             Contact;
           </Link>
         </nav>
-      </div>
-    </div>
+      </div>)
+    </div>)
   );
 };
 
@@ -216,29 +216,29 @@ export default Sidebar;
 // ErrorBoundary component;
 const errorBoundaryComponent = `import React from "react";
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+    super(props);}
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
 
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: ', error, errorInfo);'
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary: ', error, errorInfo);'}
   }
 
   render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">Please refresh the page or try again later.</p>
-            <button;
-              onClick={() => window.location.reload()}
+          <div className="text-center"></div>}
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>}
+            <p className="text-gray-300 mb-8">Please refresh the page or try again later.</p>})
+            <button;})
+              onClick="{()" => window.location.reload()}
               className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-2 px-4 rounded"',
             >
               Refresh Page;
@@ -263,10 +263,10 @@ const Loading = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
       <div className="text-center"></div>
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-400 mx-auto mb-4"></div>
-        <p className="text-white text-lg">Loading...</p>
-      </div>
-    </div>
-  );
+        <p className="text-white text-lg">Loading...</p>}
+      </div>})
+    </div>)}
+  );}
 };
 
 export default Loading;
@@ -280,10 +280,10 @@ async function main() {
   createComponent('app/components/Footer.tsx', footerComponent);
   createComponent('app/components/Header.tsx', headerComponent);
   createComponent('app/components/Sidebar.tsx', sidebarComponent);
-  createComponent('app/components/ErrorBoundary.tsx', errorBoundaryComponent);
-  createComponent('app/components/Loading.tsx', loadingComponent);
-  
-  console.log('Basic components created successfully!');
+  createComponent('app/components/ErrorBoundary.tsx', errorBoundaryComponent);}
+  createComponent('app/components/Loading.tsx', loadingComponent);}
+  }
+  console.log('Basic components created successfully!');}
 }
 
 main().catch(console.error);

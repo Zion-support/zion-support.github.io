@@ -1,13 +1,13 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 const FuturisticCardEnhanced: React.FC = () => {
   return (
     <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
-        <title>Futuristic d Enhanced - Zion Tech Group</title>
-        <meta name="description" content="Professional futuristic card enhanced services by Zion Tech Group." /></meta>
-      </Helmet>
+      <Helmet></Helmet>}
+        <title>Futuristic d Enhanced - Zion Tech Group</title>}
+        <meta name="description" content="Professional futuristic card enhanced services by Zion Tech Group." /></meta>}
+      </Helmet>}
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100"></section>
         <div className="max-w-6xl mx-auto text-center"></div>
@@ -76,14 +76,14 @@ const FuturisticCardEnhanced: React.FC = () => {
             Get Started Today;
           </a>;
         </div>
-      </section>;
-    </div>
+      </section>;)
+    </div>)
   );
 };
 
       { /* CTA Section */ }"""
       <section className="py-16 px-4 bg-blue-600">"""
-        <div className=max-w-4xl mx-auto text-center></div>
+        <div className="max-w-4xl" mx-auto text-center></div>
           <h2 className="text-3xl font-bold text-white mb-6">""
 
             Ready to Get Started?;

@@ -1,7 +1,7 @@
-import React from 'react;
-import react-helmet-async from 'react-helmet-async;
-const SeoDataPage = () => {
-  return (
+import React from 'react;';
+import react-helmet-async from 'react-helmet-async;';
+const SeoDataPage = () => {';
+  return (';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>SeoData - Zion Tech Group</title>
@@ -14,9 +14,9 @@ const SeoDataPage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>
-    </div>
-  );
-
+      </div>)}
+    </div>)}
+  );}
+}
 };
 export default seodata;

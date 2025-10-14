@@ -1,18 +1,18 @@
-import React from 'react''
+import React from 'react';
 import { Helmet } from 'react-helmet-async;
-interface SEOProps {
-  title?: string
-  description?: string
-  keywords?: string
+interface SEOProps {';
+  title?: string';
+  description?: string';
+  keywords?: string';
   image?: string'
   url?: string''
   type?: 'website' | 'article' | 'profile;
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
+  author?: string}
+  publishedTime?: string}
+  modifiedTime?: string}
+  section?: string}
   tags?: string[]}
-=======
+="======"
 >>>>>>> origin/main
   title?: string;
   description?: string;
@@ -34,11 +34,11 @@ const SEO: React.FC<SEOProps> = ({'
   url = 'https://ziontechgroup.com''
   type = 'website''
   author = 'Zion Tech Group'
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = []
-}) => {'
+  publishedTime,}
+  modifiedTime,}
+  section,})
+  tags = []})
+}) => {'}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`'
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`'
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
@@ -50,43 +50,43 @@ const SEO: React.FC<SEOProps> = ({'
     logo: 'https://ziontechgroup.com/logo.svg''
     description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.'
     address: {'
-      '@type': 'PostalAddress''
-      addressLocality: 'Middletown''
-      addressRegion: 'DE''
-      addressCountry: 'US'
+      '@type': 'PostalAddress''}
+      addressLocality: 'Middletown''}
+      addressRegion: 'DE''}
+      addressCountry: 'US'}
     },
     contactPoint: {'
-      '@type': 'ContactPoint''
-      telephone: '+1-302-464-0950''
-      contactType: 'customer service''
-      email: 'kleber@ziontechgroup.com'
+      '@type': 'ContactPoint''}
+      telephone: '+1-302-464-0950''}
+      contactType: 'customer service''}
+      email: 'kleber@ziontechgroup.com'}
     },
     sameAs: ['
       'https://www.linkedin.com/''
-      'https://twitter.com/ziontechgroup''
-      'https://github.com/ziontechgroup'
+      'https://twitter.com/ziontechgroup'']
+      'https://github.com/ziontechgroup']
     ]
   }
   return (
     <Helmet></Helmet>
       <title>{title}</title>
 """
-      <meta name=description content={description} />""
-      <meta name=keywords content={keywords} /></meta>
+      <meta name="description" content="{description}" />""
+      <meta name="keywords" content="{keywords}" /></meta>
       { /* Open Graph */ }"""
-      <meta property=og:title content={title} />""
-      <meta property=og:description content={description} />""
-      <meta property=og:type content={type} />""
-      <meta property=og:url content={url} />""
-      <meta property=og:image content={image} /></meta>
+      <meta property="og:title" content="{title}" />""
+      <meta property="og:description" content="{description}" />""
+      <meta property="og:type" content="{type}" />""
+      <meta property="og:url" content="{url}" />""
+      <meta property="og:image" content="{image}" /></meta>
       { /* Twitter */ }"""
-      <meta name=twitter:card content=summary_large_image />""
-      <meta name=twitter:title content={title} />""
-      <meta name=twitter:description content={description} />""
-      <meta name=twitter:image content={image} /></meta>
+      <meta name="twitter:card" content="summary_large_image" />""
+      <meta name="twitter:title" content="{title}" />""
+      <meta name="twitter:description" content="{description}" />""
+      <meta name="twitter:image" content="{image}" /></meta>
       { /* Canonical URL */ }"""
-      <link rel="canonical" href={url} />""
-    </Helmet>
+      <link rel="canonical" href="{url}" />"")
+    </Helmet>)
   )};
 
 export default SEO;

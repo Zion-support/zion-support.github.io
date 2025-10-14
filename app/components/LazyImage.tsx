@@ -1,14 +1,14 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 const LazyImage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white"></div>
       <Helmet></Helmet>
-
-        <title>Lazy Image - Zion Tech Group</title>
-        <meta name="description" content="Professional lazy image services by Zion Tech Group." /></meta>
-      </Helmet>
+}
+        <title>Lazy Image - Zion Tech Group</title>}
+        <meta name="description" content="Professional lazy image services by Zion Tech Group." /></meta>}
+      </Helmet>}
       {/* Hero Section   */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100"></section>
         <div className="max-w-6xl mx-auto text-center"></div>
@@ -78,8 +78,8 @@ const LazyImage: React.FC = () => {
             Get Started Today;
           </a>
         </div>
-      </section>
-    </div>
+      </section>)
+    </div>)
   );
 export default LazyImage;
                 We provide comprehensive lazy image;
@@ -116,45 +116,45 @@ export default LazyImage;
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
-  className =;,'
-  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',
-  onLoad,
-  onError;
+  className =;,'}
+  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',}
+  onLoad,})
+  onError;})
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect()
+    const observer = new IntersectionObserver()
+      ([entry]) => {}
+        if (entry.isIntersecting) {}
+          setIsInView(true);}
+          observer.disconnect()}
       },
       {threshold: 0.1,}
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
-  const handleError = () => {
-    onError?.();
-  return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
-      {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`transition-opacity duration-300 ${'
-            isLoaded ? 'opacity-100' : 'opacity-0;
+    onLoad?.();}
+  const handleError = () => {}
+    onError?.();}
+  return (}
+    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`}></div>
+      {isInView && (}
+        <img}
+          src="{src}"
+          alt="{alt}"
+          onLoad="{handleLoad}"
+          onError="{handleError}"
+          className="{`transition-opacity" duration-300 ${'}
+            isLoaded ? 'opacity-100' : 'opacity-0;}
           }`}
-          loading="lazy"
-        /></img>
+          loading="lazy")
+        /></img>)
 )}
-      {!isLoaded && (
-        <div
-          className="absolute inset-0 bg-gray-200 animate-pulse"
-          style={{
+      {!isLoaded && (}
+        <div}
+          className="absolute inset-0 bg-gray-200 animate-pulse"})
+          style="{{"})
             backgroundImage: `url(${placeholder})`,'
             backgroundSize: 'cover','
             backgroundPosition: 'center;

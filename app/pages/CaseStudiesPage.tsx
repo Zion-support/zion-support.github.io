@@ -1,27 +1,27 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
-import { ArrowRightIcon,
-  CheckIcon,
-  ChartBarIcon,
-  TrendingUpIcon,
-  ClockIcon,
-  CurrencyDollarIcon'
+import { ArrowRightIcon,;
+  CheckIcon,';
+  ChartBarIcon,;';}
+  TrendingUpIcon,';}
+  ClockIcon,';}
+  CurrencyDollarIcon'}
 } from '@heroicons/react/24/outline;
 
 
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
+const CaseStudiesPage: React.FC = () => {';
+  const caseStudies = [';
     {'
       title: 'E-commerce Platform AI Optimization','
       client: 'TechRetail Inc.','
-      industry: 'E-commerce','
-      challenge: 'Low conversion rates and high cart abandonment','
-      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',
-      results: ['
+      industry: 'E-commerce','}
+      challenge: 'Low conversion rates and high cart abandonment','}
+      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',}
+      results: ['}
         { metric: 'Conversion Rate', value: '+45%', icon: TrendingUpIcon },'
-        { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUpIcon },'
-        { metric: 'Revenue Growth', value: '+60%', icon: CurrencyDollarIcon }
+        { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUpIcon },']
+        { metric: 'Revenue Growth', value: '+60%', icon: CurrencyDollarIcon }]
       ],'
       duration: '6 months','
       image: '/.jpg'
@@ -29,13 +29,13 @@ const CaseStudiesPage: React.FC = () => {
     {'
       title: 'Cybersecurity Infrastructure Overhaul','
       client: 'FinanceCorp','
-      industry: 'Financial Services','
-      challenge: 'Outdated security systems vulnerable to modern threats','
-      solution: 'Deployed comprehensive cybersecurity suite with real-time threat detection',
-      results: ['
+      industry: 'Financial Services','}
+      challenge: 'Outdated security systems vulnerable to modern threats','}
+      solution: 'Deployed comprehensive cybersecurity suite with real-time threat detection',}
+      results: ['}
         { metric: 'Security Incidents', value: '-95%', icon: CheckIcon },'
-        { metric: 'Response Time', value: '-80%', icon: ClockIcon },'
-        { metric: 'Compliance Score', value: '100%', icon: ChartBarIcon }
+        { metric: 'Response Time', value: '-80%', icon: ClockIcon },']
+        { metric: 'Compliance Score', value: '100%', icon: ChartBarIcon }]
       ],'
       duration: '4 months','
       image: '/case-studies/cybersecurity.jpg'
@@ -43,13 +43,13 @@ const CaseStudiesPage: React.FC = () => {
     {'
       title: 'Cloud Migration & Optimization','
       client: 'ManufacturingPro','
-      industry: 'Manufacturing','
-      challenge: 'On-premise infrastructure limiting scalability and performance','
-      solution: 'Migrated to cloud infrastructure with auto-scaling and performance optimization',
-      results: ['
+      industry: 'Manufacturing','}
+      challenge: 'On-premise infrastructure limiting scalability and performance','}
+      solution: 'Migrated to cloud infrastructure with auto-scaling and performance optimization',}
+      results: ['}
         { metric: 'Performance', value: '+200%', icon: TrendingUpIcon },'
-        { metric: 'Cost Savings', value: '-40%', icon: CurrencyDollarIcon },'
-        { metric: 'Uptime', value: '99.9%', icon: CheckIcon }
+        { metric: 'Cost Savings', value: '-40%', icon: CurrencyDollarIcon },']
+        { metric: 'Uptime', value: '99.9%', icon: CheckIcon }]
       ],'
       duration: '8 months','
       image: '/.jpg'
@@ -57,13 +57,13 @@ const CaseStudiesPage: React.FC = () => {
     {'
       title: 'AI-Powered Customer Service','
       client: 'ServiceMax','
-      industry: 'Customer Service','
-      challenge: 'High support costs and slow response times','
-      solution: 'Implemented AI chatbot and automated ticket routing system',
-      results: ['
+      industry: 'Customer Service','}
+      challenge: 'High support costs and slow response times','}
+      solution: 'Implemented AI chatbot and automated ticket routing system',}
+      results: ['}
         { metric: 'Response Time', value: '-70%', icon: ClockIcon },'
-        { metric: 'Customer Satisfaction', value: '+85%', icon: TrendingUpIcon },'
-        { metric: 'Support Costs', value: '-50%', icon: CurrencyDollarIcon }
+        { metric: 'Customer Satisfaction', value: '+85%', icon: TrendingUpIcon },']
+        { metric: 'Support Costs', value: '-50%', icon: CurrencyDollarIcon }]
       ],'
       duration: '3 months','
       image: '/.jpg'
@@ -74,10 +74,10 @@ const CaseStudiesPage: React.FC = () => {
     <></>
       <Helmet></Helmet>
         <title>Case Studies - Zion Tech Group</title>'
-        <meta name="description" content="Explore our successful case studies and see how we've helped businesses transform with AI, cybersecurity, cloud infrastructure, and IT solutions." /></meta>
-        <meta name="keywords" content="case studies, success stories, AI solutions, cybersecurity, cloud infrastructure, IT solutions, business transformation" /></meta>
-      </Helmet>
-
+        <meta name="description" content="Explore our successful case studies and see how we've helped businesses transform with AI, cybersecurity, cloud infrastructure, and IT solutions." /></meta>}
+        <meta name="keywords" content="case studies, success stories, AI solutions, cybersecurity, cloud infrastructure, IT solutions, business transformation" /></meta>}
+      </Helmet>}
+}
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
         <div className="absolute inset-0 opacity-20"></div>
@@ -111,11 +111,11 @@ const CaseStudiesPage: React.FC = () => {
               See how our solutions have transformed businesses across different industries
             </p>
           </div>
-          
-          <div className="space-y-16"></div>
-            {caseStudies.map((study, index) => ('
-              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}></div>'
-                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}></div>
+          )
+          <div className="space-y-16"></div>)
+            {caseStudies.map((study, index) => ('}
+              <div key="{index}" className="{`grid" lg:grid-cols-2 gap-12 items-center ${index % 2 ="==" 1 ? 'lg:grid-flow-col-dense' : ''}`}></div>'
+                <div className="{`${index" % 2 ="==" 1 ? 'lg:col-start-2' : ''}`}></div>
                   <div className="bg-slate-800 rounded-xl p-8"></div>
                     <div className="flex items-center gap-3 mb-4"></div>
                       <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full"></span>
@@ -139,16 +139,16 @@ const CaseStudiesPage: React.FC = () => {
                       </div>
                       
                       <div></div>
-                        <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
-                          {study.results.map((result, resultIndex) => (
-                            <div key={resultIndex} className="text-center"></div>
+                        <h4 className="text-lg font-semibold text-white mb-4">Results</h4>)
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4"></div>)
+                          {study.results.map((result, resultIndex) => (}
+                            <div key="{resultIndex}" className="text-center"></div>
                               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-2"></div>
                                 <result.icon className="w-6 h-6 text-white" /></result>
                               </div>
                               <div className="text-2xl font-bold text-white">{result.value}</div>
-                              <div className="text-gray-400 text-sm">{result.metric}</div>
-                            </div>
+                              <div className="text-gray-400 text-sm">{result.metric}</div>)
+                            </div>)
                           ))}
                         </div>
                       </div>
@@ -156,7 +156,7 @@ const CaseStudiesPage: React.FC = () => {
                   </div>
                 </div>
                 '
-                <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}></div>
+                <div className="{`${index" % 2 ="==" 1 ? 'lg:col-start-1' : ''}`}></div>
                   <div className="bg-slate-800 rounded-xl p-8 h-full flex items-center justify-center"></div>
                     <div className="text-center"></div>
                       <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
@@ -231,8 +231,8 @@ const CaseStudiesPage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
                 View All Case Studies;
               </button>
-            </div>
-          </div>;
+            </div>)
+          </div>;)
 const CaseStudiesPage: React.FC = () => {
   return (
     <>
@@ -245,10 +245,10 @@ const CaseStudiesPage: React.FC = () => {
         <div className="text-center">"
           <h1>CaseStudiesPage</h1>"
           <p>This page is under construction.</p>"
-        </div>
-      </section>
-
-
+        </div>}
+      </section>}
+}
+}
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
@@ -273,8 +273,8 @@ const CaseStudiesPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </section>)
+    </>)
   );
 };
 

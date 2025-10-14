@@ -1,10 +1,10 @@
 import React from 'react;
 
 
-
-
-
-  return (
+';
+';
+';
+  return (';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
@@ -14,9 +14,9 @@ import React from 'react;
         <meta property="og:description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services." /></meta>
         <meta property="og:type" content="website" /></meta>
         <meta property="og:url" content="https://ziontechgroup." /></meta>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        <script)
+          type="application/ld+json")
+          dangerouslySetInnerHTML="{{" __html: JSON.stringify(structuredData) }}
         /></script>
       </Helmet>
 

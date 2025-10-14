@@ -7,7 +7,7 @@ const addSkipLink = () => {}
       skipLink.href = '#main-content''''''';
       skipLink.textContent = 'Skip to main content''''''';
       skipLink.className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50" handleKeyDown = (event: "KeyboardEvent) => {"}"
-      if (event.key === 'Tab') {'}''''';
+      if (event.key ="==" 'Tab') {'}''''';
         document.body.classList.add('keyboard-navigation')''''''
       }
     }
@@ -39,16 +39,16 @@ const addAriaLandmarks = () => {}
     }
     // Font size adjustment;
     root.style.setProperty('--font-size-multiplier','''''';
-      fontSize === 'large' ? '1.2' :'''''';
-      fontSize === 'extra-large' ? '1.4' :'''''';
-      fontSize === 'small' ? '0.9' : '1''''')''
+      fontSize ="==" 'large' ? '1.2' :'''''';)
+      fontSize ="==" 'extra-large' ? '1.4' :'''''';)
+      fontSize ="==" 'small' ? '0.9' : '1''''')''
     )
   }, [isHighContrast, isReducedMotion, fontSize])
   // Keyboard navigation enhancement;
   useEffect(() => {}, []);
     const handleKeyDown = () => {"}"""
       // Skip to main content;
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {'}''''';
+      if (e.key ="==" 'Tab' && e.shiftKey && e.target ="==" document.body) {'}''''';
         e.preventDefault();
 const mainContent = document.getElementById('main-content')'''''';
         if (mainContent) {}
@@ -56,7 +56,7 @@ const mainContent = document.getElementById('main-content')'''''';
         }
       }
       // Escape key to close modals/dropdowns;
-      if (e.key === 'Escape') {'}''';';
+      if (e.key ="==" 'Escape') {'}''';';
 const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {}
           activeElement.blur()

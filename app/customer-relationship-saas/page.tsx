@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const CustomerRelationshipSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Customer Relationship SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Customer Relationship SAAS - Zion Tech Group</title>';
         <meta name="description" content="Advanced CRM solution for managing customer relationships and sales." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const CustomerRelationshipSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default CustomerRelationshipSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 const BlogPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights and updates from Zion Tech Group." />
       </Helmet>
@@ -49,9 +49,16 @@ const BlogPage: React.FC = () => {
               </div>
             </section>
           </div>
+<<<<<<< HEAD
         </div>
       </div>
     </>
   )
+=======
+        </div>}
+      </div>})
+    </>)}
+  );}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 export default BlogPage

@@ -16,27 +16,27 @@ const filesToFix = [
   'app/ai-quantum-financial-oracle/page.tsx',
   'app/ai-sentiment-analysis-pro/page.tsx',
   'app/ai-space-mission-optimizer/page.tsx',
-  'app/ai-supply-chain-optimizer/page.tsx',
-  'app/ai-translation-service/page.tsx'
+  'app/ai-supply-chain-optimizer/page.tsx',]
+  'app/ai-translation-service/page.tsx']
 ];
 
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {}
+  try {}
     console.log(`Fixing ${filePath}...`);
     
     // Read the file;
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove unused imports by running eslint with --fix;
-    try {
+    try {}
       execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });
       console.log(`✓ Fixed ${filePath}`);
-    } catch (error) {
-      // If eslint can't fix it, try manual removal of common unused imports;
+    } catch (error) {}
+      // If eslint can't fix it, try manual removal of common unused imports;}
       console.log(`⚠ ESLint couldn't fix ${filePath}, trying manual fix...`);
       
       // Common patterns to remove;
-      const patterns = [
+      const patterns = []
         /import\s*{\s*[^}]*Link[^}]*}\s*from\s*['"]react-router-dom['"];\s*\n/g,
         /import\s*{\s*[^}]*Shield[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
         /import\s*{\s*[^}]*Globe[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
@@ -51,15 +51,15 @@ function fixFile(filePath) {
         /import\s*{\s*[^}]*Frown[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
       ];
       
-      patterns.forEach(pattern => {
-        content = content.replace(pattern, '');
+      patterns.forEach(pattern => {)}
+        content = content.replace(pattern, '');}
       });
       
       // Write back the cleaned content;
       fs.writeFileSync(filePath, content);
       console.log(`✓ Manually fixed ${filePath}`);
     }
-  } catch (error) {
+  } catch (error) {}
     console.log(`✗ Failed to fix ${filePath}: ${error.message}`);
   }
 }

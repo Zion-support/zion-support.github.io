@@ -1,28 +1,28 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { ArrowPathIcon,
-  UserGroupIcon,
-  CloudIcon,
-  CpuChipIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  ChartBarIcon'
+  UserGroupIcon,;
+  CloudIcon,';
+  CpuChipIcon,;';}
+  ArrowRightIcon,';}
+  CheckIcon,';}
+  ChartBarIcon'}
 } from '@heroicons/react/24/outline;
 
 
 const DigitalTransformationPage: React.FC = () => {
-  const services = [
-    {
+  const services = [';
+    {';
       icon: ArrowPathIcon,'
       title: 'Process Automation','
       description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',
       features: ['
         'Workflow Analysis','
-        'Process Mapping','
-        'Automation Implementation','
-        'Performance Monitoring'
-      ]
+        'Process Mapping','}
+        'Automation Implementation','}]
+        'Performance Monitoring'}]
+      ]}
     },
     {
       icon: UserGroupIcon,'
@@ -30,10 +30,10 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Guide your team through digital transformation with comprehensive change management strategies.',
       features: ['
         'Training Programs','
-        'Change Communication','
-        'Adoption Strategies','
-        'Performance Metrics'
-      ]
+        'Change Communication','}
+        'Adoption Strategies','}]
+        'Performance Metrics'}]
+      ]}
     },
     {
       icon: CloudIcon,'
@@ -41,10 +41,10 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Migrate your infrastructure to the cloud for improved scalability, security, and cost efficiency.',
       features: ['
         'Cloud Strategy','
-        'Data Migration','
-        'Security Implementation','
-        'Cost Optimization'
-      ]
+        'Data Migration','}
+        'Security Implementation','}]
+        'Cost Optimization'}]
+      ]}
     },
     {
       icon: CpuChipIcon,'
@@ -52,38 +52,38 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Integrate artificial intelligence into your business processes for enhanced decision-making and automation.',
       features: ['
         'AI Strategy','
-        'Model Development','
-        'Integration Services','
-        'Performance Monitoring'
-      ]
+        'Model Development','}
+        'Integration Services','}]
+        'Performance Monitoring'}]
+      ]}
     }
   ];
 
   const benefits = [
     {'
-      title: 'Increased Efficiency','
-      description: 'Streamline operations and reduce manual work',
-      icon: ChartBarIcon,'
-      value: '40%'
+      title: 'Increased Efficiency','}
+      description: 'Streamline operations and reduce manual work',}
+      icon: ChartBarIcon,'}
+      value: '40%'}
     },
     {'
-      title: 'Cost Reduction','
-      description: 'Optimize processes and reduce operational costs',
-      icon: ChartBarIcon,'
-      value: '30%'
+      title: 'Cost Reduction','}
+      description: 'Optimize processes and reduce operational costs',}
+      icon: ChartBarIcon,'}
+      value: '30%'}
     },
     {'
-      title: 'Better Customer Experience','
-      description: 'Improve customer satisfaction and engagement',
-      icon: ChartBarIcon,'
-      value: '85%'
+      title: 'Better Customer Experience','}
+      description: 'Improve customer satisfaction and engagement',}
+      icon: ChartBarIcon,'}
+      value: '85%'}
     },
     {'
-      title: 'Data-Driven Decisions','
-      description: 'Make informed decisions with real-time analytics',
-      icon: ChartBarIcon,'
-      value: '90%'
-    }
+      title: 'Data-Driven Decisions','}
+      description: 'Make informed decisions with real-time analytics',}
+      icon: ChartBarIcon,'}
+      value: '90%'}]
+    }]
   ];
 
   return (
@@ -135,10 +135,10 @@ const DigitalTransformationPage: React.FC = () => {
               Comprehensive solutions to modernize your business operations
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8"></div>
-            {services.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
+          )
+          <div className="grid md:grid-cols-2 gap-8"></div>)
+            {services.map((service, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
                 <div className="flex items-center mb-6"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"></div>
                     <service.icon className="w-8 h-8 text-white" /></service>
@@ -149,13 +149,13 @@ const DigitalTransformationPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed"></p>
                   {service.description}
                 </p>
-                
-                <ul className="space-y-3 mb-6"></ul>
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
+                )
+                <ul className="space-y-3 mb-6"></ul>)
+                  {service.features.map((feature, featureIndex) => (}
+                    <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                      {feature}
-                    </li>
+                      {feature})
+                    </li>)
                   ))}
                 </ul>
                 
@@ -185,15 +185,15 @@ const DigitalTransformationPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center"></div>
+            {benefits.map((benefit, index) => (}
+              <div key="{index}" className="text-center"></div>
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <benefit.icon className="w-10 h-10 text-white" /></benefit>
                 </div>
                 <div className="text-4xl font-bold text-purple-400 mb-2">{benefit.value}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </div>
+                <p className="text-gray-300">{benefit.description}</p>)
+              </div>)
             ))}
           </div>
         </div>
@@ -212,13 +212,13 @@ const DigitalTransformationPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-4 gap-8"></div>
-            {['
+            {['}
               { step: '01', title: 'Assessment', description: 'Analyze current processes and identify transformation opportunities' },'
               { step: '02', title: 'Strategy', description: 'Develop a comprehensive digital transformation roadmap' },'
-              { step: '03', title: 'Implementation', description: 'Execute the transformation plan with expert guidance' },'
-              { step: '04', title: 'Optimization', description: 'Monitor performance and continuously improve processes' }
+              { step: '03', title: 'Implementation', description: 'Execute the transformation plan with expert guidance' },']
+              { step: '04', title: 'Optimization', description: 'Monitor performance and continuously improve processes' }]
             ].map((phase, index) => (
-              <div key={index} className="text-center"></div>
+              <div key="{index}" className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <span className="text-2xl font-bold text-white">{phase.step}</span>
                 </div>
@@ -230,8 +230,8 @@ const DigitalTransformationPage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
                 Get Started Today;
               </button>
-            </div>
-          </div>;
+            </div>)
+          </div>;)
 const DigitalTransformationPage: React.FC = () => {
   return (
     <>
@@ -243,10 +243,10 @@ const DigitalTransformationPage: React.FC = () => {
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
         <div className="text-center"></div>
           <h1>DigitalTransformationPage</h1>
-          <p>This page is under construction.</p>
-        </div>
-      </section>
-
+          <p>This page is under construction.</p>}
+        </div>}
+      </section>}
+}
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
@@ -271,8 +271,8 @@ const DigitalTransformationPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </section>)
+    </>)
   );
 export default DigitalTransformationPage;
 '

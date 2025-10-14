@@ -1,8 +1,8 @@
-import { Star } from 'lucide-react''
-import React from 'react''
-import Link from 'next/link;
-const EnterpriseTransformationPage: React.FC = () => {
-  return (
+import { Star } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link;';
+const EnterpriseTransformationPage: React.FC = () => {';
+  return (';
     <div className="min-h-screen bg-gray-50"></div>
       <div className="max-w-4 xl mx-auto px-4 py-8"></div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
@@ -50,8 +50,8 @@ const EnterpriseTransformationPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Transformation Strategy</h2>
             <p>;
               The transformation followed a comprehensive 6-phase approach, each phase building upon the previous to create ;
-              exponential value. Here's the proven roadmap:
-            </p>
+              exponential value. Here's the proven roadmap:)
+            </p>)
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: Foundation & Assessment (Months 1-3)</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"></ul>
               <li>• Comprehensive AI readiness assessment across all business units</li>
@@ -103,11 +103,12 @@ const EnterpriseTransformationPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+        </div>}
+      </div>}
+    </div>}
+  );}
 };
 
-export default EnterpriseTransformationPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

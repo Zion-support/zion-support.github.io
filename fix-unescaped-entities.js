@@ -22,8 +22,8 @@ const filesToFix = [
   'app/main.tsx',
   'app/micro-saas-services/microSaasServices.tsx',
   'app/micro-saas-services/services.tsx',
-  'app/not-found.tsx',
-  'app/service-template.tsx'
+  'app/not-found.tsx',]
+  'app/service-template.tsx']
 ];
 
 // Common replacements for unescaped entities;
@@ -50,13 +50,13 @@ const replacements = [
   { from: "haven't", to: "haven&apos;t" },
   { from: "hadn't", to: "hadn&apos;t" },
   { from: "doesn't", to: "doesn&apos;t" },
-  { from: "didn't", to: "didn&apos;t" },
-  { from: "will", to: "will" }, // This one doesn't need escaping;
+  { from: "didn't", to: "didn&apos;t" },]
+  { from: "will", to: "will" }, // This one doesn't need escaping;]
 ];
 
-function fixFile(filePath) {
-  try {
-    if (!fs.existsSync(filePath)) {
+function fixFile(filePath) {}
+  try {}
+    if (!fs.existsSync(filePath)) {}
       console.log(`File not found: ${filePath}`);
       return;
     }
@@ -64,20 +64,20 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    replacements.forEach(({ from, to }) => {
-      if (content.includes(from)) {
-        content = content.replace(new RegExp(from, 'g'), to);
-        modified = true;
+    replacements.forEach(({ from, to }) => {}
+      if (content.includes(from)) {}
+        content = content.replace(new RegExp(from, 'g'), to);}
+        modified = true;}
       }
     });
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (modified) {}
+      fs.writeFileSync(filePath, content, 'utf8');}
       console.log(`Fixed: ${filePath}`);
-    } else {
+    } else {}
       console.log(`No changes needed: ${filePath}`);
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }

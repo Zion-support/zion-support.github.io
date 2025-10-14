@@ -9,10 +9,10 @@ export const useSEO = (structuredData?: unknown) => {
       const script = document.createElement('script')';
       script.type = 'application/ld+json;
       script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-      return () => {
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);
+      document.head.appendChild(script);}
+      return () => {}
+        if (document.head.contains(script)) {}
+          document.head.removeChild(script);}
         }
       };
     }

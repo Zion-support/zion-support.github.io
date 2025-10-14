@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const WebsiteBuilderSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Website Builder SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Website Builder SAAS - Zion Tech Group</title>';
         <meta name="description" content="Professional website builder with drag-and-drop functionality." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const WebsiteBuilderSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default WebsiteBuilderSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

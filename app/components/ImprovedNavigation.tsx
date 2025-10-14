@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react''
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom;
 import { ArrowRight, 
   ChevronDown, 
@@ -21,25 +21,25 @@ import { ArrowRight,
   ExternalLink,
   Star,
   TrendingUp,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  DollarSign,
-  Play'
+  Users,;
+  Award,';
+  Clock,;';}
+  CheckCircle,';}
+  DollarSign,';}
+  Play'}
 } from 'lucide-react;
 
 const ImprovedNavigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false);';
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);';
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)'
   const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
 
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setIsOpen(false);
-    setIsSidebarOpen(false);
+  // Close mobile menu when route changes}
+  useEffect(() => {}
+    setIsOpen(false);}
+    setIsSidebarOpen(false);}
   }, [location]);
 
   const navigationItems = [
@@ -51,155 +51,155 @@ const ImprovedNavigation = () => {
       color: 'from-blue-500 to-cyan-500',
       dropdown: [
         { '
-          label: 'AI Analytics Dashboard Pro', '
-          href: '/ai-analytics-dashboard-pro','
-          description: 'Real-time business intelligence',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: 'AI Analytics Dashboard Pro', '}
+          href: '/ai-analytics-dashboard-pro','}
+          description: 'Real-time business intelligence',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: 'AI Cybersecurity Suite Pro', '
-          href: '/ai-cybersecurity-suite-pro','
-          description: 'Advanced threat protection',
-          icon: <Shield className="w-4 h-4" /></Shield>
+          label: 'AI Cybersecurity Suite Pro', '}
+          href: '/ai-cybersecurity-suite-pro','}
+          description: 'Advanced threat protection',}
+          icon: <Shield className="w-4 h-4" /></Shield>}
         },
         { '
-          label: 'AI Content Generation Pro', '
-          href: '/ai-content-generation-pro','
-          description: 'Automated content creation',
-          icon: <Sparkles className="w-4 h-4" /></Sparkles>
+          label: 'AI Content Generation Pro', '}
+          href: '/ai-content-generation-pro','}
+          description: 'Automated content creation',}
+          icon: <Sparkles className="w-4 h-4" /></Sparkles>}
         },
         { '
-          label: 'AI Customer Support Chatbot', '
-          href: '/ai-customer-support-chatbot','
-          description: 'Intelligent customer service',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'AI Customer Support Chatbot', '}
+          href: '/ai-customer-support-chatbot','}
+          description: 'Intelligent customer service',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'AI Code Assistant Pro', '
-          href: '/ai-code-assistant-pro','
-          description: 'AI-powered development',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'AI Code Assistant Pro', '}
+          href: '/ai-code-assistant-pro','}
+          description: 'AI-powered development',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'AI Business Intelligence Pro', '
-          href: '/ai-business-intelligence-pro','
-          description: 'Data-driven insights',
-          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>
+          label: 'AI Business Intelligence Pro', '}
+          href: '/ai-business-intelligence-pro','}
+          description: 'Data-driven insights',}
+          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>}
         },
         { '
-          label: 'AI Automation Platform', '
-          href: '/ai-automation-platform','
-          description: 'Workflow automation',
-          icon: <Zap className="w-4 h-4" /></Zap>
+          label: 'AI Automation Platform', '}
+          href: '/ai-automation-platform','}
+          description: 'Workflow automation',}
+          icon: <Zap className="w-4 h-4" /></Zap>}
         },
         { '
-          label: 'AI Data Analytics Pro', '
-          href: '/ai-data-analytics-pro','
-          description: 'Advanced data analysis',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: 'AI Data Analytics Pro', '}
+          href: '/ai-data-analytics-pro','}
+          description: 'Advanced data analysis',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: 'AI Marketing Automation', '
-          href: '/ai-marketing-automation','
-          description: 'Smart marketing campaigns',
-          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>
+          label: 'AI Marketing Automation', '}
+          href: '/ai-marketing-automation','}
+          description: 'Smart marketing campaigns',}
+          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>}
         },
         { '
-          label: 'AI HR & Recruitment Pro', '
-          href: '/ai-hr-recruitment-pro','
-          description: 'Intelligent talent management',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'AI HR & Recruitment Pro', '}
+          href: '/ai-hr-recruitment-pro','}
+          description: 'Intelligent talent management',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'AI Financial Analysis', '
-          href: '/ai-financial-analysis','
-          description: 'Financial forecasting',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: 'AI Financial Analysis', '}
+          href: '/ai-financial-analysis','}
+          description: 'Financial forecasting',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: 'AI Supply Chain Optimizer', '
-          href: '/ai-supply-chain-optimizer','
-          description: 'Supply chain intelligence',
-          icon: <Globe className="w-4 h-4" /></Globe>
+          label: 'AI Supply Chain Optimizer', '}
+          href: '/ai-supply-chain-optimizer','}
+          description: 'Supply chain intelligence',}
+          icon: <Globe className="w-4 h-4" /></Globe>}
         },
         { '
-          label: 'AI Voice Assistant Pro', '
-          href: '/ai-voice-assistant-pro','
-          description: 'Voice-activated AI',
-          icon: <User className="w-4 h-4" /></User>
+          label: 'AI Voice Assistant Pro', '}
+          href: '/ai-voice-assistant-pro','}
+          description: 'Voice-activated AI',}
+          icon: <User className="w-4 h-4" /></User>}
         },
         { '
-          label: 'AI Image Recognition Pro', '
-          href: '/ai-image-recognition-pro','
-          description: 'Computer vision solutions',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'AI Image Recognition Pro', '}
+          href: '/ai-image-recognition-pro','}
+          description: 'Computer vision solutions',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'AI Predictive Maintenance', '
-          href: '/ai-predictive-maintenance','
-          description: 'Predictive analytics',
-          icon: <Clock className="w-4 h-4" /></Clock>
+          label: 'AI Predictive Maintenance', '}
+          href: '/ai-predictive-maintenance','}
+          description: 'Predictive analytics',}
+          icon: <Clock className="w-4 h-4" /></Clock>}
         },
         { '
-          label: 'AI Sentiment Analysis Pro', '
-          href: '/ai-sentiment-analysis-pro','
-          description: 'Customer sentiment tracking',
-          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>
+          label: 'AI Sentiment Analysis Pro', '}
+          href: '/ai-sentiment-analysis-pro','}
+          description: 'Customer sentiment tracking',}
+          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>}
         },
         { '
-          label: 'AI Recommendation Engine', '
-          href: '/ai-recommendation-engine','
-          description: 'Personalized recommendations',
-          icon: <Star className="w-4 h-4" /></Star>
+          label: 'AI Recommendation Engine', '}
+          href: '/ai-recommendation-engine','}
+          description: 'Personalized recommendations',}
+          icon: <Star className="w-4 h-4" /></Star>}
         },
         { '
-          label: 'AI Fraud Detection Pro', '
-          href: '/ai-fraud-detection-pro','
-          description: 'Advanced fraud prevention',
-          icon: <Shield className="w-4 h-4" /></Shield>
+          label: 'AI Fraud Detection Pro', '}
+          href: '/ai-fraud-detection-pro','}
+          description: 'Advanced fraud prevention',}
+          icon: <Shield className="w-4 h-4" /></Shield>}
         },
         { '
-          label: 'AI Language Translation', '
-          href: '/ai-language-translation','
-          description: 'Real-time translation',
-          icon: <Globe className="w-4 h-4" /></Globe>
+          label: 'AI Language Translation', '}
+          href: '/ai-language-translation','}
+          description: 'Real-time translation',}
+          icon: <Globe className="w-4 h-4" /></Globe>}
         },
         { '
-          label: 'AI Chatbot Enterprise', '
-          href: '/ai-chatbot-enterprise','
-          description: 'Enterprise chatbot solutions',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'AI Chatbot Enterprise', '}
+          href: '/ai-chatbot-enterprise','}
+          description: 'Enterprise chatbot solutions',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'AI Data Mining Pro', '
-          href: '/ai-data-mining-pro','
-          description: 'Data extraction & analysis',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: 'AI Data Mining Pro', '}
+          href: '/ai-data-mining-pro','}
+          description: 'Data extraction & analysis',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: 'AI Video Analysis', '
-          href: '/ai-video-analysis','
-          description: 'Video content analysis',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'AI Video Analysis', '}
+          href: '/ai-video-analysis','}
+          description: 'Video content analysis',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'AI Time Series Forecasting', '
-          href: '/ai-time-series-forecasting','
-          description: 'Time-based predictions',
-          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>
+          label: 'AI Time Series Forecasting', '}
+          href: '/ai-time-series-forecasting','}
+          description: 'Time-based predictions',}
+          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>}
         },
         { '
-          label: 'AI NLP Text Analysis', '
-          href: '/ai-nlp-text-analysis','
-          description: 'Natural language processing',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'AI NLP Text Analysis', '}
+          href: '/ai-nlp-text-analysis','}
+          description: 'Natural language processing',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'View All AI Services', '
-          href: '/ai-services','
-          description: 'Explore all AI solutions',
-          icon: <ArrowRight className="w-4 h-4" /></ArrowRight>
-        }
+          label: 'View All AI Services', '}
+          href: '/ai-services','}
+          description: 'Explore all AI solutions',}
+          icon: <ArrowRight className="w-4 h-4" /></ArrowRight>}]
+        }]
       ]
     },
     {'
@@ -210,89 +210,89 @@ const ImprovedNavigation = () => {
       color: 'from-green-500 to-emerald-500',
       dropdown: [
         { '
-          label: 'Cloud Infrastructure', '
-          href: '/cloud-infrastructure','
-          description: 'Scalable cloud solutions',
-          icon: <Cloud className="w-4 h-4" /></Cloud>
+          label: 'Cloud Infrastructure', '}
+          href: '/cloud-infrastructure','}
+          description: 'Scalable cloud solutions',}
+          icon: <Cloud className="w-4 h-4" /></Cloud>}
         },
         { '
-          label: 'Blockchain Development', '
-          href: '/blockchain-development','
-          description: 'Blockchain technology',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Blockchain Development', '}
+          href: '/blockchain-development','}
+          description: 'Blockchain technology',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'IoT Solutions', '
-          href: '/iot-solutions','
-          description: 'Internet of Things',
-          icon: <Globe className="w-4 h-4" /></Globe>
+          label: 'IoT Solutions', '}
+          href: '/iot-solutions','}
+          description: 'Internet of Things',}
+          icon: <Globe className="w-4 h-4" /></Globe>}
         },
         { '
-          label: 'AR/VR Development', '
-          href: '/ar-vr-development','
-          description: 'Immersive experiences',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'AR/VR Development', '}
+          href: '/ar-vr-development','}
+          description: 'Immersive experiences',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'DevOps Solutions', '
-          href: '/devops-solutions','
-          description: 'Development operations',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'DevOps Solutions', '}
+          href: '/devops-solutions','}
+          description: 'Development operations',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'Mobile Development', '
-          href: '/mobile-development','
-          description: 'Mobile applications',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Mobile Development', '}
+          href: '/mobile-development','}
+          description: 'Mobile applications',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'Web Development', '
-          href: '/web-development','
-          description: 'Web applications',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Web Development', '}
+          href: '/web-development','}
+          description: 'Web applications',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'IT Support', '
-          href: '/it-support','
-          description: 'Technical support',
-          icon: <HelpCircle className="w-4 h-4" /></HelpCircle>
+          label: 'IT Support', '}
+          href: '/it-support','}
+          description: 'Technical support',}
+          icon: <HelpCircle className="w-4 h-4" /></HelpCircle>}
         },
         { '
-          label: 'Network Infrastructure', '
-          href: '/network-infrastructure','
-          description: 'Network solutions',
-          icon: <Globe className="w-4 h-4" /></Globe>
+          label: 'Network Infrastructure', '}
+          href: '/network-infrastructure','}
+          description: 'Network solutions',}
+          icon: <Globe className="w-4 h-4" /></Globe>}
         },
         { '
-          label: 'IT Consulting', '
-          href: '/it-consulting','
-          description: 'Technology consulting',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'IT Consulting', '}
+          href: '/it-consulting','}
+          description: 'Technology consulting',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'Cybersecurity Audit', '
-          href: '/cybersecurity-audit','
-          description: 'Security assessments',
-          icon: <Shield className="w-4 h-4" /></Shield>
+          label: 'Cybersecurity Audit', '}
+          href: '/cybersecurity-audit','}
+          description: 'Security assessments',}
+          icon: <Shield className="w-4 h-4" /></Shield>}
         },
         { '
-          label: 'Data Center Services', '
-          href: '/data-center-services','
-          description: 'Data center solutions',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Data Center Services', '}
+          href: '/data-center-services','}
+          description: 'Data center solutions',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'Asset Management', '
-          href: '/asset-management','
-          description: 'IT asset tracking',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: 'Asset Management', '}
+          href: '/asset-management','}
+          description: 'IT asset tracking',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: 'View All IT Services', '
-          href: '/services','
-          description: 'Explore all IT solutions',
-          icon: <ArrowRight className="w-4 h-4" /></ArrowRight>
-        }
+          label: 'View All IT Services', '}
+          href: '/services','}
+          description: 'Explore all IT solutions',}
+          icon: <ArrowRight className="w-4 h-4" /></ArrowRight>}]
+        }]
       ]
     },
     {'
@@ -303,149 +303,149 @@ const ImprovedNavigation = () => {
       color: 'from-purple-500 to-pink-500',
       dropdown: [
         { '
-          label: 'Zion Analytics Pro', '
-          href: '/zion-analytics-pro','
-          description: 'Business intelligence platform',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: 'Zion Analytics Pro', '}
+          href: '/zion-analytics-pro','}
+          description: 'Business intelligence platform',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: 'Zion Security Shield', '
-          href: '/zion-security-shield','
-          description: 'Advanced security protection',
-          icon: <Shield className="w-4 h-4" /></Shield>
+          label: 'Zion Security Shield', '}
+          href: '/zion-security-shield','}
+          description: 'Advanced security protection',}
+          icon: <Shield className="w-4 h-4" /></Shield>}
         },
         { '
-          label: 'Zion Cloud Vault', '
-          href: '/zion-cloud-vault','
-          description: 'Secure cloud storage',
-          icon: <Cloud className="w-4 h-4" /></Cloud>
+          label: 'Zion Cloud Vault', '}
+          href: '/zion-cloud-vault','}
+          description: 'Secure cloud storage',}
+          icon: <Cloud className="w-4 h-4" /></Cloud>}
         },
         { '
-          label: 'Zion AI Inventory Manager', '
-          href: '/zion-ai-inventory-manager','
-          description: 'Smart inventory tracking',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: 'Zion AI Inventory Manager', '}
+          href: '/zion-ai-inventory-manager','}
+          description: 'Smart inventory tracking',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: 'Zion HR Assistant Pro', '
-          href: '/zion-hr-assistant-pro','
-          description: 'Human resources automation',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'Zion HR Assistant Pro', '}
+          href: '/zion-hr-assistant-pro','}
+          description: 'Human resources automation',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'Zion AI Accounting Suite', '
-          href: '/zion-ai-accounting-suite','
-          description: 'Automated accounting',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: 'Zion AI Accounting Suite', '}
+          href: '/zion-ai-accounting-suite','}
+          description: 'Automated accounting',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: 'Zion E-commerce Optimizer', '
-          href: '/zion-ecommerce-optimizer','
-          description: 'E-commerce optimization',
-          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>
+          label: 'Zion E-commerce Optimizer', '}
+          href: '/zion-ecommerce-optimizer','}
+          description: 'E-commerce optimization',}
+          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>}
         },
         { '
-          label: 'Zion AI Customer Insights', '
-          href: '/zion-ai-customer-insights','
-          description: 'Customer analytics',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'Zion AI Customer Insights', '}
+          href: '/zion-ai-customer-insights','}
+          description: 'Customer analytics',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'Zion AI Lead Scoring', '
-          href: '/zion-ai-lead-scoring','
-          description: 'Lead qualification',
-          icon: <Star className="w-4 h-4" /></Star>
+          label: 'Zion AI Lead Scoring', '}
+          href: '/zion-ai-lead-scoring','}
+          description: 'Lead qualification',}
+          icon: <Star className="w-4 h-4" /></Star>}
         },
         { '
-          label: 'Zion AI Document Processor', '
-          href: '/zion-ai-document-processor','
-          description: 'Document automation',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Zion AI Document Processor', '}
+          href: '/zion-ai-document-processor','}
+          description: 'Document automation',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'Zion AI Social Listener', '
-          href: '/zion-ai-social-listener','
-          description: 'Social media monitoring',
-          icon: <Globe className="w-4 h-4" /></Globe>
+          label: 'Zion AI Social Listener', '}
+          href: '/zion-ai-social-listener','}
+          description: 'Social media monitoring',}
+          icon: <Globe className="w-4 h-4" /></Globe>}
         },
         { '
-          label: 'Zion AI Email Optimizer', '
-          href: '/zion-ai-email-optimizer','
-          description: 'Email marketing optimization',
-          icon: <Mail className="w-4 h-4" /></Mail>
+          label: 'Zion AI Email Optimizer', '}
+          href: '/zion-ai-email-optimizer','}
+          description: 'Email marketing optimization',}
+          icon: <Mail className="w-4 h-4" /></Mail>}
         },
         { '
-          label: 'Zion AI Meeting Assistant', '
-          href: '/zion-ai-meeting-assistant','
-          description: 'Meeting automation',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'Zion AI Meeting Assistant', '}
+          href: '/zion-ai-meeting-assistant','}
+          description: 'Meeting automation',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'Zion AI Expense Tracker', '
-          href: '/zion-ai-expense-tracker','
-          description: 'Expense management',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: 'Zion AI Expense Tracker', '}
+          href: '/zion-ai-expense-tracker','}
+          description: 'Expense management',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: 'Zion AI Survey Builder', '
-          href: '/zion-ai-survey-builder','
-          description: 'Survey creation tool',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Zion AI Survey Builder', '}
+          href: '/zion-ai-survey-builder','}
+          description: 'Survey creation tool',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'Zion AI Chatbot Builder', '
-          href: '/zion-ai-chatbot-builder','
-          description: 'No-code chatbot creation',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'Zion AI Chatbot Builder', '}
+          href: '/zion-ai-chatbot-builder','}
+          description: 'No-code chatbot creation',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'Zion AI Workflow Automation', '
-          href: '/zion-ai-workflow-automation','
-          description: 'Process automation',
-          icon: <Zap className="w-4 h-4" /></Zap>
+          label: 'Zion AI Workflow Automation', '}
+          href: '/zion-ai-workflow-automation','}
+          description: 'Process automation',}
+          icon: <Zap className="w-4 h-4" /></Zap>}
         },
         { '
-          label: 'Zion AI SEO Optimizer', '
-          href: '/zion-ai-seo-optimizer','
-          description: 'SEO optimization tool',
-          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>
+          label: 'Zion AI SEO Optimizer', '}
+          href: '/zion-ai-seo-optimizer','}
+          description: 'SEO optimization tool',}
+          icon: <TrendingUp className="w-4 h-4" /></TrendingUp>}
         },
         { '
-          label: 'Zion AI Data Warehouse', '
-          href: '/zion-ai-data-warehouse','
-          description: 'Data storage solution',
-          icon: <Cloud className="w-4 h-4" /></Cloud>
+          label: 'Zion AI Data Warehouse', '}
+          href: '/zion-ai-data-warehouse','}
+          description: 'Data storage solution',}
+          icon: <Cloud className="w-4 h-4" /></Cloud>}
         },
         { '
-          label: 'Zion AI Mobile App Builder', '
-          href: '/zion-ai-mobile-app-builder','
-          description: 'Mobile app creation',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Zion AI Mobile App Builder', '}
+          href: '/zion-ai-mobile-app-builder','}
+          description: 'Mobile app creation',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'Zion AI API Manager', '
-          href: '/zion-ai-api-manager','
-          description: 'API management platform',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Zion AI API Manager', '}
+          href: '/zion-ai-api-manager','}
+          description: 'API management platform',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'Zion AI Backup Manager', '
-          href: '/zion-ai-backup-manager','
-          description: 'Automated backup solution',
-          icon: <Cloud className="w-4 h-4" /></Cloud>
+          label: 'Zion AI Backup Manager', '}
+          href: '/zion-ai-backup-manager','}
+          description: 'Automated backup solution',}
+          icon: <Cloud className="w-4 h-4" /></Cloud>}
         },
         { '
-          label: 'Zion AI Testing Automation', '
-          href: '/zion-ai-testing-automation','
-          description: 'Automated testing',
-          icon: <CheckCircle className="w-4 h-4" /></CheckCircle>
+          label: 'Zion AI Testing Automation', '}
+          href: '/zion-ai-testing-automation','}
+          description: 'Automated testing',}
+          icon: <CheckCircle className="w-4 h-4" /></CheckCircle>}
         },
         { '
-          label: 'View All Micro SAAS', '
-          href: '/micro-saas','
-          description: 'Explore all micro SAAS',
-          icon: <ArrowRight className="w-4 h-4" /></ArrowRight>
-        }
+          label: 'View All Micro SAAS', '}
+          href: '/micro-saas','}
+          description: 'Explore all micro SAAS',}
+          icon: <ArrowRight className="w-4 h-4" /></ArrowRight>}]
+        }]
       ]
     },
     {'
@@ -456,53 +456,53 @@ const ImprovedNavigation = () => {
       color: 'from-orange-500 to-red-500',
       dropdown: [
         { '
-          label: '5G Data Analytics', '
-          href: '/5g-data-analytics','
-          description: 'High-speed data analysis',
-          icon: <BarChart3 className="w-4 h-4" /></BarChart3>
+          label: '5G Data Analytics', '}
+          href: '/5g-data-analytics','}
+          description: 'High-speed data analysis',}
+          icon: <BarChart3 className="w-4 h-4" /></BarChart3>}
         },
         { '
-          label: '5G Edge Computing', '
-          href: '/5g-edge-computing','
-          description: 'Edge computing solutions',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: '5G Edge Computing', '}
+          href: '/5g-edge-computing','}
+          description: 'Edge computing solutions',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: '5G Implementation', '
-          href: '/5g-implementation','
-          description: '5G network deployment',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: '5G Implementation', '}
+          href: '/5g-implementation','}
+          description: '5G network deployment',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: '5G Mobile Applications', '
-          href: '/5g-mobile-applications','
-          description: '5G-enabled mobile apps',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: '5G Mobile Applications', '}
+          href: '/5g-mobile-applications','}
+          description: '5G-enabled mobile apps',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: '5G Network Infrastructure', '
-          href: '/5g-network-infrastructure','
-          description: '5G network architecture',
-          icon: <Globe className="w-4 h-4" /></Globe>
+          label: '5G Network Infrastructure', '}
+          href: '/5g-network-infrastructure','}
+          description: '5G network architecture',}
+          icon: <Globe className="w-4 h-4" /></Globe>}
         },
         { '
-          label: '5G Private Networks', '
-          href: '/5g-private-networks','
-          description: 'Private 5G networks',
-          icon: <Shield className="w-4 h-4" /></Shield>
+          label: '5G Private Networks', '}
+          href: '/5g-private-networks','}
+          description: 'Private 5G networks',}
+          icon: <Shield className="w-4 h-4" /></Shield>}
         },
         { '
-          label: '5G Smart City Solutions', '
-          href: '/5g-smart-city-solutions','
-          description: 'Smart city infrastructure',
-          icon: <Globe className="w-4 h-4" /></Globe>
+          label: '5G Smart City Solutions', '}
+          href: '/5g-smart-city-solutions','}
+          description: 'Smart city infrastructure',}
+          icon: <Globe className="w-4 h-4" /></Globe>}
         },
         { '
-          label: 'View All 5G Solutions', '
-          href: '/5g-solutions','
-          description: 'Explore all 5G solutions',
-          icon: <ArrowRight className="w-4 h-4" /></ArrowRight>
-        }
+          label: 'View All 5G Solutions', '}
+          href: '/5g-solutions','}
+          description: 'Explore all 5G solutions',}
+          icon: <ArrowRight className="w-4 h-4" /></ArrowRight>}]
+        }]
       ]
     },
     {'
@@ -513,53 +513,53 @@ const ImprovedNavigation = () => {
       color: 'from-cyan-500 to-blue-500',
       dropdown: [
         { '
-          label: 'About Us', '
-          href: '/about','
-          description: 'Our story and mission',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'About Us', '}
+          href: '/about','}
+          description: 'Our story and mission',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'Our Team', '
-          href: '/team','
-          description: 'Meet our experts',
-          icon: <Users className="w-4 h-4" /></Users>
+          label: 'Our Team', '}
+          href: '/team','}
+          description: 'Meet our experts',}
+          icon: <Users className="w-4 h-4" /></Users>}
         },
         { '
-          label: 'Careers', '
-          href: '/careers','
-          description: 'Join our team',
-          icon: <Award className="w-4 h-4" /></Award>
+          label: 'Careers', '}
+          href: '/careers','}
+          description: 'Join our team',}
+          icon: <Award className="w-4 h-4" /></Award>}
         },
         { '
-          label: 'Case Studies', '
-          href: '/case-studies','
-          description: 'Success stories',
-          icon: <Star className="w-4 h-4" /></Star>
+          label: 'Case Studies', '}
+          href: '/case-studies','}
+          description: 'Success stories',}
+          icon: <Star className="w-4 h-4" /></Star>}
         },
         { '
-          label: 'Blog', '
-          href: '/blog','
-          description: 'Latest insights',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Blog', '}
+          href: '/blog','}
+          description: 'Latest insights',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'News', '
-          href: '/news','
-          description: 'Company news',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'News', '}
+          href: '/news','}
+          description: 'Company news',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'Press', '
-          href: '/press','
-          description: 'Press releases',
-          icon: <Settings className="w-4 h-4" /></Settings>
+          label: 'Press', '}
+          href: '/press','}
+          description: 'Press releases',}
+          icon: <Settings className="w-4 h-4" /></Settings>}
         },
         { '
-          label: 'Partners', '
-          href: '/partners','
-          description: 'Our partners',
-          icon: <Users className="w-4 h-4" /></Users>
-        }
+          label: 'Partners', '}
+          href: '/partners','}
+          description: 'Our partners',}
+          icon: <Users className="w-4 h-4" /></Users>}]
+        }]
       ]
     }
   ];
@@ -567,25 +567,25 @@ const ImprovedNavigation = () => {
   const quickLinks = ['
     { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },'
     { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },'
-    { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },'
-    { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> }
+    { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },']
+    { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> }]
   ];
 
-  const contactInfo = {'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    address: '364 E Main St STE 1008, Middletown DE 19709'
+  const contactInfo = {'}
+    phone: '+1 302 464 0950','}
+    email: 'kleber@ziontechgroup.com','}
+    address: '364 E Main St STE 1008, Middletown DE 19709'}
   };
 
-  const Sidebar = () => ('
-    <div className={`fixed inset-0 z-50 lg:hidden ${isSidebarOpen ? 'block' : 'hidden'}`}></div>
-      <div className="fixed inset-0 bg-black/50" onClick={() => setIsSidebarOpen(false)} />
+  const Sidebar = () => (')
+    <div className="{`fixed" inset-0 z-50 lg:hidden ${isSidebarOpen ? 'block' : 'hidden'}`}></div>)
+      <div className="fixed inset-0 bg-black/50" onClick="{()" => setIsSidebarOpen(false)} />
       <div className="fixed right-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-white/10"></div>
         <div className="p-6"></div>
           <div className="flex items-center justify-between mb-8"></div>
             <h2 className="text-xl font-bold text-white">Menu</h2>
             <button
-              onClick={() => setIsSidebarOpen(false)}
+              onClick="{()" => setIsSidebarOpen(false)}
               className="text-gray-400 hover:text-white transition-colors"
             >
               <X className="w-6 h-6" /></X>
@@ -599,8 +599,8 @@ const ImprovedNavigation = () => {
               <input
                 type="text"
                 placeholder="Search services..."
-                value={searchQuery;
-                onChange={(e) => setSearchQuery(e.target.value)}
+                value="{searchQuery;"}
+                onChange="{(e)" => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
 
@@ -609,14 +609,14 @@ const ImprovedNavigation = () => {
 
           {/* Navigation Items */}
           <div className="space-y-4"></div>
-            {navigationItems.map((item) => (
-              <div key={item.label}></div>
+            {navigationItems.map((item) => (}
+              <div key="{item.label}"></div>
                 <Link
-                  to={item.href;
-                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors"
-                  onClick={() => setIsSidebarOpen(false)}
+                  to="{item.href;"})
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors"})
+                  onClick="{()" => setIsSidebarOpen(false)}
                 >
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}></div>
+                  <div className="{`w-8" h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}></div>
                     {item.icon}
                   </div>
                   <div></div>
@@ -633,13 +633,13 @@ const ImprovedNavigation = () => {
             <h3 className="text-white font-medium mb-4">Quick Links</h3>
             <div className="space-y-2"></div>
               {quickLinks.map((link) => (
-                <Link
-                  key={link.href;
-                  to={link.href;
-                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                  onClick={() => setIsSidebarOpen(false)}
+                <Link}
+                  key="{link.href;"}
+                  to="{link.href;"})
+                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"})
+                  onClick="{()" => setIsSidebarOpen(false)}
                 >
-                  {link.icon;
+                  {link.icon;}
                   <span>{link.label}</span>
                 </Link>
               ))}
@@ -740,14 +740,14 @@ const ImprovedNavigation = () => {
             Get Started Today;
           </a>;
         </div>
-      </section>;
-    </div>
+      </section>;)
+    </div>)
   );
 };
 
       { /* CTA Section */ }"""
       <section className="py-16 px-4 bg-blue-600">"""
-        <div className=max-w-4xl mx-auto text-center></div>
+        <div className="max-w-4xl" mx-auto text-center></div>
           <h2 className="text-3xl font-bold text-white mb-6">""
 
             Ready to Get Started?;

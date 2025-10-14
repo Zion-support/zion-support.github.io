@@ -1,21 +1,21 @@
 
 
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { CpuChipIcon, 
   CloudIcon,
   ShieldCheckIcon,
-  CloudIcon,
-  GlobeAltIcon,
-  SignalIcon,
-  BriefcaseIcon,
-  ArrowRightIcon,
-  CheckIcon'
+  CloudIcon,;
+  GlobeAltIcon,';
+  SignalIcon,;';}
+  BriefcaseIcon,';}
+  ArrowRightIcon,';}
+  CheckIcon'}
 } from '@heroicons/react/24/outline;
 
-const SolutionsPage: React.FC = () => {
-  const solutions = [
+const SolutionsPage: React.FC = () => {';
+  const solutions = [';
     {'
       title: 'AI-Powered Solutions','
       description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
@@ -25,10 +25,10 @@ const SolutionsPage: React.FC = () => {
         'Natural Language Processing','
         'Computer Vision','
         'Predictive Analytics','
-        'Automated Decision Making','
-        'Intelligent Automation'
-      ],'
-      href: '/ai-solutions'
+        'Automated Decision Making','}]
+        'Intelligent Automation']}
+      ],'}
+      href: '/ai-solutions'}
     },
     {'
       title: 'Cybersecurity Solutions','
@@ -39,10 +39,10 @@ const SolutionsPage: React.FC = () => {
         'Vulnerability Assessment','
         'Security Monitoring','
         'Compliance Management','
-        'Incident Response','
-        'Security Training'
-      ],'
-      href: '/cybersecurity'
+        'Incident Response','}]
+        'Security Training']}
+      ],'}
+      href: '/cybersecurity'}
     },
     {'
       title: 'Cloud Infrastructure','
@@ -53,10 +53,10 @@ const SolutionsPage: React.FC = () => {
         'Infrastructure as Code','
         'Auto-scaling','
         'Disaster Recovery','
-        'Cost Optimization','
-        'Multi-cloud Strategy'
-      ],'
-      href: '/cloud-infrastructure'
+        'Cost Optimization','}]
+        'Multi-cloud Strategy']}
+      ],'}
+      href: '/cloud-infrastructure'}
     },
     {'
       title: 'Micro SaaS Solutions','
@@ -67,10 +67,10 @@ const SolutionsPage: React.FC = () => {
         'API Integration','
         'Scalable Architecture','
         'User Management','
-        'Payment Processing','
-        'Analytics & Reporting'
-      ],'
-      href: '/micro-saas-solutions'
+        'Payment Processing','}]
+        'Analytics & Reporting']}
+      ],'}
+      href: '/micro-saas-solutions'}
     },
     {'
       title: '5G Technology','
@@ -81,10 +81,10 @@ const SolutionsPage: React.FC = () => {
         'IoT Device Management','
         'Edge Computing','
         'Real-time Data Processing','
-        'Low Latency Applications','
-        'Network Optimization'
-      ],'
-      href: '/5g-solutions'
+        'Low Latency Applications','}]
+        'Network Optimization']}
+      ],'}
+      href: '/5g-solutions'}
     },
     {'
       title: 'IT Services','
@@ -95,10 +95,10 @@ const SolutionsPage: React.FC = () => {
         'Help Desk Support','
         'System Administration','
         'Network Management','
-        'Software Deployment','
-        'Technical Consulting'
-      ],'
-      href: '/it-solutions'
+        'Software Deployment','}]
+        'Technical Consulting']}
+      ],'}
+      href: '/it-solutions'}
     }
   ];
   return (
@@ -147,10 +147,10 @@ const SolutionsPage: React.FC = () => {
               Comprehensive technology solutions designed to meet your business needs
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
+          )
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
+            {solutions.map((solution, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
                 <div className="flex items-center mb-6"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"></div>
                     <solution.icon className="w-8 h-8 text-white" /></solution>
@@ -161,24 +161,24 @@ const SolutionsPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed"></p>
                   {solution.description}
                 </p>
-                
-                <ul className="space-y-3 mb-6"></ul>
-                  {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
+                )
+                <ul className="space-y-3 mb-6"></ul>)
+                  {solution.features.map((feature, featureIndex) => (}
+                    <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                      {feature}
-                    </li>
+                      {feature})
+                    </li>)
                   ))}
                 </ul>
                 
                 <Link
-                  to={solution.href;
+                  to="{solution.href;"
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 ></Link>
-                  Learn More
-                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
-                </Link>
-              </div>
+                  Learn More}
+                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
+                </Link>}
+              </div>}
             ))}
           </div>
         </div>

@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const ZionAnalytics = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Zion Analytics - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Zion Analytics - Zion Tech Group</title>';
         <meta name="description" content="Advanced analytics platform powered by Zion AI technology." /></meta>
       </Helmet>
 
@@ -25,10 +25,10 @@ const ZionAnalytics = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
 export default ZionAnalytics'

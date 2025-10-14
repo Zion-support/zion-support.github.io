@@ -6,16 +6,16 @@ import path from 'path';
 // Function to create a clean, working page component;
 function createCleanPage(filePath) {
   const fileName = path.basename(filePath, '.tsx');
-  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page';
-  const pageTitle = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  
-  return `import React from "react";
+  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page';}
+  const pageTitle = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());}
+  }
+  return `import React from "react";}
 import { Helmet } from "react-helmet-async";
 
-const ${componentName} = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+const ${componentName} = () => {}
+  return (}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>}
+      <Helmet></Helmet>}
         <title>${pageTitle} - Zion Tech Group</title>
         <meta name="description" content="${pageTitle} - Zion Tech Group" />
       </Helmet>
@@ -26,8 +26,8 @@ const ${componentName} = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>
-    </div>
+      </div>)
+    </div>)
   );
 };
 
@@ -35,15 +35,15 @@ export default ${componentName};`;
 }
 
 // Function to create a clean main.tsx;
-function createCleanMain() {
-  return `import React from 'react';
-import ReactDOM from 'react-dom/client';
+function createCleanMain() {}
+  return `import React from 'react';}
+import ReactDOM from 'react-dom/client';}
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import './index.css';
 
-const root = ReactDOM.createRoot(
+const root = ReactDOM.createRoot()
   document.getElementById('root') as HTMLElement;
 );
 
@@ -51,16 +51,16 @@ root.render(
   <React.StrictMode></React>
     <HelmetProvider></HelmetProvider>
       <BrowserRouter></BrowserRouter>
-        <App />
+        <App /></App>
       </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>
+    </HelmetProvider>)
+  </React.StrictMode>)
 );`;
 }
 
 // Function to create a clean App.tsx;
-function createCleanApp() {
-  return `import React from 'react';
+function createCleanApp() {}
+  return `import React from 'react';}
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
@@ -74,16 +74,16 @@ function App() {
   return (
     <div className="App"></div>
       <Helmet></Helmet>
-        <title>Zion Tech Group - AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
-      </Helmet>
-      <Routes></Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-    </div>
+        <title>Zion Tech Group - AI and IT Solutions</title>}
+        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />}
+      </Helmet>}
+      <Routes></Routes>}
+        <Route path="/" element="{<HomePage" />} />
+        <Route path="/about" element="{<AboutPage" />} />
+        <Route path="/services" element="{<ServicesPage" />} />
+        <Route path="/contact" element="{<ContactPage" />} />
+      </Routes>)
+    </div>)
   );
 }
 
@@ -91,8 +91,8 @@ export default App;`;
 }
 
 // Function to create a clean home page;
-function createCleanHomePage() {
-  return `import React from 'react';
+function createCleanHomePage() {}
+  return `import React from 'react';}
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -100,10 +100,10 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
-        <title>Zion Tech Group - AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
-      </Helmet>
-      
+        <title>Zion Tech Group - AI and IT Solutions</title>}
+        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />}
+      </Helmet>}
+      }
       {/* Hero Section */}
       <section className="py-20 px-4"></section>
         <div className="container mx-auto text-center"></div>
@@ -156,8 +156,8 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section>)
+    </div>)
   );
 };
 
@@ -185,10 +185,10 @@ console.log('Fixed page.tsx');
 // Fix about page (already done, but ensure it's clean)
 const aboutPath = './app/about/page.tsx';
 if (fs.existsSync(aboutPath)) {
-  const aboutContent = fs.readFileSync(aboutPath, 'utf8');
-  if (aboutContent.includes('Unterminated string literal') || aboutContent.includes('')) {
-    fs.writeFileSync(aboutPath, createCleanPage(aboutPath));
-    console.log('Fixed about/page.tsx');
+  const aboutContent = fs.readFileSync(aboutPath, 'utf8');}
+  if (aboutContent.includes('Unterminated string literal') || aboutContent.includes('')) {}
+    fs.writeFileSync(aboutPath, createCleanPage(aboutPath));}
+    console.log('Fixed about/page.tsx');}
   }
 }
 
@@ -196,13 +196,13 @@ if (fs.existsSync(aboutPath)) {
 const criticalPages = [
   './app/services/page.tsx',
   './app/contact/page.tsx',
-  './app/404.tsx',
-  './app/not-found.tsx'
+  './app/404.tsx',]
+  './app/not-found.tsx']
 ];
 
-for (const pagePath of criticalPages) {
-  if (fs.existsSync(pagePath)) {
-    fs.writeFileSync(pagePath, createCleanPage(pagePath));
+for (const pagePath of criticalPages) {}
+  if (fs.existsSync(pagePath)) {}
+    fs.writeFileSync(pagePath, createCleanPage(pagePath));}
     console.log(`Fixed ${pagePath}`);
   }
 }

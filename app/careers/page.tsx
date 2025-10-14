@@ -1,21 +1,46 @@
-import React, { useState } from 'react;
+import React, { useState } from 'react;';
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award, Brain, BarChart3, Settings, Code, Database, Cloud, Smartphone, Target, Calendar, DollarSign, Briefcase, GraduationCap, Heart, Coffee, Gamepad2 } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Coffee } from 'lucide-react';
+import { Gamepad2 } from 'lucide-react';
 
-import { Helmet } from "react-helmet-async"'
-import EnhancedSEO from '../components/EnhancedSEO;
-
-const CareersPage = () => {'
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const jobCategories = ['
+import { Helmet } from 'react-helmet-async';
+import EnhancedSEO from '../components/EnhancedSEO;';
+';
+const CareersPage = () => {'}
+  const [selectedCategory, setSelectedCategory] = useState('all');}
+}
+  const jobCategories = ['}
     { id: 'all', label: 'All Positions', icon: <Briefcase className="w-5 h-5" /> },'
     { id: 'engineering', label: 'Engineering', icon: <Code className="w-5 h-5" /> },'
     { id: 'ai', label: 'AI & ML', icon: <Brain className="w-5 h-5" /> },'
     { id: 'security', label: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },'
     { id: 'cloud', label: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },'
-    { id: 'product', label: 'Product', icon: <Target className="w-5 h-5" /> },'
-    { id: 'data', label: 'Data & Analytics', icon: <BarChart3 className="w-5 h-5" /> }
+    { id: 'product', label: 'Product', icon: <Target className="w-5 h-5" /> },']
+    { id: 'data', label: 'Data & Analytics', icon: <BarChart3 className="w-5 h-5" /> }]
   ];
 
   const jobOpenings = [
@@ -32,12 +57,12 @@ const CareersPage = () => {'
       requirements: [
         "PhD in Computer Science or related field",
         "5+ years experience in AI/ML",
-        "Expertise in Python, TensorFlow, PyTorch",
-        "Experience with cloud platforms (AWS, GCP, Azure)"
-      ],
-      benefits: ["Health Insurance", "401k Matching", "Flexible Hours", "Learning Budget"],
-      posted: "2 days ago",
-      featured: true
+        "Expertise in Python, TensorFlow, PyTorch",]
+        "Experience with cloud platforms (AWS, GCP, Azure)"]
+      ],}
+      benefits: ["Health Insurance", "401k Matching", "Flexible Hours", "Learning Budget"],}
+      posted: "2 days ago",}
+      featured: true}
     },
     {
       id: 2,
@@ -52,12 +77,12 @@ const CareersPage = () => {'
       requirements: [
         "CISSP, CISM, or similar certification",
         "7+ years in cybersecurity",
-        "Experience with security frameworks (NIST, ISO 27001)",
-        "Knowledge of cloud security best practices"
-      ],
-      benefits: ["Health Insurance", "401k Matching", "Security Training", "Home Office Setup"],
-      posted: "1 week ago",
-      featured: false
+        "Experience with security frameworks (NIST, ISO 27001)",]
+        "Knowledge of cloud security best practices"]
+      ],}
+      benefits: ["Health Insurance", "401k Matching", "Security Training", "Home Office Setup"],}
+      posted: "1 week ago",}
+      featured: false}
     },
     {
       id: 3,
@@ -72,12 +97,12 @@ const CareersPage = () => {'
       requirements: [
         "AWS/Azure/GCP certifications",
         "6+ years cloud architecture experience",
-        "Expertise in Kubernetes, Docker, Terraform",
-        "Experience with CI/CD pipelines"
-      ],
-      benefits: ["Health Insurance", "401k Matching", "Cloud Certifications", "Flexible Schedule"],
-      posted: "3 days ago",
-      featured: true
+        "Expertise in Kubernetes, Docker, Terraform",]
+        "Experience with CI/CD pipelines"]
+      ],}
+      benefits: ["Health Insurance", "401k Matching", "Cloud Certifications", "Flexible Schedule"],}
+      posted: "3 days ago",}
+      featured: true}
     },
     {
       id: 4,
@@ -92,12 +117,12 @@ const CareersPage = () => {'
       requirements: [
         "MBA or technical degree",
         "4+ years product management experience",
-        "Experience with AI/ML products",
-        "Strong analytical and communication skills"
-      ],
-      benefits: ["Health Insurance", "401k Matching", "Stock Options", "Professional Development"],
-      posted: "5 days ago",
-      featured: false
+        "Experience with AI/ML products",]
+        "Strong analytical and communication skills"]
+      ],}
+      benefits: ["Health Insurance", "401k Matching", "Stock Options", "Professional Development"],}
+      posted: "5 days ago",}
+      featured: false}
     },
     {
       id: 5,
@@ -112,12 +137,12 @@ const CareersPage = () => {'
       requirements: [
         "MS in Data Science or related field",
         "3+ years data science experience",
-        "Proficiency in Python, R, SQL",
-        "Experience with statistical modeling and ML"
-      ],
-      benefits: ["Health Insurance", "401k Matching", "Data Science Conferences", "Research Time"],
-      posted: "1 week ago",
-      featured: false
+        "Proficiency in Python, R, SQL",]
+        "Experience with statistical modeling and ML"]
+      ],}
+      benefits: ["Health Insurance", "401k Matching", "Data Science Conferences", "Research Time"],}
+      posted: "1 week ago",}
+      featured: false}
     },
     {
       id: 6,
@@ -132,8 +157,8 @@ const CareersPage = () => {'
       requirements: [
         "3+ years frontend development experience",
         "Expertise in React, TypeScript, CSS",
-        "Experience with modern build tools",
-        "Portfolio demonstrating UI/UX skills"
+        "Experience with modern build tools",]
+        "Portfolio demonstrating UI/UX skills"]
       ],
       benefits: ["Health Insurance", "401k Matching", "Design Tools", "Creative Freedom"],
       posted: "4 days ago",
@@ -141,48 +166,48 @@ const CareersPage = () => {'
   ];
 
   const benefits = [
-    {
-      title: "Health & Wellness",
-      description: "Comprehensive health insurance, dental, vision, and mental health support",
-      icon: <Heart className="w-8 h-8" /></Heart>
+    {}
+      title: "Health & Wellness",}
+      description: "Comprehensive health insurance, dental, vision, and mental health support",}
+      icon: <Heart className="w-8 h-8" /></Heart>}
     },
-    {
-      title: "Learning & Development",
-      description: "Annual learning budget, conference attendance, and certification support",
-      icon: <GraduationCap className="w-8 h-8" /></GraduationCap>
+    {}
+      title: "Learning & Development",}
+      description: "Annual learning budget, conference attendance, and certification support",}
+      icon: <GraduationCap className="w-8 h-8" /></GraduationCap>}
     },
-    {
-      title: "Work-Life Balance",
-      description: "Flexible hours, remote work options, and unlimited PTO",
-      icon: <Coffee className="w-8 h-8" /></Coffee>
+    {}
+      title: "Work-Life Balance",}
+      description: "Flexible hours, remote work options, and unlimited PTO",}
+      icon: <Coffee className="w-8 h-8" /></Coffee>}
     },
-    {
-      title: "Growth Opportunities",
-      description: "Clear career paths, mentorship programs, and internal mobility",
-      icon: <Target className="w-8 h-8" /></Target>
+    {}
+      title: "Growth Opportunities",}
+      description: "Clear career paths, mentorship programs, and internal mobility",}
+      icon: <Target className="w-8 h-8" /></Target>}
     },
-    {
-      title: "Modern Tools",
-      description: "Latest technology stack, top-tier equipment, and home office setup",
-      icon: <Settings className="w-8 h-8" /></Settings>
+    {}
+      title: "Modern Tools",}
+      description: "Latest technology stack, top-tier equipment, and home office setup",}
+      icon: <Settings className="w-8 h-8" /></Settings>}
     },
-    {
-      title: "Team Culture",
-      description: "Collaborative environment, team events, and innovation time",
-      icon: <Users className="w-8 h-8" /></Users>
-    }
+    {}
+      title: "Team Culture",}
+      description: "Collaborative environment, team events, and innovation time",}
+      icon: <Users className="w-8 h-8" /></Users>}]
+    }]
   ];
 
   const stats = [
     { number: "50+", label: "Team Members", icon: <Users className="w-6 h-6" /> },
     { number: "15+", label: "Open Positions", icon: <Briefcase className="w-6 h-6" /> },
-    { number: "95%", label: "Employee Satisfaction", icon: <Star className="w-6 h-6" /> },
-    { number: "100%", label: "Remote Friendly", icon: <Globe className="w-6 h-6" /> }
+    { number: "95%", label: "Employee Satisfaction", icon: <Star className="w-6 h-6" /> },]
+    { number: "100%", label: "Remote Friendly", icon: <Globe className="w-6 h-6" /> }]
   ];
 '
-  const filteredJobs = selectedCategory === 'all' 
+  const filteredJobs = selectedCategory ="==" 'all' 
     ? jobOpenings 
-    : jobOpenings.filter(job => job.category === selectedCategory);
+    : jobOpenings.filter(job => job.category ="==" selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -225,16 +250,16 @@ const CareersPage = () => {'
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group"></div>
+        <div className="max-w-7xl mx-auto"></div>)
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>)
+            {stats.map((stat, index) => (}
+              <div key="{index}" className="text-center group"></div>
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
+                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>)
+              </div>)
             ))}
           </div>
         </div>
@@ -257,12 +282,12 @@ const CareersPage = () => {'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {benefits.map((benefit, index) => (
               <div
-                key={index;
+                key="{index;"
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
-              ></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10"></div>
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg"></div>
+              ></div>}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>}
+                <div className="relative z-10"></div>}
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg"></div>}
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors"></h3>
@@ -271,8 +296,8 @@ const CareersPage = () => {'
                   <p className="text-gray-300 leading-relaxed"></p>
                     {benefit.description}
                   </p>
-                </div>
-              </div>
+                </div>)
+              </div>)
             ))}
           </div>
         </div>
@@ -294,17 +319,17 @@ const CareersPage = () => {'
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
-            {jobCategories.map((category) => (
-              <button
-                key={category.id;
-                onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                  selectedCategory === category.id'
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg''
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+            {jobCategories.map((category) => (}
+              <button})
+                key="{category.id;"})
+                onClick="{()" => setSelectedCategory(category.id)}
+                className="{`flex" items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${}
+                  selectedCategory ="==" category.id'}
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg''}
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'}
                 }`}
               >
-                {category.icon;
+                {category.icon;}
                 <span>{category.label}</span>
               </button>
             ))}
@@ -312,19 +337,19 @@ const CareersPage = () => {'
 
           {/* Job Listings */}
           <div className="space-y-6"></div>
-            {filteredJobs.map((job) => (
-              <div
-                key={job.id}
-                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${'
-                  job.featured ? 'ring-2 ring-cyan-500/50' : ''
+            {filteredJobs.map((job) => (}
+              <div}
+                key="{job.id}"
+                className="{`group" bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${'}
+                  job.featured ? 'ring-2 ring-cyan-500/50' : ''}
                 }`}
               ></div>
                 {job.featured && (
                   <div className="absolute top-4 right-4"></div>
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold"></span>
-                      Featured
-                    </span>
-                  </div>
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold"></span>}
+                      Featured}
+                    </span>})
+                  </div>})
                 )}
                 
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between"></div>
@@ -367,17 +392,17 @@ const CareersPage = () => {'
                     
                     <div className="flex flex-wrap gap-2 mb-4"></div>
                       {job.requirements.slice(0, 3).map((req, idx) => (
-                        <span
-                          key={idx;
-                          className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs"
-                        ></span>
-                          {req}
-                        </span>
+                        <span}
+                          key="{idx;"}
+                          className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs"}
+                        ></span>}
+                          {req})
+                        </span>)
                       ))}
-                      {job.requirements.length > 3 && (
-                        <span className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs"></span>
-                          +{job.requirements.length - 3} more
-                        </span>
+                      {job.requirements.length > 3 && (}
+                        <span className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs"></span>}
+                          +{job.requirements.length - 3} more)
+                        </span>)
                       )}
                     </div>
                   </div>
@@ -396,12 +421,12 @@ const CareersPage = () => {'
             ))}
           </div>
 
-          {filteredJobs.length === 0 && (
+          {filteredJobs.length ="==" 0 && (
             <div className="text-center py-12"></div>
-              <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" /></Briefcase>
-              <h3 className="text-xl font-semibold text-white mb-2">No positions found</h3>
-              <p className="text-gray-300">Try selecting a different category or check back later for new openings.</p>
-            </div>
+              <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" /></Briefcase>}
+              <h3 className="text-xl font-semibold text-white mb-2">No positions found</h3>}
+              <p className="text-gray-300">Try selecting a different category or check back later for new openings.</p>})
+            </div>})
           )}
         </div>
       </section>

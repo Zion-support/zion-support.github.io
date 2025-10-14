@@ -1,8 +1,8 @@
 :app/utils/__tests__/performanceMonitoring.tsx;
-import React from 'react;
-import react-helmet-async from 'react-helmet-async;
-const PerformanceMonitoringTestPage = () => {
-  return (
+import React from 'react;';
+import react-helmet-async from 'react-helmet-async;';
+const PerformanceMonitoringTestPage = () => {';
+  return (';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>PerformanceMonitoring Test - Zion Tech Group</title>
@@ -37,17 +37,17 @@ const PerformanceMonitoringTestPage = () => {
               Track record of delivering successful projects and exceeding client expectations.
             </p>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+        </div>}
+      </div>})
+    </div>)}
+  );}
 };
 export default PerformanceMonitoringTestPage;
 import { describe, it, expect    } from "@jest/globals";
 
-describe('Performance Monitoring', () => {'''
-  it('should be defined', () => {'';
-    expect(true).toBe(true);
+describe('Performance Monitoring', () => {'''}
+  it('should be defined', () => {'';}
+    expect(true).toBe(true);}
   });
 });"
 '

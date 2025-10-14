@@ -1,17 +1,17 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react;
+import React, { Component, ErrorInfo, ReactNode } from 'react;';
 import { Logger } from '../utils/logger;
 interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
+  hasError: boolean;}
+  error: Error | null;}
+  errorInfo: ErrorInfo | null;}
+  errorId: string | null;}
 }
 interface ErrorBoundaryProps {
   children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
+  fallback?: ReactNode;}
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;}
+  enableErrorReporting?: boolean;}
+  enableRetry?: boolean;}
 }
 interface ErrorReport {
   errorId: string | null;
@@ -21,10 +21,10 @@ interface ErrorReport {
   stack: string | undefined;
   componentStack: string | null | undefined;
   timestamp: string;
-  userAgent: string;
-  url: string;
-  userId: string | null;
-  sessionId: string;
+  userAgent: string;}
+  url: string;}
+  userId: string | null;}
+  sessionId: string;}
 }
 class AdvancedErrorBoundary extends Component<;
   ErrorBoundaryProps,
@@ -35,38 +35,38 @@ class AdvancedErrorBoundary extends Component<;
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
+      hasError: false,}
+      error: null,}
+      errorInfo: null,}
+      errorId: null,}
     };
   }
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return {
-      hasError: true,
-      error,
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {}
+    return {}
+      hasError: true,}
+      error,}
 errorId: `error_${Date.now(),}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo)
-    });
-    // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {
-      Logger.error(
-        'Error Boundary caught an error',
-{ error, context: 'ErrorBoundary', errorInfo,}
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+    this.setState({})
+      error,)}';
+      errorInfo)}';
+    });';
+    // Log error to console in development;';
+    if (process.env.NODE_ENV ="==" 'development') {}
+      Logger.error(}
+        'Error Boundary caught an error',})
+{ error, context: 'ErrorBoundary', errorInfo,})
       );
     }
     // Call custom error handler;
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+    if (this.props.onError) {}
+      this.props.onError(error, errorInfo);}
     }
     // Report error to external service;
-    if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+    if (this.props.enableErrorReporting) {}
+      this.reportError(error, errorInfo);}
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -78,52 +78,52 @@ const errorReport: ErrorReport = {,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId(),
+      userAgent: navigator.userAgent,}
+      url: window.location.href,}
+      userId: this.getUserId(),}
+      sessionId: this.getSessionId(),}
     };
     // Send to error reporting service;
     this.sendErrorReport(errorReport);
   };
-  private getUserId = (): string | null => {
-    // Try to get user ID from localStorage or other sources;
-    try {`
-      return localStorage.getItem('userId') || null;``
-    } catch {```
-      return null;````
+  private getUserId = (): string | null => {}
+    // Try to get user ID from localStorage or other sources;}
+    try {`}
+      return localStorage.getItem('userId') || null;``}
+    } catch {```}
+      return null;````}
     }`````
   };``````
   private getSessionId = (): string => {```````
-    // Generate or retrieve session ID;````````
-    try {`````````
-      let sessionId = sessionStorage.getItem('sessionId');``````````
-      if (!sessionId) {```````````
+    // Generate or retrieve session ID;````````}
+    try {`````````}
+      let sessionId = sessionStorage.getItem('sessionId');``````````}
+      if (!sessionId) {```````````}
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;```````
         sessionStorage.setItem('sessionId', sessionId);````````
       }`````````
       return sessionId;``````````
-    } catch {```````````
+    } catch {```````````}
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;````````
     }`````````
   };``````````
-  private generateErrorId = (): string => {```````````
+  private generateErrorId = (): string => {```````````}
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
   private sendErrorReport = async (errorReport: ErrorReport) => {
     try {
       // Send to your error reporting service;
-      await fetch('/api/errors', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      await fetch('/api/errors', {}
+        method: 'POST',}
+        headers: {})
+          'Content-Type': 'application/json',})
         })
         body: JSON.stringify(errorReport),
       });
-    } catch (reportError) {
-      Logger.error(
-        'Failed to send error report',
-{ error: reportError as Error, context: 'ErrorReporting',}
+    } catch (reportError) {}
+      Logger.error(}
+        'Failed to send error report',})
+{ error: reportError as Error, context: 'ErrorReporting',})
       );
     }
   };
@@ -131,24 +131,24 @@ const errorReport: ErrorReport = {,
     if (this.retryCount < this.maxRetries) {
       this.retryCount++;
       this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: null)
+        hasError: false,}
+        error: null,})
+        errorInfo: null,)}
+        errorId: null)}
       });
     }
   };
-  private handleReload = () => {
-    window.location.reload();
+  private handleReload = () => {}
+    window.location.reload();}
   };
-  private handleGoHome = () => {
-    window.location.href = '/';
+  private handleGoHome = () => {}
+    window.location.href = '/';}
   };
   render() {
-    if (this.state.hasError) {
-      // Custom fallback UI;
-      if (this.props.fallback) {
-        return this.props.fallback;
+    if (this.state.hasError) {}
+      // Custom fallback UI;}
+      if (this.props.fallback) {}
+        return this.props.fallback;}
       }
       // Default error UI;
       return (
@@ -166,7 +166,7 @@ const errorReport: ErrorReport = {,
                     <path;
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2}
+                      strokeWidth="{2}"
                       d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
                     />
                   </svg>
@@ -179,13 +179,13 @@ const errorReport: ErrorReport = {,
                   has been notified.
                 </p>
               </div>
-              {process.env.NODE_ENV === 'development' && (
+              {process.env.NODE_ENV ="==" 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'></div>
                   <h3 className='text-sm font-medium text-red-800'>;
-                    Error Details:
-                  </h3>
-                  <div className='mt-2 text-sm text-red-700'></div>
-                    <p></p>
+                    Error Details:}
+                  </h3>}
+                  <div className='mt-2 text-sm text-red-700'></div>}
+                    <p></p>}
                       <strong>Error ID:</strong> {this.state.errorId}
                     </p>
                     <p></p>
@@ -207,28 +207,28 @@ const errorReport: ErrorReport = {,
                         {this.state.errorInfo?.componentStack}
                       </pre>
                     </details>
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               )}
               <div className='mt-6 space-y-3'></div>
-                {this.props.enableRetry &&;
-                  this.retryCount < this.maxRetries && (
-                    <button;
-                      onClick={this.handleRetry}
+                {this.props.enableRetry &&;}
+                  this.retryCount < this.maxRetries && (}
+                    <button;}
+                      onClick="{this.handleRetry}"
                       className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                    >;
-                      Try Again ({this.maxRetries - this.retryCount} attempts;
+                    >;)
+                      Try Again ({this.maxRetries - this.retryCount} attempts;)
                       left)
                     </button>
                   )}
                 <button;
-                  onClick={this.handleReload}
+                  onClick="{this.handleReload}"
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >;
                   Reload Page
                 </button>
                 <button;
-                  onClick={this.handleGoHome}
+                  onClick="{this.handleGoHome}"
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >;
                   Go to Homepage

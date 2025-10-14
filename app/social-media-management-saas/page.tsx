@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const SocialMediaManagementSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Social Media Management SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Social Media Management SAAS - Zion Tech Group</title>';
         <meta name="description" content="Complete social media management and marketing solution." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const SocialMediaManagementSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default SocialMediaManagementSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

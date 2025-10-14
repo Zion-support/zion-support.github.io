@@ -1,35 +1,35 @@
-import React from 'react;
-
+import React from 'react;';
+';
 import EnhancedSEO from '../components/EnhancedSEO;
 import { 
   CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  ArrowRightIcon,
-  CheckIcon,'
+  ShieldCheckIcon,;
+  CloudIcon,';
+  ChartBarIcon,;';}
+  GlobeAltIcon,';}
+  ArrowRightIcon,';}
+  CheckIcon,'}
   StarIcon'}'
 } from '@heroicons/react/24/outline;
 
 
 const Page = () => {
-  const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,'
-      title: 'Advanced Features','
-      description: 'Cutting-edge technology for maximum efficiency'
+  const features = [';
+    {';}
+      icon: <CheckCircle className="w-8 h-8" />,'}
+      title: 'Advanced Features','}
+      description: 'Cutting-edge technology for maximum efficiency'}
     },
-    {
-      icon: <Shield className="w-8 h-8" />,'
-      title: 'Secure & Reliable','
-      description: 'Enterprise-grade security and 99.9% uptime'
+    {}
+      icon: <Shield className="w-8 h-8" />,'}
+      title: 'Secure & Reliable','}
+      description: 'Enterprise-grade security and 99.9% uptime'}
     },
-    {
-      icon: <Users className="w-8 h-8" />,'
-      title: 'Expert Support','
-      description: '24/7 support from our team of specialists'
-    }
+    {}
+      icon: <Users className="w-8 h-8" />,'}
+      title: 'Expert Support','}
+      description: '24/7 support from our team of specialists'}]
+    }]
   ]
   return (
     <></>
@@ -65,17 +65,17 @@ const Page = () => {
               ></Link>
                 View Demo
               </Link>
-            </div>
-          </div>
+            </div>)
+          </div>)
 )
-          {serviceCategories.map((category, categoryIndex) => {;
-const Icon = category.icon
-            return (
-"
-              <div key={categoryIndex} className="mb-20"></div>
+          {serviceCategories.map((category, categoryIndex) => {;}
+const Icon = category.icon}
+            return (}
+"}
+              <div key="{categoryIndex}" className="mb-20"></div>
         <div className="flex items-center mb-12"></div>
-                  <div className={`w-16 h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`}></div>
-                    <Icon className={`w-8 h-8 ${category.color}`} /></Icon>
+                  <div className="{`w-16" h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`}></div>
+                    <Icon className="{`w-8" h-8 ${category.color}`} /></Icon>
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -87,17 +87,17 @@ const Icon = category.icon
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
+)
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>)
+              {features.map((feature, index) => (}
+                <div key="{index}" className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
-              </div>
+                </div>)
+              </div>)
             )})}
         </div>
       </section>

@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const SmartHomeSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Smart Home SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Smart Home SAAS - Zion Tech Group</title>';
         <meta name="description" content="Comprehensive smart home management and automation platform." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const SmartHomeSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default SmartHomeSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

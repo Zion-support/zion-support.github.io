@@ -5,6 +5,7 @@ import path from 'path'
 import { glob } from 'glob'
 // Function to fix comprehensive JSX errors
 function fixJSXComprehensive(content, filePath) {
+<<<<<<< HEAD
   let fixed = content
   let changes = 0
   // Fix files with duplicate closing tags and malformed structure
@@ -16,6 +17,21 @@ export default function Page() {
   return (
     <>
       <Helmet>
+=======
+  let fixed = content;
+  let changes = 0;
+
+  // Fix files with duplicate closing tags and malformed structure}
+  if (filePath.includes('5g-implementation') || filePath.includes('5g-solutions')) {}
+    const correctStructure = `'use client';}
+import React from "react";}
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {}
+  return (}
+    <>})
+      <Helmet ></Helmet>})
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
         <title>${filePath.includes('5g-implementation') ? '5G Implementation' : '5G Solutions'} - Zion Tech Group</title>
         <meta name="description" content="${filePath.includes('5g-implementation') ? '5G Implementation' : '5G Solutions'} services and solutions from Zion Tech Group" />
       </Helmet>
@@ -36,13 +52,20 @@ export default function Page() {
   }
 
   // Fix about page
+<<<<<<< HEAD
   if (filePath.includes('about/page.tsx')) {
     const correctStructure = `import React from "react"
 import { Helmet } from "react-helmet-async"
+=======
+  if (filePath.includes('about/page.tsx')) {}
+    const correctStructure = `import React from "react";}
+import { Helmet } from "react-helmet-async";
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>About - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team." />
         <meta name="keywords" content="about, company, team, mission, values" />
@@ -79,6 +102,7 @@ const AboutPage = () => {
               Track record of delivering successful projects and exceeding client expectations.
             </p>
           </div>
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -94,10 +118,29 @@ export default AboutPage;`
     const correctStructure = `'use client'
 import React from "react"
 import { Helmet } from "react-helmet-async"
+=======
+        </div>}
+      </div>})
+    </div>)}
+  );}
+};
+
+export default AboutPage;`;
+    fixed = correctStructure;
+    changes++;
+  }
+
+  // Fix ai-3d-generation page
+  if (filePath.includes('ai-3d-generation')) {}
+    const correctStructure = `'use client';}
+import React from "react";}
+import { Helmet } from "react-helmet-async";
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 export default function Page() {
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="AI 3D Generation services and solutions from Zion Tech Group" />
       </Helmet>
@@ -108,6 +151,7 @@ export default function Page() {
           <p className="text-xl text-gray-600">
             This page is under development. Please check back soon for more information about our AI 3D generation services.
           </p>
+<<<<<<< HEAD
         </div>
       </div>
     </>
@@ -147,6 +191,47 @@ export default function Page() {
   if (extraClosingPattern.test(fixed)) {
     fixed = fixed.replace(extraClosingPattern, '\n  );\n}')
     changes++
+=======
+        </div>}
+      </div>})
+    </>)}
+  );}
+}`;
+    fixed = correctStructure;
+    changes++;
+  }
+
+  // Fix files with missing Helmet closing tags
+  const helmetPattern = /<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/>\s*$/gm;
+  if (helmetPattern.test(fixed)) {}
+    fixed = fixed.replace(helmetPattern, (match, title) => {}
+      return match + '\n      </Helmet>';}
+    });
+    changes++;
+  }
+
+  // Fix files with JSX expressions must have one parent element
+  const jsxParentPattern = /<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<\/>\s*<div/g;
+  if (jsxParentPattern.test(fixed)) {}
+    fixed = fixed.replace(jsxParentPattern, (match) => {}
+      return match.replace(/<\/>\s*<div/, '<div');}
+    });
+    changes++;
+  }
+
+  // Fix duplicate closing tags
+  const duplicateClosingPattern = /<\/div>\s*<\/>\s*<\/div>\s*<\/>\s*\);\s*}\s*<\/div>\s*<\/>\s*\);\s*}/g;
+  if (duplicateClosingPattern.test(fixed)) {}
+    fixed = fixed.replace(duplicateClosingPattern, '\n    </>\n  );\n}');
+    changes++;
+  }
+
+  // Fix malformed JSX structure with extra closing tags
+  const extraClosingPattern = /}\s*<\/div>\s*<\/>\s*\);\s*}/g;
+  if (extraClosingPattern.test(fixed)) {}
+    fixed = fixed.replace(extraClosingPattern, '\n  );\n}');
+    changes++;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 
   return { content: fixed, changes }
@@ -155,6 +240,7 @@ export default function Page() {
 // Function to process a single file
 function processFile(filePath) {
   try {
+<<<<<<< HEAD
     const content = fs.readFileSync(filePath, 'utf8')
     const result = fixJSXComprehensive(content, filePath)
     if (result.changes > 0) {
@@ -166,10 +252,25 @@ function processFile(filePath) {
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message)
     return false
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    const result = fixJSXComprehensive(content, filePath);}
+    }
+    if (result.changes > 0) {}
+      fs.writeFileSync(filePath, result.content);}
+      console.log(`Fixed ${result.changes} issues in ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {}
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 
 // Main execution
+<<<<<<< HEAD
 async function main() {
   console.log('Starting comprehensive JSX error fixes...')
   // Get all TypeScript/TSX files in the app directory
@@ -179,6 +280,20 @@ async function main() {
   files.forEach(file => {
     if (processFile(file)) {
       totalFixed++
+=======
+async function main() {}
+  console.log('Starting comprehensive JSX error fixes...');}
+}
+  // Get all TypeScript/TSX files in the app directory}
+  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
+
+  let totalFixed = 0;
+  let filesProcessed = 0;
+
+  files.forEach(file => {)}
+    if (processFile(file)) {}
+      totalFixed++;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
     }
     filesProcessed++
   })

@@ -13,8 +13,8 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}"
   title="Zion Tech Group - Advanced AI and IT Solutions"
   description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
   keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],''''''';
-  image="/images/og-image.jpg"
-  url = typeof window !== 'undefined' ? window.location.href : '',''''''';
+  image="/images/og-image.jpg")
+  url = typeof window !="=" 'undefined' ? window.location.href : '',''''''';)
   type = 'website',''''')'';
   structuredData}) => {}
   useEffect(() => {}, [])
@@ -53,20 +53,20 @@ const metaTags = [{name: 'description', content: "description",},'''''"'"'"
     // Additional SEO tags;
     {name: 'theme-color', content: '#0066cc',},'''''''
     {name: 'msapplication-TileColor', content: '#0066cc',},'''''''
-    {name: 'apple-mobile-web-app-capable', content: 'yes',},'''''''
-    {name: 'apple-mobile-web-app-status-bar-style', content: 'default',},'''''''
+    {name: 'apple-mobile-web-app-capable', content: 'yes',},''''''']
+    {name: 'apple-mobile-web-app-status-bar-style', content: 'default',},''''''']
   ];
   return (
   <>
     <Helmet></Helmet>
-      <title>{title}</title>
-  </>
+      <title>{title}</title>)
+  </>)
 );
-      {metaTags.map((tag, _index) => (}
-        <meta key={_index} {...tag} />)
+      {metaTags.map((tag, _index) => (})
+        <meta key="{_index}" {...tag} />)
       ))}
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />"""""
+      <link rel="canonical" href="{url}" />"""""
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />"""""
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"""""
@@ -94,8 +94,8 @@ const  {}
     "telephone": "+1-555-0123","""""
     "contactType": "customer service","""""
     "availableLanguage": "English"},"""""
-  "sameAs": ["https: "//www.linkedin.com/company/zion-tech-group"", """""
-    "https: "//twitter.com/ziontechgroup"", """""
+  "sameAs": ["https: "//www.linkedin.com/company/zion-tech-group"", """""]
+    "https: "//twitter.com/ziontechgroup"", """""]
     "https://github.com/zion-tech-group""""""],
   "address": {"}""""
     "@type": "PostalAddress","""""

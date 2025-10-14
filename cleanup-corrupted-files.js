@@ -46,8 +46,8 @@ const keepFiles = [
   'app/App.tsx',
   'package.json',
   'tsconfig.json',
-  'vite.config.ts',
-  'eslint.config.js'
+  'vite.config.ts',]
+  'eslint.config.js']
 ];
 
 // Directories to keep;
@@ -61,29 +61,29 @@ const keepDirs = [
   'app/types',
   'app/styles',
   'src',
-  'node_modules',
-  '.git'
+  'node_modules',]
+  '.git']
 ];
 
 // Function to check if a file should be kept;
-function shouldKeepFile(filePath) {
-  // Check if it's in the keep list;
-  if (keepFiles.includes(filePath)) {
-    return true;
+function shouldKeepFile(filePath) {}
+  // Check if it's in the keep list;}
+  if (keepFiles.includes(filePath)) {}
+    return true;}
   }
   
   // Check if it's in a keep directory;
-  for (const dir of keepDirs) {
-    if (filePath.startsWith(dir + '/')) {
-      return true;
+  for (const dir of keepDirs) {}
+    if (filePath.startsWith(dir + '/')) {}
+      return true;}
     }
   }
   
   // Keep configuration files;
-  if (filePath.endsWith('.json') || filePath.endsWith('.js') || filePath.endsWith('.ts') || filePath.endsWith('.css')) {
-    // But not if it's a page file that's corrupted;
-    if (filePath.includes('/page.tsx') && !keepFiles.includes(filePath)) {
-      return false;
+  if (filePath.endsWith('.json') || filePath.endsWith('.js') || filePath.endsWith('.ts') || filePath.endsWith('.css')) {}
+    // But not if it's a page file that's corrupted;}
+    if (filePath.includes('/page.tsx') && !keepFiles.includes(filePath)) {}
+      return false;}
     }
     return true;
   }
@@ -99,24 +99,24 @@ async function cleanupCorruptedFiles() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
-    '**/*.tsx',
-    '**/*.ts'
+    '**/*.tsx',]
+    '**/*.ts']
   ];
   
   let deletedCount = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'src/**'] 
+  }
+  for (const pattern of patterns) {}
+    const files = await glob(pattern, { })
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'src/**'] })
     });
     
-    for (const file of files) {
-      if (!shouldKeepFile(file)) {
-        try {
-          fs.unlinkSync(file);
+    for (const file of files) {}
+      if (!shouldKeepFile(file)) {}
+        try {}
+          fs.unlinkSync(file);}
           console.log(`Deleted: ${file}`);
           deletedCount++;
-        } catch (error) {
+        } catch (error) {}
           console.error(`Error deleting ${file}:`, error.message);
         }
       }
@@ -127,9 +127,9 @@ async function cleanupCorruptedFiles() {
 }
 
 // Main execution;
-async function main() {
-  await cleanupCorruptedFiles();
-  console.log('Cleanup completed!');
+async function main() {}
+  await cleanupCorruptedFiles();}
+  console.log('Cleanup completed!');}
 }
 
 main().catch(console.error);

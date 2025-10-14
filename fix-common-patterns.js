@@ -11,15 +11,15 @@ function fixFile(filePath) {
     
     // Fix the most common patterns causing errors
     
-    // Fix malformed import statements with missing quotes
-    content = content
+    // Fix malformed import statements with missing quotes;
+    content = content;
       .replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "import $1 from '$2';")
-      .replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "import $1 from '$2';");
-    
-    // Fix missing default values in function parameters
-    content = content
-      .replace(/className\s*=\s*\{\s*\}\s*\)/g, "className = '' })")
-      .replace(/className\s*=\s*\{\s*\}\s*\)/g, "className = '' })");
+      .replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "import $1 from '$2';");}
+    }
+    // Fix missing default values in function parameters}
+    content = content}
+      .replace(/className\s*="\s*\{\s*\}\s*\)/g," "className = '' })")
+      .replace(/className\s*="\s*\{\s*\}\s*\)/g," "className = '' })");
     
     // Fix malformed JSX fragments
     content = content
@@ -41,7 +41,7 @@ function fixFile(filePath) {
     
     // Fix malformed function declarations
     content = content
-      .replace(/const\s+([^=]+)=\s*\([^)]*\)\s*=>\s*{[\s]*};[\s]*};/g, "const $1 = () => {\n  return null;\n};");
+      .replace(/const\s+([^="]+)=\s*\([^)]*\)\s*=">\s*{[\s]*};[\s]*};/g, "const $1 = () => {\n  return null;\n};");
     
     // Fix interface names that start with numbers
     content = content
@@ -51,10 +51,10 @@ function fixFile(filePath) {
     // Fix unterminated string literals
     content = content
       .replace(/import\s+([^;]+);['"]/g, "import $1;")
-      .replace(/import\s+([^;]+);['"]/g, "import $1;");
-    
-    // Fix malformed JSX expressions
-    content = content
+      .replace(/import\s+([^;]+);['"]/g, "import $1;");}
+    }
+    // Fix malformed JSX expressions}
+    content = content}
       .replace(/{`([^`]+)`}/g, "{`$1`}");
     
     // Fix extra quotes in JSX text
@@ -103,7 +103,7 @@ function fixFile(filePath) {
     
     // Fix malformed JSX attributes
     content = content
-      .replace(/className=\{`([^`]+)`\}/g, "className={`$1`}");
+      .replace(/className="\{`([^`]+)`\}/g," "className={`$1`}");
     
     // Fix unterminated template literals
     content = content
@@ -136,13 +136,13 @@ function fixFile(filePath) {
       .replace(/\n\s*\n\s*\n/g, "\n\n")
       .replace(/[\s]+$/gm, "");
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !="=" originalContent) {}
+      fs.writeFileSync(filePath, content, 'utf8');}
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -157,19 +157,19 @@ async function main() {
     'app/**/*.ts',
     '*.tsx',
     '*.ts',
-    '__tests__/**/*.tsx',
-    '__tests__/**/*.ts'
+    '__tests__/**/*.tsx',]
+    '__tests__/**/*.ts']
   ];
   
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
+  let totalFiles = 0;}
+  let fixedFiles = 0;}
+  }
+  for (const pattern of patterns) {}
     const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      totalFiles++;
-      if (fixFile(file)) {
-        fixedFiles++;
+    for (const file of files) {}
+      totalFiles++;}
+      if (fixFile(file)) {}
+        fixedFiles++;}
       }
     }
   }
@@ -178,8 +178,8 @@ async function main() {
   console.log('Common pattern fixes completed!');
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+if (import.meta.url ="==" `file://${process.argv[1]}`) {}
+  main();}
 }
 
 export { fixFile };

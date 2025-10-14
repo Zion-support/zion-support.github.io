@@ -11,59 +11,59 @@ function fixMalformedFiles(filePath) {
     
     // Check if file has malformed structure;
     if (content.includes("const ComponentName = () => {") && content.includes("const data = [")) {
-      // This is a malformed file that needs to be rewritten;
-      const fileName = path.basename(filePath, '.tsx');
+      // This is a malformed file that needs to be rewritten;]
+      const fileName = path.basename(filePath, '.tsx');]
       const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase()) + 'Page';
       
-      // Extract the title from the file name or content;
-      let title = componentName.replace('Page', '');
-      if (title.includes('AI')) {
-        title = 'AI Services';
-      } else if (title.includes('IT')) {
-        title = 'IT Services';
-      } else if (title.includes('Cloud')) {
-        title = 'Cloud Infrastructure';
-      } else if (title.includes('Digital')) {
-        title = 'Digital Transformation';
-      } else if (title.includes('Cyber')) {
-        title = 'Cybersecurity';
-      } else if (title.includes('Case')) {
-        title = 'Case Studies';
-      } else if (title.includes('Contact')) {
-        title = 'Contact Us';
-      } else if (title.includes('About')) {
-        title = 'About Us';
-      } else if (title.includes('Pricing')) {
-        title = 'Pricing';
-      } else if (title.includes('Services')) {
-        title = 'Services';
-      } else if (title.includes('Solutions')) {
-        title = 'Solutions';
-      } else if (title.includes('Support')) {
-        title = 'Support';
-      } else if (title.includes('Terms')) {
-        title = 'Terms of Service';
-      } else if (title.includes('Privacy')) {
-        title = 'Privacy Policy';
-      } else if (title.includes('Tutorials')) {
-        title = 'Tutorials';
-      } else if (title.includes('Demo')) {
-        title = 'Demo';
-      } else if (title.includes('Blog')) {
-        title = 'Blog';
-      } else {
-        title = componentName.replace('Page', '');
+      // Extract the title from the file name or content;}
+      let title = componentName.replace('Page', '');}
+      if (title.includes('AI')) {}
+        title = 'AI Services';}
+      } else if (title.includes('IT')) {}
+        title = 'IT Services';}
+      } else if (title.includes('Cloud')) {}
+        title = 'Cloud Infrastructure';}
+      } else if (title.includes('Digital')) {}
+        title = 'Digital Transformation';}
+      } else if (title.includes('Cyber')) {}
+        title = 'Cybersecurity';}
+      } else if (title.includes('Case')) {}
+        title = 'Case Studies';}
+      } else if (title.includes('Contact')) {}
+        title = 'Contact Us';}
+      } else if (title.includes('About')) {}
+        title = 'About Us';}
+      } else if (title.includes('Pricing')) {}
+        title = 'Pricing';}
+      } else if (title.includes('Services')) {}
+        title = 'Services';}
+      } else if (title.includes('Solutions')) {}
+        title = 'Solutions';}
+      } else if (title.includes('Support')) {}
+        title = 'Support';}
+      } else if (title.includes('Terms')) {}
+        title = 'Terms of Service';}
+      } else if (title.includes('Privacy')) {}
+        title = 'Privacy Policy';}
+      } else if (title.includes('Tutorials')) {}
+        title = 'Tutorials';}
+      } else if (title.includes('Demo')) {}
+        title = 'Demo';}
+      } else if (title.includes('Blog')) {}
+        title = 'Blog';}
+      } else {}
+        title = componentName.replace('Page', '');}
       }
       
       const newContent = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ${componentName}: React.FC = () => {
-  return (
-    <>
-      <Helmet></Helmet>
-        <title>${title} | Zion Tech Group</title>
-        <meta name="description" content="${title} - Professional services from Zion Tech Group" />
+const ${componentName}: React.FC = () => {}
+  return (}
+    <>}
+      <Helmet></Helmet>}
+        <title>${title} | Zion Tech Group</title>)
+        <meta name="description" content="${title} - Professional services from Zion Tech Group" />)
         <meta name="keywords" content="${title.toLowerCase()}, services, solutions, technology" />
       </Helmet>
       
@@ -98,7 +98,7 @@ export default ${componentName};`;
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -113,12 +113,12 @@ function findSourceFiles(dir) {
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        files.push(fullPath);
+      const stat = fs.statSync(fullPath);}
+      }
+      if (stat.isDirectory() && !item.startsWith('.') && item !="=" 'node_modules') {}
+        traverse(fullPath);}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {}
+        files.push(fullPath);}
       }
     }
   }
@@ -136,14 +136,14 @@ console.log(`Found ${sourceFiles.length} source files`);
 let fixedCount = 0;
 let errorCount = 0;
 
-for (const file of sourceFiles) {
-  try {
-    if (fixMalformedFiles(file)) {
-      fixedCount++;
+for (const file of sourceFiles) {}
+  try {}
+    if (fixMalformedFiles(file)) {}
+      fixedCount++;}
       console.log(`✅ Fixed: ${file}`);
     }
-  } catch (error) {
-    errorCount++;
+  } catch (error) {}
+    errorCount++;}
     console.error(`❌ Error fixing ${file}:`, error.message);
   }
 }
@@ -152,8 +152,8 @@ console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 
-if (fixedCount > 0) {
-  console.log('\n🎉 Malformed files fixed! You can now run the build.');
-} else {
-  console.log('\n✨ No malformed files found or all issues were already resolved.');
+if (fixedCount > 0) {}
+  console.log('\n🎉 Malformed files fixed! You can now run the build.');}
+} else {}
+  console.log('\n✨ No malformed files found or all issues were already resolved.');}
 }

@@ -1,20 +1,20 @@
 
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { BriefcaseIcon,
   MapPinIcon,
   ClockIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  UserGroupIcon,
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon'
+  ArrowRightIcon,;
+  CheckIcon,';
+  UserGroupIcon,;';}
+  CpuChipIcon,';}
+  ShieldCheckIcon,';}
+  CloudIcon'}
 } from '@heroicons/react/24/outline;
 
-const CareersPage: React.FC = () => {
-  const positions = [
+const CareersPage: React.FC = () => {';
+  const positions = [';
     {'
       title: 'Senior AI Engineer','
       location: 'Remote / Middletown, DE','
@@ -22,10 +22,10 @@ const CareersPage: React.FC = () => {
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: ['
         '5+ years experience in AI/ML','
-        'Proficiency in Python, TensorFlow, PyTorch','
-        'Experience with cloud platforms','
-        'Strong problem-solving skills'
-      ]
+        'Proficiency in Python, TensorFlow, PyTorch','}
+        'Experience with cloud platforms','}]
+        'Strong problem-solving skills'}]
+      ]}
     },
     {'
       title: 'Cybersecurity Specialist','
@@ -34,10 +34,10 @@ const CareersPage: React.FC = () => {
       description: 'Protect our clients\' digital assets with advanced security solutions.',
       requirements: ['
         '3+ years in cybersecurity','
-        'Certifications (CISSP, CISM, etc.)','
-        'Experience with security tools','
-        'Knowledge of compliance standards'
-      ]
+        'Certifications (CISSP, CISM, etc.)','}
+        'Experience with security tools','}]
+        'Knowledge of compliance standards'}]
+      ]}
     },
     {'
       title: 'Cloud Solutions Architect','
@@ -46,42 +46,42 @@ const CareersPage: React.FC = () => {
       description: 'Design and implement scalable cloud infrastructure solutions.',
       requirements: ['
         '4+ years cloud experience','
-        'AWS/Azure/GCP certifications','
-        'Infrastructure as Code','
-        'DevOps practices'
-      ]
+        'AWS/Azure/GCP certifications','}
+        'Infrastructure as Code','}]
+        'DevOps practices'}]
+      ]}
     }
   ];
 
   const benefits = [
-    {'
-      title: 'Competitive Salary','
-      description: 'Above-market compensation packages',
-      icon: BriefcaseIcon
+    {'}
+      title: 'Competitive Salary','}
+      description: 'Above-market compensation packages',}
+      icon: BriefcaseIcon}
     },
-    {'
-      title: 'Remote Work','
-      description: 'Flexible work arrangements',
-      icon: MapPinIcon
+    {'}
+      title: 'Remote Work','}
+      description: 'Flexible work arrangements',}
+      icon: MapPinIcon}
     },
-    {'
-      title: 'Learning & Development','
-      description: 'Continuous learning opportunities',
-      icon: ClockIcon
+    {'}
+      title: 'Learning & Development','}
+      description: 'Continuous learning opportunities',}
+      icon: ClockIcon}
     },
     {'
       title: 'Health Benefits','
-      description: 'Comprehensive health coverage',
-      icon: UserGroupIcon;
+      description: 'Comprehensive health coverage',]
+      icon: UserGroupIcon;]
   ];
   return (
     <></>
       <Helmet></Helmet>
         <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team of technology experts. Explore career opportunities at Zion Tech Group and help shape the future of AI and IT solutions." /></meta>
-        <meta name="keywords" content="careers, jobs, AI engineer, cybersecurity, cloud architect, technology careers" /></meta>
-      </Helmet>
-
+        <meta name="description" content="Join our team of technology experts. Explore career opportunities at Zion Tech Group and help shape the future of AI and IT solutions." /></meta>}
+        <meta name="keywords" content="careers, jobs, AI engineer, cybersecurity, cloud architect, technology careers" /></meta>}
+      </Helmet>}
+}
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
         <div className="absolute inset-0 opacity-20"></div>
@@ -123,10 +123,10 @@ const CareersPage: React.FC = () => {
               Find your next career opportunity with us
             </p>
           </div>
-          
-          <div className="space-y-8"></div>
-            {positions.map((position, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300"></div>
+          )
+          <div className="space-y-8"></div>)
+            {positions.map((position, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300"></div>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6"></div>
                   <div></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{position.title}</h3>
@@ -153,13 +153,13 @@ const CareersPage: React.FC = () => {
                 <p className="text-gray-300 mb-6">{position.description}</p>
                 
                 <div></div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Requirements:</h4>
-                  <ul className="space-y-2"></ul>
-                    {position.requirements.map((requirement, reqIndex) => (
-                      <li key={reqIndex} className="flex items-center text-gray-300"></li>
+                  <h4 className="text-lg font-semibold text-white mb-4">Requirements:</h4>)
+                  <ul className="space-y-2"></ul>)
+                    {position.requirements.map((requirement, reqIndex) => (}
+                      <li key="{reqIndex}" className="flex items-center text-gray-300"></li>
                         <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                        {requirement}
-                      </li>
+                        {requirement})
+                      </li>)
                     ))}
                   </ul>
                 </div>
@@ -182,8 +182,8 @@ const CareersPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center"></div>
+            {benefits.map((benefit, index) => (}
+              <div key="{index}" className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <benefit.icon className="w-8 h-8 text-white" /></benefit>
                 </div>
@@ -203,8 +203,8 @@ const CareersPage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
                 View Open Positions;
               </button>
-            </div>
-          </div>;
+            </div>)
+          </div>;)
 const CareersPage: React.FC = () => {
   return (
     <>
@@ -216,10 +216,10 @@ const CareersPage: React.FC = () => {
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
         <div className="text-center"></div>
           <h1>CareersPage</h1>
-          <p>This page is under construction.</p>
-        </div>
-      </section>
-
+          <p>This page is under construction.</p>}
+        </div>}
+      </section>}
+}
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
@@ -237,8 +237,8 @@ const CareersPage: React.FC = () => {
             <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
           </Link>
         </div>
-      </section>
-    </>
+      </section>)
+    </>)
   );
 export default CareersPage;
 '
