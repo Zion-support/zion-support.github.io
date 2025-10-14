@@ -1,10 +1,13 @@
 import React from 'react';
 
-const ErrorBoundary = () => {
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ children }) => {
   return (
     <div>
-      <h2>ErrorBoundary</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      {children}
     </div>
   );
 };

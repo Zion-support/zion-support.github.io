@@ -35,6 +35,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         }
       };
     }
+    return undefined;
   }, [structuredData]);
 
   // Generate meta tags
