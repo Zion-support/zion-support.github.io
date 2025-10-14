@@ -39,6 +39,7 @@ export default [
       },
     },
     plugins: {
+      "@typescript-eslint": typescript,
       "react": react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh

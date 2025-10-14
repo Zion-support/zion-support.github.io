@@ -1,39 +1,33 @@
-import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';,
+import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';
 
-// Higher-order component for lazy loading,
-// eslint-disable-next-line @typescript-eslint/no-explicit-any,
+// Higher-order component for lazy loading
 export function withLazyLoading<T extends ComponentType<any>>(
-
   Component: T,
   fallback?: React.ReactNode,
-) {,
-
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));,
+) {
+  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
-  return (props: ComponentProps<T>) => (
-
-    <Suspense fallback={fallback || <div>Loading...</div>}>,
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+  const WrappedComponent = (props: ComponentProps<T>) => (
+    <Suspense fallback={fallback || <div>Loading...</div>}>
       <LazyComponent {...(props as any)} />
     </Suspense>
-  );,
+  );
+  WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
+  return WrappedComponent;
 }
 
-// Utility function to create lazy-loaded components,
-// eslint-disable-next-line @typescript-eslint/no-explicit-any,
+// Utility function to create lazy-loaded components
 export function createLazyComponent<T extends ComponentType<any>>(
-
-  importFunction: () => Promise<{ default: T }>
+  importFunction: () => Promise<{ default: T }>,
   fallback?: React.ReactNode,
-) {,
-
-  const LazyComponent = lazy(importFunction);,
+) {
+  const LazyComponent = lazy(importFunction);
   
-  return (props: ComponentProps<T>) => (
-
-    <Suspense fallback={fallback || <div>Loading...</div>}>,
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+  const WrappedComponent = (props: ComponentProps<T>) => (
+    <Suspense fallback={fallback || <div>Loading...</div>}>
       <LazyComponent {...(props as any)} />
     </Suspense>
-  );,
+  );
+  WrappedComponent.displayName = `createLazyComponent(${Component.displayName || Component.name})`;
+  return WrappedComponent;
 }
