@@ -1,11 +1,13 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
+// App component would be imported here
 
-// Main page - Basic implementation
-export default function Main() {
-  return (
-    <div>
-      <h1>Main Page</h1>
-      <p>Welcome to Zion Tech Group</p>
-    </div>
-  );
-}
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+root.render(
+  <React.StrictMode>
+    <div>App component would be rendered here</div>
+  </React.StrictMode>
+);

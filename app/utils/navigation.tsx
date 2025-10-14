@@ -1,12 +1,32 @@
-import React from "react";
+'use client';
 
-export default function Navigation() {
-  return (
-    <div>
-      <h1 className="text-4xl font-bold mb-8">Navigation</h1>
-      <p className="text-gray-300 text-lg">
-        This component is under development.
-      </p>
-    </div>
-  );
-}
+import { useRouter } from 'next/navigation';
+
+export const useNavigation = () => {
+  const router = useRouter();
+
+  const navigate = (path: string) => {
+    router.push(path);
+  };
+
+  const goBack = () => {
+    router.back();
+  };
+
+  const goForward = () => {
+    router.forward();
+  };
+
+  const refresh = () => {
+    router.refresh();
+  };
+
+  return {
+    navigate,
+    goBack,
+    goForward,
+    refresh
+  };
+};
+
+export default useNavigation;

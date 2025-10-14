@@ -1,23 +1,16 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+'use client';
 
-export default function Page() {
+import React from 'react';
+
+export default function ZionAiLeadScoringPage() {
   return (
-    <div>
-  );Page content</div>
-  );
-
-    <div>Page content</div>
-  );
-    <div>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Zion AI Lead Scoring</h1>
+        <p className="text-gray-600 text-lg">
+          This page is under development.
+        </p>
       </div>
-      <div>
-      </div>
-        <h1 className: ""text-4xl font-bold mb-8">Zion Ai Lead Scoring</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.;        </p>
-      </div>
-    </React.Fragment>
+    </div>
   );
 }
-};
-};
-  )}

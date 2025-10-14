@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const TermsPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Terms of service for Zion Tech Group." />
+        <meta name="description" content="Terms of Service for Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div>

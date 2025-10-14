@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Privacy policy for Zion Tech Group." />
+        <meta name="description" content="Privacy Policy for Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div>

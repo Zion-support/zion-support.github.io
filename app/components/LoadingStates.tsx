@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoadingStates = () => {
+export default function LoadingStates() {
   return (
     <div>
       <div>
@@ -9,6 +9,4 @@ const LoadingStates = () => {
       </div>
     </div>
   );
-};
-
-export default LoadingStates;
+}

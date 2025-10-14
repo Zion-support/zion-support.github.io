@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const BlogPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Blog posts and articles from Zion Tech Group." />
+        <meta name="description" content="Latest insights and updates from Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div>

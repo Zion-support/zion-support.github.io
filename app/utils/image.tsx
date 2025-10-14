@@ -1,12 +1,34 @@
-import React from "react";
+'use client';
 
-export default function Image() {
+import React from 'react';
+
+interface ImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  loading?: 'lazy' | 'eager';
+  priority?: boolean;
+}
+
+export default function Image({ 
+  src, 
+  alt, 
+  width, 
+  height, 
+  className = '', 
+  loading = 'lazy',
+  priority = false 
+}: ImageProps) {
   return (
-    <div>
-      <h1 className="text-4xl font-bold mb-8">Image</h1>
-      <p className="text-gray-300 text-lg">
-        This component is under development.
-      </p>
-    </div>
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      loading={priority ? 'eager' : loading}
+    />
   );
 }

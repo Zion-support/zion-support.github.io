@@ -1,24 +1,16 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
 
 export default function CreateAdPage() {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Create Ad - Zion Tech Group</title>
-        <meta name="description" content="Create professional advertisements with Zion Tech Group." />
-      </Helmet>
-      
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Create Ad</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under development.
-          </p>
-        </div>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Create Ad</h1>
+        <p className="text-gray-600 text-lg">
+          This page is under development.
+        </p>
       </div>
-    </React.Fragment>
+    </div>
   );
 }

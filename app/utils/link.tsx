@@ -1,12 +1,41 @@
-import React from "react";
+'use client';
 
-export default function Link() {
+import React from 'react';
+import Link from 'next/link';
+
+interface CustomLinkProps {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  target?: string;
+  rel?: string;
+}
+
+export default function CustomLink({ 
+  href, 
+  children, 
+  className = '', 
+  target, 
+  rel 
+}: CustomLinkProps) {
+  const isExternal = href.startsWith('http') || href.startsWith('//');
+  
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        className={className}
+        target={target || '_blank'}
+        rel={rel || 'noopener noreferrer'}
+      >
+        {children}
+      </a>
+    );
+  }
+  
   return (
-    <div>
-      <h1 className="text-4xl font-bold mb-8">Link</h1>
-      <p className="text-gray-300 text-lg">
-        This component is under development.
-      </p>
-    </div>
+    <Link href={href} className={className}>
+      {children}
+    </Link>
   );
 }
