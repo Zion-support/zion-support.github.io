@@ -1,5 +1,5 @@
 declare global {
-  interfaceWindow {
+  interface Window {
     gtag: (
       command: string,
       targetId: string,

@@ -1,4 +1,4 @@
-interfaceConfig {
+interface Config {
   apiUrl: string;
   environment: string;
   features: {
@@ -18,12 +18,12 @@ export const configManager = {
       seo: true,
       performance: true,
     }
-  } asConfig,
+  } as Config,
   
   get: (key: string) => {
     return key.split('.').reduce((obj: unknown, k: string) => {
       if (obj && typeof obj === 'object' && k in obj) {
-        return (obj asRecord<string, unknown>)[k];
+        return (obj as Record<string, unknown>)[k];
       }
       return undefined;
     }, configManager.config);
@@ -35,8 +35,8 @@ export const configManager = {
       if (!(k in obj)) {
         obj[k] = {};
       }
-      return obj[k] asRecord<string, unknown>;
-    }, configManager.config asRecord<string, unknown>);
+      return obj[k] as Record<string, unknown>;
+    }, configManager.config as Record<string, unknown>);
     
     if (lastKey) {
       target[lastKey] = value;

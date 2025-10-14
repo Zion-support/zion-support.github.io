@@ -1,16 +1,16 @@
 
 import { Component, ReactNode, ErrorInfo } from 'react';
 
-interfaceProps {
+interface Props {
   children: ReactNode;
 }
 
-interfaceState {
+interface State {
   hasError: boolean;
   error?: Error;
 }
 
-classError Boundary extendsComponent<Props, State> {
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -32,7 +32,7 @@ classError Boundary extendsComponent<Props, State> {
               className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
             >
               Reload Page
-            </butn>
+            </button>
           </div>
         </div>
       );

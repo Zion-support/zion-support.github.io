@@ -4,7 +4,7 @@ const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Performance optimization logic
     const optimizeImages = () => {
-      const images = document.querySelector All('img');
+      const images = document.querySelectorAll('img');
       images.forEach((img) => {
         if (!img.loading) {
           img.loading = 'lazy';

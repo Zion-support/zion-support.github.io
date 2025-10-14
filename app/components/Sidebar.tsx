@@ -5,12 +5,12 @@ import { Phone } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interfaceSidebar Props {
+interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-constSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems: Array<{ name: string; href: string; icon: React.ComponentType<{ className?: string }> }> = [
   ];
   return (
@@ -34,19 +34,19 @@ constSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             className="text-gray-300 hover:text-white"
           >
             <X className="w-6 h-6" />
-          </butn>
+          </button>
         </div>
         <nav className="mt-6">
           <ul className="space-y-2 px-4">
             {navigationItems.map((item) => {
-              constIcon = item.icon;
+              const Icon = item.icon;
               return (
-                <likey={item.name}>
+                <li key={item.name}>
                   <Link to={item.href}
                     onClick={onClose}
-                    className="flexitems-centertext-gray-300 hover:text-white py-2"
+                    className="flex items-center text-gray-300 hover:text-white py-2"
                   >
-                    <Icon className="w-5 h-5mr-3" />
+                    <Icon className="w-5 h-5 mr-3" />
                     {item.name}
                   </Link>
                 </li>

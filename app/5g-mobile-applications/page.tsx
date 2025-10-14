@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const FiveGMobileApplications: React.FC = () => {
-=======
 const FiveGMobileApplicationsPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>
@@ -53,4 +49,4 @@ const FiveGMobileApplicationsPage: React.FC = () => {
   );
 };
 
-export default FiveGMobileApplications;
+export default FiveGMobileApplicationsPage;

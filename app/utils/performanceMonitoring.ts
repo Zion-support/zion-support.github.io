@@ -6,7 +6,7 @@ export const performanceMonitoring = {
     performance.mark(`${name}-end`)
     performance.measure(name, `${name}-start`, `${name}-end`)
     
-    const measures = performance.getEntries By Name(name)
+    const measures = performance.getEntriesByName(name)
     if (measures.length > 0) {
       const measure = measures[0]
       console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)

@@ -33,7 +33,7 @@ export const accessibilityChecker = {
     
     return issues;
   },
-  checkColor Contrast: () => {
+  checkColorContrast: () => {
     // This would require a more complex implementation
     // For now, return empty array
     return [];

@@ -1,12 +1,12 @@
 export const performanceOptimizations = {
-  debounce: <Textends (...args: unknown[]) => unknown>(func: T, wait: number): T => {
-    let timeout: Node JS.Timeout;
+  debounce: <T extends (...args: unknown[]) => unknown>(func: T, wait: number): T => {
+    let timeout: NodeJS.Timeout;
     return ((...args: unknown[]) => {
       clearTimeout(timeout);
       timeout = setTimeout(() => func.apply(this, args), wait);
     }) as T;
   },
-  throttle: <Textends (...args: unknown[]) => unknown>(func: T, limit: number): T => {
+  throttle: <T extends (...args: unknown[]) => unknown>(func: T, limit: number): T => {
     let inThrottle: boolean;
     return ((...args: unknown[]) => {
       if (!inThrottle) {
@@ -16,8 +16,8 @@ export const performanceOptimizations = {
       }
     }) as T;
   },
-  memoize: <Textends (...args: unknown[]) => unknown>(func: T): T => {
-    const cache = newMap();
+  memoize: <T extends (...args: unknown[]) => unknown>(func: T): T => {
+    const cache = new Map();
     return ((...args: unknown[]) => {
       const key = JSON.stringify(args);
       if (cache.has(key)) {

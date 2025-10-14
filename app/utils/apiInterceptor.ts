@@ -3,7 +3,7 @@ export const apiInterceptor = {
     // Add auth token if available
     const token = localStorage.getItem('authToken');
     if (token && config.headers && typeof config.headers === 'object') {
-      (config.headers asRecord<string, string>).Authorization = `Bearer ${token}`;
+      (config.headers as Record<string, string>).Authorization = `Bearer ${token}`;
     }
     return config;
   },
@@ -12,8 +12,8 @@ export const apiInterceptor = {
   },
   error: (error: unknown) => {
     if (error && typeof error === 'object' && 'response' in error) {
-      const errorWith Response = error as { response?: { status?: number } };
-      if (errorWith Response.response?.status === 401) {
+      const errorWithResponse = error as { response?: { status?: number } };
+      if (errorWithResponse.response?.status === 401) {
         // Handle unauthorized access
         localStorage.removeItem('authToken');
         window.location.href = '/login';

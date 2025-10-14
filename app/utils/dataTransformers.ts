@@ -1,7 +1,7 @@
 export const dataTransformers = {
-  transformTo Table Data: (data: unknown[]) => {
+  transformToTableData: (data: unknown[]) => {
     return data.map((item, index) => {
-      const itemObj = item asRecord<string, unknown>;
+      const itemObj = item as Record<string, unknown>;
       return {
         id: itemObj.id || index,
         ...itemObj

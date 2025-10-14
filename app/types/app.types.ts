@@ -1,11 +1,11 @@
-export interfaceUser {
+export interface User {
   id: string;
   name: string;
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
 
-export interfaceService {
+export interface Service {
   id: string;
   name: string;
   description: string;
@@ -19,14 +19,14 @@ export interfaceService {
   icon: string;
 }
 
-export interfaceAnalytics Event {
+export interface AnalyticsEvent {
   action: string;
   category: string;
   label?: string;
   value?: number;
 }
 
-export interfaceContact Form {
+export interface ContactForm {
   name: string;
   email: string;
   company: string;
@@ -34,7 +34,7 @@ export interfaceContact Form {
   phone?: string;
 }
 
-export interfaceBlog Post {
+export interface BlogPost {
   id: string;
   title: string;
   content: string;
@@ -45,7 +45,7 @@ export interfaceBlog Post {
   slug: string;
 }
 
-export interfaceTestimonial {
+export interface Testimonial {
   id: string;
   name: string;
   company: string;

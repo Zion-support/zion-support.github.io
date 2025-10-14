@@ -32,7 +32,7 @@ const ContentStatistics: React.FC = () => {
       description: 'Successful implementations'
     },
     {
-      icon: Trending Up,
+      icon: TrendingUp,
       value: counters.satisfaction,
       label: 'Client Satisfaction',
       suffix: '%',
@@ -56,7 +56,7 @@ const ContentStatistics: React.FC = () => {
       description: 'Global presence'
     },
     {
-      icon: Bar Chart 3,
+      icon: BarChart3,
       value: counters.uptime,
       label: 'Uptime Guarantee',
       suffix: '%',
@@ -174,14 +174,14 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         {/* Statistics Grid */}
-        <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (
-            <divkey={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
+            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
               <div className={`w-16 h-16 ${stat.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                 <stat.icon className="w-8 h-8" />
               </div>
-              <div className={`text-4 xl font-bold ${stat.color} mb-2`}>
-                {stat.value.toLocale String()}{stat.suffix}
+              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+                {stat.value.toLocaleString()}{stat.suffix}
               </div>
               <div className="text-lgfont-semiboldtext-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
@@ -198,20 +198,20 @@ const ContentStatistics: React.FC = () => {
             </p>
           </div>
 
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divkey={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="w-12 h-12bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6text-white" />
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-lgfont-boldtext-white mb-3 group-hover:text-purple-400 transition-colors">
+                <h4 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h4>
-                <p className="text-gray-300 text-smmb-4">{feature.description}</p>
+                <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
                 <div className="space-y-2">
                   {feature.stats.map((stat, statIndex) => (
-                    <divkey={statIndex} className="flexitems-centertext-xs text-gray-400">
-                      <CheckCircle className="w-3 h-3text-green-400 mr-2 flex-shrink-0" />
+                    <div key={statIndex} className="flex items-center text-xs text-gray-400">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {stat}
                     </div>
                   ))}
@@ -230,14 +230,14 @@ const ContentStatistics: React.FC = () => {
             </p>
           </div>
 
-          <div className="gridgrid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
-              <divkey={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <achievement.icon className="w-8 h-8text-white" />
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <achievement.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3 xlfont-bold text-white mb-2">{achievement.value}</div>
-                <div className="text-lgfont-semiboldtext-white mb-2">{achievement.title}</div>
+                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
+                <div className="text-lg font-semibold text-white mb-2">{achievement.title}</div>
                 <div className="text-gray-400 text-sm">{achievement.description}</div>
               </div>
             ))}
@@ -253,10 +253,10 @@ const ContentStatistics: React.FC = () => {
             </p>
           </div>
           
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <divkey={index} className="flexitems-startspace-x-3">
-                <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
@@ -272,14 +272,14 @@ const ContentStatistics: React.FC = () => {
             <p className="text-xltext-white/90 mb-8 max-w-2 xl mx-auto">
               Be part of our growing community of successful businesses. Start your transformation journey today.
             </p>
-            <div className="flexflex-colsm:flex-row gap-4 justify-center">
-              <but ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Get Started</span>
-              </butn>
-              <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 View Case Studies
-              </butn>
+              </button>
             </div>
           </div>
         </div>

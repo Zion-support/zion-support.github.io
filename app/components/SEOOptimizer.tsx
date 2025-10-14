@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-interface SEOOptimizer Props {
+interface SEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string;

@@ -12,12 +12,12 @@ export const envValidator = {
   boolean: (key: string, defaultValue: boolean = false): boolean => {
     const value = process.env[key];
     if (value === undefined) return defaultValue;
-    return value.toLower Case() === 'true';
+    return value.toLowerCase() === 'true';
   },
   number: (key: string, defaultValue: number = 0): number => {
     const value = process.env[key];
     if (value === undefined) return defaultValue;
     const parsed = parseInt(value, 10);
-    return isNa N(parsed) ? defaultValue : parsed;
+    return isNaN(parsed) ? defaultValue : parsed;
   }
 };

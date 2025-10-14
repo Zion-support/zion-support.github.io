@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const BlockchainWeb3Page: React.FC = () => {
-=======
-constBlockchain Web 3 Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>

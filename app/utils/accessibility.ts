@@ -1,5 +1,5 @@
 export const accessibilityUtils = {
-  addSkip Link: () => {
+  addSkipLink: () => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
@@ -7,13 +7,13 @@ export const accessibilityUtils = {
     document.body.insertBefore(skipLink, document.body.firstChild);
   },
   trapFocus: (element: HTMLElement) => {
-    const focusableElements = element.querySelector All(
+    const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
     
-    const handleTab Key = (e: Keyboard Event) => {
+    const handleTabKey = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
@@ -29,12 +29,12 @@ export const accessibilityUtils = {
       }
     };
     
-    element.addEvent Listener('keydown', handleTab Key);
+    element.addEventListener('keydown', handleTabKey);
     return () => {
-      element.removeEvent Listener('keydown', handleTab Key);
+      element.removeEventListener('keydown', handleTabKey);
     };
   },
-  addAria Labels: (element: HTMLElement, label: string) => {
+  addAriaLabels: (element: HTMLElement, label: string) => {
     element.setAttribute('aria-label', label);
   },
   addRole: (element: HTMLElement, role: string) => {

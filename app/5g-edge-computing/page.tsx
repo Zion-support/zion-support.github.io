@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const FiveGEdgeComputing: React.FC = () => {
-=======
 const FiveGEdgeComputingPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>
@@ -53,4 +49,4 @@ const FiveGEdgeComputingPage: React.FC = () => {
   );
 };
 
-export default FiveGEdgeComputing;
+export default FiveGEdgeComputingPage;

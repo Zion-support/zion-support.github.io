@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOEnhancer Props {
+interface SEOEnhancerProps {
   title: string;
   description: string;
   keywords?: string[];
@@ -18,16 +18,16 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   return (
     <Helmet>
       <title>{title}</title>
-      <meta="description" content={description} />
-      {keywords.length > 0 && <meta="keywords" content={keywords.join(', ')} />}
-      <metaproperty="og:title" content={title} />
-      <metaproperty="og:description" content={description} />
-      <metaproperty="og:type" content={type} />
+      <meta name="description" content={description} />
+      {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta="twitter:title" content={title} />
-      <meta="twitter:description" content={description} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       {structuredData && (
-        <scripttype="application/ld+json">
+        <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}

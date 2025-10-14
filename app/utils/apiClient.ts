@@ -1,5 +1,5 @@
 export const apiClient = {
-  base URL: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
   
   async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
     const url = `${this.baseURL}${endpoint}`;

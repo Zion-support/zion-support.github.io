@@ -3,7 +3,7 @@ export const errorLogger = {
     const errorInfo = {
       message: error.message,
       stack: error.stack,
-      timestamp: newDate().to ISOString(),
+      timestamp: new Date().toISOString(),
       context: context || {}
     }
     

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export const usePerformance Monitor = (name: string) => {
+export const usePerformanceMonitor = (name: string) => {
   const startTime = useRef<number>();
   
   useEffect(() => {
