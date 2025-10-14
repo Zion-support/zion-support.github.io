@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 export default defineConfig({
-  plugins: [react({]      // Optimize JSX runtime
+  plugins: [react({
       jsxRuntime: 'automatic',
     }),
   ],
@@ -52,10 +52,13 @@ export default defineConfig({
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
-            return `assets/images/[name]-[hash][extname]`;`          }
+            return `assets/images/[name]-[hash][extname]`;
+          }
           if (assetInfo.name && /\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
-            return `assets/fonts/[name]-[hash][extname]`;`          }
-          return `assets/[name]-[hash][extname]`;`        },
+            return `assets/fonts/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
       },
@@ -76,7 +79,9 @@ export default defineConfig({
     open: false,
   },
   optimizeDeps: {
-    include: ['react',]      'react-dom',
+    include: [
+      'react',
+      'react-dom',
       'react-router-dom',
       'react-helmet-async',
       '@heroicons/react/24/outline',
