@@ -4,7 +4,7 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -23,16 +23,16 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
+    this.setState({ error: _error, errorInfo: _errorInfo });
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', _error, _errorInfo);
     }
     
     // Call custom error handler if provided
-    this.props.onError?.(error, errorInfo);
+    this.props.onError?.(_error, _errorInfo);
     
     // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
@@ -64,7 +64,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (

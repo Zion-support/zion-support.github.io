@@ -1,12 +1,12 @@
 // Analytics utility functions
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (..._args: unknown[]) => void;
   }
 }
-export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+export const trackEvent = (eventName: string, _properties?: Record<string, unknown>) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, properties);
+    window.gtag('event', eventName, _properties);
   }
 };
 export const trackPageView = (pageTitle: string, pageLocation: string) => {

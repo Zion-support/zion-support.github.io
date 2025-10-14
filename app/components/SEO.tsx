@@ -56,11 +56,11 @@ export const SEO: React.FC<SEOProps> = ({
   publishDate,
   modifiedDate,
   canonical,
-  noIndex = false,
+  noIndex: _noIndex = false,
   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = [],
+  alternateLocales: _alternateLocales = [],
 }) => {
   const seo = {
     title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
