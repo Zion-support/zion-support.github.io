@@ -99,16 +99,15 @@ const PricingPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Pricing - Zion Tech Group</title>
+        <title>Pricing - Zion Tech Group
         <meta name="description" content="Transparent pricing for our AI, cybersecurity, cloud infrastructure, and IT solutions. Choose the plan that fits your business needs." />
         <meta name="keywords" content="pricing, AI solutions pricing, cybersecurity pricing, cloud infrastructure pricing, IT services pricing" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -239,7 +238,6 @@ const PricingPage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-4">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for Starter and Professional plans. Enterprise plans may include setup costs depending on the complexity of your requirements.</p>
             </div>
-          </div>
         </div>
       </section>
 
@@ -288,7 +286,6 @@ const PricingPage: React.FC = () => {
                 <MapPinIcon className="w-6 h-6 text-blue-600" />
                 <span>Middletown, DE</span>
               </div>
-            </div>
           </div>
         </section>
       </div>

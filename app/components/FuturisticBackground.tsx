@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react'
 
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
@@ -65,7 +65,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(34, 211, 238, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(34, 211, 238, ${particle.opacity})`
         ctx.fill();
       });
 
@@ -80,7 +80,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(34, 211, 238, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(34, 211, 238, ${0.1 * (1 - distance / 100)})`
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -98,20 +98,19 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
   }, []);
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
-ursor/fix-errors-and-merge-to-main-94a7
+
   return (
     <div className="relative min-h-screen">
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+      / />
       {children}
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-        
         {/* Animated Particles */}
         <div className="absolute inset-0">
           {Array.from({ length: 20 }).map((_, i) => (
@@ -127,16 +126,13 @@ ursor/fix-errors-and-merge-to-main-94a7
             ></div>
 ))}
         </div>
-
         {/* Gradient Overlay */}"""
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>"""
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div>"""
       </div>
-      
       {/* Content */}
       <div className="relative z-10">
         {children}
       </div>
-    </div>
   )};
 
 export default FuturisticBackground;

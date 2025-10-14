@@ -1,5 +1,5 @@
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 export default function AiTimeSeriesForecastingPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -9,8 +9,7 @@ export default function AiTimeSeriesForecastingPage() {
           This page is under development.;
         </p>;
       </div>
-    </div>
-  );}
+  );
 }
 '
-ursor/fix-errors-and-merge-to-main-94a7
+

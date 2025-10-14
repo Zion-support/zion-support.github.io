@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 interface EnhancedMetaTagsProps {
   title: string;
@@ -7,10 +7,10 @@ interface EnhancedMetaTagsProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
-  ogType?: 'website' | 'article' | 'product';
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  ogType?: 'website' | 'article' | 'product'
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
   noIndex?: boolean,
-  structuredData?: Record<string, any>
+  structuredData?: Record<string, any />
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -18,7 +18,7 @@ interface EnhancedMetaTagsProps {
   tags?: string[];
 }
 
-ursor/fix-errors-and-merge-to-main-94a7
+
 const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   title,
   description,
@@ -36,8 +36,8 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   tags = [],
 }) => {
   const siteUrl = 'https: //ziontechgroup.com',
-  const finalCanonical = canonical || `${siteUrl}${window.location.pathname}`;
-  const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+  const finalCanonical = canonical || `${siteUrl}${window.location.pathname}`
+  const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`
 
   // Generate structured data
   const defaultStructuredData = {
@@ -103,16 +103,14 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{title}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
-      
       {/* Canonical URL */}
-      <link rel="canonical" href={finalCanonical} />
-      
+      <link rel="canonical" href={finalCanonical} / />
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={finalCanonical} />
@@ -124,7 +122,6 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       <meta property="og:image:alt" content={`${title} - Zion Tech Group`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Article specific meta tags */}
       {ogType === 'article' && publishedTime && (
         <meta property="article:published_time" content={publishedTime} />
@@ -152,7 +149,6 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       <meta name="twitter:image" content={finalOgImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#00ffff" />
@@ -160,28 +156,24 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
       {/* Performance and Security */}
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="application-name" content="Zion Tech Group" />
-      
       {/* Preload critical resources */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/images/hero-bg.jpg" as="image" />
-      
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" / />
+      <link rel="preload" href="/images/hero-bg.jpg" as="image" / />
       {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" / />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" / />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" / />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" / />
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json" />
 {JSON.stringify(finalStructuredData)}
       </script>
-    </Helmet>
+    
   )
 }
 

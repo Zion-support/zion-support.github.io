@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-ursor/fix-errors-and-merge-to-main-94a7
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+
 import { 
   XMarkIcon,
   HomeIcon,
@@ -17,7 +17,7 @@ import {
   GlobeAltIcon,
   SignalIcon,
   UserGroupIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 interface SidebarProps {
   isOpen: boolean
@@ -54,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const isActive = (href: string) => {
     if (href === '/') {
-      return location.pathname === '/';
+      return location.pathname === '/'
     }
     return location.pathname.startsWith(href);
   };
@@ -67,8 +67,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
-      />
-      
+      / />
       {/* Sidebar */}
       <div className="fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 border-r border-slate-700 transform transition-transform duration-300 ease-in-out lg:translate-x-0">
         <div className="flex items-center justify-between h-16 px-4 border-b border-slate-700">
@@ -81,15 +80,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white lg:hidden"
-          >
-            <XMarkIcon className="w-6 h-6" />
+           />
+            <XMarkIcon className="w-6 h-6" / />
           </button>
         </div>
-
-        <nav className="mt-8 px-4">
-          <ul className="space-y-2">
+        <nav className="mt-8 px-4" />
+          <ul className="space-y-2" />
             {navigation.map((item) => (
-              <li key={item.name}>
+              <li key={item.name} />
                 <Link
                   to={item.href}
                   className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -98,16 +96,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       : 'text-gray-300 hover:text-white hover:bg-slate-800'
                   }`}
                   onClick={onClose}
-                >
-                  <item.icon className="w-5 h-5" />
+                 />
+                  <item.icon className="w-5 h-5" / />
                   <span>{item.name}</span>
                 </Link>
-                
                 {/* Submenu */}
                 {item.submenu && (
-                  <ul className="ml-8 mt-2 space-y-1">
+                  <ul className="ml-8 mt-2 space-y-1" />
                     {item.submenu.map((subItem) => (
-                      <li key={subItem.name}>
+                      <li key={subItem.name} />
                         <Link
                           to={subItem.href}
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
@@ -116,8 +113,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                               : 'text-gray-400 hover:text-white hover:bg-slate-800'
                           }`}
                           onClick={onClose}
-                        >
-                          <subItem.icon className="w-4 h-4" />
+                         />
+                          <subItem.icon className="w-4 h-4" / />
                           <span>{subItem.name}</span>
                         </Link>
                       </li>
@@ -128,16 +125,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             ))}
           </ul>
         </nav>
-
         {/* Contact Info */}
         <div className="absolute bottom-4 left-4 right-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700">
           <h3 className="text-sm font-semibold text-white mb-2">Get in Touch</h3>
           <div className="space-y-1 text-xs text-gray-300">
             <div>+1 302 464 0950</div>
             <div>kleber@ziontechgroup.com</div>
-          </div>
         </div>
-      </div>
     </>
   );
 };

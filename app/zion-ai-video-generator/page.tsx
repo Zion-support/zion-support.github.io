@@ -128,7 +128,6 @@ const Page = () => {
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-                </div>
               ))}      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -190,7 +189,6 @@ const Page = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -217,7 +215,6 @@ const Page = () => {
                 View All Services
               </Link>
             </div>
-          </div>
         </ResponsiveContainer>
       </section>
     </div>

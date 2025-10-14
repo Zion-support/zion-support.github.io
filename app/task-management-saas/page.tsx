@@ -4,9 +4,9 @@ const TaskManagementSAAS = () => {
   return (
     <>
       <Helmet>
-        <title>Task Management SAAS - Zion Tech Group</title>
+        <title>Task Management SAAS - Zion Tech Group
         <meta name="description" content="Efficient task and project management solution." />
-      </Helmet>
+      
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20">

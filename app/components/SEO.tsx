@@ -68,7 +68,7 @@ const SEO: React.FC<SEOProps> = ({
   }
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{title}
 """
       <meta name=description content={description} />""
       <meta name=keywords content={keywords} />
@@ -85,7 +85,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name=twitter:image content={image} />
       { /* Canonical URL */ }"""
       <link rel="canonical" href={url} />""
-    </Helmet>
+    
   )};
 
 export default SEO;

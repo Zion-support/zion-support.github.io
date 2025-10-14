@@ -282,7 +282,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               </div>
             )}
           </div>
-        </div>
       )}
     </div>
   );

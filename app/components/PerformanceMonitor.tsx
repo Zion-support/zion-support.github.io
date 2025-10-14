@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -8,7 +8,7 @@ interface PerformanceMetrics {
   loadTime: number | null;
 }
 
-ursor/fix-errors-and-merge-to-main-94a7
+
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
@@ -55,7 +55,6 @@ const PerformanceMonitor: React.FC = () => {
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
         <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>
-      </div>
     </div>
   );
 };

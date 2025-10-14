@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Languages, Brain, FileText, Clock, Target, CheckCircle, Globe, Zap } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Languages, Brain, FileText, Clock, Target, CheckCircle, Globe, Zap } from 'lucide-react'
+import FuturisticCard from '../components/FuturisticCard'
+import FuturisticButton from '../components/FuturisticButton'
+import ResponsiveContainer from '../components/ResponsiveContainer'
 
 export default function AITranslationServicePage() {
   const features = [
@@ -111,51 +111,48 @@ export default function AITranslationServicePage() {
     }
   ];
 
-ursor/fix-errors-and-merge-to-main-94a7
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Translation Service - Zion Tech Group</title>
+        <title>AI Translation Service - Zion Tech Group
         <meta name="description" content="Professional AI-powered translation services supporting 100+ languages with industry-specific models and real-time translation." />
         <meta name="keywords" content="AI translation, machine translation, document translation, multilingual, language services" />
-      </Helmet>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <ResponsiveContainer>
+          <ResponsiveContainer />
             <div className="relative z-10 text-center">
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6" />
                 AI Translation Service
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto" />
                 Break language barriers with our advanced AI-powered translation service supporting 100+ languages.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton className="bg-blue-600 hover:bg-blue-700">
+                <FuturisticButton className="bg-blue-600 hover:bg-blue-700" />
                   Start Translating
                 </FuturisticButton>
-                <FuturisticButton variant="outline">
+                <FuturisticButton variant="outline" />
                   View Demo
                 </FuturisticButton>
               </div>
-            </div>
           </ResponsiveContainer>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
-          <ResponsiveContainer>
+          <ResponsiveContainer />
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Translation Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
                 Our AI translation service provides comprehensive language solutions for all your needs.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <FuturisticCard key={index} className="text-center">
+                <FuturisticCard key={index} className="text-center" />
                   <div className="mb-4 flex justify-center">
                     {feature.icon}
                   </div>
@@ -166,24 +163,23 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Translation Types Section */}
         <section className="py-20 bg-white/5">
-          <ResponsiveContainer>
+          <ResponsiveContainer />
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Translation Capabilities</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
                 Comprehensive translation services for every type of content and industry.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {translationTypes.map((type, index) => (
-                <FuturisticCard key={index}>
+                <FuturisticCard key={index} />
                   <h3 className="text-xl font-semibold text-white mb-4">{type.category}</h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2" />
                     {type.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={itemIndex} className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" / />
                         {item}
                       </li>
                     ))}
@@ -193,19 +189,18 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
-          <ResponsiveContainer>
+          <ResponsiveContainer />
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Translation Service?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
                 Experience the benefits of AI-powered translation technology.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <FuturisticCard key={index} className="text-center">
+                <FuturisticCard key={index} className="text-center" />
                   <div className="mb-4 flex justify-center">
                     {benefit.icon}
                   </div>
@@ -216,22 +211,21 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 bg-white/5">
-          <ResponsiveContainer>
+          <ResponsiveContainer />
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
                 Choose the perfect plan for your translation needs.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <FuturisticCard key={index} className={`${plan.popular ? 'ring-2 ring-blue-400' : ''}`}>
+                <FuturisticCard key={index} className={`${plan.popular ? 'ring-2 ring-blue-400' : ''}`} />
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium" />
                         Most Popular
                       </span>
                     </div>
@@ -244,15 +238,15 @@ ursor/fix-errors-and-merge-to-main-94a7
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-8" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" / />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <FuturisticButton className="w-full justify-center">
+                  <FuturisticButton className="w-full justify-center" />
                     Get Started
                   </FuturisticButton>
                 </FuturisticCard>
@@ -260,29 +254,25 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
-          <ResponsiveContainer>
+          <ResponsiveContainer />
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Break Language Barriers?</h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto" />
                 Start translating your content today with our advanced AI translation service.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton className="bg-white text-blue-600 hover:bg-gray-100">
+                <FuturisticButton className="bg-white text-blue-600 hover:bg-gray-100" />
                   Start Free Trial
                 </FuturisticButton>
-                <FuturisticButton variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                <FuturisticButton variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" />
                   Contact Sales
                 </FuturisticButton>
               </div>
-            </div>
           </ResponsiveContainer>
         </section>
-ursor/fix-errors-and-merge-to-main-94a7
       </div>
-    </div>
   );
 }
-ursor/fix-errors-and-merge-to-main-94a7
+

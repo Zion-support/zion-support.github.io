@@ -4,9 +4,9 @@ const ZionAnalytics = () => {
   return (
     <>
       <Helmet>
-        <title>Zion Analytics - Zion Tech Group</title>
+        <title>Zion Analytics - Zion Tech Group
         <meta name="description" content="Advanced analytics platform powered by Zion AI technology." />
-      </Helmet>
+      
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20">

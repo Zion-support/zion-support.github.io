@@ -1,22 +1,22 @@
 
 const DemoPage: React.FC = () => {
   const features = [{'
-      icon: 'Analytics',';
-      title: 'AI-Powered Analytics',';
-      description: 'See how our AI analyzes your data in real-time',';
-      demo: 'Live Demo'';}
+      icon: 'Analytics','
+      title: 'AI-Powered Analytics','
+      description: 'See how our AI analyzes your data in real-time','
+      demo: 'Live Demo''}
     },
     {'
-      icon: 'Security',';
-      title: 'Advanced Security',';
-      description: 'Experience our enterprise-grade security features',';
-      demo: 'Demo'';}
+      icon: 'Security','
+      title: 'Advanced Security','
+      description: 'Experience our enterprise-grade security features','
+      demo: 'Demo''}
     },
     {'
-      icon: 'Intelligence',';
-      title: 'Business Intelligence',';
-      description: 'Explore our comprehensive BI dashboard',';
-      demo: 'BI Demo'';}
+      icon: 'Intelligence','
+      title: 'Business Intelligence','
+      description: 'Explore our comprehensive BI dashboard','
+      demo: 'BI Demo''}
     },
 
 
@@ -46,8 +46,7 @@ const DemoPage: React.FC = () => {
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      />
-      
+      / />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
@@ -71,7 +70,6 @@ const DemoPage: React.FC = () => {
                 Schedule Live Demo;
               </button>;
             </div>
-          </div>
         </section>;
         {/* Demo Features */}
         <section className="py-20 px-4">;
@@ -96,7 +94,6 @@ const DemoPage: React.FC = () => {
   );
               })}
             </div>
-          </div>
         </section>;
         {/* Demo Section */}
         <section className="py-20 px-4 bg-slate-800/30">;
@@ -115,9 +112,7 @@ const DemoPage: React.FC = () => {
                   <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">;
                     Play </button>;
                 </div>
-              </div>
             </div>
-          </div>
         </section>;
         {/* Testimonials */}
         <section className="py-20 px-4">;
@@ -138,10 +133,8 @@ const DemoPage: React.FC = () => {
                     <p className="text-white font-semibold">{testimonial.name}</p>;
                     <p className="text-cyan-400 text-sm">{testimonial.company}</p>;
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>;
         {/* CTA Section */}
         <section className="py-20 px-4">;
@@ -161,7 +154,6 @@ const DemoPage: React.FC = () => {
                 Contact Sales;
               </button>;
             </div>
-          </div>
         </section>;
       </div>
     </>
@@ -169,4 +161,4 @@ const DemoPage: React.FC = () => {
 
 const page = React.lazy(() => import('./page'));
 export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+

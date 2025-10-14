@@ -161,11 +161,11 @@ const AIPasswordManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Password Manager - Advanced Password Security | Zion Tech Group</title>
+        <title>AI Password Manager - Advanced Password Security | Zion Tech Group
         <meta name="description" content="Secure your digital life with our AI-powered password manager. Advanced encryption, breach monitoring, and intelligent password generation with 99.9% security uptime." />
         <meta name="keywords" content="AI password manager, password security, password generator, breach monitoring, two-factor authentication, password vault" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-password-manager" />
-      </Helmet>
+      
 
       <div className="min-h-screen bg-gray-900 text-white">
         {/* Hero Section */}
@@ -202,7 +202,6 @@ const AIPasswordManagerPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-          </div>
         </section>
 
         {/* Stats Section */}
@@ -230,10 +229,8 @@ const AIPasswordManagerPage: React.FC = () => {
                   <div className="text-gray-300 text-sm group-hover:text-white transition-colors">
                     {stat.label}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -264,7 +261,6 @@ const AIPasswordManagerPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Security Features Section */}
@@ -291,7 +287,6 @@ const AIPasswordManagerPage: React.FC = () => {
                         {feature.title}
                       </h3>
                     </div>
-                  </div>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                     {feature.description}
                   </p>
@@ -314,10 +309,8 @@ const AIPasswordManagerPage: React.FC = () => {
                       Learn More
                     </Link>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Pricing Section */}
@@ -345,7 +338,6 @@ const AIPasswordManagerPage: React.FC = () => {
                       <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>
                   )}
                   
                   <div className="text-center mb-8">
@@ -355,7 +347,6 @@ const AIPasswordManagerPage: React.FC = () => {
                       <span className="text-5xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
-                  </div>
                   
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
@@ -379,7 +370,6 @@ const AIPasswordManagerPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Testimonials Section */}
@@ -414,12 +404,9 @@ const AIPasswordManagerPage: React.FC = () => {
                     <div>
                       <div className="text-white font-semibold">{testimonial.name}</div>
                       <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                    </div>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -452,7 +439,6 @@ const AIPasswordManagerPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </div>
           </div>
         </section>
       </div>

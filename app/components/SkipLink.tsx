@@ -38,6 +38,5 @@ import React from 'react'
                 Contact Us;
               </a>;
             </div>
-          </div>
         </div>
       </section>;'

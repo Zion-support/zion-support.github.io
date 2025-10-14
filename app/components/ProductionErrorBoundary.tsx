@@ -149,7 +149,6 @@ class ProductionErrorBoundary extends Component<Props, State> {
                       {this.state.error.stack}
                     </pre>
                   </div>
-                </div>
               </details>
             )}
 
@@ -193,7 +192,6 @@ class ProductionErrorBoundary extends Component<Props, State> {
               </p>
             )}
           </div>
-        </div>
       );
     }
 

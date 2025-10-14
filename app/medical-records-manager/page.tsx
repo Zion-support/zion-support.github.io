@@ -8,8 +8,7 @@ export default function MedicalRecordsManagerPage() {
           This page is under development.;
         </p>;
       </div>
-    </div>
-  );}
+  );
 }
 '
-ursor/fix-errors-and-merge-to-main-94a7
+

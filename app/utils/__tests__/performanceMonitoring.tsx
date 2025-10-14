@@ -5,10 +5,10 @@ const PerformanceMonitoringTestPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>PerformanceMonitoring Test - Zion Tech Group</title>
+        <title>PerformanceMonitoring Test - Zion Tech Group
         <meta name="description" content="Professional performance monitoring test services by Zion Tech Group." />
         <meta name="keywords" content="performance monitoring test, AI solutions, IT services" />
-      </Helmet>
+      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -37,9 +37,7 @@ const PerformanceMonitoringTestPage = () => {
               Track record of delivering successful projects and exceeding client expectations.
             </p>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 export default PerformanceMonitoringTestPage;

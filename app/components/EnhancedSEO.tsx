@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 interface EnhancedSEOProps {
   title?: string;
@@ -14,7 +14,7 @@ interface EnhancedSEOProps {
   noFollow?: boolean}
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-ursor/fix-errors-and-merge-to-main-94a7
+
   title,
   description,
   keywords,
@@ -30,10 +30,10 @@ ursor/fix-errors-and-merge-to-main-94a7
   noIndex = false,
   noFollow = false}
 }) => {'
-  const siteName = 'Zion Tech Group';
-  const siteUrl = 'https://ziontechgroup.com';}
+  const siteName = 'Zion Tech Group'
+  const siteUrl = 'https://ziontechgroup.com'}
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;'
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`
   
   // Enhanced meta description with better length control
   const optimizedDescription = description.length > 160 
@@ -71,21 +71,18 @@ ursor/fix-errors-and-merge-to-main-94a7
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{fullTitle}
       <meta name="description" content={optimizedDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={fullCanonical} />
-      <html lang={lang} />
-      
+      <link rel="canonical" href={fullCanonical} / />
+      <html lang={lang} / />
       {/* Enhanced Performance Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       <meta name="theme-color" content="#0f172a" />
       <meta name="color-scheme" content="dark" />
-      
       {/* Robots */}
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
       <meta name="googlebot" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
-      
       {/* Open Graph */}
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
@@ -94,7 +91,6 @@ ursor/fix-errors-and-merge-to-main-94a7
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={twitterTitle || title} />
@@ -121,24 +117,22 @@ ursor/fix-errors-and-merge-to-main-94a7
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#0ea5e9" />
       <meta name="msapplication-TileColor" content="#0ea5e9" />
-      
       {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" / />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" / />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" / />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" / />
+      <link rel="manifest" href="/site.webmanifest" / />
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json" />
           {JSON.stringify(structuredData, null, 2)}
         </script>
       )}
       
       {/* Default Structured Data */}
       {!structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json" />
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -160,8 +154,8 @@ ursor/fix-errors-and-merge-to-main-94a7
           }, null, 2)}
         </script>
       )}
-ursor/fix-errors-and-merge-to-main-94a7
-    </Helmet>
+
+    
   )};
 
 export default EnhancedSEO;

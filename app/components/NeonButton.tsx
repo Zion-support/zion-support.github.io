@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 interface NeonButtonProps {
   children: React.ReactNode;
   to?: string;
   href?: string;
   onClick?: () => void;'
-  variant?: 'primary' | 'secondary' | 'accent';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: 'primary' | 'secondary' | 'accent'
+  size?: 'sm' | 'md' | 'lg'
   className?: string}
-ursor/fix-errors-and-merge-to-main-94a7
+
 
 const NeonButton: React.FC<NeonButtonProps> = ({
   children,
@@ -33,7 +33,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg;
   }
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
   const content = (
@@ -44,7 +44,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   )
   if (to) {
     return (
-      <Link to={to} className={`${classes} group`}>
+      <Link to={to} className={`${classes} group`} />
         {content}
       </Link>
     )}
@@ -56,13 +56,13 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         className={classes}
         target="_blank"
         rel="noopener noreferrer"
-      >
+       />
         {children}
       </a>
     )}
 
   return (
-    <button onClick={onClick} className={`${classes} group`}>
+    <button onClick={onClick} className={`${classes} group`} />
       {content}
     </button>
   )};

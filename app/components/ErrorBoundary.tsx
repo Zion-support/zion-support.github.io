@@ -124,7 +124,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </Link>
               </p>
             </div>
-          </div>
         </div>
       )
     }

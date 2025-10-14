@@ -32,13 +32,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   return (
     <>
       <Helmet>
-        <title>{title} | Zion Tech Group</title>
+        <title>{title} | Zion Tech Group
         <meta name="description" content={description} />
         <meta
           name="keywords"
           content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`}
         />
-      </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -49,7 +49,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               >
                 <Icon className="w-12 h-12 text-white" />
               </div>
-            </div>
             <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               {description}
@@ -100,7 +99,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                       {feature}
                     </h3>
                   </div>
-                </div>
               ))}
             </div>
           </section>
@@ -131,7 +129,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                       with {title.toLowerCase()}
                     </p>
                   </div>
-                </div>
               ))}
             </div>
           </section>
@@ -145,27 +142,22 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                     500+
                   </div>
                   <div className="text-gray-300">Happy Clients</div>
-                </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     99%
                   </div>
                   <div className="text-gray-300">Success Rate</div>
-                </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     24/7
                   </div>
                   <div className="text-gray-300">Support</div>
-                </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     10+
                   </div>
                   <div className="text-gray-300">Years Experience</div>
-                </div>
               </div>
-            </div>
           </section>
 
           {/* CTA Section */}

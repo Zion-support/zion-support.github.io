@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useRef, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 interface OptimizedImageProps {
   src: string;
@@ -79,34 +79,32 @@ const observer = new IntersectionObserver()
     <>
       {priority && (
         <Helmet>}
-          <link rel="preload" as="image" href={optimizedSrc} />
-        </Helmet>
+          <link rel="preload" as="image" href={optimizedSrc} / />
+        
 )}
       <div
 
         ref={ imgRef }
         className={`relative overflow-hidden ${className}`}
         style={{ width, height }
-      >
+       />
         {/* Placeholder */}
         {!isLoaded && !isError && (
           <div
             className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}
             style={{ width, height }
-          >
+           />
             <div className="text-gray-400 text-sm">Loading...</div>
-          </div>
 )}
         {/* Error state */}
         {isError && (
           <div
             className="absolute inset-0 bg-gray-100 flex items-center justify-center"}
             style={{ width, height }
-          >
+           />
             <div className="text-gray-400 text-sm text-center">
               <div className="text-2xl mb-2">📷</div>
               <div>Image not available</div>
-            </div>
           </div>
 )}
         {/* Actual image */}
@@ -128,11 +126,11 @@ const observer = new IntersectionObserver()
               height: '100%'
               objectFit: 'cover'
             }}
-          />
+          / />
 )}
       </div>
     </>
   )};
 
 export default OptimizedImage
-ursor/fix-errors-and-merge-to-main-94a7
+

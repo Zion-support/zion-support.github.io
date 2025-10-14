@@ -1,14 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+'use client'
 export default function Page() {
-ursor/fix-errors-and-merge-to-main-94a7
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
+        <title>Page - Zion Tech Group
         <meta name="description" content="Professional page services by Zion Tech Group." />
-      </Helmet>
+      
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center">;
           <h1 className="text-4xl font-bold text-gray-900 mb-8">;
@@ -42,15 +42,12 @@ ursor/fix-errors-and-merge-to-main-94a7
                 Round-the-clock support for all your page needs.;
               </p>;
             </div>
-          </div>
           <div className="mt-12">;
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
               Get Started Today;
             </button>;
           </div>
-        </div>
       </div>
-    </div>
-  );}
-}'
-ursor/fix-errors-and-merge-to-main-94a7
+  );
+}
+

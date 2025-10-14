@@ -5,9 +5,9 @@ export default function 5GSolutionsPage() {
   return (
     <>
       <Helmet>
-        <title>5GSolutionsPage - Zion Tech Group</title>
+        <title>5GSolutionsPage - Zion Tech Group
         <meta name="description" content="Professional 5gsolutionspage services by Zion Tech Group." />
-      </Helmet>
+      
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -38,7 +38,6 @@ export default function 5GSolutionsPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
                 <p className="text-gray-600">Round-the-clock support to ensure your success.</p>
               </div>
-            </div>
           </div>
         </section>
 

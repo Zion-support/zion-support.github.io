@@ -281,7 +281,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 />
               </button>
             </div>
-          </div>
 
           {/* Keyboard Shortcuts */}
           <div className="mt-6 pt-4 border-t border-white/10">
@@ -292,7 +291,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
               <p>Tab: Navigate elements</p>
               <p>Enter/Space: Activate elements</p>
             </div>
-          </div>
         </div>
       )}
 

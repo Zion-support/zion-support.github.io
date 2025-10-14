@@ -4,9 +4,9 @@ const FiveGInfrastructure = () => {
   return (
     <>
       <Helmet>
-        <title>5G Infrastructure - Zion Tech Group</title>
+        <title>5G Infrastructure - Zion Tech Group
         <meta name="description" content="Comprehensive 5G infrastructure solutions." />
-      </Helmet>
+      
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20">

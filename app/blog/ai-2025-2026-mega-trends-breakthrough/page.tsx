@@ -75,7 +75,6 @@ const AIMegaTrends20252026: React.FC = () => {
                   Integrate quantum-enhanced AI systems with existing enterprise workflows and processes.
                 </p>
               </div>
-            </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Next Steps</h2>
             <p className="text-gray-700 mb-6">
@@ -97,9 +96,7 @@ const AIMegaTrends20252026: React.FC = () => {
                 Explore AI Services
               </Link>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
 };

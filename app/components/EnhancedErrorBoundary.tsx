@@ -151,7 +151,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     </div>
                   )}
                 </div>
-              </div>
             )}
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
@@ -202,7 +201,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <p>Error ID: {this.state.errorId}</p>
               <p>If this problem persists, please contact our support team with this error ID.</p>
             </div>
-          </div>
         </>
       )}
 

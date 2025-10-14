@@ -5,9 +5,9 @@ const MobileNavigation: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Mobile - Zion Tech Group</title>
+        <title>Mobile - Zion Tech Group
         <meta name="description" content="Professional mobile navigation services by Zion Tech Group." />
-      </Helmet>
+      
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
@@ -57,7 +57,6 @@ const MobileNavigation: React.FC = () => {
                 Contact Us;
               </a>;
             </div>
-          </div>
         </div>
       </section>;
       {/* CTA Section */}
@@ -123,7 +122,7 @@ const MobileNavigation: React.FC = () => {
               <a
                 href="/contact"
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-                Contact Us</a></div></div></div></section>{/* CTA Section */}
+                Contact Us</a></div></section>{/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">

@@ -82,7 +82,6 @@ const Page = () => {
                 View Demo
               </Link>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -108,7 +107,6 @@ const Page = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -135,7 +133,6 @@ const Page = () => {
                 View All Services
               </Link>
             </div>
-          </div>
         </section>
       </div>
     </>

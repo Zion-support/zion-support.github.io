@@ -84,16 +84,15 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
+        <title>Contact Us - Zion Tech Group
         <meta name="description" content="Get in touch with Zion Tech Group. Contact us for AI solutions, cybersecurity, cloud infrastructure, and IT services. We're here to help transform your business." />
         <meta name="keywords" content="contact, AI solutions contact, cybersecurity contact, cloud infrastructure contact, IT services contact" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -108,7 +107,6 @@ const ContactPage: React.FC = () => {
               We're here to answer your questions and provide expert guidance.
             </p>
           </div>
-        </div>
       </section>
 
       {/* Contact Form & Info */}
@@ -177,7 +175,6 @@ const ContactPage: React.FC = () => {
                         placeholder="your@email.com"
                       />
                     </div>
-                  </div>
                   
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -209,7 +206,6 @@ const ContactPage: React.FC = () => {
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
-                  </div>
                   
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
@@ -278,7 +274,6 @@ const ContactPage: React.FC = () => {
                       <p className="text-gray-300 text-lg">{info.details}</p>
                       <p className="text-gray-400 text-sm">{info.description}</p>
                     </div>
-                  </div>
                 ))}
               </div>
               
@@ -303,9 +298,7 @@ const ContactPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
       </section>
     </>
   );

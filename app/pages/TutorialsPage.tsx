@@ -54,10 +54,10 @@ const TutorialsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Tutorials - Zion Tech Group</title>
+        <title>Tutorials - Zion Tech Group
         <meta name="description" content="Comprehensive tutorials and guides for AI, cybersecurity, cloud computing, and digital transformation technologies." />
         <meta name="keywords" content="tutorials, AI learning, cybersecurity training, cloud computing guides, 5G technology" />
-      </Helmet>
+      
       
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
@@ -71,7 +71,6 @@ const TutorialsPage: React.FC = () => {
                 Master cutting-edge technologies with our comprehensive tutorials and guides designed for all skill levels.
               </p>
             </div>
-          </div>
         </section>
 
         {/* Tutorials Grid */}
@@ -109,10 +108,8 @@ const TutorialsPage: React.FC = () => {
                       <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -136,7 +133,6 @@ const TutorialsPage: React.FC = () => {
                 Watch Demo
               </Link>
             </div>
-          </div>
         </section>
       </div>
     </>

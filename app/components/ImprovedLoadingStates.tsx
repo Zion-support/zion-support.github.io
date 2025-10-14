@@ -39,12 +39,10 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <Brain className="w-8 h-8 text-white animate-pulse" />
             </div>
-          </div>
         )}
         <LoadingSpinner size="lg" />
         <p className="mt-4 text-white text-lg">{message}</p>
       </div>
-    </div>
   );
 };
 
@@ -114,12 +112,10 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
           <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
             {getServiceIcon(serviceName)}
           </div>
-        </div>
         <LoadingSpinner size="lg" />
         <h2 className="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}</h2>
         <p className="text-gray-300">Preparing your personalized experience...</p>
       </div>
-    </div>
   );
 };
 

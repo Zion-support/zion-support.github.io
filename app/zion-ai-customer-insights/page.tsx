@@ -82,7 +82,6 @@ const Page = () => {
                 View Demo
               </Link>
             </div>
-          </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
@@ -123,7 +122,6 @@ const Page = () => {
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{metric.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{metric.label}</div>
-              </div>
             ))} cursor/analyze-improve-and-deploy-application-c573
           </div>
         </ResponsiveContainer>
@@ -152,7 +150,6 @@ const Page = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -179,7 +176,6 @@ const Page = () => {
                 View All Services
               </Link>
             </div>
-          </div>
         </section>
       </div>
     </>

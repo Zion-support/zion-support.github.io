@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
+import React from 'react'
+import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react'
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,
@@ -88,8 +88,7 @@ const Page = () => {
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      />
-      
+      / />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
@@ -113,22 +112,20 @@ const Page = () => {
                 Browse All;
               </button>;
             </div>
-          </div>
         </section>;
         {/* Categories */}
         <section className="py-10 px-4">;
           <div className="max-w-7xl mx-auto">;
             <div className="flex flex-wrap justify-center gap-4">;
               {categories.map((category, _index) => (
-                <button>
+                <button />
                   key={_index}
-                  className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300";
+                  className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
                 >;
                   {category.name} ({category.count})
                 </button>;
               ))}
             </div>
-          </div>
         </section>;
         {/* Tutorials Grid */}
         <section className="py-20 px-4">;
@@ -148,7 +145,6 @@ const Page = () => {
                       <Star className="w-4 h-4 fill-current" />;
                       <span className="ml-1 text-sm">{tutorial.rating}</span>;
                     </div>
-                  </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
                     {tutorial.title}
                   </h3>;
@@ -170,10 +166,8 @@ const Page = () => {
                       <Right className="w-4 h-4 ml-1" />;
                     </button>;
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>;
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">;
@@ -193,7 +187,6 @@ const Page = () => {
                 View All Tutorials;
               </button>;
             </div>
-          </div>
         </section>;
       </div>
     </>
@@ -201,4 +194,4 @@ const Page = () => {
 
 const page = React.lazy(() => import('./page'));
 export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+

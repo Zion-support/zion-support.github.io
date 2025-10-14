@@ -69,7 +69,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const finalStructuredData = structuredData || defaultStructuredData
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{title}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
@@ -87,7 +87,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 {JSON.stringify(structuredData)}
         </script>
 )}
-    </Helmet>
+    
   )};
 
 export default SEOHead;

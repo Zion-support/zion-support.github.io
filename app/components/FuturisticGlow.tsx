@@ -4,8 +4,8 @@ export default function FuturisticGlow() {
   return (
     <>
       <Helmet>
-        <title>Futuristic Glow - Zion Tech Group</title>
-      </Helmet>
+        <title>Futuristic Glow - Zion Tech Group
+      
       <div className="futuristic-glow-container">
         <Link
           to="/contact"

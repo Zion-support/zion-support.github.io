@@ -49,7 +49,6 @@ const Loading: React.FC<LoadingProps> = ({
           <div className="relative bg-slate-900 rounded-full flex items-center justify-center h-full w-full">
             <CurrentIcon className={`${iconSizeClasses[size]} text-cyan-400 animate-spin`} />
           </div>
-        </div>
       </section>;
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">;
@@ -114,7 +113,7 @@ const Loading: React.FC<LoadingProps> = ({
               <a
                 href="/contact"
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-                Contact Us</a></div></div></div></section>{/* CTA Section */}
+                Contact Us</a></div></section>{/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">

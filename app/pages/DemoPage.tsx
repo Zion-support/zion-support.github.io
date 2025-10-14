@@ -83,16 +83,15 @@ const DemoPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Demo - Zion Tech Group</title>
+        <title>Demo - Zion Tech Group
         <meta name="description" content="Experience our technology solutions with interactive demos. See AI, cybersecurity, cloud infrastructure, and more in action." />
         <meta name="keywords" content="demo, technology demo, AI demo, cybersecurity demo, cloud demo, micro SaaS demo" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -114,7 +113,6 @@ const DemoPage: React.FC = () => {
               <ArrowRightIcon className="w-5 h-5" />
             </Link>
           </div>
-        </div>
       </section>
 
       {/* Demo Grid */}
@@ -140,7 +138,6 @@ const DemoPage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white">{demo.title}</h3>
                     <p className="text-purple-400 text-sm">{demo.duration}</p>
                   </div>
-                </div>
                 
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {demo.description}
@@ -165,7 +162,6 @@ const DemoPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Contact Section */}
@@ -189,7 +185,6 @@ const DemoPage: React.FC = () => {
               <p className="text-gray-300 text-lg">kleber@ziontechgroup.com</p>
               <p className="text-gray-400 text-sm">Quick response guaranteed</p>
             </div>
-          </div>
           
           <Link
             to="/contact"

@@ -163,11 +163,11 @@ const AIEmailMarketingPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Email Marketing - Intelligent Email Campaigns | Zion Tech Group</title>
+        <title>AI Email Marketing - Intelligent Email Campaigns | Zion Tech Group
         <meta name="description" content="Transform your email marketing with AI-powered campaigns. Smart segmentation, content generation, and automation with 40% higher open rates and 300% ROI increase." />
         <meta name="keywords" content="AI email marketing, email automation, email campaigns, email segmentation, email analytics, email personalization" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-email-marketing" />
-      </Helmet>
+      
 
       <div className="min-h-screen bg-gray-900 text-white">
         {/* Hero Section */}
@@ -204,7 +204,6 @@ const AIEmailMarketingPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-          </div>
         </section>
 
         {/* Stats Section */}
@@ -232,10 +231,8 @@ const AIEmailMarketingPage: React.FC = () => {
                   <div className="text-gray-300 text-sm group-hover:text-white transition-colors">
                     {stat.label}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -266,7 +263,6 @@ const AIEmailMarketingPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Email Features Section */}
@@ -293,7 +289,6 @@ const AIEmailMarketingPage: React.FC = () => {
                         {feature.title}
                       </h3>
                     </div>
-                  </div>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                     {feature.description}
                   </p>
@@ -316,10 +311,8 @@ const AIEmailMarketingPage: React.FC = () => {
                       Learn More
                     </Link>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Pricing Section */}
@@ -347,7 +340,6 @@ const AIEmailMarketingPage: React.FC = () => {
                       <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>
                   )}
                   
                   <div className="text-center mb-8">
@@ -357,7 +349,6 @@ const AIEmailMarketingPage: React.FC = () => {
                       <span className="text-5xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
-                  </div>
                   
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
@@ -381,7 +372,6 @@ const AIEmailMarketingPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Testimonials Section */}
@@ -416,12 +406,9 @@ const AIEmailMarketingPage: React.FC = () => {
                     <div>
                       <div className="text-white font-semibold">{testimonial.name}</div>
                       <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                    </div>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -454,7 +441,6 @@ const AIEmailMarketingPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </div>
           </div>
         </section>
       </div>

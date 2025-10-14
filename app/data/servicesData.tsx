@@ -1,19 +1,18 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 export default function ServicesData() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Services Data - Zion Tech Group</title>
+        <title>Services Data - Zion Tech Group
         <meta name="description" content="Professional services data by Zion Tech Group." />
-      </Helmet>
+      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1>
-ursor/fix-errors-and-merge-to-main-94a7
+          <h1 />
             Services Data
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-8" />
             Professional data solutions tailored to your business needs.
           </p>"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -28,15 +27,12 @@ ursor/fix-errors-and-merge-to-main-94a7
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>"
               <h3 className="text-lg font-semibold text-purple-900 mb-2">24/7 Support</h3>"
               <p className="text-purple-700">Round-the-clock support for all your data needs.</p>
-            </div>
-          </div>"""
+            </div>"""
           <div className=mt-12></div>
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">""
               Get Started Today
             </button>
           </div>
-        </div>
       </div>
-    </div>
   );
 }"""

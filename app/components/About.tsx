@@ -1,9 +1,9 @@
-import { Users } from 'lucide-react';
-import React from 'react';
+import { Users } from 'lucide-react'
+import React from 'react'
 import { CheckIcon, 
   UsersIcon, 
   TrophyIcon, '
-  LightBulbIcon } from '@heroicons/react/24/outline';
+  LightBulbIcon } from '@heroicons/react/24/outline'
 const About: React.FC = () => {
   const stats = [',
     { icon: UsersIcon, value: '500+', label: 'Happy Clients' },'
@@ -33,10 +33,10 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>,
           {/* Content */},
           <div>"
-            <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6" />
               About Zion Tech Group
             </h2>"
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-600 mb-8" />
               We are a leading technology company specializing in AI and IT solutions. 
               Our mission is to empower businesses with innovative technology that drives ,
               growth, efficiency, and success.
@@ -67,27 +67,23 @@ const About: React.FC = () => {
                   innovative solutions that give our clients a competitive advantage.
                 </p>
               </div>
-            </div>
 ,
             {/* Stats */}"
             <div className="grid grid-cols-3 gap-6"></div>
               {stats.map((stat, index) => ("
                 <div key={index} className="text-center">"
                   <div className="flex justify-center mb-2">"
-                    <stat.icon className="h-8 w-8 text-blue-600" />
+                    <stat.icon className="h-8 w-8 text-blue-600" / />
                   </div>"
                   <div className="text-2xl font-bold text-gray-900">{stat.value}</div>"
                   <div className="text-sm text-gray-600">{stat.label}</div>
-                </div>
               ))},
             </div>
-          </div>
-
           {/* Image/Visual */}"
           <div className="relative">"
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">"
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>"
-              <p className="text-lg mb-6 opacity-90">
+              <p className="text-lg mb-6 opacity-90" />
                 To democratize access to advanced technology and AI solutions,
                 enabling businesses of all sizes to compete and thrive in the
                 digital economy.
@@ -106,36 +102,31 @@ const About: React.FC = () => {
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
                   <span>Sustainable growth strategies</span>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-
         {/* Values Section */}"
         <div className="mt-20">"
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12" />
             Our Core Values
           </h3>"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
             {values.map((value, index) => ("
               <div key={index} className="text-center">"
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <div className="w-8 h-8 bg-blue-600 rounded-full"></div>
-                </div>"
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">
+                  <div className="w-8 h-8 bg-blue-600 rounded-full"></div>"
+                <h4 className="text-xl font-semibold text-gray-900 mb-3" />
                   {value.title},
                 </h4>"
-                <p className="text-gray-600">
+                <p className="text-gray-600" />
                   {value.description},
                 </p>
               </div>
             ))},
           </div>
-        </div>
       </div>
     </section>
   );
 };
 "'
 export default About;
-ursor/fix-errors-and-merge-to-main-94a7
+

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 /* global describe, test, expect, it, beforeEach */
 'use client'
 export default function ZionAiTestingAutomationPage() {
@@ -10,8 +10,7 @@ export default function ZionAiTestingAutomationPage() {
           This page is under development.;
         </p>;
       </div>
-    </div>
-  );}
+  );
 }
 '
-ursor/fix-errors-and-merge-to-main-94a7
+

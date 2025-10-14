@@ -37,13 +37,21 @@ const EnhancedHeader: React.FC = () => {
             <nav className="flex flex-col space-y-4">
               <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Home
+              </Link>
               <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 About
+              </Link>
               <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Services
+              </Link>
               <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Contact
+              </Link>
+            </nav>
+          </div>
         )}
-  )
-}
-export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>
+      </header>
+    );
+  };
+
+export default EnhancedHeader;

@@ -182,7 +182,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   kleber@ziontechgroup.com
                 </a>
               </div>
-            </div>
             <div className="flex items-center space-x-4">
               <FuturisticButton
                 href="/contact"
@@ -193,9 +192,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 Get Quote
               </FuturisticButton>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4">
@@ -378,7 +375,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
-        </div>
 
         {/* Search Bar */}
         {isSearchOpen && (
@@ -393,7 +389,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
-          </div>
         )}
 
         {/* Mobile menu */}
@@ -518,7 +513,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <ArrowRight className="w-4 h-4" />
               </FuturisticButton>
             </div>
-          </div>
         )}
       </div>
     </nav>

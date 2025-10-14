@@ -46,7 +46,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{fullTitle}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -138,7 +138,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
           })}
         </script>
       )}
-    </Helmet>
+    
   );
 };
 

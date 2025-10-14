@@ -4,9 +4,9 @@ const EmailMarketingSAAS = () => {
   return (
     <>
       <Helmet>
-        <title>Email Marketing SAAS - Zion Tech Group</title>
+        <title>Email Marketing SAAS - Zion Tech Group
         <meta name="description" content="Advanced email marketing platform for businesses." />
-      </Helmet>
+      
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20">

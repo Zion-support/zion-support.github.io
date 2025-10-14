@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
     highContrast: false,'
     fontSize: 'normal',
     reducedMotion: false,
@@ -9,9 +9,9 @@ import React from 'react';
     // Enhanced accessibility features;
     const addSkipLinks = () => {'
       const skipLink = document.createElement('a');'
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.href = '#main-content'
+      skipLink.textContent = 'Skip to main content'
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
       document.body.insertBefore(skipLink, document.body.firstChild)};
 
     const enhanceFocusManagement = () => {
@@ -31,7 +31,7 @@ import React from 'react';
           clip: rect(0, 0, 0, 0)
           white-space: nowrap;
           border: 0}
-      `;
+      `
       document.head.appendChild(style)};
 
     const addAriaLabels = () => {
@@ -51,14 +51,14 @@ import React from 'react';
 
     const setupKeyboardNavigation = () => {
       // Enhanced keyboard navigation;'
-      document.addEventListener('keydown', (e) => {';
-        if (e.key === 'Tab') {';
-          document.body.classList.add('keyboard-navigation');}
+      document.addEventListener('keydown', (e) => {'
+        if (e.key === 'Tab') {'
+          document.body.classList.add('keyboard-navigation');
         }
       });
 '
-      document.addEventListener('mousedown', () => {';
-        document.body.classList.remove('keyboard-navigation');}
+      document.addEventListener('mousedown', () => {'
+        document.body.classList.remove('keyboard-navigation');
       });
     };
 
@@ -190,7 +190,7 @@ import React from 'react';
 
       .accessibility-toggle:hover {
         background: #7c3aed}
-    `;
+    `
     document.head.appendChild(style);
 
     return () => {
@@ -208,24 +208,24 @@ import React from 'react';
         onClick={toggleVisibility}
         aria-label="Toggle accessibility options""
         title="Accessibility Options""
-      >
+       />
         ♿ A11y
       </button>
-      <div className={`accessibility-panel ${isVisible ? 'visible' :;}`}>
+      <div className={`accessibility-panel ${isVisible ? 'visible' :;}`} />
         <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
         <div className="space-y-4">
-          <div>
+          <div />
             <label className="flex items-center space-x-2">"
               <input
                 type="checkbox""
                 checked={settings.highContrast}
                 onChange={toggleHighContrast}
                 className="rounded""
-              />
+              / />
               <span>High Contrast</span>
             </label>
           </div>
-          <div>
+          <div />
             <label className="block text-sm font-medium mb-2">Font Size</label>"
             <div className="space-y-2">"
               {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('
@@ -242,25 +242,23 @@ onChange={() => setFontSize(size)}
                 </label>
 ))}
             </div>
-          </div>
-          <div>
+          <div />
             <p className="text-sm text-gray-300">"
-              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}'
+              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}
             </p>
             <p className="text-sm text-gray-300">"
-              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}'
+              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}
             </p>
           </div>
           <button
             onClick={toggleVisibility}
             className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""
-          >
+           />
             Close
           </button>
         </div>
-      </div>
     </>
   )};
 
 export default EnhancedAccessibility
-ursor/fix-errors-and-merge-to-main-94a7
+

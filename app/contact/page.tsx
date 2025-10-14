@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
+import React, { useState } from 'react'
+import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react'
 
 export default function ContactPage()    {
   const [formData, setFormData] = useState({
@@ -75,37 +75,35 @@ export default function ContactPage()    {
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      />
-      
+      / />
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6" />
             Contact
-            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" />
               Us
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" />
             Ready to transform your business with AI and IT solutions? 
             Get in touch with our experts today.
           </p>
         </div>
       </section>
-
       {/* Contact Info */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
+          <h2 className="text-4xl font-bold text-white text-center mb-16" />
             Get in Touch
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center" />
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-white" />
+                    <Icon className="w-6 h-6 text-white" / />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
                   <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
@@ -113,23 +111,20 @@ export default function ContactPage()    {
                 </div>
               )})}
           </div>
-        </div>
       </section>
-
       {/* Contact Form */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
+          <h2 className="text-4xl font-bold text-white text-center mb-16" />
             Send us a Message
           </h2>
-          
           {isSubmitted ? (
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6">
-                <Circle className="w-8 h-8 text-white" />
+                <Circle className="w-8 h-8 text-white" / />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6" />
                 Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
@@ -146,33 +141,30 @@ export default function ContactPage()    {
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" / />
               </Link>
               <Link
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
+               />
                 View Demo
               </Link>
             </div>
-          </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
                 Why Choose Our Page Services?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto" />
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-center" />
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     {feature.icon}
                   </div>
@@ -181,9 +173,8 @@ export default function ContactPage()    {
                 </div>
               ))}
             </div>
-
               <div className="mb-6">
-                <label htmlFor="subject" className="block text-white font-medium mb-2">
+                <label htmlFor="subject" className="block text-white font-medium mb-2" />
                   Subject *
                 </label>
                 <select
@@ -193,18 +184,17 @@ export default function ContactPage()    {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
+                 />
                   <option value="">Select a subject</option>
                   {subjects.map((subject, index) => (
-                    <option key={index} value={subject}>
+                    <option key={index} value={subject} />
                       {subject}
                     </option>
                   ))}
                 </select>
               </div>
-
               <div className="mb-8">
-                <label htmlFor="message" className="block text-white font-medium mb-2">
+                <label htmlFor="message" className="block text-white font-medium mb-2" />
                   Message *
                 </label>
                 <textarea
@@ -216,15 +206,14 @@ export default function ContactPage()    {
                   rows={6}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or how we can help you..."
-                />
+                / />
               </div>
-
               <div className="text-center">
                 <button
                   type="submit"
                   disabled={isSubmitting}
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                >
+                 />
                   {isSubmitting ? (
                     <>
                       <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
@@ -233,7 +222,7 @@ export default function ContactPage()    {
                   ) : (
                     <>
                       Send Message
-                      <Send className="w-5 h-5 ml-2 inline" />
+                      <Send className="w-5 h-5 ml-2 inline" / />
                     </>
                   )}
                 </button>
@@ -244,4 +233,4 @@ export default function ContactPage()    {
       </section>
     </div>
   )}
-ursor/fix-errors-and-merge-to-main-94a7
+

@@ -169,7 +169,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 </p>
               )}
             </div>
-          </div>
         </div>
       );
     }

@@ -37,7 +37,6 @@ const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
-  </div>
 );
 
 // Main App Component
@@ -100,4 +99,3 @@ export default function App() {
     </HelmetProvider>
   );
 }
-ursor/fix-errors-and-merge-to-main-94a7

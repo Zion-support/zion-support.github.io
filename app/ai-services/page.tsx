@@ -2,33 +2,33 @@
 const AiServicesPage: React.FC = () => {
   const services = [{
       icon: Brain,'
-      title: 'AI Consulting',';
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',';
-      color: 'from-purple-500 to-pink-500'';}
+      title: 'AI Consulting','
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.','
+      color: 'from-purple-500 to-pink-500''}
     },
     {
       icon: BarChart3,'
-      title: 'AI Analytics',';
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',';
-      color: 'from-blue-500 to-cyan-500'';}
+      title: 'AI Analytics','
+      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.','
+      color: 'from-blue-500 to-cyan-500''}
     },
     {
       icon: Zap,'
-      title: 'AI Automation',';
-      description: 'Intelligent automation solutions to streamline your business processes.',';
-      color: 'from-green-500 to-emerald-500'';}
+      title: 'AI Automation','
+      description: 'Intelligent automation solutions to streamline your business processes.','
+      color: 'from-green-500 to-emerald-500''}
     },
     {
       icon: FileText,'
-      title: 'AI Content Generation',';
-      description: 'AI-powered content creation for marketing, documentation, and communication.',';
-      color: 'from-orange-500 to-red-500'';}
+      title: 'AI Content Generation','
+      description: 'AI-powered content creation for marketing, documentation, and communication.','
+      color: 'from-orange-500 to-red-500''}
     },
     {
       icon: MessageSquare,'
-      title: 'AI Customer Service',';
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',';
-      color: 'from-indigo-500 to-purple-500'';}
+      title: 'AI Customer Service','
+      description: 'Intelligent chatbots and customer service solutions powered by AI.','
+      color: 'from-indigo-500 to-purple-500''}
     },
     {
 
@@ -60,15 +60,15 @@ const AiServicesPage: React.FC = () => {
     }
   ];
 
-ursor/fix-errors-and-merge-to-main-94a7
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Services - Comprehensive AI Solutions | Zion Tech Group</title>
+        <title>AI Services - Comprehensive AI Solutions | Zion Tech Group
         <meta name="description" content="Transform your business with our comprehensive AI services including analytics, automation, content generation, customer service, marketing, and healthcare solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI analytics, AI automation, AI content generation, AI customer service, AI marketing, AI healthcare" />
         <meta name="canonical" content="https://ziontechgroup.com/ai-services" />
-      </Helmet>
+      
       <FuturisticBackground>;
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
           {/* Hero Section */}
@@ -93,7 +93,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                   Learn More;
                 </button>;
               </div>
-            </div>
           </section>;
           {/* Services Grid */}
           <section className="py-20 px-4">;
@@ -105,7 +104,7 @@ ursor/fix-errors-and-merge-to-main-94a7
                 {services.map((service, _index) => (}
                   <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
                     <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>;
-                      aria-hidden="true";
+                      aria-hidden="true"
                     >;
                       <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />;
                     </div>
@@ -114,7 +113,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                   </div>
                 ))}
               </div>
-            </div>
           </section>;
           {/* Testimonials Section */}
           <section className="py-20 px-4 bg-slate-800/30">;
@@ -135,10 +133,8 @@ ursor/fix-errors-and-merge-to-main-94a7
                       <p className="text-white font-semibold">{testimonial.name}</p>;
                       <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>;
                     </div>
-                  </div>
                 ))}
               </div>
-            </div>
           </section>;
           {/* CTA Section */}
           <section className="py-20 px-4">;
@@ -158,7 +154,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                   Schedule Consultation;
                 </button>;
               </div>
-            </div>
           </section>;
         </div>
       </FuturisticBackground>;
@@ -168,4 +163,4 @@ ursor/fix-errors-and-merge-to-main-94a7
 
 const page = React.lazy(() => import('./page'));
 export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+

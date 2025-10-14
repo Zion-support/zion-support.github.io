@@ -4,12 +4,12 @@ const Pagebroken2Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Page Broken2 | Zion Tech Group</title>
+        <title>Page Broken2 | Zion Tech Group
         <meta
           name="description"
           content="Professional page broken2 services by Zion Tech Group"
         />
-      </Helmet>
+      
 
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -36,9 +36,7 @@ const Pagebroken2Page = () => {
               Learn More
             </Link>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 

@@ -79,7 +79,6 @@ const DocumentationPage: React.FC = () => {
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-green-900/20 to-emerald-900/20"></div>
-        </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -87,7 +86,6 @@ const DocumentationPage: React.FC = () => {
               <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
                 <DocumentTextIcon className="w-10 h-10 text-white" />
               </div>
-            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-green-200 to-emerald-200 bg-clip-text text-transparent">
               Documentation
             </h1>
@@ -115,7 +113,6 @@ const DocumentationPage: React.FC = () => {
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-          </div>
         </div>
       </section>
 
@@ -142,7 +139,6 @@ const DocumentationPage: React.FC = () => {
               </div>
 ))}
           </div>
-        </div>
       </section>
 
       {/* Documentation Sections */}
@@ -168,7 +164,6 @@ const DocumentationPage: React.FC = () => {
                     <h3 className="text-xl font-bold text-white">{section.title}</h3>
                     <p className="text-gray-400">{section.description}</p>
                   </div>
-                </div>
                 <ul className="space-y-2">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
@@ -185,7 +180,6 @@ const DocumentationPage: React.FC = () => {
               </div>
 ))}
           </div>
-        </div>
       </section>
 
       {/* Code Examples Section */}
@@ -238,9 +232,7 @@ console.log(response.data)`}</code>
                   View Examples →
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Contact Section */}
@@ -267,7 +259,6 @@ console.log(response.data)`}</code>
                 <MapPinIcon className="w-6 h-6 text-green-400" />
                 <span>Middletown, DE</span>
               </div>
-            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -283,7 +274,6 @@ console.log(response.data)`}</code>
                 Get In Touch
               </Link>
             </div>
-          </div>
         </div>
       </section>
     </>

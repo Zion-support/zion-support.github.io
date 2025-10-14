@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react'
 
 interface PerformanceOptimizerProps {
   children: Node}
@@ -11,9 +11,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-      fontLink.as = 'style';
+      fontLink.rel = 'preload'
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
+      fontLink.as = 'style'
       document.head.appendChild(fontLink);
 
       // Preload critical images
@@ -26,9 +26,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
       criticalImages.forEach(src => {
         const link = document.createElement('link');
-        link.rel = 'preload';
+        link.rel = 'preload'
         link.href = src;
-        link.as = 'image';
+        link.as = 'image'
         document.head.appendChild(link);
       });
     };
@@ -37,18 +37,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {'
-        if (!img.hasAttribute('loading')) {';
-          img.setAttribute('loading', 'lazy');}
+        if (!img.hasAttribute('loading')) {'
+          img.setAttribute('loading', 'lazy');
         }
       });
     };
 
-        if (!img.hasAttribute('loading')) {';
+        if (!img.hasAttribute('loading')) {'
           img.setAttribute('loading', 'lazy')
-{ useEffect, Node } from 'react';
+{ useEffect, Node } from 'react'
 interface PerformanceOptimizerProps {
   children: Node,}
-ursor/fix-errors-and-merge-to-main-94a7
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Performance optimization code;
@@ -61,24 +61,24 @@ img.setAttribute('loading', 'lazy')}
     const optimizeFonts = () => {
       // Preload critical fonts;'
       const link = document.createElement('link');'
-      link.rel = 'preload';
-      link.href = '/fonts/inter.woff2';
-      link.as = 'font';
-      link.type = 'font/woff2';
-      link.crossOrigin = 'anonymous';
+      link.rel = 'preload'
+      link.href = '/fonts/inter.woff2'
+      link.as = 'font'
+      link.type = 'font/woff2'
+      link.crossOrigin = 'anonymous'
       document.head.appendChild(link)};
 
     const optimizeResources = () => {
       // Preload critical resources;'
-      const criticalResources = ['/css/critical.css',';
-        '/js/critical.js'';
+      const criticalResources = ['/css/critical.css','
+        '/js/critical.js''
       ];
 
       criticalResources.forEach((resource) => {
         const link = document.createElement('link');
         link.rel = 'preload'
         link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'script';
+        link.as = resource.endsWith('.css') ? 'style' : 'script'
         document.head.appendChild(link)})};
 
     // Run optimizations;
@@ -189,7 +189,7 @@ img.setAttribute('loading', 'lazy')}
 
     dnsPrefetchDomains.forEach(domain => {
       const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
+      link.rel = 'dns-prefetch'
       link.href = domain;
       document.head.appendChild(link);
     });
@@ -202,8 +202,8 @@ img.setAttribute('loading', 'lazy')}
 
     criticalModules.forEach(module => {
       const link = document.createElement('link');
-      link.rel = 'modulepreload';
-      link.href = `${module}.js`;
+      link.rel = 'modulepreload'
+      link.href = `${module}.js`
       document.head.appendChild(link);
     });
   }, [isOptimized]);
@@ -231,7 +231,7 @@ img.setAttribute('loading', 'lazy')}
         
         /* Optimize font loading */
         @font-face {
-          font-family: 'Inter';
+          font-family: 'Inter'
           font-style: normal;
           font-weight: 400;
           font-display: swap;

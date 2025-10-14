@@ -106,16 +106,15 @@ const SolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Solutions - Zion Tech Group</title>
+        <title>Solutions - Zion Tech Group
         <meta name="description" content="Comprehensive technology solutions including AI, cybersecurity, cloud infrastructure, micro SaaS, 5G technology, and IT services." />
         <meta name="keywords" content="technology solutions, AI solutions, cybersecurity, cloud computing, micro SaaS, 5G technology, IT services" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -137,7 +136,6 @@ const SolutionsPage: React.FC = () => {
               <ArrowRightIcon className="w-5 h-5" />
             </Link>
           </div>
-        </div>
       </section>
 
       {/* Solutions Grid */}
@@ -185,7 +183,6 @@ const SolutionsPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -211,7 +208,6 @@ const SolutionsPage: React.FC = () => {
               Schedule Demo
             </Link>
           </div>
-        </div>
       </section>
     </>
   );

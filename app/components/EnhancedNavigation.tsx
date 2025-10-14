@@ -200,7 +200,6 @@ const EnhancedNavigation = () => {
                         </Link>
                       ))}
                     </div>
-                  </div>
                 )}
               </div>
             ))}
@@ -272,7 +271,6 @@ const EnhancedNavigation = () => {
                       </Link>
                     )}
                   </div>
-                </div>
               ))}
               
               <div className="pt-4 border-t border-white/10">
@@ -288,9 +286,7 @@ const EnhancedNavigation = () => {
                     </Link>
                   ))}
                 </div>
-              </div>
             </div>
-          </div>
         )}
       </div>
     </header>

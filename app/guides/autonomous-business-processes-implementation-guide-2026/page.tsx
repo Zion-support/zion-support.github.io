@@ -40,7 +40,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               $5.2 B PROVEN
             </span>
           </div>
-        </div>
       </header>
 
       {/* Article Content */}
@@ -109,9 +108,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
 
         {/* Implementation Phases  */}
         <div className="mb-12">
@@ -151,7 +148,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Establish governance structure</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             {/* Phase 2  */}
@@ -187,7 +183,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Configure security and compliance</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             {/* Phase 3  */}
@@ -223,7 +218,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Gather feedback and optimize</li>
                   </ul>
                 </div>
-              </div>
             </div>
 
             {/* Phase 4  */}
@@ -261,9 +255,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Achieve full autonomy</li>
                   </ul>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
 
         {/* Expected Outcomes  */}
@@ -275,27 +267,22 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               <Brain className="w-12 h-12 mx-auto mb-4" />
               <div className="text-3 xl font-bold mb-2">95%</div>
               <div className="text-green-100">Process Automation</div>
-            </div>
 
             <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-lg text-center">
               <BarChart className="w-12 h-12 mx-auto mb-4" />
               <div className="text-3 xl font-bold mb-2">$5.2 B</div>
               <div className="text-blue-100">Cost Savings</div>
-            </div>
 
             <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-lg text-center">
               <Zap className="w-12 h-12 mx-auto mb-4" />
               <div className="text-3 xl font-bold mb-2">80%</div>
               <div className="text-purple-100">Efficiency Gain</div>
-            </div>
 
             <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 rounded-lg text-center">
               <Target className="w-12 h-12 mx-auto mb-4" />
               <div className="text-3 xl font-bold mb-2">18</div>
               <div className="text-orange-100">Months to ROI</div>
-            </div>
           </div>
-        </div>
 
         {/* Key Technologies  */}
         <div className="mb-12">
@@ -337,7 +324,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Integration Platforms</h3>
               <p className="text-gray-600">Seamless integration with existing enterprise systems</p>
             </div>
-          </div>
         </div>
 
         {/* CTA Section  */}
@@ -365,7 +351,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               <ArrowLeft className="w-5 h-5 ml-2" />
             </Link>
           </div>
-        </div>
       </article>
     </div>
   );

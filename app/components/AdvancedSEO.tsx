@@ -146,7 +146,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{fullTitle}
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="language" content={lang} />
@@ -250,7 +250,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
           ]
         })}
       </script>
-    </Helmet>
+    
   );
 };
 
