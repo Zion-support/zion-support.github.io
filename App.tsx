@@ -10,7 +10,7 @@ import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import SEOEnhancer from './app/components/SEOEnhancer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
-// import LoadingStates from './app/components/LoadingStates';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';
@@ -23,39 +23,7 @@ import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
 
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(): ErrorBoundaryState {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error to monitoring service in production
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <div className="text-white text-xl">Something went wrong.</div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
+// ErrorBoundary is imported from components
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
