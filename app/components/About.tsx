@@ -56,7 +56,7 @@ const About: React.FC = () => {
                   <CheckIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Client-Focused</h3>
-                    <p className="text-gray-600">We prioritize our clients' success and work closely with them to achieve their goals.</p>
+                    <p className="text-gray-600">We prioritize our clients&apos; success and work closely with them to achieve their goals.</p>
                   </div>
                 </div>
               </div>
