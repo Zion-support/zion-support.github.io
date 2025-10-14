@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 export const UseSEO = () => {
-  const [state, setState] = useState(null);
+  const [state] = useState(null);
 
   useEffect(() => {
     // UseSEO hook logic

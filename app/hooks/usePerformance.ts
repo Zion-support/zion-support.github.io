@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 export const UsePerformance = () => {
-  const [state, setState] = useState(null);
+  const [state] = useState(null);
 
   useEffect(() => {
     // UsePerformance hook logic
