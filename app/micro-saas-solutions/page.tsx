@@ -1,457 +1,128 @@
-'use client';'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
   CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
   ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  ShieldCheckIcon,
+  CogIcon,
   CurrencyDollarIcon,
   ClockIcon,
   UserGroupIcon,
-  CogIcon
+  DocumentTextIcon,
+  LightBulbIcon
 } from '@heroicons/react/24/outline';
 
-export default function MicroSaaSSolutionsPage()   {
+export default function MicroSaaSSolutionsPage() {
   const microSaaSProducts = [
     {
       title: "AI-Powered Analytics Dashboard",
-      description: "Real-time business analytics with AI-driven insights and predictive modeling for data-driven decision making.",
+      description: "Transform your data into actionable insights with our intelligent analytics platform that learns from your business patterns.",
       icon: ChartBarIcon,
       features: [
         "Real-time data visualization",
-        "AI-powered insights",
-        "Custom dashboard creation",
-        "Automated reporting",
+        "Predictive analytics",
+        "Custom report generation",
+        "Automated insights",
         "Multi-source data integration",
         "Mobile-responsive design"
       ],
-      color: "from-blue-500 to-indigo-500",
-      price: "$299/month",
-      setupFee: "$1,500",
-      benefits: ["40% faster insights", "Real-time updates", "Custom dashboards"],
-      useCases: ["E-commerce analytics", "Marketing performance", "Financial reporting"],
+      color: "from-blue-500 to-cyan-500",
+      price: "$199/month",
+      setupFee: "$500",
+      benefits: ["Data-driven decisions", "Time savings", "Scalable insights"],
+      useCases: ["E-commerce analytics", "Marketing insights", "Performance tracking"],
       href: "/ai-analytics-dashboard"
     },
     {
-      title: "AI Content Management System",
-      description: "Intelligent content management with AI-powered optimization, SEO tools, and automated content generation.",
-      icon: GlobeAltIcon,
+      title: "Smart Customer Support Bot",
+      description: "Deploy an intelligent chatbot that provides 24/7 customer support with natural language processing and context awareness.",
+      icon: CpuChipIcon,
       features: [
-        "AI content generation",
-        "SEO optimization",
-        "Multi-language support",
-        "Content scheduling",
-        "Performance analytics",
-        "Team collaboration tools"
-      ],
-      color: "from-green-500 to-emerald-500",
-      price: "$199/month",
-      setupFee: "$800",
-      benefits: ["80% time savings", "SEO optimized", "Multi-language"],
-      useCases: ["Blog management", "E-commerce content", "Marketing campaigns"],
-      href: "/ai-content-management"
-    },
-    {
-      title: "AI Customer Support Bot",
-      description: "Intelligent customer support automation with natural language processing and sentiment analysis.",
-      icon: PhoneIcon,
-      features: [
-        "24/7 AI chatbot",
-        "Sentiment analysis",
-        "Ticket automation",
-        "Knowledge base integration",
+        "Natural language processing",
         "Multi-channel support",
-        "Performance analytics"
+        "Escalation to human agents",
+        "Knowledge base integration",
+        "Sentiment analysis",
+        "Custom training"
       ],
       color: "from-purple-500 to-pink-500",
       price: "$149/month",
-      setupFee: "$600",
-      benefits: ["24/7 availability", "Instant responses", "95% satisfaction"],
-      useCases: ["Customer service", "Lead qualification", "FAQ automation"],
-      href: "/ai-customer-support-bot"
+      setupFee: "$800",
+      benefits: ["24/7 availability", "Reduced support costs", "Better customer satisfaction"],
+      useCases: ["E-commerce support", "SaaS customer service", "Lead qualification"],
+      href: "/smart-support-bot"
     },
     {
-      title: "AI Project Management Suite",
-      description: "Smart project management with AI-powered task optimization, resource allocation, and deadline prediction.",
+      title: "Automated Social Media Manager",
+      description: "Streamline your social media presence with AI-powered content creation, scheduling, and engagement optimization.",
       icon: CogIcon,
       features: [
-        "AI task optimization",
-        "Resource allocation",
-        "Deadline prediction",
-        "Team collaboration",
-        "Progress tracking",
-        "Risk assessment"
+        "AI content generation",
+        "Optimal posting times",
+        "Hashtag optimization",
+        "Engagement tracking",
+        "Multi-platform management",
+        "Brand voice consistency"
       ],
-      color: "from-orange-500 to-red-500",
-      price: "$249/month",
-      setupFee: "$1,200",
-      benefits: ["30% efficiency gain", "Predictive planning", "Risk mitigation"],
-      useCases: ["Software development", "Marketing campaigns", "Event planning"],
-      href: "/ai-project-management"
-    },
-    {
-      title: "AI E-commerce Optimizer",
-      description: "Complete e-commerce optimization with AI-powered product recommendations, pricing strategies, and inventory management.",
-      icon: ChartBarIcon,
-      features: [
-        "AI product recommendations",
-        "Dynamic pricing",
-        "Inventory optimization",
-        "Customer segmentation",
-        "Sales forecasting",
-        "A/B testing tools"
-      ],
-      color: "from-cyan-500 to-blue-500",
-      price: "$399/month",
-      setupFee: "$2,000",
-      benefits: ["25% sales increase", "Optimized pricing", "Reduced inventory costs"],
-      useCases: ["Online stores", "Marketplace optimization", "Retail analytics"],
-      href: "/ai-ecommerce-optimizer"
-    },
-    {
-      title: "AI HR Management System",
-      description: "Intelligent HR management with AI-powered recruitment, employee analytics, and performance optimization.",
-      icon: UserGroupIcon,
-      features: [
-        "AI resume screening",
-        "Employee analytics",
-        "Performance tracking",
-        "Training recommendations",
-        "Retention prediction",
-        "Compliance monitoring"
-      ],
-      color: "from-teal-500 to-green-500",
+      color: "from-green-500 to-emerald-500",
       price: "$179/month",
-      setupFee: "$900",
-      benefits: ["50% faster hiring", "Reduced turnover", "Better performance"],
-      useCases: ["Recruitment", "Performance management", "Employee development"],
-      href: "/ai-hr-management"
+      setupFee: "$600",
+      benefits: ["Increased engagement", "Time savings", "Consistent branding"],
+      useCases: ["Small business marketing", "Personal branding", "Content marketing"],
+      href: "/social-media-manager"
     },
     {
-      title: "AI Financial Analytics",
-      description: "Advanced financial analytics with AI-powered forecasting, risk assessment, and automated reporting.",
-      icon: CurrencyDollarIcon,
-      features: [
-        "Financial forecasting",
-        "Risk assessment",
-        "Automated reporting",
-        "Expense tracking",
-        "Investment analysis",
-        "Compliance monitoring"
-      ],
-      color: "from-emerald-500 to-teal-500",
-      price: "$329/month",
-      setupFee: "$1,500",
-      benefits: ["Accurate forecasting", "Risk mitigation", "Automated compliance"],
-      useCases: ["Financial planning", "Investment analysis", "Risk management"],
-      href: "/ai-financial-analytics"
-    },
-    {
-      title: "AI Marketing Automation",
-      description: "Comprehensive marketing automation with AI-powered campaign optimization, lead scoring, and personalization.",
-      icon: RocketLaunchIcon,
-      features: [
-        "AI campaign optimization",
-        "Lead scoring",
-        "Email personalization",
-        "Social media automation",
-        "ROI tracking",
-        "A/B testing"
-      ],
-      color: "from-pink-500 to-rose-500",
-      price: "$279/month",
-      setupFee: "$1,200",
-      benefits: ["300% ROI increase", "Personalized campaigns", "Automated optimization"],
-      useCases: ["Email marketing", "Social media", "Lead generation"],
-      href: "/ai-marketing-automation"
-    },
-    {
-      title: "AI Inventory Management",
-      description: "Smart inventory management with AI-powered demand forecasting, automated reordering, and optimization.",
-      icon: CloudIcon,
+      title: "Intelligent Inventory Tracker",
+      description: "Optimize your inventory management with predictive analytics and automated reordering based on demand patterns.",
+      icon: DocumentTextIcon,
       features: [
         "Demand forecasting",
         "Automated reordering",
-        "Inventory optimization",
+        "Low stock alerts",
         "Supplier management",
-        "Cost analysis",
-        "Real-time tracking"
+        "Cost optimization",
+        "Integration with existing systems"
       ],
-      color: "from-violet-500 to-purple-500",
-      price: "$219/month",
-      setupFee: "$1,000",
-      benefits: ["30% cost reduction", "Zero stockouts", "Optimized inventory"],
-      useCases: ["Retail management", "Manufacturing", "Supply chain"],
-      href: "/ai-inventory-management"
-    },
-    {
-      title: "AI Document Processing",
-      description: "Intelligent document processing with AI-powered OCR, data extraction, and automated workflow management.",
-      icon: ShieldCheckIcon,
-      features: [
-        "AI OCR technology",
-        "Data extraction",
-        "Workflow automation",
-        "Document classification",
-        "Version control",
-        "Security compliance"
-      ],
-      color: "from-indigo-500 to-blue-500",
-      price: "$159/month",
+      color: "from-orange-500 to-red-500",
+      price: "$229/month",
       setupFee: "$700",
-      benefits: ["90% accuracy", "80% time savings", "Automated workflows"],
-      useCases: ["Document management", "Data entry", "Compliance processing"],
-      href: "/ai-document-processing"
+      benefits: ["Reduced stockouts", "Lower inventory costs", "Improved cash flow"],
+      useCases: ["Retail inventory", "Manufacturing", "E-commerce management"],
+      href: "/inventory-tracker"
     },
     {
-      title: "AI Social Media Manager",
-      description: "Intelligent social media management with AI-powered content creation, scheduling, and engagement optimization.",
-      icon: GlobeAltIcon,
-      features: [
-        "AI content creation",
-        "Optimal posting times",
-        "Engagement optimization",
-        "Hashtag suggestions",
-        "Performance analytics",
-        "Multi-platform management"
-      ],
-      color: "from-rose-500 to-pink-500",
-      price: "$129/month",
-      setupFee: "$500",
-      benefits: ["200% engagement increase", "Automated posting", "Optimized timing"],
-      useCases: ["Social media marketing", "Brand management", "Community building"],
-      href: "/ai-social-media-manager"
-    },
-    {
-      title: "AI Email Marketing Suite",
-      description: "Advanced email marketing with AI-powered personalization, send time optimization, and performance analytics.",
-      icon: EnvelopeIcon,
-      features: [
-        "AI personalization",
-        "Send time optimization",
-        "Subject line testing",
-        "Segmentation",
-        "Performance analytics",
-        "A/B testing"
-      ],
-      color: "from-amber-500 to-orange-500",
-      price: "$99/month",
-      setupFee: "$400",
-      benefits: ["40% open rates", "Personalized content", "Optimized timing"],
-      useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
-      href: "/ai-email-marketing"
-    },
-    {
-      title: "AI Voice Assistant Platform",
-      description: "Custom voice assistant solution with natural language processing, multi-language support, and business integration.",
-      icon: PhoneIcon,
-      features: [
-        "Natural language processing",
-        "Multi-language support",
-        "Custom voice training",
-        "Business integrations",
-        "Analytics dashboard",
-        "API access"
-      ],
-      color: "from-violet-500 to-purple-500",
-      price: "$399/month",
-      setupFee: "$2,500",
-      benefits: ["95% accuracy", "24/7 availability", "Multi-language"],
-      useCases: ["Customer service", "Voice commands", "Accessibility"],
-      href: "/ai-voice-assistant"
-    },
-    {
-      title: "AI Video Analytics Platform",
-      description: "Advanced video analytics with AI-powered content analysis, engagement tracking, and performance optimization.",
-      icon: ChartBarIcon,
-      features: [
-        "Content analysis",
-        "Engagement tracking",
-        "Sentiment analysis",
-        "Performance metrics",
-        "Automated insights",
-        "Real-time monitoring"
-      ],
-      color: "from-red-500 to-pink-500",
-      price: "$349/month",
-      setupFee: "$1,800",
-      benefits: ["Real-time insights", "Automated analysis", "Performance boost"],
-      useCases: ["Video marketing", "Content optimization", "Audience analysis"],
-      href: "/ai-video-analytics"
-    },
-    {
-      title: "AI Legal Document Analyzer",
-      description: "Intelligent legal document analysis with contract review, compliance checking, and risk assessment.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Contract analysis",
-        "Compliance checking",
-        "Risk assessment",
-        "Legal research",
-        "Document comparison",
-        "Automated summaries"
-      ],
-      color: "from-slate-500 to-gray-500",
-      price: "$599/month",
-      setupFee: "$3,000",
-      benefits: ["90% time savings", "Risk reduction", "Compliance assurance"],
-      useCases: ["Legal firms", "Contract management", "Compliance"],
-      href: "/ai-legal-analyzer"
-    },
-    {
-      title: "AI Real Estate Assistant",
-      description: "Comprehensive real estate management with property valuation, market analysis, and lead generation.",
-      icon: GlobeAltIcon,
-      features: [
-        "Property valuation",
-        "Market analysis",
-        "Lead generation",
-        "Price optimization",
-        "Investment insights",
-        "Client management"
-      ],
-      color: "from-emerald-500 to-teal-500",
-      price: "$279/month",
-      setupFee: "$1,500",
-      benefits: ["Accurate valuations", "Market insights", "Lead generation"],
-      useCases: ["Real estate agents", "Property management", "Investment analysis"],
-      href: "/ai-real-estate"
-    },
-    {
-      title: "AI Healthcare Analytics",
-      description: "Advanced healthcare analytics with patient insights, treatment optimization, and predictive diagnostics.",
-      icon: CpuChipIcon,
-      features: [
-        "Patient analytics",
-        "Treatment optimization",
-        "Predictive diagnostics",
-        "Health monitoring",
-        "Risk assessment",
-        "Compliance tracking"
-      ],
-      color: "from-green-500 to-emerald-500",
-      price: "$799/month",
-      setupFee: "$4,000",
-      benefits: ["Improved outcomes", "Risk reduction", "Cost savings"],
-      useCases: ["Hospitals", "Clinics", "Health systems"],
-      href: "/ai-healthcare-analytics"
-    },
-    {
-      title: "AI Supply Chain Optimizer",
-      description: "Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.",
-      icon: CloudIcon,
-      features: [
-        "Demand forecasting",
-        "Route optimization",
-        "Cost analysis",
-        "Supplier management",
-        "Risk assessment",
-        "Performance tracking"
-      ],
-      color: "from-blue-500 to-indigo-500",
-      price: "$449/month",
-      setupFee: "$2,200",
-      benefits: ["20% cost reduction", "Optimized routes", "Risk mitigation"],
-      useCases: ["Logistics", "Manufacturing", "Retail"],
-      href: "/ai-supply-chain"
-    },
-    {
-      title: "AI Energy Management System",
-      description: "Smart energy management with consumption optimization, cost reduction, and sustainability tracking.",
-      icon: CogIcon,
-      features: [
-        "Consumption optimization",
-        "Cost analysis",
-        "Sustainability tracking",
-        "Predictive maintenance",
-        "Energy forecasting",
-        "Carbon footprint"
-      ],
-      color: "from-yellow-500 to-orange-500",
-      price: "$329/month",
-      setupFee: "$1,800",
-      benefits: ["30% energy savings", "Cost reduction", "Sustainability"],
-      useCases: ["Manufacturing", "Buildings", "Utilities"],
-      href: "/ai-energy-management"
-    },
-    {
-      title: "AI Fraud Detection System",
-      description: "Advanced fraud detection with real-time monitoring, pattern recognition, and automated alerts.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Real-time monitoring",
-        "Pattern recognition",
-        "Automated alerts",
-        "Risk scoring",
-        "Transaction analysis",
-        "Compliance reporting"
-      ],
-      color: "from-red-500 to-rose-500",
-      price: "$499/month",
-      setupFee: "$2,500",
-      benefits: ["99.9% accuracy", "Real-time detection", "Cost savings"],
-      useCases: ["Banking", "E-commerce", "Financial services"],
-      href: "/ai-fraud-detection"
-    },
-    {
-      title: "AI Learning Management System",
-      description: "Intelligent learning platform with personalized content, progress tracking, and adaptive learning paths.",
+      title: "AI-Powered Email Marketing",
+      description: "Create personalized email campaigns that automatically adapt to customer behavior and preferences for maximum engagement.",
       icon: UserGroupIcon,
       features: [
         "Personalized content",
-        "Progress tracking",
-        "Adaptive learning",
-        "Skill assessment",
-        "Certification management",
-        "Analytics dashboard"
+        "Send time optimization",
+        "A/B testing automation",
+        "Segmentation intelligence",
+        "Performance analytics",
+        "Template library"
       ],
       color: "from-indigo-500 to-purple-500",
-      price: "$199/month",
-      setupFee: "$1,000",
-      benefits: ["Personalized learning", "Better outcomes", "Engagement boost"],
-      useCases: ["Education", "Corporate training", "Online courses"],
-      href: "/ai-learning-management"
+      price: "$159/month",
+      setupFee: "$400",
+      benefits: ["Higher open rates", "Better conversions", "Automated optimization"],
+      useCases: ["E-commerce marketing", "Newsletter campaigns", "Lead nurturing"],
+      href: "/email-marketing-ai"
     },
     {
-      title: "AI Quality Assurance Platform",
-      description: "Automated quality assurance with AI-powered testing, defect detection, and performance monitoring.",
-      icon: CheckCircleIcon,
+      title: "Smart Event Management",
+      description: "Organize and manage events with AI-powered attendee matching, scheduling optimization, and engagement tracking.",
+      icon: LightBulbIcon,
       features: [
-        "Automated testing",
-        "Defect detection",
-        "Performance monitoring",
-        "Code analysis",
-        "Test generation",
-        "Quality metrics"
+        "Attendee matching",
+        "Schedule optimization",
+        "Engagement tracking",
+        "Feedback analysis",
+        "Networking suggestions",
+        "Mobile app integration"
       ],
       color: "from-teal-500 to-cyan-500",
-      price: "$379/month",
-      setupFee: "$1,900",
-      benefits: ["90% test coverage", "Faster delivery", "Quality improvement"],
-      useCases: ["Software development", "Manufacturing", "Quality control"],
-      href: "/ai-quality-assurance"
-    },
-    {
-      title: "AI Event Management Suite",
-      description: "Comprehensive event management with AI-powered planning, attendee insights, and performance optimization.",
-      icon: RocketLaunchIcon,
-      features: [
-        "Event planning",
-        "Attendee insights",
-        "Performance optimization",
-        "Registration management",
-        "Networking facilitation",
-        "Analytics dashboard"
-      ],
-      color: "from-pink-500 to-rose-500",
       price: "$249/month",
       setupFee: "$1,200",
       benefits: ["Better engagement", "Optimized planning", "Success metrics"],
@@ -459,25 +130,206 @@ export default function MicroSaaSSolutionsPage()   {
       href: "/ai-event-management"
     }
   ];
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const MicroSaaSSolutionsPage: React.FC = () => {
+  const processSteps = [
+    {
+      step: "01",
+      title: "Discovery & Requirements",
+      description: "We analyze your business needs and identify the perfect micro SaaS solution for your specific use case."
+    },
+    {
+      step: "02",
+      title: "Customization & Setup",
+      description: "Configure and customize the solution to match your brand, workflows, and specific requirements."
+    },
+    {
+      step: "03",
+      title: "Integration & Testing",
+      description: "Integrate with your existing systems and thoroughly test to ensure everything works seamlessly."
+    },
+    {
+      step: "04",
+      title: "Launch & Support",
+      description: "Deploy your solution and provide ongoing support, training, and optimization services."
+    }
+  ];
+
+  const stats = [
+    { number: "50+", label: "Micro SaaS Solutions" },
+    { number: "95%", label: "Client Satisfaction" },
+    { number: "30%", label: "Average Cost Savings" },
+    { number: "24/7", label: "Support Available" }
+  ];
+
   return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Micro SaaS solutions from Zion Tech Group" />
+        <meta name="description" content="Custom micro SaaS solutions designed to solve specific business challenges with AI-powered tools and automation." />
+        <meta name="keywords" content="micro SaaS, custom software, business automation, AI tools, specialized solutions" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">Micro SaaS Solutions</h1>
-          <p className="text-lg text-gray-300">
-            Discover our micro SaaS solutions and services.
-          </p>
-        </div>
+
+      <div className="min-h-screen bg-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+              Micro SaaS Solutions
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Specialized software solutions that solve specific business challenges
+            </p>
+            <p className="text-lg text-gray-400 max-w-4xl mx-auto">
+              Our micro SaaS products are designed to address specific business needs with focused, 
+              AI-powered solutions that integrate seamlessly into your existing workflows.
+            </p>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-slate-800/50">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl font-bold text-purple-400 mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Products Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Our Micro SaaS <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Products</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Specialized solutions designed to solve specific business challenges
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8">
+              {microSaaSProducts.map((product, index) => {
+                const Icon = product.icon;
+                return (
+                  <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">
+                    <div className="flex items-start mb-6">
+                      <div className={`p-3 bg-gradient-to-r ${product.color} rounded-lg mr-4`}>
+                        <Icon className="w-8 h-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-white mb-3">{product.title}</h3>
+                        <p className="text-gray-300 mb-4">{product.description}</p>
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="text-purple-400 font-semibold">{product.price}</div>
+                          <div className="text-gray-400 text-sm">Setup: {product.setupFee}</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                      <ul className="grid grid-cols-2 gap-2">
+                        {product.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                            <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {product.benefits.map((benefit, benefitIndex) => (
+                          <span key={benefitIndex} className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-white mb-3">Use Cases</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {product.useCases.map((useCase, useCaseIndex) => (
+                          <span key={useCaseIndex} className="bg-cyan-600/20 text-cyan-300 px-3 py-1 rounded-full text-sm">
+                            {useCase}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <Link
+                      to={product.href}
+                      className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Our Micro SaaS <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Process</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                A streamlined approach to delivering specialized software solutions
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg">{step.step}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-sm text-gray-400">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Need a Custom Micro SaaS Solution?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how we can create a specialized solution tailored to your unique business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Custom Solution
+              </Link>
+              <Link
+                to="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              >
+                View Examples
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
 }
-export default MicroSaaSSolutionsPage;
