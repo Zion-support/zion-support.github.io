@@ -46,6 +46,9 @@ class ErrorBoundary extends React.Component {
 }
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+
   useEffect(() => {
 // Performance monitoring
 if (typeof window !== 'undefined') {
