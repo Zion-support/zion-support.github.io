@@ -1,13 +1,16 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiMarketingPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Marketing</title>
-        <meta name ="description" content="Professional ai marketing solutions and services" />
-        <meta name ="keywords" content="ai, marketing" />
+        <meta
+          name="description"
+          content="Professional ai marketing solutions and services"
+        />
+        <meta name="keywords" content="ai, marketing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -49,4 +52,5 @@ const AiMarketingPage: React.FC = () => {
   );
 };
 
-export default AiMarketingPage;
+const page = React.lazy(() => import('./page'));
+export default page;

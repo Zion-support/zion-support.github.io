@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 const resolve = path.resolve;
 
@@ -13,8 +13,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@app': resolve(__dirname, './app'),
+      "@": resolve(__dirname, "./src"),
+      "@app": resolve(__dirname, "./app"),
     },
   },
   build: {
@@ -41,7 +41,12 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        pure_funcs: [
+          "console.log",
+          "console.info",
+          "console.debug",
+          "console.warn",
+        ],
         passes: 3, // More passes for better optimization
         unsafe: true,
         unsafe_comps: true,
@@ -63,19 +68,20 @@ export default defineConfig({
         safari10: true, // Better Safari compatibility
         toplevel: true,
         properties: {
-          regex: /^_/
-        }
+          regex: /^_/,
+        },
       },
       format: {
         comments: false,
-        ascii_only: true
-      }
+        ascii_only: true,
+      },
     },
     // Enhanced build optimizations
     rollupOptions: {
       output: {
         manualChunks: (id: string) => {
           // Split vendor chunks for better caching
+<<<<<<< HEAD
           if (id.includes('node_modules')) {
             // React core (smaller chunk)
             if (id.includes('react/') || id.includes('react-dom/')) {
@@ -84,18 +90,29 @@ export default defineConfig({
             // React router (separate chunk)
             if (id.includes('react-router')) {
               return 'react-router';
+=======
+          if (id.includes("node_modules")) {
+            // React ecosystem
+            if (
+              id.includes("react") ||
+              id.includes("react-dom") ||
+              id.includes("react-router")
+            ) {
+              return "react-vendor";
+>>>>>>> cursor/comprehensive-app-audit-and-update-4a25
             }
             // UI libraries
-            if (id.includes('lucide-react') || id.includes('framer-motion')) {
-              return 'ui-vendor';
+            if (id.includes("lucide-react") || id.includes("framer-motion")) {
+              return "ui-vendor";
             }
             // Large libraries
             if (id.includes('recharts') || id.includes('gray-matter')) {
               return 'large-vendor';
             }
             // Other vendor libraries
-            return 'vendor';
+            return "vendor";
           }
+<<<<<<< HEAD
           // App chunks - split by feature
           if (id.includes('/app/')) {
             // Split by page categories
@@ -107,6 +124,11 @@ export default defineConfig({
               return 'main-pages';
             }
             return 'app';
+=======
+          // App chunks
+          if (id.includes("/app/")) {
+            return "app";
+>>>>>>> cursor/comprehensive-app-audit-and-update-4a25
           }
           return undefined;
         },
@@ -133,6 +155,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
+<<<<<<< HEAD
     include: ['react', 'react-dom', 'react-router-dom'],
     exclude: ['@heroicons/react', 'framer-motion', 'recharts'],
   },
@@ -141,5 +164,8 @@ export default defineConfig({
     drop: ['console', 'debugger'],
     // Target modern browsers
     target: 'es2020',
+=======
+    include: ["react", "react-dom", "react-router-dom"],
+>>>>>>> cursor/comprehensive-app-audit-and-update-4a25
   },
 });

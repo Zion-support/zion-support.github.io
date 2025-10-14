@@ -1,23 +1,26 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiEnterpriseTransformation2025Page: React.FC = () => {
-
-
   return (
     <>
       <Helmet>
         <title>Ai Enterprise Transformation 2025</title>
-        <meta name ="description" content="Professional ai enterprise transformation 2025 solutions and services" />
-        <meta name ="keywords" content="ai, enterprise, transformation, 2025" />
+        <meta
+          name="description"
+          content="Professional ai enterprise transformation 2025 solutions and services"
+        />
+        <meta name="keywords" content="ai, enterprise, transformation, 2025" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai Enterprise Transformation 2025</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Ai Enterprise Transformation 2025
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional ai enterprise transformation 2025 solutions and services
+              Professional ai enterprise transformation 2025 solutions and
+              services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -52,4 +55,5 @@ const AiEnterpriseTransformation2025Page: React.FC = () => {
   );
 };
 
-export default AiEnterpriseTransformation2025PagePage;
+const page = React.lazy(() => import('./page'));
+export default page;

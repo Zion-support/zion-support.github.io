@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const TaskAutomationWorkflowPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Task Automation Workflow</title>
-        <meta name ="description" content="Professional task automation workflow solutions and services" />
-        <meta name ="keywords" content="task, automation, workflow" />
+        <meta
+          name="description"
+          content="Professional task automation workflow solutions and services"
+        />
+        <meta name="keywords" content="task, automation, workflow" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Task Automation Workflow</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Task Automation Workflow
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional task automation workflow solutions and services
             </p>
@@ -49,4 +54,5 @@ const TaskAutomationWorkflowPage: React.FC = () => {
   );
 };
 
-export default TaskAutomationWorkflowPage;
+const page = React.lazy(() => import('./page'));
+export default page;

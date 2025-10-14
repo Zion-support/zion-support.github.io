@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiEnergyGridManagementProPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Energy Grid Management Pro</title>
-        <meta name ="description" content="Professional ai energy grid management pro solutions and services" />
-        <meta name ="keywords" content="ai, energy, grid, management, pro" />
+        <meta
+          name="description"
+          content="Professional ai energy grid management pro solutions and services"
+        />
+        <meta name="keywords" content="ai, energy, grid, management, pro" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai Energy Grid Management Pro</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Ai Energy Grid Management Pro
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai energy grid management pro solutions and services
             </p>
@@ -49,4 +54,5 @@ const AiEnergyGridManagementProPage: React.FC = () => {
   );
 };
 
-export default AiEnergyGridManagementProPage;
+const page = React.lazy(() => import('./page'));
+export default page;

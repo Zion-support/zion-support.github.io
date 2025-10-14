@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const DatabaseManagementPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Database Management</title>
-        <meta name ="description" content="Professional database management solutions and services" />
-        <meta name ="keywords" content="database, management" />
+        <meta
+          name="description"
+          content="Professional database management solutions and services"
+        />
+        <meta name="keywords" content="database, management" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Database Management</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Database Management
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional database management solutions and services
             </p>
@@ -49,4 +54,5 @@ const DatabaseManagementPage: React.FC = () => {
   );
 };
 
-export default DatabaseManagementPage;
+const page = React.lazy(() => import('./page'));
+export default page;

@@ -1,6 +1,21 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Users, Award, Zap, Globe, Target, CheckCircle } from 'lucide-react';
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+// Icons imported for future use
+// import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Download } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
+>>>>>>> cursor/comprehensive-app-audit-and-update-4a25
 
 // Company values
 const values = [
@@ -62,12 +77,21 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI solutions, 5G technology, and comprehensive IT services. Discover our mission, values, and expertise." />
         <meta name="keywords" content="about us, AI company, 5G technology, IT solutions, artificial intelligence, machine learning, cybersecurity" />
         <meta property="og:title" content="About Us - Zion Tech Group" />
         <meta property="og:description" content="Leading provider of AI solutions, 5G technology, and comprehensive IT services." />
         <meta property="og:type" content="website" />
+=======
+        <title>About</title>
+        <meta
+          name="description"
+          content="Professional about solutions and services"
+        />
+        <meta name="keywords" content="about" />
+>>>>>>> cursor/comprehensive-app-audit-and-update-4a25
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -236,4 +260,5 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+const page = React.lazy(() => import('./page'));
+export default page;

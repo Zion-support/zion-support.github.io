@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const ZionSmartExpenseCategorizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Zion Smart Expense Categorizer</title>
-        <meta name ="description" content="Professional zion smart expense categorizer solutions and services" />
-        <meta name ="keywords" content="zion, smart, expense, categorizer" />
+        <meta
+          name="description"
+          content="Professional zion smart expense categorizer solutions and services"
+        />
+        <meta name="keywords" content="zion, smart, expense, categorizer" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Zion Smart Expense Categorizer</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Zion Smart Expense Categorizer
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional zion smart expense categorizer solutions and services
             </p>
@@ -49,4 +54,5 @@ const ZionSmartExpenseCategorizerPage: React.FC = () => {
   );
 };
 
-export default ZionSmartExpenseCategorizerPage;
+const page = React.lazy(() => import('./page'));
+export default page;

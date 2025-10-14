@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const SmartHomeSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Smart Home Saas</title>
-        <meta name ="description" content="Professional smart home saas solutions and services" />
-        <meta name ="keywords" content="smart, home, saas" />
+        <meta
+          name="description"
+          content="Professional smart home saas solutions and services"
+        />
+        <meta name="keywords" content="smart, home, saas" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Smart Home Saas</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Smart Home Saas
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional smart home saas solutions and services
             </p>
@@ -49,4 +54,5 @@ const SmartHomeSaasPage: React.FC = () => {
   );
 };
 
-export default SmartHomeSaasPage;
+const page = React.lazy(() => import('./page'));
+export default page;

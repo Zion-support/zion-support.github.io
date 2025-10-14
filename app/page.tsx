@@ -264,9 +264,16 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </section>
         </main>
       </div>
+=======
+          </div>
+        </section>
+      </main>
+    </div>
+>>>>>>> cursor/comprehensive-app-audit-and-update-4a25
     </>
   );
 };
