@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Zion Ai Neural Interface Page: React.FC = () => {
+const ZionAiNeuralInterfacePage: React.FC = () => {
   return (
     <>
       <Helmet>

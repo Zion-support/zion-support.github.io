@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Api Management Page: React.FC = () => {
+const AiApiManagementPage: React.FC = () => {
   return (
     <>
       <Helmet>

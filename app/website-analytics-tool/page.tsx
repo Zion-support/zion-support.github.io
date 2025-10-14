@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Website Analytics Tool Page: React.FC = () => {
+const WebsiteAnalyticsToolPage: React.FC = () => {
   return (
     <>
       <Helmet>

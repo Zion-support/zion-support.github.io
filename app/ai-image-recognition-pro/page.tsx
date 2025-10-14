@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Image Recognition Pro Page: React.FC = () => {
+const AiImageRecognitionProPage: React.FC = () => {
   return (
     <>
       <Helmet>

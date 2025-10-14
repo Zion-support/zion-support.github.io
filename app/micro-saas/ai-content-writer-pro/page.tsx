@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Content Writer Pro Page: React.FC = () => {
+const AiContentWriterProPage: React.FC = () => {
   return (
     <>
       <Helmet>

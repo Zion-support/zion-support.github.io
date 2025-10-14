@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const FiveGModernizationPage: React.FC = () => {
+const FiveGModernization: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,4 +49,4 @@ const FiveGModernizationPage: React.FC = () => {
   );
 };
 
-export default FiveGModernizationPage;
+export default FiveGModernization;

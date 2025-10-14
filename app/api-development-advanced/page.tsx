@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Api Development Advanced Page: React.FC = () => {
+const ApiDevelopmentAdvancedPage: React.FC = () => {
   return (
     <>
       <Helmet>

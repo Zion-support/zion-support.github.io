@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const FiveGSupportPage: React.FC = () => {
+const FiveGSupport: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,4 +49,4 @@ const FiveGSupportPage: React.FC = () => {
   );
 };
 
-export default FiveGSupportPage;
+export default FiveGSupport;

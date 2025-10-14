@@ -12,13 +12,26 @@ function kebabToPascalCase(str) {
 
 // Function to convert component name to valid TypeScript identifier
 function toValidComponentName(str) {
-  // Remove spaces and convert to PascalCase
+  // Handle special cases for numbers at the start
+  if (str.startsWith('404')) {
+    return 'NotFoundPage';
+  }
+  if (str.startsWith('5g')) {
+    return 'FiveG' + str.substring(2).split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('');
+  }
+  if (str.startsWith('ai-3d')) {
+    return 'Ai3D' + str.substring(5).split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('');
+  }
+  
+  // Regular conversion
   return str
-    .replace(/\s+/g, '')
-    .replace(/\d+/g, match => match)
-    .split(/(?=[A-Z])/)
+    .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('');
+    .join('') + 'Page';
 }
 
 // Function to fix component name in file content
@@ -27,7 +40,7 @@ function fixComponentName(content, filename) {
   const dirName = path.basename(path.dirname(filename));
   
   // Convert kebab-case directory name to valid component name
-  const validComponentName = kebabToPascalCase(dirName) + 'Page';
+  const validComponentName = toValidComponentName(dirName);
   
   // Find the component declaration line
   const componentRegex = /const\s+[^:]+:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/;
@@ -70,7 +83,7 @@ pageFiles.forEach(filePath => {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath} -> ${toValidComponentName(path.basename(path.dirname(filePath)))}`);
       fixedCount++;
     }
   } catch (error) {

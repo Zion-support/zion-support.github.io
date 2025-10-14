@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Holographic Workspace Page: React.FC = () => {
+const AiHolographicWorkspacePage: React.FC = () => {
   return (
     <>
       <Helmet>

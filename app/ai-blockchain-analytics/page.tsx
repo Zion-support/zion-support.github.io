@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Blockchain Analytics Page: React.FC = () => {
+const AiBlockchainAnalyticsPage: React.FC = () => {
   return (
     <>
       <Helmet>

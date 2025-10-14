@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const FiveGMonitoringPage: React.FC = () => {
+const FiveGMonitoring: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,4 +49,4 @@ const FiveGMonitoringPage: React.FC = () => {
   );
 };
 
-export default FiveGMonitoringPage;
+export default FiveGMonitoring;

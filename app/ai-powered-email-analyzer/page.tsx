@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Powered Email Analyzer Page: React.FC = () => {
+const AiPoweredEmailAnalyzerPage: React.FC = () => {
   return (
     <>
       <Helmet>

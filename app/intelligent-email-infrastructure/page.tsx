@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Intelligent Email Infrastructure Page: React.FC = () => {
+const IntelligentEmailInfrastructurePage: React.FC = () => {
   return (
     <>
       <Helmet>

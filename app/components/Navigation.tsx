@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone } from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;

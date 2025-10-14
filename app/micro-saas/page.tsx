@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Star, CheckCircle, Zap } from 'lucide-react';
+import { Star, CheckCircle, Zap, Users, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface MicroSaasProduct {

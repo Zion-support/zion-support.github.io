@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Iot Edge Computing Page: React.FC = () => {
+const IotEdgeComputingPage: React.FC = () => {
   return (
     <>
       <Helmet>

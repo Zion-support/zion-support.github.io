@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Social Media Scheduler Page: React.FC = () => {
+const AiSocialMediaSchedulerPage: React.FC = () => {
   return (
     <>
       <Helmet>

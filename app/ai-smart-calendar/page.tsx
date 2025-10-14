@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Smart Calendar Page: React.FC = () => {
+const AiSmartCalendarPage: React.FC = () => {
   return (
     <>
       <Helmet>

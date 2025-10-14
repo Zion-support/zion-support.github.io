@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Financial Crime Detection Pro Page: React.FC = () => {
+const AiFinancialCrimeDetectionProPage: React.FC = () => {
   return (
     <>
       <Helmet>

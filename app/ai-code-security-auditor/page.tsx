@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Code Security Auditor Page: React.FC = () => {
+const AiCodeSecurityAuditorPage: React.FC = () => {
   return (
     <>
       <Helmet>

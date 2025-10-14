@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const HomePage: React.FC = () => {
+const AppPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -89,4 +89,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default AppPage;
