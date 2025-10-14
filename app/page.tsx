@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { Brain, Shield, Zap, Users, Target, ArrowRight } from 'lucide-react';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
-function HomePage() => {
-  const features = []
+function HomePage() {
+  const features = [
     {
       icon: Brain,
       title: "AI Solutions",
@@ -80,25 +80,25 @@ function HomePage() => {
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="bg-slate-8 00 p-6 rounded-lg border border-slate-7 00 hover:border-purple-5 00 transition-all duration-3 00 transform hover:scale-1 0 5 hover:shadow-lg hover:shadow-purple-5 0 0/2 0"
+                className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <feature.icon className="w-1 2 h-1 2 text-purple-4 0 0 mb-4" />
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-3 0 0">{feature.description}</p>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-purple-9 0 0/5 0 to-cyan-9 0 0/5 0 p-1 2 rounded-lg">
+          <div className="text-center bg-gradient-to-r from-purple-900/50 to-cyan-900/50 p-12 rounded-lg">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-3 0 0 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Let our experts help you implement cutting-edge solutions
             </p>
             <Link 
               to="/contact" 
-              className="inline-flex items-center bg-gradient-to-r from-purple-6 00 to-cyan-6 00 hover:from-purple-7 00 hover:to-cyan-7 0 0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-3 0 0"
+              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
             >
               Contact Us Today
               <ArrowRight className="ml-2 w-5 h-5" />

@@ -9,7 +9,7 @@ const AccessibilityEnhancer: React.FC = () => {
     const root = document.documentElement;
 
     // High contrast mode
-    if (isHighContrast) => {
+    if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');

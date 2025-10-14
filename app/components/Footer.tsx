@@ -10,7 +10,7 @@ import {
 
 
 
-const services = []
+const services = [
     { name: 'AI Solutions', href: '/ai-solutions', },
     { name: 'IT Solutions', href: '/it-solutions', },
     { name: 'Cloud Infrastructure', href: '/cloud-solutions', },
@@ -22,7 +22,7 @@ const services = []
 
   
 
-  const company = []
+  const company = [
     { name: 'About Us', href: '/about', },
     { name: 'Solutions', href: '/solutions', },
     { name: 'Pricing', href: '/pricing', },
@@ -31,7 +31,7 @@ const services = []
     { name: 'Case Studies', href: '/case-studies', }
   ];
 
-  const support = []
+  const support = [
     { name: 'Contact', href: '/contact', },
     { name: 'Support', href: '/support', },
     { name: 'Tutorials', href: '/tutorials', },
@@ -39,7 +39,7 @@ const services = []
     { name: 'Documentation', href: '/docs', }
   ];
 
-  const legal = []
+  const legal = [
     { name: 'Privacy Policy', href: '/privacy', },
     { name: 'Terms of Service', href: '/terms', },
     { name: 'Cookie Policy', href: '/cookies', },
@@ -48,7 +48,7 @@ const services = []
     { name: 'Compliance', href: '/compliance', }
   ];
 
-  const socialLinks = []
+  const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin', },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter', },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github', },
@@ -57,51 +57,47 @@ const services = []
 
   return (
     <footer className="bg-slate-9 0 0border-tborder-slate-7 0 0">
-      <div className="max-w-7xlmx-autopx-4sm:px-6lg:px-8py-1 2">
-        <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="l g: col-span-2">
-            <Link to="/" className="flexitems-centerspace-x-3mb-6group">
-              <div className="w -1 2 h-1 2 bg-gradient-to-r from-purple-5 00 to-cyan-5 0 0rounded-lgflexitems-centerjustify-centergroup-hover:scale-1 1 0transition-transformcyber-glow">
-                <span className="text-whitefont-boldtext-xl">Z</span>
-                </div>
-        </div>
-              <span className="text-xlfont-boldtext-whitegroup-hover:text-purple-4 0 0transition-colors">Zion Tech Group</span>
+          <div className="lg:col-span-2">
+            <Link to="/" className="flex items-center space-x-3 mb-6 group">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
             </Link>
-            <p className="text-gray-4 0 0mb-6max-w-sm">
+            <p className="text-gray-400 mb-6 max-w-sm">
               Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
               and digital transformation services for businesses worldwide.
             </p>
             
             {/* Contact Info */}
-            <div className="space-y-3mb-6">
-              <div className="flexitems-centerspace-x-3text-gray-3 0 0">
-                <PhoneIcon className="w -5h-5 text-purple-4 0 0" />
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3 text-gray-300">
+                <PhoneIcon className="w-5 h-5 text-purple-400" />
                 <span>+1-302-464-0950</span>
-                </div>
-        </div>
-              <div className="flexitems-centerspace-x-3text-gray-3 0 0">
-                <EnvelopeIcon className="w -5h-5 text-purple-4 0 0" />
-                <span>kleber@ziontechgroup.com</span>
-                </div>
-        </div>
-              <div className="flexitems-centerspace-x-3text-gray-3 0 0">
-                <MapPinIcon className="w -5h-5 text-purple-4 0 0" />
-                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-                </div>
-        </div>
               </div>
-        </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <EnvelopeIcon className="w-5 h-5 text-purple-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPinIcon className="w-5 h-5 text-purple-400" />
+                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+              </div>
+            </div>
+          </div>
 
             {/* Social Links */}
-            <div className="flexspace-x-4">
+            <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-4 0 0hover:text-whitetransition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                   aria-label={social.name}
                 >
                   {social.icon === 'facebook' && '📘'}

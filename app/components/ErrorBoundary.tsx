@@ -7,33 +7,41 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+}
+
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) => {
+  constructor(props: Props) {
     super(props);
-    this.state = { hasError: false ;};
+    this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true;, error };
-  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) => {
+    return { hasError: true, error };
+  }
+  
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     // Error logged
-  render() => {
-    if (this.state.hasError) => {
+  }
+  
+  render() {
+    if (this.state.hasError) {
       return (
-        <div className="min-h-screenflexitems-centerjustify-centerbg-slate-9 0 0">
+        <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center">
-            <h1 className="text-4xlfont-boldtext-whitemb-4">Something went wrong</h1>
-            <p className="text-gray-3 0 0mb-8">We're sorry, but something unexpected happened.</p>
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-gradient-to- r from-purple-6 00 to-cyan-6 00 hover:from-purple-7 00 hover:to-cyan-7 0 0text-whitefont-boldpy-2px-4roundedtransition-allduration-3 0 0";
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300"
             >
               Reload Page
             </button>
-            </div>
-        </div>
           </div>
         </div>
       );
     }
     return this.props.children;
+  }
+}
+
 export default ErrorBoundary;

@@ -37,7 +37,7 @@ const PerformanceMonitor = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
-        if (fidEntry.processingStart) => {
+        if (fidEntry.processingStart) {
           metrics.fid = fidEntry.processingStart - fidEntry.startTime;
         }
       });
