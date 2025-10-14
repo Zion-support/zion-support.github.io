@@ -12,5 +12,7 @@ export const securityHeaders = {
     return Object.entries(securityHeaders.csp)
       .map(([key, values]) => `${key} ${values.join(' ')}`)
       .join('; ')
+    'font-src': ["'self'", "data:"],
+    'connect-src': ["'self'"]
   }
 }

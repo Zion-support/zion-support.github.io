@@ -31,7 +31,7 @@ interface SEOConfig {
     href: string
     hreflang: string
   }>
-  structuredData?: any
+  structuredData?: Record<string, unknown>
 }
 
 export const defaultSEOConfig: SEOConfig = {
@@ -51,6 +51,7 @@ export const defaultSEOConfig: SEOConfig = {
   ],
   canonicalUrl: 'https://zion.app',
   ogImage: '/images/og-image.jpg',
+  ogImage: 'https://zion.app/og-image.jpg',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   robots: 'index, follow',
@@ -116,4 +117,34 @@ export const generateImageAlt = (imagePath: string, alt?: string) => {
 
 export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
   return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`
+  viewport: 'width=device-width, initial-scale=1',
+  charset: 'UTF-8'
+}
+
+export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
+  const seoConfig = { ...defaultSEOConfig, ...config }
+  
+  return {
+    title: seoConfig.title,
+    description: seoConfig.description,
+    keywords: seoConfig.keywords.join(', '),
+    canonical: seoConfig.canonicalUrl,
+    openGraph: {
+      title: seoConfig.ogTitle || seoConfig.title,
+      description: seoConfig.ogDescription || seoConfig.description,
+      url: seoConfig.canonicalUrl,
+      type: seoConfig.ogType,
+      image: seoConfig.ogImage
+    },
+    twitter: {
+      card: seoConfig.twitterCard,
+      title: seoConfig.twitterTitle || seoConfig.title,
+      description: seoConfig.twitterDescription || seoConfig.description,
+      image: seoConfig.twitterImage || seoConfig.ogImage
+    },
+    robots: seoConfig.robots,
+    author: seoConfig.author,
+    publisher: seoConfig.publisher,
+    language: seoConfig.language
+  }
 }

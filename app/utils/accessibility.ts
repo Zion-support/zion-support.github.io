@@ -35,5 +35,12 @@ export const accessibilityUtils = {
     return () => {
       element.removeEventListener('keydown', handleTabKey)
     }
+
+  addAriaLabels: (element: HTMLElement, label: string) => {
+    element.setAttribute('aria-label', label)
+  },
+
+  addRole: (element: HTMLElement, role: string) => {
+    element.setAttribute('role', role)
   }
 }

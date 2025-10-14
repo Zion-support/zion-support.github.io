@@ -1,65 +1,24 @@
-import React from 'react'
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-
-const services = [
-  {
-    title: '5G Performance Optimization',
-    description: 'Advanced optimization techniques to maximize the performance of your 5G network.'
-  },
-  {
-    title: 'Bandwidth Management',
-    description: 'Intelligent bandwidth management and allocation for optimal 5G network utilization.'
-  },
-  {
-    title: 'Quality of Service',
-    description: 'Enhanced Quality of Service (QoS) implementation for superior 5G user experience.'
-  }
-]
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React from 'react';
+import React, { Suspense } from 'react';
 
 const FiveGOptimizationPage: React.FC = () => {
   return (
-    <>
-      <EnhancedSEO
-        title="5G Optimization Services - Zion Tech Group"
-        description="Expert 5G network optimization services to maximize performance, efficiency, and user experience."
-        keywords="5G optimization, network performance, bandwidth management, QoS, wireless optimization"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              5G Optimization Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Expert 5G network optimization services to maximize performance, efficiency, and user experience.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-            >
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5G Optimization Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Optimize your 5G network performance with our expert services.
+          </p>
         </div>
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default FiveGOptimizationPage
+export default FiveGOptimizationPage;
+

@@ -10,6 +10,7 @@ export const validation = {
   },
   
   required: (value: any) => {
+  required: (value: unknown) => {
     return value !== null && value !== undefined && value !== ''
   },
   
@@ -19,5 +20,14 @@ export const validation = {
   
   maxLength: (value: string, max: number) => {
     return value.length <= max
+  },
+  
+  url: (url: string) => {
+    try {
+      new URL(url)
+      return true
+    } catch {
+      return false
+    }
   }
 }

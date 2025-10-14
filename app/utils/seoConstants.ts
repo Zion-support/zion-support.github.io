@@ -5,4 +5,5 @@ export const seoConstants = {
   siteUrl: 'https://ziontechgroup.com',
   twitterHandle: '@ziontechgroup',
   ogImage: '/og-image.jpg'
+  defaultKeywords: 'technology, solutions, innovation'
 }

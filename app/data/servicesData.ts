@@ -36,6 +36,8 @@ export const servicesData: ServiceData[] = [
       starter: 2000,
       professional: 5000,
       enterprise: 10000
+      professional: 4000,
+      enterprise: 8000
     },
     icon: 'cloud-upload'
   }
