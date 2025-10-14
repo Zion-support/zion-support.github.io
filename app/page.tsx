@@ -1,6 +1,24 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
+=======
+'use client';
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic } from 'lucide-react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import Analytics from './components/Analytics';
+import SecurityEnhancer from './components/SecurityEnhancer';
+import PerformanceEnhancer from './components/PerformanceEnhancer';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
 
 const HomePage = () => {
   const features = [
@@ -38,7 +56,63 @@ const HomePage = () => {
     },
   ];
 
+<<<<<<< HEAD
   const microSaasHighlights = [
+=======
+// Preload critical components
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    // Preload critical components after initial render
+    setTimeout(() => {
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 100);
+  }
+};
+
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
+    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  </div>
+));
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+
+// Enhanced loading component
+const EnhancedLoadingSpinner: React.FC = memo(() => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
+  </div>
+));
+EnhancedLoadingSpinner.displayName = 'EnhancedLoadingSpinner';
+
+const HomePage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+    // Trigger visibility animation
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    // Preload components
+    preloadComponents();
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Analytics tracking for phone clicks - optimized
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      });
+    }
+  }, []);
+
+  const microSAASServices = [
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
     {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
@@ -94,6 +168,7 @@ const HomePage = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
@@ -109,6 +184,87 @@ const HomePage = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
+=======
+    <ErrorBoundary>
+      <EnhancedSEO
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        canonicalUrl="https://ziontechgroup.com"
+        ogImage="/images/og-image.jpg"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'TechCompany',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          services: [
+            'AI Solutions',
+            'Quantum Computing',
+            'Autonomous Systems',
+            'Digital Transformation',
+            'Cloud Services',
+            'Automation',
+            'Business Intelligence'
+          ],
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en'
+          },
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+            addressCountry: 'US'
+          }
+        }}
+      />
+      <PerformanceOptimizer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enableCodeSplitting={true}
+        enablePrefetching={true}
+      />
+      <PerformanceEnhancer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enablePrefetching={true}
+        enableResourceHints={true}
+      />
+      <AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReader={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+      />
+      <EnhancedAccessibility
+        enableKeyboardNavigation={true}
+        enableScreenReader={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+        enableSkipLinks={true}
+        enableAriaLabels={true}
+      />
+      <SecurityEnhancer
+        enableCSP={true}
+        enableHSTS={true}
+        enableXSSProtection={true}
+        enableClickjackingProtection={true}
+      />
+      <Analytics />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+        {/* Navigation */}
+        <Navigation />
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
@@ -161,6 +317,7 @@ const HomePage = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -180,6 +337,28 @@ const HomePage = () => {
                 to={feature.link}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                 aria-label={`Learn more about ${feature.title}`}
+=======
+        {/* Content Promotion Banner */}
+        <Suspense fallback={<LoadingSpinner size="md" text="Loading content..." />}>
+          <ContentPromotionBanner />
+        </Suspense>
+
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+          {/* Hero Section */}
+          <section
+            className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+              isLoaded && isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+            aria-labelledby="hero-heading"
+          >
+            <div className="max-w-6xl mx-auto">
+              <h1 
+                id="hero-heading" 
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
+                data-text="Zion Tech Group"
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
               >
                 <div
                   className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
@@ -304,6 +483,7 @@ const HomePage = () => {
               <h3 className="text-white font-semibold mb-2">Email</h3>
               <p className="text-cyan-400">kleber@ziontechgroup.com</p>
             </div>
+<<<<<<< HEAD
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Smartphone className="w-6 h-6 text-white" />
@@ -339,6 +519,14 @@ const HomePage = () => {
         </div>
       </section>
     </div>
+=======
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    </ErrorBoundary>
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
   );
 };
 

@@ -1,18 +1,36 @@
+<<<<<<< HEAD
 export default PerformanceDashboard;
+=======
+'use client';
+import React, { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
+<<<<<<< HEAD
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
   [key: string]: number;
     fps: 0;
+=======
+}
+const PerformanceDashboard: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
   });
   const [isVisible, setIsVisible] = useState(false);
       )[0] as PerformanceNavigationTiming;
         : 0;
+<<<<<<< HEAD
       // Measure render time;
       const renderStart = performance.now();
 const renderTime = performance.now() - renderStart;
@@ -24,6 +42,26 @@ const renderTime = performance.now() - renderStart;
       let fps = 0;
         let lastTime = performance.now();
         let frameCount = 0;
+=======
+      
+      // Measure render time
+      const renderStart = performance.now();
+      const renderTime = performance.now() - renderStart;
+      
+      // Measure memory usage
+      let memoryUsage = 0;
+      if ('memory' in performance) {
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        memoryUsage = memory?.usedJSHeapSize || 0;
+      }
+      
+      // Measure FPS (simplified)
+      let fps = 0;
+      if ('requestAnimationFrame' in window) {
+        let lastTime = performance.now();
+        let frameCount = 0;
+        const measureFPS = (currentTime: number) => {
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
           frameCount++;
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
@@ -31,13 +69,30 @@ const renderTime = performance.now() - renderStart;
           requestAnimationFrame(measureFPS);
         };
         requestAnimationFrame(measureFPS);
+<<<<<<< HEAD
         fps;
+=======
+      }
+      
+      setMetrics({
+        loadTime,
+        renderTime,
+        memoryUsage,
+        fps
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
       });
     };
+    
     updateMetrics();
+<<<<<<< HEAD
     // Update metrics every 5 seconds;
     const interval = setInterval(updateMetrics, 5000);
  clearInterval(interval);
+=======
+    // Update metrics every 5 seconds
+    const interval = setInterval(updateMetrics, 5000);
+    return () => clearInterval(interval);
+>>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
   }, []);
  setIsVisible(true)}
         className = "fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors";
