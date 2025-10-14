@@ -11,9 +11,11 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
+          </div>
         </div>
       </Router>
     </HelmetProvider>
   );
 }
+
 export default App;

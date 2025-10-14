@@ -20,7 +20,9 @@ export const errorLogger = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-
+        description: _error.message,
+        fatal: false,
+        custom_parameters: context;
       });
         description: error.message,
         fatal: false;

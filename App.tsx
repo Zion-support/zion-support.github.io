@@ -5,13 +5,12 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import { AnalyticsProvider } from './app/contexts/AnalyticsContext.tsx';
-// import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-// import EnhancedSEO from './app/components/EnhancedSEO';
-// import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-// import ErrorBoundary from './app/components/ErrorBoundary';
-// import LoadingStates from './app/components/LoadingStates';
-
+import { AnalyticsProvider } from './app/components/AnalyticsProvider';
+import LoadingSpinner from './app/components/LoadingSpinner';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import SEOOptimizer from './app/components/SEOOptimizer';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';
 import EnhancedAnalytics from './app/components/EnhancedAnalytics';
@@ -111,29 +110,31 @@ const App: React.FC = () => {
                 }
               }}
             />
-            <MetaManager />
+            <MetaManager>
+              <EnhancedAnalytics>
+                <Router>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <Navigation />
+                    <main className="relative z-10" id="main-content" role="main">
+                      <Suspense fallback={<div>Loading...</div>}>
+                        <Routes>
+                          <Route path="/" element={<HomePage />} />
+                          <Route path="/about" element={<AboutPage />} />
+                          <Route path="/services" element={<ServicesPage />} />
+                          <Route path="/contact" element={<ContactPage />} />
+                        </Routes>
+                      </Suspense>
+                    </main>
+                    <Footer />
+                  </div>
+                </Router>
+              </EnhancedAnalytics>
+            </MetaManager>
             <PerformanceMonitor />
-            <EnhancedAnalytics />
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <Navigation />
-                <main className="relative z-10" id="main-content" role="main">
-                  <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />
-              </div>
-            </Router>
-          </PerformanceOptimizer>
-        </AnalyticsProvider>
-      </HelmetProvider>
-    </ErrorBoundary>
+        </PerformanceOptimizer>
+      </AnalyticsProvider>
+    </HelmetProvider>
+  </ErrorBoundary>
   );
 };
 

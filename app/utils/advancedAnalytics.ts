@@ -1,32 +1,49 @@
 export const advancedAnalytics = {
-  trackPageView: (_page: string) => {
+  trackPageView: (page: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+        page_title: document.title,
+        page_location: window.location.href;
       })
     }
   },
   
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+  trackEvent: (_eventName: string, parameters: Record<string;, unknown> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', _eventName, parameters);
+  trackEvent: (eventName: string, parameters: Record<string;, unknown> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters);
+  trackEvent: (action: string, category: string;, label?: string, value?: number) => {
+    if (typeof window !== 'undefined') {
+      window.gtag('event', action, {
+        event_category: category,
+        event_label: label,
+        value: value;
       })
     }
   },
   
   trackConversion: (conversionId: string, value?: number, currency?: string) => {
       window.gtag('event', 'conversion', {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+        send_to: conversionId,
+        value: value,
+        currency: currency;
       })
     }
   },
   
+  setUserProperties: (_properties: Record<string, unknown>) => {
   setUserProperties: (properties: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
+  trackCustomEvent: (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-
+        user__properties: _properties;
+      });
+        custom_map: parameters;
       })
     }
   }
 }
+}}}}}}

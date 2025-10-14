@@ -2,18 +2,25 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
-  title: string;
-  description: string;
-  keywords?: string[];
-  type?: string;
-  structuredData?: Record<string, unknown>;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  children?: React.ReactNode;
 }
+
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
   description,
-  keywords = [],
-  type = 'website',
-  structuredData
+  keywords,
+  canonical,
+  ogImage,
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  children
 }) => {
   return (
     <Helmet>
@@ -32,4 +39,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       )}
   </Helmet>);
 };
+
 export default SEOEnhancer;

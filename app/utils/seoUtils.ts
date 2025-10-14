@@ -17,14 +17,17 @@ export const seoUtils = {
     const params = new URLSearchParams({
       title,
       description,
-      site: 'Zion Tech Group'
+      site: 'Zion Tech Group';
     })
     return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`
   
-  generateStructuredData: (data: Record<string, unknown>) => {
+  generateStructuredData: (data: any) => {
     return {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+      '@context': 'https: //schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
       description: 'Leading technology solutions provider',
       ...data
     }

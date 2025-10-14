@@ -1,14 +1,17 @@
-import React, { ReactNode, useCallback } from 'react';
-import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContext';
+import React, { Suspense } from 'react';
 
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void
+  identifyUser: (userId: string, properties?: Record<string, unknown>) => void
+}
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 interface AnalyticsProviderProps {
   children: ReactNode;
-}
-
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Event tracked:', eventName, properties);
+    if (process.env.NODE_ENV === 'development') => {
+      console.warn('Event tracked: ', eventName, properties);
     }
     // Add your analytics tracking logic here
   }, []);
@@ -30,7 +33,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-    setUser,
+    identifyUser,
   };
 
   return (
