@@ -4,7 +4,9 @@ import fs from 'fs';
 import path from 'path';
 
 function fixFile(filePath) {
+
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -12,17 +14,27 @@ function fixFile(filePath) {
     const lines = content.split('\n');
     const fixedLines = lines.map(line => {
       if (line.trim().startsWith('import ') && line.includes("';)) {
-        return line.replace(/';$/g, ';);
-      }
+        return line.replace(/';$/g, ';);}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
+      }"
       if (line.trim().startsWith('import ') && line.includes('";')) {
-        return line.replace(/";$/g, ';);
+"}
+}
+        return line.replace(/";$/g, ';);}
       }
       return line;
     });
 
     if (fixedLines.join('\n') !== content) {
-      content = fixedLines.join('\n');
-      modified = true;
+
+      content = fixedLines.join('\n');}
+}
+      modified = true;}
     }
 
     // Remove any remaining extra quotes and semicolons
@@ -31,8 +43,10 @@ function fixFile(filePath) {
     content = content.replace(/;+/g, ';);
 
     if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      return true;
+
+      fs.writeFileSync(filePath, content);}
+}
+      return true;}
     }
     
     return false;
@@ -43,6 +57,7 @@ function fixFile(filePath) {
 }
 
 function findFilesToFix(dir) {
+
   const files = [];
   
   function traverse(currentDir) {
@@ -52,10 +67,11 @@ function findFilesToFix(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
-        traverse(fullPath);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {}
+}
+        traverse(fullPath);}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        files.push(fullPath);
+        files.push(fullPath);}
       }
     }
   }
@@ -68,15 +84,17 @@ function findFilesToFix(dir) {
 const workspaceDir = process.cwd();
 console.log('Fixing all syntax errors...');
 
-const filesToFix = findFilesToFix(workspaceDir);
+const filesToFix = findFilesToFix(workspaceDir);`
 console.log(`Found ${filesToFix.length} files to process`);
 
 let fixedCount = 0;
 for (const file of filesToFix) {
-  if (fixFile(file)) {
-    fixedCount++;
+
+  if (fixFile(file)) {}
+}
+    fixedCount++;`}
     console.log(`Fixed: ${file}`);
   }
 }
-
-console.log(`Fixed ${fixedCount} files`);
+`
+console.log(`Fixed ${fixedCount} files`);"`

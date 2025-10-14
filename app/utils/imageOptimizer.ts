@@ -1,9 +1,12 @@
 export interface ImageOptimizationOptions {
+
   width?: number;
-  height?: number;
-  quality?: number;
-  format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  lazy?: boolean;
+  height?: number;}
+}
+  quality?: number;}
+}
+  format?: 'webp' | 'avif' | 'jpeg' | 'png';}
+  lazy?: boolean;}
 }
 
 export const optimizeImage = (
@@ -27,8 +30,8 @@ export const optimizeImage = (
 export const generateResponsiveImages = (
   src: string,
   sizes: number[] = [320, 640, 768, 1024, 1280, 1920];
-): string => {
-  return sizes;
+): string => {`}
+  return sizes;`}`
     .map(size => `${optimizeImage(src, { width: size })} ${size}w`)
-    .join(', ');
-};
+    .join(', ');`
+};``

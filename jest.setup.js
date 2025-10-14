@@ -3,6 +3,7 @@ import React from 'react';
 
 // Mock react-router-dom
 jest.mock('react-router-dom', () => {
+
   const actual = jest.requireActual('react-router-dom');
   return {
     ...actual,
@@ -10,8 +11,9 @@ jest.mock('react-router-dom', () => {
       pathname: '/',
       search: '',
       hash: '',
-      state: null,
-      key: 'default'
+      state: null,}
+}
+      key: 'default'}
     }),
 
     useNavigate: () => jest.fn(),    Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
@@ -24,14 +26,16 @@ jest.mock('react-router-dom', () => {
 // Suppress console warnings
 const originalError = console.error;
 beforeAll(() => {
+
   console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
-      return;
+    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {}
+}
+      return;}
     }
     originalError.call(console, ...args);
   };
 });
 
 afterAll(() => {
-  console.error = originalError;
-});
+  console.error = originalError;}
+})

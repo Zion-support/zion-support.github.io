@@ -2,7 +2,8 @@ import fs from 'fs;
 import path from 'path;
 import { execSync } from 'child_process;
 #!/usr/bin// Fixed regex;
-    const result = execSync('npx tsc --noEmit --skipLibCheck 2>&1', { encoding: 'utf8'';
+    const result = execSync('npx tsc --noEmit --skipLibCheck 2>&1', {
+ encoding: 'utf8'';
   console.error('Error:'';
     const lines = output.split('\n'';
   console.error('Error:'';
@@ -15,5 +16,6 @@ console.log('\nRunning final syntax check...'';
   console.log('✅ TypeScript syntax check passed - All errors fixed!'';
   console.log('❌ TypeScript syntax check still has issues'';
   const errorLines = errorOutput.split('\n').filter(line => line.includes('error TS'';
-  console.log('Remaining errors:'';
-console.log('\nAll remaining corrupted files fix complete!'';
+  console.log('Remaining errors:'';}
+}
+console.log('\nAll remaining corrupted files fix complete!'';}

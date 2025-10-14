@@ -1,4 +1,5 @@
 export interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -6,18 +7,22 @@ export interface Service {
   category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';
   icon: string;
   features: string[];
-  pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number;
+  pricing: {}
+}
+    basic: number;}
+}
+    pro: number;}
+    enterprise: number;}
   };
   benefits: string[];
   useCases: string[];
   technologies: string[];
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
+}
+    phone: string;}
+}
+    email: string;}
+    website: string;}
   };
   href: string;
   glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
@@ -26,6 +31,7 @@ export interface Service {
 export const services: Service[] = [
   // AI Services
   {
+
     id: 'ai-chatbot-enterprise',
     title: 'AI Enterprise Chatbot Platform',
     description: 'Advanced conversational AI platform with natural language processing, multi-language support, and seamless integration with existing business systems.',
@@ -42,10 +48,12 @@ export const services: Service[] = [
       'API Integration (REST, GraphQL)',
       '24/7 Customer Support'
     ],
-    pricing: {
-      basic: 299,
-      pro: 799,
-      enterprise: 2499
+    pricing: {}
+}
+      basic: 299,}
+}
+      pro: 799,}
+      enterprise: 2499}
     },
     benefits: [
       'Reduce customer support costs by 60%',
@@ -63,14 +71,17 @@ export const services: Service[] = [
     ],
     technologies: ['OpenAI GPT-4', 'TensorFlow', 'Python', 'React', 'Node.js', 'MongoDB'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-chatbot-enterprise'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/ai-chatbot-enterprise'}
     },
     href: '/ai-chatbot-enterprise',
     glowColor: 'purple'
   },
   {
+
     id: 'ai-content-generation-pro',
     title: 'AI Content Generation Pro',
     description: 'Revolutionary AI-powered content creation platform that generates high-quality articles, marketing copy, social media posts, and technical documentation.',
@@ -87,10 +98,12 @@ export const services: Service[] = [
       'Brand Voice Customization',
       'Plagiarism Detection'
     ],
-    pricing: {
-      basic: 199,
-      pro: 499,
-      enterprise: 1299
+    pricing: {}
+}
+      basic: 199,}
+}
+      pro: 499,}
+      enterprise: 1299}
     },
     benefits: [
       'Save 80% of content creation time',
@@ -108,14 +121,17 @@ export const services: Service[] = [
     ],
     technologies: ['GPT-4', 'BERT', 'Python', 'FastAPI', 'React', 'PostgreSQL'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-content-generation-pro'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/ai-content-generation-pro'}
     },
     href: '/ai-content-generation-pro',
     glowColor: 'cyan'
   },
   {
+
     id: 'ai-data-analytics-pro',
     title: 'AI Data Analytics Pro',
     description: 'Advanced AI-powered data analytics platform that provides real-time insights, predictive analytics, and automated reporting for business intelligence.',
@@ -132,10 +148,12 @@ export const services: Service[] = [
       'Custom Metrics & KPIs',
       'API Integration'
     ],
-    pricing: {
-      basic: 399,
-      pro: 999,
-      enterprise: 2999
+    pricing: {}
+}
+      basic: 399,}
+}
+      pro: 999,}
+      enterprise: 2999}
     },
     benefits: [
       'Make data-driven decisions faster',
@@ -153,9 +171,11 @@ export const services: Service[] = [
     ],
     technologies: ['Python', 'TensorFlow', 'Apache Spark', 'React', 'D3.js', 'PostgreSQL'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-data-analytics-pro'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/ai-data-analytics-pro'}
     },
     href: '/ai-data-analytics-pro',
     glowColor: 'green'
@@ -163,6 +183,7 @@ export const services: Service[] = [
 
   // Micro SaaS Services
   {
+
     id: 'project-management-saas',
     title: 'Project Management SaaS',
     description: 'Comprehensive project management platform with task tracking, team collaboration, time tracking, and advanced reporting capabilities.',
@@ -179,10 +200,12 @@ export const services: Service[] = [
       'Mobile App Access',
       'Integration with 100+ tools'
     ],
-    pricing: {
-      basic: 99,
-      pro: 299,
-      enterprise: 799
+    pricing: {}
+}
+      basic: 99,}
+}
+      pro: 299,}
+      enterprise: 799}
     },
     benefits: [
       'Increase team productivity by 40%',
@@ -200,14 +223,17 @@ export const services: Service[] = [
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'Redis', 'AWS'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/project-management-saas'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/project-management-saas'}
     },
     href: '/project-management-saas',
     glowColor: 'blue'
   },
   {
+
     id: 'crm-saas-platform',
     title: 'CRM SaaS Platform',
     description: 'Advanced Customer Relationship Management platform with lead tracking, sales pipeline management, and customer communication tools.',
@@ -224,10 +250,12 @@ export const services: Service[] = [
       'Mobile App Access',
       'API Integration'
     ],
-    pricing: {
-      basic: 149,
-      pro: 399,
-      enterprise: 999
+    pricing: {}
+}
+      basic: 149,}
+}
+      pro: 399,}
+      enterprise: 999}
     },
     benefits: [
       'Increase sales conversion by 35%',
@@ -245,14 +273,17 @@ export const services: Service[] = [
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'SendGrid', 'Stripe', 'AWS'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/crm-saas-platform'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/crm-saas-platform'}
     },
     href: '/crm-saas-platform',
     glowColor: 'pink'
   },
   {
+
     id: 'inventory-management-saas',
     title: 'Inventory Management SaaS',
     description: 'Comprehensive inventory management system with real-time tracking, automated reordering, and advanced analytics for businesses.',
@@ -269,10 +300,12 @@ export const services: Service[] = [
       'Mobile App Access',
       'API Integration'
     ],
-    pricing: {
-      basic: 199,
-      pro: 499,
-      enterprise: 1299
+    pricing: {}
+}
+      basic: 199,}
+}
+      pro: 499,}
+      enterprise: 1299}
     },
     benefits: [
       'Reduce inventory costs by 25%',
@@ -290,9 +323,11 @@ export const services: Service[] = [
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'Barcode Scanner API', 'AWS', 'Redis'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/inventory-management-saas'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/inventory-management-saas'}
     },
     href: '/inventory-management-saas',
     glowColor: 'yellow'
@@ -300,6 +335,7 @@ export const services: Service[] = [
 
   // IT Services
   {
+
     id: 'cloud-migration-service',
     title: 'Cloud Migration Service',
     description: 'Complete cloud migration service that helps businesses move their infrastructure, applications, and data to the cloud securely and efficiently.',
@@ -316,10 +352,12 @@ export const services: Service[] = [
       '24/7 Support & Monitoring',
       'Cost Optimization'
     ],
-    pricing: {
-      basic: 5000,
-      pro: 15000,
-      enterprise: 50000
+    pricing: {}
+}
+      basic: 5000,}
+}
+      pro: 15000,}
+      enterprise: 50000}
     },
     benefits: [
       'Reduce infrastructure costs by 40%',
@@ -337,14 +375,17 @@ export const services: Service[] = [
     ],
     technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/cloud-migration-service'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/cloud-migration-service'}
     },
     href: '/cloud-migration-service',
     glowColor: 'cyan'
   },
   {
+
     id: 'cybersecurity-suite-pro',
     title: 'Cybersecurity Suite Pro',
     description: 'Comprehensive cybersecurity solution providing advanced threat protection, security monitoring, and compliance management for businesses.',
@@ -361,10 +402,12 @@ export const services: Service[] = [
       'Incident Response',
       'Security Analytics'
     ],
-    pricing: {
-      basic: 999,
-      pro: 2499,
-      enterprise: 5999
+    pricing: {}
+}
+      basic: 999,}
+}
+      pro: 2499,}
+      enterprise: 5999}
     },
     benefits: [
       'Protect against 99.9% of threats',
@@ -382,14 +425,17 @@ export const services: Service[] = [
     ],
     technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption', 'AI/ML'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/cybersecurity-suite-pro'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/cybersecurity-suite-pro'}
     },
     href: '/cybersecurity-suite-pro',
     glowColor: 'purple'
   },
   {
+
     id: '5g-network-solutions',
     title: '5G Network Solutions',
     description: 'Complete 5G network implementation and optimization services for businesses looking to leverage next-generation connectivity.',
@@ -406,10 +452,12 @@ export const services: Service[] = [
       'Security Implementation',
       '24/7 Support'
     ],
-    pricing: {
-      basic: 10000,
-      pro: 25000,
-      enterprise: 75000
+    pricing: {}
+}
+      basic: 10000,}
+}
+      pro: 25000,}
+      enterprise: 75000}
     },
     benefits: [
       'Ultra-fast connectivity',
@@ -427,9 +475,11 @@ export const services: Service[] = [
     ],
     technologies: ['5G NR', 'Edge Computing', 'IoT', 'AI/ML', 'Cloud Computing', 'SDN'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/5g-network-solutions'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/5g-network-solutions'}
     },
     href: '/5g-network-solutions',
     glowColor: 'green'
@@ -437,6 +487,7 @@ export const services: Service[] = [
 
   // Blockchain Services
   {
+
     id: 'blockchain-development',
     title: 'Blockchain Development',
     description: 'Custom blockchain solutions including smart contracts, DeFi applications, NFT platforms, and enterprise blockchain integration.',
@@ -453,10 +504,12 @@ export const services: Service[] = [
       'Token Economics Design',
       'DApp Development'
     ],
-    pricing: {
-      basic: 15000,
-      pro: 35000,
-      enterprise: 75000
+    pricing: {}
+}
+      basic: 15000,}
+}
+      pro: 35000,}
+      enterprise: 75000}
     },
     benefits: [
       'Decentralized and secure solutions',
@@ -474,9 +527,11 @@ export const services: Service[] = [
     ],
     technologies: ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'React', 'Node.js'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/blockchain-development'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/blockchain-development'}
     },
     href: '/blockchain-development',
     glowColor: 'blue'
@@ -484,6 +539,7 @@ export const services: Service[] = [
 
   // IoT Services
   {
+
     id: 'iot-platform-solution',
     title: 'IoT Platform Solution',
     description: 'Complete IoT platform for device management, data collection, real-time monitoring, and analytics for connected devices.',
@@ -500,10 +556,12 @@ export const services: Service[] = [
       'Mobile App Access',
       'Cloud Storage'
     ],
-    pricing: {
-      basic: 799,
-      pro: 1999,
-      enterprise: 4999
+    pricing: {}
+}
+      basic: 799,}
+}
+      pro: 1999,}
+      enterprise: 4999}
     },
     benefits: [
       'Centralized device management',
@@ -521,9 +579,11 @@ export const services: Service[] = [
     ],
     technologies: ['MQTT', 'CoAP', 'REST APIs', 'React', 'Node.js', 'MongoDB'],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/iot-platform-solution'
+}
+      phone: '+1-302-464-0950',}
+}
+      email: 'kleber@ziontechgroup.com',}
+      website: 'https://ziontechgroup.com/iot-platform-solution'}
     },
     href: '/iot-platform-solution',
     glowColor: 'yellow'
@@ -531,9 +591,9 @@ export const services: Service[] = [
 ];
 
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category);
+  return services.filter(service => service.category === category);}
 };
 
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id);
-};
+  return services.find(service => service.id === id);}
+}

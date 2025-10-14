@@ -5,7 +5,7 @@ import path from 'path;
       if (!importStatement.includes(';
   console.error('Error:'';
     content = content.replace(/'use client'';
-      if (value.includes('"') && !value.includes("'';
+      if (value.includes('"') && !value.includes("'';"
         if (!value.startsWith('"') || !value.endsWith('';
-      if (!match.includes('';
-      if (expr.includes('"') && !expr.includes("'';
+      if (!match.includes('';"
+      if (expr.includes('"') && !expr.includes("'';"

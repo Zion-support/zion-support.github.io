@@ -5,7 +5,9 @@ import path from 'path';
 
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
+
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
@@ -19,7 +21,13 @@ function fixMergeConflicts(filePath) {
     
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8');
-    return true;
+    return true;}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
@@ -28,6 +36,7 @@ function fixMergeConflicts(filePath) {
 
 // Function to recursively find and fix merge conflicts
 function fixAllMergeConflicts(dir) {
+
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
@@ -37,12 +46,15 @@ function fixAllMergeConflicts(dir) {
     
     if (stat.isDirectory()) {
       // Skip node_modules and other directories
-      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        fixedCount += fixAllMergeConflicts(filePath);
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {}
+}
+        fixedCount += fixAllMergeConflicts(filePath);}
       }
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
-      if (fixMergeConflicts(filePath)) {
-        fixedCount++;
+
+      if (fixMergeConflicts(filePath)) {}
+}
+        fixedCount++;}
       }
     }
   }
@@ -52,5 +64,5 @@ function fixAllMergeConflicts(dir) {
 
 // Main execution
 console.log('Starting merge conflict resolution...');
-const fixedCount = fixAllMergeConflicts(process.cwd());
-console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+const fixedCount = fixAllMergeConflicts(process.cwd());`
+console.log(`Fixed merge conflicts in ${fixedCount} files.`);`

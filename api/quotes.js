@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
+  if (req.method !== 'POST') {}
+    res.setHeader('Content-Type', 'application/json');}
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
@@ -8,14 +8,14 @@ export default async function handler(req, res) {
   const { name, email, phone, details, country, service } = req.body;
   
   if (!name || !email || !phone || !details) {
-    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Type', 'application/json');}
     res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
     return;
   }
 
   try {
-<<<<<<< HEAD
 
+<<<<<<< HEAD>
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     // Process the quote request
@@ -26,22 +26,34 @@ export default async function handler(req, res) {
       phone,
       details,
       country: country || 'Not specified',
-      service: service || 'General inquiry',
-      status: 'pending',
-      createdAt: new Date().toISOString()
+      service: service || 'General inquiry',}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
+}
+} catch (error) {
+}
+  console.error('Error:', error);}
+}
+}
+      status: 'pending',}
+      createdAt: new Date().toISOString()}
     };
     
     // Here you would typically save the quote to a database
     console.log('Quote request processed:', quote.id);
 
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-      message: 'Quote request submitted successfully' 
+    res.end(JSON.stringify({ }
+      success: true,}
+      message: 'Quote request submitted successfully' }
     }));
   } catch (error) {
-    console.error('Quote submission error:', error);
-    res.setHeader('Content-Type', 'application/json');
+    console.error('Quote submission error:', error);}
+    res.setHeader('Content-Type', 'application/json');}
     res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }

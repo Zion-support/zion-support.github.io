@@ -8,6 +8,7 @@ console.log('🔧 Starting comprehensive error fixing process...');
 
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
+
   const files = [];
   
   function searchDirectory(currentDir) {
@@ -19,19 +20,28 @@ function findFilesWithConflicts(dir) {
       
       if (stat.isDirectory()) {
         // Skip node_modules, .git, dist, etc.
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-          searchDirectory(fullPath);
+        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {}
+}
+          searchDirectory(fullPath);}
         }
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
+
         try {
+
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('') || content.includes('      // For most cases, prefer the HEAD content (current branch)
-      return headContent.trim();
+      return headContent.trim();}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
     });
     
     // Fix unterminated string literals
-    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
+    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");"
+    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");"
     content = content.replace(/'use client';/g, "'use client';");
     
     // Fix malformed JSX
@@ -43,7 +53,8 @@ function findFilesWithConflicts(dir) {
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
     
     // Fix common syntax errors
-    content = content.replace(/export default function ([^   {]+)\s*{/g, 'export default function $1    {');
+    content = content.replace(/export default function ([^   {
+]+)\s*{/g, 'export default function $1    {');
     content = content.replace(/return \(\s*<>/g, 'return (\n    <>');
     content = content.replace(/;\s*<\/>;/g, '\n    </>');
     content = content.replace(/;\s*\);/g, '\n  );');
@@ -53,27 +64,30 @@ function findFilesWithConflicts(dir) {
     const reactImportLines = lines.filter(line => line.trim().startsWith('import React'));
     if (reactImportLines.length > 1) {
       const firstReactImport = reactImportLines[0];
-      content = content.replace(/import React[^;]+;/g, '');
-      content = firstReactImport + '\n' + content;
+      content = content.replace(/import React[^;]+;/g, '');}
+}
+      content = firstReactImport + '\n' + content;}
     }
     
     // Fix test file issues
     if (filePath.includes('.test.') || filePath.includes('__tests__')) {
+
       content = content.replace(/describe\(/g, '// describe(');
       content = content.replace(/test\(/g, '// test(');
       content = content.replace(/it\(/g, '// it(');
-      content = content.replace(/expect\(/g, '// expect(');
-      content = content.replace(/beforeEach\(/g, '// beforeEach(');
+      content = content.replace(/expect\(/g, '// expect(');}
+}
+      content = content.replace(/beforeEach\(/g, '// beforeEach(');}
     }
     
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, 'utf8');}
       console.log(`✅ Fixed merge conflicts in: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {`}
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -81,7 +95,9 @@ function findFilesWithConflicts(dir) {
 
 // Function to fix unterminated string literals
 function fixUnterminatedStrings(filePath) {
+
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
@@ -89,16 +105,24 @@ function fixUnterminatedStrings(filePath) {
     const lines = content.split('\n');
     const fixedLines = [];
     
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {>
       let line = lines[i];
       
-      // Fix unterminated string literals
-      if (line.includes("import React from 'react';'react;/, "import React from 'react';");
-      }
+      // Fix unterminated string literals"
+      if (line.includes("import React from 'react';'react;/, "import React from 'react';");}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
+      }"
       if (line.includes("import { Helmet } from 'react-helmet-async';'react-helmet-async;/, "import { Helmet } from 'react-helmet-async';");
-      }
+      }"
       if (line.includes("'use client';")) {
-        line = line.replace(/'use client';/, "'use client';");
+"}
+}
+        line = line.replace(/'use client';/, "'use client';");}
       }
       
       // Fix malformed JSX syntax
@@ -115,13 +139,13 @@ function fixUnterminatedStrings(filePath) {
     const fixedContent = fixedLines.join('\n');
     
     if (fixedContent !== originalContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      fs.writeFileSync(filePath, fixedContent, 'utf8');`}
       console.log(`✅ Fixed unterminated strings in: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {`}
     console.error(`❌ Error fixing strings in ${filePath}:`, error.message);
     return false;
   }
@@ -129,16 +153,20 @@ function fixUnterminatedStrings(filePath) {
 
 // Main execution
 async function main() {
-  console.log('🔍 Searching for files with merge conflicts...');
-  const conflictFiles = findFilesWithConflicts('.');
+
+  console.log('🔍 Searching for files with merge conflicts...');}
+}
+  const conflictFiles = findFilesWithConflicts('.');`}
   console.log(`Found ${conflictFiles.length} files with merge conflicts`);
   
   let fixedCount = 0;
   
   // Fix merge conflicts
   for (const file of conflictFiles) {
-    if (fixMergeConflicts(file)) {
-      fixedCount++;
+
+    if (fixMergeConflicts(file)) {}
+}
+      fixedCount++;}
     }
   }
   
@@ -147,15 +175,17 @@ async function main() {
   const allTsFiles = [];
   
   function findTsFiles(dir) {
+
     const items = fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-        findTsFiles(fullPath);
+      if (stat.isDirectory() && !['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {}
+}
+        findTsFiles(fullPath);}
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        allTsFiles.push(fullPath);
+        allTsFiles.push(fullPath);}
       }
     }
   }
@@ -163,32 +193,48 @@ async function main() {
   findTsFiles('.');
   
   for (const file of allTsFiles) {
-    if (fixUnterminatedStrings(file)) {
-      fixedCount++;
+
+    if (fixUnterminatedStrings(file)) {}
+}
+      fixedCount++;}
     }
   }
-  
+  `
   console.log(`✅ Fixed ${fixedCount} files`);
   
   // Run linting to check remaining issues
   console.log('🔍 Running linting to check remaining issues...');
   try {
-    execSync('pnpm run lint', { stdio: 'inherit' });
+
+    execSync('pnpm run lint', { stdio: 'inherit' }
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+});
     console.log('✅ Linting passed!');
   } catch (error) {
-    console.log('⚠️  Some linting issues remain, but major conflicts should be resolved');
+    console.log('⚠️  Some linting issues remain, but major conflicts should be resolved');}
   }
   
   // Run type checking
   console.log('🔍 Running type checking...');
   try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
+
+    execSync('pnpm run type-check', { stdio: 'inherit' }
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+});
     console.log('✅ Type checking passed!');
   } catch (error) {
-    console.log('⚠️  Some type issues remain, but major conflicts should be resolved');
+    console.log('⚠️  Some type issues remain, but major conflicts should be resolved');}
   }
   
   console.log('🎉 Error fixing process completed!');
 }
 
-main().catch(console.error);
+main().catch(console.error);"`

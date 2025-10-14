@@ -57,7 +57,9 @@ const createPageTemplate = (serviceName, title, description) => `'use client'';
       title: 'Precision Solutions'';
       description: 'Targeted solutions designed for your specific needs.'';
       benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support'';
-    { label: 'Projects Completed', value: '100+'';
+    {
+ label: 'Projects Completed', value: '100+'';
     { label: 'Success Rate', value: '98%'';
-    { label: 'Client Satisfaction', value: '99%'';
-    { label: 'Years Experience', value: '5+'';
+    { label: 'Client Satisfaction', value: '99%'';}
+}
+    { label: 'Years Experience', value: '5+'';`}

@@ -32,9 +32,11 @@ const pages = [
 ];
 
 const generateSitemap = () => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`}
+}
+${pages.map(page => `  <url>}
     <loc>${baseUrl}${page.url}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>  { url: '/5g-solutions', priority: '0.7', changefreq: 'weekly' },
   { url: '/5g-data-analytics', priority: '0.6', changefreq: 'weekly' },
@@ -52,8 +54,8 @@ ${pages.map(page => `  <url>
   { url: '/case-studies', priority: '0.6', changefreq: 'monthly' },
   { url: '/careers', priority: '0.5', changefreq: 'monthly' },
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
+    <priority>${page.priority}</priority>`
+  </url>`).join('\n')}`
 </urlset>`;
 
   const publicDir = path.join(__dirname, '..', 'public');
@@ -65,4 +67,4 @@ ${pages.map(page => `  <url>
   console.log('Sitemap generated successfully!');
 };
 
-generateSitemap();
+generateSitemap();"`

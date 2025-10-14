@@ -28,18 +28,18 @@ const _path = require('_path'';
       } else if (item.endsWith('.css'';
     const content = fs.readFileSync(componentPath, 'utf8'';
     let wcagLevel = 'A'';
-    if (content.includes('<img') && !content.includes('alt='';
+    if (content.includes('<img') && !content.includes('alt='';>
       issues.push('Missing alt attributes on images'';
       recommendations.push('Add descriptive alt attributes to all images'';
     const interactiveElements = ['button', 'input', 'select', 'textarea'';
       const regex = new RegExp(`<${element}(?![^>]*aria-label)`, 'g'';
-    if (content.includes('<div') && !content.includes('role='';
+    if (content.includes('<div') && !content.includes('role='';>
         issues.push('Consider adding role attributes to div elements'';
         recommendations.push('Add appropriate role attributes to div elements'';
     if (content.includes('useState') && !content.includes('useRef'';
       issues.push('Consider adding focus management for dynamic content'';
       recommendations.push('Implement focus management for better accessibility'';
-    if (content.includes('<main') && !content.includes('skip'';
+    if (content.includes('<main') && !content.includes('skip'';>
       issues.push('Missing skip navigation links'';
       recommendations.push('Add skip navigation links for keyboard users'';
     if (issues.some(issue => issue.includes('aria-label') || issue.includes('role'';
@@ -59,4 +59,4 @@ const _path = require('_path'';
     if (issues.includes('Missing aria-expanded on collapsible elements'';
       recommendations.push('Add aria-expanded to indicate collapsible state'';
     if (issues.includes('Consider adding aria-hidden to decorative elements'';
-      recommendations.push('';
+      recommendations.push('';`

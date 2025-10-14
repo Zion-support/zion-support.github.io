@@ -2,7 +2,9 @@ import fs from 'fs;
 import _path from '_path;
 #!/usr/bin/env node;
 function fixFile(filePath) {
+
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     let _modified = false;
 
@@ -15,41 +17,63 @@ function fixFile(filePath) {
       const trimmed = line.trim();
       if (!uniqueImports.has(trimmed)) {
         uniqueImports.add(trimmed);
-        fixedImports.push(line);
+        fixedImports.push(line);}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
       }
     }
 
     // Fix unused variables by prefixing with underscore;
     content = content.replace(/\b(_index|_error|_path|_files|_modified|_existingPages|_beforeEach|console|process|require|describe|test|render|expect|screen|it)\b/g, (match, p1) => {
-      if (p1 === '_index' && content.includes('_index) =>')) {';
-        return '_index';
+
+      if (p1 === '_index' && content.includes('_index) =>')) {';}
+}
+        return '_index';}
       }
-      if (p1 === '_error' && content.includes('catch (_error)')) {';
-        return '_error';
+      if (p1 === '_error' && content.includes('catch (_error)')) {
+';}
+}
+        return '_error';}
       }
-      if (p1 === '_path' && content.includes('const _path =')) {';
-        return '_path';
+      if (p1 === '_path' && content.includes('const _path =')) {
+';}
+}
+        return '_path';}
       }
-      if (p1 === '_files' && content.includes('const _files =')) {';
-        return '_files';
+      if (p1 === '_files' && content.includes('const _files =')) {
+';}
+}
+        return '_files';}
       }
-      if (p1 === '_modified' && content.includes('let _modified =')) {';
-        return '_modified';
+      if (p1 === '_modified' && content.includes('let _modified =')) {
+';}
+}
+        return '_modified';}
       }
-      if (p1 === '_existingPages' && content.includes('const _existingPages =')) {';
-        return '_existingPages';
+      if (p1 === '_existingPages' && content.includes('const _existingPages =')) {
+';}
+}
+        return '_existingPages';}
       }
-      if (p1 === '_beforeEach' && content.includes('_beforeEach')) {';
-        return '_beforeEach';
+      if (p1 === '_beforeEach' && content.includes('_beforeEach')) {
+';}
+}
+        return '_beforeEach';}
       }
       return match;
     });
 
     // Fix React import issues;
-    if (content.includes('React is not defined') || content.includes('React.')) {';
-      if (!content.includes("import React from 'react';) && !content.includes("import * as React from 'react';)) {';
-        content = "import React from 'react';\n" + content;
-        _modified = true;
+    if (content.includes('React is not defined') || content.includes('React.')) {
+';
+      if (!content.includes("import React from 'react';) && !content.includes("import * as React from 'react';)) {';"
+        content = "import React from 'react';\n" + content;}
+}
+        _modified = true;}
       }
     }
 
@@ -64,8 +88,10 @@ function fixFile(filePath) {
     content = content.replace(/<div\s+([^>]*?)\s*$/gm, '<div $1>');
     content = content.replace(/<p\s+([^>]*?)\s*$/gm, '<p $1>');
     // Fix unterminated strings;
-    content = content.replace(/'([^']*?)\s*$/gm, (match, str) => {';
-      if (!str.includes("'")) {';
+    content = content.replace(/'([^']*?)\s*$/gm, (match, str) => {
+';"}
+}
+      if (!str.includes("'")) {';`}
         return `'${str}'`;
       }
       return match;
@@ -74,47 +100,58 @@ function fixFile(filePath) {
     // Fix missing semicolons;
     content = content.replace(/([^;}])\s*$/gm, (match, char) => {
       if (char && !char.match(/[{}();,\s]/)) {
-        return char + ';
+        return char + ';}
       }
       return match;
     });
 
     // Fix globalThis.URLSearchParams issue;
-    if (content.includes('globalThis.URLSearchParams is not defined')) {';
-      content = content.replace(/globalThis.URLSearchParams/g, 'globalThis.globalThis.URLSearchParams');
+    if (content.includes('globalThis.URLSearchParams is not defined')) {
+';}
+}
+      content = content.replace(/globalThis.URLSearchParams/g, 'globalThis.globalThis.URLSearchParams');}
     }
 
     // Fix console issues in .cjs _files;
-    if (filePath.endsWith('.cjs')) {';
-      content = content.replace(/console\./g, 'global.console.');
+    if (filePath.endsWith('.cjs')) {
+';}
+}
+      content = content.replace(/console\./g, 'global.console.');}
     }
 
     // Fix require issues in .js _files;
-    if (filePath.endsWith('.js') && content.includes('require is not defined')) {';
-      content = content.replace(/require\(/g, 'global.global.require(');
+    if (filePath.endsWith('.js') && content.includes('require is not defined')) {
+';}
+}
+      content = content.replace(/require\(/g, 'global.global.require(');}
     }
 
     // Fix Jest globals;
-    if (filePath.includes('test') || filePath.includes('__tests__')) {';
+    if (filePath.includes('test') || filePath.includes('__tests__')) {
+';
       if (!content.includes('/* global describe, test, expect, it, _beforeEach */')) {';
-        content = '/* global describe, test, expect, it, _beforeEach */\n' + content;
-        _modified = true;
+        content = '/* global describe, test, expect, it, _beforeEach */\n' + content;}
+}
+        _modified = true;}
       }
     }
 
-    if (content !== fs.readFileSync(filePath, 'utf8')) {';
-      fs.writeFileSync(filePath, content);
-      return true;
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+';
+      fs.writeFileSync(filePath, content);}
+}
+      return true;}
     }
     
     return false;
-  } catch (_error) {
+  } catch (_error) {`}
     console._error(`Error fixing ${filePath}:`, _error.message);
     return false;
   }
 }
 
 function findFilesToFix(dir) {
+
   const _files = [];
   
   function traverse(currentDir) {
@@ -124,10 +161,13 @@ function findFilesToFix(dir) {
       const fullPath = _path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {';
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.cjs'))) {';
-        _files.push(fullPath);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {';}
+}
+        traverse(fullPath);}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.cjs'))) {
+';}
+}
+        _files.push(fullPath);}
       }
     }
   }
@@ -139,15 +179,17 @@ function findFilesToFix(dir) {
 // Main execution;
 const workspaceDir = process.cwd();
 console.log('Searching for _files to fix...');
-const filesToFix = findFilesToFix(workspaceDir);
+const filesToFix = findFilesToFix(workspaceDir);`
 console.log(`Found ${filesToFix.length} _files to process`);
 
 let fixedCount = 0;
 for (const file of filesToFix) {
-  if (fixFile(file)) {
-    fixedCount++;
+
+  if (fixFile(file)) {}
+}
+    fixedCount++;`}
     console.log(`Fixed: ${file}`);
   }
 }
-
-console.log(`Fixed ${fixedCount} _files`);
+`
+console.log(`Fixed ${fixedCount} _files`);"`

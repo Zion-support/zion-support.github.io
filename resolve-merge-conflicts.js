@@ -13,12 +13,14 @@ console.log('Starting merge conflict resolution...'';
         if (conflictType === 'head'';
         } else if (conflictType === 'separator'';
     fs.writeFileSync(filePath, result.join('\n'';
-    const output = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8'';
+    const output = execSync('git diff --name-only --diff-filter=U', {
+ encoding: 'utf8'';
   console.error('Error:'';
     return output.trim().split('\n'';
     console.error('Error finding conflicted files:'';
     console.log('No merge conflicts found.'';
   console.error('Error:'';
     execSync('git add .', { stdio: 'inherit'';
-    console.log('Staged resolved files'';
-  console.error('Error during merge conflict resolution:'';
+    console.log('Staged resolved files'';}
+}
+  console.error('Error during merge conflict resolution:'';}

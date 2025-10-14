@@ -6,7 +6,9 @@ import { execSync } from 'child_process';
 
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
+
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
@@ -20,7 +22,13 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/\n\n\n+/g, '\n\n');
     
     fs.writeFileSync(filePath, content);
-    return true;
+    return true;}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
@@ -29,6 +37,7 @@ function fixMergeConflicts(filePath) {
 
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
+
   const files = [];
   
   function walkDir(currentPath) {
@@ -38,16 +47,25 @@ function findFilesWithConflicts(dir) {
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walkDir(fullPath);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
+}
+        walkDir(fullPath);}
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
+
         try {
+
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('')) {
-            files.push(fullPath);
+            files.push(fullPath);}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
           }
         } catch (error) {
-          // Skip files that can't be read
+          // Skip files that can't be read}
         }
       }
     }
@@ -60,15 +78,17 @@ function findFilesWithConflicts(dir) {
 // Main execution
 console.log('🔍 Searching for files with merge conflicts...');
 const conflictedFiles = findFilesWithConflicts('/workspace');
-
+`
 console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 
 let fixedCount = 0;
 for (const file of conflictedFiles) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
+
+  if (fixMergeConflicts(file)) {}
+}
+    fixedCount++;}
   }
 }
-
+`
 console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
-console.log('🎉 All merge conflicts resolved!');
+console.log('🎉 All merge conflicts resolved!');`

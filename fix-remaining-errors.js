@@ -2,146 +2,204 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 
-console.log('🔧 Starting comprehensive remaining error fixing process...');
+// Function to fix remaining merge conflicts and syntax errors
+function fixFileErrors(filePath) {
 
-// Function to fix specific file patterns
-function fixFile(filePath) {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let modified = false;
+    
+    // Fix remaining merge conflict markers
+    const conflictPattern = /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+/gs;
+    content = content.replace(conflictPattern, (match, headContent, branchContent) => {
+      modified = true;
+      let cleaned = headContent
+        .replace(/;\s*$/, '')
+        .replace(/\s+$/, '')
+        .trim();
+      
+      if (!cleaned || cleaned === ';') {
+        const branchCleaned = branchContent
+          .replace(/;\s*$/, '')
+          .replace(/\s+$/, '')
+          .trim();
+        
+        if (branchCleaned && branchCleaned !== ';') {
+          cleaned = branchCleaned;}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
+        } else {
+          cleaned = 'Content';}
+        }
+      }
+      
+      return cleaned;
+    });
     
     // Fix unterminated string literals
-    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
+    content = content.replace(/"[^"]*$/gm, (match) => {
+
+      modified = true;"}
+}
+      return match + '"';}
+    });
     
-    // Fix malformed JSX
-    content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
-    content = content.replace(/<Helmet>/g, '<Helmet>');
-    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
-    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
-    content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
+    // Fix unterminated template literals
+    content = content.replace(/`[^`]*$/gm, (match) => {
+
+      modified = true;`}
+}
+      return match + '`';}
+    });
     
-    // Fix unterminated string constants
-    content = content.replace(/'use client';/g, "'use client';");
-    
-    // Fix malformed function declarations
-    content = content.replace(/export default function ([^  {]+)\s*{/g, 'export default function $1   {');
-    
-    // Fix missing closing parentheses
-    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\);/g, 'return (\n    <>\n$1\n    </>\n  );');
-    
-    // Fix test file issues by commenting out problematic lines
-    if (filePath.includes('.test.') || filePath.includes('__tests__') || filePath.includes('test')) {
-      content = content.replace(/^(describe|test|it|expect|beforeEach|afterEach|beforeAll|afterAll)\(/gm, '// $1(');
-    }
-    
-    // Fix duplicate React imports
-    const lines = content.split('\n');
-    const reactImports = lines.filter(line => line.trim().startsWith('import React'));
-    if (reactImports.length > 1) {
-      // Keep only the first React import
-      const firstReactImport = reactImports[0];
-      content = content.replace(/import React[^;]+;/g, '');
-      content = firstReactImport + '\n' + content;
-    }
-    
-    // Fix merge conflict markers
-    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    
-    // Fix specific syntax errors
-    content = content.replace(/;\s*\);/g, '\n  );');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
-    content = content.replace(/;\s*\);/g, '\n  );');
-    
-    // Fix malformed JSX in broken files
-    if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {
-      // For broken/disabled files, try to create a minimal valid structure
-      if (content.includes('import React from') && !content.includes('export default')) {
-        content = content.replace(/import React[^;]+;/g, '');
-        content = `import React from 'react';\n\nexport default function Page()   {\n  return (\n    <div>\n      <h1>Page Under Construction</h1>\n      <p>This page is currently being updated.</p>\n    </div>\n  );\n}`;
+    // Fix JSX syntax issues
+    content = content.replace(/<([^>]*?)\s*$/gm, (match, tagContent) => {
+
+      if (tagContent && !tagContent.includes('>') && !tagContent.includes('/')) {}
+}
+        modified = true;`}
+        return `<${tagContent}>`;
       }
-    }
+      return match;
+    });
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
+    // Fix missing closing tags
+    content = content.replace(/<span[^></span>]*>(?!.*<\/span>)/gm, (match) => {
+
+      modified = true;}
+}
+      return match + '</span>';}
+    });
+    
+    // Fix unterminated JSX expressions
+    content = content.replace(/\{[^}]*$/gm, (match) => {
+
+      if (match.length > 1) {}
+}
+        modified = true;}
+        return match + '}';
+      }
+      return match;
+    });
+    
+    // Fix common syntax errors
+    content = content
+      .replace(/;\s*$/, '') // Remove trailing semicolons
+      .replace(/\s+$/, '') // Remove trailing whitespace
+      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines
+      .replace(/,\s*$/, '') // Remove trailing commas
+      .replace(/{\s*$/, '{\n  // TODO: Add content\n}') // Fix empty objects
+      .trim();
+    
+    // Fix specific patterns
+    content = content
+      .replace(/export\s+default\s+function\s+Page\(\)\s*{
+\s*return\s*\(\s*<div[^>]*>\s*<h1[^>]*>\s*Page;\s*<\/h1>/g, "
+        'export default function Page() {\n  return (\n    <div className="min-h-screen bg-white">\n      <h1 className="text-4xl font-bold text-gray-900 mb-8">\n        Page\n      </h1>')
+      .replace(/export\s+default\s+function\s+NotFoundPage\(\)\s*{\s*return\s*\(\s*<div[^>]*>\s*<h1[^>]*>\s*404;\s*<\/h1>/g,"
+        'export default function NotFoundPage() {\n  return (\n    <div className="min-h-screen bg-white">\n      <h1 className="text-4xl font-bold text-gray-900 mb-8">\n        404 - Page Not Found\n      </h1>');
+    
+    if (modified) {}
+}
+      fs.writeFileSync(filePath, content, 'utf8');`}
+      console.log(`Fixed errors in: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+  } catch (error) {`}
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all problematic files
-function findProblematicFiles(dir) {
-  const files = [];
+// Function to recursively find and fix files
+function fixFilesInDirectory(dirPath) {
+
+  let fixedCount = 0;
   
-  function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  try {
+
+    const items = fs.readdirSync(dirPath);
     
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+      const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-          searchDirectory(fullPath);
+        // Skip node_modules and other irrelevant directories
+        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+          fixedCount += fixFilesInDirectory(fullPath);}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
         }
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('import React from \'react;') || 
-              content.includes('import { Helmet } from \'react-helmet-async;') ||
-              content.includes('<>') ||
-              content.includes('</>') ||
-              content.includes('') ||
-              content.includes('') ||
-              content.includes('>>>>>>>')) {
-            files.push(fullPath);
+      } else if (stat.isFile()) {
+
+        // Process TypeScript, JavaScript, and JSX files
+        if (/\.(tsx?|jsx?)$/.test(item)) {
+          if (fixFileErrors(fullPath)) {}
+}
+            fixedCount++;}
           }
-        } catch (err) {
-          // Skip files that can't be read
         }
       }
     }
+  } catch (error) {`}
+    console.error(`Error reading directory ${dirPath}:`, error.message);
   }
   
-  searchDirectory(dir);
-  return files;
+  return fixedCount;
 }
 
 // Main execution
-async function main() {
-  console.log('🔍 Finding problematic files...');
-  const problematicFiles = findProblematicFiles('.');
-  console.log(`Found ${problematicFiles.length} problematic files`);
-  
-  let fixedCount = 0;
-  
-  for (const file of problematicFiles) {
-    if (fixFile(file)) {
-      fixedCount++;
-    }
+console.log('Starting comprehensive error fixing...');
+
+// Fix files in the main directories
+const directories = [
+  '/workspace/app',
+  '/workspace/api',
+  '/workspace'
+];
+
+let totalFixed = 0;
+
+for (const dir of directories) {
+  if (fs.existsSync(dir)) {`}
+    console.log(`Processing directory: ${dir}`);
+    totalFixed += fixFilesInDirectory(dir);
   }
-  
-  console.log(`✅ Fixed ${fixedCount} files`);
-  
-  // Run a quick lint check on a few key files
-  console.log('🔍 Running quick validation...');
-  try {
-    execSync('pnpm run lint --max-warnings 10', { stdio: 'pipe' });
-    console.log('✅ Linting improved!');
-  } catch (error) {
-    console.log('⚠️  Some linting issues remain, but major problems should be resolved');
-  }
-  
-  console.log('🎉 Remaining error fixing process completed!');
 }
 
-main().catch(console.error);
+// Also fix specific problematic files
+const specificFiles = [
+  'SidebarNavigation.tsx',
+  'api/newsletter/subscribe.js',
+  'api/quotes.js',
+  'api/shipping-rates.js',
+  'api/subscribe.js',
+  'api/wallet.js'
+];
+
+for (const file of specificFiles) {
+
+  const filePath = path.join('/workspace', file);
+  if (fs.existsSync(filePath)) {
+    if (fixFileErrors(filePath)) {}
+}
+      totalFixed++;}
+    }
+  }
+}
+`
+console.log(`\nComprehensive error fixing complete!`);`
+console.log(`Total files fixed: ${totalFixed}`);"`

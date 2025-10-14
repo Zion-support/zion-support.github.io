@@ -1,5 +1,5 @@
 export const wait = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise(resolve => setTimeout(resolve, ms));}
 };
 
 export const waitFor = async (
@@ -7,11 +7,13 @@ export const waitFor = async (
   timeout = 5000,
   interval = 100
 ): Promise<void> => {
+
   const start = Date.now();
   
-  while (Date.now() - start < timeout) {
-    if (condition()) {
-      return;
+  while (Date.now() - start < timeout) {>
+    if (condition()) {}
+}
+      return;}
     }
     await wait(interval);
   }
@@ -20,25 +22,31 @@ export const waitFor = async (
 };
 
 export const mockFetch = (response: any) => {
+
   global.fetch = jest.fn(() =>
     Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve(response),
+      ok: true,}
+}
+      json: () => Promise.resolve(response),}
     })
   ) as jest.Mock;
 };
 
 export const createMockUser = (overrides = {}) => ({
+
   id: '1',
   name: 'Test User',
-  email: 'test@example.com',
-  ...overrides,
+  email: 'test@example.com',}
+}
+  ...overrides,}
 });
 
 export const createMockService = (overrides = {}) => ({
+
   id: '1',
   title: 'Test Service',
   description: 'Test Description',
-  price: 100,
-  ...overrides,
-});
+  price: 100,}
+}
+  ...overrides,}
+})

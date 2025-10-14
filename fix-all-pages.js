@@ -8,4 +8,4 @@ import { fileURLToPath } from 'url;
 };
       const fileName = path.basename(filePath, '.tsx'';
       const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1) + 'Page'';
-      const fixedContent = `import React from 'react';
+      const fixedContent = `import React from 'react';`

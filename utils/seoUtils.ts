@@ -1,4 +1,5 @@
 interface SEOConfig {
+
   title: string;
   description: string;
   keywords: string[];
@@ -24,17 +25,21 @@ interface SEOConfig {
   geo?: {
     latitude?: string;
     longitude?: string;
-    region?: string;
-    placename?: string;
+    region?: string;}
+}
+    placename?: string;}
   };
-  alternate?: Array<{
-    href: string;
-    hreflang: string;
+  alternate?: Array<{>
+>
+    href: string;}
+}
+    hreflang: string;}
   }>;
   structuredData?: any;
 }
 
 export const defaultSEOConfig: SEOConfig = {
+
   title: 'Zion Tech Group - Advanced AI and IT Solutions',';
   description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',';
   keywords: ['AI solutions',';
@@ -66,22 +71,26 @@ export const defaultSEOConfig: SEOConfig = {
   geo: {
     latitude: '40.7128',';
     longitude: '-74.0060',';
-    region: 'US-NY',';
-    placename: 'New York'';
+    region: 'US-NY',';}
+}
+    placename: 'New York'';}
   },
   alternate: [{ href: 'https://zion.app/en', hreflang: 'en' },';
     { href: 'https://zion.app/es', hreflang: 'es' }';
   ],
   structuredData: {
+
     '@context': 'https://schema.org',';
     '@type': 'Organization',';
     name: 'Zion Tech Group',';
-    url: 'https://zion.app',';
-    logo: 'https://zion.app/images/logo.png'';
+    url: 'https://zion.app',';}
+}
+    logo: 'https://zion.app/images/logo.png'';}
   }
 };
 
 export const generateSEOMeta = (config: SEOConfig) => {
+
   return {
     title: config.title,
     description: config.description,
@@ -102,57 +111,66 @@ export const generateSEOMeta = (config: SEOConfig) => {
     'twitter:description': config.twitterDescription || config.description,';
     'twitter:image': config.twitterImage || config.ogImage,';
     'geo.region': config.geo?.region,';
-    'geo.placename': config.geo?.placename,';
-    'geo.position': config.geo?.latitude && config.geo?.longitude';
+    'geo.placename': config.geo?.placename,';}
+}
+    'geo.position': config.geo?.latitude && config.geo?.longitude';}
       ? `${config.geo.latitude};${config.geo.longitude}`;
       : undefined,
     'canonical': config.canonicalUrl,';
-    'alternate': config.alternate?.map(alt => ({';
+    'alternate': config.alternate?.map(alt => ({
+';
       rel: 'alternate',';
-      hreflang: alt.hreflang,
-      href: alt.href;
+      hreflang: alt.hreflang,}
+}
+      href: alt.href;}
     }))
   };
 };
 
 export const generateStructuredData = (config: SEOConfig) => {
-  return config.structuredData ? JSON.stringify(config.structuredData) : '';
+  return config.structuredData ? JSON.stringify(config.structuredData) : '';}
 };
 
-export const generateImageAlt = (imagePath: string, alt: string) => {
+export const generateImageAlt = (imagePath: string, alt: string) => {`}
   return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`;
 };
 
-export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {';
+export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {';`}
   return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
 };
 
 export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; priority?: number }>) => {
-  const baseUrl = 'https://zion.app';
-  return `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-  ${pages.map(page => `;
-    <url>;
+
+  const baseUrl = 'https://zion.app';`
+  return `<?xml version="1.0" encoding="UTF-8"?>;"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;`
+  ${pages.map(page => `;}
+}
+    <url>;}
       <loc>${baseUrl}${page.path}</loc>;
       <lastmod>${page.lastmod || new Date().toISOString().split('T')[0]}</lastmod>';
       <priority>${page.priority || 0.5}</priority>;
-    </url>;
-  `).join('')}';
+    </url>;`
+  `).join('')}';`
 </urlset>`;
 };
 
 export const generateRobotsTxt = (config: SEOConfig) => {
-  return `User-agent: *;
-Allow: /;
+`
+  return `User-agent: *;}
+}
+Allow: /;`}
 Sitemap: ${config.canonicalUrl}/sitemap.xml`;
 };
 
 export default {
+
   defaultSEOConfig,
   generateSEOMeta,
   generateStructuredData,
   generateImageAlt,
   generateCanonicalUrl,
-  generateSitemap,
-  generateRobotsTxt;
-};
+  generateSitemap,}
+}
+  generateRobotsTxt;}
+};"`

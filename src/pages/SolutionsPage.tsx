@@ -1,29 +1,30 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const SolutionsPage: React.FC = () => {
+
   return (
     <>
       <Helmet>
         <title>Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT solutions by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl font-bold text-center mb-8">Our Solutions</h1>
+      </Helmet>"
+      <div className="min-h-screen bg-gray-900 text-white py-16">"
+        <div className="container mx-auto px-4">"
+          <div className="max-w-6xl mx-auto">"
+            <h1 className="text-4xl font-bold text-center mb-8">Our Solutions</h1>"
             <p className="text-xl text-gray-300 text-center mb-12">
               Comprehensive AI and IT solutions tailored to your business needs;
-            </p>
-            <section className="mb-16">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-gray-800 p-6 rounded-lg">
-                  <div className="h-12 w-12 bg-blue-600 rounded-lg mb-4 flex items-center justify-center">
+            </p>"
+            <section className="mb-16">"
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
+                <div className="bg-gray-800 p-6 rounded-lg">"
+                  <div className="h-12 w-12 bg-blue-600 rounded-lg mb-4 flex items-center justify-center">"
                     <span className="text-white font-bold">AI</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
+                  </div>"
+                  <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>"
                   <p className="text-gray-300 mb-4">
                     Advanced artificial intelligence solutions for automation and optimization.;
-                  </p>
+                  </p>"
                   <ul className="text-sm text-gray-400 space-y-1">
                     <li>• Machine Learning</li>
                     <li>• Natural Language Processing</li>
@@ -32,20 +33,20 @@ const SolutionsPage: React.FC = () => {
                 </div>
               </div>
             </section>
-            <section>
-              <h2 className="text-2xl font-semibold mb-6">Ready to Get Started?</h2>
+            <section>"
+              <h2 className="text-2xl font-semibold mb-6">Ready to Get Started?</h2>"
               <p className="text-gray-300 mb-8">
                 Contact us today to discuss your specific requirements.;
-              </p>
+              </p>"
               <div className="flex justify-center space-x-4">
-                <a;
-                  href="$1"
+                <a;">
+                  href="$1""
                   className="$1"
                 >
                   Contact Us;
                 </a>
-                <a;
-                  href="$1"
+                <a;">
+                  href="$1""
                   className="$1"
                 >
                   Request Demo;
@@ -55,7 +56,8 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>}
 }
-export default SolutionsPage;
+  );}
+}
+export default SolutionsPage;"

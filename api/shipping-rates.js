@@ -5,8 +5,8 @@ const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'shipping-rates.json');
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
+  if (req.method !== 'POST') {}
+    res.setHeader('Content-Type', 'application/json');}
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
@@ -16,17 +16,25 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Destination and weight are required' });
   }
 
-<<<<<<< HEAD
-  let rates = [];  try {
-=======
-  let rates = [];
-  try {
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-    const data = fs.readFileSync(file, 'utf8');
-    rates = JSON.parse(data);
+let rates = [];  try {
+
+    const data = fs.readFileSync(file, 'utf8');}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
+}
+} catch (error) {
+}
+  console.error('Error:', error);}
+}
+}
+    rates = JSON.parse(data);}
   } catch (error) {
-    console.error('Error:', error);
-    console.error('Error reading existing rates:', error);
+    console.error('Error:', error);}
+    console.error('Error reading existing rates:', error);}
   }
 
   const distanceMultiplier = destination === 'US' ? 1 : 2;
@@ -34,30 +42,45 @@ export default async function handler(req, res) {
   const rate = baseRate + (weight * 0.5 * distanceMultiplier);
 
   try {
+
     const newRate = {
       id: Date.now().toString(),
       destination,
-      weight,
-      rate,
-      createdAt: new Date().toISOString()
+      weight,}
+}
+} catch (error) {
+
+  console.error('Error:', error);}
+}
+}
+}
+} catch (error) {
+}
+  console.error('Error:', error);}
+}
+}
+      rate,}
+      createdAt: new Date().toISOString()}
     };
 
     rates.push(newRate);
     fs.writeFileSync(file, JSON.stringify(rates, null, 2));
 
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-      rate: rate,
-      message: 'Shipping rate calculated successfully' 
+    res.end(JSON.stringify({ }
+      success: true,}
+      rate: rate,}
+      message: 'Shipping rate calculated successfully' }
     }));
   } catch (error) {
-    console.error('Error:', error);
-    res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+    console.error('Error:', error);}
+}
+    res.setHeader('Content-Type', 'application/json');}
+}
+<<<<<<< HEAD>}
+=======}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7}
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
   }
 }

@@ -8,7 +8,7 @@ export default defineConfig({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Optimize JSX runtime
-      jsxRuntime: 'automatic',
+      jsxRuntime: 'automatic'
     })
   ],
   resolve: {
@@ -16,8 +16,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './'),
       '@app': path.resolve(__dirname, './app'),
       '@components': path.resolve(__dirname, './app/components'),
-      '@utils': path.resolve(__dirname, './utils'),
-    },
+      '@utils': path.resolve(__dirname, './utils')
+    }
   },
   build: {
     outDir: 'dist',
@@ -68,25 +68,25 @@ export default defineConfig({
           return `assets/[name]-[hash][extname]`;
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
-      },
+        entryFileNames: 'assets/js/[name]-[hash].js'
+      }
     },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     // Enable tree shaking
-    treeshake: true,
+    treeshake: true
   },
   server: {
     port: 3000,
     open: false, // Disable auto-open for CI/CD
     cors: true,
     hmr: {
-      overlay: true,
-    },
+      overlay: true
+    }
   },
   preview: {
     port: 4173,
-    open: false,
+    open: false
   },
   optimizeDeps: {
     include: [
@@ -98,19 +98,19 @@ export default defineConfig({
       'lucide-react',
       'framer-motion'
     ],
-    exclude: ['@vite/client', '@vite/env'],
+    exclude: ['@vite/client', '@vite/env']
   },
   esbuild: {
     drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-    target: 'esnext',
+    target: 'esnext'
   },
   // Performance optimizations
   define: {
     __VUE_OPTIONS_API__: false,
-    __VUE_PROD_DEVTOOLS__: false,
+    __VUE_PROD_DEVTOOLS__: false
   },
   // CSS optimizations
   css: {
-    devSourcemap: true,
-  },
+    devSourcemap: true
+  }
 });
