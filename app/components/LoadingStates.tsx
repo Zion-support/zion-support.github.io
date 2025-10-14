@@ -1,13 +1,33 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-'use client';
-export default function Page() {
+import React from 'react';
+import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
+
+interface LoadingPageProps {
+  type?: 'loading' | 'ai' | 'security' | 'performance' | 'global';
+  message?: string;
+  variant?: 'default' | 'futuristic' | 'minimal';
+}
+
+export const LoadingPage: React.FC<LoadingPageProps> = ({ 
+  message = "Loading...", 
+  variant = "futuristic" 
+}) => {
+  if (variant === 'minimal') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-900">
+        <div className="flex items-center space-x-3">
+          <Loader2 className="w-6 h-6 animate-spin text-cyan-400" />
+          <span className="text-white text-lg">{message}</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">;
-      <Helmet>;
-        <title>LoadingStates - Zion Tech Group</title>;
-        <meta name="description" content="Professional loadingstates services by Zion Tech Group." />;
-      </Helmet>;
+      <Helmet>
+        <title>LoadingStates - Zion Tech Group</title>
+        <meta name="description" content="Professional loadingstates services by Zion Tech Group." />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center">;
           <h1 className="text-4xl font-bold text-gray-900 mb-8">;
@@ -49,6 +69,4 @@ export default function Page() {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

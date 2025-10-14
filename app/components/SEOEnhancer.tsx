@@ -1,6 +1,6 @@
-import React from 'react;
-import { useEffect } from 'react;
-import { Helmet } from 'react-helmet-async;
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -8,8 +8,7 @@ interface SEOEnhancerProps {
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: unknown;
-}
+  structuredData?: unknown}
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',';
   description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',';
@@ -17,23 +16,19 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   image = '/images/og-image.jpg',';
   url = typeof window !== 'undefined' ? window.location.href : '',';
   type = 'website',';
-  structuredData;
-}) => {
+  structuredData}) => {
   useEffect(() => {
     // Add structured data to the page;
-    if (structuredData) {
+    if (structuredData) {;
       const script = document.createElement('script');
-      script.type = 'application/ld+json';
+      script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
       return () => {
         if (document.head.contains(script)) {
-          document.head.removeChild(script);
-        }
-      };
-    }
-    return undefined;
-  }, [structuredData]);
+          document.head.removeChild(script)}
+      }}
+    return undefined}, [structuredData]);
   // Generate meta tags;
   const metaTags = [{ name: 'description', content: description },';
     { name: 'keywords', content: keywords.join(', ') },';
@@ -56,31 +51,40 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'theme-color', content: '#0066cc' },';
     { name: 'msapplication-TileColor', content: '#0066cc' },';
     { name: 'apple-mobile-web-app-capable', content: 'yes' },';
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },';
-  ];
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },'];
   return (
-    <Helmet>;
-      <title>{title}</title>;
-      {metaTags.map((tag, _index) => (
-        <meta key={_index} {...tag} />;
-      ))}
+    <Helmet>
+      <title>{title}</title>
+      {metaTags.map((tag, _index) => (}
+        <meta key={_index} {...tag} />
+))}
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />;
+      <link rel="canonical" href={url} />
       {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />;
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />;
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />;
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />;
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />;
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />;
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />;
-    </Helmet>;
-  );
-};
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    </Helmet>
+  )};
 // Default structured data for the organization;
+      <link rel="canonical" href={url} />{/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />{/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />{/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></Helmet>
+  )}
+// Default structured data for the organization
 const  {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -92,19 +96,20 @@ const  {
     "@type": "ContactPoint",
     "telephone": "+1-555-0123",
     "contactType": "customer service",
-    "availableLanguage": "English";
-  },
+    "availableLanguage": "English"},
   "sameAs": ["https://www.linkedin.com/company/zion-tech-group",
     "https://twitter.com/ziontechgroup",
-    "https://github.com/zion-tech-group";
-  ],
+    "https://github.com/zion-tech-group"],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "123 Tech Street",
     "addressLocality": "San Francisco",
     "addressRegion": "CA",
     "postalCode": "94105",
-    "addressCountry": "US";
-  }
+    "addressCountry": "US"}
 };
-export default SEOEnhancer;
+
+    "addressCountry": "US"
+};
+
+export default SEOEnhancer

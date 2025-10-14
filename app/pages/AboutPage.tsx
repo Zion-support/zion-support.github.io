@@ -2,17 +2,16 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CheckCircleIcon,
   UserGroupIcon,
-  LightBulbIcon,
+  CpuChipIcon,
   ShieldCheckIcon,
+  CloudIcon,
   RocketLaunchIcon,
-  HeartIcon,
-  ArrowRightIcon,
+  CheckCircleIcon,
   StarIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon
+  GlobeAltIcon,
+  ChartBarIcon,
+  LightBulbIcon
 } from '@heroicons/react/24/outline';
 
 export default function AboutPage() {
@@ -227,5 +226,4 @@ export default function AboutPage() {
         </section>
       </div>
     </>
-  );
-}
+  )}

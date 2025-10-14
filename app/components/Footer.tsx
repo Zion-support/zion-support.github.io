@@ -8,10 +8,11 @@ import {
   HeartIcon
 } from '@heroicons/react/24/outline';
 
-const Footer: React.FC = () => {
+const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
 
   const services = [
+    { name: 'AI Services', href: '/ai-services' },
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'IT Solutions', href: '/it-solutions' },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
@@ -24,18 +25,26 @@ const Footer: React.FC = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'News', href: '/news' }
   ];
 
-  const resources = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Support', href: '/support' },
-    { name: 'Community', href: '/community' },
-    { name: 'Status', href: '/status' },
+  const microSaasServices = [
+    { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+    { name: 'Contract Manager', path: '/micro-saas/contract-manager' },
+    { name: 'Email Signature Manager', path: '/micro-saas/email-signature' },
+    { name: 'Employee Directory', path: '/micro-saas/employee-directory' },
+    { name: 'Document Processor', path: '/micro-saas/document-processor' },
+    { name: 'AI Email Marketing', path: '/micro-saas/email-marketing' },
+    { name: 'Expense Tracker Pro', path: '/micro-saas/expense-tracker' },
+    { name: 'Inventory Manager', path: '/micro-saas/inventory-management' },
+    { name: 'Lead Generation Suite', path: '/micro-saas/lead-generation' },
+    { name: 'Social Media Scheduler', path: '/micro-saas/social-scheduler' },
+    { name: 'AI Password Manager Pro', path: '/micro-saas/ai-password-manager' },
+    { name: 'AI Task Manager', path: '/micro-saas/ai-task-manager' },
+    { name: 'AI Email Marketing', path: '/micro-saas/ai-email-marketing' }
   ];
 
   const legal = [
@@ -48,14 +57,8 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-700/50 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -93,15 +96,20 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link 
+                  <Link
                     to={service.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              ))}          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4> cursor/analyze-improve-and-deploy-application-c573
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/demo" className="text-gray-300 hover:text-white transition-colors">Demo</Link></li>
             </ul>
           </div>
 
@@ -111,11 +119,10 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link 
+                  <Link
                     to={item.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
                 </li>
@@ -123,39 +130,24 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Resources & Legal */}
+          {/* Resources */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
             <ul className="space-y-3 mb-8">
               {resources.map((resource) => (
                 <li key={resource.name}>
-                  <Link 
+                  <Link
                     to={resource.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {resource.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            
-            <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Legal</h3>
-            <ul className="space-y-3">
-              {legal.map((item) => (
-                <li key={item.name}>
-                  <Link 
-                    to={item.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
+      </div>
 
         {/* Newsletter Signup */}
         <div className="mt-16 pt-8 border-t border-slate-700/50">
@@ -177,6 +169,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
@@ -185,10 +178,15 @@ const Footer: React.FC = () => {
             <HeartIcon className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
           </div>
-          <p className="text-gray-400 text-sm">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
         </div>
+      </div>
+
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-0 right-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '3s'}}></div>
       </div>
     </footer>
   );

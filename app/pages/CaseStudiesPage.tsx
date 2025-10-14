@@ -48,6 +48,7 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
 
+const CaseStudiesPagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -146,4 +147,4 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 
-export default CaseStudiesPage;
+export default CaseStudiesPagePage;

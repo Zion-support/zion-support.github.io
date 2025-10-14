@@ -1,16 +1,12 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">;
-      <Helmet>;
-        <title>AdAnalytics - Zion Tech Group</title>;
-        <meta name="description" content="Professional adanalytics services by Zion Tech Group." />;
-      </Helmet>;
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
             AdAnalytics;
           </h1>;
           <p className="text-xl text-gray-600 mb-8">;
@@ -49,6 +45,4 @@ export default function Page() {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}
