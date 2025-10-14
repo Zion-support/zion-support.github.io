@@ -25,3 +25,4 @@ export const defaultStructuredData = {
     "postalCode": "94105",
     "addressCountry": "US"
   }
+};

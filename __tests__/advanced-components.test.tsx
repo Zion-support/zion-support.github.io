@@ -4,18 +4,15 @@ import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
 
 // Mock components for testing
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThrow) {
-    throw new Error('Test error')
-  }
-  return <div>Test content
-}
-// Test component for error boundary tests
-const TestComponent = () => <div>Test component
-// Mock onError callback
-const onError = jest.fn()
-// Mock helmet context
-const helmetContext = {}
+// const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+//   if (shouldThrow) {
+//     throw new Error('Test error');
+//   }
+//   return <div>Test content</div>;
+// };
+
+const TestComponent = () => <div>Test component</div>;
+
 describe('AdvancedErrorBoundary', () => {
 
   it('renders children when there is no error', () => {

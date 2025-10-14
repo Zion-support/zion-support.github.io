@@ -1,9 +1,13 @@
-import { createContext, useContext } from "react";
-import { AnalyticsContextType } from "./AnalyticsContextDefinition";
+import React, { createContext, useContext, ReactNode } from 'react';
+import { AnalyticsContextType } from './AnalyticsContextDefinition';
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   const trackEvent = (event: string, properties?: Record<string, unknown>) => {
     console.log('Analytics Event:', event, properties);
   };
@@ -12,13 +16,13 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
     console.log('Page View:', page);
   };
 
-  const contextValue = {
+  const value = {
     trackEvent,
     trackPageView,
   };
 
   return (
-    <AnalyticsContext.Provider value={contextValue}>
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
@@ -31,3 +35,5 @@ export function useAnalytics() {
   }
   return context;
 }
+
+export { AnalyticsContext };

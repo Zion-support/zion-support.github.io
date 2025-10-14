@@ -1,4 +1,3 @@
-// Error tracking utility functions
 export const reportError = (error: Error, context?: Record<string, unknown>) => {
   console.error('Error reported:', error, context);
   // In a real implementation, you would send this to your error tracking service

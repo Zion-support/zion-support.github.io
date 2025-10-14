@@ -4,7 +4,9 @@ interface UseSEOProps {
   structuredData?: Record<string, unknown>;
 }
 
-export const useSEO = ({ structuredData }: UseSEOProps) => {
+
+
+export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {
     // Add structured data to the page
     if (structuredData) {
@@ -16,6 +18,8 @@ export const useSEO = ({ structuredData }: UseSEOProps) => {
         if (document.head.contains(script)) {
           document.head.removeChild(script);
         }
+      };
+    }
     return undefined;
   }, [structuredData])
 }

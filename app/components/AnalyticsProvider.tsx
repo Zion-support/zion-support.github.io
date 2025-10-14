@@ -1,8 +1,8 @@
 import React, { createContext, useContext } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
+  trackEvent: (event: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (page: string) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
@@ -10,15 +10,17 @@ interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    console.log('Analytics Event:', eventName, properties)
-    // Add your analytics tracking logic here
-  }
-  const trackPageView = (pageName: string) => {
-    console.log('Page View:', pageName)
-    // Add your page view tracking logic here
-  }
+export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  const trackEvent = (event: string, properties?: Record<string, unknown>) => {
+    // Analytics tracking implementation
+    console.log('Analytics Event:', event, properties);
+  };
+
+  const trackPageView = (page: string) => {
+    // Page view tracking implementation
+    console.log('Page View:', page);
+  };
+
   const value = {
     trackEvent,
     trackPageView,

@@ -1,4 +1,6 @@
+// Main entry point
+
 // main - Basic implementation
 export default function main() {
-  return null
+  return null;
 }
