@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
+import { ContentPromotionBanner  } from './components/ContentPromotionBanner';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -20,10 +21,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer />
-      <PerformanceOptimizer />
-      
-      <Navigation onSidebarToggle={() => {}} />
       
       <main className="relative">
         {/* Hero Section */}
@@ -150,8 +147,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </main>
-      
-      <Footer />
     </div>
   );
 };

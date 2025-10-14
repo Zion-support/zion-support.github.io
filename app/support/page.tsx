@@ -119,8 +119,8 @@ const SupportPage: React.FC = () => {
     <>
       <Helmet>
         <title>Support - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name ="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
-        <meta name ="keywords" content="technical support, IT support, AI support, customer service, help desk" />
+        <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
+        <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
