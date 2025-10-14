@@ -14,6 +14,7 @@ import ContactPage from './app/contact/page';
 import AIAnalyticsDashboardPro from './app/ai-analytics-dashboard-pro/page';
 import AICodeAssistantPro from './app/ai-code-assistant-pro/page';
 import FiveGImplementation from './app/5g-implementation/page';
+import AICloudInfrastructure from './app/ai-cloud-infrastructure/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,6 +59,7 @@ const App: React.FC = () => {
                   <Route path="/ai-analytics-dashboard-pro" element={<AIAnalyticsDashboardPro />} />
                   <Route path="/ai-code-assistant-pro" element={<AICodeAssistantPro />} />
                   <Route path="/5g-implementation" element={<FiveGImplementation />} />
+                  <Route path="/ai-cloud-infrastructure" element={<AICloudInfrastructure />} />
                 </Routes>
               </Suspense>
             </main>
