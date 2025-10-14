@@ -1,98 +1,130 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Code, 
-  Brain, 
   Zap, 
   Shield, 
-  Clock, 
-  Users, 
+  Globe, 
+  Brain, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
+  MapPin,
   Download,
   Play,
+  Pause,
+  RefreshCw,
   Settings,
+  Eye,
+  Filter,
+  Calendar,
   Target,
+  Terminal,
+  GitBranch,
   Bug,
   FileText,
-  GitBranch,
-  Terminal,
   Cpu,
-  Database
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Award,
+  TrendingUp
 } from 'lucide-react';
 
-const AICodeAssistantPro: React.FC = () => {
+const AiCodeAssistantProPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  // const [activeTab, setActiveTab] = useState('overview');
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const features = [
     {
-      icon: <Code className="w-8 h-8" />,
+      icon: <Code className="w-6 h-6" />,
       title: "Intelligent Code Generation",
       description: "Generate high-quality code in 50+ programming languages with AI-powered suggestions and completions.",
-      benefits: ["50+ Languages", "Context-aware suggestions", "Code completion", "Syntax highlighting"]
+      benefits: ["50+ Languages", "Context-aware suggestions", "Code completion", "Syntax optimization"]
     },
     {
-      icon: <Bug className="w-8 h-8" />,
+      icon: <Bug className="w-6 h-6" />,
       title: "Advanced Bug Detection",
-      description: "Automatically detect and fix bugs, security vulnerabilities, and performance issues in your code.",
+      description: "Automatically identify and fix bugs, security vulnerabilities, and performance issues in your code.",
       benefits: ["Static analysis", "Security scanning", "Performance optimization", "Error prevention"]
     },
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className="w-6 h-6" />,
       title: "AI Code Review",
       description: "Get intelligent code reviews with suggestions for improvements, best practices, and optimization.",
-      benefits: ["Automated reviews", "Best practices", "Code quality metrics", "Refactoring suggestions"]
+      benefits: ["Automated reviews", "Best practices", "Code quality metrics", "Learning recommendations"]
     },
     {
-      icon: <FileText className="w-8 h-8" />,
+      icon: <FileText className="w-6 h-6" />,
       title: "Documentation Generation",
       description: "Automatically generate comprehensive documentation, comments, and API references for your code.",
       benefits: ["Auto-documentation", "API references", "Code comments", "README generation"]
     },
     {
-      icon: <GitBranch className="w-8 h-8" />,
-      title: "Git Integration",
-      description: "Seamlessly integrate with Git workflows, commit analysis, and branch management.",
-      benefits: ["Commit analysis", "Branch management", "Merge conflict resolution", "Version control"]
+      icon: <Cpu className="w-6 h-6" />,
+      title: "Performance Optimization",
+      description: "Analyze and optimize your code for better performance, memory usage, and execution speed.",
+      benefits: ["Performance analysis", "Memory optimization", "Algorithm suggestions", "Bottleneck detection"]
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Security & Compliance",
-      description: "Ensure your code meets security standards and compliance requirements with automated checks.",
-      benefits: ["Security scanning", "Compliance checks", "Vulnerability detection", "Standards compliance"]
+      icon: <GitBranch className="w-6 h-6" />,
+      title: "Version Control Integration",
+      description: "Seamlessly integrate with Git and other version control systems for collaborative development.",
+      benefits: ["Git integration", "Merge conflict resolution", "Branch management", "Commit optimization"]
     }
   ];
 
-  const pricingTiers = [
+  const supportedLanguages = [
+    { name: "JavaScript", icon: "🟨", level: "Expert" },
+    { name: "Python", icon: "🐍", level: "Expert" },
+    { name: "TypeScript", icon: "🔷", level: "Expert" },
+    { name: "Java", icon: "☕", level: "Expert" },
+    { name: "C++", icon: "⚡", level: "Advanced" },
+    { name: "C#", icon: "🔵", level: "Advanced" },
+    { name: "Go", icon: "🐹", level: "Advanced" },
+    { name: "Rust", icon: "🦀", level: "Advanced" },
+    { name: "PHP", icon: "🐘", level: "Advanced" },
+    { name: "Ruby", icon: "💎", level: "Advanced" },
+    { name: "Swift", icon: "🍎", level: "Advanced" },
+    { name: "Kotlin", icon: "🟣", level: "Advanced" }
+  ];
+
+  const pricingPlans = [
     {
       name: "Developer",
       price: "$199",
-      period: "per month",
-      description: "Perfect for individual developers and small teams",
+      period: "month",
+      description: "Perfect for individual developers and freelancers",
       features: [
-        "Up to 5 projects",
         "50+ programming languages",
-        "Basic AI suggestions",
-        "Bug detection",
+        "Basic code generation",
+        "Bug detection & fixes",
+        "Documentation generation",
         "Email support",
-        "10GB storage"
+        "10 projects max"
       ],
       popular: false
     },
     {
       name: "Team",
       price: "$399",
-      period: "per month",
-      description: "Ideal for development teams and growing companies",
+      period: "month",
+      description: "Ideal for development teams and small companies",
       features: [
-        "Up to 25 projects",
-        "Advanced AI features",
+        "All Developer features",
+        "Advanced AI suggestions",
         "Code review automation",
-        "Team collaboration",
+        "Performance optimization",
         "Priority support",
-        "50GB storage",
-        "API access",
+        "Unlimited projects",
+        "Team collaboration",
         "Custom integrations"
       ],
       popular: true
@@ -100,17 +132,16 @@ const AICodeAssistantPro: React.FC = () => {
     {
       name: "Enterprise",
       price: "$799",
-      period: "per month",
-      description: "Complete solution for large organizations",
+      period: "month",
+      description: "Complete solution for large development organizations",
       features: [
-        "Unlimited projects",
-        "All AI features",
+        "All Team features",
         "Custom AI models",
         "On-premise deployment",
+        "Advanced security",
         "24/7 dedicated support",
-        "Unlimited storage",
-        "Full API access",
-        "Custom security protocols",
+        "Custom training",
+        "API access",
         "White-label options"
       ],
       popular: false
@@ -119,43 +150,65 @@ const AICodeAssistantPro: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      role: "Senior Developer, DevCorp",
-      content: "AI Code Assistant Pro has revolutionized our development process. We've increased productivity by 300% and reduced bugs by 80%.",
-      rating: 5,
-      company: "DevCorp"
-    },
-    {
-      name: "Maria Garcia",
-      role: "CTO, StartupTech",
-      content: "The intelligent code generation and bug detection features are game-changers. Our code quality has improved dramatically.",
-      rating: 5,
-      company: "StartupTech"
-    },
-    {
       name: "David Kim",
-      role: "Lead Engineer, BigTech Inc.",
-      content: "Outstanding tool! The AI code review and documentation generation have saved us countless hours and improved our code standards.",
-      rating: 5,
-      company: "BigTech Inc."
+      company: "DevTech Solutions",
+      role: "Lead Developer",
+      content: "AI Code Assistant Pro has increased our development speed by 40%. The intelligent suggestions and bug detection are game-changers.",
+      rating: 5
+    },
+    {
+      name: "Lisa Wang",
+      company: "StartupXYZ",
+      role: "CTO",
+      content: "The code generation and documentation features have saved us countless hours. Our code quality has improved significantly.",
+      rating: 5
+    },
+    {
+      name: "James Rodriguez",
+      company: "Enterprise Corp",
+      role: "Senior Architect",
+      content: "The performance optimization and security scanning features have helped us build more robust applications. Highly recommended!",
+      rating: 5
     }
   ];
 
-  const supportedLanguages = [
-    "JavaScript", "TypeScript", "Python", "Java", "C++", "C#", "Go", "Rust", "PHP", "Ruby",
-    "Swift", "Kotlin", "Dart", "Scala", "R", "MATLAB", "Perl", "Lua", "Haskell", "Clojure",
-    "Elixir", "Erlang", "F#", "OCaml", "Julia", "Nim", "Crystal", "Zig", "V", "D"
+  const useCases = [
+    {
+      title: "Web Development",
+      description: "Build modern web applications with AI-powered code generation and optimization",
+      icon: <Globe className="w-8 h-8" />,
+      technologies: ["React", "Vue.js", "Angular", "Node.js", "Express"]
+    },
+    {
+      title: "Mobile Development",
+      description: "Create cross-platform mobile apps with intelligent code suggestions and debugging",
+      icon: <Terminal className="w-8 h-8" />,
+      technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Xamarin"]
+    },
+    {
+      title: "Data Science",
+      description: "Develop machine learning models and data analysis scripts with AI assistance",
+      icon: <Database className="w-8 h-8" />,
+      technologies: ["Python", "R", "TensorFlow", "PyTorch", "Pandas"]
+    },
+    {
+      title: "DevOps & Cloud",
+      description: "Automate infrastructure and deployment with intelligent DevOps code generation",
+      icon: <Cloud className="w-8 h-8" />,
+      technologies: ["Docker", "Kubernetes", "AWS", "Azure", "Terraform"]
+    }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Code Assistant Pro - Zion Tech Group | Intelligent Development Tools</title>
-        <meta name="description" content="Boost developer productivity with AI Code Assistant Pro. Intelligent code generation, bug detection, and automated reviews for 50+ programming languages." />
-        <meta name="keywords" content="AI code assistant, code generation, bug detection, code review, programming, development tools, IDE integration" />
+        <title>AI Code Assistant Pro - Intelligent Development Platform | Zion Tech Group</title>
+        <meta name="description" content="Boost developer productivity with AI-powered code generation, bug detection, and optimization. Support for 50+ programming languages with intelligent suggestions and automation." />
+        <meta name="keywords" content="AI code assistant, code generation, bug detection, programming, development tools, code optimization, IDE integration" />
         <meta property="og:title" content="AI Code Assistant Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent development tools powered by AI for modern developers." />
+        <meta property="og:description" content="Intelligent development platform with AI-powered code generation and optimization" />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-code-assistant-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -179,12 +232,12 @@ const AICodeAssistantPro: React.FC = () => {
 
         <main className="relative z-10">
           {/* Hero Section */}
-          <section className="py-20 pt-32">
+          <section className="relative py-20 overflow-hidden">
             <div className="container mx-auto px-4">
-              <div className="text-center max-w-6xl mx-auto">
+              <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                  <Code className="w-4 h-4 mr-2" />
-                  AI-Powered Development Tools
+                  <Star className="w-4 h-4 mr-2" />
+                  #1 AI Development Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -192,8 +245,8 @@ const AICodeAssistantPro: React.FC = () => {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Boost developer productivity by 300% with intelligent code generation, 
-                  automated bug detection, and AI-powered code reviews for 50+ programming languages.
+                  Supercharge your development with AI-powered code generation, intelligent debugging, 
+                  and automated optimization. Support for 50+ programming languages.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -201,90 +254,31 @@ const AICodeAssistantPro: React.FC = () => {
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Call +1 302 464 0950
+                    Start Free Trial
                   </a>
                   <a
-                    href="mailto:kleber@ziontechgroup.com"
+                    href="#demo"
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
-                    <Mail className="w-5 h-5 mr-2" />
-                    Get Demo
+                    <Play className="w-5 h-5 mr-2" />
+                    Watch Demo
                   </a>
                 </div>
-                
-                {/* Key Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                  <div className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                      <Zap className="w-8 h-8 text-cyan-400" />
-                    </div>
-                    <div className="text-3xl font-bold text-white mb-1">300%</div>
-                    <div className="text-gray-400 text-sm">Productivity Boost</div>
-                  </div>
-                  <div className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                      <Bug className="w-8 h-8 text-green-400" />
-                    </div>
-                    <div className="text-3xl font-bold text-white mb-1">80%</div>
-                    <div className="text-gray-400 text-sm">Bug Reduction</div>
-                  </div>
-                  <div className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                      <Code className="w-8 h-8 text-purple-400" />
-                    </div>
-                    <div className="text-3xl font-bold text-white mb-1">50+</div>
-                    <div className="text-gray-400 text-sm">Languages</div>
-                  </div>
-                  <div className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                      <Users className="w-8 h-8 text-orange-400" />
-                    </div>
-                    <div className="text-3xl font-bold text-white mb-1">10K+</div>
-                    <div className="text-gray-400 text-sm">Developers</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Supported Languages Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Supported Languages
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                  Write code in 50+ programming languages with AI-powered assistance
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-4">
-                {supportedLanguages.map((language, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="text-cyan-400 font-semibold text-sm">{language}</div>
-                  </div>
-                ))}
               </div>
             </div>
           </section>
 
           {/* Features Section */}
-          <section className="py-20">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Powerful Features
+                    Powerful Development Features
                   </span>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                  Everything you need to write better code faster with AI assistance
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Everything you need to write better code faster with AI-powered assistance.
                 </p>
               </div>
               
@@ -292,7 +286,7 @@ const AICodeAssistantPro: React.FC = () => {
                 {features.map((feature, index) => (
                   <div 
                     key={index} 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-card"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-white">{feature.icon}</div>
@@ -317,65 +311,130 @@ const AICodeAssistantPro: React.FC = () => {
             </div>
           </section>
 
-          {/* Pricing Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
+          {/* Supported Languages Section */}
+          <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Simple Pricing
+                    50+ Programming Languages
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your development needs. All plans include 24/7 support and regular updates.
+                  Get AI-powered assistance for all your favorite programming languages and frameworks.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                {supportedLanguages.map((language, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                  >
+                    <div className="text-4xl mb-3">{language.icon}</div>
+                    <div className="text-white font-semibold mb-1">{language.name}</div>
+                    <div className="text-cyan-400 text-sm">{language.level}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Use Cases Section */}
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Perfect for Every Development Need
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  From web development to data science, our AI assistant adapts to your specific use case.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {useCases.map((useCase, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                      <div className="text-white">{useCase.icon}</div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                    <p className="text-gray-300 mb-6">{useCase.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {useCase.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section className="py-20 bg-slate-900">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Choose Your Plan
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Flexible pricing plans designed for developers of all sizes.
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {pricingTiers.map((tier, index) => (
+                {pricingPlans.map((plan, index) => (
                   <div 
                     key={index} 
                     className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
-                      tier.popular 
-                        ? 'border-cyan-400/40 shadow-2xl shadow-cyan-500/10' 
+                      plan.popular 
+                        ? 'border-cyan-400/40 shadow-cyan-500/10' 
                         : 'border-cyan-500/20 hover:border-cyan-400/40'
                     }`}
                   >
-                    {tier.popular && (
+                    {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                           Most Popular
-                        </span>
+                        </div>
                       </div>
                     )}
-                    
                     <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{tier.description}</p>
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                      <p className="text-gray-300 mb-4">{plan.description}</p>
                       <div className="flex items-baseline justify-center">
-                        <span className="text-5xl font-bold text-cyan-400">{tier.price}</span>
-                        <span className="text-gray-400 ml-2">{tier.period}</span>
+                        <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
+                        <span className="text-gray-400 ml-2">/{plan.period}</span>
                       </div>
                     </div>
-                    
                     <div className="space-y-4 mb-8">
-                      {tier.features.map((feature, featureIndex) => (
+                      {plan.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
+                          {feature}
                         </div>
                       ))}
                     </div>
-                    
                     <a
                       href="tel:+13024640950"
-                      className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                        tier.popular
-                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105'
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+                        plan.popular
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                           : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                       }`}
                     >
                       Get Started
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
                 ))}
@@ -384,16 +443,16 @@ const AICodeAssistantPro: React.FC = () => {
           </section>
 
           {/* Testimonials Section */}
-          <section className="py-20">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    What Developers Say
+                    Developer Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join thousands of developers who have transformed their coding experience with AI Code Assistant Pro.
+                  See how developers worldwide are boosting their productivity with AI Code Assistant Pro.
                 </p>
               </div>
               
@@ -408,12 +467,12 @@ const AICodeAssistantPro: React.FC = () => {
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-300 mb-6 leading-relaxed italic">
-                      "{testimonial.content}"
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      &ldquo;{testimonial.content}&rdquo;
                     </p>
-                    <div className="border-t border-cyan-500/20 pt-4">
+                    <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-cyan-400 text-sm">{testimonial.role}</div>
+                      <div className="text-cyan-400">{testimonial.role}</div>
                       <div className="text-gray-400 text-sm">{testimonial.company}</div>
                     </div>
                   </div>
@@ -423,14 +482,14 @@ const AICodeAssistantPro: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
+          <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Ready to Code Smarter?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of developers who have revolutionized their coding workflow with AI Code Assistant Pro.
+                  Join thousands of developers who are already using AI Code Assistant Pro to build better software faster.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -445,7 +504,7 @@ const AICodeAssistantPro: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Schedule Demo
+                    Get Free Trial
                   </a>
                 </div>
               </div>
@@ -457,4 +516,4 @@ const AICodeAssistantPro: React.FC = () => {
   );
 };
 
-export default AICodeAssistantPro;
+export default AiCodeAssistantProPage;
