@@ -1,15 +1,8 @@
 import React from 'react'
-<<<<<<< HEAD
-#!/usr/bin/env node;
-import fs from "fs"";
-import path from "path"";
-import { execSync } from "child_process""
-=======
 #!/usr/bin/env node
 import fs from "fs
 import path from "path
 import { execSync } from "child_process
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 console.log("🔧 Fixing final build errors...\n")
 // Function to fix final build errors;
 function fixFile(filePath) {
@@ -99,20 +92,6 @@ const fixes = [
     console.log(`❌ Error fixing ${filePath}: ${error.message}`)
     return false
 }
-<<<<<<< HEAD
-// Function to find all TypeScript/JavaScript files";
-function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {;
-const files = [];
-function traverse(currentDir) {;
-const items = fs.readdirSync(currentDir)
-    for (const item of items) {;
-const fullPath = path.join(currentDir, item);
-const stat = fs.statSync(fullPath)
-      if ()
-        stat.isDirectory() &&"
-        !item.startsWith(".") &&"
-        item !== "node_modules"
-=======
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
   const files = []
@@ -125,7 +104,6 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
         stat.isDirectory() &&
         !item.startsWith(".") &&
         item !== "node_modules
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       ) {
         traverse(fullPath)
       } else if ()

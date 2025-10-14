@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+// ImageOptimizer utility functions
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
+export const ImageOptimizer = {
+  // Add your utility functions here
+};

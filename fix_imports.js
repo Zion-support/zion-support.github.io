@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import fs from "fs"";
-import { glob } from "glob"
-// Fix broken import statements;
-=======
 import fs from "fs
 import { glob } from "glob
 // Fix broken import statements
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 function fixImports(content) {
   // Fix malformed import statements where quotes are missing"
   content = content.replace(/from\s+([a-zA-Z-]+)import/g, 'from "$1";\nimport')

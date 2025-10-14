@@ -1,13 +1,8 @@
 import React from 'react''''';
 import { useEffect, Node } from 'react''''
 interface PerformanceOptimizerProps {}
-<<<<<<< HEAD
-  children: "Node"}"""";
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {}"""
-=======
   children: "Node"}""
 const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {}""
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   useEffect(() => {}, [])
     // Performance optimization code''''';
 const optimizeImages = () => {}

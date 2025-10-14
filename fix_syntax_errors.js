@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import React from "react"";
-import fs from "fs"";
-import path from "path"";
-import { glob } from "glob"
-// Common syntax fixes for merged files;
-=======
 import React from "react
 import fs from "fs
 import path from "path
 import { glob } from "glob
 // Common syntax fixes for merged files
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 function fixSyntaxErrors(content) {
   // Fix JSX expressions that need one parent element
   content = content.replace()

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-=======
-            files.push(fullPath);
+files.push(fullPath);
           }
         } catch (error) { // Skip files that can't be read }
       }
@@ -21,7 +19,6 @@ for (const file of filesWithMarkers) {
   }
 }
 console.log(`Cleaned merge markers from ${cleanedCount} files`);
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 // cleanup-merge-markers - Basic implementation
 export default function cleanup-merge-markers() {
   return null;
