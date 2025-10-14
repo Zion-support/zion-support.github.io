@@ -22,11 +22,10 @@ export default async function handler(req, res) {
       amount: amount,
       currency: currency,
       status: 'requires_payment_method',
-      metadata: metadata,
-    };
+      metadata: metadata};
     res.status(200).json({ paymentIntent: mockPaymentIntent });
-  } catch (error) {
-    console.error('Error creating payment intent:', error);
+  } catch (_error) {
+    console.error('Error creating payment intent:', _error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
