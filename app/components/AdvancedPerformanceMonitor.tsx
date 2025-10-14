@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-export default function AdvancedPerformanceMonitor() {
-=======
 import React from 'react';
 
-const AdvancedPerformanceMonitor: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
+export default function AdvancedPerformanceMonitor() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -15,10 +11,4 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-export default AdvancedPerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9

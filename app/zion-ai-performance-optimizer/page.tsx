@@ -2,17 +2,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionAIPerformanceOptimizerPage = () => {
+const ZionAIPerformanceOptimizerPage: React.FC = () => {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Zion AI Performance Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional AI performance optimizer services by Zion Tech Group." />
+        <meta name="description" content="Professional AI performance optimization services by Zion Tech Group." />
       </Helmet>
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-white">Zion AI Performance Optimizer Page</h1>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Zion AI Performance Optimizer
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            AI-driven performance optimization for your applications.
+          </p>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

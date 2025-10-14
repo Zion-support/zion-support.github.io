@@ -3,17 +3,16 @@ import React from 'react';
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
-const FuturisticCard: React.FC<FuturisticCardProps> = ({
-  children,
-  className = ''
-}) => {
+export default function FuturisticCard({ children, className = '', onClick }: FuturisticCardProps) {
   return (
-    <div className={`bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 ${className}`}>
+    <div 
+      className={`bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 ${className}`}
+      onClick={onClick}
+    >
       {children}
     </div>
   );
-};
-
-export default FuturisticCard;
+}

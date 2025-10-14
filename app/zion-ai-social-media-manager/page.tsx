@@ -2,17 +2,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionAISocialMediaManagerPage = () => {
+const ZionAISocialMediaManagerPage: React.FC = () => {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Zion AI Social Media Manager - Zion Tech Group</title>
-        <meta name="description" content="Professional AI social media manager services by Zion Tech Group." />
+        <meta name="description" content="Professional AI social media management services by Zion Tech Group." />
       </Helmet>
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-white">Zion AI Social Media Manager Page</h1>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Zion AI Social Media Manager
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            AI-powered social media management and optimization.
+          </p>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

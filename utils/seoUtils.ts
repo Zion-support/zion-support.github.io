@@ -2,23 +2,6 @@ interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-<<<<<<< HEAD
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  robots?: string;
-  viewport?: string;
-  charset?: string;
-  author?: string;
-  publisher?: string;
-  language?: string;
-=======
   canonicalUrl: string;
   ogImage: string;
   ogType: string;
@@ -29,16 +12,6 @@ interface SEOConfig {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-  viewport?: string;
-  charset?: string;
-  publisher?: string;
-  language?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
   geo?: {
     latitude?: string;
     longitude?: string;
@@ -46,15 +19,23 @@ interface SEOConfig {
     placename?: string;
   };
   alternate?: Array<{
-<<<<<<< HEAD
     hreflang: string;
     href: string;
-=======
-    href: string;
-    hreflang: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
   }>;
   structuredData?: any;
+  twitterImage?: string;
+  viewport?: string;
+  charset?: string;
+  publisher?: string;
+  language?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  ogSiteName?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterSite?: string;
+  twitterCreator?: string;
 }
 
 export const defaultSEOConfig: SEOConfig = {
@@ -79,52 +60,36 @@ export const defaultSEOConfig: SEOConfig = {
   robots: 'index, follow',
   viewport: 'width=device-width, initial-scale=1',
   charset: 'utf-8',
-  author: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
   language: 'en-US'
 };
 
-export const generateMetaTags = (config: SEOConfig): string => {
-  const tags = [
-    `<title>${config.title}</title>`,
-    `<meta name="description" content="${config.description}" />`,
-    `<meta name="keywords" content="${config.keywords.join(', ')}" />`,
-    `<meta name="robots" content="${config.robots || 'index, follow'}" />`,
-    `<meta name="viewport" content="${config.viewport || 'width=device-width, initial-scale=1'}" />`,
-    `<meta charset="${config.charset || 'utf-8'}" />`,
-    `<meta name="author" content="${config.author || 'Zion Tech Group'}" />`,
-    `<meta name="publisher" content="${config.publisher || 'Zion Tech Group'}" />`,
-    `<meta name="language" content="${config.language || 'en-US'}" />`,
-    `<link rel="canonical" href="${config.canonicalUrl || 'https://zion.app'}" />`
-  ];
+export function generateSEOTags(config: SEOConfig): string {
+  const tags: string[] = [];
+
+  // Basic meta tags
+  tags.push(`<title>${config.title}</title>`);
+  tags.push(`<meta name="description" content="${config.description}" />`);
+  tags.push(`<meta name="keywords" content="${config.keywords.join(', ')}" />`);
+  tags.push(`<meta name="robots" content="${config.robots}" />`);
+  tags.push(`<meta name="viewport" content="${config.viewport || 'width=device-width, initial-scale=1'}" />`);
+  tags.push(`<meta charset="${config.charset || 'utf-8'}" />`);
+
+  // Canonical URL
+  tags.push(`<link rel="canonical" href="${config.canonicalUrl}" />`);
 
   // Open Graph tags
-  if (config.ogTitle || config.title) {
-    tags.push(`<meta property="og:title" content="${config.ogTitle || config.title}" />`);
-  }
-  if (config.ogDescription || config.description) {
-    tags.push(`<meta property="og:description" content="${config.ogDescription || config.description}" />`);
-  }
-  if (config.ogImage) {
-    tags.push(`<meta property="og:image" content="${config.ogImage}" />`);
-  }
-  if (config.ogType) {
-    tags.push(`<meta property="og:type" content="${config.ogType}" />`);
-  }
-  if (config.canonicalUrl) {
-    tags.push(`<meta property="og:url" content="${config.canonicalUrl}" />`);
-  }
+  tags.push(`<meta property="og:title" content="${config.ogTitle || config.title}" />`);
+  tags.push(`<meta property="og:description" content="${config.ogDescription || config.description}" />`);
+  tags.push(`<meta property="og:image" content="${config.ogImage}" />`);
+  tags.push(`<meta property="og:url" content="${config.ogUrl || config.canonicalUrl}" />`);
+  tags.push(`<meta property="og:type" content="${config.ogType}" />`);
+  tags.push(`<meta property="og:site_name" content="${config.ogSiteName || 'Zion Tech Group'}" />`);
 
   // Twitter Card tags
-  if (config.twitterCard) {
-    tags.push(`<meta name="twitter:card" content="${config.twitterCard}" />`);
-  }
-  if (config.twitterTitle || config.title) {
-    tags.push(`<meta name="twitter:title" content="${config.twitterTitle || config.title}" />`);
-  }
-  if (config.twitterDescription || config.description) {
-    tags.push(`<meta name="twitter:description" content="${config.twitterDescription || config.description}" />`);
-  }
+  tags.push(`<meta name="twitter:card" content="${config.twitterCard}" />`);
+  tags.push(`<meta name="twitter:title" content="${config.twitterTitle || config.title}" />`);
+  tags.push(`<meta name="twitter:description" content="${config.twitterDescription || config.description}" />`);
   if (config.twitterImage || config.ogImage) {
     tags.push(`<meta name="twitter:image" content="${config.twitterImage || config.ogImage}" />`);
   }
@@ -144,7 +109,7 @@ export const generateMetaTags = (config: SEOConfig): string => {
 
   // Alternate language tags
   if (config.alternate && config.alternate.length > 0) {
-    config.alternate.forEach(alt => {
+    config.alternate.forEach((alt: { hreflang: string; href: string }) => {
       tags.push(`<link rel="alternate" hreflang="${alt.hreflang}" href="${alt.href}" />`);
     });
   }
@@ -155,81 +120,32 @@ export const generateMetaTags = (config: SEOConfig): string => {
   }
 
   return tags.join('\n');
-};
+}
 
-export const generateStructuredData = (config: SEOConfig): any => {
+export function generatePageSEO(pageConfig: Partial<SEOConfig>): SEOConfig {
   return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": config.description,
-    "url": config.canonicalUrl || "https://zion.app",
-    "logo": config.ogImage || "/images/logo.png",
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/zion-tech-group"
+    ...defaultSEOConfig,
+    ...pageConfig
+  };
+}
+
+export function generateStructuredData(config: SEOConfig): any {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    description: config.description,
+    url: config.canonicalUrl,
+    logo: config.ogImage,
+    sameAs: [
+      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/zion-tech-group'
     ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service",
-      "areaServed": "US",
-      "availableLanguage": "English"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
-      "postalCode": "94105",
-      "addressCountry": "US"
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-0123',
+      contactType: 'customer service',
+      availableLanguage: ['English']
     }
   };
-};
-
-export const validateSEOConfig = (config: SEOConfig): string[] => {
-  const errors: string[] = [];
-
-  if (!config.title || config.title.length < 10) {
-    errors.push('Title should be at least 10 characters long');
-  }
-
-  if (!config.description || config.description.length < 120) {
-    errors.push('Description should be at least 120 characters long');
-  }
-
-  if (!config.keywords || config.keywords.length === 0) {
-    errors.push('Keywords should not be empty');
-  }
-
-  if (config.title && config.title.length > 60) {
-    errors.push('Title should be less than 60 characters for optimal SEO');
-  }
-
-  if (config.description && config.description.length > 160) {
-    errors.push('Description should be less than 160 characters for optimal SEO');
-  }
-
-  return errors;
-};
-
-export const optimizeSEOConfig = (config: SEOConfig): SEOConfig => {
-  const optimized = { ...config };
-
-  // Ensure title is within optimal length
-  if (optimized.title && optimized.title.length > 60) {
-    optimized.title = optimized.title.substring(0, 57) + '...';
-  }
-
-  // Ensure description is within optimal length
-  if (optimized.description && optimized.description.length > 160) {
-    optimized.description = optimized.description.substring(0, 157) + '...';
-  }
-
-  // Ensure keywords are unique and lowercase
-  if (optimized.keywords) {
-    optimized.keywords = [...new Set(optimized.keywords.map(k => k.toLowerCase()))];
-  }
-
-  return optimized;
-};
+}

@@ -6,20 +6,6 @@ interface PerformanceMetrics {
   fid?: number;
   cls?: number;
   ttfb?: number;
-<<<<<<< HEAD
-=======
-  fmp?: number;
-  tti?: number;
-  tbt?: number;
-}
-
-interface PerformanceEntryExtended extends PerformanceEntry {
-  processingStart?: number;
-  hadRecentInput?: boolean;
-  value?: number;
-  responseStart?: number;
-  requestStart?: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
 }
 
 export function usePerformanceMetrics() {
@@ -34,39 +20,31 @@ export function usePerformanceMetrics() {
     setIsSupported(true);
 
     // First Contentful Paint
-    new PerformanceObserver(list => {
+    new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        setMetrics((prev: PerformanceMetrics) => ({ ...prev, fcp: fcpEntry.startTime }));
       }
     }).observe({ entryTypes: ['paint'] });
 
     // Largest Contentful Paint
-    new PerformanceObserver(list => {
+    new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        setMetrics((prev: PerformanceMetrics) => ({ ...prev, lcp: lastEntry.startTime }));
       }
     }).observe({ entryTypes: ['largest-contentful-paint'] });
 
     // First Input Delay
-    new PerformanceObserver(list => {
-      const entries = list.getEntries() as PerformanceEntryExtended[];
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
       entries.forEach(entry => {
-<<<<<<< HEAD
-        const inputEntry = entry as any;
-        if (inputEntry.processingStart && inputEntry.startTime) {
-          setMetrics(prev => ({ 
+        if ('processingStart' in entry && entry.startTime) {
+          setMetrics((prev: PerformanceMetrics) => ({ 
             ...prev, 
-            fid: inputEntry.processingStart - inputEntry.startTime 
-=======
-        if (entry.processingStart !== undefined && entry.startTime !== undefined) {
-          setMetrics(prev => ({ 
-            ...prev, 
-            fid: entry.processingStart! - entry.startTime 
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
+            fid: (entry as any).processingStart - entry.startTime 
           }));
         }
       });
@@ -74,38 +52,24 @@ export function usePerformanceMetrics() {
 
     // Cumulative Layout Shift
     let clsValue = 0;
-    new PerformanceObserver(list => {
-      const entries = list.getEntries() as PerformanceEntryExtended[];
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
       entries.forEach(entry => {
-<<<<<<< HEAD
-        const layoutEntry = entry as any;
-        if (!layoutEntry.hadRecentInput) {
-          clsValue += layoutEntry.value;
-=======
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value || 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
+        if (!('hadRecentInput' in entry) || !(entry as any).hadRecentInput) {
+          clsValue += (entry as any).value || 0;
         }
       });
-      setMetrics(prev => ({ ...prev, cls: clsValue }));
+      setMetrics((prev: PerformanceMetrics) => ({ ...prev, cls: clsValue }));
     }).observe({ entryTypes: ['layout-shift'] });
 
     // Time to First Byte
-    new PerformanceObserver(list => {
-      const entries = list.getEntries() as PerformanceEntryExtended[];
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
       entries.forEach(entry => {
-<<<<<<< HEAD
-        const navEntry = entry as any;
-        if (navEntry.responseStart && navEntry.requestStart) {
-          setMetrics(prev => ({ 
+        if ('responseStart' in entry && 'requestStart' in entry) {
+          setMetrics((prev: PerformanceMetrics) => ({ 
             ...prev, 
-            ttfb: navEntry.responseStart - navEntry.requestStart 
-=======
-        if (entry.responseStart !== undefined && entry.requestStart !== undefined) {
-          setMetrics(prev => ({ 
-            ...prev, 
-            ttfb: entry.responseStart! - entry.requestStart! 
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
+            ttfb: (entry as any).responseStart - (entry as any).requestStart 
           }));
         }
       });
