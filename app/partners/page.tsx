@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { } from 'react-router-dom'
@@ -42,7 +41,6 @@ const PartnersPage: React.FC = () => {
     'Priority access to new features','
     'Dedicated partner success manager''
   ]
-=======
 import React from 'react';'
 import { Helmet ,   } from 'lucide-react';'
 import { Circle, Right,  } from 'lucide-react';
@@ -92,8 +90,6 @@ const PartnersPage: React.FC = () => {
     'Priority access to new features',';'
     'Dedicated partner success manager'';
   ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
@@ -101,7 +97,6 @@ const PartnersPage: React.FC = () => {
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, technical support, and joint go-to-market opportunities." />
         <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -132,11 +127,9 @@ const PartnersPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Strategic Partners;
-<<<<<<< HEAD
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {partners.map((partner, _index) => (
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -158,17 +151,14 @@ const PartnersPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Strategic Partners</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{partners.map((partner, _index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="text-center">
                     <div className="text-4xl mb-4">{partner.logo}</div>
                     <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
                     <p className="text-cyan-400 text-sm mb-3">{partner.category}</p>
-<<<<<<< HEAD
                     <p className="text-gray-300 text-sm">{partner.description}</p>
                   </div>
                 </div>
-=======
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {partners.map((partner, _index) => (}
@@ -180,7 +170,6 @@ const PartnersPage: React.FC = () => {
                     <p className="text-gray-300 text-sm">{partner.description}</p>;
                   </div>;
                 </div>;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
               ))}
             </div>
           </div>
@@ -190,7 +179,6 @@ const PartnersPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Partner Benefits;
-<<<<<<< HEAD
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, _index) => (
@@ -200,7 +188,6 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <span className="text-gray-300 font-medium">{benefit}</span>
                 </div>
-=======
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {benefits.map((benefit, _index) => (}
@@ -210,7 +197,6 @@ const PartnersPage: React.FC = () => {
                   </div>;
                   <span className="text-gray-300 font-medium">{benefit}</span>;
                 </div>;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
               ))}
             </div>
           </div>
@@ -238,10 +224,8 @@ const PartnersPage: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 export default PartnersPage;
-=======
                     <p className="text-gray-300 text-sm">{partner.description}</p></div></div>
               ))}
             </div></div></section>{/* Benefits Section */}
@@ -270,9 +254,5 @@ export default PartnersPage;
                 Contact Us</button></div></div></section></div></>
   )}
 export default PartnersPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
-
 export default PartnersPage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

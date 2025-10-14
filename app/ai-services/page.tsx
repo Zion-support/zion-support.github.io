@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 import React from 'react';'react-helmet-async;
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;
 import FuturisticBackground from '../components/FuturisticBackground;
-=======
 import React from 'react';'
 import { Helmet , Right,  Star,  Brain,  BarChart3,  Zap,  FileText,  MessageSquare,  Shield   } from 'lucide-react';'
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield  } from 'lucide-react';'
 FuturisticBackground from '../components/FuturisticBackground';
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 const AiServicesPage: React.FC = () => {
   const services = [{
       icon: Brain,'
@@ -44,24 +39,18 @@ const AiServicesPage: React.FC = () => {
       color: 'from-indigo-500 to-purple-500'';}
     },
     {
-<<<<<<< HEAD
       icon: icon: Shield,
       title: 'AI Security',';
       description: 'AI-powered security solutions to protect your business and data.',';
       color: 'from-cyan-500 to-blue-500'';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
-
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react'
 import FuturisticBackground from '../components/FuturisticBackground'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const AiServicesPage: React.FC = () => {
   const services = [
     {
@@ -89,27 +78,21 @@ const AiServicesPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     },
     {
-<<<<<<< HEAD
       icon: MessageSquare,
       title: 'AI Chatbots',
       description: 'Intelligent chatbots and virtual assistants for customer support.',
-=======
       icon: MessageCircle,
       title: 'AI Customer Service',
       description: 'Intelligent chatbots and customer service solutions powered by AI.',
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: Shield,
       title: 'AI Security',
-<<<<<<< HEAD
       description: 'AI-powered security solutions to protect your business from threats.',
       color: 'from-red-500 to-pink-500'
-=======
       description: 'AI-powered security solutions to protect your business and data.',
       color: 'from-cyan-500 to-blue-500'
-<<<<<<< HEAD
     }
   ]
   const features = [
@@ -132,18 +115,12 @@ const AiServicesPage: React.FC = () => {
       title: 'Scalable Architecture',
       description: 'AI solutions that grow with your business and handle increasing loads.',
       icon: '📈'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
       icon: Shield,'
       title: 'AI Security',';'
       description: 'AI-powered security solutions to protect your business and data.',';'
       color: 'from-cyan-500 to-blue-500'';}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     }
   ];
-
   const testimonials = [{
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
@@ -164,25 +141,17 @@ const AiServicesPage: React.FC = () => {
       role: "Head of Analytics",
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
       rating: 5;}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
     }
   ]
   return (
     <div className="min-h-screen bg-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and more." />
-=======
         <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and custom solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, consulting" />
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       </Helmet>
-<<<<<<< HEAD
-      
       <FuturisticBackground />
-      
-<<<<<<< HEAD
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -195,7 +164,6 @@ const AiServicesPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -223,7 +191,6 @@ const AiServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -238,7 +205,6 @@ const AiServicesPage: React.FC = () => {
                 Get Started
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">
-=======
       <div className="relative z-10 min-h-screen bg-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -247,7 +213,7 @@ const AiServicesPage: React.FC = () => {
               AI Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions. 
+              Transform your business with cutting-edge artificial intelligence solutions.
               From consulting to implementation, we deliver AI that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -255,16 +221,13 @@ const AiServicesPage: React.FC = () => {
                 Get Started
               </button>
               <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                 Learn More
               </button>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
     </div>
-=======
       <FuturisticBackground>;
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
           {/* Hero Section */}
@@ -359,13 +322,8 @@ const AiServicesPage: React.FC = () => {
         </div>;
       </FuturisticBackground>;
     </>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   );
 };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-
-<<<<<<< HEAD
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -388,7 +346,6 @@ const AiServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
           <div className="max-w-7xl mx-auto">
@@ -406,7 +363,6 @@ const AiServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -430,6 +386,4 @@ const AiServicesPage: React.FC = () => {
     </>
   )}
 export default AiServicesPage
-=======
 export default AiServicesPage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

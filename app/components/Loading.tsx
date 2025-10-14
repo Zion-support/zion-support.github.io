@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
-=======
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const Loading: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -18,7 +15,6 @@ const Loading: React.FC = () => {
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-<<<<<<< HEAD
             Loading;
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -28,19 +24,16 @@ const Loading: React.FC = () => {
         </div>
       </section>
       {/* Content Section */}
-=======
             Loading</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional loading services
             designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
-<<<<<<< HEAD
                 We provide comprehensive loading;
                 solutions tailored to your specific needs and requirements.;
               </p>
@@ -79,13 +72,10 @@ const Loading: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?;
-<<<<<<< HEAD
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-=======
           </h2>;
           <p className="text-xl text-blue-100 mb-8">;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
             Let's discuss how our loading';
             services can help you achieve your goals.;
           </p>
@@ -99,10 +89,8 @@ const Loading: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
 export default Loading;
-=======
                 We provide comprehensive loading
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3">
@@ -136,9 +124,5 @@ export default Loading;
             Get Started Today</a></div></section></div>
   )}
 export default Loading
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
-
 export default Loading;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

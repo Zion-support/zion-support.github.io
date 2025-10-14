@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
-import { 
+import {
   CloudIcon,
   ServerIcon,
   CpuChipIcon,
@@ -48,19 +47,15 @@ export default function CloudSolutionsPage() {
     { name: 'Oracle Cloud', logo: 'Oracle' },
     { name: 'DigitalOcean', logo: 'DO' }
   ]
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const CloudSolutionsPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
         <title>CloudSolutionsPage - Zion Tech Group</title>
         <meta name="description" content="CloudSolutionsPage - Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">CloudSolutionsPage</h1>
@@ -68,11 +63,7 @@ const CloudSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )}
-=======
   );
 };
-
 export default CloudSolutionsPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

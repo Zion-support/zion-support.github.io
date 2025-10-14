@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
-import { 
+import {
   DocumentTextIcon,
   CodeBracketIcon,
   CogIcon,
@@ -65,26 +64,20 @@ export default function DocumentationPage() {
     { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },
     { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
   ]
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const DocumentationPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
         <title>DocumentationPage - Zion Tech Group</title>
         <meta name="description" content="DocumentationPage - Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">DocumentationPage</h1>
           <p className="text-gray-300">This page is under construction.</p>
         </div>
-<<<<<<< HEAD
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
@@ -99,20 +92,19 @@ const DocumentationPage: React.FC = () => {
               Everything You Need to Get Started
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Comprehensive documentation, API references, and guides to help you 
+              Comprehensive documentation, API references, and guides to help you
               integrate and use our services effectively.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                to="#quick-start" 
+              <Link
+                to="#quick-start"
                 className="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Quick Start Guide
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                to="/support" 
+              <Link
+                to="/support"
                 className="group border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 Get Support
@@ -122,7 +114,6 @@ const DocumentationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Quick Start Section */}
       <section id="quick-start" className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -134,7 +125,6 @@ const DocumentationPage: React.FC = () => {
               Get up and running with our services in just a few steps
             </p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             {quickStart.map((step, index) => (
               <div key={index} className="text-center">
@@ -148,7 +138,6 @@ const DocumentationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Documentation Sections */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-green-900">
         <div className="container mx-auto px-4">
@@ -160,7 +149,6 @@ const DocumentationPage: React.FC = () => {
               Browse our comprehensive documentation by category
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {sections.map((section, index) => (
               <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
@@ -176,8 +164,8 @@ const DocumentationPage: React.FC = () => {
                 <ul className="space-y-2">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <Link 
-                        to={link.href} 
+                      <Link
+                        to={link.href}
                         className="text-green-400 hover:text-green-300 flex items-center group"
                       >
                         <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
@@ -191,7 +179,6 @@ const DocumentationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Code Examples Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -202,7 +189,6 @@ const DocumentationPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-12">
               Get started quickly with our code examples and sample implementations
             </p>
-            
             <div className="bg-slate-800 p-8 rounded-xl border border-slate-600 mb-8">
               <h3 className="text-xl font-bold text-white mb-4">Basic API Call Example</h3>
               <pre className="text-left text-green-400 overflow-x-auto">
@@ -219,7 +205,6 @@ const response = await client.ai.generateText({
 console.log(response.data);`}</code>
               </pre>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-600">
                 <h4 className="text-white font-semibold mb-2">JavaScript/Node.js</h4>
@@ -246,7 +231,6 @@ console.log(response.data);`}</code>
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-green-900">
         <div className="container mx-auto px-4">
@@ -257,7 +241,6 @@ console.log(response.data);`}</code>
             <p className="text-xl text-gray-300 mb-12">
               Can't find what you're looking for? Our support team is here to help
             </p>
-            
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-green-400" />
@@ -272,16 +255,15 @@ console.log(response.data);`}</code>
                 <span>Middletown, DE</span>
               </div>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/support" 
+              <Link
+                to="/support"
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
               >
                 Contact Support
               </Link>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300"
               >
                 Get In Touch
@@ -292,11 +274,8 @@ console.log(response.data);`}</code>
       </section>
     </>
   )}
-=======
       </div>
     </>
   );
 };
-
 export default DocumentationPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

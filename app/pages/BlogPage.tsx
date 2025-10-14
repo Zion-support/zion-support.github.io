@@ -7,7 +7,6 @@ const BlogPage: React.FC = () => {
         <title>BlogPage - Zion Tech Group</title>
         <meta name="description" content="BlogPage - Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">BlogPage</h1>
@@ -15,11 +14,8 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default BlogPage;
-=======
   )}
 export default BlogPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

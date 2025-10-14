@@ -7,7 +7,6 @@ const ContactPage: React.FC = () => {
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, cybersecurity, and digital transformation services." />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
@@ -16,7 +15,6 @@ const ContactPage: React.FC = () => {
               Ready to transform your business? Let's discuss your technology needs.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
@@ -35,7 +33,6 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
               <form className="space-y-4">
@@ -72,11 +69,8 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default ContactPage;
-=======
   )}
 export default ContactPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

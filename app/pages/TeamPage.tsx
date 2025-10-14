@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
-import { 
+import {
   UserGroupIcon,
   AcademicCapIcon,
   BriefcaseIcon,
@@ -85,19 +84,15 @@ export default function TeamPage() {
       description: 'We maintain the highest ethical standards in all our business practices.'
     }
   ]
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const TeamPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
         <title>TeamPage - Zion Tech Group</title>
         <meta name="description" content="TeamPage - Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">TeamPage</h1>
@@ -105,11 +100,7 @@ const TeamPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )}
-=======
   );
 };
-
 export default TeamPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

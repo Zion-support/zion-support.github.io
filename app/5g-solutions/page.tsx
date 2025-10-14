@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react'
-=======
 import React from 'react';'
 import { Helmet , Right,  Wifi,  Circle,  Zap,  Globe,  Smartphone  } from 'lucide-react';
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -29,56 +25,30 @@ const FiveGSolutionsPage: React.FC = () => {
     },
     {
       icon: Wifi,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
-<<<<<<< HEAD
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
 '
       title: 'IoT Connectivity','
       description: 'Connect thousands of IoT devices with 5G technology','
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
     }
   ]
   const solutions = [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
-<<<<<<< HEAD
       title: '5G Network Infrastructure',      description: 'Complete 5G network setup and optimization',
-=======
       description: 'Complete 5G network setup and optimization',
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-=======
 '
       title: '5G Network Infrastructure','
       description: 'Complete 5G network setup and optimization','
       price: 'Starting at $50,000','
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     },
     {'
       title: '5G Mobile Applications','
@@ -91,22 +61,9 @@ title: 'IoT Connectivity',
       description: 'IoT device connectivity and management platform','
       price: 'Starting at $35,000','
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
   return (
@@ -116,7 +73,6 @@ title: 'IoT Connectivity',
         <meta name="description" content="Advanced 5G solutions for ultra-fast connectivity and IoT integration" />
         <meta name="keywords" content="5G, connectivity, IoT, mobile, enterprise, solutions" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
@@ -126,16 +82,13 @@ title: 'IoT Connectivity',
               <Wifi className="w-4 h-4 text-blue-400 mr-2" />
               <span className="text-blue-400 text-sm font-medium">Next-Gen Connectivity</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               5G <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
             </h1>
-            
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Transform your business with ultra-fast 5G connectivity. Experience lightning-fast speeds, 
+              Transform your business with ultra-fast 5G connectivity. Experience lightning-fast speeds,
               low latency, and seamless IoT integration for the digital future.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -148,7 +101,6 @@ title: 'IoT Connectivity',
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -160,16 +112,12 @@ title: 'IoT Connectivity',
               Our 5G technology delivers unmatched performance, reliability, and innovation for your business needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
-<<<<<<< HEAD
               const IconComponent = feature.icon
               return (
-=======
               const IconComponent = feature.icon;
               return (}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mb-4">
                     <IconComponent className="w-6 h-6 text-white" />
@@ -189,7 +137,6 @@ title: 'IoT Connectivity',
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
@@ -201,7 +148,6 @@ title: 'IoT Connectivity',
               Choose the perfect 5G solution for your business size and requirements.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (}
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300">
@@ -223,7 +169,6 @@ title: 'IoT Connectivity',
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -239,17 +184,10 @@ title: 'IoT Connectivity',
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 }
 export default FiveGSolutionsPage;
-=======
   )}
 export default FiveGSolutionsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
-
 export default FiveGSolutionsPage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

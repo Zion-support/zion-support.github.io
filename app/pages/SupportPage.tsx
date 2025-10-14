@@ -7,7 +7,6 @@ const SupportPage: React.FC = () => {
         <title>SupportPage - Zion Tech Group</title>
         <meta name="description" content="SupportPage - Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">SupportPage</h1>
@@ -15,11 +14,8 @@ const SupportPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default SupportPage;
-=======
   )}
 export default SupportPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

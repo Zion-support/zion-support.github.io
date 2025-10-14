@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-import { 
+import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -138,13 +134,8 @@ export default function AISolutionsPage() {
       useCases: ["AI transformation", "Technology adoption", "Process improvement"],
       href: "/ai-consulting"
     }
-<<<<<<< HEAD
   ];
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const AISolutionsPage: React.FC = () => {
-=======
   ]
   const features = [
     {
@@ -168,14 +159,12 @@ const AISolutionsPage: React.FC = () => {
       icon: UserGroupIcon
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <>
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
         <meta name="description" content="Explore our advanced AI solutions including machine learning, natural language processing, and predictive analytics." />
       </Helmet>
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -405,8 +394,6 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>;    </>
-=======
-      
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
@@ -415,18 +402,15 @@ const AISolutionsPage: React.FC = () => {
               Harness the power of artificial intelligence to transform your business operations
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Machine Learning</h3>
               <p className="text-gray-300 mb-6">Custom ML models tailored to your specific business needs and data.</p>
             </div>
-            
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Natural Language Processing</h3>
               <p className="text-gray-300 mb-6">Advanced NLP solutions for text analysis and language understanding.</p>
             </div>
-            
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Predictive Analytics</h3>
               <p className="text-gray-300 mb-6">Data-driven insights and predictions to guide business decisions.</p>
@@ -435,15 +419,12 @@ const AISolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   );
 }
 export default AISolutionsPage;
-=======
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, and predictive analytics." />
         <meta name="keywords" content="AI solutions, machine learning, NLP, computer vision, predictive analytics, AI consulting" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -452,7 +433,7 @@ export default AISolutionsPage;
               AI Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions. 
+              Transform your business with cutting-edge artificial intelligence solutions.
               From machine learning to computer vision, we deliver AI that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -465,7 +446,6 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -483,7 +463,7 @@ export default AISolutionsPage;
                   <div className="mb-4">
                     <p className="text-purple-400 font-semibold">{service.price}</p>
                   </div>
-                  <Link 
+                  <Link
                     to={service.href}
                     className="text-purple-400 hover:text-purple-300 font-medium flex items-center"
                   >
@@ -494,7 +474,6 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
           <div className="max-w-7xl mx-auto">
@@ -514,7 +493,6 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -537,4 +515,3 @@ export default AISolutionsPage;
       </div>
     </>
   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

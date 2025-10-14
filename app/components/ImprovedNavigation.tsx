@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
-=======
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const ImprovedNavigation: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -20,24 +17,20 @@ const ImprovedNavigation: React.FC = () => {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Improved </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Professional improved navigation services;
             designed to help your business grow and succeed.;
           </p>
         </div>
       </section>
       {/* Content Section */}
-=======
             Professional improved navigation services
             designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
-<<<<<<< HEAD
                 We provide comprehensive improved navigation;
                 solutions tailored to your specific needs and requirements.;
               </p>
@@ -76,13 +69,10 @@ const ImprovedNavigation: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?;
-<<<<<<< HEAD
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-=======
           </h2>;
           <p className="text-xl text-blue-100 mb-8">;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
             Let's discuss how our improved navigation';
             services can help you achieve your goals.;
           </p>
@@ -96,10 +86,8 @@ const ImprovedNavigation: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
 export default ImprovedNavigation;
-=======
                 We provide comprehensive improved navigation
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3">
@@ -133,9 +121,5 @@ export default ImprovedNavigation;
             Get Started Today</a></div></section></div>
   )}
 export default ImprovedNavigation
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
-
 export default ImprovedNavigation;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

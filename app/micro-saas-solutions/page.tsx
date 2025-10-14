@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';'use client';
-=======
 'use client';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -28,7 +23,6 @@ import {
   DocumentTextIcon,
   LightBulbIcon
 } from '@heroicons/react/24/outline';
-
 const MicroSaaSSolutionsPage: React.FC = () => {
   const solutions = [
     {
@@ -140,7 +134,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       href: "/micro-saas/ai-expense-tracker"
     }
   ];
-
   const features = [
     {
       title: "AI-Powered Solutions",
@@ -163,25 +156,17 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       icon: UserGroupIcon
     }
   ];
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
   return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to streamline your business operations." />
         <meta name="keywords" content="micro SaaS, AI solutions, business automation, productivity tools" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -190,18 +175,18 @@ import { Helmet } from 'react-helmet-async';
               Micro SaaS Solutions
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Discover our comprehensive suite of micro SaaS solutions designed to streamline 
+              Discover our comprehensive suite of micro SaaS solutions designed to streamline
               your business operations and boost productivity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Started
               </Link>
-              <Link 
-                to="/demo" 
+              <Link
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 View Demo
@@ -209,7 +194,6 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-
         {/* Solutions Grid */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -227,7 +211,7 @@ import { Helmet } from 'react-helmet-async';
                   <div className="mb-4">
                     <p className="text-blue-600 font-semibold">{solution.price}</p>
                   </div>
-                  <Link 
+                  <Link
                     to={solution.href}
                     className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
                   >
@@ -238,7 +222,6 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
@@ -258,7 +241,6 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -269,14 +251,14 @@ import { Helmet } from 'react-helmet-async';
               Let's discuss how our micro SaaS solutions can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Contact Us
               </Link>
-              <Link 
-                to="/demo" 
+              <Link
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Schedule Demo
@@ -284,10 +266,8 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-=======
         <meta name="description" content="Discover our micro SaaS solutions designed to help you launch and scale your software business." />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
@@ -296,33 +276,25 @@ import { Helmet } from 'react-helmet-async';
               Launch and scale your software business with our comprehensive micro SaaS solutions
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">SaaS Development</h3>
               <p className="text-gray-300 mb-6">Custom SaaS applications built with modern technologies and best practices.</p>
             </div>
-            
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">API Integration</h3>
               <p className="text-gray-300 mb-6">Seamless integration with third-party services and APIs.</p>
             </div>
-            
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Scalable Architecture</h3>
               <p className="text-gray-300 mb-6">Cloud-native architecture designed for growth and scalability.</p>
             </div>
           </div>
         </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 export default MicroSaaSSolutionsPage;
-=======
 };
-
 export default MicroSaaSSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

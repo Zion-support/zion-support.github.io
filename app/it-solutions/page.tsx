@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -27,7 +23,6 @@ import {
   DocumentTextIcon,
   LightBulbIcon
 } from '@heroicons/react/24/outline';
-
 const ITSolutionsPage: React.FC = () => {
   const solutions = [
     {
@@ -139,7 +134,6 @@ const ITSolutionsPage: React.FC = () => {
       href: "/it-support"
     }
   ];
-
   const features = [
     {
       title: "Expert Solutions",
@@ -162,25 +156,17 @@ const ITSolutionsPage: React.FC = () => {
       icon: ShieldCheckIcon
     }
   ];
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
   return (
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -189,18 +175,18 @@ import { Helmet } from 'react-helmet-async';
               IT Solutions
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed to modernize your infrastructure, 
+              Comprehensive IT solutions designed to modernize your infrastructure,
               enhance security, and drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Started
               </Link>
-              <Link 
-                to="/demo" 
+              <Link
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 View Demo
@@ -208,7 +194,6 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-
         {/* Solutions Grid */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -226,7 +211,7 @@ import { Helmet } from 'react-helmet-async';
                   <div className="mb-4">
                     <p className="text-blue-600 font-semibold">{solution.price}</p>
                   </div>
-                  <Link 
+                  <Link
                     to={solution.href}
                     className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
                   >
@@ -237,7 +222,6 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
@@ -257,7 +241,6 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -268,14 +251,14 @@ import { Helmet } from 'react-helmet-async';
               Let's discuss how our IT solutions can help you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Contact Us
               </Link>
-              <Link 
-                to="/demo" 
+              <Link
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Schedule Demo
@@ -283,10 +266,8 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-=======
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, system integration, and technical support." />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
@@ -295,33 +276,25 @@ import { Helmet } from 'react-helmet-async';
               Comprehensive IT services to support and enhance your business technology infrastructure
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Infrastructure Management</h3>
               <p className="text-gray-300 mb-6">Complete management of your IT infrastructure and systems.</p>
             </div>
-            
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">System Integration</h3>
               <p className="text-gray-300 mb-6">Seamless integration of various systems and applications.</p>
             </div>
-            
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Technical Support</h3>
               <p className="text-gray-300 mb-6">24/7 technical support and maintenance services.</p>
             </div>
           </div>
         </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 export default ITSolutionsPage;
-=======
 };
-
 export default ITSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

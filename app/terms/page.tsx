@@ -1,28 +1,21 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-=======
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const TermsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />'
         <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
         <title>Terms of Service - Zion Tech Group</title>'
         <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />';
         <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -38,7 +31,6 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
         {/* Content Section */}
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -48,30 +40,25 @@ const TermsPage: React.FC = () => {
                 Service</span></h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Please read these terms carefully before using our services.</p></div></section>{/* Content Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
               <div className="prose prose-invert max-w-none">
                 <h2 className="text-2xl font-semibold text-white mb-4">Acceptance of Terms</h2>
                 <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
                   By accessing and using our services, you accept and agree to be bound by the terms;
                   and provision of this agreement.;
                 </p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Use License</h2>
                 <p className="text-gray-300 mb-6">
-                  Permission is granted to temporarily download one copy of our materials for personal, 
+                  Permission is granted to temporarily download one copy of our materials for personal,
                   non-commercial transitory viewing only.;
-<<<<<<< HEAD
                 </p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Disclaimer</h2>
                 <p className="text-gray-300 mb-6">
-=======
                 </p>;
                 <h2 className="text-2xl font-semibold text-white mb-4">Disclaimer</h2>;
                 <p className="text-gray-300 mb-6">;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
                   The materials on our website are provided on an 'as is' basis. Zion Tech Group makes';
                   no warranties, expressed or implied, and hereby disclaims and negates all other warranties.;
                 </p>
@@ -93,7 +80,7 @@ const TermsPage: React.FC = () => {
                 </p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Modifications</h2>
                 <p className="text-gray-300 mb-6">
-                  We may revise these terms of service at any time without notice. By using this website, 
+                  We may revise these terms of service at any time without notice. By using this website,
                   you are agreeing to be bound by the then current version of these terms.;
                 </p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Contact Information</h2>
@@ -113,15 +100,13 @@ const TermsPage: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 export default TermsPage;
-=======
                   By accessing and using our services, you accept and agree to be bound by the terms
                   and provision of this agreement.</p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Use License</h2>
                 <p className="text-gray-300 mb-6">
-                  Permission is granted to temporarily download one copy of our materials for personal, 
+                  Permission is granted to temporarily download one copy of our materials for personal,
                   non-commercial transitory viewing only.</p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Disclaimer</h2>
                 <p className="text-gray-300 mb-6">
@@ -142,7 +127,7 @@ export default TermsPage;
                   for the contents of any such linked site.</p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Modifications</h2>
                 <p className="text-gray-300 mb-6">
-                  We may revise these terms of service at any time without notice. By using this website, 
+                  We may revise these terms of service at any time without notice. By using this website,
                   you are agreeing to be bound by the then current version of these terms.</p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Contact Information</h2>
                 <p className="text-gray-300 mb-6">
@@ -154,9 +139,5 @@ export default TermsPage;
                 </p></div></div></div></section></div></>
   )}
 export default TermsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
-
 export default TermsPage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
