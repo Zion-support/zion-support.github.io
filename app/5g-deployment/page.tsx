@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const Page = () => {
+const Page = (): React.JSX.Element => {
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
@@ -116,5 +116,5 @@ const Page = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
+const page = React.lazy((): Promise<{ default: React.ComponentType<any> }> => import('./page'));
 export default page;

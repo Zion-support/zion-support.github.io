@@ -112,5 +112,5 @@ function AICybersecuritySuitePro() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
+const page = React.lazy((): Promise<{ default: React.ComponentType<any> }> => import('./page'));
 export default page;

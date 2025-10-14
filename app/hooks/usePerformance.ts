@@ -31,6 +31,7 @@ export const usePerformance = (): PerformanceMetrics => {
 
       return () => observer.disconnect();
     }
+    return undefined;
   }, []);
 
   return metrics;

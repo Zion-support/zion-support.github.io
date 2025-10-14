@@ -12,7 +12,7 @@ export const imageOptimizer = {
   
   getResponsiveSrc: (src: string, sizes: number[]) => {
     return sizes.map(size => ({
-      src: this.optimize(src, size),
+      src: imageOptimizer.optimize(src, size),
       width: size
     }));
   }
