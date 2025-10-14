@@ -13,9 +13,6 @@ function fixFileComprehensively(filePath) {
     const originalContent = content;
     
     // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
     
     // Fix unterminated string literals
     content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
@@ -114,9 +111,6 @@ function findProblematicFiles(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || 
-              content.includes('=======') ||
-              content.includes('>>>>>>>') ||
               content.includes('import React from \'react;') ||
               content.includes('import { Helmet } from \'react-helmet-async;') ||
               content.includes('<>') ||

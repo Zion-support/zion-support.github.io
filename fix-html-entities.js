@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -14,27 +11,17 @@ const __dirname = path.dirname(__filename);
 function fixHtmlEntities(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
 
-    
     // Fix common HTML entities
     const fixes = [
 
-=======
-// Fix common HTML entities
-    const fixes = [
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       { from: /&apos;/g, to: "'" },
       { from: /&quot;/g, to: '"' },
       { from: /&lt;/g, to: '<' },
       { from: /&gt;/g, to: '>' },
       { from: /&amp;/g, to: '&' },
-<<<<<<< HEAD
 
       { from: /&rbrace;/g, to: '}' },
-=======
-{ from: /&rbrace;/g, to: '}' },
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       { from: /&lbrace;/g, to: '{' }
     ];
     
@@ -47,20 +34,12 @@ function fixHtmlEntities(filePath) {
     });
     
     if (hasChanges) {
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed HTML entities in: ${filePath}`);
       return true;
     }
-<<<<<<< HEAD
 
-    
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -104,7 +83,4 @@ files.forEach(file => {
 });
 
 console.log(`Fixed HTML entities in ${fixedCount} files.`);
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79

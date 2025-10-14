@@ -20,14 +20,9 @@ import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
 
-<<<<<<< HEAD
 export default function HomePage()  {
 
   const structuredData = {
-=======
-export default function HomePage() {
-const structuredData = {
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",

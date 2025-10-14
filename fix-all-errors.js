@@ -25,7 +25,6 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
             files.push(fullPath);
           }
         } catch (err) {
@@ -46,7 +45,6 @@ function fixMergeConflicts(filePath) {
     const originalContent = content;
     
     // Fix common merge conflict patterns
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, (match, headContent, branchContent) => {
       // For most cases, prefer the HEAD content (current branch)
       return headContent.trim();
     });

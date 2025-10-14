@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-=======
-
-'use client';
-
->>>>>>> origin/main
-=======
-'use client';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -30,7 +19,7 @@ import {
   CogIcon
 } from '@heroicons/react/24/outline';
 
-export default function MicroSaaSSolutionsPage()   {
+const MicroSaaSSolutionsPage: React.FC = () => {
   const microSaaSProducts = [
     {
       title: "AI-Powered Analytics Dashboard",
@@ -469,13 +458,8 @@ export default function MicroSaaSSolutionsPage()   {
       useCases: ["Conferences", "Webinars", "Corporate events"],
       href: "/ai-event-management"
     }
-  ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+    ];
 
-const MicroSaaSSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
