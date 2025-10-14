@@ -1,42 +1,60 @@
 import { Helmet    } from "react-helmet-async";
 import { 
-  CheckCircleIcon,
-  UserGroupIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  HeartIcon,
-  ArrowRightIcon,
-  StarIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  CheckCircleIcon,;
+  UserGroupIcon,;
+  LightBulbIcon,;
+  ShieldCheckIcon,;
+  RocketLaunchIcon,;
+  HeartIcon,;
+  ArrowRightIcon,;
+  StarIcon,;
+  PhoneIcon,;
+  EnvelopeIcon,;
   MapPinIcon;
 const AboutPage: React.FC = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />"""
+        <title>AboutPage - Zion Tech Group</title>
+        <meta name="description" content="Professional AboutPage services by Zion Tech Group." />
+        <meta name="keywords" content="AboutPage, AI solutions, IT services" />
       </Helmet>
       
-        {/* Hero Section */}
-        <div>"""</div>
-          <div>"""</div>
-            <div>"""</div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
-                About Zion Tech Group;
-              </h1>
-              <p>"""
-                Empowering businesses with cutting-edge AI and IT solutions for the digital age;</p>
-              </p>
-              <div className="space-y-4"></div>
-    </>
-                <div className="flex items-start"></div>
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" /></CheckCircleIcon>
-                  <span className="text-gray-300">Innovation-driven approach</div>
-                <div className="flex items-start"></div>
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"""
-                  <span className="text-gray-300">Client-focused solutions</div>
-                <div className="flex items-start"></div>
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"""
-                  <span className="text-gray-300">Cutting-edge technology</div>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
+            AboutPage
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
+            Professional AboutPage services designed to help your business grow and succeed.
+          </p>
+        </div>
+        
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Our team of experts provides cutting-edge solutions tailored to your specific needs.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your systems run smoothly at all times.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+            <p className="text-gray-300">
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AboutPagePage;

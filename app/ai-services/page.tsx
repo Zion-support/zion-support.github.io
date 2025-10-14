@@ -1,3 +1,4 @@
+import { Brain, Shield, Zap, Users, Target, BarChart3, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 

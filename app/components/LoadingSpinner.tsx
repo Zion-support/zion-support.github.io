@@ -1,32 +1,14 @@
-  text?: string;
-  fullScreen?: boolean;
-  className?: string}
+import React from "react";
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md','''
-  color = 'primary','''
-  text,
-  fullScreen = false,
-  className = '''''
-}) => {
-  const sizeClasses = {
-  const spinner = (
-    <div>"`"`"``"`</div>
-      <div>"""</div>
-        <div;
-          className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}````
-          style={{
-            animation: 'spin 1s linear infinite','''
-            willChange: 'transform''''
-          }></div>
-          <Loader2 className="w-full h-full" />"""
-        </div>
-      {text && (
+const LoadingSpinner: React.FC = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2 xl font-bold text-white mb-4">LoadingSpinner</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for LoadingSpinner.
+      </p>
     </div>
-  )
-  if (fullScreen) {
-    return (
-        {spinner}
-      </div>
-    )
-  return spinner;
+  );
+};
+
+export default LoadingSpinner;

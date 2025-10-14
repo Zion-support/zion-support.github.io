@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react";"
 import { Helmet } from "react-helmet-async";
 
 const AppPage = () => {
   return (
-    <>
+    <>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Helmet>
-        <title>App - Zion Tech Group</title>
+        <title>App - Zion Tech Group</title>"
         <meta name="description" content="App - Zion Tech Group" />
       </Helmet>
         <div className="container mx-auto px-4 py-16">
@@ -18,6 +18,6 @@ const AppPage = () => {
       </div>
     </>
   );
-};
+</div></Helmet></title></meta></div></div></h1></div></Helmet></title></meta></div></div></h1>};
 
 export default AppPage;

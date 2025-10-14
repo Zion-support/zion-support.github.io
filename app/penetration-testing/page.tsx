@@ -1,22 +1,14 @@
-'use client';'
-import React from "react";
-import { Helmet     } from "react-helmet-async";
+'use client';
+import React from "react";"
+import { Helmet } from "react-helmet-async";
 
-const Page = () => {
+export default function Page() {
   return (
-<>
-      <Helmet>
-        <title>Penetration Testing - Zion Tech Group</title>
-        <meta name="description" content="Penetration Testing - Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white"></div>
-    </>
-    </>
-        <div className="container mx-auto px-4 py-20"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Penetration Testing</h1>
-          <p className="text-xl text-gray-600"></p>
-            This page is under development. Please check back soon for more information about our penetration testing services.
-          </div>
+    <div className="p-4">
+      <h2 className="text-2 xl font-bold text-white mb-4">Page</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for Page.
+      </p>
+    </div>
   );
-}"""
+}

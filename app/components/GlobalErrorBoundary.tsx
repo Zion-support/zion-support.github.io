@@ -1,25 +1,53 @@
-            GlobalErrorBoundary</h1>
-          <p>""</p>
-            Professional globalerrorboundary solutions tailored to your business needs.</p>
-          <div>""</div>
-            <div>""</div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">""
-                Expert Solutions</h3>
-              <p>""</p>
-                Our team of experts delivers cutting-edge globalerrorboundary solutions.</div>
-            <div>""</div>
-              <h3 className="text-lg font-semibold text-green-900 mb-2">""
-                Custom Implementation</h3>
-              <p>""</p>
-                Tailored globalerrorboundary implementations for your specific requirements.</div>
-            <div>""</div>
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">""
-                24/7 Support</h3>
-              <p>""</p>
-                Round-the-clock support for all your globalerrorboundary needs.</div>
-          <div>""</div>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">""
-              Get Started Today</div>
-  )
-            </div>
-  )}
+import React from "react";
+
+const GlobalErrorBoundary: React.FC = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">GlobalErrorBoundary</h2>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+class GlobalErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Global Error Boundary caught an error:', _error, _errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4 xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              Reload Page
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default GlobalErrorBoundary;
