@@ -1,137 +1,95 @@
-  type = 'Organization', 
-  data;}) => {const getDefaultData = () => {
-    switch (type) {
-      case 'Organization':
-        return {"@context": "https://schema.org",}
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"},
-          "address": {"@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"},
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https: //linkedin.com/company/ziontechgroup",
-          ],
-          "foundingDate": "2020",
-          "numberOfEmployees": "50+",
-          "areaServed": "Worldwide",
-          "serviceType": [
-            "AI Solutions",
-            "Quantum Computing",
-            "Autonomous Systems",
-            "Digital Transformation",
-            "Cloud Infrastructure",
-            "Cybersecurity",
-            "Data Analytics",
-            "IT Consulting"
-          ]
-        }
-      
-      case 'WebSite':
-        return {"@context": "https://schema.org",}
-          "@type": "WebSite",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "description": "Advanced AI and IT solutions for modern businesses",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"},
-          "potentialAction": {"@type": "SearchAction",
-            "target": "https: //ziontechgroup.com/search?q={search_term_string,}",
-            "query-input": "required name=search_term_string"
-          }
-        }
-      
-      case 'WebPage':
-        return {"@context": "https://schema.org",}
-          "@type": "WebPage",
-          "name": "Zion Tech Group - Advanced AI and IT Solutions",
-          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "url": "https://ziontechgroup.com",
-          "isPartOf": {
-            "@type": "WebSite",
-            "name": "Zion Tech Group",
-            "url": "https: //ziontechgroup.com",},
-          "about": {"@type": "Organization",
-            "name": "Zion Tech Group"},
-          "breadcrumb": {"@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-          }
-        }
-      
-      case 'Service':
-        return {"@context": "https://schema.org",}
-          "@type": "Service",
-          "name": "AI and IT Solutions",
-          "description": "Comprehensive AI and IT solutions including machine learning, cloud infrastructure, cybersecurity, and digital transformation services.",
-          "provider": {
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https: //ziontechgroup.com",},
-          "areaServed": "Worldwide",
-          "serviceType": [
-            "AI Solutions",
-            "Cloud Infrastructure",
-            "Cybersecurity",
-            "Data Analytics",
-            "IT Consulting",
-            "Custom Development"
-          ],
-          "offers": {"@type": "Offer",
-            "description": "Professional AI and IT consulting services",
-            "availability": "https: //schema.org/InStock",}}
-      
-      case 'LocalBusiness':
-        return {"@context": "https://schema.org",}
-          "@type": "LocalBusiness",
-          "name": "Zion Tech Group",
-          "description": "Leading provider of AI-powered enterprise solutions and digital transformation services.",
-          "url": "https://ziontechgroup.com",
-          "telephone": "+1-302-464-0950",
-          "email": "kleber@ziontechgroup.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"},
-          "geo": {"@type": "GeoCoordinates",
-            "latitude": "39.4500",
-            "longitude": "-75.7167"},
-          "openingHours": "Mo-Fr 09:00-17:00",
-          "priceRange": "$$",
-          "serviceArea": {"@type": "GeoCircle",
-            "geoMidpoint": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.4500",
-              "longitude": "-75.7167"},
-            "geoRadius": "100000"
-          }
-        }
-      
-      default: return {,}}}
-  }
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2)}}
-    />
-    </React.Fragment>
+            Structured Data;
+          </h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+            Professional structured data services;
+            designed to help your business grow and succeed.;
+          </p>
+        </div>
+      </section>
+      { /* Content Section */ }
+            Structured Data</h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+            Professional structured data services;
+            <div></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
+              <p className="text-lg text-gray-600 mb-6">"
+                We provide comprehensive structured data;
+                solutions tailored to your specific needs and requirements.;
+              </p>"
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Custom solutions;
+                </li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Expert consultation;
+                </li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Ongoing support;
+                </li>
+              </ul>
+            </div>"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">"
+                Ready to transform your business with our structured data services?;
+              </p>
+              <a;
+                href="$1"
+                className="$1></a>
+                Contact Us;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+            Ready to Get Started?;
+          </h2>"
+          <p className="text-xl text-blue-100 mb-8">"
+          </h2>"
+          <p className="text-xl text-blue-100 mb-8">"
+            Let"s discuss how our structured data"
+            services can help you achieve your goals.;
+          </p>
+          <a;
+            href="$1"
+            className="$1></a>
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>)
+  );
+export default StructuredData;
+                We provide comprehensive structured data;
+                solutions tailored to your specific needs and requirements.</p>"
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Custom solutions</li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Expert consultation</li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Ongoing support</div>"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">"
+                Ready to transform your business with our structured data services?</p>
+              <a;
+            Ready to Get Started?</a>
+          <p className="text-xl text-blue-100 mb-8">"
+            Let's discuss how our structured data''''
+            services can help you achieve your goals.</p>
+          <a"
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"
+            Get Started Today</div>
   )
-}
-export default StructuredData
+export default StructuredData;
+};
+
+export default StructuredData;

@@ -1,113 +1,57 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+import './globals.css';
 
-const LayoutPage: React.FC = () => {,
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
-    {
-    icon: Globe,
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
-const benefits = [
-  ];
+export default function RootLayout({
+  children}: {
+  children: React.ReactNode;
+}) {
+  const structuredData = {
+    '@context': 'https://schema.org',;
+    '@type': 'Organization',;
+    name: 'Zion Tech Group',;
+    url: 'https://ziontechgroup.com',;
+    logo: 'https://ziontechgroup.com/logo.png',;
+    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',;
+    foundingDate: '2020',;
+    numberOfEmployees: '50-100',;
+    industry: 'Technology',;
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-600-9898',
+      contactType: 'Customer Service',
+      areaServed: 'US',
+      availableLanguage: 'en'},
+    sameAs: [
+      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'},
+    offers: {
+      '@type': 'Offer',
+      category: 'AI Solutions',
+      description: 'Enterprise AI solutions, digital transformation, and cloud services'}};
 
-  const benefits = [
->>>>>>> main
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Layout | Zion Tech Group</title>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              <span>Layout</span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced layout solutions.</p>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Layout?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our layout solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-              </div>
-            ))}
-          </div>
-        ))
-      </section>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our layout solutions for your business.</p>
-            </p>
-          </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-              Contact our experts to discuss your layout needs and get a customized solution.
-            </p>
-              </button>
-            </div>
-          </div>
-        ))
-      </section>
-    </div>
+    <html lang='en'>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
+      <body>
+        <GlobalErrorBoundary>
+          <PerformanceMonitor />
+          <AnalyticsProvider />
+          <AccessibilityEnhancer />
+          <PWAInstaller />
+          <PerformanceOptimizer />
+          {children}
+        </GlobalErrorBoundary>
+      </body>
+    </html>
   );
-};
-
-export default LayoutPage;
-
+}

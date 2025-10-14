@@ -1,34 +1,11 @@
+import React, { ReactNode } from 'react';
+
+interface PWAInstallerProps {
+  children: ReactNode;
 }
-  ]
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
 
-    '24/7 technical support',
+const PWAInstaller: React.FC<PWAInstallerProps> = ({ children }) => {
+  return <>{children}</>;
+};
 
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-
-        <title>PWAInstaller | Zion Tech Group</title>
-    'Proven track record of success'
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>PWAInstaller | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-        </div>
-      </section>
-}
-export default PWAInstallerPage
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>PWAInstaller | Zion Tech Group
-        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
+export default PWAInstaller;

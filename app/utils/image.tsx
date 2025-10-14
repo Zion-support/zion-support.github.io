@@ -1,70 +1,93 @@
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number,
-  src: string,
-  alt: string,
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
-  _placeholder?: 'blur' | 'empty'
-    ,
-  src
-  alt,
-  width,
-  height,
-  className,
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
-  fill = false,
-  sizes,
-  style,
-  onLoad,
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-    })
-  }
-  if (hasError) {</ImageProps>
-    return(</ImageProps>)}if (hasError) {}return(<div)}
-  if (hasError) {}return(<div)}
-'use client';
-  const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
-  }
-      >)</div>
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-      </div>),
-    ),
-        {...props}
-      ></div>
-        <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
-      </div>
-    ),
-  }
-  return()
-    >)</img>
-}</img>
-export default Image</img>
-      loading={priority ? 'eager' : 'lazy'})
-      onLoad={handleLoad})
-      onError={handleError})
-      {...props})
-    />)
+            Image;
+          </h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+            Professional image services;
+            designed to help your business grow and succeed.;
+          </p>
+        </div>
+      </section>
+      { /* Content Section */ }
+            Image</h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+            Professional image services;
+            <div></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
+              <p className="text-lg text-gray-600 mb-6">"
+                We provide comprehensive image;
+                solutions tailored to your specific needs and requirements.;
+              </p>"
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Custom solutions;
+                </li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Expert consultation;
+                </li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Ongoing support;
+                </li>
+              </ul>
+            </div>"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">"
+                Ready to transform your business with our image services?;
+              </p>
+              <a;
+                href="$1"
+                className="$1></a>
+                Contact Us;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+            Ready to Get Started?;
+          </h2>"
+          <p className="text-xl text-blue-100 mb-8">"
+          </h2>"
+          <p className="text-xl text-blue-100 mb-8">"
+            Let"s discuss how our image"
+            services can help you achieve your goals.;
+          </p>
+          <a;
+            href="$1"
+            className="$1></a>
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>)
+  );
+export default Image;
+                We provide comprehensive image;
+                solutions tailored to your specific needs and requirements.</p>"
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Custom solutions</li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Expert consultation</li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Ongoing support</div>"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">"
+                Ready to transform your business with our image services?</p>
+              <a;
+            Ready to Get Started?</a>
+          <p className="text-xl text-blue-100 mb-8">"
+            Let's discuss how our image''''
+            services can help you achieve your goals.</p>
+          <a"
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"
+            Get Started Today</div>
+  );
+export default Image;
+;

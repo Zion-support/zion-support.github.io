@@ -1,103 +1,71 @@
-#!/usr/bin/env node
-
-import fs from 'fs'
-import path from 'path'
-// Get all TypeScript/TSX files in the app directory
-function getAllTsFiles(dir) {
-  let files = []
-  const items = fs.readdirSync(dir)
-  for (const item of items) {
-    const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {
-      files = files.concat(getAllTsFiles(fullPath))
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath)
-    }
-  }
-  
-  return files
+import React from "react;";";
+import fs from "fs;";";
+import path from "path;";";
+import { glob    } from "glob;";";
+// Common syntax fixes for merged files;
+function fixSyntaxErrors(content) {
+  // Fix JSX expressions that need one parent element;
+  content = content.replace();
+    /^import.*?from.*?;\s*$([\s\S]*?)(?=export|$)/gm,;
+    (match, body) => {
+      // Check if there are multiple JSX elements at the root level;
+const jsxElements = body.match(/<[A-Z][^>]*>/g);
+      if (jsxElements && jsxElements.length > 1) {
+        // Wrap in a fragment;
+        return match.replace(body, `<div>${body}</div>`)```;
 }
-
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    const originalContent = content
-    // Fix common syntax issues
-    
-    // 1. Fix missing semicolons after array declarations
-    content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?\])\s*$/gm, '$1;')
-    // 2. Fix missing commas in arrays (look for patterns like } followed by {)
-    content = content.replace(/}\s*\n\s*{/g, '},\n    {')
-    // 3. Fix missing semicolons after const declarations
-    content = content.replace(/(\s+const\s+\w+\s*=\s*[^;]+)\s*$/gm, (match) => {
-      if (!match.trim().endsWith(';') && !match.trim().endsWith('}') && !match.trim().endsWith(')')) {
-        return match + ';'
-      }
-      return match
-    })
-    // 4. Fix malformed JSX fragments - ensure proper opening/closing
-    content = content.replace(/<React\.Fragment>\s*$/gm, '<>')
-    content = content.replace(/<\/React\.Fragment>\s*$/gm, '</>')
-    // 5. Fix missing closing brackets for arrays
-    content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?)(\s*)(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, (match, arrayPart, spaces, nextPart) => {
-      if (!arrayPart.trim().endsWith(']')) {
-        return arrayPart + ']' + spaces + nextPart
-      }
-      return match
-    })
-    // 6. Fix missing commas in object arrays
-    content = content.replace(/}\s*\n\s*]\s*$/gm, '}\n  ]')
-    // 7. Fix missing semicolons after array declarations that end with ]
-    content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?\])\s*(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, '$1;\n$2')
-    // 8. Fix malformed JSX - ensure proper structure
-    content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>\n')
-    // 9. Fix missing closing tags for main sections
-    content = content.replace(/<main[^>]*>[\s\S]*?<\/section>\s*$/gm, (match) => {
-      if (!match.includes('</main>')) {
-        return match + '\n      </main>\n    </>\n  );\n}'
-      }
-      return match
-    })
-    // 10. Fix missing export statements
-    if (content.includes('const ') && !content.includes('export default') && !content.includes('export {')) {
-      const componentName = content.match(/const\s+(\w+):\s*React\.FC/g)
-      if (componentName) {
-        content = content.replace(/}\s*$/, `}\n\nexport default ${componentName[1]};`)
-      }
-    }
-    
-    // Clean up extra whitespace
-    content = content.replace(/\n\n\n+/g, '\n\n')
-    content = content.trim() + '\n'
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8')
-      console.log(`✓ Fixed syntax errors in: ${filePath}`)
-      return true
-    }
-    
-    return false
-  } catch (error) {
-    console.error(`✗ Error processing ${filePath}:`, error.message)
-    return false
-  }
+      return match;
+    },;
+  );
+  // Fix missing semicolons after JSX;
+  content = content.replace()
+    /(<[A-Z][^>]*>[\s\S]*?<\/[A-Z][^>]*>)\s*$/gm,";
+    "$1;",
+  )
+  // Fix JSX expressions that need proper wrapping;
+  content = content.replace()
+    /^(\s*)(<[A-Z][^>]*>[\s\S]*?<\/[A-Z][^>]*>)\s*$/gm,
+    (match, indent, jsx) => {"
+      if (!jsx.includes("<>") && !jsx.includes("<div")) {
+        return `${indent}<>></div>```
+</div>\n${indent}  ${jsx}\n${indent}</>````
 }
-
-// Get all TypeScript files
-const tsFiles = getAllTsFiles('./app')
-console.log(`Found ${tsFiles.length} TypeScript files to check`)
-let fixedCount = 0
-let errorCount = 0
-tsFiles.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    if (fixSyntaxErrors(filePath)) {
-      fixedCount++
-    }
-  } else {
-    console.log(`⚠ File not found: ${filePath}`)
-  }
+      return match;
+    },;
+  );
+  // Fix missing closing tags;
+  content = content.replace()
+    /<section([^>]*)>([\s\S]*?)(?=<section|$)/g,
+    (match, attrs, body) => {"
+      if (!body.includes("</section>")) {
+        return `<section${attrs}>${body}</section>````
+}
+      return match;
+    },;
+  );
+  // Fix JSX fragments;
+  content = content.replace(/<>\s*([\s\S]*?)\s*<\/>/g, (match, body) => {"
+    if (body.trim().split("\n").length > 1) {
+      return `<div>${body}</div>````
+}
+    return match;
+  });
+  return content;
+}
+// Find all TypeScript/TSX files in the app directory";
+const files = glob.sync("app/**/*.{ts,tsx}", { cwd: process.cwd() })
+console.log(`Found ${files.length} files to process...`)```
+let fixedCount = 0;
+files.forEach((file) => {
+  try {";
+const content = fs.readFileSync(file, "utf8");
+const fixedContent = fixSyntaxErrors(content)
+    if (content !== fixedContent) {
+      fs.writeFileSync(file, fixedContent);
+      console.log(`Fixed: ${file}`)```;
+      fixedCount++;
+} catch (error) {
+    console.error(`Error processing ${file}:`, error.message)```
 })
-console.log(`\nSummary:`)
-console.log(`- Files processed: ${tsFiles.length}`)
-console.log(`- Files fixed: ${fixedCount}`)
-console.log(`- Errors: ${errorCount}`)
+console.log(`Fixed ${fixedCount} files.`)``"`
+}}

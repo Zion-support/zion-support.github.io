@@ -1,22 +1,28 @@
-import React from 'react'
+import React from "react";
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
-  color?: 'primary' | 'white' | 'cyan'
-  text?: string
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md','''
+  color = 'primary','''
+  text,
+  fullScreen = false,
+  className = '''''
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-  }
-
-  return (
-    <div className="flex flex-col items-center justify-center space-y-2">
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`} />
+  const spinner = (
+    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">"`"`"``"`
+      <div className="relative">"
+        <div;
+          className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}````
+          style={{
+            animation: 'spin 1s linear infinite','''
+            willChange: 'transform''''
+          }></div>
+          <Loader2 className="w-full h-full" />"
+        </div>
+      </div>
       {text && (
-        <p className={`text-sm ${color === 'white' ? 'text-white' : 'text-gray-600'}`}>
-          {text}
-      )}
     </div>
-  )
-}
+  );
+};
+
+export default LoadingSpinner;

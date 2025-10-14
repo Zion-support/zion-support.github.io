@@ -1,20 +1,18 @@
-'use client'
-interface DynamicOptions {/* TODO: Fix JSX expression */}
-  O: Add content,}
+'use client';';
+import React, { lazy, Suspense, ComponentType } from "react";";
+interface DynamicOptions {
+  loading?: () => React.ReactElement;
+  ssr?: boolean;
 }
-  loading?: () => React.ReactElement
-  ssr?: boolean
+export function dynamic<T extends ComponentType<any>>(;
+  importFunc: () => Promise<{ default: T }>,;
+  options: DynamicOptions = {}
+): ComponentType<any> {
+  const LazyComponent = lazy(importFunc);
+  return (props: any) => (
+<>    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
+      <LazyComponent {...props} /></LazyComponent>
+    </Suspense>
+  );
 }
-export function dynamic
-          <T extends ComponentType<unknown>>()
-  importFun,
-  c: () => Promise,
-          <{/* TODO: Fix JSX expression */}
-  t: T }>,
-  _option,
-  s: DynamicOptions = {}
-): ComponentType<unknown> {/* TODO: Fix JSX expression */}
-  s: unknown) => (})
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} />
-  )
-}
+export default dynamic;

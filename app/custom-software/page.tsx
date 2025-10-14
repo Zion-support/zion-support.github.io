@@ -1,77 +1,23 @@
-        <meta name="description" content="Tailored custom software solutions designed specifically for your business needs including web applications, mobile apps, and enterprise software." />
-        <meta name="keywords" content="custom software development, tailored solutions, web applications, mobile apps, enterprise software, bespoke development" />
+import React from "react";
+import { Helmet    } from "react-helmet-async";
+
+const Page = () => {
+  return (
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Get tailored software solutions designed specifically for your business needs.</p>
-              From web applications to mobile apps and enterprise software.
-            </p>
-          </div>
-
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                </ul><li>• React & Next.js</li>
-                <li>• Node.js & Express</li>
-                <li>• Database integration</li>
-                <li>• API development</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                </ul><li>• React Native</li>
-                <li>• Native performance</li>
-                <li>• App store deployment</li>
-                <li>• Push notifications</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                </ul><li>• Microservices architecture</li>
-                <li>• Cloud deployment</li>
-                <li>• Security & compliance</li>
-                <li>• Integration capabilities</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                </ul><li>• Shopping cart functionality</li>
-                <li>• Payment integration</li>
-                <li>• Inventory management</li>
-                <li>• Order processing</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                </ul><li>• Lead management</li>
-                <li>• Sales tracking</li>
-                <li>• Customer communication</li>
-                <li>• Analytics & reporting</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                </ul><li>• RESTful APIs</li>
-                <li>• GraphQL endpoints</li>
-                <li>• Authentication & security</li>
-                <li>• Documentation</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center">
-            </button>
-          </div>
+      <div className="container mx-auto px-4 py-16"></>
+        <div className="text-center"></div>
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
+          </p>
         </div>
       </div>
-    </>
+    </div>
+  );
+};
+
+export default Page;

@@ -50,7 +50,8 @@ const PerformanceMonitor: React.FC = () => {
     return cleanup;
   }, []);
 
-  return null;
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default PerformanceMonitor;

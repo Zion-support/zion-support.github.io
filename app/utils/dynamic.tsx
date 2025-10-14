@@ -1,10 +1,10 @@
-  </unknown>
-  </T>
-  </Suspense>
-  </unknown>
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
-      <LazyComponent {...props} /></LazyComponent></$1>
+          This page is under development.;
+        </p>
+      </div>
+    </div>
+          This page is under development.</div>
   )
-}
-export default dynamic</div>
-</div>
+        </p>
+      </div>
+    </div>
+  )}

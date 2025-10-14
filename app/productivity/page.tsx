@@ -1,54 +1,22 @@
-    const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-const benefits = [
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
+'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-    '24/7 technical support',
-
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-
+export default function Page() {
+  return (
+    <>
       <Helmet>
-        <title>Page | Zion Tech Group</title>
-    'Proven track record of success'
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>Page | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <title>Productivity - Zion Tech Group</title>
+        <meta name="description" content="Productivity services and solutions from Zion Tech Group" />
       </Helmet>
-            </h1>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            </h2>
-              Ready to Get Started?
-            </h2>
-            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>
-              </button>
-            </div>
-          </div>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Productivity</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our productivity services.
+          </p>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
+  );
+}

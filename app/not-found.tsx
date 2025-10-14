@@ -1,55 +1,101 @@
-      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center"></div>
-        <div className="flex justify-center mb-6"></div>
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center"></div>
-            <span className="text-4xl">404</span>
+import Link from 'next/link';
+import { Home, Phone } from 'lucide-react';
+
+export default function NotFound() {
+  const popularPages = [
+    {
+      title: 'AI Services',
+      description: 'Explore our comprehensive AI and IT solutions',
+      href: '/services',
+      icon: '🤖'
+    },
+    {
+      title: 'Blog & Insights',
+      description: 'Read about latest AI trends and innovations',
+      href: '/blog',
+      icon: '📚'
+    },
+    {
+      title: 'About Us',
+      description: 'Learn more about Zion Tech Group',
+      href: '/about',
+      icon: '👥'
+    },
+    {
+      title: 'Case Studies',
+      description: 'See our success stories and client results',
+      href: '/case-studies',
+      icon: '📊'
+    },
+    {
+      title: 'Contact Us',
+      description: 'Get in touch with our AI experts',
+      href: '/contact',
+      icon: '📞'
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center px-4 py-16">
+      <div className="max-w-4xl w-full">
+        <div className="mb-8 text-center">
+          <h1 className="text-9xl font-bold text-gray-300 mb-4">
+            404
+          </h1>
+          <div className="text-6xl mb-4">🔍</div>
+        </div>
+
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Page Not Found
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            The page you are looking for does not exist or has been moved. 
+            Let us get you back on track!
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+          {popularPages.map((page, index) => (
+            <Link
+              key={index}
+              href={page.href}
+              className="bg-white/80 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div className="text-3xl mb-3">{page.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {page.title}
+              </h3>
+              <p className="text-sm text-gray-600">{page.description}</p>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">
+            Cannot find what you are looking for?
+          </h3>
+          <p className="text-gray-600 mb-6">
+            Try searching or contact our support team for assistance.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <Home className="w-5 h-5" />
+              <span>Go Home</span>
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-900 font-semibold py-3 px-6 rounded-lg border border-gray-300 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <Phone className="w-5 h-5" />
+              <span>Contact Support</span>
+            </Link>
           </div>
-        </div>
-        <h1>Page Not Found;</h1>
-        </h1>
-        <p>Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.</p>
-        </p>
-        <div className="flex flex-col sm: flex-row gap-3"></div>,
-          <Link>
-            </Link><Home>
-            Go Home,
-          </Link>
-          >
-            </button><ArrowLeft>
-            Go Back,
-          </button>
-        </div>
-        <div className="mt-6 text-sm text-gray-400" / /></div>
-          If you believe this is an error, please contact our support team.
         </div>
       </div>
     </div>
-
-  )
+  );
 }
-  </button>
-  </Link>
-  </h1>
-import Link from 'next/link'
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react'
-export default function NotFound() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
-        <div className="flex justify-center mb-6">
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
-            <span className="text-4xl">404
-        <h1 className="text-2xl font-bold text-white mb-4">Page Not Found
-        <p className="text-gray-300 mb-6">
-          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
-        <div className="flex flex-col sm:flex-row gap-3">
-          <$2 />
-            href="/"
-            className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors">
-            <Home className="w-4 h-4 mr-2" />
-            Go Home
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Go Back
-        <div className="mt-6 text-sm text-gray-400">
-          If you believe this is an error, please contact our support team.
-  )
-}</div></div></div></div></div></div></span></p></h1>

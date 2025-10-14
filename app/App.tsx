@@ -1,45 +1,23 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ErrorBoundary } from 'react-error-boundary';
+import React from "react";
+import { Helmet   } from "react-helmet-async";
 
-// Import the main page component
-import HomePage from './page';
-
-// Import other page components
-import AboutPage from './about/page';
-import AccessibilityPage from './accessibility/page';
-import FiveGImplementationPage from './5g-implementation/page';
-
-// Components
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AppLoadingSpinner from './components/AppLoadingSpinner';
-
-const App: React.FC = () => {
+const AppPage = () => {
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
-          <div className="App">
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
-            <Suspense fallback={<AppLoadingSpinner />}>
-              <Routes>
-                {/* Main Pages */}
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/accessibility" element={<AccessibilityPage />} />
-                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                
-                {/* Add more routes as needed */}
-              </Routes>
-            </Suspense>
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Helmet>
+          <title>App - Zion Tech Group</title>
+          <meta name="description" content="App - Zion Tech Group" />
+        </Helmet>
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">App</h1>
+            <p>This page is under construction. Please check back later.</p>
           </div>
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
+        </div>
+      </div>
+    </>
   );
 };
 
-export default App;
+export default AppPage;

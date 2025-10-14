@@ -60,9 +60,8 @@ const CaseStudiesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Case Studies - Zion Tech Group | Success Stories</title>
-        <meta name="description" content="Explore our successful technology implementations and digital transformation projects across various industries." />
-        <meta name="keywords" content="case studies, success stories, technology implementation, digital transformation, AI solutions" />
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful projects and client case studies." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

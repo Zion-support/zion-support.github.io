@@ -1,255 +1,200 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
 
 const GuidesPage: React.FC = () => {
   const guides = [
     {
-      id: 1,
-      title: 'Getting Started with AI Implementation',
-      description: 'A comprehensive guide to implementing AI solutions in your organization.',
+      title: 'AI 2026 Implementation Roadmap',
+      description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026',
+      url: '/guides/ai-2026-implementation-roadmap',
       category: 'AI Implementation',
-      difficulty: 'Beginner',
-      duration: '45 min',
-      topics: ['AI Strategy', 'Data Preparation', 'Model Selection', 'Deployment'],
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Quantum Computing Fundamentals',
-      description: 'Understanding the basics of quantum computing and its applications.',
-      category: 'Quantum Computing',
+      icon: Brain,
       difficulty: 'Intermediate',
-      duration: '60 min',
-      topics: ['Quantum Mechanics', 'Qubits', 'Quantum Algorithms', 'Applications'],
-      featured: false
+      duration: '45 min read'
     },
     {
-      id: 3,
-      title: 'Building Autonomous Systems',
-      description: 'Step-by-step guide to creating self-managing intelligent systems.',
-      category: 'Autonomous Systems',
+      title: 'AI 2027 Implementation Roadmap',
+      description: 'Advanced roadmap for AI implementation strategies in 2027',
+      url: '/guides/ai-2027-implementation-roadmap',
+      category: 'AI Implementation',
+      icon: Brain,
       difficulty: 'Advanced',
-      duration: '90 min',
-      topics: ['System Architecture', 'Machine Learning', 'Decision Making', 'Monitoring'],
-      featured: false
+      duration: '60 min read'
     },
     {
-      id: 4,
-      title: 'AI Cybersecurity Best Practices',
-      description: 'Essential security measures for AI-powered systems and applications.',
-      category: 'Cybersecurity',
-      difficulty: 'Intermediate',
-      duration: '50 min',
-      topics: ['Threat Modeling', 'Data Protection', 'Model Security', 'Compliance'],
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Blockchain Development Guide',
-      description: 'Complete guide to developing blockchain applications and smart contracts.',
-      category: 'Blockchain',
-      difficulty: 'Intermediate',
-      duration: '75 min',
-      topics: ['Blockchain Basics', 'Smart Contracts', 'DApps', 'DeFi'],
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'IoT and Edge Computing Architecture',
-      description: 'Designing scalable IoT solutions with edge computing capabilities.',
-      category: 'IoT & Edge',
-      difficulty: 'Advanced',
-      duration: '80 min',
-      topics: ['IoT Protocols', 'Edge Computing', 'Data Processing', 'Security'],
-      featured: false
-    },
-    {
-      id: 7,
-      title: 'AI Data Analytics Pipeline',
-      description: 'Building robust data analytics pipelines with AI and machine learning.',
-      category: 'Data Analytics',
-      difficulty: 'Intermediate',
-      duration: '65 min',
-      topics: ['Data Collection', 'ETL Processes', 'ML Pipelines', 'Visualization'],
-      featured: false
-    },
-    {
-      id: 8,
-      title: 'Cloud Infrastructure Optimization',
-      description: 'Optimizing cloud infrastructure for AI workloads and applications.',
-      category: 'Cloud Computing',
-      difficulty: 'Advanced',
-      duration: '70 min',
-      topics: ['Cloud Architecture', 'Cost Optimization', 'Performance Tuning', 'Monitoring'],
-      featured: false
+      title: 'Autonomous Business Processes Implementation Guide 2026',
+      description: 'Step-by-step guide to implementing autonomous business processes',
+      url: '/guides/autonomous-business-processes-implementation-guide-2026',
+      category: 'Process Automation',
+      icon: Zap,
+      difficulty: 'Expert',
+      duration: '90 min read'
     }
   ];
 
-  const categories = ['All', 'AI Implementation', 'Quantum Computing', 'Autonomous Systems', 'Cybersecurity', 'Blockchain', 'IoT & Edge', 'Data Analytics', 'Cloud Computing'];
+  const categories = [
+    { name: 'AI Implementation', icon: Brain, color: 'text-purple-400' },
+    { name: 'Process Automation', icon: Zap, color: 'text-blue-400' },
+    { name: 'Security', icon: Shield, color: 'text-red-400' },
+    { name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' },
+    { name: 'Data Management', icon: Database, color: 'text-green-400' },
+    { name: 'Development', icon: Code, color: 'text-orange-400' }
+  ];
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Beginner': return 'bg-green-500';
-      case 'Intermediate': return 'bg-yellow-500';
-      case 'Advanced': return 'bg-red-500';
-      default: return 'bg-gray-500';
+      case 'Beginner': return 'text-green-400 bg-green-400/20';
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20';
+      case 'Advanced': return 'text-orange-400 bg-orange-400/20';
+      case 'Expert': return 'text-red-400 bg-red-400/20';
+      default: return 'text-gray-400 bg-gray-400/20';
     }
   };
 
+const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
+    <>
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content=" - Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8"></h1>
+            <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
+          </div>
+        </nav>
+
+        <main className="container mx-auto px-4 py-16">
+          {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Technical Guides
-            </h1>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technical documentation and step-by-step guides to help you 
-              implement cutting-edge AI and technology solutions.
+            <div className="flex items-center justify-center space-x-4 mb-6">
+              <BookOpen className="w-16 h-16 text-cyan-400" />
+              <h1 className="text-4xl md:text-6xl font-bold text-white">
+                Implementation <span className="text-cyan-400">Guides</span>
+              </h1>
+            </div>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Step-by-step guides to help you implement AI, automation, and digital transformation 
+              solutions in your enterprise with confidence.
             </p>
           </div>
 
-          {/* Featured Guide */}
-          <div className="mb-16">
-            {guides.filter(guide => guide.featured).map(guide => (
-              <div key={guide.id} className="cyber-card hologram-card overflow-hidden">
-                <div className="md:flex">
-                  <div className="md:w-2/3 p-8">
-                    <div className="flex items-center mb-4">
-                      <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {guide.category}
-                      </span>
-                      <span className={`${getDifficultyColor(guide.difficulty)} text-white px-3 py-1 rounded-full text-sm font-medium ml-3`}>
-                        {guide.difficulty}
-                      </span>
-                      <span className="text-gray-400 text-sm ml-4">{guide.duration}</span>
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                      {guide.title}
-                    </h2>
-                    <p className="text-gray-300 mb-6 text-lg">
-                      {guide.description}
-                    </p>
-                    <div className="mb-6">
-                      <h3 className="text-lg font-semibold text-white mb-3">Topics Covered:</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {guide.topics.map((topic, index) => (
-                          <span key={index} className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm">
-                            {topic}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <button className="cyber-button">
-                      Start Learning
-                    </button>
-                  </div>
-                  <div className="md:w-1/3 bg-gradient-to-br from-cyan-500 to-purple-600 p-8 flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <div className="text-6xl mb-4">📚</div>
-                      <div className="text-xl font-bold">Free Guide</div>
-                    </div>
-                  </div>
+          {/* Categories */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {categories.map((category, index) => (
+                <div key={index} className="bg-slate-800 rounded-lg p-4 text-center hover:bg-slate-700 transition-colors">
+                  <category.icon className={`w-8 h-8 mx-auto mb-2 ${category.color}`} />
+                  <h3 className="text-white font-semibold text-sm">{category.name}</h3>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Category Filter */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map(category => (
-                <button
-                  key={category}
-                  className={`px-6 py-2 rounded-full transition-colors ${
-                    category === 'All' 
-                      ? 'bg-cyan-500 text-white' 
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                  }`}
-                >
-                  {category}
-                </button>
               ))}
             </div>
-          </div>
+          </section>
 
           {/* Guides Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {guides.filter(guide => !guide.featured).map(guide => (
-              <article key={guide.id} className="cyber-card hologram-card group">
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {guide.category}
-                    </span>
-                    <span className={`${getDifficultyColor(guide.difficulty)} text-white px-3 py-1 rounded-full text-sm font-medium ml-3`}>
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {guides.map((guide, index) => (
+                <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200">
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <guide.icon className="w-6 h-6 text-cyan-400" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-white mb-2">{guide.title}</h3>
+                      <p className="text-gray-300 text-sm mb-3">{guide.description}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-cyan-400 text-sm font-medium">{guide.category}</span>
+                    <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}>
                       {guide.difficulty}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {guide.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    {guide.description}
-                  </p>
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {guide.topics.slice(0, 3).map((topic, index) => (
-                        <span key={index} className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">
-                          {topic}
-                        </span>
-                      ))}
-                      {guide.topics.length > 3 && (
-                        <span className="text-gray-400 text-xs">+{guide.topics.length - 3} more</span>
-                      )}
-                    </div>
-                  </div>
+                  
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">{guide.duration}</span>
-                    <button className="text-cyan-400 hover:text-cyan-300 font-medium">
+                    <Link
+                      to={guide.url}
+                      className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+                    >
                       Read Guide →
-                    </button>
+                    </Link>
                   </div>
                 </div>
-              </article>
-            ))}
-          </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Getting Started */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
+            <div className="bg-slate-800 rounded-lg p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">New to AI Implementation?</h3>
+                  <p className="text-gray-300 mb-4">
+                    Start with our comprehensive AI 2026 Implementation Roadmap to understand 
+                    the fundamentals and plan your AI transformation journey.
+                  </p>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• Assess your current AI readiness</li>
+                    <li>• Plan your implementation strategy</li>
+                    <li>• Choose the right technologies</li>
+                    <li>• Measure success and ROI</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Ready for Advanced Topics?</h3>
+                  <p className="text-gray-300 mb-4">
+                    Explore our advanced guides for autonomous systems, process automation, 
+                    and cutting-edge AI implementations.
+                  </p>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• Autonomous business processes</li>
+                    <li>• Advanced AI architectures</li>
+                    <li>• Enterprise automation strategies</li>
+                    <li>• Future-ready implementations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Call to Action */}
-          <div className="mt-16 cyber-card hologram-card p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Need Custom Implementation Help?
+          <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Need Personalized Guidance?
             </h2>
-            <p className="text-gray-300 mb-6">
-              Our expert team can help you implement any of these solutions in your organization.
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Our experts are available to provide personalized implementation guidance 
+              tailored to your specific business needs and requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="cyber-button"
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
-                Get Expert Help
+                Get Expert Consultation
               </Link>
-              <Link 
-                to="/services" 
-                className="cyber-button"
-                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+              <Link
+                to="/services"
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
               >
                 View Our Services
               </Link>
             </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
+          </section>
+        </main>
+      </>
   );
 };
 
-export default GuidesPage;
+export default Page;

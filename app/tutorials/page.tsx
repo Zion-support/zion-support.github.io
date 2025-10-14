@@ -220,4 +220,4 @@ const TutorialsPage: React.FC = () => {
   )
 }
 
-export default TutorialsPage
+export default Page;

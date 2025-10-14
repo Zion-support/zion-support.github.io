@@ -1,25 +1,13 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import Navigation from './app/components/Navigation'
-import Footer from './app/components/Footer'
-import HomePage from './app/page'
+import React from "react";
 
-const App: React.FC = () => {
+const AppMinimal = () => {
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <Navigation />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
-  )
-}
-export default App
+    <>
+      <div className="min-h-screen bg-slate-900">
+        <h1 className="text-white text-center py-20">Zion Tech Group</h1>
+      </div>
+    </>
+  );
+};
+
+

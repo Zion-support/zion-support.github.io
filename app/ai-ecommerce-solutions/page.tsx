@@ -1,168 +1,225 @@
-    const features = [
-    {
-      icon: Brain,
-    }
-  ];
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Zap, BarChart3, Users, Shield } from 'lucide-react';;
 
-  const benefits = [
+const AIEcommerceSolutionsPage: React.FC = () =>&apos;,
+      icon: <Users className="w-8 h-8 text-blue-600" />&apos;,
+      icon: <BarChart3 className="w-8 h-8 text-green-600" />&apos;,
+      icon: <Zap className="w-8 h-8 text-purple-600" />&apos;,
+      icon: <Shield className="w-8 h-8 text-red-600" />&apos; }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  },
-    {
-    icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
-  },
-    {
-    icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
-  },
-    {
-    icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
-  }
-    ]
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       <Helmet>
-        <title>Ai Ecommerce Solutions - Zion Tech Group</title>
-    'Gain competitive advantage with advanced technology'
-  ]
-return (
-    <>
-      <Helmet>
-        </Helmet><title>Ai Ecommerce Solutions - Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <title>AI E-commerce Solutions | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered e-commerce solutions including personalized shopping, inventory management, payment processing, and marketing automation. Boost your online sales with cutting-edge technology." />
+        <meta name="keywords" content="AI e-commerce, online store, e-commerce platform, inventory management, payment processing, marketing automation, customer service" />
       </Helmet>
-          </div>
-        </section>
 
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1>Ai Ecommerce Solutions;</h1>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI E-commerce Solutions
             </h1>
-              </button>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Ecommerce Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai ecommerce solutions solution for modern businesses.
+            <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
+              Transform your online business with AI-powered e-commerce solutions that boost sales, reduce costs, and enhance customer experience
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
-              <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+              <a 
+                href="tel:+13024640950"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+              >
+                📞 +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                ✉️ Get E-commerce Audit
+              </a>
             </div>
           </div>
-        </section>
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-              {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <feature />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+        </div>
+      </section>
 
-                          {benefit} </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-
-            </div>
+      {/* Industry Stats */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-600">
+              Our AI e-commerce solutions deliver measurable improvements
+            </p>
           </div>
-        </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
-                  <p className="text-gray-300 mb-4">{feature.description}
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                      ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Why Choose Our Solution?
-              </h2>
-              <p></p>
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-              {benefits.map((benefit, index) => ()
-              ))}
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          ))
-        </section>
-                Ready to Get Started?
-              </h2>
-              <p></p>
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-                <button></button>
-                  Contact Us
-                </button>
-                <button></button>
-                  Learn More
-                </button>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {industryStats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-purple-600 mb-2">{stat.metric}</div>
+                <div className="text-gray-600">{stat.description}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our E-commerce Solutions
+            </h2>
+            <p className="text-xl text-gray-600">
+              Comprehensive AI-powered tools for every aspect of e-commerce
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {ecommerceServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                
+                <div className="mb-4">
+                  <span className="text-2xl font-bold text-purple-600">{service.price}</span>
+                  <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
+                </div>
+                
+                <div className="mb-4">
+                  <span className="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">
+                    {service.category}
+                  </span>
+                </div>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="space-y-2 mb-6">
+                  <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
+                  {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
+                    <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
+                  ))}
+                </div>
+                
+                <a 
+                  href="/contact"
+                  className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-flex items-center justify-center"
+                >
+                  Boost Sales Now
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our E-commerce Solutions?
+            </h2>
+            <p className="text-xl text-gray-600">
+              Advanced AI technology designed specifically for e-commerce success
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {ecommerceFeatures.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Success Stories
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real results from our e-commerce clients
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
+              <p className="text-gray-600 mb-4 italic">&quot;</p>
+              <div className="font-semibold text-gray-900">Sarah Johnson</div>
+              <div className="text-sm text-gray-500">CEO, Fashion Forward</div>
             </div>
-          ))
-        </section>
-      </div>
+            
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
+              <p className="text-gray-600 mb-4 italic">&quot;</p>
+              <div className="font-semibold text-gray-900">Michael Chen</div>
+              <div className="text-sm text-gray-500">Operations Director, TechGear</div>
+            </div>
+            
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
+              <p className="text-gray-600 mb-4 italic">&quot;</p>
+              <div className="font-semibold text-gray-900">Emily Rodriguez</div>
+              <div className="text-sm text-gray-500">Customer Success Manager, HomeDecor Plus</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Transform Your E-commerce?
+          </h2>
+          <p className="text-xl mb-8 text-purple-100">
+            Get a free e-commerce audit and discover how AI can boost your online sales
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:+13024640950"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+            >
+              📞 +1 302 464 0950
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              ✉️ kleber@ziontechgroup.com
+            </a>
+          </div>
+          <div className="mt-8 text-sm text-purple-200">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AIEcommerceSolutionsPage;

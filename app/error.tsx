@@ -1,64 +1,88 @@
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    },
-  ]
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const ErrorPage = () => {
   return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Error - Zion Tech Group</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>Error - Zion Tech Group</title>
-        <meta name="description" content="Error page." />
-        <meta name="keywords" content="error, AI solutions, IT services, business transformation" />
-      <Navigation />
-                  Learn More,
-  
-              </div>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
-                Our Services,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our solutions can help transform your business.</p>
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Services,
-  
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
-                Discover how our solutions can help transform your business.
+        <meta name="description" content="Professional error services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Error;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional error solutions tailored to your business needs.;
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge error solutions.;
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {features.map((feature, index) => (
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                    ))}
-              ))}
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored error implementations for your specific requirements.;
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your error needs.;
+              </p>
+            </div>
           </div>
-        </section>
-      </main>
-      <Footer /></Footer>
-    </>
-  ),
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
+          <div className="mt-12"></div>"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+            Error</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional error solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge error solutions.</div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored error implementations for your specific requirements.</div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your error needs.</div>
+          <div className="mt-12"></div>"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</div></div>
+  )
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+            <////div></button>;
+          </////div></div>;
+        <////div></div>;
+      </////div></div>;
+    </////div>;
+  )}
+";

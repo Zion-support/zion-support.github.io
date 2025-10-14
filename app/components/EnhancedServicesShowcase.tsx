@@ -1,57 +1,32 @@
-    const services = [
-    {
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
-      icon: Brain,
-      color: 'text-purple-400',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      description: 'Build and maintain robust technology foundations',
-      icon: Cloud,
-      color: 'text-blue-400',
-      features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],
-      description: 'Protect your business with enterprise-grade security',
-      icon: Shield,
-      color: 'text-green-400',
-      features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
-      description: 'Streamline processes with intelligent automation',
-      icon: Zap,
-      color: 'text-yellow-400',
-      features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+            EnhancedServicesShowcase</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional enhancedservicesshowcase solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge enhancedservicesshowcase solutions.</div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored enhancedservicesshowcase implementations for your specific requirements.</div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your enhancedservicesshowcase needs.</div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</div></div>
+  )
+            </button>
           </div>
-        </section>
-      <div className="container mx-auto px-4"></div>
-        <div className="text-center mb-16"></div>
-          <h2>Our Core Services;</h2>
-          </h2>
-          <p>Comprehensive AI and IT solutions designed to transform your business and drive innovation;</p>
-          </p>
         </div>
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-          {services.map((service, index) => (</div>} <div key={index}className="cyber-card hologram-card p-6 group hover: scale-105 transition-all duration-300"></div>,
-              <div className="flex items-center mb-4"></div>
-                <service>
-                </service><div />
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  <div className="text-sm text-cyan-400 font-semibold">{service.stats</div>}</div>
-              </div>
-              <p className="text-gray-300 mb-4">{service.description</p>}</p>
-              <ul>
+      </div>
+    </div>
+  );
+};
 
-                    {feature} </li>
-                ))}
-
-              </ul>
-              <a>
-                Learn More </a><ArrowRight>
-              </a>
-            </div>
-          ))}
-        </div>
+export default EnhancedServicesShowcase;

@@ -1,166 +1,32 @@
-    variant = 'spinner',
-    text = 'Loading...',
-    className = '',
-    color = 'blue',
-      () => ({
-        xs: 'h-3 w-3',
-        sm: 'h-4 w-4',
-        md: 'h-8 w-8',
-        lg: 'h-12 w-12',
-      []
-    );
-const textSizeClasses = useMemo(;)
-      () => ({xs: 'text-xs',
-        sm: 'text-sm',
-        md: 'text-base',
-        lg: 'text-lg',
-      []
-    );
-const colorClasses = useMemo(;)
-      () => ({blue: 'border-blue-600 bg-blue-600',
-        gray: 'border-gray-600 bg-gray-600',
-        green: 'border-green-600 bg-green-600',
-        red: 'border-red-600 bg-red-600',
-      []
-    );
-        case 'dots':;
-          return(<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
-              {[0, 1, 2].map(i => (</div>)
-                <div;}key={i}className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1,}s` }}
-                /></div>
-              ))}</div>
-          );
-case 'pulse':;
-          return(<div;)
-              className={`${baseClasses}rounded-full animate-pulse`}
-              role='status';
-              aria-label='Loading';
-            /></div>
-          );
-case 'skeleton':;
-          return(</div>)
-            <div className='space-y-2' role='status' aria-label='Loading'></div>
-              <div;
-
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-              /></div>
-              <div;
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '75%' ,}}
-              /></div>
-              <div;
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '50%' ,}}
-              /></div>
-          );
-case 'bars':;
-          return(<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
-              {[0, 1, 2, 3].map(i => (</div>)
-                <div;}key={i}className={`w-1 ${colorClasses[color].split(' ')[1]}animate-pulse`}
-                  style={{}height: `${12 + i * 4,}px`,
-                    animationDelay: `${i * 0.1,}s`,
-'use client'
-import React, { Suspense, lazy } from 'react'
-interface OptimizedLoadingSpinnerProps {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
-  text?: string
-  className?: string
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
-  fullScreen?: boolean
-  }
-}
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
-  }) => {
-    const sizeClasses = useMemo()
-      () => ()
-      }),
-      []
-    )
-const textSizeClasses = useMemo()
-      () => ()
-      }),
-      []
-    )
-const colorClasses = useMemo()
-      () => ()
-      }),
-      []
-    )
-const renderSpinner = useMemo(() => {
-    switch (variant) {
-        case 'dots':
-          return (
-                  key={i}
-          return ()
-                  className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
-          return (
-    <React.Fragment>
-      <;$2 />
-              className={`${baseClasses} rounded-full animate-pulse`}
-              role='status'
-              aria-label='Loading'/></div>
-    </React.Fragment>
+            OptimizedLoadingSpinner</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional optimizedloadingspinner solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge optimizedloadingspinner solutions.</div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored optimizedloadingspinner implementations for your specific requirements.</div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your optimizedloadingspinner needs.</div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</div></div>
   )
-case 'skeleton':
-          return ()
-          )
-case 'bars':
-          return ()
-                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{}
-                    height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,
-                  }}
-                / /></div>
-              ))}</div>
-    text && (</div>
-  }
-            <p>{text</p>} </p>
-          )
-case 'spinner':
-        default:  
-          return (
-    <React.Fragment>
-      <,$2 />
-              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
-              role='status'
-              aria-label='Loading'/></div>
-    </React.Fragment>
-  )
-      }
-    }, [size, variant, color, sizeClasses, colorClasses])
-const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`
-    }, [fullScreen, className])
-return ()
-          )}
+            </button>
+          </div>
         </div>
-    )
-  } )
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
-export default OptimizedLoadingSpinner/>
-              ))}
-          )
-        case 'pulse':
-          return (
-            <$2 />
-              className={`${baseClasses} rounded-full animate-pulse`}
-              role='status'
-              aria-label='Loading'/>
-          )
-        case 'skeleton':
-                  key={i}
-                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{;}
-                    height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,
-                  }}
-                />
-        case 'spinner':
-        default:
-          return (
-            <$2 />
-              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
-              role='status'
+      </div>
+    </div>
+  );
+};
+
+export default OptimizedLoadingSpinner;

@@ -93,7 +93,7 @@ const AiServicesPage: React.FC = () => {
       ],
       price: 'Starting at $4,000/month'
     }
-  ]
+  ];
 
   const categories = [
     { id: 'all', name: 'All Services' },

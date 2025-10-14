@@ -1,47 +1,50 @@
-'use client'
-import React from 'react'
-import Link from 'next/link'
-import { ChevronRight, Home } from 'lucide-react'
+import React from 'react';
+import Link from 'next/link';
+import { ChevronRightIcon, HomeIcon } from '@heroicons/react/24/outline';
 
-const Breadcrumb: React.FC = () => {
-  const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : [];
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    ...pathSegments.map(segment => ({
-      label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
-      href: null
-    }))
-  ]
-
-  return (
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20" aria-label="Breadcrumb">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ol className="flex items-center space-x-2 py-3 text-sm">
-          {breadcrumbItems.map((item, index) => (
-            <li key={index} className="flex items-center">
-              {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-              )}
-              {item.href ? (
-                <Link
-                  href={item.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center"
-                >
-                  {index === 0 && <Home className="w-4 h-4 mr-1" />}
-                  {item.label}
-                </Link>
-              ) : (
-                <span className="text-cyan-400 font-medium flex items-center">
-                  {index === 0 && <Home className="w-4 h-4 mr-1" />}
-                  {item.label}
-                </span>
-              )}
-            </li>
-          ))}
-        </ol>
-      </div>
-    </nav>
-  )
+interface BreadcrumbProps {
+  className?: string;
 }
 
-export default Breadcrumb
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
+  const getBreadcrumbName = (pathname: string) => {
+    const nameMap: Record<string, string> = {
+      'ai-services': 'AI Services',
+      'ai-analytics': 'AI Analytics',
+      'ai-automation-platform': 'AI Automation Platform',
+      'ai-content-generation': 'AI Content Generation',
+      'ai-customer-support': 'AI Customer Support',
+      'ai-cybersecurity': 'AI Cybersecurity',
+      'ai-data-analytics': 'AI Data Analytics',
+      'ai-enterprise-solutions': 'AI Enterprise Solutions',
+      'ai-integration': 'AI Integration',
+      'ai-machine-learning': 'AI Machine Learning',
+      'ai-optimization': 'AI Optimization',
+      'ai-predictive-analytics': 'AI Predictive Analytics',
+      'ai-process-automation': 'AI Process Automation',
+      'ai-robotics': 'AI Robotics',
+      'ai-voice-assistants': 'AI Voice Assistants',
+      'about': 'About',
+      'contact': 'Contact',
+      'services': 'Services',
+      'blog': 'Blog',
+      'community': 'Community'
+    };
+    return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1);
+  };
+
+  // This would typically get the current path from useRouter or props
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
+  const pathSegments = currentPath.split('/').filter(segment => segment !== '');
+
+  return (
+    <div className="p-4">
+      <h2 className="text-2 xl font-bold text-white mb-4">Breadcrumb</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for Breadcrumb.
+      </p>
+    </div>
+  );
+};
+
+export default Breadcrumb;
