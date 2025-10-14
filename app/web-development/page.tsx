@@ -1,77 +1,18 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRightIcon, CodeBracketIcon, GlobeAltIcon, DevicePhoneMobileIcon, ShoppingCartIcon, ChartBarIcon } from "@heroicons/react/24/outline";
-import FuturisticBackground from "../components/FuturisticBackground";
-
-const WebDevelopmentPage = () => {
-  const services = [
-    {
-      icon: <CodeBracketIcon className="w-12 h-12 text-cyan-400" />,
-      title: "Frontend Development",
-      description: "Modern, responsive user interfaces built with the latest technologies and best practices.",
-      features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Responsive Design", "Performance Optimization"]
-    },
-    {
-      icon: <GlobeAltIcon className="w-12 h-12 text-cyan-400" />,
-      title: "Backend Development",
-      description: "Robust server-side applications and APIs that power your web applications.",
-      features: ["Node.js & Express", "Python & Django", "Database Design", "API Development", "Cloud Integration"]
-    },
-    {
-      icon: <DevicePhoneMobileIcon className="w-12 h-12 text-cyan-400" />,
-      title: "Mobile-First Design",
-      description: "Responsive web applications optimized for all devices and screen sizes.",
-      features: ["Mobile Optimization", "Touch Interactions", "Progressive Web Apps", "Cross-Browser Compatibility"]
-    },
-    {
-      icon: <ShoppingCartIcon className="w-12 h-12 text-cyan-400" />,
-      title: "E-commerce Solutions",
-      description: "Complete online store solutions with payment processing and inventory management.",
-      features: ["Online Store Setup", "Payment Integration", "Inventory Management", "Order Processing", "Customer Management"]
-    },
-    {
-      icon: <ChartBarIcon className="w-12 h-12 text-cyan-400" />,
-      title: "Performance Optimization",
-      description: "Fast, efficient web applications with optimal loading times and user experience.",
-      features: ["Speed Optimization", "SEO Optimization", "Analytics Integration", "Performance Monitoring"]
-    }
-  ];
-
-  const technologies = [
-    "React & Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL", "MongoDB", 
-    "AWS", "Docker", "Kubernetes", "GraphQL", "REST APIs", "Tailwind CSS"
-  ];
-
-  const stats = [
-    { value: "100+", label: "Projects Completed" },
-    { value: "99%", label: "Client Satisfaction" },
-    { value: "50%", label: "Faster Load Times" },
-    { value: "24/7", label: "Support Available" }
-  ];
+import React from "react";""
+import { Helmet    } from "react-helmet-async";""
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Web Development Services - Zion Tech Group | Professional Web Solutions</title>
-        <meta name="description" content="Professional web development services including frontend, backend, full-stack, e-commerce, and performance optimization. Build modern, scalable web applications." />
-        <meta name="keywords" content="web development, frontend development, backend development, full-stack, e-commerce, web applications" />
-        <meta property="og:title" content="Web Development Services - Zion Tech Group" />
-        <meta property="og:description" content="Professional web development services for modern businesses." />
-        <meta property="og:type" content="website" />
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>""
       </Helmet>
-
-      <FuturisticBackground />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Web Development Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Build modern, scalable web applications that drive business growth. 
-            From frontend interfaces to backend systems, we create digital solutions that work.
+      <div className="container mx-auto px-4 py-16"></div>""
+    </>
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>""
+          <p className="text-gray-300 text-lg"></p>""
+            This page is under construction. Please check back later.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -195,7 +136,10 @@ const WebDevelopmentPage = () => {
         </div>
       </section>
     </div>
-  );
+  )};
 };
 
-export default WebDevelopmentPage;
+>>>>>>> origin/main;
+=======
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
