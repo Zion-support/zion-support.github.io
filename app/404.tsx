@@ -1,13 +1,18 @@
-<<<<<<< HEAD
 import React from "react";
 
 export default function NotFound() {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold text-white">404</h2>
-      <p className="text-gray-300">This is the 404 component.</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-6xl font-bold text-white mb-4">404</h1>
+        <p className="text-xl text-gray-300 mb-8">Page not found</p>
+        <a
+          href="/"
+          className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+        >
+          Go Home
+        </a>
+      </div>
     </div>
   );
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
