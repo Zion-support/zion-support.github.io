@@ -27,8 +27,9 @@ export const seoUtils = {
   
   generateStructuredData: (data: Record<string, unknown>) => {
     return {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
       description: 'Leading technology solutions provider',
       ...data
     }

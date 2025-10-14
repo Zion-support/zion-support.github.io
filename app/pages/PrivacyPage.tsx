@@ -15,14 +15,11 @@ const PrivacyPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
             <div className="text-gray-400">
               <p>Privacy policy content coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>
-</>
+    </>
   );
 };
 export default PrivacyPage;

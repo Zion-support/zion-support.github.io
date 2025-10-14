@@ -1,58 +1,27 @@
-interface EnhancedSEOData {
-  title: string;
-  description: string;
-  keywords: string;
-  ogTitle: string;
-  ogDescription: string;
-  twitterTitle: string;
-  twitterDescription: string}
-
 export const seoEnhancer = {
-  enhance: (data: { title?: string; description?: string keywords?: string }): EnhancedSEOData => {
+  generateMetaTags: (title: string, description: string, keywords?: string) => {
     return {
-      title: data.title || 'Zion Tech Group',
-
-      keywords: data.keywords || 'technology;, solutions, innovation',
-      ogTitle: data.title || 'Zion Tech Group',
-      ogDescription: data.description || 'Leading technology solutions provider',
-      twitterTitle: data.title || 'Zion Tech Group',
-      twitterDescription: data.description || 'Leading technology solutions provider';
-    }
+      title: `${title} | Zion Tech Group`,
+      description,
+      keywords: keywords || 'AI, IT solutions, automation, digital transformation',
+      'og:title': title,
+      'og:description': description,
+      'og:type': 'website',
+      'og:url': typeof window !== 'undefined' ? window.location.href : '',
+      'twitter:card': 'summary_large_image',
+      'twitter:title': title,
+      'twitter:description': description
+    };
   },
   
-  setMetaTags: (data: EnhancedSEOData) => {
-    if (typeof document !== 'undefined') {
-      document.title = data.title
-      
-      const metaDescription = document.querySelector('meta[name="description"]')
-      if (metaDescription) {
-        metaDescription.setAttribute('content', data.description)
-      }
-      
-      const metaKeywords = document.querySelector('meta[name="keywords"]')
-      if (metaKeywords) {
-        metaKeywords.setAttribute('content', data.keywords)
-      }
-      
-      const ogTitle = document.querySelector('meta[property="og: title"]');
-      if (ogTitle) {
-        ogTitle.setAttribute('content', data.ogTitle)
-      }
-      
-      const ogDescription = document.querySelector('meta[property="og: description"]');
-      if (ogDescription) {
-        ogDescription.setAttribute('content', data.ogDescription)
-      }
-      
-      const twitterTitle = document.querySelector('meta[name="twitter: title"]');
-      if (twitterTitle) {
-        twitterTitle.setAttribute('content', data.twitterTitle)
-      }
-      
-      const twitterDescription = document.querySelector('meta[name="twitter: description"]');
-      if (twitterDescription) {
-        twitterDescription.setAttribute('content', data.twitterDescription)
-      }
-    }
+  generateStructuredData: (data: Record<string, unknown>) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description: 'Leading provider of AI and IT solutions',
+      url: 'https://ziontechgroup.com',
+      ...data
+    };
   }
-}
+};

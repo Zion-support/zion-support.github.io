@@ -5,12 +5,12 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import { AnalyticsProvider } from './app/contexts/AnalyticsContext.tsx';
-// import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-// import EnhancedSEO from './app/components/EnhancedSEO';
-// import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-// import ErrorBoundary from './app/components/ErrorBoundary';
-// import LoadingStates from './app/components/LoadingStates';
+import { AnalyticsProvider } from './app/contexts/AnalyticsContext';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import LoadingSpinner from './app/components/LoadingSpinner';
+import EnhancedSEO from './app/components/EnhancedSEO';
 
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';
@@ -92,12 +92,15 @@ const App: React.FC = () => {
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer />
-            <SEOOptimizer
+            <EnhancedSEO
               title="Zion Tech Group - Advanced AI and IT Solutions"
               description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
-              keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
-              type="website"
-              structuredData={{
+              keywords="AI, IT solutions, automation, digital transformation, cybersecurity, cloud infrastructure"
+              canonicalUrl="https://ziontechgroup.com"
+              ogImage="/og-image.jpg"
+            />
+            <script type="application/ld+json">
+              {JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "Zion Tech Group",
@@ -109,27 +112,29 @@ const App: React.FC = () => {
                   "telephone": "+1-555-0123",
                   "contactType": "customer service"
                 }
-              }}
-            />
-            <MetaManager />
-            <PerformanceMonitor />
-            <EnhancedAnalytics />
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <Navigation />
-                <main className="relative z-10" id="main-content" role="main">
-                  <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
+              })}
+            </script>
+            <MetaManager>
+              <PerformanceMonitor />
+              <EnhancedAnalytics>
+                <Router>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <Navigation />
+                    <main className="relative z-10" id="main-content" role="main">
+                      <Suspense fallback={<AdvancedLoadingStates><div>Loading application...</div></AdvancedLoadingStates>}>
                     <Routes>
                       <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/services" element={<ServicesPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                     </Routes>
-                  </Suspense>
-                </main>
-                <Footer />
-              </div>
-            </Router>
+                      </Suspense>
+                    </main>
+                    <Footer />
+                  </div>
+                </Router>
+              </EnhancedAnalytics>
+            </MetaManager>
           </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>

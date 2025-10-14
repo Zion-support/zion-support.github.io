@@ -1,22 +1,23 @@
 export const sitemapGenerator = {
-  generate: (pages: Array<{ path: string; lastModified?: string priority?: number }>) => {
+  generateSitemap: (pages: Array<{ url: string; lastmod?: string; changefreq?: string; priority?: number }>) => {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>
-    <loc>https://ziontechgroup.com${page.path}</loc>
-    ${page.lastModified ? `<lastmod>${page.lastModified}</lastmod>` : ''}
+    <loc>${page.url}</loc>
+    ${page.lastmod ? `<lastmod>${page.lastmod}</lastmod>` : ''}
+    ${page.changefreq ? `<changefreq>${page.changefreq}</changefreq>` : ''}
     ${page.priority ? `<priority>${page.priority}</priority>` : ''}
   </url>`).join('\n')}
-</urlset>`
+</urlset>`;
     
-    return sitemap
+    return sitemap;
   },
   
-  generateRobotsTxt: (sitemapUrl: string = 'https://ziontechgroup.com/sitemap.xml') => {
-    return `User-agent: *
-Allow: /
-
-Sitemap: ${sitemapUrl}`
+  generateRobotsTxt: (sitemapUrl: string, disallowPaths: string[] = []) => {
+    const robots = `User-agent: *
+${disallowPaths.map(path => `Disallow: ${path}`).join('\n')}
+Sitemap: ${sitemapUrl}`;
+    
+    return robots;
   }
-}
-              </p>
+};

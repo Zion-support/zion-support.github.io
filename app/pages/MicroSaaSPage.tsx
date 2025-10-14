@@ -15,14 +15,11 @@ const MicroSaaSPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-white mb-8">Micro SaaS Solutions</h1>
             <div className="text-gray-400">
               <p>Micro SaaS solutions coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>
-</>
+    </>
   );
 };
 export default MicroSaaSPage;
