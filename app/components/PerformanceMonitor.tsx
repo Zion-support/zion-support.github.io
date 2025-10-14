@@ -8,6 +8,15 @@ interface PerformanceMetrics {
   ttfb?: number;
 }
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart?: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 const PerformanceMonitor = () => {
   useEffect(() => {
     // Only run in production
@@ -27,7 +36,7 @@ const PerformanceMonitor = () => {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as any;
+        const fidEntry = entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
           metrics.fid = fidEntry.processingStart - fidEntry.startTime;
         }
@@ -40,8 +49,9 @@ const PerformanceMonitor = () => {
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
+        const layoutShiftEntry = entry as LayoutShift;
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value;
         }
       });
       metrics.cls = clsValue;
@@ -69,7 +79,9 @@ const PerformanceMonitor = () => {
     const sendMetrics = () => {
       if (Object.keys(metrics).length > 0) {
         // Send to analytics service
-        console.log('Performance Metrics:', metrics);
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Performance Metrics:', metrics);
+        }
         
         // You can send to your analytics service here
         // Example: analytics.track('performance_metrics', metrics);

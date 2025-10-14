@@ -37,7 +37,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Log error to monitoring service in production
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
   }
 
   render() {
@@ -59,24 +62,42 @@ function App() {
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
   import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-    onCLS(console.log);
-    onFCP(console.log);
-    onLCP(console.log);
-    onTTFB(console.log);
+    onCLS((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('CLS:', metric);
+      }
+    });
+    onFCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('FCP:', metric);
+      }
+    });
+    onLCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('LCP:', metric);
+      }
+    });
+    onTTFB((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('TTFB:', metric);
+      }
+    });
   });
 
   // Monitor bundle size
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
-        console.log('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+        }
       }
     }
   });
   observer.observe({ entryTypes: ['navigation'] });
 }
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
       console.log('Zion Tech Group App initialized');
     }
   }, []);
