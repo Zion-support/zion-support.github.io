@@ -33,14 +33,13 @@ const MetaManager: React.FC<MetaManagerProps> = ({
     document.title = title;
 
     // Add canonical URL
-    let canonical = document.querySelector('link[rel="canonical"]');
+    let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
     }
-    canonical.setAttribute('href', url);
-
+    canonical.setAttribute('href', url)
     // Add structured data
     const structuredData = {
       "@context": "https://schema.org",
@@ -65,28 +64,25 @@ const MetaManager: React.FC<MetaManagerProps> = ({
         "articleSection": section,
         "keywords": tags.join(', ')
       })
-    };
-
+    }
     // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    const existingScript = document.querySelector('script[type="application/ld+json"]')
     if (existingScript) {
-      existingScript.remove();
+      existingScript.remove()
     }
 
     // Add new structured data
-    const script = document.createElement('script');
+    const script = document.createElement('script')
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-  }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
-
+    script.textContent = JSON.stringify(structuredData)
+    document.head.appendChild(script)
+  }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags])
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={url} />
-      
       {/* Open Graph tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -94,19 +90,16 @@ const MetaManager: React.FC<MetaManagerProps> = ({
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
       {/* Additional meta tags */}
       <meta name="author" content={author} />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Helmet>
-  );
-};
-
+  )
+}
 export default MetaManager;

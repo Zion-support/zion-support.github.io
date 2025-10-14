@@ -4,11 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content, filePath) {
+// Function to fix specific syntax errors
+function fixSpecificErrors(content, filePath) {
   let fixed = content;
   
-  // Fix unterminated string literals in JSX attributes
+  // Fix unterminated string literals
   fixed = fixed.replace(/content="([^"]*?)(?=\s*\/>)/g, (match, content) => {
     if (!content.endsWith('"')) {
       return `content="${content}"`;
@@ -16,20 +16,10 @@ function fixSyntaxErrors(content, filePath) {
     return match;
   });
   
-  // Fix malformed JSX closing tags
-  fixed = fixed.replace(/<\/[^>]*>\s*;\s*$/gm, '');
-  
-  // Fix multiple closing braces and semicolons
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*}\s*;\s*}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*$/gm, '}');
-  
   // Fix malformed JSX structure
   fixed = fixed.replace(/<(\w+)>\s*<\/\1>\s*<(\w+)>/g, '<$2>');
   
-  // Fix missing closing tags in JSX
+  // Fix missing closing tags
   fixed = fixed.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
   
   // Fix broken JSX expressions
@@ -108,6 +98,26 @@ export default function Page() {
   return fixed;
 }
 
+// Function to fix component files
+function fixComponentFile(content, filePath) {
+  let fixed = content;
+  
+  // Fix common component patterns
+  if (fixed.includes('export default function') && fixed.includes('return (')) {
+    // Fix malformed component structure
+    fixed = fixed.replace(/export default function (\w+)\(\)\s*{\s*return\s*\(\s*<(\w+)>\s*\)\s*;\s*<\/\2>\s*}/g, 
+      'export default function $1() {\n  return (\n    <$2>\n    </$2>\n  );\n}');
+  }
+  
+  // Fix missing semicolons
+  fixed = fixed.replace(/import\s+(\w+)\s+from\s+"([^"]*)"\s*$/gm, 'import $1 from "$2";');
+  
+  // Fix malformed JSX
+  fixed = fixed.replace(/<(\w+)([^>]*)>\s*$/gm, '<$1$2>');
+  
+  return fixed;
+}
+
 // Main function to process all files
 function processFiles() {
   const patterns = [
@@ -132,11 +142,16 @@ function processFiles() {
         const originalContent = content;
         
         // Apply fixes
-        content = fixSyntaxErrors(content, file);
+        content = fixSpecificErrors(content, file);
         
         // Apply page-specific fixes
         if (file.includes('/page.tsx') || file.includes('/page.ts')) {
           content = fixPageFile(content, file);
+        }
+        
+        // Apply component-specific fixes
+        if (file.includes('/components/')) {
+          content = fixComponentFile(content, file);
         }
         
         // Only write if content changed

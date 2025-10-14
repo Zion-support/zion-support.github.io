@@ -29,49 +29,48 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     }
 
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
+    const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', description);
+      metaDescription.setAttribute('content', description)
     } else {
-      const meta = document.createElement('meta');
+      const meta = document.createElement('meta')
       meta.name = 'description';
       meta.content = description;
-      document.head.appendChild(meta);
+      document.head.appendChild(meta)
     }
 
     // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    const metaKeywords = document.querySelector('meta[name="keywords"]')
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
+      metaKeywords.setAttribute('content', keywords.join(', '))
     } else {
-      const meta = document.createElement('meta');
+      const meta = document.createElement('meta')
       meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
+      meta.content = keywords.join(', ')
+      document.head.appendChild(meta)
     }
 
     // Add canonical URL
     if (canonical) {
-      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      const canonicalLink = document.querySelector('link[rel="canonical"]')
       if (canonicalLink) {
-        canonicalLink.setAttribute('href', canonical);
+        canonicalLink.setAttribute('href', canonical)
       } else {
-        const link = document.createElement('link');
+        const link = document.createElement('link')
         link.rel = 'canonical';
         link.href = canonical;
-        document.head.appendChild(link);
+        document.head.appendChild(link)
       }
     }
 
     // Add structured data
     if (structuredData) {
-      const script = document.createElement('script');
+      const script = document.createElement('script')
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+      script.textContent = JSON.stringify(structuredData)
+      document.head.appendChild(script)
     }
-  }, [title, description, keywords, canonical, structuredData]);
-
+  }, [title, description, keywords, canonical, structuredData])
   return (
     <Helmet>
       <title>{title}</title>
@@ -84,14 +83,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:image" content={ogImage} />
-      
       {/* Twitter Card tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
     </Helmet>
-  );
-};
-
+  )
+}
 export default SEOEnhancer;

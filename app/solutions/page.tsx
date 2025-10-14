@@ -30,14 +30,14 @@ import {
 export default function SolutionsPage() {
   return (
     >
-  );
+  )
 <elmet>
         <title>Solutions - Zion Tech Group</title>
         <meta name="description"content="Professional solutions services by Zion Tech Group. Leading provider of AI and IT solutions." />
         <meta name="keywords" content="solutions, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>;
+      
       <div className="min-h-screen bg-slate-900">
-        {/* Hero Section */};
+        {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-white mb-6">
@@ -51,16 +51,16 @@ export default function SolutionsPage() {
                 to="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-colors">
                 Get Started
-              </Link>;
+              
 <ink 
                 to="/services"className="border border-purple-600 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-600 hover:text-white transition-colors">
                 Learn More
-              </Link>;
+              
             </div>
           </div>
         </section>
 
-        {/* Content Section */};
+        {/* Content Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -93,13 +93,13 @@ export default function SolutionsPage() {
                   to="/contact"
                   className="inline-block bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
                   Contact Us
-                </Link>;
+                
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */};
+        {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -113,10 +113,10 @@ export default function SolutionsPage() {
               to="/contact"
               className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">
               Get Started Today
-            </Link>;
+            
           </div>
         </section>
       </div></>
-  );
+  )
 };</Link
 >

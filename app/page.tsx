@@ -17,7 +17,6 @@ const PagePage = () => {
         </div>
       </div>
     </div>
-  );
-};
-
+  )
+}
 export default PagePage;

@@ -28,17 +28,11 @@ const AiDocumentProcessorPage = () => {
 
   return (
     ><Helmet>
-  );
-
-
-  );
-
+  )
         <title>AI Document Processor - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description"content="Advanced AI document processing solution powered by artificial intelligence. Streamline your document workflows with cutting-edge AI technology and automation." />
         <meta name="keywords" content="AI, document processing, artificial intelligence, automation, business solutions, technology" />
-      </Helmet>;
-
-
+      
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -59,7 +53,7 @@ const AiDocumentProcessorPage = () => {
         </div>
       </section>
 
-      {/* Features Section */};
+      {/* Features Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -73,12 +67,12 @@ const AiDocumentProcessorPage = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
-  ))};
+  ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */};
+      {/* Benefits Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -102,7 +96,7 @@ const AiDocumentProcessorPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */};
+      {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-sky-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Document Processing?</h2>
@@ -115,5 +109,5 @@ const AiDocumentProcessorPage = () => {
         </div>
       </section></>
   )
-};
+}
 export default AiDocumentProcessorPage

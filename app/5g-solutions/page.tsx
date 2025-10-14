@@ -17,12 +17,11 @@ const PagePage = () => {
     div>
       <Helmet>
 
-  );
-  );
+  )
         <title>PagePage - Zion Tech Group</title>
         <meta name="description"content="PagePage - Zion Tech Group" />
       
-</Helmet>;
+
       <div>
         <div>
           <h1 className="text-4xl font-bold text-white mb-8">PagePage</h1>
@@ -32,9 +31,8 @@ const PagePage = () => {
         </div>
       </div>
     </div>
-  );
-};
-
+  )
+}
 export default PagePage;
 
 

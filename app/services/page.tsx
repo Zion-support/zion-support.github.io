@@ -17,7 +17,6 @@ const ServicesPage = () => {
         </div>
       </div>
     </div>
-  );
-};
-
+  )
+}
 export default ServicesPage;

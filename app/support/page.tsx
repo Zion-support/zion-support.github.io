@@ -62,7 +62,7 @@ const SupportPage: React.FC = () => {
     {
       question: 'What if we need custom modifications?',
       answer: 'Our team can develop custom features and modifications to meet your specific business requirements.'
-    };
+    }
   ];
 
   const supportChannels = [
@@ -85,24 +85,20 @@ const SupportPage: React.FC = () => {
       title: 'Live Chat',
       contact: 'Available on website',
       availability: '24/7'
-    };
+    }
   ];
 
   return (
     <><Helmet>
-  );
-  );
-  );
-  );
-  );
+  )
         <title>Support - Zion Tech Group | Technical Support & Help</title>
         <meta name="description"content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
         <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" />
-      </Helmet>;
+      
 <avigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */};
+        {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"/>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"style={{ animationDelay: '1s' }} />
@@ -120,7 +116,7 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Search Section */};
+        {/* Search Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

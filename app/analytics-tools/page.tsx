@@ -39,7 +39,7 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    };
+    }
   ];
 
   const benefits = [
@@ -56,13 +56,12 @@ const PagePage: React.FC = () => {
   return (
     div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-  );
-  );
+  )
         <title>Analytics Tools | Zion Tech Group</title>
         <meta name="description"content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics" />
-      </Helmet>;
-      {/* Hero Section */};
+      
+      {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
@@ -78,7 +77,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */};
+      {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
@@ -90,7 +89,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */};
+      {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -113,7 +112,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
+  )
+}
 export default PagePage;</Mail>

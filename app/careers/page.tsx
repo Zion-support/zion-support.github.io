@@ -38,7 +38,7 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
-    };
+    }
   ];
 
   const benefits = [
@@ -71,17 +71,16 @@ const CareersPage: React.FC = () => {
       icon: Award,
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do'
-    };
+    }
   ];
 
   return (
     ><Helmet>
-  );
-  );
+  )
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description"content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
-      </Helmet>;
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"/>
@@ -102,17 +101,17 @@ const CareersPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
               {openPositions.map((position, index) => (
                 <div
-                  key={index};
+                  key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                        {position.title};
+                        {position.title}
                       </h3>
                       <p className="text-gray-300">{position.department}</p>
                     </div>
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                      {position.type};
+                      {position.type}
                     </span>
                   </div>
 
@@ -135,20 +134,19 @@ const CareersPage: React.FC = () => {
                       {position.requirements.map((req, reqIndex) => (
                         <li key={reqIndex} className="text-gray-300 text-sm flex items-center">
                           </Clock><CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"/>
-                          {req};
+                          {req}
                         </li>
-  ))};
+  ))}
                     </ul>
                   </div>
 
                 </div>
-              ))};
+              ))}
             </div>
           </div>
         </section>
       </div></>
-  );
-};
-
+  )
+}
 export default CareersPage;
 </CheckCircle>

@@ -37,19 +37,18 @@ const ConsultationPage = () => {
       description: 'Comprehensive security assessment and recommendations.',
       duration: '4 hours',
       price: '$1000'
-    };
+    }
   ];
 
   return (
     div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-  );
-  );
+  )
         <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
         <meta name="description"content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
-      </Helmet>;
-      {/* Hero Section */};
+      
+      {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
@@ -61,7 +60,7 @@ const ConsultationPage = () => {
         </div>
       </section>
 
-      {/* Consultation Types */};
+      {/* Consultation Types */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -77,14 +76,13 @@ const ConsultationPage = () => {
                   <span className="text-purple-300 font-semibold">{type.price}</span>
                 </div>
               </div>
-  ))};
+  ))}
           </div>
         </div>
       </section>
     </div>
-  );
-};
-
+  )
+}
 export default ConsultationPage;
 
 </Clock>

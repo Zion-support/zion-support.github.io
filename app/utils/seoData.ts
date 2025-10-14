@@ -24,5 +24,4 @@ export const defaultStructuredData = {
     "addressRegion": "CA",
     "postalCode": "94105",
     "addressCountry": "US"
-  };
-};
+  }

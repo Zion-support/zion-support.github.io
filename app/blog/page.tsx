@@ -46,19 +46,18 @@ const BlogPage = () => {
       date: '2024-01-05',
       readTime: '6 min read',
       image: '/api/placeholder/400/250'
-    };
+    }
   ];
 
   return (
     div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-  );
-  );
+  )
         <title>Blog | Zion Tech Group</title>
         <meta name="description"content="Latest insights on AI, IT solutions, and technology trends from Zion Tech Group." />
         <meta name="keywords" content="tech blog, AI insights, IT solutions, technology trends, Zion Tech Group" />
-      </Helmet>;
-      {/* Hero Section */};
+      
+      {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
@@ -70,7 +69,7 @@ const BlogPage = () => {
         </div>
       </section>
 
-      {/* Blog Posts */};
+      {/* Blog Posts */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -97,14 +96,13 @@ const BlogPage = () => {
                   </button>
                 </div>
               </article>
-  ))};
+  ))}
           </div>
         </div>
       </section>
     </div>
-  );
-};
-
+  )
+}
 export default BlogPage;
 
 </Calendar>

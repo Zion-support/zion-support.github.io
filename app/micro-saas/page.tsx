@@ -52,7 +52,7 @@ const MicroSaasPage: React.FC = () => {
       features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support'],
       price: '$299/month',
       users: 'Unlimited users',
-    };
+    }
   ];
 
   const benefits = [
@@ -67,14 +67,13 @@ const MicroSaasPage: React.FC = () => {
 
   return (
     ><Helmet>
-  );
-  );
+  )
         <title>Micro SaaS Solutions | Zion Tech Group</title>
         <meta name="description"content="Discover our micro SaaS solutions designed for small to medium businesses. AI-powered tools that scale with your growth." />
         <meta name="keywords" content="micro SaaS, small business software, AI tools, business automation, Zion Tech Group" />
-      </Helmet>;
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* CTA Section */};
+        {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
@@ -92,18 +91,17 @@ const MicroSaasPage: React.FC = () => {
                   </Link
 ><Zap className="w-5 h-5"/>
                   <span>Start Free Trial</span>
-                </Link>;
+                
 <ink
                   to="/pricing"className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                   View All Plans
-                </Link>;
+                
               </div>
             </div>
           </div>
         </section>
       </div></>
-  );
-};
-
+  )
+}
 export default MicroSaasPage;
 </Zap>

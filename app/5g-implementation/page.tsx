@@ -15,13 +15,13 @@ export default function Page() {
   return (
 
     <React.Fragment>
-  );
+  )
       </React.Fragment><Helmet>
 
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description"content="Professional 5G implementation services by Zion Tech Group." />
       
-</Helmet>;
+
       <div>
         <div>
           <h1 className="text-4xl font-bold text-white mb-4">5G Implementation</h1>
@@ -29,10 +29,6 @@ export default function Page() {
         </div>
       </div>
 }
-};
-};
-};
-};
-    </React.Fragment>;
-  );
-};
+}
+  )
+}
