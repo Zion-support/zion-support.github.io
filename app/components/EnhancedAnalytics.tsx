@@ -8,5 +8,4 @@ const EnhancedAnalytics = () => {
     </div>
   );
 };
-
 export default EnhancedAnalytics;

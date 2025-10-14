@@ -8,5 +8,4 @@ const MetaManager = () => {
     </div>
   );
 };
-
 export default MetaManager;
