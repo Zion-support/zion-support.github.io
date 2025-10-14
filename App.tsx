@@ -6,6 +6,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+<<<<<<< HEAD
 import { AnalyticsProvider } from './app/contexts/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
@@ -19,6 +20,8 @@ import EnhancedAnalytics from './app/components/EnhancedAnalytics';
 import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
 // Pages
+=======
+>>>>>>> c303edcb7868584661debcc13b1a9abc482a2767
 import HomePage from './app/page';
 
 // Lazy load pages for better performance
@@ -48,6 +51,7 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
+<<<<<<< HEAD
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer />
@@ -105,6 +109,8 @@ const App: React.FC = () => {
             </Router>
           </PerformanceOptimizer>
         </AnalyticsProvider>
+=======
+>>>>>>> c303edcb7868584661debcc13b1a9abc482a2767
       </HelmetProvider>
     </ErrorBoundary>
   );
