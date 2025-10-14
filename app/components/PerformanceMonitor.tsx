@@ -113,18 +113,18 @@ const PerformanceMonitor = () => {
 
   return (
     <>
-      <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono">
+      <div className="fixed bottom-4right-4bg-blackbg-opacity-75text-whitep-4rounded-lgtext-xsfont-mono">
         <div className="font-bold mb-2">Performance Metrics</div>
         <div className="space-y-1">
           <div className="flex justify-between">
             <span>FCP: </span>
-              <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
+              <span className={getScoreColor(metrics.fcp, { good: 1-80-0, poor: 3-00-0 })}>
                 {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
               </span>
             </div>
             <div className="flex justify-between">
               <span>LCP: </span>
-              <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
+              <span className={getScoreColor(metrics.lcp, { good: 2-50-0, poor: 4-00-0 })}>
               {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
             </span>
           </div>

@@ -245,7 +245,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 
   return null;
->>>>>>> 7c403644bad909cfd6e23ad3-7c-5-2c-4b-8-18-93-39-5b
+>>>>>>> 7c-40-3-64-4bad9-0-9cfd-6e2-3ad-3-7c-5-2c-4b-8-18-93-39-5b
 };
 
 export default AccessibilityEnhancer;
