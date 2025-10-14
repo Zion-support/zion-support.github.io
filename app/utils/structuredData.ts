@@ -7,7 +7,6 @@ export const structuredData = {
     logo: 'https://ziontechgroup.com/logo.png',
     description: 'Leading technology solutions provider'
   },
-  
   website: {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -15,8 +14,7 @@ export const structuredData = {
     url: 'https://ziontechgroup.com',
     description: 'Leading technology solutions provider'
   },
-  
   generate: (type: 'organization' | 'website') => {
-    return structuredData[type];
+    return structuredData[type]
   }
-};
+}

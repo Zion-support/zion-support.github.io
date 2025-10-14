@@ -3,10 +3,9 @@ declare global {
     gtag: (
       command: 'config' | 'event' | 'js' | 'set',
       targetId: string,
-      config?: Record<string, any>
-    ) => void;
-    dataLayer: any[];
+      config?: any
+    ) => void
   }
 }
 
-export {};
+export {}
