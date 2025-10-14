@@ -15,6 +15,7 @@ const AccessibilityEnhancer: React.FC = () => {
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
+    } else {
       root.classList.remove('reduced-motion');
     }
     // Font size adjustment
