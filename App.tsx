@@ -6,6 +6,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import Navigation from './app/components/Navigation';
+import SEO from './app/components/SEO';
+import LoadingSpinner from './app/components/LoadingSpinner';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
 // Lazy load main pages for better code splitting
 const HomePage = React.lazy(() => import('./app/page'));
@@ -28,7 +31,7 @@ const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => {
   }, [pagePath]);
 
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="text-white text-xl">Loading page...</div></div>}>
+    <Suspense fallback={<LoadingSpinner size="lg" text="Loading page..." className="min-h-screen" />}>
       <PageComponent />
     </Suspense>
   );
@@ -40,14 +43,7 @@ const RouterContent: React.FC = () => {
   const location = useLocation();
   
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="text-center">
-          <div className="cyber-loading mx-auto mb-4"></div>
-          <div className="text-white text-xl">Loading application...</div>
-        </div>
-      </div>
-    }>
+    <Suspense fallback={<LoadingSpinner size="lg" text="Loading application..." className="min-h-screen" />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -72,11 +68,7 @@ const App: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="text-white text-xl">Loading application...</div>
-      </div>
-    );
+    return <LoadingSpinner size="lg" text="Loading application..." className="min-h-screen" />;
   }
 
   return (
@@ -84,6 +76,12 @@ const App: React.FC = () => {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <AccessibilityEnhancer />
+            <SEO 
+              title="Zion Tech Group - Advanced AI & IT Solutions"
+              description="Leading provider of AI, IT, and 5G solutions. Transform your business with cutting-edge technology, micro SAAS services, and innovative digital solutions."
+              keywords="AI solutions, IT services, 5G technology, micro SAAS, cloud computing, cybersecurity, business automation"
+            />
             <Header />
             <Navigation />
             <main className="relative z-10 pt-20" id="main-content" role="main">
