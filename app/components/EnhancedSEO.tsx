@@ -7,9 +7,4 @@ const EnhancedSEO = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default EnhancedSEO;
-=======
-
-export default EnhancedSEO;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

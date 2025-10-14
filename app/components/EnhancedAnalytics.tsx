@@ -211,16 +211,10 @@ const EnhancedAnalytics: React.FC = () => {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
-        entries.forEach((entry: PerformanceEntry) => {
-          const fidEntry = entry as PerformanceEventTiming;
-          trackPerformance('FID', fidEntry.processingStart - fidEntry.startTime);
-=======
-        entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
+entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
           if (entry.processingStart) {
             trackPerformance('FID', entry.processingStart - entry.startTime);
           }
->>>>>>> d11f3463202cce5e705e8cbfeff0fcf5b9845190
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });

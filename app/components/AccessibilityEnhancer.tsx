@@ -77,14 +77,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return undefined;
   }, [reducedMotion]);
 
-<<<<<<< HEAD
   useEffect(() => {
-    // Add ARIA landmarks if not present
-    const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {
-      main.setAttribute('role', 'main');
-    }
-=======
     // Improve focus management
     const improveFocusManagement = () => {
       // Add focus indicators
@@ -120,7 +113,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       `;
       document.head.appendChild(style);
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+
+    improveFocusManagement();
 
     const nav = document.querySelector('nav');
     if (nav && !nav.getAttribute('role')) {

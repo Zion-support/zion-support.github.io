@@ -7,9 +7,4 @@ const OptimizedImage = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default OptimizedImage;
-=======
-
-export default OptimizedImage;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

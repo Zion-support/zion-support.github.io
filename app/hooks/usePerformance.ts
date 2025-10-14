@@ -1,13 +1,4 @@
 'use client';
-<<<<<<< HEAD
-
-export const UsePerformance = () => {
-  // Implementation
-  return true;
-};
-
-export default UsePerformance;
-=======
 import { useState, useEffect } from 'react';
 
 export const usePerformance = () => {
@@ -34,4 +25,3 @@ export const usePerformance = () => {
 };
 
 export default usePerformance;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

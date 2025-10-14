@@ -7,9 +7,4 @@ const EnhancedErrorBoundary = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default EnhancedErrorBoundary;
-=======
-
-export default EnhancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

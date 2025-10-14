@@ -7,9 +7,4 @@ const PWAInstaller = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default PWAInstaller;
-=======
-
-export default PWAInstaller;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

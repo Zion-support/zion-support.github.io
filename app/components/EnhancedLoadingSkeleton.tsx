@@ -7,9 +7,4 @@ const EnhancedLoadingSkeleton = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default EnhancedLoadingSkeleton;
-=======
-
-export default EnhancedLoadingSkeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

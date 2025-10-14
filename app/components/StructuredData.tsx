@@ -7,9 +7,4 @@ const StructuredData = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default StructuredData;
-=======
-
-export default StructuredData;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

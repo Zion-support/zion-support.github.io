@@ -1,9 +1,6 @@
 // servicesData - Basic implementation
 export default function servicesData() {
-<<<<<<< HEAD
-  return null;
-=======
-  return {
+return {
     services: [
       {
         id: 1,
@@ -17,5 +14,4 @@ export default function servicesData() {
       }
     ]
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
 }

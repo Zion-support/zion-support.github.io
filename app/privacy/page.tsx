@@ -24,9 +24,4 @@ const PrivacyPage = () => {
     </>
   );
 };
-<<<<<<< HEAD
 export default PrivacyPage;
-=======
-
-export default PrivacyPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

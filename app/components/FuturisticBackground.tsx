@@ -7,9 +7,4 @@ const FuturisticBackground = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default FuturisticBackground;
-=======
-
-export default FuturisticBackground;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

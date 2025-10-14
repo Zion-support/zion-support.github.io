@@ -1,20 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
 interface ResponsiveContainerProps {
   children: React.ReactNode;
   className?: string;
+  breakpoint?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 }
-<<<<<<< HEAD
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
-  children,
-=======
 
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
-  children, 
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+  children,
   className = ''
 }) => {
   return (
@@ -23,8 +16,5 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
     </div>
   );
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
 export default ResponsiveContainer;

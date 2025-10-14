@@ -7,9 +7,4 @@ const SkipLink = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default SkipLink;
-=======
-
-export default SkipLink;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

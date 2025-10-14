@@ -7,9 +7,4 @@ const PerformanceEnhancer = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default PerformanceEnhancer;
-=======
-
-export default PerformanceEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

@@ -7,9 +7,4 @@ const AdAnalytics = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default AdAnalytics;
-=======
-
-export default AdAnalytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

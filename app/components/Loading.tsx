@@ -7,9 +7,4 @@ const Loading = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default Loading;
-=======
-
-export default Loading;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

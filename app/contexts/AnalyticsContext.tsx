@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-import { createContext } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
-}
-
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-=======
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
+  setUser: (userId: string, properties?: Record<string, unknown>) => void;
   isEnabled: boolean;
 }
 
@@ -25,14 +15,13 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
   const [isEnabled, setIsEnabled] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
     // Check if analytics is enabled
     setIsEnabled(true);
   }, []);
 
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
     // Track event logic here
     console.log('Analytics Event:', eventName, properties);
@@ -44,8 +33,8 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
     console.log('Page View:', pageName);
   };
 
-  const setUser = (newUserId: string, properties?: Record<string, any>) => {
-    setUserId(newUserId);
+  const setUser = (newUserId: string, properties?: Record<string, unknown>) => {
+    
     console.log('User Set:', newUserId, properties);
   };
 
@@ -70,4 +59,3 @@ export const useAnalytics = () => {
   }
   return context;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

@@ -7,9 +7,4 @@ const CriticalResourcePreloader = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default CriticalResourcePreloader;
-=======
-
-export default CriticalResourcePreloader;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

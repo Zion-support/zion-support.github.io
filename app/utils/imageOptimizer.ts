@@ -1,13 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
-export const ImageOptimizer = () => {
-  // Implementation
-  return true;
-};
-
-export default ImageOptimizer;
-=======
 export const imageOptimizer = (src: string, width?: number, height?: number) => {
   // Image optimization utility
   const params = new URLSearchParams();
@@ -18,4 +10,3 @@ export const imageOptimizer = (src: string, width?: number, height?: number) => 
 };
 
 export default imageOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

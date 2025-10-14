@@ -7,9 +7,4 @@ const ResponsiveGrid = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default ResponsiveGrid;
-=======
-
-export default ResponsiveGrid;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

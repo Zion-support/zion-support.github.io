@@ -7,9 +7,4 @@ const AdvancedSEOOptimizer_new = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default AdvancedSEOOptimizer_new;
-=======
-
-export default AdvancedSEOOptimizer_new;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

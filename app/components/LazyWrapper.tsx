@@ -17,8 +17,4 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
   );
 };
 
-<<<<<<< HEAD
 export default LazyWrapper;
-=======
-export default LazyWrapper;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

@@ -24,9 +24,4 @@ const TermsPage = () => {
     </>
   );
 };
-<<<<<<< HEAD
 export default TermsPage;
-=======
-
-export default TermsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

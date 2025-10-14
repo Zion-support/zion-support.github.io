@@ -7,9 +7,4 @@ const ImprovedSidebar = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default ImprovedSidebar;
-=======
-
-export default ImprovedSidebar;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

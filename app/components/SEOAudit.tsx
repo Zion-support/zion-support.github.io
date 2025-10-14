@@ -7,9 +7,4 @@ const SEOAudit = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default SEOAudit;
-=======
-
-export default SEOAudit;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

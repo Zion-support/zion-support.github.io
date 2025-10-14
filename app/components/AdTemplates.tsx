@@ -7,9 +7,4 @@ const AdTemplates = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default AdTemplates;
-=======
-
-export default AdTemplates;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

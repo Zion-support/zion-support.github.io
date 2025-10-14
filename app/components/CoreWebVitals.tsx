@@ -7,9 +7,4 @@ const CoreWebVitals = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default CoreWebVitals;
-=======
-
-export default CoreWebVitals;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

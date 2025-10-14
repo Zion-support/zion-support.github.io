@@ -7,9 +7,4 @@ const Sidebar = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default Sidebar;
-=======
-
-export default Sidebar;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

@@ -1,13 +1,4 @@
 'use client';
-<<<<<<< HEAD
-
-export const Dynamicx = () => {
-  // Implementation
-  return true;
-};
-
-export default Dynamicx;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -27,4 +18,3 @@ export default function Page() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

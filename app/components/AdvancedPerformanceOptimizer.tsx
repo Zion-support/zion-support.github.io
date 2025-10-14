@@ -7,9 +7,4 @@ const AdvancedPerformanceOptimizer = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default AdvancedPerformanceOptimizer;
-=======
-
-export default AdvancedPerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

@@ -7,9 +7,4 @@ const ImprovedFooter = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default ImprovedFooter;
-=======
-
-export default ImprovedFooter;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

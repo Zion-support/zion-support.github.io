@@ -7,9 +7,4 @@ const FuturisticServiceCard = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default FuturisticServiceCard;
-=======
-
-export default FuturisticServiceCard;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

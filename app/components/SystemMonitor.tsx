@@ -7,9 +7,4 @@ const SystemMonitor = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default SystemMonitor;
-=======
-
-export default SystemMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

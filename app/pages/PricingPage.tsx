@@ -1,18 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-
-export default function PricingPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">PricingPage</h1>
-          <p className="text-gray-300 text-lg">This page is under development.</p>
-        </div>
-      </div>
-    </div>
-=======
 import { Helmet } from 'react-helmet-async';
 
 export default function Page() {
@@ -29,6 +16,5 @@ export default function Page() {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
   );
 }

@@ -7,9 +7,4 @@ const EnhancedPerformanceOptimizer = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default EnhancedPerformanceOptimizer;
-=======
-
-export default EnhancedPerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

@@ -7,9 +7,4 @@ const AdvertisingBanner = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default AdvertisingBanner;
-=======
-
-export default AdvertisingBanner;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea

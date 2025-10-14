@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader2, Brain, Shield, Cloud, Zap } from 'lucide-react';
+import { Loader2, Brain } from 'lucide-react';
 
 interface LoadingStatesProps {
   type?: 'default' | 'page' | 'component' | 'skeleton';
@@ -74,45 +74,4 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
   );
 };
 
-<<<<<<< HEAD
-// Specialized loading components for different sections
-export const AILoadingState: React.FC<{ message?: string }> = ({ message = 'AI is thinking...' }) => (
-  <div className="flex items-center justify-center p-4">
-    <div className="text-center">
-      <Brain className="w-8 h-8 text-cyan-500 animate-pulse mx-auto mb-2" />
-      <p className="text-gray-600 text-sm">{message}</p>
-    </div>
-  </div>
-);
-
-export const SecurityLoadingState: React.FC<{ message?: string }> = ({ message = 'Securing your data...' }) => (
-  <div className="flex items-center justify-center p-4">
-    <div className="text-center">
-      <Shield className="w-8 h-8 text-green-500 animate-pulse mx-auto mb-2" />
-      <p className="text-gray-600 text-sm">{message}</p>
-    </div>
-  </div>
-);
-
-export const CloudLoadingState: React.FC<{ message?: string }> = ({ message = 'Connecting to cloud...' }) => (
-  <div className="flex items-center justify-center p-4">
-    <div className="text-center">
-      <Cloud className="w-8 h-8 text-blue-500 animate-pulse mx-auto mb-2" />
-      <p className="text-gray-600 text-sm">{message}</p>
-    </div>
-  </div>
-);
-
-export const PerformanceLoadingState: React.FC<{ message?: string }> = ({ message = 'Optimizing performance...' }) => (
-  <div className="flex items-center justify-center p-4">
-    <div className="text-center">
-      <Zap className="w-8 h-8 text-yellow-500 animate-pulse mx-auto mb-2" />
-      <p className="text-gray-600 text-sm">{message}</p>
-    </div>
-  </div>
-);
-
 export default LoadingStates;
-=======
-export default LoadingStates;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
