@@ -1,3 +1,1 @@
-// servicesData - Basic implementation
-export default function servicesData() {
-  return null;
+// servicesData - Basic implementation export const servicesData = { services: [], categories: [], features: [] }; export default servicesData;

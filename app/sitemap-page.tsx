@@ -1,2 +1,4 @@
-import React from 'react';'// sitemap-page - Basic implementation'export default function sitemap-page() {
+// sitemap-page - Basic implementation
+export default function sitemapPage() {
   return null;
+}

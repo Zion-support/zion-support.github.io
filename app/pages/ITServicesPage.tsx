@@ -1,2 +1,4 @@
-import React from 'react';'// ITServicesPage - Basic implementation'export default function ITServicesPage() {
+// ITServicesPage - Basic implementation
+export default function ITServicesPage() {
   return null;
+}

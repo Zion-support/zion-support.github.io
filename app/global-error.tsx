@@ -1,2 +1,4 @@
-import React from 'react';'// global-error - Basic implementation'export default function global-error() {
+// global-error - Basic implementation
+export default function globalError() {
   return null;
+}

@@ -1,2 +1,4 @@
-import React from 'react';'// service-template - Basic implementation'export default function service-template() {
+// service-template - Basic implementation
+export default function serviceTemplate() {
   return null;
+}
