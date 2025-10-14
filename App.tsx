@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
+import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import Navigation from './app/components/Navigation';
 import HomePage from './app/pages/HomePage';
@@ -21,13 +22,17 @@ import MetaManager from './app/components/MetaManager';
 import EnhancedAnalytics from './app/components/EnhancedAnalytics';
 import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
-// Page components
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
+// Pages
+import HomePage from './app/pages/HomePage';
+import AboutPage from './app/pages/AboutPage';
+import ServicesPage from './app/pages/ServicesPage';
+import ContactPage from './app/pages/ContactPage';
 
-function App() {
+const App: React.FC = () => {
+  const handlePerformanceMetrics = (metrics: Record<string, unknown>) => {
+    console.log('Performance metrics:', metrics);
+  };
+
   return (
     <ErrorBoundary>
       <HelmetProvider>

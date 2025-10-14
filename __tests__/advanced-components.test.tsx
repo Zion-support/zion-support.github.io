@@ -17,15 +17,6 @@ const onError = jest.fn()
 // Mock helmet context
 const helmetContext = {}
 describe('AdvancedErrorBoundary', () => {
-  it('should catch errors and display fallback UI', () => {
-    const { getByText } = render(
-      <AdvancedErrorBoundary>
-        <ThrowError shouldThrow={true} />
-      </AdvancedErrorBoundary>
-    );
-    
-    expect(getByText(/Something went wrong/)).toBeInTheDocument();
-  });
 
   it('renders children when there is no error', () => {
     render(

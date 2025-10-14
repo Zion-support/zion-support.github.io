@@ -1,4 +1,4 @@
-import React from "react";
+// ServicesPage component
 
 // ServicesPage - Basic implementation
 export default function ServicesPage() {
