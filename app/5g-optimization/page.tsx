@@ -1,13 +1,5 @@
 import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 const FiveGOptimizationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -25,7 +17,6 @@ const FiveGOptimizationPage: React.FC = () => {
   );
 }
 
-import React, { Suspense } from 'react';
 export default FiveGOptimizationPage;
 
   return (
@@ -54,12 +45,10 @@ export default FiveGOptimizationPage;
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
-import React, { Suspense } from 'react';
         </div>
       </section>
+    </div>
+  );
+}
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-
-const page = React.lazy(() => import('./page'));
-export default page;
+export default FiveGOptimizationPage;

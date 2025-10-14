@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import React, { Suspense } from 'react';
 const ZionAiCrmProPage: React.FC = () => {
   return (
     <>
@@ -50,6 +49,4 @@ const ZionAiCrmProPage: React.FC = () => {
   );
 }
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default ZionAiCrmProPage;

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -18,17 +18,24 @@ interface LayoutShift extends PerformanceEntry {
 }
 
 const PerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+
+  const getScoreColor = (value: number | undefined, thresholds: { good: number; poor: number }) => {
+    if (value === undefined) return 'text-gray-400';
+    if (value <= thresholds.good) return 'text-green-400';
+    if (value <= thresholds.poor) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
   useEffect(() => {
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
-
-    const metrics: PerformanceMetrics = {};
 
     // Measure Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      metrics.lcp = lastEntry.startTime;
+      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -38,7 +45,7 @@ const PerformanceMonitor = () => {
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
-          metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
         }
       });
     });
@@ -54,7 +61,7 @@ const PerformanceMonitor = () => {
           clsValue += layoutShiftEntry.value;
         }
       });
-      metrics.cls = clsValue;
+      setMetrics(prev => ({ ...prev, cls: clsValue }));
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -63,7 +70,7 @@ const PerformanceMonitor = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
-          metrics.fcp = entry.startTime;
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
       });
     });
@@ -72,7 +79,7 @@ const PerformanceMonitor = () => {
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
-      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
     }
 
     // Send metrics after page load
