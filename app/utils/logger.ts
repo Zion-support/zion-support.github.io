@@ -1,4 +1,3 @@
-// Logger utility functions
 
 export const Logger = {
   error: (message: string, error?: Error, context?: Record<string, unknown>) => {
