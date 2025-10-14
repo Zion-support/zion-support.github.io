@@ -1,42 +1,42 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react;
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react',
 const ITServicesPage: React.FC = () => {
   const services = [{
       icon: Server,
-      title: 'Infrastructure Management',';
-      description: 'Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.',';
-      features: ['Server Configuration', 'Network Setup', 'Hardware Maintenance', 'Performance Monitoring']';
+      title: 'Infrastructure Management',',
+      description: 'Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.',',
+      features: ['Server Configuration', 'Network Setup', 'Hardware Maintenance', 'Performance Monitoring']',
     },
     {
       icon: Cloud,
-      title: 'Cloud Solutions',';
-      description: 'Migrate to the cloud and optimize your cloud infrastructure for scalability and cost-effectiveness.',';
-      features: ['Cloud Migration', 'Multi-cloud Strategy', 'Cost Optimization', 'Disaster Recovery']';
+      title: 'Cloud Solutions',',
+      description: 'Migrate to the cloud and optimize your cloud infrastructure for scalability and cost-effectiveness.',',
+      features: ['Cloud Migration', 'Multi-cloud Strategy', 'Cost Optimization', 'Disaster Recovery']',
     },
     {
       icon: Shield,
-      title: 'Cybersecurity',';
-      description: 'Protect your business with comprehensive security solutions and threat monitoring.',';
-      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']';
+      title: 'Cybersecurity',',
+      description: 'Protect your business with comprehensive security solutions and threat monitoring.',',
+      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']',
     },
     {
       icon: Wrench,
-      title: 'Technical Support',';
-      description: '24/7 technical support and maintenance to keep your systems running smoothly.',';
-      features: ['Help Desk Support', 'Remote Monitoring', 'Preventive Maintenance', 'Emergency Response']';
+      title: 'Technical Support',',
+      description: '24/7 technical support and maintenance to keep your systems running smoothly.',',
+      features: ['Help Desk Support', 'Remote Monitoring', 'Preventive Maintenance', 'Emergency Response']',
     },
     {
       icon: Monitor,
-      title: 'System Integration',';
-      description: 'Seamlessly integrate different systems and applications for improved workflow efficiency.',';
-      features: ['API Integration', 'Data Synchronization', 'Workflow Automation', 'Legacy System Modernization']';
+      title: 'System Integration',',
+      description: 'Seamlessly integrate different systems and applications for improved workflow efficiency.',',
+      features: ['API Integration', 'Data Synchronization', 'Workflow Automation', 'Legacy System Modernization']',
     },
     {
       icon: Database,
-      title: 'Data Management',';
-      description: 'Organize, secure, and optimize your data infrastructure for better insights and compliance.',';
-      features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']';
+      title: 'Data Management',',
+      description: 'Organize, secure, and optimize your data infrastructure for better insights and compliance.',',
+      features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']',
     }
   ];
 const ITServicesPage: React.FC = () => {
@@ -55,7 +55,7 @@ const ITServicesPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive IT solutions to keep your business running efficiently and securely.;
-            From infrastructure to support, we've got you covered.';
+            From infrastructure to support, we've got you covered.',
           </p>
         </div>
         {/* Services Grid */}

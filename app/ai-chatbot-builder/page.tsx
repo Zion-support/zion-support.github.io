@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 export default function AiChatbotBuilder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

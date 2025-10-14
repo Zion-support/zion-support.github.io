@@ -1,55 +1,66 @@
+const fs = require('fs');
+const path = require('path');
 
-// Function to fix common syntax errors in a file;
-function fixSyntaxErrors(filePath) {
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix unterminated string literals in import statements
+  content = content.replace(/from 'lucide-react;$/gm, "from 'lucide-react';");
+  content = content.replace(/from 'lucide-react';$/gm, "from 'lucide-react';");
+  
+  // Fix extra quotes and semicolons in object properties
+  content = content.replace(/'([^']+)',;/g, "'$1',");
+  content = content.replace(/'([^']+)',/g, "'$1',");
+  content = content.replace(/'([^']+)';/g, "'$1',");
+  
+  // Fix missing quotes in import statements
+  content = content.replace(/from '([^']+);$/gm, "from '$1';");
+  
+  // Fix missing return statements
+  content = content.replace(/if \(process\.env\.NODE_ENV === 'production'\) \{\s*<([^>]+)>/gm, 
+    "if (process.env.NODE_ENV === 'production') {\n    return <$1>");
+  
+  // Fix broken JSX structure
+  content = content.replace(/\}\s*import React/g, "}\n\nimport React");
+  
+  // Fix duplicate function declarations
+  content = content.replace(/const (\w+): React\.FC = \(\) => \{\s*return null;\s*\}\s*export default \1;/gm, 
+    "const $1: React.FC = () => {\n  return null;\n};\n\nexport default $1;");
+  
+  return content;
+}
+
+// Function to process a file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    // Fix missing commas in object literals and arrays;
-    // Look for patterns like: key: value\n  key2: value2;
-    content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^,\n}]+)\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
-    // Fix missing commas in JSX props;
-    content = content.replace(/(\w+="[^"]*")\n\s*(\w+=)/g, '$1\n  $2');';
-    content = content.replace(/(\w+={[^}]*})\n\s*(\w+=)/g, '$1\n  $2');';
-    // Fix incomplete function calls - add missing closing parentheses;
-    // Look for patterns like: lazy(() => import("./path/page")\nconst;
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*const/g, 'lazy(() => import("$1")),\nconst');';
-    // Fix missing closing parentheses in lazy imports;
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*([a-zA-Z_$])/g, 'lazy(() => import("$1")),\n$2');';
-    // Fix missing commas after lazy imports;
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*\/\/ /g, 'lazy(() => import("$1")),\n// ');';
-    // Fix incomplete JSX elements;
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');';
-    // Fix missing closing tags in JSX;
-    content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');';
-    // Fix missing commas in array elements;
-    content = content.replace(/([^,\n])\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
-    // Fix missing closing brackets in objects;
-    content = content.replace(/([^}]\n\s*)([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1  $2');';
-    // Fix incomplete function declarations;
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*\n\s*return\s*\(\s*\n\s*<[^>]*>\s*\n\s*\)\s*;\s*\n\s*}\s*\n\s*([a-zA-Z_$])/g, 
-      'function $1() {\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );\n}\n\n$2');';
-    // Fix missing export statements;
-    content = content.replace(/}\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '}\n\nexport { $1');';
-    // Clean up multiple empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
-    // Remove any remaining orphaned markers;
-    content = content.replace(/^<<<<<<<|^;
-      return true;
-    }
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
     
-    return false;
-  } catch (_error) {
-    global.console._error(`  ❌ Error processing ${filePath}:`, _error.message);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c;
-    return false;
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-        }
-      }
-    } catch (_error) {
-      // Skip directories that can't be read';
+// Function to recursively find and process TSX files
+function processDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
+  
+  for (const item of items) {
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      processDirectory(fullPath);
+    } else if (item.endsWith('.tsx')) {
+      processFile(fullPath);
     }
-  } else {
-    global.console.log(`File not found: ${filePath}`);
   }
+}
 
+// Start processing from the app directory
+console.log('Starting syntax error fixes...');
+processDirectory('./app');
+console.log('Syntax error fixes completed!');

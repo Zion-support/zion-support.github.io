@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import React from 'react',
+import { Link } from 'react-router-dom',
+import SEO from '../components/SEO',
 import { 
   UserGroupIcon,
   AcademicCapIcon,
@@ -10,7 +10,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline',
 
 export default function TeamPage() {
   const team = [

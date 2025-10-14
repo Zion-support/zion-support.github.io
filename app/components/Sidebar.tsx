@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link, useLocation } from 'react-router-dom',
 import { 
   HomeIcon,
   InformationCircleIcon,
@@ -19,7 +19,7 @@ import {
   SignalIcon,
   UserGroupIcon,
   XMarkIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline',
 
 interface SidebarProps {
   isOpen: boolean;

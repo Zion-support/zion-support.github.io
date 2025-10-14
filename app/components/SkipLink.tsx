@@ -1,5 +1,5 @@
-import React from 'react';
-'use client';
+import React from 'react',
+'use client',
       {/* Content Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">

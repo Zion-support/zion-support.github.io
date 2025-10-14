@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 
 interface SEOProps {
   title?: string;
@@ -7,7 +7,7 @@ interface SEOProps {
   keywords?: string;
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'profile';
+  type?: 'website' | 'article' | 'profile',
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;

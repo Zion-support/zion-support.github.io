@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 
 interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string;
-  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
+  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow',
   hoverEffect?: boolean;
 }
 

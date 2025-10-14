@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';import { 
+import React from 'react',
+import { Helmet } from 'react-helmet-async',import { 
   CheckCircleIcon,
   UserGroupIcon,
   LightBulbIcon,
@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet-async';import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline',
 
 export default function AboutPage()    {
 return (    <>

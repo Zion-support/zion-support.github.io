@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useRef, useEffect } from 'react',
+import { Helmet } from 'react-helmet-async',
 
 interface OptimizedImageProps {
   src: string;
@@ -11,7 +11,7 @@ interface OptimizedImageProps {
   placeholder?: string;
   sizes?: string;
   quality?: number;
-  loading?: 'lazy' | 'eager';
+  loading?: 'lazy' | 'eager',
   onLoad?: () => void;
   onError?: () => void;
 }

@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Component, ErrorInfo, ReactNode } from 'react',
+import { Helmet } from 'react-helmet-async',
 
 interface Props {
   children: ReactNode;
@@ -86,7 +86,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.reload();
   }
   private handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/',
   }
   render() {
     if (this.state.hasError) {

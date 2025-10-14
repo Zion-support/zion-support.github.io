@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+'use client',
 const ImprovedImage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -67,7 +67,7 @@ const ImprovedImage: React.FC = () => {
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our improved image';
+            Let's discuss how our improved image',
             services can help you achieve your goals.;
           </p>
           <a;

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React from 'react',
+import { Link } from 'react-router-dom',
+import EnhancedSEO from '../components/EnhancedSEO',
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -10,7 +10,7 @@ import {
   ArrowRightIcon,
   CheckIcon,
   StarIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline',
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {

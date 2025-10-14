@@ -1,8 +1,8 @@
 
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+'use client',
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
+import { Link } from 'react-router-dom',
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -24,7 +24,7 @@ import {
   LightBulbIcon,
   WifiIcon,
   CircleStackIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline',
 
 export default function ITSolutionsPage()   {
   const itServices = [
@@ -245,8 +245,8 @@ export default function ITSolutionsPage()   {
       href: "/it-compliance"
     }
   ];
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 
 const ITSolutionsPage: React.FC = () => {
   return (
