@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
+import { AnalyticsContext } from '../contexts/analytics-context';
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
