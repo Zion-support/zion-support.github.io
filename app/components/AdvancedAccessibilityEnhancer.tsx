@@ -7,4 +7,9 @@ const AdvancedAccessibilityEnhancer = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default AdvancedAccessibilityEnhancer;
+=======
+
+export default AdvancedAccessibilityEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

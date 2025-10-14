@@ -7,4 +7,9 @@ const PerformanceMetrics = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default PerformanceMetrics;
+=======
+
+export default PerformanceMetrics;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

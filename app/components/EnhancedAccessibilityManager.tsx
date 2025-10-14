@@ -7,4 +7,9 @@ const EnhancedAccessibilityManager = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default EnhancedAccessibilityManager;
+=======
+
+export default EnhancedAccessibilityManager;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

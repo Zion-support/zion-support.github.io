@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea
 export default function Page() {
   return (
     <>

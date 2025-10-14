@@ -7,4 +7,9 @@ const LazyImage = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default LazyImage;
+=======
+
+export default LazyImage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

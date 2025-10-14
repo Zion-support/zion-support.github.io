@@ -7,4 +7,9 @@ const AnimatedCard = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default AnimatedCard;
+=======
+
+export default AnimatedCard;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

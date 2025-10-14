@@ -7,4 +7,9 @@ const MobileNavigation = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default MobileNavigation;
+=======
+
+export default MobileNavigation;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

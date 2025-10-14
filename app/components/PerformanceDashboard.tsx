@@ -7,4 +7,9 @@ const PerformanceDashboard = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default PerformanceDashboard;
+=======
+
+export default PerformanceDashboard;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

@@ -7,4 +7,9 @@ const AdAnalyticsDashboard = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default AdAnalyticsDashboard;
+=======
+
+export default AdAnalyticsDashboard;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

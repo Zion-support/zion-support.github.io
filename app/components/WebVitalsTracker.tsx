@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import { useEffect } from 'react';
 interface WebVitalsTrackerProps {
   onVitalsUpdate?: (vitals: { type: string; value: number }) => void;
@@ -37,4 +38,24 @@ export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerPro
     trackWebVitals();
   }, [onVitalsUpdate]);
   return null; // This component doesn't render anything
+=======
+import React, { useEffect } from 'react';
+
+interface WebVitalsTrackerProps {
+  children: React.ReactNode;
+}
+
+export default function WebVitalsTracker({ children }: WebVitalsTrackerProps) {
+  useEffect(() => {
+    // Track Core Web Vitals
+    const trackWebVitals = () => {
+      // This would integrate with your analytics service
+      console.log('Web Vitals tracking initialized');
+    };
+
+    trackWebVitals();
+  }, []);
+
+  return <>{children}</>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea
 }

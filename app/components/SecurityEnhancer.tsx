@@ -7,4 +7,9 @@ const SecurityEnhancer = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default SecurityEnhancer;
+=======
+
+export default SecurityEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

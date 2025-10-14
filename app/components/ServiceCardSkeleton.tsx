@@ -7,4 +7,9 @@ const ServiceCardSkeleton = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default ServiceCardSkeleton;
+=======
+
+export default ServiceCardSkeleton;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

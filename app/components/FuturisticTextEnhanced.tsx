@@ -7,4 +7,9 @@ const FuturisticTextEnhanced = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default FuturisticTextEnhanced;
+=======
+
+export default FuturisticTextEnhanced;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

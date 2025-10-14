@@ -7,4 +7,9 @@ const LoadingSpinner = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default LoadingSpinner;
+=======
+
+export default LoadingSpinner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

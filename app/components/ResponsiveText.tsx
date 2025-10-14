@@ -7,4 +7,9 @@ const ResponsiveText = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default ResponsiveText;
+=======
+
+export default ResponsiveText;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

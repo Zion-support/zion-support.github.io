@@ -7,4 +7,9 @@ const ImprovedNavigation = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default ImprovedNavigation;
+=======
+
+export default ImprovedNavigation;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

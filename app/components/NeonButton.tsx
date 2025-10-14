@@ -7,4 +7,9 @@ const NeonButton = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default NeonButton;
+=======
+
+export default NeonButton;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

@@ -7,4 +7,9 @@ const ContentCarousel = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default ContentCarousel;
+=======
+
+export default ContentCarousel;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea

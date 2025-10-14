@@ -7,4 +7,9 @@ const EnhancedMetaTags = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 export default EnhancedMetaTags;
+=======
+
+export default EnhancedMetaTags;
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ea
