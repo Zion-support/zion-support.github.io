@@ -1,13 +1,4 @@
-// Logger utility functions
-
-export const Logger = {
-  error: (message: string, error?: any) => {
-    console.error(message, error);
-  },
-  info: (message: string, data?: any) => {
-    console.info(message, data);
-  },
-  warn: (message: string, data?: any) => {
-    console.warn(message, data);
-  }
-};
+// Logger - Basic implementation;
+export default function Logger() {
+  return null;
+}

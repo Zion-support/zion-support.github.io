@@ -1,72 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Cloud, Shield, Zap, Server, Database, Globe } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import Footer from '../components/Footer';
-import FuturisticBackground from '../components/FuturisticBackground';
-
-const CloudInfrastructurePage: React.FC = () => {
-  const features = [
-    {
-      title: "Scalable Cloud Architecture",
-      description: "Build and deploy applications on a robust, scalable cloud infrastructure that grows with your business needs.",
-      icon: <Cloud className="w-12 h-12 text-cyan-400" />
-    },
-    {
-      title: "High Availability & Reliability",
-      description: "Ensure your applications are always available with our 99.9% uptime guarantee and redundant systems.",
-      icon: <Shield className="w-12 h-12 text-purple-400" />
-    },
-    {
-      title: "Auto-Scaling Solutions",
-      description: "Automatically scale your resources based on demand to optimize costs and performance.",
-      icon: <Zap className="w-12 h-12 text-yellow-400" />
-    },
-    {
-      title: "Database Management",
-      description: "Comprehensive database solutions with backup, replication, and optimization services.",
-      icon: <Database className="w-12 h-12 text-green-400" />
-    }
-  ];
-
-  const services = [
-    "Cloud migration and modernization",
-    "Container orchestration with Kubernetes",
-    "Serverless architecture implementation",
-    "Multi-cloud strategy and management",
-    "Disaster recovery and backup solutions",
-    "Performance monitoring and optimization",
-    "Security compliance and auditing",
-    "24/7 technical support and maintenance"
-  ];
-
-  const stats = [
-    { label: "Infrastructure Managed", value: "500+", icon: <Server className="w-8 h-8 text-cyan-400" /> },
-    { label: "Uptime Guarantee", value: "99.9%", icon: <Shield className="w-8 h-8 text-purple-400" /> },
-    { label: "Cost Savings", value: "40%", icon: <Zap className="w-8 h-8 text-yellow-400" /> },
-    { label: "Global Reach", value: "50+", icon: <Globe className="w-8 h-8 text-green-400" /> }
-  ];
-
+const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO 
-        title="Cloud Infrastructure - Zion Tech Group | Scalable Cloud Solutions"
-        description="Transform your business with our comprehensive cloud infrastructure services. Scalable, secure, and reliable cloud solutions for modern enterprises."
-        keywords="cloud infrastructure, cloud migration, cloud services, scalable architecture, cloud security, cloud management"
-        canonical="https://ziontechgroup.com/cloud-infrastructure"
-      />
-      
-      <FuturisticBackground />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud Infrastructure
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Build and scale your applications on a robust, secure, and reliable cloud infrastructure. 
-            Transform your business with enterprise-grade cloud solutions.
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+      <Helmet></Helmet>
+        <title>Home - Zion Tech Group</title>"""
+        <meta name="description" content="Home - Zion Tech Group" /></meta>""
+      </Helmet>"""
+      <div className="container mx-auto px-4 py-16"></div>"""
+    </>
+        <div className="text-center"></div>"""
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>"""
+          <p className="text-gray-300 text-lg"></p>""
+            This page is under construction. Please check back later.
+          </p>
+
+        </div>
+      </div>
+    </div>
+)}
+  );
+"""
+}
+=======
+import React from "react";""
+import { Helmet    } from "react-helmet-async";""
+
+const PagePage = () => {
+  return (
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>""
+      </Helmet>
+      <div className="container mx-auto px-4 py-16"></div>""
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>""
+          <p className="text-gray-300 text-lg"></p>""
+            This page is under construction. Please check back later.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -196,7 +165,8 @@ const CloudInfrastructurePage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  )};
 };
 
-export default CloudInfrastructurePage;
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
