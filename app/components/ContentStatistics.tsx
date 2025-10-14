@@ -76,24 +76,28 @@ const ContentStatistics: React.FC = () => {
   const features = [
     {
       icon: Brain,
+    {
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
       stats: ['95% Accuracy', '10x Faster', '24/7 Learning']
     },
     {
       icon: Zap,
+    {
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
       stats: ['< 100ms Response', '99.9% Uptime', '10M+ Requests']
     },
     {
       icon: Shield,
+    {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
       stats: ['256-bit Encryption', 'SOC 2 Compliant', 'Zero Breaches']
     },
     {
       icon: Globe,
+    {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
@@ -114,18 +118,21 @@ const ContentStatistics: React.FC = () => {
   const achievements = [
     {
       icon: Star,
+    {
       title: 'Industry Recognition',
       description: 'Awarded Best AI Solutions Provider 2024',
       value: '25+'
     },
     {
       icon: Target,
+    {
       title: 'Success Rate',
       description: 'Projects delivered on time and within budget',
       value: '98%'
     },
     {
       icon: Rocket,
+    {
       title: 'Growth Rate',
       description: 'Year-over-year business growth',
       value: '300%'
@@ -161,13 +168,13 @@ const ContentStatistics: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7 xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
             Discover the measurable impact we&apos;ve made for businesses worldwide through our innovative AI and IT solutions.
           </p>
         </div>
@@ -175,7 +182,7 @@ const ContentStatistics: React.FC = () => {
         {/* Statistics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
+            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
               <div className={`w-16 h-16 ${stat.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                 <stat.icon className="w-8 h-8" />
               </div>
@@ -191,15 +198,15 @@ const ContentStatistics: React.FC = () => {
         {/* Features Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Why We&apos;re the Right Choice</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
+            <h3 className="text-2 xl font-bold text-white mb-4">Why We&apos;re the Right Choice</h3>
+            <p className="text-gray-300 max-w-3 xl mx-auto">
               Our comprehensive solutions deliver measurable results across all key business metrics.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -223,19 +230,19 @@ const ContentStatistics: React.FC = () => {
         {/* Achievements Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Key Achievements</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
+            <h3 className="text-2 xl font-bold text-white mb-4">Key Achievements</h3>
+            <p className="text-gray-300 max-w-3 xl mx-auto">
               Recognition and awards that validate our commitment to excellence and innovation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <achievement.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
+                <div className="text-3 xl font-bold text-white mb-2">{achievement.value}</div>
                 <div className="text-lg font-semibold text-white mb-2">{achievement.title}</div>
                 <div className="text-gray-400 text-sm">{achievement.description}</div>
               </div>
@@ -244,10 +251,10 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
+        <div className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 mb-16">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Benefits</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
+            <h3 className="text-2 xl font-bold text-white mb-4">Comprehensive Benefits</h3>
+            <p className="text-gray-300 max-w-3 xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
             </p>
           </div>
@@ -264,11 +271,11 @@ const ContentStatistics: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-12">
+            <h3 className="text-3 xl font-bold text-white mb-4">
               Ready to Join Our Success Stories?
             </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-2 xl mx-auto">
               Be part of our growing community of successful businesses. Start your transformation journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

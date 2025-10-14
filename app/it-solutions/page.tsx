@@ -12,11 +12,11 @@ const ItSolutionsPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
         <div className="containermx-auto px-4 py-1 6">
-          <div className="text-centermb-1 6">
-            <h1 className="text-5xlfont-bold text-white mb-6">
+          <div className="text-center mb-1 6">
+            <h1 className="text-5 xlfont-bold text-white mb-6">
               IT Solutions
             </h1>
-            <p className="text-xltext-gray-3 0 0 mb-8">
+            <p className="text-xl text-gray-3 0 0 mb-8">
               Comprehensive IT services to power your digital transformation
             </p>
           </div>

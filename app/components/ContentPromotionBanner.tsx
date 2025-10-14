@@ -7,21 +7,25 @@ const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
       icon: Brain,
+    {
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
       icon: Zap,
+    {
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
       icon: Shield,
+    {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
       icon: Globe,
+    {
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
     }
@@ -61,13 +65,13 @@ const ContentPromotionBanner: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7 xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4 xl md:text-6xl font-bold text-white mb-6">
             Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
           </p>
           
@@ -90,7 +94,7 @@ const ContentPromotionBanner: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-3 xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
               <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
             </div>
@@ -100,7 +104,7 @@ const ContentPromotionBanner: React.FC = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
@@ -111,10 +115,10 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
+        <div className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-3 xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               We provide comprehensive AI and IT solutions that deliver real results for your business.
             </p>
           </div>
@@ -131,11 +135,11 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-12">
+            <h2 className="text-3 xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-2 xl mx-auto">
               Join the future of business technology. Get started with our AI solutions today and see the difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

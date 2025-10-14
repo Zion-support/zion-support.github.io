@@ -1,77 +1,161 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const fixSyntaxErrors = (filePath) => {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Common fixes for syntax errors
+const fixes = [
+  // Fix broken CSS classes with missing spaces
+  {
+    pattern: /from-slate-9\s+00via-purple-9\s+0\s+0to-slate-9\s+0\s+0/g,
+    replacement: 'from-slate-900 via-purple-900 to-slate-900'
+  },
+  {
+    pattern: /from-emerald-90\s+0to-teal-9\s+0\s+0/g,
+    replacement: 'from-emerald-900 to-teal-900'
+  },
+  {
+    pattern: /text-whitepy-2\s+0/g,
+    replacement: 'text-white py-20'
+  },
+  {
+    pattern: /containermx-autopx-4/g,
+    replacement: 'container mx-auto px-4'
+  },
+  {
+    pattern: /max-w-4xlmx-autotext-center/g,
+    replacement: 'max-w-4xl mx-auto text-center'
+  },
+  {
+    pattern: /text-4xlmd:text-6xlfont-boldmb-6/g,
+    replacement: 'text-4xl md:text-6xl font-bold mb-6'
+  },
+  {
+    pattern: /text-xlmd:text-2xlmb-8text-emerald-10\s+0/g,
+    replacement: 'text-xl md:text-2xl mb-8 text-emerald-100'
+  },
+  {
+    pattern: /min-h-screenbg-gray-50/g,
+    replacement: 'min-h-screen bg-gray-50'
+  },
+  {
+    pattern: /bg-gradient-to-rfrom-emerald-90\s+0to-teal-9\s+0\s+0text-whitepy-2\s+0/g,
+    replacement: 'bg-gradient-to-r from-emerald-900 to-teal-900 text-white py-20'
+  },
+  // Fix broken array syntax
+  {
+    pattern: /const\s+services\s*=\s*\[\s*\{/g,
+    replacement: 'const services = [\n    {'
+  },
+  {
+    pattern: /,\s*;\s*title:/g,
+    replacement: ',\n    {\n      title:'
+  },
+  {
+    pattern: /,\s*title:/g,
+    replacement: ',\n    {\n      title:'
+  },
+  // Fix broken JSX structure
+  {
+    pattern: /className="[^"]*\[[^\]]*\]"[^>]*>/g,
+    replacement: (match) => {
+      // Remove broken regex patterns in className
+      return match.replace(/\[[^\]]*\]/g, '');
+    }
+  },
+  {
+    pattern: /className="[^"]*"[^>]*>\s*<\/h3>/g,
+    replacement: (match) => {
+      // Fix empty h3 tags
+      return match.replace(/>\s*<\/h3>/, '>Service Title</h3>');
+    }
+  },
+  // Fix missing spaces in class names
+  {
+    pattern: /text-blue-900mb-2/g,
+    replacement: 'text-blue-900 mb-2'
+  },
+  {
+    pattern: /bg-green-50border/g,
+    replacement: 'bg-green-50 border'
+  },
+  {
+    pattern: /border-green-20\s+0rounded-lgp-6/g,
+    replacement: 'border-green-200 rounded-lg p-6'
+  },
+  {
+    pattern: /rounded-lgp-6/g,
+    replacement: 'rounded-lg p-6'
+  },
+  // Fix broken closing tags
+  {
+    pattern: /<div[^>]*>\s*;\s*<div[^>]*>/g,
+    replacement: (match) => {
+      return match.replace(/;\s*/, '\n              ');
+    }
+  }
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix common syntax errors
-    const fixes = [
-      // Fix semicolon instead of comma
-      { pattern: /;\s*}/g, replacement: '}' },
-      { pattern: /;\s*\)/g, replacement: ')' },
-      { pattern: /;\s*\]/g, replacement: ']' },
-      
-      // Fix missing commas in objects
-      { pattern: /(\w+)\s*;\s*(\w+)/g, replacement: '$1,\n  $2' },
-      
-      // Fix malformed function declarations
-      { pattern: /(\w+)\s*\(\s*\)\s*{\s*$/gm, replacement: '$1: () => {\n    ' },
-      
-      // Fix missing closing braces
-      { pattern: /}\s*$/gm, replacement: '}\n' },
-      
-      // Fix malformed JSX fragments
-      { pattern: /<>\s*$/gm, replacement: '<>\n' },
-      { pattern: /<\/>\s*$/gm, replacement: '</>\n' },
-      
-      // Fix missing return statements
-      { pattern: /(\w+)\s*\(\s*\)\s*{\s*([^}]+)\s*}/gm, replacement: '$1: () => {\n    return $2;\n  }' },
-    ];
-
+    
     fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
+      const originalContent = content;
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
+      }
+      if (content !== originalContent) {
         modified = true;
       }
     });
-
+    
     if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed ${filePath}`);
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-};
+}
 
-// Get all TypeScript files with errors
-const errorFiles = [
-  'app/config/errorBoundaryConfig.tsx',
-  'app/contexts/AnalyticsContextDefinition.ts',
-  'app/hooks/useSEO.ts',
-  'app/lib/utils.ts',
-  'app/types/gtag.d.ts',
-  'app/utils/accessibilityChecker.ts',
-  'app/utils/advancedAnalytics.ts',
-  'app/utils/analyticsTracker.ts',
-  'app/utils/dataTransformers.ts',
-  'app/utils/enhancedAnalytics.ts',
-  'app/utils/enhancedErrorTracking.ts',
-  'app/utils/errorHandlerEnhanced.ts',
-  'app/utils/errorLogger.ts',
-  'app/utils/errorReporter.ts',
-  'app/utils/errorTracking.ts',
-  'app/utils/performanceMonitor.ts',
-  'app/utils/performanceMonitoring.ts',
-  'app/utils/securityHeaders.ts',
-  'app/utils/seoEnhancer.ts',
-  'app/utils/seoUtils.ts',
-  'app/utils/structuredData.ts',
-  'app/utils/usePerformanceMonitor.ts'
-];
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
 
-errorFiles.forEach(fixSyntaxErrors);
-console.log('Syntax errors fixed');
+// Find all TSX files in the app directory
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+console.log(`Found ${tsxFiles.length} TSX files to check`);
+
+let fixedCount = 0;
+tsxFiles.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);

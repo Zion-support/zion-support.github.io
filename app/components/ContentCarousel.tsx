@@ -20,6 +20,7 @@ const ContentCarousel: React.FC = () => {
   const slides: Slide[] = [
     {
       icon: Brain,
+    {
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
@@ -31,6 +32,7 @@ const ContentCarousel: React.FC = () => {
     },
     {
       icon: Zap,
+    {
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
       features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency'],
@@ -42,6 +44,7 @@ const ContentCarousel: React.FC = () => {
     },
     {
       icon: Shield,
+    {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
       features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring'],
@@ -53,6 +56,7 @@ const ContentCarousel: React.FC = () => {
     },
     {
       icon: Globe,
+    {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
       features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support'],
@@ -81,20 +85,20 @@ const ContentCarousel: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7 xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6">
             Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
             Explore our comprehensive suite of AI and IT solutions designed to transform your business.
           </p>
         </div>
 
         {/* Carousel Container */}
         <div className="relative">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20 overflow-hidden">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 md:p-12 border border-white/20 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div className="space-y-8">
@@ -103,7 +107,7 @@ const ContentCarousel: React.FC = () => {
                     <currentSlideData.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    <h3 className="text-2 xl md:text-3xl font-bold text-white mb-2">
                       {currentSlideData.title}
                     </h3>
                     <p className="text-gray-300 text-lg">
@@ -130,7 +134,7 @@ const ContentCarousel: React.FC = () => {
                   <div className="grid grid-cols-3 gap-6">
                     {currentSlideData.stats.map((stat, index) => (
                       <div key={index} className="text-center">
-                        <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                        <div className="text-2 xl font-bold text-white mb-1">{stat.value}</div>
                         <div className="text-gray-400 text-sm">{stat.label}</div>
                       </div>
                     ))}
@@ -152,12 +156,12 @@ const ContentCarousel: React.FC = () => {
 
               {/* Visual Element */}
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
+                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2 xl flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                       <currentSlideData.icon className="w-16 h-16 text-white" />
                     </div>
-                    <div className="text-4xl font-bold text-white mb-2">
+                    <div className="text-4 xl font-bold text-white mb-2">
                       {currentSlideData.title}
                     </div>
                     <div className="text-gray-300">
@@ -199,25 +203,25 @@ const ContentCarousel: React.FC = () => {
 
         {/* Additional Info */}
         <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4 xl mx-auto">
             <div className="flex items-center justify-center gap-3 text-white">
               <Star className="w-6 h-6 text-yellow-400" />
               <div className="text-left">
-                <div className="text-2xl font-bold">4.9/5</div>
+                <div className="text-2 xl font-bold">4.9/5</div>
                 <div className="text-gray-400 text-sm">Customer Rating</div>
               </div>
             </div>
             <div className="flex items-center justify-center gap-3 text-white">
               <Users className="w-6 h-6 text-blue-400" />
               <div className="text-left">
-                <div className="text-2xl font-bold">10,000+</div>
+                <div className="text-2 xl font-bold">10,000+</div>
                 <div className="text-gray-400 text-sm">Happy Customers</div>
               </div>
             </div>
             <div className="flex items-center justify-center gap-3 text-white">
               <TrendingUp className="w-6 h-6 text-green-400" />
               <div className="text-left">
-                <div className="text-2xl font-bold">99.9%</div>
+                <div className="text-2 xl font-bold">99.9%</div>
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
             </div>
