@@ -1,4 +1,5 @@
-// Utility functions
-export const utilityFunction = () => {
-  return 'utility function';
+// imageOptimizer utility
+export const imageOptimizer = () => {
+  // Implementation here
+  return null;
 };

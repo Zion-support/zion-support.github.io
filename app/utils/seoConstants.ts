@@ -1,4 +1,5 @@
-// Utility functions
-export const utilityFunction = () => {
-  return 'utility function';
+// seoConstants utility
+export const seoConstants = () => {
+  // Implementation here
+  return null;
 };

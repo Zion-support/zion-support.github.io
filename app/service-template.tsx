@@ -1,4 +1,4 @@
-// service-template - Basic implementation
+// serviceTemplate - Basic implementation
 export default function serviceTemplate() {
-  return null;
+  return null
 }

@@ -1,12 +1,19 @@
-export default function PagePage() {
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+
+export default function SupportPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Support - Zion Tech Group" />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4"></h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about </p>
+          <h1 className="text-4xl font-bold text-white mb-4">Support</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about support</p>
         </div>
       </div>
     </div>
-  );
+  )
 }

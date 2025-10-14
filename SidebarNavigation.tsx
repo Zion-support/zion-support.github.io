@@ -1,4 +1,5 @@
 import React from 'react';
+import { User, X } from 'lucide-react';
 
 const navigationItems = [
   { name: 'Home', href: '/' },
@@ -10,16 +11,47 @@ const navigationItems = [
 
 export default function SidebarNavigation() {
   return (
-    <nav className="bg-gray-800 text-white p-4">
-      <ul className="space-y-2">
-        {navigationItems.map((item) => (
-          <li key={item.name}>
-            <a href={item.href} className="block py-2 px-4 hover:bg-gray-700 rounded">
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={onClose}
+        />
+      )}
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-lg font-semibold">Navigation</h2>
+          <button
+            onClick={onClose}
+            className="p-2 rounded-md hover:bg-gray-100"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        <nav className="mt-4">
+          {navigationItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+              >
+                <Icon className="h-5 w-5 mr-3" />
+                {item.name}
+              </a>
+            );
+          })}
+        </nav>
+      </div>
+    </>
   );
 }

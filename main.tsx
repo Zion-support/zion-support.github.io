@@ -1,9 +1,6 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
+// Main entry point - this file is not used in the current setup
 
-const container = document.getElementById("root");
-if (container) {
-  const root = createRoot(container);
-  root.render(<App />);
+// main - Basic implementation
+export default function main() {
+  return null;
 }

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
@@ -11,24 +11,27 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
 
 export const AnalyticsProvider = ({ children }: { children: React.ReactNode }) => {
   const [isEnabled, setIsEnabled] = useState(false);
+  const [, setUserId] = useState<string | null>(null);
+
   useEffect(() => {
     // if analytics is enabled
     setIsEnabled(true);
   }, []);
 
-  const trackEvent = (_eventName: string, _properties?: Record<string, unknown>) => {
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
     // Track event logic here
-    console.log("Analytics Event:", _eventName, _properties);
+    console.log("Analytics Event:", eventName, properties);
   };
 
-  const trackPageView = (_pageName: string) => {
+  const trackPageView = (pageName: string) => {
     // Track page view logic here
-    console.log("Page View:", _pageName);
+    console.log("Page View:", pageName);
   };
 
-  const setUser = (_newUserId: string, _properties?: Record<string, unknown>) => {
-    console.log("User Set:", _newUserId, _properties);
+  const setUser = (newUserId: string, properties?: Record<string, unknown>) => {
+    setUserId(newUserId);
+    console.log("User Set:", newUserId, properties);
   };
 
   const value = {
@@ -45,13 +48,12 @@ export const AnalyticsProvider = ({ children }: { children: React.ReactNode }) =
   );
 };
 
-export { AnalyticsContext };
-
-// Hook to use analytics context
 export const useAnalytics = () => {
-  const context = React.useContext(AnalyticsContext);
+  const context = useContext(AnalyticsContext);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
 };
+
+export { AnalyticsContext };

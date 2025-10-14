@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactNode } from "react";
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {

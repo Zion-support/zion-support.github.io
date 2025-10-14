@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactNode } from "react";
 
 interface EnhancedAnalyticsProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {

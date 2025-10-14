@@ -1,4 +1,5 @@
-// Utility functions
-export const utilityFunction = () => {
-  return 'utility function';
+// accessibilityEnhancer utility
+export const accessibilityEnhancer = () => {
+  // Implementation here
+  return null;
 };

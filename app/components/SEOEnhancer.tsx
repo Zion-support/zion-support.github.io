@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactNode } from "react";
 
 interface SEOEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
   title?: string;
   description?: string;
   keywords?: string[];
