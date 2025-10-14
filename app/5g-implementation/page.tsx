@@ -1,40 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  RocketLaunchIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
+>>>>>>> main
 
-export default function Page() {
-  const features = [
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology',
-      icon: CpuChipIcon,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and reliability for your business',
-      icon: ShieldCheckIcon,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Scalable Solutions',
-      description: 'Solutions that grow with your business needs',
-      icon: ArrowRightIcon,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Innovation First',
-      description: 'Always at the forefront of technological innovation',
-      icon: RocketLaunchIcon,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -98,6 +67,24 @@ export default function Page() {
           </div>
         </div>
       </section>
+=======
+const FiveGImplementationPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>5G Implementation - Zion Tech Group</title>
+        <meta name="description" content="5G Implementation - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">5G Implementation</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default FiveGImplementationPage;

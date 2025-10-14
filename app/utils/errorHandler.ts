@@ -1,4 +1,1 @@
-// errorHandler utility
-export const errorHandler = () => {
-  // Utility implementation
-};
+"use client;"// errorHandler utility; export const errorHandler = () => {"} // Implementation; return true}""} export default errorHandler;";"

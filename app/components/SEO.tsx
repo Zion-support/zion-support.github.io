@@ -1,10 +1,17 @@
 import React from 'react';
 
-const SEO: React.FC = () => {
+interface SEOProps {
+  title?: string;
+  description?: string;
+}
+
+const SEO: React.FC<SEOProps> = ({ title, description }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">S E O</h2>
-      <p className="text-gray-600">S E O component is under development.</p>
+    <div>
+      <h2>SEO</h2>
+      <p>This component is under construction.</p>
+      {title && <p>Title: {title}</p>}
+      {description && <p>Description: {description}</p>}
     </div>
   );
 };

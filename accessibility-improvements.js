@@ -1,2 +1,4 @@
-// <l i><//a hre f="/"""
-// <label htmlFo r="email"""
+// accessibility-improvements - Basic implementation
+export default function accessibility-improvements() {
+  return null;
+}

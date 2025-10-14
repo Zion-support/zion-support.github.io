@@ -1,61 +1,16 @@
-import React from "react"
-import { Helmet } from "react-helmet-async"
-import { ChevronRight, Wifi, Circle, Zap, Globe, Smartphone } from "lucide-react"
-const FiveGSolutionsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: "Ultra-Fast Speeds",
-      description: "Experience lightning-fast 5G connectivity with speeds up to 10 Gbps",
-      benefits: ["10x faster than 4G", "Low latency", "High bandwidth", "Reliable connection"]
-    },
-    {
-      icon: Globe,
-      title: "Global Coverage",
-      description: "Comprehensive 5G network coverage across multiple regions",
-      benefits: ["Wide coverage", "Seamless roaming", "International support", "Network redundancy"]
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Optimization",
-      description: "Optimized 5G solutions for mobile devices and applications",
-      benefits: ["Mobile-first design", "App optimization", "Battery efficiency", "Device compatibility"]
-    },
-    {
-      icon: Wifi,
-      title: "IoT Connectivity",
-      description: "Connect thousands of IoT devices with 5G technology",
-      benefits: ["Massive IoT support", "Low power consumption", "Real-time monitoring", "Scalable solutions"]
-    }
-  ]
-  const solutions = [
-    {
+>>>>>>> main
 
-      title: "5G Network Infrastructure",
-      description: "Complete 5G network setup and optimization",
-      price: "Starting at $50,000",
-      features: ["Network planning", "Tower installation", "Signal optimization", "Performance monitoring"]
-    },
-    {
-      title: "5G Mobile Applications",
-      description: "Custom mobile apps optimized for 5G networks",
-      price: "Starting at $25,000",
-      features: ["App development", "5G optimization", "Testing & QA", "Deployment support"]
-    },
-    {
-      title: "5G IoT Solutions",
-      description: "IoT device connectivity and management platform",
-      price: "Starting at $35,000",
-      features: ["Device management", "Data analytics", "Real-time monitoring", "Scalable architecture"]
-    }
-  ]
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const FiveGSolutionsPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-90 via-blue-90 to-slate-90">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G solutions for ultra-fast connectivity and IoT integration" />
-        <meta name="keywords" content="5G, connectivity, IoT, mobile, enterprise, solutions" />
+        <meta name="description" content="5G Solutions - Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -179,3 +134,17 @@ const FiveGSolutionsPage: React.FC = () => {
 }
 
 export default FiveGSolutionsPage
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">5G Solutions</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FiveGSolutionsPage;

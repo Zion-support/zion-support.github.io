@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const NavigationBackup: React.FC = () => {
+const NavigationBackup = () => {
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Navigation-backup</h2>
-      <p className="text-gray-600">Navigation-backup component is under development.</p>
+      <h2 className="text-xl font-semibold mb-2">NavigationBackup</h2>
+      <p>This component is under construction.</p>
     </div>
   );
 };

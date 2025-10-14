@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Suspense } from "react";
 
-const LazyWrapper: React.FC = () => {
+interface LazyWrapperProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}
+
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ children, fallback }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Lazy Wrapper</h2>
-      <p className="text-gray-600">Lazy Wrapper component is under development.</p>
-    </div>
+    <Suspense fallback={fallback || <div className="p-4">Loading...</div>}>
+      {children}
+    </Suspense>
   );
 };
 

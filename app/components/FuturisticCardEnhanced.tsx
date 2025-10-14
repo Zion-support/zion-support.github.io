@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const FuturisticCardEnhanced: React.FC = () => {
+const FuturisticCardEnhanced = () => {
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Futuristic Card Enhanced</h2>
-      <p className="text-gray-600">Futuristic Card Enhanced component is under development.</p>
+      <h2 className="text-xl font-semibold mb-2">FuturisticCardEnhanced</h2>
+      <p>This component is under construction.</p>
     </div>
   );
 };

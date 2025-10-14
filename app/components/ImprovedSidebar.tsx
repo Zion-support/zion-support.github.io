@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const ImprovedSidebar: React.FC = () => {
+const ImprovedSidebar = () => {
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Improved Sidebar</h2>
-      <p className="text-gray-600">Improved Sidebar component is under development.</p>
+      <h2 className="text-xl font-semibold mb-2">ImprovedSidebar</h2>
+      <p>This component is under construction.</p>
     </div>
   );
 };

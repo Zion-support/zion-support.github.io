@@ -1,54 +1,57 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // List of corrupted component files to fix
 const corruptedComponents = [
-  'app/components/AdAnalyticsDashboard.tsx',
-  'app/components/AdDashboard.tsx',
-  'app/components/AdManagementSystem.tsx',
-  'app/components/AdScheduler.tsx',
-  'app/components/AdTemplates.tsx',
-  'app/components/AdvancedAccessibilityEnhancer.tsx',
-  'app/components/AdvancedPerformanceOptimizer.tsx',
-  'app/components/AdvancedSEOOptimizer_new.tsx',
-  'app/components/AdvertisingBanner.tsx',
-  'app/components/ContentCarousel.tsx',
-  'app/components/ContentPromotionBanner.tsx',
-  'app/components/ContentStatistics.tsx',
-  'app/components/CoreWebVitals.tsx',
-  'app/components/DynamicContentShowcase.tsx',
-  'app/components/EnhancedAccessibilityManager.tsx',
-  'app/components/EnhancedHero.tsx',
-  'app/components/EnhancedLoadingSkeleton.tsx',
-  'app/components/EnhancedPerformanceMonitor.tsx',
-  'app/components/EnhancedPerformanceOptimizer.tsx',
-  'app/components/EnhancedSEOOptimizer.tsx',
-  'app/components/EnhancedServicesShowcase.tsx',
-  'app/components/EnhancedSkipLink.tsx',
-  'app/components/FuturisticServiceCard.tsx',
-  'app/components/GlobalErrorBoundary.tsx',
-  'app/components/LoadingOptimizer.tsx',
-  'app/components/MobileOptimizer.tsx',
-  'app/components/NewContentAdvertisingBanner.tsx',
-  'app/components/NewsletterSignup.tsx',
-  'app/components/OptimizedLoadingSpinner.tsx',
-  'app/components/PWAInstaller.tsx',
-  'app/components/PerformanceDashboard.tsx',
-  'app/components/PerformanceEnhancer.tsx',
-  'app/components/PerformanceMetrics.tsx',
-  'app/components/SEOAudit.tsx',
-  'app/components/SEOOptimizer.tsx',
-  'app/components/SecurityEnhancer.tsx',
-  'app/components/ServiceCardSkeleton.tsx',
-  'app/components/ServiceWorkerRegistration.tsx',
-  'app/components/SystemMonitor.tsx',
-  'app/components/UltimateContentAdvertisingBanner.tsx'
+  "app/components/AdAnalyticsDashboard.tsx",
+  "app/components/AdDashboard.tsx",
+  "app/components/AdManagementSystem.tsx",
+  "app/components/AdScheduler.tsx",
+  "app/components/AdTemplates.tsx",
+  "app/components/AdvancedAccessibilityEnhancer.tsx",
+  "app/components/AdvancedPerformanceOptimizer.tsx",
+  "app/components/AdvancedSEOOptimizer_new.tsx",
+  "app/components/AdvertisingBanner.tsx",
+  "app/components/ContentCarousel.tsx",
+  "app/components/ContentPromotionBanner.tsx",
+  "app/components/ContentStatistics.tsx",
+  "app/components/CoreWebVitals.tsx",
+  "app/components/DynamicContentShowcase.tsx",
+  "app/components/EnhancedAccessibilityManager.tsx",
+  "app/components/EnhancedHero.tsx",
+  "app/components/EnhancedLoadingSkeleton.tsx",
+  "app/components/EnhancedPerformanceMonitor.tsx",
+  "app/components/EnhancedPerformanceOptimizer.tsx",
+  "app/components/EnhancedSEOOptimizer.tsx",
+  "app/components/EnhancedServicesShowcase.tsx",
+  "app/components/EnhancedSkipLink.tsx",
+  "app/components/FuturisticServiceCard.tsx",
+  "app/components/GlobalErrorBoundary.tsx",
+  "app/components/LoadingOptimizer.tsx",
+  "app/components/MobileOptimizer.tsx",
+  "app/components/NewContentAdvertisingBanner.tsx",
+  "app/components/NewsletterSignup.tsx",
+  "app/components/OptimizedLoadingSpinner.tsx",
+  "app/components/PWAInstaller.tsx",
+  "app/components/PerformanceDashboard.tsx",
+  "app/components/PerformanceEnhancer.tsx",
+  "app/components/PerformanceMetrics.tsx",
+  "app/components/SEOAudit.tsx",
+  "app/components/SEOOptimizer.tsx",
+  "app/components/SecurityEnhancer.tsx",
+  "app/components/ServiceCardSkeleton.tsx",
+  "app/components/ServiceWorkerRegistration.tsx",
+  "app/components/SystemMonitor.tsx",
+  "app/components/UltimateContentAdvertisingBanner.tsx",
 ];
 
 function createBasicComponent(filePath) {
-  const componentName = path.basename(filePath, '.tsx');
-  const title = componentName.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim();
-  
+  const componentName = path.basename(filePath, ".tsx");
+  const title = componentName
+    .replace(/([A-Z])/g, " $1")
+    .replace(/^./, (str) => str.toUpperCase())
+    .trim();
+
   const content = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -111,7 +114,7 @@ function fixCorruptedComponent(filePath) {
   try {
     const fullPath = path.join(__dirname, filePath);
     const content = createBasicComponent(filePath);
-    
+
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed corrupted component: ${filePath}`);
   } catch (error) {
@@ -122,4 +125,4 @@ function fixCorruptedComponent(filePath) {
 // Fix all corrupted components
 corruptedComponents.forEach(fixCorruptedComponent);
 
-console.log('Finished fixing corrupted components');
+console.log("Finished fixing corrupted components");
