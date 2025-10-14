@@ -7,5 +7,4 @@
       </div>
     )
   return spinner;
-
 };

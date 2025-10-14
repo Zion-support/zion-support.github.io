@@ -16,6 +16,7 @@ const LoadingStatesPage = () => {
           </p>
         </div>
       </div>
+    
     </div>
   );
 };

@@ -6,7 +6,7 @@ if (to) {
 )
     )
   return (
-    <button
+    <button;
       onClick={onClick}
       className={classes}
     >
@@ -14,4 +14,4 @@ if (to) {
     </button>)
   )
 
-}
+export default NeonButtonPage;"

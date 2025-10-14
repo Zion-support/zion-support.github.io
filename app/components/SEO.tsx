@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface SEOProps {
 
   title?: string;
   description?: string;
-
 }
 
     '@context': 'https://schema.org',
@@ -50,4 +48,4 @@ interface SEOProps {
       { /* Canonical URL */ }"
       <link rel="canonical" href={url} />
     </Helmet>
-")
+")"

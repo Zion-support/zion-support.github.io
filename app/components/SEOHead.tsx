@@ -1,4 +1,4 @@
-structuredData
+structuredData;
 }) => {
   return (
     <Helmet></Helmet>
@@ -16,4 +16,4 @@ structuredData
 
   )
 "
-}}
+export default SEOHead;
