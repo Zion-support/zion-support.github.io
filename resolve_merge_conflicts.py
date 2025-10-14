@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Script to resolve merge conflicts by choosing the most complete version
+Script to resolve merge conflicts by keeping the most recent version (after =======)
 """
 import os
 import re
-import sys
+import glob
 
 def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts in a file by choosing the most complete version"""
+    """Resolve merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -16,74 +16,52 @@ def resolve_merge_conflicts(file_path):
         if '<<<<<<< HEAD' not in content:
             return False
         
-        print(f"Resolving merge conflicts in: {file_path}")
-        
         # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
+        parts = re.split(r'<<<<<<< HEAD.*?\n(.*?)\n=======\n(.*?)\n>>>>>>> ', content, flags=re.DOTALL)
         
-        if len(parts) < 3:
-            # Try alternative pattern for nested conflicts
-            parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
-        
-        if len(parts) < 3:
-            print(f"Could not parse merge conflicts in {file_path}")
+        if len(parts) < 2:
             return False
         
-        # Choose the version with more content (usually the more complete one)
-        resolved_content = ""
-        for i in range(0, len(parts), 2):
+        # Keep the first part (before first conflict) and the parts after ======= (most recent)
+        resolved_content = parts[0]
+        
+        for i in range(1, len(parts), 2):
             if i + 1 < len(parts):
-                # Compare the two versions
-                version1 = parts[i].strip()
-                version2 = parts[i + 1].strip()
-                
-                # Choose the longer/more complete version
-                if len(version2) > len(version1):
-                    resolved_content += version2
-                else:
-                    resolved_content += version1
-            else:
-                resolved_content += parts[i]
+                # Keep the part after ======= (most recent version)
+                resolved_content += parts[i + 1]
         
-        # Clean up any remaining conflict markers
-        resolved_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+', '', resolved_content, flags=re.DOTALL)
-        resolved_content = re.sub(r'=======.*?>>>>>>> [^\n]+', '', resolved_content, flags=re.DOTALL)
-        
-        # Write the resolved content
+        # Write the resolved content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(resolved_content)
         
-        print(f"Successfully resolved merge conflicts in: {file_path}")
+        print(f"Resolved merge conflicts in: {file_path}")
         return True
         
     except Exception as e:
-        print(f"Error resolving conflicts in {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Files with merge conflicts
-    files_to_fix = [
-        '/workspace/app/types/next.d.ts',
-        '/workspace/app/ai-content-writer/page.tsx',
-        '/workspace/app/ai-api-management/page.tsx',
-        '/workspace/app/consultation/page.tsx',
-        '/workspace/app/case-studies/page.tsx',
-        '/workspace/app/careers/page.tsx',
-        '/workspace/app/ai-api-manager/page.tsx',
-        '/workspace/app/cloud-services/page.tsx',
-        '/workspace/app/utils/accessibilityEnhancer.ts',
-        '/workspace/app/blog/page.tsx'
+    """Main function to resolve merge conflicts in all files"""
+    # Find all TypeScript/JavaScript files in the app directory
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'app/**/*.js',
+        'app/**/*.jsx'
     ]
     
-    resolved_count = 0
-    for file_path in files_to_fix:
-        if os.path.exists(file_path):
-            if resolve_merge_conflicts(file_path):
-                resolved_count += 1
-        else:
-            print(f"File not found: {file_path}")
+    files_processed = 0
+    files_resolved = 0
     
-    print(f"Resolved merge conflicts in {resolved_count} files")
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            files_processed += 1
+            if resolve_merge_conflicts(file_path):
+                files_resolved += 1
+    
+    print(f"\nProcessed {files_processed} files")
+    print(f"Resolved merge conflicts in {files_resolved} files")
 
 if __name__ == "__main__":
     main()

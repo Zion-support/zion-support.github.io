@@ -53,26 +53,11 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
-<<<<<<< HEAD
-=======
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 >>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen">
-<<<<<<< HEAD
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
-      />
-      {children}
-=======
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Animated gradient overlay */}
@@ -94,11 +79,3 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         {children}
       </div>
 <<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-    </div>
-  );
-};
-
-export default FuturisticBackground;

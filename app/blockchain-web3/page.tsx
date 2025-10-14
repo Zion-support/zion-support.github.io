@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Zap, Globe, Lock, ArrowRight } from 'lucide-react';
@@ -211,4 +209,3 @@ import Layout from '../layout';
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3

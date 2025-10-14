@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight, Globe, BarChart3, Zap, Target, CheckCircle, Star, Sparkles, Mail, Smartphone, TrendingUp } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock, CheckCircle } from 'lucide-react';
@@ -232,4 +226,3 @@ export default function AISupplyChainOptimizerPage() {
           </section>
         </div>
       </FuturisticBackground>
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
