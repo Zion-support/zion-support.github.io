@@ -1,5 +1,5 @@
-import React, { useState } from 'react';;
-import { Link, useLocation } from 'react-router-dom;
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import { 
   XMarkIcon,
@@ -17,11 +17,12 @@ import {
   CpuChipIcon,
   SignalIcon,
   UserGroupIcon
-} from ';;@heroicons/react/24/outline;
+} from '@heroicons/react/24/outline';
 
 interface SidebarProps {
-  isOpen: boolean
+  isOpen: boolean;
   onClose: () => void;
+}
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
@@ -87,11 +88,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             {navigation.map((item) => (
               <li key={item.name}>
                 <Link
-                  to={item.href;
+                  to={item.href}
                   className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.href)
                       ? 'bg-purple-600 text-white'
-                      : 'text-gray-300 hover:text-white hover:bg-slate-800
+                      : 'text-gray-300 hover:text-white hover:bg-slate-800'
                   }`}
                   onClick={onClose}
                 >
@@ -105,11 +106,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     {item.submenu.map((subItem) => (
                       <li key={subItem.name}>
                         <Link
-                          to={subItem.href;
+                          to={subItem.href}
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive(subItem.href)
                               ? 'text-purple-400 bg-slate-800'
-                              : 'text-gray-400 hover:text-white hover:bg-slate-800
+                              : 'text-gray-400 hover:text-white hover:bg-slate-800'
                           }`}
                           onClick={onClose}
                         >
@@ -138,5 +139,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default Sidebar
-}}}
+export default Sidebar;

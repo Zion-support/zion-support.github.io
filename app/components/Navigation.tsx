@@ -1,5 +1,5 @@
-import React, { useState } from 'react';;
-import { Link, useLocation } from 'react-router-dom;
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import { 
   Menu, 
@@ -9,7 +9,7 @@ import {
   Zap, 
   Globe,
   ChevronDown
-} from ';;lucide-react;
+} from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -106,11 +106,11 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
               return (
                 <div key={item.name} className="relative group">
                   <Link
-                    to={item.href;
+                    to={item.href}
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(item.href)
                         ? 'bg-purple-600 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-800
+                        : 'text-gray-300 hover:text-white hover:bg-slate-800'
                     }`}
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
@@ -124,8 +124,9 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
-                        <Link key={subItem.name;
-                          to={subItem.href;
+                        <Link 
+                          key={subItem.name}
+                          to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                         >
                           {subItem.name}
@@ -162,8 +163,7 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
         </div>
       </div>
     </nav>
-  )};
+  );
+};
 
 export default Navigation;
-
-}}}

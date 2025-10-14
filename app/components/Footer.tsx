@@ -1,5 +1,5 @@
-import React from 'react';;
-import { Link } from 'react-router-dom;
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
@@ -9,7 +9,7 @@ import { PhoneIcon,
   TwitterIcon,
   FacebookIcon,
   InstagramIcon
-} from ';;@heroicons/react/24/outline;
+} from '@heroicons/react/24/outline';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-white font-bold text-2xl">Zion Tech Group</span>
-            </Link>
+            </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               Transforming businesses through cutting-edge AI and IT solutions. 
               We help companies innovate and grow in the digital age with real, proven results.
@@ -95,8 +95,8 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
-                  key={social.name;
-                  href={social.href;
+                  key={social.name}
+                  href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
@@ -115,20 +115,14 @@ const Footer: React.FC = () => {
               {services.map((service) => (
                 <li key={service.name}>
                   <Link 
-                    to={service.href;
+                    to={service.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
                 </li>
-              ))}          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Company</h4> 
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
-              <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
-              <li><Link to="/demo" className="text-gray-300 hover:text-white transition-colors">Demo</Link>
+              ))}
             </ul>
           </div>
 
@@ -139,7 +133,7 @@ const Footer: React.FC = () => {
               {company.map((item) => (
                 <li key={item.name}>
                   <Link 
-                    to={item.href;
+                    to={item.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
@@ -157,7 +151,7 @@ const Footer: React.FC = () => {
               {resources.map((resource) => (
                 <li key={resource.name}>
                   <Link 
-                    to={resource.href;
+                    to={resource.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
@@ -173,7 +167,7 @@ const Footer: React.FC = () => {
               {legal.map((item) => (
                 <li key={item.name}>
                   <Link 
-                    to={item.href;
+                    to={item.href}
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
@@ -217,15 +211,13 @@ const Footer: React.FC = () => {
 
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-1 h-1 bg-purple-400 rounded-full animate-pulse">
-        <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}>
-        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style={{animationDelay: '2s'}}>
-        <div className="absolute bottom-0 right-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '3s'}}>
+        <div className="absolute top-0 left-1/4 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-0 right-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '3s'}}></div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
-
-}}}}}}

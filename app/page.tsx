@@ -1,20 +1,20 @@
-import React from 'react';;
-import { Link } from 'react-router-dom';;
-import { Helmet } from 'react-helmet-async';;
-import { Link } from 'react-router-dom;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon,
-  ArrowRightIcon,
   GlobeAltIcon,
   SignalIcon,
-  BriefcaseIcon
-} from ';;@heroicons/react/24/outline'
-import FuturisticBackground from './components/FuturisticBackground;
+  BriefcaseIcon,
+  CpuChipIcon,
+  ChartBarIcon
+} from '@heroicons/react/24/outline';
+import FuturisticBackground from './components/FuturisticBackground';
 
 const HomePage: React.FC = () => {
   const structuredData = {
-    ';;@context": "https://schema.org",
+    "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com/",
@@ -71,79 +71,73 @@ const HomePage: React.FC = () => {
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence services including machine learning, natural language processing, and predictive analytics.',
       icon: CpuChipIcon,
-      href: '/ai-solutions
+      href: '/ai-solutions'
     },
     {
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your business from threats and vulnerabilities.',
       icon: ShieldCheckIcon,
-      href: '/cybersecurity
+      href: '/cybersecurity'
     },
     {
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions for modern businesses with high availability and performance.',
       icon: CloudIcon,
-      href: '/cloud-infrastructure
+      href: '/cloud-infrastructure'
     },
     {
       title: 'Micro SaaS Solutions',
       description: 'Custom micro SaaS applications tailored to your specific business needs.',
       icon: GlobeAltIcon,
-      href: '/micro-saas-solutions
+      href: '/micro-saas-solutions'
     },
     {
       title: '5G Solutions',
       description: 'Next-generation 5G technology implementation for ultra-fast connectivity.',
       icon: SignalIcon,
-      href: '/5g-solutions
+      href: '/5g-solutions'
     },
     {
       title: 'IT Services',
       description: 'Complete IT infrastructure management and support services.',
       icon: BriefcaseIcon,
-      href: '/it-solutions
+      href: '/it-solutions'
     }
   ];
 
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "100+", label: "Happy Clients" },
+    { number: "99.9%", label: "Uptime Guarantee" },
+    { number: "24/7", label: "Support Available" }
+  ];
+
   return (
-    <PerformanceOptimizer>
-      <EnhancedAccessibility>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-          <EnhancedSEO
-            title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-            description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-            keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-            canonical="https://ziontechgroup.com"
-            structuredData={structuredData}
-          />
-          <StructuredData type="Organization" data={structuredData} />
-          <StructuredData 
-            type="WebSite" 
-            data={{
-              name: "Zion Tech Group",
-              url: "https://ziontechgroup.com",
-              potentialAction: {
-                "@type": "SearchAction",
-                "target": "https://ziontechgroup.com/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }} 
-          />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology." />
+        <meta name="keywords" content="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
       {/* Main Content */}
       <main id="main-content" role="main" aria-label="Main content">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse">
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         {/* Floating Elements with Neon Effects */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating">
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}>
-        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: '3s'}}>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: '3s'}}></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -261,8 +255,9 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
-  )};
+      </main>
+    </div>
+  );
 };
 
 export default HomePage;

@@ -1,11 +1,12 @@
-import React from 'react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
+const BlogPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-        <meta name=';;description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
+        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="technology blog, AI insights, cybersecurity tips, cloud computing, digital transformation" />
         <meta property="og:title" content="Blog - Zion Tech Group" />
         <meta property="og:description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />

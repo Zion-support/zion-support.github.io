@@ -1,6 +1,6 @@
-import React from 'react';;
-import { Helmet } from 'react-helmet-async';;
-import { Link } from 'react-router-dom;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 import { 
   UserGroupIcon,
@@ -13,7 +13,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from ';;@heroicons/react/24/outline;
+} from '@heroicons/react/24/outline';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -30,7 +30,8 @@ const AboutPage: React.FC = () => {
     {
       title: 'Reliability',
       description: 'We deliver consistent, high-quality solutions that you can depend on.',
-      icon: CloudIcon;
+      icon: CloudIcon
+    }
   ];
 
   const stats = [
@@ -45,7 +46,7 @@ const AboutPage: React.FC = () => {
       name: 'Kleber Santos',
       role: 'Founder & CEO',
       description: 'Technology visionary with 10+ years in AI and IT solutions.',
-      image: '/team/kleber.jpg
+      image: '/team/kleber.jpg'
     },
     {
       name: 'Sarah Johnson',
