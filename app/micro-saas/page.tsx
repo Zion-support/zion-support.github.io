@@ -176,11 +176,15 @@ const MicroSaasPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product) => (
+<<<<<<< HEAD
                 <div key={product.id}
+=======
+                <div key ={product.id}
+>>>>>>> cursor/fix-errors-and-merge-to-main-57fa
                   className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     product.popular
                       ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
-                      :'border-white/20'
+                      : 'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}>
                   {product.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -300,12 +304,20 @@ const MicroSaasPage: React.FC = () => {
                 Start with a free trial and scale as you grow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <Link to ="/contact"
+=======
+                <Link to="/contact"
+>>>>>>> cursor/fix-errors-and-merge-to-main-57fa
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Zap className="w-5 h-5" />
                   Start Free Trial
                 </Link>
+<<<<<<< HEAD
                 <Link to ="/pricing"
+=======
+                <Link to="/pricing"
+>>>>>>> cursor/fix-errors-and-merge-to-main-57fa
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   View All Plans
                 </Link>

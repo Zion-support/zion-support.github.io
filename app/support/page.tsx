@@ -176,7 +176,11 @@ const SupportPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportChannels.map((channel, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center">
+<<<<<<< HEAD
                   <div className={`w-16 h-16 ${channel.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}>
+=======
+                  <div className ={`w-16 h-16 ${channel.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-57fa
                     <channel.icon className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{channel.name}</h3>
