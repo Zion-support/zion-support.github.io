@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-structuredData
-}) => {
-  return (
-    <Helmet><title>{title}</title><meta name="description" content={description}  />
-      <meta name="keywords" content={keywords}  />
-      {structuredData && (
-        <script type="application/ld+json">)
-          {JSON.stringify(structuredData)
-        </script>
-      )
-    </Helmet>
-
-  )
-}}
-=======
 import React from "react";
 
 const SEOHead = () => {
@@ -28,4 +12,3 @@ const SEOHead = () => {
 };
 
 export default SEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

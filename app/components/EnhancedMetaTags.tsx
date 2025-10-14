@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
 
 const EnhancedMetaTags = () => {
@@ -15,4 +12,3 @@ const EnhancedMetaTags = () => {
 };
 
 export default EnhancedMetaTags;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

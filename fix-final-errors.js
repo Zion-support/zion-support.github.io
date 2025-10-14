@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-';
-import { Helmet } from 'react-helmet-async';';
-import fs from 'fs';
-import { glob } from 'glob'
-// Function to fix final remaining errors;
-function fixFinalErrors(content, filePath) {
-  let fixed = content
-  // Fix concatenated import statements without proper line breaks
-  fixed = fixed.replace(/';'\/\/\s*([^']*?)'/g;\n// $1")
-  fixed = fixed.replace(/';'import/g;\nimport")
-  fixed = fixed.replace(/';'export/g;\nexport")
-  fixed = fixed.replace(/';'const/g;\nconst")
-  fixed = fixed.replace(/';'function/g;\nfunction")
-  fixed = fixed.replace(/';'interface/g;\ninterface")
-  fixed = fixed.replace(/';'type/g;\ntype")
-  // Fix malformed quotes in import statements
-  fixed = fixed.replace(/import\s+React\s+from\s+'react';'([^']*?)'/g, 'import React from "react";\n$1')
-  fixed = fixed.replace(/import\s+{\s*(\w+)\s*}\s+from\s+"([^"]*?);'([^']*?)'/g, 'import { $1 } from "$2";\n$3')
-  fixed = fixed.replace(/import\s+(\w+)\s+from\s+"([^"]*?);'([^']*?)'/g, 'import $1 from "$2";\n$3')
-  // Fix malformed JSX attributes with colons
-  fixed = fixed.replace(/name:\s*""([^"]*?)\s+content:\s*"([^"]*?)\s*\/>/g, 'name="$1" content="$2" />')
-  fixed = fixed.replace(/className:\s*"([^"]*?)/g, 'className="$1"')
-  fixed = fixed.replace(/href:\s*"([^"]*?)/g, 'href="$1"')
-  fixed = fixed.replace(/src:\s*"([^"]*?)/g, 'src="$1"')
-  fixed = fixed.replace(/alt:\s*"([^"]*?)/g, 'alt="$1"')
-  fixed = fixed.replace(/title:\s*"([^"]*?)/g, 'title="$1"')
-  fixed = fixed.replace(/type:\s*"([^"]*?)/g, 'type="$1"')
-  fixed = fixed.replace(/rel:\s*"([^"]*?)/g, 'rel="$1"')
-  fixed = fixed.replace(/sizes:\s*"([^"]*?)/g, 'sizes="$1"')
-  // Fix malformed JSX elements
-  fixed = fixed.replace(/<h1\s+className:\s*"([^"]*?)>([^<]*?)<\/h1>>/g, '<h1 className="$1">$2</h1>')
-  fixed = fixed.replace(/<p\s+className:\s*"([^"]*?)>([^<]*?)<\/p>>/g, '<p className="$1">$2</p>')
-  fixed = fixed.replace(/<div\s+className:\s*"([^"]*?)></div>([^<]*?)<\/div>>/g, '<div className="$1"></div>$2</div>')
-  // Fix broken string concatenation
-  fixed = fixed.replace(/"([^"]*?)\s*\+\s*"([^"]*?)/g, '"$1$2"')
-  fixed = fixed.replace(/'([^']*?)'\s*\+\s*'([^']*?)'/g'$1$2'")
-  // Fix malformed template literals
-  fixed = fixed.replace(/`([^`]*?)\n/g, '`$1`')
-  fixed = fixed.replace(/\$\{([^}]*?)\}/g, '${$1}')
-  // Fix broken JSX fragments
-  if (fixed.includes('<div>') && !fixed.includes('</div>')) {
-    fixed = fixed.replace(/<>/g, '<div></div>')
-    fixed = fixed.replace(/([^>])\s*$/g, '$1</div>')
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -166,7 +121,6 @@ export default App;`;
 
   fs.writeFileSync(appTsxPath, newContent, 'utf8');
   console.log(`✅ Fixed: ${appTsxPath}`);
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 }
 
 // Fix cn utility
@@ -184,15 +138,6 @@ export function cn(...inputs: ClassValue[]) {
   fs.writeFileSync(cnPath, newContent, 'utf8');
   console.log(`✅ Fixed: ${cnPath}`);
 }
-<<<<<<< HEAD
-    return match
-  })
-  // Fix broken component structure
-  if (filePath.includes('.tsx') || filePath.includes('.jsx')) {
-    // Ensure proper component structure
-    if (fixed.includes('export default function') && !fixed.includes('React')) {
-      fixed = 'import React from "react";\n' + fixed
-=======
 
 // Fix analytics utility
 function fixAnalyticsUtility() {
@@ -205,7 +150,6 @@ declare global {
   interface Window {
     gtag?: (command: string, eventName: string, properties?: Record<string, unknown>) => void;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 }
 
 export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
@@ -226,25 +170,6 @@ export const trackPageView = (pageTitle: string, pageLocation: string) => {
   fs.writeFileSync(analyticsPath, newContent, 'utf8');
   console.log(`✅ Fixed: ${analyticsPath}`);
 }
-<<<<<<< HEAD
-  // Fix specific patterns that are causing issues
-  fixed = fixed.replace(/import\s+React\s+from\s+'react';'\/\/\s*([^']*?)'/g, 'import React from "react";\n// $1')
-  fixed = fixed.replace(/import\s+React\s+from\s+"react"import\s+{\s*(\w+)\s*}\s+from\s+"([^"]*?);'([^']*?)'/g, 'import React from "react";\nimport { $1 } from "$2";\n$3')
-  // Fix malformed meta tags
-  fixed = fixed.replace(/<meta\s+name:\s*""([^"]*?)\s+content:\s*"([^"]*?)\s*\/>/g, '<meta name="$1" content="$2" />')
-  // Fix broken string literals
-  fixed = fixed.replace(/"([^"]*?)\s*\+\s*"([^"]*?)/g, '"$1$2"')
-  fixed = fixed.replace(/'([^']*?)'\s*\+\s*'([^']*?)'/g'$1$2'")
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/className:\s*"([^"]*?)/g, 'className="$1"')
-  fixed = fixed.replace(/name:\s*"([^"]*?)/g, 'name="$1"')
-  fixed = fixed.replace(/content:\s*"([^"]*?)/g, 'content="$1"')
-  // Fix broken JSX elements
-  fixed = fixed.replace(/<h1\s+className:\s*"([^"]*?)>([^<]*?)<\/h1>>/g, '<h1 className="$1">$2</h1>')
-  fixed = fixed.replace(/<p\s+className:\s*"([^"]*?)>([^<]*?)<\/p>>/g, '<p className="$1">$2</p>')
-  fixed = fixed.replace(/<div\s+className:\s*"([^"]*?)></div>([^<]*?)<\/div>>/g, '<div className="$1"></div>$2</div>')
-  return fixed
-=======
 
 // Fix vite config
 function fixViteConfig() {
@@ -293,7 +218,6 @@ export default defineConfig({
 
   fs.writeFileSync(viteConfigPath, newContent, 'utf8');
   console.log(`✅ Fixed: ${viteConfigPath}`);
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 }
 
 // Fix ai-automation-platform page
@@ -383,16 +307,6 @@ export default FuturisticText;`;
   fs.writeFileSync(componentPath, newContent, 'utf8');
   console.log(`✅ Fixed: ${componentPath}`);
 }
-<<<<<<< HEAD
-}
-  console.log(`Fixed ${totalFixed} files`)
-}
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main()
-}
-export { fixFinalErrors, processFile }
-}}}}
-=======
 
 // Main execution
 try {
@@ -411,4 +325,3 @@ try {
   console.error('❌ Script failed:', error.message);
   process.exit(1);
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

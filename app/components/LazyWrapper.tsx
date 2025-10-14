@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-interface LazyWrapperProps { children: React.ReactNode
-  fallback?: React.ReactNode }
-import React, { Suspense, lazy, ComponentType } from 'react';';
-import LoadingSpinner from './LoadingSpinner';
-interface LazyWrapperProps { children: React.ReactNode;
-  fallback?: React.ReactNode; }
-}
-const LazyWrapper: React.FC<LazyWrapperProps> = ({ children, 
-  fallback = <LoadingSpinner size="lg" text="Loading component..." /> })
-}) => { return ( }
-    <Suspense fallback={fallback}>
-      { children }
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 
 const LazyWrapperPage = () => {
   return (
@@ -61,9 +46,5 @@ const LazyWrapperPage = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-export default LazyWrapper;
-=======
 
 export default LazyWrapperPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

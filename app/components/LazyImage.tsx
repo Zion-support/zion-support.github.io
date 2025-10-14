@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React    from "react
-const LazyImage = () => {"
-  return ()
-}
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -54,4 +48,3 @@ const LazyImagePage = () => {
 };
 
 export default LazyImagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

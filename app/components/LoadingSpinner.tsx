@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-</div>
-  )
-  if (fullScreen) {
-    return (
-
-        {spinner}
-      </div>
-    )
-  return spinner;
-
-};
-=======
 import React from "react";
 
 const LoadingSpinner = () => {
@@ -25,4 +12,3 @@ const LoadingSpinner = () => {
 };
 
 export default LoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

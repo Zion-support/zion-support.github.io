@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React    from "react"
-const PWAInstaller = () => {"
-  return (
-    <div className="p-4"><h2 className="text-xl font-semibold mb-2">PWAInstaller</h2>
-      <p>This component is under construction.</p>
-    </div>)
-}
-=======
 import React from "react";
 
 const PWAInstaller = () => {
@@ -21,4 +12,3 @@ const PWAInstaller = () => {
 };
 
 export default PWAInstaller;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -33,16 +33,6 @@ describe('Advanced Components', () => {
       expect(screen.getByText('Child component')).toBeInTheDocument();
     });
 
-<<<<<<< HEAD
-    it('renders error boundary wrapper', () => {
-      render(
-        <MockEnhancedErrorBoundary>
-          <div>Child component</div>
-        </MockEnhancedErrorBoundary>
-      );
-      expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
-    });
-=======
     render(
       <MemoryRouter>
         <EnhancedErrorBoundary>
@@ -54,7 +44,6 @@ describe('Advanced Components', () => {
     expect(screen.getByText('Something went wrong')).toBeInTheDocument();
 
     consoleSpy.mockRestore();
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   });
 
   describe('MockAdvancedSEOOptimizer', () => {
@@ -64,19 +53,6 @@ describe('Advanced Components', () => {
     });
   });
 
-<<<<<<< HEAD
-  describe('Component Integration', () => {
-    it('renders multiple components together', () => {
-      render(
-        <div>
-          <MockAdvancedPerformanceMonitor />
-          <MockAdvancedSEOOptimizer />
-        </div>
-      );
-      expect(screen.getByText('Advanced Performance Monitor')).toBeInTheDocument();
-      expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
-    });
-=======
   it('retries when retry button is clicked', () => {
     let shouldThrow = true;
     const ThrowError = () => {
@@ -142,6 +118,5 @@ describe('AdvancedPerformanceMonitor', () => {
   it('renders without crashing', () => {
     render(<AdvancedPerformanceMonitor />);
     expect(screen.getByText('Advanced Performance Monitor')).toBeInTheDocument();
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   });
 });

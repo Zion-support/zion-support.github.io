@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from "lucide-react
->>>>>>> origin/main
 import { Helmet }    from "react-helmet-async"
 const HomePage = () => {"
   return (
@@ -9,7 +6,6 @@ const HomePage = () => {"
           <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
           <p className="text-gray-300 text-lg"
             This page is under construction. Please check back later.
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -29,7 +25,6 @@ const PagePage = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Professional page services designed to help your business grow and succeed.
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
           </p>
         </div>
         
@@ -59,9 +54,5 @@ const PagePage = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-export default HomePage;
-=======
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

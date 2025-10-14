@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-// LazyLoadingUtils - Basic implementation
-export default function LazyLoadingUtils() {;
-  return null;
-}
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -54,4 +48,3 @@ const LazyLoadingUtilsPage = () => {
 };
 
 export default LazyLoadingUtilsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

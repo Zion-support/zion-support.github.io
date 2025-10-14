@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -51,4 +48,3 @@ const SkipLinkPage = () => {
 };
 
 export default SkipLinkPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

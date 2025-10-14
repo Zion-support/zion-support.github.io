@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React    from "react
-interface WebVitalsTrackerProps {
-  children: ReactNode;
-}
-const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {"
-  useEffect(() => {"
->>>>>>> origin/main
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -57,4 +48,3 @@ const WebVitalsTrackerPage = () => {
 };
 
 export default WebVitalsTrackerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

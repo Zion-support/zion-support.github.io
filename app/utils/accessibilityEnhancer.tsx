@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-// accessibilityEnhancer.tsx utility;
-export const accessibilityEnhancer = () => {;
-  // Utility implementation;
-};
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -54,4 +48,3 @@ const AccessibilityEnhancerPage = () => {
 };
 
 export default AccessibilityEnhancerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

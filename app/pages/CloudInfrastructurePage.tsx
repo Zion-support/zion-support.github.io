@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
 
 const CloudInfrastructurePage = () => {
@@ -15,4 +12,3 @@ const CloudInfrastructurePage = () => {
 };
 
 export default CloudInfrastructurePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React, { ReactNode }    from "react
-interface EnhancedAnalyticsProps {
-  children: ReactNode;
-}
-;
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
-  return <div>{children}</div>;
-}
-export default EnhancedAnalytics
-=======
 import React from 'react';
 
 const EnhancedAnalytics = () => {
@@ -21,4 +10,3 @@ const EnhancedAnalytics = () => {
 };
 
 export default EnhancedAnalytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
 
 const DigitalTransformationPage = () => {
@@ -15,4 +12,3 @@ const DigitalTransformationPage = () => {
 };
 
 export default DigitalTransformationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
 
 const AIServicesPage = () => {
@@ -15,4 +12,3 @@ const AIServicesPage = () => {
 };
 
 export default AIServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

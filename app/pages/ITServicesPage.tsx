@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
 
 const ITServicesPage = () => {
@@ -15,4 +12,3 @@ const ITServicesPage = () => {
 };
 
 export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

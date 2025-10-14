@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-      featured: true
-    },
-    {
-      id: 2,
-      featured: false
-    },
-    {
-      id: 4,
-      featured: false
-    },
-    {
-      id: 5,
-      featured: false
-    },
-    {
-      id: 6,
-      featured: false
-    }
-  ];
-
-              </Link>
-            </div>
-          </div>
-        </section>
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -40,13 +14,8 @@ const PagePage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

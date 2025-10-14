@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-document.head.removeChild(script);
-'
-{ useEffect } from 'react';';
-import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps { title?: string;
-
-=======
 import React from 'react';
 interface SEOEnhancerProps {
   title?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   description?: string;
   keywords?: string[];
   image?: string;
   url?: string;
   type?: string;
-<<<<<<< HEAD
-
-}
-=======
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group',
@@ -45,4 +32,3 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 };
 export default SEOEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

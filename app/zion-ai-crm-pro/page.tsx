@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-export default function Page() {;
-import React from "react
-import { Helmet }    from "react-helmet-async
-      <Helmet></Helmet>"
-        <meta name="description" content="Professional services by Zion Tech Group."
-}
-=======
 import React from "react";
 
 const Page = () => {
@@ -20,4 +12,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from "react"";
-import { Helmet } from "react-helmet-async";
-export default function AdvancedSEOOptimizer() {
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const AdvancedSEOOptimizerPage = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -15,16 +9,6 @@ const AdvancedSEOOptimizerPage = () => {
         <meta name="description" content="Professional AdvancedSEOOptimizer services by Zion Tech Group." />
         <meta name="keywords" content="AdvancedSEOOptimizer, AI solutions, IT services" />
       </Helmet>
-<<<<<<< HEAD
-
-      <h1>Advanced SEO Optimizer</h1>
-      <p>This component is under development.</p>
-    </div>)
-  )
-
-}
-"
-=======
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -64,4 +48,3 @@ const AdvancedSEOOptimizerPage = () => {
 };
 
 export default AdvancedSEOOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

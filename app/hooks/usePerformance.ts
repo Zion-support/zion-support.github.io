@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-export const usePerformance = () => { // Implementation;
-  return true; }
-};
-export default usePerformance;
-=======
 import { useState, useEffect } from 'react';
 
 export const useUsePerformance = () => {
@@ -22,4 +16,3 @@ export const useUsePerformance = () => {
     // Add your hook methods here
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

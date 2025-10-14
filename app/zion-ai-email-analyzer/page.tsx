@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet }  from "react-helmet-async
-=======
 import React from "react";
 
 const Page = () => {
@@ -16,4 +12,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-;
-export default function LazyLoading() {;
-  return (<div><h1>LazyLoading</h1>;
-      <p>This component is under development.</p>;
-    </div>);
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -51,7 +44,6 @@ const LazyLoadingPage = () => {
         </div>
       </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   );
 };
 

@@ -1,14 +1,8 @@
 // Learn more: https://github.com/testing-library/jest-dom
-<<<<<<< HEAD
-require("@testing-library/jest-dom
-// Polyfills for Node.js environment
-const { TextEncoder, TextDecoder } = require("util
-=======
 require("@testing-library/jest-dom");
 
 // Polyfills for Node.js environment
 const { TextEncoder, TextDecoder } = require("util");
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -26,14 +20,9 @@ jest.mock('react-lazy-load-image-component'
     },
   };
 });
-<<<<<<< HEAD
-Object.defineProperty(windowmatchMedia
-  writable: true,)
-=======
 
 Object.defineProperty(window, "matchMedia", {
   writable: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
@@ -69,11 +58,7 @@ beforeAll(() => {
     if (
       typeof args[0] === "string" &&
       (args[0].includes("Warning: ReactDOM.render") ||
-<<<<<<< HEAD
-        args[0].includes("Not implemented: HTMLFormElement.prototype.submit
-=======
         args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
     ) {
       return;
     }
@@ -83,8 +68,4 @@ beforeAll(() => {
 
 afterAll(() => {
   console.error = originalError;
-<<<<<<< HEAD
-})
-=======
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

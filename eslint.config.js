@@ -1,69 +1,3 @@
-<<<<<<< HEAD
-import js from "@eslint/js
-import globals from "globals
-import reactHooks from "eslint-plugin-react-hooks
-import reactRefresh from "eslint-plugin-react-refresh
-import tseslint from "typescript-eslint
-export default tseslint.config(
-  {
-    ignores: [
-      "dist
-      "app-broken/**
-      "app-disabled/**
-      "scripts/**
-      "src/**
-      "temp-broken/**
-      "coverage/**
-      "*.js
-      "*.cjs
-    ],
-  },
-  {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ["**/*.{ts,tsx}]
-    languageOptions: {
-      ecmaVersion: "latest
-      sourceType: "module
-      globals: {
-        ...globals.browser,
-        window: "readonly
-        document: "readonly
-        console: "readonly
-        process: "readonly
-        global: "readonly
-        HTMLElement: "readonly
-        Event: "readonly
-        KeyboardEvent: "readonly
-        MediaQueryListEvent: "readonly
-        PerformanceObserver: "readonly
-        PerformanceNavigationTiming: "readonly
-        HTMLInputElement: "readonly
-        HTMLTextAreaElement: "readonly
-        HTMLSelectElement: "readonly
-        setTimeout: "readonly
-        clearTimeout: "readonly
-        setInterval: "readonly
-        clearInterval: "readonly
-        performance: "readonly
-        localStorage: "readonly
-        sessionStorage: "readonly
-        require: "readonly
-        module: "readonly
-        exports: "readonly
-        fs: "readonly
-        __dirname: "readonly
-        // Jest globals
-        describe: "readonly
-        it: "readonly
-        test: "readonly
-        expect: "readonly
-        beforeEach: "readonly
-        afterEach: "readonly
-        beforeAll: "readonly
-        afterAll: "readonly
-        jest: "readonly
-      },
-=======
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
@@ -75,7 +9,6 @@ export default [
     files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       parser: typescriptParser,
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -108,22 +41,6 @@ export default [
       "react-refresh": reactRefresh
     },
     rules: {
-<<<<<<< HEAD
-      ...reactHooks.configs.recommended.rulesreact-refresh/only-export-components": [
-        "warn
-        {
-          allowConstantExport: true,
-          allowExportNames: [
-            "AnalyticsContext
-            "useAnalytics
-            "AnalyticsProvider
-          ],
-        },
-      ],
-    },
-  },
-);
-=======
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -139,4 +56,3 @@ export default [
     },
   },
 ];
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

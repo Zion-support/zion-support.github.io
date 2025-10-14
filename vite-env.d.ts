@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-/// <reference types="vite/client" />
-interface ImportMetaEnv {
-  readonly DEV: boolean;
-  readonly PROD: boolean;
-  readonly SSR: boolean;
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -60,4 +48,3 @@ const ViteEnv.dPage = () => {
 };
 
 export default ViteEnv.dPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

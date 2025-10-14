@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from "react"";
-import { Helmet } from "react-helmet-async";
-export default function SEOEnhancer() {
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const SEOEnhancerPage = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -33,10 +27,6 @@ const SEOEnhancerPage = () => {
               Our team of experts provides cutting-edge solutions tailored to your specific needs.
             </p>
           </div>
-<<<<<<< HEAD
-        </section>
-
-=======
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
@@ -52,7 +42,6 @@ const SEOEnhancerPage = () => {
             </p>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       </div>
     </div>
   );

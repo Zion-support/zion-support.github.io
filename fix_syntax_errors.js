@@ -2,11 +2,7 @@ import React from "react
 import fs from "fs
 import path from "path
 import { glob } from "glob
-<<<<<<< HEAD
-// Common syntax fixes for merged files;
-=======
 // Common syntax fixes for merged files
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 function fixSyntaxErrors(content) {
   // Fix JSX expressions that need one parent element
   content = content.replace()
@@ -71,10 +67,5 @@ const fixedContent = fixSyntaxErrors(content)
 } catch (error) {
     console.error(`Error processing ${file}:`, error.message)
 })
-<<<<<<< HEAD
-console.log(`Fixed ${fixedCount} files.`)
-}}
-=======
 console.log(`Fixed ${fixedCount} files.`)"
 }}
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

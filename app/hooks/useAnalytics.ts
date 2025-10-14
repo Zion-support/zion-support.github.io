@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { useContext } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  
-  return context;
-=======
 import { useState, useEffect } from 'react';
 
 export const useUseAnalytics = () => {
@@ -28,5 +15,4 @@ export const useUseAnalytics = () => {
     error,
     // Add your hook methods here
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 };

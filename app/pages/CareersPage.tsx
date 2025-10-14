@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-"use client"
-import React    from "react
-export default function CareersPage() {"
-  return ()
-}
-=======
 import React from "react";
 
 const CareersPage = () => {
@@ -19,4 +12,3 @@ const CareersPage = () => {
 };
 
 export default CareersPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

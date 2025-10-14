@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from "react-router-dom
-import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone }    from "lucide-react
-import {
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  BriefcaseIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon
-} from '
-interface SidebarProps {isOpen: boolean;
-  onClose: () => void}
->>>>>>> origin/main
->>>>>>> origin/main
 
   ]"
   const additionalLinks = ["
@@ -130,7 +102,6 @@ interface SidebarProps {isOpen: boolean;
                         >
                           <subLink.icon className="w-4 h-4 mr-3" />
                           {subLink.name}
->>>>>>> origin/main
             <button
               onClick={onClose}
               className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
@@ -251,16 +222,11 @@ interface SidebarProps {isOpen: boolean;
             </div>
           </div>
         </div>
->>>>>>> origin/main
       </div>
     </>
   );
 };
 
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -311,4 +277,3 @@ const SidebarPage = () => {
 };
 
 export default SidebarPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

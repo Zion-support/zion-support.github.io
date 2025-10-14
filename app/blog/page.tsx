@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-  ];
-
-  const posts = [
-    {
-      id: 1,
-            </p>
-          </div>
-        </div>
-      </section>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-=======
 import React from "react";
 
 const Page = () => {
@@ -31,4 +12,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
