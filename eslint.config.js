@@ -3,6 +3,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+
 export default [
   js.configs.recommended,
   {
@@ -37,8 +38,9 @@ export default [
       },
     },
     plugins: {
-      "react-hooks": reactHooks
-      "react-refresh": reactRefresh
+      "@typescript-eslint": typescript,
+      "react-hooks": reactHooks,
+      "react": react
     },
     rules: {
       ...typescript.configs.recommended.rules,

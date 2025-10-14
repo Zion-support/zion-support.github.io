@@ -1,13 +1,13 @@
-'use client';,
-import React from 'react';,
+'use client';
 
-interface AnalyticsProps {,
+import React from 'react';
 
-  children?: React.ReactNode;}
+interface AnalyticsProps {
+  children?: React.ReactNode;
+}
 
-const Analytics: React.FC<AnalyticsProps> = ({ children }) => {,
+const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
+  return <>{children}</>;
+};
 
-  return <>{children}</>;,
-};,
-
-export default Analytics;,
+export default Analytics;

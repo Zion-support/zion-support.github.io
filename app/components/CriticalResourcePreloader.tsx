@@ -1,49 +1,75 @@
-import React from "react";
-import { Helmet } from 'react-helmet-async';
-const CriticalResourcePreloaderPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet></Helmet>
-        <title>CriticalResourcePreloader - Zion Tech Group</title>
-        <meta name="description" content="Professional CriticalResourcePreloader services by Zion Tech Group." />
-        <meta name="keywords" content="CriticalResourcePreloader, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            CriticalResourcePreloader
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional CriticalResourcePreloader services designed to help your business grow and succeed.
-          </p>
-        </div>
+import React, { useEffect, useState } from "react";
+
+interface CriticalResourcePreloaderProps {
+  children?: React.ReactNode;
+}
+
+const CriticalResourcePreloader: React.FC<CriticalResourcePreloaderProps> = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Preload critical resources
+    const preloadResources = async () => {
+      try {
+        // Preload critical CSS
+        const criticalCSS = document.createElement('link');
+        criticalCSS.rel = 'preload';
+        criticalCSS.as = 'style';
+        criticalCSS.href = '/critical.css';
+        document.head.appendChild(criticalCSS);
+
+        // Preload critical fonts
+        const criticalFont = document.createElement('link');
+        criticalFont.rel = 'preload';
+        criticalFont.as = 'font';
+        criticalFont.type = 'font/woff2';
+        criticalFont.href = '/fonts/inter-var.woff2';
+        criticalFont.crossOrigin = 'anonymous';
+        document.head.appendChild(criticalFont);
+
+        // Preload critical images
+        const criticalImages = [
+          '/images/hero-bg.jpg',
+          '/images/logo.svg',
+          '/images/favicon.ico'
+        ];
+
+        await Promise.all(
+          criticalImages.map(src => {
+            return new Promise((resolve, reject) => {
+              const img = new Image();
+              img.onload = resolve;
+              img.onerror = reject;
+              img.src = src;
+            });
+          })
+        );
+
+        // Simulate loading time
+        await new Promise(resolve => setTimeout(resolve, 1000));
         
-        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Our team of experts provides cutting-edge solutions tailored to your specific needs.
-            </p>
-          </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your systems run smoothly at all times.
-            </p>
-          </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
-            <p className="text-gray-300">
-              Track record of delivering successful projects and exceeding client expectations.
-            </p>
-          </div>
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Error preloading resources:', error);
+        setIsLoading(false);
+      }
+    };
+
+    preloadResources();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 bg-slate-900 flex items-center justify-center z-50">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-white text-lg">Loading...</p>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  return <>{children}</>;
 };
 
-export default CriticalResourcePreloaderPage;
+export default CriticalResourcePreloader;
