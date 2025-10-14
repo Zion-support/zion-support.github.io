@@ -4,7 +4,7 @@ import React from 'react';
 const FuturisticButtonEnhanced = () => {
 
   return (
-    div>
+    <div>
       <h2>FuturisticButtonEnhanced</h2>
   );
   );
@@ -12,6 +12,4 @@ const FuturisticButtonEnhanced = () => {
   
   );
 };
-export default FuturisticButtonEnhanced;
-
-
+export default FuturisticButtonEnhanced

@@ -28,4 +28,4 @@ export const defaultStructuredData = {
   "foundingDate": "2020",
   "numberOfEmployees": "50-100",
   "industry": "Technology"
-};
+}

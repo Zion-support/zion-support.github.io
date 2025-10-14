@@ -36,7 +36,7 @@ const CaseStudiesPage: React.FC = () => {
   );
   );
         <title>Case Studies | Zion Tech Group</title>
-        <meta name="description"content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
+        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
       </Helmet>;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -64,4 +64,4 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 
-export default CaseStudiesPage;
+export default CaseStudiesPage

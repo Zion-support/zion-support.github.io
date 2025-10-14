@@ -31,4 +31,4 @@ export const defaultStructuredData = {
     "https://twitter.com/ziontechgroup",
     "https://www.facebook.com/ziontechgroup"
   ]
-};
+}

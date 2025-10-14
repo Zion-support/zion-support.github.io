@@ -49,7 +49,7 @@ const BlogPage = () => {
   );
   );
         <title>Blog | Zion Tech Group</title>
-        <meta name="description"content="Latest insights on AI, IT solutions, and technology trends from Zion Tech Group." />
+        <meta name="description" content="Latest insights on AI, IT solutions, and technology trends from Zion Tech Group." />
         <meta name="keywords" content="tech blog, AI insights, IT solutions, technology trends, Zion Tech Group" />
       </Helmet>;
       {/* Hero Section */};

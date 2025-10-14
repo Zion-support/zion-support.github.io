@@ -4,7 +4,7 @@ import React from 'react';
 const ContentStatistics = () => {
 
   return (
-    div>
+    <div>
       <h2>ContentStatistics</h2>
   );
   );
@@ -12,6 +12,4 @@ const ContentStatistics = () => {
   
   );
 };
-export default ContentStatistics;
-
-
+export default ContentStatistics

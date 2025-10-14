@@ -4,7 +4,7 @@ import React from 'react';
 const Sidebar = () => {
 
   return (
-    div>
+    <div>
       <h2>Sidebar</h2>
   );
   );
@@ -12,6 +12,4 @@ const Sidebar = () => {
   
   );
 };
-export default Sidebar;
-
-
+export default Sidebar

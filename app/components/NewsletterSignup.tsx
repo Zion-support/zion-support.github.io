@@ -4,7 +4,7 @@ import React from 'react';
 const NewsletterSignup = () => {
 
   return (
-    div>
+    <div>
       <h2>NewsletterSignup</h2>
   );
   );
@@ -12,6 +12,4 @@ const NewsletterSignup = () => {
   
   );
 };
-export default NewsletterSignup;
-
-
+export default NewsletterSignup

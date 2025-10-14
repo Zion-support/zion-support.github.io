@@ -4,7 +4,7 @@ import React from 'react';
 const ResponsiveGrid = () => {
 
   return (
-    div>
+    <div>
       <h2>ResponsiveGrid</h2>
   );
   );
@@ -12,6 +12,4 @@ const ResponsiveGrid = () => {
   
   );
 };
-export default ResponsiveGrid;
-
-
+export default ResponsiveGrid

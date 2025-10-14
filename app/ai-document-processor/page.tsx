@@ -32,7 +32,7 @@ const AiDocumentProcessorPage = () => {
   );
 
         <title>AI Document Processor - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description"content="Advanced AI document processing solution powered by artificial intelligence. Streamline your document workflows with cutting-edge AI technology and automation." />
+        <meta name="description" content="Advanced AI document processing solution powered by artificial intelligence. Streamline your document workflows with cutting-edge AI technology and automation." />
         <meta name="keywords" content="AI, document processing, artificial intelligence, automation, business solutions, technology" />
       </Helmet>;
 

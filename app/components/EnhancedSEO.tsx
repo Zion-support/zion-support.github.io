@@ -4,7 +4,7 @@ import React from 'react';
 const EnhancedSEO = () => {
 
   return (
-    div>
+    <div>
       <h2>EnhancedSEO</h2>
   );
   );
@@ -12,6 +12,4 @@ const EnhancedSEO = () => {
   
   );
 };
-export default EnhancedSEO;
-
-
+export default EnhancedSEO

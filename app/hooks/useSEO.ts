@@ -19,4 +19,4 @@ export const useSEO = (structuredData?: unknown) => {
     };
     return undefined;
   }, [structuredData]);
-};
+}

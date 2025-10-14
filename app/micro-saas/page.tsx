@@ -64,7 +64,7 @@ const MicroSaasPage: React.FC = () => {
   );
   );
         <title>Micro SaaS Solutions | Zion Tech Group</title>
-        <meta name="description"content="Discover our micro SaaS solutions designed for small to medium businesses. AI-powered tools that scale with your growth." />
+        <meta name="description" content="Discover our micro SaaS solutions designed for small to medium businesses. AI-powered tools that scale with your growth." />
         <meta name="keywords" content="micro SaaS, small business software, AI tools, business automation, Zion Tech Group" />
       </Helmet>;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

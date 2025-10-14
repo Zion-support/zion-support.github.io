@@ -4,7 +4,7 @@ import React from 'react';
 const ServiceWorkerRegistration = () => {
 
   return (
-    div>
+    <div>
       <h2>ServiceWorkerRegistration</h2>
   );
   );
@@ -12,6 +12,4 @@ const ServiceWorkerRegistration = () => {
   
   );
 };
-export default ServiceWorkerRegistration;
-
-
+export default ServiceWorkerRegistration

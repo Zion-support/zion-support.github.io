@@ -4,7 +4,7 @@ import React from 'react';
 const AdDashboard = () => {
 
   return (
-    div>
+    <div>
       <h2>AdDashboard</h2>
   );
   );
@@ -12,6 +12,4 @@ const AdDashboard = () => {
   
   );
 };
-export default AdDashboard;
-
-
+export default AdDashboard

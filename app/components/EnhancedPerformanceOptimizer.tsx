@@ -4,7 +4,7 @@ import React from 'react';
 const EnhancedPerformanceOptimizer = () => {
 
   return (
-    div>
+    <div>
       <h2>EnhancedPerformanceOptimizer</h2>
   );
   );
@@ -12,6 +12,4 @@ const EnhancedPerformanceOptimizer = () => {
   
   );
 };
-export default EnhancedPerformanceOptimizer;
-
-
+export default EnhancedPerformanceOptimizer

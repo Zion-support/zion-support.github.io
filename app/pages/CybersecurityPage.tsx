@@ -19,7 +19,7 @@ import {}  ShieldCheckIcon,"LockClosedIcon,
 
 
 "export default function Component() {"return (
-    div>
+    <div>
   );Page content</div>
   );
 

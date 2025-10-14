@@ -26,4 +26,4 @@ export const defaultSEOConfig = {
   keywords: ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
   image: '/images/og-image.jpg',
   type: 'website'
-};
+}

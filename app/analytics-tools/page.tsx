@@ -53,7 +53,7 @@ const PagePage: React.FC = () => {
   );
   );
         <title>Analytics Tools | Zion Tech Group</title>
-        <meta name="description"content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="description" content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>;
       {/* Hero Section */};

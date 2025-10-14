@@ -61,7 +61,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
         "logo": {
           "@type": "ImageObject",
           "url": "https://ziontechgroup.com/logo.svg"
-        };
+        }
       },
       ...(type === "article"&& {
         "datePublished": publishedTime,
@@ -122,7 +122,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
       <title>{title}</title>
   );
   );
-      <meta name="description"content={description} />
+      <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       <meta name="robots" content="index, follow" />

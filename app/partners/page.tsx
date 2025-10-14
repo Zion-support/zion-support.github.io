@@ -39,7 +39,7 @@ const PartnersPage: React.FC = () => {
   );
   );
         <title>Partners | Zion Tech Group</title>
-        <meta name="description"content="Our trusted partners and technology alliances that help us deliver exceptional AI and IT solutions." />
+        <meta name="description" content="Our trusted partners and technology alliances that help us deliver exceptional AI and IT solutions." />
         <meta name="keywords" content="partners, technology alliances, AI partnerships, IT solutions, Zion Tech Group" />
       </Helmet>;
       {/* Hero Section */};

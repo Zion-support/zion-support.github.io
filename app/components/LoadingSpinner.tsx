@@ -4,7 +4,7 @@ import React from 'react';
 const LoadingSpinner = () => {
 
   return (
-    div>
+    <div>
       <h2>LoadingSpinner</h2>
   );
   );
@@ -12,6 +12,4 @@ const LoadingSpinner = () => {
   
   );
 };
-export default LoadingSpinner;
-
-
+export default LoadingSpinner

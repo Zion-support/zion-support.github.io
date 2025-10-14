@@ -4,7 +4,7 @@ import React from 'react';
 const EnhancedServicesShowcase = () => {
 
   return (
-    div>
+    <div>
       <h2>EnhancedServicesShowcase</h2>
   );
   );
@@ -12,6 +12,4 @@ const EnhancedServicesShowcase = () => {
   
   );
 };
-export default EnhancedServicesShowcase;
-
-
+export default EnhancedServicesShowcase

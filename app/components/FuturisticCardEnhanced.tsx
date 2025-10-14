@@ -4,7 +4,7 @@ import React from 'react';
 const FuturisticCardEnhanced = () => {
 
   return (
-    div>
+    <div>
       <h2>FuturisticCardEnhanced</h2>
   );
   );
@@ -12,6 +12,4 @@ const FuturisticCardEnhanced = () => {
   
   );
 };
-export default FuturisticCardEnhanced;
-
-
+export default FuturisticCardEnhanced

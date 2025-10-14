@@ -154,7 +154,7 @@ const BlockchainPage: React.FC = () => {
   );
   );
         <title>Blockchain Services - Zion Tech Group</title>
-        <meta name="description"content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
+        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
         <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3" />
       </Helmet>;
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

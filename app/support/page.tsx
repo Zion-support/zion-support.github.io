@@ -82,7 +82,7 @@ const SupportPage: React.FC = () => {
   );
   );
         <title>Support - Zion Tech Group | Technical Support & Help</title>
-        <meta name="description"content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
+        <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
         <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" />
       </Helmet>;
 <avigation />

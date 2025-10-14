@@ -4,7 +4,7 @@ import React from 'react';
 const EnhancedAccessibilityManager = () => {
 
   return (
-    div>
+    <div>
       <h2>EnhancedAccessibilityManager</h2>
   );
   );
@@ -12,6 +12,4 @@ const EnhancedAccessibilityManager = () => {
   
   );
 };
-export default EnhancedAccessibilityManager;
-
-
+export default EnhancedAccessibilityManager

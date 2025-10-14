@@ -4,7 +4,7 @@ import React from 'react';
 const CriticalResourcePreloader = () => {
 
   return (
-    div>
+    <div>
       <h2>CriticalResourcePreloader</h2>
   );
   );
@@ -12,6 +12,4 @@ const CriticalResourcePreloader = () => {
   
   );
 };
-export default CriticalResourcePreloader;
-
-
+export default CriticalResourcePreloader

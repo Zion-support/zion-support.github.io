@@ -4,7 +4,7 @@ import React from 'react';
 const EnhancedMetaTags = () => {
 
   return (
-    div>
+    <div>
       <h2>EnhancedMetaTags</h2>
   );
   );
@@ -12,6 +12,4 @@ const EnhancedMetaTags = () => {
   
   );
 };
-export default EnhancedMetaTags;
-
-
+export default EnhancedMetaTags

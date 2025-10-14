@@ -7,13 +7,12 @@ import { Helmet } from "react-helmet-async";
 
 
 
-export default function Page() {'  return (
+export default function Page() {
+  return (
         <React.Fragment>
-  );
-      </React.Fragment><Helmet>
+      <Helmet>
 
         <title>Ai Nlp Text Analysis - Zion Tech Group</title>
-        <meta name="description"content="Professional ai nlp text analysis services by Zion Tech Group." />      </Helmet>      <div>        <div>
+        <meta name="description" content="Professional ai nlp text analysis services by Zion Tech Group." />      </Helmet>      <div>        <div>
+  );
 }
-};
-};

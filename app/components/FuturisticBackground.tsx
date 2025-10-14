@@ -4,7 +4,7 @@ import React from 'react';
 const FuturisticBackground = () => {
 
   return (
-    div>
+    <div>
       <h2>FuturisticBackground</h2>
   );
   );
@@ -12,6 +12,4 @@ const FuturisticBackground = () => {
   
   );
 };
-export default FuturisticBackground;
-
-
+export default FuturisticBackground

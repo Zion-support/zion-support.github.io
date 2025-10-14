@@ -40,7 +40,7 @@ const ConsultationPage = () => {
   );
   );
         <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
-        <meta name="description"content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
+        <meta name="description" content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
       </Helmet>;
       {/* Hero Section */};

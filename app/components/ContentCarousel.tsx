@@ -4,7 +4,7 @@ import React from 'react';
 const ContentCarousel = () => {
 
   return (
-    div>
+    <div>
       <h2>ContentCarousel</h2>
   );
   );
@@ -12,6 +12,4 @@ const ContentCarousel = () => {
   
   );
 };
-export default ContentCarousel;
-
-
+export default ContentCarousel

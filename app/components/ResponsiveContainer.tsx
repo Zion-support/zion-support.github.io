@@ -6,7 +6,7 @@ import React from "react";
 
 const ResponsiveContainer: React.FC<Props> = ({ children  }) => {};
   return (
-    div>Page content</div>
+    <div>Page content</div>
   );
   );
   );</Props>

@@ -24,7 +24,7 @@ export default function CloudSolutionsPage() {
     >
   );<Helmet>
         <title>Cloud Solutions - Zion Tech Group</title>
-        <meta name="description"content="Professional cloud solutions services by Zion Tech Group. Leading provider of AI and IT solutions." />
+        <meta name="description" content="Professional cloud solutions services by Zion Tech Group. Leading provider of AI and IT solutions." />
         <meta name="keywords" content="cloud solutions, AI solutions, IT services, Zion Tech Group" />
       </Helmet>;
       <div className="min-h-screen bg-slate-900">

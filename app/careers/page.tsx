@@ -73,7 +73,7 @@ const CareersPage: React.FC = () => {
   );
   );
         <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description"content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
+        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
       </Helmet>;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

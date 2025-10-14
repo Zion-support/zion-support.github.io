@@ -4,7 +4,7 @@ import React from 'react';
 const ImprovedFooter = () => {
 
   return (
-    div>
+    <div>
       <h2>ImprovedFooter</h2>
   );
   );
@@ -12,6 +12,4 @@ const ImprovedFooter = () => {
   
   );
 };
-export default ImprovedFooter;
-
-
+export default ImprovedFooter

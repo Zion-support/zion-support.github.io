@@ -4,7 +4,7 @@ import React from 'react';
 const EnhancedLoading = () => {
 
   return (
-    div>
+    <div>
       <h2>EnhancedLoading</h2>
   );
   );
@@ -12,6 +12,4 @@ const EnhancedLoading = () => {
   
   );
 };
-export default EnhancedLoading;
-
-
+export default EnhancedLoading

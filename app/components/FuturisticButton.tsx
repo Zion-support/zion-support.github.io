@@ -4,7 +4,7 @@ import React from 'react';
 const FuturisticButton = () => {
 
   return (
-    div>
+    <div>
       <h2>FuturisticButton</h2>
   );
   );
@@ -12,6 +12,4 @@ const FuturisticButton = () => {
   
   );
 };
-export default FuturisticButton;
-
-
+export default FuturisticButton

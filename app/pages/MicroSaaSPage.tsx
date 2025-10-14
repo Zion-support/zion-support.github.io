@@ -19,7 +19,7 @@ import {}  GlobeAltIcon,"CpuChipIcon,
 
 
 "export default function Component() {"return (
-    div>
+    <div>
   );Page content</div>
   );
 

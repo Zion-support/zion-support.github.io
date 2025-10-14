@@ -4,7 +4,7 @@ import React from 'react';
 const MobileNavigation = () => {
 
   return (
-    div>
+    <div>
       <h2>MobileNavigation</h2>
   );
   );
@@ -12,6 +12,4 @@ const MobileNavigation = () => {
   
   );
 };
-export default MobileNavigation;
-
-
+export default MobileNavigation

@@ -4,7 +4,7 @@ import React from 'react';
 const AdAnalyticsDashboard = () => {
 
   return (
-    div>
+    <div>
       <h2>AdAnalyticsDashboard</h2>
   );
   );
@@ -12,6 +12,4 @@ const AdAnalyticsDashboard = () => {
   
   );
 };
-export default AdAnalyticsDashboard;
-
-
+export default AdAnalyticsDashboard

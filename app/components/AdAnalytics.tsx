@@ -4,7 +4,7 @@ import React from 'react';
 const AdAnalytics = () => {
 
   return (
-    div>
+    <div>
       <h2>AdAnalytics</h2>
   );
   );
@@ -12,6 +12,4 @@ const AdAnalytics = () => {
   
   );
 };
-export default AdAnalytics;
-
-
+export default AdAnalytics

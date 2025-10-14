@@ -4,7 +4,7 @@ import React from 'react';
 const AdvancedPerformanceMonitor = () => {
 
   return (
-    div>
+    <div>
       <h2>AdvancedPerformanceMonitor</h2>
   );
   );
@@ -12,7 +12,4 @@ const AdvancedPerformanceMonitor = () => {
     </div>
   );
 };
-export default AdvancedPerformanceMonitor;
-
-
-
+export default AdvancedPerformanceMonitor

@@ -2,8 +2,9 @@
 import React from "react";
 
 
-'/* global describe, test, expect, it, beforeEach */'export default function Page() {'  return (
-    div>
+'/* global describe, test, expect, it, beforeEach */'export default function Page() {
+  return (
+    <div>
   );Page content</div>
   );
 
@@ -21,4 +22,4 @@ import React from "react";
 }
 };
 };
-  )};
+  )}

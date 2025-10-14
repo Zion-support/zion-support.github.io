@@ -4,7 +4,7 @@ import React from 'react';
 const AnimatedCard = () => {
 
   return (
-    div>
+    <div>
       <h2>AnimatedCard</h2>
   );
   );
@@ -12,6 +12,4 @@ const AnimatedCard = () => {
   
   );
 };
-export default AnimatedCard;
-
-
+export default AnimatedCard

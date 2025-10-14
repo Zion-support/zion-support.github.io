@@ -9,4 +9,4 @@ const LoadingStates = () => {
       <div>
   );
   );
-  );
+  )

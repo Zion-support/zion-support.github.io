@@ -4,7 +4,7 @@ import React from 'react';
 const ServiceCardSkeleton = () => {
 
   return (
-    div>
+    <div>
       <h2>ServiceCardSkeleton</h2>
   );
   );
@@ -12,6 +12,4 @@ const ServiceCardSkeleton = () => {
   
   );
 };
-export default ServiceCardSkeleton;
-
-
+export default ServiceCardSkeleton

@@ -78,7 +78,7 @@ export default function SitemapPage() {
   );
   );
         <title>Sitemap - Zion Tech Group | Complete Site Navigation</title>
-        <meta name="description"content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and resources." />
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and resources." />
         <meta name="keywords" content="sitemap, navigation, AI services, IT solutions, Zion Tech Group" />
         <meta property="og:title" content="Sitemap - Zion Tech Group" />
         <meta property="og:description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and resources." />

@@ -24,7 +24,7 @@ export default function SolutionsPage() {
     >
   );<Helmet>
         <title>Solutions - Zion Tech Group</title>
-        <meta name="description"content="Professional solutions services by Zion Tech Group. Leading provider of AI and IT solutions." />
+        <meta name="description" content="Professional solutions services by Zion Tech Group. Leading provider of AI and IT solutions." />
         <meta name="keywords" content="solutions, AI solutions, IT services, Zion Tech Group" />
       </Helmet>;
       <div className="min-h-screen bg-slate-900">

@@ -4,7 +4,7 @@ import React from react;
 
 "export default function WebVitalsTracker() {
   return (
-    div>
+    <div>
   );Page content</div>
   );
 
@@ -22,4 +22,4 @@ import React from react;
 }
 };
 };
-  )};
+  )}

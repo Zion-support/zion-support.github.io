@@ -4,7 +4,7 @@ import React from 'react';
 const Breadcrumb = () => {
 
   return (
-    div>
+    <div>
       <h2>Breadcrumb</h2>
   );
   );
@@ -12,6 +12,4 @@ const Breadcrumb = () => {
   
   );
 };
-export default Breadcrumb;
-
-
+export default Breadcrumb

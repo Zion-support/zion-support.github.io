@@ -4,7 +4,7 @@ import React from 'react';
 const CoreWebVitals = () => {
 
   return (
-    div>
+    <div>
       <h2>CoreWebVitals</h2>
   );
   );
@@ -12,6 +12,4 @@ const CoreWebVitals = () => {
   
   );
 };
-export default CoreWebVitals;
-
-
+export default CoreWebVitals

@@ -4,7 +4,7 @@ import React from 'react';
 const FuturisticCard = () => {
 
   return (
-    div>
+    <div>
       <h2>FuturisticCard</h2>
   );
   );
@@ -12,6 +12,4 @@ const FuturisticCard = () => {
   
   );
 };
-export default FuturisticCard;
-
-
+export default FuturisticCard

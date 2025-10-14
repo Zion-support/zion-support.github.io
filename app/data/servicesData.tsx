@@ -13,7 +13,7 @@ export default function servicesData() {
   );
       <Helmet>
         <title>Services Data.ts - Zion Tech Group</title>
-        <meta name="description"content="Professional services data.ts services by Zion Tech Group." />
+        <meta name="description" content="Professional services data.ts services by Zion Tech Group." />
       </Helmet>;
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -61,4 +61,4 @@ export default function servicesData() {
 };
 };
   );
-};
+}

@@ -271,4 +271,4 @@ const EnhancedAnalytics: React.FC = () => {
   return null;
 };
 
-export default EnhancedAnalytics;
+export default EnhancedAnalytics

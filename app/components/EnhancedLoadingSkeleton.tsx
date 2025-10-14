@@ -4,7 +4,7 @@ import React from 'react';
 const EnhancedLoadingSkeleton = () => {
 
   return (
-    div>
+    <div>
       <h2>EnhancedLoadingSkeleton</h2>
   );
   );
@@ -12,6 +12,4 @@ const EnhancedLoadingSkeleton = () => {
   
   );
 };
-export default EnhancedLoadingSkeleton;
-
-
+export default EnhancedLoadingSkeleton

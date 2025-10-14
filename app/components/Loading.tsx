@@ -4,7 +4,7 @@ import React from 'react';
 const Loading = () => {
 
   return (
-    div>
+    <div>
       <h2>Loading</h2>
   );
   );
@@ -12,6 +12,4 @@ const Loading = () => {
   
   );
 };
-export default Loading;
-
-
+export default Loading

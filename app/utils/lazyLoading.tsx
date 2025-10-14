@@ -42,4 +42,4 @@ export const createLazyComponent = <P extends object>(
       </Suspense>;
     </LazyWrapper></>
   );
-};
+}

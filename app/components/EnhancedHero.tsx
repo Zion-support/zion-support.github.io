@@ -4,7 +4,7 @@ import React from 'react';
 const EnhancedHero = () => {
 
   return (
-    div>
+    <div>
       <h2>EnhancedHero</h2>
   );
   );
@@ -12,6 +12,4 @@ const EnhancedHero = () => {
   
   );
 };
-export default EnhancedHero;
-
-
+export default EnhancedHero

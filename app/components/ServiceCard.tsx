@@ -1,5 +1,5 @@
 import React from "reactuse client";'export default function ServiceCard() {'  return (
-    div>
+    <div>
   );Page content</div>
   );
 
@@ -17,4 +17,4 @@ import React from "reactuse client";'export default function ServiceCard() {'  r
 }
 };
 };
-  )};
+  )}

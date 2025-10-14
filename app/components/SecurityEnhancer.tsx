@@ -4,7 +4,7 @@ import React from 'react';
 const SecurityEnhancer = () => {
 
   return (
-    div>
+    <div>
       <h2>SecurityEnhancer</h2>
   );
   );
@@ -12,6 +12,4 @@ const SecurityEnhancer = () => {
   
   );
 };
-export default SecurityEnhancer;
-
-
+export default SecurityEnhancer

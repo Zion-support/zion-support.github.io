@@ -4,7 +4,7 @@ import React from 'react';
 const PerformanceDashboard = () => {
 
   return (
-    div>
+    <div>
       <h2>PerformanceDashboard</h2>
   );
   );
@@ -12,6 +12,4 @@ const PerformanceDashboard = () => {
   
   );
 };
-export default PerformanceDashboard;
-
-
+export default PerformanceDashboard

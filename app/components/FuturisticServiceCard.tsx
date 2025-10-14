@@ -4,7 +4,7 @@ import React from 'react';
 const FuturisticServiceCard = () => {
 
   return (
-    div>
+    <div>
       <h2>FuturisticServiceCard</h2>
   );
   );
@@ -12,6 +12,4 @@ const FuturisticServiceCard = () => {
   
   );
 };
-export default FuturisticServiceCard;
-
-
+export default FuturisticServiceCard

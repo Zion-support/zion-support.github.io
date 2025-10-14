@@ -16,4 +16,4 @@ export const trackPageView = (pageName: string) => {
       page_location: window.location.href,
     });
   };
-};
+}

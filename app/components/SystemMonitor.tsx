@@ -4,7 +4,7 @@ import React from 'react';
 const SystemMonitor = () => {
 
   return (
-    div>
+    <div>
       <h2>SystemMonitor</h2>
   );
   );
@@ -12,6 +12,4 @@ const SystemMonitor = () => {
   
   );
 };
-export default SystemMonitor;
-
-
+export default SystemMonitor

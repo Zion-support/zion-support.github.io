@@ -4,7 +4,7 @@ import React from 'react';
 const AdScheduler = () => {
 
   return (
-    div>
+    <div>
       <h2>AdScheduler</h2>
   );
   );
@@ -12,6 +12,4 @@ const AdScheduler = () => {
   
   );
 };
-export default AdScheduler;
-
-
+export default AdScheduler

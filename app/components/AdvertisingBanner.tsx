@@ -4,7 +4,7 @@ import React from 'react';
 const AdvertisingBanner = () => {
 
   return (
-    div>
+    <div>
       <h2>AdvertisingBanner</h2>
   );
   );
@@ -12,6 +12,4 @@ const AdvertisingBanner = () => {
   
   );
 };
-export default AdvertisingBanner;
-
-
+export default AdvertisingBanner
