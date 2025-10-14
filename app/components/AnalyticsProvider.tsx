@@ -18,13 +18,13 @@ interface AnalyticsProviderProps {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, properties);
+      console.warn('Analytics Event:', eventName, properties);
     }
     // TODO: Implement actual analytics tracking
   };
   const trackPageView = (pageName: string) => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName);
+      console.warn('Page View:', pageName);
     }
     // TODO: Implement actual page view tracking
   };

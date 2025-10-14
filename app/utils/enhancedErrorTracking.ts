@@ -1,45 +1,26 @@
 export const enhancedErrorTracking = {
-  trackError: (_error: Error, context?: Record<string, unknown>) => {
-    const ErrorInfo = {
-      message: _error.message,
-      stack: _error.stack,
   trackError: (error: Error, context?: Record<string, unknown>) => {
-    // Error tracking logic
-  trackError: (error: Error, context?: Record<string, any>) => {
-    const errorInfo = {
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      context: context || {}
-    }
-    
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // Development logging disabled
-      console.error('Error tracked: ', errorInfo)
-    }
-    
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-
-      })
+        description: error.message,
+        fatal: false,
+        ...context
+      });
     }
   },
   
-  trackPerformanceError: (_error: Error, performanceData: unknown) => {
-    enhancedErrorTracking.trackError(_error, {
   trackPerformanceError: (error: Error, performanceData: unknown) => {
     enhancedErrorTracking.trackError(error, {
-
+      type: 'performance',
+      performanceData
     });
-  trackPerformanceError: (metric: string, value: number, threshold: number) => {
-    if (value > threshold) {
-      enhancedErrorTracking.trackError(new Error(`Performance threshold exceeded: ${metric}`), {
-        metric,
-        value,
-        threshold
-      })
-    }
+  },
+  
+  trackNetworkError: (error: Error, url: string, status?: number) => {
+    enhancedErrorTracking.trackError(error, {
+      type: 'network',
+      url,
+      status
+    });
   }
-}
-}}}}}}
+};

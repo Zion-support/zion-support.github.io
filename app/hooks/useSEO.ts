@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-
+export const useSEO = (title: string, description: string, keywords?: string) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
       const metaDescription = document.querySelector('meta[name="description"]')
@@ -13,7 +13,7 @@ import { useEffect } from 'react'
         metaKeywords.setAttribute('content', keywords)
       }
       
-      document.title = title
+      document.title = title;
     }
-  }, [title, description, keywords])
-}
+  }, [title, description, keywords]);
+};
