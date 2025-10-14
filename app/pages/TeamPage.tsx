@@ -1,115 +1,107 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEO from '../components/SEO'
-import { 
-  UserGroupIcon,
-  AcademicCapIcon,
-  BriefcaseIcon,
-  StarIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'
-export default function TeamPage() {
-  const team = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.',
-      image: '/images/team/kleber-santos.jpg',
-      linkedin: 'https://linkedin.com/in/kleber-santos',
-      twitter: 'https://twitter.com/kleber_santos'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      bio: 'Expert in cloud architecture and cybersecurity with a passion for innovation.',
-      image: '/images/team/sarah-johnson.jpg',
-      linkedin: 'https://linkedin.com/in/sarah-johnson',
-      twitter: 'https://twitter.com/sarah_johnson'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      bio: 'Machine learning specialist focused on developing cutting-edge AI solutions.',
-      image: '/images/team/michael-chen.jpg',
-      linkedin: 'https://linkedin.com/in/michael-chen',
-      twitter: 'https://twitter.com/michael_chen'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      bio: 'Creative director with expertise in user experience and interface design.',
-      image: '/images/team/emily-rodriguez.jpg',
-      linkedin: 'https://linkedin.com/in/emily-rodriguez',
-      twitter: 'https://twitter.com/emily_rodriguez'
-    },
-    {
-      name: 'David Kim',
-      role: 'DevOps Engineer',
-      bio: 'Infrastructure specialist ensuring scalable and reliable cloud solutions.',
-      image: '/images/team/david-kim.jpg',
-      linkedin: 'https://linkedin.com/in/david-kim',
-      twitter: 'https://twitter.com/david_kim'
-    },
-    {
-      name: 'Lisa Wang',
-      role: 'Project Manager',
-      bio: 'Experienced project manager ensuring timely delivery of complex solutions.',
-      image: '/images/team/lisa-wang.jpg',
-      linkedin: 'https://linkedin.com/in/lisa-wang',
-      twitter: 'https://twitter.com/lisa_wang'
-    }
-  ]
-  const values = [
-    {
-      icon: StarIcon,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, delivering the highest quality solutions.'
-    },
-    {
-      icon: UserGroupIcon,
-      title: 'Collaboration',
-      description: 'We believe in the power of teamwork and collaboration to achieve great results.'
-    },
-    {
-      icon: AcademicCapIcon,
-      title: 'Innovation',
-      description: 'We continuously innovate and stay ahead of technology trends.'
-    },
-    {
-      icon: BriefcaseIcon,
-      title: 'Integrity',
-      description: 'We maintain the highest ethical standards in all our business practices.'
-    }
-  ]
-=======
+'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRightIcon,
+  CheckCircleIcon
+} from '@heroicons/react/24/outline';
 
-const TeamPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+export default function TeamPagePage() {
   return (
     <>
       <Helmet>
-        <title>TeamPage - Zion Tech Group</title>
-        <meta name="description" content="TeamPage - Zion Tech Group" />
+        <title>Team Page - Zion Tech Group</title>
+        <meta name="description" content="Professional team page services by Zion Tech Group. Leading provider of AI and IT solutions." />
+        <meta name="keywords" content="team page, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">TeamPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
+      <div className="min-h-screen bg-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Team Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional team page services designed to help your business grow and succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-colors"
+              >
+                Get Started
+              </Link>
+              <Link 
+                to="/services" 
+                className="border border-purple-600 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-600 hover:text-white transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Our Team Page Services</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  We provide comprehensive team page solutions tailored to your specific needs and requirements.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3" />
+                    Custom solutions
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3" />
+                    Expert consultation
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3" />
+                    Ongoing support
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-gradient-to-br from-purple-500 to-cyan-600 rounded-lg p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+                <p className="mb-6">
+                  Ready to transform your business with our team page services?
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-block bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our team page services can help you achieve your goals.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </section>
       </div>
     </>
-<<<<<<< HEAD
-  )}
-=======
   );
-};
-
-export default TeamPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+}

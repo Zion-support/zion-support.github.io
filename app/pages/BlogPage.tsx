@@ -15,11 +15,5 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  );
-}
-export default BlogPage;
-=======
   )}
 export default BlogPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -1,78 +1,107 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEO from '../components/SEO'
-import { 
-  GlobeAltIcon,
-  CpuChipIcon,
-  ChartBarIcon,
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'
-export default function MicroSaaSPage() {
-  const services = [
-    {
-      icon: GlobeAltIcon,
-      title: 'Custom Micro SaaS Development',
-      description: 'Tailored micro SaaS solutions designed to solve specific business challenges with scalable architecture.',
-      features: ['Custom development', 'Scalable architecture', 'API integration', 'Multi-tenant support']
-    },
-    {
-      icon: CpuChipIcon,
-      title: 'AI-Powered Micro SaaS',
-      description: 'Intelligent micro SaaS applications powered by artificial intelligence and machine learning.',
-      features: ['AI integration', 'Machine learning', 'Predictive analytics', 'Automated workflows']
-    },
-    {
-      icon: ChartBarIcon,
-      title: 'Analytics & Reporting',
-      description: 'Comprehensive analytics and reporting solutions for your micro SaaS applications.',
-      features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Business intelligence']
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Deployment & Scaling',
-      description: 'Seamless deployment and automatic scaling solutions for your micro SaaS applications.',
-      features: ['Cloud deployment', 'Auto-scaling', 'Load balancing', 'Performance optimization']
-    }
-  ]
-  const industries = [
-    { name: 'E-commerce', description: 'Online retail solutions' },
-    { name: 'Healthcare', description: 'Medical practice management' },
-    { name: 'Finance', description: 'Financial services tools' },
-    { name: 'Education', description: 'Learning management systems' },
-    { name: 'Real Estate', description: 'Property management tools' },
-    { name: 'Manufacturing', description: 'Production optimization' }
-  ]
-=======
+'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRightIcon,
+  CheckCircleIcon
+} from '@heroicons/react/24/outline';
 
-const MicroSaaSPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+export default function MicroSaaSPagePage() {
   return (
     <>
       <Helmet>
-        <title>MicroSaaSPage - Zion Tech Group</title>
-        <meta name="description" content="MicroSaaSPage - Zion Tech Group" />
+        <title>Micro Saa S Page - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saa s page services by Zion Tech Group. Leading provider of AI and IT solutions." />
+        <meta name="keywords" content="micro saa s page, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
+      <div className="min-h-screen bg-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Micro Saa S Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional micro saa s page services designed to help your business grow and succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-colors"
+              >
+                Get Started
+              </Link>
+              <Link 
+                to="/services" 
+                className="border border-purple-600 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-600 hover:text-white transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Our Micro Saa S Page Services</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  We provide comprehensive micro saa s page solutions tailored to your specific needs and requirements.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3" />
+                    Custom solutions
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3" />
+                    Expert consultation
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3" />
+                    Ongoing support
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-gradient-to-br from-purple-500 to-cyan-600 rounded-lg p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+                <p className="mb-6">
+                  Ready to transform your business with our micro saa s page services?
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-block bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our micro saa s page services can help you achieve your goals.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </section>
       </div>
     </>
-<<<<<<< HEAD
-  )}
-=======
   );
-};
-
-export default MicroSaaSPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+}

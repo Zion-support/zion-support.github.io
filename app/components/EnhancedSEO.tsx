@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOProps {
-  title: string
-  description: string
-  keywords?: string
-  canonicalUrl?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noIndex?: boolean
-  noFollow?: boolean}
-=======
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';
 
@@ -28,7 +13,6 @@ interface SEOProps {
   noIndex?: boolean;
   noFollow?: boolean;}
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
 const EnhancedSEO: React.FC<SEOProps> = ({
   title,
@@ -40,16 +24,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   noIndex = false,
-<<<<<<< HEAD
-  noFollow = false
-}) => {
-  const siteName = 'Zion Tech Group'
-  const siteUrl = 'https://ziontechgroup.com'
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
-=======
   noFollow = false}
 }) => {'
   const siteName = 'Zion Tech Group';'
@@ -59,7 +33,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 
   const defaultStructuredData = {'
     '@context': 'https://schema.org','
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
     '@type': 'Organization',
     name: siteName,
     url: siteUrl,}
@@ -83,12 +56,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       'https://twitter.com/ziontechgroup'
     ]
   }
-<<<<<<< HEAD
-  const mergedStructuredData = structuredData || defaultStructuredData;
-
-=======
   const mergedStructuredData = structuredData || defaultStructuredData
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -142,17 +110,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         {JSON.stringify(mergedStructuredData)}
       </script>
     </Helmet>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-}
-export default EnhancedSEO;
-=======
   )}
 export default EnhancedSEO
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
 
 export default EnhancedSEO;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

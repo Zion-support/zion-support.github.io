@@ -1,33 +1,62 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflicts
-    if (!content.includes('content = content.replace(/\s*\n?/g, '');
-    content = content.replace(/    
-    // Clean up any remaining conflict markers
-    content = content.replace(/    content = content.replace(/\s*\n?/g, '');
-    content = content.replace(/    
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    // Remove merge conflict markers and keep the newer version (after =======)
+    const lines = content.split('\n');
+    const fixedLines = [];
+    let inConflict = false;
+    let keepLines = false;
     
-    // Write the cleaned content back
-    fs.writeFileSync(filePath, content, 'utf8');
-    return true;
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        keepLines = false;
+        continue;
+      }
+      
+      if (line.includes('=======')) {
+        keepLines = true;
+        continue;
+      }
+      
+      if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        keepLines = false;
+        continue;
+      }
+      
+      if (inConflict) {
+        if (keepLines) {
+          fixedLines.push(line);
+        }
+      } else {
+        fixedLines.push(line);
+      }
+    }
+    
+    const fixedContent = fixedLines.join('\n');
+    
+    // Only write if content changed
+    if (fixedContent !== content) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed merge conflicts in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and fix merge conflicts
-function fixAllMergeConflicts(dir) {
+function findAndFixConflicts(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
@@ -36,10 +65,7 @@ function fixAllMergeConflicts(dir) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-      // Skip node_modules and other directories
-      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        fixedCount += fixAllMergeConflicts(filePath);
-      }
+      fixedCount += findAndFixConflicts(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
       if (fixMergeConflicts(filePath)) {
         fixedCount++;
@@ -50,7 +76,6 @@ function fixAllMergeConflicts(dir) {
   return fixedCount;
 }
 
-// Main execution
-console.log('Starting merge conflict resolution...');
-const fixedCount = fixAllMergeConflicts(process.cwd());
+console.log('Starting to fix merge conflicts...');
+const fixedCount = findAndFixConflicts('./app');
 console.log(`Fixed merge conflicts in ${fixedCount} files.`);
