@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-// services utility;
-<<<<<<< HEAD
-export const services = () => {// Implementation;
-  return true}
-export default services;
-=======
-export const services = () => { // Implementation;
-  return true; }
+// Services data
+export const Services = {
+  // Add your data here
 };
-export default services;
-=======
-"use client;"// services utility; export const services = () => {"} // Implementation; return true}""} export default services;";"
->>>>>>> origin/main
->>>>>>> origin/main
+export default services

@@ -1,123 +1,43 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react";
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals";
-import React, { useState, useEffect } from 'react";
-interface PerformanceMetrics {loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number}
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkLatency: 0,
-  }
-  const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {// Only run in development mode
-    if (process.env.NODE_ENV !== 'development') {'
-      return}
-    const measurePerformance = () => {
-      if (typeof window !== 'undefined' && window.performance) {'
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";
-        const paint = window.performance.getEntriesByType('paint')";
-        const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0";
-        // Memory usage (if available)
-        const memoryUsage = (window as any).performance?.memory?.usedJSHeapSize || 0;
-        // Network latency (simplified)
-        const networkLatency = navigation ? navigation.responseEnd - navigation.requestStart : 0;
-        setMetrics({
-          loadTime: Math.round(loadTime),
-          renderTime: Math.round(renderTime),
-          memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
-          networkLatency: Math.round(networkLatency),
-        }
-    onCLS(handleMetric)
-    onINP(handleMetric)
-    onFCP(handleMetric)
-    onLCP(handleMetric)
-    onTTFB(handleMetric)
-  }, [])
-  // Don't render anything in production'
-  if (process.env.NODE_ENV === 'production') {'
-      <h3 className="font-bold mb-2">Performance Metrics</h3>"
-      <div className="space-y-1">"
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>"`"`
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>"`"`
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>"`"`
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>"`"`
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>      </div>"`"`
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-import React, { useState, useEffect } from 'react';
-interface PerformanceMetrics { loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number; }
-=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface PerformanceMetrics {
-  loadTime: number | null;
-  firstContentfulPaint: number | null;
-  largestContentfulPaint: number | null;
-  firstInputDelay: number | null;
-  cumulativeLayoutShift: number | null;
-}
+const PerformanceMonitorPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>PerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="PerformanceMonitor - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">PerformanceMonitor</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+        <div className="space-y-1">
+          {metrics?.fcp && (
+            <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
+          )}
+          {metrics?.lcp && (
+            <div>LCP: {metrics.lcp.toFixed(2)}ms</div>
+          )}
+          {metrics?.fid && (
+            <div>FID: {metrics.fid.toFixed(2)}ms</div>
+          )}
+          {metrics?.cls && (
+            <div>CLS: {metrics.cls.toFixed(4)}</div>
+          )}
+          {metrics?.ttfb && (
+            <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
 
->>>>>>> origin/main
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const measurePerformance = () => {
-      // Measure page load time
-      if (performance.timing) {
-        const timing = performance.timing;
-        const loadTime = timing.loadEventEnd - timing.navigationStart;
-        setMetrics(prev => ({ ...prev, loadTime }));
-      }
-
-      // Measure Core Web Vitals
-      if ('PerformanceObserver' in window) {
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcp = entries.find(entry => entry.name === 'first-contentful-paint');
-          if (fcp) {
-            setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime }));
-          }
-        });
-<<<<<<< HEAD
-      }
-    }
-    onCLS(handleMetric);
-    onINP(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
-  }, []);
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>      </div>
->>>>>>> origin/main
+export default PerformanceMonitor;
     ttfb: null,
     loadTime: null
   }
@@ -140,7 +60,6 @@ const PerformanceMonitor: React.FC = () => {
         loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : null
       }
     // Wait for page load
-<<<<<<< HEAD
     if (document.readyState === 'complete') {'
       getPerformanceMetrics()
     } else {window.addEventListener('load', getPerformanceMetrics)"}"
@@ -153,33 +72,11 @@ const PerformanceMonitor: React.FC = () => {
   // Only show in development
   if (process.env.NODE_ENV !== 'development') {'
     return null}
-=======
-    if (document.readyState === 'complete') {
-      getPerformanceMetrics();
-    } else { window.addEventListener('load', getPerformanceMetrics); }
-    return () => {
-      window.removeEventListener('load', getPerformanceMetrics);
-    };
-  }, []);
-  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
-    if (value === null) return 'text-gray-500';
-    if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.poor) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') { return null; }
->>>>>>> origin/main
   return (
     <div className="fixed bottom-4 right-4 z-50">"
       <button
-<<<<<<< HEAD
         onClick={() => setIsVisible(!isVisible)
         className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors""
-=======
-        onClick={ () => setIsVisible(!isVisible) }
-        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
->>>>>>> origin/main
       >
         Performance
       </button>
@@ -221,7 +118,6 @@ const PerformanceMonitor: React.FC = () => {
   // Toggle visibility with keyboard shortcut
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-<<<<<<< HEAD
       if (event.ctrlKey && event.shiftKey && event.key === 'P') {'
         setIsVisible(!isVisible)
     window.addEventListener('keydown', handleKeyPress)";
@@ -238,40 +134,6 @@ const PerformanceMonitor: React.FC = () => {
         <button
           onClick={() => setIsVisible(false)
           className="text-gray-400 hover:text-white text-xs""
-=======
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        setIsVisible(!isVisible);
-=======
-        fcpObserver.observe({ entryTypes: ['paint'] });
-
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, largestContentfulPaint: lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fid = entries[0];
-          setMetrics(prev => ({ ...prev, firstInputDelay: fid.processingStart - fid.startTime }));
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        // Cumulative Layout Shift
-        const clsObserver = new PerformanceObserver((list) => {
-          let clsValue = 0;
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
-          }
-          setMetrics(prev => ({ ...prev, cumulativeLayoutShift: clsValue }));
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
->>>>>>> origin/main
       }
     };
 
@@ -286,143 +148,70 @@ const PerformanceMonitor: React.FC = () => {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-<<<<<<< HEAD
   }, [isVisible]);
   // Don't render in production
   if (process.env.NODE_ENV === 'production') { return null; }
   if (!isVisible) { return null; }
-=======
-  }, []);
-
-  if (!isVisible) return null;
-
->>>>>>> origin/main
   return (
     <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold">Performance Monitor</h3>
         <button
-<<<<<<< HEAD
           onClick={ () => setIsVisible(false) }
           className="text-gray-400 hover:text-white text-xs"
-=======
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
->>>>>>> origin/main
->>>>>>> origin/main
         >
           ×
         </button>
       </div>
-<<<<<<< HEAD
-      <div className="space-y-2 text-xs">"
-        <div className="flex justify-between">"
-          <span className="text-gray-400">Load Time:</span>"
-          <span className={`font-mono ${metrics.loadTime > 1000 ? 'text-red-400' : 'text-green-400'}`}>"`"`
-            {metrics.loadTime}ms
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-400">Render Time:</span>"
-          <span className={`font-mono ${metrics.renderTime > 100 ? 'text-red-400' : 'text-green-400'}`}>"`"`
-            {metrics.renderTime}ms
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-400">Memory:</span>"
-          <span className={`font-mono ${metrics.memoryUsage > 50 ? 'text-red-400' : 'text-green-400'}`}>"`"`
-            {metrics.memoryUsage}MB
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-400">Network:</span>"
-          <span className={`font-mono ${metrics.networkLatency > 500 ? 'text-red-400' : 'text-green-400'}`}>"`"`
-            {metrics.networkLatency}ms
-          </span>
-        </div>
-      </div>
-      <div className="mt-3 pt-2 border-t border-slate-700 text-xs text-gray-500">"
-        Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
-  )
-import React from 'react";
-const PerformanceMonitor: React.FC = () => {return null}
-=======
 
       <div className="space-y-2 text-sm">
-        <div className="flex justify-between">
-          <span>Load Time:</span>
+        <div className="flex justify-between"></div>
+          <span>Load Time:</span>"
           <span className="text-cyan-400">
             {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
           </span>
         </div>
-        
-        <div className="flex justify-between">
-          <span>FCP:</span>
+        "
+        <div className="flex justify-between"></div>
+          <span>FCP:</span>"
           <span className="text-green-400">
             {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(2)}ms` : 'N/A'}
           </span>
         </div>
-        
-        <div className="flex justify-between">
-          <span>LCP:</span>
+        "
+        <div className="flex justify-between"></div>
+          <span>LCP:</span>"
           <span className="text-yellow-400">
             {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(2)}ms` : 'N/A'}
           </span>
         </div>
-        
-        <div className="flex justify-between">
-          <span>FID:</span>
+        "
+        <div className="flex justify-between"></div>
+          <span>FID:</span>"
           <span className="text-orange-400">
             {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(2)}ms` : 'N/A'}
           </span>
         </div>
-        
-        <div className="flex justify-between">
-          <span>CLS:</span>
+        "
+        <div className="flex justify-between"></div>
+          <span>CLS:</span>"
           <span className="text-red-400">
             {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}
           </span>
         </div>
       </div>
-
-      <div className="mt-2 text-xs text-gray-400">
+"
+      <div className="mt-2 text-xs text-gray-400"></div>
         Press Ctrl+Shift+P to toggle
       </div>
     </div>
   );
-=======
-import React from 'react';
-<<<<<<< HEAD
-const PerformanceMonitor: React.FC = () => { return null; }
->>>>>>> origin/main
+
 export default PerformanceMonitor;
       )
     </div>
-<<<<<<< HEAD
   )
 export default PerformanceMonitor;
-=======
-  );
-};
-=======
-
-interface PerformanceMonitorProps {
-  onMetricsUpdate: (metrics: {
-    fcp?: number;
-    lcp?: number;
-    fid?: number;
-    cls?: number;
-    ttfb?: number;
-  }) => void;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
-  return null;
->>>>>>> origin/main
 };
 
->>>>>>> origin/main
-export default PerformanceMonitor;
->>>>>>> origin/main
+export default PerformanceMonitorPage;

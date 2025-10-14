@@ -1,26 +1,5 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { Helmet } from 'react-helmet-async'
-interface Props { children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void }
-interface State { hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
-<<<<<<< HEAD
-  errorId: string}
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async";
-interface Props {children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void}
-interface State {hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string}
-=======
-  errorId: string }
-import React, { Component, ErrorInfo, ReactNode } from 'react';'
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 interface Props { children: ReactNode;
   fallback?: ReactNode;
@@ -30,113 +9,37 @@ interface State { hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string; }
-=======
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-=======
-import React, { Component, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-<<<<<<< HEAD
-  onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
-<<<<<<< HEAD
-=======
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
-=======
->>>>>>> origin/main
->>>>>>> a6fbec30ec73a2dbaa370e4e107adc185d69ffc3
 }
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
   error?: Error;
-=======
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
-=======
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-=======
   error?: Error;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> a6fbec30ec73a2dbaa370e4e107adc185d69ffc3
+  error?: Error;
 }
 
->>>>>>> origin/main
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-<<<<<<< HEAD
-      errorId: '''
-    }
-      errorInfo: null,''
-      errorId: ''}'
-    }
-    }
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,}
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}``
-    }
-    }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    }
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {'
-      console.error('Error caught by boundary:', error, errorInfo)}'
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo)
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {'
-      this.logErrorToService(error, errorInfo)
-      errorInfo}
-    }
-    // Log error to console in development''
-    if (process.env.NODE_ENV === 'development') {''
-      console.error('Error caught by boundary:', error, errorInfo)}'
-    }
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo)
-    // Log error to external service in production''
-    if (process.env.NODE_ENV === 'production') {'
-      this.logErrorToService(error, errorInfo)
-=======
-<<<<<<< HEAD
-      errorId: "" }
-      errorInfo: null,'
-      errorId: "" }
-=======
-      errorId: ''
->>>>>>> origin/main
     };
+    this.state = { hasError: false };
   }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
@@ -149,356 +52,146 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     });
 
-    // Log error to console in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') { console.error('Error caught by boundary:', error, errorInfo) }
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo)
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') { this.logErrorToService(error, errorInfo) }
-      errorInfo}
-    });
-    // Log error to console in development'
-    if (process.env.NODE_ENV === 'development') { '
-      console.error('Error caught by boundary:', error, errorInfo); }
-    }
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-    // Log error to external service in production'
-    if (process.env.NODE_ENV === 'production') { this.logErrorToService(error, errorInfo); }
-=======
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
+    // Call the onError callback if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
+    }
+
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
->>>>>>> origin/main
+      // Here you would typically send the error to a logging service
+      console.error('Production error:', error);
     }
->>>>>>> origin/main
-  }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error tracking service
-    // For example: Sentry, LogRocket, Bugsnag, etc.
-    try {
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-<<<<<<< HEAD
-      }
-        url: window.location.href}
-      // Example: Send to error tracking service
-      // errorTrackingService.captureException(error, { extra: errorData }
-      ''
-      console.error('Error logged to service:', errorData)";
-    } catch (loggingError) {''
-      console.error('Failed to log error to service:', loggingError)}'
-    }
-      // errorTrackingService.captureException(error, { extra: errorData }
-      console.error('Error logged to service:', errorData)} catch (loggingError) {'
-      console.error('Failed to log error to service:', loggingError)}'
-=======
-      };
-<<<<<<< HEAD
-      // Example: Send to error tracking service
-      // errorTrackingService.captureException(error, { extra: errorData });
-      '
-      console.error('Error logged to service:', errorData);
-    } catch (loggingError) { '
-      console.error('Failed to log error to service:', loggingError); }
-    }
-      // errorTrackingService.captureException(error, { extra: errorData })
-      console.error('Error logged to service:', errorData)} catch (loggingError) { console.error('Failed to log error to service:', loggingError) }
->>>>>>> origin/main
-  }
-=======
-
-      // Example: Send to your error tracking service
-      // errorTrackingService.captureException(errorData);
-      console.log('Error logged to service:', errorData);
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
-  };
-
->>>>>>> origin/main
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-<<<<<<< HEAD
-      errorId: '''
-      errorInfo: null,''
-      errorId: ''}'
-    }
-  private handleReload = () => {
-    window.location.reload()
-  private handleGoHome = () => {window.location.href = '/'"}"
-    }
-  private handleReload = () => {
-    window.location.reload()
-  private handleGoHome = () => {
-    window.location.href = '/'}'
-    window.location.reload();}
-  private handleGoHome = () => {''
-    window.location.href = '/'}'
-  }
-=======
-      errorId: ''
-<<<<<<< HEAD
-      errorInfo: null,'
-      errorId: "" }
-    });
-  }
-  private handleReload = () => { window.location.reload(); }
-  private handleGoHome = () => { window.location.href = '/'; }
-    })}
-  private handleReload = () => { window.location.reload() }
-  private handleGoHome = () => { window.location.href = '/' }
-    window.location.reload();}
-  };
-  private handleGoHome = () => { '
-    window.location.href = '/'; }
-=======
-    });
-  };
-
-  private handleReload = () => {
-    window.location.reload();
-  };
-
-  private copyErrorDetails = () => {
-    const errorDetails = {
-      error: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString()
-    };
-
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-      .then(() => {
-        alert('Error details copied to clipboard');
-      })
-      .catch(() => {
-        alert('Failed to copy error details');
-      });
->>>>>>> origin/main
-  };
-
->>>>>>> origin/main
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-<<<<<<< HEAD
-        return this.props.fallback}
-        return this.props.fallback;}
-=======
+
         return this.props.fallback;
       }
 
->>>>>>> origin/main
       // Default error UI
       return (
-<<<<<<< HEAD
-        <>
-          <Helmet>
-            <title>Error - Zion Tech Group</title>
-            <meta name="robots" content="noindex, nofollow" />"
-          </Helmet>
-<<<<<<< HEAD
-          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">"
-            <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">"
-              {/* Error Icon */}
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">"
-=======
+
           <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-            <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
-              { /* Error Icon */ }
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
->>>>>>> origin/main
-                <svg 
-                  className="w-8 h-8 text-red-400" "
-                  fill="none" "
-                  stroke="currentColor" "
-                  viewBox="0 0 24 24""
+        <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center"></div>
+              { /* Error Icon */ }"
+              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6"></div>
+
+                <svg "
+                  className="w-8 h-8 text-red-400" ""
+                  fill="none" ""
+                  stroke="currentColor" ""
+                  viewBox="0 0 24 24"""
                   aria-hidden="true""
                 >
                   <path 
-<<<<<<< HEAD
+"
                     strokeLinecap="round" "
-                    strokeLinejoin="round" "
-                    strokeWidth={2} 
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" "
-                  />
-                </svg>
-              </div>
-              {/* Error Title */}
-              <h1 className="text-2xl font-bold text-white mb-4">"
-                Oops! Something went wrong
-              </h1>
-              {/* Error Message */}
-              <p className="text-gray-300 mb-6 leading-relaxed">''
-                We're sorry, but something unexpected happened. Our team has been notified '
-                and is working to fix this issue.
-              </p>
-              {/* Error ID for support */}
-              {this.state.errorId && (
-                <div className="bg-slate-700 rounded-lg p-3 mb-6">"
-                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>"
-                  <code className="text-xs text-cyan-400 font-mono break-all">}"
-                    {this.state.errorId}
-                  </code>
-                </div>
-              )
-              {/* Action Buttons */}
-              <div className="space-y-3">"
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800""
-=======
-                    strokeLinecap="round" 
                     strokeLinejoin="round" 
-                    strokeWidth={ 2 }
+                    strokeWidth={ 2 }"
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" 
                   />
                 </svg>
               </div>
-              { /* Error Title */ }
+              { /* Error Title */ }"
               <h1 className="text-2xl font-bold text-white mb-4">
                 Oops! Something went wrong
               </h1>
-              { /* Error Message */ }
+              { /* Error Message */ }"
               <p className="text-gray-300 mb-6 leading-relaxed">'
                 We're sorry, but something unexpected happened. Our team has been notified 
                 and is working to fix this issue.
               </p>
               { /* Error ID for support */ }
-              { this.state.errorId && (
+              { this.state.errorId && ("
                 <div className="bg-slate-700 rounded-lg p-3 mb-6">
-                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>
+          <p className="text-sm text-gray-400 mb-1">Error ID:</p>"
                   <code className="text-xs text-cyan-400 font-mono break-all"> }
                     { this.state.errorId }
                   </code>
-                </div>
+                </div>)
               )}
-              { /* Action Buttons */ }
-              <div className="space-y-3">
+              { /* Action Buttons */ }"
+              <div className="space-y-3"></div>
                 <button
-                  onClick={ this.handleRetry }
+                  onClick={ this.handleRetry }"
                   className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800"
->>>>>>> origin/main
+
                 >
                   Try Again
-                </button>
-                <div className="flex space-x-3">"
+                </button>"
+                <div className="flex space-x-3"></div>"
                   <button
-<<<<<<< HEAD
-                    onClick={this.handleGoHome}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800""
-=======
-                    onClick={ this.handleGoHome }
+
+                    onClick={ this.handleGoHome }"
                     className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
->>>>>>> origin/main
+
                   >
                     Go Home
                   </button>
                   <button
-<<<<<<< HEAD
-                    onClick={this.handleReload}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800""
-=======
-                    onClick={ this.handleReload }
+
+                    onClick={ this.handleReload }"
                     className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
->>>>>>> origin/main
+
                   >
                     Reload Page
                   </button>
                 </div>
               </div>
-<<<<<<< HEAD
-              {/* Support Information */}
-              <div className="mt-8 pt-6 border-t border-slate-700">"
-                <p className="text-sm text-gray-400 mb-2">"
-=======
-              { /* Support Information */ }
+
+              { /* Support Information */ }"
               <div className="mt-8 pt-6 border-t border-slate-700">
-                <p className="text-sm text-gray-400 mb-2">
->>>>>>> origin/main
+          <p className="text-sm text-gray-400 mb-2">
+
                   Still having trouble? Contact our support team:
-                </p>
-                <div className="text-sm text-cyan-400">"
-                  <p>Email: kleber@ziontechgroup.com</p>
+                </p>"
+                <div className="text-sm text-cyan-400">
+          <p>Email: kleber@ziontechgroup.com</p>
                   <p>Phone: +1-302-464-0950</p>
                 </div>
               </div>
-<<<<<<< HEAD
-              {/* Development Error Details */}''
-              {process.env.NODE_ENV === 'development' && this.state.error && ('
-                <details className="mt-6 text-left">"
-                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">"
-                    Error Details (Development)
-                  </summary>
-                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">"
-                    <div className="mb-2">}"
-                      <strong>Error:</strong> {this.state.error.message}
-=======
+
               {/* Development Error Details */}'
-              { process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mt-6 text-left">
-                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
+              { process.env.NODE_ENV === 'development' && this.state.error && ("
+                <details className="mt-6 text-left">"
+                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">)
                     Error Details (Development)
-                  </summary>
+                  </summary>"
                   <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">
-                    <div className="mb-2"> }
+        <div className="mb-2"></div> }
                       <strong>Error:</strong> { this.state.error.message }
->>>>>>> origin/main
-                    </div>
-                    <div className="mb-2">"
+
+                    </div>"
+                    <div className="mb-2"></div>"
                       <strong>Stack:</strong>
-<<<<<<< HEAD
-                      <pre className="whitespace-pre-wrap mt-1">"
-                        {this.state.error.stack}
-=======
+"
                       <pre className="whitespace-pre-wrap mt-1">
                         { this.state.error.stack }
->>>>>>> origin/main
+
                       </pre>
                     </div>
                     { this.state.errorInfo && (
-                      <div>
+                      <div></div>
                         <strong>Component Stack:</strong>
-<<<<<<< HEAD
-                        <pre className="whitespace-pre-wrap mt-1">}"
-                          {this.state.errorInfo.componentStack}
-=======
+"
                         <pre className="whitespace-pre-wrap mt-1"> }
                           { this.state.errorInfo.componentStack }
->>>>>>> origin/main
+
                         </pre>
-                      </div>
+                      </div>)
                     )
                   </div>
                 </details>
-<<<<<<< HEAD
               )
             </div>
           </div>
@@ -507,20 +200,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return this.props.children}
 export default EnhancedErrorBoundary
 export default EnhancedErrorBoundary';
-=======
               )}
-=======
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
-            <div className="mb-6">
-              <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-              <h1 className="text-3xl font-bold text-white mb-2">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified.
-              </p>
-            </div>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
@@ -584,11 +264,8 @@ export default EnhancedErrorBoundary';
 
             <div className="mt-6 text-sm text-gray-400">
               If this problem persists, please contact our support team.
->>>>>>> origin/main
             </div>
           </div>
-=======
->>>>>>> a6fbec30ec73a2dbaa370e4e107adc185d69ffc3
     this.state = { hasError: false };
   }
 
@@ -600,7 +277,6 @@ export default EnhancedErrorBoundary';
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-=======
     this.state = {
       hasError: false,
       error: null,
@@ -636,7 +312,6 @@ export default EnhancedErrorBoundary';
 
     // Call custom error handler if provided
     this.props.onError?.(error, errorInfo);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
@@ -723,105 +398,33 @@ Please describe what you were doing when this error occurred:
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
       return (
         <div>
           <h2>Something went wrong.</h2>
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
           </details>
-<<<<<<< HEAD
-=======
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      // Default error UI
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-6 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified.
-            </p>
-            
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-cyan-400 hover:text-cyan-300 mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-black/50 p-4 rounded text-xs text-red-400 overflow-auto max-h-40">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  <div className="mb-2">
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap mt-1">
-                      {this.state.error.stack}
-                    </pre>
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-
-            <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded transition-colors"
-              >
-                Try Again
-              </button>
-              
-              <button
-                onClick={this.handleReload}
-                className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded transition-colors"
-              >
-                Reload Page
-              </button>
-              
-              <button
-                onClick={this.handleReportBug}
-                className="w-full bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded transition-colors"
-              >
-                Report Bug
-              </button>
-            </div>
-
-            <div className="mt-6 text-sm text-gray-400">
-              Error ID: {this.state.errorId}
-            </div>
-          </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
-=======
->>>>>>> origin/main
->>>>>>> a6fbec30ec73a2dbaa370e4e107adc185d69ffc3
+const EnhancedErrorBoundaryPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="EnhancedErrorBoundary - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">EnhancedErrorBoundary</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
         </div>
-      );
-    }
+  );
+}
 
     return this.props.children;
   }
 }
+;
+export default EnhancedErrorBoundary;
 
-<<<<<<< HEAD
 export default EnhancedErrorBoundary;
-=======
-<<<<<<< HEAD
-export default EnhancedErrorBoundary;
-=======
-export default EnhancedErrorBoundary;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> a6fbec30ec73a2dbaa370e4e107adc185d69ffc3

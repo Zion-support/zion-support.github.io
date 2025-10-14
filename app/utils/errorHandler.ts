@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-// errorHandler utility;
-<<<<<<< HEAD
-export const errorHandler = () => {// Implementation;
-  return true}
-export default errorHandler;
-=======
-export const errorHandler = () => { // Implementation;
-  return true; }
+// ErrorHandler utility functions
+export const ErrorHandler = {
+  // Add your utility functions here
 };
-export default errorHandler;
-=======
-"use client;"// errorHandler utility; export const errorHandler = () => {"} // Implementation; return true}""} export default errorHandler;";"
->>>>>>> origin/main
->>>>>>> origin/main
+export default errorHandler

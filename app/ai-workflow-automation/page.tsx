@@ -1,32 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-'use client''
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-"use client"
-export default function Page() {return (
-    <div className="min-h-screen bg-white">"
-=======
-export default function Page() {
-=======
->>>>>>> a6fbec30ec73a2dbaa370e4e107adc185d69ffc3
 import React from "react";
 import { Helmet } from "react-helmet-async";
->>>>>>> origin/main
+export default function Page() {
 
-const HomePage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/main
       <Helmet>
-<<<<<<< HEAD
         <title>Page - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Professional page services by Zion Tech Group." />"
       </Helmet>
       <div className="container mx-auto px-4 py-16">"
@@ -72,12 +49,6 @@ const HomePage = () => {
       </div>
     </div>
   )
-=======
-        <meta name="description" content="Professional services by Zion Tech Group." />
-=======
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Home - Zion Tech Group" />
->>>>>>> origin/main
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -86,7 +57,6 @@ const HomePage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
-=======
 'use client';
                           {benefit}
                         </li>
@@ -96,12 +66,9 @@ const HomePage = () => {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
       </div>
     </div>
-<<<<<<< HEAD
   ); }
->>>>>>> origin/main
             Page</h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional page solutions tailored to your business needs.</p>
@@ -131,31 +98,9 @@ const HomePage = () => {
       </div>
     </div>
   )}
-<<<<<<< HEAD
 }''
-=======
-            </button>;
-          </div>
-        </div>
-      </div>
-    </div>
-  );}
-}'
-=======
-  );
-<<<<<<< HEAD
-}
-  );
-=======
-};
 
-<<<<<<< HEAD
-export default HomePage;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
-=======
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> a6fbec30ec73a2dbaa370e4e107adc185d69ffc3
+        <meta name=description content=Professional services by Zion Tech Group. />""
+"""
+}
+"""

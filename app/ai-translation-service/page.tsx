@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Target, CheckCircle } from 'lucide-react';
+import { Languages, Target, CheckCircle } from lucide-react;
 import Layout from '../layout';
 
 export default function AITranslationServicePage() {
   const features = [
     {
-      icon: <Target className="w-6 h-6 text-green-400" />,
+      icon: <Target className="w-6 h-6 text-green-400" />,""
       title: 'Industry-Specific Translation',
       description: 'Specialized translation models for legal, medical, technical, and business content'
     }
@@ -80,33 +79,34 @@ export default function AITranslationServicePage() {
     }
   ];
 
+const PagePage = () => {
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
         {/* Hero Section */}
-        <div className="relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative overflow-hidden">""
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">""
+            <div className="text-center">""
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
                 AI Translation
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Service
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">""
+                  {" "}Service""
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
                 Break down language barriers with our advanced AI translation service. 
                 Translate content in 100+ languages with industry-specific accuracy.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">""
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                  to="/contact"""
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"""
                 >
                   Start Translating
                 </Link>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                  to="/contact"""
+                  className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"""
                 >
                   Try Demo
                 </Link>
@@ -116,22 +116,22 @@ export default function AITranslationServicePage() {
         </div>
 
         {/* Features Section */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="py-16">""
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
                 Why Choose Our Translation Service
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">""
                 Advanced AI technology meets human expertise for perfect translations
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">""
+                  <div className="mb-4">{feature.icon}</div>""
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
+                  <p className=text-gray-300>{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -139,24 +139,24 @@ export default function AITranslationServicePage() {
         </div>
 
         {/* Translation Features Section */}
-        <div className="py-16 bg-white/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="py-16 bg-white/5">""
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
                 Translation Capabilities
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">""
                 Comprehensive translation services for all your needs
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""
               {translationFeatures.map((category, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                  <ul className="space-y-2">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">""
+                  <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>""
+                  <ul className="space-y-2">""
                     {category.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={itemIndex} className="flex items-center text-gray-300">""
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />""
                         {item}
                       </li>
                     ))}
@@ -168,40 +168,40 @@ export default function AITranslationServicePage() {
         </div>
 
         {/* Pricing Section */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="py-16">""
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
                 Translation Pricing
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">""
                 Affordable pricing for all your translation needs
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">""
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
-                    <div className="bg-cyan-400 text-black text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
+                    <div className="bg-cyan-400 text-black text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">""
                       Most Popular
                     </div>
                   )}
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300">{plan.period}</span>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
+                  <p className=text-gray-300 mb-6>{plan.description}</p>
+                  <div className="mb-6">""
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>""
+                    <span className="text-gray-300">{plan.period}</span>""
                   </div>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-8">""
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-300">""
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />""
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
+                    to="/contact"""
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
@@ -217,48 +217,25 @@ export default function AITranslationServicePage() {
         </div>
 
         {/* CTA Section */}
-        <div className="py-16 bg-gradient-to-r from-cyan-500/20 to-purple-600/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="py-16 bg-gradient-to-r from-cyan-500/20 to-purple-600/20">""
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
               Ready to Break Language Barriers?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
               Start translating your content with our AI-powered translation service today.
             </p>
             <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              to="/contact"""
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"""
             >
               Start Free Trial
             </Link>
           </div>
         </div>
       </div>
-    </Layout>
-  );
-}
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const HomePage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Home - Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default HomePage;
->>>>>>> origin/main
+export default PagePage;

@@ -1,30 +1,11 @@
-import React from 'react';
-<<<<<<< HEAD
+import React from "react";
 
-const App: React.FC = () => {return (
-    <div className="App">
-      <h1>Test App</h1>
-    </div>
-  )};
-
-export default App;
-=======
-<<<<<<< HEAD
-const App: React.FC = () => { return (
-    <div className="App">
-      <h1>Test App</h1>
-    </div>
-  ); }
-=======
-
-const AppTest: React.FC = () => {
+const AppTest = () => {
   return (
-    <div className="App">
-      <h1>Test App</h1>
+    <div className="min-h-screen bg-slate-900">
+      <h1 className="text-white text-center py-20">Test App</h1>
     </div>
   );
->>>>>>> origin/main
 };
 
-export default AppTest;
->>>>>>> origin/main
+export default App;
