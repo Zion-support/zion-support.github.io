@@ -3,9 +3,10 @@ import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
+
 export default tseslint.config(
   {
-    ignores: [,
+    ignores: [
       'app-broken/**',
       'app-disabled/**',
       'dist/**',
@@ -44,10 +45,10 @@ export default tseslint.config(
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
-    languageOptions: {,
+    languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
-      globals: {,
+      globals: {
         ...globals.browser,
         window: "readonly",
         document: "readonly",
@@ -75,8 +76,8 @@ export default tseslint.config(
         exports: "readonly",
         fs: "readonly",
         __dirname: "readonly",
-        // Jest globals,
-describe: "readonly",
+        // Jest globals
+        describe: "readonly",
         it: "readonly",
         test: "readonly",
         expect: "readonly",
@@ -86,28 +87,24 @@ describe: "readonly",
         afterAll: "readonly",
         jest: "readonly"
       },
-      parserOptions: {,
+      parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {,
+        ecmaFeatures: {
           jsx: true
         }
       }
     },
-    plugins: {,
+    plugins: {
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh
     },
-    rules: {,
+    rules: {
       ...reactHooks.configs.recommended.rules,
-      "": [
-        "warn",
-        { allowConstantExport: true }
-      ],
       "no-console": "off",
       "no-undef": "off",
-      "@": "warn",
-      "@": "warn"
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn"
     }
-  })
+  }
 );
