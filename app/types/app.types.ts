@@ -21,7 +21,7 @@ export interface Service {
 export interface ContactForm {
   name: string;
   email: string;
-  company: string;
+  compunknown: string;
   message: string;
   service: string;
 }

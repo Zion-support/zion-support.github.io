@@ -7,8 +7,8 @@ export const seoData = {
   
   about: {
     title: 'About - Zion Tech Group',
-    description: 'Learn about our company and mission',
-    keywords: 'about, company, mission'
+    description: 'Learn about our compunknown and mission',
+    keywords: 'about, compunknown, mission'
   },
   
   contact: {

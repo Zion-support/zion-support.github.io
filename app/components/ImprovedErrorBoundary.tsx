@@ -7,7 +7,7 @@ export default function Page() {
       <Helmet>
         <title>ImprovedErrorBoundary - Zion Tech Group</title>
         <meta name="description" content="Professional ImprovedErrorBoundary solutions and services" />
-        <meta name="keywords" content="improvederrorboundary" />
+        <meta name="keywords" content="improved_errorboundary" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

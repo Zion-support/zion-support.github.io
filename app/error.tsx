@@ -5,16 +5,16 @@ export default function Page() {
   return (
     <>
       <Helmet>
-        <title>error - Zion Tech Group</title>
-        <meta name="description" content="Professional error solutions and services" />
-        <meta name="keywords" content="error" />
+        <title>_error - Zion Tech Group</title>
+        <meta name="description" content="Professional _error solutions and services" />
+        <meta name="keywords" content="_error" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">error</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">_error</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional error solutions and services
+              Professional _error solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">

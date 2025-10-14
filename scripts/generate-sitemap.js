@@ -34,7 +34,6 @@ ${pages.map(page => `  <url>
     fs.mkdirSync(publicDir, { recursive: true });
   }
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('Sitemap generated successfully!');
-};
+  };
 
 generateSitemap();

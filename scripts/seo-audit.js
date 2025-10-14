@@ -5,11 +5,9 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
  */
-console.log('🔍 Starting SEO audit...')
 // Check HTML structure
 function auditHTMLStructure() {
   
-  console.log('📄 Auditing HTML structure...')
   const issues = []
   const recommendations = []
   // Check for main HTML file
@@ -89,7 +87,6 @@ function auditHTMLStructure() {
 // Check sitemap
 function auditSitemap() {
   
-  console.log('🗺️ Auditing sitemap...')
   const issues = []
   const recommendations = []
   const sitemapPath = path.join(__dirname, '../public/sitemap.xml')
@@ -122,7 +119,6 @@ function auditSitemap() {
 // Check robots.txt
 function auditRobots() {
   
-  console.log('🤖 Auditing robots.txt...')
   const issues = []
   const recommendations = []
   const robotsPath = path.join(__dirname, '../public/robots.txt')
@@ -150,7 +146,6 @@ function auditRobots() {
 // Check performance metrics
 function auditPerformance() {
   
-  console.log('⚡ Auditing performance...')
   const issues = []
   const recommendations = []
   const distDir = path.join(__dirname, '../dist')
@@ -182,7 +177,6 @@ function auditPerformance() {
 
 // Generate SEO report
 function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudit) {
-  console.log('📊 Generating SEO report...')
   const allIssues = [
     ...htmlAudit.issues,
     ...sitemapAudit.issues,
@@ -216,10 +210,6 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
     path.join(__dirname, '../seo-audit-report.json'),
     JSON.stringify(report, null, 2)
   )
-  console.log('✅ SEO audit report generated')
-  console.log(`📊 SEO Score: ${report.summary.score}/100`)
-  console.log(`❌ Issues found: ${report.summary.totalIssues}`)
-  console.log(`💡 Recommendations: ${report.summary.totalRecommendations}`)
   return report
 }
 
@@ -232,19 +222,15 @@ async function audit() {
     const robotsAudit = auditRobots()
     const performanceAudit = auditPerformance()
     const report = generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudit)
-    console.log('🎉 SEO audit completed successfully!')
     if (report.summary.totalIssues > 0) {
-      console.log('\n❌ Issues to fix:')
-      report.issues.forEach(issue => console.log(`   - ${issue}`))
+      report.issues.forEach(issue => )
     }
 
     if (report.summary.totalRecommendations > 0) {
-      console.log('\n💡 Recommendations:')
-      report.recommendations.forEach(rec => console.log(`   - ${rec}`))
+      report.recommendations.forEach(rec => )
     }
 
-  } catch (error) {
-    console.error('❌ Error during SEO audit:', error)
+  } catch (_error) {
     process.exit(1)
   }
 }

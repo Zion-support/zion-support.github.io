@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',    email: ',
-    company: ',
+    compunknown: ',
     phone: ',
     service: ',
     message: ';)
@@ -28,14 +28,14 @@ const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev 
       setFormData({
         name: ',
         email: ',
-        company: ',
+        compunknown: ',
         phone: ',
         service: ',
 message: ']
     });]
-    } catch (error) {
-      setSubmitStatus('error)]
-      setSubmitStatus('error)
+    } catch (_error) {
+      setSubmitStatus('_error)]
+      setSubmitStatus('_error)
     } finally {
       setIsSubmitting(false)
   }, [])

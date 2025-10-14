@@ -9,15 +9,12 @@ const content = fs.readFileSync(filePath, 'utf8');
 const jsxOpenTags = content.match(/<[^/][^>]*>/g) || [];
 const jsxCloseTags = content.match(/<\/[^>]*>/g) || [];
 
-console.log('Opening tags: ', jsxOpenTags.length);
-console.log('Closing tags: ', jsxCloseTags.length);
-
 // Check for specific issues
 const lines = content.split('\n');
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
   if (line.includes('<>') || line.includes('</>')) {
-    console.log(`Line ${i + 1}: ${line.trim()}`);
+    }`);
   }
 }
 
@@ -42,6 +39,3 @@ for (const tag of jsxCloseTags) {
   if (tag.includes('</>')) closeFragmentCount++;
 }
 
-console.log('Div tags - Open:', divCount, 'Close: ', closeDivCount);
-console.log('Section tags - Open:', sectionCount, 'Close: ', closeSectionCount);
-console.log('Fragment tags - Open:', fragmentCount, 'Close: ', closeFragmentCount);

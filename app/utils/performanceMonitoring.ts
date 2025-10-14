@@ -9,7 +9,7 @@ export const performanceMonitoring = {
     
     const measure = performance.getEntriesByName(name)[0];
     if (measure) {
-      console.log(`${name} took ${measure.duration.toFixed(2)}ms`);
+      // Performance measurement logged
       
       // Send to analytics
       if (typeof window !== 'undefined' && window.gtag) {

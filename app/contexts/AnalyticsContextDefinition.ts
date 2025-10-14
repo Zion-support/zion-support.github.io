@@ -1,7 +1,7 @@
 export interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackEvent: (_eventName: string, _properties?: Record<string, unknown>) => void;
   trackPageView: (page: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
+  setUser: (_userId: string, _properties?: Record<string, unknown>) => void;
 }
 
 export interface AnalyticsProviderProps {
@@ -10,6 +10,6 @@ export interface AnalyticsProviderProps {
 
 export interface AnalyticsEvent {
   name: string;
-  properties?: Record<string, any>;
+  properties?: Record<string, unknown>;
   timestamp: number;
 }

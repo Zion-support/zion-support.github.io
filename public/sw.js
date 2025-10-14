@@ -18,12 +18,10 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
-      .catch((error) => {
-        console.error('Failed to cache static assets:', error);
-      })
+      .catch((_error) => {
+        })
   );
   self.skipWaiting();
 });
@@ -36,7 +34,6 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
           })
@@ -103,8 +100,7 @@ self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(
       // Handle background sync tasks
-      console.log('Background sync triggered')
-    );
+      );
   }
 });
 
@@ -134,7 +130,7 @@ self.addEventListener('push', (event) => {
   };
   
   event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
+    self._registration.showNotification('Zion Tech Group', options)
   );
 });
 

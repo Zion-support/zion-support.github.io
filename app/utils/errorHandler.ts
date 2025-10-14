@@ -1,11 +1,9 @@
 export const errorHandler = {
-  handle: (error: Error, context?: string) => {
-    console.error('Error occurred:', error);
-    
+  handle: (_error: Error, context?: string) => {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: error.message,
+        description: _error.message,
         fatal: false,
         context: context
       });
@@ -17,9 +15,9 @@ export const errorHandler = {
     };
   },
   
-  handleApiError: (error: any) => {
-    const status = error.response?.status;
-    const message = error.response?.data?.message || error.message;
+  handleApiError: (error: unknown) => {
+    const status = (error as any).response?.status;
+    const message = (error as any).response?.data?.message || (error as Error).message;
     
     switch (status) {
       case 400:

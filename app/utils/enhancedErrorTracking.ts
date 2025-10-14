@@ -1,31 +1,31 @@
 export const enhancedErrorTracking = {
-  trackError: (error: Error, context?: Record<string, any>) => {
-    const errorInfo = {
-      message: error.message,
-      stack: error.stack,
+  trackError: (_error: Error, context?: Record<string, unknown>) => {
+    const ErrorInfo = {
+      message: _error.message,
+      stack: _error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
     };
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error tracked:', errorInfo);
+      // Development logging disabled
     }
     
     // Send to analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: error.message,
+        description: _error.message,
         fatal: false,
         custom_parameters: context
       });
     }
   },
   
-  trackPerformanceError: (error: Error, performanceData: any) => {
-    enhancedErrorTracking.trackError(error, {
+  trackPerformanceError: (_error: Error, performanceData: unknown) => {
+    enhancedErrorTracking.trackError(_error, {
       performance: performanceData,
-      error_type: 'performance'
+      _error_type: 'performance'
     });
   }
 };

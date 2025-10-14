@@ -55,7 +55,6 @@ const path = require('path')
 
  */
 
-console.log('Running performance optimizations...')
 // 1. Optimize Vite configuration for better chunking
 const viteConfigPath = path.join(__dirname, '../vite.config.ts')
 let viteConfig = fs.readFileSync(viteConfigPath, 'utf8')
@@ -182,10 +181,9 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const sendToAnalytics = (metric: PerformanceMetrics) => {
       // Send to your analytics service
-      console.log('Performance metric:', metric)
       // Example: Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metric.name, {
+      if (typeof window !== 'undefined' && (window as unknown).gtag) {
+        (window as unknown).gtag('event', metric.name, {
           event_category: 'Web Vitals',
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
@@ -232,7 +230,6 @@ function analyzeBundle() {
   
   const distPath = path.join(__dirname, '../dist')
   if (!fs.existsSync(distPath)) {
-    console.log('❌ Dist folder not found. Run npm run build first.')
     return
   }
 
@@ -242,42 +239,30 @@ function analyzeBundle() {
   const cssFiles = files.filter(file => file.endsWith('.css'))
   let totalJSSize = 0
   let totalCSSSize = 0
-  console.log('\\n📊 Bundle Analysis Report')
-  console.log('===')
-  console.log('\\n📦 JavaScript Files:')
   jsFiles.forEach(file => {
     const filePath = path.join(assetsPath, file)
     const stats = fs.statSync(filePath)
     const sizeKB = (stats.size / 1024).toFixed(2)
     totalJSSize += stats.size
-    console.log(\`  \${file}: \${sizeKB} KB\`)
-  })
-  console.log('\\n🎨 CSS Files:')
+    })
   cssFiles.forEach(file => {
     const filePath = path.join(assetsPath, file)
     const stats = fs.statSync(filePath)
     const sizeKB = (stats.size / 1024).toFixed(2)
     totalCSSSize += stats.size
-    console.log(\`  \${file}: \${sizeKB} KB\`)
-  })
-  console.log('\\n📈 Summary:')
-  console.log(\`  Total JS Size: \${(totalJSSize / 1024).toFixed(2)} KB\`)
-  console.log(\`  Total CSS Size: \${(totalCSSSize / 1024).toFixed(2)} KB\`)
-  console.log(\`  Total Bundle Size: \${((totalJSSize + totalCSSSize) / 1024).toFixed(2)} KB\`)
+    })
+  .toFixed(2)} KB\`)
+  .toFixed(2)} KB\`)
+  / 1024).toFixed(2)} KB\`)
   // Recommendations
-  console.log('\\n💡 Optimization Recommendations:')
   if (totalJSSize > 500 * 1024) {
-    console.log('  ⚠️  JavaScript bundle is large. Consider code splitting.')
-  }
+    }
   if (totalCSSSize > 50 * 1024) {
-    console.log('  ⚠️  CSS bundle is large. Consider purging unused styles.')
-  }
+    }
   if (jsFiles.length > 20) {
-    console.log('  ⚠️  Many JS chunks. Consider consolidating smaller chunks.')
-  }
+    }
 
-  console.log('\\n✅ Bundle analysis complete!')
-}
+  }
 
 analyzeBundle();`
 fs.writeFileSync(bundleAnalyzerPath, bundleAnalyzerContent)
@@ -288,11 +273,7 @@ packageJson.scripts['analyze:bundle'] = 'node scripts/analyze-bundle.js'
 packageJson.scripts['perf:audit'] = 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html;
 packageJson.scripts['perf:check'] = 'npm run build && npm run analyze:bundle'
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
-console.log('✅ Performance optimizations completed!')
-console.log('📊 Run "npm run analyze:bundle" to analyze your bundle')
-console.log('🔍 Run "npm run perf:audit" to run Lighthouse audit')
 const optimizePerformance = () => {
-  console.log('🚀 Starting performance optimization...')
   // Create optimized CSS
   const cssOptimizations = `
 /* Performance optimizations */
@@ -343,8 +324,6 @@ img {
   // Write optimized CSS
   const cssPath = path.join(__dirname, '..', 'public', 'performance.css')
   fs.writeFileSync(cssPath, cssOptimizations)
-  console.log('✅ Performance CSS created')
-
   // Create preload hints
   const preloadHints = `
 <!-- Preload critical resources -->
@@ -364,7 +343,6 @@ img {
 `
   const preloadPath = path.join(__dirname, '..', 'public', 'preload-hints.html')
   fs.writeFileSync(preloadPath, preloadHints)
-  console.log('✅ Preload hints created')
   // Create service worker for caching
   const serviceWorkerContent = `
 const CACHE_NAME = 'zion-tech-group-v2'

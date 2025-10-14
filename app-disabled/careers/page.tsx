@@ -40,7 +40,7 @@ const eersPage: React.FC = () => {
         'Comprehensive health insurance,';
         'Flexible work arrangements,';
         'Professional development budget,';
-        '401k with company matching';
+        '401k with compunknown matching';
       title: 'Quantum Computing Researcher,';
       department: 'Research,';
       location: 'San Francisco, CA,';
@@ -314,7 +314,7 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
   <>
     <div />
 <>        <title>eers - Zion Tech Group | Join Our Team<
-        <meta name="description" content='Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture. ';
+        <meta name="description" content='Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our compunknown culture. ';
         <meta name="keywords" content='careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs ';
       <
         <section className="py-20 px-4'>';

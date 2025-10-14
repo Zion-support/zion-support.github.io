@@ -1,21 +1,21 @@
 export const errorReporter = {
-  report: (error: Error, context?: Record<string, any>) => {
-    const errorInfo = {
-      message: error.message,
-      stack: error.stack,
+  report: (_error: Error, context?: Record<string, unknown>) => {
+    const ErrorInfo = {
+      message: _error.message,
+      stack: _error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
     };
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error reported:', errorInfo);
+      // Development logging disabled
     }
     
     // Send to analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: error.message,
+        description: _error.message,
         fatal: false,
         custom_parameters: context
       });

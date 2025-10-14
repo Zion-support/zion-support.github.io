@@ -18,15 +18,15 @@ const AdvancedErrorBoundary = () => {
   React.useEffect(() => {
     const handleError = () => {
       setHasError(true);
-      setError(error);
+      setError(_error);
       if (onError) {
-        onError(error);
+        onError(_error);
       }
     };
 
     // Simulate error boundary behavior;
     try {
-      // This will catch any errors thrown by children;
+      // This will catch unknown errors thrown by children;
     } catch (err) {
       handleError(err as Error);
     }
@@ -35,12 +35,12 @@ const AdvancedErrorBoundary = () => {
   if (hasError) {
     return (
     
-<>      <div data-testid="error-boundary'>';
+<>      <div data-testid="_error-boundary'>';
         <h2>Unexpected Application Error!</h2>
         <p>Oops! Something went wrong</p>
-        {error && (
+        {_error && (
           <div />
-<h3 style={{ fontStyle: 'italic',}}>{error.message}</h3>';
+<h3 style={{ fontStyle: 'italic',}}>{_error.message}</h3>';
             <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)',}}>';
               {error.stack}
             </pre>
@@ -61,11 +61,11 @@ const AdvancedErrorBoundary = () => {
 
 const TestComponent = () => <div>Test Component</div>;
 const ErrorComponent = () => {;
-  throw new Error('Test error');'
+  throw new Error('Test _error');'
 };
 
 describe('Advanced Components', () => {';
-  test('AdvancedErrorBoundary renders children when no error', () => {';
+  test('AdvancedErrorBoundary renders children when no _error', () => {';
     render(
       <AdvancedErrorBoundary />
         <TestComponent /></TestComponent>
@@ -74,8 +74,8 @@ describe('Advanced Components', () => {';
     expect(screen.getByText('Test Component')).toBeInTheDocument();'
   });
 
-  test('AdvancedErrorBoundary shows error UI when error occurs', () => {';
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});';
+  test('AdvancedErrorBoundary shows _error UI when _error occurs', () => {';
+    const consoleSpy = jest.spyOn(console, '_error').mockImplementation(() => {});';
     
     render(
       <AdvancedErrorBoundary />
@@ -83,7 +83,7 @@ describe('Advanced Components', () => {';
       </AdvancedErrorBoundary>
     );
     ;
-    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();';
+    expect(screen.getByTestId('_error-boundary')).toBeInTheDocument();';
     expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();';
     consoleSpy.mockRestore();
   });

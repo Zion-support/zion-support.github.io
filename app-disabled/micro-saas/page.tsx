@@ -13,7 +13,7 @@ interface MicroSaasProduct {
 }
   id: string;
 
-  icon: .ComponentType<any>;
+  icon: .ComponentType<unknown>;
 
   title: string;
 
@@ -87,7 +87,7 @@ import { Right, Circle, Star,    } from "lucide-react";";
     '24/7 technical support,';
     'Easy integration with existing tools,';
     'Free trial for all products,';
-    Cancel anytime, no long-term contracts;
+    Cancel unknowntime, no long-term contracts;
     {
     {}
       icon: value: '10,000+,';

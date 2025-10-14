@@ -14,18 +14,18 @@ export const apiClient = {
     const response = await fetch(url, config);
     
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(`HTTP _error! status: ${response.status}`);
     }
     
     return response.json();
   },
   
   get: <T>(endpoint: string) => apiClient.request<T>(endpoint),
-  post: <T>(endpoint: string, data: any) => apiClient.request<T>(endpoint, {
+  post: <T>(endpoint: string, data: unknown) => apiClient.request<T>(endpoint, {
     method: 'POST',
     body: JSON.stringify(data),
   }),
-  put: <T>(endpoint: string, data: any) => apiClient.request<T>(endpoint, {
+  put: <T>(endpoint: string, data: unknown) => apiClient.request<T>(endpoint, {
     method: 'PUT',
     body: JSON.stringify(data),
   }),

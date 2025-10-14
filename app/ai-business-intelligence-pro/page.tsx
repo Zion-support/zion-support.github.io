@@ -9,7 +9,7 @@ import { CheckCircle } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 
-function AIBusinessIntelligencePro() {
+export default function AIBusinessIntelligencePro() {
   const features = [
     {
       icon: Brain,

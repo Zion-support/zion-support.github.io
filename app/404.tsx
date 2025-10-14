@@ -7,7 +7,7 @@ export default function Page() {
       <Helmet>
         <title>404 - Page Not Found - Zion Tech Group</title>
         <meta name="description" content="The page you are looking for does not exist" />
-        <meta name="keywords" content="404, page not found, error" />
+        <meta name="keywords" content="404, page not found, _error" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

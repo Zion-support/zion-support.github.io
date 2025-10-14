@@ -7,16 +7,16 @@ export const configManager = {
       seo: true,
       performance: true
     }
-  } as Record<string, any>,
+  } as Record<string, unknown>,
   
   get: (key: string) => {
-    return key.split('.').reduce((obj, k) => obj?.[k], configManager.config);
+    return key.split('.').reduce((obj: any, k) => obj?.[k], configManager.config);
   },
   
-  set: (key: string, value: any) => {
+  set: (key: string, value: unknown) => {
     const keys = key.split('.');
     const lastKey = keys.pop();
-    const target = keys.reduce((obj, k) => obj[k] = obj[k] || {}, configManager.config);
+    const target = keys.reduce((obj: any, k) => obj[k] = obj[k] || {}, configManager.config);
     if (lastKey) {
       target[lastKey] = value;
     }
