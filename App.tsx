@@ -4,23 +4,15 @@ import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 
 // Components
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import AnalyticsProvider from './app/components/AnalyticsProvider';
-import LoadingStates from './app/components/LoadingStates';
+import Footer from './src/components/Footer';
 
 // Pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ContactPage from './app/contact/page';
-import ServicesPage from './app/services/page';
-import BlogPage from './app/blog/page';
-import TutorialsPage from './app/tutorials/page';
-import DemoPage from './app/demo/page';
-import SupportPage from './app/support/page';
-import PrivacyPage from './app/privacy/page';
-import TermsPage from './app/terms/page';
-import PricingPage from './app/pricing/page';
+import HomePage from './src/page';
+import AboutPage from './src/about/page';
+import ContactPage from './src/pages/ContactPage';
+import ServicesPage from './src/services/page';
+import BlogPage from './src/pages/BlogPage';
+import SolutionsPage from './src/pages/SolutionsPage';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -63,12 +55,10 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <AnalyticsProvider>
           <Router>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-              <Navigation />
               <main className="relative z-10" id="main-content" role="main">
-                <Suspense fallback={<LoadingStates />}>
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-white">Loading...</div></div>}>
                   <Routes>
                     {/* Main Pages */}
                     <Route path="/" element={<HomePage />} />
@@ -76,12 +66,7 @@ function App() {
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/services" element={<ServicesPage />} />
                     <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/demo" element={<DemoPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={
@@ -101,7 +86,6 @@ function App() {
               <Footer />
             </div>
           </Router>
-        </AnalyticsProvider>
       </ErrorBoundary>
     </HelmetProvider>
   );
