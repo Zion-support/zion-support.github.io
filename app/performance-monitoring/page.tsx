@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Shield, 
-  Eye, 
+  Activity, 
+  BarChart3, 
   Zap, 
   CheckCircle, 
   ArrowRight, 
@@ -20,60 +20,58 @@ import {
   Smartphone,
   Database,
   Cloud,
-  Activity,
   Settings,
-  BarChart3,
   AlertTriangle,
-  Terminal
+  TrendingUp
 } from 'lucide-react';
 
-const AiContentModerationProPage: React.FC = () => {
+const PerformanceMonitoringPage: React.FC = () => {
   const features = [
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "AI-Powered Content Analysis",
-      description: "Advanced AI algorithms automatically detect and moderate inappropriate content across all platforms."
+      icon: <Activity className="w-6 h-6" />,
+      title: "Real-Time Monitoring",
+      description: "Monitor your applications and infrastructure in real-time with instant alerts and notifications."
     },
     {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Real-Time Monitoring",
-      description: "24/7 real-time content monitoring with instant alerts and automated moderation actions."
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Performance Analytics",
+      description: "Comprehensive performance analytics with detailed insights and trend analysis."
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Moderation",
-      description: "Intelligent automation handles content moderation with minimal human intervention."
+      title: "Automated Alerts",
+      description: "Intelligent alerting system that notifies you of performance issues before they impact users."
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Machine Learning",
-      description: "Continuous learning from content patterns to improve accuracy and reduce false positives."
+      title: "AI-Powered Insights",
+      description: "Machine learning algorithms analyze performance data to provide predictive insights."
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Language Support",
-      description: "Content moderation in 50+ languages with cultural context understanding."
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Performance Optimization",
+      description: "Automated recommendations for improving application and infrastructure performance."
     },
     {
       icon: <Settings className="w-6 h-6" />,
-      title: "Custom Rules",
-      description: "Create custom moderation rules and policies tailored to your specific requirements."
+      title: "Custom Dashboards",
+      description: "Create custom dashboards to monitor the metrics that matter most to your business."
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
+      name: "Basic",
       price: "$149",
       period: "per month",
-      description: "Perfect for small platforms with basic moderation needs",
+      description: "Perfect for small applications with basic monitoring needs",
       features: [
-        "Up to 10,000 content items/month",
-        "Basic AI moderation",
-        "Email support",
+        "Up to 10 applications",
         "Basic monitoring",
-        "Standard security",
-        "5 user accounts"
+        "Standard alerts",
+        "Email support",
+        "Basic dashboards",
+        "7-day data retention"
       ],
       popular: false
     },
@@ -81,17 +79,17 @@ const AiContentModerationProPage: React.FC = () => {
       name: "Professional",
       price: "$299",
       period: "per month",
-      description: "Ideal for growing platforms with complex moderation requirements",
+      description: "Ideal for growing businesses with complex monitoring requirements",
       features: [
-        "Up to 100,000 content items/month",
-        "Advanced AI moderation",
-        "Priority support",
+        "Up to 50 applications",
         "Advanced monitoring",
-        "Premium security",
-        "25 user accounts",
-        "Custom rules",
+        "Intelligent alerts",
+        "Priority support",
+        "Custom dashboards",
+        "30-day data retention",
+        "Performance optimization",
         "API access",
-        "Multi-language support"
+        "Team collaboration"
       ],
       popular: true
     },
@@ -99,15 +97,15 @@ const AiContentModerationProPage: React.FC = () => {
       name: "Enterprise",
       price: "$599",
       period: "per month",
-      description: "Complete solution for large platforms",
+      description: "Complete solution for large organizations",
       features: [
-        "Unlimited content items",
-        "Premium AI moderation",
+        "Unlimited applications",
+        "Premium monitoring",
+        "AI-powered insights",
         "24/7 dedicated support",
-        "24/7 monitoring",
-        "Enterprise security",
-        "Unlimited user accounts",
-        "White-label solution",
+        "White-label dashboards",
+        "Unlimited data retention",
+        "Custom integrations",
         "On-premise deployment",
         "SLA guarantee"
       ],
@@ -118,9 +116,9 @@ const AiContentModerationProPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Content Moderation Pro | Zion Tech Group - Advanced Content Moderation Platform</title>
-        <meta name="description" content="Moderate content with our advanced AI-powered platform. Real-time monitoring, automated moderation, and multi-language support starting at $149/month." />
-        <meta name="keywords" content="AI content moderation, content moderation platform, automated moderation, content analysis, moderation tools, content safety" />
+        <title>Performance Monitoring | Zion Tech Group - Advanced Application Monitoring</title>
+        <meta name="description" content="Monitor and optimize your applications with our advanced performance monitoring platform. Real-time monitoring, analytics, and AI-powered insights starting at $149/month." />
+        <meta name="keywords" content="performance monitoring, application monitoring, infrastructure monitoring, performance analytics, monitoring dashboards" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -129,14 +127,14 @@ const AiContentModerationProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Content Moderation Pro
+                Performance Monitoring
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Moderate content with our advanced AI-powered platform. Real-time monitoring, 
-                automated moderation, and multi-language support for safe, compliant platforms.
+                Monitor and optimize your applications with our advanced performance monitoring platform. 
+                Real-time monitoring, analytics, and AI-powered insights for peak performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
+                <Link to="/contact" className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </Link>
                 <Link to="/services" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
@@ -152,17 +150,17 @@ const AiContentModerationProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Advanced Content Moderation Features
+                Advanced Monitoring Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our AI-powered platform provides comprehensive content moderation capabilities for modern platforms.
+                Our performance monitoring platform provides comprehensive insights into your applications and infrastructure.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-orange-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -178,19 +176,19 @@ const AiContentModerationProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Flexible Content Moderation Plans
+                Flexible Monitoring Plans
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the content moderation solution that fits your platform needs and budget.
+                Choose the monitoring solution that fits your application needs and budget.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-xl p-8 relative border-2 ${plan.popular ? 'border-orange-500 scale-105' : 'border-gray-200'}`}>
+                <div key={index} className={`bg-white rounded-2xl shadow-xl p-8 relative border-2 ${plan.popular ? 'border-green-500 scale-105' : 'border-gray-200'}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -218,7 +216,7 @@ const AiContentModerationProPage: React.FC = () => {
                     to="/contact" 
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700' 
+                        ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700' 
                         : 'bg-gray-900 text-white hover:bg-gray-800'
                     }`}
                   >
@@ -235,10 +233,10 @@ const AiContentModerationProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Moderate Your Content?
+                Ready to Monitor Your Performance?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of platforms already using our content moderation platform to ensure safe, compliant content.
+                Join thousands of businesses already using our performance monitoring platform to optimize their applications.
               </p>
             </div>
 
@@ -277,7 +275,7 @@ const AiContentModerationProPage: React.FC = () => {
               </div>
 
               <div className="text-center mt-12">
-                <Link to="/contact" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 inline-block">
+                <Link to="/contact" className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-block">
                   Start Free Trial
                 </Link>
               </div>
@@ -289,4 +287,4 @@ const AiContentModerationProPage: React.FC = () => {
   );
 };
 
-export default AiContentModerationProPage;
+export default PerformanceMonitoringPage;
