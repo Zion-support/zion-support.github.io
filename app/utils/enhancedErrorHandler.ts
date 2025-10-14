@@ -1,19 +1,19 @@
 export const enhancedErrorHandler = {
-  handleError: (_error: Error, context?: string) => {
-    console.error('Error occurred:', _error, context);
+  handleError: (error: Error, context?: string) => {
+    console.error('Error occurred: ', error)
     
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: _error.message,
+        description: error.message,
         fatal: false,
-        context: context
-      });
+        custom_map: context ? { context } : {}
+      })
     }
     
     return {
       message: 'Something went wrong. Please try again.',
       code: 'GENERIC_ERROR'
-    };
+    }
   },
   
   handleApiError: (error: unknown) => {

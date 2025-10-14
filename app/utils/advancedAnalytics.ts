@@ -1,9 +1,8 @@
 export const advancedAnalytics = {
-  trackPageView: (_page: string) => {
+  trackPageView: (page: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: _page,
-        page_location: window.location.href
+        page_path: page
       })
     }
   },

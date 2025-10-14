@@ -18,16 +18,25 @@ export const apiClient = {
     return response.json()
   },
   
-  get: <T>(endpoint: string) => apiClient.request<T>(endpoint),
-  post: <T>(endpoint: string, data: unknown) => apiClient.request<T>(endpoint, {
-    method: 'POST',
-    body: JSON.stringify(data),
-  }),
-  put: <T>(endpoint: string, data: unknown) => apiClient.request<T>(endpoint, {
-    method: 'PUT',
-    body: JSON.stringify(data),
-  }),
-  delete: <T>(endpoint: string) => apiClient.request<T>(endpoint, {
-    method: 'DELETE',
-  }),
+  async get<T>(endpoint: string): Promise<T> {
+    return this.request<T>(endpoint, { method: 'GET' })
+  },
+  
+  async post<T>(endpoint: string, data: unknown): Promise<T> {
+    return this.request<T>(endpoint, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    })
+  },
+  
+  async put<T>(endpoint: string, data: unknown): Promise<T> {
+    return this.request<T>(endpoint, {
+      method: 'PUT',
+      body: JSON.stringify(data)
+    })
+  },
+  
+  async delete<T>(endpoint: string): Promise<T> {
+    return this.request<T>(endpoint, { method: 'DELETE' })
+  }
 }

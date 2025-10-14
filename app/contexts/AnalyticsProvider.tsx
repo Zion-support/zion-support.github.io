@@ -18,16 +18,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
     // Add your page view tracking logic here
   }, []);
-  const setUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
+  const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('User set:', userId, properties);
+      console.warn('User identified:', userId, properties);
     }
     // Add your user identification logic here
   }, []);
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-    setUser,
+    identifyUser,
   };
   return (
     <AnalyticsContext.Provider value={value}>

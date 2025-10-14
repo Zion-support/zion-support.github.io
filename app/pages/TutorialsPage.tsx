@@ -19,7 +19,7 @@ const TutorialsPage: React.FC = () => {
           </div>
         </div>
       </div>
-</>
+    </>
   );
 };
 export default TutorialsPage;

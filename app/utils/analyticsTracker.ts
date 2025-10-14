@@ -3,7 +3,7 @@ export const analyticsTracker = {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'page_view', {
         page_title: _title,
-        page_location: window.location.href
+        page_location: _page
       })
     }
   },
