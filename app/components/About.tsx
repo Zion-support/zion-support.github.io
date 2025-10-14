@@ -43,8 +43,7 @@ const About: React.FC = () => {
                 growth, efficiency, and success.
               </p>
               
-
-                </div>
+              <div className="space-y-6">
                 <div className="flex items-start">
                   <CheckIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <div>
