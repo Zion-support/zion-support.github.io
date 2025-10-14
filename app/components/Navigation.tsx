@@ -818,8 +818,6 @@ export default ImprovedNavigation;
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  Bars3Icon, 
-  XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
   BriefcaseIcon,
@@ -838,6 +836,27 @@ import {
   SignalIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
+
+const Navigation: React.FC = () => {
+  const location = useLocation();
+  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
+  };
+
+  const toggleExpanded = (item: string) => {
+    setExpandedItems(prev => 
+      prev.includes(item) 
+        ? prev.filter(i => i !== item)
+        : [...prev, item]
+    );
+  };
+=======
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
@@ -846,6 +865,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
+>>>>>>> origin/main
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -858,7 +878,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
         { name: 'IT Services', href: '/it-services', icon: CogIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+<<<<<<< HEAD
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'AI Solutions', href: '/ai-solutions' },
+        { name: 'IT Solutions', href: '/it-solutions' },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: '5G Solutions', href: '/5g-solutions' }
+=======
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon }
+>>>>>>> origin/main
       ]
     },
     { 
@@ -867,10 +896,18 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: CogIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+<<<<<<< HEAD
+        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },
+        { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: SignalIcon },
+=======
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
         { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
+>>>>>>> origin/main
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
@@ -882,6 +919,59 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
+<<<<<<< HEAD
+  return (
+    <nav className="hidden md:flex space-x-8">
+      {navigation.map((item) => (
+        <div key={item.name} className="relative">
+          {item.submenu ? (
+            <div className="relative group">
+              <button
+                onClick={() => toggleExpanded(item.name)}
+                className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                <item.icon className="w-4 h-4" />
+                <span>{item.name}</span>
+                <ChevronDownIcon 
+                  className={`w-4 h-4 transition-transform ${
+                    expandedItems.includes(item.name) ? 'rotate-180' : ''
+                  }`} 
+                />
+              </button>
+              
+              {expandedItems.includes(item.name) && (
+                <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                  <div className="py-1">
+                    {item.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.href}
+                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {subItem.icon && <subItem.icon className="w-4 h-4 mr-3" />}
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            <Link
+              to={item.href}
+              className={`flex items-center space-x-1 px-3 py-2 text-sm font-medium transition-colors ${
+                isActive(item.href)
+                  ? 'text-blue-600'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              <item.icon className="w-4 h-4" />
+              <span>{item.name}</span>
+            </Link>
+          )}
+        </div>
+      ))}
+=======
   const isActive = (path: string) => {
     return location.pathname === path;
   };
@@ -901,9 +991,14 @@ const Navigation: React.FC = () => {
           <a href="/contact" className="hover:text-gray-300">Contact</a>
         </div>
       </div>
+>>>>>>> origin/main
     </nav>
   );
 };
 
+<<<<<<< HEAD
 export default Navigation;
+=======
+export default Navigation;
+>>>>>>> origin/main
 >>>>>>> origin/main

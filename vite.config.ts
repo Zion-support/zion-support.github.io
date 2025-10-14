@@ -173,8 +173,17 @@ export default defineConfig({
     exclude: ["@vite/client", "@vite/env"],
   },
   esbuild: {
+<<<<<<< HEAD
+    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+    target: 'esnext',
+    logLevel: 'silent',
+    logOverride: {
+      'this-is-undefined-in-esm': 'silent',
+    },
+=======
     drop: process.env.NODE_ENV === "production" ? ["console", "debugger"] : [],
     target: "esnext",
+>>>>>>> origin/main
   },
   // Performance optimizations
   define: {

@@ -9,4 +9,9 @@ export default function ServicesPage() {
       <p className="text-gray-300 text-lg">This page is under development.</p>
     </div>
   );
+<<<<<<< HEAD:temp-disabled/pages/ServicesPage.tsx
 }
+export default ServicesPage;
+=======
+}
+>>>>>>> origin/main:app/pages/ServicesPage.tsx
