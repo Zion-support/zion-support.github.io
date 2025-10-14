@@ -41,11 +41,9 @@ jest.mock('react-router-dom', () => {
       });
       return React.createElement(RouterProvider, { router });
     },
-    RouterProvider: () => null
+    RouterProvider: ({ router }) => null
   };
 });
-
-// Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   observe() {}

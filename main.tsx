@@ -31,10 +31,10 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw.js")
       .then((_registration) => {
-        console.log('Service Worker registered successfully');
+        // Service Worker registered successfully
       })
       .catch((_error) => {
-        console.log('Service Worker registration failed');
+        // Service Worker registration failed
       });
   });
 }

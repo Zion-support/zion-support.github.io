@@ -17,7 +17,8 @@ export default tseslint.config(
       '*.cjs',
       'api/**',
       'scripts/**',
-      'validate-jsx.js'
+      'validate-jsx.js',
+      'public/sw.js'
     ]
   },
   js.configs.recommended,
