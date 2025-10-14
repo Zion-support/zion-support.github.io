@@ -31,10 +31,16 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw.js")
       .then((_registration) => {
-        console.log('Service Worker registered successfully');
+        if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
+          console.log('Service Worker registered successfully');
+        }
       })
       .catch((_error) => {
-        console.log('Service Worker registration failed');
+        if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
+          console.log('Service Worker registration failed');
+        }
       });
   });
 }

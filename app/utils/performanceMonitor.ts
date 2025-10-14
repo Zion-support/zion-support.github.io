@@ -4,7 +4,10 @@ export const performanceMonitor = {
     fn()
     const end = performance.now()
     const duration = end - start
-    console.log(`${name} took ${duration.toFixed(2)}ms`)
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log(`${name} took ${duration.toFixed(2)}ms`)
+    }
     return duration
   },
   
@@ -13,7 +16,10 @@ export const performanceMonitor = {
     await fn()
     const end = performance.now()
     const duration = end - start
-    console.log(`${name} took ${duration.toFixed(2)}ms`)
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log(`${name} took ${duration.toFixed(2)}ms`)
+    }
     return duration
   },
   
@@ -27,7 +33,10 @@ export const performanceMonitor = {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.measure(name, startMark, endMark)
       const measure = performance.getEntriesByName(name)[0]
-      console.log(`${name} took ${measure.duration.toFixed(2)}ms`)
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log(`${name} took ${measure.duration.toFixed(2)}ms`)
+      }
     }
   }
 }

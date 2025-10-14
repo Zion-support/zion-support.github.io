@@ -52,4 +52,4 @@ const AICybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-export default AiCybersecuritySuiteProPage;
+export default AICybersecuritySuiteProPage;
