@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React from "react"
+import { Helmet } from "react-helmet-async"
+
+>>>>>>> origin/main
 export default function AdvancedSEOOptimizer() {
   return (
-    <>
+    <div>
       <Helmet>
-        <title>AdvancedSEOOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional advancedseooptimizer services by Zion Tech Group." />
+        <title>Advanced SEO Optimizer - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Professional advanced SEO optimization services by Zion Tech Group."
+        />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -58,4 +68,10 @@ export default function AdvancedSEOOptimizer() {
       </div>
     </>
   );
+=======
+      <h1>Advanced SEO Optimizer</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+>>>>>>> origin/main
 }

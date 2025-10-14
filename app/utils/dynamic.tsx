@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 'use client'
 import React from 'react';'
@@ -20,3 +21,15 @@ export default function UtilsPage() { return (
   );}
 }
 '
+=======
+import React from 'react';
+
+export default function Dynamic() {
+  return (
+    <div>
+      <h1>Dynamic</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main

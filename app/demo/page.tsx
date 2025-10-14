@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'react-helmet-async;
 import { Play, Right, Circle, Star } from 'lucide-react;
 import React from 'react';'
@@ -56,39 +57,51 @@ icon: Play,
       title: "Team Collaboration",';'
       description: "See how teams work together seamlessly",';'
       demo: 'Collaboration Demo'';}
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+<<<<<<< HEAD
+
+>>>>>>> origin/main
     }
   ];
-    }
-  ]
-  const testimonials = [{
-      name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
+
+  const benefits = [{
+      name: "Sarah Johnson","
+      company: "TechCorp Inc.","
+      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.","
       rating: 5},
-      rating: 5;}
-    },
     {
-      name: "Michael Chen",
-      company: "DataFlow Systems",
-      content: "The live demonstration helped us understand the full potential of the AI solutions.",
+      name: "Michael Chen","
+      company: "DataFlow Systems","
+      content: "The live demonstration helped us understand the full potential of the AI solutions.","
       rating: 5},
+<<<<<<< HEAD
       rating: 5;}
     },
     { name: "Emily Rodriguez",
       company: "InnovateLabs",
       content: "The demo team was knowledgeable and answered all our questions thoroughly.",
       rating: 5 }
+=======
+    {
+      name: "Emily Rodriguez","
+      company: "InnovateLabs","
+      content: "The demo team was knowledgeable and answered all our questions thoroughly.","
+      rating: 5}
+>>>>>>> origin/main
   ]
-      rating: 5;}
-    }
-  ];
+=======
+const HomePage = () => {
+>>>>>>> origin/main
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Demo - See Our Solutions in Action | Zion Tech Group</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         { /* Hero Section */ }
         <section className="relative py-20 px-4">
@@ -255,10 +268,21 @@ icon: Play,
             </div>
           </div>
         </section>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+>>>>>>> origin/main
       </div>
-    </>
+    </div>
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 export default DemoPage;
                     <Play className="w-10 h-10 text-white ml-1" /></div>
                   <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>
@@ -295,5 +319,11 @@ export default DemoPage;
                 Contact Sales</button></div></div></section></div></>
   )}
 export default DemoPage
+=======
+export default FiveGSolutionsPage;
+=======
+>>>>>>> origin/main
 };
-export default DemoPage;'
+
+export default HomePage;
+>>>>>>> origin/main

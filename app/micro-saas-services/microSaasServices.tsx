@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -125,3 +126,15 @@ export default MicroSaasServices;
 export default MicroSaasServices
 };
 export default MicroSaasServices;'
+=======
+import React from 'react';
+
+export default function MicroSaasServices() {
+  return (
+    <div>
+      <h1>MicroSaasServices</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main

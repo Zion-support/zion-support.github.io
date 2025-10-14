@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -125,3 +126,9 @@ export default ErrorBoundaryConfig;
 export default ErrorBoundaryConfig
 };
 export default ErrorBoundaryConfig;'
+=======
+// errorBoundaryConfig - Basic implementation
+export default function errorBoundaryConfig() {
+  return null;
+}
+>>>>>>> origin/main

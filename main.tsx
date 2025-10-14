@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
@@ -14,11 +15,19 @@ if (typeof window !== 'undefined') {
 const root = createRoot(
   document.getElementById('root') as HTMLElement
 );
+=======
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+
+const root = createRoot(document.getElementById("root")!);
+>>>>>>> origin/main
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
+<<<<<<< HEAD
 // Register service worker for PWA functionality
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -34,3 +43,5 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
+=======
+>>>>>>> origin/main

@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+
 const App: React.FC = () => {
+<<<<<<< HEAD
   return (
     <HelmetProvider>
       <Router>
@@ -23,7 +23,9 @@ const App: React.FC = () => { return (
     </HelmetProvider>;
   );
 }
+=======
+  return <div>Minimal App</div>;
+>>>>>>> origin/main
 };
+
 export default App;
-export default App;
-'

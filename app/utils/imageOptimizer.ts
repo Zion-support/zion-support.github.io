@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ImageOptimizationOptions { width?: number;
   height?: number;
   quality?: number;
@@ -29,3 +30,12 @@ export const generateResponsiveImages = (
     .map(size => `${optimizeImage(src, { width: size })} ${size}w`)'
     .join(', ');
 };'
+=======
+// ImageOptimizer utility
+export const imageoptimizer = () => {
+  // Implementation here
+  console.log('ImageOptimizer utility called');
+};
+
+export default imageoptimizer;
+>>>>>>> origin/main

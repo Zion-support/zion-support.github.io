@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 interface OptimizedImageProps { src: string
@@ -150,10 +151,17 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,
         )}
       </div>
     </>
+=======
+import React from "react";
+
+const OptimizedImage = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">OptimizedImage</h2>
+      <p>This component is under construction.</p>
+    </div>
+>>>>>>> origin/main
   );
-}
-export default OptimizedImage;
-  )}
-export default OptimizedImage
 };
-export default OptimizedImage;'
+
+export default OptimizedImage;

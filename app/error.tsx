@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -83,3 +84,9 @@ export default function Page() { return (
     </div>
   );}
 }'
+=======
+// error - Basic implementation
+export default function error() {
+  return null;
+}
+>>>>>>> origin/main

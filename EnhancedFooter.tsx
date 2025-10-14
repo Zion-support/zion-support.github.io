@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
@@ -27,3 +28,17 @@ const EnhancedFooter: React.FC = () => {
 export default EnhancedFooter;
 export default EnhancedFooter;
 '
+=======
+import React from "react";
+
+const EnhancedFooter: React.FC = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">Enhanced Footer</h2>
+      <p className="text-gray-300">This is the enhanced footer component.</p>
+    </div>
+  );
+};
+
+export default EnhancedFooter;
+>>>>>>> origin/main

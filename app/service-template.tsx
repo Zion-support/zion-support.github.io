@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -125,3 +126,15 @@ export default ServiceTemplate;
 export default ServiceTemplate
 };
 export default ServiceTemplate;'
+=======
+import React from 'react';
+
+export default function ServiceTemplate() {
+  return (
+    <div>
+      <h1>ServiceTemplate</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main

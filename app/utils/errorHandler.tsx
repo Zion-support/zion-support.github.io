@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -125,3 +126,15 @@ export default ErrorHandler;
 export default ErrorHandler
 };
 export default ErrorHandler;'
+=======
+import React from 'react';
+
+export default function ErrorHandler() {
+  return (
+    <div>
+      <h1>ErrorHandler</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main

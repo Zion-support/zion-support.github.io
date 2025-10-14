@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -123,5 +124,17 @@ export default StructuredData;
             Get Started Today</a></div></section></div>
   )}
 export default StructuredData
+=======
+import React from "react";
+
+const StructuredData = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">StructuredData</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+>>>>>>> origin/main
 };
-export default StructuredData;'
+
+export default StructuredData;

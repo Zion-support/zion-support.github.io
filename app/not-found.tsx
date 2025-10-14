@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -125,3 +126,15 @@ export default NotFound;
 export default NotFound
 };
 export default NotFound;'
+=======
+import React from 'react';
+
+export default function NotFound() {
+  return (
+    <div>
+      <h1>NotFound</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main

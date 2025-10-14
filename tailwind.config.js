@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -21,4 +22,9 @@ export default {
     },
   },
   plugins: [],
+=======
+// tailwind.config - Basic implementation
+export default function tailwind.config() {
+  return null;
+>>>>>>> origin/main
 }

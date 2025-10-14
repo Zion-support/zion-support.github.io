@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 const PricingPage: React.FC = () => {
   const pricingPlans = [
@@ -51,9 +52,14 @@ const PricingPage: React.FC = () => {
       color: "green",
       popular: false }
   ];
+=======
+
+export default function Page() {
+>>>>>>> origin/main
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Helmet>
@@ -126,43 +132,45 @@ const PricingPage: React.FC = () => {
       { /* FAQ Section */ }
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
+=======
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Learn more about page" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about page</p>
+>>>>>>> origin/main
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Frequently Asked Questions
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Can I change my plan anytime?
-                </h3>
-                <p className="text-gray-600">
-                  Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Is there a free trial available?
-                </h3>
-                <p className="text-gray-600">
-                  We offer a 14-day free trial for all plans. No credit card required to get started.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  What payment methods do you accept?
-                </h3>
-                <p className="text-gray-600">
-                  We accept all major credit cards, PayPal, and bank transfers for enterprise plans.
-                </p>
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
+              <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+              <p className="text-gray-300 mb-6">
+                This page is currently under development. We're working hard to bring you the best experience.
+              </p>
+              <div className="flex justify-center space-x-4">
+                <a 
+                  href="/" 
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                >
+                  Go Home
+                </a>
+                <a 
+                  href="/contact" 
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                >
+                  Contact Us
+                </a>
               </div>
             </div>
           </div>
+
         </div>
-      </section>
+      </div>
     </div>
   );
+<<<<<<< HEAD
 };
 export default PricingPage;
+=======
+}
+>>>>>>> origin/main

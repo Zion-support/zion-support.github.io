@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOProps { title?: string
@@ -11,13 +12,15 @@ interface SEOProps { title?: string
   modifiedTime?: string
   section?: string
   tags?: string[] }
+=======
+import React from 'react';
+
+interface SEOProps {
+>>>>>>> origin/main
   title?: string;
   description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'profile';
 }
+<<<<<<< HEAD
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
@@ -71,10 +74,21 @@ const SEO: React.FC<SEOProps> = ({
       { /* Canonical URL */ }
       <link rel="canonical" href={url} />
     </Helmet>
+=======
+
+const SEO: React.FC<SEOProps> = ({ title, description }) => {
+  return (
+    <div>
+      <h2>SEO</h2>
+      <p>This component is under construction.</p>
+      {title && <p>Title: {title}</p>}
+      {description && <p>Description: {description}</p>}
+    </div>
+>>>>>>> origin/main
   );
-}
-export default SEO;
-  )}
-export default SEO
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 export default SEO;

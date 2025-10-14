@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, Play, User, Star, Circle, Clock } from 'lucide-react'
@@ -84,13 +85,19 @@ const TutorialsPage: React.FC = () => {
     { name: "DevOps", count: 3 },
     { name: "Data Science", count: 3 }
   ]
+=======
+
+import { Helmet } from "react-helmet-async";
+
+const HomePage = () => {
+>>>>>>> origin/main
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Tutorials - Learn AI & IT Skills | Zion Tech Group</title>
-        <meta name="description" content="Master AI and IT skills with our comprehensive tutorials. Learn from experts with hands-on projects and real-world examples." />
-        <meta name="keywords" content="tutorials, AI learning, IT training, machine learning, cloud computing, cybersecurity, online courses" />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         { /* Hero Section */ }
         <section className="relative py-20 px-4">
@@ -242,10 +249,21 @@ const TutorialsPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+>>>>>>> origin/main
       </div>
-    </>
+    </div>
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 export default TutorialsPage;
                       <Clock className="w-4 h-4 mr-1" />{ tutorial.duration }
                     </span>
@@ -272,5 +290,11 @@ export default TutorialsPage;
                 View All Tutorials</button></div></div></section></div></>
   )}
 export default TutorialsPage
+=======
+export default FiveGSolutionsPage;
+=======
+>>>>>>> origin/main
 };
-export default TutorialsPage;'
+
+export default HomePage;
+>>>>>>> origin/main

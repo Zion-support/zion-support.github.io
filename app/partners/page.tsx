@@ -1,9 +1,20 @@
+<<<<<<< HEAD
+
+import { Helmet } from 'react-helmet-async';
+
+import { Users, Globe, Shield, Zap } from 'lucide-react';
+
+export default function Partners() {
+  const partners = [
+=======
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { } from 'react-router-dom'
-import { Circle, Right, } from 'lucide-react'
+import { Circle, Right } from 'lucide-react'
 const PartnersPage: React.FC = () => {
   const partners = [{
+<<<<<<< HEAD
       name: "Microsoft",'
       logo: "🏢",'
       description: "Strategic partnership for cloud and AI solutions",'
@@ -32,14 +43,47 @@ const PartnersPage: React.FC = () => {
       logo: "🗄️",'
       description: "and enterprise application solutions",'
       category: ''' }
+=======
+      name: 'Microsoft',''
+      logo: '🏢',''
+      description: 'Strategic partnership for cloud and AI solutions',''
+      category: 'Technology'},'
+>>>>>>> origin/main
+    {
+      name: 'Amazon Web Services',''
+      logo: '☁️',''
+      description: 'infrastructure and AI services collaboration',''
+      category: '''},'
+    {
+      name: 'Google ',''
+      logo: '🔍',''
+      description: 'AI and machine learning platform integration',''
+      category: 'AI/ML'},'
+    {
+      name: 'IBM',''
+      logo: '💼',''
+      description: 'Enterprise AI solutions and consulting',''
+      category: 'Enterprise'},'
+    {
+      name: 'Salesforce',''
+      logo: '📊',''
+      description: 'CRM and business intelligence integration',''
+      category: 'CRM'},'
+    {
+      name: 'Oracle',''
+      logo: '🗄️',''
+      description: 'and enterprise application solutions',''
+      category: '''}'
+>>>>>>> origin/main
   ]
-  const benefits = ['Access to cutting-edge technology','
-    'Joint go-to-market opportunities','
-    'Technical support and training','
-    'Co-marketing and co-selling programs','
-    'Priority access to new features','
-    'Dedicated partner success manager''
+  const benefits = ['Access to cutting-edge technology',''
+    'Joint go-to-market opportunities',''
+    'Technical support and training',''
+    'Co-marketing and co-selling programs',''
+    'Priority access to new features',''
+    'Dedicated partner success manager'''
   ]
+<<<<<<< HEAD
 import React from 'react';'
 import { Helmet ,   } from 'lucide-react';'
 import { Circle, Right, } from 'lucide-react';
@@ -89,6 +133,8 @@ const PartnersPage: React.FC = () => {
     'Priority access to new features',';'
     'Dedicated partner success manager'';
   ];
+=======
+>>>>>>> origin/main
   return (
     <>
       <Helmet>
@@ -129,6 +175,7 @@ const PartnersPage: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {partners.map((partner, _index) => (
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -150,6 +197,8 @@ const PartnersPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Strategic Partners</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{partners.map((partner, _index) => (
+=======
+>>>>>>> origin/main
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="text-center">
                     <div className="text-4xl mb-4">{partner.logo}</div>
@@ -158,6 +207,7 @@ const PartnersPage: React.FC = () => {
                     <p className="text-gray-300 text-sm">{partner.description}</p>
                   </div>
                 </div>
+<<<<<<< HEAD
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               { partners.map((partner, _index) => ( }
@@ -169,6 +219,8 @@ const PartnersPage: React.FC = () => {
                     <p className="text-gray-300 text-sm">{partner.description}</p>;
                   </div>
                 </div>
+=======
+>>>>>>> origin/main
               ))}
             </div>
           </div>
@@ -187,6 +239,7 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <span className="text-gray-300 font-medium">{benefit}</span>
                 </div>
+<<<<<<< HEAD
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               { benefits.map((benefit, _index) => ( }
@@ -196,6 +249,8 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <span className="text-gray-300 font-medium">{benefit}</span>;
                 </div>
+=======
+>>>>>>> origin/main
               ))}
             </div>
           </div>
@@ -224,6 +279,7 @@ const PartnersPage: React.FC = () => {
     </>
   );
 }
+<<<<<<< HEAD
 export default PartnersPage;
                     <p className="text-gray-300 text-sm">{partner.description}</p></div></div>
               ))}
@@ -255,3 +311,49 @@ export default PartnersPage;
 export default PartnersPage
 };
 export default PartnersPage;'
+=======
+export default FiveGSolutionsPage;
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Learn more about page" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about page</p>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
+              <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+              <p className="text-gray-300 mb-6">
+                This page is currently under development. We're working hard to bring you the best experience.
+              </p>
+              <div className="flex justify-center space-x-4">
+                <a 
+                  href="/" 
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                >
+                  Go Home
+                </a>
+                <a 
+                  href="/contact" 
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/main
+>>>>>>> origin/main

@@ -1,5 +1,6 @@
-import React from 'react'
+<<<<<<< HEAD
 'use client'
+<<<<<<< HEAD
 import React from 'react';'
 'use client';
 export default function ZionAiMobileAppBuilderPage() { return (
@@ -18,5 +19,26 @@ export default function ZionAiMobileAppBuilderPage() { return (
       </div>
     </div>
   );}
+=======
+import React from 'react'
+export default function ZionAiMobileAppBuilderPage() {
+=======
+"use client";
+>>>>>>> origin/main
+
+import React from "react";
+
+export default function ZionAiMobileAppBuilderPage() {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">Zion Ai Mobile App Builder</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
 }
-'
+  );
+=======
+>>>>>>> origin/main
+}
+>>>>>>> origin/main

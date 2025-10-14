@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -60,3 +61,9 @@ for (const file of filesWithMarkers) {
   }
 }
 console.log(`Cleaned merge markers from ${cleanedCount} files`);
+=======
+// cleanup-merge-markers - Basic implementation
+export default function cleanup-merge-markers() {
+  return null;
+}
+>>>>>>> origin/main

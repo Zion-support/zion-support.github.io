@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /// <reference types="vite/client" />;
 interface ImportMetaEnv { readonly DEV: boolean;
   readonly PROD: boolean;
@@ -7,3 +8,6 @@ interface ImportMetaEnv { readonly DEV: boolean;
 interface ImportMeta { readonly env: ImportMetaEnv; }
 }
 }
+=======
+/// <reference types="vite/client" />
+>>>>>>> origin/main

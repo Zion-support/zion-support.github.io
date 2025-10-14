@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;
@@ -202,3 +203,17 @@ export default CaseStudiesPage;
   );
 };
 export default CaseStudiesPage;
+=======
+"use client";
+
+import React from "react";
+
+export default function CaseStudiesPage() {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">CaseStudiesPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main

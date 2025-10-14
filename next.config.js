@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import withBundleAnalyzer from ';
 import crypto from 'crypto;,
   enabled: process.env.ANALYZE === 'true'';
@@ -9,3 +10,27 @@ import crypto from 'crypto;,
 )
   contentSecurityPolicy: "default-src 'self'; script-src 'none'';) }
 ]
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: [
+      'images.unsplash.com',
+      'via.placeholder.com',
+      'ziontechgroup.com'
+    ],
+    formats: ['image/webp', 'image/avif']
+  },
+  experimental: {
+    optimizeCss: true
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
+  }
+};
+
+module.exports = nextConfig;
+
+>>>>>>> origin/main

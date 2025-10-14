@@ -1,7 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {
+"use client";
+
+import React from "react";
+
+export default function CareersPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
       <Helmet>
         <title>Careers | Zion Tech Group</title>
@@ -171,3 +174,11 @@ const CareersPage: React.FC = () => {
   );
 };
 export default CareersPage;
+=======
+    <div>
+      <h1 className="text-4xl font-bold mb-8">CareersPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main

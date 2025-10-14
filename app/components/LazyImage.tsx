@@ -1,8 +1,8 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const LazyImage: React.FC = () => {
+import React from "react";
+
+const LazyImage = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Lazy Image - Zion Tech Group</title>
@@ -183,4 +183,13 @@ const LazyImage: React.FC<LazyImageProps> = ({
     </div>
   );
 };
+=======
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">LazyImage</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+>>>>>>> origin/main
 export default LazyImage;

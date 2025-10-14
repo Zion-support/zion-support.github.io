@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
@@ -24,6 +25,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const colorClasses = {
+<<<<<<< HEAD
     primary: "text-purple-600",
     secondary: "text-cyan-600",
     white: "text-white",
@@ -38,12 +40,40 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <p className="text-sm text-gray-600">{text}</p>
         )}
       </div>
+=======
+    primary: 'text-purple-600',
+    secondary: 'text-cyan-600',
+    white: 'text-white',
+    gray: 'text-gray-400'
+  };
+
+  const spinner = (
+    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">
+      <div className="relative">
+        <div 
+          className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}
+          style={{
+            animation: 'spin 1s linear infinite',
+            willChange: 'transform'
+          }}
+        >
+          <Loader2 className="w-full h-full" />
+        </div>
+      </div>
+      {text && (
+        <p className="text-sm text-gray-600 mt-2">{text}</p>
+      )}
+>>>>>>> origin/main
     </div>
   );
 
   if (fullScreen) {
     return (
+<<<<<<< HEAD
       <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
+=======
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+>>>>>>> origin/main
         {spinner}
       </div>
     );
@@ -52,4 +82,22 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return spinner;
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
+=======
+export default LoadingSpinner;
+=======
+import React from "react";
+
+const LoadingSpinner = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">LoadingSpinner</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default LoadingSpinner;
+>>>>>>> origin/main
+>>>>>>> origin/main

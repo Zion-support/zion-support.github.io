@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Next.js type declarations;
 declare module 'next' {';
   interface NextApiRequest {
@@ -12,3 +13,13 @@ export const nextUtil = () => { // Implementation;
 };
 export default nextUtil;
 '
+=======
+// Type definitions for app/types/next.d.ts
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+export {};
+>>>>>>> origin/main

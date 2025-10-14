@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import React from 'react';'
@@ -90,7 +91,18 @@ const ServicesPage: React.FC = () => {
       ]
     }
   ]
+=======
+<<<<<<< HEAD
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones } from 'lucide-react';
+=======
+import React from "react";
+>>>>>>> origin/main
+import { Helmet } from "react-helmet-async";
+
+const ServicesPage = () => {
+>>>>>>> origin/main
   return (
+<<<<<<< HEAD
     <>
       <EnhancedSEO
         title="Our Services - Zion Tech Group | AI and IT Solutions"
@@ -99,11 +111,17 @@ const ServicesPage: React.FC = () => {
         canonicalUrl="/services"
         ogImage="/api/placeholder/1200/630"
       />
+<<<<<<< HEAD
       { /* Hero Section */ }
+=======
+
+      {/* Hero Section */}
+>>>>>>> origin/main
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
+        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
@@ -119,7 +137,12 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       { /* Services Categories */ }
+=======
+
+      {/* Services Categories */}
+>>>>>>> origin/main
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -130,11 +153,10 @@ const ServicesPage: React.FC = () => {
               Explore our comprehensive range of technology services designed to meet your business needs
             </p>
           </div>
+
           {serviceCategories.map((category, categoryIndex) => {
             const Icon = category.icon
             return (
-            const Icon = category.icon;
-            return (}
               <div key={categoryIndex} className="mb-20">
                 <div className="flex items-center mb-12">
                   <div className={`w-16 h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`}>
@@ -142,6 +164,7 @@ const ServicesPage: React.FC = () => {
                   </div>
                   <h3 className="text-3xl font-bold text-white">{category.title}</h3>
                 </div>
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   { category.services.map((service, serviceIndex) => ( }
                     <div key={serviceIndex} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
@@ -153,9 +176,11 @@ const ServicesPage: React.FC = () => {
                           { service.price }
                         </span>
                       </div>
+                      
                       <p className="text-gray-300 mb-6 leading-relaxed">
                         { service.description }
                       </p>
+
                       <ul className="space-y-2 mb-6">
                         { service.features.map((feature, featureIndex) => ( }
                           <li key={featureIndex} className="flex items-center text-gray-300">
@@ -164,8 +189,9 @@ const ServicesPage: React.FC = () => {
                           </li>
                         ))}
                       </ul>
+
                       <Link 
-                        to="/contact" 
+                        to="/contact"
                         className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all"
                       >
                         Learn More <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -177,26 +203,32 @@ const ServicesPage: React.FC = () => {
             )})}
         </div>
       </section>
+<<<<<<< HEAD
       { /* CTA Section */ }
+=======
+
+      {/* CTA Section */}
+>>>>>>> origin/main
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-12">'
-              Let's discuss your project requirements and find the perfect solution for your business
+            <p className="text-xl text-gray-300 mb-12">''"
+              Let's discuss your project requirements and find the perfect solution for your business'
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Get Free Consultation
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Schedule Demo
@@ -209,8 +241,24 @@ const ServicesPage: React.FC = () => {
     </>
   );
 }
-export default ServicesPage;
-  )}
-export default ServicesPage
+export default FiveGSolutionsPage;
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Professional IT services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
+          <p className="text-gray-300 text-lg">
+            Professional IT services and solutions for your business needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
-export default ServicesPage;'
+
+export default ServicesPage;
+>>>>>>> origin/main
