@@ -15,7 +15,6 @@ const AccessibilityEnhancer: React.FC = () => {
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
-    } else {
       root.classList.remove('reduced-motion');
     }
     // Font size adjustment
@@ -26,7 +25,6 @@ const AccessibilityEnhancer: React.FC = () => {
     );
   }, [isHighContrast, isReducedMotion, fontSize]);
   // Keyboard navigation enhancement
-  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
@@ -34,16 +32,12 @@ const AccessibilityEnhancer: React.FC = () => {
         const main = document.querySelector('main');
         if (main) {
           (main as HTMLElement).focus();
-        }
-      }
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
   // Add ARIA landmarks
-  useEffect(() => {
     const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
@@ -59,22 +53,20 @@ const AccessibilityEnhancer: React.FC = () => {
     addAriaLandmarks();
   }, []);
   // Add alt text to images without alt attributes
-  useEffect(() => {
     const addAltText = () => {
       const images = document.querySelectorAll('img:not([alt])');
       images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
-        }
+        if (!img.getAttribute(&apos;alt&apos;)) {
+          img.setAttribute(&apos;alt&apos;, `Image ${index + 1}`);
       });
     };
     addAltText();
   }, []);
   return (
-    <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
+    <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded- lgshadow-lg">
       <h3 className="text-white font-semibold mb-3">Accessibility</h3>
       <div className="space-y-3">
-        <label className="flex items-center space-x-2 text-white text-sm">
+        <label className="flex items-center space-x-2 text-whitetext- sm">
           <input
             type="checkbox"
             checked={isHighContrast}
@@ -83,22 +75,19 @@ const AccessibilityEnhancer: React.FC = () => {
           />
           <span>High Contrast</span>
         </label>
-        <label className="flex items-center space-x-2 text-white text-sm">
+        <label className="flex items-center space-x-2 text-whitetext- sm">
           <input
             type="checkbox"
             checked={isReducedMotion}
             onChange={(e) => setIsReducedMotion(e.target.checked)}
-            className="rounded"
-          />
           <span>Reduce Motion</span>
         </label>
         <div className="space-y-1">
-          <label className="text-white text-sm">Font Size</label>
+          <label className="text-whitetext- sm">Font Size</label>
           <select
             value={fontSize}
             onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large')}
-            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm"
-          >
+            className="w-full bg-slate-700 text-white rounded px-2 py-1text- sm">
             <option value="small">Small</option>
             <option value="normal">Normal</option>
             <option value="large">Large</option>
