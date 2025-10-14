@@ -1,9 +1,42 @@
-import React from 'react';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const pageFiles = [
+  'app/5g-consulting/page.tsx',
+  'app/5g-deployment/page.tsx',
+  'app/5g-integration/page.tsx',
+  'app/5g-maintenance/page.tsx',
+  'app/5g-migration/page.tsx',
+  'app/5g-modernization/page.tsx',
+  'app/5g-monitoring/page.tsx',
+  'app/5g-optimization/page.tsx',
+  'app/5g-performance/page.tsx',
+  'app/5g-reliability/page.tsx',
+  'app/5g-scalability/page.tsx',
+  'app/5g-security/page.tsx',
+  'app/5g-support/page.tsx',
+  'app/5g-testing/page.tsx',
+  'app/5g-training/page.tsx',
+  'app/5g-transformation/page.tsx',
+  'app/5g-upgrade/page.tsx'
+];
+
+pageFiles.forEach(file => {
+  const filePath = path.join(__dirname, file);
+  const componentName = file.split('/')[2].split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'Page';
+  
+  const content = `import React from 'react';
 import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-function FiveGTestingPage() {
+function ${componentName}() {
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
@@ -25,17 +58,17 @@ function FiveGTestingPage() {
   return (
     <>
       <EnhancedSEO 
-        title="FiveGTesting - Zion Tech Group"
-        description="Professional fivegtesting services"
+        title="${componentName.replace('Page', '')} - Zion Tech Group"
+        description="Professional ${componentName.replace('Page', '').toLowerCase()} services"
       />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              FiveGTesting Services
+              ${componentName.replace('Page', '')} Services
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional fivegtesting solutions for your business needs.
+              Professional ${componentName.replace('Page', '').toLowerCase()} solutions for your business needs.
             </p>
           </div>
           
@@ -66,5 +99,11 @@ function FiveGTestingPage() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default ${componentName};
+`;
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`Fixed ${file}`);
+});
+
+console.log('All 5G page files fixed!');

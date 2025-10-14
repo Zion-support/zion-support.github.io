@@ -1,9 +1,39 @@
-import React from 'react';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const pageFiles = [
+  { file: 'app/5g-consulting/page.tsx', name: 'FiveGConsultingPage' },
+  { file: 'app/5g-deployment/page.tsx', name: 'FiveGDeploymentPage' },
+  { file: 'app/5g-integration/page.tsx', name: 'FiveGIntegrationPage' },
+  { file: 'app/5g-maintenance/page.tsx', name: 'FiveGMaintenancePage' },
+  { file: 'app/5g-migration/page.tsx', name: 'FiveGMigrationPage' },
+  { file: 'app/5g-modernization/page.tsx', name: 'FiveGModernizationPage' },
+  { file: 'app/5g-monitoring/page.tsx', name: 'FiveGMonitoringPage' },
+  { file: 'app/5g-optimization/page.tsx', name: 'FiveGOptimizationPage' },
+  { file: 'app/5g-performance/page.tsx', name: 'FiveGPerformancePage' },
+  { file: 'app/5g-reliability/page.tsx', name: 'FiveGReliabilityPage' },
+  { file: 'app/5g-scalability/page.tsx', name: 'FiveGScalabilityPage' },
+  { file: 'app/5g-security/page.tsx', name: 'FiveGSecurityPage' },
+  { file: 'app/5g-support/page.tsx', name: 'FiveGSupportPage' },
+  { file: 'app/5g-testing/page.tsx', name: 'FiveGTestingPage' },
+  { file: 'app/5g-training/page.tsx', name: 'FiveGTrainingPage' },
+  { file: 'app/5g-transformation/page.tsx', name: 'FiveGTransformationPage' },
+  { file: 'app/5g-upgrade/page.tsx', name: 'FiveGUpgradePage' }
+];
+
+pageFiles.forEach(({ file, name }) => {
+  const filePath = path.join(__dirname, file);
+  
+  const content = `import React from 'react';
 import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-function FiveGTestingPage() {
+function ${name}() {
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
@@ -25,17 +55,17 @@ function FiveGTestingPage() {
   return (
     <>
       <EnhancedSEO 
-        title="FiveGTesting - Zion Tech Group"
-        description="Professional fivegtesting services"
+        title="${name.replace('Page', '')} - Zion Tech Group"
+        description="Professional ${name.replace('Page', '').toLowerCase()} services"
       />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              FiveGTesting Services
+              ${name.replace('Page', '')} Services
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional fivegtesting solutions for your business needs.
+              Professional ${name.replace('Page', '').toLowerCase()} solutions for your business needs.
             </p>
           </div>
           
@@ -66,5 +96,11 @@ function FiveGTestingPage() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default ${name};
+`;
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`Fixed ${file}`);
+});
+
+console.log('All 5G page files fixed!');
