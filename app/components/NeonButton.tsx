@@ -1,12 +1,17 @@
-import React from "react";
-
-const NeonButton = () => {
+if (to) {
+    return (
+      <Link to={to} className={classes}>
+        {children}
+      </Link>
+)
+    )
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">NeonButton</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
+    <button;
+      onClick={onClick}
+      className={classes}
+    >
+      {children}
+    </button>)
+  )
 
-export default NeonButton;
+export default NeonButtonPage;"

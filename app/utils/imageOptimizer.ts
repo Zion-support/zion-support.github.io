@@ -1,7 +1,4 @@
-// ImageOptimizer utility
-export const imageoptimizer = () => {
-  // Implementation here
-  console.log('ImageOptimizer utility called');
+// ImageOptimizer utility functions
+export const ImageOptimizer = {
+  // Add your utility functions here
 };
-
-export default imageoptimizer;

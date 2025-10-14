@@ -1,12 +1,13 @@
-"use client";
-
 import React from "react";
-
-export default function ITServicesPage() {
-  return (
-    <div>
-      <h1 className="text-4xl font-bold mb-8">ITServicesPage</h1>
-      <p className="text-gray-300 text-lg">This page is under development.</p>
+const ITServicesPage = () => {
+  return ("
+    <div className="p-4">"
+      <h2 className="text-2xl font-bold text-white mb-4">ITServicesPage</h2>"
+      <p className="text-gray-300">
+        This is a placeholder component for ITServicesPage.
+      </p>
     </div>
   );
-}
+};
+"
+export default ITServicesPage;

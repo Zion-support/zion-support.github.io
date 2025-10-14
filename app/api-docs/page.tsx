@@ -1,16 +1,19 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+export default function ApiDocsPage() { return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <h1>Api Docs</h1>
+          <p className="text-gray-300 text-lg">
 
-const HomePage = () => {
+const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Home - Zion Tech Group" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
           <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>
@@ -20,4 +23,18 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+          This page is under development.</p></div></div>
+  )
+        </p>
+      </div>
+    </div>
+  )}
+
+        </p>;
+      </div>
+    </div>
+  );
+}
+}
+'
+"""

@@ -1,12 +1,19 @@
-import React from "react";
-
-const SEOHead = () => {
+structuredData;
+}) => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SEOHead</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
+    <Helmet>
+      <title>{title}</title>
 
-export default SEOHead;
+      <meta name=description content={description} />""
+      <meta name=keywords content={keywords} />
+
+      {structuredData && ("""
+        <script type="application/ld+json">")""
+          {JSON.stringify(structuredData)
+        </script>
+      )
+    </Helmet>
+
+  )
+"""
+}}

@@ -1,34 +1,101 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-export default function performance-optimizer.js() {
-  return (}
-    <>
-      <Helmet>
-        <title>performance-optimizer.js - Zion Tech Group</title>
-        <meta name="description" content="Professional performance-optimizer.js services by Zion Tech Group." />"
-      <div className="min-h-screen bg-white">"
-        <div className="container mx-auto px-4 py-16">"
-          <div className="text-center">"
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-              performance-optimizer.js
-            <p className="text-xl text-gray-600 mb-8">"
-              Professional performance-optimizer.js services by Zion Tech Group.
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">"
-                  Expert Solutions
-                <p className="text-blue-700">"
-                  Our team of experts delivers cutting-edge solutions.
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
-                <h3 className="text-lg font-semibold text-green-900 mb-2">"
-                  Custom Implementation
-                <p className="text-green-700">"
-                  Tailored implementations for your specific requirements.
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">"
-                  24/7 Support
-                <p className="text-purple-700">"
-                  Round-the-clock support for all your needs.
-    </>
-  )
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const optimizePerformance = () => {
+  console.log('🚀 Starting performance optimization...');
+
+  // Create optimized CSS
+  const cssOptimizations = `
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Critical CSS for above-the-fold content */
+.hero-section {
+  contain: layout style paint;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize images */
+img {
+  loading: lazy;
+  decoding: async;
+}
+
+/* Optimize fonts */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  src: url('/fonts/inter-var.woff2') format('woff2-variations');
+  font-weight: 100 900;
+}
+`;
+
+  // Write optimized CSS
+  const cssPath = path.join(__dirname, '..', 'public', 'performance.css');
+  fs.writeFileSync(cssPath, cssOptimizations);
+  console.log('✅ Performance CSS created')
+
+  // Create preload hints
+  const preloadHints = `
+<!-- Preload critical resources -->
+<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/css/critical.css" as="style">
+<link rel="preload" href="/assets/js/vendor.js" as="script">
+<link rel="preload" href="/assets/js/main.js" as="script">
+
+<!-- DNS prefetch for external resources -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+
+<!-- Preconnect to external domains -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+`;
+
+  const preloadPath = path.join(__dirname, '..', 'public', 'preload-hints.html');
+  fs.writeFileSync(preloadPath, preloadHints);
+  console.log('✅ Preload hints created');
+
+  // Create service worker for caching
+  const serviceWorkerContent = `
+const CACHE_NAME = 'zion-tech-group-v2';
+const urlsToCache = [
+  '/',
+  '/static/css/main.css',
+  '/static/js/main.js',
+  '/manifest.json'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
 }

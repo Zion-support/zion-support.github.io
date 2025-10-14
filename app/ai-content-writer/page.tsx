@@ -19,5 +19,4 @@ const AIContentWriterPage = () => {
     </div>
   );
 };
-
 export default AIContentWriterPage;
