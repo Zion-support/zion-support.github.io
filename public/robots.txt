@@ -9,31 +9,11 @@ Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /node_modules/
 
-# Allow important pages
-Allow: /ai-services/
-Allow: /micro-saas/
-Allow: /5g-solutions/
-Allow: /case-studies/
-Allow: /careers/
-
-# Block common bot traps
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
-Disallow: /*.log$
-
-# Allow specific file types
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
-Allow: /*.ico$
+# Allow all other content
+Allow: /services/
+Allow: /blog/
+Allow: /tutorials/
+Allow: /about/
+Allow: /contact/

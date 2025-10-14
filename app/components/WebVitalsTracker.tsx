@@ -1,14 +1,9 @@
-import React from 'react';
-
-interface WebVitalsTrackerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function WebVitalsTracker({ className = '', children }: WebVitalsTrackerProps) {
-  return (
-    <div className={`web-vitals-tracker ${className}`}>
-      {children}
+          This page is under development.</p></div></div>
+  )
+        </p>
+      </div>
     </div>
-  );
-}
+  )}
+};
+
+export default WebVitalsTrackerPage;
