@@ -33,9 +33,14 @@ export const accessibilityChecker = {
       }
 
       previousLevel = currentLevel
+    })
     
+    return issues
+  },
   
   checkColorContrast: () => {
     // This would require a more complex implementation
     // For now, return empty array
     return []
+  }
+}
