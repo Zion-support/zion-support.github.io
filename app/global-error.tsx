@@ -45,6 +45,10 @@ const GlobalErrorPage = () => {
       </div>
     </div>
   );
-};
-
-export default GlobalErrorPage;
+            <////div></button>;
+          </////div></div>;
+        <////div></div>;
+      </////div></div>;
+    </////div>;
+  )}
+";

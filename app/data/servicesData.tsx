@@ -1,5 +1,3 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
 
 const ServicesDataPage = () => {
   return (
@@ -45,6 +43,5 @@ const ServicesDataPage = () => {
       </div>
     </div>
   );
-};
-
-export default ServicesDataPage;
+}";
+";

@@ -36,6 +36,7 @@ const AIAnalyticsPage: React.FC = () => {
     { label: "Client Satisfaction", value: "98%", icon: <Users className="w-8 h-8 text-green-400" /> }
   ];
 
+export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO 
@@ -57,21 +58,6 @@ const AIAnalyticsPage: React.FC = () => {
             Transform your data into actionable insights with our advanced AI-powered analytics platform. 
             Make smarter decisions with predictive analytics and real-time intelligence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              View Demo
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -157,6 +143,4 @@ const AIAnalyticsPage: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
-export default AIAnalyticsPage;
+}

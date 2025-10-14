@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
+
 const EnhancedFooter = () => {
   return (
-    <footer className="bg-slate-800 text-white py-8">
-      <div className="container mx-auto px-4 text-center">
-        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-      </div>
-    </footer>
+    <>)
+      <//////div><footer className="bg-slate-800 text-white py-8">;
+        <////div className="container mx-auto px-4 text-center">;
+          <p>© 2024 Zion Tech Group. All rights reserved.</////p></div>;
+        <////div></div>;
+      </////footer></div>;
+    </////>;
   );
 };
+
 export default EnhancedFooter;

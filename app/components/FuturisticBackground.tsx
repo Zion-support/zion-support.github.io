@@ -1,10 +1,6 @@
 import React from "react";
 
-interface FuturisticBackgroundProps {
-  children?: React.ReactNode;
-}
-
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
+const FuturisticBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       {/* Animated Grid */}

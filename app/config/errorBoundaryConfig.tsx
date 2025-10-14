@@ -45,6 +45,20 @@ const ErrorBoundaryConfigPage = () => {
       </div>
     </div>
   );
-};
-
-export default ErrorBoundaryConfigPage;
+export default ErrorBoundaryConfig;
+                We provide comprehensive error boundary config;
+                solutions tailored to your specific needs and requirements.</////p></div>;
+              <////div><ul className="space-y-3">";
+                <////li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Custom solutions</////li>;
+                <div><li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Expert consultation</////li>;
+                <div><li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Ongoing support</////li></ul></div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>";
+              <h3 className="text-2xl font-bold mb-4">Get Started</////h3>";
+              <p className="mb-6">;
+                Ready to transform your business with our error boundary config services?</////p>;

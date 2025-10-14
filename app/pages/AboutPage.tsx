@@ -1,7 +1,17 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const AboutPagePage = () => {
+import { Helmet    } from "react-helmet-async";
+import { 
+  CheckCircleIcon,;
+  UserGroupIcon,;
+  LightBulbIcon,;
+  ShieldCheckIcon,;
+  RocketLaunchIcon,;
+  HeartIcon,;
+  ArrowRightIcon,;
+  StarIcon,;
+  PhoneIcon,;
+  EnvelopeIcon,;
+  MapPinIcon;
+const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

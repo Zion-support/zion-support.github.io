@@ -116,6 +116,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const isActive = (href: string) => location.pathname === href;
 
+const Sidebar: React.FC = () => {
   return (
     <>
       {/* Overlay */}

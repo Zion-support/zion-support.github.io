@@ -45,6 +45,10 @@ const LoadingPage = () => {
       </div>
     </div>
   );
-};
-
-export default LoadingPage;
+            <////div></button>;
+          </////div></div>;
+        <////div></div>;
+      </////div></div>;
+    </////div>;
+  )}
+";

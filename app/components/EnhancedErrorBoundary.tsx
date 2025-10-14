@@ -1,7 +1,6 @@
 import React from "react";
-import { Helmet } from 'react-helmet-async';
 
-const EnhancedErrorBoundaryPage = () => {
+const EnhancedErrorBoundary: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -47,4 +46,4 @@ const EnhancedErrorBoundaryPage = () => {
   );
 };
 
-export default EnhancedErrorBoundaryPage;
+export default EnhancedErrorBoundary;

@@ -53,12 +53,12 @@ const GuidesPage: React.FC = () => {
     }
   };
 
+export default function Page() {
   return (
     <>
       <Helmet>
-        <title>Implementation Guides - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive guides for implementing AI, automation, and digital transformation solutions in your enterprise." />
-        <meta name="keywords" content="AI implementation, automation guides, digital transformation, enterprise solutions, technical guides" />
+        <title>Guides - Zion Tech Group</title>
+        <meta name="description" content="Guides services and solutions from Zion Tech Group" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -209,6 +209,4 @@ const GuidesPage: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default GuidesPage;
+}

@@ -1,4 +1,4 @@
-import React, { lazy, ComponentType, Suspense } from 'react';
+import React from "react";
 
 // Higher-order component for lazy loading
 export function withLazyLoading<T extends ComponentType<Record<string, unknown>>>(

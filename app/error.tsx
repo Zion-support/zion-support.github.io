@@ -45,6 +45,10 @@ const ErrorPage = () => {
       </div>
     </div>
   );
-};
-
-export default ErrorPage;
+            <////div></button>;
+          </////div></div>;
+        <////div></div>;
+      </////div></div>;
+    </////div>;
+  )}
+";

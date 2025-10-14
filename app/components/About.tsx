@@ -5,31 +5,6 @@ import { CheckIcon,
   TrophyIcon, 
   LightBulbIcon } from '@heroicons/react/24/outline';
 const About: React.FC = () => {
-  const stats = [
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients' },
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },
-    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }
-  ];
-
-  const values = [
-    {
-      title: 'Innovation',
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
-    },
-    {
-      title: 'Excellence',
-      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'
-    },
-    {
-      title: 'Partnership',
-      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'
-    },
-    {
-      title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
-    }
-  ];
-
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,10 +48,10 @@ const About: React.FC = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="flex justify-center mb-2">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                     <stat.icon className="h-8 w-8 text-blue-600" />
                   </div>
                   <div className="text-2 xl font-bold text-gray-900">{stat.value}</div>
@@ -95,21 +70,15 @@ const About: React.FC = () => {
                 enabling businesses of all sizes to compete and thrive in the 
                 digital economy.
               </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
-                  <span>Innovation-driven approach</span>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h4>
+                  <p className="text-gray-600">{value.description}</p>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
-                  <span>Client-focused solutions</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
-                  <span>Sustainable growth strategies</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -138,6 +107,6 @@ const About: React.FC = () => {
       </div>
     </section>
   );
-};
+</section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4></section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4>};
 
 export default About;

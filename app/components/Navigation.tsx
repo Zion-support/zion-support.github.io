@@ -1,10 +1,6 @@
 import React from "react";
 
-interface NavigationProps {
-  onSidebarToggle: () => void;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+const Navigation: React.FC = () => {
   return (
     <div className="p-4">
       <h2 className="text-2 xl font-bold text-white mb-4">Navigation</h2>

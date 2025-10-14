@@ -128,18 +128,12 @@ export default function ZionAnalyticsPro() {
     { number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" /> }
   ];
 
+export default function Page() {
   return (
     <>
       <Helmet>
-        <title>Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform your data into actionable insights with Zion Analytics Pro. Real-time dashboards, predictive analytics, and automated reporting for modern businesses."
-        />
-        <meta
-          name="keywords"
-          content="business intelligence, analytics, data visualization, predictive analytics, real-time dashboards, reporting, AI analytics, data insights"
-        />
+        <title>Zion Analytics Pro - Zion Tech Group</title>
+        <meta name="description" content="Zion Analytics Pro services and solutions from Zion Tech Group" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

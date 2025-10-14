@@ -1,7 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
-const LazyLoadingPage = () => {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -45,6 +44,7 @@ const LazyLoadingPage = () => {
       </div>
     </div>
   );
-};
+</h1></h1>};
 
 export default LazyLoadingPage;
+</////p></div>;

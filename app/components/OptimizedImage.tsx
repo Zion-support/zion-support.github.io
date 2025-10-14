@@ -1,7 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
-const OptimizedImagePage = () => {
+const OptimizedImage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -44,6 +43,6 @@ const OptimizedImagePage = () => {
         </div>
       </div>    </div>
   );
-};
+</li></OptimizedImageProps></HTMLImageElement></Helmet></link></div></div></div></div></div></div></img></OptimizedImageProps></HTMLImageElement></Helmet></link></div></div></div></div></div></div></img>};
 
 export default OptimizedImagePage;

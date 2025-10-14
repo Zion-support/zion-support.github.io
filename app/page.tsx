@@ -1,30 +1,22 @@
-import React from "react";
+'use client';
+import React from "react";"
 import { Helmet } from "react-helmet-async";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-const HomePage = () => {
+
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions, empowering businesses to transform and scale through innovative technology." />
-        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, digital transformation, technology consulting" />
-        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI and IT solutions, empowering businesses to transform and scale through innovative technology." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI and IT solutions, empowering businesses to transform and scale through innovative technology." />
+        <title>App - Zion Tech Group</title>"
+        <meta name="description" content="App services and solutions from Zion Tech Group" />
       </Helmet>
-      <Hero />
-      <Services />
-      <About />
-      <Contact />
-      <Footer />
-    </div>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">App</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our app services.
+          </p>
+        </div>
+      </div>
+    </>
   );
-};
-export default HomePage;
+}

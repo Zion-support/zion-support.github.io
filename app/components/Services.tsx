@@ -7,45 +7,6 @@ import { CpuChipIcon,
   ShieldCheckIcon,
   RocketLaunchIcon } from '@heroicons/react/24/outline';
 const Services: React.FC = () => {
-  const services = [
-    {
-      icon: CpuChipIcon,
-      title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions to automate processes and drive innovation.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions to power your business growth.',
-      features: ['AWS/Azure/GCP', 'DevOps & CI/CD', 'Container Orchestration', 'Cloud Migration']
-    },
-    {
-      icon: CogIcon,
-      title: 'IT Services',
-      description: 'Comprehensive IT support and management to keep your systems running smoothly.',
-      features: ['System Administration', 'Network Security', 'Data Backup', '24/7 Monitoring']
-    },
-    {
-      icon: ChartBarIcon,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics solutions.',
-      features: ['Business Intelligence', 'Data Visualization', 'Real-time Dashboards', 'Custom Reports']
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Protect your business with comprehensive security solutions and best practices.',
-      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies to modernize your business processes.',
-      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training & Support']
-    }
-  ];
-
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">

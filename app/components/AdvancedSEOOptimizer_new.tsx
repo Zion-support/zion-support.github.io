@@ -1,5 +1,6 @@
 import React from "react";
-const AdvancedSEOOptimizer_new = () => {
+
+const AdvancedSEOOptimizerNew: React.FC = () => {
   return (
     <div className="p-4">
       <h2 className="text-2 xl font-bold text-white mb-4">AdvancedSEOOptimizer_new</h2>
@@ -9,4 +10,5 @@ const AdvancedSEOOptimizer_new = () => {
     </div>
   );
 };
-export default AdvancedSEOOptimizer_new;
+
+export default AdvancedSEOOptimizerNew;

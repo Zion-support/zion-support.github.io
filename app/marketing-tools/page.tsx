@@ -77,12 +77,12 @@ const MarketingToolsPage: React.FC = () => {
     }
   ];
 
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Marketing Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
-        <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
+        <meta name="description" content="Marketing Tools services and solutions from Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -225,6 +225,4 @@ const MarketingToolsPage: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default MarketingToolsPage;
+}

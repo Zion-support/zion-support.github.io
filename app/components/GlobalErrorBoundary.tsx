@@ -1,8 +1,13 @@
-import React, { Component, ReactNode } from 'react';
+import React from "react";
 
-interface Props {
-  children: ReactNode;
-}
+const GlobalErrorBoundary: React.FC = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">GlobalErrorBoundary</h2>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
 
 interface State {
   hasError: boolean;

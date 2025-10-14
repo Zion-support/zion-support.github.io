@@ -46,5 +46,3 @@ const LazyLoadingUtilsPage = () => {
     </div>
   );
 };
-
-export default LazyLoadingUtilsPage;

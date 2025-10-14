@@ -1,7 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
-import { Mail, ArrowRight } from 'lucide-react';
+import React from "react";
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -82,6 +79,7 @@ const ContentNewsletterSignup: React.FC = () => {
       </div>
     </section>
   );
-};
+</div></div></button></section></div></div></h2></section></div></div></h2></form></div></Mail></input></button></div></ArrowRight></section></div></div></h2></section></div></div></h2></form></div></Mail></input></button></div></ArrowRight>};
 
 export default ContentNewsletterSignup;
+"

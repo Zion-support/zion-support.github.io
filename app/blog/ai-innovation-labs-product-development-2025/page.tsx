@@ -1,23 +1,20 @@
 import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
+
 const InnovationLabsPage: React.FC = () => {
-
   return (
-
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4 xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
-            <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <span>
               🚀 Innovation Lab
             </span>
             <h1 className="text-4 xl font-bold text-gray-900 mb-4">
               AI Innovation Labs: Product Development Revolution 2025
             </h1>
-            <p className="text-gray-600 text-lg">
-              January 28, 2025 · 45 min read · AI Innovation
-            </p>
+            <p>January 28, 2025 · 45 min read · AI Innovation</p>
           </div>
 
           <div className="prose max-w-none">
@@ -88,8 +85,7 @@ const InnovationLabsPage: React.FC = () => {
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <pre className="text-sm text-gray-800 overflow-x-auto">
-{`AI Innovation Lab Stack:
+              <pre className="text-sm text-gray-700 whitespace-pre-wrap">{`AI Innovation Lab Stack:
 ├── AI/ML Platform
 │   ├── TensorFlow & PyTorch
 │   ├── Hugging Face Transformers
@@ -105,8 +101,7 @@ const InnovationLabsPage: React.FC = () => {
 └── Infrastructure
     ├── Cloud-native Architecture
     ├── Kubernetes & Docker
-    └── CI/CD Automation`}
-              </pre>
+    └── CI/CD Automation`}</pre>
             </div>
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🚀 Getting Started with AI Innovation</h2>
@@ -117,16 +112,18 @@ const InnovationLabsPage: React.FC = () => {
 
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your AI Innovation Journey</h3>
-              <p className="text-gray-700 mb-4">
-                Join leading companies transforming product development with AI-powered innovation
-              </p>
+              <p>Join leading companies transforming product development with AI-powered innovation</p>
               <div className="space-x-4">
-                <Link href="/contact"
-                  className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                <Link
+                  href="/contact"
+                  className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                >
                   Schedule Innovation Assessment
                 </Link>
-                <Link href="/services"
-                  className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
+                <Link
+                  href="/services"
+                  className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors"
+                >
                   Explore AI Services
                 </Link>
               </div>
@@ -136,6 +133,6 @@ const InnovationLabsPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default InnovationLabsPage;

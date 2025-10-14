@@ -138,12 +138,12 @@ const CommunityPage: React.FC = () => {
     }
   ];
 
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join our developer community. Share projects, get help, and connect with other AI developers using Zion Tech Group services." />
-        <meta name="keywords" content="developer community, AI community, developer forum, project showcase, technical discussions" />
+        <meta name="description" content="Community services and solutions from Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -178,8 +178,7 @@ const CommunityPage: React.FC = () => {
               Browse Discussions
             </button>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Categories */}
       <section className="py-16 px-4">
@@ -205,7 +204,6 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Recent Discussions */}
@@ -218,7 +216,7 @@ const CommunityPage: React.FC = () => {
             </button>
           </div>
           
-          <div className="space-y-4">
+          <div className="space-y-6">
             {recentDiscussions.map((discussion) => (
               <div key={discussion.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
                 <div className="flex items-start justify-between">
@@ -245,7 +243,7 @@ const CommunityPage: React.FC = () => {
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {discussion.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                        <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
                           #{tag}
                         </span>
                       ))}
@@ -255,7 +253,6 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Featured Projects */}
@@ -263,7 +260,7 @@ const CommunityPage: React.FC = () => {
         <div className="max-w-7 xl mx-auto">
           <h2 className="text-3 xl font-bold text-white mb-12 text-center">Featured Projects</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2 xl transition-all duration-300 hover:scale-105">
                 <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
@@ -287,7 +284,7 @@ const CommunityPage: React.FC = () => {
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
+                      <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
                         #{tag}
                       </span>
                     ))}
@@ -299,7 +296,6 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Join Community CTA */}
@@ -308,9 +304,7 @@ const CommunityPage: React.FC = () => {
           <h2 className="text-3 xl font-bold text-white mb-6">
             Ready to Join Our Community?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Connect with thousands of developers building amazing AI applications.
-          </p>
+          <p className="text-white/90 mb-8">Connect with thousands of developers building amazing AI applications.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Sign Up Free
@@ -319,10 +313,7 @@ const CommunityPage: React.FC = () => {
               Learn More
             </button>
           </div>
-        </div>
-      </section>
+        </section>
     </div>
   );
-};
-
-export default CommunityPage;
+}

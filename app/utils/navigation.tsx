@@ -45,6 +45,10 @@ const NavigationPage = () => {
       </div>
     </div>
   );
-};
-
-export default NavigationPage;
+            <////div></button>;
+          </////div></div>;
+        <////div></div>;
+      </////div></div>;
+    </////div>;
+  )}
+";

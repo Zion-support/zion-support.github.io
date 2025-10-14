@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoadingOptimizer = () => {
+const LoadingOptimizer: React.FC = () => {
   return (
     <div className="p-4">
       <h2 className="text-2 xl font-bold text-white mb-4">LoadingOptimizer</h2>

@@ -9,6 +9,6 @@ const DemoPage = () => {
       </p>
     </div>
   );
-};
-
+}
 export default DemoPage;
+";

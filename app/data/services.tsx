@@ -1,5 +1,3 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
 
 const ServicesPage = () => {
   return (
@@ -45,6 +43,5 @@ const ServicesPage = () => {
       </div>
     </div>
   );
-};
-
-export default ServicesPage;
+}";
+";

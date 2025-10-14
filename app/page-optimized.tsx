@@ -45,6 +45,10 @@ const PageOptimizedPage = () => {
       </div>
     </div>
   );
-};
-
-export default PageOptimizedPage;
+            <////div></button>;
+          </////div></div>;
+        <////div></div>;
+      </////div></div>;
+    </////div>;
+  )}
+";

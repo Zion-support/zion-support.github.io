@@ -1,6 +1,8 @@
-import React from "react";
+'use client';
+import React from "react";"
+import { Helmet } from "react-helmet-async";
 
-const Page = () => {
+export default function Page() {
   return (
     <div className="p-4">
       <h2 className="text-2 xl font-bold text-white mb-4">Page</h2>
@@ -9,6 +11,4 @@ const Page = () => {
       </p>
     </div>
   );
-};
-
-export default Page;
+}
