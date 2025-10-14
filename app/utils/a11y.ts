@@ -10,6 +10,12 @@ export const accessibilityUtils = {
     announcement.className = 'sr-only'
     announcement.textContent = message
     document.body.appendChild(announcement)
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement)
+    }, 1000)
+  },
+  
     setTimeout(() => document.body.removeChild(announcement), 1000)
   },
 

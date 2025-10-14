@@ -10,6 +10,9 @@ export const validation = {
   },
   
   required: (value: unknown) => {
+    return value !== null && value !== undefined && value !== '';
+  required: (value: any) => {
+  required: (value: unknown) => {
     return value !== null && value !== undefined && value !== ''
   },
   
@@ -30,3 +33,4 @@ export const validation = {
     }
   }
 }
+}}

@@ -1,107 +1,115 @@
-import { useEffect } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
+  cls: number | null;
+  inp: number | null;
+  fcp: number | null;
+  lcp: number | null;
+  ttfb: number | null;
+  loadTime: number | null;
+  fid: number | null;
 }
 
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart?: number;
-}
+const getScoreColor = (score: number): string => {
+  if (score >= 90) return 'text-green-500';
+  if (score >= 70) return 'text-yellow-500';
+  return 'text-red-500';
+};
 
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    inp: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+    loadTime: 0,
+    fid: null
+  });
 
-const PerformanceMonitor = () => {
   useEffect(() => {
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
 
-    const metrics: PerformanceMetrics = {};
+    const handleMetric = (metric: unknown) => {
+      setMetrics(prev => ({
+        ...prev,
+        [(metric as { name: string; value: number }).name]: (metric as { name: string; value: number }).value
+      }));
 
-    // Measure Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      metrics.lcp = lastEntry.startTime;
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // Measure First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
-        if (fidEntry.processingStart) {
-          metrics.fid = fidEntry.processingStart - fidEntry.startTime;
-        }
-      });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-
-    // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const layoutShiftEntry = entry as LayoutShift;
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
-        }
-      });
-      metrics.cls = clsValue;
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-    // Measure First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          metrics.fcp = entry.startTime;
-        }
-      });
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-
-    // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-    }
-
-    // Send metrics after page load
-    const sendMetrics = () => {
-      if (Object.keys(metrics).length > 0) {
-        // Send to analytics service
-        if (process.env.NODE_ENV === 'development') {
-          // Performance metrics logged in development
-        }
-        
-        // You can send to your analytics service here
-        // Example: analytics.track('performance_metrics', metrics);
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
+        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', (metric as { name: string; value: number; id: string }).name, {
+          event_category: 'Web Vitals',
+          value: Math.round((metric as { name: string; value: number; id: string }).value),
+          event_label: (metric as { name: string; value: number; id: string }).id,
+          non_interaction: true,
+        });
       }
-    };
-
-    // Send metrics when page is about to unload
-    window.addEventListener('beforeunload', sendMetrics);
-
-    // Cleanup
-    return () => {
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
-      fcpObserver.disconnect();
-      window.removeEventListener('beforeunload', sendMetrics);
-    };
+    }
+    onCLS(handleMetric);
+    onINP(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
   }, []);
 
-  return null;
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-sm max-w-xs z-50">
+      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <div className="space-y-1">
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+      </div>
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={getScoreColor(metrics.fcp || 0)}>
+            {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className={getScoreColor(metrics.lcp || 0)}>
+            {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>FID:</span>
+          <span className={getScoreColor(metrics.fid || 0)}>
+            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className={getScoreColor(metrics.cls || 0)}>
+            {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className={getScoreColor(metrics.ttfb || 0)}>
+            {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
+          </span>
+        </div>
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-slate-600">
+        <div className="text-xs text-gray-400">
+          <div>Good: Green | Needs Improvement: Yellow | Poor: Red</div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { Suspense } from 'react';
 const FiveGTestingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -16,5 +15,4 @@ const FiveGTestingPage: React.FC = () => {
     </div>
   );
 }
-
 export default FiveGTestingPage;

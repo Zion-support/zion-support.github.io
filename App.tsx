@@ -1,26 +1,27 @@
-import React, { useEffect, Suspense, lazy } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
-// Lazy load pages
-const HomePage = lazy(() => import('./app/page'));
-const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
-const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
-const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
-const AIBusinessIntelligenceProPage = lazy(() => import('./app/ai-business-intelligence-pro/page'));
-const AICybersecuritySuiteProPage = lazy(() => import('./app/ai-cybersecurity-suite-pro/page'));
+// Components
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import { AnalyticsProvider } from './app/components/AnalyticsProvider';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import SEOEnhancer from './app/components/SEOEnhancer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+// import LoadingStates from './app/components/LoadingStates';
 
-// Simple loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-white text-xl">Loading...</div>
-  </div>
-);
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import MetaManager from './app/components/MetaManager';
+import EnhancedAnalytics from './app/components/EnhancedAnalytics';
+import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
-// Simple error boundary
-interface ErrorBoundaryState {
-  hasError: boolean;
-}
+// Pages
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ServicesPage from './app/services/page';
+import ContactPage from './app/contact/page';
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
@@ -56,49 +57,49 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
-function App() {
+const App: React.FC = () => {
   // Sidebar state management (currently unused)
   // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
-// Performance monitoring
-if (typeof window !== 'undefined') {
-  // Monitor Core Web Vitals
-  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-    onCLS((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('CLS:', metric);
-      }
-    });
-    onFCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('FCP:', metric);
-      }
-    });
-    onLCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('LCP:', metric);
-      }
-    });
-    onTTFB((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('TTFB:', metric);
-      }
-    });
-  });
+    // Performance monitoring
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('CLS:', metric);
+          }
+        });
+        onFCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('FCP:', metric);
+          }
+        });
+        onLCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('LCP:', metric);
+          }
+        });
+        onTTFB((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('TTFB:', metric);
+          }
+        });
+      });
 
-  // Monitor bundle size
-  const observer = new PerformanceObserver((list) => {
-    for (const entry of list.getEntries()) {
-      if (entry.entryType === 'navigation') {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+      // Monitor bundle size
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            if (process.env.NODE_ENV === 'development') {
+              console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+            }
+          }
         }
-      }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
     }
-  });
-  observer.observe({ entryTypes: ['navigation'] });
-}
 
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
       console.warn('Zion Tech Group App initialized');
@@ -108,24 +109,52 @@ if (typeof window !== 'undefined') {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                <Route path="/it-solutions" element={<ITSolutionsPage />} />
-                <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-                <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
-                <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
-                <Route path="*" element={<HomePage />} />
-              </Routes>
-            </Suspense>
-          </div>
-        </Router>
+        <AnalyticsProvider>
+          <PerformanceOptimizer>
+            <AccessibilityEnhancer />
+            <SEOEnhancer
+              title="Zion Tech Group - Advanced AI and IT Solutions"
+              description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
+              keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
+              type="website"
+              structuredData={{
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Zion Tech Group",
+                "description": "Leading provider of AI and IT solutions",
+                "url": "https://ziontechgroup.com",
+                "logo": "https://ziontechgroup.com/images/logo.png",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-555-0123",
+                  "contactType": "customer service"
+                }
+              }}
+            />
+            <MetaManager />
+            <PerformanceMonitor />
+            <EnhancedAnalytics />
+            <Router>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <Navigation />
+                <main className="relative z-10" id="main-content" role="main">
+                  <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                    </Routes>
+                  </Suspense>
+                </main>
+                <Footer />
+              </div>
+            </Router>
+          </PerformanceOptimizer>
+        </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+};
 
 export default App;

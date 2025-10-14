@@ -1,2 +1,123 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react';
+
+const AIServicesPage: React.FC = () => {
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI Strategy & Consulting',
+      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',
+      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']
+    },
+    {
+      icon: Bot,
+      title: 'Conversational AI',
+      description: 'Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.',
+      features: ['Natural Language Processing', 'Multi-channel Integration', 'Sentiment Analysis', '24/7 Availability']
+    },
+    {
+      icon: BarChart3,
+      title: 'Predictive Analytics',
+      description: 'Leverage machine learning to predict trends, behaviors, and outcomes for better decision making.',
+      features: ['Data Mining', 'Pattern Recognition', 'Forecasting Models', 'Real-time Insights']
+    },
+    {
+      icon: Shield,
+      title: 'AI Security Solutions',
+      description: 'Advanced AI-powered security systems to protect your digital assets and detect threats in real-time.',
+      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Compliance Monitoring']
+    },
+    {
+      icon: Zap,
+      title: 'Process Automation',
+      description: 'Streamline operations with intelligent automation that reduces costs and improves efficiency.',
+      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Quality Control']
+    },
+    {
+      icon: Target,
+      title: 'Custom AI Development',
+      description: 'Bespoke AI solutions designed specifically for your unique business challenges and opportunities.',
+      features: ['Custom Algorithms', 'API Development', 'Integration Services', 'Ongoing Support']
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-900 text-white">
+      <Helmet>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including strategy consulting, machine learning, predictive analytics, and custom AI development solutions." />
+        <meta name="keywords" content="AI services, machine learning, artificial intelligence, predictive analytics, AI consulting, Zion Tech Group" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            AI Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with cutting-edge artificial intelligence solutions. 
+            From strategy to implementation, we deliver AI that drives real results.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Key Features</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-gray-300 text-sm flex items-center">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Harness the Power of AI?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our AI services can transform your business and give you a competitive edge.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+              Start Your AI Journey
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+              Schedule Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AIServicesPage;
