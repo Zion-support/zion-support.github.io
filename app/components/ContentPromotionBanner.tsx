@@ -11,4 +11,4 @@ const ContentPromotionBanner = () => {
   );
 };
 
-export default ContentPromotionBanner;
+export default ContentPromotionBanner

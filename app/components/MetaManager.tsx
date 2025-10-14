@@ -69,6 +69,8 @@ const MetaManager: React.FC<MetaManagerProps> = ({
   return (
     <Helmet>
       <title>{title}</title>
+  );
+  );
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={url} />

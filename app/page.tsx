@@ -15,4 +15,6 @@ export default function Page() {
       </div>
     </React.Fragment>
   );
-}
+};
+
+export default PagePage

@@ -284,5 +284,6 @@ const EnhancedAnalytics: React.FC = () => {
     }
   }, [trackEvent, trackUserInteraction, trackPerformance, trackError])
   return null;
-}
-export default EnhancedAnalytics;
+};
+
+export default EnhancedAnalytics

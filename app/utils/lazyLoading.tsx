@@ -29,5 +29,5 @@ export const createLazyComponent = <P extends object>(
 <azyComponent {...props} />
       
     </LazyWrapper></>
-  )
+  );
 }

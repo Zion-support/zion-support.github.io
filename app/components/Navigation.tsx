@@ -18,6 +18,7 @@ const Navigation = () => {
         </div>
       </div>
     </nav>
-  )
-}
-;
+  );
+};
+
+export default Navigation

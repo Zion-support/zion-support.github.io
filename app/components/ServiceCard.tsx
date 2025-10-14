@@ -1,4 +1,7 @@
-import React from "react";
+import React from "reactuse client";'export default function ServiceCard() {'  return (
+    <div>
+  );Page content</div>
+  );
 
 export default function ServiceCard() {
   return (
@@ -10,3 +13,6 @@ export default function ServiceCard() {
     </div>
   );
 }
+};
+};
+  )}
