@@ -100,85 +100,6 @@ function fixFile(filePath) {
     content = content.replace(/export\s+([^;]+);\s*$/gm, 'export $1;');
     
     // Fix malformed function declarations
-<<<<<<< HEAD
-    content = content.replace(
-  /export default functio;n; ([
-  ^  {
-  ]
-)
-)
-  ]+)\s*{/g, 'export default functio;n; $1   {');
-    // Fix missing closing parentheses
-    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\);/g, 'return (\n    <>\n$1\n    </>\n  );');
-    // Fix test file issues by commenting out problematic lines
-    if (filePath.includes('.test.') || filePath.includes('__tests__') || filePath.includes('test')) {
-      content = content.replace(/^(describe|test|it|expect|beforeEach|afterEach|beforeAll|afterAll)\(/gm, '// $1(');
-}
-}
-    }
-    // Fix duplicate React imports
-    const lines = content.split('\n');
-    const reactImports = lines.filter(line => line.trim().startsWith('import React'));
-    if (reactImports.length > 1) { // Keep only the first React import
-      const firstReactImport = reactImports[0];
-      content = content.replace(/import React[^;]+;/g, '');
-      content = firstReactImport + '\n' + content; }
-}
-    }
-    // Fix merge conflict markers
-    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    
-    // Fix specific syntax errors
-    content = content.replace(/;\s*\);/g, '\n  );');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
-    content = content.replace(/;\s*\);/g, '\n  );');
-    // Fix malformed JSX in broken files
-    if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {
-  // For broken/disabled files, try to create a minimal valid structure
-      if (content.includes('import React from') && !content.includes('export default')) {
-        content = content.replace(/import React[^;]+;/g, '');
-}
-}
-        content = `import React from 'react';\n\nexport default function Component; Page()   {\n  return (\n    <div>\n      <h1>Page Under Construction</h1>\n      <p>This page is currently being updated.</p>\n    </div>\n  );\n}`;
-      }
-    }
-    if (content !== originalContent) { fs.writeFileSync(filePath, content, 'utf8'); }
-}
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
-=======
-    content = content.replace(/function\s+([^{]+);\s*$/gm, 'function $1 {');
-    
-    // Fix malformed JSX
-    if (content.includes('export default function') && !content.includes('return (')) {
-      const functionMatch = content.match(/export default function (\w+)\s*\(\s*\)\s*\{/);
-      if (functionMatch) {
-        const functionName = functionMatch[1];
-        const pageName = functionName.replace('Page', '');
-        
-        // Create proper JSX structure
-        const jsxContent = `  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${pageName}</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about ${pageName.toLowerCase()}</p>
-        </div>
-      </div>
-    </div>
-  );`;
-        
-        content = content.replace(
-          /export default function \w+\s*\(\s*\)\s*\{[\s\S]*?\};?\s*$/,
-          `export default function ${functionName}() {\n${jsxContent}\n}`
-        );
-      }
-    }
-    
-    // Fix specific patterns for different file types
-    if (filePath.endsWith('.d.ts')) {
-      // Fix TypeScript declaration files
-      content = content.replace(/declare\s+([^;]+);\s*$/gm, 'declare $1;');
->>>>>>> origin/main
     }
     
     if (filePath.endsWith('.test.ts') || filePath.endsWith('.test.tsx')) {
@@ -221,33 +142,6 @@ function fixFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-<<<<<<< HEAD
-// Function to find all problematic files
-function findProblematicFiles(dir) {
-  const files = [];
-  function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-          searchDirectory(fullPath);
-}
-}
-        }
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-  try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('import React from \'react;') || 
-}
-}
-              content.includes('import { Helmet } from \'react-helmet-async;') ||
-              content.includes('<>') ||
-              content.includes('</>') ||
-              content.includes('') ||
-              content.includes('') ||
-              content.includes('>>>>>>>')) { files.push(fullPath); }
 }
           }
         } catch (err) { // Skip files that can't be read }
@@ -286,10 +180,8 @@ async function main() { console.log('🔍 Finding problematic files...');
   console.log('🎉 Remaining error fixing process completed!');
 }
 main().catch(console.error);
-=======
 
 // Fix all files
 console.log('Starting to fix remaining syntax errors...');
 filesToFix.forEach(fixFile);
 console.log('Remaining syntax error fixing completed!');
->>>>>>> origin/main

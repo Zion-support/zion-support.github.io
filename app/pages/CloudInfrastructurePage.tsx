@@ -1,73 +1,3 @@
-<<<<<<< HEAD
-import React from 'react";
-import { Helmet } from 'react-helmet-async";
-import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react";
-const CloudInfrastructurePage: React.FC = () => {const services = [{
-      icon: Cloud,
-      title: 'Cloud Migration","
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.","
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']'"},"
-    {icon: Server,
-      title: 'Infrastructure as Code","
-      description: 'Automate infrastructure provisioning and management using modern DevOps practices.","
-      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']'"},"
-    {icon: Database,
-      title: 'Database Solutions","
-      description: 'Optimize your database performance and scalability in the cloud environment.","
-      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']'"},"
-    {icon: Shield,
-      title: 'Security & Compliance","
-      description: 'Implement robust security measures and ensure compliance with industry standards.","
-      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']'"},"
-    {icon: Zap,
-      title: 'Auto-scaling","
-      description: 'Automatically scale your resources based on demand to optimize costs and performance.","
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']'"},"
-    {icon: Globe,
-      title: 'Multi-cloud Strategy","
-      description: 'Leverage multiple cloud providers for better resilience and vendor independence.","
-      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']'"}"
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react;
-const CloudInfrastructurePage: React.FC = () => {
-  const services = [{
-      icon: Cloud,
-      title: "Cloud Migration",';
-      description: "Seamlessly migrate your applications and data to the cloud with minimal downtime.",';
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';
-    },
-    {
-      icon: Server,
-      title: "Infrastructure as Code",';
-      description: "Automate infrastructure provisioning and management using modern DevOps practices.",';
-      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']';
-    },
-    {
-      icon: Database,
-      title: "Database Solutions",';
-      description: "Optimize your database performance and scalability in the cloud environment.",';
-      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']';
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",';
-      description: "Implement robust security measures and ensure compliance with industry standards.",';
-      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']';
-    },
-    {
-      icon: Zap,
-      title: "Auto-scaling",';
-      description: "Automatically scale your resources based on demand to optimize costs and performance.",';
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']';
-    },
-    { icon: Globe,
-      title: "Multi-cloud Strategy",';
-      description: "Leverage multiple cloud providers for better resilience and vendor independence.",';
-      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']'; }
->>>>>>> origin/main
   ];
 const CloudInfrastructurePage: React.FC = () => {
   return (
@@ -88,13 +18,6 @@ const CloudInfrastructurePage: React.FC = () => {
             security, and cost-effectiveness.;
           </p>
         </div>
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
-=======
-        { /* Services Grid */ }
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
->>>>>>> origin/main
           {services.map((service, _index) => {
             const Icon = service.icon;
             return (
@@ -108,15 +31,6 @@ const CloudInfrastructurePage: React.FC = () => {
                 <p className="text-gray-300 mb-4">{service.description}</p>"
                 <ul className="space-y-2">"
                   {service.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">"
-                      <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>"
-                      {feature}
-=======
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-                      <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
-                      { feature }
->>>>>>> origin/main
                     </li>
                   ))
                 </ul>
@@ -124,19 +38,6 @@ const CloudInfrastructurePage: React.FC = () => {
             )
           }
         </div>
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <div className="text-center">"
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Infrastructure?</h2>"
-            <p className="text-gray-300 mb-6">"
-=======
-        { /* CTA Section */ }
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Infrastructure?</h2>
-            <p className="text-gray-300 mb-6">
->>>>>>> origin/main
               Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -211,7 +112,6 @@ export default CloudInfrastructurePage;
     </>
   )
 export default CloudInfrastructurePage;
-=======
 "use client";
 
 import React from "react";
@@ -224,4 +124,3 @@ export default function CloudInfrastructurePage() {
     </div>
   );
 }
->>>>>>> origin/main

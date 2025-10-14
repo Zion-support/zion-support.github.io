@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react";
-import { Link, useLocation } from 'react-router-dom";
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
->>>>>>> origin/main
 import { 
   XMarkIcon,
   HomeIcon,
@@ -26,34 +17,14 @@ import {
   CpuChipIcon,
   SignalIcon,
   UserGroupIcon
-<<<<<<< HEAD
-} from '@heroicons/react/24/outline";
-interface SidebarProps {isOpen: boolean;
-  onClose: () => void}
-=======
-} from '@heroicons/react/24/outline';
-<<<<<<< HEAD
-=======
-=======
-import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play } from 'lucide-react';
->>>>>>> origin/main
->>>>>>> origin/main
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
-<<<<<<< HEAD
-=======
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
->>>>>>> origin/main
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location = useLocation()
   const [expandedItems, setExpandedItems] = useState<string[]>([])
@@ -64,25 +35,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
       prev.includes(item) 
         ? prev.filter(i => i !== item)
         : [...prev, item]
-<<<<<<< HEAD
-    )
-  const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },'
-    { name: 'About', href: '/about', icon: InformationCircleIcon },'
-    { 
-      name: 'Services', '
-      href: '/services', '
-      icon: BriefcaseIcon,
-      submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },'
-        { name: 'IT Services', href: '/it-services', icon: CogIcon },'
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },'
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },'
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }'
-=======
-    );
-  };
->>>>>>> origin/main
 
   const navigation = [
     { name: "Home", href: "/", icon: HomeIcon },
@@ -92,120 +44,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
       href: "/services", 
       icon: BriefcaseIcon,
       submenu: [
-<<<<<<< HEAD
-        { name: "AI Services", href: "/ai-services", icon: CpuChipIcon },
-        { name: "IT Services", href: "/it-services", icon: CogIcon },
-        { name: "Cloud Infrastructure", href: "/cloud-infrastructure", icon: CloudIcon },
-        { name: "Cybersecurity", href: "/cybersecurity", icon: ShieldCheckIcon }
-      ]
-    },
-    { 
-      name: "Solutions", 
-      href: "/solutions", 
-      icon: CogIcon,
-      submenu: [
-        { name: "AI Solutions", href: "/ai-solutions", icon: CpuChipIcon },
-        { name: "Cybersecurity", href: "/cybersecurity", icon: ShieldCheckIcon },
-        { name: "Cloud Infrastructure", href: "/cloud-solutions", icon: CloudIcon },
-        { name: "Digital Transformation", href: "/digital-transformation", icon: CogIcon },
-        { name: "Micro SaaS", href: "/micro-saas", icon: GlobeAltIcon },
-        { name: "5G Solutions", href: "/5g-solutions", icon: SignalIcon }
-      ]
-    },
-    { name: "Blog", href: "/blog", icon: DocumentTextIcon },
-    { name: "Tutorials", href: "/tutorials", icon: AcademicCapIcon },
-    { name: "Demo", href: "/demo", icon: PlayIcon },
-    { name: "Support", href: "/support", icon: QuestionMarkCircleIcon },
-    { name: "Pricing", href: "/pricing", icon: CurrencyDollarIcon },
-    { name: "Contact", href: "/contact", icon: PhoneIcon }
-  ];
-
-  const additionalLinks = [
-    { name: "Privacy Policy", href: "/privacy", icon: ShieldCheckIcon },
-    { name: "Terms of Service", href: "/terms", icon: DocumentTextIcon },
-    { name: "Our Team", href: "/team", icon: UserGroupIcon },
-    { name: "Documentation", href: "/docs", icon: DocumentTextIcon },
-    { name: "Careers", href: "/careers", icon: BriefcaseIcon }
-  ];
-
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
-
-  const toggleSection = (sectionName: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionName) 
-        ? prev.filter(name => name !== sectionName)
-        : [...prev, sectionName]
-    );
-  };
-
-  const isExpanded = (sectionName: string) => {
-    return expandedSections.includes(sectionName);
-  };
-
-  if (!isOpen) return null;
-
-  return (
-    <>
-      {/* Overlay */}
-      <div 
-        className="fixed inset-0 bg-black bg-opacity-50 z-40"
-        onClick={onClose}
-      />
-      
-      {/* Sidebar */}
-      <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 overflow-y-auto">
-        <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold text-gray-900">Navigation</h2>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-md"
-          >
-            <XMarkIcon className="w-5 h-5" />
-          </button>
-        </div>
-        
-        <nav className="mt-4">
-          {navigation.map((item) => (
-            <div key={item.name}>
-              {item.submenu ? (
-                <div>
-                  <button
-                    onClick={() => toggleSection(item.name)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    <div className="flex items-center">
-                      <item.icon className="w-5 h-5 mr-3" />
-                      {item.name}
-                    </div>
-                    <ChevronDownIcon 
-                      className={`w-4 h-4 transition-transform ${
-                        isExpanded(item.name) ? 'rotate-180' : ''
-                      }`} 
-                    />
-                  </button>
-                  {isExpanded(item.name) && (
-                    <div className="pl-4 space-y-1">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className={`block px-4 py-2 text-sm transition-colors ${
-                            isActive(subItem.href)
-                              ? 'text-blue-600 bg-blue-50'
-                              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                          }`}
-                          onClick={onClose}
-                        >
-                          {subItem.name}
-=======
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
-        { name: 'IT Services', href: '/it-services', icon: CogIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
->>>>>>> origin/main
       ]
     },
     { name: 'Solutions', href: '/solutions', icon: GlobeAltIcon },'
@@ -262,7 +100,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                         >
                           <subLink.icon className="w-4 h-4 mr-3" />"
                           {subLink.name}
->>>>>>> origin/main
                         </Link>
                       ))
                     </div>
@@ -270,62 +107,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                 </div>
               ) : (
                 <Link
-<<<<<<< HEAD
-                  to={item.href}
-                  className={`flex items-center px-4 py-3 transition-colors ${
-                    isActive(item.href)
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
-                  }`}
-                  onClick={onClose}
-                >
-                  <item.icon className="w-5 h-5 mr-3" />
-                  {item.name}
-=======
-                  to={link.href}
-                  className={`flex items-center px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded ${`
-                    isActive(link.href) ? 'text-blue-400 bg-blue-900/20' : '''
-                  }`}`
-                  onClick={onClose}
-                >
-                  <link.icon className="w-5 h-5 mr-3" />"
-                  {link.name}
->>>>>>> origin/main
                 </Link>
               )
             </div>
-<<<<<<< HEAD
-          ))
-=======
-          ))}
-<<<<<<< HEAD
-          
-          {/* Additional Links */}
-          <div className="border-t border-gray-200 mt-4 pt-4">
-            <h3 className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
-              Additional
-            </h3>
-            {additionalLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={`flex items-center px-4 py-2 text-sm transition-colors ${
-                  isActive(link.href)
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`}
-                onClick={onClose}
-              >
-                <link.icon className="w-4 h-4 mr-3" />
-                {link.name}
-              </Link>
-            ))}
-          </div>
-=======
->>>>>>> origin/main
->>>>>>> origin/main
         </nav>
-=======
 const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -478,181 +263,9 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   })).filter(section => section.items.length > 0 || searchQuery === '');
 
   if (!isOpen) return null;
-=======
 import React from "react";
->>>>>>> origin/main
 
 const Sidebar = () => {
   return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50 lg:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed right-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-white/10 overflow-y-auto">
-        <div className="p-6">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-bold text-white">Navigation</h2>
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Search */}
-          <div className="mb-6">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              />
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div className="mb-8">
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <div className="space-y-2">
-              {quickLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={link.href}
-                  className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors"
-                  onClick={onClose}
-                >
-                  {link.icon}
-                  <span className="text-gray-300">{link.label}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation Sections */}
-          <div className="space-y-4">
-            {filteredSections.map((section) => (
-              <div key={section.id} className="space-y-2">
-                <button
-                  onClick={() => toggleSection(section.id)}
-                  className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-white/10 transition-colors"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center`}>
-                      {section.icon}
-                    </div>
-                    <div className="text-left">
-                      <div className="text-white font-medium">{section.title}</div>
-                      <div className="text-gray-400 text-sm">{section.items.length} services</div>
-                    </div>
-                  </div>
-                  {expandedSections.includes(section.id) ? (
-                    <ChevronDown className="w-4 h-4 text-gray-400" />
-                  ) : (
-                    <ChevronRight className="w-4 h-4 text-gray-400" />
-                  )}
-                </button>
-
-                {expandedSections.includes(section.id) && (
-                  <div className="ml-4 space-y-1 max-h-64 overflow-y-auto">
-                    {section.items.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.href}
-                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors group"
-                        onClick={onClose}
-                      >
-                        <div className="text-gray-400 group-hover:text-cyan-400 transition-colors">
-                          {item.icon}
-                        </div>
-                        <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">
-                          {item.label}
-                        </span>
-                      </Link>
-                    ))}
-                    <Link
-                      to={section.href}
-                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors group text-cyan-400"
-                      onClick={onClose}
-                    >
-                      <ArrowRight className="w-4 h-4" />
-                      <span className="text-sm font-medium">View All {section.title}</span>
-                    </Link>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Company Links */}
-          <div className="mt-8 pt-6 border-t border-white/10">
-            <h3 className="text-white font-semibold mb-4">Company</h3>
-            <div className="space-y-2">
-              {companyLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={link.href}
-                  className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
-                  onClick={onClose}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="mt-8 pt-6 border-t border-white/10">
-            <h3 className="text-white font-semibold mb-4">Contact</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
-                <span className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
-            </div>
-          </div>
-        </div>
->>>>>>> origin/main
       </div>
-<<<<<<< HEAD
-    </>
-  );
-};
-
-export default Sidebar;
-=======
-=======
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">Sidebar</h2>
-      <p>This component is under construction.</p>
->>>>>>> origin/main
     </div>
-<<<<<<< HEAD
-  )
-export default Sidebar;
-=======
-  );
-};
-
-<<<<<<< HEAD
-export default Sidebar;
-=======
-<<<<<<< HEAD
-export default ImprovedSidebar;
-=======
-export default Sidebar;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main

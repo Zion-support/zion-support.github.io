@@ -34,116 +34,6 @@ function fixSyntaxErrors(filePath) {
       modified = true
 }
     // Fix missing closing parentheses
-<<<<<<< HEAD
-    content = content.replace(/\(\s*([^)]*)\s*$/gm, '(\n  $1\n)');
-    // Fix malformed JSX attributes
-    content = content.replace(/<(\w+)\s+([^>]*)\s*>\s*<\/\1>/g, '<$1 $2 />');
-    // Clean up extra whitespace and newlines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
-    // Fix specific patterns for React components
-    if (content.includes('export default function Component;') && !content.includes('export default function Component; ')) { content = content.replace(/export default function Component;/g, 'export default function Component; Component'); }
-    }
-    if (content !== originalContent) { fs.writeFileSync(filePath, content);
-      return true; }
-    }
-    return false;
-=======
-    const openParens = (content.match(/\(/g) || []).length
-    const closeParens = (content.match(/\)/g) || []).length
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;}
-      content += ')'.repeat(missingParens);'
-      modified = true
-}
-    // Fix missing closing square brackets
-    const openBrackets = (content.match(/\[/g) || []).length
-    const closeBrackets = (content.match(/\]/g) || []).length
-    if (openBrackets > closeBrackets) {
-      const missingBrackets = openBrackets - closeBrackets;}
-      content += ']'.repeat(missingBrackets);'
-      modified = true
-}
-    // Fix JSX syntax
-    content = content.replace(/(<[^>]*?)([^>]*?)(?=\n|$)/g, (match, tag, rest) => {
-      if (rest && !rest.includes('>') && !rest.includes('/>') && rest.trim() !== '') {'}'
-        modified = true
-        return tag + rest + '>'
-}
-      return match
-    })
-    // Fix function declarations
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\([^)]*\)\s*(?=\n|$)/g, (match) => {
-      if (!match.includes('{')) {'}'
-        modified = true
-        return match + ' '
-}
-      return match
-    })
-    // Fix arrow functions
-    content = content.replace(/=>\s*(?=\n|$)/g, '=> ');'
-    // Fix object literals
-    content = content.replace(/\{\s*([^}]*?)\s*(?=\n|$)/g, (match, objContent) => {
-      if (objContent && !objContent.includes('}') && objContent.trim() !== '') {'}'
-        modified = true
-        return match + '}'
-}
-      return match
-    })
-    // Fix array literals
-    content = content.replace(/\[\s*([^\]]*?)\s*(?=\n|$)/g, (match, arrContent) => {
-      if (arrContent && !arrContent.includes(']') && arrContent.trim() !== '') {'}'
-        modified = true
-        return match + ']'
-}
-      return match
-    })
-    // Fix template literals
-    content = content.replace(/`([^`]*?)(?=\n|$)/g, (match, templateContent) => {`}`
-      if (templateContent && !templateContent.includes('`') && templateContent.trim() !== '') {'}`
-        modified = true
-        return match + '`'`
-}
-      return match
-    })
-    // Fix import statements
-    content = content.replace(/import\s+([^;]+?)(?=\n|$)/g, (match, importPart) => {
-      if (!importPart.includes(') && !importPart.includes('from')) {'}'
-        modified = true
-        return match + '
-}
-      return match
-    })
-    // Fix export statements
-    content = content.replace(/export\s+([^;]+?)(?=\n|$)/g, (match, exportPart) => {
-      if (!exportPart.includes(') && !exportPart.includes('=') && !exportPart.includes('{') && !exportPart.includes('default')) {'}'
-        modified = true
-        return match + '
-}
-      return match
-    })
-    // Fix variable declarations
-    content = content.replace(/(const|let|var)\s+([^=]+?)(?=\n|$)/g, (match, keyword, varName) => {
-      if (!varName.includes('=') && !varName.includes(')) {'}'
-        modified = true
-        return match + '
-}
-      return match
-    })
-    // Fix return statements
-    content = content.replace(/return\s+([^;]+?)(?=\n|$)/g, (match, returnValue) => {
-      if (!returnValue.includes(') && !returnValue.includes('{') && !returnValue.includes('(')) {'}'
-        modified = true
-        return match + '
-}
-      return match
-    })
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');'}'
-      return true
-}
-    return false
->>>>>>> origin/main
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);`
     return false
@@ -167,18 +57,6 @@ function fixAllSyntaxErrors(dir) {
         console.log(`Fixed syntax errors in: ${filePath}`);`
 }
 }
-<<<<<<< HEAD
-          }
-        } catch (error) { // Skip files that can't be read }
-        }
-      }
-    }
-  }
-  traverse(dir);
-  return files;
-=======
-  return fixedCount
->>>>>>> origin/main
 }
 // Main execution
 console.log('Starting comprehensive syntax error resolution...');'

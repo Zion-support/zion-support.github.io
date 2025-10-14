@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-'use client''
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-"use client"
-const FuturisticTextEnhanced: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">"
-      <Helmet>
-        <title>Futuristic Text Enhanced - Zion Tech Group</title>
-        <meta name="description" content="Professional futuristic text enhanced services by Zion Tech Group." />"
-      </Helmet>}
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
-        <div className="max-w-6xl mx-auto text-center">"
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">"
-=======
-'use client'
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-'use client';
-const FuturisticTextEnhanced: React.FC = () => { return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Futuristic Text Enhanced - Zion Tech Group</title>
-        <meta name="description" content="Professional futuristic text enhanced services by Zion Tech Group." />
-      </Helmet> }
-      { /* Hero Section */ }
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
->>>>>>> origin/main
             Futuristic Text Enhanced;
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
@@ -45,17 +10,6 @@ const FuturisticTextEnhanced: React.FC = () => { return (
             Futuristic Text Enhanced</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Professional futuristic text enhanced services
-<<<<<<< HEAD
-            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
-      <section className="py-16 px-4">"
-        <div className="max-w-6xl mx-auto">"
-          <div className="grid md:grid-cols-2 gap-12 items-center">"
-=======
-            designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
->>>>>>> origin/main
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
               <p className="text-lg text-gray-600 mb-6">"
@@ -92,17 +46,6 @@ const FuturisticTextEnhanced: React.FC = () => { return (
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600">"
-        <div className="max-w-4xl mx-auto text-center">"
-          <h2 className="text-3xl font-bold text-white mb-6">"
-=======
-      { /* CTA Section */ }
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
->>>>>>> origin/main
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">"
@@ -139,21 +82,6 @@ export default FuturisticTextEnhanced;
               <p className="mb-6">"
                 Ready to transform your business with our futuristic text enhanced services?</p>
               <a
-<<<<<<< HEAD
-                href="/contact""
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">"
-                Contact Us</a></div></div></div></section>{/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600">"
-        <div className="max-w-4xl mx-auto text-center">"
-          <h2 className="text-3xl font-bold text-white mb-6">"
-=======
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-                Contact Us</a></div></div></div></section>{ /* CTA Section */ }
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
->>>>>>> origin/main
             Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">"
             Let's discuss how our futuristic text enhanced''
@@ -164,22 +92,6 @@ export default FuturisticTextEnhanced;
             Get Started Today</a></div></section></div>
   )
 export default FuturisticTextEnhanced
-<<<<<<< HEAD
-}
-export default FuturisticTextEnhanced';
-=======
-=======
-import React from "react";
-
-const FuturisticTextEnhanced = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">FuturisticTextEnhanced</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
->>>>>>> origin/main
 };
 
 export default FuturisticTextEnhanced;
->>>>>>> origin/main

@@ -1,140 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react";
-=======
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
->>>>>>> origin/main
 const AccessibilityEnhancer: React.FC = () => {
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusVisible: boolean;
-}
-
-interface ImprovedAccessibilityProps {
-  children: React.ReactNode;
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableLargeText?: boolean;
-  enableReducedMotion?: boolean;
-}
-
-const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,
-  enableHighContrast = false,
-  enableLargeText = false,
-  enableReducedMotion = false
-}) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: enableHighContrast,
-    largeText: enableLargeText,
-    reducedMotion: enableReducedMotion,
-    screenReader: enableScreenReader,
-    keyboardNavigation: enableKeyboardNavigation,
-    focusVisible: false
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Apply accessibility settings
->>>>>>> origin/main
   useEffect(() => {
-<<<<<<< HEAD
-    // Add skip link functionality
-    const addSkipLink = () => {
-      const skipLink = document.createElement('a')";
-      skipLink.href = "#main-content"
-      skipLink.textContent = "Skip to main content"
-      skipLink.className = "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-      document.body.insertBefore(skipLink, document.body.firstChild)
-// Focus management for keyboard navigation
-    // Add keyboard navigation enhancements
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content with Alt + M
-      if (event.altKey && event.key === 'm') {'
-        event.preventDefault()
-        const mainContent = document.getElementById('main-content')";
-        if (mainContent) {
-          mainContent.focus()
-          mainContent.scrollIntoView({ behavior: 'smooth' })";
-        }
-    }
-    const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')"}"
-=======
-    const root = document.documentElement;
-    
-    // High contrast
-    if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    // Large text
-    if (settings.largeText) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-    }
-
-    // Reduced motion
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Screen reader
-    if (settings.screenReader) {
-      root.setAttribute('aria-live', 'polite');
-    } else {
-      root.removeAttribute('aria-live');
-    }
-
-    // Keyboard navigation
-    if (settings.keyboardNavigation) {
-      root.classList.add('keyboard-navigation');
-    } else {
-      root.classList.remove('keyboard-navigation');
-    }
-
-    // Focus visible
-    if (settings.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-  }, [settings]);
-
-  // Handle keyboard navigation
-  useEffect(() => {
-    if (!settings.keyboardNavigation) return;
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.altKey) {
-        event.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-<<<<<<< HEAD
-    }
-    const handleMouseDown = () => { document.body.classList.remove('keyboard-navigation'); }
->>>>>>> origin/main
     // Add focus indicators for keyboard navigation
     }
     // Add focus styles
@@ -155,13 +20,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       if (main && !main.getAttribute('role')) {'
         main.setAttribute('role', 'main')"}"
     // Reduced motion mode
-<<<<<<< HEAD
-    if (isReducedMotion) {root.classList.add('reduced-motion')'} else {root.classList.remove('reduced-motion')"}"
-=======
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else { root.classList.remove('reduced-motion'); }
->>>>>>> origin/main
     // Font size adjustment
     root.style.setProperty('--font-size-multiplier', '
       fontSize === 'large' ? '1.2' : '
@@ -197,34 +55,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       if (target) {
         target.classList.remove('focus-visible')"}"
     }
-<<<<<<< HEAD
-    document.addEventListener('focusin', handleFocusIn)";
-    document.addEventListener('focusout', handleFocusOut)";
-    return () => {focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus)";
-        element.removeEventListener('blur', handleBlur)";
-      const nav = document.querySelector('nav');      if (nav && !nav.getAttribute('role')) {'
-      const nav = document.querySelector('nav')";
-      if (nav && !nav.getAttribute('role')) {'
-        nav.setAttribute('role', 'navigation')"}"
-      const footer = document.querySelector('footer')";
-      if (footer && !footer.getAttribute('role')) {'
-        footer.setAttribute('role', 'contentinfo')"}"
-=======
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-    return () => {
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      const nav = document.querySelector('nav');      if (nav && !nav.getAttribute('role')) {
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) { footer.setAttribute('role', 'contentinfo'); }
->>>>>>> origin/main
     }
     // Add alt text to images without alt attributes
     const addAltText = () => {
@@ -235,69 +65,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         }
       }
     // Initialize accessibility enhancements
-<<<<<<< HEAD
-    addSkipLink()
-    addFocusStyles()
-    addAriaLandmarks()
-    addAltText()
-    document.addEventListener('keydown', handleKeyDown)";
-    addFocusStyles()
-    return () => {document.removeEventListener('keydown', handleKeyDown)";
-      document.removeEventListener('mousedown', handleMouseDown)"}"
-  }, [])
-return null;
-import React from 'react";
-const AccessibilityEnhancer: React.FC = () => {return null}
-export default AccessibilityEnhancer;
-  }, [])
-  return null;
-    }
-  }, [])
-  return null;
-}
-export default AccessibilityEnhancer;
-=======
-    addSkipLink();
-    addFocusStyles();
-    addAriaLandmarks();
-    addAltText();
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    addFocusStyles();
-    return () => { document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown); }
-  }, []);
-return null;
-import React from 'react';
-const AccessibilityEnhancer: React.FC = () => { return null; }
-export default AccessibilityEnhancer;
-  }, []);
-  return null;
-=======
-
-      // Toggle accessibility panel
-      if (event.key === 'Tab' && event.altKey && event.ctrlKey) {
-        event.preventDefault();
-        setIsVisible(!isVisible);
-      }
-
-      // Focus visible
-      if (event.key === 'Tab') {
-        setSettings(prev => ({ ...prev, focusVisible: true }));
-      }
-    };
-
-    const handleMouseDown = () => {
-      setSettings(prev => ({ ...prev, focusVisible: false }));
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
->>>>>>> origin/main
     };
   }, [settings.keyboardNavigation, isVisible]);
 
@@ -555,27 +322,3 @@ export default AccessibilityEnhancer;
     </>
   );
 };
-<<<<<<< HEAD
-export default AccessibilityEnhancer;
-=======
-
-export default ImprovedAccessibility;
-=======
-import React, { ReactNode } from "react";
-
-interface AccessibilityEnhancerProps {
-  children?: ReactNode;
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default AccessibilityEnhancer;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main

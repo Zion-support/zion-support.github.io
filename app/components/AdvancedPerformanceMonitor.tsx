@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react";
-interface PerformanceMetrics {loadTime: number;
-=======
-import React, { useEffect, useState } from 'react';
-interface PerformanceMetrics { loadTime: number;
->>>>>>> origin/main
   renderTime: number;
   memoryUsage: number;
   networkLatency: number;
@@ -14,11 +5,6 @@ interface PerformanceMetrics { loadTime: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-<<<<<<< HEAD
-  totalBlockingTime: number}
-=======
-  totalBlockingTime: number; }
->>>>>>> origin/main
 const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -86,199 +72,6 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   // Toggle visibility with keyboard shortcut
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-<<<<<<< HEAD
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {'
-        setIsVisible(!isVisible)
-      if (event.ctrlKey && event.shiftKey && event.key === 'R') {'
-        setIsRecording(!isRecording)
-    window.addEventListener('keydown', handleKeyPress)";
-    return () => window.removeEventListener('keydown', handleKeyPress)";
-  }, [isVisible, isRecording])
-  // Don't render in production'
-  if (process.env.NODE_ENV === 'production') {'
-    return null}
-  if (!isVisible) {return null}
-  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {if (value <= thresholds.good) return "text-green-400"
-    if (value <= thresholds.needsImprovement) return "text-yellow-400"
-    return 'text-red-400'"}"
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">"
-      <div className="container mx-auto px-4">"
-        <h1 className="text-4xl font-bold mb-8">Advanced Performance Monitor</h1>"
-        <p className="text-gray-300 text-lg">"
-          This component is under development.;
-        </p>
-      </div>
-    </div>
-  )
-    <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-lg p-4 shadow-lg z-50 max-w-sm">"
-      <div className="flex items-center justify-between mb-3">"
-        <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>"
-        <div className="flex space-x-2">"
-          <button
-            onClick={() => setIsRecording(!isRecording)
-            className={`text-xs px-2 py-1 rounded ${`
-              isRecording ? 'bg-red-600 text-white' : 'bg-slate-600 text-gray-300''
-            }`}`
-          >
-            {isRecording ? 'Recording' : 'Record'}'
-          </button>
-          <button
-            onClick={() => setIsVisible(false)
-            className="text-gray-400 hover:text-white text-xs""
-=======
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        setIsVisible(!isVisible);
-      }
-      if (event.ctrlKey && event.shiftKey && event.key === 'R') { setIsRecording(!isRecording); }
-    };
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [isVisible, isRecording]);
-  // Don't render in production
-  if (process.env.NODE_ENV === 'production') { return null; }
-  if (!isVisible) { return null; }
-  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-=======
-import React from 'react';
-
-const AdvancedPerformanceMonitor = () => {
-<<<<<<< HEAD
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null,
-    timeToFirstByte: null,
-    memoryUsage: null,
-    domContentLoaded: null,
-    totalBlockingTime: null
-  })
-
-  const [isVisible, setIsVisible] = useState(false)
-  const [isRecording, setIsRecording] = useState(false)
-
-  useEffect(() => {
-    const measureWebVitals = () => {
-      // Measure Core Web Vitals
-      if ('PerformanceObserver' in window) {
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const fcp = entries.find(entry => entry.name === 'first-contentful-paint')
-        if (fcp) {
-          setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime }))
-          reportMetric('FCP', fcp.startTime)
-        }
-        })
-        fcpObserver.observe({ entryTypes: ['paint'] })
-
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
-          setMetrics(prev => ({ ...prev, largestContentfulPaint: lastEntry.startTime }))
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const fid = entries[0]
-          setMetrics(prev => ({ ...prev, firstInputDelay: fid.processingStart - fid.startTime }))
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
-
-        // Cumulative Layout Shift
-        const clsObserver = new PerformanceObserver((list) => {
-          let clsValue = 0
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value
-            }
-          }
-          setMetrics(prev => ({ ...prev, cumulativeLayoutShift: clsValue }))
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-      }
-    }
-
-    const measureMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory
-        setMetrics(prev => ({ 
-          ...prev, 
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-        }))
-      }
-    }
-
-    const measureLoadTime = () => {
-      if (performance.timing) {
-        const timing = performance.timing
-        const loadTime = timing.loadEventEnd - timing.navigationStart
-        const domContentLoaded = timing.domContentLoadedEventEnd - timing.navigationStart
-        const timeToFirstByte = timing.responseStart - timing.navigationStart
-        
-        setMetrics(prev => ({
-          ...prev,
-          loadTime,
-          domContentLoaded,
-          timeToFirstByte
-        }))
-      }
-    }
-
-    // Report metrics to analytics
-    const reportMetric = (name: string, value: number) => {
-      // Analytics reporting would go here
-      console.log(`Performance Metric - ${name}: ${value}`)
-    }
-
-    measureWebVitals()
-    measureMemory()
-    measureLoadTime()
-
-    // Set up keyboard shortcut to toggle visibility
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev)
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyPress)
-    return () => window.removeEventListener('keydown', handleKeyPress)
-  }, [])
-
-  const startRecording = () => {
-    setIsRecording(true)
-    // Start performance recording logic here
-  }
-
-  const stopRecording = () => {
-    setIsRecording(false)
-    // Stop performance recording logic here
-  }
-
-  const exportMetrics = () => {
-    const dataStr = JSON.stringify(metrics, null, 2)
-    const dataBlob = new Blob([dataStr], { type: 'application/json' })
-    const url = URL.createObjectURL(dataBlob)
-    const link = document.createElement('a')
-    link.href = url
-    link.download = 'performance-metrics.json'
-    link.click()
-    URL.revokeObjectURL(url)
-  }
-
-  if (!isVisible) return null
-
->>>>>>> origin/main
   return (
     <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
       <div className="flex items-center justify-between mb-4">
@@ -359,25 +152,6 @@ const AdvancedPerformanceMonitor = () => {
         Press Ctrl+Shift+P to toggle
       </div>
     </div>
-<<<<<<< HEAD
-  );
-}
-    <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-lg p-4 shadow-lg z-50 max-w-sm">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
-        <div className="flex space-x-2">
-          <button
-            onClick={ () => setIsRecording(!isRecording) }
-            className={`text-xs px-2 py-1 rounded ${
-              isRecording ? 'bg-red-600 text-white' : 'bg-slate-600 text-gray-300'
-            }`}
-          >
-            { isRecording ? 'Recording' : 'Record' }
-          </button>
-          <button
-            onClick={ () => setIsVisible(false) }
-            className="text-gray-400 hover:text-white text-xs"
->>>>>>> origin/main
           >
             ✕
           </button>
@@ -402,17 +176,6 @@ const AdvancedPerformanceMonitor = () => {
             {metrics.largestContentfulPaint}ms
           </span>
         </div>
-<<<<<<< HEAD
-        <div className="flex justify-between">"
-          <span className="text-gray-400">CLS:</span>"
-          <span className={`font-mono ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}>`
-            {metrics.cumulativeLayoutShift.toFixed(3)
-=======
-        <div className="flex justify-between">
-          <span className="text-gray-400">CLS:</span>
-          <span className={`font-mono ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}>
-            { metrics.cumulativeLayoutShift.toFixed(3) }
->>>>>>> origin/main
           </span>
         </div>
         <div className="flex justify-between">"
@@ -438,30 +201,13 @@ const AdvancedPerformanceMonitor = () => {
         <div>Ctrl+Shift+P: Toggle</div>
         <div>Ctrl+Shift+R: Record</div>
       </div>
-=======
   )
 }
 
 export default AdvancedPerformanceMonitor
-=======
   return (
     <div>
       <h2>AdvancedPerformanceMonitor</h2>
       <p>This component is under construction.</p>
->>>>>>> origin/main
     </div>
-<<<<<<< HEAD
-  )
-=======
-  );
-};
-
->>>>>>> origin/main
 export default AdvancedPerformanceMonitor;
-<<<<<<< HEAD
-          This component is under development.</p></div></div>
-  )
-export default AdvancedPerformanceMonitor
-=======
->>>>>>> origin/main
->>>>>>> origin/main
