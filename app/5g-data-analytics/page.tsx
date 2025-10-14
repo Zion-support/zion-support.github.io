@@ -95,7 +95,7 @@ const Page = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our 5G data analytics services can help your business succeed.
+              Let&apos;s discuss how our 5G data analytics services can help your business succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
