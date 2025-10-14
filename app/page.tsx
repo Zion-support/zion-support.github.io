@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
-import EnhancedSEO from "./components/EnhancedSEO";
+import EnhancedSEOHead from "./components/EnhancedSEOHead";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -173,11 +173,12 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
-      <EnhancedSEO
+      <EnhancedSEOHead
         title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
         description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
-        canonical="https://ziontechgroup.com"
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={structuredData}
       />
 
       {/* Hero Section */}

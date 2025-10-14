@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-<<<<<<< HEAD
 const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -138,24 +137,7 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
       cancelAnimationFrame(animationId);
     };
   }, []);
-=======
-interface FuturisticBackgroundProps {
-  children?: React.ReactNode;
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-
   return (
-<<<<<<< HEAD
-    <div className="relative min-h-screen">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ zIndex: 1 }}
-      />
-      <div className="relative z-10">
-        {children}
-      </div>
-=======
     <div className="relative">
       {/* Animated background elements */}
       <div className="fixed inset-0 pointer-events-none">
@@ -167,9 +149,7 @@ interface FuturisticBackgroundProps {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
       
-      {children}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-    </div>
+      {children}    </div>
   );
 };
 

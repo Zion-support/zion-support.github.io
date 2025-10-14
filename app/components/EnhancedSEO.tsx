@@ -8,18 +8,6 @@ interface EnhancedSEOProps {
   canonical?: string;
   ogImage?: string;
   ogType?: string;
-<<<<<<< HEAD
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: object;
-  noIndex?: boolean;
-  lang?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -30,7 +18,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogImage = '/og-image.svg',
   ogType = 'website'
 }) => {
-<<<<<<< HEAD
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
   const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
@@ -73,13 +60,10 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD
       <meta name="keywords" content={finalKeywords} />
       <meta name="author" content={siteName} />
       <meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
@@ -126,25 +110,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       {/* Favicon and Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/manifest.json" />
-=======
-      <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      {canonical && <meta property="og:url" content={canonical} />}
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-    </Helmet>
+      <link rel="manifest" href="/manifest.json" />    </Helmet>
   );
 };
 

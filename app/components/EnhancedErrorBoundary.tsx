@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
 interface Props {
@@ -17,20 +16,6 @@ interface State {
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   private retryTimeoutId: NodeJS.Timeout | null = null;
-
-=======
-
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-export class EnhancedErrorBoundary extends Component<Props, State> {
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -41,7 +26,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -118,16 +102,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   componentWillUnmount() {
     if (this.retryTimeoutId) {
       clearTimeout(this.retryTimeoutId);
-    }
-=======
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-  }
+    }  }
 
   render() {
     if (this.state.hasError) {
@@ -137,7 +112,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-8 text-center">
             <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
@@ -197,20 +171,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
               <p className="mt-2">
                 Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
               </p>
-            </div>
-=======
-        <div className="min-h-screen flex items-center justify-center bg-slate-900">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-400 mb-4">Please refresh the page or try again later.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition-colors"
-            >
-              Refresh Page
-            </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-          </div>
+            </div>          </div>
         </div>
       );
     }

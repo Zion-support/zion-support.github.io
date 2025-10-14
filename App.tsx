@@ -22,6 +22,8 @@ import Breadcrumb from "./app/components/Breadcrumb";
 import LoadingPageEnhanced from "./app/components/EnhancedLoading";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+import AccessibilityManager from "./app/components/AccessibilityManager";
+import PerformanceDashboard from "./app/components/PerformanceDashboard";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -96,10 +98,7 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -131,9 +130,11 @@ function App() {
                     <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
-                          <Navigation onSidebarToggle={toggleSidebar} />
-                          <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                          <Breadcrumb />
+                          <AccessibilityManager>
+                            <Navigation onSidebarToggle={toggleSidebar} />
+                            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                            <Breadcrumb />
+                            <PerformanceDashboard />
                           
                           <main className="relative z-10" id="main-content" role="main">
                             <Suspense fallback={<LoadingPage />}>
@@ -228,6 +229,7 @@ function App() {
                           </main>
                           
                           <Footer />
+                          </AccessibilityManager>
                         </FuturisticBackground>
                       </div>
                     </Router>
