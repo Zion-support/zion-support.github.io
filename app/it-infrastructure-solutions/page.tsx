@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import React, { Suspense } from 'react';
 const ItInfrastructureSolutionsPage: React.FC = () => {
   return (
     <>
@@ -50,7 +49,6 @@ const ItInfrastructureSolutionsPage: React.FC = () => {
   );
 }
 
-import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
 export default ItInfrastructureSolutionsPage;
 

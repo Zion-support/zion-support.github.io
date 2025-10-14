@@ -1,12 +1,4 @@
 import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 
 const FiveGUpgradePage: React.FC = () => {
   return (
@@ -26,7 +18,4 @@ const FiveGUpgradePage: React.FC = () => {
 }
 import React, { Suspense } from 'react';
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default FiveGUpgradePage;

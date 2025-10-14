@@ -1,12 +1,4 @@
 import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 
 const FiveGTransformationPage: React.FC = () => {
   return (
@@ -26,7 +18,4 @@ const FiveGTransformationPage: React.FC = () => {
 }
 import React, { Suspense } from 'react';
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default FiveGTransformationPage;

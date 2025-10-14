@@ -4,27 +4,9 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import js from "@eslint/js"
-import globals from "globals"
-import reactHooks from "eslint-plugin-react-hooks"
-import reactRefresh from "eslint-plugin-react-refresh"
-import tseslint from "typescript-eslint"
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
-export default [
-  {
-    ignores: [
-      "app-broken/**",
-      "app-disabled/**", 
-      "temp-broken/**",
-      "temp-disabled/**",
-      "**/*.cjs",
-      "**/*.js",
-      "api/**",
-      "scripts/**"
-    ]
-  },
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
 export default tseslint.config(
   {
     ignores: [
@@ -66,6 +48,7 @@ export default tseslint.config(
         document: 'readonly',
         process: 'readonly',
         global: 'readonly',
+        ...globals.browser,
       },
     },
     plugins: {
@@ -73,19 +56,6 @@ export default tseslint.config(
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -95,29 +65,19 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': ['error', { "argsIgnorePattern": "^_", "varsIgnorePattern": "^[A-Z]" }],
       '@typescript-eslint/no-require-imports': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-undef': 'off', // TypeScript handles this
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
+      'no-console': ['warn', { "allow": ["warn", "error"] }]
     },
     settings: {
       react: {
         version: 'detect',
       },
     },
-  },
-  {
-    ignores: ['dist/**', 'node_modules/**', '*.config.js', '*.config.mjs'],
-  },
-];
-      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^[A-Z]" }],
-      "@typescript-eslint/no-explicit-any": "off",
-      "no-console": "off"
-      "@typescript-eslint/no-explicit-any": "warn",
-      "no-console": ["warn", { "allow": ["warn", "error"] }]
-    }
   },
   {
     files: ["public/sw.js"],
@@ -156,4 +116,4 @@ export default tseslint.config(
       "@typescript-eslint/no-require-imports": "off"
     }
   }
-)
+);

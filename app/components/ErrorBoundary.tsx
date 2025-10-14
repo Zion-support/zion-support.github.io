@@ -20,7 +20,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
 import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
   componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     // Error logged
   }

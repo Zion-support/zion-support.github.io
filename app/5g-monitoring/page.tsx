@@ -1,15 +1,8 @@
 import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import React, { Suspense } from 'react';
 import EnhancedSEO from '../components/EnhancedSEO'
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 const FiveGMonitoringPage = () => {
   const services = [
     {
@@ -82,7 +75,5 @@ import React, { Suspense } from 'react';
   )
 }
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
 export default FiveGMonitoringPage
