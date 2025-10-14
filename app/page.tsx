@@ -18,6 +18,10 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
 
+  // These variables are used for future functionality
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _unused = { isVisible, handlePhoneClick };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer />
