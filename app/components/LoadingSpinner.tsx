@@ -28,12 +28,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
+    <div className={`flex flex-col items-center justify-center ${className}`}></div>
       <div
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full animate-spin ${colorClasses[color]}`}
-      />
+      /></div>
       {text && (
-        <p className="mt-2text-smtext-gray-30 0">
+        <p className="mt-2text-smtext-gray-300">
           {text}
         </p>
       )}
@@ -42,8 +42,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   if (fullScreen) {
     return (
-      <div className="fixedinset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="bg-slate-800rounded-lg p-8 shadow-xl">
+    <>
+      <div className="fixedinset-0 bg-slate-900/80backdrop-blur-smflexitems-centerjustify-centerz-50"></div>
+        <div className="bg-slate-800rounded-lg p-8shadow-xl">
           {spinner}
         </div>
       </div>

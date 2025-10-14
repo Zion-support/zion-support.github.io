@@ -6,22 +6,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-<<<<<<< HEAD
-import { AnalyticsProvider } from './app/contexts/AnalyticsProvider';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import LoadingSpinner from './app/components/LoadingSpinner';
-import SEOOptimizer from './app/components/SEOOptimizer';
-
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import MetaManager from './app/components/MetaManager';
-import EnhancedAnalytics from './app/components/EnhancedAnalytics';
-import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
-
-// Pages
-=======
->>>>>>> 7c403644bad909cfd6e23ad37c52c4b81893395b
 import HomePage from './app/page';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
@@ -56,51 +40,6 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-<<<<<<< HEAD
-        <AnalyticsProvider>
-          <PerformanceOptimizer>
-            <AccessibilityEnhancer />
-            <SEOOptimizer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
-              keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
-              type="website"
-              structuredData={{
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Zion Tech Group",
-                "description": "Leading provider of AI and IT solutions",
-                "url": "https://ziontechgroup.com",
-                "logo": "https://ziontechgroup.com/images/logo.png",
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+1-555-0123",
-                  "contactType": "customer service"
-                }
-              }}
-            />
-            <MetaManager />
-            <PerformanceMonitor />
-            <EnhancedAnalytics />
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <Navigation />
-                <main className="relative z-10" id="main-content" role="main">
-                  <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />
-              </div>
-            </Router>
-          </PerformanceOptimizer>
-        </AnalyticsProvider>
-=======
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
@@ -134,7 +73,6 @@ const App: React.FC = () => {
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>
         </Router>
->>>>>>> 7c403644bad909cfd6e23ad37c52c4b81893395b
       </HelmetProvider>
     </ErrorBoundary>
   );

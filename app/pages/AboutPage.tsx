@@ -78,11 +78,11 @@ const stats = []
         <meta name="keywords" content="about us, team, mission, AI experts, IT professionals, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screenbg-slate-90 0text-white">
+      <div className="min-h-screenbg-slate-900text-white"></div>
         {/* Hero Section */}
-        <section className="relative py-2 0bg-gradient-to-brfrom-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-          <div className="containermx-autopx-4text-center">
-            <h1 className="text-5xl md:text-6xlfont-boldmb-6bg-gradient-to-r from-purple-400 to-cyan-400bg-clip-text text-transparent">
+        <section className="relative py-20bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900">
+          <div className="containermx-autopx-4text-center"></div>
+            <h1 className="text-5xl md:text-6xlfont-boldmb-6bg-gradient-to-rfrom-purple-400to-cyan-400bg-clip-texttext-transparent">
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-300mb-8max-w-3xlmx-auto">
@@ -95,22 +95,22 @@ const stats = []
 
         {/* Mission Section */}
         <section className="py-20">
-          <div className="containermx-autopx-4">
-            <div className="max-w-4xlmx-autotext-center">
+          <div className="containermx-autopx-4"></div>
+            <div className="max-w-4xlmx-autotext-center"></div>
               <h2 className="text-4xlmd:text-5xlfont-boldtext-whitemb-8">
                 Our Mission
               </h2>
-              <p className="text-xl text-gray-300mb-1 2leading-relaxed">
+              <p className="text-xl text-gray-300mb-12leading-relaxed">
                 To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
                 efficiency, and growth. We believe technology should be accessible, secure, and 
                 transformative for organizations of all sizes.
               </p>
               
-              <div className="gridmd:grid-cols-4gap-8">
+              <div className="gridmd:grid-cols-4gap-8"></div>
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    </div><div className="text-4xlfont-boldtext-purple-40 0mb-2">{stat.number}</div>
-                    <div className="text-gray-30 0">{stat.label}</div>
+                    </div><div className="text-4xlfont-boldtext-purple-400mb-2">{stat.number}</div>
+                    <div className="text-gray-300">{stat.label}</div>
                     </div>
         </div>
                 ))}
@@ -123,9 +123,9 @@ const stats = []
         </section>
 
         {/* Values Section */}
-        <section className="py-20bg-slate-8 0 0/5 0">
-          <div className="containermx-autopx-4">
-            <div className="text-centermb-16">
+        <section className="py-20bg-slate-800/50">
+          <div className="containermx-autopx-4"></div>
+            <div className="text-centermb-16"></div>
               <h2 className="text-4xlmd:text-5xlfont-boldtext-whitemb-6">
                 Our Values
               </h2>
@@ -135,15 +135,15 @@ const stats = []
               </div>
         </div>
             
-            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">
+            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8"></div>
               {values.map((value, index) => (
                 <div key={index} className="text-center">
-                  </div><div className="w-1 6 h-1 6 bg-gradient-to-r from-purple-5 0 0to-cyan-5 0 0rounded-lgflexitems-centerjustify-centermx-automb-6">
+                  </div><div className="w-16 h-16bg-gradient-to-rfrom-purple-500to-cyan-500rounded-lgflexitems-centerjustify-centermx-automb-6"></div>
                     <value.icon className="w-8h-8 text-white" />
                     </div>
         </div>
-                  <h3 className="text-xlfont-bold text-white mb-4">{value.title}</h3>
-                  <p className="text-gray-30 0">{value.description}</p>
+                  <h3 className="text-xlfont-bold text-whitemb-4">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
                   </div>
         </div>
               ))}
@@ -155,8 +155,8 @@ const stats = []
 
         {/* Team Section */}
         <section className="py-20">
-          <div className="containermx-autopx-4">
-            <div className="text-centermb-16">
+          <div className="containermx-autopx-4"></div>
+            <div className="text-centermb-16"></div>
               <h2 className="text-4xlmd:text-5xlfont-boldtext-whitemb-6">
                 Meet Our Team
               </h2>
@@ -167,16 +167,16 @@ const stats = []
               </div>
         </div>
             
-            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">
+            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8"></div>
               {team.map((member, index) => (
-                <div key={index} className="bg-slate-8 00 rounded-xlp-6text-centerborderborder-slate-7 00hover:border-purple-5 0 0transition-all duration-300">
-                  </div><div className="w-2 4 h-2 4 bg-gradient-to-r from-purple-5 0 0to-cyan-5 0 0rounded-fullmx-automb-4flexitems-centerjustify-center">
-                    <UserGroupIcon className="w-1 2h-1 2 text-white" />
+                <div key={index} className="bg-slate-800 rounded-xlp-6text-centerborderborder-slate-700hover:border-purple-500transition-allduration-300">
+                  </div><div className="w-24 h-24bg-gradient-to-rfrom-purple-500to-cyan-500rounded-fullmx-automb-4flexitems-centerjustify-center"></div>
+                    <UserGroupIcon className="w-12h-12 text-white" />
                     </div>
         </div>
                   <h3 className="text-xlfont-boldtext-whitemb-2">{member.name}</h3>
-                  <div className="text-purple-40 0font-semiboldmb-3">{member.role}</div>
-                  <p className="text-gray-30 0text-sm">{member.description}</p>
+                  <div className="text-purple-400font-semiboldmb-3">{member.role}</div>
+                  <p className="text-gray-300text-sm">{member.description}</p>
                   </div>
         </div>
               ))}
@@ -187,8 +187,8 @@ const stats = []
         </section>
 
         {/* CTA Section */}
-        <section className="py-20bg-gradient-to-rfrom-purple-9 0 0/3 0to-cyan-9 0 0/3 0">
-          <div className="containermx-autopx-4text-center">
+        <section className="py-20bg-gradient-to-rfrom-purple-900/30to-cyan-900/30">
+          <div className="containermx-autopx-4text-center"></div>
             <h2 className="text-4xlmd:text-5xlfont-boldtext-whitemb-6">
               Ready to Work With Us?
             </h2>
@@ -196,12 +196,12 @@ const stats = []
               Let&apos;s discuss how our team can help transform your business with 
               cutting-edge AI and IT solutions.
             </p>
-            <div className="flexflex-colsm:flex-rowgap-4justify-center">
-              <button className="bg-gradient-to-r from-purple-6 00 to-cyan-6 00 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-7 00 hover:to-cyan-7 00 transition-all duration-300transformhover:scale-1 0 5flexitems-centerjustify-centergap-2">
+            <div className="flexflex-colsm:flex-rowgap-4justify-center"></div>
+              <button className="bg-gradient-to-r from-purple-600to-cyan-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-purple-700hover:to-cyan-700transition-allduration-300transformhover:scale-105flexitems-centerjustify-centergap-2">
                 Get Started
                 <ArrowRightIcon className="w-5h-5" />
               </button>
-              <button className="border-2 border-white text-white px-8py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-9 0 0transition-all duration-300">
+              <button className="border-2 border-whitetext-whitepx-8py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-900transition-allduration-300">
                 View Our Work
               </button>
               </div>

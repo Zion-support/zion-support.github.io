@@ -32,30 +32,30 @@ const FiveGDataAnalyticsPage = () => {
         description="Professional 5G data analytics services by Zion Tech Group. Expert solutions for your business needs."
         keywords="5G, data analytics, business solutions, technology services, professional services"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relativepy-2 0 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xlmx-auto text-center">
-            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6">
+        <section className="relativepy-20 px-4sm:px-6lg:px-8">
+          <div className="max-w-7xlmx-auto text-center"></div>
+            <h1 className="text-4xlmd:text-6xl font-boldtext-whitemb-6">
               5G Data Analytics
-              <span className="blockbg-gradient-to-r from-cyan-4 0 0 to-purple-4 0 0 bg-clip-text text-transparent">
+              <span className="blockbg-gradient-to-r from-cyan-400to-purple-400bg-clip-texttext-transparent">
                 Solutions
               </span>
             </h1>
-            <p className="text-xltext-gray-3 0 0 mb-8 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
               Professional 5G data analytics services designed to help your business succeed and grow.
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            <div className="flexflex-col sm:flex-rowgap-4justify-center"></div>
               <Link
                 to="/contact"
-                className="inline-flexitems-center px-8 py-4 bg-gradient-to-r from-cyan-5 00 to-purple-6 00 text-white font-semibold rounded-lg hover:from-cyan-6 00 hover:to-purple-7 0 0 transition-all duration-3 0 0 group"
+                className="inline-flexitems-center px-8py-4bg-gradient-to-rfrom-cyan-500to-purple-600text-whitefont-semiboldrounded-lghover:from-cyan-600hover:to-purple-700transition-allduration-300group"
               >
                 Get Started
-                <ArrowRight className="ml-2w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2w-5 h-5group-hover:translate-x-1transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="inline-flexitems-center px-8 py-4 border border-cyan-4 00 text-cyan-4 00 font-semibold rounded-lg hover:bg-cyan-4 0 0/1 0 transition-all duration-3 0 0"
+                className="inline-flexitems-center px-8py-4borderborder-cyan-400text-cyan-400font-semiboldrounded-lghover:bg-cyan-400/10transition-allduration-300"
               >
                 View Demo
               </Link>
@@ -64,24 +64,24 @@ const FiveGDataAnalyticsPage = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-1 6">
-              <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+        <section className="py-20 px-4sm:px-6lg:px-8">
+          <div className="max-w-7xlmx-auto"></div>
+            <div className="text-centermb-16"></div>
+              <h2 className="text-3xlmd:text-4xl font-boldtext-whitemb-4">
                 Why Choose Our 5G Data Analytics Services?
               </h2>
-              <p className="text-xltext-gray-3 0 0 max-w-2xl mx-auto">
+              <p className="text-xltext-gray-300max-w-2xlmx-auto">
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-            <div className="gridgrid-cols-1 md:grid-cols-3 gap-8">
+            <div className="gridgrid-cols-1 md:grid-cols-3gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-1 6 bg-gradient-to-r from-cyan-5 0 0 to-purple-6 0 0 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="text-center"></div>
+                  <div className="w-16 h-16bg-gradient-to-rfrom-cyan-500to-purple-600rounded-fullflexitems-centerjustify-centermx-automb-4">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-30 0">{feature.description}</p>
+                  <h3 className="text-xlfont-semibold text-whitemb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -89,25 +89,25 @@ const FiveGDataAnalyticsPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-8 0 0/3 0">
-          <div className="max-w-4xlmx-auto text-center">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-6">
+        <section className="py-20 px-4sm:px-6lg:px-8bg-slate-800/30">
+          <div className="max-w-4xlmx-auto text-center"></div>
+            <h2 className="text-3xlmd:text-4xl font-boldtext-whitemb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xltext-gray-3 0 0 mb-8">
+            <p className="text-xltext-gray-300mb-8">
               Let&apos;s discuss how our 5G data analytics services can help your business succeed.
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            <div className="flexflex-col sm:flex-rowgap-4justify-center"></div>
               <Link
                 to="/contact"
-                className="inline-flexitems-center px-8 py-4 bg-gradient-to-r from-cyan-5 00 to-purple-6 00 text-white font-semibold rounded-lg hover:from-cyan-6 00 hover:to-purple-7 0 0 transition-all duration-3 0 0 group"
+                className="inline-flexitems-center px-8py-4bg-gradient-to-rfrom-cyan-500to-purple-600text-whitefont-semiboldrounded-lghover:from-cyan-600hover:to-purple-700transition-allduration-300group"
               >
                 Contact Us
-                <ArrowRight className="ml-2w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2w-5 h-5group-hover:translate-x-1transition-transform" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flexitems-center px-8 py-4 border border-cyan-4 00 text-cyan-4 00 font-semibold rounded-lg hover:bg-cyan-4 0 0/1 0 transition-all duration-3 0 0"
+                className="inline-flexitems-center px-8py-4borderborder-cyan-400text-cyan-400font-semiboldrounded-lghover:bg-cyan-400/10transition-allduration-300"
               >
                 View All Services
               </Link>

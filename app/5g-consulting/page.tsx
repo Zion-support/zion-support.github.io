@@ -19,44 +19,45 @@ const FiveGConsultingPage = () => {
     }
   ];
   return (
-    <div className="min-h-screenbg-gray-50">
+    <>
+      <div className="min-h-screenbg-gray-50"></div>
       <EnhancedSEO 
         title="5G Consulting Services - Zion Tech Group"
         description="Expert 5G consulting services to help your business leverage next-generation wireless technology."
       />
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-centermb-16">
-          <h1 className="text-4xlfont-bold text-gray-900 mb-6">
+      <div className="container mx-autopx-4py-16"></div>
+        <div className="text-centermb-16"></div>
+          <h1 className="text-4xlfont-bold text-gray-900mb-6">
             5G Consulting Services
           </h1>
-          <p className="text-xltext-gray-600 max-w-3xl mx-auto">
+          <p className="text-xltext-gray-600 max-w-3xlmx-auto">
             Expert guidance for your 5G transformation journey
           </p>
           </div>
         </div>
-        <div className="gridmd:grid-cols-3 gap-8 mb-16">;
+        <div className="gridmd:grid-cols-3 gap-8mb-16"></div>;
           {services.map((service, index) => (
-            <div key={index} className="bg-whiterounded-lgshadow-lgp-6">
-              <h3 className="text-xlfont-semiboldtext-gray-90 0mb-4">
+            <div key={index} className="bg-whiterounded-lgshadow-lgp-6"></div>
+              <h3 className="text-xlfont-semiboldtext-gray-900mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-60 0mb-4">
+              <p className="text-gray-600mb-4">
                 {service.description}
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flexitems-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flexitems-center text-blue-600hover:text-blue-800font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2w-4 h-4" />
               </Link>
             </div>
           ))}
-        <div className="text-center">
+        <div className="text-center"></div>
           <Link 
             to="/contact" 
-            className="inline-flexitems-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+            className="inline-flexitems-center bg-blue-600hover:bg-blue-700text-whitefont-semiboldpy-3px-6rounded-lgtransition-colors"
           >
             Get Started
             <ArrowRight className="ml-2w-5 h-5" />

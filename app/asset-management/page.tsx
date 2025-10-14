@@ -9,16 +9,16 @@ const AssetManagementPage: React.FC = () => {
         <meta name="description" content="Professional Asset management solutions and services" />
         <meta name="keywords" content="asset, management" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Asset management</h1>
-            <p className="text-xl text-gray-300 mb-8">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900"></div>
+        <div className="container mx-autopx-4py-16"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl font-boldtext-whitemb-8">Asset management</h1>
+            <p className="text-xl text-gray-300mb-8">
               Professional Asset management solutions and services
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900mb-2">
+            <div className="grid md:grid-cols-2lg:grid-cols-3gap-8mt-12"></div>;
+              <div className="bg-blue-50 borderborder-blue-200rounded-lgp-6"></div>
+                <h3 className="text-lg font-semiboldtext-blue-900mb-2">
                   Expert Solutions
                 </h3>
                 <p className="text-blue-700">
@@ -26,13 +26,13 @@ const AssetManagementPage: React.FC = () => {
                 </p>
                 </div>
         </div>
-              <div className="bg-green-50border border-green-20 0rounded-lgp-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+              <div className="bg-green-50border border-green-200rounded-lgp-6"></div>
+                <h3 className="text-lg font-semiboldtext-purple-900mb-2">
                 </h3>
                 <p className="[^"]*">
                   Tailored implementations for your specific requirements.
-              </p><div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+              </p><div className="bg-purple-50 borderborder-purple-200rounded-lgp-6"></div>
+                <h3 className="text-lg font-semiboldtext-purple-900mb-2">
                 </h3>
                 <p className="[^"]*">
                   Round-the-clock support for all your needs.

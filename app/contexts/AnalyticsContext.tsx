@@ -27,7 +27,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     identifyUser,
   };
   return (
-    <AnalyticsContext.Provider value={value}>
+    <>
+      <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   )
@@ -48,3 +49,8 @@ export const useAnalytics = () => {
 </string>
 </string>
 </string>
+
+
+
+}
+}}}

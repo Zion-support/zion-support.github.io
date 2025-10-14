@@ -113,7 +113,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontPreloads = [
-        { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { href: '/fonts/inter-var.woff', as: 'font', type: 'font/woff', crossorigin: 'anonymous' }
       ];
 
@@ -231,7 +231,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         /* Critical CSS for above-the-fold content */
         .hero-section { min-height: 100vh; }
         .navigation { position: fixed; top: 0; width: 100%; z-index: 50; }
-        .loading-skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); }
+        .loading-skeleton { background: linear-gradient(90deg, #f-0f-0f-025%, #e-0e-0e-050%, #f-0f-0f-075%); }
       `;
 
       const style = document.createElement('style');
