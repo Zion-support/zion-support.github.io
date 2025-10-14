@@ -4,8 +4,14 @@ export const apiInterceptor = {
     const token = localStorage.getItem('authToken');
     if (token && config.headers && typeof config.headers === 'object') {
       (config.headers as Record<string, string>).Authorization = `Bearer ${token}`;
+    const token = localStorage.getItem('authToken')
+    if (token) {
+      config.headers = {
+        ...config.headers,
+        Authorization: `Bearer ${token}`
+      }
     }
-    return config;
+    return config
   },
   
   response: (response: unknown) => {
@@ -20,7 +26,18 @@ export const apiInterceptor = {
         localStorage.removeItem('authToken');
         window.location.href = '/login';
       }
+  response: (response: any) => {
+    // Handle successful responses
+    return response
+  },
+  
+  error: (error: any) => {
+    // Handle errors
+    if (error.response?.status === 401) {
+      // Unauthorized - redirect to login
+      localStorage.removeItem('authToken')
+      window.location.href = '/login'
     }
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
-};
+}

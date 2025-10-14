@@ -8,19 +8,11 @@ export const securityHeaders = {
     'connect-src': ["'self'", "https:"]
   },
   
-  headers: {
-    'X-Frame-Options': 'DENY',
-    'X-Content-Type-Options': 'nosniff',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-  },
-  
-  getHeaders: () => {
-    return {
-      ...securityHeaders.headers,
-      'Content-Security-Policy': Object.entries(securityHeaders.csp)
-        .map(([key, values]) => `${key} ${(values as string[]).join(' ')}`)
-        .join('; ')
-    };
+  getCSPHeader: () => {
+    return Object.entries(securityHeaders.csp)
+      .map(([key, values]) => `${key} ${values.join(' ')}`)
+      .join('; ')
+    'font-src': ["'self'", "data:"],
+    'connect-src': ["'self'"]
   }
-};
+}

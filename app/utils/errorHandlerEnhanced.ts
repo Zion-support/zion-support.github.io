@@ -5,27 +5,25 @@ export const errorHandlerEnhanced = {
       stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
-    };
+    }
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('Error handled:', errorInfo);
+      console.error('Error handled:', errorInfo)
     }
     
-    // Send to analytics
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
         description: error.message,
-        fatal: false,
-        custom_parameters: context
-      });
+        fatal: false
+      })
     }
     
     return {
       message: 'Something went wrong. Please try again.',
-      code: 'GENERIC_ERROR',
-      id: Date.now().toString()
-    };
+      code: 'GENERIC_ERROR'
+    }
   }
-};
+}

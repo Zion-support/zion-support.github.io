@@ -1,4 +1,3 @@
-/* eslint-env serviceworker */
 // Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';

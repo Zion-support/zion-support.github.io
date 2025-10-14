@@ -1,173 +1,140 @@
-import React, { useEffect, Suspense, useState } from "react";
+import React, { Suspense } from 'react';
+import React, { useEffect, Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
-import Footer from './app/components/Footer';
-import LoadingPage from './app/components/Loading';
-import HomePage from './app/page';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import ErrorBoundary from './app/components/ErrorBoundary';
+import React, { Suspense } from 'react';
 
-// All necessary imports are already defined above
+// Lazy load pages
+const HomePage = lazy(() => import('./app/page'));
+const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
+const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AIBusinessIntelligenceProPage = lazy(() => import('./app/ai-business-intelligence-pro/page'));
+const AICybersecuritySuiteProPage = lazy(() => import('./app/ai-cybersecurity-suite-pro/page'));
 
+// Simple loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-white text-xl">Loading...</div>
+  </div>
+);
 
+// Simple error boundary
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
 
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
 
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-// Page Components
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import CookiesPage from './app/pages/CookiesPage';
-import SitemapPage from './app/pages/SitemapPage';
-import PricingPage from './app/pages/PricingPage';
-// Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
+  }
 
-// Additional Pages
-import MicroSaaSPage from './app/pages/MicroSaaSPage';
-// TODO: Add lazy imports for components when they are created
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+    // Log error to monitoring service in production
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+  }
 
-// New Innovative Micro SAAS Services
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-white text-xl">Something went wrong.</div>
+        </div>
+      );
+    }
 
-// 5G Solutions Pages
-// Additional AI Services Pages
-
-// New Advanced AI Services
-
-// Additional IT Services Pages
+    return this.props.children;
+  }
+}
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
   useEffect(() => {
-    // Performance monitoring
-    if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
-      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
-            console.log('CLS:', metric);
-          }
-        });
-        onFCP((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
-            console.log('FCP:', metric);
-          }
-        });
-        onLCP((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
-            console.log('LCP:', metric);
-          }
-        });
-        onTTFB((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
-            console.log('TTFB:', metric);
-          }
-        });
-      });
+import React, { Suspense } from 'react';
+// Performance monitoring
+if (typeof window !== 'undefined') {
+  // Monitor Core Web Vitals
+import React, { Suspense } from 'react';
+  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+    onCLS((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+import React, { Suspense } from 'react';
+        console.warn('CLS:', metric);
+      }
+    });
+    onFCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('FCP:', metric);
+      }
+    });
+    onLCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('LCP:', metric);
+      }
+    });
+    onTTFB((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('TTFB:', metric);
+      }
+    });
+  });
 
-      // Monitor bundle size
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            if (process.env.NODE_ENV === 'development') {
-              // eslint-disable-next-line no-console
-              console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
-            }
-          }
+  // Monitor bundle size
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      if (entry.entryType === 'navigation') {
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
         }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
+      }
+    }
+
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+import React, { Suspense } from 'react';
+      console.warn('Zion Tech Group App initialized');
     }
   }, []);
 
-  useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.log('Zion Tech Group App initialized');
-    }
-  }, []);
+  const handleSidebarToggle = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-slate-900 flex">
-            <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-            <div className="flex-1 flex flex-col">
-              <Navigation onSidebarToggle={() => setIsSidebarOpen(true)} />
-              <main className="relative z-10 flex-1">
-                <Suspense fallback={<LoadingPage />}>
-                  <Routes>
-                    {/* Main Pages */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/ai-services" element={<AIServicesPage />} />
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/demo" element={<DemoPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/cookies" element={<CookiesPage />} />
-                    <Route path="/sitemap" element={<SitemapPage />} />
-                    <Route path="/micro-saas" element={<MicroSaaSPage />} />
-                    <Route path="/it-services" element={<ITServicesPage />} />
-                    <Route path="/cloud-services" element={<ServicesPage />} />
-                    <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                    <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                    <Route path="/case-studies" element={<CaseStudiesPage />} />
-                    <Route path="/careers" element={<CareersPage />} />
-                    
-                    {/* New Innovative Micro SAAS Services */}
-                    {/* TODO: Add micro SaaS service routes when components are created */}
-                    
-                    {/* Advanced AI Services */}
-                    {/* TODO: Add advanced AI service routes when components are created */}
-
-                    {/* Catch all route */}
-                    <Route path="*" element={
-                      <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                        <div className="text-center">
-                          <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                          <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                          <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                            Go Home
-                          </a>
-                        </div>
-                      </div>
-                    } />
-                  </Routes>
-                </Suspense>
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-            </div>
+import React, { Suspense } from 'react';
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
+                <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
+                <Route path="*" element={<HomePage />} />
+              </Routes>
+            </Suspense>
           </div>
         </Router>
       </HelmetProvider>

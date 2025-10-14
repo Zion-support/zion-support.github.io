@@ -1,6 +1,11 @@
 import '@testing-library/jest-dom';
 import React from 'react';
 
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock react-router-dom
 global.jest = {
   mock: jest.mock,
@@ -41,9 +46,11 @@ jest.mock('react-router-dom', () => {
       });
       return React.createElement(RouterProvider, { router });
     },
-    RouterProvider: ({ router }) => null
+    RouterProvider: () => null
   };
 });
+
+// Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   observe() {}

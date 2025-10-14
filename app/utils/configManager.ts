@@ -1,12 +1,17 @@
 interface Config {
-  apiUrl: string;
-  environment: string;
+  apiUrl: string
+  environment: string
   features: {
     analytics: boolean;
     seo: boolean;
     performance: boolean;
   };
   [key: string]: unknown;
+    analytics: boolean
+    seo: boolean
+    performance: boolean
+  }
+  [key: string]: any
 }
 
 export const configManager = {
@@ -14,7 +19,7 @@ export const configManager = {
     apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
     environment: process.env.NODE_ENV || 'development',
     features: {
-      analytics: true,
+      analytics: process.env.NODE_ENV === 'production',
       seo: true,
       performance: true
     }
@@ -27,6 +32,7 @@ export const configManager = {
       }
       return undefined;
     }, configManager.config);
+    return key.split('.').reduce((obj, k) => obj?.[k], configManager.config)
   },
   
   set: (key: string, value: unknown) => {
@@ -38,8 +44,17 @@ export const configManager = {
       }
       return obj[k] as Record<string, unknown>;
     }, configManager.config as Record<string, unknown>);
+    const target = keys.reduce((obj, k) => obj[k] = obj[k] || {}, configManager.config);
+  set: (key: string, value: any) => {
+    const keys = key.split('.')
+    const lastKey = keys.pop()
+    const target = keys.reduce((obj, k) => {
+      if (!obj[k]) obj[k] = {}
+      return obj[k]
+    }, configManager.config)
+    
     if (lastKey) {
-      target[lastKey] = value;
+      target[lastKey] = value
     }
   }
-};
+}
