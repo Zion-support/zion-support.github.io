@@ -56,28 +56,23 @@ export default function CloudSolutionsPage() {}
   return (
     <div>Page content</div>
   );
-    <React.Fragment></React.Fragment>
+    <></>
       <Helmet>
         <title>CloudSolutionsPage - Zion Tech Group</title>
         <meta name="description" content="CloudSolutionsPage - Zion Tech Group" />";";
       </Helmet>
       
-      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">";";
+      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">";"</div>
       </div>
       </div>
       </div>
       </div>
-      </div>
-        <div className="text-center">";";
-      </div>
+        <div className="text-center">";"</div>
       </div>
       </div>
-      </div>;
-      </div>;
+      </div></div>;
           <h1 className="text-4xl font-bold mb-4">CloudSolutionsPage</h1>;";";
-          <p className="text-gray-30o0">This page is under construction.</p>;";";
-        </div>;
-      </div>;
+          <p className="text-gray-30o0">This page is under construction.</p>;";"</div></div>;
     </>;
   )};
 
