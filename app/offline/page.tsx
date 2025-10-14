@@ -1,23 +1,24 @@
+"use client";
+
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function Page() {
+export default function OfflinePage() {
   return (
-    <div>
-  );Page content</div>
-  );
-
-    <div>Page content</div>
-  );
-    <div>
-      </div>
+    <React.Fragment>
+      <Helmet>
+        <title>Offline - Zion Tech Group</title>
+        <meta name="description" content="Offline page for Zion Tech Group." />
+      </Helmet>
+      
       <div>
-      </div>
-        <h1 className: ""text-4xl font-bold mb-8">Offline</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.;        </p>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-8">Offline</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under development.
+          </p>
+        </div>
       </div>
     </React.Fragment>
   );
 }
-};
-};
-  )}

@@ -1,6 +1,11 @@
 import React from 'react';
 
-// main - Basic implementation
-export default function main() {
-  return null;
+// Main page - Basic implementation
+export default function Main() {
+  return (
+    <div>
+      <h1>Main Page</h1>
+      <p>Welcome to Zion Tech Group</p>
+    </div>
+  );
 }

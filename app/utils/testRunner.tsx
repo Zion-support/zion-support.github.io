@@ -1,6 +1,12 @@
-// Test runner utility
+import React from "react";
 
-// testRunner - Basic implementation
-export default function testRunner() {
-  return null;
+export default function TestRunner() {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">TestRunner</h1>
+      <p className="text-gray-300 text-lg">
+        This component is under development.
+      </p>
+    </div>
+  );
 }

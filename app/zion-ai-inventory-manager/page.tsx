@@ -8,10 +8,11 @@ export default function Page() {
         <title>Zion Ai Inventory Manager - Zion Tech Group</title>
         <meta name="description" content="Professional zion ai inventory manager services by Zion Tech Group." />
       </Helmet>
+      
       <div>
         <div>
-          <h1>Zion Ai Inventory Manager</h1>
-          <p>Professional zion ai inventory manager services by Zion Tech Group.</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Zion Ai Inventory Manager</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </React.Fragment>

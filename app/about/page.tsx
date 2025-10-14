@@ -1,16 +1,17 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function Page() {
+export default function AboutPage() {
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>About - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group and our mission." />
+        <meta name="description" content="Professional about services by Zion Tech Group." />
       </Helmet>
+      
       <div>
         <div>
-          <h1 className="text-4xl font-bold text-white mb-8">About Us</h1>
+          <h1 className="text-4xl font-bold text-white mb-8">About</h1>
           <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>

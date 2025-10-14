@@ -1,22 +1,14 @@
-import React from "react"
-export default function DynamicPage() {
+"use client";
+
+import React from "react";
+
+export default function DynamicComponent() {
   return (
     <div>
-  );Page content</div>
-  );
-
-    <div>Page content</div>
-  );
-    <div>
-      <div>
-        <div>
-          <h1 className="text-4-xl font-bold text-white mb-4">Dynamic</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about dynamic</p>
-        </div>
-      </div>
+      <h1 className="text-4xl font-bold mb-8">Dynamic Component</h1>
+      <p className="text-gray-300 text-lg">
+        This component is under development.
+      </p>
     </div>
-  )
+  );
 }
-};
-};
-  )}

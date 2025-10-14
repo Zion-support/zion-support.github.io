@@ -1,13 +1,24 @@
-'use client';
-import React from 'react';
+"use client";
+
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function EcommerceAnalyticsProPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Ecommerce Analytics Pro</h1>
-        <p className="text-gray-600 text-lg">This page is under development.</p>
+    <React.Fragment>
+      <Helmet>
+        <title>Ecommerce Analytics Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional ecommerce analytics pro services by Zion Tech Group." />
+      </Helmet>
+      
+      <div>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-8">Ecommerce Analytics Pro</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under development.
+          </p>
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }

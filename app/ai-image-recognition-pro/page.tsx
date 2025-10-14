@@ -3,19 +3,18 @@ import { Helmet } from "react-helmet-async";
 
 export default function Page() {
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
-        <title>Ai Image Recognition Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional ai image recognition pro services by Zion Tech Group." />
+        <title>PagePage - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
       </Helmet>
+      
       <div>
         <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Ai Image Recognition Pro</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
+          <h1 className="text-4xl font-bold text-white mb-4">PagePage</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }

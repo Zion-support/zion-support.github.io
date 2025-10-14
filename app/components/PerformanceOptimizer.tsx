@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { useEffect, ReactNode } from "react";
 
 interface PerformanceOptimizerProps {
   children: ReactNode;

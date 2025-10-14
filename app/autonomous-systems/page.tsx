@@ -8,10 +8,11 @@ export default function Page() {
         <title>Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Professional autonomous systems services by Zion Tech Group." />
       </Helmet>
+      
       <div>
         <div>
-          <h1>Autonomous Systems</h1>
-          <p>Professional autonomous systems services by Zion Tech Group.</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Autonomous Systems</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </React.Fragment>

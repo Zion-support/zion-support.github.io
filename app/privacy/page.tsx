@@ -1,16 +1,20 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function Page() {
+export default function PrivacyPage() {
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
-
-  );
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group privacy policy and data protection information." />      </Helmet>            <div>
+        <title>Privacy - Zion Tech Group</title>
+        <meta name="description" content="Professional privacy services by Zion Tech Group." />
+      </Helmet>
+      
+      <div>
         <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>          <div>            <p className="text-gray-300 text-lg mb-6">"This privacy policy is under construction. Please check back later for our complete privacy policy.            </p>            <p className="text-gray-300">"              For any privacy-related questions, please contact us at kleber@ziontechgroup.com            </p>          </div>
+          <h1 className="text-4xl font-bold text-white mb-8">Privacy</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
         </div>
       </div>
     </React.Fragment>

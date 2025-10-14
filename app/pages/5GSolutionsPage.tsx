@@ -1,5 +1,11 @@
-import React from "react";
+import React from 'react';
 
+// 5G Solutions Page - Basic implementation
 export default function FiveGSolutionsPage() {
-  return null;
+  return (
+    <div>
+      <h1>5G Solutions</h1>
+      <p>Professional 5G solutions</p>
+    </div>
+  );
 }

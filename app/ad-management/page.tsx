@@ -8,10 +8,11 @@ export default function Page() {
         <title>Ad Management - Zion Tech Group</title>
         <meta name="description" content="Professional ad management services by Zion Tech Group." />
       </Helmet>
+      
       <div>
         <div>
-          <h1>Ad Management</h1>
-          <p>Professional ad management services.</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Ad Management</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </React.Fragment>

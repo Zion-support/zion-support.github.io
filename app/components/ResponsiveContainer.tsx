@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { ReactNode } from "react";
 
-export default function ResponsiveContainer() {
+interface ResponsiveContainerProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ 
+  children, 
+  className = "" 
+}) => {
   return (
-    <div>
-      <h1>ResponsiveContainer</h1>
-      <p>This component is under development.</p>
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
     </div>
   );
-}
+};
+
+export default ResponsiveContainer;

@@ -1,10 +1,11 @@
-// import { createContext } from 'react';
+// Analytics context type definitions
 
-interface AnalyticsContextType {
+export interface AnalyticsContextDefinition {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
 }
 
-// const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export type { AnalyticsContextType };
+export const defaultAnalyticsContext: AnalyticsContextDefinition = {
+  trackEvent: () => {},
+  trackPageView: () => {},
+};

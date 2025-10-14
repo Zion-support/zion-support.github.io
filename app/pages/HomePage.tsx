@@ -1,8 +1,12 @@
-import React from 'react';
-
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function HomePage() {
-  return null;
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">HomePage</h1>
+      <p className="text-gray-300 text-lg">
+        This component is under development.
+      </p>
+    </div>
+  );
 }

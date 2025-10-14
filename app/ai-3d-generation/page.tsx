@@ -5,13 +5,14 @@ export default function Page() {
   return (
     <React.Fragment>
       <Helmet>
-        <title>AI 3D Generation - Zion Tech Group</title>
+        <title>Ai 3d Generation - Zion Tech Group</title>
         <meta name="description" content="Professional ai 3d generation services by Zion Tech Group." />
       </Helmet>
+      
       <div>
         <div>
-          <h1>AI 3D Generation</h1>
-          <p>Professional ai 3d generation services by Zion Tech Group.</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Ai 3d Generation</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </React.Fragment>

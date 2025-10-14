@@ -1,10 +1,14 @@
+"use client";
+
 import React from "react";
 
-export default function Navigation-backup() {
+export default function NavigationBackup() {
   return (
     <div>
-      <h1>Navigation-backup</h1>
-      <p>This component is under development.</p>
+      <h1 className="text-4xl font-bold mb-8">Navigation Backup</h1>
+      <p className="text-gray-300 text-lg">
+        This component is under development.
+      </p>
     </div>
   );
 }

@@ -8,10 +8,11 @@ export default function Page() {
         <title>Business Intelligence - Zion Tech Group</title>
         <meta name="description" content="Professional business intelligence services by Zion Tech Group." />
       </Helmet>
+      
       <div>
         <div>
-          <h1>Business Intelligence</h1>
-          <p>Professional business intelligence services by Zion Tech Group.</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Business Intelligence</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </React.Fragment>

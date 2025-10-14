@@ -8,10 +8,11 @@ export default function Page() {
         <title>Cloud Migration Pro - Zion Tech Group</title>
         <meta name="description" content="Professional cloud migration pro services by Zion Tech Group." />
       </Helmet>
+      
       <div>
         <div>
-          <h1>Cloud Migration Pro</h1>
-          <p>Professional cloud migration pro services by Zion Tech Group.</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration Pro</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </React.Fragment>
