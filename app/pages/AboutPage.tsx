@@ -1,7 +1,6 @@
-import React from 'react';''
-import { Helmet } from 'react-helmet-async';''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-ursor/fix-errors-and-merge-to-main-""94a""7
 import { 
   UserGroupIcon,
   CpuChipIcon,

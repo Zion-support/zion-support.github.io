@@ -1,6 +1,6 @@
 
-import React from 'react';''
-import { Helmet } from 'react-helmet-async';''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   BriefcaseIcon,
@@ -10,14 +10,14 @@ import {
   CheckIcon,
   UserGroupIcon,
   CpuChipIcon,
-  ShieldCheckIcon,';
-  CloudIcon from 'react';'
+  ShieldCheckIcon,
+  CloudIcon
 } from '@heroicons/react/24/outline';
 
 const CareersPage: React.FC = () => {
-  const positions = ['
-    {''
-      title: 'Senior AI Engineer',''
+  const positions = [
+    {
+      title: 'Senior AI Engineer',
       location: 'Remote / Middletown, DE',''
       type: 'Full-time',''
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.','
