@@ -1,140 +1,54 @@
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  loadTime: number;
-}
-
-const PerformanceEnhancer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Only run in browser environment
-    if (typeof window === 'undefined') return;
-
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
-      const metrics: PerformanceMetrics = {
-        fcp: fcp ? fcp.startTime : 0,
-        lcp: lcp ? lcp.startTime : 0,
-        fid: 0, // Would need PerformanceObserver
-        cls: 0, // Would need PerformanceObserver
-        ttfb: navigation.responseStart - navigation.requestStart,
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      };
-
-      setMetrics(metrics);
-
-      // Log performance metrics
-      };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.href = '/critical.css';
-      criticalCSS.as = 'style';
-      document.head.appendChild(criticalCSS);
-
-      // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = '/fonts/inter-var.woff2';
-      fontPreload.as = 'font';
-      fontPreload.type = 'font/woff2';
-      fontPreload.crossOrigin = 'anonymous';
-      document.head.appendChild(fontPreload);
-    };
-
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize images
-  useEffect(() => {
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => imageObserver.observe(img));
-    };
-
-    optimizeImages();
-  }, []);
-
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development' || !metrics) {
-    return null;
-  }
-
+import React from 'react''''
+import { Helmet } from 'react-helmet-async''''
+'use client'''
+export default function Page() {}
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
-        aria-label="Toggle performance metrics"
-      >
-        Performance
-      </button>
-      
-      {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
-          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="text-gray-600">FCP:</span>
-              <span className="font-mono">{metrics.fcp.toFixed(2)}ms</span>
+    <div className="min-h-screen bg-white">"""
+      <Helmet>
+        <title>PerformanceEnhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional performanceenhancer services by Zion Tech Group." />"""
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">"""
+        <div className="text-center">"""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">"""
+            PerformanceEnhancer
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">"""
+            Professional performanceenhancer solutions tailored to your business needs.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"""
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"""
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">"""
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">"""
+                Our team of experts delivers cutting-edge performanceenhancer solutions.
+              </p>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">LCP:</span>
-              <span className="font-mono">{metrics.lcp.toFixed(2)}ms</span>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"""
+              <h3 className="text-lg font-semibold text-green-900 mb-2">"""
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">"""
+                Tailored performanceenhancer implementations for your specific requirements.
+              </p>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">TTFB:</span>
-              <span className="font-mono">{metrics.ttfb.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Load Time:</span>
-              <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"""
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">"""
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">"""
+                Round-the-clock support for all your performanceenhancer needs.
+              </p>
             </div>
           </div>
+          <div className="mt-12">"""
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"""
+              Get Started Today
+            </button>
+          </div>
         </div>
-      )}
+      </div>
     </div>
-  );
-};
-
-export default PerformanceEnhancer;
+  )
+}

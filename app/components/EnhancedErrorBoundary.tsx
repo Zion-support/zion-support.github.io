@@ -1,224 +1,193 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-<<<<<<< HEAD
-
-interface Props {
-  children: ReactNode;
-=======
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-<<<<<<< HEAD
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-}
-
-interface State {
-  hasError: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  error?: Error;
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-=======
-  error?: Error;
-}
-
-export class EnhancedErrorBoundary extends Component<Props, State> {
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+import React, { Component, ErrorInfo, ReactNode } from 'react''''
+import { Helmet } from 'react-helmet-async''''
+interface Props {}
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: "Error", errorInfo: "ErrorInfo) => void"}""
+interface State {}
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: "string"}""
+class EnhancedErrorBoundary extends Component<Props, State> {}
+  constructor(props: "Props) {",}"
+    super(props)
+    this.state = {}
+      hasError: "false",""
+      error: "null",""
+      errorInfo: "null",""
+      errorId: '''''
+    }
   }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: "Error): Partial<State> {",}"
+    return {}
+      hasError: "true",""
+      error,
+      errorId: "`error_${Date.now()"}_${Math.random().toString(36).substr(2, 9)}`""
+    }
   }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-<<<<<<< HEAD
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="text-center p-8 max-w-md mx-auto">
-            <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
-            <p className="text-gray-300 mb-8">
-              We're sorry, but something unexpected happened. Please try again.
-=======
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  retryCount: number;
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  private retryTimeoutId: NodeJS.Timeout | null = null;
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error
-    };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
+  componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {",}""
+    this.setState({}
       error,
       errorInfo
-    });
-
+    })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Send error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
+    if (process.env.NODE_ENV === 'development') {'}''
+      console.error('Error caught by boundary:', error, errorInfo)}'''
+    // Call custom error handler
+    this.props.onError?.(error, errorInfo)
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {'}''
+      this.logErrorToService(error, errorInfo)}
   }
-
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error monitoring service
+  private logErrorToService = (error: "Error", errorInfo: ErrorInfo) => {}""
+    // In a real application, you would send this to an error tracking service
     // like Sentry, LogRocket, or Bugsnag
-    try {
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        retryCount: this.state.retryCount
-      };
-
-      // Example: Send to monitoring service
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'exception', {
-          description: error.message,
-          fatal: true,
-          custom_map: errorData
-        });
+    try {}
+      const errorData = {}
+        message: "error.message",""
+        stack: "error.stack",""
+        componentStack: "errorInfo.componentStack",""
+        errorId: "this.state.errorId",""
+        timestamp: "new Date().toISOString()",""
+        userAgent: "navigator.userAgent",""
+        url: "window.location.href"""
       }
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
+      // Example: Send to error tracking service
+      // errorTrackingService.captureException(error, { extra: "errorData"})""
+      console.error('Error logged to service:', errorData)'''
+    } catch (loggingError) {}
+      console.error('Failed to log error to service:', loggingError)'''
     }
-  };
-
-  private handleRetry = () => {
-    this.setState(prevState => ({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: prevState.retryCount + 1
-    }));
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleReload = () => {
-    window.location.reload();
-  };
-
-  componentWillUnmount() {
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-    }
-=======
-      return this.state.fallback || (
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-slate-800/95 backdrop-blur-sm rounded-xl p-8 border border-red-500/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-<<<<<<< HEAD
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-            </p>
-            <div className="space-y-4">
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <RefreshCw className="w-5 h-5" />
-                Try Again
-=======
-            <p className="text-gray-400 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-
-            <div className="space-y-3">
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full flex items-center justify-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                <RefreshCw className="w-4 h-4" />
-                <span>Try Again</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-              </button>
-              <button
-                onClick={() => window.location.href = '/'}
-<<<<<<< HEAD
-                className="w-full border border-gray-600 text-gray-300 hover:text-white hover:border-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <Home className="w-5 h-5" />
-                Go Home
-              </button>
-            </div>
-<<<<<<< HEAD
-=======
-                className="w-full flex items-center justify-center space-x-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                <Home className="w-4 h-4" />
-                <span>Go Home</span>
-              </button>
-            </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
   }
-}
-
-export default EnhancedErrorBoundary;
-<<<<<<< HEAD
-=======
-
-            <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem persists, please contact our support team.</p>
-              <p className="mt-2">
-                Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
+  private handleRetry = () => {}
+    this.setState({}
+      hasError: "false",""
+      error: "null",""
+      errorInfo: "null",""
+      errorId: '''''
+    })
+  }
+  private handleReload = () => {}
+    window.location.reload()
+  }
+  private handleGoHome = () => {}
+    window.location.href = '/''''
+  }
+  render() {}
+    if (this.state.hasError) {}
+      // Custom fallback UI
+      if (this.props.fallback) {}
+        return this.props.fallback}
+      // Default error UI
+      return (
+        <>
+          <Helmet>
+            <title>Error - Zion Tech Group</title>
+            <meta name="robots" content="noindex, nofollow" />"""
+          </Helmet>
+          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">"""
+            <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">"""
+              {/* Error Icon */}
+              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">"""
+                <svg
+                  className="w-8 h-8 text-red-400""""
+                  fill="none""""
+                  stroke="currentColor""""
+                  viewBox="0 0 24 24""""
+                  aria-hidden="true""""
+                >
+                  <path
+                    strokeLinecap="round""""
+                    strokeLinejoin="round""""
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z""""
+                  />
+                </svg>
+              </div>
+              {/* Error Title */}
+              <h1 className="text-2xl font-bold text-white mb-4">"""
+                Oops! Something went wrong
+              </h1>
+              {/* Error Message */}
+              <p className="text-gray-300 mb-6 leading-relaxed">"""
+                We're sorry, but something unexpected happened. Our team has been notified'''
+                and is working to fix this issue.
               </p>
+              {/* Error ID for support */}
+              {this.state.errorId && (}
+                <div className="bg-slate-700 rounded-lg p-3 mb-6">"""
+                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>"""
+                  <code className="text-xs text-cyan-400 font-mono break-all">"""
+                    {this.state.errorId}
+                  </code>
+                </div>
+              )}
+              {/* Action Buttons */}
+              <div className="space-y-3">"""
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800""""
+                >
+                  Try Again
+                </button>
+                <div className="flex space-x-3">"""
+                  <button
+                    onClick={this.handleGoHome}
+                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800""""
+                  >
+                    Go Home
+                  </button>
+                  <button
+                    onClick={this.handleReload}
+                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800""""
+                  >
+                    Reload Page
+                  </button>
+                </div>
+              </div>
+              {/* Support Information */}
+              <div className="mt-8 pt-6 border-t border-slate-700">"""
+                <p className="text-sm text-gray-400 mb-2">"""
+                  Still having trouble? Contact our support team:
+                </p>
+                <div className="text-sm text-cyan-400">"""
+                  <p>Email: kleber@ziontechgroup.com</p>
+                  <p>Phone: +1-302-464-0950</p>
+                </div>
+              </div>
+              {/* Development Error Details */}
+              {process.env.NODE_ENV === 'development' && this.state.error && ('}''
+                <details className="mt-6 text-left">"""
+                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">"""
+                    Error Details (Development)
+                  </summary>
+                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">"""
+                    <div className="mb-2">"""
+                      <strong>Error: "</strong> {this.state.error.message"}""
+                    </div>
+                    <div className="mb-2">"""
+                      <strong>Stack:</strong>
+                      <pre className="whitespace-pre-wrap mt-1">"""
+                        {this.state.error.stack}
+                      </pre>
+                    </div>
+                    {this.state.errorInfo && (}
+                      <div>
+                        <strong>Component Stack:</strong>
+                        <pre className="whitespace-pre-wrap mt-1">"""
+                          {this.state.errorInfo.componentStack}
+                        </pre>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              )}
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+          </div>
+        </>
+      )}
+    return this.props.children}
+}
+export default EnhancedErrorBoundary
+</State>

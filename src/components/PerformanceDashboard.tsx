@@ -1,60 +1,84 @@
-export default PerformanceDashboard;
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  [key: string]: number;
-    fps: 0;
-  });
-  const [isVisible, setIsVisible] = useState(false);
-      )[0] as PerformanceNavigationTiming;
-        : 0;
-      // Measure render time;
-      const renderStart = performance.now();
-const renderTime = performance.now() - renderStart;
-      // Measure memory usage;
-      let memoryUsage = 0;
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
-      // Measure FPS (simplified)
-      let fps = 0;
-        let lastTime = performance.now();
-        let frameCount = 0;
-          frameCount++;
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;
-          requestAnimationFrame(measureFPS);
-        };
-        requestAnimationFrame(measureFPS);
-        fps;
-      });
-    };
-    updateMetrics();
-    // Update metrics every 5 seconds;
-    const interval = setInterval(updateMetrics, 5000);
- clearInterval(interval);
-  }, []);
- setIsVisible(true)}
-        className = "fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors";
-        Show Performance;
-    );
-        <h3 className = "text-lg font-semibold text-gray-800">Performance Dashboard</h3>
- setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
-          ×
-          <span className="text-sm text-gray-600">Load Time:</span>;
-            {metrics.loadTime.toFixed(2)}ms;
-          <span className = "text-sm text-gray-600">Render Time:</span>;
-            {metrics.renderTime.toFixed(2)}ms;
-          <span className = "text-sm text-gray-600">Memory Usage:</span>;
-            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
-          <span className = "text-sm text-gray-600">FPS:</span>
-          <span className="text-sm font-mono">{metrics.fps}</span>
-            Last updated: {new Date().toLocaleTimeString()};
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
+const PerformanceDashboard: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Performance Dashboard - Zion Tech Group</title>
+        <meta name="description" content="Professional performance dashboard services by Zion Tech Group." />
+      </Helmet>
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Performance Dashboard;
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional performance dashboard services;
+            designed to help your business grow and succeed.;
+          </p>
+        </div>
+      </section>
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive performance dashboard;
+                solutions tailored to your specific needs and requirements.;
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions;
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation;
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support;
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our performance dashboard services?;
+              </p>
+              <a;
+                href="$1"
+                className="$1"
+              >
+                Contact Us;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our performance dashboard;
+            services can help you achieve your goals.;
+          </p>
+          <a;
+            href="$1"
+            className="$1"
+          >
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>
   );
-};
+}
+export default PerformanceDashboard;

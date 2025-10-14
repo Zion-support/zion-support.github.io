@@ -1,160 +1,284 @@
-const fs = require('fs');
-const path = require('path');
-
-console.log('Starting performance optimization...');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-// Performance optimization script
-const optimizePerformance = () => {
+const fs = require('fs');';
+const _path = require('_path');';
+const { execSync } = require('child_process');';
+// Performance optimization script;
+function optimizePerformance() {
+  global.console.log('🚀 Starting comprehensive performance optimization...');';
   try {
-    console.log('Performance optimization completed successfully!');
-  } catch (error) {
-    console.error('Error during performance optimization:', error);
+    // 1. Optimize HTML _files;
+    optimizeHTML();
+    
+    // 2. Optimize CSS _files;
+    optimizeCSS();
+    
+    // 3. Optimize JavaScript _files;
+    optimizeJavaScript();
+    
+    // 4. Optimize images;
+    optimizeImages();
+    
+    // 5. Generate critical CSS;
+    generateCriticalCSS();
+    
+    // 6. Optimize fonts;
+    optimizeFonts();
+    
+    // 7. Generate performance report;
+    generatePerformanceReport();
+    
+    global.console.log('✅ Performance optimization completed successfully!');';
+  } catch (_error) {
+    global.console._error('❌ Performance optimization failed:', _error.message);';
+    process.exit(1);
   }
-};
+}
 
-<<<<<<< HEAD
-optimizePerformance();
-=======
-// Optimize images
-console.log('Optimizing images...');
-// This would typically use sharp or imagemin
-// For now, we'll just log the step
-console.log('✓ Images optimized');
-
-// Generate critical CSS
-console.log('Generating critical CSS...');
-const criticalCSS = `
-/* Critical CSS for above-the-fold content */
-body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
-.bg-gradient-to-br { background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a); }
-.text-white { color: #ffffff; }
-.text-cyan-400 { color: #22d3ee; }
-.text-purple-400 { color: #c084fc; }
-.bg-cyan-500 { background-color: #06b6d4; }
-.bg-purple-600 { background-color: #9333ea; }
-.rounded-lg { border-radius: 0.5rem; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-.font-bold { font-weight: 700; }
-.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
-.text-2xl { font-size: 1.5rem; line-height: 2rem; }
-.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-.text-5xl { font-size: 3rem; line-height: 1; }
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.min-h-screen { min-height: 100vh; }
-.max-w-7xl { max-width: 80rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.relative { position: relative; }
-.z-50 { z-index: 50; }
-.backdrop-blur-sm { backdrop-filter: blur(4px); }
-.border-b { border-bottom-width: 1px; }
-.border-white\\/10 { border-color: rgba(255, 255, 255, 0.1); }
-.h-16 { height: 4rem; }
-.space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.5rem; }
-.w-8 { width: 2rem; }
-.h-8 { height: 2rem; }
-.w-5 { width: 1.25rem; }
-.h-5 { height: 1.25rem; }
-.bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
-.from-cyan-500 { --tw-gradient-from: #06b6d4; --tw-gradient-to: rgba(6, 182, 212, 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
-.to-purple-600 { --tw-gradient-to: #9333ea; }
-.bg-clip-text { background-clip: text; }
-.text-transparent { color: transparent; }
-`;
-
-// Write critical CSS to file
-const criticalCSSPath = path.join(__dirname, '..', 'dist', 'critical.css');
-fs.writeFileSync(criticalCSSPath, criticalCSS);
-console.log('✓ Critical CSS generated');
-
-// Generate service worker for caching
-console.log('Generating service worker...');
-const serviceWorker = `
-const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [
-  '/',
-  '/about',
-  '/contact',
-  '/services',
-  '/ai-services',
-  '/static/css/main.css',
-  '/static/js/main.js'
-];
-
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  );
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});
-`;
-
-const serviceWorkerPath = path.join(__dirname, '..', 'dist', 'sw.js');
-fs.writeFileSync(serviceWorkerPath, serviceWorker);
-console.log('✓ Service worker generated');
-
-// Generate robots.txt
-console.log('Generating robots.txt...');
-const robotsTxt = `User-agent: *
-Allow: /
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
-`;
-
-const robotsPath = path.join(__dirname, '..', 'dist', 'robots.txt');
-fs.writeFileSync(robotsPath, robotsTxt);
-console.log('✓ Robots.txt generated');
-
-// Generate manifest.json for PWA
-console.log('Generating manifest.json...');
-const manifest = {
-  "name": "Zion Tech Group",
-  "short_name": "Zion Tech",
-  "description": "Advanced AI and IT Solutions",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#06b6d4",
-  "icons": [
-    {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+function optimizeHTML() {
+  global.console.log('📄 Optimizing HTML _files...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const htmlFiles = findFiles(distPath, '.html');';
+  htmlFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');';
+    // Remove unnecessary whitespace;
+    content = content.replace(/>\s+</g, '><');';
+    // Remove comments (except important ones)
+    content = content.replace(/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/g, '');';
+    // Optimize meta tags;
+    content = content.replace(/\s+/g, ' ');';
+    // Add preload hints for critical resources;
+    if (content.includes('<head>')) {';
+      const preloadHints = `;
+    <!-- Preload critical resources -->;
+    <link rel="preload" href="/assets/css/index.css" as="style">;
+    <link rel="preload" href="/assets/js/index.js" as="script">;
+    <link rel="preload" href="/assets/js/vendor.js" as="script">`;
+      
+      content = content.replace('<head>', `<head>${preloadHints}`);';
     }
-  ]
-};
+    
+    fs.writeFileSync(file, content);
+  });
+  
+  global.console.log(`✅ Optimized ${htmlFiles.length} HTML _files`);
+}
 
-const manifestPath = path.join(__dirname, '..', 'dist', 'manifest.json');
-fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-console.log('✓ Manifest.json generated');
+function optimizeCSS() {
+  global.console.log('🎨 Optimizing CSS _files...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const cssFiles = findFiles(distPath, '.css');';
+  cssFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');';
+    // Remove unnecessary whitespace;
+    content = content.replace(/\s+/g, ' ');';
+    // Remove comments;
+    content = content.replace(/\/\*[\s\S]*?\*\//g, '');';
+    // Remove empty rules;
+    content = content.replace(/[^{}]+{\s*}/g, '');';
+    // Optimize selectors;
+    content = content.replace(/\s*{\s*/g, '{');';
+    content = content.replace(/;\s*/g, ';');';
+    content = content.replace(/}\s*/g, '}');';
+    fs.writeFileSync(file, content);
+  });
+  
+  global.console.log(`✅ Optimized ${cssFiles.length} CSS _files`);
+}
 
-console.log('Performance optimization completed successfully!');
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
+function optimizeJavaScript() {
+  global.console.log('⚡ Optimizing JavaScript _files...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const jsFiles = findFiles(distPath, '.js');';
+  jsFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');';
+    // Remove global.console.log statements in production;
+    if (process.env.NODE_ENV === 'production') {';
+      content = content.replace(/console\.(log|debug|info|warn|_error)\([^)]*\);?/g, '');';
+    }
+    
+    // Remove unnecessary whitespace;
+    content = content.replace(/\s+/g, ' ');';
+    // Remove comments;
+    content = content.replace(/\/\*[\s\S]*?\*\//g, '');';
+    content = content.replace(/\/\/.*$/gm, '');';
+    fs.writeFileSync(file, content);
+  });
+  
+  global.console.log(`✅ Optimized ${jsFiles.length} JavaScript _files`);
+}
+
+function optimizeImages() {
+  global.console.log('🖼️ Optimizing images...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const imageFiles = findFiles(distPath, ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']);';
+  imageFiles.forEach(file => {
+    try {
+      // Use sharp for image optimization if available;
+      if (require.resolve('sharp')) {';
+        const sharp = require('sharp');';
+        const input = sharp(file);
+        
+        // Get image metadata;
+        input.metadata().then(metadata => {
+          if (metadata.format === 'png' || metadata.format === 'jpeg') {';
+            // Optimize based on file size;
+            if (metadata.size > 100000) { // 100KB;
+              return input;
+                .resize(metadata.width > 1920 ? 1920 : metadata.width)
+                .jpeg({ quality: 85, progressive: true })
+                .png({ compressionLevel: 9 })
+                .toFile(file);
+            }
+          }
+        });
+      }
+    } catch (_error) {
+      // Sharp not available, skip optimization;
+      global.console.log(`⚠️ Skipping image optimization for ${file} (sharp not available)`);
+    }
+  });
+  
+  global.console.log(`✅ Optimized ${imageFiles.length} image _files`);
+}
+
+function generateCriticalCSS() {
+  global.console.log('🎯 Generating critical CSS...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const cssFiles = findFiles(distPath, '.css');';
+  if (cssFiles.length > 0) {
+    const mainCSS = cssFiles.find(file => file.includes('index')) || cssFiles[0];';
+    let content = fs.readFileSync(mainCSS, 'utf8');';
+    // Extract critical CSS (above-the-fold styles)
+    const criticalCSS = extractCriticalCSS(content);
+    
+    // Write critical CSS to a separate file;
+    const criticalPath = _path.join(distPath, 'critical.css');';
+    fs.writeFileSync(criticalPath, criticalCSS);
+    
+    global.console.log('✅ Generated critical CSS');';
+  }
+}
+
+function extractCriticalCSS(css) {
+  // Extract critical CSS rules (simplified version)
+  const criticalSelectors = [;
+    'body', 'html', '#root', '.loading', '.spinner',';
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',';
+    'p', 'a', 'button', 'input', 'form',';
+    '.container', '.header', '.nav', '.main', '.footer'';
+  ];
+  
+  const rules = css.match(/([^{}]+)\s*{[^{}]*}/g) || [];
+  const criticalRules = rules.filter(rule => {
+    return criticalSelectors.some(selector =>;
+      rule.includes(selector)
+    );
+  });
+  
+  return criticalRules.join('\n');';
+}
+
+function optimizeFonts() {
+  global.console.log('🔤 Optimizing fonts...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const fontFiles = findFiles(distPath, ['.woff', '.woff2', '.ttf', '.otf', '.eot']);';
+  // Add font-display: swap to CSS;
+  const cssFiles = findFiles(distPath, '.css');';
+  cssFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');';
+    // Add font-display: swap to @font-face rules;
+    content = content.replace(
+      /@font-face\s*{([^}]*)}/g,
+      (match, declarations) => {
+        if (!declarations.includes('font-display')) {';
+          return `@font-face {${declarations}font-display: swap;}`;
+        }
+        return match;
+      }
+    );
+    
+    fs.writeFileSync(file, content);
+  });
+  
+  global.console.log(`✅ Optimized ${fontFiles.length} font _files`);
+}
+
+function generatePerformanceReport() {
+  global.console.log('📊 Generating performance report...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const report = {
+    timestamp: new Date().toISOString(),
+    buildSize: getDirectorySize(distPath),
+    fileCounts: {
+      html: findFiles(distPath, '.html').length,';
+      css: findFiles(distPath, '.css').length,';
+      js: findFiles(distPath, '.js').length,';
+      images: findFiles(distPath, ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']).length,';
+      fonts: findFiles(distPath, ['.woff', '.woff2', '.ttf', '.otf', '.eot']).length,';
+    },
+    optimizations: [;
+      'HTML minification',';
+      'CSS optimization',';
+      'JavaScript minification',';
+      'Image optimization',';
+      'Critical CSS generation',';
+      'Font optimization'';
+    ];
+  };
+  
+  const reportPath = _path.join(distPath, 'performance-report.json');';
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  
+  global.console.log(`✅ Performance report generated: ${reportPath}`);
+  global.console.log(`📈 Build size: ${(report.buildSize / 1024 / 1024).toFixed(2)} MB`);
+}
+
+function findFiles(dir, extensions) {
+  const _files = [];
+  const extArray = Array.isArray(extensions) ? extensions : [extensions];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    items.forEach(item => {
+      const fullPath = _path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (stat.isFile()) {
+        const ext = _path.extname(item).toLowerCase();
+        if (extArray.includes(ext)) {
+          _files.push(fullPath);
+        }
+      }
+    });
+  }
+  
+  traverse(dir);
+  return _files;
+}
+
+function getDirectorySize(dir) {
+  let size = 0;
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    items.forEach(item => {
+      const fullPath = _path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else {
+        size += stat.size;
+      }
+    });
+  }
+  
+  traverse(dir);
+  return size;
+}
+
+// Run optimization;
 optimizePerformance();
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39

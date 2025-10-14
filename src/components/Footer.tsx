@@ -1,48 +1,66 @@
-import React from 'react';
-export default Footer;
+import { memo } from 'react;
+import { } from 'react-router-dom;
+import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react;
+&apos;use client&apos;
   ];
+
   ];
+
   ];
-  // Removed specializedServices as it was unused;
+
   ];
+
   ];
+
   ];
+
   ];
-          {/* Company Info */}
-              <span className = "text-xl font-bold text-white neon-text">Zion Tech Group</span>
-              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.;
-                  +1 302 464 0950;
-                  kleber@ziontechgroup.com;
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-          {/* Micro SAAS Services */}
-              Micro SAAS;
-                    <span>{service.name}</span>
-              ))}
-              View All Micro SAAS →
-          {/* AI & IT Services */}
-              AI & IT Services;
-                <h4 className = "text-white font-medium mb-2">AI Services</h4>
-                        {service.name}
-                  ))}
-                <h4 className="text-white font-medium mb-2">IT Services</h4>
-                        {service.name}
-                  ))}
-              View All Services →
-          {/* Additional AI Services */};
-              AI Tools;
-                    <span>{service.name}</span>
-              ))}
-          {/* Company & Support */}
-            <h3 className = "text-cyan-400 font-semibold mb-4">Company</h3>
-                <h4 className="text-white font-medium mb-2">Company</h4>
-                        {link.name}
-                  ))}
-                <h4 className="text-white font-medium mb-2">Support</h4>
-                        {link.name}
-                  ))}
-        {/* Bottom Section */}
-              © 2024 Zion Tech Group. All rights reserved.
-                  {link.name}
-              ))};
+
+  ];
+
+                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group;
+                  <p className="text-sm text-cyan-400">AI & IT Solutions;
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
+              and digital transformation services. Transform your business with cutting-edge technology.;
+                  <to={service.url}
+                    className="$1"
+                  >
+                <to="$1"
+                  className="$1"
+                >
+                  View All AI Services →;
+                  <to={service.url}
+                    className="$1"
+                  >
+                <to="$1"
+                  className="$1"
+                >
+                <to="$1"
+                className="$1"
+              >
+                View All Solutions;
+                <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                <div className="text-white font-medium">{contactInfo.hours}
+                <div className="text-gray-400 text-sm">Business hours;
+                  <to={link.url}
+                    className="$1"
+                  >
+                  <to={link.url}
+                    className="$1"
+                  >
+              <li><to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</>
+              <li><to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</>
+              <li><to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</>
+              <li><to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</>
+              <to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Privacy Policy;
+              <to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Terms of Service;
+              <to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Cookie Policy;
   );
-};
+});
+
+Footer.displayName = &apos;Footer&apos;
+export default Footer;
