@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 // Analytics utility functions;
+=======
+// Analytics utility functions
+declare global {
+  interface Window {
+    gtag?: (..._args: unknown[]) => void;
+  }
+}
+>>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
 export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
   // Basic analytics tracking;
   console.log('Analytics Event:', eventName, properties);'

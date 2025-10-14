@@ -1,5 +1,22 @@
+<<<<<<< HEAD
   error: Error | null;
   errorInfo: ErrorInfo | null}
+=======
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+>>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {

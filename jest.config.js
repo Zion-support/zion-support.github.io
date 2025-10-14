@@ -1,8 +1,13 @@
 export default {
+<<<<<<< HEAD
+=======
+  preset: 'ts-jest',
+>>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
+<<<<<<< HEAD
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/pages/(.*)$': '<rootDir>/app/$1',
     '^@/utils/(.*)$': '<rootDir>/app/utils/$1',
@@ -34,4 +39,26 @@ export default {
   },
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   preset: 'ts-jest'
+=======
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: 'tsconfig.jest.json',
+    }],
+  },
+  testMatch: [
+    '<rootDir>/app/**/__tests__/**/*.(ts|tsx)',
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx)',
+  ],
+  collectCoverageFrom: [
+    'app/**/*.{ts,tsx}',
+    '!app/**/*.d.ts',
+    '!app/**/__tests__/**',
+  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(.*\\.mjs$))',
+  ],
+>>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
 };
