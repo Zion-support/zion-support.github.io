@@ -1,128 +1,128 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
-const glob = require('glob')
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {}
+console.log('🔧 Starting comprehensive syntax error fixes...');
+
+// Find all page.tsx files
+const findFiles = (dir, pattern) => {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findFiles(fullPath, pattern));
+    } else if (stat.isFile() && pattern.test(item)) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+};
+
+const pageFiles = findFiles('./app', /page\.tsx$/);
+const componentFiles = findFiles('./app/components', /\.tsx$/);
+
+console.log(`Found ${pageFiles.length} page files and ${componentFiles.length} component files`);
+
+// Fix function to clean up syntax errors
+function fixSyntaxErrors(content) {
   let fixed = content;
   
-  // Fix malformed import statements with fixed = fixed.replace(/import\s+([^']+)'([^']+)/g, "import $1 from '$2';\n");
-  fixed = fixed.replace(/import\s+([^']+)'([^']+)/g, "import $1 from '$2';\n");
+  // Fix duplicate semicolons and quotes in imports
+  fixed = fixed.replace(/import\s+([^;]+);';';/g, 'import $1;');
+  fixed = fixed.replace(/from\s+'([^']+)';';';/g, "from '$1';");
+  fixed = fixed.replace(/from\s+"([^"]+)";";";/g, 'from "$1";');
   
-  // Fix missing semicolons after import statements
-  fixed = fixed.replace(/import\s+[^;]+(?!;)\n/g, (match) => {}
-    if (!match.trim().endsWith(';')) {}
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
+  // Fix JSX syntax errors
+  fixed = fixed.replace(/>";";/g, '>');
+  fixed = fixed.replace(/>";/g, '>');
+  fixed = fixed.replace(/";"</g, '<');
+  fixed = fixed.replace(/";</g, '<');
   
-  // Fix unterminated string literals in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"([^,}\n]*)/g, (match, key, value, rest) => {}
-    if (rest.includes('"') && !rest.includes('",')) {}
-      return `${key}: "${value}",`;
-    }
-    return match;
-  });
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/className="([^"]+)">";/g, 'className="$1">');
+  fixed = fixed.replace(/content="([^"]+)">";/g, 'content="$1">');
   
-  // Fix unterminated string literals with missing closing quotes
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)(?![^"]*")/g, (match, key, value) => {}
-    if (!value.endsWith('"')) {}
-      return `${key}: "${value}"`;
-    }
-    return match;
-  });
+  // Fix broken function declarations
+  fixed = fixed.replace(/export default function ComponentsPage\(\) \{\}\s*return \(/g, 'export default function ComponentsPage() {\n  return (');
   
-  // Fix missing commas in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*(?=\w+:)/g, '$1: "$2",');
-
+  // Fix malformed component structures
+  fixed = fixed.replace(/\}\s*return\s*\(\s*<div>Page content<\/div>\s*\);\s*\}\s*return\s*\(/g, '}');
   
-  // Fix malformed JSX closing tags
-  {
-    pattern: /}\s*<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}
-  },
+  // Fix broken JSX elements
+  fixed = fixed.replace(/<div className="min-h-screen bg-gray-90o0 text-white py-20">";"<\/div>/g, '<div className="min-h-screen bg-gray-900 text-white py-20"></div>');
+  fixed = fixed.replace(/<div className="text-gray-30o0 text-lg">";"/g, '<div className="text-gray-300 text-lg">');
   
-  // Fix malformed function endings
-  {
-    pattern: /}\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}
-  },
+  // Fix malformed interface declarations
+  fixed = fixed.replace(/interface\s+(\w+)\s*\{\}\s*children:\s*c,lassName\?:\s*string;/g, 'interface $1 {\n  children: React.ReactNode;\n  className?: string;');
   
-  // Fix missing semicolons after variable declarations
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\n/g, (match) => {}
-    if (!match.trim().endsWith(';')) {}
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
-
+  // Fix broken function parameters
+  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC<(\w+)>\s*=\s*\(\{\}\s*children,\s*className\s*=\s*\}\s*=>\s*\{\}/g, 'const $1: React.FC<$2> = ({ children, className = "" }) => {');
   
-  // Fix unterminated string literals
-  {
-    pattern: /"([^"]*)\n/g,
-    replacement: '"$1"\n
-  },
+  // Fix malformed return statements
+  fixed = fixed.replace(/return\s*\(\s*<div>Page content<\/div>;\s*\);/g, 'return (\n    <div>Page content</div>\n  );');
   
-  // Fix missing semicolons in imports
-  {
-    pattern: /import ([^;]+)\n/g,
-    replacement: 'import $1;\n
-  },
+  // Fix broken JSX structure
+  fixed = fixed.replace(/<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 \$\{className\}`}>`<\/div>/g, '<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>');
+  
+  // Fix extra closing tags and malformed JSX
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
+  
+  // Fix malformed closing tags
+  fixed = fixed.replace(/<\/\w+>\s*<\/\w+>\s*<\/\w+>\s*<\/\w+>/g, '</div>');
+  
+  // Fix broken expressions
+  fixed = fixed.replace(/h1 className="text-4xl font-bold mb-8">Components<\/h1>";";/g, '<h1 className="text-4xl font-bold mb-8">Components</h1>');
+  fixed = fixed.replace(/This page is under development\.<\/p>/g, 'This page is under development.</p>');
+  
+  // Fix malformed closing statements
+  fixed = fixed.replace(/\s*<\/p><\/div><\/div>\s*\);\}\s*\}/g, '\n  );');
+  
+  // Fix extra closing tags at the end
+  fixed = fixed.replace(/\s*<\/\w+>\s*<\/\w+>\s*<\/\w+>\s*\);\}\s*\}/g, '\n  );');
   
   // Fix malformed export statements
-  {
-    pattern: /export default function ([^{]+)\s*{\s*}\s*$/gm,
-    replacement: 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}
-  }
-]
+  fixed = fixed.replace(/export default \w+;\s*<\/\w+>\s*$/g, 'export default ResponsiveContainer;');
+  
+  return fixed;
+}
 
-// Function to process a single file
-function processFile(filePath) {}
-  try {}
-    const content = fs.readFileSync(filePath, 'utf8');
+// Process all files
+let fixedCount = 0;
+let errorCount = 0;
+
+for (const file of [...pageFiles, ...componentFiles]) {
+  try {
+    const content = fs.readFileSync(file, 'utf8');
     const fixed = fixSyntaxErrors(content);
     
-    if (content !== fixed) {}
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    if (content !== fixed) {
+      fs.writeFileSync(file, fixed, 'utf8');
+      console.log(`✅ Fixed: ${file}`);
+      fixedCount++;
     }
-    return false;
-  } catch (error) {}
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-
+  } catch (error) {
+    console.error(`❌ Error processing ${file}:`, error.message);
+    errorCount++;
   }
-})
-
-// Main function
-async function main() {}
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',;
-    'api/**/*.js';
-  ];
-  
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {}
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {}
-      if (processFile(file)) {}
-        totalFixed++;
-      }
-    }
-  }
-  
-  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {}
-  main();
+console.log(`\n🎉 Fix complete!`);
+console.log(`✅ Fixed: ${fixedCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);
+
+// Run linting to check results
+console.log('\n🔍 Running linting check...');
+try {
+  execSync('pnpm run lint', { stdio: 'pipe' });
+  console.log('✅ Linting passed!');
+} catch (error) {
+  console.log('⚠️  Linting still has issues, but many errors were fixed.');
 }
-
-export { fixSyntaxErrors, processFile };
-

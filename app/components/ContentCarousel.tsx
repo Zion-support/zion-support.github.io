@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const ContentCarousel = () => {
   return (
     <div className="contentcarousel-component">
@@ -9,7 +7,4 @@ const ContentCarousel = () => {
     </div>
   );
 };
-
 export default ContentCarousel;
-
-

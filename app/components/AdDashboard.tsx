@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const AdDashboard = () => {
   return (
     <div className="addashboard-component">
@@ -9,7 +7,4 @@ const AdDashboard = () => {
     </div>
   );
 };
-
 export default AdDashboard;
-
-

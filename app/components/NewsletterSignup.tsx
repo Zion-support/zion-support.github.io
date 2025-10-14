@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const NewsletterSignup = () => {
   return (
     <div className="newslettersignup-component">
@@ -9,7 +7,4 @@ const NewsletterSignup = () => {
     </div>
   );
 };
-
 export default NewsletterSignup;
-
-

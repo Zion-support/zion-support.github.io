@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const AdTemplates = () => {
   return (
     <div className="adtemplates-component">
@@ -9,7 +7,4 @@ const AdTemplates = () => {
     </div>
   );
 };
-
 export default AdTemplates;
-
-

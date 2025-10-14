@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const ServiceCardSkeleton = () => {
   return (
     <div className="servicecardskeleton-component">
@@ -9,7 +7,4 @@ const ServiceCardSkeleton = () => {
     </div>
   );
 };
-
 export default ServiceCardSkeleton;
-
-

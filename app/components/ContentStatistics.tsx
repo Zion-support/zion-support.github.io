@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const ContentStatistics = () => {
   return (
     <div className="contentstatistics-component">
@@ -9,7 +7,4 @@ const ContentStatistics = () => {
     </div>
   );
 };
-
 export default ContentStatistics;
-
-

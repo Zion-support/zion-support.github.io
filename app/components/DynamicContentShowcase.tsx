@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const DynamicContentShowcase = () => {
   return (
     <div className="dynamiccontentshowcase-component">
@@ -9,7 +7,4 @@ const DynamicContentShowcase = () => {
     </div>
   );
 };
-
 export default DynamicContentShowcase;
-
-

@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const AccessibilityAudit = () => {
   return (
     <div className="accessibilityaudit-component">
@@ -9,7 +7,4 @@ const AccessibilityAudit = () => {
     </div>
   );
 };
-
 export default AccessibilityAudit;
-
-

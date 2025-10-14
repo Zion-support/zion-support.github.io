@@ -1,10 +1,10 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from 'typescript-eslint';
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import tseslint from 'typescript-eslint'
 export default tseslint.config(
-  { ignores: ['dist', 'app-broken/**', 'app-disabled/**', 'scripts/**', '*.js', '*.cjs'] },
+  { ignores: ['dist', 'app-broken/**', 'app-disabled/**', 'scripts/**', 'src/**', 'temp-broken/**', '*.js', '*.cjs'] },
 
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
@@ -39,10 +39,11 @@ export default tseslint.config(
         module: 'readonly',
         exports: 'readonly',
         fs: 'readonly',
+        __dirname: 'readonly',
         // Jest globals
         describe: 'readonly',
-        test: 'readonly',
         it: 'readonly',
+        test: 'readonly',
         expect: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',

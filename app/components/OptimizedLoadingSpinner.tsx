@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const OptimizedLoadingSpinner = () => {
   return (
     <div className="optimizedloadingspinner-component">
@@ -9,7 +7,4 @@ const OptimizedLoadingSpinner = () => {
     </div>
   );
 };
-
 export default OptimizedLoadingSpinner;
-
-
