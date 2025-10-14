@@ -218,18 +218,52 @@ async function syncOfflineData(data) {
 self.addEventListener('message', (event) => {
   console.log('Service Worker received message:', event.data);
   
+  // Always respond to messages to prevent channel closure errors
+  const respond = (response) => {
+    try {
+      if (event.ports && event.ports[0]) {
+        event.ports[0].postMessage(response);
+      } else if (event.source) {
+        // Fallback for different message channel types
+        event.source.postMessage(response, event.origin);
+      }
+    } catch (error) {
+      console.warn('Failed to respond to message:', error);
+    }
+  };
+  
+  // Handle different message types
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
-  }
-  
-  if (event.data && event.data.type === 'CACHE_URLS') {
+    respond({ success: true, message: 'Skip waiting triggered' });
+  } else if (event.data && event.data.type === 'CACHE_URLS') {
     const urlsToCache = event.data.urls;
     event.waitUntil(
       caches.open(DYNAMIC_CACHE)
         .then((cache) => {
           return cache.addAll(urlsToCache);
         })
+        .then(() => {
+          respond({ success: true, message: 'URLs cached successfully' });
+        })
+        .catch((error) => {
+          respond({ success: false, error: error.message });
+        })
     );
+  } else if (event.data && event.data.type === 'GET_CACHE_STATUS') {
+    // Respond with cache status
+    caches.keys().then((cacheNames) => {
+      respond({ 
+        success: true, 
+        caches: cacheNames,
+        message: 'Cache status retrieved' 
+      });
+    }).catch((error) => {
+      respond({ success: false, error: error.message });
+    });
+  } else {
+    // Respond to any other message to prevent channel closure
+    respond({ success: true, message: 'Message received', data: event.data });
   }
 });
 
