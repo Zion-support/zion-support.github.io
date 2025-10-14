@@ -65,7 +65,7 @@ if (typeof window !== 'undefined') {
 <<<<<<< HEAD
     const logMetric = (metric: unknown) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
+        console.warn('Web Vital:', metric);
       }
     };
     onCLS(logMetric);
@@ -101,7 +101,7 @@ if (typeof window !== 'undefined') {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
         if (process.env.NODE_ENV === 'development') {
-          console.log('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
         }
       }
     }
@@ -110,7 +110,7 @@ if (typeof window !== 'undefined') {
 }
 
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-      console.log('Zion Tech Group App initialized');
+      console.warn('Zion Tech Group App initialized');
     }
   }, []);
 
