@@ -35,4 +35,4 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
   return metrics;
 };
 
-export default usePerformanceMonitor;
+export default usePerformanceMonitor

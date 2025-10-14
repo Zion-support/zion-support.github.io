@@ -77,4 +77,4 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
   }, children);
 };
 
-export default FuturisticText;
+export default FuturisticText

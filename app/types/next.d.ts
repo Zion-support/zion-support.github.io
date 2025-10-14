@@ -41,8 +41,4 @@ export const nextUtil = () => { // Implementation;
 };
 export default nextUtil;
 '
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> origin/main
-=======
->>>>>>> origin/main
+

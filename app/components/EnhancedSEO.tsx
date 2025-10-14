@@ -36,7 +36,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   noindex = false,
   nofollow = false,
   structuredData,
-  lang = "en"
+  lang = "en
 }) => {
   const robotsContent = React.useMemo(() => {
     const robots = [];
@@ -57,7 +57,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com
     },
     "address": {
       "@type": "PostalAddress",
@@ -65,11 +65,11 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
+      "addressCountry": "US
     },
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+      "https://twitter.com/ziontechgroup
     ]
   };
 
@@ -145,4 +145,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   );
 };
 
-export default EnhancedSEO;
+export default EnhancedSEO

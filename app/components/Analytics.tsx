@@ -9,4 +9,4 @@ const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   return <>{children}</>;
 };
 
-export default Analytics;
+export default Analytics

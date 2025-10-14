@@ -1,6 +1,6 @@
 import React from 'react';
 variant?: 'default' | 'glow' | 'gradient' }
-;
+
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
   className = '','')
@@ -8,7 +8,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
 const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm'';
 const variantClasses = {
 
-    default: "bg-white/10",';"
+    default: "bg-white/10",';
     glow: "bg-white/10 shadow-lg shadow-blue-500/20",';
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'';
   }
@@ -17,14 +17,14 @@ const variantClasses = {
   className?: string';
   variant?: 'default' | 'glow' | 'gradient';}'
 }
-;
+
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ children, '
   className = '',';'
   variant = 'default''; })
 }) => {';
 const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
-  const variantClasses = {'"
-    default: "bg-white/10",';'"
+  const variantClasses = {'
+    default: "bg-white/10",';'
     glow: "bg-white/10 shadow-lg shadow-blue-500/20",';'
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'';}
   };
@@ -34,8 +34,8 @@ const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
     </div>)
   );
 }
-export default FuturisticCard;"
-    default: "bg-white/10",'"
+export default FuturisticCard;
+    default: "bg-white/10",'
     glow: "bg-white/10 shadow-lg shadow-blue-500/20",'
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20''}
   return (
@@ -55,4 +55,3 @@ export default FuturisticCard
 
 };
 export default FuturisticCard;'
-"

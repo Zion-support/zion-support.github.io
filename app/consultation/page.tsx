@@ -122,14 +122,14 @@ const ConsultationPage: React.FC = () => {
                       Full Name *
                     </label>
                     <input
-                      type="text"
-                      id="name"
-                      name="name"
+                      type="text
+                      id="name
+                      name="name
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Your full name"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500
+                      placeholder="Your full name
                     />
                   </div>
                   
@@ -138,14 +138,14 @@ const ConsultationPage: React.FC = () => {
                       Email Address *
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
+                      type="email
+                      id="email
+                      name="email
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="your@email.com"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500
+                      placeholder="your@email.com
                     />
                   </div>
                 </div>
@@ -156,13 +156,13 @@ const ConsultationPage: React.FC = () => {
                       Company
                     </label>
                     <input
-                      type="text"
-                      id="company"
-                      name="company"
+                      type="text
+                      id="company
+                      name="company
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Your company name"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500
+                      placeholder="Your company name
                     />
                   </div>
                   
@@ -171,13 +171,13 @@ const ConsultationPage: React.FC = () => {
                       Phone Number
                     </label>
                     <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
+                      type="tel
+                      id="phone
+                      name="phone
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="(555) 123-4567"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500
+                      placeholder="(555) 123-4567
                     />
                   </div>
                 </div>
@@ -187,11 +187,11 @@ const ConsultationPage: React.FC = () => {
                     Service Interest
                   </label>
                   <select
-                    id="service"
-                    name="service"
+                    id="service
+                    name="service
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-blue-500
                   >
                     <option value="">Select a service</option>
                     <option value="ai-solutions">AI Solutions</option>
@@ -207,19 +207,19 @@ const ConsultationPage: React.FC = () => {
                     Tell us about your project
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
+                    id="message
+                    name="message
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Describe your project requirements, challenges, or goals..."
+                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500
+                    placeholder="Describe your project requirements, challenges, or goals...
                   />
                 </div>
 
                 <button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                  type="submit
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center
                 >
                   Schedule Free Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -233,20 +233,14 @@ const ConsultationPage: React.FC = () => {
               </p>
               <div className="flex justify-center space-x-4">
                 <a 
-                  href="/" 
-=======
-</p>
-              <div className="flex justify-center space-x-4"></div>
-                <a "
-                  href="/" "
->>>>>>> origin/main
-                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                  href="/
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300
                 >
                   Go Home
                 </a>
-                <a "
-                  href="/contact" "
-                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                <a 
+                  href="/contact" 
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300
                 >
                   Contact Us
                 </a>
@@ -258,4 +252,3 @@ const ConsultationPage: React.FC = () => {
         </div>
       </div>
     </div>
-"

@@ -4,4 +4,4 @@ export const seodata = () => {
   console.log('SeoData utility called');
 };
 
-export default seodata;
+export default seodata

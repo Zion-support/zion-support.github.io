@@ -21,7 +21,7 @@ const HomePage = () => {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com
     },
     "address": {
       "@type": "PostalAddress",
@@ -29,11 +29,11 @@ const HomePage = () => {
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
+      "addressCountry": "US
     },
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+      "https://twitter.com/ziontechgroup
     ]
   };
 
@@ -44,7 +44,7 @@ const HomePage = () => {
       description: "Cutting-edge artificial intelligence services including machine learning, natural language processing, and computer vision.",
       features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"],
       pricing: "From $2,500/month",
-      link: "/ai-services"
+      link: "/ai-services
     },
     {
       icon: Shield,
@@ -52,7 +52,7 @@ const HomePage = () => {
       description: "Comprehensive security solutions to protect your digital assets and ensure compliance with industry standards.",
       features: ["Threat Detection", "Security Audits", "Compliance", "Incident Response"],
       pricing: "From $1,800/month",
-      link: "/cybersecurity-solutions"
+      link: "/cybersecurity-solutions
     },
     {
       icon: Cloud,
@@ -60,7 +60,7 @@ const HomePage = () => {
       description: "Scalable cloud solutions and migration services to optimize your infrastructure and reduce costs.",
       features: ["Cloud Migration", "Infrastructure Setup", "Monitoring", "Cost Optimization"],
       pricing: "From $3,000/month",
-      link: "/cloud-infrastructure"
+      link: "/cloud-infrastructure
     },
     {
       icon: Zap,
@@ -68,7 +68,7 @@ const HomePage = () => {
       description: "Ready-to-use software solutions that can be deployed quickly to solve specific business problems.",
       features: ["Quick Deployment", "Customizable", "Scalable", "Cost-Effective"],
       pricing: "From $99/month",
-      link: "/micro-saas"
+      link: "/micro-saas
     }
   ];
 
@@ -81,7 +81,7 @@ const HomePage = () => {
       features: ["Real-time Analytics", "Custom Dashboards", "AI Insights", "API Integration"],
       rating: 4.9,
       reviews: 127,
-      link: "/zion-analytics-pro"
+      link: "/zion-analytics-pro
     },
     {
       name: "Zion Security Shield",
@@ -91,7 +91,7 @@ const HomePage = () => {
       features: ["24/7 Monitoring", "Threat Detection", "Compliance Reports", "Incident Response"],
       rating: 4.8,
       reviews: 89,
-      link: "/zion-security-shield"
+      link: "/zion-security-shield
     },
     {
       name: "Zion Content Studio",
@@ -101,7 +101,7 @@ const HomePage = () => {
       features: ["AI Writing", "Content Planning", "SEO Optimization", "Multi-platform Publishing"],
       rating: 4.7,
       reviews: 156,
-      link: "/zion-content-studio"
+      link: "/zion-content-studio
     }
   ];
 
@@ -112,7 +112,7 @@ const HomePage = () => {
       role: "CTO",
       content: "Zion Tech Group transformed our operations with their AI solutions. We've seen a 40% increase in efficiency.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face
     },
     {
       name: "Michael Chen",
@@ -120,7 +120,7 @@ const HomePage = () => {
       role: "CEO",
       content: "Their micro SAAS solutions helped us scale quickly without the overhead of building everything from scratch.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face
     },
     {
       name: "Emily Rodriguez",
@@ -128,33 +128,38 @@ const HomePage = () => {
       role: "Security Director",
       content: "The cybersecurity solutions provided by Zion Tech Group are top-notch. We feel completely protected.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-        canonical="https://ziontechgroup.com"
+        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company
+        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
+        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology
+        canonical="https://ziontechgroup.com
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page Description - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
         <ResponsiveContainer>
           <div className="text-center relative z-10">
             <FuturisticText
-              as="h1"
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+              as="h1
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent
             >
               Transform Your Business with
               <span className="block text-3xl sm:text-4xl lg:text-6xl mt-2">
@@ -170,9 +175,9 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <FuturisticButton
                 as={Link}
-                to="/contact"
-                className="px-8 py-4 text-lg font-semibold"
-                variant="primary"
+                to="/contact
+                className="px-8 py-4 text-lg font-semibold
+                variant="primary
               >
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -180,9 +185,9 @@ const HomePage = () => {
               
               <FuturisticButton
                 as={Link}
-                to="/demo"
-                className="px-8 py-4 text-lg font-semibold"
-                variant="secondary"
+                to="/demo
+                className="px-8 py-4 text-lg font-semibold
+                variant="secondary
               >
                 View Demo
                 <Sparkles className="ml-2 h-5 w-5" />
@@ -244,8 +249,8 @@ const HomePage = () => {
                   <FuturisticButton
                     as={Link}
                     to={service.link}
-                    className="w-full"
-                    variant="outline"
+                    className="w-full
+                    variant="outline
                   >
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -297,8 +302,8 @@ const HomePage = () => {
                           key={i}
                           className={`h-4 w-4 ${
                             i < Math.floor(service.rating)
-                              ? "text-yellow-400"
-                              : "text-gray-400"
+                              ? "text-yellow-400
+                              : "text-gray-400
                           }`}
                         />
                       ))}
@@ -311,8 +316,8 @@ const HomePage = () => {
                   <FuturisticButton
                     as={Link}
                     to={service.link}
-                    className="w-full"
-                    variant="primary"
+                    className="w-full
+                    variant="primary
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -343,7 +348,7 @@ const HomePage = () => {
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-full mr-4"
+                    className="w-12 h-12 rounded-full mr-4
                   />
                   <div>
                     <h4 className="font-semibold">{testimonial.name}</h4>
@@ -357,7 +362,7 @@ const HomePage = () => {
                     <Star
                       key={i}
                       className={`h-4 w-4 ${
-                        i < testimonial.rating ? "text-yellow-400" : "text-gray-400"
+                        i < testimonial.rating ? "text-yellow-400" : "text-gray-400
                       }`}
                     />
                   ))}
@@ -382,9 +387,9 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <FuturisticButton
                 as={Link}
-                to="/contact"
-                className="px-8 py-4 text-lg font-semibold"
-                variant="primary"
+                to="/contact
+                className="px-8 py-4 text-lg font-semibold
+                variant="primary
               >
                 Start Your Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -392,9 +397,9 @@ const HomePage = () => {
               
               <FuturisticButton
                 as={Link}
-                to="/pricing"
-                className="px-8 py-4 text-lg font-semibold"
-                variant="secondary"
+                to="/pricing
+                className="px-8 py-4 text-lg font-semibold
+                variant="secondary
               >
                 View Pricing
                 <Target className="ml-2 h-5 w-5" />
@@ -406,11 +411,11 @@ const HomePage = () => {
 
       {/* Structured Data */}
       <script
-        type="application/ld+json"
+        type="application/ld+json
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
     </div>
   );
 };
 
-export default HomePage;
+export default HomePage

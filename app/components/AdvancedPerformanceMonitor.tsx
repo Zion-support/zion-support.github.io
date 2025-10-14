@@ -10,7 +10,7 @@ interface PerformanceMetrics { loadTime: number;
   firstInputDelay: number;
 
   totalBlockingTime: number; }
-;
+
 const AdvancedPerformanceMonitor: React.FC = () => {;
 const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -46,7 +46,7 @@ const entries = list.getEntries()
                 cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value
               }))
           }
-        }"
+        }
         observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] })";
         const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;";
 const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0";
@@ -95,5 +95,5 @@ const handleKeyPress = (event: KeyboardEvent) => {
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };
-"
+
 }}}}}

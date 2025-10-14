@@ -1,35 +1,23 @@
-// SEO constants;
-export const DEFAULT_SEO = {
-  title: 'ZionTechGroup-AdvancedAIandITSolutions',
-  description: 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
-  keywords: ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
-  image: '/images/og-image.jpg',
-  type: 'website',
-} as const;
-;
-export const META_TAGS = {
-  AUTHOR: 'ZionTechGroup',
-  ROBOTS: 'index, follow',
-  VIEWPORT: 'width=device-width, initial-scale=1.0',
-} as const;
-;
-export const defaultStructuredData = {
-  "@context": "https://schema.org","
-  "@type": "Organization","
-  "name": "Zion Tech Group","
-  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.","
-  "url": "https://ziontechgroup.com","
-  "logo": "https://ziontechgroup.com/images/logo.png","
-  "contactPoint": {"
-    "@type": "ContactPoint","
-    "telephone": "+1-555-0123","
-    "contactType": "customer service","
-    "availableLanguage": "English"
-  },"
-  "sameAs": ["
-    "https://www.linkedin.com/company/zion-tech-group","
-    "https://twitter.com/ziontechgroup","
-    "https://www.facebook.com/ziontechgroup"
-  ]
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const Seo.tsPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Seo.Ts - Zion Tech Group</title>
+        <meta name="description" content="Seo.Ts - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Seo.Ts</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
-"
+
+export default Seo.tsPage;

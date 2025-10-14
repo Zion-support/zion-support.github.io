@@ -52,8 +52,8 @@ const Main: React.FC = () => {
                 Ready to transform your business with our main services?
               </p>
               <a
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                href="/contact
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors
               >
                 Contact Us
               </a>
@@ -72,8 +72,8 @@ const Main: React.FC = () => {
             Let's discuss how our main services can help you achieve your goals.
           </p>
           <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+            href="/contact
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors
           >
             Get Started Today
           </a>
@@ -83,4 +83,4 @@ const Main: React.FC = () => {
   );
 };
 
-export default Main;
+export default Main

@@ -4,4 +4,4 @@ export const structureddata = () => {
   console.log('StructuredData utility called');
 };
 
-export default structureddata;
+export default structureddata

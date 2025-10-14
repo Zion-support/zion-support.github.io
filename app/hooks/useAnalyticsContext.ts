@@ -1,3 +1,3 @@
 import { useAnalytics } from '../contexts/AnalyticsContext';
 
-export { useAnalytics };
+export { useAnalytics }

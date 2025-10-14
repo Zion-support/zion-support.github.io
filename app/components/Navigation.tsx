@@ -146,9 +146,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             <div className="flex items-center space-x-4">
               <FuturisticButton
                 as={Link}
-                to="/contact"
-                className="px-4 py-1 text-sm"
-                variant="outline"
+                to="/contact
+                className="px-4 py-1 text-sm
+                variant="outline
               >
                 Get Quote
               </FuturisticButton>
@@ -176,7 +176,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               <Link
-                to="/"
+                to="/
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/') 
                     ? 'text-cyan-400 bg-cyan-500/10' 
@@ -187,7 +187,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
 
               <Link
-                to="/about"
+                to="/about
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/about') 
                     ? 'text-cyan-400 bg-cyan-500/10' 
@@ -218,7 +218,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         key={service.path}
                         to={service.path}
                         onClick={closeAllDropdowns}
-                        className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors"
+                        className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors
                       >
                         <service.icon className="h-4 w-4 mr-3" />
                         {service.name}
@@ -249,7 +249,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         key={service.path}
                         to={service.path}
                         onClick={closeAllDropdowns}
-                        className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors"
+                        className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors
                       >
                         <service.icon className="h-4 w-4 mr-3" />
                         {service.name}
@@ -280,7 +280,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         key={service.path}
                         to={service.path}
                         onClick={closeAllDropdowns}
-                        className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors"
+                        className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors
                       >
                         <service.icon className="h-4 w-4 mr-3" />
                         {service.name}
@@ -291,7 +291,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </div>
 
               <Link
-                to="/pricing"
+                to="/pricing
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/pricing') 
                     ? 'text-cyan-400 bg-cyan-500/10' 
@@ -302,7 +302,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
 
               <Link
-                to="/blog"
+                to="/blog
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/blog') 
                     ? 'text-cyan-400 bg-cyan-500/10' 
@@ -313,7 +313,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
 
               <Link
-                to="/contact"
+                to="/contact
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/contact') 
                     ? 'text-cyan-400 bg-cyan-500/10' 
@@ -328,17 +328,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             <div className="hidden lg:flex items-center space-x-4">
               <FuturisticButton
                 as={Link}
-                to="/demo"
-                className="px-4 py-2 text-sm"
-                variant="outline"
+                to="/demo
+                className="px-4 py-2 text-sm
+                variant="outline
               >
                 Demo
               </FuturisticButton>
               <FuturisticButton
                 as={Link}
-                to="/contact"
-                className="px-4 py-2 text-sm"
-                variant="primary"
+                to="/contact
+                className="px-4 py-2 text-sm
+                variant="primary
               >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -349,13 +349,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             <div className="lg:hidden flex items-center space-x-2">
               <button
                 onClick={onSidebarToggle}
-                className="p-2 rounded-md text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors"
+                className="p-2 rounded-md text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors
               >
                 <SidebarIcon className="h-6 w-6" />
               </button>
               <button
                 onClick={toggleMobileMenu}
-                className="p-2 rounded-md text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors"
+                className="p-2 rounded-md text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors
               >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -368,7 +368,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="lg:hidden bg-slate-800 border-t border-cyan-500/20">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
-                to="/"
+                to="/
                 onClick={closeAllDropdowns}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive('/') 
@@ -380,7 +380,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
               
               <Link
-                to="/about"
+                to="/about
                 onClick={closeAllDropdowns}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive('/about') 
@@ -392,7 +392,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
 
               <Link
-                to="/ai-services"
+                to="/ai-services
                 onClick={closeAllDropdowns}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive('/ai-services') 
@@ -404,7 +404,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
 
               <Link
-                to="/services"
+                to="/services
                 onClick={closeAllDropdowns}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive('/services') 
@@ -416,7 +416,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
 
               <Link
-                to="/micro-saas"
+                to="/micro-saas
                 onClick={closeAllDropdowns}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive('/micro-saas') 
@@ -428,7 +428,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
 
               <Link
-                to="/pricing"
+                to="/pricing
                 onClick={closeAllDropdowns}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive('/pricing') 
@@ -440,7 +440,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
 
               <Link
-                to="/blog"
+                to="/blog
                 onClick={closeAllDropdowns}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive('/blog') 
@@ -452,7 +452,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
 
               <Link
-                to="/contact"
+                to="/contact
                 onClick={closeAllDropdowns}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive('/contact') 
@@ -466,19 +466,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               <div className="pt-4 pb-2 border-t border-cyan-500/20">
                 <FuturisticButton
                   as={Link}
-                  to="/demo"
+                  to="/demo
                   onClick={closeAllDropdowns}
-                  className="w-full mb-2"
-                  variant="outline"
+                  className="w-full mb-2
+                  variant="outline
                 >
                   Demo
                 </FuturisticButton>
                 <FuturisticButton
                   as={Link}
-                  to="/contact"
+                  to="/contact
                   onClick={closeAllDropdowns}
-                  className="w-full"
-                  variant="primary"
+                  className="w-full
+                  variant="primary
                 >
                   Get Started
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -492,7 +492,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       {/* Click outside to close dropdowns */}
       {(isServicesOpen || isItServicesOpen || isMicroSaasOpen) && (
         <div
-          className="fixed inset-0 z-40"
+          className="fixed inset-0 z-40
           onClick={closeAllDropdowns}
         />
       )}
@@ -500,4 +500,4 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   );
 };
 
-export default Navigation;
+export default Navigation

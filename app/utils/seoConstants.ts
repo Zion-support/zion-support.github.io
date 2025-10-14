@@ -4,4 +4,4 @@ export const seoconstants = () => {
   console.log('SeoConstants utility called');
 };
 
-export default seoconstants;
+export default seoconstants
