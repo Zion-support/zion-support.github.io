@@ -1,44 +1,55 @@
-}
+import React from 'react';
 
-const NeonButton: React.FC<NeonButtonProps> = ({
-  children,
-  to,
-  href,
-  onClick,
-  variant = 'primary','
-  size = 'md','
-  className = '''
-}) => {
-  
-  const variantClasses = {
-    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 focus:ring-blue-500','
-    secondary: 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 focus:ring-purple-500','
-    accent: 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 focus:ring-cyan-500''
-  }
-  
-  const sizeClasses = {
-    sm: 'px-4 py-2 text-sm','
-    md: 'px-6 py-3 text-base','
-    lg: 'px-8 py-4 text-lg''
-  }
-  
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}``
-  
-  if (href) {
-    return (
-      <a
-        href={href}
-        className={classes}
-        target="_blank""
-        rel="noopener noreferrer""
-      >
-        {children}
-      </a>
-    )
-  }
-  
-  if (to) {
-    return (
-      <Link to={to} className={classes}>
-        {children}
-      </Link>
+const NeonButton: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Neon Button
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional neonbutton solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge neonbutton solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored neonbutton implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your neonbutton needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NeonButton;

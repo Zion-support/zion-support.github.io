@@ -1,139 +1,55 @@
-}
+import React from 'react';
 
-interface State {
-  hasError: boolean;
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    };
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    });
-
-    // Log error to console in development
-    }
-  }
-
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error tracking service
-    // For example: Sentry, LogRocket, Bugsnag, etc.
-    try {
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-  }
-
-      // Example: Send to your error tracking service
-      // errorTrackingService.captureException(errorData);
-      console.log('Error logged to service:', errorData);
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
-  };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-  };
-
-  render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-      // Default error UI
-      return (
-                <svg 
-                  className="w-8 h-8 text-red-400" "
-                  fill="none" "
-                  stroke="currentColor" "
-                  viewBox="0 0 24 24""
-                  aria-hidden="true""
-                >
-                  <path 
-                >
-                  Try Again
-                </button>
-                <div className="flex space-x-3">"
-                  <button
-                  >
-                    Go Home
-                  </button>
-                  <button
-                  >
-                    Reload Page
-                  </button>
-                </div>
-              </div>
-                  Still having trouble? Contact our support team:
-                </p>
-                <div className="text-sm text-cyan-400">"
-                  <p>Email: kleber@ziontechgroup.com</p>
-                  <p>Phone: +1-302-464-0950</p>
-                </div>
-              </div>
-                    </div>
-                    <div className="mb-2">"
-                      <strong>Stack:</strong>
-                      </pre>
-                    </div>
-                    { this.state.errorInfo && (
-                      <div>
-                        <strong>Component Stack:</strong>
-                        </pre>
-                      </div>
-                    )
-                  </div>
-                </details>
+const EnhancedErrorBoundary: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Enhanced Error Boundary
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional enhancederrorboundary solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge enhancederrorboundary solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored enhancederrorboundary implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your enhancederrorboundary needs.
+              </p>
             </div>
           </div>
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div>
-          <h2>Something went wrong.</h2>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
-          </details>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
         </div>
-      );
-    }
+      </div>
+    </div>
+  );
+};
 
-    return this.props.children;
-  }
-}
-
+export default EnhancedErrorBoundary;

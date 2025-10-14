@@ -13,6 +13,10 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
   });
 
   useEffect(() => {
+    if (typeof performance === 'undefined') {
+      return;
+    }
+
     const startTime = performance.now();
     
     const measurePerformance = () => {

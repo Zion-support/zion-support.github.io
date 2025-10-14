@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {
     // Add structured data to the page
-    if (structuredData) {
+    if (structuredData && typeof document !== 'undefined') {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);

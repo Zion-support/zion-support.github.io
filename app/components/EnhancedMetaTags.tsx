@@ -1,69 +1,55 @@
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: 'website' | 'article' | "product"
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | "player"
-  noIndex?: boolean;
-  structuredData?: Record<string, any>
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
-  title,
-  description,
-  keywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology','
-  canonical,
-  ogImage = 'https://ziontechgroup.com/images/og-image.jpg','
-  ogType = 'website','
-  twitterCard = 'summary_large_image','
-  noIndex = false,
-  structuredData,
-  author = 'Zion Tech Group','
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-}) => {
-    },
-    sameAs: [
-      'https://twitter.com/ziontechgroup','
-      'https://linkedin.com/company/ziontechgroup','
-      'https://github.com/ziontechgroup','
-    ],
-    headline: title,
-    description,
-    author: {
-      '@type': 'Organization','
-      name: author,
-    },
-    publisher: {
-      logo: {
-        '@type': 'ImageObject','
-        url: `${siteUrl}/images/logo.png`,`
-      },
-    },
-    datePublished: publishedTime,
-    dateModified: modifiedTime || publishedTime,
-    mainEntityOfPage: {
-      '@type': 'WebPage','
-      '@id': finalCanonical,'
-    },
-    image: finalOgImage,
-    ...(section && { articleSection: section }),
-    ...(tags.length > 0 && { keywords: tags.join(', ') }),'
-  } : null;
+import React from 'react';
+
+const EnhancedMetaTags: React.FC = () => {
   return (
-    <Helmet>
-      { /* Basic Meta Tags */ }
-      <title>{title}</title>
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords} />"
-      <meta name="author" content={author} />"
-      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />"
-      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />"
-      
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />"
-        ))
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Enhanced Meta Tags
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional enhancedmetatags solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge enhancedmetatags solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored enhancedmetatags implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your enhancedmetatags needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default EnhancedMetaTags;

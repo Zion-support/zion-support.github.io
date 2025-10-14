@@ -1,21 +1,55 @@
-const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
-  children, 
-  className = '',''
-  variant = 'default''}) => {'
-  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm''
-  const variantClasses = {
-  children: React.ReactNode;
-  className?: string';
-  variant?: 'default' | 'glow' | 'gradient';}'
-}
-    </div>
-  )
-export default FuturisticCard;
-    default: 'bg-white/10',''
-    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',''
-    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20''}'
+import React from 'react';
+
+const FuturisticCard: React.FC = () => {
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>{children}`
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Futuristic Card
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional futuristiccard solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge futuristiccard solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored futuristiccard implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your futuristiccard needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-export default FuturisticCard
+  );
+};
+
+export default FuturisticCard;

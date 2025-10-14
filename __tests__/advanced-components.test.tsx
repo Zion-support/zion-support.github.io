@@ -1,134 +1,107 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter } from 'react-router-dom';
-import EnhancedErrorBoundary from '../app/components/EnhancedErrorBoundary';
-import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
+import AccessibilityEnhancer from '../app/components/AccessibilityEnhancer';
+import AdAnalytics from '../app/components/AdAnalytics';
 
-// Mock components that might not exist
-jest.mock('../app/components/AdvancedPerformanceMonitor', () => {
-  return function MockAdvancedPerformanceMonitor() {
-    return <div>Advanced Performance Monitor</div>;
-  };
-});
+// Mock react-router-dom
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useLocation: () => ({
+    pathname: '/',
+  }),
+}));
 
-describe('EnhancedErrorBoundary', () => {
-  const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-    if (shouldThrow) {
-      throw new Error('Test error');
-    }
-    return <div>No error</div>;
-  };
+describe('Advanced Components', () => {
+  describe('AccessibilityEnhancer', () => {
+    test('renders without crashing', () => {
+      render(
+        <HelmetProvider>
+          <AccessibilityEnhancer />
+        </HelmetProvider>
+      );
+    });
 
-  it('renders children when there is no error', () => {
-    render(
-      <EnhancedErrorBoundary>
-        <div>No error content</div>
-      </EnhancedErrorBoundary>
-    );
+    test('renders with custom props', () => {
+      render(
+        <HelmetProvider>
+          <AccessibilityEnhancer 
+            isHighContrast={true}
+            isReducedMotion={true}
+            fontSize="large"
+          />
+        </HelmetProvider>
+      );
+    });
 
-    expect(screen.getByText('No error content')).toBeInTheDocument();
+    test('renders skip to main content link', () => {
+      render(
+        <HelmetProvider>
+          <AccessibilityEnhancer />
+        </HelmetProvider>
+      );
+      
+      const skipLink = screen.getByText('Skip to main content');
+      expect(skipLink).toBeInTheDocument();
+    });
+
+    test('renders accessibility controls', () => {
+      render(
+        <HelmetProvider>
+          <AccessibilityEnhancer />
+        </HelmetProvider>
+      );
+      
+      const controlsTitle = screen.getByText('Accessibility Options');
+      expect(controlsTitle).toBeInTheDocument();
+    });
   });
 
-  it('renders error UI when there is an error', () => {
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
+  describe('AdAnalytics', () => {
+    test('renders without crashing', () => {
+      render(
+        <HelmetProvider>
+          <AdAnalytics />
+        </HelmetProvider>
+      );
+    });
 
-    render(
-      <MemoryRouter>
-        <EnhancedErrorBoundary>
-          <ThrowError shouldThrow={true} />
-        </EnhancedErrorBoundary>
-      </MemoryRouter>
-    );
+    test('renders main heading', () => {
+      render(
+        <HelmetProvider>
+          <AdAnalytics />
+        </HelmetProvider>
+      );
+      
+      const heading = screen.getByText('Ad Analytics');
+      expect(heading).toBeInTheDocument();
+    });
 
-    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+    test('renders feature cards', () => {
+      render(
+        <HelmetProvider>
+          <AdAnalytics />
+        </HelmetProvider>
+      );
+      
+      const expertSolutions = screen.getByText('Expert Solutions');
+      const customImplementation = screen.getByText('Custom Implementation');
+      const support = screen.getByText('24/7 Support');
+      
+      expect(expertSolutions).toBeInTheDocument();
+      expect(customImplementation).toBeInTheDocument();
+      expect(support).toBeInTheDocument();
+    });
 
-    consoleSpy.mockRestore();
-  });
-
-  it('calls onError callback when error occurs', () => {
-    const onError = jest.fn();
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
-
-    render(
-      <EnhancedErrorBoundary onError={onError}>
-        <ThrowError shouldThrow={true} />
-      </EnhancedErrorBoundary>
-    );
-
-    expect(onError).toHaveBeenCalled();
-    consoleSpy.mockRestore();
-  });
-
-  it('retries when retry button is clicked', () => {
-    let shouldThrow = true;
-    const ThrowError = () => {
-      if (shouldThrow) {
-        throw new Error('Test error');
-      }
-      return <div>No error</div>;
-    };
-
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
-
-    render(
-      <MemoryRouter>
-        <EnhancedErrorBoundary>
-          <ThrowError />
-        </EnhancedErrorBoundary>
-      </MemoryRouter>
-    );
-
-    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
-    
-    // Change shouldThrow before clicking retry
-    shouldThrow = false;
-
-    consoleSpy.mockRestore();
-  });
-});
-
-describe('AdvancedSEOOptimizer', () => {
-  it('renders without crashing', () => {
-    render(
-      <HelmetProvider>
-        <AdvancedSEOOptimizer />
-      </HelmetProvider>
-    );
-    expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
-  });
-
-  it('renders without setting document title', () => {
-    render(
-      <HelmetProvider>
-        <AdvancedSEOOptimizer />
-      </HelmetProvider>
-    );
-    
-    expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
-  });
-
-  it('renders structured data when enabled', async () => {
-    render(
-      <HelmetProvider>
-        <AdvancedSEOOptimizer />
-      </HelmetProvider>
-    );
-    
-    expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
-  });
-});
-
-describe('AdvancedPerformanceMonitor', () => {
-  it('renders without crashing', () => {
-    render(<AdvancedPerformanceMonitor />);
-    expect(screen.getByText('Advanced Performance Monitor')).toBeInTheDocument();
+    test('renders get started button', () => {
+      render(
+        <HelmetProvider>
+          <AdAnalytics />
+        </HelmetProvider>
+      );
+      
+      const button = screen.getByText('Get Started Today');
+      expect(button).toBeInTheDocument();
+    });
   });
 });

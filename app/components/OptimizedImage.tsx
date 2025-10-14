@@ -1,70 +1,54 @@
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  placeholder?: string;
-  sizes?: string;
-  quality?: number';
-  loading?: 'lazy' | "eager"
-  onLoad?: () => void;
-  alt,
-  width,
-  height,''
-  className = '','
-  priority = false,''
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',''
-  sizes = '100vw','
-  quality = 85,''
-  loading = 'lazy','
-  onLoad,
-  const [isError, setIsError] = useState(false)
-  const [isInView, setIsInView] = useState(priority)
-  const imgRef = useRef<HTMLImageElement>(null)
-  useEffect(() => {
-    if (priority) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
-          setIsInView(true)
-          observer.disconnect()}
-      },
-  // Generate WebP src if supported
-  const getOptimizedSrc = (originalSrc: string) => {''
-    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {'
-      return originalSrc}
-      return originalSrc;}
-      return originalSrc;}
-    // For local images, you could implement WebP conversion here
-    return originalSrc;
-  }
-  const optimizedSrc = getOptimizedSrc(src)
-    return originalSrc}
-  const optimizedSrc = getOptimizedSrc(src)
+import React from 'react';
+
+const OptimizedImage: React.FC = () => {
   return (
-    <>
-        </Helmet>
-      )
-      <div
-      >
-        { /* Placeholder */ }
-        { !isLoaded && !isError && (
-          <div
-          >
-            <div className="text-gray-400 text-sm">Loading...</div>"
-          </div>
-          >
-            <div className="text-gray-400 text-sm text-center">"
-              <div className="text-2xl mb-2">📷</div>"
-              <div>Image not available</div>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Optimized Image
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional optimizedimage solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge optimizedimage solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored optimizedimage implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your optimizedimage needs.
+              </p>
             </div>
           </div>
-          />
-        )
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

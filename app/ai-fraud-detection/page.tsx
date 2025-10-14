@@ -251,7 +251,7 @@ const AIFraudDetectionPage: React.FC = () => {
                 Protect Your Business from Fraud
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
-                Don't let fraud damage your business. Our AI-powered fraud detection systems 
+                Don&apos;t let fraud damage your business. Our AI-powered fraud detection systems 
                 provide real-time protection and help you stay ahead of emerging threats.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
