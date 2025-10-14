@@ -18,7 +18,7 @@ export const usePerformanceMonitor = (name: string) => {
         // Send to analytics
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'performance_measurement', {
-            name: name;,
+            name: name,
             duration: duration;
           });
         }

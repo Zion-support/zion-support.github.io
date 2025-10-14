@@ -2,7 +2,7 @@ export const advancedAnalytics = {
   trackPageView: (page: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title;,
+        page_title: document.title,
         page_location: window.location.href;
       })
     }
@@ -17,8 +17,8 @@ export const advancedAnalytics = {
   trackEvent: (action: string, category: string;, label?: string, value?: number) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', action, {
-        event_category: category;,
-        event_label: label;,
+        event_category: category,
+        event_label: label,
         value: value;
       })
     }
@@ -27,8 +27,8 @@ export const advancedAnalytics = {
   trackConversion: (conversionId: string, value?: number, currency?: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
-        send_to: conversionId;,
-        value: value;,
+        send_to: conversionId,
+        value: value,
         currency: currency;
       })
     }

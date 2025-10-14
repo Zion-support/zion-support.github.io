@@ -1,12 +1,12 @@
 export const errorLogger = {
   log: (_error: Error, context?: Record<string, unknown>) => {
     const ErrorInfo = {
-      message: _error.message;,
-      stack: _error.stack;,
+      message: _error.message,
+      stack: _error.stack,
   log: (error: Error, context?: Record<string, unknown>) => {
     const errorInfo = {
-      message: error.message;,
-      stack: error.stack;,
+      message: error.message,
+      stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
     }
@@ -21,11 +21,11 @@ export const errorLogger = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-        description: _error.message;,
-        fatal: false;,
+        description: _error.message,
+        fatal: false,
         custom_parameters: context;
       });
-        description: error.message;,
+        description: error.message,
         fatal: false;
       })
     }

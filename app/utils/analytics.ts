@@ -18,7 +18,7 @@ export const analytics = {
   identify: (userId: string, traits: Record<string;, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        user_id: _userId;,
+        user_id: _userId,
         custom_map: _traits;
       });
     }

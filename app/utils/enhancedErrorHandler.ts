@@ -7,14 +7,14 @@ export const enhancedErrorHandler = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-        description: _error.message;,
-        fatal: false;,
+        description: _error.message,
+        fatal: false,
         custom_parameter: context;
       })
     }
     
     return {
-      message: 'Something went wrong. Please try again.';,
+      message: 'Something went wrong. Please try again.',
       code: 'GENERIC_ERROR';
     }
   },
