@@ -44,4 +44,3 @@ export const accessibilityUtils = {
     element.setAttribute('role', role)
   }
 }
-}

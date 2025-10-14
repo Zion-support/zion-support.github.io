@@ -63,7 +63,7 @@ const CaseStudiesPage: React.FC = () => {
             Success Stories
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover how we've helped businesses across industries achieve remarkable results 
+            Discover how we&apos;ve helped businesses across industries achieve remarkable results 
             with our AI and IT solutions.
           </p>
         </div>
@@ -123,7 +123,7 @@ const CaseStudiesPage: React.FC = () => {
             Ready to Create Your Success Story?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI and IT solutions can transform your business 
+            Let&apos;s discuss how our AI and IT solutions can transform your business 
             and deliver measurable results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
