@@ -1,67 +1,63 @@
-#!/usr/bin/env node
-import fs from "fs"
+#!/usr/bin/env node:;
+import fs from "fs":;
 import path from "path"
-// Function to fix specific files with known issues
-function fixSpecificFiles() {
-  const fixes = [
-    {
-      file: "/workspace/app/components/AdvancedPerformanceMonitor.tsx",
-      content: `import React from 'react'
-const AdvancedPerformanceMonitor = () => {
-  return (
-    <div className="advancedperformancemonitor-component">
-      <h2>AdvancedPerformanceMonitor</h2>
-      <p>This component is under construction.</p>
-  )
+// Function to fix specific files with known issues:;
+function fixSpecificFiles() {;
+const fixes = [
+    {;
+file: "/workspace/app/components/AdvancedPerformanceMonitor.tsx",;
+content: `import React from 'react';`;`
+const AdvancedPerformanceMonitor = () =>{;
+return (
+    <div className="advancedperformancemonitor-component"><h2>AdvancedPerformanceMonitor</h2><p>This component is under construction.</p>)
 }
 export default AdvancedPerformanceMonitor
-`,
+`,`
     },
-    {
-      file: "/workspace/app/components/AnalyticsProvider.tsx",
-      content: `import React, { createContext, ReactNode } from 'react'
-import { trackEvent, trackPageView } from '../utils/analytics'
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void
+    {;
+file: "/workspace/app/components/AnalyticsProvider.tsx",;
+content: `import React, { createContext, ReactNode } from 'react';`;`
+import { trackEvent, trackPageView } from '../utils/analytics':;
+interface AnalyticsContextType {;
+trackEvent: (eventName: string, properties?: Record<string, unknown>) =>void:;
+trackPageView: (pageName: string) =>void
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
-interface AnalyticsProviderProps {
-  children: ReactNode
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+interface AnalyticsProviderProps {;
+children: ReactNode
 }
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    // Basic analytics tracking
-    console.log('Analytics Event:', eventName, properties)
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps>= ({ children }) =>{;
+const trackEvent = (eventName: string, properties?: Record<string, unknown>) =>{
+    // Basic analytics tracking:;
+console.log('Analytics Event:', eventName, properties)
   }
-  const trackPageView = (pageName: string) => {
-    // Basic page view tracking
-    console.log('Page View:', pageName)
+  const trackPageView = (pageName: string) =>{
+    // Basic page view tracking:;
+console.log('Page View:', pageName)
   }
-  const value = {
-    trackEvent,
-    trackPageView,
+  const value = {;
+trackEvent,;
+trackPageView,
   }
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
+    <AnalyticsContext.Provider value={value}>{children}
   )
 }
 export { AnalyticsContext }
-`,
+`,`
     },
-  ]
-  for (const fix of fixes) {
-    try {
-      fs.writeFileSync(fix.file, fix.content)
-      console.log(`✅ Fixed: ${fix.file}`)
-    } catch (error) {
-      console.error(`❌ Error fixing ${fix.file}:`, error.message)
+  ];
+for (const fix of fixes) {;
+try {;
+fs.writeFileSync(fix.file, fix.content);
+console.log(`✅ Fixed: ${fix.file}`)`
+    } catch (error) {;
+console.error(`❌ Error fixing ${fix.file}:`, error.message)`
 }
 }
-// Function to fix JSX fragment issues
-function fixJSXFragmentIssues() {
-  const filesToFix = [
+// Function to fix JSX fragment issues:;
+function fixJSXFragmentIssues() {;
+const filesToFix = [
     "/workspace/app/it-infrastructure/page.tsx",
     "/workspace/app/legal-document-manager/page.tsx",
     "/workspace/app/medical-records-manager/page.tsx",
@@ -85,136 +81,141 @@ function fixJSXFragmentIssues() {
     "/workspace/app/zion-ai-workflow-automation/page.tsx",
     "/workspace/app/zion-ecommerce-optimizer/page.tsx",
     "/workspace/app/zion-hr-assistant-pro/page.tsx",
-  ]
-  for (const file of filesToFix) {
-    try {
-      let content = fs.readFileSync(file, "utf8")
-      // Fix JSX fragment issues - replace <> with <React.Fragment> and </> with </React.Fragment>
-      content = content.replace(/<>/g, "<React.Fragment>")
-      content = content.replace(/<\/>/g, "</React.Fragment>")
-      // Add React import if not present
-      if (!content.includes("import React")) {
-        content = "import React from 'react';\n" + content
+  ];
+for (const file of filesToFix) {;
+try {;
+let content = fs.readFileSync(file, "utf8")
+      // Fix JSX fragment issues - replace <>with <React.Fragment>and </>with </React.Fragment>content = content.replace(/<>/g, "<React.Fragment>");
+content = content.replace(/<\/>/g, "</React.Fragment>")
+      // Add React import if not present:;
+if (!content.includes("import React")) {;
+content = "import React from 'react';\n" + content
 }
-      fs.writeFileSync(file, content)
-      console.log(`✅ Fixed JSX fragments in: ${file}`)
-    } catch (error) {
-      console.error(`❌ Error fixing ${file}:`, error.message)
+      fs.writeFileSync(file, content);
+console.log(`✅ Fixed JSX fragments in: ${file}`)`
+    } catch (error) {;
+console.error(`❌ Error fixing ${file}:`, error.message)`
 }
 }
-// Function to fix other specific issues
+// Function to fix other specific issues:;
 function fixOtherIssues() {
-  // Fix App.tsx - remove unused import
-  try {
-    let content = fs.readFileSync("/workspace/App.tsx", "utf8")
-    content = content.replace(
+  // Fix App.tsx - remove unused import:;
+try {;
+let content = fs.readFileSync("/workspace/App.tsx", "utf8");
+content = content.replace(
       /import CustomErrorBoundary from '\.\/app\/components\/ErrorBoundary';/,
       "",
-    )
-    fs.writeFileSync("/workspace/App.tsx", content)
-    console.log("✅ Fixed App.tsx - removed unused import")
-  } catch (error) {
-    console.error("❌ Error fixing App.tsx:", error.message)
+    );
+fs.writeFileSync("/workspace/App.tsx", content);
+console.log("✅ Fixed App.tsx - removed unused import")
+  } catch (error) {;
+console.error("❌ Error fixing App.tsx:", error.message)
 }
-  // Fix 5g-solutions/page.tsx - fix unused variable
-  try {
-    let content = fs.readFileSync(
+  // Fix 5g-solutions/page.tsx - fix unused variable:;
+try {;
+let content = fs.readFileSync(
       "/workspace/app/5g-solutions/page.tsx",
       "utf8",
-    )
-    content = content.replace(
-      /const PagePage = \(\) => \{/,
-      "const Page = () => {",
-    )
-    content = content.replace(
+    );
+content = content.replace(
+      /const PagePage = \(\) =>\{/,
+      "const Page = () =>{",
+    );
+content = content.replace(
       /export default PagePage;/,
       "export default Page;",
-    )
-    fs.writeFileSync("/workspace/app/5g-solutions/page.tsx", content)
-    console.log("✅ Fixed 5g-solutions/page.tsx - renamed PagePage to Page")
-  } catch (error) {
-    console.error("❌ Error fixing 5g-solutions/page.tsx:", error.message)
+    );
+fs.writeFileSync("/workspace/app/5g-solutions/page.tsx", content);
+console.log("✅ Fixed 5g-solutions/page.tsx - renamed PagePage to Page")
+  } catch (error) {;
+console.error("❌ Error fixing 5g-solutions/page.tsx:", error.message)
 }
-  // Fix page.tsx - remove unused imports
-  try {
-    let content = fs.readFileSync("/workspace/app/page.tsx", "utf8")
-    content = content.replace(/import React from 'react';\n/, "")
-    content = content.replace(
+  // Fix page.tsx - remove unused imports:;
+try {;
+let content = fs.readFileSync("/workspace/app/page.tsx", "utf8");
+content = content.replace(/import React from 'react';\n/, "");
+content = content.replace(
       /import { Helmet } from 'react-helmet-async';\n/,
       "",
-    )
-    fs.writeFileSync("/workspace/app/page.tsx", content)
-    console.log("✅ Fixed page.tsx - removed unused imports")
-  } catch (error) {
-    console.error("❌ Error fixing page.tsx:", error.message)
+    );
+fs.writeFileSync("/workspace/app/page.tsx", content);
+console.log("✅ Fixed page.tsx - removed unused imports")
+  } catch (error) {;
+console.error("❌ Error fixing page.tsx:", error.message)
 }
-  // Fix LoadingStates.tsx - remove unused imports
-  try {
-    let content = fs.readFileSync(
+  // Fix LoadingStates.tsx - remove unused imports:;
+try {;
+let content = fs.readFileSync(
       "/workspace/app/components/LoadingStates.tsx",
       "utf8",
-    )
-    content = content.replace(/, Shield, Cloud, Zap/, "")
-    fs.writeFileSync("/workspace/app/components/LoadingStates.tsx", content)
-    console.log("✅ Fixed LoadingStates.tsx - removed unused imports")
-  } catch (error) {
-    console.error("❌ Error fixing LoadingStates.tsx:", error.message)
+    );
+content = content.replace(/, Shield, Cloud, Zap/, "");
+fs.writeFileSync("/workspace/app/components/LoadingStates.tsx", content);
+console.log("✅ Fixed LoadingStates.tsx - removed unused imports")
+  } catch (error) {;
+console.error("❌ Error fixing LoadingStates.tsx:", error.message)
 }
-  // Fix SEOEnhancer.tsx - remove unused variable
-  try {
-    let content = fs.readFileSync(
+  // Fix SEOEnhancer.tsx - remove unused variable:;
+try {;
+let content = fs.readFileSync(
       "/workspace/app/components/SEOEnhancer.tsx",
       "utf8",
-    )
-    content = content.replace(/const defaultStructuredData = [^;]+;/g, "")
-    fs.writeFileSync("/workspace/app/components/SEOEnhancer.tsx", content)
-    console.log("✅ Fixed SEOEnhancer.tsx - removed unused variable")
-  } catch (error) {
-    console.error("❌ Error fixing SEOEnhancer.tsx:", error.message)
+    );
+content = content.replace(/const defaultStructuredData = [^;]+;/g, "");
+fs.writeFileSync("/workspace/app/components/SEOEnhancer.tsx", content);
+console.log("✅ Fixed SEOEnhancer.tsx - removed unused variable")
+  } catch (error) {;
+console.error("❌ Error fixing SEOEnhancer.tsx:", error.message)
 }
-  // Fix AnalyticsContext.tsx - fix any types and unused variables
-  try {
-    let content = fs.readFileSync(
+  // Fix AnalyticsContext.tsx - fix any types and unused variables:;
+try {;
+let content = fs.readFileSync(
       "/workspace/app/contexts/AnalyticsContext.tsx",
       "utf8",
-    )
-    content = content.replace(
+    );
+content = content.replace(
       /Record<string, any>/g,
       "Record<string, unknown>",
-    )
-    content = content.replace(/any\[\]/g, "unknown[]")
-    content = content.replace(/const userId = [^;]+;/g, "")
-    fs.writeFileSync("/workspace/app/contexts/AnalyticsContext.tsx", content)
-    console.log(
+    );
+content = content.replace(/any\[\]/g, "unknown[]");
+content = content.replace(/const userId = [^;]+;/g, "");
+fs.writeFileSync("/workspace/app/contexts/AnalyticsContext.tsx", content);
+console.log(
       "✅ Fixed AnalyticsContext.tsx - fixed types and removed unused variable",
     )
-  } catch (error) {
-    console.error("❌ Error fixing AnalyticsContext.tsx:", error.message)
+  } catch (error) {;
+console.error("❌ Error fixing AnalyticsContext.tsx:", error.message)
 }
-  // Fix AnalyticsContextDefinition.tsx - fix any types
-  try {
-    let content = fs.readFileSync(
+  // Fix AnalyticsContextDefinition.tsx - fix any types:;
+try {;
+let content = fs.readFileSync(
       "/workspace/app/contexts/AnalyticsContextDefinition.tsx",
       "utf8",
-    )
-    content = content.replace(
+    );
+content = content.replace(
       /Record<string, any>/g,
       "Record<string, unknown>",
-    )
-    fs.writeFileSync(
-      "/workspace/app/contexts/AnalyticsContextDefinition.tsx",
-      content,
-    )
-    console.log("✅ Fixed AnalyticsContextDefinition.tsx - fixed types")
-  } catch (error) {
-    console.error(
-      "❌ Error fixing AnalyticsContextDefinition.tsx:",
-      error.message,
+    );
+fs.writeFileSync(
+      "/workspace/app/contexts/AnalyticsContextDefinition.tsx",;
+content,
+    );
+console.log("✅ Fixed AnalyticsContextDefinition.tsx - fixed types")
+  } catch (error) {;
+console.error(
+      "❌ Error fixing AnalyticsContextDefinition.tsx:",;
+error.message,
     )
 }
-// Main execution
-console.log("🔧 Starting remaining conflict resolution...")
-fixSpecificFiles()
-fixJSXFragmentIssues()
-fixOtherIssues()
+// Main execution:;
+console.log("🔧 Starting remaining conflict resolution...");
+fixSpecificFiles();
+fixJSXFragmentIssues();
+fixOtherIssues();
 console.log("\n✅ Remaining conflict resolution completed!")
+}}}}}
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

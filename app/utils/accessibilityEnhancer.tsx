@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-  )
-  )};``
-=======
-// accessibilityEnhancer.tsx utility;
+// accessibilityEnhancer.tsx utility:;
 export const accessibilityEnhancer = () => {;
-  // Utility implementation;
+  // Utility implementation:
 };
->>>>>>> origin/main

@@ -1,16 +1,13 @@
-#!/usr/bin/env node
-import fs from "fs"
+#!/usr/bin/env node:;
+import fs from "fs":;
 import { glob } from "glob"
-// Simple component template
-const componentTemplate = (name) => `import React from "react"
-export default function ${name}() {
-  return (
-    <div>
-      <h1>${name}</h1>
-      <p>This component is under development.</p>
-  )
-}`
-// List of component files that likely have syntax errors
+// Simple component template:;
+const componentTemplate = (name) =>`import React from "react";`;`
+export default function ${name}() {;
+return (
+    <div><h1>${name}</h1><p>This component is under development.</p>)
+}``
+// List of component files that likely have syntax errors:;
 const componentFiles = [
   "app/components/AccessibilityAudit.tsx",
   "app/components/AccessibilityEnhancer.tsx",
@@ -102,35 +99,37 @@ const componentFiles = [
   "app/components/UltimateContentAdvertisingBanner.tsx",
   "app/components/WebVitalsTracker.tsx",
   "app/components/lazyUtils.tsx",
-]
-async function fixAllComponents() {
-  console.log("Fixing all component files...")
-  let fixed = 0
-  for (const file of componentFiles) {
-    try {
-      if (fs.existsSync(file)) {
-        const content = fs.readFileSync(file, "utf8")
-        // Check if file has syntax errors
-        if (
-          content.includes("Declaration or statement expected") ||
-          content.includes("Expression expected") ||
-          content.includes("Unterminated string literal") ||
-          content.includes("JSX expressions must have one parent element") ||
-          content.includes("className:") ||
-          content.includes("content:") ||
-          content.includes("name:") ||
-          content.includes("div>") ||
-          content.includes(";export default function;")
-        ) {
-          const componentName = file.split("/").pop().replace(".tsx", "")
-          const newContent = componentTemplate(componentName)
-          fs.writeFileSync(file, newContent, "utf8")
-          console.log(`Fixed: ${file}`)
-          fixed++
+];
+async function fixAllComponents() {;
+console.log("Fixing all component files...");
+let fixed = 0:;
+for (const file of componentFiles) {;
+try {;
+if (fs.existsSync(file)) {;
+const content = fs.readFileSync(file, "utf8")
+        // Check if file has syntax errors:;
+if (;
+content.includes("Declaration or statement expected") ||;
+content.includes("Expression expected") ||;
+content.includes("Unterminated string literal") ||;
+content.includes("JSX expressions must have one parent element") ||;
+content.includes("className:") ||;
+content.includes("content:") ||;
+content.includes("name:") ||;
+content.includes("div>") ||;
+content.includes(";export default function;")
+        ) {;
+const componentName = file.split("/").pop().replace(".tsx", "");
+const newContent = componentTemplate(componentName);
+fs.writeFileSync(file, newContent, "utf8");
+console.log(`Fixed: ${file}`);`;`
+fixed++
 }
-    } catch (error) {
-      console.error(`Error processing ${file}:`, error.message)
+    } catch (error) {;
+console.error(`Error processing ${file}:`, error.message)`
 }
-  console.log(`Fixed ${fixed} component files`)
+  console.log(`Fixed ${fixed} component files`)`
 }
 fixAllComponents().catch(console.error)
+}}
+  </div>

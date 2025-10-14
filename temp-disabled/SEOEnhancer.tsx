@@ -1,30 +1,30 @@
-import React from 'react'''''
-import { useEffect } from 'react'''''
-import { Helmet } from 'react-helmet-async'''''
+import React from 'react''''':;
+import { useEffect } from 'react''''':;
+import { Helmet } from 'react-helmet-async''''':;
 interface SEOEnhancerProps {}
-  title?: string
-  description?: string
-  keywords?: string[]
-  image?: string
-  url?: string
-  type?: string
-  structuredData?: unknown}
-const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}""
-  title = 'Zion Tech Group - Advanced AI and IT Solutions','''''
-  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.','''''
-  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],'''''
-  image = '/images/og-image.jpg','''''
-  url = typeof window !== 'undefined' ? window.location.href : '','''''
-  type = 'website','''''
-  structuredData}) => {}
-  useEffect(() => {}, [])
-    // Add structured data to the page
-    if (structuredData) {}
-      const script = document.createElement('script')''''
-      script.type = 'application/ld+json'''''
-      script.text = JSON.stringify(structuredData)
-      document.head.appendChild(script)
-      return () => {}
+  title?: string:;
+description?: string:;
+keywords?: string[];
+image?: string:;
+url?: string:;
+type?: string:;
+structuredData?: unknown}
+const SEOEnhancer: "React.FC<SEOEnhancerProps>= ({"}"":;
+title = 'Zion Tech Group - Advanced AI and IT Solutions',''''':;
+description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',''''':;
+keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],''''':;
+image = '/images/og-image.jpg',''''':;
+url = typeof window !== 'undefined' ? window.location.href : '',''''':;
+type = 'website',''''':;
+structuredData}) =>{}
+  useEffect(() =>{}, [])
+    // Add structured data to the page:;
+if (structuredData) {}
+      const script = document.createElement('script')'''':;
+script.type = 'application/ld+json''''':;
+script.text = JSON.stringify(structuredData);
+document.head.appendChild(script);
+return () =>{}
         if (document.head.contains(script)) {}
           document.head.removeChild(script)
         }
@@ -32,8 +32,8 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}""
     }
     return undefined
   }, [structuredData])
-  // Generate meta tags
-  const metaTags = [{ name: 'description', content: "description"},'''''
+  // Generate meta tags:;
+const metaTags = [{ name: 'description', content: "description"},'''''
     { name: 'keywords', content: "keywords.join('", ') },'''''
     { name: 'author', content: 'Zion Tech Group' },'''''
     { name: 'robots', content: '_index, follow' },'''''
@@ -55,13 +55,10 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}""
     { name: 'msapplication-TileColor', content: '#0066cc' },'''''
     { name: 'apple-mobile-web-app-capable', content: 'yes' },'''''
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },'''''
-  ]
-  return (
-    <Helmet>
-      <title>{title}</title>
-      {metaTags.map((tag, _index) => (}
-        <meta key={_index} {...tag} />
-      ))}
+  ];
+return (
+    <Helmet><title>{title}</title>{metaTags.map((tag, _index) =>(}
+        <meta key={_index} {...tag} />))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />""""
       {/* Favicon */}
@@ -75,10 +72,9 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}""
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />""""
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />""""
-    </Helmet>
-  )
+    </Helmet>)
 }
-// Default structured data for the organization
+// Default structured data for the organization:;
 const  {}
   "@context": "https: "//schema.org"",""""
   "@type": "Organization",""""
@@ -106,3 +102,8 @@ const  {}
 }
 export default SEOEnhancer
 </SEOEnhancerProps>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
