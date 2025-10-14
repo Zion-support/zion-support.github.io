@@ -10,9 +10,12 @@ import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+<<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import AdvancedPerformanceMonitor from "./app/components/AdvancedPerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
@@ -20,15 +23,57 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import LoadingPageEnhanced from "./app/components/EnhancedLoading";
+<<<<<<< HEAD
+=======
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
+import ImprovedLoading from "./app/components/ImprovedLoading";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import Breadcrumb from "./app/components/Breadcrumb";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import EnhancedSEO from "./app/components/EnhancedSEO";
+import { performanceOptimizer } from "./utils/performanceUtils";
+import { accessibilityManager } from "./utils/accessibilityUtils";
+>>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+=======
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import EnhancedSEO from "./app/components/EnhancedSEO";
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+import LoadingState from "./app/components/EnhancedLoading";
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
+<<<<<<< HEAD
+=======
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
+const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
+const DemoPage = React.lazy(() => import("./app/demo/page"));
+const SupportPage = React.lazy(() => import("./app/support/page"));
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
@@ -79,7 +124,89 @@ const SmartInventoryOptimizerPage = React.lazy(() => import("./app/smart-invento
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense-categorizer/page"));
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
+// AI Service Pages
+const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
+const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
+const AiBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
+const AiContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
+const AiCustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
+const AiDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
+const AiEmailAutomationPage = React.lazy(() => import("./app/ai-email-automation/page"));
+const AiFraudDetectionPage = React.lazy(() => import("./app/ai-fraud-detection/page"));
+const AiHealthcarePage = React.lazy(() => import("./app/ai-healthcare/page"));
+const AiMarketingPage = React.lazy(() => import("./app/ai-marketing/page"));
+const AiPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
+const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-management/page"));
+const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
+const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
+const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+
+// IT Service Pages
+const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
+const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
+const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
+const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
+const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
+const CustomSoftwarePage = React.lazy(() => import("./app/custom-software/page"));
+const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
+
+// Micro SAAS Pages
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
+const ZionAiCrmProPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
+const ZionAiMarketingAutomationProPage = React.lazy(() => import("./app/zion-ai-marketing-automation-pro/page"));
+const ZionAiProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
+
+// 5G Solutions Pages
+const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
+const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
+const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
+const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
+const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
+const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
+const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
+<<<<<<< HEAD
+const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+=======
+const FiveG5gIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
+
+// Main App Component
+>>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+=======
+// Additional AI Services Pages
+const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
+const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
+const AIDesignStudioPage = React.lazy(() => import("./app/ai-design-studio/page"));
+const AIBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
+const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
+const AIComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
+const AIConversationalAIPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
+const AICRMPage = React.lazy(() => import("./app/ai-crm/page"));
+const AICustomerInsightsPage = React.lazy(() => import("./app/ai-customer-insights/page"));
+const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualization/page"));
+const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
+const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
+
+// Additional IT Services Pages
+const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
+const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
+const DisasterRecoveryPage = React.lazy(() => import("./app/disaster-recovery/page"));
+const ITSupportPage = React.lazy(() => import("./app/it-support/page"));
+const ManagedServicesPage = React.lazy(() => import("./app/managed-services/page"));
+const SecurityAuditPage = React.lazy(() => import("./app/security-audit/page"));
+const TechnologyConsultingPage = React.lazy(() => import("./app/technology-consulting/page"));
+
+// Additional 5G Services Pages (these are already defined above, but adding for completeness)
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
 function App() {
+<<<<<<< HEAD
   useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
@@ -89,10 +216,11 @@ function App() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <HelmetProvider>
-      <GlobalErrorBoundary>
+      <EnhancedErrorBoundary>
         <AnalyticsProvider>
-          <PerformanceMonitor>
+          <AdvancedPerformanceMonitor showInProduction={false} enableReporting={true}>
             <WebVitalsTracker>
               <EnhancedAccessibility>
                 <AccessibilityEnhancer>
@@ -105,7 +233,7 @@ function App() {
                         <Breadcrumb />
                         
                         <main className="relative z-10">
-                          <Suspense fallback={<LoadingPage />}>
+                          <Suspense fallback={<LoadingState type="loading" message="Loading page..." size="lg" />}>
                             <Routes>
                               {/* Main Pages */}
                               <Route path="/" element={<HomePage />} />
@@ -167,41 +295,37 @@ function App() {
                               <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
 
                               {/* Additional AI Services Routes */}
-                              <Route path="/ai-chatbot-builder" element={<React.lazy(() => import("./app/ai-chatbot-builder/page")) />} />
-                              <Route path="/ai-code-assistant" element={<React.lazy(() => import("./app/ai-code-assistant/page")) />} />
-                              <Route path="/ai-design-studio" element={<React.lazy(() => import("./app/ai-design-studio/page")) />} />
-                              <Route path="/ai-business-intelligence" element={<React.lazy(() => import("./app/ai-business-intelligence/page")) />} />
-                              <Route path="/ai-automation" element={<React.lazy(() => import("./app/ai-automation/page")) />} />
-                              <Route path="/ai-computer-vision" element={<React.lazy(() => import("./app/ai-computer-vision/page")) />} />
-                              <Route path="/ai-conversational-ai" element={<React.lazy(() => import("./app/ai-conversational-ai/page")) />} />
-                              <Route path="/ai-crm" element={<React.lazy(() => import("./app/ai-crm/page")) />} />
-                              <Route path="/ai-customer-insights" element={<React.lazy(() => import("./app/ai-customer-insights/page")) />} />
-                              <Route path="/ai-data-visualization" element={<React.lazy(() => import("./app/ai-data-visualization/page")) />} />
-                              <Route path="/ai-devops-automation" element={<React.lazy(() => import("./app/ai-devops-automation/page")) />} />
-                              <Route path="/ai-document-intelligence" element={<React.lazy(() => import("./app/ai-document-intelligence/page")) />} />
-                              <Route path="/ai-marketing-automation" element={<React.lazy(() => import("./app/ai-marketing-automation/page")) />} />
-                              <Route path="/ai-predictive-analytics" element={<React.lazy(() => import("./app/ai-predictive-analytics/page")) />} />
-                              <Route path="/ai-voice-assistant" element={<React.lazy(() => import("./app/ai-voice-assistant/page")) />} />
-                              <Route path="/ai-workflow-automation" element={<React.lazy(() => import("./app/ai-workflow-automation/page")) />} />
+                              <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                              <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                              <Route path="/ai-design-studio" element={<AIDesignStudioPage />} />
+                              <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+                              <Route path="/ai-automation" element={<AIAutomationPage />} />
+                              <Route path="/ai-computer-vision" element={<AIComputerVisionPage />} />
+                              <Route path="/ai-conversational-ai" element={<AIConversationalAIPage />} />
+                              <Route path="/ai-crm" element={<AICRMPage />} />
+                              <Route path="/ai-customer-insights" element={<AICustomerInsightsPage />} />
+                              <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
+                              <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
+                              <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage />} />
 
                               {/* Additional IT Services Routes */}
-                              <Route path="/cloud-consulting" element={<React.lazy(() => import("./app/cloud-consulting/page")) />} />
-                              <Route path="/data-center-solutions" element={<React.lazy(() => import("./app/data-center-solutions/page")) />} />
-                              <Route path="/disaster-recovery" element={<React.lazy(() => import("./app/disaster-recovery/page")) />} />
-                              <Route path="/it-support" element={<React.lazy(() => import("./app/it-support/page")) />} />
-                              <Route path="/managed-services" element={<React.lazy(() => import("./app/managed-services/page")) />} />
-                              <Route path="/security-audit" element={<React.lazy(() => import("./app/security-audit/page")) />} />
-                              <Route path="/technology-consulting" element={<React.lazy(() => import("./app/technology-consulting/page")) />} />
+                              <Route path="/cloud-consulting" element={<CloudConsultingPage />} />
+                              <Route path="/data-center-solutions" element={<DataCenterSolutionsPage />} />
+                              <Route path="/disaster-recovery" element={<DisasterRecoveryPage />} />
+                              <Route path="/it-support" element={<ITSupportPage />} />
+                              <Route path="/managed-services" element={<ManagedServicesPage />} />
+                              <Route path="/security-audit" element={<SecurityAuditPage />} />
+                              <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
 
                               {/* Additional 5G Services Routes */}
-                              <Route path="/5g-data-analytics" element={<React.lazy(() => import("./app/5g-data-analytics/page")) />} />
-                              <Route path="/5g-edge-computing" element={<React.lazy(() => import("./app/5g-edge-computing/page")) />} />
-                              <Route path="/5g-implementation" element={<React.lazy(() => import("./app/5g-implementation/page")) />} />
-                              <Route path="/5g-iot-solutions" element={<React.lazy(() => import("./app/5g-iot-solutions/page")) />} />
-                              <Route path="/5g-mobile-applications" element={<React.lazy(() => import("./app/5g-mobile-applications/page")) />} />
-                              <Route path="/5g-network-infrastructure" element={<React.lazy(() => import("./app/5g-network-infrastructure/page")) />} />
-                              <Route path="/5g-private-networks" element={<React.lazy(() => import("./app/5g-private-networks/page")) />} />
-                              <Route path="/5g-smart-city-solutions" element={<React.lazy(() => import("./app/5g-smart-city-solutions/page")) />} />
+                              <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+                              <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                              <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                              <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
+                              <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
+                              <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                              <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                              <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
 
                               {/* Catch all route */}
                               <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
@@ -224,10 +348,154 @@ function App() {
                 </AccessibilityEnhancer>
               </EnhancedAccessibility>
             </WebVitalsTracker>
-          </PerformanceMonitor>
+          </AdvancedPerformanceMonitor>
         </AnalyticsProvider>
-      </GlobalErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
+=======
+    <ImprovedErrorBoundary>
+      <GlobalErrorBoundary>
+        <EnhancedErrorBoundary>
+          <HelmetProvider>
+            <AccessibilityEnhancer>
+              <Router>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <FuturisticBackground>
+                    <Navigation onSidebarToggle={toggleSidebar} />
+                    <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                    <Breadcrumb />
+                    <main id="main-content" role="main">
+                      <Suspense fallback={<ImprovedLoading message="Loading Zion Tech Group..." variant="futuristic" />}>
+=======
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+
+  const toggleSidebar = React.useCallback(() => {
+    setIsSidebarOpen(prev => !prev);
+  }, []);
+
+  const closeSidebar = React.useCallback(() => {
+    setIsSidebarOpen(false);
+  }, []);
+
+  return (
+    <GlobalErrorBoundary>
+      <EnhancedErrorBoundary>
+        <HelmetProvider>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <FuturisticBackground>
+                  <Navigation onSidebarToggle={toggleSidebar} />
+                  <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                  <Breadcrumb />
+                  <main id="main-content" role="main">
+                    <Suspense fallback={<LoadingPage />}>
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                        <Route path="/pricing" element={<PricingPage />} />
+                        <Route path="/blog" element={<BlogPage />} />
+                        <Route path="/ai-services" element={<AIServicesPage />} />
+                        <Route path="/tutorials" element={<TutorialsPage />} />
+                        <Route path="/demo" element={<DemoPage />} />
+                        <Route path="/support" element={<SupportPage />} />
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/terms" element={<TermsPage />} />
+                        <Route path="/cookies" element={<CookiesPage />} />
+                        <Route path="/sitemap" element={<SitemapPage />} />
+                        
+                        {/* AI Services Routes */}
+                        <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                        <Route path="/ai-automation" element={<AiAutomationPage />} />
+                        <Route path="/ai-business-intelligence" element={<AiBusinessIntelligencePage />} />
+                        <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                        <Route path="/ai-customer-service" element={<AiCustomerServicePage />} />
+                        <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                        <Route path="/ai-email-automation" element={<AiEmailAutomationPage />} />
+                        <Route path="/ai-fraud-detection" element={<AiFraudDetectionPage />} />
+                        <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                        <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                        <Route path="/ai-predictive-analytics" element={<AiPredictiveAnalyticsPage />} />
+                        <Route path="/ai-project-management" element={<AiProjectManagementPage />} />
+                        <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
+                        <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
+                        <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                        
+                        {/* IT Services Routes */}
+                        <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                        <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                        <Route path="/web-development" element={<WebDevelopmentPage />} />
+                        <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                        <Route path="/database-management" element={<DatabaseManagementPage />} />
+                        <Route path="/custom-software" element={<CustomSoftwarePage />} />
+                        <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                        
+                        {/* Micro SAAS Routes */}
+                        <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                        <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                        <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                        <Route path="/zion-ai-crm-pro" element={<ZionAiCrmProPage />} />
+                        <Route path="/zion-ai-marketing-automation-pro" element={<ZionAiMarketingAutomationProPage />} />
+                        <Route path="/zion-ai-project-manager-pro" element={<ZionAiProjectManagerProPage />} />
+                        
+                        {/* 5G Solutions Routes */}
+                        <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+                        <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                        <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                        <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
+                        <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                        <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                        <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+<<<<<<< HEAD
+                        <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+=======
+                        <Route path="/5g-iot-solutions" element={<FiveG5gIotSolutionsPage />} />
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
+                      </Routes>
+                    </Suspense>
+                  </main>
+                  <Footer />
+                </FuturisticBackground>
+                <PerformanceMonitor />
+                <WebVitalsTracker />
+                <CoreWebVitals />
+<<<<<<< HEAD
+                <PerformanceOptimizer 
+                  enableImageOptimization={true}
+                  enablePreloading={true}
+                  enableCaching={true}
+                  enableCompression={true}
+                  enableLazyLoading={true}
+                />
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
+                <EnhancedSEO 
+                  title="Zion Tech Group - Advanced AI and IT Solutions"
+                  description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
+                  keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+                />
+              </div>
+              <AnalyticsProvider>
+                <div>
+                  <PerformanceMonitor />
+                  <WebVitalsTracker />
+                </div>
+              </AnalyticsProvider>
+            </Router>
+          </AccessibilityEnhancer>
+        </HelmetProvider>
+      </EnhancedErrorBoundary>
+    </GlobalErrorBoundary>
+<<<<<<< HEAD
+    </ImprovedErrorBoundary>
+>>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
   );
 }
 

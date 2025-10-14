@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
@@ -18,6 +19,20 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   private maxRetries = 3;
 
   constructor(props: Props) {
+=======
+import React from 'react';
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error?: Error;
+}
+
+export class GlobalErrorBoundary extends React.Component<
+  React.PropsWithChildren<{}>,
+  ErrorBoundaryState
+> {
+  constructor(props: React.PropsWithChildren<{}>) {
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
     super(props);
     this.state = {
       hasError: false,
@@ -27,6 +42,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     };
   }
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -88,6 +104,16 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
 
+=======
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Global Error Boundary caught an error:', error, errorInfo);
+  }
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
   render() {
     if (this.state.hasError) {
       // Use custom fallback if provided
@@ -96,6 +122,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       }
 
       return (
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
@@ -172,6 +199,18 @@ export class GlobalErrorBoundary extends Component<Props, State> {
               <p>Error ID: {Date.now().toString(36)}</p>
               <p>If this problem continues, please contact our support team.</p>
             </div>
+=======
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">We're working to fix this issue. Please try again later.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-colors"
+            >
+              Reload Page
+            </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
           </div>
         </div>
       );
@@ -181,6 +220,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 // Functional error boundary for specific components
 export const ErrorBoundary: React.FC<{
   children: ReactNode;
@@ -214,4 +254,6 @@ export const ErrorBoundary: React.FC<{
   return <>{children}</>;
 };
 
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 export default GlobalErrorBoundary;
