@@ -13,7 +13,7 @@ import {
   DocumentTextIcon,
   VideoCameraIcon,
   UserGroupIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function SupportPage() {
   const [searchQuery, setSearchQuery] = useState('');

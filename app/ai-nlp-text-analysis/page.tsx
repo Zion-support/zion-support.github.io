@@ -1,5 +1,5 @@
 import React from 'react';
-'use client';
+'use client'
 export default function AiNlpTextAnalysisPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">;

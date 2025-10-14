@@ -90,7 +90,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/'
   };
 
   render() {

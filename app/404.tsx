@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client';
+'use client'
 export default function NotFoundPage() {
   return (
     <>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -19,8 +19,8 @@ import {
   EyeIcon,
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
-  LightBulbIcon;
-} from '@heroicons/react/24/outline';
+    LightBulbIcon
+  } from '@heroicons/react/24/outline';
 export default function AISolutionsPage() {
   const aiServices = [{
       title: "Machine Learning Models",
@@ -306,7 +306,7 @@ export default function AISolutionsPage() {
                   <div className="flex gap-2">;
                     <Link;
                       to={service.href}
-                      className={`flex-1 inline-flex items-center justify-center gap-2 text-${service.color.split(' ')[1].split('-')[1]}-400 hover:text-${service.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg`}';
+                      className={`flex-1 inline-flex items-center justify-center gap-2 text-${service.color.split(' ')[1].split('-')[1]}-400 hover:text-${service.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg`}'
                     >;
                       Learn More <ArrowRightIcon className="w-4 h-4" />;
                     </Link>;
@@ -433,7 +433,7 @@ export default function AISolutionsPage() {
               Ready to Harness the Power of AI?;
             </h2>;
             <p className="text-xl text-gray-300 mb-12">;
-              Let's discuss how our AI solutions can transform your business and drive innovation';
+              Let's discuss how our AI solutions can transform your business and drive innovation'
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">;
               <Link;

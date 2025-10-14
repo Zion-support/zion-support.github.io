@@ -6,7 +6,7 @@ import {
   UserIcon,
   ArrowRightIcon,
   TagIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function BlogPage() {
   const blogPosts = [

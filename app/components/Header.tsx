@@ -6,21 +6,21 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-  const navigationItems = [{ name: 'Home', href: '/' },';
-    { name: 'About', href: '/about' },';
+  const navigationItems = [{ name: 'Home', href: '/' },'
+    { name: 'About', href: '/about' },'
     { 
-      name: 'Services',';
-      href: '/services',';
-      submenu: [{ name: 'AI Services', href: '/ai-services' },';
-        { name: 'IT Services', href: '/it-services' },';
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';
-        { name: 'Digital Transformation', href: '/digital-transformation' }';
+      name: 'Services','
+      href: '/services','
+      submenu: [{ name: 'AI Services', href: '/ai-services' },'
+        { name: 'IT Services', href: '/it-services' },'
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },'
+        { name: 'Digital Transformation', href: '/digital-transformation' }'
       ];
     },
-    { name: 'Solutions', href: '/solutions' },';
-    { name: 'Case Studies', href: '/case-studies' },';
-    { name: 'Blog', href: '/blog' },';
-    { name: 'Contact', href: '/contact' }';
+    { name: 'Solutions', href: '/solutions' },'
+    { name: 'Case Studies', href: '/case-studies' },'
+    { name: 'Blog', href: '/blog' },'
+    { name: 'Contact', href: '/contact' }'
   ];
 
   return (

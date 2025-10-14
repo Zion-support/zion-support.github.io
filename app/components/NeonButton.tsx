@@ -6,8 +6,8 @@ interface NeonButtonProps {
   to?: string;
   href?: string;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'accent';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: 'primary' | 'secondary' | 'accent'
+  size?: 'sm' | 'md' | 'lg'
   className?: string;
 }
 
@@ -16,8 +16,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   to,
   href,
   onClick,
-  variant = 'primary',
-  size = 'md',
+  variant = 'primary'
+  size = 'md'
   className = ''
 }) => {
   const baseClasses = "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2";

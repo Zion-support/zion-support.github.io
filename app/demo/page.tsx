@@ -2,28 +2,28 @@ import React from 'react';'react-helmet-async;
 import { Play, Right, Circle, Star } from 'lucide-react;
 const DemoPage: React.FC = () => {
   const features = [{
-      icon: 'Analytics',';
-      title: 'AI-Powered Analytics',';
-      description: 'See how our AI analyzes your data in real-time',';
-      demo: 'Live Demo'';
+      icon: 'Analytics','
+      title: 'AI-Powered Analytics','
+      description: 'See how our AI analyzes your data in real-time','
+      demo: 'Live Demo''
     },
     {
-      icon: 'Security',';
-      title: 'Advanced Security',';
-      description: 'Experience our enterprise-grade security features',';
-      demo: 'Demo'';
+      icon: 'Security','
+      title: 'Advanced Security','
+      description: 'Experience our enterprise-grade security features','
+      demo: 'Demo''
     },
     {
-      icon: 'Intelligence',';
-      title: 'Business Intelligence',';
-      description: 'Explore our comprehensive BI dashboard',';
-      demo: 'BI Demo'';
+      icon: 'Intelligence','
+      title: 'Business Intelligence','
+      description: 'Explore our comprehensive BI dashboard','
+      demo: 'BI Demo''
     },
     {
-      icon: 'Collaboration',';
-      title: 'Team Collaboration',';
-      description: 'See how teams work together seamlessly',';
-      demo: 'Collaboration Demo'';
+      icon: 'Collaboration','
+      title: 'Team Collaboration','
+      description: 'See how teams work together seamlessly','
+      demo: 'Collaboration Demo''
     }
   ];
 

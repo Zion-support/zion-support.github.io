@@ -16,7 +16,7 @@ import {
   CogIcon,
   ChevronDownIcon,
   GlobeAltIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

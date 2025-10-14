@@ -5,10 +5,10 @@ const AccessibilityEnhancer: React.FC = () => {
     // Skip to main content functionality
     const addSkipLink = () => {
       const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.zIndex = '9999';
+      skipLink.href = '#main-content'
+      skipLink.textContent = 'Skip to main content'
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50'
+      skipLink.style.zIndex = '9999'
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
@@ -114,6 +114,8 @@ const AccessibilityEnhancer: React.FC = () => {
       focusableElements.forEach(element => {
         element.removeEventListener('focus', handleFocus);
         element.removeEventListener('blur', handleBlur);
+      });
+      
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');

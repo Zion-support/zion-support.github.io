@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -31,9 +31,9 @@ const PerformanceMonitor: React.FC = () => {
 
       // Send to analytics service
       if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
+          window.gtag('event', metric.name, {
+            event_category: 'Web Vitals',
+            value: Math.round(metric.value),
           event_label: metric.id,
           non_interaction: true,
         });
@@ -103,7 +103,6 @@ const PerformanceMonitor: React.FC = () => {
       
       <div className="mt-3 pt-2 border-t border-slate-600 text-xs text-gray-400">
         Press Ctrl+Shift+P to toggle
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
       </div>
 =======
     </div>

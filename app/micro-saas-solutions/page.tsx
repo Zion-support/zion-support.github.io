@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-'use client';
-=======
-
-'use client';
-
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -23,7 +16,7 @@ import {
   ClockIcon,
   UserGroupIcon,
   CogIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function MicroSaaSSolutionsPage()   {
   const microSaaSProducts = [

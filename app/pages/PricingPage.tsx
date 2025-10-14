@@ -9,7 +9,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   ChatBubbleLeftRightIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState('monthly');

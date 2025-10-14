@@ -10,7 +10,7 @@ import {
   CodeBracketIcon,
   ShieldCheckIcon,
   CloudIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function TutorialsPage() {
   const tutorials = [

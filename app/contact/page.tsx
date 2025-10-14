@@ -4,11 +4,11 @@ import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export default function ContactPage()    {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    subject: ''
     message: ''
   });
 
@@ -36,25 +36,25 @@ export default function ContactPage()    {
   const contactInfo = [
     {
 
-      icon: 'Phone',
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
+      icon: 'Phone'
+      title: 'Phone'
+      value: '+1 (555) 123-4567'
       description: 'Mon-Fri 9AM-6PM EST'
     },
     {
-      icon: 'Email',
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
+      icon: 'Email'
+      title: 'Email'
+      value: 'contact@ziontechgroup.com'
       description: 'We respond within 24 hours'
     },
     {
-      icon: 'Location',
-      title: 'Address',
-      value: '123 Tech Street, Suite 100',
+      icon: 'Location'
+      title: 'Address'
+      value: '123 Tech Street, Suite 100'
       description: 'San Francisco, CA 94105'
     },
     {
-      icon: 'Clock',
+      icon: 'Clock'
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       description: '9:00 AM - 6:00 PM EST'
@@ -62,12 +62,12 @@ export default function ContactPage()    {
   ];
 
   const subjects = [
-    'AI Services',
-    'IT Services',
-    'Services',
-    'Micro SAAS',
-    'Digital Transformation',
-    '5G Implementation',
+    'AI Services'
+    'IT Services'
+    'Services'
+    'Micro SAAS'
+    'Digital Transformation'
+    '5G Implementation'
     'Other'
   ];
 
@@ -139,11 +139,11 @@ export default function ContactPage()    {
                 onClick={() => {
                   setIsSubmitted(false);
                   setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
+                    name: ''
+                    email: ''
+                    company: ''
+                    phone: ''
+                    subject: ''
                     message: ''
                   });
                 }}

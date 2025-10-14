@@ -7,7 +7,7 @@ import {
   DocumentTextIcon,
   UserIcon,
   CogIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function PrivacyPage() {
   const lastUpdated = "January 15, 2024";

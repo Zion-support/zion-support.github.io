@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead'
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -14,11 +14,11 @@ import {
   EnvelopeIcon,
   CurrencyDollarIcon,
   StarIcon
-} from '@heroicons/react/24/outline';
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
-import { services, getServicesByCategory } from '../data/servicesData';
+} from '@heroicons/react/24/outline'
+import FuturisticBackground from '../components/FuturisticBackground'
+import NeonButton from '../components/NeonButton'
+import AnimatedCard from '../components/AnimatedCard'
+import { services, getServicesByCategory } from '../data/servicesData'
 
 export default function ServicesPage() {
   const categories = ['AI', 'SaaS', 'IT', 'Cybersecurity', 'Cloud', '5G', 'Blockchain', 'IoT'];

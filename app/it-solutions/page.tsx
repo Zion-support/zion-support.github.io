@@ -1,5 +1,5 @@
 
-'use client';
+'use client'
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -25,7 +25,7 @@ import {
   LightBulbIcon,
   WifiIcon,
   CircleStackIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function ITSolutionsPage()   {
   const itServices = [

@@ -9,7 +9,7 @@ import {
   UserIcon,
   VideoCameraIcon,
   PresentationChartBarIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function DemoPage() {
   const [selectedDemo, setSelectedDemo] = useState(0);

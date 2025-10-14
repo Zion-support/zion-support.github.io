@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client';
+'use client'
 const StructuredData: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">;
@@ -67,7 +67,7 @@ const StructuredData: React.FC = () => {
             Ready to Get Started?;
           </h2>;
           <p className="text-xl text-blue-100 mb-8">;
-            Let's discuss how our structured data';
+            Let's discuss how our structured data'
             services can help you achieve your goals.;
           </p>;
           <a;

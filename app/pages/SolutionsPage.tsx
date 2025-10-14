@@ -14,7 +14,7 @@ import {
   UserGroupIcon,
   BuildingOfficeIcon,
   AcademicCapIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function SolutionsPage() {
   const solutions = [

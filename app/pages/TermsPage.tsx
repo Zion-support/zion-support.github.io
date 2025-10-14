@@ -7,7 +7,7 @@ import {
   ExclamationTriangleIcon,
   CheckCircleIcon,
   UserIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function TermsPage() {
   const lastUpdated = "January 15, 2024";

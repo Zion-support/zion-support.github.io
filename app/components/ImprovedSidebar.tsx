@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client';
+'use client'
 const ImprovedSidebar: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">;
@@ -67,7 +67,7 @@ const ImprovedSidebar: React.FC = () => {
             Ready to Get Started?;
           </h2>;
           <p className="text-xl text-blue-100 mb-8">;
-            Let's discuss how our improved sidebar';
+            Let's discuss how our improved sidebar'
             services can help you achieve your goals.;
           </p>;
           <a;

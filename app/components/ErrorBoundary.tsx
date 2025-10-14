@@ -9,7 +9,7 @@ interface Props {
 
 interface State {
   hasError: boolean;
-error: Error | null;
+  error: Error | null;
   errorInfo: ErrorInfo | null;
 }
 
@@ -36,11 +36,14 @@ class ErrorBoundary extends Component<Props, State> {
     
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
+    }
+    
     this.setState({
       error,
       errorInfo
     });
-// Log error to console in development
+    
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }

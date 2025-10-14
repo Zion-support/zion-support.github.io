@@ -1,7 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from './components/SEO';
+import SEO from './components/SEO'
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -12,7 +12,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function HomePage()  {
   const structuredData = {
