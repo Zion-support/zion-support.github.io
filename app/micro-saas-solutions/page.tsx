@@ -67,16 +67,16 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Advanced filtering and drill-down capabilities",
         "Collaborative workspace with team sharing"
       ],
-      color: "from-blue-500 to-indigo-600",
-      price: "$299/month",
-      setupFee: "$1,500",
-      originalPrice: "$399/month",
+      color: "from-blue-5 0 0 to-indigo-6 0 0",
+      price: "$2 9 9/month",
+      setupFee: "$1,5 0 0",
+      originalPrice: "$3 9 9/month",
       discount: "25% OFF",
       benefits: ["40% faster insights", "Real-time updates", "Custom dashboards", "ROI tracking"],
       useCases: ["E-commerce analytics", "Marketing performance", "Financial reporting", "Operations monitoring"],
       href: "/ai-analytics-dashboard-pro",
       rating: 4.9,
-      reviews: 127,
+      reviews: 1 2 7,
       popularity: 95,
       isNew: false,
       isFeatured: true,
@@ -101,10 +101,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Brand voice consistency checking",
         "Content plagiarism detection and originality scoring"
       ],
-      color: "from-green-500 to-emerald-600",
-      price: "$199/month",
-      setupFee: "$800",
-      originalPrice: "$299/month",
+      color: "from-green-5 0 0 to-emerald-6 0 0",
+      price: "$1 9 9/month",
+      setupFee: "$8 0 0",
+      originalPrice: "$2 9 9/month",
       discount: "33% OFF",
       benefits: ["80% time savings", "SEO optimized", "Multi-language", "Brand consistency"],
       useCases: ["Blog management", "E-commerce content", "Marketing campaigns", "Documentation"],
@@ -133,18 +133,18 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Multi-channel support (email, chat, social, phone)",
         "Customer journey mapping and analytics",
         "Predictive churn detection and prevention",
-        "Integration with 100+ business tools"
+        "Integration with 1 0 0+ business tools"
       ],
-      color: "from-purple-500 to-pink-600",
-      price: "$149/month",
-      setupFee: "$600",
-      originalPrice: "$199/month",
+      color: "from-purple-5 0 0 to-pink-6 0 0",
+      price: "$1 4 9/month",
+      setupFee: "$6 0 0",
+      originalPrice: "$1 9 9/month",
       discount: "25% OFF",
       benefits: ["24/7 availability", "Instant responses", "95% satisfaction", "Predictive insights"],
       useCases: ["Customer service", "Lead qualification", "FAQ automation", "Support optimization"],
       href: "/ai-customer-success-platform",
       rating: 4.7,
-      reviews: 156,
+      reviews: 1 5 6,
       popularity: 92,
       isNew: false,
       isFeatured: true,
@@ -166,13 +166,13 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Advanced team collaboration tools",
         "Real-time progress tracking and reporting",
         "Risk assessment and mitigation recommendations",
-        "Integration with 200+ project tools",
+        "Integration with 2 0 0+ project tools",
         "Custom workflow automation and triggers"
       ],
-      color: "from-orange-500 to-red-600",
-      price: "$249/month",
-      setupFee: "$1,200",
-      originalPrice: "$349/month",
+      color: "from-orange-5 0 0 to-red-6 0 0",
+      price: "$2 4 9/month",
+      setupFee: "$1,2 0 0",
+      originalPrice: "$3 4 9/month",
       discount: "29% OFF",
       benefits: ["30% efficiency gain", "Predictive planning", "Risk mitigation", "Team collaboration"],
       useCases: ["Software development", "Marketing campaigns", "Event planning", "Construction"],
@@ -203,16 +203,16 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Conversion rate optimization tools",
         "Multi-channel sales analytics and reporting"
       ],
-      color: "from-cyan-500 to-blue-600",
-      price: "$399/month",
-      setupFee: "$2,000",
-      originalPrice: "$599/month",
+      color: "from-cyan-5 0 0 to-blue-6 0 0",
+      price: "$3 9 9/month",
+      setupFee: "$2,0 0 0",
+      originalPrice: "$5 9 9/month",
       discount: "33% OFF",
       benefits: ["25% sales increase", "Optimized pricing", "Reduced inventory costs", "Better targeting"],
       useCases: ["Online stores", "Marketplace optimization", "Retail analytics", "Dropshipping"],
       href: "/ai-ecommerce-intelligence",
       rating: 4.8,
-      reviews: 134,
+      reviews: 1 3 4,
       popularity: 90,
       isNew: false,
       isFeatured: true,
@@ -237,10 +237,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Employee engagement surveys and analytics",
         "Integration with payroll and benefits systems"
       ],
-      color: "from-teal-500 to-green-600",
-      price: "$179/month",
-      setupFee: "$900",
-      originalPrice: "$249/month",
+      color: "from-teal-5 0 0 to-green-6 0 0",
+      price: "$1 7 9/month",
+      setupFee: "$9 0 0",
+      originalPrice: "$2 4 9/month",
       discount: "28% OFF",
       benefits: ["50% faster hiring", "Reduced turnover", "Better performance", "Compliance automation"],
       useCases: ["Recruitment", "Performance management", "Employee development", "HR analytics"],
@@ -269,12 +269,12 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Investment analysis and portfolio optimization",
         "Fraud detection and prevention",
         "Tax optimization and planning",
-        "Integration with 500+ financial institutions"
+        "Integration with 5 0 0+ financial institutions"
       ],
-      color: "from-emerald-500 to-teal-600",
-      price: "$329/month",
-      setupFee: "$1,500",
-      originalPrice: "$449/month",
+      color: "from-emerald-5 0 0 to-teal-6 0 0",
+      price: "$3 2 9/month",
+      setupFee: "$1,5 0 0",
+      originalPrice: "$4 4 9/month",
       discount: "27% OFF",
       benefits: ["Accurate forecasting", "Risk mitigation", "Automated compliance", "Cost optimization"],
       useCases: ["Financial planning", "Investment analysis", "Risk management", "Accounting"],
@@ -302,19 +302,19 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Social media automation and scheduling",
         "ROI tracking and attribution modeling",
         "Customer journey mapping and automation",
-        "Integration with 300+ marketing tools",
+        "Integration with 3 0 0+ marketing tools",
         "Advanced analytics and reporting dashboard"
       ],
-      color: "from-pink-500 to-rose-600",
-      price: "$279/month",
-      setupFee: "$1,200",
-      originalPrice: "$399/month",
+      color: "from-pink-5 0 0 to-rose-6 0 0",
+      price: "$2 7 9/month",
+      setupFee: "$1,2 0 0",
+      originalPrice: "$3 9 9/month",
       discount: "30% OFF",
-      benefits: ["300% ROI increase", "Personalized campaigns", "Automated optimization", "Multi-channel"],
+      benefits: ["3 0 0% ROI increase", "Personalized campaigns", "Automated optimization", "Multi-channel"],
       useCases: ["Email marketing", "Social media", "Lead generation", "Customer retention"],
       href: "/ai-marketing-automation-pro",
       rating: 4.7,
-      reviews: 112,
+      reviews: 1 1 2,
       popularity: 89,
       isNew: false,
       isFeatured: true,
@@ -336,13 +336,13 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Real-time tracking and monitoring",
         "Cost analysis and optimization recommendations",
         "Supplier performance analytics",
-        "Integration with 100+ ERP and POS systems",
+        "Integration with 1 0 0+ ERP and POS systems",
         "Mobile app for warehouse management"
       ],
-      color: "from-violet-500 to-purple-600",
-      price: "$219/month",
-      setupFee: "$1,000",
-      originalPrice: "$299/month",
+      color: "from-violet-5 0 0 to-purple-6 0 0",
+      price: "$2 1 9/month",
+      setupFee: "$1,0 0 0",
+      originalPrice: "$2 9 9/month",
       discount: "27% OFF",
       benefits: ["30% cost reduction", "Zero stockouts", "Optimized inventory", "Supplier efficiency"],
       useCases: ["Retail management", "Manufacturing", "Supply chain", "Warehouse operations"],
@@ -364,19 +364,19 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       icon: DocumentTextIcon,
       category: 'productivity',
       features: [
-        "AI OCR with 99% accuracy for 100+ languages",
+        "AI OCR with 99% accuracy for 1 0 0+ languages",
         "Intelligent data extraction and validation",
         "Automated workflow and approval processes",
         "Document classification and organization",
         "Version control and collaboration tools",
         "Security compliance and audit trails",
-        "Integration with 200+ business applications",
+        "Integration with 2 0 0+ business applications",
         "Mobile document capture and processing"
       ],
-      color: "from-indigo-500 to-blue-600",
-      price: "$159/month",
-      setupFee: "$700",
-      originalPrice: "$229/month",
+      color: "from-indigo-5 0 0 to-blue-6 0 0",
+      price: "$1 5 9/month",
+      setupFee: "$7 0 0",
+      originalPrice: "$2 2 9/month",
       discount: "31% OFF",
       benefits: ["90% accuracy", "80% time savings", "Automated workflows", "Multi-language"],
       useCases: ["Document management", "Data entry", "Compliance processing", "Invoice processing"],
@@ -407,16 +407,16 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Advanced analytics and ROI tracking",
         "Crisis management and reputation monitoring"
       ],
-      color: "from-rose-500 to-pink-600",
-      price: "$129/month",
-      setupFee: "$500",
-      originalPrice: "$179/month",
+      color: "from-rose-5 0 0 to-pink-6 0 0",
+      price: "$1 2 9/month",
+      setupFee: "$5 0 0",
+      originalPrice: "$1 7 9/month",
       discount: "28% OFF",
-      benefits: ["200% engagement increase", "Automated posting", "Optimized timing", "Brand protection"],
+      benefits: ["2 0 0% engagement increase", "Automated posting", "Optimized timing", "Brand protection"],
       useCases: ["Social media marketing", "Brand management", "Community building", "Crisis management"],
       href: "/ai-social-media-intelligence",
       rating: 4.5,
-      reviews: 145,
+      reviews: 1 4 5,
       popularity: 88,
       isNew: false,
       isFeatured: false,
@@ -438,19 +438,19 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Advanced segmentation and targeting",
         "Performance analytics and ROI tracking",
         "Deliverability optimization and monitoring",
-        "Integration with 150+ email platforms",
+        "Integration with 1 5 0+ email platforms",
         "Compliance and GDPR management"
       ],
-      color: "from-amber-500 to-orange-600",
+      color: "from-amber-5 0 0 to-orange-6 0 0",
       price: "$99/month",
-      setupFee: "$400",
-      originalPrice: "$149/month",
+      setupFee: "$4 0 0",
+      originalPrice: "$1 4 9/month",
       discount: "34% OFF",
       benefits: ["40% open rates", "Personalized content", "Optimized timing", "Better deliverability"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing", "Customer retention"],
       href: "/ai-email-intelligence",
       rating: 4.6,
-      reviews: 167,
+      reviews: 1 6 7,
       popularity: 91,
       isNew: false,
       isFeatured: false,
@@ -472,13 +472,13 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Business integrations and API access",
         "Real-time analytics and performance monitoring",
         "Voice biometrics and authentication",
-        "Integration with 300+ business applications",
+        "Integration with 3 0 0+ business applications",
         "Custom voice assistant development"
       ],
-      color: "from-violet-500 to-purple-600",
-      price: "$399/month",
-      setupFee: "$2,500",
-      originalPrice: "$599/month",
+      color: "from-violet-5 0 0 to-purple-6 0 0",
+      price: "$3 9 9/month",
+      setupFee: "$2,5 0 0",
+      originalPrice: "$5 9 9/month",
       discount: "33% OFF",
       benefits: ["95% accuracy", "24/7 availability", "Multi-language", "Custom training"],
       useCases: ["Customer service", "Voice commands", "Accessibility", "Voice commerce"],
@@ -509,10 +509,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Integration with 20+ video platforms",
         "Custom analytics dashboard and reporting"
       ],
-      color: "from-red-500 to-pink-600",
-      price: "$349/month",
-      setupFee: "$1,800",
-      originalPrice: "$499/month",
+      color: "from-red-5 0 0 to-pink-6 0 0",
+      price: "$3 4 9/month",
+      setupFee: "$1,8 0 0",
+      originalPrice: "$4 9 9/month",
       discount: "30% OFF",
       benefits: ["Real-time insights", "Automated analysis", "Performance boost", "Engagement optimization"],
       useCases: ["Video marketing", "Content optimization", "Audience analysis", "Live streaming"],
@@ -543,10 +543,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Integration with legal databases",
         "Client communication and reporting tools"
       ],
-      color: "from-slate-500 to-gray-600",
-      price: "$599/month",
-      setupFee: "$3,000",
-      originalPrice: "$799/month",
+      color: "from-slate-5 0 0 to-gray-6 0 0",
+      price: "$5 9 9/month",
+      setupFee: "$3,0 0 0",
+      originalPrice: "$7 9 9/month",
       discount: "25% OFF",
       benefits: ["90% time savings", "Risk reduction", "Compliance assurance", "Automated research"],
       useCases: ["Legal firms", "Contract management", "Compliance", "Legal research"],
@@ -577,10 +577,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Property listing optimization",
         "Integration with MLS and property databases"
       ],
-      color: "from-emerald-500 to-teal-600",
-      price: "$279/month",
-      setupFee: "$1,500",
-      originalPrice: "$399/month",
+      color: "from-emerald-5 0 0 to-teal-6 0 0",
+      price: "$2 7 9/month",
+      setupFee: "$1,5 0 0",
+      originalPrice: "$3 9 9/month",
       discount: "30% OFF",
       benefits: ["Accurate valuations", "Market insights", "Lead generation", "Investment optimization"],
       useCases: ["Real estate agents", "Property management", "Investment analysis", "Market research"],
@@ -611,10 +611,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Integration with EHR and health systems",
         "Privacy-compliant data processing"
       ],
-      color: "from-green-500 to-emerald-600",
-      price: "$799/month",
-      setupFee: "$4,000",
-      originalPrice: "$1,199/month",
+      color: "from-green-5 0 0 to-emerald-6 0 0",
+      price: "$7 9 9/month",
+      setupFee: "$4,0 0 0",
+      originalPrice: "$1,1 9 9/month",
       discount: "33% OFF",
       benefits: ["Improved outcomes", "Risk reduction", "Cost savings", "Better diagnostics"],
       useCases: ["Hospitals", "Clinics", "Health systems", "Medical research"],
@@ -642,13 +642,13 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Supplier performance monitoring",
         "Risk assessment and mitigation",
         "Real-time tracking and visibility",
-        "Integration with 200+ logistics systems",
+        "Integration with 2 0 0+ logistics systems",
         "Sustainability and carbon footprint tracking"
       ],
-      color: "from-blue-500 to-indigo-600",
-      price: "$449/month",
-      setupFee: "$2,200",
-      originalPrice: "$649/month",
+      color: "from-blue-5 0 0 to-indigo-6 0 0",
+      price: "$4 4 9/month",
+      setupFee: "$2,2 0 0",
+      originalPrice: "$6 4 9/month",
       discount: "31% OFF",
       benefits: ["20% cost reduction", "Optimized routes", "Risk mitigation", "Sustainability"],
       useCases: ["Logistics", "Manufacturing", "Retail", "Transportation"],
@@ -679,10 +679,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Real-time monitoring and alerts",
         "Compliance and reporting automation"
       ],
-      color: "from-yellow-500 to-orange-600",
-      price: "$329/month",
-      setupFee: "$1,800",
-      originalPrice: "$449/month",
+      color: "from-yellow-5 0 0 to-orange-6 0 0",
+      price: "$3 2 9/month",
+      setupFee: "$1,8 0 0",
+      originalPrice: "$4 4 9/month",
       discount: "27% OFF",
       benefits: ["30% energy savings", "Cost reduction", "Sustainability", "Predictive maintenance"],
       useCases: ["Manufacturing", "Buildings", "Utilities", "Renewable energy"],
@@ -710,13 +710,13 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Risk scoring and assessment",
         "Transaction analysis and validation",
         "Compliance reporting and audit trails",
-        "Integration with 500+ payment systems",
+        "Integration with 5 0 0+ payment systems",
         "Custom rule engine and configuration"
       ],
-      color: "from-red-500 to-rose-600",
-      price: "$499/month",
-      setupFee: "$2,500",
-      originalPrice: "$699/month",
+      color: "from-red-5 0 0 to-rose-6 0 0",
+      price: "$4 9 9/month",
+      setupFee: "$2,5 0 0",
+      originalPrice: "$6 9 9/month",
       discount: "29% OFF",
       benefits: ["99.9% accuracy", "Real-time detection", "Cost savings", "Compliance"],
       useCases: ["Banking", "E-commerce", "Financial services", "Payment processing"],
@@ -743,20 +743,20 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Progress tracking and analytics",
         "Certification and credential management",
         "Gamification and engagement tools",
-        "Integration with 100+ learning platforms",
+        "Integration with 1 0 0+ learning platforms",
         "Mobile learning and offline capabilities",
         "Instructor tools and course management"
       ],
-      color: "from-indigo-500 to-purple-600",
-      price: "$199/month",
-      setupFee: "$1,000",
-      originalPrice: "$299/month",
+      color: "from-indigo-5 0 0 to-purple-6 0 0",
+      price: "$1 9 9/month",
+      setupFee: "$1,0 0 0",
+      originalPrice: "$2 9 9/month",
       discount: "33% OFF",
       benefits: ["Personalized learning", "Better outcomes", "Engagement boost", "Skill tracking"],
       useCases: ["Education", "Corporate training", "Online courses", "Professional development"],
       href: "/ai-learning-intelligence",
       rating: 4.6,
-      reviews: 127,
+      reviews: 1 2 7,
       popularity: 83,
       isNew: false,
       isFeatured: false,
@@ -778,13 +778,13 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Code quality analysis and improvement",
         "Test generation and optimization",
         "Quality metrics and reporting",
-        "Integration with 150+ development tools",
+        "Integration with 1 5 0+ development tools",
         "Continuous integration and deployment"
       ],
-      color: "from-teal-500 to-cyan-600",
-      price: "$379/month",
-      setupFee: "$1,900",
-      originalPrice: "$549/month",
+      color: "from-teal-5 0 0 to-cyan-6 0 0",
+      price: "$3 7 9/month",
+      setupFee: "$1,9 0 0",
+      originalPrice: "$5 4 9/month",
       discount: "31% OFF",
       benefits: ["90% test coverage", "Faster delivery", "Quality improvement", "Automated testing"],
       useCases: ["Software development", "Manufacturing", "Quality control", "DevOps"],
@@ -815,10 +815,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Integration with 50+ event platforms",
         "Mobile app for attendees and organizers"
       ],
-      color: "from-pink-500 to-rose-600",
-      price: "$249/month",
-      setupFee: "$1,200",
-      originalPrice: "$349/month",
+      color: "from-pink-5 0 0 to-rose-6 0 0",
+      price: "$2 4 9/month",
+      setupFee: "$1,2 0 0",
+      originalPrice: "$3 4 9/month",
       discount: "29% OFF",
       benefits: ["Better engagement", "Optimized planning", "Success metrics", "Networking boost"],
       useCases: ["Conferences", "Webinars", "Corporate events", "Trade shows"],
@@ -846,13 +846,13 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Security monitoring and alerting",
         "Compliance and audit management",
         "Penetration testing and assessment",
-        "Integration with 200+ security tools",
+        "Integration with 2 0 0+ security tools",
         "24/7 security operations center"
       ],
-      color: "from-red-500 to-orange-600",
-      price: "$699/month",
-      setupFee: "$3,500",
-      originalPrice: "$999/month",
+      color: "from-red-5 0 0 to-orange-6 0 0",
+      price: "$6 9 9/month",
+      setupFee: "$3,5 0 0",
+      originalPrice: "$9 9 9/month",
       discount: "30% OFF",
       benefits: ["99.9% threat detection", "Automated response", "Compliance assurance", "24/7 monitoring"],
       useCases: ["Enterprise security", "Compliance", "Threat management", "Security operations"],
@@ -878,15 +878,15 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Real-time data analytics and insights",
         "Predictive maintenance and optimization",
         "Device health monitoring and alerts",
-        "Integration with 1000+ IoT protocols",
+        "Integration with 10 0 0+ IoT protocols",
         "Edge computing and processing",
         "Security and compliance management",
         "Custom dashboard and reporting"
       ],
-      color: "from-purple-500 to-indigo-600",
-      price: "$549/month",
-      setupFee: "$2,800",
-      originalPrice: "$799/month",
+      color: "from-purple-5 0 0 to-indigo-6 0 0",
+      price: "$5 4 9/month",
+      setupFee: "$2,8 0 0",
+      originalPrice: "$7 9 9/month",
       discount: "31% OFF",
       benefits: ["Predictive maintenance", "Device optimization", "Cost reduction", "Real-time insights"],
       useCases: ["Smart cities", "Manufacturing", "Agriculture", "Healthcare IoT"],
@@ -927,7 +927,7 @@ import { Helmet } from 'react-helmet-async';
 import { Target, Rocket } from 'lucide-react';
 
 const MicroSaasSolutionsPage: React.FC = () => {
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d 0 5
   return (
     <>
       <Helmet>
@@ -943,37 +943,36 @@ const MicroSaasSolutionsPage: React.FC = () => {
         <meta name="twitter:description" content="25+ AI-powered micro SaaS solutions to transform your business." />
       </Helmet>
       
-      <div className="min-h-screen bg-slate-900 text-white">
+      <div className="min-h-screen bg-slate-9 0 0 text-white">
         {/* Hero Section */}
         <section className="relativeoverflow-hidden py-20">
           {/* Animated Background */}
           <div className="absoluteinset-0 opacity-20">
-            <div className="w-fullh-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
-          </div>
+            </div>
           
 <<<<<<< HEAD
           {/* Floating Elements */}
-          <div className="absolutetop-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
-          <div className="absolutebottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
-          <div className="absolutetop-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
+          <div className="absolutetop-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-5 0 0 to-pink-5 0 0 rounded-full opacity-20 animate-pulse floating"></div>
+          <div className="absolutebottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-5 0 0 to-blue-5 0 0 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
+          <div className="absolutetop-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-5 0 0 to-rose-5 0 0 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
           
           <div className="relativez-10 container mx-auto px-4 text-center">
             <div className="max-w-4xlmx-auto">
               <h1 className="text-6xlmd:text-7xl font-bold mb-6 gradient-text neon-text">
                 Micro SaaS Solutions
               </h1>
-              <p className="text-xlmd:text-2xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xlmd:text-2xl text-gray-3 0 0 mb-8 leading-relaxed">
                 25+ AI-Powered Business Tools to Transform Your Operations
 =======
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Rocket className="w-12h-12 text-blue-400 mb-4" />
+            <div className="bg-white/1 0 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <Rocket className="w-1 2 h-12 text-blue-4 0 0 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Rapid Development</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-3 0 0">
                 Fast-track your SaaS product development with our expert team.
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d 0 5
               </p>
-              <p className="text-lgtext-gray-400 mb-12 max-w-3xl mx-auto">
+              <p className="text-lgtext-gray-4 0 0 mb-12 max-w-3xl mx-auto">
                 Discover our comprehensive suite of intelligent micro SaaS solutions designed to automate, 
                 optimize, and accelerate your business growth with cutting-edge AI technology.
               </p>
@@ -981,14 +980,14 @@ const MicroSaasSolutionsPage: React.FC = () => {
               <div className="flexflex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <Link 
                   to="/contact" 
-                  className="groupbg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect"
+                  className="groupbg-gradient-to-r from-purple-6 0 0 to-cyan-6 0 0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-7 0 0 hover:to-cyan-7 0 0 transition-all duration-3 0 0 hover-lift hover-glow flex items-center gap-2 glow-effect"
                 >
                   Get Started Today
                   <ArrowRightIcon className="w-5h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
                   to="/demo" 
-                  className="groupborder-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glass"
+                  className="groupborder-2 border-purple-4 0 0 text-purple-3 0 0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-4 0 0 hover:text-white transition-all duration-3 0 0 hover-lift hover-glow flex items-center gap-2 glass"
                 >
                   Schedule Demo
                   <ArrowRightIcon className="w-5h-5 group-hover:translate-x-1 transition-transform" />
@@ -998,20 +997,20 @@ const MicroSaasSolutionsPage: React.FC = () => {
               {/* Stats */}
               <div className="gridgrid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xlmd:text-4xl font-bold text-purple-400 mb-2">25+</div>
-                  <div className="text-gray-300text-sm md:text-base">AI Solutions</div>
+                  <div className="text-3xlmd:text-4xl font-bold text-purple-4 0 0 mb-2">25+</div>
+                  <div className="text-gray-30 0 text-sm md:text-base">AI Solutions</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xlmd:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                  <div className="text-gray-300text-sm md:text-base">Happy Clients</div>
+                  <div className="text-3xlmd:text-4xl font-bold text-cyan-4 0 0 mb-2">5 0 0+</div>
+                  <div className="text-gray-30 0 text-sm md:text-base">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xlmd:text-4xl font-bold text-green-400 mb-2">99.9%</div>
-                  <div className="text-gray-300text-sm md:text-base">Uptime</div>
+                  <div className="text-3xlmd:text-4xl font-bold text-green-4 0 0 mb-2">99.9%</div>
+                  <div className="text-gray-30 0 text-sm md:text-base">Uptime</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xlmd:text-4xl font-bold text-pink-400 mb-2">24/7</div>
-                  <div className="text-gray-300text-sm md:text-base">Support</div>
+                  <div className="text-3xlmd:text-4xl font-bold text-pink-4 0 0 mb-2">24/7</div>
+                  <div className="text-gray-30 0 text-sm md:text-base">Support</div>
                 </div>
               </div>
             </div>
@@ -1019,7 +1018,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
         </section>
 
         {/* Filters and Sorting */}
-        <section className="py-8bg-slate-800/50 border-b border-slate-700">
+        <section className="py-8bg-slate-8 0 0/50 border-b border-slate-7 0 0">
           <div className="container mx-auto px-4">
             <div className="flexflex-col lg:flex-row gap-6 items-center justify-between">
               {/* Category Filters */}
@@ -1028,10 +1027,10 @@ const MicroSaasSolutionsPage: React.FC = () => {
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-3 0 0 ${
                       selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white'
-                        : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
+                        ? 'bg-gradient-to-r from-purple-6 0 0 to-cyan-6 0 0 text-white'
+                        : 'bg-slate-7 0 0 text-gray-3 0 0 hover:bg-slate-6 0 0 hover:text-white'
                     }`}
                   >
                     {category.name} ({category.count})
@@ -1041,11 +1040,11 @@ const MicroSaasSolutionsPage: React.FC = () => {
 
               {/* Sorting */}
               <div className="flexitems-center gap-4">
-                <span className="text-gray-300text-sm">Sort by:</span>
+                <span className="text-gray-30 0 text-sm">Sort by:</span>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-slate-700text-white px-4 py-2 rounded-lg border border-slate-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="bg-slate-70 0 text-white px-4 py-2 rounded-lg border border-slate-6 0 0 focus:outline-none focus:ring-2 focus:ring-purple-5 0 0"
                 >
                   <option value="popularity">Popularity</option>
                   <option value="rating">Rating</option>
@@ -1064,55 +1063,55 @@ const MicroSaasSolutionsPage: React.FC = () => {
               {sortedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="groupbg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark relative overflow-hidden"
+                  className="groupbg-gradient-to-br from-slate-8 0 0 to-slate-7 0 0 p-8 rounded-xl border border-slate-6 0 0 hover:border-purple-5 0 0 transition-all duration-3 0 0 hover-lift hover-glow glass-dark relative overflow-hidden"
                 >
                   {/* Badges */}
                   <div className="absolutetop-4 right-4 flex flex-col gap-2">
                     {product.isNew && (
-                      <span className="bg-gradient-to-rfrom-green-500 to-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      <span className="bg-gradient-to-rfrom-green-5 0 0 to-emerald-5 0 0 text-white text-xs font-bold px-2 py-1 rounded-full">
                         NEW
                       </span>
                     )}
                     {product.isFeatured && (
-                      <span className="bg-gradient-to-rfrom-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      <span className="bg-gradient-to-rfrom-purple-5 0 0 to-pink-5 0 0 text-white text-xs font-bold px-2 py-1 rounded-full">
                         FEATURED
                       </span>
                     )}
                     {product.discount && (
-                      <span className="bg-gradient-to-rfrom-red-500 to-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      <span className="bg-gradient-to-rfrom-red-5 0 0 to-orange-5 0 0 text-white text-xs font-bold px-2 py-1 rounded-full">
                         {product.discount}
                       </span>
                     )}
                   </div>
 
                   {/* Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-1 1 0 transition-transform floating`}>
                     <product.icon className="w-8h-8 text-white" />
                   </div>
 
                   {/* Title and Description */}
-                  <h3 className="text-2xlfont-bold text-white mb-4 gradient-text group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-2xlfont-bold text-white mb-4 gradient-text group-hover:text-purple-4 0 0 transition-colors">
                     {product.title}
                   </h3>
-                  <p className="text-gray-300mb-6 leading-relaxed">
+                  <p className="text-gray-30 0 mb-6 leading-relaxed">
                     {product.description}
                   </p>
 
                   {/* Features */}
                   <div className="mb-6">
                     <h4 className="text-whitefont-semibold mb-3 flex items-center gap-2">
-                      <SparklesIcon className="w-4h-4 text-purple-400" />
+                      <SparklesIcon className="w-4h-4 text-purple-4 0 0" />
                       Key Features
                     </h4>
                     <ul className="space-y-2">
                       {product.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="text-gray-300text-sm flex items-center gap-2">
-                          <CheckCircleIcon className="w-4h-4 text-green-400 flex-shrink-0" />
+                        <li key={index} className="text-gray-30 0 text-sm flex items-center gap-2">
+                          <CheckCircleIcon className="w-4h-4 text-green-4 0 0 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                       {product.features.length > 4 && (
-                        <li className="text-purple-400text-sm font-medium">
+                        <li className="text-purple-40 0 text-sm font-medium">
                           +{product.features.length - 4} more features
                         </li>
                       )}
@@ -1122,14 +1121,14 @@ const MicroSaasSolutionsPage: React.FC = () => {
                   {/* Benefits */}
                   <div className="mb-6">
                     <h4 className="text-whitefont-semibold mb-3 flex items-center gap-2">
-                      <BoltIcon className="w-4h-4 text-yellow-400" />
+                      <BoltIcon className="w-4h-4 text-yellow-4 0 0" />
                       Benefits
                     </h4>
                     <div className="flexflex-wrap gap-2">
                       {product.benefits.map((benefit, index) => (
                         <span
                           key={index}
-                          className="bg-gradient-to-rfrom-purple-500/20 to-cyan-500/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30"
+                          className="bg-gradient-to-rfrom-purple-5 0 0/20 to-cyan-5 0 0/20 text-purple-3 0 0 text-xs px-3 py-1 rounded-full border border-purple-5 0 0/30"
                         >
                           {benefit}
                         </span>
@@ -1138,14 +1137,14 @@ const MicroSaasSolutionsPage: React.FC = () => {
                   </div>
 
                   {/* Pricing */}
-                  <div className="mb-6p-4 bg-slate-900/50 rounded-lg border border-slate-600">
+                  <div className="mb-6p-4 bg-slate-9 0 0/50 rounded-lg border border-slate-6 0 0">
                     <div className="flexitems-center justify-between mb-2">
                       <span className="text-2xlfont-bold text-white">{product.price}</span>
                       {product.originalPrice && (
-                        <span className="text-gray-400line-through text-sm">{product.originalPrice}</span>
+                        <span className="text-gray-40 0 line-through text-sm">{product.originalPrice}</span>
                       )}
                     </div>
-                    <div className="text-gray-300text-sm">
+                    <div className="text-gray-30 0 text-sm">
                       Setup fee: {product.setupFee}
                     </div>
                   </div>
@@ -1159,17 +1158,17 @@ const MicroSaasSolutionsPage: React.FC = () => {
                             key={i}
                             className={`w-4 h-4 ${
                               i < Math.floor(product.rating)
-                                ? 'text-yellow-400 fill-current'
-                                : 'text-gray-400'
+                                ? 'text-yellow-4 0 0 fill-current'
+                                : 'text-gray-4 0 0'
                             }`}
                           />
                         ))}
                       </div>
-                      <span className="text-gray-300text-sm">
+                      <span className="text-gray-30 0 text-sm">
                         {product.rating} ({product.reviews} reviews)
                       </span>
                     </div>
-                    <div className="text-gray-400text-sm">
+                    <div className="text-gray-40 0 text-sm">
                       {product.popularity}% popular
                     </div>
                   </div>
@@ -1178,7 +1177,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                   <div className="flexflex-col gap-3">
                     <Link
                       to={product.href}
-                      className="w-fullbg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105"
+                      className="w-fullbg-gradient-to-r from-purple-6 0 0 to-cyan-6 0 0 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-7 0 0 hover:to-cyan-7 0 0 transition-all duration-3 0 0 flex items-center justify-center gap-2 group-hover:scale-1 0 5"
                     >
                       Learn More
                       <ArrowRightIcon className="w-4h-4 group-hover:translate-x-1 transition-transform" />
@@ -1189,7 +1188,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                         href={product.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors flex items-center justify-center gap-2"
+                        className="flex-1bg-slate-7 0 0 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-6 0 0 transition-colors flex items-center justify-center gap-2"
                       >
                         <EyeIcon className="w-4h-4" />
                         Demo
@@ -1198,7 +1197,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                         href={product.documentationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors flex items-center justify-center gap-2"
+                        className="flex-1bg-slate-7 0 0 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-6 0 0 transition-colors flex items-center justify-center gap-2"
                       >
                         <DocumentTextIcon className="w-4h-4" />
                         Docs
@@ -1211,7 +1210,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                     {product.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="text-gray-400text-xs px-2 py-1 bg-slate-800 rounded border border-slate-600"
+                        className="text-gray-40 0 text-xs px-2 py-1 bg-slate-8 0 0 rounded border border-slate-6 0 0"
                       >
                         {tag}
                       </span>
@@ -1224,27 +1223,27 @@ const MicroSaasSolutionsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+        <section className="py-2 0 bg-gradient-to-r from-purple-9 0 0/30 to-cyan-9 0 0/30">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-4xlmx-auto">
               <h2 className="text-4xlmd:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-3 0 0 mb-8">
                 Choose from our comprehensive suite of AI-powered micro SaaS solutions 
                 and start your digital transformation journey today.
               </p>
               <div className="flexflex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-rfrom-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                  className="bg-gradient-to-rfrom-purple-6 0 0 to-cyan-6 0 0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-7 0 0 hover:to-cyan-7 0 0 transition-all duration-3 0 0 transform hover:scale-1 0 5 flex items-center justify-center gap-2"
                 >
                   Get Started Today
                   <ArrowRightIcon className="w-5h-5" />
                 </Link>
                 <Link
                   to="/pricing"
-                  className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-9 0 0 transition-all duration-3 0 0 flex items-center justify-center gap-2"
                 >
                   View Pricing
                   <CurrencyDollarIcon className="w-5h-5" />
@@ -1254,7 +1253,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 
@@ -1262,7 +1261,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
 export default MicroSaaSSolutionsPage;
 =======
 export default MicroSaasSolutionsPage;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d 0 5
 
         </div>
         </div>

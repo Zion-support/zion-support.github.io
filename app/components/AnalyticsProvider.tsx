@@ -10,7 +10,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
-    throw new Error(&apos;useAnalytics must be used within an AnalyticsProvider&apos;);
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
 };
@@ -28,8 +28,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const trackPageView = (pageName: string) => {
-    if (process.env.NODE_ENV === &apos;development&apos;) {
-      console.log(&apos;Page View:&apos;, pageName);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Page View:', pageName);
     }
     // TODO: Implement actual page view tracking
   };

@@ -9,43 +9,42 @@ const NetworkDesignPage: React.FC = () => {
         <meta name="description" content="Professional Network design solutions and services" />
         <meta name="keywords" content="network, design" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-9 0 0 via-purple-9 0 0 to-slate-9 0 0">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Network design</h1>
-<p className="Professional Network design solutions and services
-               ">$2</p>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2  ">Expert Solutions
+              <div className="bg-blue-50 border border-blue-2 0 0 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-9 0 0 mb-2  ">Expert Solutions
                 </h3>
-                <p className="text-blue-700   ">Our team of experts delivers cutting-edge solutions.
+                <p className="text-blue-7 0 0   ">Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2  ">Custom Implementation
+              <div className="bg-green-50 border border-green-2 0 0 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-9 0 0 mb-2  ">Custom Implementation
                 </h3>
-                <p className="text-green-700   ">Tailored implementations for your specific requirements.
+                <p className="text-green-7 0 0   ">Tailored implementations for your specific requirements.
                 </p>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2  ">24/7 Support
+              <div className="bg-purple-50 border border-purple-2 0 0 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-9 0 0 mb-2  ">24/7 Support
                 </h3>
-                <p className="text-purple-700   ">Round-the-clock support for all your needs.
+                <p className="text-purple-7 0 0   ">Round-the-clock support for all your needs.
                 </p>
               </div>
             </div>
         </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2  ">Custom Implementation
+              <div className="bg-green-50 border border-green-2 0 0 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-9 0 0 mb-2  ">Custom Implementation
                 </h3>
-                <p className="text-green-700   ">Tailored implementations for your specific requirements.
+                <p className="text-green-7 0 0   ">Tailored implementations for your specific requirements.
                 </p>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2  ">24/7 Support
+              <div className="bg-purple-50 border border-purple-2 0 0 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-9 0 0 mb-2  ">24/7 Support
                 </h3>
-                <p className="text-purple-700   ">Round-the-clock support for all your needs.
+                <p className="text-purple-7 0 0   ">Round-the-clock support for all your needs.
                 </p>
               </div>
         </div>
@@ -54,7 +53,7 @@ const NetworkDesignPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    
   );
 }
 export default NetworkDesignPage;

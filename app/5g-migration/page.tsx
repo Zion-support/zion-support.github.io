@@ -28,10 +28,10 @@ title="5G Migration Services - Zion Tech Group"
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold text-gray-9 0 0 mb-6">
             5G Migration Services
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-6 0 0 max-w-3xl mx-auto">
             Migrate to 5G technology with minimal disruption using our proven migration strategies.
           </p>
         </div>
@@ -40,17 +40,17 @@ title="5G Migration Services - Zion Tech Group"
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-8">
               <div className="flexitems-center mb-4">
-                <CheckCircle className="h-8w-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">
+                <CheckCircle className="h-8w-8 text-blue-6 0 0 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-9 0 0">
                   {service.title}
                 </h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-6 0 0 mb-6">
                 {service.description}
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flex items-center text-blue-6 0 0 hover:text-blue-8 0 0 font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2h-4 w-4" />
@@ -62,7 +62,7 @@ title="5G Migration Services - Zion Tech Group"
         <div className="text-center">
           <Link 
             to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-6 0 0 hover:bg-blue-7 0 0"
           >
             Get Started Today
             <ArrowRight className="ml-2h-5 w-5" />
