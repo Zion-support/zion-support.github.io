@@ -1,21 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const BlogPage: React.FC = () => {
+interface BlogPageProps {
+  className?: string;
+}
+
+export default function BlogPage({ className = '' }: BlogPageProps) {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>BlogPage - Zion Tech Group</title>
-        <meta name="description" content="Professional blogpage services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">BlogPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
-      </div>
-    </React.Fragment>
+    <div className={`${className}`}>
+      <h2>BlogPage</h2>
+      <p>Component content goes here.</p>
+    </div>
   );
-};
-
-export default BlogPage;
+}

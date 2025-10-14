@@ -1,21 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const AIServicesPage: React.FC = () => {
+interface AIServicesPageProps {
+  className?: string;
+}
+
+export default function AIServicesPage({ className = '' }: AIServicesPageProps) {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>AIServicesPage - Zion Tech Group</title>
-        <meta name="description" content="Professional aiservicespage services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">AIServicesPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
-      </div>
-    </React.Fragment>
+    <div className={`${className}`}>
+      <h2>AIServicesPage</h2>
+      <p>Component content goes here.</p>
+    </div>
   );
-};
-
-export default AIServicesPage;
+}

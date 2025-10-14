@@ -1,5 +1,14 @@
-import {createContext} from 'react';
-;interface AnalyticsContextType {;}
-  trackEvent: "(eventNam,e: string", properties?: Record<string, any>) => void;""  trackPageView: "(pageNam,e: string) => void"};""const  createContext<AnalyticsContextType | undefined>(undefined);
-export type {AnalyticsContextType}
-export type {AnalyticsContextType};"
+import React from 'react';
+
+interface AnalyticsContextDefinitionProps {
+  className?: string;
+}
+
+export default function AnalyticsContextDefinition({ className = '' }: AnalyticsContextDefinitionProps) {
+  return (
+    <div className={`${className}`}>
+      <h2>AnalyticsContextDefinition</h2>
+      <p>Component content goes here.</p>
+    </div>
+  );
+}

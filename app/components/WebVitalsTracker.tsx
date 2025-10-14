@@ -1,19 +1,14 @@
-import React from  from 'react';
-"use client''
-'export default function ComponentsPage() {return null;}
-  return <div className="min-h-screen bg-gray-900 text-white py-20">"
-"        </div>
-      <div className="container mx-auto px-4">"
-"        </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>"
-"        <p className="text-gray-300 text-lg">"
-"        </p>
-          This page is under development.;
-        </p>
-      </div>
+import React from 'react';
+
+interface WebVitalsTrackerProps {
+  className?: string;
+}
+
+export default function WebVitalsTracker({ className = '' }: WebVitalsTrackerProps) {
+  return (
+    <div className={`${className}`}>
+      <h2>WebVitalsTracker</h2>
+      <p>Component content goes here.</p>
     </div>
   );
 }
-        </p></div></div>
-  );}
-}"'

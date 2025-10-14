@@ -1,21 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const OptimizedImage: React.FC = () => {
+interface OptimizedImageProps {
+  className?: string;
+}
+
+export default function OptimizedImage({ className = '' }: OptimizedImageProps) {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>OptimizedImage - Zion Tech Group</title>
-        <meta name="description" content="Professional optimizedimage services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">OptimizedImage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
-      </div>
-    </React.Fragment>
+    <div className={`${className}`}>
+      <h2>OptimizedImage</h2>
+      <p>Component content goes here.</p>
+    </div>
   );
-};
-
-export default OptimizedImage;
+}
