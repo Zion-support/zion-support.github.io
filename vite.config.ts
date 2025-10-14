@@ -6,8 +6,6 @@ import { resolve } from "path";
 export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
       // Enable JSX runtime
       jsxRuntime: "automatic",
     }),
