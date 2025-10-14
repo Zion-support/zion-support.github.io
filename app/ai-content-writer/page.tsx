@@ -129,7 +129,9 @@ const AIContentWriterPage: React.FC = () => {
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
-      />
+      >
+        <div></div>
+      </AccessibilityEnhancer>
       <SecurityEnhancer
         enableCSP={true}
         enableHSTS={true}
