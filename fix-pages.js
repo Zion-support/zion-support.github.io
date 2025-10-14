@@ -1,95 +1,78 @@
-#!/usr/bin/env node
-import fs from "fs"
-import { glob } from "glob"
-// Template for fixing broken page files
-const pageTemplate = (title, description) => `import React from "react"
-import { Helmet } from "react-helmet-async"
-export default function Page() {
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// List of page files that need fixing
+const pageFiles = [
+  'app/it-infrastructure/page.tsx',
+  'app/legal-document-manager/page.tsx',
+  'app/medical-records-manager/page.tsx',
+  'app/offline/page.tsx',
+  'app/online-learning-platform/page.tsx',
+  'app/property-management-ai/page.tsx',
+  'app/supply-chain-optimizer/page.tsx',
+  'app/web-development/page.tsx',
+  'app/webinars/page.tsx',
+  'app/whitepapers/page.tsx',
+  'app/zion-ai-accounting-suite/page.tsx',
+  'app/zion-ai-api-manager/page.tsx',
+  'app/zion-ai-chatbot-builder/page.tsx',
+  'app/zion-ai-data-warehouse/page.tsx',
+  'app/zion-ai-document-processor/page.tsx',
+  'app/zion-ai-email-optimizer/page.tsx',
+  'app/zion-ai-expense-tracker/page.tsx',
+  'app/zion-ai-lead-scoring/page.tsx',
+  'app/zion-ai-mobile-app-builder/page.tsx',
+  'app/zion-ai-social-listener/page.tsx',
+  'app/zion-ai-testing-automation/page.tsx',
+  'app/zion-ai-workflow-automation/page.tsx',
+  'app/zion-ecommerce-optimizer/page.tsx',
+  'app/zion-hr-assistant-pro/page.tsx'
+];
+
+// Function to get page name from file path
+function getPageName(filePath) {
+  const parts = filePath.split('/');
+  const fileName = parts[parts.length - 2]; // Get the directory name before page.tsx
+  return fileName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+}
+
+// Template for page components
+function createPageTemplate(pageName) {
+  return `"use client";
+import React from "react";
+
+export default function ${pageName.replace(/\s+/g, '')}Page() {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      <div>
-        <div>
-          <h1>${title}</h1>
-          <p>${description}</p>
-  )
-}`
-// Page configurations
-const pageConfigs = {
-  "ai-3d-generation": "AI 3D Generation",
-  "ai-analytics": "AI Analytics",
-  "ai-automation-platform": "AI Automation Platform",
-  "ai-automation-suite": "AI Automation Suite",
-  "ai-automation": "AI Automation",
-  "ai-chatbot-builder": "AI Chatbot Builder",
-  "ai-content-creation": "AI Content Creation",
-  "ai-content-generation": "AI Content Generation",
-  "ai-content-writer": "AI Content Writer",
-  "ai-customer-support-chatbot": "AI Customer Support Chatbot",
-  "ai-customer-support": "AI Customer Support",
-  "ai-cybersecurity": "AI Cybersecurity",
-  "ai-data-analytics": "AI Data Analytics",
-  "ai-data-mining-pro": "AI Data Mining Pro",
-  "ai-data-visualization": "AI Data Visualization",
-  "ai-ecommerce-solutions": "AI E-commerce Solutions",
-  "ai-education-platform": "AI Education Platform",
-  "ai-financial-analysis": "AI Financial Analysis",
-  "ai-fintech-solutions": "AI Fintech Solutions",
-  "ai-fintech": "AI Fintech",
-  "ai-fraud-detection-pro": "AI Fraud Detection Pro",
-  "ai-healthcare": "AI Healthcare",
-  "ai-language-translation": "AI Language Translation",
-  "ai-marketing": "AI Marketing",
-  "ai-mobile-app-builder": "AI Mobile App Builder",
-  "ai-mobile-app-development": "AI Mobile App Development",
-  "ai-mobile-builder": "AI Mobile Builder",
-  "ai-nlp-text-analysis": "AI NLP Text Analysis",
-  "ai-predictive-analytics": "AI Predictive Analytics",
-  "ai-project-management": "AI Project Management",
-  "ai-recommendation-engine": "AI Recommendation Engine",
-  "ai-sales-automation": "AI Sales Automation",
-  "ai-supply-chain-optimizer": "AI Supply Chain Optimizer",
-  "ai-time-series-forecasting": "AI Time Series Forecasting",
-  "ai-translation-service": "AI Translation Service",
-  "ai-voice-assistant": "AI Voice Assistant",
-  "ai-workflow-automation": "AI Workflow Automation",
-  "api-docs": "API Documentation",
-  "autonomous-systems": "Autonomous Systems",
-  "blockchain-web3": "Blockchain Web3",
-  "business-intelligence": "Business Intelligence",
-  "cloud-infrastructure-management": "Cloud Infrastructure Management",
-  "cloud-infrastructure": "Cloud Infrastructure",
-  "cloud-migration-pro": "Cloud Migration Pro",
-  "cloud-services": "Cloud Services",
-  "create-ad": "Create Ad",
+    <div className="min-h-screen bg-gray-900">
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">${pageName}</h1>
+          <p className="text-gray-300 text-xl mb-8">This page is under development.</p>
+        </div>
+      </div>
+    </div>
+  );
+}`;
 }
-async function fixPages() {
-  console.log("Fixing page files...")
-  const files = await glob("app/*/page.tsx")
-  let fixed = 0
-  for (const file of files) {
-    try {
-      const content = fs.readFileSync(file, "utf8")
-      // Check if file has syntax errors
-      if (
-        content.includes("'  return (") ||
-        content.includes("Unterminated string literal") ||
-        content.includes("JSX expressions must have one parent element")
-      ) {
-        const pageName = file.split("/")[1]
-        const title =
-          pageConfigs[pageName] ||
-          pageName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())
-        const description = `Professional ${title.toLowerCase()} services by Zion Tech Group.`
-        const newContent = pageTemplate(title, description)
-        fs.writeFileSync(file, newContent, "utf8")
-        console.log(`Fixed: ${file}`)
-        fixed++
-} catch (error) {
-      console.error(`Error processing ${file}:`, error.message)
-}
-  console.log(`Fixed ${fixed} page files`)
-}
-fixPages().catch(console.error)
+
+// Fix each page file
+pageFiles.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  const pageName = getPageName(filePath);
+  const content = createPageTemplate(pageName);
+  
+  try {
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+});
+
+console.log('Page fixing completed!');
