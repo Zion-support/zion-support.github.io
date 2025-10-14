@@ -1,11 +1,11 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 interface LazyWrapperProps {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
 }
 
-export default function LazyWrapper({ children }: LazyWrapperProps) {
+export default function LazyWrapper({ children, fallback }: LazyWrapperProps) {
   return (
     <div>
       {children}

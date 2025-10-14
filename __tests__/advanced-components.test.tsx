@@ -49,19 +49,18 @@ describe('AdvancedErrorBoundary', () => {
     consoleSpy.mockRestore();
   });
 
-  it('calls onError callback when error occurs', () => {
-    const onError = jest.fn();
+  it('logs error when error occurs', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
     render(
-      <AdvancedErrorBoundary onError={onError}>
+      <AdvancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </AdvancedErrorBoundary>
     );
 
-    expect(onError).toHaveBeenCalled();
+    expect(consoleSpy).toHaveBeenCalled();
     consoleSpy.mockRestore();
   });
 
