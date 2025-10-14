@@ -2,7 +2,7 @@ import React, { lazy, ComponentType } from 'react';
 import LazyWrapper from './LazyWrapper';
 
 // Higher-order component for lazy loading
-export function withLazyLoading<P = Record<string, never>>(
+export function withLazyLoading<P = Record<string, unknown>>(
   Component: ComponentType<P>,
   fallback?: React.ReactNode
 ) {
@@ -10,13 +10,13 @@ export function withLazyLoading<P = Record<string, never>>(
   
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
-      <LazyComponent {...(props as Record<string, unknown>)} />
+      <LazyComponent {...(props as any)} />
     </LazyWrapper>
   );
 }
 
 // Utility function to create lazy-loaded components
-export function createLazyComponent<P = Record<string, never>>(
+export function createLazyComponent<P = Record<string, unknown>>(
   importFunction: () => Promise<{ default: ComponentType<P> }>,
   fallback?: React.ReactNode
 ) {
@@ -24,7 +24,7 @@ export function createLazyComponent<P = Record<string, never>>(
   
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
-      <LazyComponent {...(props as Record<string, unknown>)} />
+      <LazyComponent {...(props as any)} />
     </LazyWrapper>
   );
 }

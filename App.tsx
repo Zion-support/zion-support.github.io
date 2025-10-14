@@ -4,13 +4,12 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import Navigation from './app/components/Navigation';
-
-import { AnalyticsProvider } from './app/contexts/AnalyticsContext';
+import Footer from './app/components/Footer';
+import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import SEOEnhancer from './app/components/SEOEnhancer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
-
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import LoadingStates from './app/components/LoadingStates';
 
@@ -21,6 +20,29 @@ import ServicesPage from './app/pages/ServicesPage';
 import ContactPage from './app/pages/ContactPage';
 
 const App = () => {
+  const handlePerformanceMetrics = (metrics: {
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number;
+  }) => {
+    // Log performance metrics in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', metrics);
+    }
+    
+    // Send to analytics in production
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'performance_metrics', {
+        custom_parameter_1: metrics.fcp,
+        custom_parameter_2: metrics.lcp,
+        custom_parameter_3: metrics.fid,
+        custom_parameter_4: metrics.cls
+      });
+    }
+  };
+
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -45,7 +67,9 @@ const App = () => {
                     "contactType": "customer service"
                   }
                 }}
-              />
+              >
+                <div></div>
+              </SEOEnhancer>
               <PerformanceMonitor onMetricsUpdate={handlePerformanceMetrics} />
               <Router>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
