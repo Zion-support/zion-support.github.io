@@ -1,11 +1,11 @@
 import React from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+  size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos;;
   text?: string;
   fullScreen?: boolean;
   className?: string;
-  color?: 'primary' | 'secondary' | 'white';
+  color?: &apos;primary&apos; | &apos;secondary&apos; | &apos;white&apos;;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -16,15 +16,15 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   color = 'primary'
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    sm: &apos;w-4 h-4&apos;,
+    md: &apos;w-8 h-8&apos;,
+    lg: &apos;w-12 h-12&apos;
   };
 
   const colorClasses = {
-    primary: 'border-purple-500',
-    secondary: 'border-cyan-500',
-    white: 'border-white'
+    primary: &apos;border-purple-500&apos;,
+    secondary: &apos;border-cyan-500&apos;,
+    white: &apos;border-white&apos;
   };
 
   const spinner = (
@@ -33,18 +33,16 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full animate-spin ${colorClasses[color]}`}
       />
       {text && (
-        <p className="mt-2 text-sm text-gray-300">
-          {text}
-        </p>
+<p className="{text}
+           ">$2</p>
       )}
     </div>
   );
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
-          {spinner}
+      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-centerz-50">
+        <div className="bg-slate-800 rounded-lg p-8shadow- xl  ">{spinner}
         </div>
       </div>
     );
@@ -53,4 +51,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return spinner;
 };
 
+      </div>
 export default LoadingSpinner;
