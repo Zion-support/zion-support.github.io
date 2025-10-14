@@ -1,20 +1,13 @@
 import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Target } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import PerformanceMonitor from './components/PerformanceMonitor';
-
-// Loading component for better UX
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-  </div>
-);
 
 function HomePage() {
   const features = [
@@ -123,4 +116,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
