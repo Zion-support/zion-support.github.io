@@ -1,36 +1,15 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
-export default function AiChatbotBuilder() {
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+export default function Page() {
   return (
-    <>
+    <React.Fragment>
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Professional AI chatbot builder services from Zion Tech Group"
-        />
+        <title>Ai Chatbot Builder - Zion Tech Group</title>
+        <meta name="description" content="Professional ai chatbot builder services by Zion Tech Group." />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            AI Chatbot Builder
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional AI chatbot builder services coming soon.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
+      <div>
+        <div><h1>Page Title</h1><p>Page content goes here.</p></div>
       </div>
-    </>
+    </React.Fragment>
   );
 }

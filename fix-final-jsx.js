@@ -1,99 +1,88 @@
-#!/usr/bin/env node
-
-import fs from "fs";
-import { glob } from "glob";
-
-// Final comprehensive fixes for remaining JSX issues
-const fixes = [
-  // Fix malformed className attributes
-  {
-    pattern: /className="hover:border-cyan-400\/50transition-all/g,
-    replacement: 'className="hover:border-cyan-400/50 transition-all',
-  },
-  {
-    pattern: /className="text-xlfont-semiboldtext-whiteml-3"/g,
-    replacement: 'className="text-xl font-semibold text-white ml-3"',
-  },
-
-  // Fix malformed JSX elements with self-closing tags that should be containers
-  {
-    pattern:
-      /<div key=\{index\} className="bg-slate-800\/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400\/50 transition-all duration-300" \/>\s*<div className=\{\`w-16 h-16 rounded-lg bg-gradient-to-r \$\{feature\.color\} flex items-center justify-center mb-4\`\} \/>\s*<div>\s*\{feature\.icon\}\s*<\/div>\s*<\/div>\s*<h3 className="text-xl font-semibold text-white mb-3">\{feature\.title\}<\/h3>\s*<p className="text-gray-300">\{feature\.description\}<\/p>\s*<\/div>/g,
-    replacement:
-      '<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">\n                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>\n                  {feature.icon}\n                </div>\n                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>\n                <p className="text-gray-300">{feature.description}</p>\n              </div>',
-  },
-
-  // Fix malformed use case elements
-  {
-    pattern:
-      /<div key=\{index\} className="bg-slate-800\/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700" \/>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*\{useCase\.icon\}\s*<h3 className="text-xl font-semibold text-white ml-3">\{useCase\.title\}<\/h3>\s*<\/div>/g,
-    replacement:
-      '<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">\n                <div className="flex items-center mb-4">\n                  {useCase.icon}\n                  <h3 className="text-xl font-semibold text-white ml-3">{useCase.title}</h3>\n                </div>\n                <p className="text-gray-300">{useCase.description}</p>\n              </div>',
-  },
-
-  // Fix malformed h2 elements
-  {
-    pattern:
-      /<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">([^<]+)\s*<\/h2>/g,
-    replacement:
-      '<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">$1</h2>',
-  },
-
-  // Fix malformed div elements with duplicate classes
-  {
-    pattern:
-      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">([^<]+)<\/h2>\s*<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">([^<]+)<\/p>\s*<\/div>/g,
-    replacement:
-      '<div className="text-center">\n            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">$1</h2>\n            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">$2</p>\n          </div>',
-  },
-
-  // Fix malformed grid layouts
-  {
-    pattern:
-      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*\{useCases\.map\(\(useCase, index\) => \(/g,
-    replacement:
-      '<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">\n            {useCases.map((useCase, index) => (',
-  },
-
-  // Fix missing closing tags
-  {
-    pattern: /(\s+)<\/div>\s*<\/div>\s*<\/section>/g,
-    replacement: "$1        </div>\n      </section>",
-  },
-
+import React from "react"
+import fs from "fs"
+import path from "path"
+import { fileURLToPath } from "url"
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Function to fix final JSX issues
+function fixFinalJSX(content) {
+  // Remove all extra quotes at the end of lines
+  content = content.replace(/"\s*$/gm, "")
+  // Fix malformed JSX structure
+  content = content.replace(/<title>([^<]*)<\/title>"/g, "<title>$1</title>")
+  content = content.replace(
+    /<h1[^>]*>([^<]*)<\/h1>""/g,
+    '<h1 className="text-4xl font-bold text-white mb-8">$1</h1>',
+  )
+  content = content.replace(
+    /<p[^>]*>([^<]*)<\/p>/g,
+    '<p className="text-gray-300 text-lg">$1</p>',
+  )
   // Fix malformed closing tags
-  {
-    pattern: /(\s+)<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g,
-    replacement: "$1        </div>\n      </section>",
-  },
-];
-
-// Find all TSX files in the app directory
-const files = await glob("app/**/*.tsx");
-
-console.log(`Found ${files.length} TSX files to process...`);
-
-let fixedCount = 0;
-
-for (const file of files) {
-  try {
-    let content = fs.readFileSync(file, "utf8");
-    let originalContent = content;
-
-    // Apply fixes
-    fixes.forEach((fix) => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content, "utf8");
-      fixedCount++;
-      console.log(`Fixed: ${file}`);
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-  }
+  content = content.replace(/<\/div><\/div>/g, "</div>\n      </div>")
+  content = content.replace(
+    /<\/React\.Fragment>\s*\);\s*"/g,
+    "</React.Fragment>\n  );",
+  )
+  content = content.replace(/}\s*""/g, "}")
+  // Fix missing closing Helmet tag
+  content = content.replace(
+    /<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/>\s*<div>/g,
+    '<Helmet>\n        <title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Helmet>\n      <div>',
+  )
+  // Fix malformed function structure
+  content = content.replace(
+    /export default function Page\(\) \{\s*return\s*\(\s*<React\.Fragment>\s*<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/><\/Helmet>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div><\/div>\s*<\/React\.Fragment>\s*\);\s*\}/g,
+    `export default function Page() {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>$1</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      <div>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-8">$2</h1>
+          <p className="text-gray-300 text-lg">$3</p>
+  )
+}`,
+  )
+  return content
 }
-
-console.log(`\nFixed ${fixedCount} files.`);
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8")
+    const fixedContent = fixFinalJSX(content)
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent)
+      console.log(`Fixed: ${filePath}`)
+      return true
+}
+    return false
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
+}
+// Function to recursively find and process all TypeScript/React files
+function processDirectory(dirPath) {
+  let fixedCount = 0
+  try {
+    const items = fs.readdirSync(dirPath)
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item)
+      const stat = fs.statSync(fullPath)
+      if (stat.isDirectory()) {
+        fixedCount += processDirectory(fullPath)
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
+        if (processFile(fullPath)) {
+          fixedCount++
+}
+} catch (error) {
+    console.error(`Error processing directory ${dirPath}:`, error.message)
+}
+  return fixedCount
+}
+// Main execution
+console.log("Starting final JSX fixes...")
+const fixedCount = processDirectory("./app")
+console.log(`Fixed ${fixedCount} files.`)

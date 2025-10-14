@@ -1,83 +1,167 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-#!/usr/bin/env node;
-// Function to fix common syntax errors in TSX files;
-function fixSyntaxErrors(content) {
-  // Fix invalid characters in import statements;
-  content = content.replace(/\\'/g, "'");
-  // Fix malformed JSX elements with missing spaces in className;
-    // Add space between concatenated class names;
-    return prefix + char1 + ' ' + char2;
+import { execSync } from 'child_process';
+
+console.log('🔧 Starting comprehensive syntax error fixing...');
+
+// Function to fix common JSX syntax errors
+function fixJSXSyntax(content) {
+  // Fix unterminated string literals
+  content = content.replace(/'([^']*)$/gm, (match, str) => {
+    if (str.includes('"') && !str.includes("'")) {
+      return `"${str}"`;
+    }
+    return match;
   });
-  // Fix malformed JSX closing tags;
-');
-  // Fix malformed JSX opening tags;
-  content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s*\/\s*>/g, '<$1 />');
-  // Fix malformed JSX with missing closing tags;
-  content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+className="[^"]*"\s*\/\s*>/g, '<$1 className="$2" />');
-  // Fix specific patterns found in the files;
-    return `className="${prefix}${char1} ${char2}`;
+
+  // Fix missing closing tags for React.Fragment
+  content = content.replace(/<React\.Fragment[^>]*>([^<]*(?:<(?!/React\.Fragment>)[^<]*)*?)(?=<[^/]|$)/g, (match, inner) => {
+    if (!inner.includes('</React.Fragment>')) {
+      return match + inner + '</React.Fragment>';
+    }
+    return match;
   });
-  // Fix specific malformed patterns;
-  content = content.replace(/className="([^"]*?)pt-20"/g, 'className="$1 pt-20"');
-  content = content.replace(/className="([^"]*?)py-12"/g, 'className="$1 py-12"');
-  content = content.replace(/className="([^"]*?)gap-8"/g, 'className="$1 gap-8"');
-  content = content.replace(/className="([^"]*?)mb-4"/g, 'className="$1 mb-4"');
-  content = content.replace(/className="([^"]*?)mb-6"/g, 'className="$1 mb-6"');
-  content = content.replace(/className="([^"]*?)mb-8"/g, 'className="$1 mb-8"');
-  content = content.replace(/className="([^"]*?)space-x-4"/g, 'className="$1 space-x-4"');
-  content = content.replace(/className="([^"]*?)space-y-2"/g, 'className="$1 space-y-2"');
-  content = content.replace(/className="([^"]*?)space-y-3"/g, 'className="$1 space-y-3"');
-  content = content.replace(/className="([^"]*?)text-center"/g, 'className="$1 text-center"');
-  content = content.replace(/className="([^"]*?)text-gray-300"/g, 'className="$1 text-gray-300"');
-  content = content.replace(/className="([^"]*?)text-gray-400"/g, 'className="$1 text-gray-400"');
-  content = content.replace(/className="([^"]*?)text-white"/g, 'className="$1 text-white"');
-  content = content.replace(/className="([^"]*?)flex"/g, 'className="$1 flex"');
-  content = content.replace(/className="([^"]*?)items-center"/g, 'className="$1 items-center"');
-  content = content.replace(/className="([^"]*?)justify-center"/g, 'className="$1 justify-center"');
-  content = content.replace(/className="([^"]*?)mx-auto"/g, 'className="$1 mx-auto"');
-  content = content.replace(/className="([^"]*?)w-fit"/g, 'className="$1 w-fit"');
-  content = content.replace(/className="([^"]*?)w-4"/g, 'className="$1 w-4"');
-  content = content.replace(/className="([^"]*?)h-4"/g, 'className="$1 h-4"');
-  content = content.replace(/className="([^"]*?)w-5"/g, 'className="$1 w-5"');
-  content = content.replace(/className="([^"]*?)h-5"/g, 'className="$1 h-5"');
-  content = content.replace(/className="([^"]*?)ml-2"/g, 'className="$1 ml-2"');
-  content = content.replace(/className="([^"]*?)mr-2"/g, 'className="$1 mr-2"');
-  content = content.replace(/className="([^"]*?)transition-colors"/g, 'className="$1 transition-colors"');
-  content = content.replace(/className="([^"]*?)hover:text-cyan-400"/g, 'className="$1 hover:text-cyan-400"');
+
+  // Fix missing closing tags for fragments
+  content = content.replace(/<>([^<]*(?:<(?!/>)[^<]*)*?)(?=<[^/]|$)/g, (match, inner) => {
+    if (!inner.includes('</>')) {
+      return match + inner + '</>';
+    }
+    return match;
+  });
+
+  // Fix missing closing div tags
+  content = content.replace(/<div[^>]*>([^<]*(?:<(?!/div>)[^<]*)*?)(?=<[^/]|$)/g, (match, inner) => {
+    if (!inner.includes('</div>')) {
+      return match + inner + '</div>';
+    }
+    return match;
+  });
+
+  // Fix malformed JSX attributes
+  content = content.replace(/className="([^"]*)"([^>]*>)/g, 'className="$1"$2');
+  content = content.replace(/className='([^']*)'([^>]*>)/g, 'className="$1"$2');
+
+  // Fix missing closing braces
+  content = content.replace(/\{([^}]*)$/gm, (match, inner) => {
+    if (inner.trim() && !inner.includes('}')) {
+      return match + '}';
+    }
+    return match;
+  });
+
+  // Fix malformed function declarations
+  content = content.replace(/export\s+default\s+function\s+(\w+)\s*\([^)]*\)\s*\{([^}]*)$/gm, (match, name, body) => {
+    if (body.trim() && !body.includes('}')) {
+      return match + '}';
+    }
+    return match;
+  });
+
   return content;
-// Function to process a single file;
-function processFile(filePath) {
+}
+
+// Function to fix specific file types
+function fixFile(filePath) {
   try {
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
+
     const content = fs.readFileSync(filePath, 'utf8');
-const fixedContent = fixSyntaxErrors(content);
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    const originalContent = content;
+    
+    let fixedContent = content;
+
+    // Fix based on file extension
+    if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
+      fixedContent = fixJSXSyntax(fixedContent);
+    }
+
+    // Fix common TypeScript errors
+    fixedContent = fixedContent
+      // Fix unterminated string literals
+      .replace(/'([^']*)$/gm, (match, str) => {
+        if (str && !str.includes("'") && !str.includes('"')) {
+          return `"${str}"`;
+        }
+        return match;
+      })
+      // Fix missing semicolons
+      .replace(/([^;}])\n(\s*[a-zA-Z_$])/g, '$1;\n$2')
+      // Fix missing closing parentheses
+      .replace(/\(([^)]*)$/gm, (match, inner) => {
+        if (inner.trim() && !inner.includes(')')) {
+          return match + ')';
+        }
+        return match;
+      });
+
+    if (fixedContent !== originalContent) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`✅ Fixed: ${filePath}`);
       return true;
+    }
+
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
-// Function to recursively find and process TSX files;
-function processDirectory(dirPath) {
-  let processedCount = 0;
+  }
+}
+
+// Function to get all TypeScript/JavaScript files
+function getAllTSFiles(dir) {
+  const files = [];
+  
   function walkDir(currentPath) {
     const items = fs.readdirSync(currentPath);
-    for (const item, of, items) {
+    
+    for (const item of items) {
       const fullPath = path.join(currentPath, item);
-const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         walkDir(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        if (processFile(fullPath)) {
-          processedCount++;
-  walkDir(dirPath);
-  return processedCount;
-// Main execution;
-console.log('Starting syntax error fixes...');
-const processedCount = processDirectory('./app');
-console.log(`Processed ${processedCount} files.`);
-// Also process the root EnhancedFooter.tsx;
-if (processFile('./EnhancedFooter.tsx')) {
-  console.log('Fixed: EnhancedFooter.tsx');
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  walkDir(dir);
+  return files;
+}
+
+// Main execution
+function main() {
+  console.log('📋 Finding all TypeScript/JavaScript files...');
+  const files = getAllTSFiles('/workspace');
+  
+  console.log(`📝 Found ${files.length} files to check`);
+
+  let fixedCount = 0;
+  let totalCount = files.length;
+
+  for (const file of files) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+
+  console.log(`\n📊 Fix Summary:`);
+  console.log(`   ✅ Successfully fixed: ${fixedCount}/${totalCount} files`);
+
+  // Run type check to see remaining errors
+  console.log('\n🔍 Running type check to verify fixes...');
+  try {
+    execSync('pnpm run type-check', { stdio: 'inherit' });
+    console.log('✅ Type check passed!');
+  } catch (error) {
+    console.log('⚠️  Some type errors remain, but many have been fixed');
+  }
+}
+
+main();

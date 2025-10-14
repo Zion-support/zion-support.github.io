@@ -1,47 +1,27 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import React from 'react';
+import Link from 'next/link';
 
-const NotFoundPage = () => {
+export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page Not Found | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="The page you are looking for could not be found"
-        />
-      </Helmet>
-
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Page Not Found
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            The page you are looking for could not be found
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Learn More
-            </Link>
-          </div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+        <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gray-100 rounded-full mb-4">
+          <svg className="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.009-5.824-2.709" />
+          </svg>
         </div>
+        <h1 className="text-4xl font-bold text-gray-900 mb-2">404</h1>
+        <h2 className="text-xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
+        <p className="text-gray-600 mb-6">
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+        <Link
+          href="/"
+          className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+        >
+          Go Home
+        </Link>
       </div>
     </div>
   );
-};
-
-export default NotFoundPage;
+}

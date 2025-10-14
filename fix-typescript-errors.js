@@ -1,154 +1,134 @@
 #!/usr/bin/env node
-
-import fs from "fs";
-import path from "path";
-import { glob } from "glob";
-
-// Common Lucide React icons used across pages
-const commonIcons = [
-  "ArrowRight",
-  "Brain",
-  "Shield",
-  "Zap",
-  "Globe",
-  "CheckCircle",
-  "Star",
-  "Phone",
-  "Mail",
-  "Clock",
-  "Target",
-  "BarChart3",
-  "TrendingUp",
-  "Settings",
-  "Users",
-  "DollarSign",
-  "BarChart",
-  "Cloud",
-  "Cpu",
-  "Database",
-  "Server",
-  "Layers",
-  "PieChart",
-  "Activity",
-  "Award",
-  "BookOpen",
-  "Briefcase",
-  "Building",
-  "Calendar",
-  "Camera",
-  "Code",
-  "Command",
-  "CreditCard",
-  "FileText",
-  "Gift",
-  "Heart",
-  "Home",
-  "Image",
-  "Laptop",
-  "Lock",
-  "MessageCircle",
-  "Monitor",
-  "Palette",
-  "PieChart",
-  "Play",
-  "Search",
-  "ShoppingCart",
-  "Smartphone",
-  "Tablet",
-  "Terminal",
-  "Truck",
-  "Wifi",
-];
-
-function fixPageFile(filePath) {
-  let content = fs.readFileSync(filePath, "utf8");
-  let modified = false;
-
-  // Remove unused React import if it's not used
-  if (
-    content.includes("import React from 'react';") &&
-    !content.includes("React.")
-  ) {
-    content = content.replace("import React from 'react';\n", "");
-    modified = true;
-  }
-
-  // Add missing Lucide React imports
-  const usedIcons = [];
-  commonIcons.forEach((icon) => {
-    if (content.includes(icon) && !content.includes(`import { ${icon}`)) {
-      usedIcons.push(icon);
-    }
-  });
-
-  if (usedIcons.length > 0) {
-    // Check if lucide-react is already imported
-    const lucideImportMatch = content.match(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/,
-    );
-
-    if (lucideImportMatch) {
-      // Add to existing import
-      const existingIcons = lucideImportMatch[1]
-        .split(",")
-        .map((i) => i.trim());
-      const allIcons = [...new Set([...existingIcons, ...usedIcons])];
-      content = content.replace(
-        lucideImportMatch[0],
-        `import { ${allIcons.join(", ")} } from 'lucide-react';`,
-      );
-    } else {
-      // Add new import
-      content = `import { ${usedIcons.join(", ")} } from 'lucide-react';\n${content}`;
-    }
-    modified = true;
-  }
-
-  // Fix missing variable declarations
-  if (
-    content.includes("chatbotFeatures") &&
-    !content.includes("const chatbotFeatures")
-  ) {
+import fs from "fs"
+// Function to fix App.tsx import and ErrorBoundary issues
+function fixAppTsx() {
+  try {
+    let content = fs.readFileSync("/workspace/App.tsx", "utf8")
+    // Fix AnalyticsProvider import
     content = content.replace(
-      /const EnhancedServicesShowcase/,
-      `const chatbotFeatures = [
-    { category: 'Core Features', items: ['Natural Language Processing', 'Multi-language Support', 'Context Awareness', 'Real-time Responses'] },
-    { category: 'Integration', items: ['API Integration', 'CRM Integration', 'Database Connectivity', 'Third-party Tools'] },
-    { category: 'Analytics', items: ['Conversation Analytics', 'Performance Metrics', 'User Insights', 'Custom Reports'] }
-  ];
-
-  const pricingPlans = [
-    { name: 'Starter', price: '$299', features: ['Basic chatbot', 'Email support', 'Standard templates'] },
-    { name: 'Professional', price: '$799', features: ['Advanced AI', 'Priority support', 'Custom integrations'] },
-    { name: 'Enterprise', price: '$1999', features: ['Full customization', '24/7 support', 'Dedicated manager'] }
-  ];
-
-  const testimonials = [
-    { name: 'Sarah Johnson', company: 'TechCorp', text: 'Amazing chatbot solution!' },
-    { name: 'Mike Chen', company: 'StartupXYZ', text: 'Increased customer satisfaction by 40%.' }
-  ];
-
-const EnhancedServicesShowcase`,
-    );
-    modified = true;
-  }
-
-  if (modified) {
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  }
+      /import AnalyticsProvider from '\.\/app\/components\/AnalyticsProvider';/,
+      "import { AnalyticsProvider } from './app/components/AnalyticsProvider';",
+    )
+    // Fix ErrorBoundary import and usage
+    content = content.replace(
+      /import CustomErrorBoundary from '\.\/app\/components\/ErrorBoundary';/,
+      "import ErrorBoundary from './app/components/ErrorBoundary';",
+    )
+    fs.writeFileSync("/workspace/App.tsx", content)
+    console.log("✅ Fixed App.tsx imports")
+  } catch (error) {
+    console.error("❌ Error fixing App.tsx:", error.message)
 }
-
+// Function to fix ResponsiveContainer.tsx
+function fixResponsiveContainer() {
+  try {
+    let content = fs.readFileSync(
+      "/workspace/app/components/ResponsiveContainer.tsx",
+      "utf8",
+    )
+    // Add the missing interface
+    const interfaceDefinition = `interface ResponsiveContainerProps {
+  children: React.ReactNode
+  className?: string
+  breakpoint?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+}
+`
+    // Insert the interface at the beginning after imports
+    content = content.replace(
+      /import React from 'react';\n/,
+      `import React from 'react';\n\n${interfaceDefinition}`,
+    )
+    fs.writeFileSync(
+      "/workspace/app/components/ResponsiveContainer.tsx",
+      content,
+    )
+    console.log("✅ Fixed ResponsiveContainer.tsx")
+  } catch (error) {
+    console.error("❌ Error fixing ResponsiveContainer.tsx:", error.message)
+}
+// Function to fix ServiceCard.tsx
+function fixServiceCard() {
+  try {
+    let content = fs.readFileSync(
+      "/workspace/app/components/ServiceCard.tsx",
+      "utf8",
+    )
+    // Add the missing interface
+    const interfaceDefinition = `interface ServiceCardProps {
+  title: string
+  description: string
+  icon?: React.ReactNode
+  className?: string
+  onClick?: () => void
+}
+`
+    // Insert the interface at the beginning after imports
+    content = content.replace(
+      /import React from 'react';\n/,
+      `import React from 'react';\n\n${interfaceDefinition}`,
+    )
+    fs.writeFileSync("/workspace/app/components/ServiceCard.tsx", content)
+    console.log("✅ Fixed ServiceCard.tsx")
+  } catch (error) {
+    console.error("❌ Error fixing ServiceCard.tsx:", error.message)
+}
+// Function to fix AnalyticsContext.tsx
+function fixAnalyticsContext() {
+  try {
+    let content = fs.readFileSync(
+      "/workspace/app/contexts/AnalyticsContext.tsx",
+      "utf8",
+    )
+    // Remove the setUserId reference
+    content = content.replace(/setUserId\([^)]+\);/g, "")
+    fs.writeFileSync("/workspace/app/contexts/AnalyticsContext.tsx", content)
+    console.log("✅ Fixed AnalyticsContext.tsx")
+  } catch (error) {
+    console.error("❌ Error fixing AnalyticsContext.tsx:", error.message)
+}
+// Function to fix page.tsx
+function fixPageTsx() {
+  try {
+    let content = fs.readFileSync("/workspace/app/page.tsx", "utf8")
+    // Fix the PagePage reference
+    content = content.replace(/PagePage/g, "Page")
+    fs.writeFileSync("/workspace/app/page.tsx", content)
+    console.log("✅ Fixed page.tsx")
+  } catch (error) {
+    console.error("❌ Error fixing page.tsx:", error.message)
+}
+// Function to fix zion-ai pages with multiple default exports
+function fixZionAiPages() {
+  const pages = [
+    "/workspace/app/zion-ai-analytics-pro/page.tsx",
+    "/workspace/app/zion-ai-crm-pro/page.tsx",
+    "/workspace/app/zion-ai-email-analyzer/page.tsx",
+    "/workspace/app/zion-ai-performance-optimizer/page.tsx",
+    "/workspace/app/zion-ai-social-media-manager/page.tsx",
+    "/workspace/app/zion-ai-voice-assistant-pro/page.tsx",
+  ]
+  for (const page of pages) {
+    try {
+      let content = fs.readFileSync(page, "utf8")
+      // Fix PagePage references and multiple default exports
+      content = content.replace(
+        /const PagePage = \(\) => \{/,
+        "export default function Page() {",
+      )
+      content = content.replace(/export default PagePage;/, "}")
+      content = content.replace(/PagePage/g, "Page")
+      fs.writeFileSync(page, content)
+      console.log(`✅ Fixed ${page}`)
+    } catch (error) {
+      console.error(`❌ Error fixing ${page}:`, error.message)
+}
+}
 // Main execution
-async function main() {
-  // Find all page.tsx files in the app directory
-  const pageFiles = await glob("app/**/page.tsx");
-
-  console.log(`Found ${pageFiles.length} page files to fix...`);
-
-  pageFiles.forEach(fixPageFile);
-
-  console.log("TypeScript errors fix completed!");
-}
-
-main().catch(console.error);
+console.log("🔧 Starting TypeScript error fixes...")
+fixAppTsx()
+fixResponsiveContainer()
+fixServiceCard()
+fixAnalyticsContext()
+fixPageTsx()
+fixZionAiPages()
+console.log("\n✅ TypeScript error fixes completed!")
