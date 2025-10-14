@@ -26,17 +26,21 @@ const Footer: React.FC = () => {
 
   const serviceCategories = [
     {
-      title: 'AI Solutions',
+      title: 'AI Services',
       icon: <Brain className="w-5 h-5 text-cyan-400" />,
       services: [
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
-        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+        { name: 'AI Voice Assistant Enterprise', href: '/ai-voice-assistant-enterprise' },
+        { name: 'AI Cybersecurity Platform', href: '/ai-cybersecurity-platform' },
+        { name: 'AI E-commerce Platform', href: '/ai-ecommerce-platform' },
+        { name: 'AI Healthcare Platform', href: '/ai-healthcare-platform' },
+        { name: 'AI Financial Platform', href: '/ai-financial-platform' },
+        { name: 'AI Education Platform', href: '/ai-education-platform' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
-        { name: 'AI Security Suite', href: '/ai-security-suite' },
-        { name: 'AI Customer Analytics Pro', href: '/ai-customer-analytics-pro' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
       ]
     },
     {
@@ -52,7 +56,7 @@ const Footer: React.FC = () => {
       ]
     },
     {
-      title: '5G Technology',
+      title: '5G Solutions',
       icon: <Wifi className="w-5 h-5 text-green-400" />,
       services: [
         { name: '5G Implementation', href: '/5g-implementation' },
@@ -67,14 +71,12 @@ const Footer: React.FC = () => {
       title: 'Micro SAAS',
       icon: <Cloud className="w-5 h-5 text-orange-400" />,
       services: [
-        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
         { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
-        { name: 'AI Customer Analytics Pro', href: '/ai-customer-analytics-pro' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
       ]
     }
   ];

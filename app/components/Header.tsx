@@ -28,27 +28,39 @@ const Header: React.FC = () => {
       icon: <Users className="w-4 h-4" />
     },
     {
-      name: 'Services',
-      href: '/services',
-      icon: <Code className="w-4 h-4" />
-    },
-    {
-      name: 'AI Solutions',
+      name: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+        { name: 'AI Voice Assistant Enterprise', href: '/ai-voice-assistant-enterprise' },
+        { name: 'AI Cybersecurity Platform', href: '/ai-cybersecurity-platform' },
+        { name: 'AI E-commerce Platform', href: '/ai-ecommerce-platform' },
+        { name: 'AI Healthcare Platform', href: '/ai-healthcare-platform' },
+        { name: 'AI Financial Platform', href: '/ai-financial-platform' },
+        { name: 'AI Education Platform', href: '/ai-education-platform' },
         { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
-        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-        { name: 'AI Database Solutions', href: '/ai-database-solutions' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
       ]
     },
     {
-      name: '5G Technology',
+      name: 'IT Services',
+      href: '/it-services',
+      icon: <Code className="w-4 h-4" />,
+      dropdown: [
+        { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'API Management', href: '/ai-api-management' },
+        { name: 'Database Solutions', href: '/database-solutions' },
+        { name: 'Security Suite', href: '/advanced-security-suite' },
+        { name: 'Performance Monitoring', href: '/performance-monitoring' },
+        { name: 'DevOps Solutions', href: '/devops-solutions' }
+      ]
+    },
+    {
+      name: '5G Solutions',
       href: '/5g-solutions',
       icon: <Wifi className="w-4 h-4" />,
       dropdown: [
@@ -71,19 +83,6 @@ const Header: React.FC = () => {
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
         { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '#',
-      icon: <Users className="w-4 h-4" />,
-      dropdown: [
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Support', href: '/support' },
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' }
       ]
     },
     {
