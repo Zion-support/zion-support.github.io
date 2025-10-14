@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from '"react"';
 const OperationalTrustScorecardsPage: React.FC = () => {
 
   return (
@@ -21,7 +22,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
           <p>A practical blueprint to ship reliable, safe, and cost‑effective AI
             by tracking reliability, safety, cost, and value in a single live
             scorecard.    Prevent    regressions with budgets, gates, and instant
-            rollback.</p>
+            rollback.</p></div></div></div>
           </div>
       </section>
 
@@ -32,7 +33,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
             <p>Enterprise AI fails without measurable trust. Scorecards unify
               KP    Is    across reliability (accuracy, grounding, latency), safety
               (policy adherence), cost (per task, per user), and value (business
-              outcomes) so leaders can make tradeoffs responsibly.</p>
+              outcomes) so leaders can make tradeoffs responsibly.</p></div></div></div>
             </div>
 
           <div>
@@ -53,14 +54,14 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               <li>
                 <strong className="text-white">Value   :</strong> conversion
                 uplift, time saved, NPS changes, $ ROI.
-              </ul>
+              </ul></div></div></div>
           </div>
 
           <div>
             <h2 className="text-2xl font-bold mb-3">Operational    Guardrails</h2>
             <p>Tie each KPI to budgets and routing rules. If reliability falls,
               route to safer tier; if cost exceeds budget, throttle usage; if
-              safety violations spike, auto-rollback to last known good state.</p>
+              safety violations spike, auto-rollback to last known good state.</p></div></div></div>
             </div>
         </section>
     </main>

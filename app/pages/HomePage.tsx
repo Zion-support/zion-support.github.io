@@ -1,6 +1,6 @@
-import React from "react
-import { Link    } from "react-router-dom
-import SEOHead from "../components/SEOHead
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react
+import { Link    } from" "react-router-dom
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import SEOHead from ""../components/SEOHead
 import { ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -13,11 +13,11 @@ import { ArrowRightIcon,
   RocketLaunchIcon,
   SparklesIcon,
   BoltIcon
-   } from "@heroicons/react/24/outline"
-import FuturisticBackground from "../components/FuturisticBackground
-import NeonButton from "../components/NeonButton
-import AnimatedCard from "../components/AnimatedCard
-import { services    } from "../data/servicesData
+   } from" "@heroicons/react/24/outline"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import FuturisticBackground from ""../components/FuturisticBackground
+import NeonButton from" "../components/NeonButton
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import AnimatedCard from ""../components/AnimatedCard
+import { services    } from" "../data/servicesData
 
 export default function HomePage()  {
 
@@ -43,8 +43,6 @@ const HomePage = () => {
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions
         structuredData={structuredData}
-      /></SEOHead>
-      <FuturisticBackground /></FuturisticBackground>
       {/* Hero Section */}"
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">"
         <div className="relative z-10 container mx-auto px-4 text-center">"
@@ -57,7 +55,7 @@ const HomePage = () => {
               <div className="flex items-center justify-center gap-4 mb-4">"
                 <SparklesIcon className="w-8 h-8 text-purple-400 animate-bounce" />"
                 <BoltIcon className="w-8 h-8 text-cyan-400 animate-bounce delay-100" />"
-                <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200" />"
+                <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200" />"</div></div></div>
               </div>
     </>
             </div>
@@ -78,16 +76,13 @@ const HomePage = () => {
               <NeonButton to="/services" variant="secondary" size="lg">"
                 Explore Services
                 <ArrowRightIcon className="w-5 h-5 ml-2" />"
-              </NeonButton>
+              </NeonButton></div></div></div>
             </div>
-          </div>
         </div>
       </section>
 
 
-                  </NeonButton>
                 </div>
-              </AnimatedCard>
             ))}
           </div>
           "
@@ -95,14 +90,13 @@ const HomePage = () => {
             <NeonButton to="/services" variant="primary" size="lg">"
               View All Services
               <ArrowRightIcon className="w-5 h-5 ml-2" />"
-            </NeonButton>
+            </NeonButton></div></div></div>
           </div>
-        </div>
       </section>
 
       {/* About Section */}"
       <section className="py-20 relative">"
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900"></div>"
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900"></div></div></div></div>"
         <div className="container mx-auto px-4 relative z-10">"
           <div className="max-w-6xl mx-auto">"
             <div className="text-center mb-16">"
@@ -113,24 +107,24 @@ const HomePage = () => {
                 With over 4 years of experience in cutting-edge technology solutions, 
                 we've helped businesses across various industries transform their operations '
                 and achieve unprecedented growth.
-              </p>
+              </p></div></div></div>
             </div>
             "
             <div className="grid md:grid-cols-3 gap-8 mb-16">"
               <AnimatedCard glowColor="purple" className="text-center">"
-                <div className="text-6xl font-bold text-purple-400 mb-4 animate-pulse">50+</div>"
-                <div className="text-xl text-gray-300 mb-2">Projects Completed</div>"
-                <div className="text-gray-400 text-sm">Successfully delivered across various industries</div>"
+                <div className="text-6xl font-bold text-purple-400 mb-4 animate-pulse">50+</div></div></div></div>"
+                <div className="text-xl text-gray-300 mb-2">Projects Completed</div></div></div></div>"
+                <div className="text-gray-400 text-sm">Successfully delivered across various industries</div></div></div></div>"
               </AnimatedCard>"
               <AnimatedCard glowColor="cyan" className="text-center">"
-                <div className="text-6xl font-bold text-cyan-400 mb-4 animate-pulse">25+</div>"
-                <div className="text-xl text-gray-300 mb-2">Happy Clients</div>"
-                <div className="text-gray-400 text-sm">Satisfied customers worldwide</div>"
+                <div className="text-6xl font-bold text-cyan-400 mb-4 animate-pulse">25+</div></div></div></div>"
+                <div className="text-xl text-gray-300 mb-2">Happy Clients</div></div></div></div>"
+                <div className="text-gray-400 text-sm">Satisfied customers worldwide</div></div></div></div>"
               </AnimatedCard>"
               <AnimatedCard glowColor="green" className="text-center">"
-                <div className="text-6xl font-bold text-green-400 mb-4 animate-pulse">99%</div>"
-                <div className="text-xl text-gray-300 mb-2">Success Rate</div>"
-                <div className="text-gray-400 text-sm">Projects delivered on time and within budget</div>"
+                <div className="text-6xl font-bold text-green-400 mb-4 animate-pulse">99%</div></div></div></div>"
+                <div className="text-xl text-gray-300 mb-2">Success Rate</div></div></div></div>"
+                <div className="text-gray-400 text-sm">Projects delivered on time and within budget</div></div></div></div>"
               </AnimatedCard>
             </div>
             "
@@ -138,15 +132,14 @@ const HomePage = () => {
               <NeonButton to="/about" variant="primary" size="lg">"
                 Learn More About Us
                 <ArrowRightIcon className="w-5 h-5 ml-2" />"
-              </NeonButton>
+              </NeonButton></div></div></div>
             </div>
-          </div>
         </div>
       </section>
 
       {/* Contact Section */}"
       <section className="py-20 relative">"
-        <div className="absolute inset-0 bg-slate-900"></div>"
+        <div className="absolute inset-0 bg-slate-900"></div></div></div></div>"
         <div className="container mx-auto px-4 relative z-10">"
           <div className="max-w-6xl mx-auto">"
             <div className="text-center mb-16">"
@@ -155,7 +148,7 @@ const HomePage = () => {
               </h2>"
               <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">"'
                 Let's discuss how our technology solutions can drive your business forward'
-              </p>
+              </p></div></div></div>
             </div>
             "
             <div className="grid md:grid-cols-3 gap-8 mb-16">"
@@ -176,7 +169,7 @@ const HomePage = () => {
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>"
                 <p className="text-gray-300 text-lg">Middletown, DE</p>"
                 <p className="text-gray-400 text-sm mt-2">364 E Main St STE 1008</p>"
-              </AnimatedCard>
+              </AnimatedCard></div></div></div>
             </div>
             "
             <div className="flex flex-col sm:flex-row gap-6 justify-center">"
@@ -187,9 +180,8 @@ const HomePage = () => {
               <NeonButton to="/demo" variant="secondary" size="lg">"
                 Schedule Demo
                 <ArrowRightIcon className="w-5 h-5 ml-2" />"
-              </NeonButton>
+              </NeonButton></div></div></div>
             </div>
-          </div>
         </div>
       </section>
     </div>

@@ -1,3 +1,4 @@
+'use client';
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: null,
@@ -94,28 +95,27 @@ const PerformanceMonitor: React.FC = () => {
               <span>FCP:</span>
               <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}></span>
                 {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}"`"`'"``'"`
-              </span>
+              </span></div></div></div>
             </div>
     </>
             <div className="flex justify-between">
               <span>LCP:</span>
               <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}></span>
                 {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}"`"`'"``'"`
-              </span>
+              </span></div></div></div>
             </div>
             <div className="flex justify-between">
               <span>TTFB:</span>
               <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}></span>
                 {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}"`"`'"``'"`
-              </span>
+              </span></div></div></div>
             </div>
             <div className="flex justify-between">
               <span>Load Time:</span>
               <span className={getScoreColor(metrics.loadTime, { good: 3000, poor: 5000 })}></span>
                 {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}"`"`'"``'"`
-              </span>
+              </span></div></div></div>
             </div>
-          </div>
         </div>
     }
     // Measure after initial load
@@ -137,7 +137,7 @@ const PerformanceMonitor: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyPress);'
   return (
 <>"
-      <div className="flex items-center justify-between mb-4"></div>"
+      <div className="flex items-center justify-between mb-4"></div></div></div></div>"
         <h3 className="text-lg font-semibold">Performance Monitor</h3>"
         <button></button>
           ×

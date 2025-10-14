@@ -2,16 +2,16 @@
         <title>Page optimized - Zion Tech Group</title>
         <meta name="description" content="Professional page optimized services by Zion Tech Group." />"
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
+      <div className="container mx-auto px-4 py-16"></div></div></div></div>
+        <div className="text-center"></div></div></div></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">"
             Page optimized
           </h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional page optimized solutions tailored to your business needs.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div></div></div></div>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div></div></div></div>
               <h3 className="text-lg font-semibold text-blue-900 mb-2">"
                 Expert Solutions
               </h3>
@@ -19,7 +19,7 @@
                 Our team of experts delivers cutting-edge page optimized solutions.
               </p>"
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div></div></div></div>
               <h3 className="text-lg font-semibold text-green-900 mb-2">"
                 Custom Implementation
               </h3>
@@ -27,7 +27,7 @@
                 Tailored page optimized implementations for your specific requirements.
               </p>"
             </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div></div></div></div>
               <h3 className="text-lg font-semibold text-purple-900 mb-2">"
                 24/7 Support
               </h3>
@@ -36,41 +36,35 @@
               </p>
             </div>"
           </div>
-          <div className="mt-12"></div>
+          <div className="mt-12"></div></div></div></div>
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
               Get Started Today
             </button>
           </div>
-        </div>
       </div>
-    </div>
-            Page optimized</h1>"
           <p className="text-xl text-gray-600 mb-8">"
             Professional page optimized solutions tailored to your business needs.</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div></div></div></div>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div></div></div></div>
               <h3 className="text-lg font-semibold text-blue-900 mb-2">"
                 Expert Solutions</h3>
               <p className="text-blue-700">"
                 Our team of experts delivers cutting-edge page optimized solutions.</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div></div></div></div>
               <h3 className="text-lg font-semibold text-green-900 mb-2">"
                 Custom Implementation</h3>
               <p className="text-green-700">"
                 Tailored page optimized implementations for your specific requirements.</p></div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div></div></div></div>
               <h3 className="text-lg font-semibold text-purple-900 mb-2">"
                 24/7 Support</h3>
               <p className="text-purple-700">"
-                Round-the-clock support for all your page optimized needs.</p></div></div>
-          <div className="mt-12"></div>
+                Round-the-clock support for all your page optimized needs.</p></div>
+          <div className="mt-12"></div></div></div></div>
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-              Get Started Today</button></div></div></div></div>
+              Get Started Today</button></div></div>
   )
-            </button>
           </div>
-        </div>
       </div>
-    </div>
   )}
 "

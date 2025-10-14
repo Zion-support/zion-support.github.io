@@ -18,7 +18,7 @@ const CloudInfrastructurePage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
             Build, migrate, and optimize your cloud infrastructure for maximum performance, 
             security, and cost-effectiveness.
-          </p>
+          </p></div></div></div>
         </div>
           {services.map((service, _index
   </>
@@ -29,7 +29,7 @@ const CloudInfrastructurePage: React.FC = () => {
     <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">"
                 <div className="flex items-center mb-4">"
                   <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mr-4">"
-                    <Icon className="w-6 h-6 text-white" />"
+                    <Icon className="w-6 h-6 text-white" />"</div></div></div>
                   </div>"
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>"
                 </div>"
@@ -46,7 +46,6 @@ const CloudInfrastructurePage: React.FC = () => {
           }
         </div>
               Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.
-            </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300">"
                 Start Migration
@@ -76,7 +75,7 @@ const CloudInfrastructurePage: React.FC = () => {
                 </h3>"
                 <p className="text-blue-700">"
                   Our team of experts delivers cutting-edge cloud infrastructure solutions.
-                </p>
+                </p></div></div></div>
               </div>"
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
                 <h3 className="text-lg font-semibold text-green-900 mb-2">"
@@ -84,7 +83,7 @@ const CloudInfrastructurePage: React.FC = () => {
                 </h3>"
                 <p className="text-green-700">"
                   Tailored cloud infrastructure implementations for your specific requirements.
-                </p>
+                </p></div></div></div>
               </div>"
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">"
@@ -92,15 +91,13 @@ const CloudInfrastructurePage: React.FC = () => {
                 </h3>"
                 <p className="text-purple-700">"
                   Round-the-clock support for all your cloud infrastructure needs.
-                </p>
-              </div>
-            </div>"
+                </p></div></div></div>
+              </div>"
             <div className="mt-12">"
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
                 Get Started Today
-              </button>
+              </button></div></div></div>
             </div>
-          </div>
 const CloudInfrastructurePage: React.FC = () => {
   return (
     <>
@@ -110,10 +107,10 @@ const CloudInfrastructurePage: React.FC = () => {
 export default CloudInfrastructurePage
 "use client"
 "
-import React from "react
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react
 
 const CloudInfrastructurePage = () => {
   return (
 
-}
+}"
 "

@@ -1,3 +1,4 @@
+'use client';
 import { 
   HomeIcon, 
   UserGroupIcon, 
@@ -51,20 +52,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
   if (!isOpen) return null
   return (
 
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div></div></div></div>
       <div className="relative flex flex-col w-64 h-full bg-slate-900">
         <div className="flex items-center justify-between p-4 border-b border-slate-700">
           <span className="text-xl font-bold text-white">Menu</span>
           <button onClick={onClose} className="text-gray-400 hover:text-white">
             <XMarkIcon className="w-6 h-6" />
-          </button>
+          </button></div></div></div>
         </div>
     </>
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
           {navigation.map((link) => (
-            <div key={link.name}></div>
+            <div key={link.name}></div></div></div></div>
               {link.submenu ? (
-                <div></div>
+                <div></div></div></div></div>
                   <button
                     onClick={() => toggleExpanded(link.name)
                     className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded"
@@ -93,13 +94,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                           <subLink.icon className="w-4 h-4 mr-3" />
                           {subLink.name}
                         </Link>
-                      ))
+                      ))</div></div></div>
                     </div>
                   )}
                 </div>
               ) : (
                 <Link
-                </Link></Link>
+                </Link>
               )
             </div>
         </nav>
@@ -249,10 +250,10 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   })).filter(section => section.items.length > 0 || searchQuery === ');'
 
   if (!isOpen) return null
-import React from "react;
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react;
 
   return (
-    <div className={`bg-slate-800 text-white transition-all duration-300 ${isOpen ? 'w-64' : 'w-16'} ${className}`}>
+    <div className={`bg-slate-800 text-white transition-all duration-300 ${isOpen ?" 'w-64' : 'w-16'} ${className}`}>
       <div className="flex items-center justify-between p-4 border-b border-slate-700">
         {isOpen && (
           <h2 className="text-xl font-bold">Zion Tech Group</h2>
@@ -266,6 +267,5 @@ import React from "react;
           ) : (
             <ChevronRightIcon className="w-5 h-5" />
           )}
-        </button>
+        </button></div></div></div>
       </div>
-    </div>

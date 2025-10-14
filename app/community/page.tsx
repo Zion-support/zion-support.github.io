@@ -1,6 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Star, TrendingUp, Award, BookOpen, Code, Lightbulb, Share2 } from 'lucide-react';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from '"react"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Helmet } from '"react-helmet-async"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Users, MessageCircle, Star, TrendingUp, Award, BookOpen, Code, Lightbulb, Share2 } from '"lucide-react"';
 
 const CommunityPage: React.FC = () => {
   const communityStats = [
@@ -154,16 +155,15 @@ const CommunityPage: React.FC = () => {
             Developer Community
           </h1>
           <p>Connect with fellow developers, share your projects, get help, and learn from the community.</p>
-          </p>
           
           {/* Community Stats */}
-          <div>{communityStats.map((stat, index) => (</div>
+          <div>{communityStats.map((stat, index) => (</div></div></div></div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center justify-center mb-2">
-                  <stat.icon className="w-8 h-8 text-cyan-400 mr-2" />
+                  <stat.icon className="w-8 h-8 text-cyan-400 mr-2" /></div></div></div>
                 </div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div></div></div></div>
+                <div className="text-gray-300">{stat.label}</div></div></div></div>
             ))}
           </div>
 
@@ -173,7 +173,7 @@ const CommunityPage: React.FC = () => {
               Join Community
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Browse Discussions
+              Browse Discussions</div></div></div>
             </div>
         </section>
 
@@ -182,18 +182,18 @@ const CommunityPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Discussion Categories</h2>
           
-          <div>{categories.map((category, index) => (</div>
+          <div>{categories.map((category, index) => (</div></div></div></div>
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div className="flex items-center mb-4">
                   <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}>
-                    <category.icon className={`w-6 h-6 ${category.color}`} />
+                    <category.icon className={`w-6 h-6 ${category.color}`} /></div></div></div>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
                     <p className="text-sm text-gray-500">{category.posts} posts</p>
                 <p>{category.description}</p>
                 <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors">
-                  View Discussions
+                  View Discussions</div></div></div>
                 </div>
             ))}
           </div>
@@ -205,10 +205,10 @@ const CommunityPage: React.FC = () => {
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-3xl font-bold text-white">Recent Discussions</h2>
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-              Start Discussion
+              Start Discussion</div></div></div>
             </div>
           
-          <div>{recentDiscussions.map((discussion) => (</div>
+          <div>{recentDiscussions.map((discussion) => (</div></div></div></div>
               <div key={discussion.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
@@ -221,7 +221,7 @@ const CommunityPage: React.FC = () => {
                           <Award className="w-3 h-3 mr-1" />
                           Solved
                         </span>
-                      )}
+                      )}</div></div></div>
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-purple-600 cursor-pointer">
                       {discussion.title}
@@ -231,7 +231,7 @@ const CommunityPage: React.FC = () => {
                       <span>{discussion.replies} replies</span>
                       <span>{discussion.views} views</span>
                       <span>{discussion.lastActivity}</span>
-                    <div>{discussion.tags.map((tag, tagIndex) => (</div>
+                    <div>{discussion.tags.map((tag, tagIndex) => (</div></div></div></div>
                         <span>
                           #{tag}
                         </span>
@@ -246,10 +246,10 @@ const CommunityPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Projects</h2>
           
-          <div>{featuredProjects.map((project, index) => (</div>
+          <div>{featuredProjects.map((project, index) => (</div></div></div></div>
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
-                  <div className="text-4xl">🚀</div>
+                  <div className="text-4xl">🚀</div></div></div></div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
                   <p>{project.description}</p>
@@ -262,9 +262,9 @@ const CommunityPage: React.FC = () => {
                       </span>
                       <span className="flex items-center">
                         <MessageCircle className="w-4 h-4 mr-1" />
-                        {project.comments}
+                        {project.comments}</div></div></div>
                       </div>
-                  <div>{project.tags.map((tag, tagIndex) => (</div>
+                  <div>{project.tags.map((tag, tagIndex) => (</div></div></div></div>
                       <span>
                         #{tag}
                       </span>
@@ -284,13 +284,12 @@ const CommunityPage: React.FC = () => {
             Ready to Join Our Community?
           </h2>
           <p>Connect with thousands of developers building amazing AI applications.</p>
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Sign Up Free
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Learn More
+              Learn More</div></div></div>
             </div>
         </section>
     </div>

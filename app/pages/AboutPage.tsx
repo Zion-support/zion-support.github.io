@@ -1,4 +1,4 @@
-import { Helmet    } from "react-helmet-async
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Helmet    } from ""react-helmet-async
 import { 
   CheckCircleIcon,
   UserGroupIcon,
@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
-        <title>About Us - Zion Tech Group</title>"
+        <title>About Us - Zion Tech Group</title>""
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />
       </Helmet>
       
@@ -29,11 +29,10 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
                 Empowering businesses with cutting-edge AI and IT solutions for the digital age
               </p>"
-              <div className="space-y-4"></div>"
+              <div className="space-y-4"></div></div></div></div>"
     </>"
-                <div className="flex items-start"></div>"
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" /></CheckCircleIcon>"
+                <div className="flex items-start"></div></div></div></div>"
                   <span className="text-gray-300">Innovation-driven approach</span>"
                 </div>"
-                <div className="flex items-start"></div>
+                <div className="flex items-start"></div></div></div></div>
 

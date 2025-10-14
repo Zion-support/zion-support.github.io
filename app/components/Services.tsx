@@ -1,10 +1,11 @@
-import React from "react;
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react;
 import { CpuChipIcon, 
   CloudIcon, 
   CogIcon, 
   ChartBarIcon,
   ShieldCheckIcon,
-  RocketLaunchIcon } from "@heroicons/react/24/outline";
+  RocketLaunchIcon } from" "@heroicons/react/24/outline";
 
 const Services: React.FC = () => {
   const services = [
@@ -56,7 +57,7 @@ const Services: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             We provide comprehensive technology solutions to help your business 
             thrive in the digital age.
-          </p>
+          </p></div></div></div>
         </div>
     </>
 
@@ -67,7 +68,7 @@ const Services: React.FC = () => {
               className="group bg-white border border-gray-200 rounded-xl p-8 hover:shadow-xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2">"
               <div className="flex items-center mb-6">"
                 <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors">"
-                  <service.icon className="h-8 w-8 text-blue-600" />"
+                  <service.icon className="h-8 w-8 text-blue-600" />"</div></div></div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 ml-4">"
                   {service.title}
@@ -81,7 +82,7 @@ const Services: React.FC = () => {
               <ul className="space-y-2">"
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-500">"
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>"
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div></div></div></div>"
                     {feature}
                   </li>
                 )})}
@@ -90,9 +91,8 @@ const Services: React.FC = () => {
               <div className="mt-6">"
                 <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline">"
                   Learn More →
-                </button>
+                </button></div></div></div>
               </div>
-            </div>
           ))}
         </div>
 
@@ -107,9 +107,8 @@ const Services: React.FC = () => {
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
               Get Free Consultation
-            </button>
+            </button></div></div></div>
           </div>
-        </div>
       </div>
     </section>
   )

@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react"";
 
 interface AdvancedSEOOptimizerNewProps {
   className?: string;
@@ -14,7 +15,7 @@ const AdvancedSEOOptimizerNew: React.FC<AdvancedSEOOptimizerNewProps> = ({ class
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional SEO optimization solutions tailored to your business needs.
-          </p>
+          </p></div></div></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -24,7 +25,7 @@ const AdvancedSEOOptimizerNew: React.FC<AdvancedSEOOptimizerNewProps> = ({ class
             </h3>
             <p className="text-blue-700">
               Our team of experts delivers cutting-edge SEO optimization solutions.
-            </p>
+            </p></div></div></div>
           </div>
           
           <div className="bg-green-50 border border-green-200 rounded-lg p-6">
@@ -33,7 +34,7 @@ const AdvancedSEOOptimizerNew: React.FC<AdvancedSEOOptimizerNewProps> = ({ class
             </h3>
             <p className="text-green-700">
               Tailored SEO strategies for your specific requirements.
-            </p>
+            </p></div></div></div>
           </div>
           
           <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
@@ -42,11 +43,9 @@ const AdvancedSEOOptimizerNew: React.FC<AdvancedSEOOptimizerNewProps> = ({ class
             </h3>
             <p className="text-purple-700">
               Ongoing SEO monitoring and optimization to ensure peak performance.
-            </p>
+            </p></div></div></div>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 

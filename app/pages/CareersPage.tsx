@@ -12,7 +12,7 @@
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
             Be part of a team that"s shaping the future of AI and IT solutions."
             Work on cutting-edge projects and make a real impact.
-          </p>
+          </p></div></div></div>
         </div>
             {benefits.map((benefit, _index) => {
               const Icon = benefit.icon
@@ -41,7 +41,7 @@ const CareersPage: React.FC = () => {
                 </h3>"
                 <p className="text-blue-700">"
                   Explore our current job openings and find your perfect role.
-                </p>
+                </p></div></div></div>
               </div>"
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
                 <h3 className="text-lg font-semibold text-green-900 mb-2">"
@@ -49,7 +49,7 @@ const CareersPage: React.FC = () => {
                 </h3>"
                 <p className="text-green-700">"
                   Competitive salary, health insurance, and professional development.
-                </p>
+                </p></div></div></div>
               </div>"
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">"
@@ -57,18 +57,17 @@ const CareersPage: React.FC = () => {
                 </h3>"
                 <p className="text-purple-700">"
                   Collaborative, innovative, and inclusive work environment.
-                </p>
-              </div>
-            </div>"
+                </p></div></div></div>
+              </div>"
             <div className="mt-12">"
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
                 View Open Positions
-              </button>
+              </button></div></div></div>
             </div>
-          </div>
 const CareersPage: React.FC = () => {
   return (
     <>
 
-}
+</>
+  );}
 "

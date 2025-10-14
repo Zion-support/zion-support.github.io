@@ -1,3 +1,4 @@
+'use client';
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
   children, 
   className = ,'
@@ -14,12 +15,12 @@ export default FuturisticButton
     </button>
   )
 export default FuturisticButton
-import React from "react;
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react;
 
 interface FuturisticButtonProps {
   children: React.ReactNode
   onClick?: () => void
-  variant?: 'primary' | 'secondary' | 'outline';'
+  variant?:" 'primary' | 'secondary' | 'outline';'
   size?: 'sm' | 'md' | 'lg';'
   disabled?: boolean
   className?: string

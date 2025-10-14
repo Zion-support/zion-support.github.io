@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react"";
 
 const Page = () => {
   return (
@@ -6,7 +7,7 @@ const Page = () => {
       <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
       <p className="text-gray-300">
         This is a placeholder component for Page.
-      </p>
+      </p></div></div></div>
     </div>
   );
 };

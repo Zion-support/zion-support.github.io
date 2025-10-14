@@ -1,5 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from '"react"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import Link from '"next/link"';
 
 interface ContentPreviewCardProps {
   id: string;
@@ -32,7 +33,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             src={imageUrl}
             alt={title}
             className="w-full h-48 object-cover"
-          />
+          /></div></div></div>
         </div>
       )}
       
@@ -49,7 +50,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           </h3>
         
         <p>{excerpt}</p>
-        </p>
         
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -68,7 +68,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             Read more
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </Link>
+            </Link></div></div></div>
         </div>
     </article>
   );

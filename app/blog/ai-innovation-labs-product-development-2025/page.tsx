@@ -1,5 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from '"react"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import Link from '"next/link"';
 
 const InnovationLabsPage: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const InnovationLabsPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Innovation Labs: Product Development Revolution 2025
             </h1>
-            <p>January 28, 2025 · 45 min read · AI Innovation</p>
+            <p>January 28, 2025 · 45 min read · AI Innovation</p></div></div></div>
           </div>
 
           <div className="prose max-w-none">
@@ -25,17 +26,14 @@ const InnovationLabsPage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-blue-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">10x</div>
-                <div className="text-gray-700">Faster Time-to-Market</div>
-              </div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">10x</div></div></div></div>
+                <div className="text-gray-700">Faster Time-to-Market</div></div></div></div>
               <div className="bg-green-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">85%</div>
-                <div className="text-gray-700">Cost Reduction</div>
-              </div>
+                <div className="text-3xl font-bold text-green-600 mb-2">85%</div></div></div></div>
+                <div className="text-gray-700">Cost Reduction</div></div></div></div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">300%</div>
-                <div className="text-gray-700">Innovation Speed</div>
-              </div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">300%</div></div></div></div>
+                <div className="text-gray-700">Innovation Speed</div></div></div></div>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏭 Lab Overview</h2>
@@ -96,7 +94,7 @@ const InnovationLabsPage: React.FC = () => {
 └── Infrastructure
     ├── Cloud-native Architecture
     ├── Kubernetes & Docker
-    └── CI/CD Automation`}</pre>
+    └── CI/CD Automation`}</pre></div></div></div>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with AI Innovation</h2>
@@ -112,19 +110,14 @@ const InnovationLabsPage: React.FC = () => {
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Schedule Innovation Assessment
-                </Link>
                 <Link
                   href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors"
                 >
-                  Explore AI Services
-                </Link>
+                  Explore AI Services</div></div></div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 

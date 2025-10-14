@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from '"react"';
 
 interface AdvertisingBannerProps {
   className?: string;
@@ -25,9 +26,8 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
         >
           {ctaText}
-        </a>
+        </a></div></div></div>
       </div>
-    </div>
   );
 };
 

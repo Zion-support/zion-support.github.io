@@ -1,3 +1,4 @@
+'use client';
 }
 
 const NeonButton: React.FC<NeonButtonProps> = ({
@@ -39,5 +40,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   if (to) {
     return (
       <Link to={to} className={classes}></Link>
-        {children}
+        {children</>
+  );}
       </Link>

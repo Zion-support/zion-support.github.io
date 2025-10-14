@@ -1,3 +1,4 @@
+'use client';
     reducedMotion: false,
     screenReader: false
   }
@@ -5,13 +6,13 @@
   useEffect(() => {
     // Enhanced accessibility features
     const addSkipLinks = () => {
-import React, { useEffect, useState } from "react
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React, { useEffect, useState } from ""react
 const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighContrast] = useState(false)
   const [isReducedMotion, setIsReducedMotion] = useState(false)
   const [fontSize, setFontSize] = useState(16)
   useEffect(() => {
     // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches";'"
+    const prefersReducedMotion = window.matchMedia("'(prefers-reduced-motion: reduce)').matches";'"
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches";'"
     setIsReducedMotion(prefersReducedMotion)
     setIsHighContrast(prefersHighContrast)
@@ -184,11 +185,10 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
 <>
       <button></button>
         ♿ A11y
-      </button>
       <div className={`accessibility-panel ${isVisible ? 'visible' : '}`}>"`"`'"``'"`
         <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
         <div className="space-y-4">
-          <div></div>
+          <div></div></div></div></div>
     </>
             <label className="flex items-center space-x-2">
               <input
@@ -196,7 +196,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
               <span>High Contrast</span>
             </label>
           </div>
-          <div></div>
+          <div></div></div></div></div>
             <label className="block text-sm font-medium mb-2">Font Size</label>
             <div className="space-y-2">
               {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => (
@@ -205,15 +205,12 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
                   /></input>
                   <span className="capitalize">{size}</span>
                 </label>
-              )})
+              )})</div></div></div>
             </div>
-          </div>
-          <div></div>
+          <div></div></div></div></div>
           >
             Close
-          </button>
         </div>
-      </div>
     </div>
   )
 export default EnhancedAccessibility

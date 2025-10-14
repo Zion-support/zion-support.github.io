@@ -1,6 +1,7 @@
-import { ArrowRight, BarChart3, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Database, Bell, PieChart, Mail, Phone, MapPin, Play, FileText } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { ArrowRight, BarChart3, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Database, Bell, PieChart, Mail, Phone, MapPin, Play, FileText } from ""lucide-react"";
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Helmet } from ""react-helmet-async"";
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Link } from ""react-router-dom"";
 
 export default function ZionAnalyticsPro() {
   const features = [
@@ -140,10 +141,10 @@ export default function ZionAnalyticsPro() {
           content="business intelligence, analytics, data visualization, predictive analytics, real-time dashboards, reporting, AI analytics, data insights" />
       </Helmet>
 
-      <div>{/* Animated Background */}</div>
+      <div>{/* Animated Background */}</div></div></div></div>
     </>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse"></div></div></div></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]"></div></div></div></div>
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -162,7 +163,6 @@ export default function ZionAnalyticsPro() {
                 
                 <p>Transform your data into actionable insights with our AI-powered business intelligence platform. 
                   Real-time dashboards, predictive analytics, and automated reporting for modern businesses.</p>
-                </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -177,16 +177,15 @@ export default function ZionAnalyticsPro() {
                     className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                   >
                     Watch Demo
-                    <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                    <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" /></div></div></div>
                   </div>
                 
                 {/* Stats */}
-                <div>{stats.map((stat, index) => (</div>
+                <div>{stats.map((stat, index) => (</div></div></div></div>
                     <div key={index} className="text-center group">
-                      <div>{stat.icon}</div>
-                      </div>
-                      <div className="text-xl font-bold text-white mb-1">{stat.number}</div>
-                      <div className="text-gray-300 text-sm">{stat.label}</div>
+                      <div>{stat.icon}</div></div></div></div>
+                      <div className="text-xl font-bold text-white mb-1">{stat.number}</div></div></div></div>
+                      <div className="text-gray-300 text-sm">{stat.label}</div></div></div></div>
                   ))}
                 </div>
               
@@ -202,21 +201,21 @@ export default function ZionAnalyticsPro() {
                       <div className="flex items-center justify-between mb-2">
                         <span>Revenue</span>
                         <span className="text-green-400 text-sm">+12.5%</span>
-                      <div className="text-2xl font-bold text-white">$125,430</div>
+                      <div className="text-2xl font-bold text-white">$125,430</div></div></div></div>
                     
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-4">
-                        <div className="text-white font-semibold text-sm mb-1">Users</div>
-                        <div className="text-xl font-bold text-white">2,847</div>
+                        <div className="text-white font-semibold text-sm mb-1">Users</div></div></div></div>
+                        <div className="text-xl font-bold text-white">2,847</div></div></div></div>
                       <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4">
-                        <div className="text-white font-semibold text-sm mb-1">Conversion</div>
-                        <div className="text-xl font-bold text-white">3.2%</div>
+                        <div className="text-white font-semibold text-sm mb-1">Conversion</div></div></div></div>
+                        <div className="text-xl font-bold text-white">3.2%</div></div></div></div>
                     
                     <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
                         <span>Active Sessions</span>
                         <span className="text-yellow-400 text-sm">Live</span>
-                      <div className="text-2xl font-bold text-white">1,234</div>
+                      <div className="text-2xl font-bold text-white">1,234</div></div></div></div>
           </section>
 
         {/* Features Section */}
@@ -227,26 +226,24 @@ export default function ZionAnalyticsPro() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                   Powerful Features
                 </h2>
-              <p>Everything you need to transform your data into actionable business insights.</p>
+              <p>Everything you need to transform your data into actionable business insights.</p></div></div></div>
               </div>
             
-            <div>{features.map((feature, index) => (</div>
+            <div>{features.map((feature, index) => (</div></div></div></div>
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
                 >
-                  <div>{feature.icon}</div>
-                  </div>
+                  <div>{feature.icon}</div></div></div></div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">
                     {feature.title}
                   </h3>
                   <p>{feature.description}</p>
-                  </p>
-                  <div>{feature.benefits.map((benefit, idx) => (</div>
+                  <div>{feature.benefits.map((benefit, idx) => (</div></div></div></div>
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         <span>{benefit}</span>
-                    ))}
+                    ))}</div></div></div>
                   </div>
               ))}
             </div>
@@ -260,11 +257,11 @@ export default function ZionAnalyticsPro() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
                   Simple Pricing
                 </h2>
-              <p>Choose the plan that fits your business needs. All plans include our core features.</p>
+              <p>Choose the plan that fits your business needs. All plans include our core features.</p></div></div></div>
               </div>
             
-            <div>{pricingPlans.map((plan, index) => (</div>
-                <div>{plan.popular && (</div>
+            <div>{pricingPlans.map((plan, index) => (</div></div></div></div>
+                <div>{plan.popular && (</div></div></div></div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -278,11 +275,11 @@ export default function ZionAnalyticsPro() {
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     <p className="text-gray-300 mt-2">{plan.description}</p>
                   
-                  <div>{plan.features.map((feature, idx) => (</div>
+                  <div>{plan.features.map((feature, idx) => (</div></div></div></div>
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                    ))}
+                    ))}</div></div></div>
                   </div>
                   
                   <Link
@@ -307,25 +304,24 @@ export default function ZionAnalyticsPro() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Customers Say
               </h2>
-              <p>Join thousands of businesses already using Zion Analytics Pro to drive growth.</p>
+              <p>Join thousands of businesses already using Zion Analytics Pro to drive growth.</p></div></div></div>
               </div>
             
-            <div>{testimonials.map((testimonial, index) => (</div>
+            <div>{testimonials.map((testimonial, index) => (</div></div></div></div>
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <div>{[...Array(testimonial.rating)].map((_, i) => (</div>
+                  <div>{[...Array(testimonial.rating)].map((_, i) => (</div></div></div></div>
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p>&ldquo;{testimonial.content}&rdquo;</p>
                   <div className="flex items-center">
-                    <div>{testimonial.avatar}</div>
-                    </div>
+                    <div>{testimonial.avatar}</div></div></div></div>
                     <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                      <div className="font-semibold text-white">{testimonial.name}</div></div></div></div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div></div></div></div>
               ))}
             </div>
         </section>
@@ -338,25 +334,24 @@ export default function ZionAnalyticsPro() {
                 Ready to Get Started?
               </h2>
               <p>Contact us today to start your free trial or schedule a personalized demo.</p>
-              </p>
               
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Mail className="w-6 h-6 text-white" />
+                    <Mail className="w-6 h-6 text-white" /></div></div></div>
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-blue-400">kleber@ziontechgroup.com</p>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Phone className="w-6 h-6 text-white" />
+                    <Phone className="w-6 h-6 text-white" /></div></div></div>
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-blue-400">+1 302 464 0950</p>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <MapPin className="w-6 h-6 text-white" />
+                    <MapPin className="w-6 h-6 text-white" /></div></div></div>
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-blue-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</div>
@@ -373,10 +368,9 @@ export default function ZionAnalyticsPro() {
                   to="/demo"
                   className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
-                  Schedule Demo
+                  Schedule Demo</div></div></div>
                 </div>
     </>
   );
 }
-</span>
 </span>

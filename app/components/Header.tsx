@@ -1,12 +1,13 @@
-import React, { useState } from "react;
-import { Link    } from "react-router-dom;
-import { Menu, X, ChevronDown    } from "lucide-react;
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React, { useState } from ""react;
+import { Link    } from" "react-router-dom;
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Menu, X, ChevronDown    } from ""lucide-react;
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const navigationItems = [
-    { name: "Home", href: "/" },"
+    { name:" "Home", href: "/" },"
     { name: "About", href: "/about" },"
     {
       name: "Services","
@@ -27,7 +28,6 @@ const Header: React.FC = () => {
 
     </>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>"
-          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">"
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
                         className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">"
                         {subItem.name}
                       </Link>
-                    ))}
+                    ))}</div></div></div>
                   </div>
                 )}}
               </div>
@@ -63,8 +63,7 @@ const Header: React.FC = () => {
             <Link
               to="/contact
               className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors">"
-              Get Started
-            </Link>
+              Get Started</div></div></div>
           </div>
 
           {/* Mobile menu button */}
@@ -73,21 +72,19 @@ const Header: React.FC = () => {
             className="md:hidden text-gray-300 hover:text-white
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
-          </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-slate-700">"
             {navigationItems.map((item) => (
-              <div key={item.name}></div>
+              <div key={item.name}></div></div></div></div>
                 <Link
                   to={item.href}
                   className="block py-2 text-gray-300 hover:text-white transition-colors
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </Link>
                 {item.submenu && (
                   <div className="ml-4">"
                     {item.submenu.map((subItem) => (
@@ -98,8 +95,7 @@ const Header: React.FC = () => {
                         onClick={() => setIsOpen(false)}
                       >
                         {subItem.name}
-                      </Link>
-                    ))}
+                    ))}</div></div></div>
                   </div>
                 )}
               </div>
@@ -110,13 +106,10 @@ const Header: React.FC = () => {
                 className="block w-full text-center px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors
                 onClick={() => setIsOpen(false)}
               >
-                Get Started
-              </Link>
+                Get Started</div></div></div>
             </div>
-          </div>
         )}
       </div>
-    </header>
   )
 }
 export default Header

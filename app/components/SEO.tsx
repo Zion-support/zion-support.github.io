@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react"";
 
 const SEO = () => {
   return (
@@ -6,7 +7,7 @@ const SEO = () => {
       <h2 className="text-2xl font-bold text-white mb-4">SEO</h2>
       <p className="text-gray-300">
         This is a placeholder component for SEO.
-      </p>
+      </p></div></div></div>
     </div>
   );
 };

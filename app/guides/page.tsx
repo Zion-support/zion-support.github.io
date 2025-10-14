@@ -1,7 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from '"react"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Link } from '"react-router-dom"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Helmet } from '"react-helmet-async"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from '"lucide-react"';
 
 const GuidesPage: React.FC = () => {
   const guides = [
@@ -62,7 +63,7 @@ const GuidesPage: React.FC = () => {
         <meta name="keywords" content="AI implementation, automation guides, digital transformation, enterprise solutions, technical guides" />
       </Helmet>
       
-      <div>{/* Navigation */}</div>
+      <div>{/* Navigation */}</div></div></div></div>
     </>
         <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
           <div className="container mx-auto px-4">
@@ -75,7 +76,7 @@ const GuidesPage: React.FC = () => {
                 <Link to="About">About</Link>
                 <Link to="Services">Services</Link>
                 <Link to="Guides">Guides</Link>
-                <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</div>
+                <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</div></div></div></div>
         </nav>
 
         <main className="container mx-auto px-4 py-16">
@@ -84,7 +85,7 @@ const GuidesPage: React.FC = () => {
             <div className="flex items-center justify-center space-x-4 mb-6">
               <BookOpen className="w-16 h-16 text-cyan-400" />
               <h1 className="text-4xl md:text-6xl font-bold text-white">
-                Implementation <span className="text-cyan-400">Guides</h1>
+                Implementation <span className="text-cyan-400">Guides</h1></div></div></div>
             </div>
             <p>Step-by-step guides to help you implement AI, automation, and digital transformation 
               solutions in your enterprise with confidence.</p>
@@ -93,21 +94,21 @@ const GuidesPage: React.FC = () => {
           {/* Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
-            <div>{categories.map((category, index) => (</div>
+            <div>{categories.map((category, index) => (</div></div></div></div>
                 <div key={index} className="bg-slate-800 rounded-lg p-4 text-center hover:bg-slate-700 transition-colors">
                   <category.icon className={`w-8 h-8 mx-auto mb-2 ${category.color}`} />
-                  <h3 className="text-white font-semibold text-sm">{category.name}</div>
+                  <h3 className="text-white font-semibold text-sm">{category.name}</div></div></div></div>
               ))}
             </section>
 
           {/* Guides Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
-            <div>{guides.map((guide, index) => (</div>
+            <div>{guides.map((guide, index) => (</div></div></div></div>
                 <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200">
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <guide.icon className="w-6 h-6 text-cyan-400" />
+                      <guide.icon className="w-6 h-6 text-cyan-400" /></div></div></div>
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{guide.title}</h3>
@@ -125,7 +126,7 @@ const GuidesPage: React.FC = () => {
                       to={guide.url}
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                     >
-                      Read Guide →
+                      Read Guide →</div></div></div>
                     </div>
               ))}
             </section>
@@ -139,23 +140,21 @@ const GuidesPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-4">New to AI Implementation?</h3>
                   <p>Start with our comprehensive AI 2026 Implementation Roadmap to understand 
                     the fundamentals and plan your AI transformation journey.</p>
-                  </p>
                   <ul className="space-y-2 text-gray-300">
                     <li>• Assess your current AI readiness</li>
                     <li>• Plan your implementation strategy</li>
                     <li>• Choose the right technologies</li>
-                    <li>• Measure success and ROI</ul>
+                    <li>• Measure success and ROI</ul></div></div></div>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Ready for Advanced Topics?</h3>
                   <p>Explore our advanced guides for autonomous systems, process automation, 
                     and cutting-edge AI implementations.</p>
-                  </p>
                   <ul className="space-y-2 text-gray-300">
                     <li>• Autonomous business processes</li>
                     <li>• Advanced AI architectures</li>
                     <li>• Enterprise automation strategies</li>
-                    <li>• Future-ready implementations</ul>
+                    <li>• Future-ready implementations</ul></div></div></div>
                 </div>
             </section>
 
@@ -166,7 +165,6 @@ const GuidesPage: React.FC = () => {
             </h2>
             <p>Our experts are available to provide personalized implementation guidance 
               tailored to your specific business needs and requirements.</p>
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="
                 Get Expert Consultation
@@ -177,7 +175,7 @@ const GuidesPage: React.FC = () => {
                 to="/services"
                 className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
               >
-                View Our Services
+                View Our Services</div></div></div>
               </div>
           </main>
       </div>
@@ -187,5 +185,4 @@ const GuidesPage: React.FC = () => {
 
 export default GuidesPage;
 </span>
-</li>
 </li>

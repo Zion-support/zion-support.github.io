@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react"";
 
 const AdDashboard = () => {
   return (
@@ -18,7 +19,7 @@ const AdDashboard = () => {
               </h3>
               <p className="text-blue-700">
                 Our team of experts delivers cutting-edge ad dashboard solutions.
-              </p>
+              </p></div></div></div>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-green-900 mb-2">
@@ -26,7 +27,7 @@ const AdDashboard = () => {
               </h3>
               <p className="text-green-700">
                 Tailored ad dashboard implementations for your specific requirements.
-              </p>
+              </p></div></div></div>
             </div>
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-purple-900 mb-2">
@@ -34,11 +35,9 @@ const AdDashboard = () => {
               </h3>
               <p className="text-purple-700">
                 Comprehensive analytics and reporting capabilities for your advertising campaigns.
-              </p>
+              </p></div></div></div>
             </div>
-          </div>
         </div>
-      </div>
     </>
   );
 };

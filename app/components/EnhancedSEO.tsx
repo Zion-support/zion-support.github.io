@@ -1,3 +1,4 @@
+'use client';
   description: string
   keywords: string
   canonical: string
@@ -44,7 +45,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <title>{title}</title>
       </script>
     </Helmet>
-  )}
+  )</>
+  );}
 export default EnhancedSEO
   )
 export default EnhancedSEO

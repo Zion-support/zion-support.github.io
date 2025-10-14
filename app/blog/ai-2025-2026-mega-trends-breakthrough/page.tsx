@@ -1,5 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from '"react"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import Link from '"next/link"';
 
 const AIMegaTrends20252026: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const AIMegaTrends20252026: React.FC = () => {
               AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation
             </h1>
             <p>Discover the groundbreaking AI trends and breakthroughs that will revolutionize
-              enterprise operations</p>
+              enterprise operations</p></div></div></div>
           </div>
 
           <div className="prose max-w-none">
@@ -58,17 +59,14 @@ const AIMegaTrends20252026: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-indigo-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-indigo-600 mb-2">$100B+</div>
-                <div className="text-gray-700">Market Value</div>
-              </div>
+                <div className="text-3xl font-bold text-indigo-600 mb-2">$100B+</div></div></div></div>
+                <div className="text-gray-700">Market Value</div></div></div></div>
               <div className="bg-green-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">95%</div>
-                <div className="text-gray-700">Process Automation</div>
-              </div>
+                <div className="text-3xl font-bold text-green-600 mb-2">95%</div></div></div></div>
+                <div className="text-gray-700">Process Automation</div></div></div></div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">10x</div>
-                <div className="text-gray-700">Efficiency Gains</div>
-              </div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">10x</div></div></div></div>
+                <div className="text-gray-700">Efficiency Gains</div></div></div></div>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Future Outlook</h2>
@@ -87,19 +85,14 @@ const AIMegaTrends20252026: React.FC = () => {
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
                 >
                   Get AI Assessment
-                </Link>
                 <Link
                   href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors"
                 >
-                  Explore AI Services
-                </Link>
+                  Explore AI Services</div></div></div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 

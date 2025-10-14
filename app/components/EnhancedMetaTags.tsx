@@ -1,3 +1,4 @@
+'use client';
   description: string
   keywords?: string
   canonical?: string
@@ -65,4 +66,4 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       
         tags.map((tag, index) => (
           <meta key={index} property="article:tag" content={tag} />
-        )})
+        )})</div></div></div>

@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from '"react"';
 
 interface AdvancedPerformanceOptimizerProps {
   className?: string;
@@ -14,7 +15,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional performance optimization solutions tailored to your business needs.
-          </p>
+          </p></div></div></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -24,7 +25,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             </h3>
             <p className="text-blue-700">
               Our team of experts delivers cutting-edge performance optimization solutions.
-            </p>
+            </p></div></div></div>
           </div>
           
           <div className="bg-green-50 border border-green-200 rounded-lg p-6">
@@ -33,7 +34,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             </h3>
             <p className="text-green-700">
               Tailored performance optimization strategies for your specific requirements.
-            </p>
+            </p></div></div></div>
           </div>
           
           <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
@@ -42,11 +43,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             </h3>
             <p className="text-purple-700">
               Ongoing performance monitoring and optimization to ensure peak efficiency.
-            </p>
+            </p></div></div></div>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 

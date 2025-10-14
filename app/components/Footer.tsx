@@ -1,12 +1,13 @@
-import React from "react;
-import { Link    } from "react-router-dom;
-import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle    } from "lucide-react;
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react;
+import { Link    } from" "react-router-dom;
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle    } from ""lucide-react;
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   const serviceCategories = [
     {
-      title: 'AI Services','
+      title:" 'AI Services','
       icon: <Brain className="w-5 h-5" />,"
       color: 'from-blue-500 to-cyan-500','
       links: [
@@ -86,7 +87,7 @@ const Footer = () => {
             <div key={index} className="lg:col-span-1">"
               <div className="flex items-center mb-6">"
                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mr-3`}>```
-                  {category.icon}
+                  {category.icon}</div></div></div>
                 </div>
                 <h3 className="text-lg font-semibold text-white">{category.title}</h3>"
               </div>
@@ -107,7 +108,7 @@ const Footer = () => {
 
         {/* Additional Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700">"
-          <div></div>
+          <div></div></div></div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>"
             <ul className="space-y-3">"
               {companyLinks.map((link, index) => (
@@ -121,7 +122,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div></div>
+          <div></div></div></div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Support</h4>"
             <ul className="space-y-3">"
               {supportLinks.map((link, index) => (
@@ -135,7 +136,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div></div>
+          <div></div></div></div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>"
             <ul className="space-y-3">"
               {legalLinks.map((link, index) => (
@@ -149,7 +150,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-        </div>
 
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-slate-700">"
@@ -165,9 +165,8 @@ const Footer = () => {
               <button className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-r-lg transition-colors flex items-center">"
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />"
-              </button>
+              </button></div></div></div>
             </div>
-          </div>
         </div>
 
       {/* Bottom Footer */}
@@ -175,7 +174,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">"
           <div className="flex flex-col md:flex-row items-center justify-between">"
             <div className="text-gray-400 text-sm mb-4 md:mb-0">"
-              © {currentYear} Zion Tech Group. All rights reserved.
+              © {currentYear} Zion Tech Group. All rights reserved.</div></div></div>
             </div>
             <div className="flex items-center space-x-6">"
               {socialLinks.map((social, index) => (
@@ -188,12 +187,11 @@ const Footer = () => {
                   aria-label={social.label}></a>
                   {social.icon}
                 </a>
-              ))}
+              ))}</div></div></div>
             </div>
-          </div>
         </div>
-      </div>
     </footer>
   )
-}
+</>
+  );}
 export default Footer

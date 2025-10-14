@@ -1,3 +1,4 @@
+'use client';
       <Helmet></Helmet>
         <title>Lazy Image - Zion Tech Group</title>
         <meta name="description" content="Professional lazy image services by Zion Tech Group." />
@@ -11,14 +12,13 @@
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional lazy image services
             designed to help your business grow and succeed.
-          </p>
+          </p></div></div></div>
         </div>
       </section>
       { /* Content Section */ }
-            Lazy Image</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional lazy image services
-            <div></div>
+            <div></div></div></div></div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
                 We provide comprehensive lazy image
@@ -48,9 +48,8 @@
                 href="$1"
                 className="$1"></a>
                 Contact Us
-              </a>
+              </a></div></div></div>
             </div>
-          </div>
         </div>
       </section>
             Ready to Get Started?
@@ -127,14 +126,14 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {isInView && (
         <img
           src={src}
-        /></img>
+        /></img></div></div></div>
   </>
 )
       {!isLoaded && (
         <div
           className="absolute inset-0 bg-gray-200 animate-pulse"
           style={{
-        /></div>
+        /></div></div></div></div>
       )
     </div>
 export default LazyImage

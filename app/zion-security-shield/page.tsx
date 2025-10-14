@@ -1,6 +1,7 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Mail, Phone, MapPin } from ""lucide-react"";
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Helmet } from ""react-helmet-async"";
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Link } from ""react-router-dom"";
 
 export default function ZionSecurityShield() {
   const features = [
@@ -124,10 +125,10 @@ export default function ZionSecurityShield() {
           content="cybersecurity, threat detection, security monitoring, vulnerability assessment, endpoint protection, compliance management, AI security" />
       </Helmet>
 
-      <div>{/* Animated Background */}</div>
+      <div>{/* Animated Background */}</div></div></div></div>
     </>
-        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div></div></div></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div></div></div></div>
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -143,12 +144,11 @@ export default function ZionSecurityShield() {
                 <span>
                   {" "}Shield
                 </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 rounded-lg blur opacity-30 animate-pulse"></h1>
+                <div className="absolute -inset-1 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 rounded-lg blur opacity-30 animate-pulse"></h1></div></div></div>
             </div>
             
             <p>Advanced AI-powered cybersecurity monitoring and threat detection designed for small to medium businesses. 
               Protect your digital assets with 24/7 security monitoring and automated incident response.</p>
-            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -157,25 +157,24 @@ export default function ZionSecurityShield() {
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
               <Link
                 to="/demo"
                 className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
-                View Demo
+                View Demo</div></div></div>
               </div>
 
             {/* Key Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Threat Detection Rate</div>
+                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div></div></div></div>
+                <div className="text-gray-300">Threat Detection Rate</div></div></div></div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">&lt;1min</div>
-                <div className="text-gray-300">Response Time</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">&lt;1min</div></div></div></div>
+                <div className="text-gray-300">Response Time</div></div></div></div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-                <div className="text-gray-300">Monitoring</div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div></div></div></div>
+                <div className="text-gray-300">Monitoring</div></div></div></div>
         </section>
 
         {/* Features Section */}
@@ -186,29 +185,27 @@ export default function ZionSecurityShield() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
                   Advanced Security Features
                 </h2>
-              <p>Comprehensive cybersecurity protection powered by AI and machine learning to keep your business safe.</p>
+              <p>Comprehensive cybersecurity protection powered by AI and machine learning to keep your business safe.</p></div></div></div>
               </div>
             
-            <div>{features.map((feature, index) => (</div>
+            <div>{features.map((feature, index) => (</div></div></div></div>
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></div></div></div>
                   
                   <div className="relative z-10">
-                    <div>{feature.icon}</div>
-                    </div>
+                    <div>{feature.icon}</div></div></div></div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-300 transition-colors">
                       {feature.title}
                     </h3>
                     <p>{feature.description}</p>
-                    </p>
-                    <div>{feature.benefits.map((benefit, idx) => (</div>
+                    <div>{feature.benefits.map((benefit, idx) => (</div></div></div></div>
                         <div key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{benefit}</span>
-                      ))}
+                      ))}</div></div></div>
                     </div>
               ))}
             </div>
@@ -222,17 +219,17 @@ export default function ZionSecurityShield() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">
                   Security Services
                 </h2>
-              <p>Comprehensive security services to protect your business from evolving cyber threats.</p>
+              <p>Comprehensive security services to protect your business from evolving cyber threats.</p></div></div></div>
               </div>
             
-            <div>{securityServices.map((service, index) => (</div>
+            <div>{securityServices.map((service, index) => (</div></div></div></div>
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
                   <p>{service.description}</p>
-                  <div className="text-red-400 font-bold">{service.price}</div>
+                  <div className="text-red-400 font-bold">{service.price}</div></div></div></div>
               ))}
             </div>
         </section>
@@ -245,14 +242,13 @@ export default function ZionSecurityShield() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-400">
                   Security Plans
                 </h2>
-              <p>Choose the security plan that fits your business needs. All plans include a 14-day free trial.</p>
+              <p>Choose the security plan that fits your business needs. All plans include a 14-day free trial.</p></div></div></div>
               </div>
             
-            <div>{pricingPlans.map((plan, index) => (</div>
-                <div>{plan.popular && (</div>
+            <div>{pricingPlans.map((plan, index) => (</div></div></div></div>
+                <div>{plan.popular && (</div></div></div></div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div>Most Popular</div>
-                      </div>
+                      <div>Most Popular</div></div></div></div>
                   )}
                   
                   <div className="text-center mb-6">
@@ -278,7 +274,7 @@ export default function ZionSecurityShield() {
                         : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
                     }`}
                   >
-                    {plan.popular ? 'Start Free Trial' : 'Get Started'}
+                    {plan.popular ? 'Start Free Trial' : 'Get Started'}</div></div></div>
                   </div>
               ))}
             </div>
@@ -292,19 +288,17 @@ export default function ZionSecurityShield() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
                   Compliance Standards
                 </h2>
-              <p>Meet regulatory requirements with automated compliance monitoring and reporting.</p>
+              <p>Meet regulatory requirements with automated compliance monitoring and reporting.</p></div></div></div>
               </div>
             
-            <div>{complianceStandards.map((standard, index) => (</div>
+            <div>{complianceStandards.map((standard, index) => (</div></div></div></div>
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 text-center group"
                 >
-                  <div className="text-2xl mb-2">🛡️</div>
-                  <div>{standard.name}</div>
-                  </div>
-                  <div>{standard.description}</div>
-                  </div>
+                  <div className="text-2xl mb-2">🛡️</div></div></div></div>
+                  <div>{standard.name}</div></div></div></div>
+                  <div>{standard.description}</div></div></div></div>
               ))}
             </div>
         </section>
@@ -318,25 +312,24 @@ export default function ZionSecurityShield() {
               </h2>
               <p>Don&apos;t wait for a security breach. Protect your business with Zion Security Shield today. 
                 Start your free trial or contact us for a security assessment.</p>
-              </p>
               
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Mail className="w-6 h-6 text-white" />
+                    <Mail className="w-6 h-6 text-white" /></div></div></div>
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-red-400">kleber@ziontechgroup.com</p>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Phone className="w-6 h-6 text-white" />
+                    <Phone className="w-6 h-6 text-white" /></div></div></div>
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-red-400">+1 302 464 0950</p>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <MapPin className="w-6 h-6 text-white" />
+                    <MapPin className="w-6 h-6 text-white" /></div></div></div>
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-red-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</div>
@@ -353,7 +346,7 @@ export default function ZionSecurityShield() {
                   to="/demo"
                   className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
-                  Security Assessment
+                  Security Assessment</div></div></div>
                 </div>
     </>
   );

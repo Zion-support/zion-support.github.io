@@ -1,7 +1,6 @@
 'use client';
-
-import React, { useState } from 'react';
-import { Mail, ArrowRight } from 'lucide-react';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React, { useState } from '"react"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import { Mail, ArrowRight } from '"lucide-react"';
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -27,7 +26,7 @@ const ContentNewsletterSignup: React.FC = () => {
     return (
       <section className="mb-16" aria-labelledby="newsletter-heading">
         <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
-          <div className="text-4xl mb-4">✅</div>
+          <div className="text-4xl mb-4">✅</div></div></div></div>
           <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
           <p className="text-green-100">You&apos;ve been successfully subscribed to our newsletter.</p>
         </div>
@@ -57,7 +56,7 @@ const ContentNewsletterSignup: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-300"
                 required
                 aria-label="Email address"
-              />
+              /></div></div></div>
             </div>
             <button
               type="submit"
@@ -65,7 +64,7 @@ const ContentNewsletterSignup: React.FC = () => {
               className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
             >
               {isSubmitting ? (
-                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div></div></div></div>
               ) : (
                 <>
                   Subscribe
@@ -79,7 +78,6 @@ const ContentNewsletterSignup: React.FC = () => {
             We respect your privacy. Unsubscribe at any time.
           </p>
         </div>
-      </div>
     </section>
   );
 };

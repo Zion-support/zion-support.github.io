@@ -1,4 +1,5 @@
-import React from "react;
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react;
 
 interface SEOEnhancerProps {
   title?: string
@@ -10,7 +11,7 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group','
+  title =" 'Zion Tech Group','
   description = 'Leading provider of AI and IT solutions','
   keywords = ['AI', 'IT', 'technology', 'solutions'],'
   image,
@@ -22,7 +23,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <h1>{title}</h1>
       <p>{description}</p>
       {keywords && (
-        <div className="keywords"></div>"
+        <div className="keywords"></div></div></div></div>"
     </>
           {keywords.map((keyword, index) => (
             <span key={index} className="keyword"></span>"

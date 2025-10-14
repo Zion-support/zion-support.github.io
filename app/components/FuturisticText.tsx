@@ -1,5 +1,6 @@
-import React from "react;
-import { cn    } from "../utils/cn;
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react;
+import { cn    } from" "../utils/cn;
 
 interface FuturisticTextProps {
   children: React.ReactNode

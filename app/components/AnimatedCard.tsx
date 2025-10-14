@@ -1,3 +1,4 @@
+'use client';
 }
 
 const AnimatedCard: React.FC<AnimatedCardProps> = ({
@@ -20,8 +21,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   return (
 <>
       <div>````
-      {children}</div>
-    </div>
+      {children}</div></div></div></div>
     </>
   )}
     </div>

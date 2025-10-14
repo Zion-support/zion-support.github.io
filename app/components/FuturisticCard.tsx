@@ -1,3 +1,4 @@
+'use client';
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
   className = ,'

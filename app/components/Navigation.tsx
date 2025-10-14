@@ -1,3 +1,4 @@
+'use client';
 import { 
   HomeIcon,
   InformationCircleIcon,
@@ -58,8 +59,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 const Navigation: React.FC = () => {
   return (
 <>    <nav className="bg-gray-800 text-white p-4"></nav>"
-      <div className="container mx-auto flex justify-between items-center"></div>"
+      <div className="container mx-auto flex justify-between items-center"></div></div></div></div>"
         <h1 className="text-xl font-bold">Zion Tech Group</h1>"
-        <div className="space-x-4"></div>"
+        <div className="space-x-4"></div></div></div></div>"
     </>
 

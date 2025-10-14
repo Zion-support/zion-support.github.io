@@ -1,3 +1,4 @@
+'use client';
   text?: string
   fullScreen?: boolean
   className?: string}
@@ -18,10 +19,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           style={{
             animation: 'spin 1s linear infinite',
             willChange: 'transform'
-          }></div>
+          }></div></div></div></div>
           <Loader2 className="w-full h-full" />
         </div>
-      </div>
       {text && (
     </div>
   )

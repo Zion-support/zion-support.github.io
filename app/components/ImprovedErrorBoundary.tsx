@@ -1,5 +1,5 @@
+'use client';
             Improved Error Boundary
-          </h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional improved error boundary services
             designed to help your business grow and succeed.
@@ -7,11 +7,10 @@
         </div>
       </section>
       { /* Content Section */ }
-            Improved Error Boundary</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional improved error boundary services
-import React, { Component, ErrorInfo, ReactNode } from "react;
-import { AlertTriangle, RefreshCw, Home     } from "lucide-react;
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React, { Component, ErrorInfo, ReactNode } from ""react;
+import { AlertTriangle, RefreshCw, Home     } from" "lucide-react;
 
 interface Props {
   children: ReactNode

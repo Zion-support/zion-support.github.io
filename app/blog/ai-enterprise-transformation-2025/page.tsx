@@ -1,5 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from '"react"';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import Link from '"next/link"';
 const EnterpriseTransformationPage: React.FC = () => {
 
   return (
@@ -16,7 +17,7 @@ const EnterpriseTransformationPage: React.FC = () => {
             </h1>
             <p className="text-gray-600 text-lg">
               January 28, 2025 · 50 min read · Enterprise AI
-            </p>
+            </p></div></div></div>
           </div>
 
           <div className="prose max-w-none">
@@ -28,17 +29,14 @@ const EnterpriseTransformationPage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-green-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">$50M</div>
-                <div className="text-gray-700">Annual Savings</div>
-              </div>
+                <div className="text-3xl font-bold text-green-600 mb-2">$50M</div></div></div></div>
+                <div className="text-gray-700">Annual Savings</div></div></div></div>
               <div className="bg-blue-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
-                <div className="text-gray-700">Process Automation</div>
-              </div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">95%</div></div></div></div>
+                <div className="text-gray-700">Process Automation</div></div></div></div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">300%</div>
-                <div className="text-gray-700">ROI</div>
-              </div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">300%</div></div></div></div>
+                <div className="text-gray-700">ROI</div></div></div></div>
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏢 Company Profile</h2>
@@ -107,13 +105,10 @@ const EnterpriseTransformationPage: React.FC = () => {
                 <Link href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </Link></div></div></div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   );
 }
 

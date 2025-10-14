@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React from ""react"";
 
 const AccessibilityAudit = () => {
   return (
@@ -8,9 +9,8 @@ const AccessibilityAudit = () => {
           <h1 className="text-4 xl font-bold text-white mb-8">Accessibility Audit</h1>
           <p className="text-gray-300 text-lg">
             This component is under construction. Please check back later.
-          </p>
+          </p></div></div></div>
         </div>
-      </div>
     </>
   );
 };

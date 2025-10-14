@@ -1,4 +1,5 @@
-import React, { Component, ReactNode } from 'react';
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React, { Component, ReactNode } from '"react"';
 
 interface Props {
   children: ReactNode;
@@ -36,9 +37,8 @@ class ErrorBoundary extends Component<Props, State> {
               className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
             >
               Reload Page
-            </button>
+            </button></div></div></div>
           </div>
-        </div>
       );
     }
 

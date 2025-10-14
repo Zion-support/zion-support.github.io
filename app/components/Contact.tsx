@@ -1,8 +1,9 @@
-import React, { useState } from "react;
+'use client';
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""import React, { useState } from ""react;
 import { EnvelopeIcon, 
   PhoneIcon, 
   MapPinIcon,
-  ClockIcon } from "@heroicons/react/24/outline";
+  ClockIcon } from" "@heroicons/react/24/outline";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -59,16 +60,16 @@ const Contact: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Ready to transform your business? Let's discuss how our solutions '
             can help you achieve your goals.
-          </p>
+          </p></div></div></div>
         </div>
     </>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">"
           {/* Contact Form */}
-          <div></div>
+          <div></div></div></div></div>
             <form onSubmit={handleSubmit} className="space-y-6">"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-                <div></div>
+                <div></div></div></div></div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">"
                     Full Name *
                   </label>
@@ -83,7 +84,7 @@ const Contact: React.FC = () => {
                     placeholder="Your full name
                   /></input>
                 </div>
-                <div></div>
+                <div></div></div></div></div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">"
                     Email Address *
                   </label>
@@ -98,9 +99,8 @@ const Contact: React.FC = () => {
                     placeholder="your@email.com
                   /></input>
                 </div>
-              </div>
               
-              <div></div>
+              <div></div></div></div></div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">"
                   Company
                 </label>
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
                 /></input>
               </div>
               
-              <div></div>
+              <div></div></div></div></div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">"
                   Message *
                 </label>
@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">"
-            <div></div>
+            <div></div></div></div></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">"
                 Contact Information
               </h3>
@@ -156,10 +156,9 @@ const Contact: React.FC = () => {
                 <div key={index} className="flex items-start space-x-4">"
                   <div className="flex-shrink-0">"
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">"
-                      <info.icon className="h-6 w-6 text-blue-600" />"
+                      <info.icon className="h-6 w-6 text-blue-600" />"</div></div></div>
                     </div>
-                  </div>
-                  <div></div>
+                  <div></div></div></div></div>
                     <h4 className="text-lg font-semibold text-gray-900">"
                       {info.title}
                     </h4>
@@ -170,7 +169,6 @@ const Contact: React.FC = () => {
                       {info.description}
                     </p>
                   </div>
-                </div>
               )})}
             </div>
 
@@ -181,26 +179,24 @@ const Contact: React.FC = () => {
               </h4>
               <ul className="space-y-2 text-gray-600">"
                 <li className="flex items-center">"
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>"
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div></div></div></div>"
                   Free initial consultation
                 </li>
                 <li className="flex items-center">"
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>"
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div></div></div></div>"
                   Customized solutions
                 </li>
                 <li className="flex items-center">"
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>"
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div></div></div></div>"
                   24/7 support available
                 </li>
                 <li className="flex items-center">"
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>"
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div></div></div></div>"
                   Proven track record
                 </li>
               </ul>
             </div>
-          </div>
         </div>
-      </div>
     </section>
   )
 }
