@@ -10,7 +10,7 @@ const AiPredictiveModelingPage: React.FC = () => {
         <meta name="keywords" content="ai, predictive, modeling" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-        <div className="container mx-autopx-4py-1 6">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-boldtext-white mb-8">Ai predictive modeling</h1>
             <p className="text-xl text-gray-30 0 mb-8">

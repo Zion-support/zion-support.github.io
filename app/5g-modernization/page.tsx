@@ -17,7 +17,7 @@ const FiveGModernizationPage = () => {
       title: 'Team Training',
       description: 'Comprehensive training for modernized 5G network operations.',
     }
-  ]
+  ];
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 

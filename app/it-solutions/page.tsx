@@ -12,7 +12,7 @@ const ItSolutionsPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
         <div className="container mx-auto px-4 py-1 6">
-          <div className="text-center mb-1 6">
+          <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
               IT Solutions
             </h1>

@@ -17,8 +17,7 @@ const FiveGMaintenancePage = () => {
       title: 'Team Training',
       description: 'Comprehensive training for 5G network maintenance and troubleshooting.',
     }
-  ]
-
+  ];
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 

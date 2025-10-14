@@ -17,8 +17,7 @@ const FiveGDeploymentPage = () => {
       title: 'Team Training',
       description: 'Comprehensive training for your team on 5G deployment best practices.',
     }
-  ]
-
+  ];
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 

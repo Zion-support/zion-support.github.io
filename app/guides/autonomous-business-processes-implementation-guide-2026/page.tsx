@@ -10,7 +10,7 @@ const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => {
         <meta name="keywords" content="autonomous, business, processes, implementation, guide, 2026" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-        <div className="container mx-autopx-4py-1 6">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-boldtext-white mb-8">Autonomous business processes implementation guide 2026</h1>
             <p className="text-xl text-gray-30 0 mb-8">

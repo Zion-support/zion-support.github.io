@@ -17,8 +17,7 @@ const FiveGMigrationPage = () => {
       title: 'Team Training',
       description: 'Comprehensive training for 5G migration and new technology adoption.',
     }
-  ]
-
+  ];
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 

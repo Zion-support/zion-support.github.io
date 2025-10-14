@@ -17,15 +17,15 @@ const FiveGMonitoringPage = () => {
       title: 'Team Training',
       description: 'Comprehensive training for 5G network monitoring and management.',
     }
-  ]
+  ];
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-title="5G Monitoring Services - Zion Tech Group"
+        title="5G Monitoring Services - Zion Tech Group"
         description="Professional 5G monitoring services to ensure optimal network performance and security."
       />
       
-      <div className="container mx-autopx-4py-1 6">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             5G Monitoring Services

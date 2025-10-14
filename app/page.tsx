@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { Brain, Shield, Zap, Users, Target, ArrowRight } from 'lucide-react';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
-function HomePage() => {
-  const features = []
+function HomePage() {
+  const features = [
     {
       icon: Brain,
       title: "AI Solutions",
@@ -51,7 +51,7 @@ function HomePage() => {
       <div className="min-h-screen bg-slate-9 0 0 text-white">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-2 0">
-          <div className="text-center mb-1 6">
+          <div className="text-center mb-16">
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-4 0 0 to-cyan-4 0 0 bg-clip-text text-transparent">
               Zion Tech Group
             </h1>

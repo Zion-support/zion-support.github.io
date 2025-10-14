@@ -11,7 +11,7 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-        <div className="container mx-autopx-4py-1 6">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xlfont-boldtext-whitemb-6">
               AI Business Intelligence Pro
