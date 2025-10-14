@@ -15,9 +15,6 @@ export const accessibilityUtils = {
       document.body.removeChild(announcement)
     }, 1000)
   },
-  
-    setTimeout(() => document.body.removeChild(announcement), 1000)
-  },
 
   getFocusableElements: (container: HTMLElement) => {
     return container.querySelectorAll(

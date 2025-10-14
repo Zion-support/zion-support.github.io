@@ -1,34 +1,46 @@
 export const errorLogger = {
-  log: (_error: Error, context?: Record<string, unknown>) => {
-    const ErrorInfo = {
-      message: _error.message;,
-      stack: _error.stack;,
   log: (error: Error, context?: Record<string, unknown>) => {
     const errorInfo = {
-      message: error.message;,
-      stack: error.stack;,
+      message: error.message,
+      stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
-    }
+    };
     
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // Development logging disabled
-      // eslint-disable-next-line no-console
-      console.error('Error logged: ', errorInfo);
-      console.error('Error logged: ', errorInfo)
-    }
+    // Log to console
+    console.error('Error logged:', errorInfo);
     
-    if (typeof window !== 'undefined') {
+    // Send to analytics
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: _error.message;,
-        fatal: false;,
-        custom_parameters: context
+        description: error.message,
+        fatal: false,
+        custom_parameter: context
       });
-        description: error.message;,
-        fatal: false;
-      })
     }
+    
+    return errorInfo;
+  },
+  
+  logAsync: async (error: Error, context?: Record<string, unknown>) => {
+    const errorInfo = {
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString(),
+      context: context || {}
+    };
+    
+    // Log to console
+    console.error('Async error logged:', errorInfo);
+    
+    // Send to external logging service
+    try {
+      // This would be replaced with actual logging service
+      console.log('Error sent to logging service:', errorInfo);
+    } catch (loggingError) {
+      console.error('Failed to send error to logging service:', loggingError);
+    }
+    
+    return errorInfo;
   }
-}
-}
+};

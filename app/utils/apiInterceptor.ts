@@ -1,9 +1,6 @@
 export const apiInterceptor = {
   request: (config: Record<string, unknown>) => {
     // Add auth token if available
-    const token = localStorage.getItem('authToken');
-    if (token && config.headers && typeof config.headers === 'object') {
-      (config.headers as Record<string, string>).Authorization = `Bearer ${token}`;
     const token = localStorage.getItem('authToken')
     if (token) {
       config.headers = {

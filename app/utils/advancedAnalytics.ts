@@ -2,7 +2,7 @@ export const advancedAnalytics = {
   trackPageView: (page: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title;,
+        page_title: document.title,
         page_location: window.location.href
       })
     }

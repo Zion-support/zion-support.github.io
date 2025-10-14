@@ -3,7 +3,7 @@ export const dataTransformers = {
     return data.map((item, index) => {
       const itemObj = item as Record<string, unknown>;
       return {
-        id: itemObj.id || index;,
+        id: itemObj.id || index,
         ...itemObj
       };
     });

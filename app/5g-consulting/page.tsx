@@ -59,7 +59,7 @@ const FiveGConsultingPage = () => {
         <div className="text-center">
           <Link 
             to="/contact" 
-            className="inline-flex items-center bg-blue-600 hover: bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors";
+            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
           >
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />

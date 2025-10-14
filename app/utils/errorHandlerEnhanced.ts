@@ -1,39 +1,45 @@
 export const errorHandlerEnhanced = {
-  handle: (_error: Error, context?: Record<string, unknown>) => {
-    const ErrorInfo = {
-      message: _error.message;,
-      stack: _error.stack;,
   handle: (error: Error, context?: Record<string, unknown>) => {
     const errorInfo = {
-      message: error.message;,
-      stack: error.stack;,
+      message: error.message,
+      stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
+    };
+    
+    // Send to analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_parameter: context
+      });
     }
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      // Development logging disabled
-      // eslint-disable-next-line no-console
-      console.error('Error handled: ', errorInfo);
-      console.error('Error handled: ', errorInfo)
+      console.error('Enhanced error handled:', errorInfo);
     }
     
-    if (typeof window !== 'undefined') {
-      window.gtag('event', 'exception', {
-        description: _error.message;,
-        fatal: false;,
-        custom_parameters: context
-      });
-        description: error.message;,
-        fatal: false;
-      })
+    return errorInfo;
+  },
+  
+  handleAsync: async (error: Error, context?: Record<string, unknown>) => {
+    const errorInfo = {
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString(),
+      context: context || {}
+    };
+    
+    // Send to external error tracking service
+    try {
+      // This would be replaced with actual error tracking service
+      console.log('Error sent to tracking service:', errorInfo);
+    } catch (trackingError) {
+      console.error('Failed to send error to tracking service:', trackingError);
     }
     
-    return {
-      message: 'Something went wrong. Please try again.';,
-      code: 'GENERIC_ERROR';
-    }
+    return errorInfo;
   }
-}
-}
+};
