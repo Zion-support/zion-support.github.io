@@ -16,7 +16,7 @@ export default function Page() {
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
               <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
               <p className="text-gray-300 mb-6">
-                This page is currently under development. We're working hard to bring you the best experience.
+                This page is currently under development. We&apos;re working hard to bring you the best experience.
               </p>
               <div className="flex justify-center space-x-4">
                 <a 
