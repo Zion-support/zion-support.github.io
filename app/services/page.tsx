@@ -5,8 +5,8 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Professional Services solutions and services" />
+        <title>Services</title>
+        <meta name="description" content="Professional services solutions and services" />
         <meta name="keywords" content="services" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -14,7 +14,7 @@ const ServicesPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Services</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional Services solutions and services
+              Professional services solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -26,10 +26,10 @@ const ServicesPage: React.FC = () => {
                 </p>
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
                   Custom Implementation
                 </h3>
-                <p className="text-purple-700">
+                <p className="text-green-700">
                   Tailored implementations for your specific requirements.
                 </p>
               </div>
@@ -46,7 +46,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-  };
+  );
+};
 
 export default ServicesPage;

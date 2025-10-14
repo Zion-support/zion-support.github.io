@@ -9,14 +9,14 @@ export const errorTracking = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error tracked: ', errorInfo);
+      console.error('Error tracked: ', errorInfo)
     }
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      });
+      })
     }
   }
 }

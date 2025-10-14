@@ -16,8 +16,8 @@ export const performanceMonitoring = {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'performance_measurement', {
           metric_name: name,
-          metric_value: measure.duration
-        });
+          value: measure.duration
+        })
       }
     }
     

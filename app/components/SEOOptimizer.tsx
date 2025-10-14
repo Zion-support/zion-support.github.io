@@ -15,9 +15,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   description,
   keywords,
   canonical,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+  ogImage: _ogImage,
+  ogType: _ogType = 'website',
+  twitterCard: _twitterCard = 'summary_large_image'
 }) => {
   useEffect(() => {
     // Update document title

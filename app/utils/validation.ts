@@ -11,17 +11,14 @@ export const validation = {
   
   required: (value: unknown) => {
     return value !== null && value !== undefined && value !== '';
-  required: (value: any) => {
-  required: (value: unknown) => {
-    return value !== null && value !== undefined && value !== ''
   },
   
   minLength: (value: string, min: number) => {
-    return value.length >= min
+    return value.length >= min;
   },
   
   maxLength: (value: string, max: number) => {
-    return value.length <= max
+    return value.length <= max;
   },
   
   url: (url: string) => {
@@ -33,4 +30,3 @@ export const validation = {
     }
   }
 }
-}}

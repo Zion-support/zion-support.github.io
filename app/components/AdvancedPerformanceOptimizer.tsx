@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useCallback, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { usePerformanceMonitor } from '../hooks/usePerformanceMonitor';
 
 interface AdvancedPerformanceOptimizerProps {
@@ -18,7 +18,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true,
+  enableCodeSplitting: _enableCodeSplitting = true,
   enableServiceWorker = true,
   enableResourceHints = true,
   enableCriticalCSS = true,
@@ -77,7 +77,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             const componentName = component.getAttribute('data-lazy-component');
             if (componentName) {
               // Load component dynamically
-              import(`../components/${componentName}.tsx`).then((module) => {
+              import(`../components/${componentName}.tsx`).then((_module) => {
                 component.innerHTML = '';
                 // Render component
                 componentObserver.unobserve(component);
@@ -113,7 +113,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontPreloads = [
-        { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { href: '/fonts/inter-var.woff', as: 'font', type: 'font/woff', crossorigin: 'anonymous' }
       ];
 
@@ -167,6 +167,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
+          // eslint-disable-next-line no-console
           console.log('Service Worker registered successfully:', registration);
           
           // Track service worker registration
@@ -231,7 +232,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         /* Critical CSS for above-the-fold content */
         .hero-section { min-height: 100vh; }
         .navigation { position: fixed; top: 0; width: 100%; z-index: 50; }
-        .loading-skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); }
+        .loading-skeleton { background: linear-gradient(90deg, #f-0f-0f-025%, #e-0e-0e-050%, #f-0f-0f-075%); }
       `;
 
       const style = document.createElement('style');

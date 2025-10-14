@@ -1,47 +1,42 @@
-import React, { Component, ErrorInfo, ReactNode, Suspense } from 'react';
-import React, { Suspense } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props {
-  children: ReactNode
-  }
+  children: ReactNode;
+}
 
 interface State {
   hasError: boolean;
-  error?: Error
-  }
+  error?: Error;
+}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
   }
-  
   componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     // Error logged
   }
-  
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screenflex items-center justify-center bg-slate-900">
+        <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center">
-            <h1 className="text-4xlfont-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300mb-8">We're sorry, but something unexpected happened.</p>
-            <button
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <button 
               onClick={() => window.location.reload()}
-              className="bg-gradient-to-rfrom-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300"
+              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
             >
               Reload Page
             </button>
           </div>
         </div>
-      )
-  }
-    return this.props.children
+      );
+    }
+    return this.props.children;
   }
 }
-
 export default ErrorBoundary;

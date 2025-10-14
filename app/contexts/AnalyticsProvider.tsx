@@ -29,7 +29,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-    setUser,
+    identifyUser: setUser,
   };
   return (
     <AnalyticsContext.Provider value={value}>

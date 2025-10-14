@@ -30,39 +30,49 @@ const ContentCarousel: React.FC = () => {
       ]
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency'],
+      icon: Shield,
+      title: 'Cybersecurity Excellence',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance',
+      features: ['Threat Detection', 'Data Encryption', 'Compliance Management', 'Incident Response'],
       stats: [
         { value: '99.9%', label: 'Uptime' },
-        { value: '< 100ms', label: 'Response Time' },
-        { value: '10M+', label: 'Requests/Day' }
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring'],
-      stats: [
-        { value: '256-bit', label: 'Encryption' },
-        { value: 'SOC 2', label: 'Compliance' },
-        { value: 'Zero', label: 'Security Breaches' }
+        { value: 'Zero', label: 'Data Breaches' },
+        { value: '24/7', label: 'Monitoring' }
       ]
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support'],
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions to support your business growth and digital transformation',
+      features: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Multi-Cloud Strategy'],
       stats: [
-        { value: '50+', label: 'Countries' },
-        { value: '15+', label: 'Languages' },
-        { value: '24/7', label: 'Global Support' }
+        { value: '50%', label: 'Cost Reduction' },
+        { value: '99.9%', label: 'Reliability' },
+        { value: 'Global', label: 'Reach' }
+      ]
+    },
+    {
+      icon: Users,
+      title: 'Team Augmentation',
+      description: 'Expert talent to complement your team and accelerate project delivery',
+      features: ['Expert Developers', 'Project Management', 'Quality Assurance', 'Technical Consulting'],
+      stats: [
+        { value: '100+', label: 'Experts' },
+        { value: '5+', label: 'Years Experience' },
+        { value: '24/7', label: 'Support' }
       ]
     }
   ];
+
+  const currentSlideData = slides[currentSlide];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -72,20 +82,13 @@ const ContentCarousel: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const currentSlideData = slides[currentSlide];
-
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our comprehensive suite of AI and IT solutions designed to transform your business.
@@ -152,76 +155,44 @@ const ContentCarousel: React.FC = () => {
 
               {/* Visual Element */}
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
+                <div className="w-full h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <currentSlideData.icon className="w-16 h-16 text-white" />
-                    </div>
-                    <div className="text-4xl font-bold text-white mb-2">
-                      {currentSlideData.title}
-                    </div>
-                    <div className="text-gray-300">
-                      Slide {currentSlide + 1} of {slides.length}
-                    </div>
+                    <currentSlideData.icon className="w-32 h-32 text-white/50 mx-auto mb-4" />
+                    <div className="text-white/70 text-lg">Interactive Demo</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-3 text-white">
-              <Star className="w-6 h-6 text-yellow-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">4.9/5</div>
-                <div className="text-gray-400 text-sm">Customer Rating</div>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-3 text-white">
-              <Users className="w-6 h-6 text-blue-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">10,000+</div>
-                <div className="text-gray-400 text-sm">Happy Customers</div>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-3 text-white">
-              <TrendingUp className="w-6 h-6 text-green-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">99.9%</div>
-                <div className="text-gray-400 text-sm">Uptime</div>
-              </div>
-            </div>
-          </div>
+        {/* Slide Indicators */}
+        <div className="flex justify-center mt-8 space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? 'bg-gradient-to-r from-purple-500 to-blue-500'
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+            />
+          ))}
         </div>
       </div>
     </div>

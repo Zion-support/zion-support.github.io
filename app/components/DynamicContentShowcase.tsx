@@ -205,7 +205,7 @@ const DynamicContentShowcase: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
+              Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about their experience.
             </p>
           </div>
 
@@ -219,7 +219,7 @@ const DynamicContentShowcase: React.FC = () => {
                 </div>
                 
                 <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  "{currentTestimonial.content}"
+                  &ldquo;{currentTestimonial.content}&rdquo;
                 </blockquote>
                 
                 <div className="flex items-center justify-center gap-4">
