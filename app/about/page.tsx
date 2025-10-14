@@ -1,12 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-  CpuChipIcon,
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  UsersIcon
-} from '@heroicons/react/24/outline';
+// Unused imports removed
 
 const AboutPage: React.FC = () => {
   return (
