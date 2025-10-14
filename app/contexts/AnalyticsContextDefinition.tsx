@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode } from "react";
+import { createContext } from "react";
 
 type AnalyticsContextType = Record<string, unknown>;
 

@@ -4,7 +4,7 @@ type LoadingSpinnerProps = Record<string, unknown>;
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
   return (
-    <div className="loadingspinner">
+    <div className="loadingspinner" data-testid="loading-spinner">
       LoadingSpinner
     </div>
   );

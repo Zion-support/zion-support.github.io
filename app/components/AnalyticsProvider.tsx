@@ -1,11 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const AnalyticsProvider: React.FC<Record<string, unknown>> = () => {
-  return (
-    <div className="analyticsprovider">
-      {/* Component content */}
-    </div>
-  );
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default AnalyticsProvider;

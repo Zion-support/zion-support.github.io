@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from "react"
 const AppMinimal = () => {
   return (
     <div>
@@ -7,7 +6,6 @@ const AppMinimal = () => {
       <p>This is a minimal app component.</p>
       f7f852c0f7415181a1b362c4aa5a784585ad5828
     </div>
-  );
-};
-
-export default AppMinimal;
+  )
+}
+export default AppMinimal
