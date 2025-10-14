@@ -42,7 +42,7 @@ export const usePerformanceMetrics = () => {
     // First Input Delay
     new PerformanceObserver((list) => {
       const entries = list.getEntries()
-      const fidEntry = entries[0] as PerformanceEventTiming
+      const fidEntry = entries[0] as { processingStart?: number; startTime: number }
       if (fidEntry && fidEntry.processingStart) {
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))
       }
@@ -53,7 +53,11 @@ export const usePerformanceMetrics = () => {
       let clsValue = 0
       const entries = list.getEntries()
       entries.forEach(entry => {
+<<<<<<< HEAD
         const layoutShiftEntry = entry as LayoutShift
+=======
+        const layoutShiftEntry = entry as { hadRecentInput?: boolean; value?: number }
+>>>>>>> cursor/fix-errors-and-merge-to-main-0baa
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0
         }

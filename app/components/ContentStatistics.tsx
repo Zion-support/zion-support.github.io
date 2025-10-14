@@ -133,7 +133,11 @@ const ContentStatistics: React.FC = () => {
       countries: 50,
       uptime: 99
     };
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-0baa
     const duration = 3000; // 3 seconds
     const steps = 60;
     const stepDuration = duration / steps;
