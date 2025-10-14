@@ -183,6 +183,6 @@ const AIAnalyticsPage: React.FC = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default AIAnalyticsPage;

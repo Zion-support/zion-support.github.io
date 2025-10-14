@@ -1,19 +1,26 @@
 // Analytics utility functions
 declare global {
   interface Window {
-    gtag?: (command: string, eventName: string, properties?: Record<string, unknown>) => void;
+    gtag?: (..._args: unknown[]) => void;
   }
 }
 export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+  // Basic analytics tracking;
+  console.log('Analytics Event:', eventName, properties);
+  
+  // In a real implementation, you would send this to your analytics service;
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties);
   }
 };
-export const trackPageView = (pageTitle: string, pageLocation: string) => {
+
+export const trackPageView = (pageName: string) => {
+  console.log('Page Vie,
+    w:', pageName);
+  
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_title: pageTitle,
-      page_location: pageLocation,
-    });
+      page_location: pageLocation});
   }
-};
+</string></string>};

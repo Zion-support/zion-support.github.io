@@ -1,38 +1,36 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require("@testing-library/jest-dom");
 
-// Polyfills for Node.js environment
-const { TextEncoder, TextDecoder } = require("util");
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-
-// Mock CSS imports
-jest.mock('react-lazy-load-image-component/src/effects/blur.css', () => ({}));
-
-// Mock react-lazy-load-image-component
-jest.mock('react-lazy-load-image-component', () => {
-  const React = require('react');
+// Mock react-router-dom
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual('react-router-dom');
   return {
-    LazyLoadImage: ({ children, placeholderSrc, ...props }) => {
-      // Filter out non-DOM props
-      const { effect, ...domProps } = props;
-      return React.createElement('img', domProps, children);
+    ...actual,
+    useLocation: () => ({
+      pathname: '/',
+      search: '',
+      hash: '',
+      state: null,
+      key: 'default'
+    }),
+    useNavigate: () => jest.fn(),
+    Link: ({ to, children, ...props }) => {
+      const React = require('react');
+      return React.createElement('a', { href: to, ...props }, children);
     },
+    NavLink: ({ to, children, ...props }) => {
+      const React = require('react');
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    BrowserRouter: ({ children }) => {
+      const React = require('react');
+      return React.createElement('div', { 'data-testid': 'browser-router' }, children);
+    },
+    MemoryRouter: ({ children }) => {
+      const React = require('react');
+      return React.createElement('div', { 'data-testid': 'memory-router' }, children);
+    }
   };
-});
-
-Object.defineProperty(window, "matchMedia", {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
 });
 
 // Mock IntersectionObserver
@@ -40,14 +38,9 @@ global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
+  takeRecords() {
+    return [];
+  }
   unobserve() {}
 };
 

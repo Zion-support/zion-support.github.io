@@ -4,8 +4,8 @@ export default function handler(req, res) {
   }
 
   try {
-    const { error, stack, url, userAgent } = req.body;
-    console.error('Client Error Report:', { error, stack, url, userAgent });
+const { error, stack, url, userAgent } = req.body;    console.error('Client Error Report:', { error, stack, url, userAgent });
+
     console.log('Error report received:', new Date().toISOString());
     res.status(200).json({ success: true, message: 'Error report received' });
   } catch (error) {

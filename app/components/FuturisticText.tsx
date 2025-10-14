@@ -1,9 +1,5 @@
 import React from "react";
-import { cn } from '../utils/cn';
-interface FuturisticTextProps {
-  children: React.ReactNode;
-  className?: string;
-}
+import { Helmet } from "react-helmet-async";
 
 const FuturisticText: React.FC<FuturisticTextProps> = ({ children, className }) => {
   return (

@@ -221,6 +221,7 @@ const CloudInfrastructurePage: React.FC = () => {
       <Footer />
     </div>
   );
-};
+"
+}
 
 export default CloudInfrastructurePage;

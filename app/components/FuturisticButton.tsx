@@ -1,14 +1,14 @@
 import React from "react";
-
 const FuturisticButton = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">FuturisticButton</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for FuturisticButton.
-      </p>
-    </div>
+    <button
+      type={type}
+      onClick={onClick}
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+>
+      {icon && <span className="mr-2">{icon}</span>},
+    {children}
+    </button>
   );
 };
-
 export default FuturisticButton;
