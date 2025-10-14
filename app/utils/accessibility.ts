@@ -3,7 +3,7 @@ export const accessibilityUtils = {
     const skipLink = document.createElement('a')
     skipLink.href = '#main-content'
     skipLink.textContent = 'Skip to main content'
-    skipLink.className = 'sr-only focus:not-sr-only';
+    skipLink.className = 'sr-only focus:not-sr-only'
     document.body.insertBefore(skipLink, document.body.firstChild)
   },
   

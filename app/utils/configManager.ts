@@ -13,21 +13,21 @@ interface Config {
 
 export const configManager = {
   config: {
-    apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';,
-    environment: process.env.NODE_ENV || 'development';,
+    apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
+    environment: process.env.NODE_ENV || 'development',
     features: {
-      analytics: process.env.NODE_ENV === 'production';,
-      seo: true;,
+      analytics: process.env.NODE_ENV === 'production',
+      seo: true,
       performance: true;
     }
   } as Record<string, unknown>,
   
   get: (key: string) => {
-    return key.split('.').reduce((obj: any;, k) => obj?.[k], configManager.config);
+    return key.split('.').reduce((obj: any, k) => obj?.[k], configManager.config);
   } as Config,
   
   get: (key: string) => {
-    return key.split('.').reduce((obj: unknown;, k: string) => {
+    return key.split('.').reduce((obj: unknown, k: string) => {
       if (obj && typeof obj === 'object' && k in obj) {
         return (obj as Record<string, unknown>)[k];
       }
@@ -39,8 +39,8 @@ export const configManager = {
   set: (key: string, value: unknown) => {
     const keys = key.split('.');
     const lastKey = keys.pop();
-    const target = keys.reduce((obj: any;, k) => obj[k] = obj[k] || {}, configManager.config);
-    const target = keys.reduce((obj: Record<string;, unknown>, k: string) => {
+    const target = keys.reduce((obj: any, k) => obj[k] = obj[k] || {}, configManager.config);
+    const target = keys.reduce((obj: Record<string, unknown>, k: string) => {
       if (!(k in obj)) {
         obj[k] = {};
       }
