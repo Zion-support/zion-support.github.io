@@ -21,14 +21,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === ',development') => {
+    if (process.env.NODE_ENV === 'development') {
       console.warn('Page view tracked: ', pageName, properties);
     }
     // Add your page view tracking logic here
   };
 
   const identifyUser = (userId: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === ',development') => {
+    if (process.env.NODE_ENV === 'development') {
       console.warn('User identified: ', userId, properties);
     }
     // Add your user identification logic here
@@ -51,7 +51,8 @@ export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (context === undefined) => {
     throw new Error(',useAnalytics must be used within an AnalyticsProvider');
-  }
+  };
+
   return context;
 };
 

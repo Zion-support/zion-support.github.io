@@ -1,92 +1,47 @@
-import React from 'react';
-import { X } from 'lucide-react';
-import { Home } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems = []
-    { name: 'Home', href: '/', icon: Home ;},
-    { name: 'About', href: '/about', icon: Users ;},
-    { name: 'Services', href: '/services', icon: Settings ;},
-    { name: 'Contact', href: '/contact', icon: Mail ;},
-  ];
-
+const ComponentsPage: React.FC = () => {
   return (
     <>
-      {/* Overlay */}
-      {isOpen && (
-        <div 
-          className="fixedinset-0bg-blackbg-opacity-5 0z-4 0lg:hidden";
-          onClick={onClose}
-        />
-      )}
-      
-      {/* Sidebar */}
-      <div className={`
-        fixed top-0 left-0 h-full w-64 bg-slate-800 transform transition-transform duration-300 ease-in-out z-50
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg: translate-x-0 lg:static lg:inset-0;
-      `}>
-        <div className="flexitems-centerjustify-betweenp-4border-bborder-slate-7 0 0">
-          <h2 className="text-xlfont-boldtext-white">Zion Tech Group</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-4 0 0hover:text-whitelg:hidden";
-          >
-            <X className="w-6h-6" />
-          </button>
-          </div>
-        </div>
-        
-        <nav className="mt-6">
-          <ul className="space-y-2px-4">
-            {navigationItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    onClick={onClose}
-                    className="fle x items-centerpx-4py-3text-gray-3 0 0hover:bg-slate-7 0 0hover:text-whiterounded-lgtransition-colors";
-                  >
-                    <Icon className="w -5h-5 mr-3" />
-                    {item.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-        
-        <div className="absolutebottom-4left-4right-4">
-          <div className="bg-slate-7 0 0rounded-lgp-4">
-            <div className="flexitems-centertext-smtext-gray-3 0 0mb-2">
-              <MapPin className="w -4h-4 mr-2" />
-              <span>Contact Info</span>
+      <Helmet>
+        <title>Components</title>
+        <meta name="description" content="Professional components solutions and services" />
+        <meta name="keywords" content="components" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Components</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional components solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
               </div>
-        </div>
-            <div className="flexitems-centertext-smtext-gray-3 0 0mb-1">
-              <Phone className="w -4h-4 mr-2" />
-              <span>+1 (555) 123-4567</span>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
               </div>
-        </div>
-            <div className="flexitems-centertext-smtext-gray-3 0 0">
-              <Mail className="w -4h-4 mr-2" />
-              <span>info@ziontechgroup.com</span>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
               </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>
@@ -94,4 +49,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default Sidebar;
+export default ComponentsPage;

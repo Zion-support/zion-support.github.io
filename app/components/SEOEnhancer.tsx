@@ -23,8 +23,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   children
 }) => {
   return (
-    <>
-      <Helmet>
+    <Helmet>
         {title && <title>{title}</title>}
         {description && <meta name="description" content={description} />}
         {keywords && <meta name="keywords" content={keywords} />}
@@ -42,9 +41,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         {title && <meta name="twitter:title" content={title} />}
         {description && <meta name="twitter:description" content={description} />}
         {ogImage && <meta name="twitter:image" content={ogImage} />}
-      </Helmet>
+      <</Helmet>
       {children}
-    </>
+    
+  </>
   );
 };
 

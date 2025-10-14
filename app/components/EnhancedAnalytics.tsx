@@ -82,6 +82,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if (eventName) => {
       trackEvent(eventName, eventProperties);
     }
+;
 
     return cleanup;
   }, [eventName, eventProperties]);

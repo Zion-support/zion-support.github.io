@@ -6,7 +6,7 @@ const PerformanceOptimizer: React.FC = () => {
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
-        if (!img.loading) => {
+        if (!img.loading) {
           img.loading = 'lazy';
         }
       });
@@ -25,11 +25,11 @@ const PerformanceOptimizer: React.FC = () => {
 
     const optimizeResources = () => {
       // Add resource hints
-      const resourceHints = []
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com', },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com', },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com', },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', },
+      const resourceHints = [
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       ];
 
       resourceHints.forEach((hint) => {

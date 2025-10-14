@@ -5,16 +5,16 @@ const FiveGIotSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>5G IoT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G IoT solutions and services" />
-        <meta name="keywords" content="5g, iot, solutions" />
+        <title>5G Iot Solutions</title>
+        <meta name="description" content="Professional 5G Iot solutions solutions and services" />
+        <meta name="keywords" content="5G, iot, solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">5G IoT Solutions</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">5G Iot Solutions</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional 5G IoT solutions and services
+              Professional 5g iot solutions solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -47,5 +47,6 @@ const FiveGIotSolutionsPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
+
 export default FiveGIotSolutionsPage;

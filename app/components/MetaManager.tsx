@@ -22,14 +22,14 @@ const MetaManager: React.FC<MetaManagerProps> = ({
 }) => {
   useEffect(() => {
     // Update document title
-    if (title) => {
+    if (title) {
       document.title = title;
     }
 
     // Update meta description
-    if (description) => {
+    if (description) {
       const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) => {
+      if (metaDescription) {
         metaDescription.setAttribute('content', description);
       } else {
         const meta = document.createElement('meta');
@@ -40,9 +40,9 @@ const MetaManager: React.FC<MetaManagerProps> = ({
     }
 
     // Update meta keywords
-    if (keywords) => {
+    if (keywords) {
       const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) => {
+      if (metaKeywords) {
         metaKeywords.setAttribute('content', keywords);
       } else {
         const meta = document.createElement('meta');
@@ -53,9 +53,9 @@ const MetaManager: React.FC<MetaManagerProps> = ({
     }
 
     // Update canonical URL
-    if (canonical) => {
+    if (canonical) {
       const canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (canonicalLink) => {
+      if (canonicalLink) {
         canonicalLink.setAttribute('href', canonical);
       } else {
         const link = document.createElement('link');
@@ -85,7 +85,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({
       {title && <meta name="twitter:title" content={title} />}
       {description && <meta name="twitter:description" content={description} />}
       {ogImage && <meta name="twitter:image" content={ogImage} />}
-    </Helmet>
+    <</Helmet>
   );
 };
 

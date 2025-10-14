@@ -5,16 +5,16 @@ const FiveGImplementationPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>5G Implementation - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G implementation solutions and services" />
-        <meta name="keywords" content="5g, implementation" />
+        <title>5G Implementation</title>
+        <meta name="description" content="Professional 5G implementation services." />
+        <meta name="keywords" content="5G, implementation, services" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">5G Implementation</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional 5G implementation solutions and services
+              Professional 5G implementation services.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -47,5 +47,6 @@ const FiveGImplementationPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
+
 export default FiveGImplementationPage;
