@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useState, useCallback } from 'react'
+import React, { createContext, ReactNode, useCallback } from 'react'
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void
