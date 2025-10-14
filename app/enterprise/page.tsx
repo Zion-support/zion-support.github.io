@@ -1,14 +1,29 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
+const EnterprisePage: React.FC = () => {
+  const services = [
+    {
+      title: 'Expert Enterprise Solutions',
+      description: 'Professional enterprise services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored enterprise implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your enterprise needs.'
+    }
+  ];
 
-
-const Enterprise Page: React.FC = () => {
   return (
     <>
       <div>
       <Helmet>
-        <title>Enterprise</title>
+        <title>Enterprise - Zion Tech Group</title>
         <meta name="description" content="Professional enterprise solutions and services" />
         <meta name="keywords" content="enterprise" />
       </Helmet>
@@ -31,28 +46,38 @@ const Enterprise Page: React.FC = () => {
 =======
             <h1 className="text-4 xl font-bold text-white mb-8">Enterprise</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional Enterprise solutions and services
+              Professional enterprise solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p>
-          
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    {service.description}
+                  </p>
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </div>
-        </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">Service Title</h3>
-                <p className="[^"]*">
-                  Tailored implementations for your specific requirements.
-              </p><div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">Service Title</h3>
-                <p className="[^"]*">
-                  Round-the-clock support for all your needs.
-              </div>
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </div>
           </div>
       </div>
@@ -63,7 +88,7 @@ const Enterprise Page: React.FC = () => {
     </div> 
           </div> 
     </>
-  )
-  }
-  )
-export default Enterprise;; Page
+  );
+};
+
+export default EnterprisePage;

@@ -1,49 +1,73 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Target, Rocket } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
+const MicroSaasSolutionsPage: React.FC = () => {
+  const services = [
+    {
+      title: 'Expert Micro Saas Solutions Solutions',
+      description: 'Professional micro saas solutions services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored micro saas solutions implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your micro saas solutions needs.'
+    }
+  ];
 
-
-
-const Micro Saas Solutions Page: React.FC = () => {
   return (
     <>
       <div>
       <Helmet>
-        <title>Micro Saa S Solutions - Zion Tech Group</title>
-        <meta name="description" content="Scalable micro Saa S solutions for modern businesses" />
+        <title>Micro Saas Solutions - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saas solutions solutions and services" />
+        <meta name="keywords" content="micro, saas, solutions" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5 xlfont-boldtext-whitemb-6">
-              Micro SaaS Solutions
-            </h1>
-            <p>
-          
-              Scalable micro Saa S solutions tailored to your business needs
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Micro Saas Solutions</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional micro saas solutions solutions and services
             </p>
-          </div>
-          
-          <div className="gridmd:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-smrounded-lg p-6borderborder-white/2 0">
-              <Rocket className="w-1 2 h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-whitemb-3">Rapid Development</h3>
-              <p className="text-gray-30 0">
-                Fast-track your SaaS product development with our expert team.
-              </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    {service.description}
+                  </p>
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              ))}
             </div>
-            <div className="bg-white/10 backdrop-blur-smrounded-lg p-6borderborder-white/2 0">
-              <Target className="w-1 2 h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-whitemb-3">Targeted Solutions</h3>
-              <p className="text-gray-30 0">
-                Focused solutions for specific business challenges.
-              </p>
+            <div className="text-center mt-12">
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </div>
         </div>
     </>
-  )
-  }
-  )
-export default Micro;; Saas Solutions Page
+  );
+};
+
+export default MicroSaasSolutionsPage;

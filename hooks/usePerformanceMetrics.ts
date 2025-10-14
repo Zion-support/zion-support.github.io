@@ -1,16 +1,12 @@
 import { useState, useEffect } from "react";
 
 export const usePerformanceMetrics = () => {
-  const [metrics, setMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
-  })
+  const [metrics, setMetrics] = useState<Record<string, number>>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return
+    }
 
     // First Contentful Paint
     new PerformanceObserver((list) => {

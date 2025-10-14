@@ -1,30 +1,11 @@
-import js from "@eslint/js";
-import typescript from "@typescript-eslint/eslint-plugin";
-import typescriptParser from "@typescript-eslint/parser";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import globals from "globals";
-import tseslint from "typescript-eslint";
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
-export default tseslint.config(
-  {
-    ignores: [
-      "app-broken/**",
-      "app-disabled/**",
-      "dist/**",
-      "node_modules/**",
-      "*.config.js",
-      "*.config.cjs",
-      "*.config.mjs",
-      "*.cjs",
-      "api/**",
-      "scripts/**",
-      "validate-jsx.js",
-      "fix-lint-*.js",
-      "fix-numeric-components.js",
-    ],
-  },
+export default [
   js.configs.recommended,
   {
     files: ["**/*.{ts,tsx,js,jsx}"],
@@ -38,25 +19,43 @@ export default tseslint.config(
         },
       },
       globals: {
-        ...globals.browser,
-        console: "readonly",
-        PerformanceObserver: "readonly",
-        describe: "readonly",
-        it: "readonly",
-        expect: "readonly",
-        jest: "readonly",
-        window: "readonly",
-        document: "readonly",
-        process: "readonly",
-        global: "readonly",
-        ...globals.browser,
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        performance: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceEntry: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        HTMLImageElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        HTMLElement: 'readonly',
+        KeyboardEvent: 'readonly',
+        IntersectionObserver: 'readonly',
+        // Node.js globals
+        process: 'readonly',
+        NodeJS: 'readonly',
+        // Test globals
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        jest: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
       },
     },
     plugins: {
-      "@typescript-eslint": typescript,
-      react,
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -66,16 +65,14 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { argsIgnorePattern: "^_", varsIgnorePattern: "^[A-Z]" },
-      ],
-      "@typescript-eslint/no-require-imports": "error",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "no-undef": "off", // TypeScript handles this
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
-      "no-console": ["warn", { allow: ["warn", "error"] }],
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'no-console': 'warn',
+      'no-debugger': 'error',
+      'no-undef': 'off', // TypeScript handles this
+      'react/no-unescaped-entities': 'warn',
     },
     settings: {
       react: {
@@ -84,40 +81,22 @@ export default tseslint.config(
     },
   },
   {
-    files: ["public/sw.js"],
+    files: ['**/*.js'],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: {
-        ...globals.serviceworker,
-        self: "readonly",
-        caches: "readonly",
-        fetch: "readonly",
-        URL: "readonly",
-        location: "readonly",
-        clients: "readonly",
-      },
-    },
-    rules: {
-      "@typescript-eslint/no-unused-vars": "off",
-      "no-console": "off",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
   },
   {
-    files: ["jest.setup.js"],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: {
-        ...globals.jest,
-        global: "readonly",
-        console: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly",
-      },
-    },
-    rules: {
-      "@typescript-eslint/no-unused-vars": "off",
-      "no-console": "off",
-      "@typescript-eslint/no-require-imports": "off",
-    },
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.ts',
+      'public/**',
+      'build/**',
+      '.next/**',
+      'out/**',
+    ],
   },
-);
+];

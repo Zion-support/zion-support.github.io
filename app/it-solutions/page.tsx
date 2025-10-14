@@ -1,21 +1,3 @@
-import React, { Suspense } from 'react'; import {Helmet, Server, Cloud }from 'react-helmet-async'; const It Solutions Page: React.FC = ( )=> {return (
-    <> 
-      <Helmet> <title>ITSolutions - Zion Tech Group</title> <meta name="description"content="Comprehensive IT solutions for modern businesses" /> 
-      </Helmet> 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> 
-        <div className="container mx-auto px 4 py-1"> 
-          <div className="text-center"> mb 12"> <h1 className="text 5 xlfont-bold text-white mb-6"> ITSolutions </h1> <p className="text xltext gray-3 mb-8"> Comprehensive IT servicestopower yourdigitaltransformation </p> 
-          </div> 
-            <div className="grid md:grid cols 2 gap-8"> <div className="bg white/10 backdrop blur-sm rounded-lg p-6 border border-white/2 0"> <Serverclass Nam e="w 12 h-1 text-blue-4 mb-4"/> <h3 className="text xlfont semibold text-white mb-3">Infrastructure</h3> <p className="text gray 30"> Robust IT infrastructuresolutionsfor scalable growth. </p> 
-          </div> <div className="bg white/10 backdrop blur-sm rounded-lg p-6 border border-white/2 0"> <Cloudclass Nam e="w 12 h-1 text-blue-4 mb-4"/> <h3 className="text xlfont semibold text-white mb-3">Cloud Services</h3> <p className="text gray 30"> Secureandscalable cloudcomputingsolutions. </p> 
-          
-        </div>
-      </div>
-    </div> 
-          </div> 
-    </>
-  )}; export default It Solutions Page;
-=======
 import React, { Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Server, Cloud } from 'lucide-react'
@@ -24,50 +6,77 @@ import { Server, Cloud } from 'lucide-react'
 
 
 const It Solutions Page: React.FC = () => {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const ItSolutionsPage: React.FC = () => {
+  const services = [
+    {
+      title: 'Expert It Solutions Solutions',
+      description: 'Professional it solutions services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored it solutions implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your it solutions needs.'
+    }
+  ];
+
   return (
     <>
       <div>
       <Helmet>
-        <title>I T Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive I T solutions for modern businesses" />
+        <title>It Solutions - Zion Tech Group</title>
+        <meta name="description" content="Professional it solutions solutions and services" />
+        <meta name="keywords" content="it, solutions" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        
-        <div className="containermx-auto px-4 py-1 6">
-          <div className="text-center mb-1 6">
-            <h1 className="text-5 xlfont-bold text-white mb-6">
-              IT Solutions
-            </h1>
-            <p className="text-xl text-gray-3 0 0 mb-8">
-              Comprehensive IT services to power your digital transformation
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">It Solutions</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional it solutions solutions and services
             </p>
-          </div>
-          
-          <div className="gridmd:grid-cols-2 gap-8">
-        
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/2 0">
-        
-              <Server className="w-12 h-1 2 text-blue-4 0 0 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Infrastructure</h3>
-              <p>
-          
-                Robust I T infrastructure solutions for scalable growth.
-              </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    {service.description}
+                  </p>
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              ))}
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/2 0">
-        
-              <Cloud className="w-12 h-1 2 text-blue-4 0 0 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
-              <p>
-          
-                Secure and scalable cloud computing solutions.
-              </p>
+            <div className="text-center mt-12">
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </div>
         </div>
     </>
-  )
-  }
-  )
-export default It;; Solutions Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d8c1
+  );
+};
+
+export default ItSolutionsPage;

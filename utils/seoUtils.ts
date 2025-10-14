@@ -92,33 +92,10 @@ export const generateImageAlt = (imagePath: string, alt?: string) => {
 }
 
 export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
-  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`
-}
+  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
+};
 
-export const generateMetaTags = (config: Partial<SEOConfig> = {}) => {
-  const seoConfig = { ...defaultSEOConfig, ...config }
-  
-  return {
-    title: seoConfig.title,
-    description: seoConfig.description,
-    keywords: seoConfig.keywords.join(", "),
-    canonical: seoConfig.canonicalUrl,
-    openGraph: {
-      title: seoConfig.ogTitle || seoConfig.title,
-      description: seoConfig.ogDescription || seoConfig.description,
-      url: seoConfig.canonicalUrl,
-      type: seoConfig.ogType,
-      image: seoConfig.ogImage;
-    },
-    twitter: {
-      card: seoConfig.twitterCard,
-      title: seoConfig.twitterTitle || seoConfig.title,
-      description: seoConfig.twitterDescription || seoConfig.description,
-      image: seoConfig.twitterImage || seoConfig.ogImage;
-    },
-    robots: seoConfig.robots,
-    author: seoConfig.author,
-    publisher: seoConfig.publisher,
-    language: seoConfig.language;
-  }
-}
+export const defaultMeta = {
+  viewport: 'width=device-width, initial-scale=1',
+  charset: 'UTF-8'
+};
