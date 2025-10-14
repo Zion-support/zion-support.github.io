@@ -6,6 +6,16 @@ interface PerformanceMetrics {
   fid?: number; // First Input Delay
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
+  memory?: {
+    usedJSHeapSize?: number;
+    totalJSHeapSize?: number;
+    jsHeapSizeLimit?: number;
+  };
+  navigation?: {
+    loadTime?: number;
+    domContentLoaded?: number;
+    firstPaint?: number;
+  };
 }
 
 // interface LayoutShift extends PerformanceEntry {
@@ -96,12 +106,40 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     };
 
+    // Measure Memory Usage
+    const measureMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        metrics.memory = {
+          usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
+          jsHeapSizeLimit: memory.jsHeapSizeLimit
+        };
+        onMetricsUpdate?.(metrics);
+      }
+    };
+
+    // Measure Navigation Timing
+    const measureNavigation = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        metrics.navigation = {
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          firstPaint: navigation.responseEnd - navigation.requestStart
+        };
+        onMetricsUpdate?.(metrics);
+      }
+    };
+
     // Initialize measurements
     measureFCP();
     measureLCP();
     measureFID();
     measureCLS();
     measureTTFB();
+    measureMemory();
+    measureNavigation();
 
     // Report metrics at intervals
     const interval = setInterval(() => {
