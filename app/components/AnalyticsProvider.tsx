@@ -1,3 +1,4 @@
+import React, { createContext, useContext, ReactNode } from 'react';
 
 import React, { useEffect } from 'react';
 
@@ -9,18 +10,7 @@ declare global {
   }
 }
 
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Initialize Google Analytics
-    const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
-    
-    const initAnalytics = () => {
-      
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
-      document.head.appendChild(script);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
@@ -93,24 +83,11 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       });
     };
 
-    // Handle route changes
-    const handleRouteChange = () => {
-      trackPageView();
-    };
-
-    // Initialize analytics
-    initAnalytics();
-    trackPageView();
-    trackInteractions();
-
-    window.addEventListener('popstate', handleRouteChange);
-
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, []);
-
-  return <>{children}</>;
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
 };
 
 export default AnalyticsProvider;

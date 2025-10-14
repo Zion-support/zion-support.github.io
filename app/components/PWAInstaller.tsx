@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactNode } from 'react';
 
 interface PWAInstallerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const PWAInstaller: React.FC<PWAInstallerProps> = ({ children }) => {

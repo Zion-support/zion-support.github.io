@@ -1,13 +1,12 @@
-import React from "react";
-
-const Page = () => {
+const HomePage = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for Page.
-      </p>
-    </div>
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+
+      <Helmet></Helmet>
+"
+        <meta name="description" content="Professional services by Zion Tech Group." /></meta>
+")}
+}
   );
 };
 
