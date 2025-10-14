@@ -15,10 +15,7 @@ const DemoPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-white mb-8">Demo</h1>
             <div className="text-gray-400">
               <p>Demos coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>

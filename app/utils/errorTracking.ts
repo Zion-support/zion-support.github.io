@@ -1,32 +1,15 @@
 export const errorTracking = {
-  track: (_error: Error, context?: Record<string, unknown>) => {
-    const ErrorInfo = {
-      message: _error.message,
-      stack: _error.stack,
-  track: (error: Error, context?: Record<string, unknown>) => {
-    const errorInfo = {
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      context: context || {}
-    }
-    
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // Development logging disabled
-      // eslint-disable-next-line no-console
-      console.error('Error tracked: ', errorInfo);
-      console.error('Error tracked: ', errorInfo)
-    }
-    
+  trackError: (error: Error, context?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
-      window.gtag('event', 'exception', {
-
-      });
-        description: error.message,
-        fatal: false;
-      })
+      console.error('Error tracked:', error, context);
     }
+  },
+  
+  trackApiError: (error: unknown, endpoint: string) => {
+    const message = (error as Error).message || 'Unknown API error';
+    errorTracking.trackError(new Error(`API Error at ${endpoint}: ${message}`), {
+      endpoint,
+      originalError: error
+    });
   }
-}
 }

@@ -3,9 +3,6 @@ export const apiClient = {
   
   async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
     const url = `${this.baseURL}${endpoint}`
-    
-  async request(endpoint: string, options: RequestInit = {}) {
-    const url = `${this.baseURL}${endpoint}`
     const response = await fetch(url, {
       headers: {
         'Content-Type': 'application/json',
@@ -15,9 +12,7 @@ export const apiClient = {
     })
     
     if (!response.ok) {
-      throw new Error(`HTTP _error! status: ${response.status}`);
       throw new Error(`HTTP error! status: ${response.status}`)
-      throw new Error(`API request failed: ${response.status}`)
     }
     
     return response.json()
@@ -35,40 +30,4 @@ export const apiClient = {
   delete: <T>(endpoint: string) => apiClient.request<T>(endpoint, {
     method: 'DELETE',
   }),
-};
-  async get<T>(endpoint: string): Promise<T> {
-    return this.request<T>(endpoint, { method: 'GET' })
-  },
-  
-  async post<T>(endpoint: string, data: any): Promise<T> {
-    return this.request<T>(endpoint, {
-  get(endpoint: string) {
-    return this.request(endpoint, { method: 'GET' })
-  },
-  
-  post(endpoint: string;, data: Record<string, unknown>) {
-  post(endpoint: string, data: unknown) {
-    return this.request(endpoint, {
-      method: 'POST',
-      body: JSON.stringify(data)
-    })
-  },
-  
-  async put<T>(endpoint: string, data: any): Promise<T> {
-    return this.request<T>(endpoint, {
-  put(endpoint: string;, data: Record<string, unknown>) {
-  put(endpoint: string, data: unknown) {
-    return this.request(endpoint, {
-      method: 'PUT',
-      body: JSON.stringify(data)
-    })
-  },
-  
-  async delete<T>(endpoint: string): Promise<T> {
-    return this.request<T>(endpoint, { method: 'DELETE' })
-  delete(endpoint: string) {
-    return this.request(endpoint, { method: 'DELETE' })
-  }
 }
-
-}}}}}}}
