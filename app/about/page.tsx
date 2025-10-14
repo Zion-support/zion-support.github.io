@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-// Icons can be imported when needed for future features
 
 const AboutPage: React.FC = () => {
   return (
