@@ -1,11 +1,11 @@
 import React from "react";''';'";
-import { useEffect, Node     } from "react";'''"'";
+import { useEffect, Node } from 'react';'''"'";
 interface PerformanceOptimizerProps {}
   children: "Node"}
 const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {}
   useEffect(() => {}, [])
     // Performance optimization code''''';'
-const optimizeImages = () => {}
+const optimizeImages = () => {};
       const images = document.querySelectorAll('img')'''''';
       images.forEach((img) => {}
         if (!img.hasAttribute('loading')) {''}''''';
@@ -13,7 +13,7 @@ const optimizeImages = () => {}
         }
       });
     }
-    const optimizeFonts = () => {}
+    const optimizeFonts = () => {};
       // Preload critical fonts;
 const link = document.createElement('link')'''''';
       link.rel = 'preload''''''';
@@ -23,7 +23,7 @@ const link = document.createElement('link')'''''';
       link.crossOrigin = 'anonymous''''''';
       document.head.appendChild(link);
     }
-    const optimizeResources = () => {}
+    const optimizeResources = () => {};
       // Preload critical resources;
 const criticalResources = ['/css/critical.css',''''''';
         '/js/critical.js'''''''';

@@ -1,11 +1,11 @@
 import React from 'react';
 /* global describe, test, expect, it, beforeEach */
-const App: React.FC = () => {
+const App: React.FC = () => {,
+  return null;
   return (
     <div>;
-      <h1>Test App</h1>;
-    </div>;
+      <h1>Test App</h1>;)
+    </div>;)
   );
 }
-
 export default App;

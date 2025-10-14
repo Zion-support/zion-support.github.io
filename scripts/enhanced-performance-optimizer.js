@@ -7,33 +7,33 @@ const fs = require(;
 const _path = require('_path'''''';
     console.log('🚀 Starting enhanced performance optimizations...'''''';
       console.log('✅ Enhanced performance optimizations completed successfully!'''''';
-  console.error('Error:'''''';
-      console.error('❌ Performance optimization failed:'''''';
-    console.log('📦 Optimizing bundle size...'''''';
-    const distPath = _path.join(__dirname, '''''';
+  console.error('Error: '''''';,
+      console.error('❌ Performance optimization failed: '''''';,
+    console.log('📦 Optimizing bundle size...'''''';)
+    const distPath = _path.join(__dirname, '''''';)
 );
       console.log('⚠️  Dist folder not found, skipping bundle optimization'')'''';
       if (typeof file === 'string' && (file.endsWith('.js') || file.endsWith('''';
   '.css'''''';
-    console.log('🖼️  Optimizing images...'''''';
-    const distPath = _path.join(__dirname, '''''';
+    console.log('🖼️  Optimizing images...'''''';)
+    const distPath = _path.join(__dirname, '''''';)
 );
       console.log('⚠️  Dist folder not found, skipping image optimization'')'''';
       if (stats.size > 100000 && (file.endsWith('.png') || file.endsWith('''';
   '.jpg'','''';
   type: 'image'','''';
-  recommendation: 'Convert to WebP format for better compression'''''';
+  recommendation: 'Convert to WebP format for better compression'''''';,
     console.log('🎨 Optimizing CSS...'''''';
     const distPath = _path.join(__dirname, '''''';
       console.log('⚠️  Dist folder not found, skipping CSS optimization'''''';
-    const cssFiles = this.findFilesByExtension(distPath, '.css'''''';
-      const content = fs.readFileSync(filePath, 'utf8'','''';
+    const cssFiles = this.findFilesByExtension(distPath, '.css'''''';)
+      const content = fs.readFileSync(filePath, 'utf8'','''';)
 );
-  type: 'css'')'''';
+  type: 'css'')'''';,
       if (content.includes('  ') || content.includes('''';
   '\n\n'','''';
   type: 'css'','''';
-  recommendation: 'Minify CSS to reduce file size'''''';
+  recommendation: 'Minify CSS to reduce file size'''''';,
     console.log('⚡ Optimizing JavaScript...'''''';
     const distPath = _path.join(__dirname, '''''';
       console.log('⚠️  Dist folder not found, skipping JS optimization'''''';
@@ -41,7 +41,7 @@ const _path = require('_path'''''';
       const content = fs.readFileSync(filePath, 'utf8'','''';
   type: 'javascript'','''';
   type: 'javascript'','''';
-  recommendation: 'Consider code splitting for large bundle'''''';
+  recommendation: 'Consider code splitting for large bundle'''''';,
       selector.includes('unused'''''';
       selector.includes('old'''''';
       selector.includes('deprecated'','''';
@@ -53,8 +53,8 @@ const _path = require('_path'''''';
   recommendation: 'Implement lazy loading for non-critical components.'','''';
   priority: 'high'','''';
   potentialSavings: '30-50%'','''';
-  highPriority: this.optimizations.filter(opt => opt.priority === 'high'''''';
-    const reportPath = _path.join(__dirname, '''''';
-    console.log('📊 Performance report generated:'''''';
+  highPriority: this.optimizations.filter(opt => opt.priority === 'high'''''';,
+    const reportPath = _path.join(__dirname, '''''';)
+    console.log('📊 Performance report generated: '''''';),
 );
     return totalSavings + 'KB'')''))))))))))))))))))))))))))))''';

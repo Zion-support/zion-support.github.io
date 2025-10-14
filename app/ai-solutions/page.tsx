@@ -20,35 +20,21 @@ const AISolutionsPage: React.FC = () => {
       icon: CpuChipIcon,
       features: [
         'Custom algorithm development',
-        'Real-time model training',
-        'A/B testing framework',
-        'Model performance monitoring',
-        'Automated retraining',
-        'Edge deployment'
-      ],
-      color: 'from-purple-500 to-pink-500',
-      price: 'Starting at $3,500/month',
-      benefits: ['95% accuracy', 'Real-time processing', 'Custom algorithms'],
-      useCases: ['Predictive analytics', 'Recommendation engines', 'Fraud detection'],
-      href: '/ai-machine-learning'
+        'Real-time data processing',
+        'Model optimization',
+        'Continuous learning'
+      ]
     },
     {
       title: 'Computer Vision',
-      description: 'Advanced image and video analysis solutions for automated visual inspection, object detection, and facial recognition.',
+      description: 'Advanced image and video analysis solutions for object detection, recognition, and automated visual inspection.',
       icon: EyeIcon,
       features: [
-        'Object detection and classification',
-        'Facial recognition systems',
-        'Image segmentation',
-        'Real-time video analysis',
-        'Quality control automation',
-        'Medical image analysis'
-      ],
-      color: 'from-blue-500 to-cyan-500',
-      price: 'Starting at $4,200/month',
-      benefits: ['99% accuracy', 'Real-time processing', 'Custom models'],
-      useCases: ['Quality control', 'Security systems', 'Medical imaging'],
-      href: '/ai-computer-vision'
+        'Object detection',
+        'Image classification',
+        'Facial recognition',
+        'Quality inspection'
+      ]
     },
     {
       title: 'Natural Language Processing',
@@ -56,53 +42,61 @@ const AISolutionsPage: React.FC = () => {
       icon: ChatBubbleLeftRightIcon,
       features: [
         'Sentiment analysis',
-        'Text classification',
+        'Text generation',
         'Language translation',
-        'Content generation',
-        'Chatbot development',
-        'Document analysis'
-      ],
-      color: 'from-green-500 to-emerald-500',
-      price: 'Starting at $2,800/month',
-      benefits: ['Multi-language support', 'Real-time processing', 'Custom training'],
-      useCases: ['Customer service', 'Content moderation', 'Language translation'],
-      href: '/ai-nlp'
+        'Content summarization'
+      ]
+    },
+    {
+      title: 'Document Intelligence',
+      description: 'Automated document processing and analysis for data extraction, classification, and intelligent document management.',
+      icon: DocumentTextIcon,
+      features: [
+        'Document classification',
+        'Data extraction',
+        'OCR processing',
+        'Automated workflows'
+      ]
+    },
+    {
+      title: 'Predictive Analytics',
+      description: 'Data-driven insights and forecasting solutions to help you make informed business decisions and predict future trends.',
+      icon: LightBulbIcon,
+      features: [
+        'Trend forecasting',
+        'Risk assessment',
+        'Demand prediction',
+        'Performance optimization'
+      ]
     },
     {
       title: 'AI Automation',
-      description: 'Intelligent process automation solutions that streamline workflows and reduce manual tasks across your organization.',
-      icon: LightBulbIcon,
+      description: 'Intelligent automation solutions that streamline business processes and reduce manual work through AI-powered workflows.',
+      icon: SparklesIcon,
       features: [
-        'Workflow automation',
-        'Document processing',
-        'Data extraction',
-        'Process optimization',
-        'Intelligent routing',
-        'Exception handling'
-      ],
-      color: 'from-orange-500 to-red-500',
-      price: 'Starting at $3,200/month',
-      benefits: ['80% time savings', 'Error reduction', 'Scalable solutions'],
-      useCases: ['Document processing', 'Data entry', 'Workflow optimization'],
-      href: '/ai-automation'
+        'Process automation',
+        'Workflow optimization',
+        'Task scheduling',
+        'Intelligent routing'
+      ]
     }
   ];
 
-  const industries = [
-    { name: 'Healthcare', icon: '🏥', description: 'Medical imaging, drug discovery, patient care' },
-    { name: 'Finance', icon: '💰', description: 'Fraud detection, risk assessment, trading algorithms' },
-    { name: 'E-commerce', icon: '🛒', description: 'Recommendation engines, price optimization, inventory management' },
-    { name: 'Manufacturing', icon: '🏭', description: 'Quality control, predictive maintenance, supply chain optimization' },
-    { name: 'Education', icon: '🎓', description: 'Personalized learning, content generation, assessment tools' },
-    { name: 'Transportation', icon: '🚗', description: 'Autonomous vehicles, route optimization, traffic management' }
+  const benefits = [
+    'Increased Efficiency',
+    'Cost Reduction',
+    'Better Decision Making',
+    'Enhanced Customer Experience',
+    'Scalable Solutions',
+    '24/7 Availability'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI solutions including machine learning, computer vision, NLP, and automation. Transform your business with cutting-edge artificial intelligence technology." />
-        <meta name="keywords" content="AI solutions, machine learning, computer vision, NLP, artificial intelligence, automation, AI consulting" />
+        <meta name="description" content="Advanced AI solutions including machine learning, computer vision, NLP, and automation services for modern businesses." />
+        <meta name="keywords" content="AI solutions, machine learning, computer vision, NLP, artificial intelligence, automation" />
       </Helmet>
 
       {/* Hero Section */}
@@ -113,98 +107,63 @@ const AISolutionsPage: React.FC = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <SparklesIcon className="w-12 h-12 text-purple-400 animate-pulse" />
-              <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                AI Solutions
-              </h1>
-              <SparklesIcon className="w-12 h-12 text-cyan-400 animate-pulse" />
-            </div>
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              AI Solutions
+            </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Transform Your Business with Artificial Intelligence
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Leverage cutting-edge AI technology to automate processes, gain insights, and drive innovation. 
-              Our comprehensive AI solutions are designed to solve complex business challenges.
+              Leverage the power of AI to automate processes, gain insights, and drive innovation 
+              across your organization with our cutting-edge artificial intelligence solutions.
             </p>
             <Link
               to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"
             >
-              Get Started with AI
+              Get Started
               <ArrowRightIcon className="w-5 h-5" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* AI Services Section */}
+      {/* Services Section */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our AI Solutions
+              Our AI Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive artificial intelligence services designed to transform your business
+              Comprehensive AI solutions designed to meet your business needs
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group">
-                <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform`}>
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                    <p className="text-purple-400 font-semibold">{service.price}</p>
-                  </div>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Key Features</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckIcon className="w-4 h-4 text-green-400 mr-3" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Benefits</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">
-                          {benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.useCases.map((useCase, useCaseIndex) => (
-                        <span key={useCaseIndex} className="px-3 py-1 bg-cyan-600 text-white text-sm rounded-full">
-                          {useCase}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <ul className="space-y-3 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
                 
                 <Link
-                  to={service.href}
+                  to="/contact"
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 >
                   Learn More
@@ -216,24 +175,28 @@ const AISolutionsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* Benefits Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Industries We Serve
+              Why Choose Our AI Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI solutions tailored for various industries and business needs
+              We provide comprehensive AI solutions that keep your business ahead of the competition
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 text-center">
-                <div className="text-4xl mb-4">{industry.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{industry.name}</h3>
-                <p className="text-gray-300 text-sm">{industry.description}</p>
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{benefit}</h3>
+                <p className="text-gray-300">
+                  Professional AI services that ensure your business stays competitive and innovative.
+                </p>
               </div>
             ))}
           </div>
@@ -244,17 +207,17 @@ const AISolutionsPage: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business with AI?
+            Ready to Embrace AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI solutions can help you achieve your business goals
+            Let our experts help you implement AI solutions that transform your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
             >
-              Start Your AI Journey
+              Get Started Today
             </Link>
             <Link
               to="/demo"
@@ -269,5 +232,5 @@ const AISolutionsPage: React.FC = () => {
   );
 };
 
-export default AISolutionsPage;
-ursor/fix-errors-and-merge-to-main-94a7
+const page = React.lazy(() => import('./page'));
+export default page;

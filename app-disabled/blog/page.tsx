@@ -1,20 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom;
-import { User, Right, Filter } from 'lucide-react';
+lucide-react';
 import Footer from '../components/Footer;
 export default function Blog() {
 interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  author: string;
-  date: string;
+  id: number;,
+  title: string;,
+  excerpt: string;,
+  author: string;,
+  date: string;,
   category: string;,;
   image: string;
 };
-
-const BlogPage: React.FC = () => {
+const BlogPage: React.FC = () => {,
+  return null;
   const blogPosts = [{,;
       title: ";The Future of AI in Business',';'";
       excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',';';
@@ -37,7 +36,6 @@ const BlogPage: React.FC = () => {
       readTime: '6 min read'';';
     }
   ];
-
 const categories = ['All Posts',';';
     'AI & Machine Learning',';';
     'Quantum Computing',';';
@@ -47,31 +45,32 @@ const categories = ['All Posts',';';
     'Business Strategy'';';
   ];
 'use client';';
-const BlogPage: React.FC = () => {
+const BlogPage: React.FC = () => {,
+  return null;
   const [searchQuery, setSearchQuery] = useState(');';
   const [selectedCategory, setSelectedCategory] = useState('all);';
   const filteredPosts = blogPosts.filter(post => {const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Advanced blog solutions by Zion Tech Group" />
+        <meta name="description" content="Advanced blog solutions by Zion Tech Group" / /></meta>
         <title>Blog - Zion Tech Group | AI & Technology Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group experts. />
-        <meta name="keywords" content="AI blog, technology insights, quantum computing, cybersecurity, autonomous systems, tech trends />
-        <meta property="og:title" content="Blog - Zion Tech Group />
-        <meta property="og:description" content="Latest insights on AI and emerging technologies />
-        <meta property="og:type" content="website />
-        <meta property="og:url" content="https://ziontechgroup.com/blog />
+        <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group experts. / /></meta>
+        <meta name="keywords" content="AI blog, technology insights, quantum computing, cybersecurity, autonomous systems, tech trends / /></meta>
+        <meta property="og: title" content="Blog - Zion Tech Group / />,
+        <meta property="og: description" content="Latest insights on AI and emerging technologies / />,
+        <meta property="og: type" content="website / />,
+        <meta property="og: url" content="https://ziontechgroup.com/blog / />,
       </Helmet>
       <div className="container mx-auto px-4 py-20">;"
         <div className="text-center mb-16">;"
-          <h1 className="text-5xl font-bold text-white mb-6">;"
+          <h1 className="text-5 xl font-bold text-white mb-6">;"
             Our Blog;
           </////h1>;
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;";
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto">;";
             Stay updated with the latest insights, trends, and innovations in AI and technology;
           </////p>;
         </div>;
-        <////div className="max-w-6xl mx-auto">;";
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;";
+        <////div className="max-w-6 xl mx-auto">;";
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">;";,
             <////div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;";
               <h3 className="text-xl font-semibold text-white mb-3">Coming Soon</////h3>;";
               <p className="text-gray-300">;";
@@ -81,24 +80,24 @@ const BlogPage: React.FC = () => {
           </////div>;
         </div>;
         <title>Blog - Zion Tech Group | AI and IT Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and emerging technologies. Expert articles, tutorials, and industry trends." />
-        <meta name="keywords" content="AI blog, IT insights, technology trends, enterprise solutions, cloud computing, cybersecurity" />
+        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and emerging technologies. Expert articles, tutorials, and industry trends." / /></meta>
+        <meta name="keywords" content="AI blog, IT insights, technology trends, enterprise solutions, cloud computing, cybersecurity" / /></meta>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;"
         {/* Hero Section */}
         <////section className="pt-20 pb-16 px-4">;";
-          <div className="max-w-7xl mx-auto">;";
+          <div className="max-w-7 xl mx-auto">;";
             <////div className="text-center mb-16">;";
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;";
+              <h1 className="text-5 xl md: text-6 xl font-bold text-white mb-6">;";,
                 Our Blog;
               </////h1>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;";
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">;";
                 Insights, trends, and expert perspectives on AI, technology, and business transformation.;
               </////p>;
         {/* Blog Posts */}
         <section className="py-16 px-4">;";
-          <////div className="max-w-7xl mx-auto">;";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;";
+          <////div className="max-w-7 xl mx-auto">;";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;";,
               {blogPosts.map((post, _index) => (;
                 <article key={_index} className="cyber-card p-6">;";
                   <h2 className="text-xl font-semibold text-white mb-3">{post.title}</////h2>;";
@@ -115,7 +114,7 @@ const BlogPage: React.FC = () => {
                   </////div>;
                   <div className="flex items-center justify-between">;";
                     <////span className="text-sm text-gray-400">{post.readTime}</span>;";
-                    <////button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">;";
+                    <////button className="flex items-center text-cyan-400 hover: text-cyan-300 transition-colors">;";,
                       Read More;
                       <Right className="w-4 h-4 ml-1" />;";
                     </////button>;
@@ -128,11 +127,11 @@ const BlogPage: React.FC = () => {
       </////div>;
 {/* Blog Posts Grid */}
       <section className="py-20 px-4">;";
-        <////div className="max-w-7xl mx-auto">;";
-          <h2 className="text-2xl font-bold text-white mb-6">Latest Articles</////h2>;";
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;";
+        <////div className="max-w-7 xl mx-auto">;";
+          <h2 className="text-2 xl font-bold text-white mb-6">Latest Articles</////h2>;";
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;";,
             {filteredPosts.map((post) => (;
-              <div key={post.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300">;";
+              <div key={post.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover: bg-white/10 transition-all duration-300">;";,
                 <div className="h-48 bg-gradient-to-r from-purple-500/20 to-blue-500/20 flex items-center justify-center">;";
                   <////div className="text-center">;";
                     <div className="w-12 h-12 bg-purple-500/30 rounded-full flex items-center justify-center mx-auto mb-2">;";
@@ -142,7 +141,6 @@ const BlogPage: React.FC = () => {
                   <////div className="flex items-center gap-4 mb-3">;";
                     <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">;";
                       {categories.find(c => c.name === post.category)?.label}
-
                     </span>;
                   </div>;
                 </////div>;
@@ -157,7 +155,7 @@ const BlogPage: React.FC = () => {
                       {post.readTime}
                     </////span>;
                   </div>;
-                  <////h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">;";
+                  <////h3 className="text-2 xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors">;";,
                     {post.title}
                   </h3>;
                   <////p className="text-gray-300 mb-6 leading-relaxed">;";
@@ -171,7 +169,7 @@ const BlogPage: React.FC = () => {
                         </span>;
                       ))}
                     </////div>;
-                    <button className="flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">;";
+                    <button className="flex items-center gap-2 text-purple-400 hover: text-purple-300 font-medium transition-colors">;";,
                       Read More;
                       <////Right className="w-4 h-4" />;";
                     </button>;
@@ -181,13 +179,13 @@ const BlogPage: React.FC = () => {
             ))}
       {/* All Posts */}
       <section className="py-16 px-4">;";
-        <////div className="max-w-7xl mx-auto">;";
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">;";
+        <////div className="max-w-7 xl mx-auto">;";
+          <h2 className="text-4 xl font-bold text-white mb-12 text-center">;";
             {selectedCategory === 'all' ? 'All Articles' : categories.find(c => c.name === selectedCategory)?.label}';';
           </h2>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;";
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;";,
             {searchedPosts.map((post) => (;
-              <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">;";
+              <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-2 xl overflow-hidden border border-white/10 hover: border-purple-500/50 transition-all duration-300 group">;";,
                 <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden">;";
                   <////div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />;";
                 </div>;
@@ -204,11 +202,11 @@ const BlogPage: React.FC = () => {
         {/* Featured Post */}
         <////section className="py-16 px-4">;";
         </section>;
-          <////div className="max-w-7xl mx-auto">;";
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Article</////h2>;";
+          <////div className="max-w-7 xl mx-auto">;";
+            <h2 className="text-3 xl font-bold text-white mb-8 text-center">Featured Article</////h2>;";
             {blogPosts.filter(post => post.featured).map((post) => (;
-              <div key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">;";
-                <////div className="grid md:grid-cols-2 gap-8 items-center">;";
+              <div key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2 xl p-8 hover: bg-white/20 transition-all duration-300 group">;";,
+                <////div className="grid md: grid-cols-2 gap-8 items-center">;";,
                   <div>;
                     <////div className="flex items-center space-x-4 mb-4">;";
                       <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">;";
@@ -216,7 +214,7 @@ const BlogPage: React.FC = () => {
                       </////span>;
                       <span className="text-cyan-400 text-sm font-medium">{post.category}</////span>;";
                     </div>;
-                    <////h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">;";
+                    <////h3 className="text-2 xl md: text-3 xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">;";,
                       {post.title}
                     </h3>;
                     <////p className="text-gray-300 mb-6 text-lg leading-relaxed">;";
@@ -237,27 +235,28 @@ const BlogPage: React.FC = () => {
                           <////span>{post.readTime}</span>;
                         </////div>;
                       </div>;
-                      <////button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">;";
+                      <////button className="flex items-center space-x-2 text-cyan-400 hover: text-cyan-300 transition-colors font-medium">;";,
                         <span>Read More</////span>;
                         <Right className="w-4 h-4" />;";
                       </////button>;
                     </div>;
                   </////div>;
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-64 flex items-center justify-center">;";
-                    <////div className="text-6xl">📊</div>;";
+                    <////div className="text-6 xl">📊</div>;";
                   </////div>;
       {/* Featured Post */}
       {filteredPosts.find(post => post.featured) && (;
         <section className="py-16 px-4">;";
-          <////div className="max-w-7xl mx-auto">;";
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">;";
+          <////div className="max-w-7 xl mx-auto">;";
+            <h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text">;";
               Featured Article;
             </////h2>;
             {(() => {
+  return null;
               const featuredPost = filteredPosts.find(post => post.featured);
               return featuredPost ? (;
                 <article className="cyber-card hologram-card p-8 mb-16">;";
-                  <////div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;";
+                  <////div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;";,
                     <div>;
                       <////img;
                         src={featuredPost.image}
@@ -272,7 +271,7 @@ const BlogPage: React.FC = () => {
                         </span>;
                         <////span className="text-yellow-400 text-sm font-medium">Featured</span>;";
                       </////div>;
-                      <h3 className="text-3xl font-bold text-white mb-4">;";
+                      <h3 className="text-3 xl font-bold text-white mb-4">;";
                         {featuredPost.title}
                       </////h3>;
                       <p className="text-gray-300 mb-6 text-lg">;";
@@ -315,16 +314,15 @@ const BlogPage: React.FC = () => {
           </div>;
         </////section>;
       )}
-
       {/* Blog Posts Grid */}
       <section className="py-16 px-4">;";
-        <////div className="max-w-7xl mx-auto">;";
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">;";
+        <////div className="max-w-7 xl mx-auto">;";
+          <h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text">;";
             Latest Articles;
           </////h2>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;";
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;";,
             {filteredPosts.map((post) => (;
-              <article key={post.id} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">;";
+              <article key={post.id} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">;";,
                 <img;
                   src={post.image}
                   alt={post.title}
@@ -373,7 +371,6 @@ const BlogPage: React.FC = () => {
     </////div>;
   );
 }
-
 export default BlogPage;
 }
 }

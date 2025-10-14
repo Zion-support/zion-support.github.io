@@ -13,40 +13,37 @@ const CareersPage = lazy(() => import("./careers/page"));
 const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
-
-// 5G Solutions Pages
-const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
-const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
-const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"));
-const FiveGIoTSolutionsPage = lazy(() => import("./5g-iot-solutions/page"));
-const FiveGMobileApplicationsPage = lazy(
-  () => import("./5g-mobile-applications/page"),
+// 5 G Solutions Pages,
+const FiveGDataAnalyticsPage = lazy(() => import("./5 g-data-analytics/page"));
+const FiveGEdgeComputingPage = lazy(() => import("./5 g-edge-computing/page"));
+const FiveGImplementationPage = lazy(() => import("./5 g-implementation/page"));
+const FiveGIoTSolutionsPage = lazy(() => import("./5 g-iot-solutions/page"));
+const FiveGMobileApplicationsPage = lazy();
+  () => import("./5 g-mobile-applications/page"),;
 );
-const FiveGNetworkInfrastructurePage = lazy(
-  () => import("./5g-network-infrastructure/page"),
+const FiveGNetworkInfrastructurePage = lazy();
+  () => import("./5 g-network-infrastructure/page"),;
 );
-const FiveGPrivateNetworksPage = lazy(
-  () => import("./5g-private-networks/page"),
+const FiveGPrivateNetworksPage = lazy();
+  () => import("./5 g-private-networks/page"),;
 );
-const FiveGSmartCitySolutionsPage = lazy(
-  () => import("./5g-smart-city-solutions/page"),
+const FiveGSmartCitySolutionsPage = lazy();
+  () => import("./5 g-smart-city-solutions/page"),;
 );
-const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
-
-// Loading component
+const FiveGSolutionsPage = lazy(() => import("./5 g-solutions/page"));
+// Loading component,
 const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
-  </div>
+  <div className="min-h-screen flex items-center justify-center bg-gray-900" /></div>
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500" /></div>;
+  </div>;
 );
-
-// Main App Component
+// Main App Component,
 export default function App() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
+    <HelmetProvider /></HelmetProvider>
+      <BrowserRouter /></BrowserRouter>
         <Suspense fallback={<LoadingSpinner />}>
-          <Routes>
+          <Routes /></Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
@@ -59,45 +56,43 @@ export default function App() {
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/cookies" element={<CookiesPage />} />
-
-            {/* 5G Solutions Routes */}
-            <Route
-              path="/5g-data-analytics"
+            {/* 5 G Solutions Routes */}
+            <Route,
+path="/5 g-data-analytics"
               element={<FiveGDataAnalyticsPage />}
             />
-            <Route
-              path="/5g-edge-computing"
+            <Route,
+path="/5 g-edge-computing"
               element={<FiveGEdgeComputingPage />}
             />
-            <Route
-              path="/5g-implementation"
+            <Route,
+path="/5 g-implementation"
               element={<FiveGImplementationPage />}
             />
-            <Route
-              path="/5g-iot-solutions"
+            <Route,
+path="/5 g-iot-solutions"
               element={<FiveGIoTSolutionsPage />}
             />
-            <Route
-              path="/5g-mobile-applications"
+            <Route,
+path="/5 g-mobile-applications"
               element={<FiveGMobileApplicationsPage />}
             />
-            <Route
-              path="/5g-network-infrastructure"
+            <Route,
+path="/5 g-network-infrastructure"
               element={<FiveGNetworkInfrastructurePage />}
             />
-            <Route
-              path="/5g-private-networks"
+            <Route,
+path="/5 g-private-networks"
               element={<FiveGPrivateNetworksPage />}
             />
-            <Route
-              path="/5g-smart-city-solutions"
+            <Route,
+path="/5 g-smart-city-solutions"
               element={<FiveGSmartCitySolutionsPage />}
             />
-            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+            <Route path="/5 g-solutions" element={<FiveGSolutionsPage />} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
-    </HelmetProvider>
+      </BrowserRouter>)
+    </HelmetProvider>)
   );
 }
-ursor/fix-errors-and-merge-to-main-94a7

@@ -1,35 +1,34 @@
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
-const AIPoweredChatbotSAAS = () => {
+const AIPoweredChatbotSAAS = () => {;
+  return null;
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet /></Helmet>
         <title>AI-Powered Chatbot SAAS - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI chatbot solution for customer service and support." />
+        <meta name="description" content="Advanced AI chatbot solution for customer service and support." / /></meta>
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20">
-          <ResponsiveContainer>
-            <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /></div>
+        <section className="py-20" /></section>
+          <ResponsiveContainer /></ResponsiveContainer>
+            <div className="text-center" /></div>
+              <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6" />,
                 AI-Powered Chatbot SAAS
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto" /></p>
                 Advanced AI chatbot solution for customer service and support.
               </p>
-              <Link to="/contact">
-                <FuturisticButton size="lg">
+              <Link to="/contact" /></Link>
+                <FuturisticButton size="lg" /></FuturisticButton>
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" / /></ArrowRight>
                 </FuturisticButton>
               </Link>
             </div>
           </ResponsiveContainer>
         </section>
-      </div>
-    </>
+      </div>)
+    </>;)
   );
 };
-
-export default AIPoweredChatbotSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;

@@ -24,16 +24,16 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Focus management
-    const enhanceFocus = () => {
+    const enhanceFocusManagement = () => {
       // Add focus indicators
       const style = document.createElement('style');
       style.textContent = `
         *:focus {
-          outline: 2px solid #8b5cf6 !important;
+          outline: 2px solid #a855f7 !important;
           outline-offset: 2px !important;
         }
         .high-contrast {
-          filter: contrast(150%) brightness(1.2);
+          filter: contrast(150%) brightness(120%);
         }
       `;
       document.head.appendChild(style);
@@ -42,32 +42,33 @@ const AccessibilityEnhancer: React.FC = () => {
     // Keyboard navigation enhancement
     const enhanceKeyboardNavigation = () => {
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
+        // Escape key to close modals
+        if (e.key === 'Escape') {
+          const modals = document.querySelectorAll('[role="dialog"]');
+          modals.forEach(modal => {
+            if (modal.getAttribute('aria-hidden') === 'false') {
+              modal.setAttribute('aria-hidden', 'true');
+            }
+          });
         }
-      });
-
-      document.addEventListener('mousedown', () => {
-        document.body.classList.remove('keyboard-navigation');
       });
     };
 
     // Initialize accessibility features
     addSkipLink();
     addHighContrastToggle();
-    enhanceFocus();
+    enhanceFocusManagement();
     enhanceKeyboardNavigation();
 
-    // Cleanup function
+    // Cleanup
     return () => {
       const skipLink = document.querySelector('a[href="#main-content"]');
       if (skipLink) {
         skipLink.remove();
       }
-      
-      const toggle = document.querySelector('button[onclick*="high-contrast"]');
-      if (toggle) {
-        toggle.remove();
+      const contrastToggle = document.querySelector('button[onclick*="high-contrast"]');
+      if (contrastToggle) {
+        contrastToggle.remove();
       }
     };
   }, []);

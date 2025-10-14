@@ -3,10 +3,9 @@ import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
-
 export default tseslint.config(
   {
-    ignores: [
+    ignores: [,
       'app-broken/**',
       'app-disabled/**',
       'dist/**',
@@ -45,10 +44,10 @@ export default tseslint.config(
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
-    languageOptions: {
+    languageOptions: {,
       ecmaVersion: "latest",
       sourceType: "module",
-      globals: {
+      globals: {,
         ...globals.browser,
         window: "readonly",
         document: "readonly",
@@ -76,8 +75,8 @@ export default tseslint.config(
         exports: "readonly",
         fs: "readonly",
         __dirname: "readonly",
-        // Jest globals
-        describe: "readonly",
+        // Jest globals,
+describe: "readonly",
         it: "readonly",
         test: "readonly",
         expect: "readonly",
@@ -85,45 +84,30 @@ export default tseslint.config(
         afterEach: "readonly",
         beforeAll: "readonly",
         afterAll: "readonly",
-        jest: "readonly",
+        jest: "readonly"
       },
-      parserOptions: {
+      parserOptions: {,
         ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {
+        ecmaFeatures: {,
           jsx: true
         }
-      },
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceEventTiming: 'readonly'
       }
     },
-    plugins: {
+    plugins: {,
       "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      "react-refresh": reactRefresh
     },
-    rules: {
+    rules: {,
       ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-empty-object-type': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'no-console': 'off',
-      'react/no-unescaped-entities': 'off',
-      'no-undef': 'off'
-    },
-  },
+      "": [
+        "warn",
+        { allowConstantExport: true }
+      ],
+      "no-console": "off",
+      "no-undef": "off",
+      "@": "warn",
+      "@": "warn"
+    }
+  })
 );

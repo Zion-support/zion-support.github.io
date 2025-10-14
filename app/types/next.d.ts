@@ -6,7 +6,7 @@ declare module 'next' {';
     // Add any Next.js specific types here}
 }
 // Export a utility function;
-export const nextUtil = () => {
+export const nextUtil = () => {;
   // Implementation;
   return true};
 export default nextUtil;

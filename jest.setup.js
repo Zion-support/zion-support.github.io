@@ -1,28 +1,30 @@
-require('@testing-library/jest-dom');
+require('@');
 const React = require('react');
-
 jest.mock('react-router-dom', () => {
+  return null;
   const actual = jest.requireActual('react-router-dom');
   const React = require('react');
-
   return {
     ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
+useNavigate: () => jest.fn(),
+    useLocation: () => ({,
       pathname: '/',
       search: '',
       hash: '',
       state: null
-    }),
-    useParams: () => ({}),
+    })
+    useParams: () => ({})
     Link: ({ children, to, ...props }) => {
+  return null;
       return React.createElement('a', { href: to, ...props }, children);
-    },
+    }
     NavLink: ({ children, to, ...props }) => {
+  return null;
       return React.createElement('a', { href: to, ...props }, children);
-    },
+    }
     BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
+MemoryRouter: ({ children }) => {
+  return null;
       const { createMemoryRouter, RouterProvider } = actual;
       const router = createMemoryRouter([
         {
@@ -30,36 +32,36 @@ jest.mock('react-router-dom', () => {
           element: children
         }
       ], {
-        initialEntries: ['/'],
-        initialIndex: 0
+        initialEntries: ['/'],;)
+        initialIndex: 0;)
       });
       return React.createElement(RouterProvider, { router });
-    },
+    }
     RouterProvider: ({ router }) => null
   };
 });
-
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   observe() {}
   unobserve() {}
   disconnect() {}
 };
-
-// Suppress console errors in tests
+// Suppress console errors in tests,
 const originalError = console.error;
 beforeAll(() => {
+  return null;
   console.error = (...args) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
+  return null;
+    if ()
+      typeof args[0] === 'string' &&)
+      args[0].includes('Warning: ReactDOM.render is no longer supported'),
     ) {
       return;
     }
     originalError.call(console, ...args);
   };
 });
-
 afterAll(() => {
+  return null;
   console.error = originalError;
 });

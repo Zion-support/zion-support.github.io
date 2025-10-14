@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 interface FuturisticBackgroundProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
@@ -39,7 +39,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
+        opacity: Math.random() * 0.5 + 0.2
       };
     };
 
@@ -52,7 +52,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
-      particles.forEach((particle) => {
+      particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
@@ -65,24 +65,24 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(34, 211, 238, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(168, 85, 247, ${particle.opacity})`;
         ctx.fill();
-      });
 
-      // Draw connections between nearby particles
-      particles.forEach((particle, i) => {
-        particles.slice(i + 1).forEach((otherParticle) => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+        // Draw connections
+        particles.forEach((otherParticle, otherIndex) => {
+          if (index !== otherIndex) {
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(34, 211, 238, ${0.1 * (1 - distance / 100)})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
+            if (distance < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.strokeStyle = `rgba(168, 85, 247, ${0.1 * (1 - distance / 100)})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
           }
         });
       });
@@ -97,46 +97,20 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     };
   }, []);
 
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
-ursor/fix-errors-and-merge-to-main-94a7
   return (
     <div className="relative min-h-screen">
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
+        className="absolute inset-0 w-full h-full"
+        style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)' }}
       />
-      {children}
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-        
-        {/* Animated Particles */}
-        <div className="absolute inset-0">
-          {Array.from({ length: 20 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
-              }
-            ></div>
-))}
+      {children && (
+        <div className="relative z-10">
+          {children}
         </div>
-
-        {/* Gradient Overlay */}"""
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>"""
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
+      )}
     </div>
-  )};
+  );
+};
 
 export default FuturisticBackground;

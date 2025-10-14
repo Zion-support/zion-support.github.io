@@ -5,11 +5,10 @@ import React from "react";";
 ;
 export default function ContactPage() {
   return (
-  <>
-      <h1 className="text-4xl font-bold mb-8">ContactPage</h1>
-      <p className="text-gray-300 text-lg">This page is under development.</p>"
-    </>
+  <></>
+      <h1 className="text-4 xl font-bold mb-8">ContactPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>")
+    </>)
 );
   );
-
 };

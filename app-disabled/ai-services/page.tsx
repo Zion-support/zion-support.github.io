@@ -1,67 +1,60 @@
 import React from "react";";
 import React from "react";";
-import { Helmet    } from "react-helmet-async";";
+import { Helmet } from 'react-helmet-async';";
 'use client;';
 import react;
-
 import { Helmet } from  from "react;";
-
 import { Helmet } from 'react-helmet-async';
-
-import { Box, Mic, } from 'lucide-react';
-
-import from ../components
-import Footer from ../components
-import { Circle, Right, Star, } from lucide-react;
-
+import { Box, Mic } from 'lucide-react';
+import from ../components,
+import Footer from ../components,
+import { Circle, Right, Star } from lucide-react;
 ;
-
-const AIServicesPagePage: React.FC = () => {const features = [;
-
-const AIServicesPage: React.FC = () => {
+const AIServicesPagePage: React.FC = () => {const features = [;,
+const AIServicesPage: React.FC = () => {,
+  return null;
   const features = [;
     {
       ico,;
     n: title: 'AI-Powered Intelligence,'';
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,'';
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]'';
-import { Helmet    } from "react-helmet-async";";
-import { Box, Mic,    } from "lucide-react";";
+import { Helmet } from 'react-helmet-async';";
+import { Box, Mic } from 'lucide-react';";
 import ../components/ from "../components/";";
 import Footer from "../components/Footer";";
-import { Circle, Right, Star,    } from "lucide-react";";
+import { Circle, Right, Star } from 'lucide-react';";
 ;
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+      <div className="container mx-auto px-4 py-16" /></div>
+        <div className="text-center" /></div>
+          <h1 className="text-4 xl font-bold text-gray-900 mb-4" /></h1>
             AI Services;
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-8" /></p>
             Comprehensive AI solutions to transform your business.
           </p>
         </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="max-w-4 xl mx-auto" /></div>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8" />,
+            <div className="bg-white rounded-lg shadow-md p-6" /></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Machine Learning</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600" /></p>
                 Advanced machine learning solutions for data analysis and prediction.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-lg shadow-md p-6" /></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Natural Language Processing</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600" /></p>
                 AI-powered text analysis and language understanding.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-lg shadow-md p-6" /></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Computer Vision</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600" /></p>
                 Image and video analysis using advanced AI algorithms.
               </p>
             </div>
           </div>
-
     </div>
   );
 }
@@ -136,17 +129,15 @@ import { Circle, Right, Star,    } from "lucide-react";";
       popular: false;
     }
   ]
-      <Helmet></Helmet>
+      <Helmet /></Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including content generation, chatbots, analytics, and automation solutions for modern businesses." />
+        <meta name="description" content="Advanced AI services including content generation, chatbots, analytics, and automation solutions for modern businesses." / /></meta>
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <div className="container mx-auto px-4 py-20" /></div>
+        <div className="text-center mb-16" /></div>
+          <h1 className="text-4 xl md: text-6 xl font-bold text-white mb-6" />,
             AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
       </>
   );
 };
-
 export default AIServicesPage;

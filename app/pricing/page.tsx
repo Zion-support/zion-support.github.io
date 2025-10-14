@@ -1,144 +1,279 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Heart } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { Wifi } from 'lucide-react';
-import { Building2 } from 'lucide-react';
-import { Briefcase } from 'lucide-react';
-import { Lightbulb } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { 
+  CheckIcon,
+  ArrowRightIcon,
+  StarIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ShieldCheckIcon
+} from '@heroicons/react/24/outline';
 
-const Page = () => {
-  const features = [
+const PricingPage: React.FC = () => {
+  const plans = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Advanced Features',
-      description: 'Cutting-edge technology for maximum efficiency'
+      name: 'Starter',
+      price: '$999',
+      period: '/month',
+      description: 'Perfect for small businesses getting started with AI',
+      features: [
+        'Basic AI integration',
+        'Cloud hosting included',
+        'Email support',
+        'Up to 5 users',
+        'Basic analytics',
+        'Standard security'
+      ],
+      popular: false,
+      icon: CpuChipIcon
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime'
+      name: 'Professional',
+      price: '$2,999',
+      period: '/month',
+      description: 'Ideal for growing businesses with advanced needs',
+      features: [
+        'Advanced AI solutions',
+        'Custom integrations',
+        'Priority support',
+        'Up to 25 users',
+        'Advanced analytics',
+        'Enhanced security',
+        'API access',
+        'Custom training'
+      ],
+      popular: true,
+      icon: CloudIcon
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Expert Support',
-      description: '24/7 support from our team of specialists'
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
+      features: [
+        'Fully customized AI',
+        'Dedicated infrastructure',
+        '24/7 support',
+        'Unlimited users',
+        'Enterprise analytics',
+        'Maximum security',
+        'Full API access',
+        'Custom development',
+        'On-premise options',
+        'SLA guarantee'
+      ],
+      popular: false,
+      icon: ShieldCheckIcon
+    }
+  ];
+
+  const addOns = [
+    {
+      name: 'Additional Users',
+      price: '$50',
+      period: '/user/month',
+      description: 'Add more team members to your plan'
+    },
+    {
+      name: 'Premium Support',
+      price: '$500',
+      period: '/month',
+      description: 'Dedicated support with faster response times'
+    },
+    {
+      name: 'Custom Integrations',
+      price: '$2,000',
+      period: '/integration',
+      description: 'Connect with your existing systems'
+    },
+    {
+      name: 'Training & Onboarding',
+      price: '$1,500',
+      period: '/session',
+      description: 'Expert training for your team'
     }
   ];
 
   return (
     <>
-      <EnhancedSEO 
-        title="Page - Zion Tech Group"
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
-        keywords="page, business solutions, technology services, professional services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Solutions
-              </span>
+      <Helmet>
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Transparent pricing for AI solutions, cloud infrastructure, and digital transformation services. Choose the plan that fits your business needs." />
+        <meta name="keywords" content="pricing, AI pricing, cloud pricing, enterprise pricing, subscription plans" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Simple Pricing
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional page services designed to help your business succeed and grow.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Choose the Plan That Fits Your Business
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                View Demo
-              </Link>
-            </div>
+            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+              Transparent pricing with no hidden fees. Scale up or down as your business grows.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Page Services?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+      {/* Pricing Plans */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Choose Your Plan
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our page services can help your business succeed.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Flexible pricing options designed to grow with your business
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                View All Services
-              </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {plans.map((plan, index) => (
+              <div key={index} className={`relative bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 ${
+                plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''
+              }`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <plan.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link
+                  to="/contact"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Add-ons Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Add-ons & Extras
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Enhance your plan with additional services and features
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {addOns.map((addOn, index) => (
+              <div key={index} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300">
+                <h3 className="text-xl font-bold text-white mb-2">{addOn.name}</h3>
+                <div className="flex items-baseline mb-3">
+                  <span className="text-2xl font-bold text-purple-400">{addOn.price}</span>
+                  <span className="text-gray-300 ml-1">{addOn.period}</span>
+                </div>
+                <p className="text-gray-300 text-sm">{addOn.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          
+          <div className="space-y-8">
+            <div className="bg-slate-800 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-white mb-3">Can I change my plan later?</h3>
+              <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</p>
+            </div>
+            
+            <div className="bg-slate-800 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-white mb-3">Is there a free trial?</h3>
+              <p className="text-gray-300">We offer a 14-day free trial for all plans. No credit card required to get started.</p>
+            </div>
+            
+            <div className="bg-slate-800 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-white mb-3">What payment methods do you accept?</h3>
+              <p className="text-gray-300">We accept all major credit cards, PayPal, and bank transfers for enterprise plans.</p>
+            </div>
+            
+            <div className="bg-slate-800 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-white mb-3">Do you offer custom pricing?</h3>
+              <p className="text-gray-300">Yes, we offer custom pricing for enterprise clients with specific requirements. Contact us for a quote.</p>
             </div>
           </div>
-        </section>
-ursor/fix-errors-and-merge-to-main-94a7
-      </div>
-    </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Choose your plan and start transforming your business today
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Free Trial
+            </Link>
+            <Link
+              to="/demo"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
 const page = React.lazy(() => import('./page'));
 export default page;
-ursor/fix-errors-and-merge-to-main-94a7

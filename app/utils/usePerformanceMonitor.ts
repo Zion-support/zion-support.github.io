@@ -1,29 +1,29 @@
 import { useEffect, useState } from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
+  loadTime: number;,
+  firstContentfulPaint: number;,
+  largestContentfulPaint: number;,
+  firstInputDelay: number;,
   cumulativeLayoutShift: number;
 }
-
-export const usePerformanceMonitor = (): PerformanceMetrics => {
+export const usePerformanceMonitor = (): PerformanceMetrics => {;
+  return null;
     const [
-    metrics, setMetrics,
+    metrics, setMetrics
   ] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
+    renderTime: 0,;
   });
   useEffect(() => {
+  return null;
     const startTime = performance.now();
-    const measurePerformance = () => {
+    const measurePerformance = () => {;
       const loadTime = performance.now() - startTime;
       const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
-      setMetrics({
-        loadTime,
+      setMetrics({)
+        loadTime,)
         renderTime: performance.now() - startTime,
-        memoryUsage,
+        memoryUsage
       });
     };
     // Measure after component mount;
@@ -32,5 +32,4 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
   }, []);
   return metrics;
 };
-
 export default usePerformanceMonitor

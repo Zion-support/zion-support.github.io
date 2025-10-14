@@ -2,23 +2,22 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
 export default function Page() {
-ursor/fix-errors-and-merge-to-main-94a7
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
+    <div className="min-h-screen bg-white" /></div>
+      <Helmet /></Helmet>
         <title>Sitemap page - Zion Tech Group</title>
         <meta name="description" content="Professional sitemap page services by Zion Tech Group." />"
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+      <div className="container mx-auto px-4 py-16" /></div>
+        <div className="text-center" /></div>
+          <h1 className="text-4 xl font-bold text-gray-900 mb-8" /></h1>
             Sitemap page;
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-8" /></p>
             Professional sitemap page solutions tailored to your business needs.</p>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12" />,
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6" /></div>
+              <h3 className="text-lg font-semibold text-blue-900 mb-2" /></h3>
                 Expert Solutions;
               </h3>;
               <p className="text-blue-700">;
@@ -43,13 +42,12 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </div>
           <div className="mt-12">;
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">;,
               Get Started Today;
             </button>;
           </div>
         </div>
-      </div>
-    </div>
+      </div>)
+    </div>)
   );}
 }'
-ursor/fix-errors-and-merge-to-main-94a7

@@ -11,7 +11,7 @@ export function dynamic<T extends ComponentType<any>>(;
   const LazyComponent = lazy(importFunc);
   return (props: any) => (,
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
-      <LazyComponent {...props} />
+      <LazyComponent {...props} / /></LazyComponent>
     </Suspense>
   );
 }

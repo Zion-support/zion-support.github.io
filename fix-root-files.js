@@ -2,10 +2,10 @@
 // fix-root-files.js - Fixed syntax errors;
 export function createAdvancedMonitoring()   {};
   const monitoringFiles =;
-    'monitoring/health-check.js': ''';
+    '.js': ''';
       healthCheck: () => ({ status: 'ok' })''';
     },;
-    'monitoring/performance-monitor.js': ''';
+    '.js': ''';
       performanceCheck: () => ({ status: 'ok' })''';
 }
   return monitoringFiles;

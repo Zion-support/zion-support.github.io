@@ -6,11 +6,10 @@ function fixMalformedFiles(content) {
   // Remove malformed closing tags at the end;
   content = content.replace(")
     /\n\s*<\/button><\/div><\/div><\/div><\/div>\s*\n\s*\);\}\s*\n\s*\}\s*\s*$/g,"
-    ,
   )
   // Fix malformed export statements;
-  content = content.replace(
-    /export default \w+;\n\};/g,"
+  content = content.replace()
+    /export default \w+;\n\};/g,")
     "export default Page\n}",)
   )"
   content = content.replace(/export default \w+;/g, "export default Page")
@@ -35,40 +34,7 @@ const stat = fs.statSync(filePath);
       processFiles(filePath)"
     } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
       try {
-        console.log(`Processing: ${filePath}`)``"`
-        let content = fs.readFileSync(filePath, "utf8");
-const originalContent = content;
-        content = fixMalformedFiles(content)
-        if (content !== originalContent) {"
-          fs.writeFileSync(filePath, content, "utf8")
-          console.log(`Fixed: ${filePath}`)```
-} catch (error) {
-        console.error(`Error processing ${filePath}:`, error.message)```;
-ursor/fix-errors-and-merge-to-main-94a7
-}
-
-// Main execution
-async function main() {
-  console.log('Starting fix for malformed files...');
-
-  // Get all TypeScript/TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
-
-  let totalFixed = 0;
-  let filesProcessed = 0;
-
-  files.forEach(file => {
-    if (processFile(file)) {
-      totalFixed++;
-    }
-    filesProcessed++;
-  });
-
-  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`);
-  console.log('Malformed files fix completed!');
-}
-// Process the app directory"
-console.log("Starting malformed file fixes...")"
-processFiles("./app")"
-console.log("Malformed file fixes completed!")"
-ursor/fix-errors-and-merge-to-main-94a7
+        console.log(`Processing: ${filePath}`)``"""
+          console.log(`Fixed: ${filePath}`)``""
+        console.error(`Error processing ${filePath}:`, error.message)``""
+  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files"")

@@ -1,150 +1,137 @@
-// Service Worker for Zion Tech Group
+// Service Worker for Zion Tech Group,
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
-
-// Assets to cache immediately
+// Assets to cache immediately,
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/favicon.ico',
-  '/images/icon-192x192.png',
-  '/images/icon-512x512.png'
+  '/'
+  '/index.html'
+  '/manifest.json'
+  '/favicon.ico'
+  '/.png';
+  '/.png';
 ];
-
-// Install event - cache static assets
+// Install event - cache static assets,
 self.addEventListener('install', (event) => {
-  event.waitUntil(
+  return null;
+  event.waitUntil()
     caches.open(STATIC_CACHE)
       .then((cache) => {
+  return null;
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
+  return null;
         return self.skipWaiting();
       })
   );
 });
-
-// Activate event - clean up old caches
+// Activate event - clean up old caches,
 self.addEventListener('activate', (event) => {
-  event.waitUntil(
+  return null;
+  event.waitUntil()
     caches.keys()
       .then((cacheNames) => {
-        return Promise.all(
+  return null;
+        return Promise.all()
           cacheNames.map((cacheName) => {
+  return null;
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
-      .then(() => {
-        return self.clients.claim();
-      })
-  );
-});
-
-// Fetch event - serve from cache, fallback to network
+              console.log('Deleting old cache: ''),
 self.addEventListener('fetch', (event) => {
+  return null;
   const { request } = event;
   const url = new URL(request.url);
-
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
+  // Skip non-GET requests,
+if (request.method !== 'GET') {
     return;
   }
-
-  // Skip cross-origin requests
-  if (url.origin !== location.origin) {
+  // Skip cross-origin requests,
+if (url.origin !== location.origin) {
     return;
   }
-
-  event.respondWith(
+  event.respondWith()
     caches.match(request)
       .then((response) => {
-        // Return cached version if available
-        if (response) {
+  return null;
+        // Return cached version if available,
+if (response) {
           return response;
         }
-
-        // Otherwise, fetch from network
-        return fetch(request)
+        // Otherwise, fetch from network,
+return fetch(request)
           .then((response) => {
-            // Don't cache if not a valid response
-            if (!response || response.status !== 200 || response.type !== 'basic') {
+  return null;
+            // Don't cache if not a valid response,
+if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
-
-            // Clone the response
-            const responseToCache = response.clone();
-
-            // Cache dynamic content
-            caches.open(DYNAMIC_CACHE)
+            // Clone the response,
+const responseToCache = response.clone();
+            // Cache dynamic content,
+caches.open(DYNAMIC_CACHE)
               .then((cache) => {
+  return null;
                 cache.put(request, responseToCache);
               });
-
             return response;
           })
           .catch(() => {
-            // Return offline page for navigation requests
-            if (request.destination === 'document') {
+  return null;
+            // Return offline page for navigation requests,
+if (request.destination === 'document') {
               return caches.match('/offline.html');
             }
           });
       })
   );
 });
-
-// Background sync for offline form submissions
+// Background sync for offline form submissions,
 self.addEventListener('sync', (event) => {
+  return null;
   if (event.tag === 'background-sync') {
-    event.waitUntil(
-      // Handle offline form submissions here
+    event.waitUntil()
+      // Handle offline form submissions here)
       console.log('Background sync triggered')
     );
   }
 });
-
-// Push notifications
+// Push notifications,
 self.addEventListener('push', (event) => {
+  return null;
   const options = {
     body: event.data ? event.data.text() : 'New update available!',
-    icon: '/images/icon-192x192.png',
-    badge: '/images/icon-192x192.png',
-    vibrate: [100, 50, 100],
-    data: {
+    icon: '/.png',
+    badge: '/.png',
+    vibrate: [100, 50, 100]
+    data: {,
       dateOfArrival: Date.now(),
       primaryKey: 1
-    },
-    actions: [
+    }
+    actions: [,
       {
         action: 'explore',
         title: 'Go to the site',
-        icon: '/images/icon-192x192.png'
-      },
+        icon: '/.png'
+      }
       {
         action: 'close',
         title: 'Close notification',
-        icon: '/images/icon-192x192.png'
-      }
-    ]
+        icon: '/.png'
+      };
+    ];
   };
-
-  event.waitUntil(
+  event.waitUntil()
     self.registration.showNotification('Zion Tech Group', options)
   );
 });
-
-// Notification click handler
+// Notification click handler,
 self.addEventListener('notificationclick', (event) => {
+  return null;
   event.notification.close();
-
   if (event.action === 'explore') {
-    event.waitUntil(
+    event.waitUntil()
       clients.openWindow('/')
     );
   }

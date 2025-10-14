@@ -8,7 +8,6 @@ interface PerformanceMetrics {
   loadTime: number | null;
 }
 
-ursor/fix-errors-and-merge-to-main-94a7
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
@@ -24,38 +23,40 @@ const PerformanceMonitor: React.FC = () => {
       return;
     }
 
-    // Simulate performance metrics for development
-    const simulateMetrics = () => {
-      setMetrics({
-        cls: Math.random() * 0.1,
-        fcp: Math.random() * 1000 + 500,
-        lcp: Math.random() * 2000 + 1000,
-        ttfb: Math.random() * 500 + 200,
-        loadTime: Math.random() * 3000 + 1000
-      });
+    const updateMetrics = () => {
+      if (typeof window !== 'undefined' && window.performance) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        
+        setMetrics(prev => ({
+          ...prev,
+          loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : null,
+          ttfb: navigation ? navigation.responseStart - navigation.requestStart : null
+        }));
+      }
     };
 
-    // Simulate metrics after a delay
-    const timer = setTimeout(simulateMetrics, 2000);
+    // Update metrics on load
+    updateMetrics();
 
-    return () => clearTimeout(timer);
+    // Update metrics periodically
+    const interval = setInterval(updateMetrics, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
+  // Only render in development
+  if (process.env.NODE_ENV !== 'development') {
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1 text-sm">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>
-      </div>
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50">
+      <div className="mb-2 font-bold">Performance Metrics</div>
+      <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}</div>
+      <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}</div>
+      <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+      <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+      <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
     </div>
   );
 };
