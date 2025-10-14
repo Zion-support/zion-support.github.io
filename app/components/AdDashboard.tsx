@@ -1,6 +1,6 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 export default function Page() {
   return (
     <div className="min-h-screen bg-white"></div>
@@ -45,10 +45,10 @@ export default function Page() {
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
               Get Started Today;
             </button>;
-          </div>
-        </div>
-      </div>
-    </div>
+          </div>}
+        </div>}
+      </div>})
+    </div>})
   );}'
 }'
 

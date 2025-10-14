@@ -20,18 +20,18 @@ const MainPage = () => {
             <h1 className="text-4xl font-bold text-white mb-8">Main</h1>
             <p>This page is under construction. Please check back later.</p>
           </div>
-        </div>
-      </div>
-    </>
-  );
+        </div>}
+      </div>})
+    </>)}
+  );}
 };
 
 export default MainPage;
 `;
 
-try {
-  fs.writeFileSync('/workspace/app/main.tsx', mainContent, 'utf8');
-  console.log('✅ Fixed main.tsx');
-} catch (error) {
-  console.error('❌ Error fixing main.tsx: ', error.message);'
+try {}
+  fs.writeFileSync('/workspace/app/main.tsx', mainContent, 'utf8');}
+  console.log('✅ Fixed main.tsx');}
+} catch (error) {}
+  console.error('❌ Error fixing main.tsx: ', error.message);'}
 }

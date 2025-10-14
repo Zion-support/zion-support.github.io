@@ -1,53 +1,53 @@
-import React from 'react''
-import { ArrowRight } from 'lucide-react''
-import { CheckCircle } from 'lucide-react''
-import { Star } from 'lucide-react''
-import { Users } from 'lucide-react''
-import { Clock } from 'lucide-react''
-import { DollarSign } from 'lucide-react''
-import { Shield } from 'lucide-react''
-import { Code } from 'lucide-react''
-import { Database } from 'lucide-react''
-import { Mail } from 'lucide-react''
-import { Settings } from 'lucide-react''
-import { Target } from 'lucide-react''
-import { TrendingUp } from 'lucide-react''
-import { PieChart } from 'lucide-react''
-import { MessageSquare } from 'lucide-react''
-import { Heart } from 'lucide-react''
-import { Globe } from 'lucide-react''
-import { Smartphone } from 'lucide-react''
-import { Network } from 'lucide-react''
-import { Lock } from 'lucide-react''
-import { Cpu } from 'lucide-react''
-import { Wifi } from 'lucide-react''
-import { Building2 } from 'lucide-react''
-import { Briefcase } from 'lucide-react''
-import { Lightbulb } from 'lucide-react''
-import { Link } from 'react-router-dom''
+import React from 'react'
+import { ArrowRight } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { Star } from 'lucide-react'
+import { Users } from 'lucide-react'
+import { Clock } from 'lucide-react'
+import { DollarSign } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Code } from 'lucide-react'
+import { Database } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Settings } from 'lucide-react'
+import { Target } from 'lucide-react'
+import { TrendingUp } from 'lucide-react'
+import { PieChart } from 'lucide-react'
+import { MessageSquare } from 'lucide-react'
+import { Heart } from 'lucide-react'
+import { Globe } from 'lucide-react'
+import { Smartphone } from 'lucide-react'
+import { Network } from 'lucide-react'
+import { Lock } from 'lucide-react'
+import { Cpu } from 'lucide-react'
+import { Wifi } from 'lucide-react'
+import { Building2 } from 'lucide-react'
+import { Briefcase } from 'lucide-react'
+import { Lightbulb } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO;
-
-const Page = () => {
-  const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,'
-      title: 'Advanced Features','
-      description: 'Cutting-edge technology for maximum efficiency'
+';
+const Page = () => {';
+  const features = [';
+    {';}
+      icon: <CheckCircle className="w-8 h-8" />,'}
+      title: 'Advanced Features','}
+      description: 'Cutting-edge technology for maximum efficiency'}
     },
-    {
-      icon: <Shield className="w-8 h-8" />,'
-      title: 'Secure & Reliable','
-      description: 'Enterprise-grade security and 99.9% uptime'
+    {}
+      icon: <Shield className="w-8 h-8" />,'}
+      title: 'Secure & Reliable','}
+      description: 'Enterprise-grade security and 99.9% uptime'}
     },
-    {
-      icon: <Users className="w-8 h-8" />,'
-      title: 'Expert Support','
-      description: '24/7 support from our team of specialists'
-    }
+    {}
+      icon: <Users className="w-8 h-8" />,'}
+      title: 'Expert Support','}
+      description: '24/7 support from our team of specialists'}]
+    }]
   ];
-  const testimonials = [{
-      name: "Sarah Johnson", company: "TechStart Inc.", role: "CEO", content: "Zion Analytics Pro transformed our data analysis. We now make decisions 40% faster with real-time insights.", rating: 5, avatar: "SJ", }, {
-      name: "Michael Chen", company: "E-commerce Solutions", role: "CTO", content: "The predictive analytics feature helped us identify trends before our competitors. Game changer!", rating: 5, avatar: "MC", }, {
+  const testimonials = [{}
+      name: "Sarah Johnson", company: "TechStart Inc.", role: "CEO", content: "Zion Analytics Pro transformed our data analysis. We now make decisions 40% faster with real-time insights.", rating: 5, avatar: "SJ", }, {}]
+      name: "Michael Chen", company: "E-commerce Solutions", role: "CTO", content: "The predictive analytics feature helped us identify trends before our competitors. Game changer!", rating: 5, avatar: "MC", }, {}]
       name: "Emily Rodriguez", company: "Digital Marketing Agency", role: "Operations Director", content: "Easy to use, powerful features, and excellent support. Our team productivity increased by 60%.", rating: 5, avatar: "ER", }];
   const stats = [{number: "10, 000+", label: "Active Users", icon: <Users className="w-6 h-6" />, }, {number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" />, }, {number: "100+", label: "Integrations", icon: <Database className="w-6 h-6" />, }, {number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" />, }];
   return (
@@ -98,14 +98,14 @@ const Page = () => {
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
+)
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>)
+              {features.map((feature, index) => (}
+                <div key="{index}" className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               ))}
             </div>
           </div>

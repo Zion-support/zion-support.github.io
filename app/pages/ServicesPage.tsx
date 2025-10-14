@@ -1,17 +1,17 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { CpuChipIcon,
-  CloudIcon,
-  GlobeAltIcon,
-  SignalIcon,
-  BriefcaseIcon,
-  ArrowRightIcon,
-  CheckIcon'
+  CloudIcon,;
+  GlobeAltIcon,';
+  SignalIcon,;';}
+  BriefcaseIcon,';}
+  ArrowRightIcon,';}
+  CheckIcon'}
 } from '@heroicons/react/24/outline;
 
-const ServicesPage: React.FC = () => {
-  const services = [
+const ServicesPage: React.FC = () => {';
+  const services = [';
     {'
       title: 'AI Solutions','
       description: 'Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.',
@@ -21,11 +21,11 @@ const ServicesPage: React.FC = () => {
         'Natural Language Processing','
         'Computer Vision','
         'Predictive Analytics','
-        'AI Automation','
-        'Custom AI Development'
-      ],'
-      href: '/ai-solutions','
-      color: 'from-purple-500 to-pink-500'
+        'AI Automation',']
+        'Custom AI Development']}
+      ],'}
+      href: '/ai-solutions','}
+      color: 'from-purple-500 to-pink-500'}
     },
     {'
       title: 'Cybersecurity','
@@ -36,11 +36,11 @@ const ServicesPage: React.FC = () => {
         'Vulnerability Assessment','
         'Security Monitoring','
         'Incident Response','
-        'Compliance Management','
-        'Security Training'
-      ],'
-      href: '/cybersecurity','
-      color: 'from-red-500 to-orange-500'
+        'Compliance Management',']
+        'Security Training']}
+      ],'}
+      href: '/cybersecurity','}
+      color: 'from-red-500 to-orange-500'}
     },
     {'
       title: 'Cloud Infrastructure','
@@ -51,11 +51,11 @@ const ServicesPage: React.FC = () => {
         'Infrastructure as Code','
         'Auto-scaling','
         'Disaster Recovery','
-        'Cost Optimization','
-        'Multi-cloud Strategy'
-      ],'
-      href: '/cloud-infrastructure','
-      color: 'from-blue-500 to-cyan-500'
+        'Cost Optimization',']
+        'Multi-cloud Strategy']}
+      ],'}
+      href: '/cloud-infrastructure','}
+      color: 'from-blue-500 to-cyan-500'}
     },
     {'
       title: 'Micro SaaS Solutions','
@@ -66,11 +66,11 @@ const ServicesPage: React.FC = () => {
         'API Integration','
         'Scalable Architecture','
         'User Management','
-        'Payment Processing','
-        'Analytics Dashboard'
-      ],'
-      href: '/micro-saas-solutions','
-      color: 'from-green-500 to-emerald-500'
+        'Payment Processing',']
+        'Analytics Dashboard']}
+      ],'}
+      href: '/micro-saas-solutions','}
+      color: 'from-green-500 to-emerald-500'}
     },
     {'
       title: '5G Technology','
@@ -81,11 +81,11 @@ const ServicesPage: React.FC = () => {
         'IoT Device Management','
         'Edge Computing','
         'Real-time Data Processing','
-        'Low Latency Applications','
-        'Network Optimization'
-      ],'
-      href: '/5g-solutions','
-      color: 'from-indigo-500 to-purple-500'
+        'Low Latency Applications',']
+        'Network Optimization']}
+      ],'}
+      href: '/5g-solutions','}
+      color: 'from-indigo-500 to-purple-500'}
     },
     {'
       title: 'IT Services','
@@ -96,34 +96,34 @@ const ServicesPage: React.FC = () => {
         'Help Desk Support','
         'System Administration','
         'Network Management','
-        'Software Deployment','
-        'Technical Consulting'
-      ],'
-      href: '/it-solutions','
-      color: 'from-gray-500 to-slate-500'
+        'Software Deployment',']
+        'Technical Consulting']}
+      ],'}
+      href: '/it-solutions','}
+      color: 'from-gray-500 to-slate-500'}
     }
   ];
   const processSteps = [
-    {'
-      step: '01','
-      title: 'Discovery','
-      description: 'We analyze your business needs and current technology stack to identify opportunities for improvement.'
+    {'}
+      step: '01','}
+      title: 'Discovery','}
+      description: 'We analyze your business needs and current technology stack to identify opportunities for improvement.'}
     },
-    {'
-      step: '02','
-      title: 'Strategy','
-      description: 'We develop a comprehensive strategy tailored to your specific requirements and business goals.'
+    {'}
+      step: '02','}
+      title: 'Strategy','}
+      description: 'We develop a comprehensive strategy tailored to your specific requirements and business goals.'}
     },
-    {'
-      step: '03','
-      title: 'Implementation','
-      description: 'Our expert team implements the solution with minimal disruption to your daily operations.'
+    {'}
+      step: '03','}
+      title: 'Implementation','}
+      description: 'Our expert team implements the solution with minimal disruption to your daily operations.'}
     },
-    {'
-      step: '04','
-      title: 'Support','
-      description: 'We provide ongoing support and optimization to ensure your solution continues to deliver value.'
-    }
+    {'}
+      step: '04','}
+      title: 'Support','}
+      description: 'We provide ongoing support and optimization to ensure your solution continues to deliver value.'}]
+    }]
   ];
   return (
     <></>
@@ -170,12 +170,12 @@ const ServicesPage: React.FC = () => {
               Comprehensive solutions designed to meet your business needs
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {services.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
+          )
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
+            {services.map((service, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
                 <div className="flex items-center mb-6"></div>
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform`}></div>
+                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform`}></div>
                     <service.icon className="w-8 h-8 text-white" /></service>
                   </div>
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>"
@@ -184,24 +184,24 @@ const ServicesPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed"></p>
                   {service.description}
                 </p>
-                
-                <ul className="space-y-3 mb-6"></ul>
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
+                )
+                <ul className="space-y-3 mb-6"></ul>)
+                  {service.features.map((feature, featureIndex) => (}
+                    <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                      {feature}
-                    </li>
+                      {feature})
+                    </li>)
                   ))}
                 </ul>
                 
                 <Link
-                  to={service.href;
+                  to="{service.href;"
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 ></Link>
-                  Learn More
-                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
-                </Link>
-              </div>
+                  Learn More}
+                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
+                </Link>}
+              </div>}
             ))}
           </div>
         </section>
@@ -218,14 +218,14 @@ const ServicesPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-4 gap-8"></div>
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center"></div>
+            {processSteps.map((step, index) => (}
+              <div key="{index}" className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>"
-                <p>{step.description}</p>"
-              </div>
+                <p>{step.description}</p>")
+              </div>)
             ))}
           </div>
         </section>

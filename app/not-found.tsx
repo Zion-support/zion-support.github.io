@@ -1,13 +1,13 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 const NotFound: React.FC = () => {
 
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
-        <title>Not Found - Zion Tech Group</title>
-        <meta name="description" content="Professional not found services by Zion Tech Group." /></meta>
+    <div className="min-h-screen bg-white"></div>}
+      <Helmet></Helmet>}
+        <title>Not Found - Zion Tech Group</title>}
+        <meta name="description" content="Professional not found services by Zion Tech Group." /></meta>}
       </Helmet> }
       { /* Hero Section */ }"
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
@@ -78,8 +78,8 @@ const NotFound: React.FC = () => {
           </a>;
         </div>
       </section>;
-
-    </div>
+)
+    </div>)
   );
 ,
   };

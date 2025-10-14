@@ -1,18 +1,18 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { CpuChipIcon,
   EyeIcon,
-  ChatBubbleLeftRightIcon,
-  DocumentTextIcon,
-  LightBulbIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  SparklesIcon'
+  ChatBubbleLeftRightIcon,;
+  DocumentTextIcon,';
+  LightBulbIcon,;';}
+  ArrowRightIcon,';}
+  CheckIcon,';}
+  SparklesIcon'}
 } from '@heroicons/react/24/outline;
 
-const AISolutionsPage: React.FC = () => {
-  const aiServices = [
+const AISolutionsPage: React.FC = () => {';
+  const aiServices = [';
     {'
       title: 'Machine Learning Models','
       description: 'Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.',
@@ -22,14 +22,14 @@ const AISolutionsPage: React.FC = () => {
         'Real-time model training','
         'A/B testing framework','
         'Model performance monitoring','
-        'Automated retraining','
-        'Edge deployment'
+        'Automated retraining',']
+        'Edge deployment']
       ],'
       color: 'from-purple-500 to-pink-500','
-      price: 'Starting at $3,500/month','
-      benefits: ['95% accuracy', 'Real-time processing', 'Custom algorithms'],'
-      useCases: ['Predictive analytics', 'Recommendation engines', 'Fraud detection'],'
-      href: '/ai-machine-learning'
+      price: 'Starting at $3,500/month','}
+      benefits: ['95% accuracy', 'Real-time processing', 'Custom algorithms'],'}
+      useCases: ['Predictive analytics', 'Recommendation engines', 'Fraud detection'],'}
+      href: '/ai-machine-learning'}
     },
     {'
       title: 'Computer Vision','
@@ -40,14 +40,14 @@ const AISolutionsPage: React.FC = () => {
         'Facial recognition systems','
         'Image segmentation','
         'Real-time video analysis','
-        'Quality control automation','
-        'Medical image analysis'
+        'Quality control automation',']
+        'Medical image analysis']
       ],'
       color: 'from-blue-500 to-cyan-500','
-      price: 'Starting at $4,200/month','
-      benefits: ['99% accuracy', 'Real-time processing', 'Custom models'],'
-      useCases: ['Quality control', 'Security systems', 'Medical imaging'],'
-      href: '/ai-computer-vision'
+      price: 'Starting at $4,200/month','}
+      benefits: ['99% accuracy', 'Real-time processing', 'Custom models'],'}
+      useCases: ['Quality control', 'Security systems', 'Medical imaging'],'}
+      href: '/ai-computer-vision'}
     },
     {'
       title: 'Natural Language Processing','
@@ -58,14 +58,14 @@ const AISolutionsPage: React.FC = () => {
         'Text classification','
         'Language translation','
         'Content generation','
-        'Chatbot development','
-        'Document analysis'
+        'Chatbot development',']
+        'Document analysis']
       ],'
       color: 'from-green-500 to-emerald-500','
-      price: 'Starting at $2,800/month','
-      benefits: ['Multi-language support', 'Real-time processing', 'Custom training'],'
-      useCases: ['Customer service', 'Content moderation', 'Language translation'],'
-      href: '/ai-nlp'
+      price: 'Starting at $2,800/month','}
+      benefits: ['Multi-language support', 'Real-time processing', 'Custom training'],'}
+      useCases: ['Customer service', 'Content moderation', 'Language translation'],'}
+      href: '/ai-nlp'}
     },
     {'
       title: 'AI Automation','
@@ -76,14 +76,14 @@ const AISolutionsPage: React.FC = () => {
         'Document processing','
         'Data extraction','
         'Process optimization','
-        'Intelligent routing','
-        'Exception handling'
+        'Intelligent routing',']
+        'Exception handling']
       ],'
       color: 'from-orange-500 to-red-500','
-      price: 'Starting at $3,200/month','
-      benefits: ['80% time savings', 'Error reduction', 'Scalable solutions'],'
-      useCases: ['Document processing', 'Data entry', 'Workflow optimization'],'
-      href: '/ai-automation'
+      price: 'Starting at $3,200/month','}
+      benefits: ['80% time savings', 'Error reduction', 'Scalable solutions'],'}
+      useCases: ['Document processing', 'Data entry', 'Workflow optimization'],'}
+      href: '/ai-automation'}
     }
   ];
 
@@ -92,8 +92,8 @@ const AISolutionsPage: React.FC = () => {
     { name: 'Finance', icon: '💰', description: 'Fraud detection, risk assessment, trading algorithms' },'
     { name: 'E-commerce', icon: '🛒', description: 'Recommendation engines, price optimization, inventory management' },'
     { name: 'Manufacturing', icon: '🏭', description: 'Quality control, predictive maintenance, supply chain optimization' },'
-    { name: 'Education', icon: '🎓', description: 'Personalized learning, content generation, assessment tools' },'
-    { name: 'Transportation', icon: '🚗', description: 'Autonomous vehicles, route optimization, traffic management' }
+    { name: 'Education', icon: '🎓', description: 'Personalized learning, content generation, assessment tools' },']
+    { name: 'Transportation', icon: '🚗', description: 'Autonomous vehicles, route optimization, traffic management' }]
   ];
 
   return (
@@ -148,12 +148,12 @@ const AISolutionsPage: React.FC = () => {
               Comprehensive artificial intelligence services designed to transform your business
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8"></div>
-            {aiServices.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
+          )
+          <div className="grid md:grid-cols-2 gap-8"></div>)
+            {aiServices.map((service, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
                 <div className="flex items-center mb-6"></div>
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform`}></div>
+                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform`}></div>
                     <service.icon className="w-8 h-8 text-white" /></service>
                   </div>
                   <div></div>
@@ -168,13 +168,13 @@ const AISolutionsPage: React.FC = () => {
                 
                 <div className="space-y-4 mb-6"></div>
                   <div></div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Key Features</h4>
-                    <ul className="space-y-2"></ul>
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300"></li>
+                    <h4 className="text-lg font-semibold text-white mb-2">Key Features</h4>)
+                    <ul className="space-y-2"></ul>)
+                      {service.features.map((feature, featureIndex) => (}
+                        <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
                           <CheckIcon className="w-4 h-4 text-green-400 mr-3" /></CheckIcon>
-                          {feature}
-                        </li>
+                          {feature})
+                        </li>)
                       ))}
                     </ul>
                   </div>
@@ -182,10 +182,10 @@ const AISolutionsPage: React.FC = () => {
                   <div></div>
                     <h4 className="text-lg font-semibold text-white mb-2">Benefits</h4>
                     <div className="flex flex-wrap gap-2"></div>
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full"></span>
-                          {benefit}
-                        </span>
+                      {service.benefits.map((benefit, benefitIndex) => (}
+                        <span key="{benefitIndex}" className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full"></span>
+                          {benefit})
+                        </span>)
                       ))}
                     </div>
                   </div>
@@ -193,23 +193,23 @@ const AISolutionsPage: React.FC = () => {
                   <div></div>
                     <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
                     <div className="flex flex-wrap gap-2"></div>
-                      {service.useCases.map((useCase, useCaseIndex) => (
-                        <span key={useCaseIndex} className="px-3 py-1 bg-cyan-600 text-white text-sm rounded-full"></span>
-                          {useCase}
-                        </span>
+                      {service.useCases.map((useCase, useCaseIndex) => (}
+                        <span key="{useCaseIndex}" className="px-3 py-1 bg-cyan-600 text-white text-sm rounded-full"></span>
+                          {useCase})
+                        </span>)
                       ))}
                     </div>
                   </div>
                 </div>
                 
                 <Link
-                  to={service.href;
+                  to="{service.href;"
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 ></Link>
-                  Learn More
-                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
-                </Link>
-              </div>
+                  Learn More}
+                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
+                </Link>}
+              </div>}
             ))}
           </div>
         </div>
@@ -228,12 +228,12 @@ const AISolutionsPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {industries.map((industry, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 text-center"></div>
+            {industries.map((industry, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 text-center"></div>
                 <div className="text-4xl mb-4">{industry.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{industry.name}</h3>
-                <p className="text-gray-300 text-sm">{industry.description}</p>
-              </div>
+                <p className="text-gray-300 text-sm">{industry.description}</p>)
+              </div>)
             ))}
           </div>
         </div>
@@ -268,6 +268,7 @@ const AISolutionsPage: React.FC = () => {
   );
 };
 
-export default AISolutionsPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

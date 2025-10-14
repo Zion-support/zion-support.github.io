@@ -1,20 +1,20 @@
-import React from 'react''
+import React from 'react';
 import { Link } from 'react-router-dom;
 import { PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
-  ArrowRightIcon,
-  GlobeAltIcon,
-  LinkedinIcon,
-  TwitterIcon,
-  FacebookIcon,
-  InstagramIcon'
+  ArrowRightIcon,;
+  GlobeAltIcon,';
+  LinkedinIcon,;';}
+  TwitterIcon,';}
+  FacebookIcon,';}
+  InstagramIcon'}
 } from '@heroicons/react/24/outline;
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  const services = ['
+const Footer: React.FC = () => {}
+  const currentYear = new Date().getFullYear();';}
+';}
+  const services = ['}
     { name: 'AI Services', href: '/ai-services' },'
     { name: 'AI Solutions', href: '/ai-solutions' },'
     { name: 'IT Solutions', href: '/it-solutions' },'
@@ -22,8 +22,8 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },'
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },'
     { name: 'Digital Transformation', href: '/digital-transformation' },'
-    { name: '5G Solutions', href: '/5g-solutions' },'
-    { name: 'Case Studies', href: '/case-studies' }
+    { name: '5G Solutions', href: '/5g-solutions' },']
+    { name: 'Case Studies', href: '/case-studies' }]
   ];
 
   const company = ['
@@ -31,8 +31,8 @@ const Footer: React.FC = () => {
     { name: 'Our Team', href: '/team' },'
     { name: 'Careers', href: '/careers' },'
     { name: 'Contact', href: '/contact' },'
-    { name: 'News', href: '/news' },'
-    { name: 'Partners', href: '/partners' }
+    { name: 'News', href: '/news' },']
+    { name: 'Partners', href: '/partners' }]
   ];
 
   const resources = ['
@@ -40,23 +40,23 @@ const Footer: React.FC = () => {
     { name: 'Tutorials', href: '/tutorials' },'
     { name: 'Documentation', href: '/docs' },'
     { name: 'Support', href: '/support' },'
-    { name: 'Demo', href: '/demo' },'
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Demo', href: '/demo' },']
+    { name: 'Pricing', href: '/pricing' }]
   ];
 
   const legal = ['
     { name: 'Privacy Policy', href: '/privacy' },'
     { name: 'Terms of Service', href: '/terms' },'
-    { name: 'Cookie Policy', href: '/cookies' },'
-    { name: 'GDPR', href: '/gdpr' }
+    { name: 'Cookie Policy', href: '/cookies' },']
+    { name: 'GDPR', href: '/gdpr' }]
   ];
 
 
   const socialLinks = ['
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: LinkedinIcon },'
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: TwitterIcon },'
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: FacebookIcon },'
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: InstagramIcon }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: FacebookIcon },']
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: InstagramIcon }]
   ];
   return (
     <footer className="bg-slate-900 text-white"></footer>
@@ -91,19 +91,19 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className="flex space-x-4"></div>
+            {/* Social Links */})
+            <div className="flex space-x-4"></div>)
               {socialLinks.map((social) => (
                 <a
-                  key={social.name;
-                  href={social.href;
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label={social.name}
+                  key="{social.name;"
+                  href="{social.href;"}
+                  target="_blank"}
+                  rel="noopener noreferrer"}
+                  className="text-gray-400 hover:text-white transition-colors"}
+                  aria-label="{social.name}"
                 ></a>
-                  <social.icon className="w-5 h-5" /></social>
-                </a>
+                  <social.icon className="w-5 h-5" /></social>)
+                </a>)
               ))}
             </div>
           </div>
@@ -112,16 +112,16 @@ const Footer: React.FC = () => {
           <div></div>
             <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
             <ul className="space-y-3"></ul>
-              {services.map((service) => (
-                <li key={service.name}></li>
+              {services.map((service) => (}
+                <li key="{service.name}"></li>
                   <Link 
-                    to={service.href;
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  ></Link>
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
+                    to="{service.href;"}
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"}
+                  ></Link>}
+                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
                     {service.name}
-                  </Link>
-                </li>
+                  </Link>)
+                </li>)
               ))}          <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4> 
             <ul className="space-y-2"></ul>
@@ -136,16 +136,16 @@ const Footer: React.FC = () => {
           <div></div>
             <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
             <ul className="space-y-3"></ul>
-              {company.map((item) => (
-                <li key={item.name}></li>
+              {company.map((item) => (}
+                <li key="{item.name}"></li>
                   <Link 
-                    to={item.href;
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  ></Link>
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
+                    to="{item.href;"}
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"}
+                  ></Link>}
+                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
                     {item.name}
-                  </Link>
-                </li>
+                  </Link>)
+                </li>)
               ))}
             </ul>
           </div>
@@ -154,32 +154,32 @@ const Footer: React.FC = () => {
           <div></div>
             <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
             <ul className="space-y-3 mb-8"></ul>
-              {resources.map((resource) => (
-                <li key={resource.name}></li>
+              {resources.map((resource) => (}
+                <li key="{resource.name}"></li>
                   <Link 
-                    to={resource.href;
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  ></Link>
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
+                    to="{resource.href;"}
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"}
+                  ></Link>}
+                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
                     {resource.name}
-                  </Link>
-                </li>
+                  </Link>)
+                </li>)
               ))}
             </ul>
 
             {/* Legal */}
             <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
             <ul className="space-y-3"></ul>
-              {legal.map((item) => (
-                <li key={item.name}></li>
+              {legal.map((item) => (}
+                <li key="{item.name}"></li>
                   <Link 
-                    to={item.href;
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  ></Link>
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
+                    to="{item.href;"}
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"}
+                  ></Link>}
+                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
                     {item.name}
-                  </Link>
-                </li>
+                  </Link>)
+                </li>)
               ))}
             </ul>
           </div>
@@ -218,9 +218,9 @@ const Footer: React.FC = () => {
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden"></div>
         <div className="absolute top-0 left-1/4 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>'
-        <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>'
-        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>'
-        <div className="absolute bottom-0 right-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style="{{animationDelay:" '1s'}}></div>'
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style="{{animationDelay:" '2s'}}></div>'
+        <div className="absolute bottom-0 right-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse" style="{{animationDelay:" '3s'}}></div>
       </div>
     </footer>
   );

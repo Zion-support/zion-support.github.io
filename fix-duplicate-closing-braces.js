@@ -1,9 +1,9 @@
 import fs from "fs;";";
 import path from "path;";";
 // Function to fix duplicate closing braces;
-function fixDuplicateClosingBraces(content) {
-  // Fix duplicate closing braces;
-  content = content.replace()
+function fixDuplicateClosingBraces(content) {}
+  // Fix duplicate closing braces;}
+  content = content.replace()}
     /\s*\)\s*\n\s*\}\s*\n\s*\)\s*\n\s*\}\s*$/g,"
     "\n  )\n}",
   )
@@ -22,20 +22,20 @@ function fixDuplicateClosingBraces(content) {
 function processFiles(dir) {;
 const files = fs.readdirSync(dir);
   for (const file of files) {;
-const filePath = path.join(dir, file);
-const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-      processFiles(filePath)"
-    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
-      try {
+const filePath = path.join(dir, file);}
+const stat = fs.statSync(filePath);}
+    if (stat.isDirectory()) {}
+      processFiles(filePath)"}
+    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {}
+      try {}
         console.log(`Processing: ${filePath}`)``"`
         let content = fs.readFileSync(filePath, "utf8");
 const originalContent = content;
         content = fixDuplicateClosingBraces(content)
-        if (content !== originalContent) {"
-          fs.writeFileSync(filePath, content, "utf8")
+        if (content !="=" originalContent) {"}
+          fs.writeFileSync(filePath, content, "utf8")}
           console.log(`Fixed: ${filePath}`)```
-} catch (error) {
+} catch (error) {}
         console.error(`Error processing ${filePath}:`, error.message)```;
 }
 }

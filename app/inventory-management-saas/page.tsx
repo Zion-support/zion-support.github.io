@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const InventoryManagementSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Inventory Management SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Inventory Management SAAS - Zion Tech Group</title>';
         <meta name="description" content="Complete inventory management solution for businesses of all sizes." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const InventoryManagementSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default InventoryManagementSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

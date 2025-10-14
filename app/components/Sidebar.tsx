@@ -1,4 +1,4 @@
-import React, { useState } from 'react''
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom;
 
 import { 
@@ -11,36 +11,36 @@ import {
   ChatBubbleLeftRightIcon,
   CogIcon,
   QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  MapIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon'
+  ShieldCheckIcon,;
+  MapIcon,';
+  CloudIcon,;';}
+  CpuChipIcon,';}
+  SignalIcon,';}
+  UserGroupIcon'}
 } from '@heroicons/react/24/outline;
 
-interface SidebarProps {
-  isOpen: boolean
-  onClose: () => void;
+interface SidebarProps {}
+  isOpen: boolean}
+  onClose: () => void;}
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-
-  const navigation = ['
+  const location = useLocation();}
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());';}
+';}
+  const navigation = ['}
     { name: 'Home', href: '/', icon: HomeIcon },'
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { '
-      name: 'Services', '
-      href: '/services', 
-      icon: BriefcaseIcon,
-      submenu: ['
+      name: 'Services', '}
+      href: '/services', }
+      icon: BriefcaseIcon,}
+      submenu: ['}
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },'
         { name: 'IT Solutions', href: '/it-solutions', icon: BriefcaseIcon },'
         { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },'
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },'
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },'
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },'
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },']
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }]
       ]
     },'
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },'
@@ -50,9 +50,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
-  const isActive = (href: string) => {'
-    if (href === '/') {'
-      return location.pathname === '/';
+  const isActive = (href: string) => {'}
+    if (href ="==" '/') {'}
+      return location.pathname ="==" '/';}
     }
     return location.pathname.startsWith(href);
   };
@@ -63,7 +63,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-        onClick={onClose}
+        onClick="{onClose}"
       /></div>
       {/* Sidebar */}
       <div className="fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 border-r border-slate-700 transform transition-transform duration-300 ease-in-out lg:translate-x-0"></div>
@@ -75,43 +75,43 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </div>
           <button
-            onClick={onClose}
+            onClick="{onClose}"
             className="text-gray-400 hover:text-white lg:hidden"
           ></button>
             <XMarkIcon className="w-6 h-6" /></XMarkIcon>
           </button>
         </div>
 
-        <nav className="mt-8 px-4"></nav>
-          <ul className="space-y-2"></ul>
-            {navigation.map((item) => (
-              <li key={item.name}></li>
+        <nav className="mt-8 px-4"></nav>)
+          <ul className="space-y-2"></ul>)
+            {navigation.map((item) => (}
+              <li key="{item.name}"></li>
                 <Link
-                  to={item.href;
-                  className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(item.href)'
-                      ? 'bg-purple-600 text-white''
-                      : 'text-gray-300 hover:text-white hover:bg-slate-800'
+                  to="{item.href;")
+                  className="{`flex" items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${)}
+                    isActive(item.href)'}
+                      ? 'bg-purple-600 text-white''}
+                      : 'text-gray-300 hover:text-white hover:bg-slate-800'}
                   }`}
-                  onClick={onClose}
+                  onClick="{onClose}"
                 ></Link>
                   <item.icon className="w-5 h-5" /></item>
                   <span>{item.name}</span>
                 </Link>
                 
                 {/* Submenu */}
-                {item.submenu && (
-                  <ul className="ml-8 mt-2 space-y-1"></ul>
-                    {item.submenu.map((subItem) => (
-                      <li key={subItem.name}></li>
+                {item.submenu && (})
+                  <ul className="ml-8 mt-2 space-y-1"></ul>)}
+                    {item.submenu.map((subItem) => (}
+                      <li key="{subItem.name}"></li>
                         <Link
-                          to={subItem.href;
-                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
-                            isActive(subItem.href)'
-                              ? 'text-purple-400 bg-slate-800''
-                              : 'text-gray-400 hover:text-white hover:bg-slate-800'
+                          to="{subItem.href;")
+                          className="{`flex" items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${)}
+                            isActive(subItem.href)'}
+                              ? 'text-purple-400 bg-slate-800''}
+                              : 'text-gray-400 hover:text-white hover:bg-slate-800'}
                           }`}
-                          onClick={onClose}
+                          onClick="{onClose}"
                         ></Link>
                           <subItem.icon className="w-4 h-4" /></subItem>
                           <span>{subItem.name}</span>

@@ -1,14 +1,14 @@
-import React from 'react''
+import React from 'react';
 import { Helmet } from 'react-helmet-async;
 export default function 5GSolutionsPage() {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>5GSolutionsPage - Zion Tech Group</title>
-        <meta name="description" content="Professional 5gsolutionspage services by Zion Tech Group." /></meta>
-      </Helmet>
-      
-      <div className="min-h-screen bg-white"></div>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>5GSolutionsPage - Zion Tech Group</title>';
+        <meta name="description" content="Professional 5gsolutionspage services by Zion Tech Group." /></meta>}
+      </Helmet>}
+      }
+      <div className="min-h-screen bg-white"></div>}
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100"></section>
           <div className="max-w-6xl mx-auto text-center"></div>
@@ -53,7 +53,7 @@ export default function 5GSolutionsPage() {
             </button>
           </div>
         </section>
-      </div>
-    </>
+      </div>)
+    </>)
   )}
 '

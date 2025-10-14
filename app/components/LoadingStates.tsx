@@ -1,6 +1,6 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 export default function Page() {
   return (
     <div className="min-h-screen bg-white"></div>
@@ -42,15 +42,15 @@ export default function Page() {
               </p>;
             </div>
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div></div>
- cursor/fix-errors-and-merge-to-main-54ad;
-          </div>
-"
-          <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>"
+ cursor/fix-errors-and-merge-to-main-54ad;}
+          </div>}
+"})
+          <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>"})
           <p>{message || getDefaultMessage()}</p>"
           <div className="flex justify-center space-x-2"></div>"
             <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div></div>"
-            <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s',}}></div></div>"'"'"
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s',}}></div></div>'"'"
+            <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="{{" animationDelay: '0.1s',}}></div></div>"'"'"
+            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style="{{" animationDelay: '0.2s',}}></div></div>'"'"
           </div>
         </div>
       </div>
@@ -78,8 +78,8 @@ export default function Page() {
               <p>"
                 Round-the-clock support for all your loadingstates needs.</p></div></div>
           <div className="mt-12">"
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-              Get Started Today</button></div></div></div></div>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">")
+              Get Started Today</button></div></div></div></div>)
   )}
             </button>
           </div>

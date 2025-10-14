@@ -1,10 +1,10 @@
-import { Menu, X } from 'lucide-react''
-import React, { useState } from 'react''
-import { Link } from 'react-router-dom'
-const EnhancedHeader: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+import { Menu, X } from 'lucide-react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+const EnhancedHeader: React.FC = () => {;}
+  const [isMenuOpen, setIsMenuOpen] = useState(false);}
+  const toggleMenu = () => {}
+    setIsMenuOpen(!isMenuOpen);}
   };
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50"></header>
@@ -29,7 +29,7 @@ const EnhancedHeader: React.FC = () => {
           </nav>
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
+            onClick="{toggleMenu}"
             className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"></button>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -45,10 +45,10 @@ const EnhancedHeader: React.FC = () => {
               <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
                 Services
               <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
-                Contact
-              </Link>
-            </nav>
-          </div>
+                Contact}
+              </Link>}
+            </nav>})
+          </div>})
         )}
   )
 }

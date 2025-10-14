@@ -4,8 +4,8 @@ interface FuturisticCardProps {}
   className?: string;
   variant?: 'default' | 'glow' | 'gradient'}'''''';
 const FuturisticCard: "React.FC<FuturisticCardProps> = ({"}"
-  children,
-  className=""
+  children,)
+  className="")
   variant = 'default''}) => {'}''';';
 const baseClasses="rounded-xl p-6 border border-white/20 backdrop-blur-sm" variantClasses = {}
     default: 'bg-white/10',''''''';
@@ -14,10 +14,10 @@ const baseClasses="rounded-xl p-6 border border-white/20 backdrop-blur-sm" varia
   }
   return (
   <>
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div>```
+    <div className="{`${baseClasses}" ${variantClasses[variant]} ${className}`}></div>```
       {children}
-    </div>
-  </>
+    </div>)
+  </>)
 );
   )
 }

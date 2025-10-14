@@ -9,16 +9,16 @@ function fixJSXComprehensive(content, filePath) {
   let fixed = content;
   let changes = 0;
 
-  // Fix files with duplicate closing tags and malformed structure
-  if (filePath.includes('5g-implementation') || filePath.includes('5g-solutions')) {
-    const correctStructure = `'use client';
-import React from "react";
+  // Fix files with duplicate closing tags and malformed structure}
+  if (filePath.includes('5g-implementation') || filePath.includes('5g-solutions')) {}
+    const correctStructure = `'use client';}
+import React from "react";}
 import { Helmet } from "react-helmet-async";
 
-export default function Page() {
-  return (
-    <>
-      <Helmet>
+export default function Page() {}
+  return (}
+    <>})
+      <Helmet ></Helmet>})
         <title>${filePath.includes('5g-implementation') ? '5G Implementation' : '5G Solutions'} - Zion Tech Group</title>
         <meta name="description" content="${filePath.includes('5g-implementation') ? '5G Implementation' : '5G Solutions'} services and solutions from Zion Tech Group" />
       </Helmet>
@@ -39,14 +39,14 @@ export default function Page() {
   }
 
   // Fix about page
-  if (filePath.includes('about/page.tsx')) {
-    const correctStructure = `import React from "react";
+  if (filePath.includes('about/page.tsx')) {}
+    const correctStructure = `import React from "react";}
 import { Helmet } from "react-helmet-async";
 
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>About - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team." />
         <meta name="keywords" content="about, company, team, mission, values" />
@@ -83,10 +83,10 @@ const AboutPage = () => {
               Track record of delivering successful projects and exceeding client expectations.
             </p>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+        </div>}
+      </div>})
+    </div>)}
+  );}
 };
 
 export default AboutPage;`;
@@ -95,15 +95,15 @@ export default AboutPage;`;
   }
 
   // Fix ai-3d-generation page
-  if (filePath.includes('ai-3d-generation')) {
-    const correctStructure = `'use client';
-import React from "react";
+  if (filePath.includes('ai-3d-generation')) {}
+    const correctStructure = `'use client';}
+import React from "react";}
 import { Helmet } from "react-helmet-async";
 
 export default function Page() {
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="AI 3D Generation services and solutions from Zion Tech Group" />
       </Helmet>
@@ -114,10 +114,10 @@ export default function Page() {
           <p className="text-xl text-gray-600">
             This page is under development. Please check back soon for more information about our AI 3D generation services.
           </p>
-        </div>
-      </div>
-    </>
-  );
+        </div>}
+      </div>})
+    </>)}
+  );}
 }`;
     fixed = correctStructure;
     changes++;
@@ -125,32 +125,32 @@ export default function Page() {
 
   // Fix files with missing Helmet closing tags
   const helmetPattern = /<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/>\s*$/gm;
-  if (helmetPattern.test(fixed)) {
-    fixed = fixed.replace(helmetPattern, (match, title) => {
-      return match + '\n      </Helmet>';
+  if (helmetPattern.test(fixed)) {}
+    fixed = fixed.replace(helmetPattern, (match, title) => {}
+      return match + '\n      </Helmet>';}
     });
     changes++;
   }
 
   // Fix files with JSX expressions must have one parent element
   const jsxParentPattern = /<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<\/>\s*<div/g;
-  if (jsxParentPattern.test(fixed)) {
-    fixed = fixed.replace(jsxParentPattern, (match) => {
-      return match.replace(/<\/>\s*<div/, '<div');
+  if (jsxParentPattern.test(fixed)) {}
+    fixed = fixed.replace(jsxParentPattern, (match) => {}
+      return match.replace(/<\/>\s*<div/, '<div');}
     });
     changes++;
   }
 
   // Fix duplicate closing tags
   const duplicateClosingPattern = /<\/div>\s*<\/>\s*<\/div>\s*<\/>\s*\);\s*}\s*<\/div>\s*<\/>\s*\);\s*}/g;
-  if (duplicateClosingPattern.test(fixed)) {
+  if (duplicateClosingPattern.test(fixed)) {}
     fixed = fixed.replace(duplicateClosingPattern, '\n    </>\n  );\n}');
     changes++;
   }
 
   // Fix malformed JSX structure with extra closing tags
   const extraClosingPattern = /}\s*<\/div>\s*<\/>\s*\);\s*}/g;
-  if (extraClosingPattern.test(fixed)) {
+  if (extraClosingPattern.test(fixed)) {}
     fixed = fixed.replace(extraClosingPattern, '\n  );\n}');
     changes++;
   }
@@ -162,33 +162,33 @@ export default function Page() {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const result = fixJSXComprehensive(content, filePath);
-    
-    if (result.changes > 0) {
-      fs.writeFileSync(filePath, result.content);
+    const result = fixJSXComprehensive(content, filePath);}
+    }
+    if (result.changes > 0) {}
+      fs.writeFileSync(filePath, result.content);}
       console.log(`Fixed ${result.changes} issues in ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Main execution
-async function main() {
-  console.log('Starting comprehensive JSX error fixes...');
-
-  // Get all TypeScript/TSX files in the app directory
+async function main() {}
+  console.log('Starting comprehensive JSX error fixes...');}
+}
+  // Get all TypeScript/TSX files in the app directory}
   const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
 
   let totalFixed = 0;
   let filesProcessed = 0;
 
-  files.forEach(file => {
-    if (processFile(file)) {
-      totalFixed++;
+  files.forEach(file => {)}
+    if (processFile(file)) {}
+      totalFixed++;}
     }
     filesProcessed++;
   });

@@ -3,25 +3,25 @@
   ];
 const solutions = ["""
     {name: "Quantum Computing", url: "/quantum-computing", }, """
-    {name: "Autonomous Systems", url: "/autonomous-systems", }, """
-    {name: "Blockchain Web3", url: "/blockchain-web3", }, """
+    {name: "Autonomous Systems", url: "/autonomous-systems", }, """]
+    {name: "Blockchain Web3", url: "/blockchain-web3", }, """]
     {name: "IoT Edge Computing", url: "/iot-edge-computing", }""];
 const company = ["""
     {name: "About Us", url: "/about", }, """
-    {name: "Team", url: "/team", }, """
-    {name: "Careers", url: "/careers", }, """
+    {name: "Team", url: "/team", }, """]
+    {name: "Careers", url: "/careers", }, """]
     {name: "News", url: "/news", }""];
 const support = ["""
     {name: "Documentation", url: "/documentation", }, """
-    {name: "Support", url: "/support", }, """
-    {name: "FAQ", url: "/faq", }, """
+    {name: "Support", url: "/support", }, """]
+    {name: "FAQ", url: "/faq", }, """]
     {name: "Contact", url: "/contact", }""];
 const socialLinks = ["""
     {name: "Facebook", icon: Facebook, url: "#", }, """
     {name: "Twitter", icon: Twitter, url: "#", }, """
     {name: "LinkedIn", icon: Linkedin, url: "#", }, """
-    {name: "Instagram", icon: Instagram, url: "#", }, """
-    {name: "YouTube", icon: Youtube, url: "#", }, """
+    {name: "Instagram", icon: Instagram, url: "#", }, """]
+    {name: "YouTube", icon: Youtube, url: "#", }, """]
     {name: "GitHub", icon: Github, url: "#", }""];
 ;
   return ("""
@@ -35,8 +35,8 @@ const socialLinks = ["""
             <p className="text-sm text-cyan-400">AI & IT Solutions</p>"""
             <p className="text-gray-300 text-sm leading-relaxed"></p>""
                   >
-                    {service.name}
-                  </Link>
+                    {service.name})
+                  </Link>)
                 </li>)}
               ))}
               <li></li>

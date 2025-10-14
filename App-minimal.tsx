@@ -17,10 +17,10 @@ function App() {
               Website is being updated. Please check back soon.
             </p>
           </div>
-        </div>
-      </div>
-    </>
-  );
+        </div>}
+      </div>})
+    </>)}
+  );}
 }
 
 export default App;

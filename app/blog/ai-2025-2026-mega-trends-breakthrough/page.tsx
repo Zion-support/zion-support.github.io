@@ -1,7 +1,7 @@
-import React from 'react''
-import Link from 'next/link;
-const AIMegaTrends20252026: React.FC = () => {
-    return (
+import React from 'react';
+import Link from 'next/link;';
+const AIMegaTrends20252026: React.FC = () => {';
+    return (';
     <div className="min-h-screen bg-gray-50"></div>
       <div className="max-w-4xl mx-auto px-4 py-8"></div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
@@ -96,10 +96,10 @@ const AIMegaTrends20252026: React.FC = () => {
                 Explore AI Services
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
-  );
+          </div>}
+        </div>})
+      </div>)}
+  );}
 };
 
 export default AIMegaTrends20252026'

@@ -1,81 +1,81 @@
 import React from 'react;
-
-
-const CloudInfrastructurePage: React.FC = () => {
-  const services = [{
-      icon: Cloud,''
-      title: 'Cloud Migration'''
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.'''
+';
+';
+const CloudInfrastructurePage: React.FC = () => {';
+  const services = [{';}
+      icon: Cloud,'}
+      title: 'Cloud Migration'''}]
+      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.'''}]
       features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';}
     },
-    {'
-      icon: Server''
-      title: 'Infrastructure as Code'''
-      description: 'Automate infrastructure provisioning and management using modern DevOps practices.'''
+    {'}
+      icon: Server''}
+      title: 'Infrastructure as Code'''}
+      description: 'Automate infrastructure provisioning and management using modern DevOps practices.'''}
       features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']';}
     },
-    {'
-      icon: Database''
-      title: 'Database Solutions'''
-      description: 'Optimize your database performance and scalability in the cloud environment.'''
+    {'}
+      icon: Database''}
+      title: 'Database Solutions'''}
+      description: 'Optimize your database performance and scalability in the cloud environment.'''}
       features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']';}
     },
-    {'
-      icon: Shield''
-      title: 'Security & Compliance'''
-      description: 'Implement robust security measures and ensure compliance with industry standards.'''
+    {'}
+      icon: Shield''}
+      title: 'Security & Compliance'''}
+      description: 'Implement robust security measures and ensure compliance with industry standards.'''}
       features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']';}
     },
-    {'
-      icon: Zap''
-      title: 'Auto-scaling'''
-      description: 'Automatically scale your resources based on demand to optimize costs and performance.'''
+    {'}
+      icon: Zap''}
+      title: 'Auto-scaling'''}
+      description: 'Automatically scale your resources based on demand to optimize costs and performance.'''}
       features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']';}
     },
-    {'
-      icon: Globe''
-      title: 'Multi-cloud Strategy'''
-      description: 'Leverage multiple cloud providers for better resilience and vendor independence.'''
+    {'}
+      icon: Globe''}
+      title: 'Multi-cloud Strategy'''}
+      description: 'Leverage multiple cloud providers for better resilience and vendor independence.'''}
       features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']';}
     }
   ];
 const CloudInfrastructurePage: React.FC = () => {
   const services = [
     {
-      icon: Cloud,'
-      title: 'Cloud Migration','
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.','
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']
+      icon: Cloud,'}
+      title: 'Cloud Migration','}]
+      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.','}]
+      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']}
     },
     {
-      icon: Server,'
-      title: 'Infrastructure as Code','
-      description: 'Automate infrastructure provisioning and management using modern DevOps practices.','
-      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']
+      icon: Server,'}
+      title: 'Infrastructure as Code','}
+      description: 'Automate infrastructure provisioning and management using modern DevOps practices.','}
+      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']}
     },
     {
-      icon: Database,'
-      title: 'Database Solutions','
-      description: 'Optimize your database performance and scalability in the cloud environment.','
-      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']
+      icon: Database,'}
+      title: 'Database Solutions','}
+      description: 'Optimize your database performance and scalability in the cloud environment.','}
+      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']}
     },
     {
-      icon: Shield,'
-      title: 'Security & Compliance','
-      description: 'Implement robust security measures and ensure compliance with industry standards.','
-      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']
+      icon: Shield,'}
+      title: 'Security & Compliance','}
+      description: 'Implement robust security measures and ensure compliance with industry standards.','}
+      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']}
     },
     {
-      icon: Zap,'
-      title: 'Auto-scaling','
-      description: 'Automatically scale your resources based on demand to optimize costs and performance.','
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
+      icon: Zap,'}
+      title: 'Auto-scaling','}
+      description: 'Automatically scale your resources based on demand to optimize costs and performance.','}
+      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']}
     },
     {
-      icon: Globe,'
-      title: 'Multi-cloud Strategy','
-      description: 'Leverage multiple cloud providers for better resilience and vendor independence.','
-      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']
+      icon: Globe,'}
+      title: 'Multi-cloud Strategy','}
+      description: 'Leverage multiple cloud providers for better resilience and vendor independence.','}
+      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']}
     }
   ];
 
@@ -98,29 +98,29 @@ const CloudInfrastructurePage: React.FC = () => {
             security, and cost-effectiveness.;
           </p>
         </div>
-          {services.map((service, _index
-  </>
-); => {
-            const Icon = service.icon;
-            return (
-  <>
-    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>
+          {services.map((service, _index)
+  </>)
+); => {}
+            const Icon = service.icon;}
+            return (}
+  <>}
+    <div key="{_index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"></div>
                 <div className="flex items-center mb-4"></div>
                   <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mr-4"></div>
-                    <Icon className="w-6 h-6 text-white" />
+                    <Icon className="w-6 h-6 text-white" /></Icon>
                   </div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
                 <p>{service.description}</p>
                 <ul className="space-y-2"></ul>
-                  {service.features.map((feature, featureIndex
-  </>;
-); => (
-                    </li>
-                  ))
-                </ul>
-              </div>
-            )
+                  {service.features.map((feature, featureIndex)
+  </>;)
+); => ()
+                    </li>)
+                  ))}
+                </ul>}
+              </div>}
+            )}
           }
         </div>;
               Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.;
@@ -178,8 +178,8 @@ const CloudInfrastructurePage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
                 Get Started Today;
               </button>
-            </div>
-          </div>;
+            </div>)
+          </div>;)
 const CloudInfrastructurePage: React.FC = () => {
   return (
     <>
@@ -192,12 +192,12 @@ const CloudInfrastructurePage: React.FC = () => {
         <div className="text-center"></div>
           <h1>CloudInfrastructurePage</h1>
           <p>This page is under construction.</p>
-        </div>
-      </div>;
-    </div>;  );
-export default CloudInfrastructurePage;
-    </>
-  );
+        </div>)
+      </div>;)
+    </div>;  );}
+export default CloudInfrastructurePage;}
+    </>}
+  );}
 };
 
 

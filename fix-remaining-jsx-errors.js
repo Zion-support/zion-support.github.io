@@ -11,16 +11,16 @@ function fixRemainingJsxErrors(content, filePath) {
   // Fix incomplete JSX fragments - add missing closing tags;
   const fragmentOpenCount = (fixed.match(/<>/g) || []).length;
   const fragmentCloseCount = (fixed.match(/<\/>/g) || []).length;
-  
-  if (fragmentOpenCount > fragmentCloseCount) {
-    const missingFragments = fragmentOpenCount - fragmentCloseCount;
-    // Find the last closing brace and add missing fragments before it;
+  }
+  if (fragmentOpenCount > fragmentCloseCount) {}
+    const missingFragments = fragmentOpenCount - fragmentCloseCount;}
+    // Find the last closing brace and add missing fragments before it;}
     const lastBraceIndex = fixed.lastIndexOf('}');
-    if (lastBraceIndex !== -1) {
-      const beforeLastBrace = fixed.substring(0, lastBraceIndex);
-      const afterLastBrace = fixed.substring(lastBraceIndex);
-      fixed = beforeLastBrace + '</>'.repeat(missingFragments) + afterLastBrace;
-      changes += missingFragments;
+    if (lastBraceIndex !="=" -1) {
+      const beforeLastBrace = fixed.substring(0, lastBraceIndex);}
+      const afterLastBrace = fixed.substring(lastBraceIndex);}
+      fixed = beforeLastBrace + '</>'.repeat(missingFragments) + afterLastBrace;}
+      changes += missingFragments;}
     }
   }
 
@@ -32,18 +32,18 @@ function fixRemainingJsxErrors(content, filePath) {
   const divOpenCount = (fixed.match(/<div[^>]*>/g) || []).length;
   const divCloseCount = (fixed.match(/<\/div>/g) || []).length;
   
-  if (divOpenCount > divCloseCount) {
-    const missingDivs = divOpenCount - divCloseCount;
-    // Add missing closing divs before the last closing fragment or brace;
-    const lastFragmentIndex = fixed.lastIndexOf('</>');
+  if (divOpenCount > divCloseCount) {}
+    const missingDivs = divOpenCount - divCloseCount;}
+    // Add missing closing divs before the last closing fragment or brace;}
+    const lastFragmentIndex = fixed.lastIndexOf('</>');}
     const lastBraceIndex = fixed.lastIndexOf('}');
     const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
     
-    if (insertIndex !== -1) {
-      const beforeInsert = fixed.substring(0, insertIndex);
-      const afterInsert = fixed.substring(insertIndex);
-      fixed = beforeInsert + '</div>'.repeat(missingDivs) + afterInsert;
-      changes += missingDivs;
+    if (insertIndex !="=" -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);}
+      const afterInsert = fixed.substring(insertIndex);}
+      fixed = beforeInsert + '</div>'.repeat(missingDivs) + afterInsert;}
+      changes += missingDivs;}
     }
   }
 
@@ -51,17 +51,17 @@ function fixRemainingJsxErrors(content, filePath) {
   const sectionOpenCount = (fixed.match(/<section[^>]*>/g) || []).length;
   const sectionCloseCount = (fixed.match(/<\/section>/g) || []).length;
   
-  if (sectionOpenCount > sectionCloseCount) {
-    const missingSections = sectionOpenCount - sectionCloseCount;
-    const lastFragmentIndex = fixed.lastIndexOf('</>');
+  if (sectionOpenCount > sectionCloseCount) {}
+    const missingSections = sectionOpenCount - sectionCloseCount;}
+    const lastFragmentIndex = fixed.lastIndexOf('</>');}
     const lastBraceIndex = fixed.lastIndexOf('}');
     const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
     
-    if (insertIndex !== -1) {
-      const beforeInsert = fixed.substring(0, insertIndex);
-      const afterInsert = fixed.substring(insertIndex);
-      fixed = beforeInsert + '</section>'.repeat(missingSections) + afterInsert;
-      changes += missingSections;
+    if (insertIndex !="=" -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);}
+      const afterInsert = fixed.substring(insertIndex);}
+      fixed = beforeInsert + '</section>'.repeat(missingSections) + afterInsert;}
+      changes += missingSections;}
     }
   }
 
@@ -69,17 +69,17 @@ function fixRemainingJsxErrors(content, filePath) {
   const liOpenCount = (fixed.match(/<li[^>]*>/g) || []).length;
   const liCloseCount = (fixed.match(/<\/li>/g) || []).length;
   
-  if (liOpenCount > liCloseCount) {
-    const missingLis = liOpenCount - liCloseCount;
-    const lastFragmentIndex = fixed.lastIndexOf('</>');
+  if (liOpenCount > liCloseCount) {}
+    const missingLis = liOpenCount - liCloseCount;}
+    const lastFragmentIndex = fixed.lastIndexOf('</>');}
     const lastBraceIndex = fixed.lastIndexOf('}');
     const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
     
-    if (insertIndex !== -1) {
-      const beforeInsert = fixed.substring(0, insertIndex);
-      const afterInsert = fixed.substring(insertIndex);
-      fixed = beforeInsert + '</li>'.repeat(missingLis) + afterInsert;
-      changes += missingLis;
+    if (insertIndex !="=" -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);}
+      const afterInsert = fixed.substring(insertIndex);}
+      fixed = beforeInsert + '</li>'.repeat(missingLis) + afterInsert;}
+      changes += missingLis;}
     }
   }
 
@@ -87,17 +87,17 @@ function fixRemainingJsxErrors(content, filePath) {
   const buttonOpenCount = (fixed.match(/<button[^>]*>/g) || []).length;
   const buttonCloseCount = (fixed.match(/<\/button>/g) || []).length;
   
-  if (buttonOpenCount > buttonCloseCount) {
-    const missingButtons = buttonOpenCount - buttonCloseCount;
-    const lastFragmentIndex = fixed.lastIndexOf('</>');
+  if (buttonOpenCount > buttonCloseCount) {}
+    const missingButtons = buttonOpenCount - buttonCloseCount;}
+    const lastFragmentIndex = fixed.lastIndexOf('</>');}
     const lastBraceIndex = fixed.lastIndexOf('}');
     const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
     
-    if (insertIndex !== -1) {
-      const beforeInsert = fixed.substring(0, insertIndex);
-      const afterInsert = fixed.substring(insertIndex);
-      fixed = beforeInsert + '</button>'.repeat(missingButtons) + afterInsert;
-      changes += missingButtons;
+    if (insertIndex !="=" -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);}
+      const afterInsert = fixed.substring(insertIndex);}
+      fixed = beforeInsert + '</button>'.repeat(missingButtons) + afterInsert;}
+      changes += missingButtons;}
     }
   }
 
@@ -105,17 +105,17 @@ function fixRemainingJsxErrors(content, filePath) {
   const linkOpenCount = (fixed.match(/<Link[^>]*>/g) || []).length;
   const linkCloseCount = (fixed.match(/<\/Link>/g) || []).length;
   
-  if (linkOpenCount > linkCloseCount) {
-    const missingLinks = linkOpenCount - linkCloseCount;
-    const lastFragmentIndex = fixed.lastIndexOf('</>');
+  if (linkOpenCount > linkCloseCount) {}
+    const missingLinks = linkOpenCount - linkCloseCount;}
+    const lastFragmentIndex = fixed.lastIndexOf('</>');}
     const lastBraceIndex = fixed.lastIndexOf('}');
     const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
     
-    if (insertIndex !== -1) {
-      const beforeInsert = fixed.substring(0, insertIndex);
-      const afterInsert = fixed.substring(insertIndex);
-      fixed = beforeInsert + '</Link>'.repeat(missingLinks) + afterInsert;
-      changes += missingLinks;
+    if (insertIndex !="=" -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);}
+      const afterInsert = fixed.substring(insertIndex);}
+      fixed = beforeInsert + '</Link>'.repeat(missingLinks) + afterInsert;}
+      changes += missingLinks;}
     }
   }
 
@@ -123,17 +123,17 @@ function fixRemainingJsxErrors(content, filePath) {
   const spanOpenCount = (fixed.match(/<span[^>]*>/g) || []).length;
   const spanCloseCount = (fixed.match(/<\/span>/g) || []).length;
   
-  if (spanOpenCount > spanCloseCount) {
-    const missingSpans = spanOpenCount - spanCloseCount;
-    const lastFragmentIndex = fixed.lastIndexOf('</>');
+  if (spanOpenCount > spanCloseCount) {}
+    const missingSpans = spanOpenCount - spanCloseCount;}
+    const lastFragmentIndex = fixed.lastIndexOf('</>');}
     const lastBraceIndex = fixed.lastIndexOf('}');
     const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
     
-    if (insertIndex !== -1) {
-      const beforeInsert = fixed.substring(0, insertIndex);
-      const afterInsert = fixed.substring(insertIndex);
-      fixed = beforeInsert + '</span>'.repeat(missingSpans) + afterInsert;
-      changes += missingSpans;
+    if (insertIndex !="=" -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);}
+      const afterInsert = fixed.substring(insertIndex);}
+      fixed = beforeInsert + '</span>'.repeat(missingSpans) + afterInsert;}
+      changes += missingSpans;}
     }
   }
 
@@ -173,18 +173,18 @@ function fixRemainingJsxErrors(content, filePath) {
   const tagPattern = /<(\w+)[^>]*>(?!.*<\/\1>)/g;
   const unclosedTags = fixed.match(tagPattern) || [];
   
-  if (unclosedTags.length > 0) {
-    const lastFragmentIndex = fixed.lastIndexOf('</>');
+  if (unclosedTags.length > 0) {}
+    const lastFragmentIndex = fixed.lastIndexOf('</>');}
     const lastBraceIndex = fixed.lastIndexOf('}');
     const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
     
-    if (insertIndex !== -1) {
+    if (insertIndex !="=" -1) {
       const beforeInsert = fixed.substring(0, insertIndex);
       const afterInsert = fixed.substring(insertIndex);
-      
-      let closingTags = '';
-      unclosedTags.forEach(tag => {
-        const tagName = tag.match(/<(\w+)/)[1];
+      }
+      let closingTags = '';}
+      unclosedTags.forEach(tag => {)}
+        const tagName = tag.match(/<(\w+)/)[1];}
         closingTags += `</${tagName}>`;
       });
       
@@ -197,39 +197,39 @@ function fixRemainingJsxErrors(content, filePath) {
 }
 
 // Function to process a single file;
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+function processFile(filePath) {}
+  try {}
+    const content = fs.readFileSync(filePath, 'utf8');}
     const { content: fixed, changes } = fixRemainingJsxErrors(content, filePath);
     
-    if (changes > 0) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+    if (changes > 0) {}
+      fs.writeFileSync(filePath, fixed, 'utf8');}
       console.log(`Fixed ${changes} issues in ${filePath}`);
       return changes;
     }
     return 0;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return 0;
   }
 }
 
 // Main function;
-async function main() {
-  console.log('Starting remaining JSX syntax error fixes...');
-  
-  // Find all TypeScript/JavaScript files in the app directory;
+async function main() {}
+  console.log('Starting remaining JSX syntax error fixes...');}
+  }
+  // Find all TypeScript/JavaScript files in the app directory;}
   const pattern = 'app/**/*.{ts,tsx,js,jsx}';
   const files = await glob(pattern);
   
   let totalChanges = 0;
   let filesProcessed = 0;
   
-  files.forEach(file => {
-    const changes = processFile(file);
-    totalChanges += changes;
-    if (changes > 0) {
-      filesProcessed++;
+  files.forEach(file => {)
+    const changes = processFile(file);}
+    totalChanges += changes;}
+    if (changes > 0) {}
+      filesProcessed++;}
     }
   });
   

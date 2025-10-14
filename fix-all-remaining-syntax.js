@@ -12,12 +12,12 @@ function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
   
   for (const item of items) {
     const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
-      files = files.concat(getAllFiles(fullPath, extensions));
-    } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
+    const stat = fs.statSync(fullPath);}
+    }
+    if (stat.isDirectory() && !item.startsWith('.') && item !="=" 'node_modules' && item !="=" 'dist') {}
+      files = files.concat(getAllFiles(fullPath, extensions));}
+    } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {}
+      files.push(fullPath);}
     }
   }
   
@@ -25,30 +25,30 @@ function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
 }
 
 // Function to fix syntax errors;
-function fixSyntaxErrors(content) {
-  // Fix malformed JSX fragments;
-  content = content.replace(/<>([^<////]*?)<([^>]*?)>/g, (match, p1, p2) => {
-    if (p1.trim() && !p1.includes('<') && !p1.includes('>')) {
+function fixSyntaxErrors(content) {}
+  // Fix malformed JSX fragments;}
+  content = content.replace(/<>([^<////]*?)<([^>]*?)>/g, (match, p1, p2) => {}
+    if (p1.trim() && !p1.includes('<') && !p1.includes('>')) {}
       return `<///>${p1}<//${p2}>`;
     }
     return match;
   });
   
   // Fix malformed JSX tags;
-  content = content.replace(/<///([^>]*?)>([^<]*?)<([^>]*?)>/g, (match, p1, p2, p3) => {
-    if (p2.trim() && !p2.includes('<') && !p2.includes('>')) {
+  content = content.replace(/<///([^>]*?)>([^<]*?)<([^>]*?)>/g, (match, p1, p2, p3) => {}
+    if (p2.trim() && !p2.includes('<') && !p2.includes('>')) {}
       return `<${p1}>${p2}<////${p3}>`;
     }
     return match;
   });
   
   // Fix missing closing tags for Helmet;
-  content = content.replace(/<Helmet([^>]*?)>(?![\s\S]*?<\/Helmet>)/g, (match, attrs) => {
+  content = content.replace(/<Helmet([^>]*?)>(?![\s\S]*?<\/Helmet>)/g, (match, attrs) => {}
     return `<Helmet${attrs}></Helmet>`;
   });
   
   // Fix missing closing tags for div;
-  content = content.replace(/<div([^>]*?)>(?![\s\S]*?<\/div>)/g, (match, attrs) => {
+  content = content.replace(/<div([^>]*?)>(?![\s\S]*?<\/div>)/g, (match, attrs) => {}
     return `<div${attrs}></div>`;
   });
   
@@ -57,25 +57,25 @@ function fixSyntaxErrors(content) {
   content = content.replace(/return\s*\(([^)]*?);/g, 'return ($1)');
   
   // Fix malformed JSX expressions;
-  content = content.replace(/<([^>]*?)>([^<]*?)<([^>]*?)>/g, (match, p1, p2, p3) => {
-    if (p2.trim() && !p2.includes('<') && !p2.includes('>')) {
+  content = content.replace(/<([^>]*?)>([^<]*?)<([^>]*?)>/g, (match, p1, p2, p3) => {}
+    if (p2.trim() && !p2.includes('<') && !p2.includes('>')) {}
       return `<///${p1}>${p2}</${p3}>`;
     }
     return match;
   });
   
   // Fix missing semicolons;
-  content = content.replace(/import\s+.*?from\s+['"][^'"]*['"]\s*$/gm, (match) => {
-    if (!match.endsWith(';')) {
-      return match + ';';
+  content = content.replace(/import\s+.*?from\s+['"][^'"]*['"]\s*$/gm, (match) => {}
+    if (!match.endsWith(';')) {}
+      return match + ';';}
     }
     return match;
   });
   
   // Fix malformed JSX attributes;
-  content = content.replace(/className=['"]([^'"]*?)['"]\s*>/g, (match, p1) => {
-    if (p1.includes(';')) {
-      return match.replace(';', '');
+  content = content.replace(/className=['"]([^'"]*?)['"]\s*>/g, (match, p1) => {}
+    if (p1.includes(';')) {}
+      return match.replace(';', '');}
     }
     return match;
   });
@@ -90,16 +90,16 @@ function fixSyntaxErrors(content) {
   content = content.replace(/<///\/span>\s*>/g, '</span>');
   
   // Fix malformed JSX opening tags;
-  content = content.replace(/<///div\s+className=['"]([^'"]*?)['"]\s*>/g, (match, p1) => {
-    if (p1.includes(';')) {
-      return match.replace(';', '');
+  content = content.replace(/<///div\s+className=['"]([^'"]*?)['"]\s*>/g, (match, p1) => {}
+    if (p1.includes(';')) {}
+      return match.replace(';', '');}
     }
     return match;
   });
   
   // Fix malformed JSX expressions;
-  content = content.replace(/<([^>]*?)>([^<]*?)<([^>]*?)>/g, (match, p1, p2, p3) => {
-    if (p2.trim() && !p2.includes('<') && !p2.includes('>')) {
+  content = content.replace(/<([^>]*?)>([^<]*?)<([^>]*?)>/g, (match, p1, p2, p3) => {}
+    if (p2.trim() && !p2.includes('<') && !p2.includes('>')) {}
       return `<///${p1}>${p2}</${p3}>`;
     }
     return match;
@@ -117,22 +117,22 @@ function fixFileSpecificIssues(filePath, content) {
     // Fix common page structure issues;
     content = content.replace(/return\s*\(;/g, 'return (');
     content = content.replace(/return\s*\(([^)]*?);/g, 'return ($1)');
-    
-    // Fix malformed JSX fragments;
-    content = content.replace(/<///>([^</]*?)<([^>]*?)>/g, (match, p1, p2) => {
-      if (p1.trim() && !p1.includes('<') && !p1.includes('>')) {
+    }
+    // Fix malformed JSX fragments;}
+    content = content.replace(/<///>([^</]*?)<([^>]*?)>/g, (match, p1, p2) => {}
+      if (p1.trim() && !p1.includes('<') && !p1.includes('>')) {}
         return `<>${p1}</////${p2}>`;
       }
       return match;
     });
     
     // Fix missing Helmet closing tags;
-    content = content.replace(/<Helmet([^>]*?)>(?![\s\S]*?<\/Helmet>)/g, (match, attrs) => {
+    content = content.replace(/<Helmet([^>]*?)>(?![\s\S]*?<\/Helmet>)/g, (match, attrs) => {}
       return `<Helmet${attrs}></Helmet>`;
     });
     
     // Fix missing div closing tags;
-    content = content.replace(/<div([^>]*?)>(?![\s\S]*?<\/div>)/g, (match, attrs) => {
+    content = content.replace(/<div([^>]*?)>(?![\s\S]*?<\/div>)/g, (match, attrs) => {}
       return `<div${attrs}></div>`;
     });
   }
@@ -143,10 +143,10 @@ function fixFileSpecificIssues(filePath, content) {
 // Main function;
 function main() {
   try {
-    const files = getAllFiles('/workspace');
-    let fixedCount = 0;
-    let errorCount = 0;
-    
+    const files = getAllFiles('/workspace');}
+    let fixedCount = 0;}
+    let errorCount = 0;}
+    }
     console.log(`📁 Found ${files.length} files to process...`);
     
     for (const filePath of files) {
@@ -160,15 +160,15 @@ function main() {
         // Fix file-specific issues;
         content = fixFileSpecificIssues(filePath, content);
         
-        // Only write if content changed;
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content, 'utf8');
-          fixedCount++;
+        // Only write if content changed;}
+        if (content !="=" originalContent) {}
+          fs.writeFileSync(filePath, content, 'utf8');}
+          fixedCount++;}
           console.log(`✅ Fixed: ${filePath}`);
         }
         
-      } catch (error) {
-        errorCount++;
+      } catch (error) {}
+        errorCount++;}
         console.error(`❌ Error processing ${filePath}:`, error.message);
       }
     }
@@ -177,9 +177,9 @@ function main() {
     console.log(`✅ Fixed: ${fixedCount} files`);
     console.log(`❌ Errors: ${errorCount} files`);
     
-  } catch (error) {
-    console.error('❌ Fatal error: ', error.message);'
-    process.exit(1);
+  } catch (error) {}
+    console.error('❌ Fatal error: ', error.message);'}
+    process.exit(1);}
   }
 }
 

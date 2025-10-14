@@ -19,10 +19,10 @@ const __dirname = path.dirname(__filename);
       </div>
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
-export default function performance-optimizer.js() {
+export default function performance-optimizer.js() {}
   return (}
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>performance-optimizer.js - Zion Tech Group</title>
         <meta name="description" content="Professional performance-optimizer.js services by Zion Tech Group." />"
       <div className="min-h-screen bg-white">"
@@ -47,8 +47,8 @@ export default function performance-optimizer.js() {
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">"
                   24/7 Support
                 <p className="text-purple-700">"
-                  Round-the-clock support for all your needs.
-    </>
+                  Round-the-clock support for all your needs.)
+    </>)
   )
 }
 const fs = require('fs');
@@ -68,53 +68,53 @@ let viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
 // Enhanced chunk splitting strategy
 const optimizedChunkConfig = `
         manualChunks: (id) => {
-          // Vendor chunks - more granular splitting
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+          // Vendor chunks - more granular splitting}
+          if (id.includes('node_modules')) {}
+            if (id.includes('react') || id.includes('react-dom')) {}
+              return 'vendor-react';}
             }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
+            if (id.includes('react-router')) {}
+              return 'vendor-router';}
             }
-            if (id.includes('framer-motion')) {
-              return 'vendor-animations';
+            if (id.includes('framer-motion')) {}
+              return 'vendor-animations';}
             }
-            if (id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-icons';
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {}
+              return 'vendor-icons';}
             }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
+            if (id.includes('recharts')) {}
+              return 'vendor-charts';}
             }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
+            if (id.includes('web-vitals')) {}
+              return 'vendor-analytics';}
             }
-            if (id.includes('tailwindcss')) {
-              return 'vendor-styles';
+            if (id.includes('tailwindcss')) {}
+              return 'vendor-styles';}
             }
             return 'vendor-misc';
           }
           
           // App chunks - more specific splitting
-          if (id.includes('/app/ai-')) {
-            return 'ai-services';
+          if (id.includes('/app/ai-')) {}
+            return 'ai-services';}
           }
-          if (id.includes('/app/it-')) {
-            return 'it-services';
+          if (id.includes('/app/it-')) {}
+            return 'it-services';}
           }
-          if (id.includes('/app/components/')) {
-            return 'components';
+          if (id.includes('/app/components/')) {}
+            return 'components';}
           }
-          if (id.includes('/app/utils/')) {
-            return 'utils';
+          if (id.includes('/app/utils/')) {}
+            return 'utils';}
           }
-          if (id.includes('/app/hooks/')) {
-            return 'hooks';
+          if (id.includes('/app/hooks/')) {}
+            return 'hooks';}
           }
           return 'app';
         },`;
 
 // Replace the existing chunk configuration
-viteConfig = viteConfig.replace(
+viteConfig = viteConfig.replace()
   /manualChunks: \(id\) => \{[\s\S]*?\},/,
   optimizedChunkConfig
 );
@@ -131,22 +131,22 @@ const performanceOptimizations = `
     cssTarget: 'chrome80',
     reportCompressedSize: true,
     chunkSizeWarningLimit: 500,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
-    rollupOptions: {
-      output: {
+    cssCodeSplit: true,}
+    assetsInlineLimit: 4096,}
+    rollupOptions: {}
+      output: {}
         ${optimizedChunkConfig}
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const ext = assetInfo.name?.split('.').pop();
-          if (/\.(css)$/i.test(assetInfo.name || '')) {
+        assetFileNames: (assetInfo) => {}
+          const ext = assetInfo.name?.split('.').pop();}
+          if (/\.(css)$/i.test(assetInfo.name || '')) {}
             return \`assets/css/[name]-[hash].\${ext}\`;
           }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {}
             return \`assets/images/[name]-[hash].\${ext}\`;
           }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {}
             return \`assets/fonts/[name]-[hash].\${ext}\`;
           }
           return \`assets/[name]-[hash].\${ext}\`;
@@ -155,20 +155,20 @@ const performanceOptimizations = `
     },
     terserOptions: {
       compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
+        drop_console: true,}
+        drop_debugger: true,}
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],}
+        passes: 2,}
       },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/
+      mangle: {}
+        safari10: true,}
+        properties: {}
+          regex: /^_/}
         }
       },
-      format: {
-        comments: false,
-        ascii_only: true
+      format: {}
+        comments: false,}
+        ascii_only: true}
       }
     }
   },`;
@@ -183,10 +183,10 @@ import { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
+  name: string;}
+  value: number;}
+  delta: number;}
+  id: string;}
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -196,12 +196,12 @@ const PerformanceMonitor: React.FC = () => {
       console.log('Performance metric:', metric);
       
       // Example: Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
+      if (typeof window !="=" 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
+          event_category: 'Web Vitals',)}
+          event_label: metric.id,)}
+          value: Math.round(metric.name ="==" 'CLS' ? metric.value * 1000 : metric.value),}
+          non_interaction: true,}
         });
       }
     };
@@ -214,16 +214,16 @@ const PerformanceMonitor: React.FC = () => {
     getTTFB(sendToAnalytics);
 
     // Measure additional performance metrics
-    if (typeof window !== 'undefined') {
+    if (typeof window !="=" 'undefined') {
       // First Contentful Paint
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.name === 'first-contentful-paint') {
+          if (entry.name ="==" 'first-contentful-paint') {
             sendToAnalytics({
-              name: 'FCP',
-              value: entry.startTime,
-              delta: entry.startTime,
-              id: 'fcp-custom'
+              name: 'FCP',}
+              value: entry.startTime,}
+              delta: entry.startTime,})
+              id: 'fcp-custom'})
             });
           }
         }
@@ -252,10 +252,10 @@ const path = require('path');
 
 function analyzeBundle() {
   const distPath = path.join(__dirname, '../dist');
-  
-  if (!fs.existsSync(distPath)) {
-    console.log('❌ Dist folder not found. Run npm run build first.');
-    return;
+  }
+  if (!fs.existsSync(distPath)) {}
+    console.log('❌ Dist folder not found. Run npm run build first.');}
+    return;}
   }
 
   const assetsPath = path.join(distPath, 'assets');
@@ -271,20 +271,20 @@ function analyzeBundle() {
   console.log('===');
   
   console.log('\\n📦 JavaScript Files:');
-  jsFiles.forEach(file => {
-    const filePath = path.join(assetsPath, file);
-    const stats = fs.statSync(filePath);
-    const sizeKB = (stats.size / 1024).toFixed(2);
-    totalJSSize += stats.size;
+  jsFiles.forEach(file => {)
+    const filePath = path.join(assetsPath, file);}
+    const stats = fs.statSync(filePath);}
+    const sizeKB = (stats.size / 1024).toFixed(2);}
+    totalJSSize += stats.size;}
     console.log(\`  \${file}: \${sizeKB} KB\`);
   });
   
   console.log('\\n🎨 CSS Files:');
-  cssFiles.forEach(file => {
-    const filePath = path.join(assetsPath, file);
-    const stats = fs.statSync(filePath);
-    const sizeKB = (stats.size / 1024).toFixed(2);
-    totalCSSSize += stats.size;
+  cssFiles.forEach(file => {)
+    const filePath = path.join(assetsPath, file);}
+    const stats = fs.statSync(filePath);}
+    const sizeKB = (stats.size / 1024).toFixed(2);}
+    totalCSSSize += stats.size;}
     console.log(\`  \${file}: \${sizeKB} KB\`);
   });
   
@@ -295,14 +295,14 @@ function analyzeBundle() {
   
   // Recommendations
   console.log('\\n💡 Optimization Recommendations:');
-  if (totalJSSize > 500 * 1024) {
-    console.log('  ⚠️  JavaScript bundle is large. Consider code splitting.');
+  if (totalJSSize > 500 * 1024) {}
+    console.log('  ⚠️  JavaScript bundle is large. Consider code splitting.');}
   }
-  if (totalCSSSize > 50 * 1024) {
-    console.log('  ⚠️  CSS bundle is large. Consider purging unused styles.');
+  if (totalCSSSize > 50 * 1024) {}
+    console.log('  ⚠️  CSS bundle is large. Consider purging unused styles.');}
   }
-  if (jsFiles.length > 20) {
-    console.log('  ⚠️  Many JS chunks. Consider consolidating smaller chunks.');
+  if (jsFiles.length > 20) {}
+    console.log('  ⚠️  Many JS chunks. Consider consolidating smaller chunks.');}
   }
   
   console.log('\\n✅ Bundle analysis complete!');
@@ -317,7 +317,7 @@ const packageJsonPath = path.join(__dirname, '../package.json');
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
 packageJson.scripts['analyze:bundle'] = 'node scripts/analyze-bundle.js';
-packageJson.scripts['perf:audit'] = 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html';
+packageJson.scripts['perf:audit'] = 'lighthouse http://localhost:3000 --output="html" --output-path=./lighthouse-report.html';
 packageJson.scripts['perf:check'] = 'npm run build && npm run analyze:bundle';
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
@@ -329,50 +329,50 @@ const optimizePerformance = () => {
   console.log('🚀 Starting performance optimization...');
 
   // Create optimized CSS
-  const cssOptimizations = `
-/* Performance optimizations */
-* {
-  box-sizing: border-box;
+  const cssOptimizations = `}
+/* Performance optimizations */}
+* {}
+  box-sizing: border-box;}
 }
 
-html {
-  scroll-behavior: smooth;
+html {}
+  scroll-behavior: smooth;}
 }
 
-body {
-  font-display: swap;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {}
+  font-display: swap;}
+  -webkit-font-smoothing: antialiased;}
+  -moz-osx-font-smoothing: grayscale;}
 }
 
 /* Critical CSS for above-the-fold content */
-.hero-section {
-  contain: layout style paint;
+.hero-section {}
+  contain: layout style paint;}
 }
 
 /* Optimize animations */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  *::after {}
+    animation-duration: 0.01ms !important;}
+    animation-iteration-count: 1 !important;}
+    transition-duration: 0.01ms !important;}
   }
 }
 
 /* Optimize images */
-img {
-  loading: lazy;
-  decoding: async;
+img {}
+  loading: lazy;}
+  decoding: async;}
 }
 
 /* Optimize fonts */
 @font-face {
-  font-family: 'Inter';
-  font-display: swap;
-  src: url('/fonts/inter-var.woff2') format('woff2-variations');
-  font-weight: 100 900;
+  font-family: 'Inter';}
+  font-display: swap;}
+  src: url('/fonts/inter-var.woff2') format('woff2-variations');}
+  font-weight: 100 900;}
 }
 `;
 
@@ -409,13 +409,13 @@ const CACHE_NAME = 'zion-tech-group-v2';
 const urlsToCache = [
   '/',
   '/static/css/main.css',
-  '/static/js/main.js',
-  '/manifest.json'
+  '/static/js/main.js',]
+  '/manifest.json']
 ];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  );
+  event.waitUntil()}
+    caches.open(CACHE_NAME)}
+      .then((cache) => cache.addAll(urlsToCache))}
+  );}
 }

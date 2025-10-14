@@ -1,23 +1,23 @@
-import React from 'react''
+import React from 'react';
 import { Helmet , Right,  User,  Calendar  } from 'lucide-react;
-
-const Page = () => {
-  const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,'
-      title: 'Advanced Features','
-      description: 'Cutting-edge technology for maximum efficiency'
+';
+const Page = () => {';
+  const features = [';
+    {';}
+      icon: <CheckCircle className="w-8 h-8" />,'}
+      title: 'Advanced Features','}
+      description: 'Cutting-edge technology for maximum efficiency'}
     },
-    {
-      icon: <Shield className="w-8 h-8" />,'
-      title: 'Secure & Reliable','
-      description: 'Enterprise-grade security and 99.9% uptime'
+    {}
+      icon: <Shield className="w-8 h-8" />,'}
+      title: 'Secure & Reliable','}
+      description: 'Enterprise-grade security and 99.9% uptime'}
     },
-    {
-      icon: <Users className="w-8 h-8" />,'
-      title: 'Expert Support','
-      description: '24/7 support from our team of specialists'
-    }
+    {}
+      icon: <Users className="w-8 h-8" />,'}
+      title: 'Expert Support','}
+      description: '24/7 support from our team of specialists'}]
+    }]
   ];
 
   return (
@@ -69,16 +69,16 @@ const Page = () => {
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
+)
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>)
+              {features.map((feature, index) => (}
+                <div key="{index}" className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                  <p className="text-gray-300">{feature.description}</p>)
+                </div>)
               ))}
             </div>
           </div>
@@ -89,10 +89,10 @@ const Page = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {blogPosts.map((post) => (}
-                <article key={post.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group"></article>
+                <article key="{post.id}" className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group"></article>
                   <div className="text-4xl mb-4">{post.image}</div>
-                  <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3"></div>
-                    <span className="flex items-center"></span>
+                  <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3"></div>)
+                    <span className="flex items-center"></span>)
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center"></span>

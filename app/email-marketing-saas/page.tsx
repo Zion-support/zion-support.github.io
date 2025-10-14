@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const EmailMarketingSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Email Marketing SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Email Marketing SAAS - Zion Tech Group</title>';
         <meta name="description" content="Advanced email marketing platform for businesses." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const EmailMarketingSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default EmailMarketingSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

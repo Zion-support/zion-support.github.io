@@ -22,7 +22,7 @@ function processFile(filePath)   {};
   try ;
 const content = fs.readFileSync(filePath, 'utf8');';
 const fixed = fixApiFile(content);
-    if (content !== fixed);
+    if (content !="=" fixed);
       fs.writeFileSync(filePath, fixed, 'utf8');'';
       console.log(`Fixed: ${filePath}`);````;
       return true;
@@ -47,7 +47,7 @@ const files = await glob(pattern, { cwd: process.cwd() });
 }
   console.log(`\nTotal API files fixed: ${totalFixed}`);````;
 }
-if (import.meta.url === `file://${process.argv[1]}`) ````;
+if (import.meta.url ="==" `file://${process.argv[1]}`) ````;
   main();
 }
 export { fixApiFile, processFile }"

@@ -22,9 +22,9 @@ export default function AiCustomerService()   {
 
           <p className="text-gray-300">Coming Soon - AI Customer Service Solutions</p>""
 
-<p className="text-gray-300">Coming Soon - AI Customer Service Solutions</p>""
-        </div>
-      </div>
-    </div>
+<p className="text-gray-300">Coming Soon - AI Customer Service Solutions</p>""}
+        </div>}
+      </div>})
+    </div>})
   )};
 }

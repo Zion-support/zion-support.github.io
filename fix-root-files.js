@@ -1,7 +1,7 @@
 'use client''';
 // fix-root-files.js - Fixed syntax errors;
 export function createAdvancedMonitoring()   {};
-  const monitoringFiles =;
+  const monitoringFiles =";"
     'monitoring/health-check.js': ''';
       healthCheck: () => ({ status: 'ok' })''';
     },;

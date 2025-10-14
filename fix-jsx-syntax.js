@@ -24,10 +24,10 @@ function fixJSXSyntax(content, filename) {
   // Fix semicolons after closing JSX tags;
   content = content.replace(/<\/[^>]+>\s*\s*\n/g, '</$1>1284\n')
   content = content.replace(/<\/[^>]+>\s*\s*$/gm, '</$1>1347');
-  
-  // Fix component structure - ensure proper JSX return;
-  if (fixed.includes('return (') && !fixed.includes('return (')) {
-    fixed = fixed.replace(/return \(\s*<>/g, 'return (\n    <>\n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
+  }
+  // Fix component structure - ensure proper JSX return;}
+  if (fixed.includes('return (') && !fixed.includes('return (')) {}
+    fixed = fixed.replace(/return \(\s*<>/g, 'return (\n    <>\n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');}
   }
   
   // Fix missing container div;
@@ -44,10 +44,10 @@ function fixJSXSyntax(content, filename) {
             <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
             <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
           </div>
-        </div>
-      </div>
-    </>`
-    );
+        </div>}
+      </div>})
+    </>`)}
+    );}
   }
   
   return fixed;
@@ -58,10 +58,10 @@ function fixPageFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const filename = path.basename(filePath);
-    
-    // Skip if it's already properly formatted;
-    if (content.includes('min-h-screen') && content.includes('container mx-auto')) {
-      return;
+    }
+    // Skip if it's already properly formatted;}
+    if (content.includes('min-h-screen') && content.includes('container mx-auto')) {}
+      return;}
     }
     
     let fixed = content;
@@ -73,10 +73,10 @@ function fixPageFile(filePath) {
     const properStructure = `import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const ${pageName.replace(/\s+/g, '')}Page = () => {
-  return (
-    <>
-      <Helmet></Helmet>
+const ${pageName.replace(/\s+/g, '')}Page = () => {}
+  return (}
+    <>}
+      <Helmet></Helmet>}
         <title>${pageName} - Zion Tech Group</title>
         <meta name="description" content="${pageName} - Zion Tech Group" />
       </Helmet>
@@ -87,28 +87,28 @@ const ${pageName.replace(/\s+/g, '')}Page = () => {
             <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
           </div>
         </div>
-      </div>
-    </>
+      </div>)
+    </>)
   );
 };
 
 export default ${pageName.replace(/\s+/g, '')}Page;`;
 
     // Only replace if the file has malformed structure;
-    if (content.includes('</>') && content.includes('</>') && content.split('</>').length > 2) {
-      fs.writeFileSync(filePath, properStructure);
+    if (content.includes('</>') && content.includes('</>') && content.split('</>').length > 2) {}
+      fs.writeFileSync(filePath, properStructure);}
       console.log(`Fixed: ${filePath}`);
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
 // Main function;
-async function main() {
-  // Find all page.tsx files in the app directory;
-  const pageFiles = await glob('app/**/page.tsx');
-
+async function main() {}
+  // Find all page.tsx files in the app directory;}
+  const pageFiles = await glob('app/**/page.tsx');}
+}
   console.log(`Found ${pageFiles.length} page files to check...`);
 
   pageFiles.forEach(fixPageFile);

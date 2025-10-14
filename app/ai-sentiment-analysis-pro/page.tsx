@@ -1,35 +1,35 @@
-import React from 'react''
-import { CheckCircle } from 'lucide-react''
-import EnhancedSEO from '../components/EnhancedSEO''
-import ResponsiveContainer from '../components/ResponsiveContainer''
-import FuturisticCard from '../components/FuturisticCard''
-import FuturisticButton from '../components/FuturisticButton;
-const AISentimentAnalysisPro = () => {
-  const features = [
-    {
-      title: "Real-time Sentiment Tracking","
-      description: "Monitor customer sentiment across all channels in real-time","
-      icon: <TrendingUp className="w-6 h-6" />,"
-      color: "from-blue-500 to-cyan-500"
+import React from 'react'
+import { CheckCircle } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton;';
+const AISentimentAnalysisPro = () => {';
+  const features = [';
+    {';
+      title: "Real-time Sentiment Tracking","}
+      description: "Monitor customer sentiment across all channels in real-time","}
+      icon: <TrendingUp className="w-6 h-6" />,"}
+      color: "from-blue-500 to-cyan-500"}
     },
     {
-      title: "Multi-language Support","
-      description: "Analyze sentiment in 50+ languages with high accuracy","
-      icon: <Globe className="w-6 h-6" />,"
-      color: "from-green-500 to-emerald-500"
+      title: "Multi-language Support","}
+      description: "Analyze sentiment in 50+ languages with high accuracy","}
+      icon: <Globe className="w-6 h-6" />,"}
+      color: "from-green-500 to-emerald-500"}
     },
     {
-      title: "Emotion Detection","
-      description: "Detect emotions like joy, anger, fear, and sadness in text","
-      icon: <MessageSquare className="w-6 h-6" />,"
-      color: "from-purple-500 to-pink-500"
+      title: "Emotion Detection","}
+      description: "Detect emotions like joy, anger, fear, and sadness in text","}
+      icon: <MessageSquare className="w-6 h-6" />,"}
+      color: "from-purple-500 to-pink-500"}
     },
     {
-      title: "Trend Analysis","
-      description: "Identify sentiment trends and patterns over time","
-      icon: <BarChart3 className="w-6 h-6" />,"
-      color: "from-orange-500 to-red-500"
-    }
+      title: "Trend Analysis","}
+      description: "Identify sentiment trends and patterns over time","}
+      icon: <BarChart3 className="w-6 h-6" />,"}
+      color: "from-orange-500 to-red-500"}]
+    }]
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
@@ -68,7 +68,7 @@ const AISentimentAnalysisPro = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}"
+              icon="{<ArrowRight" className="w-5 h-5" />}"
             >
               Get Started Today;
             </FuturisticButton>
@@ -76,7 +76,7 @@ const AISentimentAnalysisPro = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<TrendingUp className="w-5 h-5" />}"
+              icon="{<TrendingUp" className="w-5 h-5" />}"
             >
               View Demo;
             </FuturisticButton>
@@ -93,15 +93,15 @@ const AISentimentAnalysisPro = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
               Everything you need to understand and analyze customer sentiment effectively.
             </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+          </div>)
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>)
             {features.map((feature, index) => (
 <FuturisticCard
-                key={index;
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              ></FuturisticCard>
-                <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                key="{index;"}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"}
+              ></FuturisticCard>}
+                <div}
+                  className="{`w-12" h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 ></div>
                   {feature.icon}
                 </div>
@@ -110,8 +110,8 @@ const AISentimentAnalysisPro = () => {
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base"></p>
                   {feature.description}
-                </p>
-              </FuturisticCard>
+                </p>)
+              </FuturisticCard>)
             ))}
           </div>
         </ResponsiveContainer>
@@ -128,11 +128,11 @@ const AISentimentAnalysisPro = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg"></div>
+            {benefits.map((benefit, index) => (}
+              <div key="{index}" className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg"></div>
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" /></CheckCircle>
-                <span className="text-white font-medium">{benefit}</span>
-              </div>
+                <span className="text-white font-medium">{benefit}</span>)
+              </div>)
             ))}
           </div>
         </ResponsiveContainer>
@@ -152,7 +152,7 @@ const AISentimentAnalysisPro = () => {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}"
+                icon="{<ArrowRight" className="w-5 h-5" />}"
               >
                 Start Your Free Trial;
               </FuturisticButton>
@@ -160,7 +160,7 @@ const AISentimentAnalysisPro = () => {
                 href="/pricing"
                 variant="outline"
                 size="lg"
-                icon={<Target className="w-5 h-5" />}"
+                icon="{<Target" className="w-5 h-5" />}"
               >
                 View Pricing
               </FuturisticButton>
@@ -172,5 +172,6 @@ const AISentimentAnalysisPro = () => {
   );
 };
 
-export default AISentimentAnalysisPro;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

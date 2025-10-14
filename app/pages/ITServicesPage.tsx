@@ -1,29 +1,29 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { ServerIcon,
   CloudIcon,
-  ShieldCheckIcon,
-  CpuChipIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  PhoneIcon,
-  EnvelopeIcon'
+  ShieldCheckIcon,;
+  CpuChipIcon,';
+  ArrowRightIcon,;';}
+  CheckIcon,';}
+  PhoneIcon,';}
+  EnvelopeIcon'}
 } from '@heroicons/react/24/outline;
 
 
 const ITServicesPage: React.FC = () => {
-  const services = [
-    {
+  const services = [';
+    {';
       icon: ServerIcon,'
       title: 'Infrastructure Management','
       description: 'Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.',
       features: ['
         'Server Configuration','
-        'Network Setup','
-        'Hardware Maintenance','
-        'Performance Monitoring'
-      ]
+        'Network Setup','}
+        'Hardware Maintenance','}]
+        'Performance Monitoring'}]
+      ]}
     },
     {
       icon: CloudIcon,'
@@ -31,10 +31,10 @@ const ITServicesPage: React.FC = () => {
       description: 'Complete cloud migration and management services for scalable, secure, and cost-effective solutions.',
       features: ['
         'Cloud Migration','
-        'Multi-cloud Strategy','
-        'Cost Optimization','
-        'Security Compliance'
-      ]
+        'Multi-cloud Strategy','}
+        'Cost Optimization','}]
+        'Security Compliance'}]
+      ]}
     },
     {
       icon: ShieldCheckIcon,'
@@ -42,10 +42,10 @@ const ITServicesPage: React.FC = () => {
       description: 'Advanced security solutions to protect your IT infrastructure from threats and vulnerabilities.',
       features: ['
         'Threat Detection','
-        'Vulnerability Assessment','
-        'Security Monitoring','
-        'Incident Response'
-      ]
+        'Vulnerability Assessment','}
+        'Security Monitoring','}]
+        'Incident Response'}]
+      ]}
     },
     {
       icon: CpuChipIcon,'
@@ -53,10 +53,10 @@ const ITServicesPage: React.FC = () => {
       description: 'Integrate artificial intelligence into your existing IT infrastructure for enhanced capabilities.',
       features: ['
         'Machine Learning','
-        'Process Automation','
-        'Data Analytics','
-        'Predictive Maintenance'
-      ]
+        'Process Automation','}
+        'Data Analytics','}]
+        'Predictive Maintenance'}]
+      ]}
     }
   ];
 
@@ -65,8 +65,8 @@ const ITServicesPage: React.FC = () => {
     'Proactive Monitoring','
     'Scalable Solutions','
     'Cost Optimization','
-    'Security Compliance','
-    'Performance Optimization'
+    'Security Compliance',']
+    'Performance Optimization']
   ];
 
   return (
@@ -118,10 +118,10 @@ const ITServicesPage: React.FC = () => {
               Comprehensive IT solutions designed to meet your business needs
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8"></div>
-            {services.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
+          )
+          <div className="grid md:grid-cols-2 gap-8"></div>)
+            {services.map((service, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
                 <div className="flex items-center mb-6"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"></div>
                     <service.icon className="w-8 h-8 text-white" /></service>
@@ -132,13 +132,13 @@ const ITServicesPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed"></p>
                   {service.description}
                 </p>
-                
-                <ul className="space-y-3 mb-6"></ul>
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
+                )
+                <ul className="space-y-3 mb-6"></ul>)
+                  {service.features.map((feature, featureIndex) => (}
+                    <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                      {feature}
-                    </li>
+                      {feature})
+                    </li>)
                   ))}
                 </ul>
                 
@@ -168,8 +168,8 @@ const ITServicesPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center"></div>
+            {benefits.map((benefit, index) => (}
+              <div key="{index}" className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <CheckIcon className="w-8 h-8 text-white" /></CheckIcon>
                 </div>
@@ -199,8 +199,8 @@ const ITServicesPage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
                 Get Started Today;
               </button>
-            </div>
-          </div>;
+            </div>)
+          </div>;)
 const ITServicesPage: React.FC = () => {
   return (
     <>
@@ -212,10 +212,10 @@ const ITServicesPage: React.FC = () => {
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
         <div className="text-center"></div>
           <h1>ITServicesPage</h1>
-          <p>This page is under construction.</p>
-        </div>
-      </section>
-
+          <p>This page is under construction.</p>}
+        </div>}
+      </section>}
+}
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
@@ -240,8 +240,8 @@ const ITServicesPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </section>)
+    </>)
   );
 export default ITServicesPage;
 '

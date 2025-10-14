@@ -3,29 +3,29 @@ import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react;
 // Higher-order component for lazy loading;
 // eslint-disable-next-line @;
 export function withLazyLoading<T extends ComponentType<any>>(
-  Component: T,
-  fallback?: React.ReactNode;
-) {
-const LazyComponent = lazy(() => Promise.resolve({ default: Component,}));
-  return (props: ComponentProps<T>) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* eslint-disable-next-line @ */}
+  Component: T,)
+  fallback?: React.ReactNode;)
+) {}
+const LazyComponent = lazy(() => Promise.resolve({ default: Component,}));';
+  return (props: ComponentProps<T>) => (';
+    <Suspense fallback="{fallback" || <div>Loading...</div>}>)
+      {/* eslint-disable-next-line @ */})
       <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
   )};
 }
 // Utility function to create lazy-loaded components;
 // eslint-disable-next-line @;
-export function createLazyComponent<T extends ComponentType<any>>(
-  importFunction: () => Promise<{
-    default: T ,
+export function createLazyComponent<T extends ComponentType<any>>()
+  importFunction: () => Promise<{}
+    default: T ,}
   }>,
   fallback?: React.ReactNode;
-) {
-  const LazyComponent = lazy(importFunction);
-  return (props: ComponentProps<T>) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* eslint-disable-next-line @ */}
+) {}
+  const LazyComponent = lazy(importFunction);}
+  return (props: ComponentProps<T>) => (}
+    <Suspense fallback="{fallback" || <div>Loading...</div>}>)
+      {/* eslint-disable-next-line @ */})
       <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
   );,
@@ -37,14 +37,14 @@ export function createLazyComponent<T extends ComponentType<any>>()
   fallback?: React.ReactNode,
 ) {,
 
-  const LazyComponent = lazy(importFunction);,
-  
-  return (props: ComponentProps<T>) => ()
-,
-    <Suspense fallback={fallback || <div>Loading...</div>}>,
+  const LazyComponent = lazy(importFunction);,}
+  }
+  return (props: ComponentProps<T>) => ()}
+,}
+    <Suspense fallback="{fallback" || <div>Loading...</div>}>,
       {/* eslint-disable-next-line @ */},
-      <LazyComponent {...(props as any)} /></LazyComponent>
-    </Suspense>
+      <LazyComponent {...(props as any)} /></LazyComponent>';
+    </Suspense>';
   );,'
 }'
 '

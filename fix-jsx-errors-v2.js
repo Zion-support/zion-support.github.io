@@ -10,20 +10,20 @@ function fixJSXErrors(filePath) {
     let modified = false;
 
     // Fix duplicate min-h-screen div wrappers;
-    const duplicateWrapperRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">/g;
-    if (duplicateWrapperRegex.test(content)) {
-      content = content.replace(duplicateWrapperRegex, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
-      modified = true;
+    const duplicateWrapperRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">/g;}
+    if (duplicateWrapperRegex.test(content)) {}
+      content = content.replace(duplicateWrapperRegex, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');}
+      modified = true;}
     }
 
     // Fix missing closing div tags;
     const missingClosingDivRegex = /<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (missingClosingDivRegex.test(content)) {
       content = content.replace(missingClosingDivRegex, (match) => {
-        return match.replace(
-          /<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/,
-          '</div>\n        </div>\n      </div>'
-        );
+        return match.replace(}
+          /<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/,})
+          '</div>\n        </div>\n      </div>')}
+        );}
       });
       modified = true;
     }
@@ -32,10 +32,10 @@ function fixJSXErrors(filePath) {
     const incompleteJSXRegex = /<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (incompleteJSXRegex.test(content)) {
       content = content.replace(incompleteJSXRegex, (match) => {
-        return match.replace(
-          /<\/div>\s*<\/div>\s*<\/>/,
-          '</div>\n        </div>\n      </div>\n    </>'
-        );
+        return match.replace(}
+          /<\/div>\s*<\/div>\s*<\/>/,})
+          '</div>\n        </div>\n      </div>\n    </>')}
+        );}
       });
       modified = true;
     }
@@ -44,10 +44,10 @@ function fixJSXErrors(filePath) {
     const missingContainerClosingRegex = /<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (missingContainerClosingRegex.test(content)) {
       content = content.replace(missingContainerClosingRegex, (match) => {
-        return match.replace(
-          /<\/div>\s*<\/div>\s*<\/>/,
-          '</div>\n        </div>\n      </div>\n    </>'
-        );
+        return match.replace(}
+          /<\/div>\s*<\/div>\s*<\/>/,})
+          '</div>\n        </div>\n      </div>\n    </>')}
+        );}
       });
       modified = true;
     }
@@ -56,17 +56,17 @@ function fixJSXErrors(filePath) {
     const missingMinHeightClosingRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (missingMinHeightClosingRegex.test(content)) {
       content = content.replace(missingMinHeightClosingRegex, (match) => {
-        return match.replace(
-          /<\/div>\s*<\/div>\s*<\/>/,
-          '</div>\n        </div>\n      </div>\n    </>'
-        );
+        return match.replace(}
+          /<\/div>\s*<\/div>\s*<\/>/,})
+          '</div>\n        </div>\n      </div>\n    </>')}
+        );}
       });
       modified = true;
     }
 
     // Fix extra closing divs;
     const extraClosingDivsRegex = /<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/g;
-    if (extraClosingDivsRegex.test(content)) {
+    if (extraClosingDivsRegex.test(content)) {}
       content = content.replace(extraClosingDivsRegex, '</div>\n        </div>\n      </div>\n    </>\n  );\n};');
       modified = true;
     }
@@ -76,57 +76,57 @@ function fixJSXErrors(filePath) {
     if (containerPatternRegex.test(content)) {
       content = content.replace(containerPatternRegex, (match) => {
         return match.replace(
-          /<div className="container mx-auto px-4 py-16">/,
-          '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-16">'
-        ).replace(
-          /<\/div>\s*<\/div>\s*<\/>/,
-          '</div>\n        </div>\n      </div>\n    </>'
-        );
+          /<div className="container mx-auto px-4 py-16">/,)
+          '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-16">')
+        ).replace(}
+          /<\/div>\s*<\/div>\s*<\/>/,})
+          '</div>\n        </div>\n      </div>\n    </>')}
+        );}
       });
       modified = true;
     }
 
     // Clean up any remaining malformed structure;
     const malformedStructureRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">/g;
-    if (malformedStructureRegex.test(content)) {
-      content = content.replace(malformedStructureRegex, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-16">');
-      modified = true;
+    if (malformedStructureRegex.test(content)) {}
+      content = content.replace(malformedStructureRegex, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-16">');}
+      modified = true;}
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (modified) {}
+      fs.writeFileSync(filePath, content, 'utf8');}
       console.log(`Fixed JSX errors in: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Main execution;
-async function main() {
-  console.log('Starting JSX error fixes v2...');
-  
-  // Find all page.tsx files;
+async function main() {}
+  console.log('Starting JSX error fixes v2...');}
+  }
+  // Find all page.tsx files;}
   const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
   
   let fixedCount = 0;
   
-  for (const file of pageFiles) {
-    if (fixJSXErrors(file)) {
-      fixedCount++;
+  for (const file of pageFiles) {}
+    if (fixJSXErrors(file)) {}
+      fixedCount++;}
     }
   }
   
   console.log(`Fixed JSX errors in ${fixedCount} files`);
   
   // Also fix the main App.tsx file;
-  if (fixJSXErrors('app/App.tsx')) {
-    fixedCount++;
-    console.log('Fixed App.tsx');
+  if (fixJSXErrors('app/App.tsx')) {}
+    fixedCount++;}
+    console.log('Fixed App.tsx');}
   }
   
   console.log(`Total files fixed: ${fixedCount}`);

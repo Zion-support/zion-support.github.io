@@ -1,51 +1,51 @@
-import React from 'react''
+import React from 'react';
 import { Helmet, Right, Wifi, Circle, Zap, Globe, Smartphone, CheckCircle, Shield } from 'lucide-react;
-
-const Page = () => {
-  const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,'
-      title: 'Advanced Features','
-      description: 'Cutting-edge technology for maximum efficiency'
+';
+const Page = () => {';
+  const features = [';
+    {';}
+      icon: <CheckCircle className="w-8 h-8" />,'}
+      title: 'Advanced Features','}
+      description: 'Cutting-edge technology for maximum efficiency'}
+    },
+    {}
+      icon: <Shield className="w-8 h-8" />,'}
+      title: 'Secure & Reliable','}
+      description: 'Enterprise-grade security and 99.9% uptime'}
     },
     {
-      icon: <Shield className="w-8 h-8" />,'
-      title: 'Secure & Reliable','
-      description: 'Enterprise-grade security and 99.9% uptime'
+      icon: Smartphone,'}
+      title: 'Mobile Optimization','}]
+      description: 'Optimized 5G solutions for mobile devices and applications','}]
+      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']}
     },
     {
-      icon: Smartphone,'
-      title: 'Mobile Optimization','
-      description: 'Optimized 5G solutions for mobile devices and applications','
-      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
-    },
-    {
-      icon: Wifi,'
-      title: 'Network Infrastructure','
-      description: 'Robust 5G network infrastructure for reliable connectivity','
-      benefits: ['High-speed connectivity', 'Low latency', 'Massive device support', 'Edge computing']
+      icon: Wifi,'}
+      title: 'Network Infrastructure','}
+      description: 'Robust 5G network infrastructure for reliable connectivity','}
+      benefits: ['High-speed connectivity', 'Low latency', 'Massive device support', 'Edge computing']}
     }
   ];
 
   const solutions = [
     {
 '
-      description: 'Complete 5G network setup and optimization','
-      price: 'Starting at $50,000','
-      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-
+      description: 'Complete 5G network setup and optimization','}]
+      price: 'Starting at $50,000',']}
+      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']}
+}
     },'
-    {''
-      title: '5G Mobile Applications'''
-      description: 'Custom mobile apps optimized for 5G networks'''
-      price: 'Starting at $25,000'''
+    {''}
+      title: '5G Mobile Applications'''}
+      description: 'Custom mobile apps optimized for 5G networks'''}
+      price: 'Starting at $25,000'''}
       features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']}
     },'
     {''
-      title: '5G IoT Solutions'''
-      description: 'IoT device connectivity and management platform'''
-      price: 'Starting at $35,000'''
-      features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
+      title: '5G IoT Solutions'''}
+      description: 'IoT device connectivity and management platform'''}
+      price: 'Starting at $35,000'''}
+      features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']}
     }
   ];
 
@@ -98,16 +98,16 @@ const Page = () => {
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
+)
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>)
+              {features.map((feature, index) => (}
+                <div key="{index}" className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                  <p className="text-gray-300">{feature.description}</p>)
+                </div>)
               ))}
             </div>
           </div>
@@ -153,11 +153,11 @@ const Page = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
+            {features.map((feature, index) => (}
+              <div key="{index}" className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg mb-4"></div>
-                  <feature.icon className="w-6 h-6 text-white" /></feature>
-                </div>
+                  <feature.icon className="w-6 h-6 text-white" /></feature>)
+                </div>)
               )})}
           </div>
         </div>
@@ -175,17 +175,17 @@ const Page = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8"></div>
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300"></div>
+            {solutions.map((solution, index) => (}
+              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300"></div>
                 <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
-                <div className="text-3xl font-bold text-blue-400 mb-6">{solution.price}</div>
-                <ul className="space-y-3 mb-8"></ul>
-                  {solution.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300"></li>
+                <div className="text-3xl font-bold text-blue-400 mb-6">{solution.price}</div>)
+                <ul className="space-y-3 mb-8"></ul>)
+                  {solution.features.map((feature, idx) => (}
+                    <li key="{idx}" className="flex items-center text-gray-300"></li>
                       <Right className="w-5 h-5 text-green-400 mr-3" /></Right>
-                      {feature}
-                    </li>
+                      {feature})
+                    </li>)
 ))}
                 </ul>
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"></button>

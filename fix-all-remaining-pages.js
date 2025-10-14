@@ -9,17 +9,17 @@ async function fixPageFile(filePath) {
     
     // Extract page name from file path;
     const pageName = filePath.split('/').pop().replace('.tsx', '').replace('.ts', '');
-    const displayName = pageName.split('-').map(word =>;
-      word.charAt(0).toUpperCase() + word.slice(1);
-    ).join(' ');
-    
-    // Fix the specific malformed pattern;
+    const displayName = pageName.split('-').map(word =>;)
+      word.charAt(0).toUpperCase() + word.slice(1);}
+    ).join(' ');}
+    }
+    // Fix the specific malformed pattern;}
     const pattern = /const PagePage = \(\) => \{\s*return \(\s*<>\s*<//////Helmet>\s*<title>Page - Zion Tech Group<////\/title>\s*<meta name="description" content="Page - Zion Tech Group" \/>\s*<////\/Helmet>\s*<div className="container mx-auto px-4 py-16"><\/div>\s*<\/>\s*<////\/>\s*<div className="text-center"><\/div>\s*<h1 className="text-4xl font-bold text-white mb-8">Page<////\/h1>\s*<p className="text-gray-300 text-lg"><\/p>\s*This page is under construction\. Please check back later\.\s*<\/p>\s*<////\/div>\s*\);\s*\};\s*export default PagePage;/g;
     
-    const replacement = `const PagePage = () => {
-  return (
-    <>)
-      <//////div><Helmet>;
+    const replacement = `const PagePage = () => {}
+  return ()}
+    <>)}
+      <//////div><Helmet>;}
         <////title>${displayName} - Zion Tech Group</title></div>;
         <div><meta name="description" content="${displayName} - Zion Tech Group" />;
       </Helmet></div>;
@@ -40,18 +40,18 @@ async function fixPageFile(filePath) {
 export default PagePage;`;
     
     const newContent = content.replace(pattern, replacement);
-    if (newContent !== content) {
-      content = newContent;
-      modified = true;
+    if (newContent !="=" content) {}
+      content = newContent;}
+      modified = true;}
     }
     
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (modified) {}
+      fs.writeFileSync(filePath, content, 'utf8');}
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -171,15 +171,15 @@ async function main() {
     'app/ai-chatbot-builder/page.tsx',;
     'app/zion-ai-voice-assistant-pro/page.tsx',;
     'app/medical-records-manager/page.tsx',;
-    'app/web-development/page.tsx',;
-    'app/blog/page.tsx';
+    'app/web-development/page.tsx',;]
+    'app/blog/page.tsx';]
   ];
   
   let totalFixed = 0;
-  
-  for (const file of files) {
-    if (await fixPageFile(file)) {
-      totalFixed++;
+  }
+  for (const file of files) {}
+    if (await fixPageFile(file)) {}
+      totalFixed++;}
     };
   }
   

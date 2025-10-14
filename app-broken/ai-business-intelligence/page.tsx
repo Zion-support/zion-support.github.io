@@ -22,9 +22,9 @@ export default function AiBusinessIntelligence()   {
 
           <p className="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>""
 
-<p className="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>""
-        </div>
-      </div>
-    </div>
+<p className="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>""}
+        </div>}
+      </div>})
+    </div>})
   )};
 }

@@ -1,53 +1,53 @@
 
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
-import { AcademicCapIcon,
-  PlayIcon,
-  DocumentTextIcon,
-  ClockIcon,
-  UserGroupIcon,
-  ArrowRightIcon'
+import { AcademicCapIcon,;
+  PlayIcon,';
+  DocumentTextIcon,;';}
+  ClockIcon,';}
+  UserGroupIcon,';}
+  ArrowRightIcon'}
 } from '@heroicons/react/24/outline;
 
 const TutorialsPage: React.FC = () => {
-  const tutorials = [
-    {
+  const tutorials = [';
+    {';
       id: 1,'
       title: 'Getting Started with AI Solutions','
       description: 'Learn the fundamentals of artificial intelligence and how to implement AI solutions in your business.','
-      duration: '2 hours','
-      level: 'Beginner','
-      category: 'AI Solutions','
-      href: '/'
+      duration: '2 hours','}
+      level: 'Beginner','}
+      category: 'AI Solutions','}
+      href: '/'}
     },
     {
       id: 2,'
       title: 'Cybersecurity Best Practices','
       description: 'Essential cybersecurity practices to protect your business from threats and vulnerabilities.','
-      duration: '3 hours','
-      level: 'Intermediate','
-      category: 'Cybersecurity','
-      href: '/'
+      duration: '3 hours','}
+      level: 'Intermediate','}
+      category: 'Cybersecurity','}
+      href: '/'}
     },
     {
       id: 3,'
       title: 'Cloud Infrastructure Setup','
       description: 'Step-by-step guide to setting up and managing cloud infrastructure for your business.','
-      duration: '4 hours','
-      level: 'Advanced','
-      category: 'Cloud Computing','
-      href: '/'
+      duration: '4 hours','}
+      level: 'Advanced','}
+      category: 'Cloud Computing','}
+      href: '/'}
     },
     {
       id: 4,'
       title: '5G Technology Implementation','
       description: 'Understanding and implementing 5G technology solutions for modern businesses.','
-      duration: '2.5 hours','
-      level: 'Intermediate','
-      category: '5G Solutions','
-      href: '/'
-    }
+      duration: '2.5 hours','}
+      level: 'Intermediate','}
+      category: '5G Solutions','}
+      href: '/'}]
+    }]
   ];
   return (
     <></>
@@ -73,10 +73,10 @@ const TutorialsPage: React.FC = () => {
         </section>
         {/* Tutorials Grid */}
         <section className="py-20"></section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {tutorials.map((tutorial) => (
-                <div key={tutorial.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 group"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>)
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
+              {tutorials.map((tutorial) => (}
+                <div key="{tutorial.id}" className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 group"></div>
                   <div className="flex items-center justify-between mb-4"></div>
                     <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full"></span>
                       {tutorial.category}
@@ -99,14 +99,14 @@ const TutorialsPage: React.FC = () => {
                     </div>
                     
                     <Link
-                      to={tutorial.href;
+                      to="{tutorial.href;"
                       className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:gap-2 transition-all"
                     ></Link>
                       Start Tutorial
-                      <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
-                    </Link>
-                  </div>
-                </div>
+                      <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
+                    </Link>}
+                  </div>})
+                </div>})
               ))}
             </div>
           </div>

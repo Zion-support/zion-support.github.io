@@ -1,14 +1,13 @@
-import React from 'react''
-'use client;
+import React from 'react';
+'use client';
       {/* Content Section */}'
-import React from 'react''
-'use client'{/* Content Section */}
+import React from 'react'use client'{/* Content Section */}
       <section className="py-16 px-4"></section>
         <div className="max-w-6xl mx-auto"></div>
           <div className="grid md: grid-cols-2 gap-12 items-center"></div>
             <div></div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6"></p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>;
+              <p className="text-lg text-gray-600 mb-6"></p>;
                 We provide comprehensive skip link;
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3"></ul>

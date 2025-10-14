@@ -1,13 +1,13 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 const CriticalResourcePreloader: React.FC = () => {
   return (
     <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
-        <title>Critical Resource Preloader - Zion Tech Group</title>
-        <meta name="description" content="Professional critical resource preloader services by Zion Tech Group." /></meta>
-      </Helmet>
+      <Helmet></Helmet>}
+        <title>Critical Resource Preloader - Zion Tech Group</title>}
+        <meta name="description" content="Professional critical resource preloader services by Zion Tech Group." /></meta>}
+      </Helmet>}
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100"></section>
         <div className="max-w-6xl mx-auto text-center"></div>
@@ -78,8 +78,8 @@ const CriticalResourcePreloader: React.FC = () => {
           </a>
         </div>
       </section>;
-
-    </div>
+)
+    </div>)
   );
 export default CriticalResourcePreloader;
 

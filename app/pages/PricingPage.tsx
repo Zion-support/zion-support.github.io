@@ -1,20 +1,20 @@
 
 
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { CurrencyDollarIcon,
   CheckIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon'
+  ArrowRightIcon,;
+  PhoneIcon,';
+  EnvelopeIcon,;';}
+  CpuChipIcon,';}
+  ShieldCheckIcon,';}
+  CloudIcon'}
 } from '@heroicons/react/24/outline;
 
-const PricingPage: React.FC = () => {
-  const plans = [
+const PricingPage: React.FC = () => {';
+  const plans = [';
     {'
       name: 'Starter','
       price: '$2,999','
@@ -25,10 +25,10 @@ const PricingPage: React.FC = () => {
         'Standard Security','
         'Cloud Infrastructure','
         'Email Support','
-        'Monthly Reports','
-        'Basic Analytics'
-      ],
-      popular: false;
+        'Monthly Reports','}]
+        'Basic Analytics']}
+      ],}
+      popular: false;}
     },
     {'
       name: 'Professional','
@@ -42,10 +42,10 @@ const PricingPage: React.FC = () => {
         'Priority Support','
         'Weekly Reports','
         'Advanced Analytics','
-        'Custom Integrations','
-        '24/7 Monitoring'
-      ],
-      popular: true;
+        'Custom Integrations','}]
+        '24/7 Monitoring']}
+      ],}
+      popular: true;}
     },
     {'
       name: 'Enterprise','
@@ -61,39 +61,39 @@ const PricingPage: React.FC = () => {
         'Custom Analytics','
         'Full Customization','
         '24/7 Dedicated Support','
-        'On-site Consulting','
-        'SLA Guarantees'
-      ],
-      popular: false;
-=======
+        'On-site Consulting',']
+        'SLA Guarantees']}
+      ],}
+      popular: false;}
+="======"}
     }
 >>>>>>> origin/main
   ];
   const addOns = [
     {'
-      name: 'AI Development','
-      price: '$1,500','
-      period: '/month','
-      description: 'Additional AI model development and training'
+      name: 'AI Development','}
+      price: '$1,500','}
+      period: '/month','}
+      description: 'Additional AI model development and training'}
     },
     {'
-      name: 'Security Audit','
-      price: '$2,500','
-      period: '/audit','
-      description: 'Comprehensive security assessment and recommendations'
+      name: 'Security Audit','}
+      price: '$2,500','}
+      period: '/audit','}
+      description: 'Comprehensive security assessment and recommendations'}
     },
     {'
-      name: 'Cloud Migration','
-      price: '$5,000','
-      period: '/project','
-      description: 'Complete cloud infrastructure migration service'
+      name: 'Cloud Migration','}
+      price: '$5,000','}
+      period: '/project','}
+      description: 'Complete cloud infrastructure migration service'}
     },
     {'
-      name: 'Training & Support','
-      price: '$800','
-      period: '/hour','
-      description: 'Custom training sessions for your team'
-    }
+      name: 'Training & Support','}
+      price: '$800','}
+      period: '/hour','}
+      description: 'Custom training sessions for your team'}]
+    }]
   ];
   return (
     <></>
@@ -133,16 +133,16 @@ const PricingPage: React.FC = () => {
               Flexible pricing options to meet your business needs
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8"></div>
-            {plans.map((plan, index) => ('
-              <div key={index} className={`bg-slate-800 rounded-xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}></div>
+          )
+          <div className="grid md:grid-cols-3 gap-8"></div>)
+            {plans.map((plan, index) => ('}
+              <div key="{index}" className="{`bg-slate-800" rounded-xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}></div>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                    <span className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
-                      Most Popular
-                    </span>
-                  </div>
+                    <span className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold"></span>}
+                      Most Popular}
+                    </span>})
+                  </div>})
                 )}
                 
                 <div className="text-center mb-8"></div>
@@ -156,23 +156,23 @@ const PricingPage: React.FC = () => {
                 </div>
                 
                 <ul className="space-y-4 mb-8"></ul>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
+                  {plan.features.map((feature, featureIndex) => (}
+                    <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                      {feature}
-                    </li>
+                      {feature})
+                    </li>)
                   ))}
                 </ul>
                 
                 <Link
                   to="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular'
-                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700''
-                      : 'border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white'
+                  className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                    plan.popular'}
+                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700''}
+                      : 'border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white'}
                   }`}
                 ></Link>'
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                  {plan.name ="==" 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                 </Link>
               </div>
             ))}
@@ -191,15 +191,15 @@ const PricingPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {addOns.map((addOn, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300"></div>
+            {addOns.map((addOn, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300"></div>
                 <h3 className="text-xl font-bold text-white mb-2">{addOn.name}</h3>
                 <div className="flex items-baseline mb-4"></div>
                   <span className="text-2xl font-bold text-purple-400">{addOn.price}</span>
                   <span className="text-gray-400 ml-1">{addOn.period}</span>
                 </div>
-                <p>{addOn.description}</p>"
-              </div>
+                <p>{addOn.description}</p>")
+              </div>)
             ))}
           </div>
         </section>

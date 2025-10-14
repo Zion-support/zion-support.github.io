@@ -1,35 +1,41 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react''
-import EnhancedSEO from '../components/EnhancedSEO''
-import ResponsiveContainer from '../components/ResponsiveContainer''
-import FuturisticCard from '../components/FuturisticCard''
+import { Right } from 'lucide-react';
+import { Circle } from 'lucide-react';
+import { Workflow } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Play } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO'
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton;
-
-const AIAutomationPlatform = () => {
-  const features = [
-    {
-      title: "Workflow Automation",
-      description: "Automate complex business processes with AI-powered workflows",
-      icon: <Workflow className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
+';
+const AIAutomationPlatform = () => {';
+  const features = [';
+    {';
+      title: "Workflow Automation",}
+      description: "Automate complex business processes with AI-powered workflows",}
+      icon: <Workflow className="w-6 h-6" />,}
+      color: "from-blue-500 to-cyan-500"}
     },
     {
-      title: "Smart Decision Making",
-      description: "AI-driven decision making for automated business processes",
-      icon: <Brain className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
+      title: "Smart Decision Making",}
+      description: "AI-driven decision making for automated business processes",}
+      icon: <Brain className="w-6 h-6" />,}
+      color: "from-green-500 to-emerald-500"}
     },
     {
-      title: "Process Optimization",
-      description: "Continuously optimize processes using machine learning",
-      icon: <Settings className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
+      title: "Process Optimization",}
+      description: "Continuously optimize processes using machine learning",}
+      icon: <Settings className="w-6 h-6" />,}
+      color: "from-purple-500 to-pink-500"}
     },
     {
-      title: "Integration Hub",
-      description: "Connect and automate across all your business systems",
-      icon: <Circle className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
+      title: "Integration Hub",}
+      description: "Connect and automate across all your business systems",}
+      icon: <Circle className="w-6 h-6" />,}
+      color: "from-orange-500 to-red-500"}]
+    }]
   ];
   return (
     <></>
@@ -56,7 +62,7 @@ const AIAutomationPlatform = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <FuturisticButton
-                  icon={<Right className="w-5 h-5" />}
+                  icon="{<Right" className="w-5 h-5" />}
                 >
                   Get Started Today
                 </FuturisticButton>
@@ -82,11 +88,11 @@ const AIAutomationPlatform = () => {
                 Everything you need to automate and optimize your business processes.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {features.map((feature, index) => (
-                <FuturisticCard key={index} className="text-center"></FuturisticCard>
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}></div>
+            )
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>)
+              {features.map((feature, index) => (}
+                <FuturisticCard key="{index}" className="text-center"></FuturisticCard>
+                  <div className="{`w-16" h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}></div>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4"></h3>
@@ -94,8 +100,8 @@ const AIAutomationPlatform = () => {
                   </h3>
                   <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base"></p>
                     {feature.description}
-                  </p>
-                </FuturisticCard>
+                  </p>)
+                </FuturisticCard>)
               ))}
             </div>
           </ResponsiveContainer>
@@ -114,11 +120,11 @@ const AIAutomationPlatform = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg"></div>
+              {benefits.map((benefit, index) => (}
+                <div key="{index}" className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg"></div>
                   <Circle className="w-6 h-6 text-green-400 flex-shrink-0" /></Circle>
-                  <span className="text-white font-medium">{benefit}</span>
-                </div>
+                  <span className="text-white font-medium">{benefit}</span>)
+                </div>)
               ))}
             </div>
           </ResponsiveContainer>

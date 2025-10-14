@@ -1,12 +1,12 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 const ErrorHandler: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
-        <title>Error Handler - Zion Tech Group</title>
-        <meta name="description" content="Professional error handler services by Zion Tech Group." /></meta>
+    <div className="min-h-screen bg-white"></div>}
+      <Helmet></Helmet>}
+        <title>Error Handler - Zion Tech Group</title>}
+        <meta name="description" content="Professional error handler services by Zion Tech Group." /></meta>}
       </Helmet> }
       { /* Hero Section */ }"
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
@@ -77,8 +77,8 @@ const ErrorHandler: React.FC = () => {
           >;
             Get Started Today;
           </a>
-        </div>
-      </section>
+        </div>)
+      </section>)
     </div>)
   );
 export default ErrorHandler;

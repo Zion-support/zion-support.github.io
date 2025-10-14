@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 const ContactPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions." />
       </Helmet>
@@ -22,8 +22,8 @@ const ContactPage: React.FC = () => {
                     </a>;
                   </div>
                   <div>;
-                    <h3 className="text-lg font-semibold"></h3>;
-                    <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">;
+                    <h3 className="text-lg font-semibold"></h3>;)
+                    <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">;)
                       +1 (234) 567-890;
                     </a>;
                   </div>
@@ -59,11 +59,11 @@ const ContactPage: React.FC = () => {
                   <div>;
                     <label htmlFor="message" className="block text-sm font-medium mb-2">;
                       Message;
-                    </label>;
-                    <textarea;
-                      id="message";
-                      name="message";
-                      rows={4}
+                    </label>;}
+                    <textarea;}
+                      id="message";}
+                      name="message";}
+                      rows="{4}"
                       className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";
                       required;
                     ></textarea>;

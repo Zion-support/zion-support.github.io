@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const FinancialManagementSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Financial Management SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Financial Management SAAS - Zion Tech Group</title>';
         <meta name="description" content="Professional financial management and accounting solution." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const FinancialManagementSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default FinancialManagementSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

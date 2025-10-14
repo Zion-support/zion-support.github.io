@@ -1,65 +1,65 @@
 
 
-import React, { useState } from 'react''
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async;
-import { PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  ClockIcon,
-  ArrowRightIcon,
-  CheckIcon'
+import { PhoneIcon,;
+  EnvelopeIcon,';
+  MapPinIcon,;';}
+  ClockIcon,';}
+  ArrowRightIcon,';}
+  CheckIcon'}
 } from '@heroicons/react/24/outline;
-
-const ContactPage: React.FC = () => {
+';
+const ContactPage: React.FC = () => {';
   const [formData, setFormData] = useState({'
     name: '','
     email: '','
-    company: '','
-    phone: '','
-    service: '','
-    message: ''
+    company: '','}
+    phone: '','}
+    service: '','})
+    message: ''})
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value;
+    setFormData(prev => ({}
+      ...prev,})
+      [name]: value;})
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    // Simulate form submission;}
+    await new Promise(resolve => setTimeout(resolve, 2000));}
+    setIsSubmitting(false);}
+    setIsSubmitted(true);}
   };
   const contactInfo = [
     {
-      icon: PhoneIcon,'
-      title: 'Phone','
-      details: '+1-302-464-0950','
-      description: 'Available 24/7'
+      icon: PhoneIcon,'}
+      title: 'Phone','}
+      details: '+1-302-464-0950','}
+      description: 'Available 24/7'}
     },
     {
-      icon: EnvelopeIcon,'
-      title: 'Email','
-      details: 'kleber@ziontechgroup.com','
-      description: 'Quick response guaranteed'
+      icon: EnvelopeIcon,'}
+      title: 'Email','}
+      details: 'kleber@ziontechgroup.com','}
+      description: 'Quick response guaranteed'}
     },
     {
-      icon: MapPinIcon,'
-      title: 'Address','
-      details: '364 E Main St STE 1008','
-      description: 'Middletown, DE 19709'
+      icon: MapPinIcon,'}
+      title: 'Address','}
+      details: '364 E Main St STE 1008','}
+      description: 'Middletown, DE 19709'}
     },
     {
-      icon: ClockIcon,'
-      title: 'Business Hours','
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM','
-      description: 'Weekend support available'
+      icon: ClockIcon,'}
+      title: 'Business Hours','}
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM','}
+      description: 'Weekend support available'}
     }
   };
 
@@ -70,8 +70,8 @@ const ContactPage: React.FC = () => {
     'Micro SaaS Solutions','
     '5G Technology','
     'IT Services','
-    'Digital Transformation','
-    'Consulting'
+    'Digital Transformation',']
+    'Consulting']
   ];
   return (
     <></>
@@ -115,17 +115,17 @@ const ContactPage: React.FC = () => {
                     <CheckIcon className="w-8 h-8 text-white" /></CheckIcon>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>'
-                  <p className="text-gray-300 mb-6">Thank you for contacting us. We'll get back to you within 24 hours.</p>
-                  <button
-                    onClick={() => {
+                  <p className="text-gray-300 mb-6">Thank you for contacting us. We'll get back to you within 24 hours.</p>)
+                  <button)
+                    onClick="{()" => {
                       setIsSubmitted(false);
                       setFormData({'
                         name: '','
                         email: '','
-                        company: '','
-                        phone: '','
-                        service: '','
-                        message: ''
+                        company: '','}
+                        phone: '','}
+                        service: '','})
+                        message: ''})
                       });
                     }}
                     className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover: 'from-purple-700 hover:to-cyan-700 transition-all duration-300"','
@@ -134,7 +134,7 @@ const ContactPage: React.FC = () => {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6"></form>
+                <form onSubmit="{handleSubmit}" className="space-y-6"></form>
                   <div className="grid md:grid-cols-2 gap-6"></div>
                     <div></div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -144,8 +144,8 @@ const ContactPage: React.FC = () => {
                         type="text"
                         id="name"
                         name="name"
-value={formData.name;
-                        onChange={handleInputChange;
+value="{formData.name;"
+                        onChange="{handleInputChange;"
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Your full name"
@@ -160,8 +160,8 @@ value={formData.name;
                         type="email"
                         id="email"
                         name="email"
-value={formData.email;
-                        onChange={handleInputChange;
+value="{formData.email;"
+                        onChange="{handleInputChange;"
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="your@email.com"
@@ -178,8 +178,8 @@ value={formData.email;
                         type="text"
                         id="company"
                         name="company"
-value={formData.company;
-                        onChange={handleInputChange;
+value="{formData.company;"
+                        onChange="{handleInputChange;"
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Your company name"
                       /></input>
@@ -193,9 +193,9 @@ value={formData.company;
                         type="tel"
                         id="phone"
                         name="phone"
-value={formData.phone;
-                        onChange={handleInputChange;
-                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+value="{formData.phone;"
+                        onChange="{handleInputChange;")
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent")
                         placeholder="+1 (555) 123-4567"
                       /></input>
                     </div>
@@ -208,13 +208,13 @@ value={formData.phone;
                     <select;
                       id="service"
                       name="service"
-value={formData.service;
-                      onChange={handleInputChange;
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    ></select>
-                      <option value="">Select a service</option>
-                      {services.map((service, index) => (
-                        <option key={index} value={service}>{service}</option>
+value="{formData.service;"
+                      onChange="{handleInputChange;"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"}
+                    ></select>}
+                      <option value="">Select a service</option>}
+                      {services.map((service, index) => (})
+                        <option key="{index}" value="{service}">{service}</option>)
                       ))}
                     </select>
                   </div>
@@ -226,19 +226,19 @@ value={formData.service;
                     <textarea;
                       id="message"
                       name="message"
-value={formData.message;
-                      onChange={handleInputChange;
+value="{formData.message;"
+                      onChange="{handleInputChange;"
                       required
-                      rows={6;
+                      rows="{6;"
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="Tell us about your project or how we can help..."
                     /></textarea>
                   </div>
                   <button;
-                    type="submit"
-disabled={isSubmitting;
-                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                  ></button>'
+                    type="submit"}
+disabled="{isSubmitting;"}
+                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"}
+                  ></button>'}
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                     {!isSubmitting && <ArrowRightIcon className="w-5 h-5" />}
                   </button>
@@ -256,8 +256,8 @@ disabled={isSubmitting;
               </div>
               
               <div className="space-y-6"></div>
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4"></div>
+                {contactInfo.map((info, index) => (}
+                  <div key="{index}" className="flex items-start space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                       <info.icon className="w-6 h-6 text-white" /></info>
                     </div>
@@ -265,8 +265,8 @@ disabled={isSubmitting;
                       <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
                       <p className="text-gray-300 text-lg">{info.details}</p>
                       <p className="text-gray-400 text-sm">{info.description}</p>
-                    </div>
-                  </div>
+                    </div>)
+                  </div>)
                 ))}
               </div>
               

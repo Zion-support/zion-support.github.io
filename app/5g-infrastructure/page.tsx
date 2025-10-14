@@ -1,11 +1,11 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react;';
+import { Helmet } from 'react-helmet-async;';
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const FiveGInfrastructure = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>5G Infrastructure - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>5G Infrastructure - Zion Tech Group</title>';
         <meta name="description" content="Comprehensive 5G infrastructure solutions." /></meta>
       </Helmet>
 
@@ -27,10 +27,10 @@ const FiveGInfrastructure = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
 export default FiveGInfrastructure'

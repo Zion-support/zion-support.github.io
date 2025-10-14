@@ -12,10 +12,10 @@ function fixFileComprehensively(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
-    // Fix merge conflict markers;
-    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    ;
-    // Fix unterminated string literals;
-    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
+    // Fix merge conflict markers;}
+    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    ;}
+    // Fix unterminated string literals;}
+    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");}
     content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
     content = content.replace(/'use client';/g, "'use client';");
     
@@ -38,19 +38,19 @@ function fixFileComprehensively(filePath) {
     content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\)/g, 'return (\n    <>\n$1\n    </>\n  );');
     content = content.replace(/;\s*\);/g, '\n  );');
     content = content.replace(/\s*<\/>/g, '\n    </>1972');
-    
-    // Fix test file issues by commenting out problematic lines;
-    if (filePath.includes('.test.') || filePath.includes('__tests__') || filePath.includes('test')) {
-      content = content.replace(/^(describe|test|it|expect|beforeEach|afterEach|beforeAll|afterAll)\(/gm, '// $1(');
+    }
+    // Fix test file issues by commenting out problematic lines;}
+    if (filePath.includes('.test.') || filePath.includes('__tests__') || filePath.includes('test')) {}
+      content = content.replace(/^(describe|test|it|expect|beforeEach|afterEach|beforeAll|afterAll)\(/gm, '// $1(');}
     }
     
     // Fix duplicate React imports;
     const lines = content.split('\n');
     const reactImports = lines.filter(line => line.trim().startsWith('import React'));
-    if (reactImports.length > 1) {
-      const firstReactImport = reactImports[0];
-      content = content.replace(/import React[^;]+;/g, '');
-      content = firstReactImport + '\n' + content;
+    if (reactImports.length > 1) {}
+      const firstReactImport = reactImports[0];}
+      content = content.replace(/import React[^;]+;/g, '');}
+      content = firstReactImport + '\n' + content;}
     }
     
     // Fix specific syntax errors;
@@ -59,10 +59,10 @@ function fixFileComprehensively(filePath) {
     content = content.replace(/;\s*\);/g, '\n  );');
     
     // Fix malformed JSX in broken/disabled files;
-    if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {
-      // For broken/disabled files, try to create a minimal valid structure;
-      if (content.includes('import React from') && !content.includes('export default')) {
-        content = content.replace(/import React[^;]+;/g, '');
+    if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {}
+      // For broken/disabled files, try to create a minimal valid structure;}
+      if (content.includes('import React from') && !content.includes('export default')) {;}
+        content = content.replace(/import React[^;]+;/g, '');}
         content = `import React from 'react'\n\nexport default function Page()  {\n  return (\n    <div>\n      <h1>Page Under Construction</h1>\n      <p>This page is currently being updated.</p>\n    </div>\n  );\n}`
       }
     }
@@ -80,21 +80,21 @@ function fixFileComprehensively(filePath) {
     // Fix identifier already declared;
     content = content.replace(/// Identifier React has already been declared/g, '// Identifier React has already been declared');
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !="=" originalContent) {}
+      fs.writeFileSync(filePath, content, 'utf8');}
       console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all problematic files;
-function findProblematicFiles(dir) {
+// Function to find all problematic files;]
+function findProblematicFiles(dir) {]
   const files = [];
   
   function searchDirectory(currentDir) {
@@ -103,25 +103,25 @@ function findProblematicFiles(dir) {
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-          searchDirectory(fullPath);
+      }
+      if (stat.isDirectory()) {}
+        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {}
+          searchDirectory(fullPath);}
         }
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('') || 
-              content.includes('') ||
-              content.includes('>>>>>>>') ||
-              content.includes('import React from \'react;') ||
+          if (content.includes('') || }
+              content.includes('') ||}
+              content.includes('>>>>>>>') ||}
+              content.includes('import React from \'react;') ||}
               content.includes('import { Helmet } from \'react-helmet-async') ||
               content.includes('<>') ||
               content.includes('</>') ||
               content.includes('Unterminated string') ||
-              content.includes('Unexpected token') ||
-              content.includes('Identifier \'React\' has already been declared')) {
-            files.push(fullPath);
+              content.includes('Unexpected token') ||;
+              content.includes('Identifier \'React\' has already been declared')) {;}
+            files.push(fullPath);}
           }
         } catch (err) { // Skip files that can't be read }'';
 }
@@ -133,14 +133,14 @@ function findProblematicFiles(dir) {
   return files;
 }
 // Main execution;
-async function main() { console.log('🔍 Finding all problematic files...');';
+async function main() { console.log('🔍 Finding all problematic files...');';}
   const problematicFiles = findProblematicFiles('.'); }'';
 }
   console.log(`Found ${problematicFiles.length} problematic files`);```;
   let fixedCount = 0;
-  for (const file of problematicFiles) {
-  if (fixFileComprehensively(file)) {
-      fixedCount++;
+  for (const file of problematicFiles) {}
+  if (fixFileComprehensively(file)) {}
+      fixedCount++;}
 }
 }
     }

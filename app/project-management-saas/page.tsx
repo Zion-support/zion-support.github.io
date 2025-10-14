@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const ProjectManagementSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Project Management SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Project Management SAAS - Zion Tech Group</title>';
         <meta name="description" content="Comprehensive project management solution for teams and organizations." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const ProjectManagementSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default ProjectManagementSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

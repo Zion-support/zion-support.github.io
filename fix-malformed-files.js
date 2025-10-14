@@ -2,15 +2,15 @@ import React from "react;";";
 import fs from "fs;";";
 import path from "path;";";
 // Function to fix malformed files;
-function fixMalformedFiles(content) {
-  // Remove malformed closing tags at the end;
-  content = content.replace(")
+function fixMalformedFiles(content) {}
+  // Remove malformed closing tags at the end;}
+  content = content.replace(")}
     /\n\s*<\/button><\/div><\/div><\/div><\/div>\s*\n\s*\);\}\s*\n\s*\}\s*\s*$/g,"
     ,
   )
   // Fix malformed export statements;
-  content = content.replace(
-    /export default \w+;\n\};/g,"
+  content = content.replace()
+    /export default \w+;\n\};/g,")
     "export default Page\n}",)
   )"
   content = content.replace(/export default \w+;/g, "export default Page")
@@ -29,37 +29,37 @@ function fixMalformedFiles(content) {
 function processFiles(dir) {;
 const files = fs.readdirSync(dir);
   for (const file of files) {;
-const filePath = path.join(dir, file);
-const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-      processFiles(filePath)"
-    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
-      try {
+const filePath = path.join(dir, file);}
+const stat = fs.statSync(filePath);}
+    if (stat.isDirectory()) {}
+      processFiles(filePath)"}
+    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {}
+      try {}
         console.log(`Processing: ${filePath}`)``"`
         let content = fs.readFileSync(filePath, "utf8");
 const originalContent = content;
         content = fixMalformedFiles(content)
-        if (content !== originalContent) {"
-          fs.writeFileSync(filePath, content, "utf8")
+        if (content !="=" originalContent) {"}
+          fs.writeFileSync(filePath, content, "utf8")}
           console.log(`Fixed: ${filePath}`)```
-} catch (error) {
+} catch (error) {}
         console.error(`Error processing ${filePath}:`, error.message)```;
 ursor/fix-errors-and-merge-to-main-94a7
 }
 
 // Main execution
-async function main() {
-  console.log('Starting fix for malformed files...');
-
-  // Get all TypeScript/TSX files in the app directory
+async function main() {}
+  console.log('Starting fix for malformed files...');}
+}
+  // Get all TypeScript/TSX files in the app directory}
   const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
 
   let totalFixed = 0;
   let filesProcessed = 0;
 
-  files.forEach(file => {
-    if (processFile(file)) {
-      totalFixed++;
+  files.forEach(file => {)}
+    if (processFile(file)) {}
+      totalFixed++;}
     }
     filesProcessed++;
   });

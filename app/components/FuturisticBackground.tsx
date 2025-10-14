@@ -1,6 +1,6 @@
 
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
+interface FuturisticBackgroundProps {}
+  children: React.ReactNode;}
 }
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
@@ -12,10 +12,10 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
 '
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+}
+    const resizeCanvas = () => {}
+      canvas.width = window.innerWidth;}
+      canvas.height = window.innerHeight;}
     };
 
     resizeCanvas()'
@@ -25,26 +25,26 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     const particles: Array<{
       x: number;
       y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
+      vx: number;}
+      vy: number;}
+      size: number;}
+      opacity: number;}
     }> = [];
 
     const createParticle = () => {
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
+        vx: (Math.random() - 0.5) * 0.5,}
+        vy: (Math.random() - 0.5) * 0.5,}
+        size: Math.random() * 2 + 1,}
+        opacity: Math.random() * 0.5 + 0.1,}
       };
     };
 
     // Initialize particles
-    for (let i = 0; i < 50; i++) {
-      particles.push(createParticle());
+    for (let i = 0; i < 50; i++) {}
+      particles.push(createParticle());}
     }
 
     const animate = () => {
@@ -60,10 +60,10 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+}
+        // Draw particle}
+        ctx.beginPath();}
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);}
         ctx.fillStyle = `rgba(34, 211, 238, ${particle.opacity})`;
         ctx.fill();
       });
@@ -75,10 +75,10 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
+          if (distance < 100) {}
+            ctx.beginPath();}
+            ctx.moveTo(particle.x, particle.y);}
+            ctx.lineTo(otherParticle.x, otherParticle.y);}
             ctx.strokeStyle = `rgba(34, 211, 238, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
@@ -91,19 +91,19 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
 
     animate();
 
-    return () => {'
-      window.removeEventListener('resize', resizeCanvas);
+    return () => {'}
+      window.removeEventListener('resize', resizeCanvas);}
     };
   }, []);
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
 
   return (
-    <div className="relative min-h-screen"></div>
-      <canvas
-        ref={canvasRef;
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
+    <div className="relative min-h-screen"></div>}
+      <canvas}
+        ref="{canvasRef;"}
+        className="fixed inset-0 w-full h-full pointer-events-none"}
+        style="{{" zIndex: -1 }}
       /></canvas>
       {children}
       {/* Animated Background */}
@@ -111,13 +111,13 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
         
-        {/* Animated Particles */}
-        <div className="absolute inset-0"></div>
+        {/* Animated Particles */})
+        <div className="absolute inset-0"></div>)
           {Array.from({ length: 20 }).map((_, i) => (
             <div
-              key={i;
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
-              style={{
+              key="{i;"}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"})
+              style="{{"})
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
@@ -129,8 +129,8 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         <div className="absolute inset-0"></div>"
           {Array.from({ length: 20,}).map((_, i) => (
             <div;
-              key={i}
-              }}></div>
+              key="{i}")
+              }}></div>)
           ))
         </div>
         {/* Gradient Overlay */}

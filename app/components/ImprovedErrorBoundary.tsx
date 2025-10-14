@@ -1,13 +1,13 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 const ImprovedErrorBoundary: React.FC = () => {
   return (
     <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
-        <title>Improved Error Boundary - Zion Tech Group</title>
-        <meta name="description" content="Professional improved error boundary services by Zion Tech Group." /></meta>
-      </Helmet>
+      <Helmet></Helmet>}
+        <title>Improved Error Boundary - Zion Tech Group</title>}
+        <meta name="description" content="Professional improved error boundary services by Zion Tech Group." /></meta>}
+      </Helmet>}
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
         <div className="max-w-6xl mx-auto text-center">;
@@ -77,63 +77,63 @@ const ImprovedErrorBoundary: React.FC = () => {
             Get Started Today;
           </a>;
         </div>
-      </section>;
-    </div>
+      </section>;)
+    </div>)
   );
 };
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+interface Props {}
+  children: ReactNode;}
+  fallback?: ReactNode;}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;}
 }
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId: string;
+  hasError: boolean;}
+  error?: Error;}
+  errorInfo?: ErrorInfo;}
+  errorId: string;}
 }
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
-      errorId:
+      hasError: false,}
+      error: undefined,}
+      errorInfo: undefined,}
+      errorId:}
     };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {}
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.setState({ error, errorInfo });
     
     // Log error to console in development'
-    if (process.env.NODE_ENV === 'development') {}
+    if (process.env.NODE_ENV ="==" 'development') {}
 
     // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo)
+    if (this.props.onError) {}
+      this.props.onError(error, errorInfo)}
     }
 
     // Log to external service in production'
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send to an error reporting service
+    if (process.env.NODE_ENV ="==" 'production') {}
+      // Here you would typically send to an error reporting service}
       } 
   }
 
-  handleRetry = () => {
+  handleRetry = () => {}
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
   render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
+    if (this.state.hasError) {}
+      // Custom fallback UI}
+      if (this.props.fallback) {}
+        return this.props.fallback;}
       }
 
       return (
@@ -196,8 +196,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             Get Started Today
           </a>
         </div>
-      </section>
-    </div>
+      </section>)
+    </div>)
   );
 export default ImprovedErrorBoundary;
                 We provide comprehensive improved error boundary;

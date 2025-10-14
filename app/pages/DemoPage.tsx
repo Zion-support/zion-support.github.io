@@ -1,22 +1,22 @@
 
 
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { PlayIcon,
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
-  GlobeAltIcon,
-  SignalIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  PhoneIcon,
-  EnvelopeIcon'
+  GlobeAltIcon,;
+  SignalIcon,';
+  ArrowRightIcon,;';}
+  CheckIcon,';}
+  PhoneIcon,';}
+  EnvelopeIcon'}
 } from '@heroicons/react/24/outline;
 
-const DemoPage: React.FC = () => {
-  const demos = [
+const DemoPage: React.FC = () => {';
+  const demos = [';
     {'
       title: 'AI Solutions Demo','
       description: 'Experience our AI-powered solutions in action with interactive demonstrations.',
@@ -24,10 +24,10 @@ const DemoPage: React.FC = () => {
       features: ['
         'Machine Learning Models','
         'Natural Language Processing','
-        'Computer Vision','
-        'Predictive Analytics'
-      ],'
-      duration: '15 minutes'
+        'Computer Vision','}]
+        'Predictive Analytics']}
+      ],'}
+      duration: '15 minutes'}
     },
     {'
       title: 'Cybersecurity Demo','
@@ -36,10 +36,10 @@ const DemoPage: React.FC = () => {
       features: ['
         'Threat Detection','
         'Vulnerability Assessment','
-        'Security Monitoring','
-        'Incident Response'
-      ],'
-      duration: '20 minutes'
+        'Security Monitoring','}]
+        'Incident Response']}
+      ],'}
+      duration: '20 minutes'}
     },
     {'
       title: 'Cloud Infrastructure Demo','
@@ -48,10 +48,10 @@ const DemoPage: React.FC = () => {
       features: ['
         'Cloud Migration','
         'Auto-scaling','
-        'Disaster Recovery','
-        'Cost Optimization'
-      ],'
-      duration: '25 minutes'
+        'Disaster Recovery','}]
+        'Cost Optimization']}
+      ],'}
+      duration: '25 minutes'}
     },
     {'
       title: 'Micro SaaS Demo','
@@ -60,10 +60,10 @@ const DemoPage: React.FC = () => {
       features: ['
         'Custom Development','
         'API Integration','
-        'User Management','
-        'Analytics Dashboard'
-      ],'
-      duration: '18 minutes'
+        'User Management','}]
+        'Analytics Dashboard']}
+      ],'}
+      duration: '18 minutes'}
     },
     {'
       title: '5G Technology Demo','
@@ -72,10 +72,10 @@ const DemoPage: React.FC = () => {
       features: ['
         '5G Network Implementation','
         'IoT Device Management','
-        'Edge Computing','
-        'Real-time Processing'
-      ],'
-      duration: '22 minutes'
+        'Edge Computing','}]
+        'Real-time Processing']}
+      ],'}
+      duration: '22 minutes'}
     }
   ];
 
@@ -127,10 +127,10 @@ const DemoPage: React.FC = () => {
               Choose from our comprehensive range of technology demonstrations
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {demos.map((demo, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
+          )
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
+            {demos.map((demo, index) => (}
+              <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
                 <div className="flex items-center mb-6"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"></div>
                     <demo.icon className="w-8 h-8 text-white" /></demo>
@@ -144,13 +144,13 @@ const DemoPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed"></p>
                   {demo.description}
                 </p>
-                
-                <ul className="space-y-3 mb-6"></ul>
-                  {demo.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
+                )
+                <ul className="space-y-3 mb-6"></ul>)
+                  {demo.features.map((feature, featureIndex) => (}
+                    <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                      {feature}
-                    </li>
+                      {feature})
+                    </li>)
                   ))}
                 </ul>
                 

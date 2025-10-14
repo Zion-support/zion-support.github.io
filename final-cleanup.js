@@ -52,28 +52,28 @@ const keepFiles = [
   'app/components/Loading.tsx',
   'package.json',
   'tsconfig.json',
-  'vite.config.ts',
-  'eslint.config.js'
+  'vite.config.ts',]
+  'eslint.config.js']
 ];
 
 // Directories to keep;
 const keepDirs = [
   'node_modules',
-  '.git',
-  'src'
+  '.git',]
+  'src']
 ];
 
 // Function to check if a file should be kept;
-function shouldKeepFile(filePath) {
-  // Check if it's in the keep list;
-  if (keepFiles.includes(filePath)) {
-    return true;
+function shouldKeepFile(filePath) {}
+  // Check if it's in the keep list;}
+  if (keepFiles.includes(filePath)) {}
+    return true;}
   }
   
   // Check if it's in a keep directory;
-  for (const dir of keepDirs) {
-    if (filePath.startsWith(dir + '/')) {
-      return true;
+  for (const dir of keepDirs) {}
+    if (filePath.startsWith(dir + '/')) {}
+      return true;}
     }
   }
   
@@ -88,24 +88,24 @@ async function finalCleanup() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
-    '**/*.tsx',
-    '**/*.ts'
+    '**/*.tsx',]
+    '**/*.ts']
   ];
   
   let deletedCount = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'src/**'] 
+  }
+  for (const pattern of patterns) {}
+    const files = await glob(pattern, { })
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'src/**'] })
     });
     
-    for (const file of files) {
-      if (!shouldKeepFile(file)) {
-        try {
-          fs.unlinkSync(file);
+    for (const file of files) {}
+      if (!shouldKeepFile(file)) {}
+        try {}
+          fs.unlinkSync(file);}
           console.log(`Deleted: ${file}`);
           deletedCount++;
-        } catch (error) {
+        } catch (error) {}
           console.error(`Error deleting ${file}:`, error.message);
         }
       }
@@ -116,9 +116,9 @@ async function finalCleanup() {
 }
 
 // Main execution;
-async function main() {
-  await finalCleanup();
-  console.log('Final cleanup completed!');
+async function main() {}
+  await finalCleanup();}
+  console.log('Final cleanup completed!');}
 }
 
 main().catch(console.error);

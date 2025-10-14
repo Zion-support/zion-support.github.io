@@ -1,78 +1,78 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
+import React from 'react;';
+import { Link } from 'react-router-dom;';
 import SEO from '../components/SEO;
 import { DocumentTextIcon,
-  CodeBracketIcon,
-  CogIcon,
-  QuestionMarkCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,'
-  MapPinIcon''
+  CodeBracketIcon,;
+  CogIcon,';
+  QuestionMarkCircleIcon,;';
+  ArrowRightIcon,';}
+  PhoneIcon,';}
+  EnvelopeIcon,'}
+  MapPinIcon''}
 } from '@heroicons/react/24/outline;
 export default function DocumentationPage() {
-  const sections = [
-    {
-      icon: CodeBracketIcon,'
-      title: 'API Documentation','
-      description: 'Comprehensive API reference for all our services and integrations.',
-      links: ['
+  const sections = [';
+    {';
+      icon: CodeBracketIcon,'}
+      title: 'API Documentation','}
+      description: 'Comprehensive API reference for all our services and integrations.',}
+      links: ['}
         { name: 'Authentication', href: '/docs/api/authentication' },'
         { name: 'AI Services API', href: '/docs/' },'
-        { name: 'Cloud Management API', href: '/docs/' },'
-        { name: 'Webhooks', href: '/docs/api/webhooks' }
+        { name: 'Cloud Management API', href: '/docs/' },']
+        { name: 'Webhooks', href: '/docs/api/webhooks' }]
       ]
     },
     {
-      icon: CogIcon,'
-      title: 'Integration Guides','
-      description: 'Step-by-step guides for integrating our solutions with your systems.',
-      links: ['
+      icon: CogIcon,'}
+      title: 'Integration Guides','}
+      description: 'Step-by-step guides for integrating our solutions with your systems.',}
+      links: ['}
         { name: 'Getting Started', href: '/docs/' },'
         { name: 'SDK Installation', href: '/docs/integration/sdk' },'
-        { name: 'Configuration', href: '/docs/integration/configuration' },'
-        { name: 'Best Practices', href: '/docs/' }
+        { name: 'Configuration', href: '/docs/integration/configuration' },']
+        { name: 'Best Practices', href: '/docs/' }]
       ]
     },
     {
-      icon: DocumentTextIcon,'
-      title: 'User Guides','
-      description: 'Detailed user guides for all our products and services.',
-      links: ['
+      icon: DocumentTextIcon,'}
+      title: 'User Guides','}
+      description: 'Detailed user guides for all our products and services.',}
+      links: ['}
         { name: 'AI Solutions Guide', href: '/docs/' },'
         { name: 'Cloud Infrastructure', href: '/docs/' },'
-        { name: 'Cybersecurity Setup', href: '/docs/guides/cybersecurity' },'
-        { name: 'Micro SaaS Development', href: '/docs/' }
+        { name: 'Cybersecurity Setup', href: '/docs/guides/cybersecurity' },']
+        { name: 'Micro SaaS Development', href: '/docs/' }]
       ]
     },
     {
-      icon: QuestionMarkCircleIcon,'
-      title: 'Troubleshooting','
-      description: 'Common issues and solutions to help you resolve problems quickly.',
-      links: ['
+      icon: QuestionMarkCircleIcon,'}
+      title: 'Troubleshooting','}
+      description: 'Common issues and solutions to help you resolve problems quickly.',}
+      links: ['}
         { name: 'FAQ', href: '/docs/troubleshooting/faq' },'
         { name: 'Error Codes', href: '/docs/' },'
-        { name: 'Performance Issues', href: '/docs/troubleshooting/performance' },'
-        { name: 'Contact Support', href: '/support' }
+        { name: 'Performance Issues', href: '/docs/troubleshooting/performance' },']
+        { name: 'Contact Support', href: '/support' }]
       ]
     }
   ]
   const quickStart = ['
     { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' },'
     { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },'
-    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },'
-    { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
+    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },']
+    { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }]
   ]'
 import { Helmet } from 'react-helmet-async;
-const DocumentationPage: React.FC = () => {
-  return (
-    <></>
-      <SEO 
+const DocumentationPage: React.FC = () => {';
+  return (';
+    <></>';
+      <SEO ';
         title="Documentation - Zion Tech Group"
-        description="Comprehensive documentation for all Zion Tech Group services including API references, integration guides, user manuals, and troubleshooting resources."
-        keywords="documentation, API docs, integration guides, user manual, troubleshooting, SDK, developer resources"
-        url="/docs"
-      /></SEO>
+        description="Comprehensive documentation for all Zion Tech Group services including API references, integration guides, user manuals, and troubleshooting resources."}
+        keywords="documentation, API docs, integration guides, user manual, troubleshooting, SDK, developer resources"}
+        url="/docs"}
+      /></SEO>}
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
         <div className="absolute inset-0 opacity-20"></div>
@@ -127,16 +127,16 @@ const DocumentationPage: React.FC = () => {
               Get up and running with our services in just a few steps
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-4 gap-8"></div>
-            {quickStart.map((step, index) => (
-              <div key={index} className="text-center"></div>
+          )
+          <div className="grid md:grid-cols-4 gap-8"></div>)
+            {quickStart.map((step, index) => (}
+              <div key="{index}" className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <span className="text-white font-bold text-xl">{step.step}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>"
-                <p>{step.description}</p>"
-              </div>
+                <p>{step.description}</p>")
+              </div>)
 ))}
           </div>
         </div>
@@ -154,8 +154,8 @@ const DocumentationPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8"></div>
-            {sections.map((section, index) => (
-              <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300"></div>
+            {sections.map((section, index) => (}
+              <div key="{index}" className="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300"></div>
                 <div className="flex items-center mb-6"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4"></div>
                     <section.icon className="w-6 h-6 text-white" /></section>
@@ -164,18 +164,18 @@ const DocumentationPage: React.FC = () => {
                     <h3 className="text-xl font-bold text-white">{section.title}</h3>
                     <p className="text-gray-400">{section.description}</p>
                   </div>
-                </div>
-                <ul className="space-y-2"></ul>
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}></li>
+                </div>)
+                <ul className="space-y-2"></ul>)
+                  {section.links.map((link, linkIndex) => (}
+                    <li key="{linkIndex}"></li>
                       <Link 
-                        to={link.href;
-                        className="text-green-400 hover:text-green-300 flex items-center group"
-                      ></Link>
-                        <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
+                        to="{link.href;"}
+                        className="text-green-400 hover:text-green-300 flex items-center group"}
+                      ></Link>}
+                        <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>}
                         {link.name}
-                      </Link>
-                    </li>
+                      </Link>)
+                    </li>)
 ))}
                 </ul>
               </div>
@@ -197,15 +197,15 @@ const DocumentationPage: React.FC = () => {
             <div className="bg-slate-800 p-8 rounded-xl border border-slate-600 mb-8"></div>
               <h3 className="text-xl font-bold text-white mb-4">Basic API Call Example</h3>
               <pre className="text-left text-green-400 overflow-x-auto"></pre>
-                <code>{`// Initialize the client
-const client = new ZionTechClient({'
-  apiKey: 'your-api-key','
-  environment: 'production;
+                <code>{`// Initialize the client}
+const client = new ZionTechClient({'}
+  apiKey: 'your-api-key','})
+  environment: 'production;})
 });
 // Make an API call
-const response = await client.ai.generateText({'
-  prompt: 'Hello, world!',
-  maxTokens: 100
+const response = await client.ai.generateText({'}
+  prompt: 'Hello, world!',})
+  maxTokens: 100})
 });
 console.log(response.data)`}</code>
               </pre>

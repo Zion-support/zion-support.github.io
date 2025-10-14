@@ -1,20 +1,19 @@
-import React from 'react''
-{ useState } from 'react''
-import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react;
-
-const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false)'
-'}'
+import React from 'react';
+{ useState } from 'react';
+import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react;';
+';
+const Header: React.FC = () => {';}
+  const [isOpen, setIsOpen] = useState(false);';}
+  const [isServicesOpen, setIsServicesOpen] = useState(false)'}'
   const navigationItems = [{ name: 'Home', href: '/' }''
     { name: 'About', href: '/about' }''
-    { ''
-      name: 'Services'''
+    { ''}
+      name: 'Services'''}
       href: '/services'''}'
       submenu: [{ name: 'AI Services', href: '/ai-services' }''
         { name: 'IT Services', href: '/it-services' }''
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' }''
-        { name: 'Digital Transformation', href: '/digital-transformation' }';
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' }'']
+        { name: 'Digital Transformation', href: '/digital-transformation' }';]
       ]'
     }''
     { name: 'Solutions', href: '/solutions' }''
@@ -25,12 +24,12 @@ const Header: React.FC = () => {
 '
   const navigationItems = [{ name: 'Home', href: '/' }''
     { name: 'About', href: '/about' }'
-    { '
-      name: 'Services'''
-      href: '/services'''
+    { '}
+      name: 'Services'''}
+      href: '/services'''}
       submenu: [{ name: 'AI Services', href: '/ai-services' }''
-        { name: 'IT Services', href: '/it-services' }''
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' }''
+        { name: 'IT Services', href: '/it-services' }'']
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' }'']
         { name: 'Digital Transformation', href: '/digital-transformation' }']},'
     { name: 'Solutions', href: '/solutions' }''
     { name: 'Case Studies', href: '/case-studies' }''
@@ -38,10 +37,10 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' }'];
 
 export default function Header() {
-  return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50"></nav>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-        <div className="flex justify-between items-center h-16"></div>
+  return (}
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50"></nav>}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>}
+        <div className="flex justify-between items-center h-16"></div>}
           {/* Logo */}
 <div className="flex-shrink-0">;
             <Link to="/" className="text-2xl font-bold text-white">;
@@ -49,30 +48,30 @@ export default function Header() {
             </Link>;
           </div>
           {/* Desktop Navigation */}
-          <div className="hidden md:block"></div>
-            <div className="ml-10 flex items-baseline space-x-4"></div>
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">;
+          <div className="hidden md:block"></div>)
+            <div className="ml-10 flex items-baseline space-x-4"></div>)
+              {navigationItems.map((item) => (}
+                <div key="{item.name}" className="relative group">;
                   <Link></Link>
-                    to={item.href}
-                    className="$1"
-onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                    to="{item.href}")
+                    className="$1")
+onMouseEnter="{()" => item.submenu && setIsServicesOpen(true)}
+onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
                   >
-                    {item.name;
+                    {item.name;}
                     {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
                   </Link>
                   {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"></div>
-                      {item.submenu.map((subItem) => (
-                        <Link></Link>
-                          key={subItem.name}
-                          to={subItem.href}
+                  {item.submenu && isServicesOpen && ()}
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"></div>)}
+                      {item.submenu.map((subItem) => (}
+                        <Link></Link>}
+                          key="{subItem.name}"
+                          to="{subItem.href}"
                           className="$1"
                         >
-                          {subItem.name;
-                        </Link>;
+                          {subItem.name;})
+                        </Link>;})
                       ))}
                     </div>
                   )}
@@ -84,26 +83,26 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
           </Link>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8"></nav>
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative group"></div>
+            {navigationItems.map((item) => (}
+              <div key="{item.name}" className="relative group"></div>
                 <Link;
-                  to={item.href}
-                  className="text-gray-300 hover:text-white transition-colors flex items-center"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                  to="{item.href}")
+                  className="text-gray-300 hover:text-white transition-colors flex items-center")
+                  onMouseEnter="{()" => item.submenu && setIsServicesOpen(true)}
+                  onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
                 >
                   {item.name}
                   {item.submenu && <ChevronDown className="w-4 h-4 ml-1" />}
                 </Link>
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg py-2 z-50"></div>
-                    {item.submenu.map((subItem) => (
-                      <Link;
-                        key={subItem.name}
-                        to={subItem.href}
+                {item.submenu && isServicesOpen && ()}
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg py-2 z-50"></div>)}
+                    {item.submenu.map((subItem) => (}
+                      <Link;}
+                        key="{subItem.name}"
+                        to="{subItem.href}"
                         className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">"
-                        {subItem.name}
-                      </Link>
+                        {subItem.name})
+                      </Link>)
                     ))}
                   </div>
                 )}}
@@ -122,7 +121,7 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button></button>
-              onClick={() => setIsOpen(!isOpen)}
+              onClick="{()" => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2";
             >;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -130,29 +129,29 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
           </div>
         </div>
         {/* Mobile Navigation */}
-        {isOpen && (
-<div className="md:hidden">;
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;
-              {navigationItems.map((item) => (
-                <div key={item.name}>;
+        {isOpen && (}
+<div className="md:hidden">;})
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;)}
+              {navigationItems.map((item) => (}
+                <div key="{item.name}">;
                   <Link></Link>
-                    to={item.href}
-                    className="$1"
-onClick={() => setIsOpen(false)}
+                    to="{item.href}")
+                    className="$1")
+onClick="{()" => setIsOpen(false)}
                   >
                     {item.name;
                   </Link>
-                  {item.submenu && (
-                    <div className="pl-4 space-y-1"></div>
-                      {item.submenu.map((subItem) => (
-                        <Link></Link>
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="$1"
-onClick={() => setIsOpen(false)}
+                  {item.submenu && ()}
+                    <div className="pl-4 space-y-1"></div>)}
+                      {item.submenu.map((subItem) => (}
+                        <Link></Link>}
+                          key="{subItem.name}"
+                          to="{subItem.href}")
+                          className="$1")
+onClick="{()" => setIsOpen(false)}
                         >
-                          {subItem.name;
-                        </Link>;
+                          {subItem.name;}
+                        </Link>;}
                       ))}
                     </div>
                   )}
@@ -162,18 +161,18 @@ onClick={() => setIsOpen(false)}
                 <Link></Link>
                   to="/contact";
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center";
-                  onClick={() => setIsOpen(false)}
+                  onClick="{()" => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
-                {item.submenu && (
-                  <div className="ml-4"></div>
-                    {item.submenu.map((subItem) => (
-                      <Link;
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block py-1 text-gray-400 hover:text-white transition-colors"
-                        onClick={() => setIsOpen(false)}
+                {item.submenu && ()}
+                  <div className="ml-4"></div>)}
+                    {item.submenu.map((subItem) => (}
+                      <Link;}
+                        key="{subItem.name}"
+                        to="{subItem.href}")
+                        className="block py-1 text-gray-400 hover:text-white transition-colors")
+                        onClick="{()" => setIsOpen(false)}
                       >
                         {subItem.name}
                       </Link>
@@ -186,7 +185,7 @@ onClick={() => setIsOpen(false)}
               <Link;
                 to="/contact"
                 className="block w-full text-center px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
-                onClick={() => setIsOpen(false)}
+                onClick="{()" => setIsOpen(false)}
               >;
                 Get Started;
               </Link>

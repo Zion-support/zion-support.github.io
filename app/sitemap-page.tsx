@@ -1,6 +1,6 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
 export default function Page() {
 
   return (
@@ -70,14 +70,14 @@ export default function Page() {
               <p></p>
                 Round-the-clock support for all your sitemap page needs.</p></div></div>
           <div className="mt-12"></div>"
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
-              Get Started Today</button></div></div></div></div>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>)
+              Get Started Today</button></div></div></div></div>)
   )
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div>}
+        </div>}
+      </div>}
+    </div>}
   );}'
 }'
 

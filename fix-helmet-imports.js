@@ -18,15 +18,15 @@ const filesToFix = [;
   'app/blockchain-web3/page.tsx',;
   'app/blockchain/page.tsx',;
   'app/ai-services/page.tsx',;
-  'app/ai-mobile-app-development/page.tsx',;
-  'app/case-studies/page.tsx';
+  'app/ai-mobile-app-development/page.tsx',;]
+  'app/case-studies/page.tsx';]
 ];
 
 function fixHelmetImports(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove react-helmet-async import;
+  try {}
+    let content = fs.readFileSync(filePath, 'utf8');}
+    }
+    // Remove react-helmet-async import;}
     content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];\s*\n?/g, '');
     
     // Remove Helmet wrapper and move title/meta to head;
@@ -40,7 +40,7 @@ function fixHelmetImports(filePath) {
     
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }

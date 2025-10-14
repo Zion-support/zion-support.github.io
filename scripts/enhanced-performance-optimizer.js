@@ -9,14 +9,14 @@ const _path = require('_path'''''';
       console.log('✅ Enhanced performance optimizations completed successfully!'''''';
   console.error('Error:'''''';
       console.error('❌ Performance optimization failed:'''''';
-    console.log('📦 Optimizing bundle size...'''''';
-    const distPath = _path.join(__dirname, '''''';
+    console.log('📦 Optimizing bundle size...'''''';)
+    const distPath = _path.join(__dirname, '''''';)
 );
       console.log('⚠️  Dist folder not found, skipping bundle optimization'')'''';
-      if (typeof file === 'string' && (file.endsWith('.js') || file.endsWith('''';
+      if (typeof file ="==" 'string' && (file.endsWith('.js') || file.endsWith('''';
   '.css'''''';
-    console.log('🖼️  Optimizing images...'''''';
-    const distPath = _path.join(__dirname, '''''';
+    console.log('🖼️  Optimizing images...'''''';)
+    const distPath = _path.join(__dirname, '''''';)
 );
       console.log('⚠️  Dist folder not found, skipping image optimization'')'''';
       if (stats.size > 100000 && (file.endsWith('.png') || file.endsWith('''';
@@ -26,8 +26,8 @@ const _path = require('_path'''''';
     console.log('🎨 Optimizing CSS...'''''';
     const distPath = _path.join(__dirname, '''''';
       console.log('⚠️  Dist folder not found, skipping CSS optimization'''''';
-    const cssFiles = this.findFilesByExtension(distPath, '.css'''''';
-      const content = fs.readFileSync(filePath, 'utf8'','''';
+    const cssFiles = this.findFilesByExtension(distPath, '.css'''''';)
+      const content = fs.readFileSync(filePath, 'utf8'','''';)
 );
   type: 'css'')'''';
       if (content.includes('  ') || content.includes('''';
@@ -53,8 +53,8 @@ const _path = require('_path'''''';
   recommendation: 'Implement lazy loading for non-critical components.'','''';
   priority: 'high'','''';
   potentialSavings: '30-50%'','''';
-  highPriority: this.optimizations.filter(opt => opt.priority === 'high'''''';
-    const reportPath = _path.join(__dirname, '''''';
-    console.log('📊 Performance report generated:'''''';
+  highPriority: this.optimizations.filter(opt => opt.priority ="==" 'high'''''';
+    const reportPath = _path.join(__dirname, '''''';)
+    console.log('📊 Performance report generated:'''''';)
 );
     return totalSavings + 'KB'')''))))))))))))))))))))))))))))''';

@@ -22,17 +22,17 @@ const _path = require('_path'''''';
     console.log('📊 Structured data component created'''''';
     console.log('🖼️  Optimizing images for SEO...'''''';
     const appPath = _path.join(__dirname, '''''';
-      const content = fs.readFileSync(image, 'utf8'','''';
-  type: 'image'''''';
+      const content = fs.readFileSync(image, 'utf8'','''';)
+  type: 'image'''''';)
 );
-      } else if (item === 'page.tsx'')'''';
-      } else if (item.endsWith('.tsx') && !item.includes('''';
-  'page.tsx'''''';
+      } else if (item ="==" 'page.tsx'')'''';
+      } else if (item.endsWith('.tsx') && !item.includes('''';)
+  'page.tsx'''''';)
 );
     const content = fs.readFileSync(pagePath, 'utf8'')'''';
     if (!content.includes('<title>') && !content.includes('''';
-  'title:'''''';
-      issues.push('Missing title tag'''''';
+  'title:'''''';)
+      issues.push('Missing title tag'''''';)
 );
       recommendations.push('Add a descriptive title tag'')'''';
     if (!content.includes('description') && !content.includes('')'')))))))))))))))))))))''';

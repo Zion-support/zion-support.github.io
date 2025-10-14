@@ -1,42 +1,42 @@
 
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { ServerIcon,
   CloudIcon,
-  ShieldCheckIcon,
-  CpuChipIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  PhoneIcon,
-  EnvelopeIcon'
+  ShieldCheckIcon,;
+  CpuChipIcon,';
+  ArrowRightIcon,;';}
+  CheckIcon,';}
+  PhoneIcon,';}
+  EnvelopeIcon'}
 } from '@heroicons/react/24/outline;
 
-const ITSolutionsPage: React.FC = () => {
-  const services = [
+const ITSolutionsPage: React.FC = () => {';
+  const services = [';
     {'
-      title: 'Infrastructure Management','
-      description: 'Complete IT infrastructure setup, monitoring, and maintenance services.',
-      icon: ServerIcon,'
-      features: ['24/7 Monitoring', 'Automated Backups', 'Performance Optimization', 'Security Updates']
+      title: 'Infrastructure Management','}
+      description: 'Complete IT infrastructure setup, monitoring, and maintenance services.',}]
+      icon: ServerIcon,'}]
+      features: ['24/7 Monitoring', 'Automated Backups', 'Performance Optimization', 'Security Updates']}
     },
     {'
-      title: 'Cloud Migration','
-      description: 'Seamless migration to cloud platforms with zero downtime.',
-      icon: CloudIcon,'
-      features: ['AWS/Azure/GCP', 'Data Migration', 'Cost Optimization', 'Security Compliance']
+      title: 'Cloud Migration','}
+      description: 'Seamless migration to cloud platforms with zero downtime.',}
+      icon: CloudIcon,'}
+      features: ['AWS/Azure/GCP', 'Data Migration', 'Cost Optimization', 'Security Compliance']}
     },
     {'
-      title: 'Cybersecurity Solutions','
-      description: 'Comprehensive security measures to protect your digital assets.',
-      icon: ShieldCheckIcon,'
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Security Training']
+      title: 'Cybersecurity Solutions','}
+      description: 'Comprehensive security measures to protect your digital assets.',}
+      icon: ShieldCheckIcon,'}
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Security Training']}
     },
     {'
-      title: 'AI Integration','
-      description: 'Integrate artificial intelligence into your existing IT infrastructure.',
-      icon: CpuChipIcon,'
-      features: ['Machine Learning', 'Process Automation', 'Data Analytics', 'Predictive Maintenance']
+      title: 'AI Integration','}
+      description: 'Integrate artificial intelligence into your existing IT infrastructure.',}
+      icon: CpuChipIcon,'}
+      features: ['Machine Learning', 'Process Automation', 'Data Analytics', 'Predictive Maintenance']}
     }
   ];
 
@@ -75,10 +75,10 @@ const ITSolutionsPage: React.FC = () => {
                 From infrastructure management to AI integration, we provide end-to-end IT solutions
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-2 gap-8"></div>
-              {services.map((service, index) => (
-                <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
+            )
+            <div className="grid md:grid-cols-2 gap-8"></div>)
+              {services.map((service, index) => (}
+                <div key="{index}" className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"></div>
                       <service.icon className="w-8 h-8 text-white" /></service>
@@ -89,13 +89,13 @@ const ITSolutionsPage: React.FC = () => {
                   <p className="text-gray-300 mb-6 leading-relaxed"></p>
                     {service.description}
                   </p>
-                  
-                  <ul className="space-y-3 mb-6"></ul>
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300"></li>
+                  )
+                  <ul className="space-y-3 mb-6"></ul>)
+                    {service.features.map((feature, featureIndex) => (}
+                      <li key="{featureIndex}" className="flex items-center text-gray-300"></li>
                         <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
-                        {feature}
-                      </li>
+                        {feature})
+                      </li>)
                     ))}
                   </ul>
                   
@@ -141,6 +141,7 @@ const ITSolutionsPage: React.FC = () => {
   )};
 };
 
-export default ITSolutionsPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

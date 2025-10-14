@@ -1,5 +1,5 @@
-import React from 'react''
-import { Link } from 'react-router-dom''
+import React from 'react';
+import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead;
 import { 
   ArrowRightIcon, 
@@ -8,53 +8,53 @@ import {
   CloudIcon, 
   CpuChipIcon,
   ChartBarIcon,
-  GlobeAltIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  RocketLaunchIcon,
-  SparklesIcon,'
+  GlobeAltIcon,;
+  PhoneIcon,';
+  EnvelopeIcon,;';}
+  MapPinIcon,';}
+  RocketLaunchIcon,';}
+  SparklesIcon,'}
   BoltIcon'}'
-} from '@heroicons/react/24/outline''
-import FuturisticBackground from '../components/FuturisticBackground''
-import NeonButton from '../components/NeonButton''
-import AnimatedCard from '../components/AnimatedCard''
-import { services } from '../data/servicesData;
+} from '@heroicons/react/24/outline'
+import FuturisticBackground from '../components/FuturisticBackground'
+import NeonButton from '../components/NeonButton';
+import AnimatedCard from '../components/AnimatedCard';
+import { services } from '../data/servicesData;';
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",
-    "potentialAction": {
-      "@type": "SearchAction",
+    "potentialAction": {}
+      "@type": "SearchAction",}
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   const features = [
     {
-      icon: CpuChipIcon,'
-      title: 'AI Solutions','
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business operations.','
-      href: '/ai-solutions;
+      icon: CpuChipIcon,'}
+      title: 'AI Solutions','}
+      description: 'Advanced artificial intelligence and machine learning solutions to transform your business operations.','}
+      href: '/ai-solutions;}
     },
     {
-      icon: ShieldCheckIcon,'
-      title: 'Cybersecurity','
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.','
-      href: '/cybersecurity;
+      icon: ShieldCheckIcon,'}
+      title: 'Cybersecurity','}
+      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.','}
+      href: '/cybersecurity;}
     },
     {
-      icon: CloudIcon,'
-      title: 'Cloud Infrastructure','
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.','
-      href: '/cloud-solutions;
+      icon: CloudIcon,'}
+      title: 'Cloud Infrastructure','}
+      description: 'Scalable cloud solutions and infrastructure management for modern businesses.','}
+      href: '/cloud-solutions;}
     },
     {
-      icon: RocketLaunchIcon,'
-      title: 'Digital Transformation','
-      description: 'Complete digital transformation services to modernize your business processes.','
-      href: '/digital-transformation;
-    }
+      icon: RocketLaunchIcon,'}
+      title: 'Digital Transformation','}
+      description: 'Complete digital transformation services to modernize your business processes.','}
+      href: '/digital-transformation;}]
+    }]
   ];
   return (
     <></>
@@ -62,7 +62,7 @@ import { services } from '../data/servicesData;
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        structuredData={structuredData}
+        structuredData="{structuredData}"
       /></SEOHead>
       <FuturisticBackground /></FuturisticBackground>
       {/* Hero Section */}
@@ -93,11 +93,11 @@ import { services } from '../data/servicesData;
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center"></div>
               <NeonButton to="/contact" variant="primary" size="lg"></NeonButton>
                 Get Started Today;
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
+                <ArrowRightIcon className="w-5 h-5 ml-2" /></ArrowRightIcon>
               </NeonButton>
               <NeonButton to="/services" variant="secondary" size="lg"></NeonButton>
                 Explore Services;
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
+                <ArrowRightIcon className="w-5 h-5 ml-2" /></ArrowRightIcon>
               </NeonButton>
             </div>
           </div>
@@ -113,21 +113,21 @@ import { services } from '../data/servicesData;
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
               Comprehensive technology solutions designed to accelerate your business growth with real, proven results;
             </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>
-            {featuredServices.map((service, index) => (
-              <AnimatedCard key={service.id} glowColor={service.glowColor} className="group"></AnimatedCard>
+          </div>)
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>)
+            {featuredServices.map((service, index) => (}
+              <AnimatedCard key="{service.id}" glowColor="{service.glowColor}" className="group"></AnimatedCard>
                 <div className="text-center mb-6>"
                   <div className="text-6xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                   <p>{service.shortDescription}</p>
-                </div>
-                <div className="space-y-3 mb-6"></div>
-                  {service.features.slice(0, 4).map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-gray-300"></div>
+                </div>)
+                <div className="space-y-3 mb-6"></div>)
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (}
+                    <div key="{featureIndex}" className="flex items-center text-gray-300"></div>
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3></div>"
-                      <span className="text-sm">{feature}</span>
-                    </div>
+                      <span className="text-sm">{feature}</span>)
+                    </div>)
                   )})}
                 </div>
                 
@@ -140,9 +140,9 @@ import { services } from '../data/servicesData;
                 </div>
                 
                 <div className="flex flex-col gap-3"></div>
-                  <NeonButton to={service.href} variant="primary" size="sm"></NeonButton>
+                  <NeonButton to="{service.href}" variant="primary" size="sm"></NeonButton>
                     Learn More;
-                    <ArrowRightIcon className="w-4 h-4 ml-2" />
+                    <ArrowRightIcon className="w-4 h-4 ml-2" /></ArrowRightIcon>
                   </NeonButton>
                   <NeonButton to="/contact" variant="secondary" size="sm"></NeonButton>
                     Get Quote;
@@ -155,7 +155,7 @@ import { services } from '../data/servicesData;
           <div className="text-center mt-12>"
             <NeonButton to="/services" variant="primary" size="lg"></NeonButton>
               View All Services;
-              <ArrowRightIcon className="w-5 h-5 ml-2" />
+              <ArrowRightIcon className="w-5 h-5 ml-2" /></ArrowRightIcon>
             </NeonButton>
           </div>
         </div>
@@ -176,21 +176,21 @@ import { services } from '../data/servicesData;
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {features.map((feature, index) => (
-                <AnimatedCard key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></AnimatedCard>
+              {features.map((feature, index) => (}
+                <AnimatedCard key="{index}" className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></AnimatedCard>
                   <div className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg mb-4"></div>
                     <feature.icon className="w-6 h-6 text-white" /></feature>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <Link
-                    to={feature.href;
+                    to="{feature.href;"
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center"
                   ></Link>
-                    Learn More
-                    <ArrowRightIcon className="w-4 h-4 ml-1" /></ArrowRightIcon>
-                  </Link>
-                </AnimatedCard>
+                    Learn More}
+                    <ArrowRightIcon className="w-4 h-4 ml-1" /></ArrowRightIcon>}
+                  </Link>})
+                </AnimatedCard>})
 ))}
             </div>
           </div>
@@ -210,28 +210,28 @@ import { services } from '../data/servicesData;
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {services.slice(0, 6).map((service, index) => (
-                <AnimatedCard key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300"></AnimatedCard>
+              {services.slice(0, 6).map((service, index) => (}
+                <AnimatedCard key="{index}" className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300"></AnimatedCard>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg mb-4"></div>
                     <service.icon className="w-6 h-6 text-white" /></service>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <Link
-                    to={service.href;
+                    to="{service.href;"
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center"
                   ></Link>
-                    Learn More
-                    <ArrowRightIcon className="w-4 h-4 ml-1" /></ArrowRightIcon>
-                  </Link>
-                </AnimatedCard>
+                    Learn More}
+                    <ArrowRightIcon className="w-4 h-4 ml-1" /></ArrowRightIcon>}
+                  </Link>})
+                </AnimatedCard>})
 ))}
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center"></div>
               <NeonButton to="/contact" variant="primary" size="lg"></NeonButton>
                 Get In Touch;
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
+                <ArrowRightIcon className="w-5 h-5 ml-2" /></ArrowRightIcon>
               </NeonButton>
               <NeonButton to="/demo" variant="secondary" size="lg"></NeonButton>
                 Schedule Demo;

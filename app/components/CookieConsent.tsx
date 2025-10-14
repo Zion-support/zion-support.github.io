@@ -1,25 +1,25 @@
-import React from 'react;
+import React from 'react;';
 import { Cookie, Settings } from "lucide-react";
 
 const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");"
-    if (!consent) {
-      setIsVisible(true);
+  useEffect(() => {}
+    const consent = localStorage.getItem("cookie-consent");"}
+    if (!consent) {}
+      setIsVisible(true);}
     }
   }, []);
-  const handleAccept = () => {
-    localStorage.setItem("cookie-consent", "accepted");"
-    setIsVisible(false);
+  const handleAccept = () => {}
+    localStorage.setItem("cookie-consent", "accepted");"}
+    setIsVisible(false);}
   };
-  const handleReject = () => {
-    localStorage.setItem("cookie-consent", "rejected");"
-    setIsVisible(false);
+  const handleReject = () => {}
+    localStorage.setItem("cookie-consent", "rejected");"}
+    setIsVisible(false);}
   };
-  const handleSettings = () => {
-    setShowSettings(!showSettings);
+  const handleSettings = () => {}
+    setShowSettings(!showSettings);}
   };
   if (!isVisible) return null;
   return (
@@ -62,38 +62,38 @@ const CookieConsent: React.FC = () => {
                     </label>
                     <label className="flex items-center justify-between"></label>
                       <span className="text-gray-300">Marketing Cookies</span>
-                      <input type="checkbox" className="rounded" /></input>
-                    </label>
-                  </div>
-                </div>
+                      <input type="checkbox" className="rounded" /></input>}
+                    </label>}
+                  </div>})
+                </div>})
               )}
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-2 ml-4"></div>
             <button
-              onClick={handleSettings;
+              onClick="{handleSettings;"
               className="flex items-center px-4 py-2 text-gray-300 hover:text-white transition-colors"
             ></button>
               <Settings className="w-4 h-4 mr-2" /></Settings>
               Settings
             </button>
             <button
-              onClick={handleReject;
+              onClick="{handleReject;"
               className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors"
             ></button>
               Reject All
             </button>
             <button
-              onClick={handleAccept;
+              onClick="{handleAccept;"
               className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             ></button>
               Accept All
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div>}
+        </div>}
+      </div>}
+    </div>}
   )}
 };
 export default CookieConsent;

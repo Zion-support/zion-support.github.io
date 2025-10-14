@@ -37,13 +37,13 @@ export default tseslint.config(
       '*.py',
       'api/**',
       'src/**',
-      'temp-broken/**',
-      'utils/**',
-      'hooks/**'
-    ]
+      'temp-broken/**',}
+      'utils/**',}]
+      'hooks/**'}]
+    ]}
   },
-  {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+  {}
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],}
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: "latest",
@@ -83,22 +83,22 @@ export default tseslint.config(
         test: "readonly",
         expect: "readonly",
         beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly",
-        jest: "readonly",
+        afterEach: "readonly",}
+        beforeAll: "readonly",}
+        afterAll: "readonly",}
+        jest: "readonly",}
       },
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
+        ecmaVersion: 'latest',}
+        sourceType: 'module',}
+        ecmaFeatures: {}
+          jsx: true}
         }
       }
     },
-    plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+    plugins: {}
+      "react-hooks": reactHooks,}
+      "react-refresh": reactRefresh,}
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -106,10 +106,10 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-empty-object-type': 'off',
       'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'no-console': 'off',
-      'react/no-unescaped-entities': 'off',
-      'no-undef': 'off'
-    },
-  },
+      'react/prop-types': 'off',}
+      'no-console': 'off',}
+      'react/no-unescaped-entities': 'off',}
+      'no-undef': 'off'}
+    },)
+  },)
 );

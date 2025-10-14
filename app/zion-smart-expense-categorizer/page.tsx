@@ -1,7 +1,7 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
-export default function ZionSmartExpenseCategorizer() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
+function ZionSmartExpenseCategorizer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
@@ -61,10 +61,10 @@ export default function ZionSmartExpenseCategorizer() {
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">;
               Get Started Today;
             </button>;
-          </div>
-        </div>
-      </div>
-    </div>
+          </div>}
+        </div>}
+      </div>})
+    </div>})
   );}
 }'
 '

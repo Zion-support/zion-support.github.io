@@ -7,10 +7,10 @@ import path from 'path';
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix unterminated string literals;
-    content = content.replace(/import React from "react";"/g, 'import React from "react";');
+    let originalContent = content;}
+    }
+    // Fix unterminated string literals;}
+    content = content.replace(/import React from "react";"/g, 'import React from "react";');}
     content = content.replace(/import { Helmet } from "react-helmet-async";"/g, 'import { Helmet } from "react-helmet-async";');
     content = content.replace(/import { Link } from "react-router-dom";"/g, 'import { Link } from "react-router-dom";');
     content = content.replace(/import { [^}]+ } from "lucide-react";"/g, (match) => match.replace(/"/g, ''));
@@ -19,8 +19,8 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/return \("/g, 'return (');
     content = content.replace(/<Helmet><\/Helmet>/g, '<Helmet>');
     content = content.replace(/<\/Helmet>"/g, '</Helmet>');
-    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {
-      const className = match.match(/className="([^"]*)"/)?.[1] || '';
+    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {}
+      const className = match.match(/className="([^"]*)"/)?.[1] || '';}
       return `<div className="${className}">`;
     });
     content = content.replace(/<h1[^>]*>[^<]*<\/h1>"/g, (match) => match.replace(/"/g, ''));
@@ -49,8 +49,8 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/description: "[^"]*", "/g, (match) => match.replace(/"/g, ''));
     
     // Fix JSX structure issues;
-    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {
-      const className = match.match(/className="([^"]*)"/)?.[1] || '';
+    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {}
+      const className = match.match(/className="([^"]*)"/)?.[1] || '';}
       return `<div className="${className}">`;
     });
     
@@ -63,16 +63,16 @@ function fixSyntaxErrors(filePath) {
     
     // If the file is still heavily corrupted, create a simple working version;
     if (content.includes('Unterminated string literal') || content.includes('<<<<<<< HEAD')) {
-      const fileName = path.basename(filePath, '.tsx');
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page';
-      
-      content = `import React from "react";
+      const fileName = path.basename(filePath, '.tsx');}
+      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page';}
+      }
+      content = `import React from "react";}
 import { Helmet } from "react-helmet-async";
 
-const ${componentName} = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+const ${componentName} = () => {}
+  return (}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>})
+      <Helmet></Helmet>})
         <title>${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group</title>
         <meta name="description" content="${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group" />
       </Helmet>
@@ -91,32 +91,32 @@ const ${componentName} = () => {
 export default ${componentName};`;
     }
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
+    if (content !="=" originalContent) {}
+      fs.writeFileSync(filePath, content);}
       console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript files;
-function findTSFiles(dir) {
+// Function to find all TypeScript/JavaScript files;]
+function findTSFiles(dir) {]
   const files = [];
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
     const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...findTSFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
+    const stat = fs.statSync(fullPath);}
+    }
+    if (stat.isDirectory() && !item.startsWith('.') && item !="=" 'node_modules') {}
+      files.push(...findTSFiles(fullPath));}
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
+      files.push(fullPath);}
     }
   }
   
@@ -130,12 +130,12 @@ const tsFiles = findTSFiles('./app');
 let fixedCount = 0;
 let errorCount = 0;
 
-for (const file of tsFiles) {
-  try {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
+for (const file of tsFiles) {}
+  try {}
+    if (fixSyntaxErrors(file)) {}
+      fixedCount++;}
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Failed to process ${file}:`, error.message);
     errorCount++;
   }

@@ -1,9 +1,9 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const TaskManagementSAAS = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Task Management SAAS - Zion Tech Group</title>
+  return (';
+    <></>';
+      <Helmet></Helmet>';
+        <title>Task Management SAAS - Zion Tech Group</title>';
         <meta name="description" content="Efficient task and project management solution." /></meta>
       </Helmet>
 
@@ -25,11 +25,12 @@ const TaskManagementSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 
-export default TaskManagementSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

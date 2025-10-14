@@ -5,10 +5,10 @@ import { execSync } from 'child_process';
 
 // Strategy: Use our fixes (HEAD) for all conflicts since we've fixed syntax errors
 function resolveConflicts() {
-  try {
-    console.log('Starting merge with conflict resolution...');
-    
-    // Start the merge
+  try {}
+    console.log('Starting merge with conflict resolution...');}
+    }
+    // Start the merge}
     execSync('git merge origin/main --no-commit', { stdio: 'inherit' });
     
     console.log('Merge conflicts detected. Resolving automatically...');
@@ -22,8 +22,8 @@ function resolveConflicts() {
     console.log(`Found ${conflictedFiles.length} conflicted files`);
     
     // Resolve conflicts by choosing our version (HEAD) for all files
-    for (const file of conflictedFiles) {
-      try {
+    for (const file of conflictedFiles) {}
+      try {}
         console.log(`Resolving conflicts in: ${file}`);
         
         // Use git checkout to take our version (HEAD) for all conflicts
@@ -33,7 +33,7 @@ function resolveConflicts() {
         execSync(`git add "${file}"`, { stdio: 'inherit' });
         
         console.log(`✓ Resolved: ${file}`);
-      } catch (error) {
+      } catch (error) {}
         console.error(`Error resolving ${file}:`, error.message);
       }
     }
@@ -44,18 +44,18 @@ function resolveConflicts() {
     console.log('✅ Successfully resolved all merge conflicts and merged main branch');
     return true;
     
-  } catch (error) {
-    console.error('Error during merge resolution:', error.message);
-    return false;
+  } catch (error) {}
+    console.error('Error during merge resolution:', error.message);}
+    return false;}
   }
 }
 
 // Alternative approach: Use git merge strategy
 function resolveWithStrategy() {
-  try {
-    console.log('Attempting merge with strategy to prefer our changes...');
-    
-    // Use merge strategy to prefer our changes
+  try {}
+    console.log('Attempting merge with strategy to prefer our changes...');}
+    }
+    // Use merge strategy to prefer our changes}
     execSync('git merge origin/main -X ours --no-commit', { stdio: 'inherit' });
     
     // Commit the merge
@@ -64,28 +64,28 @@ function resolveWithStrategy() {
     console.log('✅ Successfully merged main branch using ours strategy');
     return true;
     
-  } catch (error) {
-    console.error('Error with merge strategy:', error.message);
-    return false;
+  } catch (error) {}
+    console.error('Error with merge strategy:', error.message);}
+    return false;}
   }
 }
 
 async function main() {
   console.log('Resolving merge conflicts and merging main branch...');
   
-  // Try the strategy approach first (cleaner)
-  if (resolveWithStrategy()) {
-    console.log('Merge completed successfully using strategy approach');
-    return;
+  // Try the strategy approach first (cleaner)}
+  if (resolveWithStrategy()) {}
+    console.log('Merge completed successfully using strategy approach');}
+    return;}
   }
   
   // If strategy fails, try manual conflict resolution
   console.log('Strategy approach failed, trying manual conflict resolution...');
-  if (resolveConflicts()) {
-    console.log('Merge completed successfully using manual resolution');
-  } else {
-    console.error('Failed to resolve merge conflicts');
-    process.exit(1);
+  if (resolveConflicts()) {}
+    console.log('Merge completed successfully using manual resolution');}
+  } else {}
+    console.error('Failed to resolve merge conflicts');}
+    process.exit(1);}
   }
 }
 

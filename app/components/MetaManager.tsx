@@ -14,10 +14,10 @@ const MetaManagerPage = () => {
           <p className="text-gray-300 text-lg"></p>
             This page is under construction. Please check back later.
           </p>
-        </div>
-      </div>
-    </div>
-    </>
+        </div>}
+      </div>}
+    </div>})
+    </>})
   )};
 };
 export default MetaManager;

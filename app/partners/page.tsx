@@ -1,58 +1,58 @@
-import React from 'react''
-import { Helmet ,   } from 'lucide-react''
-import { Circle, Right,  } from 'lucide-react;
+import React from 'react';
+import { Helmet ,   } from 'lucide-react';
+import { Circle, Right,  } from 'lucide-react;';
 const PartnersPage: React.FC = () => {'
-  const partners = [{''
-      name: 'Microsoft'''
-      logo: '🏢'''
-      description: 'Strategic partnership for cloud and AI solutions'''
+  const partners = [{''}
+      name: 'Microsoft'''}
+      logo: '🏢'''}
+      description: 'Strategic partnership for cloud and AI solutions'''}
       category: 'Technology'';}
     },'
-    {''
-      name: 'Amazon Web Services'''
-      logo: '☁️'''
-      description: 'infrastructure and AI services collaboration'''
+    {''}
+      name: 'Amazon Web Services'''}
+      logo: '☁️'''}
+      description: 'infrastructure and AI services collaboration'''}
       category: ''';}
     },'
-    {''
-      name: 'Google '''
-      logo: '🔍'''
-      description: 'AI and machine learning platform integration'''
+    {''}
+      name: 'Google '''}
+      logo: '🔍'''}
+      description: 'AI and machine learning platform integration'''}
       category: 'AI/ML'';}
     },'
-    {''
-      name: 'IBM'''
-      logo: '💼'''
-      description: 'Enterprise AI solutions and consulting'''
+    {''}
+      name: 'IBM'''}
+      logo: '💼'''}
+      description: 'Enterprise AI solutions and consulting'''}
       category: 'Enterprise'';}
     },'
-    {''
-      name: 'Salesforce'''
-      logo: '📊'''
-      description: 'CRM and business intelligence integration'''
+    {''}
+      name: 'Salesforce'''}
+      logo: '📊'''}
+      description: 'CRM and business intelligence integration'''}
       category: 'CRM'';}
     },'
-    {''
-      name: 'Oracle'''
-      logo: '🗄️'''
-      description: 'and enterprise application solutions'''
-      category: ''';}
-    }
+    {''}
+      name: 'Oracle'''}
+      logo: '🗄️'''}
+      description: 'and enterprise application solutions'''}
+      category: ''';}]
+    }]
   ]'
 ''
   const benefits = ['Access to cutting-edge technology'''
     'Joint go-to-market opportunities'''
     'Technical support and training'''
     'Co-marketing and co-selling programs'''
-    'Priority access to new features'''
-    'Dedicated partner success manager'';
+    'Priority access to new features''']
+    'Dedicated partner success manager'';]
   ];
 '
   const benefits = ['Access to cutting-edge technology'''
     'Joint go-to-market opportunities'''
     'Technical support and training'''
-    'Co-marketing and co-selling programs'''
-    'Priority access to new features'''
+    'Co-marketing and co-selling programs''']
+    'Priority access to new features''']
     'Dedicated partner success manager''];
 
   return (
@@ -91,12 +91,12 @@ const PartnersPage: React.FC = () => {'
         <section className="py-20 px-4">"
           <div className="max-w-7xl mx-auto"></div>"
             <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>
-              Strategic Partners;
-            </h2>"
+              Strategic Partners;)
+            </h2>")
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")}
-              {partners.map((partner, _index) => (
-"
-                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>"
+              {partners.map((partner, _index) => (}
+"}
+                <div key="{_index}" className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>"
                   <div className="text-center"></div>"
                     <div className="text-4xl mb-4"></div>{partner.logo}</div>"
                     <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>"
@@ -104,20 +104,20 @@ const PartnersPage: React.FC = () => {'
                     <p>{partner.description}</p>
                   </div>
                 </div>;
-              Partner Benefits;
-            </h2>"
+              Partner Benefits;)
+            </h2>")
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")
-              {benefits.map((benefit, _index) => ("
-                <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>
+              {benefits.map((benefit, _index) => ("}
+                <div key="{_index}" className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>
                     <Circle className="w-4 h-4 text-white" />"
                   </div>"
                   <span className="text-gray-300 font-medium">{benefit}</span>"
-                </div>
-            </h2>"
+                </div>)
+            </h2>")
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
               {benefits.map((benefit, _index) => (}"
-                <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>"
+                <div key="{_index}" className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>"
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>"
                     <Circle className="w-4 h-4 text-white" /></Circle>
                   </div>"
@@ -139,8 +139,8 @@ const PartnersPage: React.FC = () => {'
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </div>)
+    </>)
   )};
 '
 const page = React.lazy(() => import('./page'));

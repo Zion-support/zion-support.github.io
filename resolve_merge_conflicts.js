@@ -14,10 +14,10 @@ console.log(`Found ${conflictedFiles.length} files with merge conflicts`);```;
 let resolvedCount = 0;
 let errorCount = 0;
 
-for (const file of conflictedFiles) {
-  try {
+for (const file of conflictedFiles) {}
+  try {}
     console.log(`\n📝 Resolving conflicts in: ${file}`);```;
-    if (!fs.existsSync(file)) {
+    if (!fs.existsSync(file)) {}
       console.log(`⚠️  File does not exist: ${file}`);```;
       continue;
     }
@@ -32,5 +32,5 @@ const content = fs.readFileSync(file, 'utf8');';
     let resolvedContent = content;
     
     // Remove merge conflict markers and keep the main branch version;
-    resolvedContent = resolvedContent.replace(;
-}
+    resolvedContent = resolvedContent.replace(;)
+})

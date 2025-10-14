@@ -1,63 +1,63 @@
-import React, { useState } from 'react''
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react;
-
-export default function ContactPage()    {
+import React, { useState } from 'react';
+import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react;';
+';
+export default function ContactPage()    {';
   const [formData, setFormData] = useState({'
     name: '','
     email: '','
-    company: '','
-    phone: '','
-    subject: '','
-    message: ''
+    company: '','}
+    phone: '','}
+    subject: '','})
+    message: ''})
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
+    setFormData({}
+      ...formData,})
+      [e.target.name]: e.target.value})
     })};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
+    // Simulate form submission}
+    await new Promise(resolve => setTimeout(resolve, 1000));}
+    }
+    setIsSubmitted(true);}
     setIsSubmitting(false)};
 
   const contactInfo = [
     {
 '
-      title: 'Phone','
-      value: '+1 (555) 123-4567','
-      description: 'Mon-Fri 9AM-6PM EST'
-
+      title: 'Phone','}
+      value: '+1 (555) 123-4567','}
+      description: 'Mon-Fri 9AM-6PM EST'}
+}
     },'
-    {''
-      icon: 'Email'''
-      title: 'Email'''
-      value: 'contact@ziontechgroup.com'''
+    {''}
+      icon: 'Email'''}
+      title: 'Email'''}
+      value: 'contact@ziontechgroup.com'''}
       description: 'We respond within 24 hours'}
     },'
-    {''
-      icon: 'Location'''
-      title: 'Address'''
-      value: '123 Tech Street, Suite 100'''
+    {''}
+      icon: 'Location'''}
+      title: 'Address'''}
+      value: '123 Tech Street, Suite 100'''}
       description: 'San Francisco, CA 94105'}
     },'
     {''
-      icon: 'Clock',
-'
-      description: '9:00 AM - 6:00 PM EST'
-'
+      icon: 'Clock',}
+'}
       description: '9:00 AM - 6:00 PM EST'}
-
-    }
+'}
+      description: '9:00 AM - 6:00 PM EST'}
+]
+    }]
   ]
   const subjects = ['
     'AI Services''
@@ -65,8 +65,8 @@ export default function ContactPage()    {
     'Services''
     'Micro SAAS''
     'Digital Transformation''
-    '5G Implementation''
-    'Other'
+    '5G Implementation'']
+    'Other']
   ];
   return (
     <></>
@@ -96,19 +96,19 @@ export default function ContactPage()    {
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>
             Get in Touch
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {contactInfo.map((info, index) => {
-              const Icon = info.icon;
-              return (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center"></div>
+          </h2>)
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>)
+            {contactInfo.map((info, index) => {}
+              const Icon = info.icon;}
+              return (}
+                <div key="{index}" className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center"></div>
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4"></div>
                     <Icon className="w-6 h-6 text-white" /></Icon>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
                   <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
-                  <p className="text-gray-400 text-sm">{info.description}</p>
-                </div>
+                  <p className="text-gray-400 text-sm">{info.description}</p>)
+                </div>)
               )})}
           </div>
         </div>
@@ -129,17 +129,17 @@ export default function ContactPage()    {
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
               <p className="text-gray-300 mb-6"></p>'
                 Thank you for contacting us. We'll get back to you within 24 hours.
-              </p>
-              <button
-                onClick={() => {
+              </p>)
+              <button)
+                onClick="{()" => {
                   setIsSubmitted(false);
                   setFormData({'
                     name: '','
                     email: '','
-                    company: '','
-                    phone: '','
-                    subject: '','
-                    message: ''
+                    company: '','}
+                    phone: '','}
+                    subject: '','})
+                    message: ''})
                   })}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
@@ -169,14 +169,14 @@ export default function ContactPage()    {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
+              {features.map((feature, index) => (}
+                <div key="{index}" className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                  <p className="text-gray-300">{feature.description}</p>)
+                </div>)
               ))}
             </div>
 
@@ -187,16 +187,16 @@ export default function ContactPage()    {
                 <select
                   id="subject"
                   name="subject"
-                  value={formData.subject;
-                  onChange={handleChange;
+                  value="{formData.subject;"
+                  onChange="{handleChange;"
                   required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                ></select>
-                  <option value="">Select a subject</option>
-                  {subjects.map((subject, index) => (
-                    <option key={index} value={subject}></option>
-                      {subject}
-                    </option>
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"}
+                ></select>}
+                  <option value="">Select a subject</option>}
+                  {subjects.map((subject, index) => (}
+                    <option key="{index}" value="{subject}"></option>
+                      {subject})
+                    </option>)
                   ))}
                 </select>
               </div>
@@ -208,10 +208,10 @@ export default function ContactPage()    {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message;
-                  onChange={handleChange;
+                  value="{formData.message;"
+                  onChange="{handleChange;"
                   required
-                  rows={6;
+                  rows="{6;"
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or how we can help you..."
                 /></textarea>
@@ -220,19 +220,19 @@ export default function ContactPage()    {
               <div className="text-center"></div>
                 <button
                   type="submit"
-                  disabled={isSubmitting;
+                  disabled="{isSubmitting;"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 ></button>
                   {isSubmitting ? (
                     <></>
                       <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                      Sending...
-                    </>
+                      Sending...)
+                    </>)
                   ) : (
-                    <></>
-                      Send Message
-                      <Send className="w-5 h-5 ml-2 inline" /></Send>
-                    </>
+                    <></>}
+                      Send Message}
+                      <Send className="w-5 h-5 ml-2 inline" /></Send>})
+                    </>})
                   )}
                 </button>
               </div>

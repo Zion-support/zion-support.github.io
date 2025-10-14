@@ -1,71 +1,71 @@
-import React from 'react''
-import { Link } from 'react-router-dom''
-import { Helmet } from 'react-helmet-async''
-import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react;
-const GuidesPage: React.FC = () => {
-  const guides = [
+import React from 'react'
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react;';
+const GuidesPage: React.FC = () => {';
+  const guides = [';
     {'
       title: 'AI 2026 Implementation Roadmap','
       description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026','
       url: '/','
       category: 'AI Implementation',
-      icon: Brain,'
-      difficulty: 'Intermediate','
-      duration: '45 min read'
-    ,
+      icon: Brain,'}
+      difficulty: 'Intermediate','}
+      duration: '45 min read'}
+    ,}
   },
     {'
     title: 'AI 2027 Implementation Roadmap','
       description: 'Advanced roadmap for AI implementation strategies in 2027','
       url: '/','
       category: 'AI Implementation',
-      icon: Brain,'
-      difficulty: 'Advanced','
-      duration: '60 min read'
-    ,
+      icon: Brain,'}
+      difficulty: 'Advanced','}
+      duration: '60 min read'}
+    ,}
   },
     {'
     title: 'Autonomous Business Processes Implementation Guide 2026','
       description: 'Step-by-step guide to implementing autonomous business processes','
       url: '/','
       category: 'Process Automation',
-      icon: Zap,'
-      difficulty: 'Expert','
-      duration: '90 min read'
-    ,
-  }
-  ,
+      icon: Zap,'}
+      difficulty: 'Expert','}
+      duration: '90 min read'}
+    ,}
+  }]
+  ,]
   ];
 
   const categories = [
-    {'
-    name: 'AI Implementation', icon: Brain, color: 'text-purple-400' ,
+    {'}
+    name: 'AI Implementation', icon: Brain, color: 'text-purple-400' ,}
   },
-    {'
-    name: 'Process Automation', icon: Zap, color: 'text-blue-400' ,
+    {'}
+    name: 'Process Automation', icon: Zap, color: 'text-blue-400' ,}
   },
-    {'
-    name: 'Security', icon: Shield, color: 'text-red-400' ,
+    {'}
+    name: 'Security', icon: Shield, color: 'text-red-400' ,}
   },
-    {'
-    name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' ,
+    {'}
+    name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' ,}
   },
-    {'
-    name: 'Data Management', icon: Database, color: 'text-green-400' ,
+    {'}
+    name: 'Data Management', icon: Database, color: 'text-green-400' ,}
   },
-    {'
-    name: 'Development', icon: Code, color: 'text-orange-400' ,
-  }
-  ,
+    {'}
+    name: 'Development', icon: Code, color: 'text-orange-400' ,}
+  }]
+  ,]
   ];
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {'
       case 'Beginner': return 'text-green-400 bg-green-400/20''
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20''
-      case 'Advanced': return 'text-orange-400 bg-orange-400/20''
-      case 'Expert': return 'text-red-400 bg-red-400/20''
-      default: return 'text-gray-400 bg-gray-400/20';
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20''}
+      case 'Advanced': return 'text-orange-400 bg-orange-400/20''}
+      case 'Expert': return 'text-red-400 bg-red-400/20''}
+      default: return 'text-gray-400 bg-gray-400/20';}
     }
   };
 
@@ -82,10 +82,10 @@ const Page = () => {
           <div className="text-center"></div>
             <h1 className="text-4xl font-bold text-white mb-8"></h1>
             <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
-          </div>
-        </nav>
-
-        <main className="container mx-auto px-4 py-16"></main>
+          </div>}
+        </nav>}
+}
+        <main className="container mx-auto px-4 py-16"></main>}
           {/* Header  */}
           <div className="text-center mb-16"></div>
             <div className="flex items-center justify-center space-x-4 mb-6"></div>
@@ -102,13 +102,13 @@ const Page = () => {
 
           {/* Categories  */}
           <section className="mb-16"></section>
-            <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"></div>
-              {categories.map((category, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-4 text-center hover:bg-slate-700 transition-colors"></div>
-                  <category.icon className={`w-8 h-8 mx-auto mb-2 ${category.color}`} /></category>
-                  <h3 className="text-white font-semibold text-sm">{category.name}</h3>
-                </div>
+            <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>)
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"></div>)
+              {categories.map((category, index) => (}
+                <div key="{index}" className="bg-slate-800 rounded-lg p-4 text-center hover:bg-slate-700 transition-colors"></div>
+                  <category.icon className="{`w-8" h-8 mx-auto mb-2 ${category.color}`} /></category>
+                  <h3 className="text-white font-semibold text-sm">{category.name}</h3>)
+                </div>)
               ))}
             </div>
           </section>
@@ -117,8 +117,8 @@ const Page = () => {
           <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {guides.map((guide, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200"></div>
+              {guides.map((guide, index) => (}
+                <div key="{index}" className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200"></div>
                   <div className="flex items-start space-x-4 mb-4"></div>
                     <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                       <guide.icon className="w-6 h-6 text-cyan-400" /></guide>
@@ -129,9 +129,9 @@ const Page = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-center justify-between mb-4"></div>
-                    <span className="text-cyan-400 text-sm font-medium">{guide.category}</span>
-                    <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}></span>
+                  <div className="flex items-center justify-between mb-4"></div>)
+                    <span className="text-cyan-400 text-sm font-medium">{guide.category}</span>)
+                    <span className="{`px-2" py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}></span>
                       {guide.difficulty}
                     </span>
                   </div>
@@ -139,13 +139,13 @@ const Page = () => {
                   <div className="flex items-center justify-between"></div>
                     <span className="text-gray-400 text-sm">{guide.duration}</span>
 <Link
-                      to={guide.url;
+                      to="{guide.url;"
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                     ></Link>
-                      Read Guide →
-                    </Link>
-                  </div>
-                </div>
+                      Read Guide →}
+                    </Link>}
+                  </div>}
+                </div>}
               ))}
             </div>
           </section>
@@ -214,6 +214,7 @@ const Page = () => {
   );
 };
 
-export default Page;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

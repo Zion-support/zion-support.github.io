@@ -1,7 +1,7 @@
-import React from 'react;
-import react-helmet-async from 'react-helmet-async;
-const StructuredDataPage = () => {
-  return (
+import React from 'react;';
+import react-helmet-async from 'react-helmet-async;';
+const StructuredDataPage = () => {';
+  return (';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>StructuredData - Zion Tech Group</title>
@@ -14,9 +14,9 @@ const StructuredDataPage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>
-    </div>
-  );
-
+      </div>)}
+    </div>)}
+  );}
+}
 };
 export default structureddata;

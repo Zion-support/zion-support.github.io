@@ -14,18 +14,18 @@ console.log(`Checking ${filesToCheck.length} files for all syntax errors`);
 let fixedCount = 0;
 let errorCount = 0;
 
-filesToCheck.forEach(filePath => {
-  try {
+filesToCheck.forEach(filePath => {)
+  try {)
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
     // Fix common syntax errors;
     ;
     // 1. Fix malformed imports;
-    content = content.replace(/import React from 'react';/g, "import React from 'react';");
-    content = content.replace(/import React from 'react';-dom/g, "import React from 'react';\nimport ReactDOM from 'react-dom';");
-    
-    // 2. Fix duplicate imports;
+    content = content.replace(/import React from 'react';/g, "import React from 'react';");}
+    content = content.replace(/import React from 'react';-dom/g, "import React from 'react';\nimport ReactDOM from 'react-dom';");}
+    }
+    // 2. Fix duplicate imports;}
     content = content.replace(/} from '@heroicons\/react\/24\/outline';\s*ArrowRightIcon\s*} from '@heroicons\/react\/24\/outline';/g, "} from '@heroicons/react/24/outline';");
     content = content.replace(/} from '@heroicons\/react\/24\/outline';\s*import {[^}]+} from 'lucide-react';\s*HeartIcon\s*} from '@heroicons\/react\/24\/outline';/g, "} from '@heroicons/react/24/outline';\nimport { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';");
     
@@ -47,19 +47,19 @@ filesToCheck.forEach(filePath => {
     content = content.replace(/];\s*\{[^}]+\}\s*];/g, '];');
     
     // 8. Fix malformed function declarations;
-    content = content.replace(/const (\w+): React\.FC<EnhancedAccessibilityProps> = \(\{ children \}\) => \{/g, 'const $1: React.FC = () => {');
+    content = content.replace(/const (\w+): React\.FC<EnhancedAccessibilityProps> = \(\{ children \}\) => \{/g, 'const $1: React.FC = () => {');}
     content = content.replace(/const (\w+): React\.FC<EnhancedAccessibilityProps> = \(\{ children \}\) => \{/g, 'const $1: React.FC = () => {');
     
     // 9. Fix missing closing parentheses;
     content = content.replace(/\);(\s*export default)/g, ');\n$1');
     
-    // 10. Fix malformed JSX fragments;
-    content = content.replace(/<>\s*(\d+)/g, '<>');
-    
-    // 11. Fix missing commas in object arrays;
-    content = content.replace(/\}\s*\{/g, '},\n    {');
-    
-    // 12. Fix malformed string literals;
+    // 10. Fix malformed JSX fragments;}
+    content = content.replace(/<>\s*(\d+)/g, '<>');}
+    }
+    // 11. Fix missing commas in object arrays;}
+    content = content.replace(/\}\s*\{/g, '},\n    {');}
+    }
+    // 12. Fix malformed string literals;}
     content = content.replace(/import { createRoot } from 'react-dom\/client;/g, "import { createRoot } from 'react-dom/client';");
     content = content.replace(/import App from '\.\/App;/g, "import App from './App';");
     content = content.replace(/import '\.\/index\.css;/g, "import './index.css';");
@@ -69,18 +69,18 @@ filesToCheck.forEach(filePath => {
     content = content.replace(/\/\/ Fix for scheduler unstable_now error;/g, '// Fix for scheduler unstable_now error');
     
     // 14. Fix malformed if statements;
-    content = content.replace(/if \(typeof window !== 'undefined'\) \{';/g, "if (typeof window !== 'undefined') {");
-    
-    // 15. Fix malformed object properties;
+    content = content.replace(/if \(typeof window !="=" 'undefined'\) \{';/g, "if (typeof window !="=" 'undefined') {");}
+    }
+    // 15. Fix malformed object properties;}
     content = content.replace(/window\.performance = window\.performance \|\| \{\}/g, 'window.performance = window.performance || {};;');
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
+    if (content !="=" originalContent) {}
+      fs.writeFileSync(filePath, content);}
       console.log(`Fixed: ${filePath}`);
       fixedCount++;
     }
     
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     errorCount++;
   }

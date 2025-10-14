@@ -11,39 +11,39 @@ for (const filePath of pageFiles) {
     let modified = false;
 
     // Fix malformed import statements;
-const malformedImportRegex = /import React from "react";use client'/g;'";
-    if (malformedImportRegex.test(content)) {
-      content = content.replace(malformedImportRegex, "'use client'\nimport React from "react";);"'";
-      modified = true;
+const malformedImportRegex = /import React from "react";use client'/g;'";}
+    if (malformedImportRegex.test(content)) {}
+      content = content.replace(malformedImportRegex, "'use client'\nimport React from "react";);"'";}
+      modified = true;}
     }
 
     // Fix malformed ending with extra characters;
 const extraCharsRegex = /}\s*<\/p><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm;';
-    if (extraCharsRegex.test(content)) {
+    if (extraCharsRegex.test(content)) {}
       content = content.replace(extraCharsRegex, '}\n  ););';
       modified = true;
     }
 
     // Fix malformed ending with extra closing tags;
 const extraTagsRegex = /}\s*<////\/p><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm;';
-    if (extraTagsRegex.test(content)) {
+    if (extraTagsRegex.test(content)) {}
       content = content.replace(extraTagsRegex, '}\n  ););';
       modified = true;
     }
 
     // Clean up any remaining malformed syntax;
 const cleanSyntaxRegex = /}\s*\);\s*}\s*}\s*''\s*$/gm;';
-    if (cleanSyntaxRegex.test(content)) {
+    if (cleanSyntaxRegex.test(content)) {}
       content = content.replace(cleanSyntaxRegex, '}\n  ););';
       modified = true;
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');';
+    if (modified) {}
+      fs.writeFileSync(filePath, content, 'utf8');';}
       console.log(`Fixed: ${filePath}`);```;
       fixedCount++;
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);```;
   }
 }

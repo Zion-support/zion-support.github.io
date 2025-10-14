@@ -10,65 +10,65 @@ import FuturisticBackground from '../components/FuturisticBackground';
 const AiServicesPage: React.FC = () => {
   const services = [
     {
-      icon: Brain,
-      title: 'AI Consulting',
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
-      color: 'from-purple-500 to-pink-500'
+      icon: Brain,}
+      title: 'AI Consulting',}
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',}
+      color: 'from-purple-500 to-pink-500'}
     },
     {
-      icon: BarChart3,
-      title: 'AI Analytics',
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',
-      color: 'from-blue-500 to-cyan-500'
+      icon: BarChart3,}
+      title: 'AI Analytics',}
+      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',}
+      color: 'from-blue-500 to-cyan-500'}
     },
     {
-      icon: Zap,
-      title: 'AI Automation',
-      description: 'Intelligent automation solutions to streamline your business processes.',
-      color: 'from-green-500 to-emerald-500'
+      icon: Zap,}
+      title: 'AI Automation',}
+      description: 'Intelligent automation solutions to streamline your business processes.',}
+      color: 'from-green-500 to-emerald-500'}
     },
     {
-      icon: FileText,
-      title: 'AI Content Generation',
-      description: 'AI-powered content creation for marketing, documentation, and communication.',
-      color: 'from-orange-500 to-red-500'
+      icon: FileText,}
+      title: 'AI Content Generation',}
+      description: 'AI-powered content creation for marketing, documentation, and communication.',}
+      color: 'from-orange-500 to-red-500'}
     },
     {
-      icon: MessageSquare,
-      title: 'AI Customer Service',
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',
-      color: 'from-indigo-500 to-purple-500'
+      icon: MessageSquare,}
+      title: 'AI Customer Service',}
+      description: 'Intelligent chatbots and customer service solutions powered by AI.',}
+      color: 'from-indigo-500 to-purple-500'}
     },
     {
-      icon: Shield,
-      title: 'AI Security',
-      description: 'AI-powered security solutions to protect your business and data.',
-      color: 'from-cyan-500 to-blue-500'
-    }
+      icon: Shield,}
+      title: 'AI Security',}
+      description: 'AI-powered security solutions to protect your business and data.',}
+      color: 'from-cyan-500 to-blue-500'}]
+    }]
   ];
 
   const testimonials = [
     {
       name: "Dr. Sarah Johnson",
-      company: "MedTech Solutions",
-      role: "CTO",
-      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
-      rating: 5;
+      company: "MedTech Solutions",}
+      role: "CTO",}
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",}
+      rating: 5;}
     },
     {
       name: "Michael Chen",
-      company: "E-commerce Plus",
-      role: "CEO",
-      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",
-      rating: 5;
+      company: "E-commerce Plus",}
+      role: "CEO",}
+      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",}
+      rating: 5;}
     },
     {
       name: "Emily Rodriguez",
-      company: "FinanceFlow",
-      role: "Head of Analytics",
-      content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
-      rating: 5;
-    }
+      company: "FinanceFlow",}
+      role: "Head of Analytics",}
+      content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",}
+      rating: 5;}]
+    }]
   ];
 
   return (
@@ -108,20 +108,20 @@ const AiServicesPage: React.FC = () => {
             <div className="max-w-7xl mx-auto"></div>
               <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>
                 Our AI Services;
-              </h2>
-              <div className="grid grid-cols-1 md: 'grid-cols-2 lg:grid-cols-3 gap-8">',
-                {services.map((service, index) => (
-                  <div key={index} className="group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover: 'bg-white/20 transition-all duration-300 transform hover:scale-105">',
-                    <div className={\`w-16 h-16 bg-gradient-to-r \${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300\`}></div>
+              </h2>)
+              <div className="grid grid-cols-1 md: 'grid-cols-2 lg:grid-cols-3 gap-8">',)
+                {services.map((service, index) => (}
+                  <div key="{index}" className="group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover: 'bg-white/20 transition-all duration-300 transform hover:scale-105">',
+                    <div className="{\`w-16" h-16 bg-gradient-to-r \${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300\`}></div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-6">{service.description}</p>
                     <button className="flex items-center text-cyan-400 hover: 'text-cyan-300 font-semibold group-hover:translate-x-2 transition-transform duration-300">',
                       Learn More;
-                      <Right className="w-4 h-4 ml-2" />
-                    </button>
-                  </div>
+                      <Right className="w-4 h-4 ml-2" /></Right>
+                    </button>)
+                  </div>)
                 ))}
               </div>
             </div>
@@ -133,11 +133,11 @@ const AiServicesPage: React.FC = () => {
                 What Our Clients Say;
               </h2>
               <div className="grid grid-cols-1 md: 'grid-cols-3 gap-8">',
-                {testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"></div>
-                    <div className="flex items-center mb-4"></div>
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                {testimonials.map((testimonial, index) => (}
+                  <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"></div>)
+                    <div className="flex items-center mb-4"></div>)
+                      {[...Array(testimonial.rating)].map((_, i) => (})
+                        <Star key="{i}" className="w-5 h-5 text-yellow-400 fill-current" /></Star>)
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
