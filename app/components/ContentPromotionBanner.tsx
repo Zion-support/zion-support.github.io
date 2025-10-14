@@ -35,6 +35,6 @@ const ContentPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ContentPromotionBanner;

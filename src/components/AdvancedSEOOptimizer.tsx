@@ -1,50 +1,80 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { useEffect, useCallback, useRef } from 'react;
+import { Helmet } from 'react-helmet-async';
+&apos;use client&apos;
+interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  structuredData?: unknown;
+}
 
-const AdvancedSEOOptimizerPage = () => {
+interface AdvancedSEOOptimizerProps {
+  seoData: SEOData;
+  children?: .Node;
+}
+
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+  seoData,
+  children;
+}) => {
+  const {
+    title,
+    description,
+    keywords,
+    canonicalUrl,
+    ogImage,
+    noIndex = false,
+    structuredData;
+  } = seoData;
+
+  const baseStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading AI and IT solutions provider",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service";
+    }
+  }
+  const finalStructuredData = structuredData || baseStructuredData
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <.Fragment>
       <Helmet>
-        <title>AdvancedSEOOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedSEOOptimizer services by Zion Tech Group." />
-        <meta name="keywords" content="AdvancedSEOOptimizer, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AdvancedSEOOptimizer
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional AdvancedSEOOptimizer services designed to help your business grow and succeed.
-          </p>
-        </div>
+        {/* Basic Meta Tags */}
+        <title>{title}
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords.join(', ')} />'
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />'
+        {/* Canonical URL */}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
-        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Our team of experts provides cutting-edge solutions tailored to your specific needs.
-            </p>
-          </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your systems run smoothly at all times.
-            </p>
-          </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
-            <p className="text-gray-300">
-              Track record of delivering successful projects and exceeding client expectations.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+        {/* Open Graph Tags */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl || "https://ziontechgroup.com"} />
+        {ogImage && <meta property="og:image" content={ogImage} />}
+        
+        {/* Twitter d Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        {ogImage && <meta name="twitter:image" content={ogImage} />}
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(finalStructuredData)}
+      {children}
   );
-};
-
-export default AdvancedSEOOptimizerPage;
+}
+;

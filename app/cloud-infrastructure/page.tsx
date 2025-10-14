@@ -144,6 +144,7 @@ const CloudInfrastructurePage = () => {
       </section>
     </div>
   );
-};
+"
+}
 
 export default CloudInfrastructurePage;

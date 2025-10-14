@@ -1,8 +1,7 @@
+import { Clock, Phone, MapPin } from 'lucide-react';
 import React, { useState } from 'react';
-import { EnvelopeIcon, 
-  PhoneIcon, 
-  MapPinIcon,
-  ClockIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -35,75 +34,77 @@ const Contact: React.FC = () => {
       icon: PhoneIcon,
       title: 'Phone',
       details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 9am to 6pm'
+      description: 'Mon-Fri from 9 am to 6 pm'
     },
     {
       icon: MapPinIcon,
-      title: 'Office',
-      details: 'San Francisco, CA',
+      title: 'Address',
+      details: '123 Tech Street, Innovation City, IC 12345',
       description: 'Visit our headquarters'
     },
-    {icon: ClockIcon,
-      title: 'Response Time',
-      details: '< 24 hours',
-      description: 'We respond quickly'}
+    {
+      icon: ClockIcon,
+      title: 'Business Hours',
+      details: 'Mon-Fri: 9AM-6PM',
+      description: 'We are here to help'
+    }
   ];
 
   return (
-    <section className="py-20 bg-white">
+<>    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Get In Touch
+            Get In Touch;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss how our solutions 
+            Ready to transform your business? Let&apos;s discuss how our solutions 
             can help you achieve your goals.
           </p>
-        </div>
+        </>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div>
+          <div></div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+                <div></div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
                   </label>
-                  <input
+                  <input;
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
+                    required;
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your full name"
-                  />
+                  /></input>
                 </div>
-                <div>
+                <div></div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
-                  <input
+                  <input;
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
+                    required;
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your@email.com"
-                  />
+                  /></input>
                 </div>
               </div>
               
-              <div>
+              <div></div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                  Company
+                  Company;
                 </label>
-                <input
+                <input;
                   type="text"
                   id="company"
                   name="company"
@@ -111,14 +112,14 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
-                />
+                /></input>
               </div>
               
-              <div>
+              <div></div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
                 </label>
-                <textarea
+                <textarea;
                   id="message"
                   name="message"
                   value={formData.message}
@@ -127,27 +128,26 @@ const Contact: React.FC = () => {
                   rows={6}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us about your project or requirements..."
-                />
+                /></textarea>
               </div>
               
-              <button
+              <button;
                 type="submit"
-                className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Send Message
+                className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors>"
+                Send Message;
               </button>
             </form>
           </div>
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div>
+            <div></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Contact Information
+                Contact Information;
               </h3>
               <p className="text-gray-600 mb-8">
-                We're here to help! Reach out to us through any of the channels below, 
-                and we'll get back to you as soon as possible.
+                We&apos;re here to help! Reach out to us through any of the channels below, 
+                and we&apos;ll get back to you as soon as possible.
               </p>
             </div>
 
@@ -159,7 +159,7 @@ const Contact: React.FC = () => {
                       <info.icon className="h-6 w-6 text-blue-600" />
                     </div>
                   </div>
-                  <div>
+                  <div></div>
                     <h4 className="text-lg font-semibold text-gray-900">
                       {info.title}
                     </h4>
@@ -182,26 +182,26 @@ const Contact: React.FC = () => {
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Free initial consultation
+                  Free initial consultation;
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Customized solutions
+                  Customized solutions;
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  24/7 support available
+                  24/7 support available;
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Proven track record
+                  Proven track record;
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

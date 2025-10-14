@@ -1,14 +1,12 @@
 import React from "react";
 
-const ResponsiveContainer = () => {
+const ResponsiveContainer: React.FC = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">ResponsiveContainer</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for ResponsiveContainer.
-      </p>
+<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
     </div>
   );
 };
 
 export default ResponsiveContainer;
+

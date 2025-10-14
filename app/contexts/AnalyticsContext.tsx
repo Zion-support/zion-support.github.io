@@ -1,15 +1,37 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react'
+'use client'
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void
+  trackPageView: (pageName: string) => void
+  setUser: (userId: string, properties?: Record<string, any>) => void
+  isEnabled: boolean}
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
+const  ({ children }) => {
+  const [isEnabled, setIsEnabled] = useState(false)
+  const [userId, setUserId] = useState<string | null>(null)
+  useEffect(() => {
+    // if analytics is enabled
+    setIsEnabled(true)}, [])
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+if (!isEnabled) return;
+    // Track event logic here;
+    console.log('Analytics Event:', eventName, properties);
+  }
+  const trackPageView = (pageName: string) => {
+    if (!isEnabled) return;
+    // Track page view logic here;
+    console.log('Page View:', pageName)
+  }
+  const setUser = (newUserId: string, properties?: Record<string, any>) => {
+    setUserId(newUserId);
+    console.log('User Set:', newUserId, properties)
+  }
 
-interface AnalyticsContextContextType {
-  // Add your context properties here
-}
-
-const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
-
-export const useAnalyticsContext = () => {
-  const context = useContext(AnalyticsContextContext);
-  if (!context) {
-    throw new Error(`useAnalyticsContext must be used within a AnalyticsContextProvider`);
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+    setUser,
+    isEnabled,
   }
   return context;
 };
@@ -20,12 +42,19 @@ interface AnalyticsContextProviderProps {
 
 export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
   const value = {
-    // Add your context values here
+    trackEvent: (event: string, properties?: Record<string, unknown>) => {
+      console.log('Analytics Event:', event, properties);
+    },
+    trackPageView: (page: string) => {
+      console.log('Page View:', page);
+    }
   };
 
   return (
-    <AnalyticsContextContext.Provider value={value}>
+<AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContextContext.Provider>
+    </AnalyticsContext.Provider>
   );
-};
+}
+
+export { AnalyticsContext }

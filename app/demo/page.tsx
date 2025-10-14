@@ -1,21 +1,184 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-const PagePage = () => {
+import React from 'react';-helmet-async;
+import { Play, Right, Circle, Star } from 'lucide-react;
+const DemoPage: React.FC = () => {
+  const features = [{
+      icon: 'Analytics',';
+      title: 'AI-Powered Analytics',';
+      description: 'See how our AI analyzes your data in real-time',';
+      demo: 'Live Demo'';
+    },
+    {
+      icon: 'Security',';
+      title: 'Advanced Security',';
+      description: 'Experience our enterprise-grade security features',';
+      demo: 'Demo'';
+    },
+    {
+      icon: 'Intelligence',';
+      title: 'Business Intelligence',';
+      description: 'Explore our comprehensive BI dashboard',';
+      demo: 'BI Demo'';
+    },
+    {
+      icon: 'Collaboration',';
+      title: 'Team Collaboration',';
+      description: 'See how teams work together seamlessly',';
+      demo: 'Collaboration Demo'';    }
+  ]
+
+  const testimonials = [{
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
+      rating: 5},
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      rating: 5,
+      comment: 'The AI analytics demo was incredible. We could see exactly how it would transform our data insights.'
+    },
+    {
+      name: 'Michael Chen',
+      company: 'DataFlow Systems',
+      rating: 5,
+      comment: 'The automation demo showed us how we could save hours of manual work every day.'
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'CustomerFirst',
+      rating: 5,
+      comment: 'The chatbot demo was so realistic. It felt like talking to a real customer service agent.'
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Page - Zion Tech Group" />
+        <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See exactly how our technology can transform your business." />
+        <meta name="keywords" content="AI demo, technology demo, interactive demo, AI analytics, automation demo, chatbot demo" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-        </div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              See It In
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Action
+              </span>2207
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Experience our AI and IT solutions through interactive demos.
+              See how our technology can transform your business.
+            </p>2381
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                <Play className="w-5 h-5 mr-2 inline" />
+                Start Demo
+              </button>2941
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Schedule Live Demo
+              </button>3048
+            </div>
+          </div>
+        </section>
+
+        {/* Demo Selector */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Interactive Demos
+            </h2>3437
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, _index) => {
+                const Icon = feature.icon
+                return (
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h3>
+                    <p className="text-gray-300 mb-4 text-center">{feature.description}</p>
+                    <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                      {feature.demo}
+                    </button>
+                  </div>
+  )
+              })}
+            </div>4707
+          </div>
+        </section>
+        {/* Demo Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Watch Our Solutions in Action
+            </h2>4936
+
+            <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+              <div className="aspect-video bg-slate-700/50 rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
+<Play className="w-10 h-10 text-white ml-1" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              What Say About Our Demos
+            </h2>6182
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, _index) => (
+                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <div key={i} className="w-5 h-5 text-yellow-400">★</div>
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">&ldquo{testimonial.content}&rdquo</p>6825
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to See More?
+            </h2>7356
+            <p className="text-xl text-gray-300 mb-8">
+              Schedule a personalized demo with our experts to see how our solutions can work for your specific needs.
+            </p>7472
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                Schedule Live Demo
+                <Right className="w-5 h-5 ml-2 inline" />
+              </button>
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Contact Sales
+              </button>8106
+            </div>
+          </div>
+        </section>
+
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
-export default PagePage;
+
+export default DemoPage;
+

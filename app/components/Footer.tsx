@@ -1,6 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  MapPinIcon,
+  ArrowRightIcon,
+  HeartIcon
+} from '@heroicons/react/24/outline';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -76,12 +83,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
-    { icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
-    { icon: <Youtube className="w-5 h-5" />, href: 'https://youtube.com/ziontechgroup', label: 'YouTube' }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
   ];
 
   return (

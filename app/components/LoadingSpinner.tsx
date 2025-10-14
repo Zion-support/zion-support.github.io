@@ -1,12 +1,52 @@
-import React from "react";
+'use client';import React from 'react';
 
-const LoadingSpinner = () => {
+import { Loader2 } from 'lucide-react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
+  fullScreen?: boolean;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+text = 'Loading...',
+  fullScreen = false,
+  className = ''
+  color = 'primary',
+
+  text,
+  fullScreen = false,
+  className = '''''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+md: 'w-8 h-8',
+          {text}
+        </p>
+      )}
+
+    </div>
+  )
+
+  if (fullScreen) {
+    return (
+<div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
+          {spinner}
+        </div>      </div>
+
+    );
+  }
+
+  return spinner
+lg: 'w-12 h-12'
+  }
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">LoadingSpinner</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for LoadingSpinner.
-      </p>
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
+      {text && (
     </div>
   );
 };
