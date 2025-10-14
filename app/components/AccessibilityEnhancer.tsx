@@ -5,7 +5,11 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  return <>{children}</>;
+  return (
+    <div className="accessibility-enhanced">
+      {children}
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;
