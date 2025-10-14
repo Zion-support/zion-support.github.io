@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, CheckCircle } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [

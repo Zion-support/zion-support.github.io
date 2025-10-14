@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
-import { Search, Eye } from 'lucide-react';
+
 
 interface SEOSettings {
   metaTags: boolean;

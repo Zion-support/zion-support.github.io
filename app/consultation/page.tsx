@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Users, Clock, Shield, Zap, Brain, Cloud } from 'lucide-react';
+import { ArrowRight, CheckCircle, Cloud } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
 
 export default function Softwaredevelopment() {
   return (
@@ -32,7 +32,7 @@ export default function Softwaredevelopment() {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart3, Users, ArrowRight } from 'lucide-react';
+import { Code, BarChart3, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const SoftwareDevelopmentPage = () => {

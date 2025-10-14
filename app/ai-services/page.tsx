@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Shield, Cloud, Users, Award, Clock, Star } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
   const services = [

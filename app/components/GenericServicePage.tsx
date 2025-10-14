@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, Phone, Mail, CheckCircle } from 'lucide-react';
 
 interface GenericServicePageProps {
   title: string;

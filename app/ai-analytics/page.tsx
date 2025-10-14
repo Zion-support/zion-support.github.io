@@ -1,17 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  BarChart3, 
-  Brain, 
-  CheckCircle, 
-  Star,
-  Database,
-  Settings,
-  Monitor,
-  Sparkles
-} from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Monitor } from 'lucide-react';
 
 const AIAnalyticsPage: React.FC = () => {
   const features = [

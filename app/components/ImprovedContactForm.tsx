@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
+import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from 'lucide-react';
 
 interface FormData {
   name: string;

@@ -1,20 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Play, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Clock, 
-  Shield,
-  Brain,
-  BarChart3,
-  Zap,
-  Mail,
-  Phone
-} from "lucide-react";
+import { ArrowRight, CheckCircle, BarChart3, Mail, Phone } from 'lucide-react';
 
 export default function DemoPage() {
   const [selectedDemo, setSelectedDemo] = useState("ai-analytics");

@@ -1,24 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  TrendingUp, 
-  MessageSquare, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  Smile,
-  Frown,
-  AlertCircle
-} from 'lucide-react';
+import { MessageSquare, BarChart3, CheckCircle, ArrowRight, Smile, AlertCircle } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
   const features = [

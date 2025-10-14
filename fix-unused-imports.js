@@ -1,107 +1,99 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from "fs";
-import { glob } from "glob";
-
-// Common unused imports that need to be removed
-const unusedImports = [
-  "Cloud",
-  "Code",
-  "Monitor",
-  "BarChart",
-  "Star",
-  "Settings",
-  "Users",
-  "DollarSign",
-  "TrendingUp",
-  "Shield",
-  "Target",
-  "Mail",
-  "Phone",
-  "Clock",
-  "PieChart",
-  "Activity",
-  "Award",
-  "BookOpen",
-  "Briefcase",
-  "Building",
-  "Calendar",
-  "Camera",
-  "Command",
-  "CreditCard",
-  "FileText",
-  "Gift",
-  "Heart",
-  "Home",
-  "Image",
-  "Laptop",
-  "Lock",
-  "MessageCircle",
-  "Palette",
-  "Play",
-  "Search",
-  "ShoppingCart",
-  "Smartphone",
-  "Tablet",
-  "Terminal",
-  "Truck",
-  "Wifi",
-  "Cpu",
-  "Database",
-  "Server",
-  "Layers",
-];
-
+// Function to remove unused imports from a file
 function fixUnusedImports(filePath) {
-  let content = fs.readFileSync(filePath, "utf8");
-  let modified = false;
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Common unused imports to remove
+    const unusedImports = [
+      'Link', 'Shield', 'Globe', 'Star', 'Users', 'Award', 'Clock', 'Database',
+      'Brain', 'Zap', 'Target', 'TrendingUp', 'Cpu', 'Settings', 'Sparkles',
+      'Smartphone', 'Lock', 'Calendar', 'Search', 'Filter', 'Download', 'Upload',
+      'Share', 'Bell', 'Heart', 'ThumbsUp', 'AwardIcon', 'Wifi', 'Battery',
+      'Camera', 'Headphones', 'Mic', 'Video', 'Music', 'BookOpen', 'Lightbulb',
+      'Puzzle', 'Gamepad2', 'ShoppingCart', 'CreditCard', 'Wallet', 'Banknote',
+      'Coins', 'Gift', 'Tag', 'Percent', 'Calculator', 'PieChart', 'LineChart',
+      'Activity', 'Layers', 'Grid', 'List', 'Map', 'Compass', 'Navigation',
+      'Globe2', 'WifiOff', 'Signal', 'Bluetooth', 'Usb', 'HardDrive', 'MemoryStick',
+      'Printer', 'Scanner', 'Fax', 'Voicemail', 'Headset', 'Speaker', 'Volume2',
+      'VolumeX', 'Play', 'Pause', 'Stop', 'SkipBack', 'SkipForward', 'RotateCcw',
+      'RotateCw', 'Shuffle', 'Repeat', 'Repeat1', 'Shuffle2', 'Maximize', 'Minimize',
+      'Square', 'Circle', 'Triangle', 'Hexagon', 'Octagon', 'Diamond', 'StarIcon',
+      'Moon', 'Sun', 'Sunrise', 'Sunset', 'CloudRain', 'CloudSnow', 'CloudLightning',
+      'Wind', 'Droplets', 'Thermometer', 'Gauge', 'Timer', 'Stopwatch', 'Hourglass',
+      'DollarSign', 'Eye', 'Rocket', 'Frown'
+    ];
 
-  // Fix 'use client' directive placement
-  if (
-    content.includes("'use client';") &&
-    !content.startsWith("'use client';")
-  ) {
-    content = content.replace(/'use client';\s*\n/, "");
-    content = "'use client';\n" + content;
-    modified = true;
-  }
-
-  // Remove unused imports
-  const lucideImportMatch = content.match(
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/,
-  );
-
-  if (lucideImportMatch) {
-    const existingIcons = lucideImportMatch[1].split(",").map((i) => i.trim());
-    const usedIcons = existingIcons.filter((icon) => {
-      // Check if the icon is actually used in the file
-      const iconRegex = new RegExp(`\\b${icon}\\b`, "g");
-      const matches = content.match(iconRegex);
-      return matches && matches.length > 1; // More than just the import
+    // Remove unused imports from lucide-react imports
+    const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
+    
+    content = content.replace(lucideImportRegex, (match, imports) => {
+      const importList = imports.split(',').map(imp => imp.trim());
+      const usedImports = importList.filter(imp => {
+        const cleanImport = imp.replace(/\s+as\s+\w+/, '').trim();
+        return !unusedImports.includes(cleanImport);
+      });
+      
+      if (usedImports.length === 0) {
+        return ''; // Remove the entire import line if no imports are used
+      }
+      
+      return `import { ${usedImports.join(', ')} } from 'lucide-react';`;
     });
 
-    if (usedIcons.length !== existingIcons.length) {
-      if (usedIcons.length > 0) {
-        content = content.replace(
-          lucideImportMatch[0],
-          `import { ${usedIcons.join(", ")} } from 'lucide-react';`,
-        );
-      } else {
-        content = content.replace(lucideImportMatch[0] + "\n", "");
-      }
-      modified = true;
+    // Remove Link import if not used
+    if (content.includes("import { Link } from 'react-router-dom';") && !content.includes('<Link')) {
+      content = content.replace(/import\s*{\s*Link\s*}\s*from\s*['"]react-router-dom['"];?\s*\n?/g, '');
     }
-  }
 
-  if (modified) {
+    // Remove unused variables
+    const lines = content.split('\n');
+    const newLines = lines.filter(line => {
+      // Remove lines that declare unused variables
+      if (line.includes('const benefits =') && !content.includes('benefits')) {
+        return false;
+      }
+      return true;
+    });
+    
+    content = newLines.join('\n');
+
     fs.writeFileSync(filePath, content);
-    }
+    console.log(`Fixed unused imports in: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
 }
 
-// Main execution
-async function main() {
-  const pageFiles = await glob("app/**/page.tsx");
-  pageFiles.forEach(fixUnusedImports);
+// Get all TypeScript/TSX files in the app directory
+function getAllTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...getAllTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
+    }
   }
+  
+  return files;
+}
 
-main().catch(console.error);
+// Fix all files
+const appDir = path.join(__dirname, 'app');
+const files = getAllTsxFiles(appDir);
+
+console.log(`Found ${files.length} TypeScript files to process...`);
+
+files.forEach(file => {
+  fixUnusedImports(file);
+});
+
+console.log('Done fixing unused imports!');

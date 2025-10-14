@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Star, Zap } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
 
 interface ContentPromotionBannerProps {
   title?: string;

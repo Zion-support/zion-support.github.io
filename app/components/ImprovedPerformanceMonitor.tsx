@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
+
 
 interface PerformanceMetrics {
   lcp?: number;

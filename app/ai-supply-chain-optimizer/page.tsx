@@ -1,17 +1,13 @@
-<<<<<<< HEAD
-import { ArrowRight, Globe, BarChart3, Zap, Target, CheckCircle, Star, Sparkles, Mail, Smartphone, TrendingUp } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
 export default function AISupplyChainOptimizerPage() {
+  const pricingPlans = [
+    {
       name: 'Starter',
       price: '$199',
       period: '/month',
@@ -74,6 +70,12 @@ export default function AISupplyChainOptimizerPage() {
       icon: <Shield className="w-6 h-6 text-green-400" />,
       title: 'Risk Mitigation',
       description: 'Proactive risk assessment and automated compliance monitoring'
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
         <title>AI Supply Chain Optimizer - Zion Tech Group</title>
         <meta name="description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility with our advanced supply chain intelligence platform." />
         <meta name="keywords" content="AI supply chain, supply chain optimization, demand forecasting, logistics, inventory management" />
@@ -209,6 +211,13 @@ export default function AISupplyChainOptimizerPage() {
                     <FuturisticButton
                       variant={plan.popular ? 'primary' : 'secondary'}
                       className="w-full"
+                    >
+                      Get Started
+                    </FuturisticButton>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </div>
           </section>
 
           {/* CTA Section */}
@@ -232,4 +241,6 @@ export default function AISupplyChainOptimizerPage() {
           </section>
         </div>
       </FuturisticBackground>
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
+    </>
+  );
+}

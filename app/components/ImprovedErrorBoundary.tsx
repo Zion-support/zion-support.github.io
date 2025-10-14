@@ -29,104 +29,99 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
       console.error('Error caught by boundary:', error, errorInfo);
     }
     
-    // Call custom error handler if provided
+    // Call the onError callback if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-    
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-=======
-      }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo)
-    }
-
-    // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send to an error reporting service
-      }
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
   }
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
+
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
+      // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <div className="max-w-md mx-auto px-6 text-center">
+        <div className="min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
             <div className="mb-8">
-              <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-red-500/20 rounded-full mb-6">
                 <AlertTriangle className="w-10 h-10 text-red-400" />
               </div>
-              <h1 className="text-3xl font-bold text-white mb-4">
-                Oops! Something went wrong
+              <h1 className="text-4xl font-bold text-white mb-4">
+                Something went wrong
               </h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              <p className="text-xl text-gray-300 mb-8">
+                We encountered an unexpected error. Our team has been notified and is working to fix it.
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 mb-8">
               <button
                 onClick={this.handleRetry}
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors flex items-center justify-center"
               >
-                <RefreshCw className="w-5 h-5" />
+                <RefreshCw className="w-5 h-5 mr-2" />
                 Try Again
               </button>
               
-              <Link
-                to="/"
-                className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              <button
+                onClick={this.handleGoHome}
+                className="w-full bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors flex items-center justify-center"
               >
-                <Home className="w-5 h-5" />
+                <Home className="w-5 h-5 mr-2" />
                 Go Home
-              </Link>
+              </button>
             </div>
 
-            {/* Development Error Details */}
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-8 text-left">
-                <summary className="text-red-400 cursor-pointer hover:text-red-300">
-                  Error Details (Development Only)
-                </summary>
-                <div className="mt-4 p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
-                  <pre className="text-red-300 text-sm overflow-auto">
-                    {this.state.error.toString()}
-                    {this.state.errorInfo?.componentStack}
-                  </pre>
-                </div>
-              </details>
-            )}
-
-            {/* Contact Support */}
-            <div className="mt-8 pt-6 border-t border-white/10">
-              <p className="text-gray-400 text-sm mb-4">
-                Still having issues? Contact our support team
+            <div className="text-center">
+              <p className="text-gray-400 mb-4">
+                Still having issues? Contact our support team.
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 mr-2" />
                 Get Support
               </Link>
             </div>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-8 text-left">
+                <summary className="cursor-pointer text-red-400 font-semibold mb-4">
+                  Error Details (Development Only)
+                </summary>
+                <div className="bg-black/50 rounded-lg p-4 text-sm text-gray-300 overflow-auto max-h-64">
+                  <div className="mb-4">
+                    <strong className="text-red-400">Error:</strong>
+                    <pre className="mt-2 whitespace-pre-wrap">
+                      {this.state.error.toString()}
+                    </pre>
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong className="text-red-400">Component Stack:</strong>
+                      <pre className="mt-2 whitespace-pre-wrap">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              </details>
+            )}
           </div>
         </div>
       );
@@ -135,31 +130,5 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-
-// Higher-order component for easier usage
-export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<Props, 'children'>
-) => {
-  const WrappedComponent = (props: P) => (
-    <ImprovedErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
-    </ImprovedErrorBoundary>
-  );
-  
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  
-  return WrappedComponent;
-};
-
-// Hook for functional components to handle errors
-export const useErrorHandler = () => {
-  return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by hook:', error, errorInfo);
-    
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-  };
-};
 
 export default ImprovedErrorBoundary;

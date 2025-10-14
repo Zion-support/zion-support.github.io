@@ -1,9 +1,11 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Zap, Globe, Lock, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Layout from '../layout';
+
+export default function BlockchainWeb3Page() {
+  const features = [
+    {
       category: 'Blockchain Development',
       items: ['Smart Contract Development', 'DApp Development', 'Token Creation', 'DeFi Protocols', 'NFT Marketplaces', 'Cross-chain Solutions']
     },
@@ -34,6 +36,9 @@ import Layout from '../layout';
         'Basic security audit',
         'Documentation',
         '1 month support'
+      ]
+    },
+    {
       name: 'Professional',
       price: '$7,999',
       period: '/project',
@@ -46,6 +51,9 @@ import Layout from '../layout';
         'DeFi protocol integration',
         '3 months support',
         'Performance optimization'
+      ]
+    },
+    {
       name: 'Enterprise',
       price: '$19,999',
       period: '/project',
@@ -211,4 +219,9 @@ import Layout from '../layout';
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+}

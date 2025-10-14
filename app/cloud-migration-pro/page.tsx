@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import {
-  Cloud,
-  Shield,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-} from "lucide-react";
+import { Cloud, CheckCircle, ArrowRight,  } from 'lucide-react';
 
 const CloudMigrationProPage = () => {
   const features = [
     {
-=======
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
       title: 'Seamless Migration',
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption'
@@ -22,7 +13,6 @@ const CloudMigrationProPage = () => {
       icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Security First',
       description: 'Enterprise-grade security protocols throughout the migration process'
-      popular: false
     }
   ];
 
