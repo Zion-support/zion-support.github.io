@@ -13,6 +13,6 @@ export default function Page() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }
