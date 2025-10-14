@@ -51,7 +51,6 @@ export const defaultSEOConfig: SEOConfig = {
     'business intelligence'
   ],
   canonicalUrl: 'https://zion.app',
-  ogImage: '/images/og-image.jpg',
   ogImage: 'https://zion.app/og-image.jpg',
   ogType: 'website',
   twitterCard: 'summary_large_image',
@@ -85,39 +84,16 @@ export const defaultSEOConfig: SEOConfig = {
   }
 }
 
-export const generateSEOTags = (config: SEOConfig) => {
-  const tags = [
-    { name: 'title', content: config.title },
-    { name: 'description', content: config.description },
-    { name: 'keywords', content: config.keywords.join(', ') },
-    { property: 'og:title', content: config.ogTitle || config.title },
-    { property: 'og:description', content: config.ogDescription || config.description },
-    { property: 'og:image', content: config.ogImage },
-    { property: 'og:type', content: config.ogType },
-    { property: 'og:url', content: config.canonicalUrl },
-    { name: 'twitter:card', content: config.twitterCard },
-    { name: 'twitter:title', content: config.twitterTitle || config.title },
-    { name: 'twitter:description', content: config.twitterDescription || config.description },
-    { name: 'twitter:image', content: config.twitterImage || config.ogImage }
-  ]
-
-  if (config.geo) {
-    tags.push(
-      { name: 'geo.region', content: config.geo.region },
-      { name: 'geo.placename', content: config.geo.placename },
-      { name: 'geo.position', content: `${config.geo.latitude};${config.geo.longitude}` }
-    )
-  }
-
-  return tags
-}
 
 export const generateImageAlt = (imagePath: string, alt?: string) => {
   return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`
 }
 
 export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
-  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`
+  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
+};
+
+export const defaultMeta = {
   viewport: 'width=device-width, initial-scale=1',
   charset: 'UTF-8'
 }

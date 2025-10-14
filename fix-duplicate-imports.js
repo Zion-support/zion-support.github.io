@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 
 // Find all TypeScript/JavaScript files in the app directory
