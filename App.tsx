@@ -7,9 +7,8 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import LoadingPage from "./app/components/LoadingStates";
+import GlobalErrorBoundary from "./app/components/EnhancedErrorFeedback";
 import Breadcrumb from "./app/components/Breadcrumb";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -35,12 +34,12 @@ const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
 const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
 const CybersecurityPage = React.lazy(() => import("./app/cybersecurity/page"));
-const CustomDevelopmentPage = React.lazy(() => import("./app/custom-development/page"));
+const CustomDevelopmentPage = React.lazy(() => import("./app/custom-software/page"));
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
-const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
+const DataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
 
 // Micro SAAS Services
@@ -49,22 +48,17 @@ const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shie
 
 // Main App Component
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
-  const toggleSidebar = React.useCallback(() => {
-    setIsSidebarOpen(prev => !prev);
-  }, []);
 
   return (
     <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
-        <HelmetProvider>
-          <AccessibilityEnhancer>
+      <HelmetProvider>
+        <AccessibilityEnhancer>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
-                  <Navigation onSidebarToggle={toggleSidebar} />
-                  <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+                  <Navigation />
+                  <Sidebar isOpen={false} onClose={() => {}} />
                   <Breadcrumb />
                   <main id="main-content" role="main">
                     <Suspense fallback={<LoadingPage />}>
@@ -110,7 +104,6 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
   );
 }
