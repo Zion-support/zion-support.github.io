@@ -1,13 +1,10 @@
-import { useEffect } from 'react';
+import { useContext } from 'react'
+import { AnalyticsContext } from '../contexts/AnalyticsContext'
 
 export const useAnalytics = () => {
-  useEffect(() => {
-    // Analytics initialization
-  }, []);
-
-  const trackEvent = (_eventName: string, _parameters?: Record<string, unknown>) => {
-    // Track event logic
-  };
-
-  return { trackEvent };
-};
+  const context = useContext(AnalyticsContext)
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')
+  }
+  return context
+}

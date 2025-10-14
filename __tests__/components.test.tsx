@@ -1,5 +1,9 @@
+
+import { render } from '@testing-library/react';
+
 describe('Components', () => {
   it('should render without crashing', () => {
-    expect(true).toBe(true);
+    const { container } = render(<div>Test component</div>);
+    expect(container).toBeInTheDocument();
   });
 });

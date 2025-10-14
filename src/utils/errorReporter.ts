@@ -1,8 +1,0 @@
-import React from 'react'
-';'
-  severity: 'low' | 'medium' | 'high' | 'critical';'
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development','
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production','
-    severity: ErrorReport['severity'] = 'medium','
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown','
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown','

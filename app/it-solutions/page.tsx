@@ -1,8 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Server, Shield, Cloud, Database } from 'lucide-react';
+import { Server, Cloud } from 'lucide-react';
 
-const Page: React.FC = () => {
+import React, { Suspense } from 'react';
+const ItSolutionsPage: React.FC = () => {
 
   return (
     <>
@@ -44,5 +45,6 @@ const Page: React.FC = () => {
   );
 };
 
-const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
-export default LazyPage;
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+export default ItSolutionsPage;

@@ -4,9 +4,8 @@ declare global {
       command: 'config' | 'event' | 'js' | 'set',
       targetId: string,
       config?: Record<string, unknown>
-    ) => void;
-    dataLayer: unknown[];
+    ) => void
   }
 }
 
-export {};
+export {}
