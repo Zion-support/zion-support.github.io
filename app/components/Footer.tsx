@@ -1,50 +1,46 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-export default function Page() {
+const Footer: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Footer - Zion Tech Group</title>
-        <meta name="description" content="Professional Footer solutions and services" />
-        <meta name="keywords" content="footer" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Footer</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional Footer solutions and services
+    <footer className="bg-slate-800 text-white py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300">
+              Advanced AI and IT solutions for businesses worldwide.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
+          </div>
+          <div>
+            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li><a href="/ai-services" className="hover:text-white transition-colors">AI Services</a></li>
+              <li><a href="/it-services" className="hover:text-white transition-colors">IT Services</a></li>
+              <li><a href="/cloud-services" className="hover:text-white transition-colors">Cloud Services</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-md font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li><a href="/about" className="hover:text-white transition-colors">About</a></li>
+              <li><a href="/careers" className="hover:text-white transition-colors">Careers</a></li>
+              <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-md font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
+            </ul>
           </div>
         </div>
+        <div className="border-t border-slate-700 mt-8 pt-8 text-center text-gray-300">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        </div>
       </div>
-    </>
+    </footer>
   );
-}
+};
+
+export default Footer;
