@@ -4,10 +4,3 @@ declare module 'next' {
     // Add any custom Next.js configuration types here
   }
 }
-
-// Export a default configuration object
-const nextConfig = {
-  // Configuration options
-};
-
-export default nextConfig;
