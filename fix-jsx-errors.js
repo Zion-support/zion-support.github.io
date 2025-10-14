@@ -1,86 +1,109 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix common JSX syntax errors
-function fixJSXErrors(content) {
-  // Fix malformed JSX elements with missing spaces
-  content = content.replace(/(\w+)(\d+)(\w+)/g, '$1 $2 $3'); // Add spaces between words and numbers
-  
-  // Fix malformed className attributes
-  content = content.replace(/className="([^"]*?)(\w+)(\d+)(\w+)([^"]*?)"/g, (match, before, word1, num, word2, after) => {
-    return `className="${before}${word1} ${num} ${word2}${after}"`;
-  });
-  
-  // Fix malformed JSX elements like <p className="...">$2</p>
-  content = content.replace(/<p[^>]*>\$(\d+)<\/p>/g, '');
-  
-  // Fix malformed text content with extra spaces and quotes
-  content = content.replace(/>\s*"([^"]*?)\s*"\s*</g, '>$1<');
-  
-  // Fix malformed closing tags
-  content = content.replace(/<\/\s*>/g, '');
-  
-  // Fix malformed JSX fragments - ensure proper opening and closing
-  const fragmentRegex = /<>\s*([\s\S]*?)\s*<\/>/g;
-  content = content.replace(fragmentRegex, (match, innerContent) => {
-    // Clean up the inner content
-    innerContent = innerContent.trim();
-    return `<>${innerContent}</>`;
-  });
-  
-  // Fix malformed div structures
-  content = content.replace(/<div[^>]*>\s*<\/div>\s*<\/div>/g, '</div>');
-  
-  // Fix malformed className attributes with missing spaces
-  content = content.replace(/className="([^"]*?)(\w+)(\d+)(\w+)([^"]*?)"/g, (match, before, word1, num, word2, after) => {
-    return `className="${before}${word1} ${num} ${word2}${after}"`;
-  });
-  
-  // Fix malformed text content
-  content = content.replace(/>\s*"([^"]*?)\s*"\s*</g, '>$1<');
-  
-  // Fix malformed closing tags
-  content = content.replace(/<\/\s*>/g, '');
-  
-  return content;
-}
+// Find all TypeScript/JSX files in the app directory
+const files = glob.sync('app/**/*.{tsx,ts}', { cwd: process.cwd() });
 
-// Function to fix specific file
-function fixFile(filePath) {
+console.log(`Found ${files.length} files to process...`);
+
+let fixedCount = 0;
+
+files.forEach(file => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let content = fs.readFileSync(file, 'utf8');
+    let originalContent = content;
     
-    content = fixJSXErrors(content);
+    // Fix malformed Tailwind classes
+    content = content.replace(/slate-9\s+0\s+0/g, 'slate-900');
+    content = content.replace(/purple-9\s+0\s+0/g, 'purple-900');
+    content = content.replace(/gray-9\s+0\s+0/g, 'gray-900');
+    content = content.replace(/blue-9\s+0\s+0/g, 'blue-900');
+    content = content.replace(/green-9\s+0\s+0/g, 'green-900');
+    content = content.replace(/purple-9\s+0\s+0/g, 'purple-900');
+    content = content.replace(/red-9\s+0\s+0/g, 'red-900');
+    content = content.replace(/yellow-9\s+0\s+0/g, 'yellow-900');
+    content = content.replace(/indigo-9\s+0\s+0/g, 'indigo-900');
+    content = content.replace(/pink-9\s+0\s+0/g, 'pink-900');
+    
+    content = content.replace(/gray-3\s+0\s+0/g, 'gray-300');
+    content = content.replace(/blue-7\s+0\s+0/g, 'blue-700');
+    content = content.replace(/green-7\s+0\s+0/g, 'green-700');
+    content = content.replace(/purple-7\s+0\s+0/g, 'purple-700');
+    content = content.replace(/red-7\s+0\s+0/g, 'red-700');
+    content = content.replace(/yellow-7\s+0\s+0/g, 'yellow-700');
+    content = content.replace(/indigo-7\s+0\s+0/g, 'indigo-700');
+    content = content.replace(/pink-7\s+0\s+0/g, 'pink-700');
+    
+    content = content.replace(/blue-2\s+0\s+0/g, 'blue-200');
+    content = content.replace(/green-2\s+0\s+0/g, 'green-200');
+    content = content.replace(/purple-2\s+0\s+0/g, 'purple-200');
+    content = content.replace(/red-2\s+0\s+0/g, 'red-200');
+    content = content.replace(/yellow-2\s+0\s+0/g, 'yellow-200');
+    content = content.replace(/indigo-2\s+0\s+0/g, 'indigo-200');
+    content = content.replace(/pink-2\s+0\s+0/g, 'pink-200');
+    
+    // Fix missing closing JSX fragments
+    if (content.includes('<>') && !content.includes('</>')) {
+      // Find the last closing div before the return statement ends
+      const returnMatch = content.match(/return\s*\(\s*<>[\s\S]*?(\s*\)\s*;)/);
+      if (returnMatch) {
+        const beforeReturn = returnMatch[0].slice(0, -returnMatch[1].length);
+        const afterReturn = returnMatch[1];
+        content = content.replace(returnMatch[0], beforeReturn + '\n    </>' + afterReturn);
+      }
+    }
+    
+    // Fix malformed JSX with extra spaces and line breaks
+    content = content.replace(/\s+mb-2\s+\s+">/g, ' mb-2">');
+    content = content.replace(/\s+text-\w+-\d+\s+\s+">/g, (match) => {
+      return match.replace(/\s+/g, ' ').trim() + '">';
+    });
+    
+    // Fix incomplete JSX structures
+    content = content.replace(/\s+">\s*$/gm, '">');
+    content = content.replace(/\s+">\s*\n\s*<\/h3>/g, '">\n                </h3>');
+    content = content.replace(/\s+">\s*\n\s*<\/p>/g, '">\n                </p>');
+    
+    // Clean up extra whitespace and malformed structures
+    content = content.replace(/\s+\s+/g, ' ');
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    // Fix specific patterns like "5g" to "5G"
+    content = content.replace(/\b5g\b/g, '5G');
+    content = content.replace(/\b5G\s+([a-z])/g, (match, letter) => `5G ${letter.toUpperCase()}`);
+    
+    // Remove duplicate content blocks
+    const lines = content.split('\n');
+    const seen = new Set();
+    const cleanedLines = [];
+    
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (trimmed && !seen.has(trimmed)) {
+        seen.add(trimmed);
+        cleanedLines.push(line);
+      } else if (!trimmed) {
+        cleanedLines.push(line);
+      }
+    }
+    
+    content = cleanedLines.join('\n');
+    
+    // Remove trailing empty lines and fix final structure
+    content = content.replace(/\n\s*\n\s*$/, '\n');
     
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main function
-async function main() {
-  // Find all page.tsx files
-  const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
-
-  console.log(`Found ${pageFiles.length} page files to check...`);
-
-  let fixedCount = 0;
-  pageFiles.forEach(file => {
-    if (fixFile(file)) {
+      fs.writeFileSync(file, content, 'utf8');
+      console.log(`Fixed: ${file}`);
       fixedCount++;
     }
-  });
+    
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+  }
+});
 
-  console.log(`Fixed ${fixedCount} files`);
-}
-
-main().catch(console.error);
+console.log(`\nFixed ${fixedCount} files.`);
