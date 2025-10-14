@@ -1,4 +1,4 @@
-'use client;;
+'use client';
 import React from 'react'; import { Helmet   } from 'react-helmet-async'; const DemoPage: React.FC = () => {} return ( <React.Fragment>Helme t><///Helme t><//titl e>DemoPage - Zion Tech Group</titl e><//meta nam e="description" conten t="DemoPage - Zion Tech Group" />"" </Helme t><//div classNam e="min-h-screen bg-slate-900 text-white flex items-center justify-center">"" <div classNam e="text-center">;
       </div>
       </div>

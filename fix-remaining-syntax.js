@@ -1,88 +1,75 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix remaining syntax errors
-function fixRemainingSyntax(content) {
-  let fixed = content;
-  
-  // Remove unwanted characters added by previous fix
-  fixed = fixed.replace(/},\$1/g, '}');
-  fixed = fixed.replace(/,\$1/g, '');
-  fixed = fixed.replace(/\$1/g, '');
-  
-  // Fix malformed JSX closing tags
-  fixed = fixed.replace(/\);},\$1/g, ');');
-  fixed = fixed.replace(/\);},/g, ');');
-  fixed = fixed.replace(/}\);,\$1/g, '});');
-  fixed = fixed.replace(/}\);,/g, '});');
-  
-  // Fix malformed object properties
-  fixed = fixed.replace(/title: "([^"]*)"(\s*),\$1/g, 'title: "$1",$2');
-  fixed = fixed.replace(/description: "([^"]*)"(\s*),\$1/g, 'description: "$1",$2');
-  fixed = fixed.replace(/icon: ([^,}]+)(\s*),\$1/g, 'icon: $1,$2');
-  fixed = fixed.replace(/color: "([^"]*)"(\s*),\$1/g, 'color: "$1",$2');
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/className="([^"]*)"(\s*),\$1/g, 'className="$1"$2');
-  
-  // Fix malformed function calls
-  fixed = fixed.replace(/map\(\([^)]+\) => \(},\$1/g, 'map(($1) => (');
-  fixed = fixed.replace(/map\(\([^)]+\) => \(},/g, 'map(($1) => (');
-  
-  // Fix malformed JSX fragments
-  fixed = fixed.replace(/<>\s*},\$1/g, '<>');
-  fixed = fixed.replace(/<\/>\s*},\$1/g, '</>');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/div>\s*},\$1/g, '</div>');
-  fixed = fixed.replace(/<\/section>\s*},\$1/g, '</section>');
-  
-  // Clean up any remaining malformed patterns
-  fixed = fixed.replace(/\s*},\$1\s*$/gm, '');
-  fixed = fixed.replace(/\s*,\$1\s*$/gm, '');
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix remaining syntax errors in a file
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingSyntax(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix specific patterns
+    const fixes = [
+      // Fix stray quotes at end of JSX elements
+      { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: '$1' },
+      // Fix stray quotes in return statements
+      { pattern: /(\s*\));\s*'$/gm, replacement: '$1' },
+      // Fix unterminated string literals with quotes
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: '$1$2' },
+      // Fix stray quotes in JSX structure
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: '$1$2' },
+      // Fix multiple semicolons and quotes
+      { pattern: /;;\s*'$/gm, replacement: '' },
+      // Fix stray quotes at end of lines
+      { pattern: /;\s*'$/gm, replacement: '' },
+      // Fix unterminated string literals
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: '$1$2' },
+      // Fix stray quotes in return statements
+      { pattern: /(\s*\));\s*'(\s*})/g, replacement: '$1$2' },
+      // Fix stray quotes in JSX
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: '$1$2' },
+      // Fix stray quotes at end of return
+      { pattern: /(\s*\));\s*'$/gm, replacement: '$1' },
+      // Fix stray quotes in JSX elements
+      { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: '$1' },
+    ];
+
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Main function
 async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'api/**/*.js'
-  ];
-  
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**'] });
-    
-    for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
-      }
+  // Find all page.tsx files
+  const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
+
+  console.log(`Found ${pageFiles.length} page files to check...`);
+
+  let fixedCount = 0;
+  pageFiles.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
     }
-  }
-  
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+  });
+
+  console.log(`Fixed ${fixedCount} files out of ${pageFiles.length} total files.`);
 }
 
-main();
+main().catch(console.error);

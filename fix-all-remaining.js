@@ -3,7 +3,7 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix final syntax errors in a file
+// Function to fix all remaining syntax errors in a file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');

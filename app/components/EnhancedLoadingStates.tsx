@@ -1,35 +1,13 @@
-'use client;;
+'use client';
 import React from 'react';
-export default function ComponentsPage() {}
-  return (
-    <div>Page content</div>
-  );
-}
-  return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">;
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="container mx-auto px-4">;
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>;
-        <p className="text-gray-30o0 text-lg">;
-          This page is under development.;
-        </p>
 
+export default function EnhancedLoadingStates() {
+  return (
+    <div className="flex items-center justify-center">
+      <div className="animate-pulse">
+        <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
+        <div className="h-4 bg-gray-300 rounded w-1/2"></div>
       </div>
-    </>
+    </div>
   );
 }
-        </p></div></div>
-  );}
-}
-

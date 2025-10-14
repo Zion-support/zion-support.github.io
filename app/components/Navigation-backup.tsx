@@ -1,35 +1,22 @@
-'use client;;
+'use client';
 import React from 'react';
-export default function ComponentsPage() {}
-  return (
-    <div>Page content</div>
-  );
-}
-  return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">;
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="container mx-auto px-4">;
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>;
-        <p className="text-gray-30o0 text-lg">;
-          This page is under development.;
-        </p>
 
+export default function NavigationBackup() {
+  return (
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <a href="/" className="text-gray-600 hover:text-gray-900">Home</a>
+            <a href="/about" className="text-gray-600 hover:text-gray-900">About</a>
+            <a href="/services" className="text-gray-600 hover:text-gray-900">Services</a>
+            <a href="/contact" className="text-gray-600 hover:text-gray-900">Contact</a>
+          </div>
+        </div>
       </div>
-    </>
+    </nav>
   );
 }
-        </p></div></div>
-  );}
-}
-

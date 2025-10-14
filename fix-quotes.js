@@ -1,37 +1,42 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix syntax errors in a file
+// Function to fix quote issues in a file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix common syntax errors
+    // Fix specific patterns
     const fixes = [
-      // Remove stray semicolons after JSX elements
-      { pattern: /(\s*<[^>]+>);/g, replacement: '$1' },
-      // Fix unterminated string literals with stray quotes
-      { pattern: /(\s*<[^>]+>);\s*$/gm, replacement: '$1' },
-      // Fix stray quotes at end of lines
+      // Fix stray quotes at end of JSX elements
       { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: '$1' },
-      // Fix unterminated string literals in JSX
-      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: '$1$2' },
-      // Fix stray semicolons in JSX structure
-      { pattern: /(\s*<[^>]+>);\s*(\s*<[^>]+>)/g, replacement: '$1$2' },
+      // Fix stray quotes in return statements
+      { pattern: /(\s*\));\s*'$/gm, replacement: '$1' },
       // Fix unterminated string literals with quotes
       { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: '$1$2' },
-      // Fix stray quotes and semicolons
+      // Fix stray quotes in JSX structure
       { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: '$1$2' },
-      // Fix multiple semicolons
-      { pattern: /;;+/g, replacement: ';' },
-      // Fix stray quotes at end of return statements
-      { pattern: /(\s*\));\s*'$/gm, replacement: '$1' },
-      // Fix unterminated string literals in return statements
+      // Fix multiple semicolons and quotes
+      { pattern: /;;\s*'$/gm, replacement: '' },
+      // Fix stray quotes at end of lines
+      { pattern: /;\s*'$/gm, replacement: '' },
+      // Fix unterminated string literals
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: '$1$2' },
+      // Fix stray quotes in return statements
       { pattern: /(\s*\));\s*'(\s*})/g, replacement: '$1$2' },
+      // Fix stray quotes in JSX
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: '$1$2' },
+      // Fix stray quotes at end of return
+      { pattern: /(\s*\));\s*'$/gm, replacement: '$1' },
+      // Fix stray quotes in JSX elements
+      { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: '$1' },
+      // Fix specific pattern: <p>text</p>'; -> <p>text</p>
+      { pattern: /(\s*<[^>]+>[^<]*<\/[^>]+>);\s*'$/gm, replacement: '$1' },
+      // Fix specific pattern: );' -> );
+      { pattern: /(\s*\));\s*'$/gm, replacement: '$1' },
     ];
 
     fixes.forEach(fix => {

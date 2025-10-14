@@ -12,17 +12,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         if (!img.hasAttribute('loading')) {
           img.setAttribute('loading', 'lazy');
         }
-      );
+      });
     };
 
     const optimizeFonts = () => {
       // Preload critical fonts
       const link = document.createElement('link');
-      link.rel = 'preload;
-      link.href = '/fonts/inter.woff2;
-      link.as = 'font;
-      link.type = 'font/woff2;
-      link.crossOrigin = 'anonymous;
+      link.rel = 'preload';
+      link.href = '/fonts/inter.woff2';
+      link.as = 'font';
+      link.type = 'font/woff2';
+      link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     };
 
@@ -31,11 +31,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const criticalResources = ['/css/critical.css', '/js/critical.js'];
       criticalResources.forEach((resource) => {
         const link = document.createElement('link');
-        link.rel = 'preload;
+        link.rel = 'preload';
         link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'script;
+        link.as = resource.endsWith('.css') ? 'style' : 'script';
         document.head.appendChild(link);
-      );
+      });
     };
 
     // Run optimizations
@@ -53,4 +53,3 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 };
 
 export default PerformanceOptimizer;
-
