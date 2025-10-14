@@ -27,8 +27,8 @@ const App: React.FC = () => {
     }
     
     // Send to analytics in production
-    if (typeof window !== 'undefined' && (window as Record<string, unknown>).gtag) {
-      (window as Record<string, unknown>).gtag('event', 'performance_metrics', {
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: (...args: unknown[]) => void }).gtag) {
+      (window as typeof window & { gtag: (...args: unknown[]) => void }).gtag('event', 'performance_metrics', {
         custom_parameter_1: metrics.fcp,
         custom_parameter_2: metrics.lcp,
         custom_parameter_3: metrics.fid,
