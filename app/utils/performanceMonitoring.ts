@@ -18,9 +18,6 @@ export const performanceMonitoring = {
 
         });
       }
-    }
     
     performance.clearMarks(`${name}-start`)
     performance.clearMarks(`${name}-end`)
-  }
-}
