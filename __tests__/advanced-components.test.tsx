@@ -13,6 +13,16 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 
 const TestComponent = () => <div>Test component</div>;
 
+// Suppress console.error for this test file
+const originalError = console.error;
+beforeAll(() => {
+  console.error = jest.fn();
+});
+
+afterAll(() => {
+  console.error = originalError;
+});
+
 describe('AdvancedErrorBoundary', () => {
   it('should catch errors and display fallback UI', () => {
     const { getByText } = render(
