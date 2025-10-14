@@ -1,5 +1,15 @@
 'use client';
 import { useEffect } from 'react';
+
+// Type definitions for Web Vitals
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
 interface WebVitalsTrackerProps {
   onVitalsUpdate?: (vitals: { type: string; value: number }) => void;
 }
@@ -17,7 +27,8 @@ export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerPro
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          onVitalsUpdate?.({ type: 'FID', value: entry.processingStart - entry.startTime });
+          const fidEntry = entry as PerformanceEventTiming;
+          onVitalsUpdate?.({ type: 'FID', value: fidEntry.processingStart - fidEntry.startTime });
         });
       }).observe({ entryTypes: ['first-input'] });
       // Track CLS (Cumulative Layout Shift)
@@ -25,8 +36,9 @@ export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerPro
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
           }
         });
         onVitalsUpdate?.({ type: 'CLS', value: clsValue });
