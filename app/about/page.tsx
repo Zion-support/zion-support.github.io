@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon } from "lucide-react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon } from 'lucide-react';
 
 export default function AboutPage() {
   const stats = [
@@ -32,79 +32,11 @@ export default function AboutPage() {
       title: "Excellence",
       description: "We strive for excellence in every project, ensuring the highest quality deliverables."
     }
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AboutPage: React.FC = () => {}
-import {}
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  UsersIcon,
-  GlobeAltIcon,
-  ChartBarIcon
-} from '@heroicons/react/24/outline';
-
-export default function AboutPage() {}
-  return (
-    <div>Page content</div>
-  );
-}
-  const team = [
-    {}
-      name: 'John Smith',
-      role: 'CEO & Founder',
-      description: '20+ years in technology leadership',
-      image: '/api/placeholder/300/300'
-    },
-    {}
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      description: 'Expert in AI and machine learning',
-      image: '/api/placeholder/300/300'
-    },
-    {}
-      name: 'Mike Chen',
-      role: 'Head of Security',
-      description: 'Cybersecurity specialist',
-      image: '/api/placeholder/300/300';
-    };
-  ];
-
-  const values = [
-    {}
-      icon: CpuChipIcon,
-      title: 'Innovation',
-      description: 'We stay at the forefront of technology to deliver cutting-edge solutions.'
-    },
-    {}
-      icon: ShieldCheckIcon,
-      title: 'Security',
-      description: 'Security is our top priority in every solution we deliver.'
-    },
-    {}
-      icon: UsersIcon,
-      title: 'Collaboration',
-      description: 'We work closely with our clients to understand their unique needs.'
-    },
-    {}
-      icon: ChartBarIcon,
-      title: 'Results',
-      description: 'We measure success by the impact we create for our clients.';
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
   ];
 
   return (
-    <div>Page content</div>
-  );
-    <></>
+    <>
       <Helmet>
-<<<<<<< HEAD
         <title>About - Zion Tech Group | AI & IT Solutions</title>
         <meta
           name="description"
@@ -131,58 +63,6 @@ export default function AboutPage() {}
                   {" "}Zion Tech Group
                 </span>
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
-=======
-        <title>About - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group about page." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <div className="text-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">About</h1>
-          <p className="text-xl text-gray-600">
-            Welcome to our about page.
-          </p>
-        </div>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group - leading provider of AI, cloud, and cybersecurity solutions." />
-        <meta name="keywords" content="about us, company, team, AI solutions, technology company" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="container mx-auto px-4 relative z-10">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <div className="text-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-                About Zion Tech Group
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -226,26 +106,10 @@ export default function AboutPage() {}
         </section>
 
         {/* Mission Section */}
-<<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
-=======
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
               <div>
-<<<<<<< HEAD
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                     Our Mission
@@ -253,17 +117,6 @@ export default function AboutPage() {}
                 </h2>
                 <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                   To revolutionize how businesses operate by providing intelligent, scalable, and secure technology solutions that drive digital transformation and sustainable growth.
-=======
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-                <p className="text-xl text-gray-300 mb-6">
-                  To empower businesses with cutting-edge technology solutions that drive 
-                  innovation, growth, and digital transformation.
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                 </p>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                   We believe in the power of artificial intelligence and cutting-edge technology to solve complex business challenges and create opportunities for innovation.
@@ -278,7 +131,6 @@ export default function AboutPage() {}
                   </Link>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
                 <ul className="space-y-4">
@@ -307,26 +159,12 @@ export default function AboutPage() {}
                     <span className="text-gray-300">Proven track record of successful projects</span>
                   </li>
                 </ul>
-=======
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-white/20">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                <h3 className="text-2xl font-bold text-white mb-6">Our Vision</h3>
-                <p className="text-gray-300">
-                  To be the world's most trusted technology partner, enabling businesses 
-                  to thrive in the digital age through innovative AI, cloud, and security solutions.
-                </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
               </div>
             </div>
           </div>
         </section>
 
         {/* Values Section */}
-<<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -335,28 +173,11 @@ export default function AboutPage() {}
                   Our Values
                 </span>
               </h2>
-=======
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <div className="text-center mb-16">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-              <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 The principles that guide everything we do and shape our approach to technology and client relationships.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
               {values.map((value, index) => (
                 <div
                   key={index}
@@ -373,27 +194,6 @@ export default function AboutPage() {}
                     <p className="text-gray-300 text-center leading-relaxed">
                       {value.description}
                     </p>
-=======
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-              {values.map((value, index) => ()
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                  <div className="text-blue-400 mb-4 flex justify-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                    <value.icon className="w-12 h-12" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                   </div>
                 </div>
               ))}
@@ -401,7 +201,6 @@ export default function AboutPage() {}
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Contact CTA */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -435,105 +234,6 @@ export default function AboutPage() {}
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-=======
-        {/* Team Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <div className="text-center mb-16">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-              <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The experts behind our innovative solutions
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-              {team.map((member, index) => ()
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                  <div className="w-32 h-32 bg-gray-600 rounded-full mx-auto mb-4"></div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                  <p className="text-blue-400 mb-3">{member.role}</p>
-                  <p className="text-gray-300">{member.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                <div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                  <div className="text-4xl font-bold text-white mb-2">500+</div>
-                  <div className="text-gray-300">Projects Completed</div>
-                </div>
-                <div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                  <div className="text-4xl font-bold text-white mb-2">200+</div>
-                  <div className="text-gray-300">Happy Clients</div>
-                </div>
-                <div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                  <div className="text-4xl font-bold text-white mb-2">10+</div>
-                  <div className="text-gray-300">Years Experience</div>
-                </div>
-                <div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-                  <div className="text-4xl font-bold text-white mb-2">99%</div>
-                  <div className="text-gray-300">Success Rate</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                 </div>
               </div>
               
@@ -558,10 +258,4 @@ export default function AboutPage() {}
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
-};
-
-export default AboutPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
 }

@@ -23,60 +23,25 @@ import TermsPage from './app/terms/page';
 import PricingPage from './app/pricing/page';
 
 // Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => ()
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
       <div className="flex items-center mb-4">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
         <div className="flex-shrink-0">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
           <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
           </svg>
         </div>
         <div className="ml-3">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
           <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
         </div>
       </div>
       <div className="mt-2">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
         <p className="text-sm text-gray-500">
           {error.message || 'An unexpected error occurred'}
         </p>
       </div>
       <div className="mt-4 flex space-x-3">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
         <button
           onClick={resetErrorBoundary}
           className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -94,20 +59,13 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
-function App() {}
+function App() {
   return (
-    <div>Page content</div>
-  );
     <HelmetProvider>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <AnalyticsProvider>
           <Router>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
               <Navigation />
               <main className="relative z-10" id="main-content" role="main">
                 <Suspense fallback={<LoadingStates />}>
@@ -126,19 +84,9 @@ function App() {}
                     <Route path="/pricing" element={<PricingPage />} />
                     
                     {/* Catch all route */}
-                    <Route path="*" element={}
+                    <Route path="*" element={
                       <div className="min-h-screen flex items-center justify-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
                         <div className="text-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
                           <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
                           <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
                           <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

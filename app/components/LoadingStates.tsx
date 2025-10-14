@@ -1,8 +1,6 @@
-'use client';
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
-<<<<<<< HEAD
 export const LoadingPage: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -20,12 +18,14 @@ export const LoadingPage: React.FC = () => {
 export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8'
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
   };
 
   return (
-    <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
+    <div className="flex items-center justify-center">
+      <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
+    </div>
   );
 };
 
@@ -33,78 +33,22 @@ export const LoadingCard: React.FC = () => {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
       <div className="space-y-4">
-        <div className="h-4 bg-white/20 rounded w-3/4"></div>
-        <div className="h-4 bg-white/20 rounded w-1/2"></div>
-        <div className="h-4 bg-white/20 rounded w-5/6"></div>
+        <div className="h-4 bg-gray-300/20 rounded w-3/4"></div>
+        <div className="h-4 bg-gray-300/20 rounded w-1/2"></div>
+        <div className="h-4 bg-gray-300/20 rounded w-5/6"></div>
       </div>
     </div>
   );
 };
 
-export const LoadingButton: React.FC<{ children: React.ReactNode; loading?: boolean }> = ({ 
-  children, 
-  loading = false 
-}) => {
+export const LoadingGrid: React.FC<{ count?: number }> = ({ count = 6 }) => {
   return (
-    <button 
-      disabled={loading}
-      className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-    >
-      {loading && <Loader2 className="w-4 h-4 animate-spin" />}
-      <span>{children}</span>
-    </button>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {Array.from({ length: count }).map((_, index) => (
+        <LoadingCard key={index} />
+      ))}
+    </div>
   );
 };
 
 export default LoadingPage;
-=======
-const LoadingStates: React.FC = () => {}
-  return (
-    <div>Page content</div>
-  );
-    <div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <h1>LoadingStates</h1>
-export const LoadingPage = () => ()
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-    <div className="text-center">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-      <p className="text-white">Loading...</p>
-    </div>;
-  </div>;
-);
-
-export const LoadingSpinner = ({ size = 'md' }) => {;
-  const sizes = {};
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12'
-  };
-
-  return (
-    <div>Page content</div>
-  );
-    <div className={`animate-spin rounded-full border-b-2 border-blue-500 ${sizes[size]}`}></div>
-  );
-};
-
-export default LoadingStates;
-const LoadingStates = () => <LoadingPage />;
-
-export default LoadingStates;
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79

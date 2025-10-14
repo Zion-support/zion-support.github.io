@@ -1,13 +1,12 @@
-'use client';
-export default function handler(req, res) {}
-  if (req.method !== 'POST') {}
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
   
-  try {}
+  try {
     // Add your API logic here
     res.status(200).json({ success: true });
-  } catch (error) {}
+  } catch (error) {
     console.error('API Error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }

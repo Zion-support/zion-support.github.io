@@ -1,12 +1,9 @@
-'use client';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
-const App: React.FC = () => {}
+const App: React.FC = () => {
   return (
-    <div>Page content</div>
-  );
     <HelmetProvider>
       <Router>
         <Routes>
