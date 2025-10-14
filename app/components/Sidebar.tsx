@@ -50,12 +50,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
   ]
   if (!isOpen) return null
   return (
-<<<<<<< HEAD
-<>    <div className="fixed inset-0 z-50 md:hidden">
-=======
-<>
-      <div>"""</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
       <div className="relative flex flex-col w-64 h-full bg-slate-900">
         <div className="flex items-center justify-between p-4 border-b border-slate-700">
@@ -77,13 +72,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                     <div className="flex items-center">
                       <link.icon className="w-5 h-5 mr-3" />
                       {link.name}
-<<<<<<< HEAD
-                    </div>
-                    <ChevronDownIcon
-=======
-                    </li>
-                    <ChevronDownIcon;
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
                       className={`w-4 h-4 transition-transform ${````
                         expandedItems.includes(link.name) ? 'rotate-180' : 
                       }`} ````

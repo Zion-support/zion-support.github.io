@@ -1,18 +1,7 @@
 }) => {
   if (variant === 'minimal') {'
     return (
-<<<<<<< HEAD
-<>"
-        <div className="flex items-center space-x-3"></div>"
-          <Loader2 className="w-6 h-6 animate-spin text-cyan-400" /></Loader2>"
-          <span className="text-white">{message}</span>"
-        </div>
-=======
-<>
-      <div</div>
-          <Loader2 className="w-6 h-6 animate-spin text-cyan-400" /></Loader2>
-          <span className="text-white">{message}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
     </>
       </div>
     )}
@@ -24,14 +13,7 @@
         <div className="text-center"></div>"
             </div>"
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div></div>"
-======="
-          <div className="relative mb-8"></div>"
-            <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
-              <Brain className="w-10 h-10 text-white animate-pulse" /></Brain>"
-            </div>"
-            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div>"
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
+
           </div>"
 "
           <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>

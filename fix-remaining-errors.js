@@ -7,7 +7,7 @@ import { glob } from 'glob';
 const fixes = [
   // Fix merge conflict markers
   {
-    pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g,
+    pattern: /
     replacement: ''
   },
   // Fix malformed JSX structure in page components

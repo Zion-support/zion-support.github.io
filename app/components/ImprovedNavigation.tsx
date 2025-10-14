@@ -81,35 +81,14 @@ export default ImprovedNavigation
           <p className="text-xl text-blue-100 mb-8">
             Let's discuss how our improved navigation'
             services can help you achieve your goals.</p>
-<<<<<<< HEAD
-          <a
-            href="/contact
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-            Get Started Today</a></div></section></div>
-=======
-          <a"""
-            href="/contact"""""
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"""
-            Get Started Today</a>
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
   )
 export default ImprovedNavigation
 const ImprovedNavigation = () => {
   return (
-<<<<<<< HEAD
-<>"
-      <h2 className="text-xl font-semibold mb-2">ImprovedNavigation</h2>"
-      <p>This component is under construction.</p>
-    </div>
-=======
-<>
-      <div className="p-4"></div>
-      <h2 className="text-xl font-semibold mb-2">ImprovedNavigation</h2>
-      <p>This component is under construction.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
     </>
-=======
->>>>>>> origin/main
+
   )}
 }
 export default ImprovedNavigation

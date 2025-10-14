@@ -104,31 +104,7 @@ const DigitalTransformationPage: React.FC = () => {
 const DigitalTransformationPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
-      <Helmet></Helmet>
-        <title>DigitalTransformationPage - Zion Tech Group</title>"
-        <meta name="description" content="DigitalTransformationPage - Zion Tech Group" />"
-      </Helmet>"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">DigitalTransformationPage</h1>"
-          <p className="text-gray-300">This page is under construction.</p>"
-        </div>
-      </div>
-    </div>;  )
-export default DigitalTransformationPage
-=======
-      <Helmet>
-        <title>DigitalTransformationPage - Zion Tech Group</title>
-        <meta name="description" content="DigitalTransformationPage - Zion Tech Group" />""
-      </Helmet>
-      <div>""</div>
-    </>
-        <div>""</div>
-          <h1 className="text-4xl font-bold mb-4">DigitalTransformationPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>;  )
-export default DigitalTransformationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
     </>
   )
 export default DigitalTransformationPage
@@ -138,19 +114,6 @@ import React from "react
 
 const DigitalTransformationPage = () => {
   return (
-<<<<<<< HEAD
-  <>"
-      <h1 className="text-4xl font-bold mb-8">DigitalTransformationPage</h1>"
-      <p className="text-gray-300 text-lg">This page is under development.</p>"
-    </div>
-    </>
-)
-=======
-  <>
-      <h1 className="text-4xl font-bold mb-8">DigitalTransformationPage</h1>
-      <p className="text-gray-300 text-lg">This page is under development.</p>
-  </>
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
 }
 "

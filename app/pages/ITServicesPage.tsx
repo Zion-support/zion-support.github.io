@@ -104,31 +104,7 @@ const ITServicesPage: React.FC = () => {
 const ITServicesPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
-      <Helmet></Helmet>
-        <title>ITServicesPage - Zion Tech Group</title>"
-        <meta name="description" content="ITServicesPage - Zion Tech Group" />"
-      </Helmet>"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">ITServicesPage</h1>"
-          <p className="text-gray-300">This page is under construction.</p>"
-        </div>
-      </div>
-    </div>;  )
-export default ITServicesPage
-=======
-      <Helmet>
-        <title>ITServicesPage - Zion Tech Group</title>
-        <meta name="description" content="ITServicesPage - Zion Tech Group" />""
-      </Helmet>
-      <div>""</div>
-    </>
-        <div>""</div>
-          <h1 className="text-4xl font-bold mb-4">ITServicesPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>;  )
-export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
     </>
   )
 export default ITServicesPage
@@ -138,19 +114,6 @@ import React from "react
 
 const ITServicesPage = () => {
   return (
-<<<<<<< HEAD
-  <>"
-      <h1 className="text-4xl font-bold mb-8">ITServicesPage</h1>"
-      <p className="text-gray-300 text-lg">This page is under development.</p>"
-    </div>
-    </>
-)
-=======
-  <>
-      <h1 className="text-4xl font-bold mb-8">ITServicesPage</h1>
-      <p className="text-gray-300 text-lg">This page is under development.</p>
-  </>
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
 }
 "

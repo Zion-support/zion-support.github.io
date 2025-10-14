@@ -79,30 +79,4 @@ export default Services
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
               <p className="mb-6">
                 Ready to transform your business with our services services?</p>
-<<<<<<< HEAD
-              <a
-            Ready to Get Started?</h2></a>"
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our services'
-            services can help you achieve your goals.</p>"
-          <a
-            href="/contact
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-            Get Started Today</a></div></section></div>
-  )
-export default Services
-;"
-=======
-              <a;
-            Ready to Get Started?</a>
-          <p>"""
-            Let's discuss how our services''''</p>
-            services can help you achieve your goals.</p>
-          <a"""
-            href="/contact"""""
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"""
-            Get Started Today</a>
-  );
-export default Services;
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+
