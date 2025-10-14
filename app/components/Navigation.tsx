@@ -75,10 +75,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8">
         <div className="flexjustify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flexitems-center space-x-2 group">
-            <div className="w-8h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
-              <span className="text-whitefont-bold text-lg">Z</span>
-            <span className="text-xlfont-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
           <div className="hiddenlg:flex items-center space-x-8">
@@ -113,7 +114,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       ))}
                     </div>
                   )}
-                </Link>
                 </div>
               );
             })}
