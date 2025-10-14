@@ -1,11 +1,19 @@
-import React from "react";"interface ResponsiveContainerProps {}"  children: 
-  c,lassName ?  : string
+import React, { ReactNode } from "react";
 
-const ResponsiveContainer: React.FC<Props> = ({ children }) => {}
+interface ResponsiveContainerProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ 
+  children, 
+  className = "" 
+}) => {
   return (
-
-    <div>Page content</div>
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
+    </div>
   );
-    <div className="`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className"`}>`;`      </div>`      {children}`    </div>`  );`}
+};
 
-export default ResponsiveContainer;``</ResponsiveContainerProps>```"`"``
+export default ResponsiveContainer;

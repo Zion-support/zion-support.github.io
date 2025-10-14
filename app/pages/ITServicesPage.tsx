@@ -1,3 +1,12 @@
-import React from 'react';'// ITServicesPage - Basic implementation'export default function ITServicesPage() {
-  return null;
+import React from "react";
+
+export default function ITServicesPage() {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">ITServicesPage</h1>
+      <p className="text-gray-300 text-lg">
+        This component is under development.
+      </p>
+    </div>
+  );
 }

@@ -1,17 +1,17 @@
-import React from "react";"use client";'export default function ServiceCard() {'  return (
+import React from "react";
 
-    <div>Page content</div>
-  );
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+}
 
-    <div>Page content</div>
-  );
-    <div>
-      </div>
-      <div>
-      </div>
-        <h1 className: '"text-4xl font-bold mb-8>Components</h1>        <p className: ""text-gray-30o0 text-lg>"          This page is under development.;        </p>      </div>
+export default function ServiceCard({ title, description, icon }: ServiceCardProps) {
+  return (
+    <div className="bg-gray-800 p-6 rounded-lg">
+      {icon && <div className="mb-4">{icon}</div>}
+      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+      <p className="text-gray-300">{description}</p>
     </div>
   );
-
-        </p></div></div>
-  )}
+}

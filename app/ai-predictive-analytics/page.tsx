@@ -1,10 +1,20 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";export default function Page() {'  return ('    <React.Fragment>
+import { Helmet } from "react-helmet-async";
 
+export default function Page() {
+  return (
+    <React.Fragment>
       <Helmet>
-
         <title>Ai Predictive Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional ai predictive analytics services by Zion Tech Group." />      </Helmet>      <div>        <div>
-          <h1 className="text-4xl font-bold text-white mb-4">Ai Predictive Analytics</h1>          <p className="text-gray-300">Coming soon...</p>        </div>      </div>    </React.Fragment>
+        <meta name="description" content="Professional ai predictive analytics services by Zion Tech Group." />
+      </Helmet>
+      
+      <div>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-4">Ai Predictive Analytics</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </div>
+    </React.Fragment>
   );
 }

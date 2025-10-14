@@ -1,18 +1,24 @@
-"use client;"import React from react;"export default function Page() {
+"use client";
+
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function ZionAiApiManagerPage() {
   return (
-
-    <div>Page content</div>
-  );
-
-    <div>Page content</div>
-  );
-    <div>
-      </div>
+    <React.Fragment>
+      <Helmet>
+        <title>Zion AI API Manager - Zion Tech Group</title>
+        <meta name="description" content="Professional AI API manager by Zion Tech Group." />
+      </Helmet>
+      
       <div>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-8">Zion AI API Manager</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under development.
+          </p>
+        </div>
       </div>
-        <h1 className: ""text-4xl font-bold mb-8">Zion Ai Api Manager</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.;        </p>
-      </div>
+    </React.Fragment>
   );
-
-        </p></div></div>
-  )}
+}

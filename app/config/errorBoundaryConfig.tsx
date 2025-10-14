@@ -1,3 +1,8 @@
-import React from 'react';'// errorBoundaryConfig - Basic implementation'export default function errorBoundaryConfig() {
-  return null;
-}
+import React from "react";
+
+export const errorBoundaryConfig = {
+  fallback: <div>Something went wrong</div>,
+  onError: (error: Error, errorInfo: React.ErrorInfo) => {
+    console.error("Error caught by boundary:", error, errorInfo);
+  }
+};

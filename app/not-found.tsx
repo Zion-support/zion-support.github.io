@@ -1,2 +1,11 @@
-import React from 'react';'// not-found - Basic implementation'export default function not-found() {
-  return null;
+import React from 'react';
+
+// Not found page - Basic implementation
+export default function NotFound() {
+  return (
+    <div>
+      <h1>404 - Page Not Found</h1>
+      <p>The page you're looking for doesn't exist.</p>
+    </div>
+  );
+}
