@@ -9,6 +9,7 @@ export default function Page() {
         <title>Ai Fintech Solutions - Zion Tech Group</title>
         <meta name="description" content="Ai Fintech Solutions services and solutions from Zion Tech Group" />
       </Helmet>
+      </Helmet>
       
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">

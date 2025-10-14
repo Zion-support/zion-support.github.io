@@ -224,7 +224,7 @@ const CommunityPage: React.FC = () => {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center space-x-3 mb-2">
-                      <span>
+                      <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
                         {discussion.category}
                       </span>
                       {discussion.solved && (
@@ -271,9 +271,9 @@ const CommunityPage: React.FC = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                  <p>{project.description}</p>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex items-center justify-between mb-4">
-                    <span>by {project.author}</span>
+                    <span className="text-sm text-gray-500">by {project.author}</span>
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
                       <span className="flex items-center">
                         <Star className="w-4 h-4 mr-1" />

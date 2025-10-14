@@ -49,8 +49,4 @@
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
               <p className="mb-6">"
                 Ready to transform your business with our skip link services?</p>
-              <a
-                href="/contact
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">"
-                Contact Us</a></div></div></div></section>
-"
+

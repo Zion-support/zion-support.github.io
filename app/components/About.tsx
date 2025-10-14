@@ -43,13 +43,7 @@ const About: React.FC = () => {
                 growth, efficiency, and success.
               </p>
               
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <CheckIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Cutting-Edge Technology</h3>
-                    <p className="text-gray-600">We leverage the latest AI and IT technologies to deliver innovative solutions.</p>
-                  </div>
+
                 </div>
                 <div className="flex items-start">
                   <CheckIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />

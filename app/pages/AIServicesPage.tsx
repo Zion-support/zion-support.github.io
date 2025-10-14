@@ -104,18 +104,7 @@ const AIServicesPage: React.FC = () => {
 const AIServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
-        <title>AIServicesPage - Zion Tech Group</title>"
-        <meta name="description" content="AIServicesPage - Zion Tech Group" />"
-      </Helmet>"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">AIServicesPage</h1>"
-          <p className="text-gray-300">This page is under construction.</p>"
-        </div>
-      </div>
-    </div>;  )
-export default AIServicesPage
+
     </>
   )
 export default AIServicesPage
@@ -125,11 +114,6 @@ import React from "react
 
 const AIServicesPage = () => {
   return (
-  <>"
-      <h1 className="text-4xl font-bold mb-8">AIServicesPage</h1>"
-      <p className="text-gray-300 text-lg">This page is under development.</p>"
-    </div>
-    </>
-)
+
 }
 "

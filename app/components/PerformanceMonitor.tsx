@@ -6,7 +6,7 @@ const PerformanceMonitor: React.FC = () => {
     firstInputDelay: null,
     cumulativeLayoutShift: null
   })
->>>>>>> origin/main
+
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     const measurePerformance = () => {
@@ -82,7 +82,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     // Wait for page load
   return (
-<>    <div className="fixed bottom-4 right-4 z-50">
+
       <button></button>
         Performance
       </button>

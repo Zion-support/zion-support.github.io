@@ -17,64 +17,7 @@
             {benefits.map((benefit, _index) => {
               const Icon = benefit.icon
               return (
-  <>"
-    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">"
-                  <div className="p-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4">"
-                    <Icon className="w-6 h-6 text-white" />"
-                  </div>"
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>"
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>"
-                </div>
-    </>
-)
-            }
-          </div>
-        </div>
-                  </span>
-                </div>"
-                <div className="flex items-center text-gray-400 mb-3">"
-                  <MapPin className="w-4 h-4 mr-2" />"
-                  <span className="text-sm">{position.location}</span>"
-                  <span className="mx-2">•</span>"
-                  <span className="text-sm">{position.department}</span>"
-                </div>"
-                <p className="text-gray-300 mb-4">{position.description}</p>"
-                <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">"
-                  Apply Now
-                </button>
-              </div>
-            ))
-          </div>
-        </div>
-              </div>"
-              <h3 className="text-xl font-semibold text-white mb-3">Collaborative</h3>"
-              <p className="text-gray-300">We believe in the power of teamwork and open communication to achieve great things.</p>"
-            </div>"
-            <div className="text-center">"
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"
-                <Zap className="w-8 h-8 text-white" />"
-              </div>"
-              <h3 className="text-xl font-semibold text-white mb-3">Innovative</h3>"
-              <p className="text-gray-300">We encourage creative thinking and embrace new technologies to solve complex problems.</p>"
-            </div>"
-            <div className="text-center">"
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"
-                <Target className="w-8 h-8 text-white" />"
-              </div>"
-              <h3 className="text-xl font-semibold text-white mb-3">Impact-Driven</h3>"
-              <p className="text-gray-300">We focus on delivering real value to our clients and making a positive impact.</p>"
-            </div>
-          </div>
-        </div>
-            </p>"
-            <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">"
-              Send Resume
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>;  )
-export default CareersPage
+
 const CareersPage: React.FC = () => {
   return (
     <>
@@ -126,23 +69,6 @@ const CareersPage: React.FC = () => {
 const CareersPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
-        <title>CareersPage - Zion Tech Group</title>"
-        <meta name="description" content="CareersPage - Zion Tech Group" />"
-      </Helmet>"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">CareersPage</h1>"
-          <p className="text-gray-300">This page is under construction.</p>"
-        </div>
-      </div>
-    </>
-  )
-export default CareersPage
-    <div></div>"
-      <h1 className="text-4xl font-bold mb-8">CareersPage</h1>"
-      <p className="text-gray-300 text-lg">This page is under development.</p>"
-    </div>
-  )
+
 }
 "

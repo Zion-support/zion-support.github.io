@@ -2,12 +2,10 @@ import React from "react";
 
 const AdAnalytics = () => {
   return (
-    <>
-      <div className="p-4">
-        <h2 className="text-xl font-bold text-white mb-4">Ad Analytics</h2>
-        <p className="text-gray-300">This component is under construction.</p>
-      </div>
-    </>
+    <div className="ad-analytics">
+      <h2>Ad Analytics</h2>
+      <p>Analytics component under construction</p>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ interface Props {
   children: ReactNode
   fallback?: ReactNode
   onError?: (error: Error, errorInfo: ErrorInfo) => void
->>>>>>> origin/main
+
 }
 
 interface State {
@@ -28,10 +28,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
->>>>>>> origin/main
+
 }
 
->>>>>>> origin/main
+
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
@@ -41,7 +41,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
     }
->>>>>>> origin/main
+
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -62,12 +62,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {'
       // Here you would typically send the error to a logging service
       console.error('Production error:', error);'
->>>>>>> origin/main
+
     }
->>>>>>> origin/main
-=======
-)
->>>>>>> origin/main
+
+
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -147,8 +145,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <div className="text-sm text-cyan-400"></div>
                   <p>Email: kleber@ziontechgroup.com</p>
                   <p>Phone: +1-302-464-0950</p>
-                </div>
-              </div>
+
 
               {/* Development Error Details */}'
               { process.env.NODE_ENV === 'development' && this.state.error && ("'"'"
@@ -183,7 +180,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </details>
               )
             </div>
->>>>>>> origin/main
+
           </div>
     </>
       )
@@ -201,7 +198,4 @@ export default EnhancedErrorBoundary';'
 }
 
 export default EnhancedErrorBoundary
->>>>>>> origin/main
-=======
-"
->>>>>>> origin/main
+
