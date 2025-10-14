@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { EnvelopeIcon, 
-  PhoneIcon, 
-  MapPinIcon,
-  ClockIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -43,10 +41,12 @@ const Contact: React.FC = () => {
       details: 'San Francisco, CA',
       description: 'Visit our headquarters'
     },
-    {icon: ClockIcon,
+    {
+      icon: ClockIcon,
       title: 'Response Time',
       details: '< 24 hours',
-      description: 'We respond quickly'}
+      description: 'We respond quickly'
+    }
   ];
 
   return (
