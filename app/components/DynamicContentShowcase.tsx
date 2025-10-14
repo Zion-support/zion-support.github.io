@@ -1,19 +1,19 @@
 'use client';
 
-import React,{ useState, useEffect } from 'react';
-import { Play, ArrowRight, Star, Users, ChevronLeft, Pause, ChevronRight, CheckCircle, Zap  } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Play, ArrowRight, Star, Users, ChevronLeft, Pause, ChevronRight, CheckCircle, Zap, Brain, Shield, Globe } from 'lucide-react';
 
-interfaceFeature {
+interface Feature {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
-  stats?:{
+  stats?: {
     value: string;
     label: string;
   }[];
 }
 
-interfaceTestimonial {
+interface Testimonial {
   name: string;
   company: string;
   role: string;
@@ -23,66 +23,91 @@ interfaceTestimonial {
 }
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrent Index] = useState(0);
-  const [isPlaying, setIs Playing] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
 
-  const features: Feature[] =[
+  const features: Feature[] = [
     {
       icon: Brain,
-      title:'AI-Powered Intelligence',
-      description:'Advanced AI algorithms that learn and adapt to your business needs in real-time',
-      stats:[
-        { value:'95%', label:'Accuracy' },{ value:'10 x', label:'Faster' },{ value:'24/7', label:'Learning' }]
-    },{
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time',
+      stats: [
+        { value: '95%', label: 'Accuracy' },
+        { value: '10x', label: 'Faster' },
+        { value: '24/7', label: 'Learning' }
+      ]
+    },
+    {
       icon: Zap,
-      title:'Lightning Fast Performance',
-      description:'Optimized for speed with sub-second response times and seamless user experience',
-      stats:[
-        { value:'<100 ms', label:'Response' },{ value:'99.9%', label:'Uptime' },{ value:'10 M+', label:'Requests' }]
-    },{
+      title: 'Lightning Fast Performance',
+      description: 'Optimized for speed with sub-second response times and seamless user experience',
+      stats: [
+        { value: '<100ms', label: 'Response' },
+        { value: '99.9%', label: 'Uptime' },
+        { value: '10M+', label: 'Requests' }
+      ]
+    },
+    {
       icon: Shield,
-      title:'Enterprise Security',
-      description:'Bank-level security with end-to-end encryption and compliance standards',
-      stats:[
-        { value:'256-bit', label:'Encryption' },{ value:'SOC 2', label:'Compliance' },{ value:'Zero', label:'Breaches' }]
-    },{
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards',
+      stats: [
+        { value: '256-bit', label: 'Encryption' },
+        { value: 'SOC 2', label: 'Compliance' },
+        { value: 'Zero', label: 'Breaches' }
+      ]
+    },
+    {
       icon: Globe,
-      title:'Global Scalability',
-      description:'Scale effortlessly across multiple regions with automatic load balancing',
-      stats:[
-        { value:'50+', label:'Countries' },{ value:'15+', label:'Languages' },{ value:'24/7', label:'Support' }]
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing',
+      stats: [
+        { value: '50+', label: 'Countries' },
+        { value: '15+', label: 'Languages' },
+        { value: '24/7', label: 'Support' }
+      ]
     }
   ];
 
-  const benefits =[
-    'Advanced AI technology integration','Real-time processing and analytics','Enterprise-grade security and compliance','Scalable and flexible solutions','24/7 technical support','Easy integration with existing systems','Cost-effective pricing plans','Proven track record of success'
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ];
 
-  const testimonials: Testimonial[] =[
+  const testimonials: Testimonial[] = [
     {
-      name:'Sarah Johnson',
-      company:'Tech Corp Inc.',
-      role:'CTO',
-      content:'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
-      rating: 5;
-    },{
-      name:'Michael Chen',
-      company:'Data Flow Systems',
-      role:'CEO',
-      content:'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
-      rating: 5;
-    },{
-      name:'Emily Rodriguez',
-      company:'Innovate Lab',
-      role:'Product Manager',
-      content:'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5;
-    },{
-      name:'David Kim',
-      company:'Cloud First Solutions',
-      role:'VP Engineering',
-      content:'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
-      rating: 5;
+      name: 'Sarah Johnson',
+      company: 'Tech Corp Inc.',
+      role: 'CTO',
+      content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'Data Flow Systems',
+      role: 'CEO',
+      content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'Innovate Lab',
+      role: 'Product Manager',
+      content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
+      rating: 5
+    },
+    {
+      name: 'David Kim',
+      company: 'Cloud First Solutions',
+      role: 'VP Engineering',
+      content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
+      rating: 5
     }
   ];
 
@@ -90,47 +115,47 @@ const DynamicContentShowcase: React.FC = () => {
     if (!isPlaying) return;
     
     const timer = setInterval(() => {
-      setCurrent Index((prev) => (prev + 1) % testimonials.length);
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     
     return () => clearInterval(timer);
-  },[isPlaying, testimonials.length]);
+  }, [isPlaying, testimonials.length]);
 
-  const nextTestimonial = ($2): void => {
-    setCurrent Index((prev) => (prev + 1) % testimonials.length);
+  const nextTestimonial = (): void => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = ($2): void => {
-    setCurrent Index((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevTestimonial = (): void => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const togglePlay Pause = () => {
-    setIs Playing(!isPlaying);
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
   };
 
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 min-h-screen">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7 xlmx-auto text-center">
-          <h1 className="text-4 xlmd:text-6 xl font-bold text-white mb-6">
-            Dynamic <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations;
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Experience the power of our cutting-edge solutions with real-time demonstrations
             and interactive showcases that bring your business to life.
           </p>
-          <div className="flexflex-colsm:flex-row gap-4 justify-center">
-            <button ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Play className="w-5 h-5" />
-              Start Demo;
-            </butn>
-            <button ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+              Start Demo
+            </button>
+            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
-              Learn More;
-            </butn>
+              Learn More
+            </button>
           </div>
         </div>
       </section>
