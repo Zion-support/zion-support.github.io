@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 export const UseAnalytics = () => {
-  const [state, setState] = useState(null);
+  const [state] = useState(null);
 
   useEffect(() => {
     // UseAnalytics hook logic

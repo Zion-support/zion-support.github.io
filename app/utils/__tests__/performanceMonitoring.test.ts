@@ -1,6 +1,6 @@
-export const PerformanceMonitoring.Test = () => {
-  // PerformanceMonitoring.Test utility function
+export const PerformanceMonitoringTest = () => {
+  // PerformanceMonitoringTest utility function
   return true;
 };
 
-export default PerformanceMonitoring.Test;
+export default PerformanceMonitoringTest;
