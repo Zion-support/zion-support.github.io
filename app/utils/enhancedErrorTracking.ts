@@ -26,13 +26,13 @@ export const enhancedErrorTracking = {
     }
   },
   
-  trackPerformanceError: (_error: Error, performanceData: unknown) => {
-    enhancedErrorTracking.trackError(_error, {
-  trackPerformanceError: (error: Error, performanceData: unknown) => {
+  trackPerformanceError: (error: Error, _performanceData: unknown) => {
     enhancedErrorTracking.trackError(error, {
-
+      performance: true
     });
-  trackPerformanceError: (metric: string, value: number, threshold: number) => {
+  },
+  
+  trackPerformanceThreshold: (metric: string, value: number, threshold: number) => {
     if (value > threshold) {
       enhancedErrorTracking.trackError(new Error(`Performance threshold exceeded: ${metric}`), {
         metric,

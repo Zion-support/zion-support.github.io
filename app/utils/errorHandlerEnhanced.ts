@@ -21,16 +21,14 @@ export const errorHandlerEnhanced = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-
-      });
         description: error.message,
-        fatal: false;
-      })
+        fatal: false
+      });
     }
     
     return {
       message: 'Something went wrong. Please try again.',
-      code: 'GENERIC_ERROR';
+      code: 'GENERIC_ERROR'
     }
   }
 }

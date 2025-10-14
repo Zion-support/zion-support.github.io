@@ -15,6 +15,10 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Contact', href: '/contact', icon: Mail }
   ];
   return (
     <>
@@ -57,29 +61,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             })}
           </ul>
         </nav>
-        <div className="absolutebottom-4 left-4 right-4">
-          <div className="bg-slate-700rounded-lg p-4">
-            <div className="flexitems-center text-sm text-gray-300 mb-2">
-              <MapPin className="w-4h-4 mr-2" />
+        <div className="absolute bottom-4 left-4 right-4">
+          <div className="bg-slate-700 rounded-lg p-4">
+            <div className="flex items-center text-sm text-gray-300 mb-2">
+              <MapPin className="w-4 h-4 mr-2" />
               <span>Contact Info</span>
-              </div>
-        </div>
-            <div className="flexitems-center text-sm text-gray-300 mb-1">
-              <Phone className="w-4h-4 mr-2" />
-              <span>+1 (555) 123-4567</span>
-              </div>
-        </div>
-            <div className="flexitems-center text-sm text-gray-300">
-              <Mail className="w-4h-4 mr-2" />
-              <span>info@ziontechgroup.com</span>
-              </div>
-        </div>
             </div>
-        </div>
+            <div className="flex items-center text-sm text-gray-300 mb-1">
+              <Phone className="w-4 h-4 mr-2" />
+              <span>+1 (555) 123-4567</span>
+            </div>
+            <div className="flex items-center text-sm text-gray-300">
+              <Mail className="w-4 h-4 mr-2" />
+              <span>info@ziontechgroup.com</span>
+            </div>
           </div>
         </div>
       </div>
-</>
+    </>
   );
 };
 export default Sidebar;
