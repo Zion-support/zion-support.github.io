@@ -5,7 +5,7 @@ import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-reac
 
 const GuidesPage: React.FC = () => {
   const guides = [
-    {
+    {,
       title: 'AI 2026 Implementation Roadmap',
       description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026',
       url: '/guides/ai-2026-implementation-roadmap',
@@ -48,7 +48,7 @@ const GuidesPage: React.FC = () => {
       case 'Beginner': return 'text-green-400 bg-green-400/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20';
       case 'Advanced': return 'text-orange-400 bg-orange-400/20';
-      case 'Expert': return 'text-red-400 bg-red-400/20';
+      case 'Expert': return 'text-red-400 bg-red-400/20';,
       default: return 'text-gray-400 bg-gray-400/20';
     }
   };
@@ -185,3 +185,6 @@ const GuidesPage: React.FC = () => {
 };
 
 export default GuidesPage;
+</span>
+</li>
+</li>

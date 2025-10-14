@@ -15,7 +15,7 @@ function fixBlogHelmet(filePath) {
     content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];\s*\n?/g, '');
     
     // Remove Helmet wrapper
-    content = content.replace(/<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*/g, '');
+    content = content.replace(/<div>\s*<Helmet>[\s\S]*?<\/Helmet>\s*/g, '');
     
     // Remove closing fragment
     content = content.replace(/\s*<\/>\s*$/gm, '');

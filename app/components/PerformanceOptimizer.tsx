@@ -1,8 +1,8 @@
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-    // Performance optimization code'';'
-const optimizeImages = () => {;
-const images = document.querySelectorAll('img')'''
+    // Performance optimization code;'
+const optimizeImages = () => {
+const images = document.querySelectorAll('img')
       images.forEach((img) => {}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -17,7 +17,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     if (typeof window === 'undefined') return;'
 
-    // Image optimization;
+    // Image optimization
     if (enableImageOptimization) {
       const images = document.querySelectorAll('img');'
       images.forEach((img) => {
@@ -27,42 +27,41 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         if (!img.decoding) {
           img.decoding = 'async';'
         }
-        // Add fetchpriority for above-the-fold images;
+        // Add fetchpriority for above-the-fold images
         if (img.getBoundingClientRect().top < window.innerHeight) {
           img.setAttribute('fetchpriority', 'high');'
         }
-      });
+      })
     }
-      link.rel = 'preload'''
-      link.href = '/fonts/inter.woff2'''
-      link.as = 'font'''
-      link.type = 'font/woff2'''
-      ];
-
+      link.rel = 'preload
+      link.href = '/fonts/inter.woff2
+      link.as = 'font
+      link.type = 'font/woff2
+      ]
       prefetchLinks.forEach((href) => {
         const existingLink = document.querySelector(`link[href="${href}"]`);``"`
         if (!existingLink) {
           const link = document.createElement('link');'
           link.rel = 'prefetch';'
-          link.href = href;
-          document.head.appendChild(link);
+          link.href = href
+          document.head.appendChild(link)
         }
-      });
+      })
     }
-    // Run optimizations;
+    // Run optimizations
     optimizeImages()
     optimizeFonts()
     optimizeResources()
-    // Cleanup function;
+    // Cleanup function
   return <>{children}</>
 }
-export default PerformanceOptimizer;
-        const link = document.createElement('link')'''
-        link.rel = 'preload''''
-        link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'script''''
+export default PerformanceOptimizer
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.href = resource
+        link.as = resource.endsWith('.css') ? 'style' : 'script'
         document.head.appendChild(link)}
-    // Run optimizations;
+    // Run optimizations
     optimizeImages()
     optimizeFonts()
     optimizeResources()
@@ -70,10 +69,9 @@ export default PerformanceOptimizer;
       // Cleanup if needed}}, [])
   return <>{children}</>
 }
-export default PerformanceOptimizer;
+export default PerformanceOptimizer
       // Cleanup if needed;}
   }, [])
   return <>{children}</>
-};
-
-export default PerformanceOptimizer;
+}
+export default PerformanceOptimizer

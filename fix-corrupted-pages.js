@@ -21,3 +21,7 @@ const createAIServicePage = (serviceName, title, description, features) => `'use
     { label: 'Success Rate', value: '98%'';'
     { label: 'Client Satisfaction', value: '99%'';'
     { label: 'Years Experience', value: '5+'';'
+}
+}
+}
+}
