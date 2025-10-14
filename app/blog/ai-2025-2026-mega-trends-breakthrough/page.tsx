@@ -14,7 +14,7 @@ const AIMegaTrends20252026: React.FC = () => {
               </h1>
               <p>Discover the groundbreaking AI trends and breakthroughs that will revolutionize
                 enterprise operations</p>
-              </div>
+            </div>
 
             <div className="prose max-w-none">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Executive Summary</h2>
@@ -22,66 +22,69 @@ const AIMegaTrends20252026: React.FC = () => {
                 revolutionary technologies transforming enterprise operations at an exponential
                 rate. This comprehensive guide reveals the mega trends that will reshape business
                 intelligence, automation, and operational excellence.</p>
-              </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 🌟 Revolutionary AI Breakthroughs
               </h2>
               <p>The following mega trends are reshaping the enterprise AI landscape:</p>
-              </p>
 
               <h3 className="text-xl font-semibold text-gray-800 mb-4">⚛️ Quantum-Enhanced AI</h3>
               <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
                 <li>• Quantum computing integration with AI systems</li>
                 <li>• Exponential processing power for complex problems</li>
                 <li>• Breakthrough optimization capabilities</li>
-                <li>• Revolutionary data analysis methods</ul>
+                <li>• Revolutionary data analysis methods</li>
+              </ul>
 
               <h3 className="text-xl font-semibold text-gray-800 mb-4">🧠 Conscious AI Systems</h3>
               <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
                 <li>• Self-aware AI with consciousness capabilities</li>
                 <li>• Emotional intelligence and empathy</li>
                 <li>• Autonomous decision-making with ethical reasoning</li>
-                <li>• Human-like cognitive processing</ul>
+                <li>• Human-like cognitive processing</li>
+              </ul>
 
               <h3 className="text-xl font-semibold text-gray-800 mb-4">🤖 Autonomous Operations</h3>
               <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
                 <li>• Self-managing business processes</li>
                 <li>• Zero-downtime operations</li>
                 <li>• Predictive maintenance and self-healing</li>
-                <li>• Continuous learning and adaptation</ul>
+                <li>• Continuous learning and adaptation</li>
+              </ul>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 Enterprise Impact</h2>
               <p>These mega trends are delivering unprecedented value to enterprises:</p>
-              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-indigo-50 p-6 rounded-lg text-center">
                   <div className="text-3xl font-bold text-indigo-600 mb-2">$100B+</div>
                   <div className="text-gray-700">Market Value</div>
+                </div>
                 <div className="bg-green-50 p-6 rounded-lg text-center">
                   <div className="text-3xl font-bold text-green-600 mb-2">95%</div>
                   <div className="text-gray-700">Process Automation</div>
+                </div>
                 <div className="bg-purple-50 p-6 rounded-lg text-center">
                   <div className="text-3xl font-bold text-purple-600 mb-2">10x</div>
                   <div className="text-gray-700">Efficiency Gains</div>
+                </div>
+              </div>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Future Outlook</h2>
               <p>The AI revolution of 2025-2026 represents a fundamental shift in how enterprises
                 operate. Organizations that embrace these mega trends will gain significant
                 competitive advantages and transform their operations for the future.</p>
-              </p>
 
               <div className="bg-indigo-50 p-6 rounded-lg text-center">
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">
                   Prepare for the AI Revolution
                 </h3>
                 <p>Join leading enterprises embracing the AI mega trends of 2025-2026</p>
-                </p>
                 <div className="space-x-4">
-                  <Link to="
-                    Get AI Assessment
-                  ">
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
+                  >
                     Get AI Assessment
                   </Link>
                   <Link
@@ -89,12 +92,14 @@ const AIMegaTrends20252026: React.FC = () => {
                     className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors"
                   >
                     Explore AI Services
-                  </div>
-  );
-};
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
-export default AIMegaTrends20252026;
-
-</li>
-</li>
-</li>
+  export default AIMegaTrends20252026;

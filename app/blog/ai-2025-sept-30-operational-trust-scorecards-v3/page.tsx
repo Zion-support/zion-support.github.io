@@ -13,8 +13,9 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               GUIDE
             </span>
             <span className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs">
-              Sep    30, 2025
-            </div>
+              Sep 30, 2025
+            </span>
+          </div>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
             Operational Trust    Scorecards    v3
           </h1>
@@ -33,7 +34,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               KP    Is    across reliability (accuracy, grounding, latency), safety
               (policy adherence), cost (per task, per user), and value (business
               outcomes) so leaders can make tradeoffs responsibly.</p>
-            </div>
+          </div>
 
           <div>
             <h2 className="text-2xl font-bold mb-3">Scorecard    Structure</h2>
@@ -53,7 +54,8 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               <li>
                 <strong className="text-white">Value   :</strong> conversion
                 uplift, time saved, NPS changes, $ ROI.
-              </ul>
+              </li>
+            </ul>
           </div>
 
           <div>
@@ -61,13 +63,12 @@ const OperationalTrustScorecardsPage: React.FC = () => {
             <p>Tie each KPI to budgets and routing rules. If reliability falls,
               route to safer tier; if cost exceeds budget, throttle usage; if
               safety violations spike, auto-rollback to last known good state.</p>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
     </>
   );
 }
 
 export default OperationalTrustScorecardsPage;
-
-</li>
