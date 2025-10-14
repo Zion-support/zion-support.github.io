@@ -11,8 +11,10 @@ export const productionLogger = {
       // In development, log everything
       if (level === 'info') {
         console.warn(message, data);
-      } else {
-        console[level](message, data);
+      } else if (level === 'warn') {
+        console.warn(message, data);
+      } else if (level === 'error') {
+        console.error(message, data);
       }
     }
   },
