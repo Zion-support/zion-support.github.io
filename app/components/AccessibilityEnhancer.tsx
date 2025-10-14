@@ -1,12 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const AccessibilityEnhancer = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AccessibilityEnhancer</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
+interface AccessibilityEnhancerProps {
+  children: ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;

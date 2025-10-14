@@ -1,4 +1,5 @@
-import React from 'react';'// navigation - Basic implementation'export default function navigation() {;
+// navigationx utility
+export const navigationx = () => {
+  // Implementation here
   return null;
-}
-;
+};

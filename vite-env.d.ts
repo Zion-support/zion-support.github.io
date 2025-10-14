@@ -1,4 +1,5 @@
-// vite-env.d - Basic implementation
-export default function vite-env.d() {
-  return null;
+// Type definitions
+declare module '*.svg' {
+  const content: string;
+  export default content;
 }
