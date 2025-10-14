@@ -1,37 +1,41 @@
-import React, { createContext, ReactNode } from 'react';
+import React, { createContext, useState, useEffect } from "react";
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, unknown>) => void;
+  isEnabled: boolean;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
+export const AnalyticsProvider = ({ children }: { children: React.ReactNode }) => {
+  const [isEnabled, setIsEnabled] = useState(false);
+  useEffect(() => {
+    // if analytics is enabled
+    setIsEnabled(true);
+  }, []);
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    // Implementation for tracking events
-    console.log('Event tracked:', eventName, properties);
+  const trackEvent = (_eventName: string, _properties?: Record<string, unknown>) => {
+    if (!isEnabled) return;
+    // Track event logic here
+    console.log("Analytics Event:", _eventName, _properties);
   };
 
-  const trackPageView = (pageName: string) => {
-    // Implementation for tracking page views
-    console.log('Page view tracked:', pageName);
+  const trackPageView = (_pageName: string) => {
+    // Track page view logic here
+    console.log("Page View:", _pageName);
   };
 
-  const setUser = (userId: string, properties?: Record<string, unknown>) => {
-    // Implementation for setting user
-    console.log('User set:', userId, properties);
+  const setUser = (_newUserId: string, _properties?: Record<string, unknown>) => {
+    console.log("User Set:", _newUserId, _properties);
   };
 
-  const value: AnalyticsContextType = {
+  const value = {
     trackEvent,
     trackPageView,
     setUser,
+    isEnabled
   };
 
   return (
@@ -42,3 +46,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 };
 
 export { AnalyticsContext };
+
+// Hook to use analytics context
+export const useAnalytics = () => {
+  const context = React.useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};

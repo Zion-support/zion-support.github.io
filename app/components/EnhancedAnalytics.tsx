@@ -1,14 +1,11 @@
-import React from "react";
+import React from 'react';
 
-export default function EnhancedAnalytics() {
-  return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-white mb-8">EnhancedAnalytics</h1>
-        <p className="text-gray-300 text-lg">
-          Content for EnhancedAnalytics component.
-        </p>
-      </div>
-    </div>
-  );
+interface EnhancedAnalyticsProps {
+  children: React.ReactNode;
 }
+
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default EnhancedAnalytics;

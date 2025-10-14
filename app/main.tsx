@@ -1,14 +1,12 @@
-import React from "react";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from '../App';
 
+// Main entry point
 export default function main() {
-  return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-white mb-8">main</h1>
-        <p className="text-gray-300 text-lg">
-          Content for main component.
-        </p>
-      </div>
-    </div>
-  );
+  const container = document.getElementById('root');
+  if (container) {
+    const root = createRoot(container);
+    root.render(<App />);
+  }
 }

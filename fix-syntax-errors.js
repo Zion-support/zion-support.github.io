@@ -1,104 +1,115 @@
+import React from 'react'
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-// Function to fix common syntax errors in TSX files
+import fs from "fs"
+import path from "path"
+import { glob } from "glob"
+// Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
-  let fixed = content;
-  
-  // Fix unterminated string literals
-  fixed = fixed.replace(/content="([^"]*)$/gm, 'content="$1"');
-  
-  // Fix missing closing tags and malformed JSX
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*}\s*;\s*$/gm, '}');
-  fixed = fixed.replace(/}\s*;\s*$/gm, '}');
-  
+  let fixed = content
+  // Fix unterminated string literals in JSX attributes
+  fixed = fixed.replace(/content="([^"]*?)(?=\s*\/>)/g, 'content="$1"')
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g)
+    return tags[tags.length - 1]; // Keep only the last closing tag
+  })
+  // Fix orphaned closing tags
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g)
+    return tags[tags.length - 1]
+  })
+  // Fix malformed function returns
+  fixed = fixed.replace(
+    /return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g,
+    "return (",
+  )
+  // Fix multiple closing parentheses
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;/g, ");")
+  // Fix orphaned semicolons and braces
+  fixed = fixed.replace(/;\s*}\s*;\s*}\s*;\s*}/g, "}")
   // Fix malformed JSX structure
-  fixed = fixed.replace(/<div[^>]*>\s*\)\s*;\s*$/gm, '</div>');
-  fixed = fixed.replace(/<main[^>]*>\s*\)\s*;\s*$/gm, '</main>');
-  fixed = fixed.replace(/<Router[^>]*>\s*\)\s*;\s*$/gm, '</Router>');
-  fixed = fixed.replace(/<HelmetProvider[^>]*>\s*\)\s*;\s*$/gm, '</HelmetProvider>');
-  
-  // Fix broken JSX expressions
-  fixed = fixed.replace(/\)\s*;\s*<([^>]+)>/gm, '>\n      <$1>');
-  fixed = fixed.replace(/<\/[^>]+>\s*<([^>]+)>/gm, '</$1>');
-  
-  // Fix missing return statements
-  if (fixed.includes('export default function') && !fixed.includes('return (')) {
-    fixed = fixed.replace(/export default function[^{]*{([^}]*)}/gm, (match, body) => {
-      if (!body.trim().includes('return')) {
-        return match.replace('{', '{\n  return (');
-      }
-      return match;
-    });
-  }
-  
-  // Fix broken function declarations
-  fixed = fixed.replace(/export default function[^{]*{\s*'([^']*)'\s*return\s*\(/gm, 'export default function Page() {\n  return (');
-  
-  // Fix malformed JSX structure in specific patterns
-  fixed = fixed.replace(/<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/gm, '<React.Fragment>\n      </React.Fragment>');
-  
-  // Fix broken closing tags
-  fixed = fixed.replace(/<\/[^>]+>\s*;\s*$/gm, '');
-  fixed = fixed.replace(/;\s*<\/[^>]+>/gm, '</$1>');
-  
-  // Fix missing semicolons and brackets
-  fixed = fixed.replace(/}\s*export default/gm, '}\n\nexport default');
-  
-  // Clean up extra semicolons and brackets
-  fixed = fixed.replace(/;\s*;\s*$/gm, ';');
-  fixed = fixed.replace(/}\s*}\s*$/gm, '}');
-  
-  return fixed;
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, "<$1>")
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(
+    /<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g,
+    (match, tagName) => {
+      if (match.includes("=") && !match.includes("/>")) {
+        return match + ">"
 }
-
+      return match
+    },
+  )
+  // Fix orphaned closing tags that don't match opening tags
+  const lines = fixed.split("\n")
+  const fixedLines = []
+  const openTags = []
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    // Skip lines that are just orphaned closing tags
+    if (/^\s*<\/[^>]*>\s*$/.test(line) && openTags.length === 0) {
+      continue
+}
+    // Track opening tags
+    const openingTags = line.match(/<([^\/][^>]*?)>/g)
+    if (openingTags) {
+      openingTags.forEach((tag) => {
+        const tagName = tag.match(/<([^\s>]+)/)
+        if (tagName && !tag.includes("/>")) {
+          openTags.push(tagName[1])
+})
+}
+    // Track closing tags
+    const closingTags = line.match(/<\/([^>]+)>/g)
+    if (closingTags) {
+      closingTags.forEach((tag) => {
+        const tagName = tag.match(/<\/([^>]+)>/)
+        if (tagName) {
+          const index = openTags.lastIndexOf(tagName[1])
+          if (index !== -1) {
+            openTags.splice(index, 1)
+}
+      })
+}
+    fixedLines.push(line)
+}
+  fixed = fixedLines.join("\n")
+  return fixed
+}
 // Function to fix specific file patterns
-function fixSpecificFiles() {
-  const files = [
-    'app/404.tsx',
-    'app/App.tsx',
-    'app/ad-management/page.tsx',
-    'app/ai-3d-generation/page.tsx',
-    'app/ai-analytics/page.tsx',
-    'app/ai-automation-platform/page.tsx',
-    'app/ai-automation-suite/page.tsx',
-    'app/ai-automation/page.tsx'
-  ];
-  
-  files.forEach(filePath => {
-    const fullPath = path.join(process.cwd(), filePath);
-    if (fs.existsSync(fullPath)) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      const fixed = fixSyntaxErrors(content, filePath);
-      
-      if (fixed !== content) {
-        fs.writeFileSync(fullPath, fixed);
-        console.log(`Fixed: ${filePath}`);
-      }
-    }
-  });
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8")
+    const fixed = fixSyntaxErrors(content, filePath)
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, "utf8")
+      console.log(`Fixed: ${filePath}`)
+      return true
 }
-
+    return false
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
+}
 // Main execution
-console.log('Fixing syntax errors...');
-fixSpecificFiles();
-
-// Find and fix all TSX files with common patterns
-const tsxFiles = glob.sync('app/**/*.tsx', { cwd: process.cwd() });
-
-tsxFiles.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
-  let content = fs.readFileSync(fullPath, 'utf8');
-  const fixed = fixSyntaxErrors(content, filePath);
-  
-  if (fixed !== content) {
-    fs.writeFileSync(fullPath, fixed);
-    console.log(`Fixed: ${filePath}`);
-  }
-});
-
-console.log('Syntax error fixing completed!');
+async function main() {
+  console.log("Starting syntax error fixes...")
+  // Get all TypeScript/JavaScript files
+  const patterns = [
+    "app/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.jsx",
+    "app/**/*.js",
+    "__tests__/**/*.tsx",
+    "__tests__/**/*.ts",
+  ]
+  let totalFixed = 0
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() })
+    for (const file of files) {
+      if (fixFile(file)) {
+        totalFixed++
+}
+}
+  console.log(`Fixed ${totalFixed} files.`)
+}
+main().catch(console.error)

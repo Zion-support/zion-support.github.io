@@ -1,4 +1,4 @@
 // DigitalTransformationPage - Basic implementation
 export default function DigitalTransformationPage() {
-  return null;
+  return null
 }

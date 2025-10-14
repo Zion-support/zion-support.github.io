@@ -1,185 +1,171 @@
+import React from 'react'
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-// Function to completely rewrite corrupted files
-function fixCorruptedFile(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  const dirName = path.dirname(filePath).split('/').pop();
-  
-  // Generate proper content based on file name and location
-  let content = '';
-  
-  if (fileName === '404') {
-    content = `import React from 'react';
-
-export default function NotFound() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-        <p className="text-gray-300 text-xl mb-8">Page not found</p>
-        <a
-          href="/"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors"
-        >
-          Go Home
-        </a>
-      </div>
-    </div>
-  );
-}`;
-  } else if (fileName === 'App') {
-    content = `import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ServicesPage from "./pages/ServicesPage";
-import ContactPage from "./pages/ContactPage";
-import BlogPage from "./pages/BlogPage";
-import DemoPage from "./pages/DemoPage";
-
-function App() {
-  return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-900">
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
-  );
+import fs from "fs"
+import path from "path"
+import { glob } from "glob"
+// Function to fix specific syntax patterns
+function fixSyntaxPatterns(content) {
+  let fixed = content
+  // Fix unterminated string literals in JSX attributes
+  fixed = fixed.replace(/content="([^"]*?)(?=\s*\/>)/g, 'content="$1"')
+  fixed = fixed.replace(/name="([^"]*?)(?=\s*\/>)/g, 'name="$1"')
+  fixed = fixed.replace(/description="([^"]*?)(?=\s*\/>)/g, 'description="$1"')
+  // Fix malformed function declarations
+  fixed = fixed.replace(
+    /export default function Page\(\) \{'  return \(/g,
+    "export default function Page() {\n  return (",
+  )
+  fixed = fixed.replace(
+    /export default function Page\(\) \{'  return \(/g,
+    "export default function Page() {\n  return (",
+  )
+  // Fix orphaned closing tags and malformed JSX
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g)
+    return tags[tags.length - 1]
+  })
+  // Fix malformed return statements
+  fixed = fixed.replace(
+    /return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g,
+    "return (",
+  )
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, "return (")
+  // Fix multiple closing parentheses and semicolons
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;/g, ");")
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;/g, ");")
+  // Fix orphaned semicolons and braces
+  fixed = fixed.replace(/;\s*}\s*;\s*}\s*;\s*}/g, "}")
+  fixed = fixed.replace(/;\s*}\s*;\s*}/g, "}")
+  // Fix malformed JSX structure with orphaned tags
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, "<$1>")
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(
+    /<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g,
+    (match, tagName) => {
+      if (match.includes("=") && !match.includes("/>")) {
+        return match + ">"
 }
-
-export default App;`;
-  } else if (filePath.includes('/page.tsx')) {
-    const serviceName = dirName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-    content = `import React from "react";
-import { Helmet } from "react-helmet-async";
-
-export default function Page() {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>${serviceName} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${serviceName.toLowerCase()} services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold text-white mb-8">${serviceName}</h1>
-          <p className="text-gray-300 text-lg">
-            Professional ${serviceName.toLowerCase()} services tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-}`;
-  } else {
-    // Generic component template
-    content = `import React from "react";
-
-export default function ${fileName}() {
-  return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-white mb-8">${fileName}</h1>
-        <p className="text-gray-300 text-lg">
-          Content for ${fileName} component.
-        </p>
-      </div>
-    </div>
-  );
-}`;
-  }
-  
-  return content;
+      return match
+    },
+  )
+  // Fix specific patterns for page components
+  fixed = fixed.replace(
+    /export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g,
+    "export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  );",
+  )
+  // Fix malformed Helmet components
+  fixed = fixed.replace(/<\/Helmet>\s*<div>
+</div>/g, "</Helmet>\n      <div>
+</div>")
+  fixed = fixed.replace(
+    /<title>([^<]*)<\/title>\s*<meta name="description"content="([^"]*)" \/>/g,
+    '<title>$1</title>\n        <meta name="description" content="$2" />',
+  )
+  // Fix orphaned closing tags that don't match opening tags
+  const lines = fixed.split("\n")
+  const fixedLines = []
+  const openTags = []
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    // Skip lines that are just orphaned closing tags
+    if (/^\s*<\/[^>]*>\s*$/.test(line) && openTags.length === 0) {
+      continue
 }
-
-// Function to check if file is corrupted
-function isCorrupted(content) {
-  const corruptionPatterns = [
-    /<\/\/[^>]*>/g,  // Malformed closing tags
-    /'[^']*$/gm,   // Unterminated strings
-    /}\s*;\s*}\s*;\s*$/gm,  // Multiple closing braces
-    /<[^>]*>\s*\)\s*;\s*$/gm,  // Malformed JSX
-    /export default function[^{]*{\s*'[^']*'\s*return/gm,  // Broken function declarations
-  ];
-  
-  return corruptionPatterns.some(pattern => pattern.test(content));
+    // Track opening tags
+    const openingTags = line.match(/<([^\/][^>]*?)>/g)
+    if (openingTags) {
+      openingTags.forEach((tag) => {
+        const tagName = tag.match(/<([^\s>]+)/)
+        if (tagName && !tag.includes("/>")) {
+          openTags.push(tagName[1])
+})
 }
-
+    // Track closing tags
+    const closingTags = line.match(/<\/([^>]+)>/g)
+    if (closingTags) {
+      closingTags.forEach((tag) => {
+        const tagName = tag.match(/<\/([^>]+)>/)
+        if (tagName) {
+          const index = openTags.lastIndexOf(tagName[1])
+          if (index !== -1) {
+            openTags.splice(index, 1)
+}
+      })
+}
+    fixedLines.push(line)
+}
+  fixed = fixedLines.join("\n")
+  // Fix specific malformed patterns
+  fixed = fixed.replace(
+    /export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g,
+    "export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  );",
+  )
+  // Fix malformed JSX with orphaned closing tags
+  fixed = fixed.replace(/<div[^>
+</div>]*>\s*<\/div>\s*<\/div>/g, "<div>
+</div>")
+  fixed = fixed.replace(/<main[^>]*>\s*<\/main>\s*<\/main>/g, "<main>")
+  fixed = fixed.replace(
+    /<section[^>]*>\s*<\/section>\s*<\/section>/g,
+    "<section>",
+  )
+  // Fix malformed function returns
+  fixed = fixed.replace(
+    /return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g,
+    "return (",
+  )
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, "return (")
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, "<$1>")
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(
+    /<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g,
+    (match, tagName) => {
+      if (match.includes("=") && !match.includes("/>")) {
+        return match + ">"
+}
+      return match
+    },
+  )
+  return fixed
+}
+// Function to fix specific file patterns
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8")
+    const fixed = fixSyntaxPatterns(content)
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, "utf8")
+      console.log(`Fixed: ${filePath}`)
+      return true
+}
+    return false
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
+}
+  return content
+}
 // Main execution
-console.log('Starting comprehensive fix...');
-
-// Fix specific corrupted files first
-const criticalFiles = [
-  'app/404.tsx',
-  'app/App.tsx',
-  'app/ad-management/page.tsx',
-  'app/ai-3d-generation/page.tsx',
-  'app/ai-analytics/page.tsx',
-  'app/ai-automation-platform/page.tsx',
-  'app/ai-automation-suite/page.tsx',
-  'app/ai-automation/page.tsx',
-  'app/ai-chatbot-builder/page.tsx',
-  'app/ai-content-creation/page.tsx',
-  'app/ai-content-generation/page.tsx',
-  'app/ai-content-writer/page.tsx',
-  'app/ai-customer-support-chatbot/page.tsx',
-  'app/ai-customer-support/page.tsx',
-  'app/ai-cybersecurity/page.tsx',
-  'app/ai-data-analytics/page.tsx',
-  'app/ai-data-mining-pro/page.tsx',
-  'app/ai-data-visualization/page.tsx',
-  'app/ai-document-processor/page.tsx',
-  'app/ai-ecommerce-solutions/page.tsx',
-  'app/ai-education-platform/page.tsx',
-  'app/ai-fintech-solutions/page.tsx',
-  'app/ai-fintech/page.tsx',
-  'app/ai-financial-analysis/page.tsx',
-  'app/5g-implementation/page.tsx',
-  'app/5g-solutions/page.tsx',
-  'app/about/page.tsx'
-];
-
-criticalFiles.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
-  if (fs.existsSync(fullPath)) {
-    const content = fixCorruptedFile(filePath);
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
-  }
-});
-
-// Find and fix all remaining corrupted TSX files
-const tsxFiles = glob.sync('app/**/*.tsx', { cwd: process.cwd() });
-
-tsxFiles.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
-  let content = fs.readFileSync(fullPath, 'utf8');
-  
-  if (isCorrupted(content)) {
-    const fixed = fixCorruptedFile(filePath);
-    fs.writeFileSync(fullPath, fixed);
-    console.log(`Fixed corrupted: ${filePath}`);
-  }
-});
-
-console.log('Comprehensive fix completed!');
+async function main() {
+  console.log("Starting comprehensive syntax fixes...")
+  // Get all TypeScript/JavaScript files
+  const patterns = [
+    "app/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.jsx",
+    "app/**/*.js",
+    "__tests__/**/*.tsx",
+    "__tests__/**/*.ts",
+  ]
+  let totalFixed = 0
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() })
+    for (const file of files) {
+      if (fixFile(file)) {
+        totalFixed++
+}
+}
+  console.log(`Fixed ${totalFixed} files.`)
+}
+main().catch(console.error)

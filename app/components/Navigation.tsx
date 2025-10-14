@@ -1,14 +1,19 @@
-import React from "react";
+import React from 'react';
 
-export default function Navigation() {
+const Navigation: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-white mb-8">Navigation</h1>
-        <p className="text-gray-300 text-lg">
-          Content for Navigation component.
-        </p>
+    <nav className="bg-gray-800 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-xl font-bold">Zion Tech Group</h1>
+        <div className="space-x-4">
+          <a href="/" className="hover:text-gray-300">Home</a>
+          <a href="/about" className="hover:text-gray-300">About</a>
+          <a href="/services" className="hover:text-gray-300">Services</a>
+          <a href="/contact" className="hover:text-gray-300">Contact</a>
+        </div>
       </div>
-    </div>
+    </nav>
   );
-}
+};
+
+export default Navigation;

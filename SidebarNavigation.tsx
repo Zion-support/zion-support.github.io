@@ -1,64 +1,25 @@
 import React from 'react';
-import { User, X } from 'lucide-react';
-
-interface SidebarNavigationProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
 
 const navigationItems = [
-  { name: 'Home', href: '/', icon: User },
-  { name: 'Profile', href: '/profile', icon: User },
-  { name: 'Settings', href: '/settings', icon: User },
-  { name: 'Help', href: '/help', icon: User },
-  { name: 'About', href: '/about', icon: User }
+  { name: 'Home', href: '/' },
+  { name: 'Profile', href: '/profile' },
+  { name: 'Settings', href: '/settings' },
+  { name: 'Help', href: '/help' },
+  { name: 'About', href: '/about' }
 ];
 
-const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
+export default function SidebarNavigation() {
   return (
-    <>
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={onClose}
-        />
-      )}
-
-      {/* Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold">Navigation</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md hover:bg-gray-100"
-          >
-            <X className="h-5 w-5" />
-          </button>
-        </div>
-
-        <nav className="mt-4">
-          {navigationItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <a
-                key={item.name}
-                href={item.href}
-                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-              >
-                <Icon className="h-5 w-5 mr-3" />
-                {item.name}
-              </a>
-            );
-          })}
-        </nav>
-      </div>
-    </>
+    <nav className="bg-gray-800 text-white p-4">
+      <ul className="space-y-2">
+        {navigationItems.map((item) => (
+          <li key={item.name}>
+            <a href={item.href} className="block py-2 px-4 hover:bg-gray-700 rounded">
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
-};
-
-export default SidebarNavigation;
+}
