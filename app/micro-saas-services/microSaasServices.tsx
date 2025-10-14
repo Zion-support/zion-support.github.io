@@ -1,108 +1,81 @@
-            Micro Saas Services
-          </h1>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional micro saas services services
-            designed to help your business grow and succeed.
-          </p>
-        </div>
-      </section>
-      { /* Content Section */ }"
-            Micro Saas Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional micro saas services services
-            <div></div>"
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                We provide comprehensive micro saas services
-                solutions tailored to your specific needs and requirements.
-              </p>
-              <ul className="space-y-3">"
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions
-                </li>
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Expert consultation
-                </li>
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support
-                </li>
-              </ul>"
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>"
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
-              <p className="mb-6">
-                Ready to transform your business with our micro saas services services?
-              </p>"
-              <a
-                href="$1
-                className="$1"></a>
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let"s discuss how our micro saas services
-            services can help you achieve your goals.
-          </p>"
-          <a
-            href="$1
-            className="$1"></a>
-            Get Started Today
-          </a>
-        </div>
-      </section>
-    </div>)
-  )
-export default MicroSaasServices
-                We provide comprehensive micro saas services
-                solutions tailored to your specific needs and requirements.</p>
-              <ul className="space-y-3">"
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions</li>
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Expert consultation</li>
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support</li></ul></div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>"
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
-              <p className="mb-6">
-                Ready to transform your business with our micro saas services services?</p>
-<<<<<<< HEAD
-              <a
-            Ready to Get Started?</h2></a>"
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our micro saas services'
-            services can help you achieve your goals.</p>"
-          <a
-            href="/contact
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-            Get Started Today</a></div></section></div>
-  )
-export default MicroSaasServices
-;"
-=======
+            Micro Saas Services;
+          <div></h1>";
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Professional micro saas services services;
+            designed to help your business grow and succeed.;
+          </////p></div>;
+        <////div></div>;
+      </////section></div>;
+      { /* Content Section */ }";
+            Micro Saas Services</////h1>;
+          <div><p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Professional micro saas services services;
+            <div></div>";
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</////h2></div>;
+              <////div><p className="text-lg text-gray-600 mb-6">;
+                We provide comprehensive micro saas services;
+                solutions tailored to your specific needs and requirements.;
+              </////p></div>;
+              <////div><ul className="space-y-3">";
+                <////li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Custom solutions;
+                <////div></li>;
+                <////li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Expert consultation;
+                <////div></li>;
+                <////li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Ongoing support;
+                <////div></li>;
+              </////ul>";
+            </div></div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>";
+              <h3 className="text-2xl font-bold mb-4">Get Started</////h3>";
+              <p className="mb-6">;
+                Ready to transform your business with our micro saas services services?;
+              </////p>";
               <a;
-            Ready to Get Started?</a>
-          <p>"""
-            Let's discuss how our micro saas services''''</p>
-            services can help you achieve your goals.</p>
-          <a"""
-            href="/contact"""""
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"""
-            Get Started Today</a>
+                href="$1;
+                className="$1"></a>;
+                Contact Us;
+              <div></a>;
+            </div></div>;
+          <div></div>;
+        </div></div>;
+      <div></section>;
+            Ready to Get Started?;
+          </h2></div>;
+          <div><p className="text-xl text-blue-100 mb-8">;
+          </h2></div>;
+          <div><p className="text-xl text-blue-100 mb-8">;
+            Let"s discuss how our micro saas services;
+            services can help you achieve your goals.;
+          </p>";
+          <////a;
+            href="$1;
+            className="$1"></a></div>;
+            Get Started Today;
+          <div></a>;
+        </div></div>;
+      <div></section>;
+    </div>);
   );
 export default MicroSaasServices;
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+                We provide comprehensive micro saas services;
+                solutions tailored to your specific needs and requirements.</////p></div>;
+              <////div><ul className="space-y-3">";
+                <////li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Custom solutions</////li>;
+                <div><li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Expert consultation</////li>;
+                <div><li className="flex items-center">";
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span></div>;
+                  Ongoing support</////li></ul></div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>";
+              <h3 className="text-2xl font-bold mb-4">Get Started</////h3>";
+              <p className="mb-6">;
+                Ready to transform your business with our micro saas services services?</////p>;

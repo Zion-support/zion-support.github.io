@@ -1,19 +1,12 @@
-  title?: string
-  description?: string
-}
-<<<<<<< HEAD
-    sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup'
-    ]
-  }
-=======
+import React from "react";
 
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
+const SEO: React.FC = () => {
   return (
-<>    <Helmet></Helmet>
-      <title>{title}</title>
-  )}
-}
-export default SEO
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">SEO</h2>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SEO;

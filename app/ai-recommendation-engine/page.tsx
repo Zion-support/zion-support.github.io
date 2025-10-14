@@ -9,7 +9,6 @@ export default function Page() {
         <title>Ai Recommendation Engine - Zion Tech Group</title>
         <meta name="description" content="Ai Recommendation Engine services and solutions from Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Recommendation Engine</h1>

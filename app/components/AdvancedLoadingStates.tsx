@@ -1,22 +1,12 @@
-import React from "react;
+import React from "react";
 
-interface AdvancedLoadingStatesProps {
-  className?: string
-  children?: React.ReactNode
-}
-
-const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ className = , children }) => {'
+const AdvancedLoadingStates: React.FC = () => {
   return (
-<<<<<<< HEAD
-<>```
-=======
-<>
-      <div className={`advancedloadingstates ${className}`}></div>```
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
-      {children}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">AdvancedLoadingStates</h2>
+      <p>This component is under development.</p>
     </div>
-    </>
-  )}
-}
+  );
+};
 
 export default AdvancedLoadingStates;

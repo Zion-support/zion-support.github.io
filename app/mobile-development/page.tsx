@@ -7,28 +7,14 @@ export default function Page() {
     <>
       <Helmet>
         <title>Mobile Development - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Mobile Development services and solutions from Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Mobile Development</h1>
           <p className="text-xl text-gray-600">
             This page is under development. Please check back soon for more information about our mobile development services.
           </p>
-=======
-        <meta name="description" content="Mobile Development - Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Mobile Development</h1>
-            <p className="text-gray-300 text-lg">
-              This page is under construction. Please check back later.
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
         </div>
       </div>
     </>

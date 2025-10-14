@@ -9,7 +9,6 @@ export default function Page() {
         <title>Zion Smart Expense Categorizer - Zion Tech Group</title>
         <meta name="description" content="Zion Smart Expense Categorizer services and solutions from Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Zion Smart Expense Categorizer</h1>

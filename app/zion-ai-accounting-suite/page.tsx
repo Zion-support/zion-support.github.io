@@ -1,17 +1,6 @@
 'use client';
 import React from "react";
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
-=======
-;
-export default function ZionAiAccountingSuitePage() {
-  return (
-<>
-      <h1 className="text-4xl font-bold mb-8">Zion Ai Accounting Suite</h1>
-      <p className="text-gray-300 text-lg">This page is under development.</p>)}
-    </>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
 
 export default function Page() {
   return (
@@ -20,7 +9,6 @@ export default function Page() {
         <title>Zion Ai Accounting Suite - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Accounting Suite services and solutions from Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Zion Ai Accounting Suite</h1>

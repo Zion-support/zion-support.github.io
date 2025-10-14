@@ -9,7 +9,6 @@ export default function Page() {
         <title>Zion Ai Lead Scoring - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Lead Scoring services and solutions from Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Zion Ai Lead Scoring</h1>

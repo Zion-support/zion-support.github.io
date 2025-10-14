@@ -1,42 +1,12 @@
-import React from "react;
+import React from "react";
 
-interface SEOEnhancerProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  image?: string
-  url?: string
-  type?: string
-}
-
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group','
-  description = 'Leading provider of AI and IT solutions','
-  keywords = ['AI', 'IT', 'technology', 'solutions'],'
-  image,
-  url,
-  type = 'website
-}) => {
+const SEOEnhancer: React.FC = () => {
   return (
-<<<<<<< HEAD
-<>"
-=======
-<>
-      <div className="seo-enhancer"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
-      <h1>{title}</h1>
-      <p>{description}</p>
-      {keywords && (
-        <div className="keywords"></div>"
-    </>
-          {keywords.map((keyword, index) => (
-            <span key={index} className="keyword"></span>"
-              {keyword}
-            </span>
-          ))}
-        </div>
-      )}}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">SEOEnhancer</h2>
+      <p>This component is under development.</p>
     </div>
-  )
-}
-export default SEOEnhancer
+  );
+};
+
+export default SEOEnhancer;

@@ -6,30 +6,15 @@ export default function Page() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Ai Automation - Zion Tech Group</title>
         <meta name="description" content="Ai Automation services and solutions from Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Automation</h1>
           <p className="text-xl text-gray-600">
             This page is under development. Please check back soon for more information about our ai automation services.
           </p>
-=======
-        <title>AI Automation - Zion Tech Group</title>
-        <meta name="description" content="AI Automation - Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">AI Automation</h1>
-            <p className="text-gray-300 text-lg">
-              This page is under construction. Please check back later.
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a
         </div>
       </div>
     </>
