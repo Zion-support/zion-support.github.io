@@ -60,7 +60,6 @@ function App() {
   // Sidebar state management (currently unused)
   // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-
   useEffect(() => {
 // Performance monitoring
 if (typeof window !== 'undefined') {
