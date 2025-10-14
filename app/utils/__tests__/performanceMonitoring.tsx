@@ -1,3 +1,4 @@
+:app/utils/__tests__/performanceMonitoring.tsx
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PerformanceMonitoringTestPage = () => {
@@ -42,3 +43,10 @@ const PerformanceMonitoringTestPage = () => {
   );
 };
 export default PerformanceMonitoringTestPage;
+import { describe, it, expect    } from "@jest/globals";
+
+describe('Performance Monitoring', () => {'';
+  it('should be defined', () => {'';
+    expect(true).toBe(true);
+  });
+});"

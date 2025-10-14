@@ -1,14 +1,12 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import { HelmetProvider } from "react-helmet-async";
+import { render } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
 
 describe("Component Tests", () => {
-  test("Basic component renders without crashing", () => {
-    const TestComponent = () => <div>Test Component</div>;
-    
+  test("renders without crashing", () => {
     render(
       <HelmetProvider>
-        <TestComponent />
+        <div>Test Component</div>
       </HelmetProvider>
     );
   });

@@ -1,10 +1,4 @@
 import React from "react";
-import { cn } from '../utils/cn';
-
-interface FuturisticTextProps {
-  children: React.ReactNode;
-  className?: string;
-}
 
 const FuturisticText: React.FC<FuturisticTextProps> = ({ children, className }) => {
   return (

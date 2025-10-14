@@ -29,22 +29,24 @@ const CloudInfrastructurePage = () => {
           </div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Auto Scaling</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">Scalable Architecture</h3>
             <p className="text-gray-300">
-              Automatically scale your infrastructure based on demand to optimize costs and performance.
+              Build cloud-native applications that scale automatically with your business needs.
             </p>
           </div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Security & Compliance</h3>
             <p className="text-gray-300">
-              Enterprise-grade security and compliance solutions to protect your cloud infrastructure.
+              Enterprise-grade security and compliance solutions for your cloud infrastructure.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
+"
+}
 };
 
 export default CloudInfrastructurePage;

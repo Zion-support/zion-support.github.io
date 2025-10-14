@@ -1,14 +1,23 @@
-import React from "react";
+'use client';
+import React from "react";"
+import { Helmet } from "react-helmet-async";
 
-const Page = () => {
+export default function Page() {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for Page.
-      </p>
+<>
+      <Helmet></Helmet>
+        <title>Solutions - Zion Tech Group</title>
+        <meta name="description" content="Solutions services and solutions from Zion Tech Group" /></meta>
+      </Helmet>
+      
+      <div className="min-h-screen bg-white"></>
+        <div className="container mx-auto px-4 py-20"></div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>
+          <p className="text-xl text-gray-600"></p>
+            This page is under development. Please check back soon for more information about our solutions services.
+          </p>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default Page;
+}"

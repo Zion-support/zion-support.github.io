@@ -46,8 +46,8 @@ const ImprovedSidebar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default ImprovedSidebar;
+export default ImprovedSidebarPage;

@@ -136,6 +136,55 @@ const WebDevelopmentPage = () => {
                     Get Started
                   </Link>
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Technology Stack */}
+        <section className="mb-16">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              Our Technology Stack
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Frontend</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>React/Next.js</li>
+                  <li>Vue.js/Angular</li>
+                  <li>TypeScript</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+              </div>
+              <div className="text-center">
+                <h3 className="text-lg font-semibold text-purple-400 mb-3">Backend</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>Node.js/Python</li>
+                  <li>Express.js/Django</li>
+                  <li>PostgreSQL/MongoDB</li>
+                  <li>Redis</li>
+                </ul>
+              </div>
+              <div className="text-center">
+                <h3 className="text-lg font-semibold text-green-400 mb-3">Cloud & DevOps</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>AWS/Azure/GCP</li>
+                  <li>Docker/Kubernetes</li>
+                  <li>CDN Services</li>
+                  <li>CI/CD Pipelines</li>
+                </ul>
+              </div>
+              <div className="text-center">
+                <h3 className="text-lg font-semibold text-orange-400 mb-3">Tools & Testing</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>Git/GitHub</li>
+                  <li>Jest/Cypress</li>
+                  <li>Webpack/Vite</li>
+                  <li>Figma/Sketch</li>
+                </ul>
               </div>
             ))}
           </div>

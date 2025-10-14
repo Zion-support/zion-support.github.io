@@ -1,9 +1,30 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Star } from "lucide-react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  BarChart3, 
+  Users, 
+  Target, 
+  Globe, 
+  ArrowRight, 
+  Star, 
+  CheckCircle,
+  Video,
+  MessageSquare,
+  TrendingUp,
+  Database,
+  Eye,
+  Settings,
+  Award,
+  Clock
+} from 'lucide-react';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const AiServicesPage = () => {
   const aiServices = [
     {
       title: "AI Video Generation",
@@ -58,14 +79,14 @@ const AiServicesPage = () => {
 
   const features = [
     {
-      title: "Expert AI Team",
-      description: "Our team of AI specialists brings years of experience in machine learning and artificial intelligence.",
-      icon: "👥"
+      icon: <Brain className="w-6 h-6" />,
+      title: "Advanced AI Technology",
+      description: "Cutting-edge machine learning algorithms and neural networks"
     },
     {
-      title: "Custom Solutions",
-      description: "Tailored AI solutions designed specifically for your business needs and objectives.",
-      icon: "🎯"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Lightning Fast Processing",
+      description: "Optimized for speed and efficiency with real-time processing"
     },
     {
       title: "24/7 Support",
@@ -103,21 +124,20 @@ const AiServicesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Services - Zion Tech Group | Advanced AI Solutions for Business</title>
-        <meta name="description" content="Discover our comprehensive AI services including video generation, content creation, analytics, cybersecurity, and workflow automation. Transform your business with cutting-edge AI technology." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI cybersecurity, business AI solutions" />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including video generation, customer insights, voice assistants, and more. Transform your business with cutting-edge artificial intelligence." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, business intelligence" />
       </Helmet>
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+
+      <ResponsiveContainer>
+        {/* Hero Section */}
+        <div className="text-center py-20">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
             AI Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our comprehensive suite of AI services. 
-            From content generation to cybersecurity, we provide intelligent solutions 
-            that drive growth and efficiency.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Transform your business with our comprehensive suite of AI-powered solutions. 
+            From video generation to customer insights, we provide the tools you need to succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -186,40 +206,48 @@ const AiServicesPage = () => {
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+        {/* Features Section */}
+        <div className="py-20">
+          <h2 className="text-4xl font-bold text-center text-white mb-16">
             Why Choose Our AI Services?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">{feature.icon}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+              <FuturisticCard key={index} className="p-6">
+                <div className="text-blue-400 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            What Our Clients Say
+        {/* Services Grid */}
+        <div className="py-20">
+          <h2 className="text-4xl font-bold text-center text-white mb-16">
+            Our AI Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => (
+              <FuturisticCard key={index} className={`p-6 ${service.featured ? 'ring-2 ring-blue-400' : ''}`}>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-blue-400">{service.icon}</div>
+                  {service.featured && (
+                    <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-sm">
+                      Featured
+                    </span>
+                  )}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {feature}
+                    </li>
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
@@ -231,16 +259,14 @@ const AiServicesPage = () => {
             ))}
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        {/* CTA Section */}
+        <div className="py-20 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with AI?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Start your AI journey today and discover the power of intelligent automation and insights.
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Get started with our AI services today and experience the power of artificial intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -258,9 +284,9 @@ const AiServicesPage = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </ResponsiveContainer>
     </div>
   );
 };
 
-export default AiServicesPage;
+export default AIServices;

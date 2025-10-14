@@ -6,10 +6,13 @@ export const useUseAnalyticsContext = () => {
   useEffect(() => {
     // Add your hook logic here
   }, []);
+
   return {
     data,
     loading,
     error,
-    // Add your hook methods here
+    setData,
+    setLoading,
+    setError,
   };
 };
