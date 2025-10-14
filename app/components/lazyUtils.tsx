@@ -1,5 +1,4 @@
-import React, { lazy, ComponentType } from 'react';
-import LazyWrapper from './LazyWrapper';
+import React, { lazy, ComponentType, Suspense } from 'react';
 
 // Higher-order component for lazy loading
 export function withLazyLoading<P = Record<string, never>>(
@@ -9,9 +8,9 @@ export function withLazyLoading<P = Record<string, never>>(
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
   return (props: P) => (
-    <LazyWrapper fallback={fallback}>
-      <LazyComponent {...(props as Record<string, unknown>)} />
-    </LazyWrapper>
+    <Suspense fallback={fallback || <div>Loading...</div>}>
+      <LazyComponent {...(props as any)} />
+    </Suspense>
   );
 }
 
@@ -23,8 +22,8 @@ export function createLazyComponent<P = Record<string, never>>(
   const LazyComponent = lazy(importFunction);
   
   return (props: P) => (
-    <LazyWrapper fallback={fallback}>
-      <LazyComponent {...(props as Record<string, unknown>)} />
-    </LazyWrapper>
+    <Suspense fallback={fallback || <div>Loading...</div>}>
+      <LazyComponent {...(props as any)} />
+    </Suspense>
   );
 }
