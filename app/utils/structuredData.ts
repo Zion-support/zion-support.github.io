@@ -5,7 +5,7 @@ export const structuredData = {
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading technology solutions provider';
+    description: 'Leading technology solutions provider'
   },
   
   website: {
@@ -13,7 +13,7 @@ export const structuredData = {
     '@type': 'WebSite',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
-    description: 'Leading technology solutions provider';
+    description: 'Leading technology solutions provider'
   },
   
   generate: (type: 'organization' | 'website') => {

@@ -10,4 +10,4 @@ export const appConfig = {
     linkedin: 'https://linkedin.com/compunknown/ziontechgroup',
     github: 'https://github.com/ziontechgroup'
   }
-};
+}
