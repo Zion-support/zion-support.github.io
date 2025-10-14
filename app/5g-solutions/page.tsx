@@ -79,11 +79,7 @@ const FiveGSolutionsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-60 to-purple-60 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-70 hover:to-purple-70 transition-all duration-30 flex items-center">
                 Get Started
-<<<<<<< HEAD
-                <ArrowRight className="w-5 h-5 ml-2" />
-=======
                 <ChevronRight className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b4e0
               </button>
               <button className="border border-blue-40 text-blue-40 px-8 py-3 rounded-lg font-semibold hover:bg-blue-40 hover:text-white transition-all duration-30">
                 Learn More
