@@ -1,7 +1,7 @@
-import React, { useState } from "react;;
+import React, { useState } from "react";
 import { EnvelopeIcon, 
   PhoneIcon, ";
-  ClockIcon } from "@heroicons/react/24/outline;";
+  ClockIcon } from "@heroicons/react/24/outline";
 const Contact: React.FC = () => {,'
   const [formData, setFormData] = useState({''
     name: ''''

@@ -7,7 +7,7 @@ import { ArrowPathIcon,
   ArrowRightIcon,
   CheckIcon,
   ChartBarIcon";
-} from "@heroicons/react/24/outline;";
+} from "@heroicons/react/24/outline";
 
 
 const DigitalTransformationPage: React.FC = () => {

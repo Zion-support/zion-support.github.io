@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
-import { Helmet } from "react-helmet-async;;
+import { Helmet } from "react-helmet-async";
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

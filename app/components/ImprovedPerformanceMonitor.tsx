@@ -1,4 +1,4 @@
-import React from "react;;
+import React from "react";
 import { Activity, TrendingUp } from "lucide-react";
 interface PerformanceMetrics {
   lcp?: number;

@@ -1,11 +1,11 @@
 import { Shield } from "lucide-react";
-import React from "react;;
+import React from "react";
 import { CpuChipIcon,
   CloudIcon,
   CogIcon,
 
   ChartBarIcon,";
-  RocketLaunchIcon } from "@heroicons/react/24/outline;";
+  RocketLaunchIcon } from "@heroicons/react/24/outline";
 const Services: React.FC = () => {
   const services = [{,'
       icon: CpuChipIcon''

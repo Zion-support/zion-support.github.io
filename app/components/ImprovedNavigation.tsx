@@ -27,7 +27,7 @@ import { ArrowRight,
   CheckCircle,
   DollarSign,
   Play";
-} from "lucide-react;";
+} from "lucide-react";
 
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);

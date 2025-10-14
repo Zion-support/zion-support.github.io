@@ -1,4 +1,4 @@
-import React from "react;;
+import React from "react";
 import { Cookie, Settings } from "lucide-react";
 
 const CookieConsent: React.FC = () => {

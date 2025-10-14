@@ -8,25 +8,25 @@ import { PhoneIcon,
   LinkedinIcon,
   TwitterIcon,
   FacebookIcon,
-  InstagramIcon";
-} from "@heroicons/react/24/outline;";
+    InstagramIcon
+  } from "@heroicons/react/24/outline";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const services = ['
-    { name: 'AI Services', href: '/ai-services' },'
-    { name: 'AI Solutions', href: '/ai-solutions' },'
-    { name: 'IT Solutions', href: '/it-solutions' },'
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },'
-    { name: 'Cybersecurity', href: '/cybersecurity' },'
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },'
-    { name: 'Digital Transformation', href: '/digital-transformation' },'
-    { name: '5G Solutions', href: '/5g-solutions' },'
-    { name: 'Case Studies', href: '/case-studies' }'
+    const services = [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'IT Solutions', href: '/it-solutions' },
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+      { name: 'Digital Transformation', href: '/digital-transformation' },
+      { name: '5G Solutions', href: '/5g-solutions' },
+      { name: 'Case Studies', href: '/case-studies' }
   ];
 
-  const company = ['
+    const company = [
     { name: 'About Us', href: '/about' },'
     { name: 'Our Team', href: '/team' },'
     { name: 'Careers', href: '/careers' },'

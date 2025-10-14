@@ -1,4 +1,4 @@
-import React from "react;;
+import React from "react";
 import { AlertTriangle, RefreshCw, Home, Mail } from "lucide-react";
 interface Props {
   children: ";

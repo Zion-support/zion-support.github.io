@@ -1,5 +1,5 @@
 import React from "react";
-'use client;
+'use client';
       {/* Content Section */}'
 import React from "react";
                 We provide comprehensive skip link;

@@ -1,5 +1,5 @@
 import React from "react";
-'use client;
+'use client';
 const EnhancedLoading: React.FC = () => {
   return (
     <div className="min-h-screen bg-white"></div>"

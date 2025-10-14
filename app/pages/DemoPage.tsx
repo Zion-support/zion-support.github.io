@@ -12,7 +12,7 @@ import { PlayIcon,
   CheckIcon,
   PhoneIcon,
   EnvelopeIcon";
-} from "@heroicons/react/24/outline;";
+} from "@heroicons/react/24/outline";
 
 const DemoPage: React.FC = () => {
   const demos = [

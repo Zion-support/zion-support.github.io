@@ -6,8 +6,8 @@ import { CpuChipIcon,
   SignalIcon,
   BriefcaseIcon,
   ArrowRightIcon,
-  CheckIcon";
-} from "@heroicons/react/24/outline;";
+    CheckIcon
+  } from "@heroicons/react/24/outline";
 
 const ServicesPage: React.FC = () => {
   const services = [

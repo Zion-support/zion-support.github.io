@@ -16,36 +16,38 @@ import {
   CloudIcon,
   CpuChipIcon,
   SignalIcon,
-  UserGroupIcon";
-} from "@heroicons/react/24/outline;";
+    UserGroupIcon
+  } from "@heroicons/react/24/outline";
 
 interface SidebarProps {
-  isOpen: boolean
+  isOpen: boolean;
   onClose: () => void;
+}
+
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 
-  const navigation = ['
-    { name: 'Home', href: '/', icon: HomeIcon },'
-    { name: 'About', href: '/about', icon: InformationCircleIcon },'
-    { '
-      name: 'Services', '
-      href: '/services', '
-      icon: BriefcaseIcon,
-      submenu: ['
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },'
-        { name: 'IT Solutions', href: '/it-solutions', icon: BriefcaseIcon },'
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },'
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },'
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },'
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },'
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }'
+    const navigation = [
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    {
+        name: 'Services',
+        href: '/services',
+        icon: BriefcaseIcon,
+        submenu: [
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'IT Solutions', href: '/it-solutions', icon: BriefcaseIcon },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
+          { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },
+          { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
-    },'
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },'
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },'
-    { name: 'Demo', href: '/demo', icon: PlayIcon },'
+      },
+      { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+      { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+      { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },'
     { name: 'Contact', href: '/contact', icon: PhoneIcon }'
   ];

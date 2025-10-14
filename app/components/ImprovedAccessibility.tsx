@@ -1,4 +1,4 @@
-import React from "react;;
+import React from "react";
 import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from "lucide-react";
 interface AccessibilitySettings {
   highContrast: ";

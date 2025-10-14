@@ -1,5 +1,5 @@
-import React from "react;;
-import { Helmet    } from "react-helmet-async;;
+import React from "react";
+import { Helmet    } from "react-helmet-async";
 const PagePage = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20"></div>"

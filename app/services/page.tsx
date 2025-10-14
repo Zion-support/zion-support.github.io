@@ -1,4 +1,4 @@
-import React from "react;;
+import React from "react";
 
 import EnhancedSEO from "../components/EnhancedSEO;;
 import { 
@@ -9,7 +9,7 @@ import {
   GlobeAltIcon,
   ArrowRightIcon,
   CheckIcon,";
-} from "@heroicons/react/24/outline;";
+} from "@heroicons/react/24/outline";
 
 
 const Page = () => {

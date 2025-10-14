@@ -1,4 +1,4 @@
-import React from "react;;
+import React from "react";
 /* global describe, test, expect, it, beforeEach */";
       <div className="container mx-auto px-4">;
         <h1 className="text-4xl font-bold mb-8">Zion Ai Testing Automation</h1>;

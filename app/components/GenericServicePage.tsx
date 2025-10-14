@@ -1,4 +1,4 @@
-import React from "react;;
+import React from "react";
 import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
 
 interface GenericServicePageProps {

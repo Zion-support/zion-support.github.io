@@ -1,5 +1,5 @@
-import React from "react;;
-import { Helmet } from "react-helmet-async;;
+import React from "react";
+import { Helmet } from "react-helmet-async";
 import ResponsiveContainer from "../components/ResponsiveContainer;;
 const FiveGInfrastructure = () => {
   return (

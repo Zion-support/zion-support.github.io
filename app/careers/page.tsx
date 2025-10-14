@@ -1,4 +1,4 @@
-import React, { useState } from "react;;
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award, Brain, BarChart3, Settings, Code, Database, Cloud, Smartphone, Target, Calendar, DollarSign, Briefcase, GraduationCap, Heart, Coffee, Gamepad2 } from "lucide-react";
 

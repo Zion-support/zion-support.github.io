@@ -9,7 +9,7 @@ import { ServerIcon,
   CheckIcon,
   PhoneIcon,
   EnvelopeIcon";
-} from "@heroicons/react/24/outline;";
+} from "@heroicons/react/24/outline";
 
 const ITSolutionsPage: React.FC = () => {
   const services = [

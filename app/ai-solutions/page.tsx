@@ -8,7 +8,7 @@ import { CpuChipIcon,
   ArrowRightIcon,
   CheckIcon,
   SparklesIcon";
-} from "@heroicons/react/24/outline;";
+} from "@heroicons/react/24/outline";
 
 const AISolutionsPage: React.FC = () => {
   const aiServices = [

@@ -1,5 +1,5 @@
 import React, { Component, ReactNode } from "react";
-import { ArrowPathIcon, HomeIcon } from "@heroicons/react/24/outline;;
+import { ArrowPathIcon, HomeIcon } from "@heroicons/react/24/outline";
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -39,8 +39,8 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // Log error to external service in production'
-    if (process.env.NODE_ENV === 'production') {'
+      // Log error to external service in production
+      if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a service like Sentry'
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }

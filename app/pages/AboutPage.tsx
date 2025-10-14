@@ -11,8 +11,8 @@ import {
   StarIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon";
-} from "@heroicons/react/24/outline;";
+    MapPinIcon
+  } from "@heroicons/react/24/outline";
 
 const AboutPage: React.FC = () => {
   const values = [

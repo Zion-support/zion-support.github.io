@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRightIcon, PlayIcon } from "@heroicons/react/24/outline;;
+import { ArrowRightIcon, PlayIcon } from "@heroicons/react/24/outline";
 
 const Hero: React.FC = () => {
   return (

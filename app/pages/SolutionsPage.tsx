@@ -11,7 +11,7 @@ import { CpuChipIcon,
   BriefcaseIcon,
   ArrowRightIcon,
   CheckIcon";
-} from "@heroicons/react/24/outline;";
+} from "@heroicons/react/24/outline";
 
 const SolutionsPage: React.FC = () => {
   const solutions = [

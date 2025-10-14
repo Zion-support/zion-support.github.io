@@ -6,8 +6,8 @@ import { AcademicCapIcon,
   DocumentTextIcon,
   ClockIcon,
   UserGroupIcon,
-  ArrowRightIcon";
-} from "@heroicons/react/24/outline;";
+    ArrowRightIcon
+  } from "@heroicons/react/24/outline";
 
 const TutorialsPage: React.FC = () => {
   const tutorials = [

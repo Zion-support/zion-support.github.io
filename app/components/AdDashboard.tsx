@@ -1,5 +1,5 @@
 import React from "react";
-'use client;
+'use client';
 export default function Page() {
   return (
     <div className="min-h-screen bg-white"></div>"

@@ -10,7 +10,7 @@ import { BriefcaseIcon,
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon";
-} from "@heroicons/react/24/outline;";
+} from "@heroicons/react/24/outline";
 
 const CareersPage: React.FC = () => {
   const positions = [

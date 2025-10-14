@@ -8,161 +8,95 @@ import {
   Shield, 
   Zap, 
   Globe,
-  ChevronDown";
-} from "lucide-react;";
+  ChevronDown
+} from "lucide-react";
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
+
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
-const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
+  const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
   const [isITServicesOpen, setIsITServicesOpen] = useState(false);
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
   const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
 
-  const navigation = ['
-    { name: 'Home', href: '/', icon: HomeIcon },'
-    { name: 'About', href: '/about', icon: InformationCircleIcon },'
-    { '
-      name: 'Services', '
-      href: '/services', '
-      icon: BriefcaseIcon,
-      submenu: ['
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },'
-        { name: 'IT Solutions', href: '/it-solutions', icon: BriefcaseIcon },'
-        { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: GlobeAltIcon },'
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },'
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },'
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }'
+  const navigation = [
+    { name: 'Home', href: '/', icon: Globe },
+    { name: 'About', href: '/about', icon: Brain },
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Shield,
+      submenu: [
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+        { name: 'IT Solutions', href: '/it-solutions', icon: Shield },
+        { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: Globe },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Globe },
+        { name: '5G Solutions', href: '/5g-solutions', icon: Zap }
       ]
     },
-    { '
-      name: 'Solutions', '
-      href: '/solutions', '
-      icon: CogIcon,
-      submenu: ['
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },'
-        { name: 'IT Services', href: '/it-services', icon: BriefcaseIcon },'
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },'
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }'
-      ]
-    },'
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },'
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },'
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },'
-    { name: 'Demo', href: '/demo', icon: PlayIcon },'
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },'
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }'
-  ];
-
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
-
-  const itServices = ['
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },'
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },'
-    { name: 'Web Development', href: '/web-development', icon: <Globe className="w-4 h-4" /> },'
-    { name: 'Mobile Development', href: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },'
-    { name: 'Database Management', href: '/database-management', icon: <Database className="w-4 h-4" /> },'
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: <Network className="w-4 h-4" /> }"
-  ];
-
-  const microSaasServices = ['
-    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },'
-    { name: 'Zion Security Shield', href: '/zion-security-shield', icon: <Shield className="w-4 h-4" /> },'
-    { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" /> },'
-    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: <FileText className="w-4 h-4" /> }"
-  ];
-
-  const fiveGServices = ['
-    { name: '5G Implementation', href: '/5g-implementation', icon: <Cpu className="w-4 h-4" /> },'
-    { name: '5G Edge Computing', href: '/5g-edge-computing', icon: <Zap className="w-4 h-4" /> },'
-    { name: '5G IoT Solutions', href: '/5g-iot-solutions', icon: <Wifi className="w-4 h-4" /> },'
-    { name: '5G Smart City', href: '/5g-smart-city-solutions', icon: <Building2 className="w-4 h-4" /> }"
+    { name: 'Contact', href: '/contact', icon: Globe }
   ];
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50"></nav>"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
-        <div className="flex justify-between items-center h-16"></div>"
+    <nav className="bg-slate-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center"></div>"
-            <Link to="/" className="flex items-center space-x-2"></Link>"
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center"></div>"
-                <span className="text-white font-bold text-lg">Z</span>"
-              </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>"
-            </Link>
-          </div>
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1"></div>"
-            {navigation.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.name} className="relative group"></div>"
-                  <Link
-                    to={item.href;
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive(item.href)'
-                        ? 'bg-purple-600 text-white''
-                        : 'text-gray-300 hover:text-white hover:bg-slate-800'
-                    }`}
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >
-                    <Icon className="w-4 h-4" /></Icon>"
-                    <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}"
-                  </Link>
-                  
-                  {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"></div>"
+          <div className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                <Link
+                  to={item.href}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-1"
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
+                  {item.submenu && <ChevronDown className="w-4 h-4" />}
+                </Link>
+                
+                {/* Dropdown Menu */}
+                {item.submenu && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="py-2">
                       {item.submenu.map((subItem) => (
-                        <Link key={subItem.name;
-                          to={subItem.href;
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
-                        ></Link>
-                          {subItem.name}
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition-colors duration-200"
+                        >
+                          <subItem.icon className="w-4 h-4" />
+                          <span>{subItem.name}</span>
                         </Link>
                       ))}
                     </div>
-                  )}
-                </div>
-              );
-            })}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4"></div>"
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-            ></Link>
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2"></div>"
-            <button
-              onClick={onSidebarToggle}
-              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
-            ></button>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>"
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></path>"
-              </svg>
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={onSidebarToggle}
+            className="md:hidden text-gray-300 hover:text-white p-2"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
         </div>
       </div>
     </nav>
-  )};
+  );
+};
 
 export default Navigation;
-'

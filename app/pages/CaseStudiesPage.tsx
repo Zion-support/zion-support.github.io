@@ -6,7 +6,7 @@ import { ArrowRightIcon,
   TrendingUpIcon,
   ClockIcon,
   CurrencyDollarIcon";
-} from "@heroicons/react/24/outline;";
+} from "@heroicons/react/24/outline";
 
 
 const CaseStudiesPage: React.FC = () => {

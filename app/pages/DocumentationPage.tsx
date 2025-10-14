@@ -8,7 +8,7 @@ import { DocumentTextIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,";
-} from "@heroicons/react/24/outline;";
+} from "@heroicons/react/24/outline";
 export default function DocumentationPage() {
   const sections = [
     {
