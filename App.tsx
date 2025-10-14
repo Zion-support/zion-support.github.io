@@ -2,8 +2,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
-// Components
-import Navigation from './app/components/Navigation';
+// Components - Navigation removed for now
 
 // Pages
 import HomePage from './app/page';
@@ -36,7 +35,7 @@ const App: React.FC = () => {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <Navigation />
+            {/* Navigation removed for now */}
             <main className="relative z-10" id="main-content" role="main">
               <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="text-white text-xl">Loading application...</div></div>}>
                 <Routes>
