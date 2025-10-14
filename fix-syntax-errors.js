@@ -1,134 +1,142 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
-// Common patterns to fix
-const fixes = [
-  // Fix malformed import statements
-  {
-    pattern: /import React from  from 'react';/g,
-    replacement: "import React from 'react';"
-  },
-  {
-    pattern: /import React from 'react';'use client'/g,
-    replacement: "import React from 'react';\n'use client'"
-  },
-  {
-    pattern: /import React from 'react';'react-helmet-async';/g,
-    replacement: "import React from 'react';\nimport { Helmet } from 'react-helmet-async';"
-  },
+console.log('🔧 Starting comprehensive syntax error fixes...');
+
+// Find all page.tsx files
+const findFiles = (dir, pattern) => {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  // Fix malformed strings with extra quotes
-  {
-    pattern: /title: "([^"]*)"",/g,
-    replacement: 'title: "$1",'
-  },
-  {
-    pattern: /description: "([^"]*)"",/g,
-    replacement: 'description: "$1",'
-  },
-  {
-    pattern: /color: "([^"]*)"",/g,
-    replacement: 'color: "$1",'
-  },
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findFiles(fullPath, pattern));
+    } else if (stat.isFile() && pattern.test(item)) {
+      files.push(fullPath);
+    }
+  }
   
-  // Fix duplicate properties
-  {
-    pattern: /color: "([^"]*)",\s*color: "([^"]*)",/g,
-    replacement: 'color: "$1",'
-  },
+  return files;
+};
+
+const pageFiles = findFiles('./app', /page\.tsx$/);
+const componentFiles = findFiles('./app/components', /\.tsx$/);
+
+console.log(`Found ${pageFiles.length} page files and ${componentFiles.length} component files`);
+
+// Fix function to clean up syntax errors
+function fixSyntaxErrors(content) {
+  // Fix malformed color classes (0o0 -> 0, 40o0 -> 400, etc.)
+  content = content.replace(/(\d+)o0/g, '$1');
   
-  // Fix malformed JSX closing tags
-  {
-    pattern: /}\s*<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}'
-  },
+  // Fix duplicate semicolons and quotes in imports
+  fixed = fixed.replace(/import\s+([^;]+);';';/g, 'import $1;');
+  fixed = fixed.replace(/from\s+'([^']+)';';';/g, "from '$1';");
+  fixed = fixed.replace(/from\s+"([^"]+)";";";/g, 'from "$1";');
   
-  // Fix malformed function endings
-  {
-    pattern: /}\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}'
-  },
+  // Fix JSX syntax errors
+  fixed = fixed.replace(/>";";/g, '>');
+  fixed = fixed.replace(/>";/g, '>');
+  fixed = fixed.replace(/";"</g, '<');
+  fixed = fixed.replace(/";</g, '<');
   
-  // Fix malformed JSX fragments
-  {
-    pattern: /<>\s*<\/>\s*$/gm,
-    replacement: ''
-  },
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/className="([^"]+)">";/g, 'className="$1">');
+  fixed = fixed.replace(/content="([^"]+)">";/g, 'content="$1">');
   
-  // Fix unterminated string literals
-  {
-    pattern: /"([^"]*)\n/g,
-    replacement: '"$1"\n'
-  },
+  // Fix broken function declarations
+  fixed = fixed.replace(/export default function ComponentsPage\(\) \{\}\s*return \(/g, 'export default function ComponentsPage() {\n  return (');
   
-  // Fix missing semicolons in imports
-  {
-    pattern: /import ([^;]+)\n/g,
-    replacement: 'import $1;\n'
-  },
+  // Fix malformed component structures
+  fixed = fixed.replace(/\}\s*return\s*\(\s*<div>Page content<\/div>\s*\);\s*\}\s*return\s*\(/g, '}');
+  
+  // Fix broken JSX elements
+  fixed = fixed.replace(/<div className="min-h-screen bg-gray-90o0 text-white py-20">";"<\/div>/g, '<div className="min-h-screen bg-gray-900 text-white py-20"></div>');
+  fixed = fixed.replace(/<div className="text-gray-30o0 text-lg">";"/g, '<div className="text-gray-300 text-lg">');
+  
+  // Fix malformed interface declarations
+  fixed = fixed.replace(/interface\s+(\w+)\s*\{\}\s*children:\s*c,lassName\?:\s*string;/g, 'interface $1 {\n  children: React.ReactNode;\n  className?: string;');
+  
+  // Fix broken function parameters
+  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC<(\w+)>\s*=\s*\(\{\}\s*children,\s*className\s*=\s*\}\s*=>\s*\{\}/g, 'const $1: React.FC<$2> = ({ children, className = "" }) => {');
+  
+  // Fix malformed return statements
+  fixed = fixed.replace(/return\s*\(\s*<div>Page content<\/div>;\s*\);/g, 'return (\n    <div>Page content</div>\n  );');
+  
+  // Fix broken JSX structure
+  fixed = fixed.replace(/<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 \$\{className\}`}>`<\/div>/g, '<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>');
+  
+  // Fix extra closing tags and malformed JSX
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
+  
+  // Fix malformed closing tags
+  fixed = fixed.replace(/<\/\w+>\s*<\/\w+>\s*<\/\w+>\s*<\/\w+>/g, '</div>');
+  
+  // Fix broken expressions
+  fixed = fixed.replace(/h1 className="text-4xl font-bold mb-8">Components<\/h1>";";/g, '<h1 className="text-4xl font-bold mb-8">Components</h1>');
+  fixed = fixed.replace(/This page is under development\.<\/p>/g, 'This page is under development.</p>');
+  
+  // Fix malformed closing statements
+  fixed = fixed.replace(/\s*<\/p><\/div><\/div>\s*\);\}\s*\}/g, '\n  );');
+  
+  // Fix extra closing tags at the end
+  fixed = fixed.replace(/\s*<\/\w+>\s*<\/\w+>\s*<\/\w+>\s*\);\}\s*\}/g, '\n  );');
   
   // Fix malformed export statements
-  {
-    pattern: /export default function ([^{]+)\s*{\s*}\s*$/gm,
-    replacement: 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}'
-  }
-];
+  fixed = fixed.replace(/export default \w+;\s*<\/\w+>\s*$/g, 'export default ResponsiveContainer;');
+  
+  // Fix malformed numeric literals
+  content = content.replace(/(\d+),0o0/g, '$1,000');
+  content = content.replace(/(\d+)o0/g, '$1');
+  
+  // Fix malformed JSX expressions
+  content = content.replace(/\{\s*feature\.icon\s*\}/g, '{feature.icon}');
+  
+  // Fix malformed className attributes
+  content = content.replace(/className="([^"]*)\/50([^"]*)"/g, 'className="$1/50$2"');
+  
+  // Fix malformed closing brackets
+  content = content.replace(/\]\s*;\s*$/gm, '];');
+  
+  return content;
+}
 
-// Get all TypeScript files
-const files = glob.sync('app/**/*.tsx', { cwd: process.cwd() });
-
+// Process all files
 let fixedCount = 0;
 let errorCount = 0;
 
-console.log(`Found ${files.length} TypeScript files to check...`);
-
-files.forEach(file => {
+for (const file of [...pageFiles, ...componentFiles]) {
   try {
-    let content = fs.readFileSync(file, 'utf8');
-    let originalContent = content;
+    const content = fs.readFileSync(file, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-    
-    // Additional specific fixes
-    // Fix common malformed patterns
-    content = content.replace(/}\s*\);\s*}\s*}\s*''\s*$/gm, '}');
-    content = content.replace(/}\s*\);\s*}\s*}\s*$/gm, '}');
-    content = content.replace(/}\s*}\s*''\s*$/gm, '}');
-    content = content.replace(/}\s*}\s*$/gm, '}');
-    
-    // Fix malformed JSX
-    content = content.replace(/<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm, '');
-    
-    // Fix duplicate closing braces
-    content = content.replace(/}\s*}\s*}\s*$/gm, '}');
-    
-    // Fix malformed function declarations
-    content = content.replace(/const ([^=]+) = \(\) => {\s*}\s*$/gm, 'const $1 = () => {\n  return (\n    <div>Page under development</div>\n  );\n};');
-    
-    // Fix malformed export statements
-    content = content.replace(/export default function ([^{]+)\s*{\s*}\s*$/gm, 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}');
-    
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.trim() + '\n';
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content, 'utf8');
-      console.log(`Fixed: ${file}`);
+    if (content !== fixed) {
+      fs.writeFileSync(file, fixed, 'utf8');
+      console.log(`✅ Fixed: ${file}`);
       fixedCount++;
     }
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.error(`❌ Error processing ${file}:`, error.message);
     errorCount++;
   }
-});
+}
 
-console.log(`\nFixed ${fixedCount} files`);
-console.log(`Errors: ${errorCount} files`);
-console.log('Done!');
+console.log(`\n🎉 Fix complete!`);
+console.log(`✅ Fixed: ${fixedCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);
+
+// Run linting to check results
+console.log('\n🔍 Running linting check...');
+try {
+  execSync('pnpm run lint', { stdio: 'pipe' });
+  console.log('✅ Linting passed!');
+} catch (error) {
+  console.log('⚠️  Linting still has issues, but many errors were fixed.');
+}

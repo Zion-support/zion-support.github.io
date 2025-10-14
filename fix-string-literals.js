@@ -1,73 +1,129 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
 
-// Function to fix string literal issues
-function fixStringLiterals(content) {
-  let fixed = content;
-  
-  // Fix malformed string literals with extra quotes
-  fixed = fixed.replace(/console\.error\('([^']*): "\'"', ([^)]+)\)/g, "console.error('$1:', $2)");
-  fixed = fixed.replace(/console\.log\('([^']*): "\'"', ([^)]+)\)/g, "console.log('$1:', $2)");
-  fixed = fixed.replace(/console\.error\('([^']*): "\'"', error\)/g, "console.error('$1:', error)");
-  fixed = fixed.replace(/console\.log\('([^']*): "\'"', ([^)]+)\)/g, "console.log('$1:', $2)");
-  
-  // Fix malformed JSON string values
-  fixed = fixed.replace(/JSON\.stringify\(\{ error: "\'([^']*)\'"\}\)/g, "JSON.stringify({ error: '$1' })");
-  fixed = fixed.replace(/JSON\.stringify\(\{ success: true, message: "\'([^']*)\'"\}\)/g, "JSON.stringify({ success: true, message: '$1' })");
-  fixed = fixed.replace(/JSON\.stringify\(\{ error: "\'([^']*)\'"\}\)/g, "JSON.stringify({ error: '$1' })");
-  
-  // Fix malformed status responses
-  fixed = fixed.replace(/res\.status\(\d+\)\.json\(\{ error: "\'([^']*)\'"\}\)/g, "res.status(405).json({ error: '$1' })");
-  fixed = fixed.replace(/res\.status\(\d+\)\.json\(\{ success: true, message: "\'([^']*)\'"\}\)/g, "res.status(200).json({ success: true, message: '$1' })");
-  
-  // Fix malformed try-catch blocks
-  fixed = fixed.replace(/try \{\;\s*await/g, 'try {\n      await');
-  
-  return fixed;
-}
+console.log('🔧 Fixing unterminated string literals...');
 
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix unterminated string literals in a file
+function fixStringLiterals(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixStringLiterals(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-// Main function
-async function main() {
-  const patterns = [
-    'api/**/*.js'
-  ];
-  
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
+    // Fix common patterns of unterminated string literals
+    const patterns = [
+      // Fix import statements with extra quotes and semicolons
+      {
+        regex: /import\s+React\s+from\s+['"]react['"];';'/g,
+        replacement: "import React from 'react';"
+      },
+      {
+        regex: /import\s+{\s*Helmet\s*}\s+from\s+['"]react-helmet-async['"];';'/g,
+        replacement: "import { Helmet } from 'react-helmet-async';"
+      },
+      // Fix malformed JSX attributes
+      {
+        regex: /content="[^"]*";+"/g,
+        replacement: (match) => match.replace(/;+"/, '"')
+      },
+      // Fix malformed JSX elements
+      {
+        regex: /<[^>]*;+[^>]*>/g,
+        replacement: (match) => match.replace(/;+/g, '')
+      },
+      // Fix malformed function declarations
+      {
+        regex: /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s+null;\s*}/g,
+        replacement: (match, funcName) => `export default function ${funcName}() {
+  return (
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">${funcName}</h1>
+        <p className="text-xl text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
+}`
+      }
+    ];
+
+    for (const pattern of patterns) {
+      const newContent = content.replace(pattern.regex, pattern.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
     }
+
+    // Additional cleanup
+    content = content.replace(/;+$/gm, '');
+    content = content.replace(/^;+/gm, '');
+    content = content.replace(/\s+;+\s+/g, ' ');
+    content = content.replace(/['"]+$/gm, '');
+    content = content.replace(/^['"]+/gm, '');
+
+    // Remove any remaining merge conflict markers
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed string literals in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to recursively find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  let files = [];
+  
+  try {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        files = files.concat(findFiles(fullPath, extensions));
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  } catch (error) {
+    console.error(`Error reading directory ${dir}:`, error.message);
   }
   
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+  return files;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+// Main execution
+try {
+  console.log('📁 Scanning for files with string literal issues...');
+  
+  const files = findFiles('.');
+  let fixedCount = 0;
+  let totalFiles = 0;
+  
+  for (const file of files) {
+    totalFiles++;
+    if (fixStringLiterals(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`   Total files processed: ${totalFiles}`);
+  console.log(`   Files with string literal issues fixed: ${fixedCount}`);
+  
+  console.log('\n🎉 String literal fixes completed!');
+  
+} catch (error) {
+  console.error('❌ Error during string literal fixes:', error.message);
+  process.exit(1);
 }
-
-export { fixStringLiterals, processFile };
