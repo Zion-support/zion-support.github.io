@@ -1,27 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone } from 'lucide-react';
+import { 
+  Menu, 
+  X, 
+  Network,
+  FileText,
+  Clock,
+  ChevronDown, 
+  Phone, 
+  Mail, 
+  MapPin,
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart
+} from 'lucide-react';
+import FuturisticButton from './FuturisticButton';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  // const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
+
+  const toggleDropdown = useCallback((dropdown: string) => {
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
+  }, []);
+
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth >= 1024) {
+      setIsMenuOpen(false);
+    }
   };
 
-  // const _toggleServices = () => {
-  //   setIsServicesOpen(!isServicesOpen);
-  // };
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 50);
+  };
 
-  // const _toggleSolutions = () => {
-  //   setIsSolutionsOpen(!isSolutionsOpen);
-  // };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const navigation = [
     { name: 'Home', href: '/', icon: null },
@@ -31,12 +73,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarTogg
       href: '/services', 
       icon: null,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-services', icon: Zap },
+        { name: 'AI Solutions', href: '/ai-services', icon: Brain },
         { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-        { name: 'Data Analytics', href: '/data-analytics', icon: Database },
+        { name: 'Data Analytics', href: '/data-analytics', icon: BarChart },
         { name: 'Web Development', href: '/web-development', icon: Code },
-        { name: 'Mobile Apps', href: '/mobile-apps', icon: Smartphone }
+        { name: '5G Solutions', href: '/5g-solutions', icon: Network }
       ]
     },
     { name: 'Contact', href: '/contact', icon: null }
@@ -66,8 +108,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarTogg
                   <Link
                     to={item.href}
                     className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                    onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
+                    onMouseLeave={() => item.submenu && setActiveDropdown(null)}
                   >
                     {item.name}
                     {item.submenu && (
@@ -76,7 +118,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarTogg
                   </Link>
                   
                   {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
+                  {item.submenu && activeDropdown === item.name && (
                     <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-slate-700 py-2 z-50">
                       {item.submenu.map((subItem) => (
                         <Link
@@ -98,17 +140,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarTogg
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={toggleMobileMenu}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
+        {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
               {navigation.map((item) => (
@@ -116,7 +158,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarTogg
                   <Link
                     to={item.href}
                     className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
@@ -127,7 +169,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarTogg
                           key={subItem.name}
                           to={subItem.href}
                           className="flex items-center text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => setIsMenuOpen(false)}
                         >
                           {subItem.icon && <subItem.icon className="mr-3 h-4 w-4" />}
                           {subItem.name}
