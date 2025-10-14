@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";interface ResponsiveContainerProps {}"  children: 
+  c,lassName ?  : string
 
 interface ResponsiveContainerProps {
   children: React.ReactNode;

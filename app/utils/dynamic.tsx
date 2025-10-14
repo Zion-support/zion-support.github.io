@@ -1,19 +1,16 @@
-'use client';
-
-import React, { Suspense } from 'react';
-
-interface DynamicImportProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
-}
-
-export default function DynamicImport({ 
-  children, 
-  fallback = <div>Loading...</div> 
-}: DynamicImportProps) {
+"use client;import React from react;export default function Component() {
   return (
     <Suspense fallback={fallback}>
       {children}
     </Suspense>
   );
-}
+
+    <div>Page content</div>
+  );
+    <div>
+      </div>
+      <div>
+      </div>
+        <h1 className: ""text-4xl font-bold mb-8">Utils</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.</p></div>
+  )</p></div></div>
+  )}
