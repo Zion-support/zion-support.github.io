@@ -67,106 +67,239 @@ const AiServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Services - Comprehensive AI Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our comprehensive AI services including analytics, automation, content generation, customer service, marketing, and healthcare solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI analytics, AI automation, AI content generation, AI customer service, AI marketing, AI healthcare" />
-        <meta name="canonical" content="https://ziontechgroup.com/ai-services" />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including analytics, automation, healthcare diagnostics, and more. Transform your business with cutting-edge AI solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, analytics, automation, healthcare AI, business intelligence" />
       </Helmet>
-      <FuturisticBackground>;
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
+          <ResponsiveContainer>
+            <div className="text-center relative z-10">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with our comprehensive suite of AI-powered services. 
+                From analytics to automation, we provide cutting-edge solutions tailored to your needs.
+              </p>
+              <div className="flex flex-wrap justify-center gap-8 mb-12">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-3xl font-bold text-white">{stat.value}</div>
+                    <div className="text-gray-400">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ResponsiveContainer>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our AI experts help you unlock the full potential of artificial intelligence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white/30 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">
+      <div className="relative z-10 min-h-screen bg-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge artificial intelligence solutions. 
+              From consulting to implementation, we deliver AI that drives real results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+      <FuturisticBackground>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           {/* Hero Section */}
-          <section className="relative py-20 px-4">;
-            <div className="max-w-7xl mx-auto text-center">;
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
+          <section className="relative py-20 px-4">
+            <div className="max-w-7xl mx-auto text-center">
+              <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
                 AI;
-                <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+                <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   Services;
-                </span>;
-              </h1>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-                Transform your business with our comprehensive AI services.;
-                From analytics to automation, we provide cutting-edge AI solutions.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with our comprehensive AI services.,
+                From analytics to automation, we provide cutting-edge AI solutions.</p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Get Started;
-                  <Right className="w-5 h-5 ml-2 inline" />;
-                </button>;
-                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
-                  Learn More;
-                </button>;
-              </div>;
-            </div>;
-          </section>;
+                  <Right className="w-5 h-5 ml-2 inline" />
+                </button>
+                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                  Learn More,
+                </button>
+              </div>
+            </div>
+          </section>
           {/* Services Grid */}
-          <section className="py-20 px-4">;
-            <div className="max-w-7xl mx-auto">;
-              <h2 className="text-4xl font-bold text-white text-center mb-16">;
+          <section className="py-20 px-4">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-4xl font-bold text-white text-center mb-16">
                 Our AI Services;
-              </h2>;
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {services.map((service, _index) => (
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
-                    <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>;
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, _index) => (}
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
+                    <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                       aria-hidden="true";
                     >;
-                      <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />;
-                    </div>;
-                    <h3 className="text-lg font-semibold text-white mb-2 text-center">{service.title}</h3>;
-                    <p className="text-gray-300 text-sm text-center">{service.description}</p>;
-                  </div>;
-                ))}
-              </div>;
-            </div>;
-          </section>;
+                      <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2 text-center">{service.title}</h3>
+                    <p className="text-gray-300 text-sm text-center">{service.description}</p>
+                  </div>
+))}
+              </div>
+            </div>
+          </section>
           {/* Testimonials Section */}
-          <section className="py-20 px-4 bg-slate-800/30">;
-            <div className="max-w-7xl mx-auto">;
-              <h2 className="text-4xl font-bold text-white text-center mb-16">;
+          <section className="py-20 px-4 bg-slate-800/30">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-4xl font-bold text-white text-center mb-16">
                 What Our Clients Say;
-              </h2>;
-              <div className="grid md:grid-cols-3 gap-8">;
-                {testimonials.map((testimonial, _index) => (
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
-                    <div className="flex items-center mb-4">;
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
-                      ))}
-                    </div>;
-                    <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>;
-                    <div>;
-                      <p className="text-white font-semibold">{testimonial.name}</p>;
-                      <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>;
-                    </div>;
-                  </div>;
-                ))}
-              </div>;
-            </div>;
-          </section>;
+              </h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {testimonials.map((testimonial, _index) => (}
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
+                    <div className="flex items-center mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (}
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+))}
+                    </div>
+                    <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo</p>
+                    <div>
+                      <p className="text-white font-semibold">{testimonial.name}</p>
+                      <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                    </div>
+                  </div>
+))}
+              </div>
+            </div>
+          </section>
           {/* CTA Section */}
-          <section className="py-20 px-4">;
-            <div className="max-w-4xl mx-auto text-center">;
-              <h2 className="text-4xl font-bold text-white mb-6">;
+          <section className="py-20 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business with AI?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Join hundreds of companies already using our AI services to drive innovation and growth.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join hundreds of companies already using our AI services to drive innovation and growth.</p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Start Your AI Journey;
-                  <Right className="w-5 h-5 ml-2 inline" />;
-                </button>;
-                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
-                  Schedule Consultation;
-                </button>;
-              </div>;
-            </div>;
-          </section>;
-        </div>;
-      </FuturisticBackground>;
+                  <Right className="w-5 h-5 ml-2 inline" />
+                </button>
+                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                  Schedule Consultation,
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </FuturisticBackground>
+    </>
+  )
+}
+        {/* Services Grid */}
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index) => (
+                <FuturisticCard
+                  key={index}
+                  className={`p-6 h-full ${service.featured ? 'ring-2 ring-blue-400' : ''}`}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="text-blue-400 mr-3">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                    {service.featured && (
+                      <Star className="w-5 h-5 text-yellow-400 ml-auto" />
+                    )}
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <div className="text-2xl font-bold text-white mb-2">{service.price}</div>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <Link to={service.link}>
+                    <FuturisticButton className="w-full">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </FuturisticButton>
+                  </Link>
+                </FuturisticCard>
+              ))}
+            </div>
+          </ResponsiveContainer>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Contact our AI experts to discuss your requirements and discover how our services can drive your success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact">
+                  <FuturisticButton size="lg">
+                    Get Started Today
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </FuturisticButton>
+                </Link>
+                <Link to="/services">
+                  <FuturisticButton variant="outline" size="lg">
+                    View All Services
+                  </FuturisticButton>
+                </Link>
+              </div>
+            </div>
+          </ResponsiveContainer>
+        </section>
+      </div>
     </>
   );
 };
 
-export default AiServicesPage;
+export default AIServices;

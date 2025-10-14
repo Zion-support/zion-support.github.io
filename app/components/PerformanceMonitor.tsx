@@ -104,7 +104,6 @@ const PerformanceMonitor: React.FC = () => {
       <div className="mt-3 pt-2 border-t border-slate-600 text-xs text-gray-400">
         Press Ctrl+Shift+P to toggle
       </div>
-=======
     </div>
   );
 };

@@ -228,12 +228,11 @@ export default function AISolutionsPage() {
     }
   ];
 
+export default function GDataAnalyticsZionTechGroupPage() {
   return (
     <>
       <Helmet>
-        <title>AI Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, predictive analytics, and more. Transform your business with cutting-edge artificial intelligence." />
-        <meta name="keywords" content="AI solutions, machine learning, natural language processing, computer vision, predictive analytics, AI chatbots, artificial intelligence" />
+        <title>5G Data Analytics - Zion Tech Group</title>
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;

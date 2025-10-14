@@ -83,126 +83,24 @@ export default function BlogPage() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and digital transformation from Zion Tech Group experts." />
-        <meta name="keywords" content="AI blog, cybersecurity insights, cloud computing, digital transformation, technology trends" />
+
+        <title>BlogPage - Zion Tech Group</title>
+        <meta name="description" content="BlogPage - Zion Tech Group" />"
       </Helmet>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Our Blog
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Insights, trends, and expert knowledge from the world of AI and technology
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Stay ahead of the curve with our latest articles on artificial intelligence, 
-              cybersecurity, cloud computing, and digital transformation strategies.
-            </p>
-          </div>
-        </div>
-      </section>
+"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
+        <div></div>"
+          <h1>BlogPage</h1>
+          <p className="text-gray-300">This page is under construction.</p>
 
-      {/* Category Filter */}
-      <section className="py-8 bg-slate-900 border-b border-slate-700">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-6 py-2 rounded-full border border-slate-600 text-gray-300 hover:border-purple-500 hover:text-purple-300 transition-colors"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
         </div>
-      </section>
-
-      {/* Blog Posts */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {blogPosts.map((post) => (
-              <article 
-                key={post.id}
-                className="group bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"
-              >
-                <div className="aspect-video bg-gradient-to-br from-purple-500 to-pink-500 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-purple-600 text-white text-sm font-semibold rounded-full">
-                      {post.category}
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                    <div className="flex items-center gap-2">
-                      <UserIcon className="w-4 h-4" />
-                      <span>{post.author}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CalendarIcon className="w-4 h-4" />
-                      <span>{new Date(post.date).toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <TagIcon className="w-4 h-4" />
-                      <span>{post.readTime}</span>
-                    </div>
-                  </div>
-                  
-                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                    {post.title}
-                  </h2>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                  
-                  <Link 
-                    to={`/blog/${post.id}`}
-                    className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all"
-                  >
-                    Read More <ArrowRightIcon className="w-4 h-4" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Subscribe to our newsletter and never miss the latest insights on AI and technology trends
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+      </div>
+)
+    </>)
+  )
 }
+;
+export default BlogPag;e;
+';

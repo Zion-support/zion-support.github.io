@@ -1,10 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode,
 }
 
 interface State {
@@ -15,22 +12,18 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null
-    };
-  }
-
+    }
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
       errorInfo: null
-    };
-  }
-
+    }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
@@ -65,10 +58,6 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
       return (
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
@@ -99,45 +88,57 @@ Error Details (Development Only)
                       <pre className="mt-1 whitespace-pre-wrap">
                         {this.state.errorInfo.componentStack}
                       </pre>
-                    </div>
-                  )}
+)}
+                  </div>
+)}
+
+                <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                  <button
+onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    <RefreshCw className="w-4 h-4 mr-2" />
+                    Refresh Page
+                  </button>
+                  <Link
+                    to="/"
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    <Home className="w-4 h-4 mr-2" />
+                    Go Home
+                  </Link>
                 </div>
-              </details>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Try Again
-              </button>
-              
-              <Link
-                to="/"
-className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
-                <Home className="w-4 h-4" />
-                Go Home
-              </Link>
+              </div>
             </div>
-
-            <div className="mt-6 pt-6 border-t border-slate-700">
-              <p className="text-sm text-gray-400">
-                If this problem persists, please{' '}
-                <Link to="/contact" className="text-purple-400 hover:text-purple-300">
-                  contact our support team
-                </Link>
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We apologize for the inconvenience. Please try refreshing the page.
               </p>
             </div>
+            <div className="mt-4">
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              >
+                Refresh Page
+              </button>
+            </div>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4">
+                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-gray-600 bg-gray-100 p-2 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;
   }
-}
-
 export default ErrorBoundary;

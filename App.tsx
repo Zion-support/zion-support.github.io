@@ -9,59 +9,73 @@ import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-import AISolutionsPage from './app/ai-solutions/page';
-import ITSolutionsPage from './app/it-solutions/page';
+// AI Services
+const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
+const AIAutomationPlatformPage = React.lazy(() => import("./app/ai-automation-platform/page"));
+const AIClimatePredictionPage = React.lazy(() => import("./app/ai-climate-prediction-engine/page"));
+const AICustomerSentimentPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
+const AIDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics-pro/page"));
+const AIFinancialAnalysisPage = React.lazy(() => import("./app/ai-financial-analysis/page"));
+const AIHealthcareDiagnosticsPage = React.lazy(() => import("./app/ai-healthcare-diagnostics/page"));
+const AIHolographicWorkspacePage = React.lazy(() => import("./app/ai-holographic-workspace/page"));
+const AIHRRecruitmentPage = React.lazy(() => import("./app/ai-hr-recruitment-pro/page"));
+const AIImageRecognitionPage = React.lazy(() => import("./app/ai-image-recognition-pro/page"));
+const AIPoweredDevOpsPage = React.lazy(() => import("./app/ai-powered-devops/page"));
+const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/ai-powered-email-analyzer/page"));
+const AIQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const AISupplyChainOptimizerPage = React.lazy(() => import("./app/ai-supply-chain-optimizer/page"));
+const AITranslationServicePage = React.lazy(() => import("./app/ai-translation-service/page"));
 
-// Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
+// Zion Services
+const ZionAnalyticsPage = React.lazy(() => import("./app/zion-analytics/page"));
+const ZionAIPlatformPage = React.lazy(() => import("./app/zion-ai-platform/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
 
-// Error fallback component
-export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-      <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-        </svg>
-      </div>
-      <div className="mt-4 text-center">
-        <h1 className="text-lg font-medium text-gray-900">Something went wrong</h1>
-        <p className="mt-2 text-sm text-gray-500">
-          {error.message}
-        </p>
-        <div className="mt-6">
-          <button
-            onClick={resetErrorBoundary}
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            Try again
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+// 5G Services
+const FiveGNetworkOptimizationPage = React.lazy(() => import("./app/5g-network-optimization/page"));
+const FiveGInfrastructurePage = React.lazy(() => import("./app/5g-infrastructure/page"));
+
+// IT Services
+const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure-management/page"));
+const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration-pro/page"));
+const BlockchainWeb3Page = React.lazy(() => import("./app/blockchain-web3/page"));
+
+// Micro SAAS
+const MicroSAASPage = React.lazy(() => import("./app/micro-saas/page"));
+const ProjectManagementPage = React.lazy(() => import("./app/project-management-saas/page"));
+const CustomerRelationshipPage = React.lazy(() => import("./app/customer-relationship-saas/page"));
+const InventoryManagementPage = React.lazy(() => import("./app/inventory-management-saas/page"));
+const FinancialManagementPage = React.lazy(() => import("./app/financial-management-saas/page"));
+const EmployeeManagementPage = React.lazy(() => import("./app/employee-management-saas/page"));
+const SocialMediaManagementPage = React.lazy(() => import("./app/social-media-management-saas/page"));
+const EmailMarketingPage = React.lazy(() => import("./app/email-marketing-saas/page"));
+const WebsiteBuilderPage = React.lazy(() => import("./app/website-builder-saas/page"));
+const TaskManagementPage = React.lazy(() => import("./app/task-management-saas/page"));
+const SmartHomePage = React.lazy(() => import("./app/smart-home-saas/page"));
+const AIPoweredChatbotPage = React.lazy(() => import("./app/ai-powered-chatbot-saas/page"));
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    // Simulate initial loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
+
   return (
     <ErrorBoundary>
       <HelmetProvider>

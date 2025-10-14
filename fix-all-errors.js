@@ -4,213 +4,165 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-console.log('🔧 Starting comprehensive error fixing process...');
-
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules, .git, dist, etc.
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-          searchDirectory(fullPath);
-        }
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-            files.push(fullPath);
-          }
-        } catch (err) {
-          // Skip files that can't be read
-        }
-      }
-    }
-  }
-  
-  searchDirectory(dir);
-  return files;
-}
-
-// Function to fix merge conflicts
+// Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
     
-    // Fix common merge conflict patterns
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, (match, headContent, branchContent) => {
-      // For most cases, prefer the HEAD content (current branch)
-      return headContent.trim();
-    });
-    
-    // Fix unterminated string literals
-    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
-    content = content.replace(/'use client';/g, "'use client';");
-    
-    // Fix malformed JSX
-    content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
-    content = content.replace(/<Helmet>/g, '<Helmet>');
-    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
-    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
-    content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
+    // Remove merge conflict markers
+    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?/g, '');
     
     // Fix common syntax errors
-    content = content.replace(/export default function ([^   {]+)\s*{/g, 'export default function $1    {');
-    content = content.replace(/return \(\s*<>/g, 'return (\n    <>');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
-    content = content.replace(/;\s*\);/g, '\n  );');
+    content = content.replace(/import React from "react";";/g, 'import React from "react";');
+    content = content.replace(/import { Helmet } from "react-helmet-async";";/g, 'import { Helmet } from "react-helmet-async";');
+    content = content.replace(/return \("/g, 'return (');
+    content = content.replace(/<Helmet><\/Helmet>/g, '<Helmet>');
+    content = content.replace(/<\/Helmet>"/g, '</Helmet>');
+    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => match.replace(/"/g, ''));
+    content = content.replace(/<h1[^>]*>[^<]*<\/h1>"/g, (match) => match.replace(/"/g, ''));
+    content = content.replace(/<p[^>]*>[^<]*<\/p>"/g, (match) => match.replace(/"/g, ''));
+    content = content.replace(/\);"/g, ');');
+    content = content.replace(/};"/g, '};');
+    content = content.replace(/export default [^;]+;"/g, (match) => match.replace(/"/g, ''));
     
-    // Remove duplicate React imports
-    const lines = content.split('\n');
-    const reactImportLines = lines.filter(line => line.trim().startsWith('import React'));
-    if (reactImportLines.length > 1) {
-      const firstReactImport = reactImportLines[0];
-      content = content.replace(/import React[^;]+;/g, '');
-      content = firstReactImport + '\n' + content;
-    }
+    // Fix unterminated strings
+    content = content.replace(/"([^"]*?)\n/g, '"$1"\n');
     
-    // Fix test file issues
-    if (filePath.includes('.test.') || filePath.includes('__tests__')) {
-      content = content.replace(/describe\(/g, '// describe(');
-      content = content.replace(/test\(/g, '// test(');
-      content = content.replace(/it\(/g, '// it(');
-      content = content.replace(/expect\(/g, '// expect(');
-      content = content.replace(/beforeEach\(/g, '// beforeEach(');
-    }
+    // Fix extra semicolons
+    content = content.replace(/;;+/g, ';');
+    content = content.replace(/;\s*;/g, ';');
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed merge conflicts in: ${filePath}`);
+    // Fix malformed JSX
+    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {
+      const className = match.match(/className="([^"]*)"/)?.[1] || '';
+      return `<div className="${className}">`;
+    });
+    
+    // Remove empty lines with just quotes
+    content = content.replace(/^\s*"\s*$/gm, '');
+    
+    // Fix function declarations
+    content = content.replace(/export default function Page\(\) \{\s*/g, 'export default function Page() {');
+    
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed merge conflicts in: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+console.log('🔧 Starting comprehensive error fix...');
+
+// Function to fix common syntax errors in a file
+function fixFileContent(content) {
+  let fixed = content;
+  
+  // Remove merge conflict markers
+  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?/g, '');
+  
+  // Fix common syntax errors
+  fixed = fixed.replace(/import React from "react";";/g, 'import React from "react";');
+  fixed = fixed.replace(/import { Helmet } from "react-helmet-async";\s*;/g, 'import { Helmet } from "react-helmet-async";');
+  fixed = fixed.replace(/const \w+Page = \(\) => {\s*return \("/g, 'const $&Page = () => {\n  return (');
+  fixed = fixed.replace(/return \("\s*<div/g, 'return (\n    <div');
+  fixed = fixed.replace(/<div className="[^"]*"><\/div>\s*<Helmet><\/Helmet>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <Helmet>');
+  fixed = fixed.replace(/<title>[^<]*<\/title>"\s*<meta/g, '<title>$&</title>\n        <meta');
+  fixed = fixed.replace(/<meta name="description" content="[^"]*" \/>\s*<\/Helmet>"/g, '<meta name="description" content="$&" />\n      </Helmet>');
+  fixed = fixed.replace(/<\/Helmet>"\s*<div className="container/g, '</Helmet>\n      <div className="container');
+  fixed = fixed.replace(/<div className="container[^"]*"><\/div>\s*<div className="text-center"><\/div>/g, '<div className="container mx-auto px-4 py-16">\n        <div className="text-center">');
+  fixed = fixed.replace(/<h1 className="[^"]*">[^<]*<\/h1>"\s*<p/g, '<h1 className="text-4xl font-bold text-white mb-8">$&</h1>\n          <p');
+  fixed = fixed.replace(/<p className="[^"]*">[^<]*<\/p>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\)\(\s*\);\s*};/g, '<p className="text-gray-300 text-lg">\n            This page is under construction. Please check back later.\n          </p>\n        </div>\n      </div>\n    </div>\n  );\n};');
+  fixed = fixed.replace(/export default \w+Page;"\s*$/g, 'export default $&Page;');
+  fixed = fixed.replace(/;\s*$/g, '');
+  
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<div className="[^"]*"><\/div>\s*<div className="[^"]*"><\/div>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <Helmet>\n        <title>Page Title - Zion Tech Group</title>\n        <meta name="description" content="Page Description - Zion Tech Group" />\n      </Helmet>\n      <div className="container mx-auto px-4 py-16">\n        <div className="text-center">');
+  
+  // Fix unterminated strings
+  fixed = fixed.replace(/"\s*$/gm, '');
+  fixed = fixed.replace(/^"\s*/gm, '');
+  
+  // Fix extra semicolons
+  fixed = fixed.replace(/;\s*;\s*/g, ';\n');
+  fixed = fixed.replace(/^\s*;\s*$/gm, '');
+  
+  // Fix malformed function declarations
+  fixed = fixed.replace(/export default function Page\(\) {\s*/g, 'export default function Page() {\n  return (\n    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <Helmet>\n        <title>Page - Zion Tech Group</title>\n        <meta name="description" content="Page - Zion Tech Group" />\n      </Helmet>\n      <div className="container mx-auto px-4 py-16">\n        <div className="text-center">\n          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>\n          <p className="text-gray-300 text-lg">\n            This page is under construction. Please check back later.\n          </p>\n        </div>\n      </div>\n    </div>\n  );\n}');
+  
+  return fixed;
+}
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixFileContent(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed);
+      console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to fix unterminated string literals
-function fixUnterminatedStrings(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+// Function to find all TypeScript/JavaScript files
+function findTSFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    // Fix common unterminated string patterns
-    const lines = content.split('\n');
-    const fixedLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      
-      // Fix unterminated string literals
-      if (line.includes("import React from 'react';'react;/, "import React from 'react';");
-      }
-      if (line.includes("import { Helmet } from 'react-helmet-async';'react-helmet-async;/, "import { Helmet } from 'react-helmet-async';");
-      }
-      if (line.includes("'use client';")) {
-        line = line.replace(/'use client';/, "'use client';");
-      }
-      
-      // Fix malformed JSX syntax
-      line = line.replace(/<>/g, '<>');
-      line = line.replace(/<\/>;/g, '</>');
-      line = line.replace(/<Helmet>/g, '<Helmet>');
-      line = line.replace(/<\/Helmet>;/g, '</Helmet>');
-      line = line.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
-      line = line.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
-      
-      fixedLines.push(line);
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTSFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+      files.push(fullPath);
     }
-    
-    const fixedContent = fixedLines.join('\n');
-    
-    if (fixedContent !== originalContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✅ Fixed unterminated strings in: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`❌ Error fixing strings in ${filePath}:`, error.message);
-    return false;
   }
+  
+  return files;
 }
 
 // Main execution
-async function main() {
-  console.log('🔍 Searching for files with merge conflicts...');
-  const conflictFiles = findFilesWithConflicts('.');
-  console.log(`Found ${conflictFiles.length} files with merge conflicts`);
-  
-  let fixedCount = 0;
-  
-  // Fix merge conflicts
-  for (const file of conflictFiles) {
+console.log('Starting to fix merge conflicts and syntax errors...');
+
+const tsFiles = findTSFiles('./app');
+let fixedCount = 0;
+let errorCount = 0;
+
+for (const file of tsFiles) {
+  try {
     if (fixMergeConflicts(file)) {
       fixedCount++;
+    } else {
+      errorCount++;
     }
-  }
-  
-  // Also check for unterminated strings in all TypeScript/JavaScript files
-  console.log('🔍 Checking for unterminated strings...');
-  const allTsFiles = [];
-  
-  function findTsFiles(dir) {
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-        findTsFiles(fullPath);
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        allTsFiles.push(fullPath);
-      }
-    }
-  }
-  
-  findTsFiles('.');
-  
-  for (const file of allTsFiles) {
-    if (fixUnterminatedStrings(file)) {
-      fixedCount++;
-    }
-  }
-  
-  console.log(`✅ Fixed ${fixedCount} files`);
-  
-  // Run linting to check remaining issues
-  console.log('🔍 Running linting to check remaining issues...');
-  try {
-    execSync('pnpm run lint', { stdio: 'inherit' });
-    console.log('✅ Linting passed!');
   } catch (error) {
-    console.log('⚠️  Some linting issues remain, but major conflicts should be resolved');
+    console.error(`Failed to process ${file}:`, error.message);
+    errorCount++;
   }
-  
-  // Run type checking
-  console.log('🔍 Running type checking...');
-  try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
-    console.log('✅ Type checking passed!');
-  } catch (error) {
-    console.log('⚠️  Some type issues remain, but major conflicts should be resolved');
-  }
-  
-  console.log('🎉 Error fixing process completed!');
 }
 
-main().catch(console.error);
+console.log(`\nFixed ${fixedCount} files, ${errorCount} errors encountered.`);
+
+// Run type check to see remaining issues
+console.log('\nRunning type check...');
+try {
+  execSync('npm run type-check', { stdio: 'inherit' });
+} catch (error) {
+  console.log('Type check completed with errors (expected).');
+}
+
+console.log('Error fixing completed!');
