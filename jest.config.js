@@ -1,4 +1,5 @@
 export default {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
   moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/app/$1',

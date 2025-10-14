@@ -12,9 +12,9 @@ function fixFile(filePath) {
     let modified = false;
 
     // Remove merge conflict markers
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      // Keep the HEAD version (first part before =======)
-      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======([\s\S]*?)\n>>>>>>>.*?\n/g, '$1');
+    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+      // Keep the HEAD version (first part before )
+      content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)\n>>>>>>>.*?\n/g, '$1');
       modified = true;
     }
 
