@@ -29,7 +29,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
       )}
-  </Helmet>);
+    </Helmet>
+  );
 };
 export default SEOEnhancer;

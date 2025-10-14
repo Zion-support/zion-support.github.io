@@ -8,10 +8,11 @@ export const accessibilityChecker = {
         issues.push({
           element: img as HTMLElement,
           issue: 'Missing alt text'
-        })
+        });
       }
+    });
     
-    return issues
+    return issues;
   },
   
   checkHeadingStructure: () => {
@@ -19,17 +20,22 @@ export const accessibilityChecker = {
     let previousLevel = 0
     
     headings.forEach((heading) => {
-      const currentLevel = parseInt(heading.tagName.charAt(1))
+      const currentLevel = parseInt(heading.tagName.charAt(1));
       if (currentLevel > previousLevel + 1) {
         issues.push({
           element: heading as HTMLElement,
           issue: 'Heading level skipped'
-        })
+        });
       }
-      previousLevel = currentLevel
+      previousLevel = currentLevel;
+    });
     
+    return issues;
+  },
   
   checkColorContrast: () => {
     // This would require a more complex implementation
     // For now, return empty array
-    return []
+    return [];
+  }
+};
