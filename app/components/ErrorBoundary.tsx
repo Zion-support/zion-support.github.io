@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { ReactNode } from "react";
 
 interface ErrorBoundaryProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function ErrorBoundary({ children }: ErrorBoundaryProps) {
   return (
-    <div>
+    <>
       {children}
-    </div>
+    </>
   );
 };
 

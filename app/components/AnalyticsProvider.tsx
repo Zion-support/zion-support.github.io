@@ -1,40 +1,14 @@
-import React, { createContext, useContext } from 'react';
+import React, { ReactNode } from "react";
 
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    console.log('Analytics Event:', eventName, properties);
-    // Add your analytics tracking logic here
-  };
-
-  const trackPageView = (page: string) => {
-    // Page view tracking implementation
-    console.log('Page View:', page);
-  };
-
-  const value = {
-    trackEvent,
-    trackPageView,
-  };
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
 export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   return (
-    <div>
+    <>
       {children}
-    </div>
+    </>
   );
 }
 
