@@ -1,4 +1,5 @@
 import React from 'react';
+
 const LoadingStates = () => {
   return (
     <div>
@@ -10,4 +11,4 @@ const LoadingStates = () => {
   );
 };
 
-export default PagePage;
+export default LoadingStates;
