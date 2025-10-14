@@ -1,106 +1,136 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react;
+import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react';
+
 const CloudInfrastructurePage: React.FC = () => {
-  const services = [{
+  const services = [
+    {
       icon: Cloud,
-      title: 'Cloud Migration',';
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',';
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';
+      title: 'Cloud Migration',
+      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',
+      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Post-Migration Support']
     },
     {
       icon: Server,
-      title: 'Infrastructure as Code',';
-      description: 'Automate infrastructure provisioning and management using modern DevOps practices.',';
-      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']';
+      title: 'Server Management',
+      description: 'Comprehensive server setup, configuration, and ongoing management for optimal performance.',
+      features: ['Server Provisioning', 'Configuration Management', 'Performance Tuning', 'Monitoring & Maintenance']
     },
     {
       icon: Database,
-      title: 'Database Solutions',';
-      description: 'Optimize your database performance and scalability in the cloud environment.',';
-      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']';
+      title: 'Database Solutions',
+      description: 'Expert database design, optimization, and management for your critical data infrastructure.',
+      features: ['Database Design', 'Performance Optimization', 'Backup & Recovery', 'Security Hardening']
     },
     {
       icon: Shield,
-      title: 'Security & Compliance',';
-      description: 'Implement robust security measures and ensure compliance with industry standards.',';
-      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']';
+      title: 'Security & Compliance',
+      description: 'Robust security measures and compliance management to protect your cloud infrastructure.',
+      features: ['Security Audits', 'Compliance Management', 'Threat Detection', 'Incident Response']
     },
     {
       icon: Zap,
-      title: 'Auto-scaling',';
-      description: 'Automatically scale your resources based on demand to optimize costs and performance.',';
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']';
+      title: 'Performance Optimization',
+      description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
+      features: ['Performance Analysis', 'Cost Optimization', 'Auto-scaling', 'Load Balancing']
     },
     {
       icon: Globe,
-      title: 'Multi-cloud Strategy',';
-      description: 'Leverage multiple cloud providers for better resilience and vendor independence.',';
-      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']';
+      title: 'Global Deployment',
+      description: 'Deploy your applications globally with our worldwide cloud infrastructure expertise.',
+      features: ['Multi-region Setup', 'CDN Configuration', 'Global Load Balancing', 'Disaster Recovery']
     }
   ];
-const CloudInfrastructurePage: React.FC = () => {
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Cloud Infrastructure | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />
-        <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />
+        <meta name="description" content="Expert cloud infrastructure services including migration, management, and optimization for scalable and secure cloud solutions." />
+        <meta name="keywords" content="cloud infrastructure, cloud migration, server management, database solutions, cloud security, performance optimization" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Infrastructure</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Build, migrate, and optimize your cloud infrastructure for maximum performance, 
-            security, and cost-effectiveness.;
-          </p>
+
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Cloud Infrastructure
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Build, manage, and optimize your cloud infrastructure for maximum performance and scalability
+            </p>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              From migration to ongoing management, our cloud experts help you leverage the full power 
+              of cloud computing to drive business growth and innovation.
+            </p>
+          </div>
         </div>
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, _index) => {
-            const Icon = service.icon;
-            return (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mr-4">
-                    <Icon className="w-6 h-6 text-white" />
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <div 
+                  key={service.title}
+                  className="group bg-slate-800/50 p-8 rounded-xl hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-blue-500"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-                      <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Infrastructure?</h2>
-            <p className="text-gray-300 mb-6">
-              Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.;
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Ready to Transform Your Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12">
+              Let our cloud experts help you build a robust, scalable, and secure cloud infrastructure
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300">
-                Start Migration;
-              </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Get Assessment;
-              </button>
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Cloud Consultation
+              </a>
+              <a
+                href="/demo"
+                className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
+              >
+                Schedule Demo
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>;  );
-}
+      </section>
+    </div>
+  );
+};
+
 export default CloudInfrastructurePage;

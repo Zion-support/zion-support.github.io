@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
 interface PerformanceMetrics {
   cls: number | null;
   inp: number | null;
@@ -15,7 +16,8 @@ const PerformanceMonitor: React.FC = () => {
     inp: null,
     fcp: null,
     lcp: null,
-    ttfb: null
+    ttfb: null,
+    loadTime: null
   });
 
   useEffect(() => {
@@ -29,33 +31,46 @@ const PerformanceMonitor: React.FC = () => {
       }));
 
       // Send to analytics service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', metric.name, {
           event_category: 'Web Vitals',
           value: Math.round(metric.value),
           event_label: metric.id,
           non_interaction: true,
         });
       }
-    }
+    };
+
     onCLS(handleMetric);
     onINP(handleMetric);
     onFCP(handleMetric);
     onLCP(handleMetric);
     onTTFB(handleMetric);
+
+    // Track page load time
+    const loadTime = performance.now();
+    setMetrics(prev => ({
+      ...prev,
+      loadTime
+    }));
   }, []);
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+
+  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (!value) return 'text-gray-400';
+    if (value <= thresholds.good) return 'text-green-400';
+    if (value <= thresholds.poor) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs max-w-xs z-50">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>      </div>
-      
-      <div className="space-y-2 text-xs">
+      <div className="space-y-2">
         <div className="flex justify-between">
           <span>FCP:</span>
           <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
@@ -69,9 +84,9 @@ const PerformanceMonitor: React.FC = () => {
           </span>
         </div>
         <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
+          <span>INP:</span>
+          <span className={getScoreColor(metrics.inp, { good: 100, poor: 300 })}>
+            {metrics.inp ? `${Math.round(metrics.inp)}ms` : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
@@ -95,9 +110,6 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
-import React from 'react';
+};
 
-const PerformanceMonitor: React.FC = () => {
-  return null;
-}
 export default PerformanceMonitor;
