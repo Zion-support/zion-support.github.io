@@ -83,16 +83,14 @@ const App: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return <LoadingSpinner />;
+    return <AdvancedLoadingStates />;
   }
 
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <AnalyticsProvider>
-          <PerformanceOptimizer>
-            <AccessibilityEnhancer />
-            <SEOOptimizer
+    <HelmetProvider>
+      <AnalyticsProvider>
+        <PerformanceMonitor>
+          <MetaManager
               title="Zion Tech Group - Advanced AI and IT Solutions"
               description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
               keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
@@ -111,8 +109,6 @@ const App: React.FC = () => {
                 }
               }}
             />
-            <MetaManager />
-            <PerformanceMonitor />
             <EnhancedAnalytics />
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -130,10 +126,9 @@ const App: React.FC = () => {
                 <Footer />
               </div>
             </Router>
-          </PerformanceOptimizer>
+          </PerformanceMonitor>
         </AnalyticsProvider>
       </HelmetProvider>
-    </ErrorBoundary>
   );
 };
 
