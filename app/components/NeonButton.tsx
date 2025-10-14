@@ -1,15 +1,19 @@
-if (to) {
+if (to) {,
+
     return (
-      <Link to={to} className={classes}>
+
+      <Link to={to} className={classes}></Link>
         {children}
       </Link>
 )
     )
   return (
-    <button
+
+    <button,
       onClick={onClick}
       className={classes}
-    >
+    ></button,
+>
       {children}
     </button>)
   )

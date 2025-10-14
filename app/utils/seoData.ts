@@ -1,7 +1,5 @@
-// SeoData utility
-export const seodata = () => {
-  // Implementation here
-  console.log('SeoData utility called');
-};
+// SeoData utility,
+export const seodata = () => {// Implementation here,
+  console.log('SeoData utility called');};,
 
-export default seodata;
+export default seodata;,

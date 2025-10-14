@@ -1,11 +1,14 @@
 </div>
+    </div>
   )
-  if (fullScreen) {
+  if (fullScreen) {,
+
     return (
 
         {spinner}
       </div>
+    </div>
     )
-  return spinner;
+  return spinner;,
 
-};
+};,

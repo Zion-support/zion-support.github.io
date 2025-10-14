@@ -1,13 +1,11 @@
-document.head.removeChild(script);
-'
-{ useEffect } from 'react';';
-import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps { title?: string;
+document.head.removeChild(script);,
+',
+{ useEffect } from 'react';';,
+import { Helmet } from 'react-helmet-async';,
+interface SEOEnhancerProps {title?: string;,
 
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: string;
-
-}
+  description?: string;,
+  keywords?: string[];,
+  image?: string;,
+  url?: string;,
+  type?: string;}

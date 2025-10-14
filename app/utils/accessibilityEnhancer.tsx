@@ -1,4 +1,2 @@
-// accessibilityEnhancer.tsx utility;
-export const accessibilityEnhancer = () => {;
-  // Utility implementation;
-};
+// accessibilityEnhancer.tsx utility;,
+export const accessibilityEnhancer = () => {// Utility implementation;};,

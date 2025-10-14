@@ -1,3 +1,3 @@
-export const utilityFunction = () => { // Utility implementation;
+export const utilityFunction = () => { // Utility implementation;,
   return true; }
-};
+};,

@@ -1,8 +1,8 @@
-interface LazyWrapperProps { children: React.ReactNode
+interface LazyWrapperProps { children: React.ReactNode,
   fallback?: React.ReactNode }
-import React, { Suspense, lazy, ComponentType } from 'react';';
-import LoadingSpinner from './LoadingSpinner';
-interface LazyWrapperProps { children: React.ReactNode;
+import React, { Suspense, lazy, ComponentType } from 'react';';,
+import LoadingSpinner from './LoadingSpinner';,
+interface LazyWrapperProps { children: React.ReactNode;,
   fallback?: React.ReactNode; }
 }
 const LazyWrapper: React.FC<LazyWrapperProps> = ({ children, 
@@ -13,6 +13,6 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({ children,
 
     </Suspense>
 )
-  );
-};
-export default LazyWrapper;
+  );,
+};,
+export default LazyWrapper;,

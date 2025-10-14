@@ -1,66 +1,67 @@
-import js from "@eslint/js
-import globals from "globals
-import reactHooks from "eslint-plugin-react-hooks
-import reactRefresh from "eslint-plugin-react-refresh
-import tseslint from "typescript-eslint
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+
 export default tseslint.config(
   {
     ignores: [
-      "dist
-      "app-broken/**
-      "app-disabled/**
-      "scripts/**
-      "src/**
-      "temp-broken/**
-      "coverage/**
-      "*.js
-      "*.cjs
+      "dist/**",
+      "app-broken/**",
+      "app-disabled/**",
+      "scripts/**",
+      "src/**",
+      "temp-broken/**",
+      "coverage/**",
+      "*.js",
+      "*.cjs"
     ],
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ["**/*.{ts,tsx}]
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
-      ecmaVersion: "latest
-      sourceType: "module
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: {
         ...globals.browser,
-        window: "readonly
-        document: "readonly
-        console: "readonly
-        process: "readonly
-        global: "readonly
-        HTMLElement: "readonly
-        Event: "readonly
-        KeyboardEvent: "readonly
-        MediaQueryListEvent: "readonly
-        PerformanceObserver: "readonly
-        PerformanceNavigationTiming: "readonly
-        HTMLInputElement: "readonly
-        HTMLTextAreaElement: "readonly
-        HTMLSelectElement: "readonly
-        setTimeout: "readonly
-        clearTimeout: "readonly
-        setInterval: "readonly
-        clearInterval: "readonly
-        performance: "readonly
-        localStorage: "readonly
-        sessionStorage: "readonly
-        require: "readonly
-        module: "readonly
-        exports: "readonly
-        fs: "readonly
-        __dirname: "readonly
+        window: "readonly",
+        document: "readonly",
+        console: "readonly",
+        process: "readonly",
+        global: "readonly",
+        HTMLElement: "readonly",
+        Event: "readonly",
+        KeyboardEvent: "readonly",
+        MediaQueryListEvent: "readonly",
+        PerformanceObserver: "readonly",
+        PerformanceNavigationTiming: "readonly",
+        HTMLInputElement: "readonly",
+        HTMLTextAreaElement: "readonly",
+        HTMLSelectElement: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        setInterval: "readonly",
+        clearInterval: "readonly",
+        performance: "readonly",
+        localStorage: "readonly",
+        sessionStorage: "readonly",
+        require: "readonly",
+        module: "readonly",
+        exports: "readonly",
+        fs: "readonly",
+        __dirname: "readonly",
         // Jest globals
-        describe: "readonly
-        it: "readonly
-        test: "readonly
-        expect: "readonly
-        beforeEach: "readonly
-        afterEach: "readonly
-        beforeAll: "readonly
-        afterAll: "readonly
-        jest: "readonly
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly",
+        jest: "readonly"
       },
       parserOptions: {
         ecmaFeatures: {
@@ -69,18 +70,19 @@ export default tseslint.config(
       },
     },
     plugins: {
-      "react-hooks": reactHooks
+      "react-hooks": reactHooks,
       "react-refresh": reactRefresh
     },
     rules: {
-      ...reactHooks.configs.recommended.rulesreact-refresh/only-export-components": [
-        "warn
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
         {
           allowConstantExport: true,
           allowExportNames: [
-            "AnalyticsContext
-            "useAnalytics
-            "AnalyticsProvider
+            "AnalyticsContext",
+            "useAnalytics",
+            "AnalyticsProvider"
           ],
         },
       ],
