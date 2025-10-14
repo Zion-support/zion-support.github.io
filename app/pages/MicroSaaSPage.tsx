@@ -60,7 +60,6 @@ import React from 'react';';';
   CpuChipIcon,
   ChartBarIcon,
   RocketLaunchIcon,
-  CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,

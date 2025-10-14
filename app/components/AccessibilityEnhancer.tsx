@@ -92,6 +92,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     addAriaLandmarks()
     addAltText()
 
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
     return () => {
       // Cleanup if needed
     }

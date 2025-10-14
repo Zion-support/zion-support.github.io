@@ -45,8 +45,8 @@ export default function EnhancedAccessibility() {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
 <<<<<<< HEAD
 }

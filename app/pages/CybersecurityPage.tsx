@@ -60,7 +60,6 @@ import React from 'react';';';
   LockClosedIcon,
   EyeIcon,
   ExclamationTriangleIcon,
-  CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
