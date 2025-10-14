@@ -26,7 +26,7 @@ title="5G Monitoring Services - Zion Tech Group"
         description="Professional 5G monitoring services to ensure optimal network performance and security."
       />
       
-      <div className="container mx-autopx-4py-1 6">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             5G Monitoring Services
@@ -34,7 +34,6 @@ title="5G Monitoring Services - Zion Tech Group"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Monitor your 5G network performance with our advanced monitoring solutions.
           </p>
-          </div>
         </div>
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
@@ -70,5 +69,6 @@ title="5G Monitoring Services - Zion Tech Group"
       </div>
     </div>
   );
-}
-export default FiveGMonitoringPage
+};
+
+export default FiveGMonitoringPage;
