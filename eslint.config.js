@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: '[',
+    ignores: [
       'app-broken/**',
       'app-disabled/**',
       'dist/**',
@@ -91,7 +91,7 @@ export default tseslint.config(
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true;
+          jsx: true
         }
       },
       globals: {
