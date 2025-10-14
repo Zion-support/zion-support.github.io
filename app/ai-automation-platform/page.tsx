@@ -69,4 +69,7 @@ const AIAutomationPlatform = () => {
     </div>
   );
 };
-export default pagePage;
+export default Page;
+    </div>
+  </div>
+</div>

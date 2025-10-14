@@ -98,8 +98,8 @@ const ContactPage: React.FC = () => {
       </section>
       {/* Contact Form & Info */}
       <section className="py-20 bg-slate-900">"
-        <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
-          <div className="grid lg: 'grid-cols-2 gap-12">"','
+        <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8">"','
+          <div className="grid lg: "grid-cols-2 gap-12">"','
             {/* Contact Form */}
             <div className="bg-slate-800 rounded-xl p-8">"
               <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>"
@@ -122,14 +122,14 @@ const ContactPage: React.FC = () => {
                         message:
                       });
                     }}
-                    className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover: 'from-purple-700 hover:to-cyan-700 transition-all duration-300"','
+                    className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover: "from-purple-700 hover:to-cyan-700 transition-all duration-300"','
                   >
                     Send Another Message;
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">"
-                  <div className="grid md: 'grid-cols-2 gap-6">"','
+                  <div className="grid md: "grid-cols-2 gap-6">"','
                     <div></div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">"
                         Full Name *
@@ -161,7 +161,7 @@ value={formData.email;
                       /></input>
                     </div>
                   </div>
-                  <div className="grid md: 'grid-cols-2 gap-6">"','
+                  <div className="grid md: "grid-cols-2 gap-6">"','
                     <div></div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">"
                         Company;

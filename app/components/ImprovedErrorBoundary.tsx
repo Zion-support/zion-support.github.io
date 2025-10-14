@@ -11,7 +11,6 @@
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Professional improved error boundary services;
 import React from 'react';
-import lucide-react from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

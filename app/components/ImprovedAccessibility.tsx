@@ -132,7 +132,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       {/* Accessibility Toggle Button */}
       <button;
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed top-4 right-4 z-50 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover: 'bg-slate-700/90 transition-colors"','
+        className="fixed top-4 right-4 z-50 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover: "bg-slate-700/90 transition-colors"','
         title="Accessibility Settings"
         aria-label="Open accessibility settings"
       >
@@ -145,7 +145,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
             <h3 className="text-lg font-semibold">Accessibility Settings</h3>"
             <button;
               onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover: 'text-white"','
+              className="text-gray-400 hover: "text-white"','
               aria-label="Close accessibility settings"
             >
               ×
@@ -268,7 +268,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       {/* Skip to main content link */}
       <a;
         href="#main-content"
-        className="sr-only focus: 'not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50"','
+        className="sr-only focus: "not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50"','
         onClick={(e) => {
           e.preventDefault();`
           const mainContent = document.getElementById('main-content');'``

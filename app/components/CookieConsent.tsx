@@ -1,5 +1,4 @@
 import React from 'react';
-import lucide-react from 'lucide-react';
 const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);

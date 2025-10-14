@@ -265,4 +265,4 @@ const AISolutionsPage: React.FC = () => {
     </div>
   );
 };
-export default pagePage;
+export default Page;

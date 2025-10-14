@@ -10,7 +10,7 @@ const ZionAIPlatform = () => {
         <section className="py-20">"
           <ResponsiveContainer></ResponsiveContainer>
             <div className="text-center">"
-              <h1 className="text-5xl md: 'text-7xl font-bold text-white mb-6">"','
+              <h1 className="text-5xl md: "text-7xl font-bold text-white mb-6">"','
                 Zion <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Platform</span>"
               </h1>
               <p>"

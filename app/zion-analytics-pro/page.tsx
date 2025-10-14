@@ -128,8 +128,10 @@ const Page = () => {
               </div>
             </div>
           </div>
-        </section>
-        {/* Features Section */}
+        </div>
+        </div>
+      </div>
+    </div>
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

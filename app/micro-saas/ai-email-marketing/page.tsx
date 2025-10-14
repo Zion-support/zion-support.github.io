@@ -173,27 +173,27 @@ icon: <Mail className="w-6 h-6" />,
               <Mail className="w-4 h-4" />"
               <span>AI-Powered Email Marketing</span>
             </div>
-            <h1 className="text-4xl sm: 'text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">"','
+            <h1 className="text-4xl sm: "text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">"','
               Intelligent <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Email Marketing</span>"
             </h1>
             <p>"','
               Transform your email marketing with AI-powered campaigns. Smart segmentation,
               content generation, and automation to maximize your email ROI and engagement.
             </p>
-            <div className="flex flex-col sm: 'flex-row gap-6 justify-center mb-16">"','
+            <div className="flex flex-col sm: "flex-row gap-6 justify-center mb-16">"','
               <Link ;
                 to="/contact"
-                className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover: 'from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"','
+                className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover: "from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"','
               ></Link>
                 <span>Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 group-hover: 'translate-x-1 transition-transform" />"','
+                <ArrowRight className="w-5 h-5 group-hover: "translate-x-1 transition-transform" />"','
               </Link>
               <Link ;
                 to="/demo"
-                className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover: 'bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"','
+                className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover: "bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"','
               ></Link>
                 <span>View Demo</span>
-                <ArrowRight className="w-5 h-5 group-hover: 'translate-x-1 transition-transform" />"','
+                <ArrowRight className="w-5 h-5 group-hover: "translate-x-1 transition-transform" />"','
               </Link>
             </div>
           </div>
@@ -203,14 +203,14 @@ icon: <Mail className="w-6 h-6" />,
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" />"
           <div className="relative max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
-              <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-4">"','
+              <h2 className="text-4xl md: "text-5xl font-bold text-white mb-4">"','
                 Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Email Marketing?</span>"
               </h2>
               <p>"
                 Experience the power of AI-driven email marketing with our proven results.
               </p>
             </div>
-            <div className="grid grid-cols-2 md: 'grid-cols-4 gap-8">"','
+            <div className="grid grid-cols-2 md: "grid-cols-4 gap-8">"','
               {stats.map((stat, index) => (
 <div key={index} className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -226,20 +226,22 @@ icon: <Mail className="w-6 h-6" />,
               ))}
             </div>
           </div>
-        </section>
-        {/* Features Section */}
+        </div>
+        </div>
+      </div>
+    </div>
         <section className="py-20 px-4 relative">"
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-cyan-500/5 to-pink-500/5" />"
           <div className="relative max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
-              <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+              <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
                 Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Email Features</span>"
               </h2>
               <p>"
                 Everything you need to create, send, and optimize email campaigns with artificial intelligence.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: 'grid-cols-2 lg:grid-cols-3 gap-8">"','
+            <div className="grid grid-cols-1 md: "grid-cols-2 lg:grid-cols-3 gap-8">"','
               {features.map((feature, index) => (
 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -260,14 +262,14 @@ icon: <Mail className="w-6 h-6" />,
         <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative">"
           <div className="relative max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
-              <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+              <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
                 Email <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Features</span>"
               </h2>
               <p>"
                 Comprehensive email marketing features powered by artificial intelligence.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: 'grid-cols-2 lg:grid-cols-3 gap-8">"','
+            <div className="grid grid-cols-1 md: "grid-cols-2 lg:grid-cols-3 gap-8">"','
               {emailFeatures.map((feature, index) => (
 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                   <div className="flex items-center justify-between mb-4">
@@ -297,7 +299,7 @@ icon: <Mail className="w-6 h-6" />,
                     </div>
                     <Link ;
                       to="/contact"
-                      className="block w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover: 'from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"','
+                      className="block w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover: "from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"','
                     ></Link>
                       Learn More;
                     </Link>
@@ -312,14 +314,14 @@ icon: <Mail className="w-6 h-6" />,
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" />"
           <div className="relative max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
-              <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+              <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
                 Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>"
               </h2>
               <p>"
                 Choose the plan that fits your email marketing needs. All plans include a 14-day free trial.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: 'grid-cols-3 gap-8">"','
+            <div className="grid grid-cols-1 md: "grid-cols-3 gap-8">"','
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${````````
                   plan.popular ;`````````
@@ -368,16 +370,16 @@ icon: <Mail className="w-6 h-6" />,
         <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50 to-pink-900/50 relative">"
           <div className="relative max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
-              <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+              <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
                 What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Marketers Say</span>"
               </h2>
               <p>"
                 Join thousands of marketers who have transformed their email campaigns with our AI platform.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: 'grid-cols-3 gap-8">"','
+            <div className="grid grid-cols-1 md: "grid-cols-3 gap-8">"','
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: 'bg-white/20 transition-all duration-300">"','
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: "bg-white/20 transition-all duration-300">"','
                   <div className="flex items-center mb-4">"
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />"
@@ -406,28 +408,28 @@ icon: <Mail className="w-6 h-6" />,
         <section className="py-20 px-4 relative">"
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />"
           <div className="relative max-w-7xl mx-auto text-center">"
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm: 'p-12 lg:p-16">"','
-              <h2 className="text-4xl sm: 'text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">"','
+            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm: "p-12 lg:p-16">"','
+              <h2 className="text-4xl sm: "text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">"','
                 Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Email Marketing?</span>"
               </h2>
               <p>"','
                 Join thousands of marketers using our AI platform to create high-performing email campaigns.
                 Start your free trial today and see the difference AI can make.
               </p>
-              <div className="flex flex-col sm: 'flex-row gap-6 justify-center">"','
+              <div className="flex flex-col sm: "flex-row gap-6 justify-center">"','
                 <Link ;
                   to="/contact"
-                  className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover: 'bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"','
+                  className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover: "bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"','
                 ></Link>
                   <span>Start Free Trial</span>
-                  <ArrowRight className="w-5 h-5 group-hover: 'translate-x-1 transition-transform" />"','
+                  <ArrowRight className="w-5 h-5 group-hover: "translate-x-1 transition-transform" />"','
                 </Link>
                 <Link ;
                   to="/pricing"
-                  className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover: 'bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"','
+                  className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover: "bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"','
                 ></Link>
                   <span>View All Plans</span>
-                  <ArrowRight className="w-5 h-5 group-hover: 'translate-x-1 transition-transform" />"','`
+                  <ArrowRight className="w-5 h-5 group-hover: "translate-x-1 transition-transform" />"','`
                 </Link>``
               </div>```
             </div>````

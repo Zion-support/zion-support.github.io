@@ -120,16 +120,16 @@ const PricingPage: React.FC = () => {
         </section>
       {/* Pricing Plans */}
       <section className="py-20 bg-slate-900">"
-        <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
+        <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8">"','
           <div className="text-center mb-16">"
-            <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
               Our Pricing Plans;
             </h2>
             <p>"
               Flexible pricing options to meet your business needs;
             </p>
           </div>
-          <div className="grid md: 'grid-cols-3 gap-8">"','
+          <div className="grid md: "grid-cols-3 gap-8">"','
             {plans.map((plan, index) => (
               <div key={index} className={`bg-slate-800 rounded-xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : }`}>'
                 {plan.popular && (
@@ -174,18 +174,18 @@ const PricingPage: React.FC = () => {
         </section>
       {/* Add-ons Section */}
       <section className="py-20 bg-slate-800/50">"
-        <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
+        <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8">"','
           <div className="text-center mb-16">"
-            <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
               Additional Services;
             </h2>
             <p>"
               Enhance your plan with these additional services;
             </p>
           </div>
-          <div className="grid md: 'grid-cols-2 lg:grid-cols-4 gap-8">"','
+          <div className="grid md: "grid-cols-2 lg:grid-cols-4 gap-8">"','
             {addOns.map((addOn, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-6 hover: 'bg-slate-700 transition-all duration-300">"','
+              <div key={index} className="bg-slate-800 rounded-xl p-6 hover: "bg-slate-700 transition-all duration-300">"','
                 <h3 className="text-xl font-bold text-white mb-2">{addOn.name}</h3>"
                 <div className="flex items-baseline mb-4">"
                   <span className="text-2xl font-bold text-purple-400">{addOn.price}</span>"
@@ -198,9 +198,9 @@ const PricingPage: React.FC = () => {
         </section>
       {/* FAQ Section */}
       <section className="py-20 bg-slate-900">"
-        <div className="max-w-4xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
+        <div className="max-w-4xl mx-auto px-4 sm: "px-6 lg:px-8">"','
           <div className="text-center mb-16">"
-            <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
               Frequently Asked Questions;
             </h2>
             <p>"
@@ -229,23 +229,23 @@ const PricingPage: React.FC = () => {
       </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">"
-        <div className="max-w-4xl mx-auto px-4 sm: 'px-6 lg:px-8 text-center">"','
-          <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+        <div className="max-w-4xl mx-auto px-4 sm: "px-6 lg:px-8 text-center">"','
+          <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
             Ready to Get Started?
           </h2>
           <p>"
             Contact us to discuss your specific needs and get a personalized quote;
           </p>
-          <div className="flex flex-col sm: 'flex-row gap-4 justify-center">"','
+          <div className="flex flex-col sm: "flex-row gap-4 justify-center">"','
             <Link;
               to="/contact"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover: 'bg-gray-100 transition-all duration-300"','
+              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-gray-100 transition-all duration-300"','
             ></Link>
               Contact Sales;
             </Link>
             <Link;
               to="/demo"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: 'bg-white hover:text-purple-900 transition-all duration-300"','
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-white hover:text-purple-900 transition-all duration-300"','
             ></Link>
               Schedule Demo;
             </Link>
@@ -257,7 +257,7 @@ const PricingPage: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-8">"
               Need Help Choosing a Plan?
             </h3>
-            <div className="grid md: 'grid-cols-3 gap-8">"','
+            <div className="grid md: "grid-cols-3 gap-8">"','
               <div className="flex items-center justify-center space-x-3 text-gray-600">"
                 <PhoneIcon className="w-6 h-6 text-blue-600" />"
                 <span>+1-302-464-0950</span>

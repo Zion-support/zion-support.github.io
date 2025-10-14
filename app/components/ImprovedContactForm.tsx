@@ -1,5 +1,4 @@
 import React from 'react';
-import lucide-react from 'lucide-react';
 interface FormData {
   name: 'string;','
   email: 'string;','
@@ -149,7 +148,7 @@ const ImprovedContactForm: React.FC = () => {
         </p>
         <button;
           onClick={() => setIsSubmitted(false)}
-          className="bg-cyan-500 hover: 'bg-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors"','
+          className="bg-cyan-500 hover: "bg-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors"','
         >
           Send Another Message;
         </button>
@@ -169,7 +168,7 @@ const ImprovedContactForm: React.FC = () => {
       </div>
       <form onSubmit={handleSubmit} className="space-y-6">"
         {/* Name and Email Row */}
-        <div className="grid md: 'grid-cols-2 gap-4">"','
+        <div className="grid md: "grid-cols-2 gap-4">"','
           <div></div>
             <label htmlFor="name" className="block text-sm font-medium text-white mb-2">"
               <User className="w-4 h-4 inline mr-2" />"
@@ -284,7 +283,7 @@ value={formData.company;
                     key={service;
                     type="button"
                     onClick={() => handleServiceSelect(service)}
-                    className="w-full px-4 py-3 text-left text-white hover: 'bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg"','
+                    className="w-full px-4 py-3 text-left text-white hover: "bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg"','
                   >
                     {service;
                   </button>
@@ -300,7 +299,7 @@ value={formData.company;
           )}
         </div>
         {/* Budget and Timeline Row */}
-        <div className="grid md: 'grid-cols-2 gap-4">"','
+        <div className="grid md: "grid-cols-2 gap-4">"','
           <div></div>
             <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">"
               Budget Range;

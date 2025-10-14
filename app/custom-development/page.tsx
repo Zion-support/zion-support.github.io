@@ -68,7 +68,9 @@ const Page = () => {
               Our team of experts provides cutting-edge solutions tailored to your specific needs.
             </p>
           </div>
-</section>
+        </div>
+      </div>
+    </div>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">

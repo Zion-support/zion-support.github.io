@@ -152,7 +152,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     <div className="fixed bottom-4 right-4 z-50">"
       <button;
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover: 'bg-slate-700/90 transition-colors"','
+        className="bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover: "bg-slate-700/90 transition-colors"','
         title="Performance Monitor"
       >
         <Activity className="w-5 h-5" />"
@@ -166,7 +166,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             </h3>
             <button;`
               onClick={() => setIsVisible(false)}``
-              className="text-gray-400 hover: 'text-white"','```
+              className="text-gray-400 hover: "text-white"','```
             >````
               ×`````
             </button>``````

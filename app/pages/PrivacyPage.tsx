@@ -96,7 +96,7 @@ const PrivacyPage: React.FC = () => {
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR compliance" />"
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white py-20">"
-        <div className="max-w-4xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
+        <div className="max-w-4xl mx-auto px-4 sm: "px-6 lg:px-8">"','
           <h1>"','
             Privacy Policy;
           </h1>

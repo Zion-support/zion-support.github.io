@@ -126,19 +126,19 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   Reload Page
                 </button>
               </div>
-              <div className="flex flex-col sm: 'flex-row gap-4 justify-center">"','
+              <div className="flex flex-col sm: "flex-row gap-4 justify-center">"','
                 <Link;
                   to="/"
-                  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover: 'bg-white/20 transition-all duration-300 flex items-center justify-center group"','
+                  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover: "bg-white/20 transition-all duration-300 flex items-center justify-center group"','
                 ></Link>
-                  <Home className="w-5 h-5 mr-2 group-hover: 'scale-110 transition-transform" />"','
+                  <Home className="w-5 h-5 mr-2 group-hover: "scale-110 transition-transform" />"','
                   Go Home;
                 </Link>
                 <Link;
                   to="/contact"
-                  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover: 'bg-white/20 transition-all duration-300 flex items-center justify-center group"','
+                  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover: "bg-white/20 transition-all duration-300 flex items-center justify-center group"','
                 ></Link>
-                  <Mail className="w-5 h-5 mr-2 group-hover: 'scale-110 transition-transform" />"','
+                  <Mail className="w-5 h-5 mr-2 group-hover: "scale-110 transition-transform" />"','
                   Contact Support;
                 </Link>
               </div>

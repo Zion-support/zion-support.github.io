@@ -34,7 +34,7 @@ const EnhancedHeader: React.FC = () => {
           </nav>
           {/* Mobile Menu Button */}
           <button
-onClick={toggleMenu;
+            onClick={toggleMenu}
             className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

@@ -22,7 +22,7 @@ export default function 5GSolutionsPage() {
         {/* Content Section */}
         <section className="py-20 px-4">"
           <div className="max-w-6xl mx-auto">"
-            <div className="grid md: 'grid-cols-2 lg:grid-cols-3 gap-8">"','
+            <div className="grid md: "grid-cols-2 lg:grid-cols-3 gap-8">"','
               <div className="bg-white p-6 rounded-lg shadow-lg">"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>"
                 <p>High-quality professional services tailored to your needs.</p>"
@@ -47,7 +47,7 @@ export default function 5GSolutionsPage() {
             <p>"
               Contact us today to learn more about our services and how they can benefit your organization.
             </p>
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover: 'bg-blue-700 transition-colors">"','
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover: "bg-blue-700 transition-colors">"','
               Get Started;
             </button>
           </div>

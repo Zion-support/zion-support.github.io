@@ -95,20 +95,20 @@ const DocumentationPage: React.FC = () => {
               Comprehensive documentation, API references, and guides to help you ;
               integrate and use our services effectively.
             </p>
-            <div className="flex flex-col sm: 'flex-row gap-4 justify-center items-center">"','
+            <div className="flex flex-col sm: "flex-row gap-4 justify-center items-center">"','
               <Link ;
                 to="#quick-start"
-                className="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: 'from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"','
+                className="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: "from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"','
               ></Link>
                 Quick Start Guide;
-                <ArrowRightIcon className="w-5 h-5 group-hover: 'translate-x-1 transition-transform" />"','
+                <ArrowRightIcon className="w-5 h-5 group-hover: "translate-x-1 transition-transform" />"','
               </Link>
               <Link ;
                 to="/support"
-                className="group border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover: 'bg-green-400 hover:text-white transition-all duration-300 flex items-center gap-2"','
+                className="group border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-green-400 hover:text-white transition-all duration-300 flex items-center gap-2"','
               ></Link>
                 Get Support;
-                <ArrowRightIcon className="w-5 h-5 group-hover: 'translate-x-1 transition-transform" />"','
+                <ArrowRightIcon className="w-5 h-5 group-hover: "translate-x-1 transition-transform" />"','
               </Link>
             </div>
           </div>
@@ -118,14 +118,14 @@ const DocumentationPage: React.FC = () => {
       <section id="quick-start" className="py-20 bg-slate-900">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
-            <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
               Quick Start Guide;
             </h2>
             <p>"
               Get up and running with our services in just a few steps;
             </p>
           </div>
-          <div className="grid md: 'grid-cols-4 gap-8">"','
+          <div className="grid md: "grid-cols-4 gap-8">"','
             {quickStart.map((step, index) => (
               <div key={index} className="text-center">"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -142,16 +142,16 @@ const DocumentationPage: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-slate-900 to-green-900">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
-            <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
               Documentation Sections;
             </h2>
             <p>"
               Browse our comprehensive documentation by category;
             </p>
           </div>
-          <div className="grid md: 'grid-cols-2 gap-8">"','
+          <div className="grid md: "grid-cols-2 gap-8">"','
             {sections.map((section, index) => (
-              <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-600 hover: 'border-green-500 transition-all duration-300">"','
+              <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-600 hover: "border-green-500 transition-all duration-300">"','
                 <div className="flex items-center mb-6">"
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">"
                     <section.icon className="w-6 h-6 text-white" />"
@@ -183,7 +183,7 @@ const DocumentationPage: React.FC = () => {
       <section className="py-20 bg-slate-900">"
         <div className="container mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center">"
-            <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-8">"','
+            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-8">"','
               Code Examples;
             </h2>
             <p>"
@@ -205,25 +205,25 @@ const response = await client.ai.generateText({````````
 console.log(response.data)`}</code>
               </pre>
             </div>
-            <div className="grid md: 'grid-cols-3 gap-6">"','
+            <div className="grid md: "grid-cols-3 gap-6">"','
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-600">"
                 <h4 className="text-white font-semibold mb-2">JavaScript/Node.js</h4>"
                 <p>Complete examples for web applications</p>"
-                <Link to="/docs/examples/javascript" className="text-green-400 hover: 'text-green-300 text-sm">"','
+                <Link to="/docs/examples/javascript" className="text-green-400 hover: "text-green-300 text-sm">"','
                   View Examples →
                 </Link>
               </div>
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-600">"
                 <h4 className="text-white font-semibold mb-2">Python</h4>"
                 <p>Python SDK and examples</p>"
-                <Link to="/docs/examples/python" className="text-green-400 hover: 'text-green-300 text-sm">"','
+                <Link to="/docs/examples/python" className="text-green-400 hover: "text-green-300 text-sm">"','
                   View Examples →
                 </Link>
               </div>
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-600">"
                 <h4 className="text-white font-semibold mb-2">cURL</h4>"
                 <p>Direct HTTP API calls</p>"
-                <Link to="/docs/examples/curl" className="text-green-400 hover: 'text-green-300 text-sm">"','
+                <Link to="/docs/examples/curl" className="text-green-400 hover: "text-green-300 text-sm">"','
                   View Examples →
                 </Link>
               </div>
@@ -235,13 +235,13 @@ console.log(response.data)`}</code>
       <section className="py-20 bg-gradient-to-r from-slate-900 to-green-900">"
         <div className="container mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center">"
-            <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-8">"','
+            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-8">"','
               Need Help?
             </h2>
             <p>"
               Can't find what you're looking for? Our support team is here to help'
             </p>
-            <div className="grid md: 'grid-cols-3 gap-8 mb-12">"','
+            <div className="grid md: "grid-cols-3 gap-8 mb-12">"','
               <div className="flex items-center justify-center gap-4 text-gray-300">"
                 <PhoneIcon className="w-6 h-6 text-green-400" />"
                 <span>+1-302-464-0950</span>
@@ -255,16 +255,16 @@ console.log(response.data)`}</code>
                 <span>Middletown, DE</span>
               </div>
             </div>
-            <div className="flex flex-col sm: 'flex-row gap-4 justify-center">"','
+            <div className="flex flex-col sm: "flex-row gap-4 justify-center">"','
               <Link ;
                 to="/support"
-                className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: 'from-green-700 hover:to-emerald-700 transition-all duration-300"','
+                className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: "from-green-700 hover:to-emerald-700 transition-all duration-300"','
               ></Link>
                 Contact Support;
               </Link>
               <Link ;
                 to="/contact"
-                className="border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover: 'bg-green-400 hover:text-white transition-all duration-300"','`
+                className="border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-green-400 hover:text-white transition-all duration-300"','`
               ></Link>``
                 Get In Touch;```
               </Link>````

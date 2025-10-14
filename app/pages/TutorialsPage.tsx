@@ -57,7 +57,7 @@ const TutorialsPage: React.FC = () => {
       <div className="min-h-screen bg-slate-900 text-white">"
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-          <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
+          <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8">"','
             <div className="text-center">"
               <h1>"','
                 Tutorials & Learning;
@@ -70,8 +70,8 @@ const TutorialsPage: React.FC = () => {
         </section>
         {/* Tutorials Grid */}
         <section className="py-20">"
-          <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
-            <div className="grid md: 'grid-cols-2 lg:grid-cols-3 gap-8">"','
+          <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8">"','
+            <div className="grid md: "grid-cols-2 lg:grid-cols-3 gap-8">"','
               {tutorials.map((tutorial) => (
 <div key={tutorial.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 group">
                   <div className="flex items-center justify-between mb-4">
@@ -109,21 +109,21 @@ const TutorialsPage: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className="py-20 bg-slate-800">"
-          <div className="max-w-4xl mx-auto px-4 sm: 'px-6 lg:px-8 text-center">"','
+          <div className="max-w-4xl mx-auto px-4 sm: "px-6 lg:px-8 text-center">"','
             <h2 className="text-4xl font-bold mb-6">Ready to Start Learning?</h2>"
             <p>"
               Join thousands of professionals who are advancing their careers with our expert-led tutorials.
             </p>
-            <div className="flex flex-col sm: 'flex-row gap-4 justify-center">"','
+            <div className="flex flex-col sm: "flex-row gap-4 justify-center">"','
               <Link;
                 to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover: 'from-purple-700 hover:to-cyan-700 transition-all duration-300"','
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover: "from-purple-700 hover:to-cyan-700 transition-all duration-300"','
               ></Link>
                 Get Started Today;
               </Link>
               <Link;
                 to="/demo"
-                className="border-2 border-purple-400 text-purple-300 px-8 py-3 rounded-lg font-semibold hover: 'bg-purple-400 hover:text-white transition-all duration-300"','
+                className="border-2 border-purple-400 text-purple-300 px-8 py-3 rounded-lg font-semibold hover: "bg-purple-400 hover:text-white transition-all duration-300"','
               ></Link>
                 Watch Demo;
               </Link>

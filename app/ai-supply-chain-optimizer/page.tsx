@@ -219,4 +219,7 @@ export default function AISupplyChainOptimizerPage() {
     </div>
   );
 };
-export default pagePage;
+export default Page;
+    </div>
+  </div>
+</div>

@@ -33,9 +33,10 @@ const pagePage: React.FC = () => {
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
-      </section>
-
-      {/* Features Section */}
+      </div>
+        </div>
+      </div>
+    </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
@@ -125,4 +126,7 @@ const pagePage: React.FC = () => {
     </div>
   );
 };
-export default pagePage;
+export default Page;
+    </div>
+  </div>
+</div>

@@ -15,7 +15,9 @@ const PagePage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
-</section>
+        </div>
+      </div>
+    </div>
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">

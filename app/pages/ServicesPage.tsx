@@ -149,7 +149,7 @@ const ServicesPage: React.FC = () => {
             </p>
             <Link;
               to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: 'from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"','
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: "from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"','
             ></Link>
               Get Started;
               <ArrowRightIcon className="w-5 h-5" />"
@@ -158,18 +158,18 @@ const ServicesPage: React.FC = () => {
         </section>
       {/* Services Grid */}
       <section className="py-20 bg-slate-900">"
-        <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
+        <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8">"','
           <div className="text-center mb-16">"
-            <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
               Our Technology Services;
             </h2>
             <p>"
               Comprehensive solutions designed to meet your business needs;
             </p>
           </div>
-          <div className="grid md: 'grid-cols-2 lg:grid-cols-3 gap-8">"','
+          <div className="grid md: "grid-cols-2 lg:grid-cols-3 gap-8">"','
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 hover: 'bg-slate-700 transition-all duration-300 group">"','
+              <div key={index} className="bg-slate-800 rounded-xl p-8 hover: "bg-slate-700 transition-all duration-300 group">"','
                 <div className="flex items-center mb-6">"
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform`}></div>
                     <service.icon className="w-8 h-8 text-white" />"
@@ -201,16 +201,16 @@ const ServicesPage: React.FC = () => {
         </section>
       {/* Process Section */}
       <section className="py-20 bg-slate-800/50">"
-        <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
+        <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8">"','
           <div className="text-center mb-16">"
-            <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+            <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
               Our Process;
             </h2>
             <p>"
               A structured approach to delivering exceptional results;
             </p>
           </div>
-          <div className="grid md: 'grid-cols-4 gap-8">"','
+          <div className="grid md: "grid-cols-4 gap-8">"','
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">"
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -224,23 +224,23 @@ const ServicesPage: React.FC = () => {
         </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">"
-        <div className="max-w-4xl mx-auto px-4 sm: 'px-6 lg:px-8 text-center">"','
-          <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
+        <div className="max-w-4xl mx-auto px-4 sm: "px-6 lg:px-8 text-center">"','
+          <h2 className="text-4xl md: "text-5xl font-bold text-white mb-6">"','
             Ready to Transform Your Business?
           </h2>
           <p>"
             Let's discuss how our services can help you achieve your business goals'
           </p>
-          <div className="flex flex-col sm: 'flex-row gap-4 justify-center">"','
+          <div className="flex flex-col sm: "flex-row gap-4 justify-center">"','
             <Link;
               to="/contact"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover: 'bg-gray-100 transition-all duration-300"','
+              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-gray-100 transition-all duration-300"','
             ></Link>
               Get Started Today;
             </Link>
             <Link;
               to="/demo"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: 'bg-white hover:text-purple-900 transition-all duration-300"','
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-white hover:text-purple-900 transition-all duration-300"','
             ></Link>`
               Schedule Demo;``
             </Link>```

@@ -146,9 +146,9 @@ name: 'AI Services',
     ></nav>
       {/* Contact Bar */}
       <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-white/10">"
-        <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
-          <div className="flex flex-col sm: 'flex-row items-center justify-between py-2 text-sm">"','
-            <div className="flex flex-col sm: 'flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">"','
+        <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8">"','
+          <div className="flex flex-col sm: "flex-row items-center justify-between py-2 text-sm">"','
+            <div className="flex flex-col sm: "flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">"','
               <div className="flex items-center text-cyan-400">"
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>"
                 <span>Live Support Available</span>
@@ -171,7 +171,7 @@ name: 'AI Services',
                 href="/contact"
                 variant="ghost"
                 size="sm"
-                className="text-cyan-400 hover: 'text-white"','
+                className="text-cyan-400 hover: "text-white"','
               ></FuturisticButton>
                 Get Quote;
               </FuturisticButton>
@@ -184,13 +184,13 @@ name: 'AI Services',
         <div className="flex justify-between items-center py-4">"
           <Link ;
             to="/"
-            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover: 'from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"','
+            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover: "from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"','
             aria-label="Zion Tech Group - Go to homepage"
           ></Link>
             Zion Tech Group;
           </Link>
           {/* Desktop Navigation */}
-          <div className="hidden lg: 'flex space-x-8 items-center">"','
+          <div className="hidden lg: "flex space-x-8 items-center">"','
             {/* Search Button */}
 <button
               onClick={toggleSearch;
@@ -365,7 +365,7 @@ name: 'AI Services',
                 placeholder="Search services, solutions, or topics..."
                 value={searchQuery;
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: 'outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"','
+                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"','
               />
 </div>
           </div>

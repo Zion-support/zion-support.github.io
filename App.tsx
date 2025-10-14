@@ -1,11 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
-// Components
-=======
 import './app/styles/futuristic.css';
->>>>>>> fb9ac3cec7e583b520c05c6d49af695b8d83a618
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import Sidebar from './app/components/Sidebar';
