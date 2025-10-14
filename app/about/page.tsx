@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight, Phone, Mail } from 'lucide-react';
 
 // Team members data (for future use)
 // const teamMembers = [
