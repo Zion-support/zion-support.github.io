@@ -1,12 +1,10 @@
 import React from 'react';
 
 
-const LoadingStates = () => {
+const LoadingStates = () = {
 
   return (
 
-    <div>
-      <div>
-  );
-  );
+    <div
+      <div
   );

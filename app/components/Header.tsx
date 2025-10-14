@@ -1,17 +1,12 @@
 import React from 'react';
-
+import Navigation from './Navigation';
 
 const Header = () => {
-
   return (
-    div>
-      <h2>Header</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div>
+      <Navigation />
+    </div>
   );
 };
+
 export default Header;
-
-

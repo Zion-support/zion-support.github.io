@@ -1,17 +1,17 @@
 import React from 'react';
 
 
-const FuturisticServiceCard = () => {
+const FuturisticServiceCard = () = {
 
   return (
-    div>
-      <h2>FuturisticServiceCard</h2>
+    div
+      <h2>FuturisticServiceCard</h2
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      <p className="text-gray-300 text-lg"This component is under construction.</p
   
   );
 };
 export default FuturisticServiceCard;
 
 
+>>>>

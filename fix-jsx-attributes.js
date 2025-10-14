@@ -3,41 +3,27 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix malformed JSX and syntax
-function fixMalformedJSX(content) {
+// Function to fix JSX attribute issues
+function fixJSXAttributes(content) {
   let fixed = content;
 
-  // Fix missing closing tags in JSX
-  fixed = fixed.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
-  fixed = fixed.replace(/<h1([^>]*)>\s*$/gm, '<h1$1>');
-  fixed = fixed.replace(/<p([^>]*)>\s*$/gm, '<p$1>');
-  fixed = fixed.replace(/<a([^>]*)>\s*$/gm, '<a$1>');
-  fixed = fixed.replace(/<main([^>]*)>\s*$/gm, '<main$1>');
-  fixed = fixed.replace(/<section([^>]*)>\s*$/gm, '<section$1>');
-  fixed = fixed.replace(/<header([^>]*)>\s*$/gm, '<header$1>');
-  fixed = fixed.replace(/<footer([^>]*)>\s*$/gm, '<footer$1>');
+  // Fix malformed JSX attributes with unescaped > characters
+  fixed = fixed.replace(/content="([^"]*?)>([^"]*?)"/g, 'content="$1&gt;$2"');
+  fixed = fixed.replace(/name="([^"]*?)>([^"]*?)"/g, 'name="$1&gt;$2"');
+  fixed = fixed.replace(/description="([^"]*?)>([^"]*?)"/g, 'description="$1&gt;$2"');
+  fixed = fixed.replace(/title="([^"]*?)>([^"]*?)"/g, 'title="$1&gt;$2"');
   
-  // Fix missing closing tags
-  fixed = fixed.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
-  fixed = fixed.replace(/<h1([^>]*)>\s*$/gm, '<h1$1>');
-  fixed = fixed.replace(/<p([^>]*)>\s*$/gm, '<p$1>');
-  fixed = fixed.replace(/<a([^>]*)>\s*$/gm, '<a$1>');
-  fixed = fixed.replace(/<main([^>]*)>\s*$/gm, '<main$1>');
-  fixed = fixed.replace(/<section([^>]*)>\s*$/gm, '<section$1>');
-  fixed = fixed.replace(/<header([^>]*)>\s*$/gm, '<header$1>');
-  fixed = fixed.replace(/<footer([^>]*)>\s*$/gm, '<footer$1>');
+  // Fix malformed JSX attributes with missing quotes
+  fixed = fixed.replace(/content="([^"]*?)(?=\s*\/>)/g, 'content="$1"');
+  fixed = fixed.replace(/name="([^"]*?)(?=\s*\/>)/g, 'name="$1"');
+  fixed = fixed.replace(/description="([^"]*?)(?=\s*\/>)/g, 'description="$1"');
+  fixed = fixed.replace(/title="([^"]*?)(?=\s*\/>)/g, 'title="$1"');
   
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/className="([^"]*)"\s*$/gm, 'className="$1">');
-  fixed = fixed.replace(/href="([^"]*)"\s*$/gm, 'href="$1">');
-  fixed = fixed.replace(/src="([^"]*)"\s*$/gm, 'src="$1">');
-  fixed = fixed.replace(/alt="([^"]*)"\s*$/gm, 'alt="$1">');
-  
-  // Fix malformed JSX content
-  fixed = fixed.replace(/<h1([^>]*)>\s*([^<]+)\s*<\/h1/gm, '<h1$1>$2</h1>');
-  fixed = fixed.replace(/<p([^>]*)>\s*([^<]+)\s*<\/p/gm, '<p$1>$2</p>');
-  fixed = fixed.replace(/<a([^>]*)>\s*([^<]+)\s*<\/a/gm, '<a$1>$2</a>');
-  fixed = fixed.replace(/<div([^>]*)>\s*([^<]+)\s*<\/div/gm, '<div$1>$2</div>');
+  // Fix malformed JSX with orphaned closing tags
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g);
+    return tags[tags.length - 1];
+  });
   
   // Fix malformed function returns
   fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g, 'return (');
@@ -93,7 +79,7 @@ function fixMalformedJSX(content) {
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixMalformedJSX(content);
+    const fixed = fixJSXAttributes(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -109,7 +95,7 @@ function fixFile(filePath) {
 
 // Main execution
 async function main() {
-  console.log('Starting final syntax fixes...');
+  console.log('Starting JSX attribute fixes...');
 
   // Get all TypeScript/JavaScript files
   const patterns = [

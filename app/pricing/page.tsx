@@ -17,7 +17,7 @@ import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
 
 
 
-const PricingPage: React.FC = () => {
+const PricingPage: React.FC = () = {
   const plans = [
     {
       name: 'Starter',
@@ -69,13 +69,12 @@ const PricingPage: React.FC = () => {
   ];
 
   return (
-    ><Helmet>
+    <Helmet
   );
-  );
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
-        <meta name="description"content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
-        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
-      </Helmet>;</>
+        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title
+        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." /
+        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" /
+      </Helmet>>>>>;</
   );
 };
 
