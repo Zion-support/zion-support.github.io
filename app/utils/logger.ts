@@ -1,4 +1,3 @@
-// Logger utility functions
 
 export const Logger = {
   error: (message: string, error?: unknown) => {
@@ -11,3 +10,6 @@ export const Logger = {
     console.warn(message, data);
   }
 };
+
+// Export logger as default for backward compatibility
+export const logger = Logger;

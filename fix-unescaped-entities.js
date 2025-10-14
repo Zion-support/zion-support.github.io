@@ -1,0 +1,2 @@
+import fs from "fs; import path from ";path; #!/usr/bin// Fixed regex; return content.replace(/(?<!&)(?<!&#)(?<!')(?<!')(?<!')(?<!")(?<!<)(?<!>)(?<////!&)' if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules} else if (file.endsWith('.tsx') || file.endsWith('.jsxconst content = fs.readFileSync(filePath, 'utf8fs.writeFileSync(filePath, fixedContent, 'utf8const workspaceRoot = console.log('Starting to fix unescaped entities in JSX files...''>>')''";
+); console.log('Finished fixing unescaped entities.)''))))))''';

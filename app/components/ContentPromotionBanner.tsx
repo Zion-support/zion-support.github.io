@@ -1,16 +1,31 @@
-
 import React from 'react';
 
-const ContentPromotionBanner: React.FC = () => {
+interface ContentPromotionBannerProps {
+  title?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  className?: string;
+}
+
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+  title = "Discover More",
+  description = "Explore our latest content and insights",
+  ctaText = "Learn More",
+  ctaLink = "#",
+  className = ""
+}) => {
   return (
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4">
-      <div className="container mx-auto text-center">
-        <p className="text-sm font-medium">
-          🚀 <strong>New:</strong> AI-Powered Business Intelligence Dashboard - 
-          <a href="/business-intelligence" className="underline hover:no-underline ml-1">
-            Learn More →
-          </a>
-        </p>
+    <div className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-lg ${className}`}>
+      <div className="max-w-4xl mx-auto text-center">
+        <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        <p className="text-lg mb-4 opacity-90">{description}</p>
+        <a
+          href={ctaLink}
+          className="inline-block bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+        >
+          {ctaText}
+        </a>
       </div>
     </div>
   );

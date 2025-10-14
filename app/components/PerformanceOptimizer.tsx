@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactNode } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
