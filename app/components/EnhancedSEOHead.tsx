@@ -260,7 +260,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       }
     });
 
-  }, [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard, structuredData, noIndex, noFollow, locale, alternateLanguages, author, publishedTime, modifiedTime, section, tags]);
+  }, [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard, structuredData, noIndex, noFollow, locale, alternateLanguages, author, publishedTime, modifiedTime, section, tags, generateStructuredData]);
 
   return (
     <Helmet>

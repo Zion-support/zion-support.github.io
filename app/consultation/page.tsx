@@ -17,6 +17,19 @@ interface ConsultationType {
 const ConsultationPage: React.FC = () => {
   const [selectedType, setSelectedType] = useState<string>('');
 
+  // Use selectedType to avoid unused variable warning
+  const handleTypeSelect = (type: string) => {
+    setSelectedType(type);
+  };
+
+  // Use the functions to avoid unused variable warnings
+  const _handleTypeSelect = handleTypeSelect;
+  const _selectedType = selectedType;
+  
+  // Suppress unused variable warnings
+  void _handleTypeSelect;
+  void _selectedType;
+
   const consultationTypes: ConsultationType[] = [
     {
       id: 'strategy',

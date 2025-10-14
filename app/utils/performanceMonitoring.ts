@@ -15,9 +15,14 @@ export const performanceMonitoring = {
       // Send to analytics
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'performance_measurement', {
-
-        });
+          event_category: 'performance',
+          event_label: name,
+          value: Math.round(measure.duration)
+        })
       }
+    }
     
     performance.clearMarks(`${name}-start`)
     performance.clearMarks(`${name}-end`)
+  }
+}

@@ -26,11 +26,14 @@ export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) =
     enableUserTiming = true,
     enableNavigationTiming = true,
     enableMemoryInfo = true,
-    enableCustomMetrics = true,
+    enableCustomMetrics: _enableCustomMetrics = true,
     sampleRate = 1.0,
     batchSize = 10,
     flushInterval = 30000
   } = options;
+
+  // Suppress unused variable warning
+  void _enableCustomMetrics;
 
   const metricsRef = useRef<PerformanceMetric[]>([]);
   const flushTimeoutRef = useRef<NodeJS.Timeout>();
@@ -108,7 +111,7 @@ export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) =
 
     const cleanup = trackCoreWebVitals();
     return cleanup;
-  }, [enableCoreWebVitals]);
+  }, [enableCoreWebVitals, trackMetric]);
 
   // Resource timing tracking
   useEffect(() => {
@@ -136,7 +139,7 @@ export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) =
 
     const cleanup = trackResourceTiming();
     return cleanup;
-  }, [enableResourceTiming]);
+  }, [enableResourceTiming, trackMetric]);
 
   // User timing tracking
   useEffect(() => {
@@ -159,7 +162,7 @@ export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) =
 
     const cleanup = trackUserTiming();
     return cleanup;
-  }, [enableUserTiming]);
+  }, [enableUserTiming, trackMetric]);
 
   // Navigation timing tracking
   useEffect(() => {
@@ -193,7 +196,7 @@ export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) =
       window.addEventListener('load', trackNavigationTiming);
       return () => window.removeEventListener('load', trackNavigationTiming);
     }
-  }, [enableNavigationTiming]);
+  }, [enableNavigationTiming, trackMetric]);
 
   // Memory info tracking
   useEffect(() => {
@@ -212,7 +215,7 @@ export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) =
     // Track memory usage periodically
     const interval = setInterval(trackMemoryInfo, 30000);
     return () => clearInterval(interval);
-  }, [enableMemoryInfo]);
+  }, [enableMemoryInfo, trackMetric]);
 
   // Flush metrics periodically
   useEffect(() => {

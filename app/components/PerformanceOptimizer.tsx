@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 
 interface PerformanceOptimizerProps {
@@ -81,9 +81,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
+            // eslint-disable-next-line no-console
             console.log('LCP:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
+            // eslint-disable-next-line no-console
             console.log('FID:', entry.processingStart - entry.startTime);
           }
         });
@@ -91,7 +93,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support these entry types
       }
     }
