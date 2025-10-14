@@ -14,7 +14,7 @@ const Navigation: React.FC = () => {
           <Link to="/" className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
             Zion Tech Group
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">Home</Link>

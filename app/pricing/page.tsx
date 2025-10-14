@@ -1,6 +1,3 @@
-import React from 'react';
-      </div>
-    </div>
-  );
-};
-export default PricingPage;
+import React from 'react' </div> </div> )
+}
+export default PricingPage'

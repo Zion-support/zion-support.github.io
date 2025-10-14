@@ -1,2 +1,0 @@
-import react-helmet-async from 'react-helmet-async'; #!/usr/bin// Fixed regex const createBasicPageTemplate = (pageName) => `'use client''`'` <meta nam e="description" conten t="Professional ${"}" pageName.replace(/([A-Z])/g, ' $1'''`"'
-}'"`"'`"'`"'

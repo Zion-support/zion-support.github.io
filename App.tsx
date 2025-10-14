@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 
@@ -7,7 +7,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
-import LoadingStates from './app/components/LoadingStates';
+// import LoadingStates from './app/components/LoadingStates';
 
 // Pages
 import HomePage from './app/page';

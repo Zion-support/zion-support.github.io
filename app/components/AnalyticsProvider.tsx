@@ -1,5 +1,4 @@
-import React from 'react';
-import { createContext, useContext, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
@@ -9,28 +8,69 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
-    // Analytics tracking implementation
-    console.log('Analytics track:', event, properties);
+    // Implement analytics tracking here
+    console.log('Analytics Event:', event, properties);
+    
+    // Example: Send to analytics service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', event, properties);
+    }
   };
 
   const identify = (userId: string, traits?: Record<string, any>) => {
-    // User identification implementation
-    console.log('Analytics identify:', userId, traits);
+    // Implement user identification here
+    console.log('Analytics Identify:', userId, traits);
+    
+    // Example: Send to analytics service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        user_id: userId,
+        custom_map: traits
+      });
+    }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {
-    // Page tracking implementation
-    console.log('Analytics page:', name, properties);
+    // Implement page tracking here
+    console.log('Analytics Page:', name, properties);
+    
+    // Example: Send to analytics service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: name,
+        page_location: window.location.href,
+        ...properties
+      });
+    }
+  };
+
+  useEffect(() => {
+    // Initialize analytics
+    console.log('Analytics Provider initialized');
+  }, []);
+
+  const value: AnalyticsContextType = {
+    track,
+    identify,
+    page
   };
 
   return (
-    <AnalyticsContext.Provider value={{ track, identify, page }}>
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );

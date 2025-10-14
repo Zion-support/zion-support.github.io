@@ -1,13 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon,
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Heart } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -60,11 +54,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link 
-                    to={service.href} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                  <Link to={service.href} className="text-gray-400 hover:text-white transition-colors flex items-center group">
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
                 </li>
@@ -78,11 +69,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                  <Link to={item.href} className="text-gray-400 hover:text-white transition-colors flex items-center group">
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
                 </li>
@@ -96,11 +84,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {support.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                  <Link to={item.href} className="text-gray-400 hover:text-white transition-colors flex items-center group">
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
                 </li>
@@ -113,15 +98,15 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center">
-                <PhoneIcon className="w-5 h-5 mr-3 text-purple-400" />
+                <Phone className="w-5 h-5 mr-3 text-purple-400" />
                 <span className="text-gray-400">+1-302-464-0950</span>
               </div>
               <div className="flex items-center">
-                <EnvelopeIcon className="w-5 h-5 mr-3 text-purple-400" />
+                <Mail className="w-5 h-5 mr-3 text-purple-400" />
                 <span className="text-gray-400">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
-                <MapPinIcon className="w-5 h-5 mr-3 text-purple-400" />
+                <MapPin className="w-5 h-5 mr-3 text-purple-400" />
                 <span className="text-gray-400">Delaware, USA</span>
               </div>
             </div>
@@ -157,10 +142,9 @@ const Footer: React.FC = () => {
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <div className="flex items-center text-gray-400 text-sm">
-                <HeartIcon className="w-4 h-4 mr-1 text-red-500" />
+                <Heart className="w-4 h-4 mr-1 text-red-500" />
                 Made with passion for innovation
               </div>
               <div className="text-gray-400 text-sm">

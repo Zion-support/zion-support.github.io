@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs'
+import path from 'path'
 const baseUrl = 'https:// ziontechgroup.com'const pages = ['
   { url: '/', priority: '1.0', changefreq: 'daily' },'
   { url: '/about', priority: '0.8', changefreq: 'monthly' },'
@@ -9,7 +9,7 @@ const baseUrl = 'https:// ziontechgroup.com'const pages = ['
   { url: '/micro-saas-solutions', priority: '0.8', changefreq: 'weekly' },'
   { url: '/5g-solutions', priority: '0.8', changefreq: 'weekly' },'
 const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filename)
 // Define all the pages and their priorities
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'weekly' },'
@@ -55,12 +55,12 @@ ${pages.map(
     <priority>${page.priority}</priority>
   </url>`).join('\n')}'
 </urlset>`
-  const publicDir = path.join(__dirname, '..', 'public');'
+  const publicDir = path.join(__dirname, '..', 'public')'
   if (!fs.existsSync(publicDir)) {
 }
-    fs.mkdirSync(publicDir, { recursive: true });
+    fs.mkdirSync(publicDir, { recursive: true })
   }
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);'
-  console.log('Sitemap generated successfully!');'
-};
-generateSitemap();
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)'
+  console.log('Sitemap generated successfully!')'
+}
+generateSitemap()

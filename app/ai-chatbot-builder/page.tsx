@@ -1,32 +1,50 @@
-import React from 'react';'
-import { Helmet  } from 'react-helmet-async';'
-export default function; AiChatbotBuilder() {return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0">"
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+export default function AiChatbotBuilder() {
+  return (
+    <>
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI chatbot builder solutions by Zion Tech Group" />"
+        <title>AiChatbotBuilder - Zion Tech Group</title>
+        <meta name="description" content="Professional aichatbotbuilder services by Zion Tech Group." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">;"
-        <div className="text-center">;"
-          <h1 className="text-4xl font-bold text-gray-90o0 mb-4">;"
-            AI Chatbot Builder;
-          </h1>
-          <p className="text-xl text-gray-60o0 mb-8">"
-            Advanced AI chatbot builder solutions by Zion Tech Group;
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">"
-          <div className="bg-white rounded-lg shadow-md p-8">"
-            <h2 className="text-2xl font-semibold text-gray-90o0 mb-4">Coming Soon</h2>"
-            <p className="text-gray-60o0">"
-              This page is under development. Please check back later for updates.;
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              AiChatbotBuilder
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional aichatbotbuilder services by Zion Tech Group.
             </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  )}
-            </p></div></div></div></div>
-  );}
+    </>
+  );
 }
-'''

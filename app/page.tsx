@@ -45,25 +45,17 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Transform Your Business with
-              <span className="text-blue-600"> AI & Technology</span>
+              Transform Your Business with <span className="text-blue-600">AI & Technology</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              We deliver cutting-edge AI solutions and IT services that drive innovation, 
-              efficiency, and growth for modern businesses.
+              We deliver cutting-edge AI solutions and IT services that drive innovation, efficiency, and growth for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
+              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">
                 Get Started
                 <ArrowRight className="ml-2" size={20} />
               </Link>
-              <Link 
-                to="/services" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-              >
+              <Link to="/services" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                 Learn More
               </Link>
             </div>
@@ -96,7 +88,6 @@ const HomePage: React.FC = () => {
               We combine deep technical expertise with business acumen to deliver solutions that drive real results.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -125,10 +116,7 @@ const HomePage: React.FC = () => {
             <p className="text-xl mb-8 opacity-90">
               Let's discuss how we can help you achieve your goals with cutting-edge technology.
             </p>
-            <Link 
-              to="/contact" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center font-semibold"
-            >
+            <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center font-semibold">
               Get Started Today
               <ArrowRight className="ml-2" size={20} />
             </Link>

@@ -1,2 +1,0 @@
-import path from 'path';'; ''; ''; ''; ''; ''; let content = fs.readFileSync(; filePath, 'utf8''; console.error('Error:''''
-); console.log('All page files fixed!'';)''''
