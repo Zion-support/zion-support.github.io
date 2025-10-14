@@ -1,5 +1,23 @@
 import React from 'react';
-const SEOOptimizer = () => {
+import { Helmet } from 'react-helmet-async';
+
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  type?: string;
+  url?: string;
+  image?: string;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered IT solutions, custom software development, and digital transformation services.",
+  keywords = ["AI", "IT solutions", "software development", "digital transformation", "technology consulting"],
+  type = "website",
+  url = "https://ziontechgroup.com",
+  image = "https://ziontechgroup.com/og-image.jpg"
+}) => {
   return (
     <Helmet>
       {/* Basic Meta Tags */}
