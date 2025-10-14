@@ -14,5 +14,5 @@ export default function Pricing() {
         </div>
       </div>
     </React.Fragment>
-  );'
-'
+  );
+}

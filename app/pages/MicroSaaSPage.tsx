@@ -1,6 +1,6 @@
 'use client;;
 import React from 'react';
-;import { Link   } from 'react-router-dom';
+;import { Link   } from 'react-router-dom
 ';import SEO from '../components/SEO;'
 ';import {}
   GlobeAltIcon,

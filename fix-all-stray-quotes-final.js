@@ -3,30 +3,26 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix import statements
-function fixImportStatements(filePath) {
+// Function to fix all stray quotes
+function fixAllStrayQuotes(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix import statements
+    // Fix all patterns
     const patterns = [
-      // Fix React imports
-      { from: /import React from 'react$/gm, to: "import React from 'react';" },
-      { from: /import React, { useState } from 'react$/gm, to: "import React, { useState } from 'react';" },
-      { from: /import React, { useState, useEffect } from 'react$/gm, to: "import React, { useState, useEffect } from 'react';" },
+      // Fix stray quotes at end of lines
+      { from: /';\s*'$/gm, to: ';' },
+      { from: /';\s*'$/gm, to: ';' },
       
-      // Fix Helmet imports
-      { from: /import { Helmet } from 'react-helmet-async$/gm, to: "import { Helmet } from 'react-helmet-async';" },
-      { from: /import { Helmet   } from 'react-helmet-async$/gm, to: "import { Helmet } from 'react-helmet-async';" },
+      // Fix stray quotes at end of export statements
+      { from: /export default \w+;'$/gm, to: (match) => match.replace("';", ';') },
       
-      // Fix react-router-dom imports
-      { from: /import { Link } from 'react-router-dom$/gm, to: "import { Link } from 'react-router-dom';" },
-      { from: /import { Link  } from 'react-router-dom$/gm, to: "import { Link } from 'react-router-dom';" },
+      // Fix any remaining stray quotes
+      { from: /';\s*'$/gm, to: ';' },
       
-      // Fix lucide-react imports
-      { from: /import { Menu, X, ChevronDown } from 'lucide-react$/gm, to: "import { Menu, X, ChevronDown } from 'lucide-react';" },
-      { from: /import { Menu, X, ChevronDown} from 'lucide-react$/gm, to: "import { Menu, X, ChevronDown } from 'lucide-react';" },
+      // Clean up extra newlines and empty lines
+      { from: /\n\s*\n\s*\n/g, to: '\n\n' },
     ];
 
     for (const pattern of patterns) {
@@ -37,9 +33,12 @@ function fixImportStatements(filePath) {
       }
     }
 
+    // Clean up the file
+    content = content.trim() + '\n';
+
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed imports: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
   } catch (error) {
@@ -76,7 +75,7 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('Fixing import statements...');
+console.log('Fixing all stray quotes...');
 
 const directories = ['./app', './src'];
 let totalFixed = 0;
@@ -87,7 +86,7 @@ for (const dir of directories) {
     console.log(`Processing ${tsxFiles.length} files in ${dir}...`);
     
     for (const file of tsxFiles) {
-      if (fixImportStatements(file)) {
+      if (fixAllStrayQuotes(file)) {
         totalFixed++;
       }
     }
