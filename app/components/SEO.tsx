@@ -1,4 +1,6 @@
-import React from 'react;'const SEO = () => {
+import React from 'react;
+
+const SEO = () => {
   return (
     <div>
       <h2>SEO</h2>

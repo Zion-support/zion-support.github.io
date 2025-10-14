@@ -1,4 +1,6 @@
-import React from 'react;'const AccessibilityAudit = () => {
+import React from 'react;
+
+const AccessibilityAudit = () => {
   return (
     <div>
       <h2>AccessibilityAudit</h2>

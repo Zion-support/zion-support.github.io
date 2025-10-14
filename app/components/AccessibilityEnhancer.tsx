@@ -1,4 +1,6 @@
-import React from 'react;'const AccessibilityEnhancer = () => {
+import React from 'react;
+
+const AccessibilityEnhancer = () => {
   return (
     <div>
       <h2>AccessibilityEnhancer</h2>

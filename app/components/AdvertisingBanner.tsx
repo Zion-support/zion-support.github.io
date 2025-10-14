@@ -1,4 +1,6 @@
-import React from 'react;'const AdvertisingBanner = () => {
+import React from 'react;
+
+const AdvertisingBanner = () => {
   return (
     <div>
       <h2>AdvertisingBanner</h2>

@@ -1,4 +1,6 @@
-import React from 'react;'const MobileNavigation = () => {
+import React from 'react;
+
+const MobileNavigation = () => {
   return (
     <div>
       <h2>MobileNavigation</h2>

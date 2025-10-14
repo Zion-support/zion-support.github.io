@@ -1,4 +1,6 @@
-import React from 'react;'const PerformanceMetrics = () => {
+import React from 'react;
+
+const PerformanceMetrics = () => {
   return (
     <div>
       <h2>PerformanceMetrics</h2>

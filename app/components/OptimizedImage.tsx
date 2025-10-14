@@ -1,4 +1,6 @@
-import React from 'react;'const OptimizedImage = () => {
+import React from 'react;
+
+const OptimizedImage = () => {
   return (
     <div>
       <h2>OptimizedImage</h2>

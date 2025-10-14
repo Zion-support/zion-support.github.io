@@ -1,4 +1,6 @@
-import React from 'react;'const AdDashboard = () => {
+import React from 'react;
+
+const AdDashboard = () => {
   return (
     <div>
       <h2>AdDashboard</h2>

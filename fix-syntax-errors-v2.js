@@ -9,14 +9,12 @@ const __dirname = path.dirname(__filename);
 
 // Function to fix corrupted syntax in files
 function fixCorruptedSyntax(content) {
-  // Fix concatenated import statements
+  // Fix concatenated import statements with missing line breaks
   content = content.replace(/import\s+([^;]+);"import\s+/g, 'import $1;\nimport ');
+  content = content.replace(/import\s+([^;]+);"const\s+/g, 'import $1;\n\nconst ');
+  content = content.replace(/import\s+([^;]+);'const\s+/g, "import $1;\n\nconst ");
   
   // Fix missing quotes in import statements
-  content = content.replace(/import\s+([^;]+);'const\s+/g, 'import $1;\n\nconst ');
-  content = content.replace(/import\s+([^;]+);'const\s+/g, 'import $1;\n\nconst ');
-  
-  // Fix missing quotes around strings
   content = content.replace(/from\s+'react;'/g, "from 'react';");
   content = content.replace(/from\s+"react;"/g, 'from "react";');
   
@@ -25,25 +23,28 @@ function fixCorruptedSyntax(content) {
   content = content.replace(/name:\s*"/g, 'name="');
   content = content.replace(/content:\s*"/g, 'content="');
   
-  // Fix malformed JSX closing tags
+  // Fix malformed return statements and JSX
+  content = content.replace(/return\s*\(\s*<div>/g, 'return (\n    <div>');
+  content = content.replace(/\{\s*return\s*\(\s*<div>/g, '{\n  return (\n    <div>');
+  
+  // Fix malformed JSX closing tags and strings
   content = content.replace(/"\s*<\/Helmet>/g, '"\n      </Helmet>');
   content = content.replace(/"\s*<\/div>/g, '"\n      </div>');
   content = content.replace(/"\s*<\/h1>/g, '"\n          </h1>');
   content = content.replace(/"\s*<\/p>/g, '"\n          </p>');
+  content = content.replace(/"\s*<\/meta>/g, '"\n        />');
+  
+  // Fix unterminated string literals in JSX
+  content = content.replace(/content="([^"]*)"\s*\/>/g, 'content="$1" />');
+  content = content.replace(/name="([^"]*)"\s*content="([^"]*)"\s*\/>/g, 'name="$1" content="$2" />');
+  
+  // Fix malformed text content
+  content = content.replace(/"\s*This page is under construction\. Please check back later\./g, 
+    '"\n            This page is under construction. Please check back later.');
   
   // Fix missing semicolons and line breaks
   content = content.replace(/}\s*export\s+default\s+/g, '}\n\nexport default ');
   content = content.replace(/}\s*const\s+/g, '}\n\nconst ');
-  
-  // Fix malformed return statements
-  content = content.replace(/return\s*\(\s*<div>/g, 'return (\n    <div>');
-  
-  // Fix missing closing parentheses and braces
-  content = content.replace(/}\s*$/g, '}\n\nexport default ');
-  
-  // Clean up extra quotes and malformed strings
-  content = content.replace(/"\s*"\s*/g, '');
-  content = content.replace(/'\s*'\s*/g, '');
   
   // Fix specific patterns found in the files
   content = content.replace(/import React from "react";"import { Helmet } from "react-helmet-async";"const PagePage = \(\) => \{'  return \('    <div>/g, 
@@ -60,13 +61,32 @@ function fixCorruptedSyntax(content) {
   content = content.replace(/className: "([^"]*)"([^>]*)>/g, 
     'className="$1"$2>');
   
-  // Fix malformed text content
-  content = content.replace(/"\s*This page is under construction\. Please check back later\./g, 
-    '"\n            This page is under construction. Please check back later.');
+  // Clean up extra quotes and malformed strings
+  content = content.replace(/"\s*"\s*/g, '');
+  content = content.replace(/'\s*'\s*/g, '');
+  
+  // Fix specific unterminated string patterns
+  content = content.replace(/import { Helmet } from "react-helmet-async";"const PagePage = \(\) => \{'  return \('    <div>/g,
+    'import { Helmet } from "react-helmet-async";\n\nconst PagePage = () => {\n  return (\n    <div>');
+  
+  // Fix malformed JSX structure
+  content = content.replace(/\}\s*const\s+([^=]+)=\s*\(\)\s*=>\s*\{/g, '}\n\nconst $1 = () => {');
   
   // Clean up extra whitespace and normalize line endings
   content = content.replace(/\r\n/g, '\n');
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  // Fix specific patterns that are still broken
+  content = content.replace(/import\s+([^;]+);"const\s+([^=]+)=\s*\(\)\s*=>\s*\{/g, 
+    'import $1;\n\nconst $2 = () => {');
+  
+  // Fix malformed JSX return statements
+  content = content.replace(/\{\s*return\s*\(\s*<div>\s*<Helmet>/g, 
+    '{\n  return (\n    <div>\n      <Helmet>');
+  
+  // Fix malformed closing tags
+  content = content.replace(/\/>\s*"\s*<\/Helmet>/g, ' />\n      </Helmet>');
+  content = content.replace(/\/>\s*"\s*<\/div>/g, ' />\n      </div>');
   
   return content;
 }
@@ -121,7 +141,7 @@ function processDirectory(dirPath, extensions = ['.tsx', '.ts', '.jsx', '.js']) 
 }
 
 // Main execution
-console.log('Starting syntax error fixes...');
+console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('/workspace/app');
 console.log(`Fixed ${fixedCount} files.`);
 

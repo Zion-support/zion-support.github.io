@@ -1,4 +1,6 @@
-import React from 'react;'const ContentCarousel = () => {
+import React from 'react;
+
+const ContentCarousel = () => {
   return (
     <div>
       <h2>ContentCarousel</h2>

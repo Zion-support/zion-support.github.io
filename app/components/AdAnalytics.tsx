@@ -1,4 +1,6 @@
-import React from 'react;'const AdAnalytics = () => {
+import React from 'react;
+
+const AdAnalytics = () => {
   return (
     <div>
       <h2>AdAnalytics</h2>

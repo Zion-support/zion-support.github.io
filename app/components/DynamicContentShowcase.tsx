@@ -1,4 +1,6 @@
-import React from 'react;'const DynamicContentShowcase = () => {
+import React from 'react;
+
+const DynamicContentShowcase = () => {
   return (
     <div>
       <h2>DynamicContentShowcase</h2>

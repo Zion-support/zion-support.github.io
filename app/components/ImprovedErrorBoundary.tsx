@@ -1,4 +1,6 @@
-import React from 'react;'const ImprovedErrorBoundary = () => {
+import React from 'react;
+
+const ImprovedErrorBoundary = () => {
   return (
     <div>
       <h2>ImprovedErrorBoundary</h2>

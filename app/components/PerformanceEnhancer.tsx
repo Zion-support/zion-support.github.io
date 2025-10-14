@@ -1,4 +1,6 @@
-import React from 'react;'const PerformanceEnhancer = () => {
+import React from 'react;
+
+const PerformanceEnhancer = () => {
   return (
     <div>
       <h2>PerformanceEnhancer</h2>

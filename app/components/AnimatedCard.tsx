@@ -1,4 +1,6 @@
-import React from 'react;'const AnimatedCard = () => {
+import React from 'react;
+
+const AnimatedCard = () => {
   return (
     <div>
       <h2>AnimatedCard</h2>

@@ -1,4 +1,6 @@
-import React from 'react;'const EnhancedSEOOptimizer = () => {
+import React from 'react;
+
+const EnhancedSEOOptimizer = () => {
   return (
     <div>
       <h2>EnhancedSEOOptimizer</h2>

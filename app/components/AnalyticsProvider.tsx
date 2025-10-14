@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode } from "react;"interface AnalyticsContextType {"  trackEvent: (eventName: string, properties ?  : Record<string, any>) => void
+import React, { createContext, useContext, ReactNode } from "react";interface AnalyticsContextType {"  trackEvent: (eventName: string, properties ?  : Record<string, any>) => void
   trackPageView: (pageName: string) => void;
 }
 
@@ -17,7 +17,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }
 
-  const value = {
+const value = {
     trackEvent,
     trackPageView,
   }
@@ -32,4 +32,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 export const useAnalytics = () => {
   const context :  useContext(AnalyticsContext);
   if (context : : :  undefined) {
-    throw new Error(useAnalytics must be used within an AnalyticsProvider");"  }'}''export default AnalyticsProvider;'
+    throw new Error(useAnalytics must be used within an AnalyticsProvider");"  }'}
+
+export default AnalyticsProvider;'

@@ -1,4 +1,6 @@
-import React from 'react;'const LoadingSpinner = () => {
+import React from 'react;
+
+const LoadingSpinner = () => {
   return (
     <div>
       <h2>LoadingSpinner</h2>

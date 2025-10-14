@@ -1,4 +1,6 @@
-import React from 'react;'const Header = () => {
+import React from 'react;
+
+const Header = () => {
   return (
     <div>
       <h2>Header</h2>

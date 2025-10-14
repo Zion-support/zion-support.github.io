@@ -9,9 +9,12 @@
       </div>
       <div>
       </div>
-        <h1 className: ""text-4xl font-bold mb-8">It Infrastructure</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.;"        </p>"
+        <h1 className=text-4xl font-bold mb-8">It Infrastructure</h1>        <p className=text-gray-30o0 text-lg">"          This page is under development.;"
+          </p>"
       </div>
   );
 
         </p></div></div>
   )}
+
+export default 

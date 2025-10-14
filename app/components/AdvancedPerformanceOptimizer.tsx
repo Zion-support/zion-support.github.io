@@ -1,4 +1,6 @@
-import React from 'react;'const AdvancedPerformanceOptimizer = () => {
+import React from 'react;
+
+const AdvancedPerformanceOptimizer = () => {
   return (
     <div>
       <h2>AdvancedPerformanceOptimizer</h2>

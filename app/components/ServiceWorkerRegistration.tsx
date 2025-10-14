@@ -1,4 +1,6 @@
-import React from 'react;'const ServiceWorkerRegistration = () => {
+import React from 'react;
+
+const ServiceWorkerRegistration = () => {
   return (
     <div>
       <h2>ServiceWorkerRegistration</h2>

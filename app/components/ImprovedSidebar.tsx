@@ -1,4 +1,6 @@
-import React from 'react;'const ImprovedSidebar = () => {
+import React from 'react;
+
+const ImprovedSidebar = () => {
   return (
     <div>
       <h2>ImprovedSidebar</h2>

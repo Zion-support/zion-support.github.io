@@ -1,4 +1,6 @@
-import React from 'react;'const EnhancedLoading = () => {
+import React from 'react;
+
+const EnhancedLoading = () => {
   return (
     <div>
       <h2>EnhancedLoading</h2>
