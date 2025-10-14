@@ -1,15 +1,15 @@
-import { describe, it, expect, vi, beforeEach } from '@jest/globals';
+import { describe, it, expect, jest, beforeEach } from '@jest/globals';
 
 // Mock performance monitoring utilities
 const mockPerformanceMonitor = {
-  trackMetric: vi.fn(),
-  getMetrics: vi.fn(),
-  reset: vi.fn()
+  trackMetric: jest.fn(),
+  getMetrics: jest.fn(),
+  reset: jest.fn()
 };
 
 describe('Performance Monitoring', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    jest.clearAllMocks();
   });
 
   it('should track performance metrics', () => {
