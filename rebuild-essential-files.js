@@ -1,48 +1,47 @@
-#!/usr/bin/env node;
-;
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
 
-// Essential pages to recreate;
-const essentialPages = [
-  'app/page.tsx',
-  'app/about/page.tsx',
-  'app/services/page.tsx',
-  'app/contact/page.tsx',
-  'app/pricing/page.tsx',
-  'app/careers/page.tsx',
-  'app/blog/page.tsx',
-  'app/solutions/page.tsx',
-  'app/ai-services/page.tsx',
-  'app/it-services/page.tsx',
-  'app/cloud-services/page.tsx',
-  'app/cybersecurity/page.tsx',
-  'app/micro-saas/page.tsx',
-  'app/5g-solutions/page.tsx',
-  'app/blockchain/page.tsx',
-  'app/quantum-computing/page.tsx',
-  'app/iot-edge/page.tsx',
-  'app/autonomous-systems/page.tsx',
-  'app/digital-transformation/page.tsx',
-  'app/case-studies/page.tsx',
-  'app/api-docs/page.tsx',
-  'app/tutorials/page.tsx',
-  'app/support/page.tsx',
-  'app/privacy/page.tsx',
-  'app/terms/page.tsx',
-  'app/cookies/page.tsx',
-  'app/gdpr/page.tsx',
-  'app/team/page.tsx',
-  'app/partners/page.tsx',
-  'app/news/page.tsx',
-  'app/demo/page.tsx',
-  'app/not-found.tsx',
-  'app/404.tsx',
-  'app/error.tsx',
-  'app/loading.tsx',
-  'app/global-error.tsx'
-];
+// Essential pages to recreate
+// const essentialPages = [
+//   'app/page.tsx',
+//   'app/about/page.tsx',
+//   'app/services/page.tsx',
+//   'app/contact/page.tsx',
+//   'app/pricing/page.tsx',
+//   'app/careers/page.tsx',
+//   'app/blog/page.tsx',
+//   'app/solutions/page.tsx',
+//   'app/ai-services/page.tsx',
+//   'app/it-services/page.tsx',
+//   'app/cloud-services/page.tsx',
+//   'app/cybersecurity/page.tsx',
+//   'app/micro-saas/page.tsx',
+//   'app/5g-solutions/page.tsx',
+//   'app/blockchain/page.tsx',
+//   'app/quantum-computing/page.tsx',
+//   'app/iot-edge/page.tsx',
+//   'app/autonomous-systems/page.tsx',
+//   'app/digital-transformation/page.tsx',
+//   'app/case-studies/page.tsx',
+//   'app/api-docs/page.tsx',
+//   'app/tutorials/page.tsx',
+//   'app/support/page.tsx',
+//   'app/privacy/page.tsx',
+//   'app/terms/page.tsx',
+//   'app/cookies/page.tsx',
+//   'app/gdpr/page.tsx',
+//   'app/team/page.tsx',
+//   'app/partners/page.tsx',
+//   'app/news/page.tsx',
+//   'app/demo/page.tsx',
+//   'app/not-found.tsx',
+//   'app/404.tsx',
+//   'app/error.tsx',
+//   'app/loading.tsx',
+//   'app/global-error.tsx'
+// ];
 
 // Template for a basic page;
 const pageTemplate = (title, description, content = '') => `import React from 'react';
@@ -211,13 +210,13 @@ function createPage(filePath, content) {
   const dir = path.dirname(filePath);
   ensureDir(dir);
   fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`Created: ${filePath}`);
+  // console.log(`Created: ${filePath}`);
 }
 
 // Main execution;
 async function main() {
   
-  console.log('Rebuilding essential files...');
+  // console.log('Rebuilding essential files...');
   
   // Create home page;
   createPage('app/page.tsx', homePageTemplate);
@@ -263,7 +262,7 @@ async function main() {
   createPage('app/loading.tsx', pageTemplate('Loading', 'Please wait while we load the page...'));
   createPage('app/global-error.tsx', errorPageTemplate('Global Error', 'A global error occurred. Please refresh the page.'));
   
-  console.log('Essential files rebuilt successfully!');
+  // console.log('Essential files rebuilt successfully!');
 }
 
-main().catch(console.error);
+main().catch(/* console.error */);

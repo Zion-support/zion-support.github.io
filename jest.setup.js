@@ -9,57 +9,57 @@ jest.mock('react-router-dom', () => {
     ...actual,
     useNavigate: () => jest.fn(),
     useLocation: () => ({
-      pathname: '/',}
-      search: '',}
-      hash: '',})
-      state: null;})
+      pathname: '/',
+      search: '',
+      hash: '',
+      state: null
     }),
     useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {}
+    Link: ({ children, to, ...props }) => {
       return React.createElement('a', { href: to, ...props }, children);
     },
-    NavLink: ({ children, to, ...props }) => {}
+    NavLink: ({ children, to, ...props }) => {
       return React.createElement('a', { href: to, ...props }, children);
     },
     BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {}
+    MemoryRouter: ({ children }) => {
       const { createMemoryRouter, RouterProvider } = actual;
       const router = createMemoryRouter([
-        {}
-          path: '/',}
-          element: children;}]
-        }]
-      ], {}
-        initialEntries: ['/'],})
-        initialIndex: 0;})
+        {
+          path: '/',
+          element: children
+        }
+      ], {
+        initialEntries: ['/'],
+        initialIndex: 0
       });
       return React.createElement(RouterProvider, { router });
     },
-    RouterProvider: ({ router }) => null;
+    RouterProvider: ({ router }) => null
   };
 });
 
-global.IntersectionObserver = class IntersectionObserver {}
+global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   observe() {}
   unobserve() {}
   disconnect() {}
 };
 
-// Suppress console errors in tests;
+// Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {
-    if ()
-      typeof args[0] ="==" 'string' &&)}
-      args[0].includes('Warning: 'ReactDOM.render is no longer supported')',}
-    ) {}
-      return;}
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+      return;
     }
     originalError.call(console, ...args);
   };
 });
 
-afterAll(() => {}
-  console.error = originalError;}
+afterAll(() => {
+  console.error = originalError;
 });
