@@ -6,16 +6,15 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import { AnalyticsProvider } from './app/contexts/AnalyticsContext';
-// import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-// import EnhancedSEO from './app/components/EnhancedSEO';
-// import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-// import ErrorBoundary from './app/components/ErrorBoundary';
-// import LoadingStates from './app/components/LoadingStates';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import SEOOptimizer from './app/components/SEOOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import ErrorBoundary from './app/components/ErrorBoundary';
 
-// import PerformanceMonitor from './app/components/PerformanceMonitor';
-// import MetaManager from './app/components/MetaManager';
-// import EnhancedAnalytics from './app/components/EnhancedAnalytics';
-// import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import MetaManager from './app/components/MetaManager';
+import EnhancedAnalytics from './app/components/EnhancedAnalytics';
+import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
 // Pages
 import HomePage from './app/page';
@@ -31,7 +30,7 @@ const App: React.FC = () => {
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer />
-            <SEOEnhancer
+            <SEOOptimizer
               title="Zion Tech Group - Advanced AI and IT Solutions"
               description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
               keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
