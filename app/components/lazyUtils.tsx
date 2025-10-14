@@ -10,7 +10,7 @@ const LazyComponent = lazy(() => Promise.resolve({ default: Component,}));
   return (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
       {/* eslint-disable-next-line @ */}
-      <LazyComponent {...(props as any)} /></LazyComponent>
+      <LazyComponent {...(props as any)} />
     </Suspense>
   )};
 }
@@ -26,7 +26,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
   return (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
       {/* eslint-disable-next-line @ */}
-      <LazyComponent {...(props as any)} /></LazyComponent>
+      <LazyComponent {...(props as any)} />
     </Suspense>
   );,
 },
@@ -43,8 +43,7 @@ export function createLazyComponent<T extends ComponentType<any>>()
 ,
     <Suspense fallback={fallback || <div>Loading...</div>}>,
       {/* eslint-disable-next-line @ */},
-      <LazyComponent {...(props as any)} /></LazyComponent>
+      <LazyComponent {...(props as any)} />
     </Suspense>
-  );,'
-}'
-'
+  );,
+}

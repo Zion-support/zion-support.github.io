@@ -28,11 +28,11 @@ export const services: Service[] = [
     category: 'AI',';
     icon: 'CpuChipIcon',';
     features: [
-      'Machine Learning Models','
-      'Natural Language Processing','
-      'Computer Vision','
-      'Predictive Analytics','
-      'AI Chatbots','
+      'Machine Learning Models',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Predictive Analytics',
+      'AI Chatbots',
       'Automated Decision Making
     ],
     pricing: {
@@ -78,12 +78,12 @@ export const services: Service[] = [
     ],
     useCases: ['Network Security',
       'Data Protection', ],
-    technologies: ['SIEM', '
-      'EDR', '
-      'XDR', '
-      'SOAR', '
-      'NGFW', '
-      'WAF', '
+    technologies: ['SIEM', 
+      'EDR', 
+      'XDR', 
+      'SOAR', 
+      'NGFW', 
+      'WAF', 
       'DLP],
     contactInfo: {},
     href: '/cybersecurity
@@ -97,24 +97,24 @@ export const services: Service[] = [
       pro: 8000,
       enterprise: 25000;
     },
-    benefits: ['Scalability', '
-      'Cost Efficiency', '
-      'High Availability', '
-      'Flexibility', '
-      'Global Reach', '
+    benefits: ['Scalability', 
+      'Cost Efficiency', 
+      'High Availability', 
+      'Flexibility', 
+      'Global Reach', 
       'Reduced Maintenance],
-    useCases: ['Application Hosting', '
-      'Data Storage', '
-      'Backup Solutions', '
-      'Development Environments', '
-      'Production Workloads', '
+    useCases: ['Application Hosting', 
+      'Data Storage', 
+      'Backup Solutions', 
+      'Development Environments', 
+      'Production Workloads', 
       'Hybrid Cloud],
-    technologies: ['AWS', '
-      'Azure', '
-      'Google Cloud', '
-      'Docker', '
-      'Kubernetes', '
-      'Terraform', '
+    technologies: ['AWS', 
+      'Azure', 
+      'Google Cloud', 
+      'Docker', 
+      'Kubernetes', 
+      'Terraform', 
       'Ansible],
     contactInfo: {
       phone: '+1-302-464-0950',
@@ -130,35 +130,35 @@ export const services: Service[] = [
     shortDescription: 'Complete digital transformation services',';
     category: 'IT',';
     icon: 'RocketLaunchIcon',';
-    features: ['Process Automation', '
-      'Workflow Optimization', '
-      'System Integration', '
-      'Change Management', '
-      'Digital Strategy', '
+    features: ['Process Automation', 
+      'Workflow Optimization', 
+      'System Integration', 
+      'Change Management', 
+      'Digital Strategy', 
       'Technology Adoption],
     pricing: {
       basic: 10000,
       pro: 30000,
       enterprise: 100000;
     },
-    benefits: ['Improved Efficiency', '
-      'Better Customer Experience', '
-      'Increased Agility', '
-      'Cost Reduction', '
-      'Competitive Advantage', '
+    benefits: ['Improved Efficiency', 
+      'Better Customer Experience', 
+      'Increased Agility', 
+      'Cost Reduction', 
+      'Competitive Advantage', 
       'Future-Ready Operations],
-    useCases: ['Process Modernization', '
-      'System Integration', '
-      'Workflow Automation', '
-      'Digital Strategy', '
-      'Change Management', '
+    useCases: ['Process Modernization', 
+      'System Integration', 
+      'Workflow Automation', 
+      'Digital Strategy', 
+      'Change Management', 
       'Technology Adoption],
-    technologies: ['RPA', '
-      'API Integration', '
-      'Workflow Engines', '
-      'Data Analytics', '
-      'Cloud Platforms', '
-      'Mobile Solutions', '
+    technologies: ['RPA', 
+      'API Integration', 
+      'Workflow Engines', 
+      'Data Analytics', 
+      'Cloud Platforms', 
+      'Mobile Solutions', 
       'IoT Integration],
     contactInfo: {
       phone: '+1-302-464-0950',
@@ -174,35 +174,35 @@ export const services: Service[] = [
     shortDescription: 'Next-generation 5G solutions',';
     category: '5G',';
     icon: 'SignalIcon',';
-    features: ['Network Implementation', '
-      'IoT Connectivity', '
-      'Mobile Optimization', '
-      'Enterprise Services', '
-      'Edge Computing', '
+    features: ['Network Implementation', 
+      'IoT Connectivity', 
+      'Mobile Optimization', 
+      'Enterprise Services', 
+      'Edge Computing', 
       'Network Slicing],
     pricing: {
       basic: 15000,
       pro: 50000,
       enterprise: 150000;
     },
-    benefits: ['Ultra-Fast Speeds', '
-      'Low Latency', '
-      'Massive Connectivity', '
-      'Enhanced Mobility', '
-      'Edge Computing', '
+    benefits: ['Ultra-Fast Speeds', 
+      'Low Latency', 
+      'Massive Connectivity', 
+      'Enhanced Mobility', 
+      'Edge Computing', 
       'Future-Ready Infrastructure],
-    useCases: ['Smart Cities', '
-      'Industrial IoT', '
-      'Autonomous Vehicles', '
-      'Remote Work', '
-      'AR/VR Applications', '
+    useCases: ['Smart Cities', 
+      'Industrial IoT', 
+      'Autonomous Vehicles', 
+      'Remote Work', 
+      'AR/VR Applications', 
       'Real-time Analytics],
-    technologies: ['5G NR', '
-      'Edge Computing', '
-      'Network Slicing', '
-      'MEC', '
-      'IoT Platforms', '
-      'SDN/NFV', '
+    technologies: ['5G NR', 
+      'Edge Computing', 
+      'Network Slicing', 
+      'MEC', 
+      'IoT Platforms', 
+      'SDN/NFV', 
       'AI/ML],
     contactInfo: {
       phone: '+1-302-464-0950',
@@ -218,35 +218,35 @@ export const services: Service[] = [
     shortDescription: 'Custom micro SaaS solutions',';
     category: 'SaaS',';
     icon: 'GlobeAltIcon',';
-    features: ['Application Development', '
-      'API Integration', '
-      'Subscription Management', '
-      'Scalable Architecture', '
-      'Multi-tenancy', '
+    features: ['Application Development', 
+      'API Integration', 
+      'Subscription Management', 
+      'Scalable Architecture', 
+      'Multi-tenancy', 
       'Analytics Dashboard],
     pricing: {
       basic: 8000,
       pro: 25000,
       enterprise: 75000;
     },
-    benefits: ['Rapid Deployment', '
-      'Scalable Architecture', '
-      'Cost-Effective', '
-      'Easy Maintenance', '
-      'Multi-tenant Support', '
+    benefits: ['Rapid Deployment', 
+      'Scalable Architecture', 
+      'Cost-Effective', 
+      'Easy Maintenance', 
+      'Multi-tenant Support', 
       'Revenue Generation],
-    useCases: ['Business Tools', '
-      'Productivity Apps', '
-      'Industry Solutions', '
-      'API Services', '
-      'Data Management', '
+    useCases: ['Business Tools', 
+      'Productivity Apps', 
+      'Industry Solutions', 
+      'API Services', 
+      'Data Management', 
       'Automation Tools],
-    technologies: ['React', '
-      'Node.js', '
-      'PostgreSQL', '
-      'Redis', '
-      'Docker', '
-      'Kubernetes', '
+    technologies: ['React', 
+      'Node.js', 
+      'PostgreSQL', 
+      'Redis', 
+      'Docker', 
+      'Kubernetes', 
       'Stripe API],
     contactInfo: {
       phone: '+1-302-464-0950',

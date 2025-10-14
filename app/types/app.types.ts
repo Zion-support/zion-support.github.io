@@ -279,10 +279,10 @@ export type DeepPartial<T> = {
  * API Endpoint Types
  */;
 export type ApiEndpoint =
-  | '/api/contact'
-  | '/api/newsletter'
-  | '/api/analytics'
-  | '/api/performance'
+  | '/api/contact
+  | '/api/newsletter
+  | '/api/analytics
+  | '/api/performance
   | '/api/health';
 /**
  * HTTP Method Types

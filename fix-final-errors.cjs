@@ -1,95 +1,95 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { glob } = require('glob');
 
-// Function to create a simple component template
-function createSimpleComponent(componentName) {
-  return `import React from "react";
-
-const ${componentName} = () => {
-  return (
-    <>
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            ${componentName.replace(/([A-Z])/g, ' $1').trim()}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Professional ${componentName.toLowerCase().replace(/([A-Z])/g, ' $1').trim()} solutions tailored to your business needs.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions
-              </h3>
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge ${componentName.toLowerCase().replace(/([A-Z])/g, ' $1').trim()} solutions.
-              </p>
-            </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-900 mb-2">
-                Custom Implementation
-              </h3>
-              <p className="text-green-700">
-                Tailored ${componentName.toLowerCase().replace(/([A-Z])/g, ' $1').trim()} implementations for your specific requirements.
-              </p>
-            </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                Advanced Features
-              </h3>
-              <p className="text-purple-700">
-                Comprehensive features and capabilities for your business needs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default ${componentName};`;
-}
-
-// Find all TSX files with severe syntax errors
-const tsxFiles = glob.sync('app/**/*.tsx');
-
-console.log(`Found ${tsxFiles.length} TSX files to process`);
-
-let fixedCount = 0;
-
-tsxFiles.forEach(filePath => {
+// Function to fix remaining syntax errors
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix unterminated string literals in imports
+    content = content.replace(/import\s+([^'"`]+)\s+from\s+['"`]([^'"`]+)['"`];/g, "import $1 from '$2';");
+    content = content.replace(/import\s+([^'"`]+)\s+from\s+['"`]([^'"`]+)['"`]/g, "import $1 from '$2';");
     
-    // Check if file has severe syntax errors that can't be easily fixed
-    if (content.includes('Unexpected keyword') || 
-        content.includes('Unterminated string literal') ||
-        content.includes('Declaration or statement expected') ||
-        content.includes('Identifier expected') ||
-        content.includes('Expression expected') ||
-        content.includes('Unknown keyword or identifier') ||
-        (content.includes('Ad') && content.includes('error'))) {
-      
-      console.log(`Replacing severely corrupted file: ${filePath}`);
-      
-      // Extract component name from file path
-      const fileName = path.basename(filePath, '.tsx');
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
-      
-      // Create new content
-      const newContent = createSimpleComponent(componentName);
-      
-      // Write the fixed content
-      fs.writeFileSync(filePath, newContent, 'utf8');
+    // Fix 'use client' directive
+    content = content.replace(/'use client;'/g, "'use client';");
+    content = content.replace(/'use client'/g, "'use client';");
+    
+    // Fix unterminated string literals in object properties
+    content = content.replace(/description:\s*'([^']*?)\n\s*}/g, "description: '$1'\n    }");
+    content = content.replace(/description:\s*"([^"]*?)\n\s*}/g, 'description: "$1"\n    }');
+    
+    // Fix malformed JSX closing tags
+    content = content.replace(/<\/\$1>/g, '');
+    content = content.replace(/<\/\$1/g, '');
+    
+    // Fix self-closing tags that are malformed
+    content = content.replace(/<(\w+)\s+[^>]*><\/\1>/g, '<$1 />');
+    
+    // Fix JSX fragments
+    content = content.replace(/<><\/>/g, '<></>');
+    
+    // Fix unterminated JSX elements
+    content = content.replace(/(<[^>]+)>\s*<\/\1>/g, '$1></$1>');
+    
+    // Fix missing closing tags in JSX
+    content = content.replace(/(<div[^>]*>)\s*<\/div>\s*<\/div>/g, '$1</div>');
+    
+    // Fix malformed Link components
+    content = content.replace(/<Link([^>]*)>\s*<\/Link>/g, '<Link$1></Link>');
+    
+    // Fix unterminated comments
+    content = content.replace(/\/\*\s*([^*]*?)\n\s*\*\//g, '/* $1 */');
+    
+    // Fix specific patterns that are causing issues
+    content = content.replace(/import\s+([^'"`]+)\s+from\s+['"`]([^'"`]+)['"`];/g, "import $1 from '$2';");
+    
+    // Fix JSX structure issues
+    content = content.replace(/return\s*\(\s*<>\s*<\/>\s*/g, 'return (\n    <>\n      ');
+    content = content.replace(/<>\s*<\/>\s*<([^>]+)>\s*<\/\1>/g, '<$1></$1>');
+    
+    // Fix extra closing braces
+    content = content.replace(/\);}/g, ');');
+    content = content.replace(/}\s*}\s*$/g, '}');
+    
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      fixedCount++;
+      modified = true;
     }
+    
+    return modified;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log(`Fixed ${fixedCount} files out of ${tsxFiles.length} total files`);
-console.log('Final error fixing completed!');
+async function main() {
+  // Find all TypeScript and JavaScript files
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    '*.tsx',
+    '*.ts'
+  ];
+
+  let totalFixed = 0;
+
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**'] });
+    
+    for (const file of files) {
+      if (fixFile(file)) {
+        totalFixed++;
+      }
+    }
+  }
+
+  console.log(`\nFixed ${totalFixed} files`);
+}
+
+main().catch(console.error);

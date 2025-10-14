@@ -2,10 +2,10 @@
 
 export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
   // Basic analytics tracking;
-  console.log('Analytics Event:', eventName, properties)'
+  console.log('Analytics Event:', eventName, properties)
   // In a real implementation, you would send this to your analytics service;
   if (typeof window !== 'undefined' && (window as { gtag?: unknown }).gtag) {
-(window as { gtag: (command: string, eventName: string, properties?: Record<string, unknown>) => void,}).gtag('event', eventName, properties)'
+(window as { gtag: (command: string, eventName: string, properties?: Record<string, unknown>) => void,}).gtag('event', eventName, properties)
   }
 };
 export const trackPageView = () => {;

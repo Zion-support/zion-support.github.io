@@ -1,14 +1,14 @@
 import React from 'react;
-import { Link } from 'react-router-dom;
+import { Link } from ';;react-router-dom;
 interface Props {
-  children: 'ReactNode','
+  children: 'ReactNode',
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 interface State {
-  hasError: 'boolean','
-  error: 'Error | null','
-  errorInfo: 'ErrorInfo | null','
+  hasError: 'boolean',
+  error: 'Error | null',
+  errorInfo: 'ErrorInfo | null',
   errorId: string;
 }
 class ComprehensiveErrorBoundary extends Component<Props, State> {
@@ -17,8 +17,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null,'
-      errorId: ''
+      errorInfo: null,
+      errorId: '
     };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -34,10 +34,10 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       errorInfo;
     });
 
-    // Log error to console in development'
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {}
 
-    // Log error to external service in production'
+    // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
     }
@@ -64,8 +64,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null,'
-      errorId: ''
+      errorInfo: null,
+      errorId: '
     });
   };
   handleReload = () => {
@@ -79,35 +79,35 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       }
       // Default error UI;
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div>
-          <div className="max-w-2xl mx-auto text-center"></div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
-              <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center"></div>
-                <AlertTriangle className="w-8 h-8 text-red-400" /></AlertTriangle>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
+                <AlertTriangle className="w-8 h-8 text-red-400" />
               </div>
               
-              <h1 className="text-3xl font-bold text-white mb-4"></h1>
+              <h1 className="text-3xl font-bold text-white mb-4">
                 Oops! Something went wrong
               </h1>
               
-              <p className="text-gray-300 mb-6 leading-relaxed"></p>'
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 We're sorry, but something unexpected happened. Our team has been notified 
                 and is working to fix the issue. In the meantime, you can try refreshing 
                 the page or returning to the homepage.
               </p>
-'
+
               {process.env.NODE_ENV === 'development' && this.state.error && (
-                <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left"></div>
+                <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
                   <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                  <p className="text-red-300 text-sm font-mono break-all"></p>
+                  <p className="text-red-300 text-sm font-mono break-all">
                     {this.state.error.message}
                   </p>
                   {this.state.error.stack && (
-                    <details className="mt-2"></details>
-                      <summary className="text-red-400 cursor-pointer text-sm"></summary>
+                    <details className="mt-2">
+                      <summary className="text-red-400 cursor-pointer text-sm">
                         Stack Trace
                       </summary>
-                      <pre className="text-red-300 text-xs mt-2 overflow-auto"></pre>
+                      <pre className="text-red-300 text-xs mt-2 overflow-auto">
                         {this.state.error.stack}
                       </pre>
                     </details>
@@ -115,42 +115,42 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 </div>
               )}
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <button
                   onClick={this.handleRetry;
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-                ></button>
-                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" /></RefreshCw>
+                >
+                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
                   Try Again
                 </button>
                 
                 <button
                   onClick={this.handleReload;
                   className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
-                ></button>
-                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" /></RefreshCw>
+                >
+                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
                   Reload Page
                 </button>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/"
                   className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
-                ></Link>
-                  <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /></Home>
+                >
+                  <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                   Go Home
                 </Link>
                 <Link;
                   to="/contact"
                   className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
-                ></Link>
-                  <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /></Mail>
+                >
+                  <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                   Contact Support
                 </Link>
               </div>
               {this.state.errorId && (
-                <p className="text-gray-400 text-sm mt-6"></p>
+                <p className="text-gray-400 text-sm mt-6">
                   Error ID: {this.state.errorId}
                 </p>
               )}
@@ -164,4 +164,5 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ComprehensiveErrorBoundary'
+export default ComprehensiveErrorBoundary
+}}

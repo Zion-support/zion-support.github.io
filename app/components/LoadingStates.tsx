@@ -1,12 +1,12 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from 'react';;
+import { Helmet } from 'react-helmet-async';;
 'use client;
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-white">
+      <Helmet>
         <title>LoadingStates - Zion Tech Group</title>
-        <meta name="description" content="Professional loadingstates services by Zion Tech Group." /></meta>
+        <meta name="description" content="Professional loadingstates services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center">;
@@ -41,16 +41,16 @@ export default function Page() {
                 Round-the-clock support for all your loadingstates needs.;
               </p>;
             </div>
-            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div></div>
+            <div />
  cursor/fix-errors-and-merge-to-main-54ad;
           </div>
 "
           <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>"
           <p>{message || getDefaultMessage()}</p>"
-          <div className="flex justify-center space-x-2"></div>"
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div></div>"
-            <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s',}}></div></div>"'"'"
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s',}}></div></div>'"'"
+          <div className="flex justify-center space-x-2">"
+            <div />"
+            <div />"'"'"
+            <div />'"'"
           </div>
         </div>
       </div>
@@ -66,26 +66,25 @@ export default function Page() {
               <h3 className="text-lg font-semibold text-blue-900 mb-2">"
                 Expert Solutions</h3>
               <p>"
-                Our team of experts delivers cutting-edge loadingstates solutions.</p></div>
+                Our team of experts delivers cutting-edge loadingstates solutions.</p>
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
               <h3 className="text-lg font-semibold text-green-900 mb-2">"
                 Custom Implementation</h3>
               <p>"
-                Tailored loadingstates implementations for your specific requirements.</p></div>
+                Tailored loadingstates implementations for your specific requirements.</p>
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
               <h3 className="text-lg font-semibold text-purple-900 mb-2">"
                 24/7 Support</h3>
               <p>"
-                Round-the-clock support for all your loadingstates needs.</p></div></div>
+                Round-the-clock support for all your loadingstates needs.</p></div>
           <div className="mt-12">"
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-              Get Started Today</button></div></div></div></div>
+              Get Started Today</button></div></div>
   )}
             </button>
           </div>
         </div>
       </div>
     </div>
-  );}'
-}'
-'
+  );
+}

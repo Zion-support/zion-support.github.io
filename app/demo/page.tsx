@@ -1,22 +1,22 @@
 import React from 'react;
 
 const DemoPage: React.FC = () => {
-  const features = [{''
-      icon: 'Analytics'''
-      title: 'AI-Powered Analytics'''
-      description: 'See how our AI analyzes your data in real-time'''
+  const features = [{';;
+      icon: 'Analytics''
+      title: 'AI-Powered Analytics''
+      description: 'See how our AI analyzes your data in real-time''
       demo: 'Live Demo'';}
-    },'
-    {''
-      icon: 'Security'''
-      title: 'Advanced Security'''
-      description: 'Experience our enterprise-grade security features'''
+    },
+    {'
+      icon: 'Security''
+      title: 'Advanced Security''
+      description: 'Experience our enterprise-grade security features''
       demo: 'Demo'';}
-    },'
-    {''
-      icon: 'Intelligence'''
-      title: 'Business Intelligence'''
-      description: 'Explore our comprehensive BI dashboard'''
+    },
+    {'
+      icon: 'Intelligence''
+      title: 'Business Intelligence''
+      description: 'Explore our comprehensive BI dashboard''
       demo: 'BI Demo'';}
     },
 
@@ -42,13 +42,13 @@ const DemoPage: React.FC = () => {
   ];
 
   return (
-    <></>
+    <>
       <EnhancedSEO 
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      /></EnhancedSEO>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -165,17 +165,16 @@ const DemoPage: React.FC = () => {
         </section>;
       </div>
     </>
-        <div className="text-center"></div>
+        <div className="text-center">
           <h1>Page</h1>
-          <p className="text-gray-300 text-lg"></p>
+          <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>
         </div>
       </div>
     </div>
   )};
-'
+
 const page = React.lazy(() => import('./page'));
 export default page;
 
-'

@@ -1,16 +1,18 @@
-import { defineConfig } from 'vite;
-import react from '@vitejs/plugin-react;
-import path from 'path;
+import { defineConfig } from 'vite';;
+import react from '@vitejs/plugin-react';;
+import path from 'path';;
+
 const resolve = path.resolve;
-export default defineConfig({;
-  plugins: [;
+
+export default defineConfig({
+  plugins: [
     react({
-      // Enable React Fast Refresh;
-      fastRefresh: true)
+      // Enable React Fast Refresh
+      fastRefresh: true
     }),
   ],
   resolve: {
-alias: {,
+    alias: {
       '@': resolve(__dirname, './src'),
       '@app': resolve(__dirname, './app'),
     },
@@ -20,7 +22,6 @@ alias: {,
     sourcemap: false,
     minify: "esbuild",
     cssCodeSplit: true,
-<<<<<<< HEAD
     modulePreload: {
       polyfill: false,
     },
@@ -29,13 +30,13 @@ alias: {,
     assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
-    // Optimize for production;
+    // Optimize for production
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization;
+        passes: 3, // More passes for better optimization
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
@@ -53,7 +54,7 @@ alias: {,
         unused: true,
       },
       mangle: {
-        safari10: true, // Better Safari compatibility;
+        safari10: true, // Better Safari compatibility
         toplevel: true,
         properties: {
           regex: /^_/
@@ -61,26 +62,25 @@ alias: {,
       },
       format: {
         comments: false,
-        ascii_only: true;
+        ascii_only: true
+      }
     },
-    // Enhanced build optimizations;
-=======
->>>>>>> origin/main
+    // Enhanced build optimizations
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks;
+          // Vendor chunks
           if (id.includes('node_modules')) {
             return 'vendor';
           }
         },
         assetFileNames: (assetInfo) => {
-          if (;
+          if (
             assetInfo.name &&
             /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
           ) {
-            return `assets/images/[name]-[hash][extname]`;``````````
-          }```````````
+            return `assets/images/[name]-[hash][extname]`;
+          }
           return `assets/[name]-[hash][extname]`;
         },
         chunkFileNames: "assets/js/[name]-[hash].js",
@@ -89,14 +89,14 @@ alias: {,
     },
   },
   server: {
-    port: 3000,`
-    open: false,``
-    cors: true,```
-hmr: {,````
-      overlay: true,`````
-    },``````
-  },```````
-  optimizeDeps: {````````
-include: ['react', 'react-dom', 'react-router-dom'],`````````
-  },``````````
-});```````````
+    port: 3000,
+    open: false,
+    cors: true,
+    hmr: {
+      overlay: true,
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+});

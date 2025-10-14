@@ -1,14 +1,14 @@
 import React from 'react;
-import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
+import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from ';;lucide-react';
 
 interface FormData {
-  name: 'string','
-  email: 'string','
-  phone: 'string','
-  company: 'string','
-  message: 'string','
-  service: 'string','
-  budget: 'string','
+  name: 'string',
+  email: 'string',
+  phone: 'string',
+  company: 'string',
+  message: 'string',
+  service: 'string',
+  budget: 'string',
   timeline: string;
 }
 interface FormErrors {
@@ -76,7 +76,7 @@ const ImprovedContactForm: React.FC = () => {
     // Phone validation (optional but if provided, should be valid)
     if (formData.phone.trim()) {
       const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-      if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ))) {'
+      if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ))) {
         newErrors.phone = "Please enter a valid phone number;
       }
     }
@@ -94,20 +94,20 @@ const ImprovedContactForm: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
     // Clear error when user starts typing
-    if (errors[name]) {'
+    if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
   };
   const handleServiceSelect = (service: string) => {
     setFormData(prev => ({ ...prev, service }));
     setIsServiceDropdownOpen(false);
-    if (errors.service) {'
+    if (errors.service) {
       setErrors(prev => ({ ...prev, service: '' }));
     }
   };
@@ -121,7 +121,7 @@ const ImprovedContactForm: React.FC = () => {
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // In a real app, you would send the data to your backend'
+      // In a real app, you would send the data to your backend
       console.log('Form submitted:', formData);
       
       setIsSubmitted(true);
@@ -135,7 +135,7 @@ const ImprovedContactForm: React.FC = () => {
         budget: ,"
         timeline: ,"
       });
-    } catch (error) {'
+    } catch (error) {
       console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
@@ -143,17 +143,17 @@ const ImprovedContactForm: React.FC = () => {
   };
   if (isSubmitted) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 text-center"></div>
-        <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-          <CheckCircle className="w-8 h-8 text-green-400" /></CheckCircle>
+      <div className="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 text-center">
+        <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <CheckCircle className="w-8 h-8 text-green-400" />
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
-        <p className="text-gray-300 mb-6"></p>'
+        <p className="text-gray-300 mb-6">
           Your message has been sent successfully. We'll get back to you within 24 hours.
         </p>
         <button;
           onClick={() => setIsSubmitted(false)}
-          className="bg-cyan-500 hover: 'bg-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors"','
+          className="bg-cyan-500 hover: 'bg-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors"',
         >
           Send Another Message;
         </button>
@@ -161,23 +161,23 @@ const ImprovedContactForm: React.FC = () => {
     );
   }
   return (
-    <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8"></div>
-      <div className="flex items-center gap-3 mb-6"></div>
-        <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center"></div>
-          <MessageSquare className="w-6 h-6 text-cyan-400" /></MessageSquare>
+    <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+          <MessageSquare className="w-6 h-6 text-cyan-400" />
         </div>
-        <div></div>
-          <h3 className="text-2xl font-bold text-white">Get In Touch</h3>'
+        <div>
+          <h3 className="text-2xl font-bold text-white">Get In Touch</h3>
           <p className="text-gray-300">We'd love to hear from you. Send us a message!</p>
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6"></form>
+      <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name and Email Row */}
-        <div className="grid md:grid-cols-2 gap-4"></div>
-          <div></div>
-            <label htmlFor="name" className="block text-sm font-medium text-white mb-2"></label>
-              <User className="w-4 h-4 inline mr-2" /></User>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+              <User className="w-4 h-4 inline mr-2" />
               Full Name *
             </label>
             <input;
@@ -186,22 +186,22 @@ const ImprovedContactForm: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${'
-                errors.name ? 'border-red-500' : 'border-white/20'
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${
+                errors.name ? 'border-red-500' : 'border-white/20
               }`}
               placeholder="Your full name"
-            /></input>
+            />
             {errors.name && (
-              <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-                <AlertCircle className="w-4 h-4" /></AlertCircle>
+              <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
+                <AlertCircle className="w-4 h-4" />
                 {errors.name}
               </p>
             )}
           </div>
 
-          <div></div>
-            <label htmlFor="email" className="block text-sm font-medium text-white mb-2"></label>
-              <Mail className="w-4 h-4 inline mr-2" /></Mail>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+              <Mail className="w-4 h-4 inline mr-2" />
               Email Address *
             </label>
             <input
@@ -210,24 +210,24 @@ const ImprovedContactForm: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${'
-                errors.email ? 'border-red-500' : 'border-white/20'
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${
+                errors.email ? 'border-red-500' : 'border-white/20
               }`}
               placeholder="your.email@example.com"
-            /></input>
+            />
             {errors.email && (
-              <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-                <AlertCircle className="w-4 h-4" /></AlertCircle>
+              <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
+                <AlertCircle className="w-4 h-4" />
                 {errors.email}
               </p>
             )}
           </div>
         </div>
         {/* Phone and Company Row */}
-        <div className="grid md:grid-cols-2 gap-4"></div>
-          <div></div>
-            <label htmlFor="phone" className="block text-sm font-medium text-white mb-2"></label>
-              <Phone className="w-4 h-4 inline mr-2" /></Phone>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+              <Phone className="w-4 h-4 inline mr-2" />
               Phone Number
             </label>
             <input
@@ -236,22 +236,22 @@ const ImprovedContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${'
-                errors.phone ? 'border-red-500' : 'border-white/20'
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${
+                errors.phone ? 'border-red-500' : 'border-white/20
               }`}
               placeholder="+1 (555) 123-4567"
-            /></input>
+            />
             {errors.phone && (
-              <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-                <AlertCircle className="w-4 h-4" /></AlertCircle>
+              <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
+                <AlertCircle className="w-4 h-4" />
                 {errors.phone}
               </p>
             )}
           </div>
 
-          <div></div>
-            <label htmlFor="company" className="block text-sm font-medium text-white mb-2"></label>
-              <Building className="w-4 h-4 inline mr-2" /></Building>
+          <div>
+            <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
+              <Building className="w-4 h-4 inline mr-2" />
               Company
             </label>
             <input;
@@ -262,36 +262,36 @@ value={formData.company;
               onChange={handleChange;
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
               placeholder="Your company name"
-            /></input>
+            />
           </div>
         </div>
 
         {/* Service Selection */}
-        <div></div>
-          <label className="block text-sm font-medium text-white mb-2"></label>
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">
             Service Interest *
           </label>
-          <div className="relative"></div>
+          <div className="relative">
             <button
               type="button"
               onClick={() => setIsServiceDropdownOpen(!isServiceDropdownOpen)}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors flex items-center justify-between ${'
-                errors.service ? 'border-red-500' : 'border-white/20'
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors flex items-center justify-between ${
+                errors.service ? 'border-red-500' : 'border-white/20
               }`}
-            >'
-              <span className={formData.service ? 'text-white' : 'text-gray-400'}></span>'
+            >
+              <span className={formData.service ? 'text-white' : 'text-gray-400'}>
                 {formData.service || 'Select a service'}
-              </span>'
-              <ChevronDown className={`w-5 h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} /></ChevronDown>
+              </span>
+              <ChevronDown className={`w-5 h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             {isServiceDropdownOpen && (
-              <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto"></div>
+              <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto">
                 {services.map((service) => (
 <button
                     key={service;
                     type="button"
                     onClick={() => handleServiceSelect(service)}
-                    className="w-full px-4 py-3 text-left text-white hover: 'bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg"','
+                    className="w-full px-4 py-3 text-left text-white hover: 'bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg"',
                   >
                     {service;
                   </button>
@@ -300,16 +300,16 @@ value={formData.company;
             )}
           </div>
           {errors.service && (
-            <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-              <AlertCircle className="w-4 h-4" /></AlertCircle>
+            <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
+              <AlertCircle className="w-4 h-4" />
               {errors.service}
             </p>
           )}
         </div>
         {/* Budget and Timeline Row */}
-        <div className="grid md:grid-cols-2 gap-4"></div>
-          <div></div>
-            <label htmlFor="budget" className="block text-sm font-medium text-white mb-2"></label>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
               Budget Range
             </label>
             <select;
@@ -318,18 +318,18 @@ value={formData.company;
 value={formData.budget;
               onChange={handleChange;
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
-            ></select>
+            >
               <option value="">Select budget range</option>
               {budgets.map((budget) => (
-                <option key={budget} value={budget} className="bg-slate-800"></option>
+                <option key={budget} value={budget} className="bg-slate-800">
                   {budget}
                 </option>
               ))}
             </select>
           </div>
 
-          <div></div>
-            <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2"></label>
+          <div>
+            <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
               Project Timeline
             </label>
             <select;
@@ -338,10 +338,10 @@ value={formData.budget;
 value={formData.timeline;
               onChange={handleChange;
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
-            ></select>
+            >
               <option value="">Select timeline</option>
               {timelines.map((timeline) => (
-                <option key={timeline} value={timeline} className="bg-slate-800"></option>
+                <option key={timeline} value={timeline} className="bg-slate-800">
                   {timeline}
                 </option>
               ))}
@@ -349,9 +349,9 @@ value={formData.timeline;
           </div>
         </div>
         {/* Message */}
-        <div></div>
-          <label htmlFor="message" className="block text-sm font-medium text-white mb-2"></label>
-            <FileText className="w-4 h-4 inline mr-2" /></FileText>
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+            <FileText className="w-4 h-4 inline mr-2" />
             Message *
           </label>
           <textarea
@@ -360,14 +360,14 @@ value={formData.timeline;
             value={formData.message}
             onChange={handleChange}
             rows={5}
-            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors resize-none ${'
-              errors.message ? 'border-red-500' : 'border-white/20'
+            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors resize-none ${
+              errors.message ? 'border-red-500' : 'border-white/20
             }`}
             placeholder="Tell us about your project, requirements, or any questions you have..."
-          /></textarea>
+          />
           {errors.message && (
-            <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-              <AlertCircle className="w-4 h-4" /></AlertCircle>
+            <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
+              <AlertCircle className="w-4 h-4" />
               {errors.message}
             </p>
           )}
@@ -377,15 +377,15 @@ value={formData.timeline;
           type="submit"
 disabled={isSubmitting;
           className="w-full bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-        ></button>
+        >
           {isSubmitting ? (
             <></>
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" /></div>
+              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
               Sending...
             </>
           ) : (
             <></>
-              <Send className="w-5 h-5" /></Send>
+              <Send className="w-5 h-5" />
               Send Message
             </>
           )}
@@ -395,4 +395,5 @@ disabled={isSubmitting;
   );
 };
 
-export default ImprovedContactForm'
+export default ImprovedContactForm
+}}}}}}}}}

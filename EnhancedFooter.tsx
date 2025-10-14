@@ -1,8 +1,8 @@
 import React from 'react;
 const EnhancedFooter = () => {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-white">
+      <Helmet>
         <title>Enhanced Footer - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
       </Helmet>
@@ -23,4 +23,3 @@ const EnhancedFooter = () => {
 };
 
 export default EnhancedFooter;
-'

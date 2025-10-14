@@ -9,42 +9,42 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
-      // Preload critical fonts'
-      const fontLink = document.createElement('link')'
-      fontLink.rel = 'preload''
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap''
+      // Preload critical fonts
+      const fontLink = document.createElement(';;link')
+      fontLink.rel = 'preload'
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
       // Preload critical images
-      const criticalImages = ['
-        '/logo.svg','
-        '/og-image.svg','
-        '/api/placeholder/1200/630', // Hero image'
+      const criticalImages = [
+        '/logo.svg',
+        '/og-image.svg',
+        '/api/placeholder/1200/630', // Hero image
         '/api/placeholder/800/600',  // Service images
       ];
 
-      criticalImages.forEach(src => {'
-        const link = document.createElement('link')'
+      criticalImages.forEach(src => {
+        const link = document.createElement('link')
         link.rel = 'preload';
-        link.href = src'
+        link.href = src
         link.as = 'image';
         document.head.appendChild(link);
       });
     };
 
     // Optimize images
-    const optimizeImages = () => {'
-      const images = document.querySelectorAll('img')'
-      images.forEach((img) => {''
-        if (!img.hasAttribute('loading')) {''
-          img.setAttribute('loading', 'lazy');}
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img')
+      images.forEach((img) => {'
+        if (!img.hasAttribute('loading')) {'
+          img.setAttribute('loading', 'lazy');
         }
       });
     };
-'
-        if (!img.hasAttribute('loading')) {''
-          img.setAttribute('loading', 'lazy')'
+
+        if (!img.hasAttribute('loading')) {'
+          img.setAttribute('loading', 'lazy')
 { useEffect, Node } from 'react';
 interface PerformanceOptimizerProps {
   children: Node,}
@@ -52,32 +52,32 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Performance optimization code;
-    const optimizeImages = () => {'
+    const optimizeImages = () => {
       const images = document.querySelectorAll('img')
-      images.forEach((img) => {'
-        if (!img.hasAttribute('loading')) {'
+      images.forEach((img) => {
+        if (!img.hasAttribute('loading')) {
 img.setAttribute('loading', 'lazy')}
       });
-    const optimizeFonts = () => {'
-      // Preload critical fonts''
-      const link = document.createElement('link')''
-      link.rel = 'preload''
-      link.href = '/fonts/inter.woff2''
-      link.as = 'font''
-      link.type = 'font/woff2''
+    const optimizeFonts = () => {
+      // Preload critical fonts'
+      const link = document.createElement('link')'
+      link.rel = 'preload'
+      link.href = '/fonts/inter.woff2'
+      link.as = 'font'
+      link.type = 'font/woff2'
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link)};
 
-    const optimizeResources = () => {'
-      // Preload critical resources''
-      const criticalResources = ['/css/critical.css'''
+    const optimizeResources = () => {
+      // Preload critical resources'
+      const criticalResources = ['/css/critical.css''
         '/js/critical.js'';
       ];
 
-      criticalResources.forEach((resource) => {'
-        const link = document.createElement('link')'
-        link.rel = 'preload'
-        link.href = resource'
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link')
+        link.rel = 'preload
+        link.href = resource
         link.as = resource.endsWith('.css') ? 'style' : 'script';
         document.head.appendChild(link)})};
 
@@ -120,8 +120,8 @@ img.setAttribute('loading', 'lazy')}
     }
   }, []);
 
-  useEffect(() => {'
-    window.addEventListener('scroll', handleScroll, { passive: true })'
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
@@ -140,8 +140,8 @@ img.setAttribute('loading', 'lazy')}
     }
   }, []);
 
-  useEffect(() => {'
-    window.addEventListener('resize', handleResize, { passive: true })'
+  useEffect(() => {
+    window.addEventListener('resize', handleResize, { passive: true })
     return () => window.removeEventListener('resize', handleResize);
   }, [handleResize]);
 
@@ -150,7 +150,7 @@ img.setAttribute('loading', 'lazy')}
     if (!isOptimized) return;
 
     const observerOptions = {
-      root: null,'
+      root: null,
       rootMargin: '50px',
       threshold: 0.1
     };
@@ -160,7 +160,7 @@ img.setAttribute('loading', 'lazy')}
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
           
-          // Add animation classes when element comes into view'
+          // Add animation classes when element comes into view
           element.classList.add('animate-fade-in');
           
           // Unobserve after animation
@@ -169,7 +169,7 @@ img.setAttribute('loading', 'lazy')}
       });
     }, observerOptions);
 
-    // Observe elements with data-lazy attribute'
+    // Observe elements with data-lazy attribute
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach(el => observer.observe(el));
 
@@ -181,27 +181,27 @@ img.setAttribute('loading', 'lazy')}
     if (!isOptimized) return;
 
     // DNS prefetch for external resources
-    const dnsPrefetchDomains = ['
-      '//fonts.googleapis.com','
-      '//fonts.gstatic.com','
-      '//www.google-analytics.com'
+    const dnsPrefetchDomains = [
+      '//fonts.googleapis.com',
+      '//fonts.gstatic.com',
+      '// www.google-analytics.com
     ];
 
-    dnsPrefetchDomains.forEach(domain => {'
-      const link = document.createElement('link')'
+    dnsPrefetchDomains.forEach(domain => {
+      const link = document.createElement('link')
       link.rel = 'dns-prefetch';
       link.href = domain;
       document.head.appendChild(link);
     });
 
     // Module preload for critical JavaScript
-    const criticalModules = ['
-      '/','
-      '/'
+    const criticalModules = [
+      '/',
+      '/
     ];
 
-    criticalModules.forEach(module => {'
-      const link = document.createElement('link')'
+    criticalModules.forEach(module => {
+      const link = document.createElement('link')
       link.rel = 'modulepreload';
       link.href = `${module}.js`;
       document.head.appendChild(link);
@@ -209,7 +209,7 @@ img.setAttribute('loading', 'lazy')}
   }, [isOptimized]);
 
   return (
-    <></>
+    <>
       {children}
       
       {/* Performance monitoring styles */}
@@ -230,11 +230,11 @@ img.setAttribute('loading', 'lazy')}
         }
         
         /* Optimize font loading */
-        @font-face {'
+        @font-face {
           font-family: 'Inter';
           font-style: normal;
           font-weight: 400;
-          font-display: swap'
+          font-display: swap
           src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
         }
         
@@ -270,4 +270,5 @@ img.setAttribute('loading', 'lazy')}
 };
 
 export default PerformanceOptimizer;
-'
+
+}}}

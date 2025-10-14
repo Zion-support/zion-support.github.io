@@ -1,102 +1,66 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Common patterns to fix
-const fixes = [
-  // Fix unterminated string literals with single quotes
-  {
-    pattern: /'([^']*),'/g,
-    replacement: "'$1'"
-  },
-  // Fix malformed object properties
-  {
-    pattern: /(\w+),'(\w+)',/g,
-    replacement: "$1: '$2',"
-  },
-  // Fix missing commas in object literals
-  {
-    pattern: /'(\w+)','(\w+)',/g,
-    replacement: "'$1', '$2',"
-  },
-  // Fix numeric literal issues
-  {
-    pattern: /(\d+),'(\w+)',/g,
-    replacement: "$1, '$2',"
-  },
-  // Fix JSX fragment closing issues
-  {
-    pattern: /<>\s*$/gm,
-    replacement: "<>"
-  },
-  // Fix missing closing tags
-  {
-    pattern: /<(\w+)([^>]*)>\s*$/gm,
-    replacement: "<$1$2></$1>"
-  },
-  // Remove git branch names from code
-  {
-    pattern: /[a-z0-9-]+\/[a-z0-9-]+-[a-z0-9-]+/g,
-    replacement: ""
-  },
-  // Fix empty object properties
-  {
-    pattern: /{\s*}/g,
-    replacement: "{}"
-  }
-];
-
+// Function to fix unterminated string literals and JSX issues
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
+
+    // Fix unterminated string literals with extra quotes
+    const originalContent = content;
+    content = content.replace(/from\s+['"`]([^'"`]+)['"`]''/g, "from '$1';");
+    content = content.replace(/from\s+['"`]([^'"`]+)['"`]"/g, "from '$1';");
+    content = content.replace(/import\s+([^'"`]+)\s+from\s+['"`]([^'"`]+)['"`]''/g, "import $1 from '$2';");
+    content = content.replace(/import\s+([^'"`]+)\s+from\s+['"`]([^'"`]+)['"`]"/g, "import $1 from '$2';");
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
+    // Fix 'use client' directive
+    content = content.replace(/'use client;'/g, "'use client';");
+    content = content.replace(/'use client'/g, "'use client';");
     
-    if (modified) {
+    // Fix JSX closing tags that are malformed
+    content = content.replace(/<([^>]+)><\/\1>/g, '<$1></$1>');
+    
+    // Fix unterminated comments
+    content = content.replace(/\/\/\s*([^'\n]*?)'$/gm, '// $1');
+    
+    // Remove trailing quotes at end of file
+    content = content.replace(/'$/gm, '');
+    
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
+      modified = true;
     }
-    return false;
+    
+    return modified;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-async function main() {
-  console.log('Starting syntax error fixes...');
+// Find all TypeScript and JavaScript files
+const patterns = [
+  'app/**/*.tsx',
+  'app/**/*.ts',
+  '*.tsx',
+  '*.ts'
+];
+
+let totalFixed = 0;
+
+patterns.forEach(async (pattern) => {
+  const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**'] });
   
-  // Find all TypeScript and JSX files
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixFile(file)) {
-        totalFixed++;
-      }
+  files.forEach(file => {
+    if (fixFile(file)) {
+      totalFixed++;
     }
-  }
-  
-  console.log(`\nFixed ${totalFixed} files`);
-}
+  });
+});
 
-main().catch(console.error);
-
-export { fixFile, fixes };
+console.log(`\nFixed ${totalFixed} files`);

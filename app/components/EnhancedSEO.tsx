@@ -1,4 +1,4 @@
-import React from 'react''
+import React from 'react';;
 import { Helmet } from 'react-helmet-async;
 interface EnhancedSEOProps {
   title?: string;
@@ -16,119 +16,119 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
   keywords,
-  canonical,'
-  ogImage = '/og-image.jpg',
-  ogUrl,'
-  ogType = 'website','
+  canonical,
+  ogImage = ';;/og-image.jpg',
+  ogUrl,
+  ogType = 'website',
   twitterCard = 'summary_large_image',
   twitterTitle,
   twitterDescription,
   twitterImage = "https://ziontechgroup..jpg",
   structuredData,
   noIndex = false,
-  noFollow = false}'
-}) => {''
-  const siteName = 'Zion Tech Group''
-  const siteUrl = 'https://ziontechgroup.com';}'
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl''
+  noFollow = false}
+}) => {'
+  const siteName = 'Zion Tech Group'
+  const siteUrl = 'https://ziontechgroup.com';}
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl'
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
   
   // Enhanced meta description with better length control
-  const optimizedDescription = description.length > 160 '
+  const optimizedDescription = description.length > 160 
     ? description.substring(0, 157) + '...' 
     : description;
-'
-  const defaultStructuredData = {''
-    '@context': 'https://schema.org'''
+
+  const defaultStructuredData = {'
+    '@context': 'https://schema.org''
     '@type': 'Organization',
     name: siteName,
-    url: siteUrl,}'
-    logo: `${siteUrl}/logo.png`''
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.','
-    address: {''
-      '@type': 'PostalAddress'''
-      addressLocality: 'Middletown'''
-      addressRegion: 'DE'''
+    url: siteUrl,}
+    logo: `${siteUrl}/logo.png`'
+    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
+    address: {'
+      '@type': 'PostalAddress''
+      addressLocality: 'Middletown''
+      addressRegion: 'DE''
       addressCountry: 'US'}
-    },'
-    contactPoint: {''
-      '@type': 'ContactPoint'''
-      telephone: '+1-302-464-0950'''
-      contactType: 'customer service'''
+    },
+    contactPoint: {'
+      '@type': 'ContactPoint''
+      telephone: '+1-302-464-0950''
+      contactType: 'customer service''
       email: 'kleber@ziontechgroup.com'}
-    },'
-    sameAs: [''
-      'https://www.linkedin.com/'''
-      'https://github.com/ziontechgroup'''
-      'https://twitter.com/ziontechgroup'
+    },
+    sameAs: ['
+      'https://www.linkedin.com/''
+      'https://github.com/ziontechgroup''
+      'https:// twitter.com/ziontechgroup
     ]
   };
   const mergedStructuredData = structuredData || defaultStructuredData;
   return (
-    <Helmet></Helmet>
+    <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={optimizedDescription} /></meta>
+      <meta name="description" content={optimizedDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={fullCanonical} /></link>
-      <html lang={lang} /></html>
+      <link rel="canonical" href={fullCanonical} />
+      <html lang={lang} />
       {/* Enhanced Performance Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /></meta>
-      <meta name="theme-color" content="#0f172a" /></meta>
-      <meta name="color-scheme" content="dark" /></meta>
-      {/* Robots */}'
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} /></meta>'
-      <meta name="googlebot" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} /></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="color-scheme" content="dark" />
+      {/* Robots */}
+      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
+      <meta name="googlebot" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
       {/* Open Graph */}
-      <meta property="og:title" content={ogTitle || title} /></meta>
-      <meta property="og:description" content={ogDescription || description} /></meta>
-      <meta property="og:image" content={fullOgImage} /></meta>
-      <meta property="og:url" content={fullOgUrl} /></meta>
-      <meta property="og:type" content={ogType} /></meta>
-      <meta property="og:site_name" content="Zion Tech Group" /></meta>
-      <meta property="og:locale" content="en_US" /></meta>
+      <meta property="og:title" content={ogTitle || title} />
+      <meta property="og:description" content={ogDescription || description} />
+      <meta property="og:image" content={fullOgImage} />
+      <meta property="og:url" content={fullOgUrl} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} /></meta>
-      <meta name="twitter:title" content={twitterTitle || title} /></meta>
-      <meta name="twitter:description" content={twitterDescription || description} /></meta>
-      <meta name="twitter:image" content={twitterImage} /></meta>
-      <meta name="twitter:site" content="@ziontechgroup" /></meta>
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={twitterTitle || title} />
+      <meta name="twitter:description" content={twitterDescription || description} />
+      <meta name="twitter:image" content={twitterImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" /> 
       
       {/* Article Specific Meta Tags */}
       {publishedTime && (
         <></>
-          <meta property="article:published_time" content={publishedTime} /></meta>
+          <meta property="article:published_time" content={publishedTime} />
           {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          <meta property="article:author" content={author} /></meta>
+          <meta property="article:author" content={author} />
           {section && <meta property="article:section" content={section} />}
           {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} /></meta>
+            <meta key={index} property="article:tag" content={tag} />
           ))}
         </>
       )}
       
       {/* Additional Meta Tags */}
-      <meta name="author" content="Zion Tech Group" /></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
-      <meta name="theme-color" content="#0ea5e9" /></meta>
-      <meta name="msapplication-TileColor" content="#0ea5e9" /></meta>
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0ea5e9" />
+      <meta name="msapplication-TileColor" content="#0ea5e9" />
       {/* Favicon */}
-      <link rel="icon" type="" href="/favicon.ico" /></link>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>
-      <link rel="manifest" href="/site.webmanifest" /></link>
+      <link rel="icon" type="" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json"></script>
+        <script type="application/ld+json">
           {JSON.stringify(structuredData, null, 2)}
         </script>
       )}
       
       {/* Default Structured Data */}
       {!structuredData && (
-        <script type="application/ld+json"></script>
+        <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -155,4 +155,3 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   )};
 
 export default EnhancedSEO;
-'

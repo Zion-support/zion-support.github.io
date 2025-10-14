@@ -9,7 +9,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-'
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -18,7 +18,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       canvas.height = window.innerHeight;
     };
 
-    resizeCanvas()'
+    resizeCanvas()
     window.addEventListener('resize', resizeCanvas);
 
     // Animated particles
@@ -91,7 +91,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
 
     animate();
 
-    return () => {'
+    return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
@@ -99,20 +99,20 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
 
   return (
-    <div className="relative min-h-screen"></div>
+    <div className="relative min-h-screen">
       <canvas
         ref={canvasRef;
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      /></canvas>
+      />
       {children}
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse">
         
         {/* Animated Particles */}
-        <div className="absolute inset-0"></div>
+        <div className="absolute inset-0">
           {Array.from({ length: 20 }).map((_, i) => (
             <div
               key={i;
@@ -123,25 +123,26 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
                 animationDelay: `${Math.random() * 5}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
               }
-            ></div>
+            >
 ))}
         </div>
-        <div className="absolute inset-0"></div>"
+        <div className="absolute inset-0">"
           {Array.from({ length: 20,}).map((_, i) => (
             <div;
               key={i}
-              }}></div>
+              }}>
           ))
         </div>
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50">
       </div>
       {/* Content */}
-      <div className="relative z-10"></div>
+      <div className="relative z-10">
         {children}
       </div>
     </div>
   )};
 
 export default FuturisticBackground;
-'
+
+}}}

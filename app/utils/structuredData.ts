@@ -1,16 +1,16 @@
 import React from 'react;
-import react-helmet-async from 'react-helmet-async;
+import react-helmet-async from ';;react-helmet-async;
 const StructuredDataPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>StructuredData - Zion Tech Group</title>
-        <meta name="description" content="StructuredData - Zion Tech Group" /></meta>
+        <meta name="description" content="StructuredData - Zion Tech Group" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-8">StructuredData</h1>
-          <p className="text-gray-300 text-lg"></p>
+          <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>
         </div>

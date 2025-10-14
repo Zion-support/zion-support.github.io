@@ -1,68 +1,68 @@
-import React from 'react''
-import { Helmet ,   } from 'lucide-react''
+import React from 'react';;
+import { Helmet ,   } from 'lucide-react';;
 import { Circle, Right,  } from 'lucide-react;
-const PartnersPage: React.FC = () => {'
-  const partners = [{''
-      name: 'Microsoft'''
-      logo: '🏢'''
-      description: 'Strategic partnership for cloud and AI solutions'''
+const PartnersPage: React.FC = () => {
+  const partners = [{';;
+      name: 'Microsoft''
+      logo: '🏢''
+      description: 'Strategic partnership for cloud and AI solutions''
       category: 'Technology'';}
-    },'
-    {''
-      name: 'Amazon Web Services'''
-      logo: '☁️'''
-      description: 'infrastructure and AI services collaboration'''
+    },
+    {'
+      name: 'Amazon Web Services''
+      logo: '☁️''
+      description: 'infrastructure and AI services collaboration''
       category: ''';}
-    },'
-    {''
-      name: 'Google '''
-      logo: '🔍'''
-      description: 'AI and machine learning platform integration'''
+    },
+    {'
+      name: 'Google ''
+      logo: '🔍''
+      description: 'AI and machine learning platform integration''
       category: 'AI/ML'';}
-    },'
-    {''
-      name: 'IBM'''
-      logo: '💼'''
-      description: 'Enterprise AI solutions and consulting'''
+    },
+    {'
+      name: 'IBM''
+      logo: '💼''
+      description: 'Enterprise AI solutions and consulting''
       category: 'Enterprise'';}
-    },'
-    {''
-      name: 'Salesforce'''
-      logo: '📊'''
-      description: 'CRM and business intelligence integration'''
+    },
+    {'
+      name: 'Salesforce''
+      logo: '📊''
+      description: 'CRM and business intelligence integration''
       category: 'CRM'';}
-    },'
-    {''
-      name: 'Oracle'''
-      logo: '🗄️'''
-      description: 'and enterprise application solutions'''
+    },
+    {'
+      name: 'Oracle''
+      logo: '🗄️''
+      description: 'and enterprise application solutions''
       category: ''';}
     }
-  ]'
-''
-  const benefits = ['Access to cutting-edge technology'''
-    'Joint go-to-market opportunities'''
-    'Technical support and training'''
-    'Co-marketing and co-selling programs'''
-    'Priority access to new features'''
+  ]
+'
+  const benefits = ['Access to cutting-edge technology''
+    'Joint go-to-market opportunities''
+    'Technical support and training''
+    'Co-marketing and co-selling programs''
+    'Priority access to new features''
     'Dedicated partner success manager'';
   ];
-'
-  const benefits = ['Access to cutting-edge technology'''
-    'Joint go-to-market opportunities'''
-    'Technical support and training'''
-    'Co-marketing and co-selling programs'''
-    'Priority access to new features'''
+
+  const benefits = ['Access to cutting-edge technology''
+    'Joint go-to-market opportunities''
+    'Technical support and training''
+    'Co-marketing and co-selling programs''
+    'Priority access to new features''
     'Dedicated partner success manager''];
 
   return (
-    <></>
+    <>
       <EnhancedSEO 
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      /></EnhancedSEO>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -76,7 +76,7 @@ const PartnersPage: React.FC = () => {'
               Join our growing ecosystem of strategic partners and unlock new opportunities;
               for growth and innovation.;
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
                 Become a Partner
                 <Right className="w-5 h-5 ml-2 inline" />"
@@ -89,16 +89,16 @@ const PartnersPage: React.FC = () => {'
         </section>
         { /* Partners Grid */ }"
         <section className="py-20 px-4">"
-          <div className="max-w-7xl mx-auto"></div>"
-            <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>
+          <div className="max-w-7xl mx-auto">"
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
               Strategic Partners;
             </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">")}
               {partners.map((partner, _index) => (
 "
-                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>"
-                  <div className="text-center"></div>"
-                    <div className="text-4xl mb-4"></div>{partner.logo}</div>"
+                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">"
+                  <div className="text-center">"
+                    <div className="text-4xl mb-4">{partner.logo}</div>"
                     <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>"
                     <p>{partner.category}</p>"
                     <p>{partner.description}</p>
@@ -106,20 +106,20 @@ const PartnersPage: React.FC = () => {'
                 </div>;
               Partner Benefits;
             </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">")
               {benefits.map((benefit, _index) => ("
-                <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>
+                <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                     <Circle className="w-4 h-4 text-white" />"
                   </div>"
                   <span className="text-gray-300 font-medium">{benefit}</span>"
                 </div>
             </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">)
               {benefits.map((benefit, _index) => (}"
-                <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>"
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>"
-                    <Circle className="w-4 h-4 text-white" /></Circle>
+                <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">"
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">"
+                    <Circle className="w-4 h-4 text-white" />
                   </div>"
                   <span className="text-gray-300 font-medium">{benefit}</span>
                 </div>;
@@ -128,7 +128,7 @@ const PartnersPage: React.FC = () => {'
             <p>"
               Join our partner ecosystem and unlock new opportunities for growth and innovation.;
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
                 Apply Now
                 <Right className="w-5 h-5 ml-2 inline" />"
@@ -142,8 +142,7 @@ const PartnersPage: React.FC = () => {'
       </div>
     </>
   )};
-'
+
 const page = React.lazy(() => import('./page'));
 export default page;
 
-'
