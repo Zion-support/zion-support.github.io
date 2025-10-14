@@ -28,14 +28,24 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const siteUrl = 'https://ziontechgroup.com';
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+  
+  // Enhanced meta description with better length control
+  const optimizedDescription = description.length > 160 
+    ? description.substring(0, 157) + '...' 
+    : description;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
+      <meta name="description" content={optimizedDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={fullCanonical} />
+      
+      {/* Enhanced Performance Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="color-scheme" content="dark" />
       
       {/* Robots */}
       {noIndex && <meta name="robots" content="noindex, nofollow" />}

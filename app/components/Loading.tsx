@@ -28,7 +28,7 @@ const Loading: React.FC<LoadingProps> = ({
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIcon((prev) => (prev + 1) % icons.length);
-    }, 1000);
+    }, 800); // Faster animation for better UX
 
     return () => clearInterval(interval);
   }, []);
@@ -36,7 +36,12 @@ const Loading: React.FC<LoadingProps> = ({
   const CurrentIcon = icons[currentIcon];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div 
+      className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"
+      role="status"
+      aria-live="polite"
+      aria-label="Loading content"
+    >
       <div className="text-center">
         {/* Animated Icon */}
         <div className={`${sizeClasses[size]} mx-auto mb-6 relative`}>
