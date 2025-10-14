@@ -9,7 +9,7 @@ interface SEOEnhancerProps {
   structuredData?: Record<string, unknown>;
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ children, title, description, keywords, type, structuredData }) => {
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ children }) => {
   return <>{children}</>;
 };
 

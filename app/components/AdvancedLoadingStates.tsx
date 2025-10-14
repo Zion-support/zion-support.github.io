@@ -6,7 +6,7 @@ interface AdvancedLoadingStatesProps {
   message?: string;
 }
 
-const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ type, fullScreen, message }) => {
+const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ fullScreen, message }) => {
   return (
     <div className={`${fullScreen ? 'fixed inset-0' : ''} flex items-center justify-center bg-slate-900 text-white`}>
       <div className="text-center">

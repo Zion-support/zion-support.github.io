@@ -4,7 +4,7 @@ interface PerformanceMonitorProps {
   onMetricsUpdate: () => void;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onMetricsUpdate }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
   return null;
 };
 
