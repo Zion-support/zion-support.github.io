@@ -99,6 +99,7 @@ const PagePage = () => {
         <title>AI E-commerce Solutions - Zion Tech Group</title>
         <meta name="description" content="Transform your e-commerce with AI-powered solutions. Increase sales, optimize inventory, and enhance customer experience with our advanced AI technology." />
       </Helmet>
+      </Helmet>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20">

@@ -118,6 +118,7 @@ const PagePage = () => {
         <title>AI Mobile App Development - Zion Tech Group</title>
         <meta name="description" content="Build powerful AI-powered mobile apps for iOS and Android. Expert development with cutting-edge AI integration, native performance, and modern design." />
       </Helmet>
+      </Helmet>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">

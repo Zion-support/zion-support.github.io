@@ -82,6 +82,7 @@ const MarketingToolsPage: React.FC = () => {
       <Helmet>
         <title>Marketing Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
+      </Helmet>
         <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
       </Helmet>
 

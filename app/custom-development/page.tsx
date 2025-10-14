@@ -7,6 +7,7 @@ export default function CustomDevelopmentPage() {
       <Helmet>
         <title>Custom Development - Zion Tech Group</title>
         <meta name="description" content="Professional custom development services by Zion Tech Group." />
+      </Helmet>
         <meta name="keywords" content="custom development, software development, IT services" />
       </Helmet>
       

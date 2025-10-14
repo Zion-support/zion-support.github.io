@@ -143,6 +143,7 @@ const CommunityPage: React.FC = () => {
       <Helmet>
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join our developer community. Share projects, get help, and connect with other AI developers using Zion Tech Group services." />
+      </Helmet>
         <meta name="keywords" content="developer community, AI community, developer forum, project showcase, technical discussions" />
       </Helmet>
 

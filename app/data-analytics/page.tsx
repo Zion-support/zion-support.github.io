@@ -7,6 +7,7 @@ export default function DataAnalyticsPage() {
       <Helmet>
         <title>Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional data analytics services by Zion Tech Group." />
+      </Helmet>
         <meta name="keywords" content="data analytics, business intelligence, IT services" />
       </Helmet>
       

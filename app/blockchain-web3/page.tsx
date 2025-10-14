@@ -9,6 +9,7 @@ export default function Page() {
         <title>Blockchain Web3 - Zion Tech Group</title>
         <meta name="description" content="Blockchain Web3 services and solutions from Zion Tech Group" />
       </Helmet>
+      </Helmet>
       
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
