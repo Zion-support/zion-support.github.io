@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+
 export default defineConfig({
-  plugins: [
-    react({
-      // Optimize JSX runtime
+  plugins: [react({
       jsxRuntime: 'automatic',
     }),
   ],
@@ -16,7 +15,8 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './utils'),
     },
   },
-  build: {outDir: 'dist',
+  build: {
+    outDir: 'dist',
     target: 'esnext',
     minify: 'esbuild',
     sourcemap: process.env.NODE_ENV === 'development',
@@ -27,30 +27,30 @@ export default defineConfig({
           // Vendor chunks
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+              return 'vendor-react'
             }
             if (id.includes('react-router')) {
-              return 'vendor-router';
+              return 'vendor-router'
             }
             if (id.includes('@heroicons') || id.includes('lucide-react')) {
-              return 'vendor-icons';
+              return 'vendor-icons'
             }
             if (id.includes('framer-motion')) {
-              return 'vendor-motion';
+              return 'vendor-motion'
             }
             if (id.includes('react-helmet')) {
-              return 'vendor-helmet';
+              return 'vendor-helmet'
             }
-            return 'vendor-other';
+            return 'vendor-other'
           }
           // Page chunks for better code splitting
           if (id.includes('/app/pages/')) {
-            return 'pages';
+            return 'pages'
           }
           if (id.includes('/app/components/')) {
-            return 'components';
+            return 'components'
           }
-          return undefined;
+          return undefined
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
@@ -105,4 +105,4 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
-});
+})

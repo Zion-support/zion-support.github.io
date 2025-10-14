@@ -14,13 +14,16 @@ module.exports = {
   },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.jest.json'
+      tsconfig: 'tsconfig.jest.json',
+      useESM: true
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/src/**/*.(test|spec).(ts|tsx|js|jsx)'
+    '<rootDir>/src/**/*.(test|spec).(ts|tsx|js|jsx)',
+    '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
   ],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
@@ -41,9 +44,4 @@ module.exports = {
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  }
 };

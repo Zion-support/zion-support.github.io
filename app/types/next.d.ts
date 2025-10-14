@@ -1,15 +1,24 @@
-
-// Next.js type declarations;
-declare module 'next' {';'
-  interface NextApiRequest {
-    user?: any;}
-  }
-  interface NextConfig {// Add any Next.js specific types here;}
-  }
-}
-// Export a utility function;
-export const nextUtil = () => {;
-  // Implementation;
-  return true;}
+declare module '*.svg' {
+  const content: string;
+  export default content;
 };
-export default nextUtil;'
+declare module '*.png' {
+  const content: string;
+  export default content;
+};
+declare module '*.jpg' {
+  const content: string;
+  export default content;
+};
+declare module '*.jpeg' {
+  const content: string;
+  export default content;
+};
+declare module '*.gif' {
+  const content: string;
+  export default content;
+};
+declare module '*.webp' {
+  const content: string;
+  export default content;
+};

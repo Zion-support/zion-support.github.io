@@ -7,129 +7,132 @@ import { glob } from 'glob';
 // Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
   let fixed = content;
-  let changes = [];
 
-  // Fix 1: Remove duplicate 'from' in import statements
-  if (fixed.includes('import React from  from')) {
-    fixed = fixed.replace(/import React from  from/g, 'import React from');
-    changes.push('Fixed duplicate "from" in import statement');
+  // Fix unterminated string literals in JSX attributes
+  fixed = fixed.replace(/content="([^"]*?)(?=\s*\/>)/g, 'content="$1"');
+  
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g);
+    return tags[tags.length - 1]; // Keep only the last closing tag
+  });
+
+  // Fix orphaned closing tags
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g);
+    return tags[tags.length - 1];
+  });
+
+  // Fix malformed function returns
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g, 'return (');
+  
+  // Fix multiple closing parentheses
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;/g, ');');
+  
+  // Fix orphaned semicolons and braces
+  fixed = fixed.replace(/;\s*}\s*;\s*}\s*;\s*}/g, '}');
+  
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, '<$1>');
+  
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(/<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g, (match, tagName) => {
+    if (match.includes('=') && !match.includes('/>')) {
+      return match + '>';
+    }
+    return match;
+  });
+
+  // Fix orphaned closing tags that don't match opening tags
+  const lines = fixed.split('\n');
+  const fixedLines = [];
+  const openTags = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Skip lines that are just orphaned closing tags
+    if (/^\s*<\/[^>]*>\s*$/.test(line) && openTags.length === 0) {
+      continue;
+    }
+    
+    // Track opening tags
+    const openingTags = line.match(/<([^\/][^>]*?)>/g);
+    if (openingTags) {
+      openingTags.forEach(tag => {
+        const tagName = tag.match(/<([^\s>]+)/);
+        if (tagName && !tag.includes('/>')) {
+          openTags.push(tagName[1]);
+        }
+      });
+    }
+    
+    // Track closing tags
+    const closingTags = line.match(/<\/([^>]+)>/g);
+    if (closingTags) {
+      closingTags.forEach(tag => {
+        const tagName = tag.match(/<\/([^>]+)>/);
+        if (tagName) {
+          const index = openTags.lastIndexOf(tagName[1]);
+          if (index !== -1) {
+            openTags.splice(index, 1);
+          }
+        }
+      });
+    }
+    
+    fixedLines.push(line);
   }
+  
+  fixed = fixedLines.join('\n');
 
-  // Fix 2: Fix unterminated string literals with quotes
-  const unterminatedStringRegex = /"([^"]*?)\n/g;
-  const unterminatedMatches = fixed.match(unterminatedStringRegex);
-  if (unterminatedMatches) {
-    fixed = fixed.replace(unterminatedStringRegex, (match, content) => {
-      return `"${content}"\n`;
-    });
-    changes.push('Fixed unterminated string literals');
-  }
-
-  // Fix 3: Remove extra quotes and fix malformed object properties
-  fixed = fixed.replace(/"([^"]*?)",\s*"([^"]*?)"/g, '"$1", "$2"');
-  fixed = fixed.replace(/"([^"]*?)",\s*"([^"]*?)"}/g, '"$1", "$2"}');
-  
-  // Fix 4: Fix duplicate property assignments
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)",\s*\1:\s*"([^"]*)"/g, '$1: "$2"');
-  
-  // Fix 5: Remove extra closing braces and parentheses
-  fixed = fixed.replace(/\}\s*\}\s*\)\s*;\s*\}/g, '});');
-  fixed = fixed.replace(/\}\s*\)\s*;\s*\}/g, '});');
-  
-  // Fix 6: Fix malformed JSX closing tags
-  fixed = fixed.replace(/<\/\s*>\s*<\/\s*>/g, '</>');
-  
-  // Fix 7: Remove stray semicolons in JSX
-  fixed = fixed.replace(/;\s*<\/p>/g, '</p>');
-  
-  // Fix 8: Fix incomplete import statements
-  fixed = fixed.replace(/import\s+from\s+from/g, 'import');
-  
-  // Fix 9: Remove duplicate closing tags
-  fixed = fixed.replace(/<\/div>\s*<\/div>\s*\)\s*;\s*\}/g, '</div></div>);');
-  
-  // Fix 10: Fix malformed function declarations
-  fixed = fixed.replace(/export default function\s+(\w+)\(\)\s*{\s*return\s*\(/g, 'export default function $1() {\n  return (');
-  
-  // Fix 11: Remove extra quotes at end of files
-  fixed = fixed.replace(/\n''\s*$/g, '');
-  
-  // Fix 12: Fix malformed object syntax
-  fixed = fixed.replace(/\{\s*"([^"]*)",\s*"([^"]*)"\s*\}/g, '{"$1", "$2"}');
-  
-  // Fix 13: Remove duplicate closing parentheses and braces
-  fixed = fixed.replace(/\)\s*;\s*\}\s*\}\s*$/g, ');\n}');
-  
-  // Fix 14: Fix incomplete JSX elements
-  fixed = fixed.replace(/<(\w+)\s*$/gm, '<$1>');
-  
-  // Fix 15: Remove stray characters and fix spacing
-  fixed = fixed.replace(/\s+$/gm, '');
-  fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n');
-
-  return { content: fixed, changes };
+  return fixed;
 }
 
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix specific file patterns
+function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const result = fixSyntaxErrors(content, filePath);
+    const fixed = fixSyntaxErrors(content, filePath);
     
-    if (result.changes.length > 0) {
-      fs.writeFileSync(filePath, result.content);
-      console.log(`✅ Fixed ${filePath}:`);
-      result.changes.forEach(change => console.log(`   - ${change}`));
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function
+// Main execution
 async function main() {
-  console.log('🔧 Starting syntax error fixes...\n');
-  
-  // Get all TypeScript and JavaScript files
+  console.log('Starting syntax error fixes...');
+
+  // Get all TypeScript/JavaScript files
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
-    'src/**/*.tsx',
-    'src/**/*.ts',
-    '*.tsx',
-    '*.ts'
+    'app/**/*.jsx',
+    'app/**/*.js',
+    '__tests__/**/*.tsx',
+    '__tests__/**/*.ts'
   ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
+
+  let totalFixed = 0;
+
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
     for (const file of files) {
-      totalFiles++;
-      if (processFile(file)) {
-        fixedFiles++;
+      if (fixFile(file)) {
+        totalFixed++;
       }
     }
   }
-  
-  console.log(`\n📊 Summary:`);
-  console.log(`   Total files processed: ${totalFiles}`);
-  console.log(`   Files fixed: ${fixedFiles}`);
-  console.log(`   Files unchanged: ${totalFiles - fixedFiles}`);
-  
-  if (fixedFiles > 0) {
-    console.log('\n✨ Syntax errors have been fixed!');
-  } else {
-    console.log('\n✅ No syntax errors found to fix.');
-  }
+
+  console.log(`Fixed ${totalFixed} files.`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { fixSyntaxErrors, processFile };
+main().catch(console.error);

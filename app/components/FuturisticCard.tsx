@@ -1,22 +1,14 @@
 import React from 'react';
-interface FuturisticCardProps {children: React.ReactNode;
-  className?: string;
-  variant?: 'default' | 'glow' | 'gradient';}
-const FuturisticCard: React.FC<FuturisticCardProps> = ({
-  children,
-  className = '',
-  variant = 'default'
-}) => {
-  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
-  const variantClasses = {
-    default: 'bg-white/10',
-    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',
-    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'
-  };
+
+export default function FuturisticCardPage() {
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>`
-      {children}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">FuturisticCard</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about futuristiccard</p>
+        </div>
+      </div>
     </div>
   );
-};
-export default FuturisticCard;
+}
