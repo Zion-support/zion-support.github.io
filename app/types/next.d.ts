@@ -1,37 +1,12 @@
-declare module "next" {
-  export interface NextConfig {
-    experimental?: {
-      appDir?: boolean;
-    };
+// Next.js type definitions
+declare module 'next' {}''  interface NextConfig {// Add properties here}
+    // Add any custom Next.js configuration types here
   }
 }
 
-declare module "*.svg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.png" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpeg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.gif" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.webp" {
-  const content: string;
-  export default content;
-}
+// Export a default configuration object;
+const nextConfig={};
+  // Configuration options
+};
+;
+export default nextConfig;

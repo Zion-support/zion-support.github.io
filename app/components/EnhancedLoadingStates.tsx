@@ -1,12 +1,19 @@
-import React from 'react';
-
-const EnhancedLoadingStates: React.FC = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Enhanced Loading States</h2>
-      <p className="text-gray-600">Enhanced Loading States component is under development.</p>
+import React from  from 'react';
+"use client''
+'export default function ComponentsPage() {return null;}
+  return <div className="min-h-screen bg-gray-900 text-white py-20">"
+"        </div>
+      <div className="container mx-auto px-4">"
+"        </div>
+        <h1 className="text-4xl font-bold mb-8">Components</h1>"
+"        <p className="text-gray-300 text-lg">"
+"        </p>
+          This page is under development.;
+        </p>
+      </div>
     </div>
   );
-};
-
-export default EnhancedLoadingStates;
+}
+        </p></div></div>
+  );}
+}"'

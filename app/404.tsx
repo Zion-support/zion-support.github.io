@@ -1,49 +1,47 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-export default function NotFoundPage() {
-
-  return (
-    <>
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+export default function NotFoundPage() {return (
+    <React.Fragment>
       <Helmet>
-        <title>44 - Zion Tech Group</title>
-        <meta name="description" content="Professional 44 services by Zion Tech Group." />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-90 mb-8">
-            44 - Page Not Found
+        <title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Explore our AI and IT solutions." />
+"      </Helmet>
+      <div className="container mx-auto px-4 py-16">"        <div className="text-center">
+"          <h1 className="text-4xl font-bold text-gray-900 mb-8">"            404 - Page Not Found
           </h1>
-          <p className="text-xl text-gray-60 mb-8">
-            The page you"re looking for doesn"t exist.'
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-20 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-90 mb-2">
-                Expert Solutions
+          <p className="text-xl text-gray-600 mb-8">
+"            The page you're looking for doesn't exist.'          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+"              <h3 className="text-lg font-semibold text-blue-900 mb-2">"                Expert Solutions
               </h3>
-              <p className="text-blue-70">
-                Our team of experts delivers cutting-edge solutions.
+              <p className="text-blue-700">
+"                Our team of experts delivers cutting-edge solutions.
               </p>
             </div>
-            <div className="bg-green-50 border border-green-20 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-90 mb-2">
-                Custom Implementation
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"              <h3 className="text-lg font-semibold text-green-900 mb-2">
+"                Custom Implementation
               </h3>
-              <p className="text-green-70">
-                Tailored implementations for your specific requirements.
+              <p className="text-green-700">"                Tailored implementations for your specific requirements.
               </p>
             </div>
-            <div className="bg-purple-50 border border-purple-20 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-90 mb-2">
-                24/7 Support
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+"              <h3 className="text-lg font-semibold text-purple-900 mb-2">"                24/7 Support
               </h3>
-              <p className="text-purple-70">
-                Round-the-clock support for all your needs.
+              <p className="text-purple-700">
+"                Round-the-clock support for all your needs.
               </p>
             </div>
           </div>
+          <div className="mt-12">
+            <Link
+              to="/"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200"
+            >
+              Go Home
+            </Link>
+          </div>
         </div>
       </div>
-    </>
-  )
-}
+    </React.Fragment>
+  );}
