@@ -7,8 +7,8 @@ const Page = () => {
       <p className="text-gray-300">
         This is a placeholder component for Page.
       </p>
-    </div>
   );
 };
 
 export default Page;
+</div>

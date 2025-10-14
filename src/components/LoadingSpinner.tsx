@@ -5,7 +5,7 @@ interface LoadingSpinnerProps {
   children?: React.ReactNode;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', children }) => {''
+const LoadingSpinner: 'React.FC<LoadingSpinnerProps> = ({ className = ''', children }) => {''
   return (
 <>    <div className={`loadingspinner ${className}`}></div>```
       {children}

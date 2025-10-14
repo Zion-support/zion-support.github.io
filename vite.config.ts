@@ -5,37 +5,37 @@ import path from "path";
 const resolve = path.resolve;
 
 export default defineConfig({
-  plugins: [
+  plugins: '[
     react({
       // Enable JSX runtime
-      jsxRuntime: "automatic",
+      jsxRuntime: "automatic"',
     }),
   ],
-  resolve: {
+  resolve: '{
     alias: {
-      '@': resolve(__dirname, './src'),
+      '@': resolve(__dirname', './src'),
       '@app': resolve(__dirname, './app'),
     },
   },
-  build: {
-    outDir: "dist",
-    sourcemap: false,
+  build: '{
+    outDir: "dist"',
+    sourcemap: 'false',
     minify: "esbuild",
-    cssCodeSplit: true,
-    rollupOptions: {
+    cssCodeSplit: 'true',
+    rollupOptions: '{
       output: {
         manualChunks: (id) => {
           // Vendor chunks
           if (id.includes('node_modules')) {
-            return 'vendor';
+            return 'vendor';'
           }
         },
-        assetFileNames: (assetInfo) => {
+        assetFileNames: '(assetInfo) => {
           if (
             assetInfo.name &&
             /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
           ) {
-            return `assets/images/[name]-[hash][extname]`;
+            return `assets/images/[name]-[hash][extname]`;'
           }
           return `assets/[name]-[hash][extname]`;
         },
@@ -44,17 +44,17 @@ export default defineConfig({
       },
     },
   },
-  server: {
-    port: 3000,
-    open: false,
-    cors: true,
-    hmr: {
-      overlay: true,
+  server: '{
+    port: 3000',
+    open: 'false',
+    cors: 'true',
+    hmr: '{
+      overlay: true',
     },
   },
-  optimizeDeps: {
+  optimizeDeps: '{
     include: [
-      'react',
+      'react'',
       'react-dom',
       'react-router-dom',
     ],

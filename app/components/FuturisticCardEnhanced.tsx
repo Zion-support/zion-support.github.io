@@ -4,8 +4,6 @@
             Professional futuristic card enhanced services
             designed to help your business grow and succeed.
           </p>
-        </div>
-      </section>
       { /* Content Section */ }
             Futuristic d Enhanced</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -29,8 +27,6 @@
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                   Ongoing support
                 </li>
-              </ul>
-            </div>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>"
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
               <p className="mb-6">
@@ -41,9 +37,6 @@
                 className="$1"></a>
                 Contact Us
               </a>
-            </div>
-          </div>
-        </div>
       </section>
             Ready to Get Started?
           </h2>
@@ -57,10 +50,7 @@
             href="$1
             className="$1"></a>
             Get Started Today
-          </a>
-        </div>
-      </section>
-    </div>)
+          </a>)
   )
 export default FuturisticCardEnhanced
                 We provide comprehensive futuristic card enhanced
@@ -74,7 +64,7 @@ export default FuturisticCardEnhanced
                   Expert consultation</li>
                 <li className="flex items-center">"
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support</li></ul></div>
+                  Ongoing support</li>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>"
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
               <p className="mb-6">
@@ -88,4 +78,4 @@ export default FuturisticCardEnhanced
   )
 export default FuturisticCardEnhanced
 }
-export default FuturisticCardEnhanced
+export default FuturisticCardEnhanced</ul></p></ul>

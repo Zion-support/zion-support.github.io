@@ -3,15 +3,15 @@ import React from "react";"
 
 // Declare gtag function for Google Analytics;
 declare global {
-  function gtag(...args: any[]): void;
+  function gtag(...args: 'any[]): void;'
 }
 
 export interface AnalyticsEvent {
-  action: string;
+  action: 'string;
   category: string;
   label?: string;
   value?: number;
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string', unknown>;
 }
 export interface AnalyticsUser {
   id?: string;
@@ -19,10 +19,10 @@ export interface AnalyticsUser {
 }
 class AnalyticsService {
   private isInitialized = false;
-  private queue: AnalyticsEvent[] = []
+  private queue: 'AnalyticsEvent[] = []
   private readonly maxQueueSize = 100;
   public config = {
-    gaId: 'GA_MEASUREMENT_ID'''
+    gaId: 'GA_MEASUREMENT_ID''''
   }
   
   initialize(): void {
@@ -38,18 +38,18 @@ class AnalyticsService {
     }
   }
   
-  trackEvent(event: AnalyticsEvent): void {
+  trackEvent(event: 'AnalyticsEvent): void {
     try {
       if (!this.isInitialized) {
         this.queueEvent(event)
-        return
+        return'
       }
       // Send to Google Analytics if available;
       if (this.hasGtag()) {
         gtag('event', event.action, {''
-          event_category: event.category,
-          event_label: event.label,
-          value: event.value,
+          event_category: 'event.category',
+          event_label: 'event.label',
+          value: 'event.value',
           ...event.metadata;
         })
       }
@@ -61,12 +61,12 @@ class AnalyticsService {
     }
   }
   
-  trackPageView(path: string, title?: string): void {
+  trackPageView(path: 'string', title?: string): void {
     try {
       if (this.hasGtag()) {
         gtag('config', this.config.gaId, {''
-          page_path: path,
-          page_title: title;
+          page_path: 'path',
+          page_title: 'title;'
         })
       }
     } catch (error) {
@@ -74,11 +74,11 @@ class AnalyticsService {
     }
   }
   
-  identifyUser(user: AnalyticsUser): void {
+  identifyUser(user: 'AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        gtag('config', this.config.gaId, {''
-          user_id: user.id,
+        gtag('config'', this.config.gaId, {''
+          user_id: 'user.id',
           ...user.properties;
         })
       }
@@ -87,31 +87,31 @@ class AnalyticsService {
     }
   }
   
-  trackError(error: Error, metadata?: Record<string, unknown>): void {
+  trackError(error: 'Error', metadata?: Record<string, unknown>): void {
     this.trackEvent({
       action: 'error',''
       category: 'exception',''
-      label: error.message,
-      metadata: {
-        stack: error.stack,
+      label: 'error.message',
+      metadata: '{
+        stack: error.stack',
         ...metadata;
       }
     })
   }
   
   trackTiming(
-    category: string,
-    variable: string,
-    value: number,
+    category: 'string',
+    variable: 'string',
+    value: 'number',
     label?: string;
   ): void {
     try {
       if (this.hasGtag()) {
         gtag('event', 'timing_complete', {''
-          name: variable,
-          value: Math.round(value),
-          event_category: category,
-          event_label: label;
+          name: 'variable',
+          value: 'Math.round(value)',
+          event_category: 'category',
+          event_label: 'label;'
         });
       }
     } catch (error) {
@@ -119,13 +119,13 @@ class AnalyticsService {
     }
   }
   
-  trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
+  trackPerformance(metric: 'string', value: 'number', metadata?: Record<string, unknown>): void {
     try {
       this.trackEvent({
         action: 'performance',''
         category: 'web_vitals',''
-        label: metric,
-        value: Math.round(value),
+        label: 'metric',
+        value: 'Math.round(value)',
         metadata;
       })
     } catch (error) {
@@ -145,9 +145,9 @@ class AnalyticsService {
     return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'''
   }
   
-  private queueEvent(event: AnalyticsEvent): void {
+  private queueEvent(event: 'AnalyticsEvent): void {
     if (this.queue.length < this.maxQueueSize) {
-      this.queue.push(event)
+      this.queue.push(event)'
     }
   }
   
@@ -163,22 +163,22 @@ class AnalyticsService {
 // Export singleton instance;
 export const analytics = new AnalyticsService()
 // Export convenience functions;
-export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
-export const trackPageView = (path: string, title?: string) =>
+export const trackEvent = (event: 'AnalyticsEvent) => analytics.trackEvent(event)
+export const trackPageView = (path: string', title?: string) =>
   analytics.trackPageView(path, title)
-export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
+export const trackError = (error: 'Error', metadata?: Record<string, unknown>) =>
   analytics.trackError(error, metadata)
-export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
+export const trackPerformance = (metric: 'string', value: 'number', metadata?: Record<string, unknown>) =>
   analytics.trackPerformance(metric, value, metadata)
 export const trackTiming = (
-  category: string,
-  variable: string,
-  value: number,
+  category: 'string',
+  variable: 'string',
+  value: 'number',
   label?: string;
 ) => analytics.trackTiming(category, variable, value, label)
-export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user)
+export const identifyUser = (user: 'AnalyticsUser) => analytics.identifyUser(user)
 // Initialize on import
 if (typeof window !== 'undefined') {''
-  analytics.initialize()
+  analytics.initialize()'
 }
 export default analytics;

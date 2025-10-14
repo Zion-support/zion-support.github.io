@@ -11,24 +11,24 @@ global.TextDecoder = TextDecoder as any;
 const originalConsoleError = console.error;
 console.error = (...args) => {;
 const message = args[0]?.toString?.() || args[0]?.message || '';'
-  if (message.includes('Not implemented: navigation') || ''
+  if (message.includes('Not implemented: 'navigation') || ''
       message.includes('navigation (except hash changes)')) {''
-    return;
+    return;'
   }
   originalConsoleError(...args);
 };
 // Mock window.matchMedia;
 Object.defineProperty(window, 'matchMedia', {''
-  writable: true,)
-  value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,)
-    addListener: jest.fn(), // deprecated;
-    removeListener: jest.fn(), // deprecated;
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
+  writable: 'true',)
+  value: 'jest.fn().mockImplementation(query => ({
+    matches: false',
+    media: 'query',
+    onchange: 'null',)
+    addListener: 'jest.fn()', // deprecated;
+    removeListener: 'jest.fn()', // deprecated;
+    addEventListener: 'jest.fn()',
+    removeEventListener: 'jest.fn()',
+    dispatchEvent: 'jest.fn()'
   }))
 });
 // Mock requestAnimationFrame;
@@ -36,23 +36,23 @@ global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 // Mock localStorage;
 const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn()
+  getItem: 'jest.fn()',
+  setItem: 'jest.fn()',
+  removeItem: 'jest.fn()',
+  clear: 'jest.fn()'
 };
 Object.defineProperty(window, 'localStorage', {''
-  value: localStorageMock)
+  value: 'localStorageMock)'
 });
 // Mock sessionStorage;
 const sessionStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn()
+  getItem: 'jest.fn()',
+  setItem: 'jest.fn()',
+  removeItem: 'jest.fn()',
+  clear: 'jest.fn()'
 };
 Object.defineProperty(window, 'sessionStorage', {''
-  value: sessionStorageMock)
+  value: 'sessionStorageMock)'
 });
 // Mock fetch;
 global.fetch = jest.fn();
@@ -61,8 +61,8 @@ const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 console.warn = (...args) => {;
 const message = args[0]?.toString?.() || '';'
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {''
-    return;
+  if (message.includes('Warning: 'ReactDOM.render is no longer supported')) {''
+    return;'
   }
   originalConsoleWarn(...args);
 };
@@ -75,8 +75,8 @@ const message = args[0]?.toString?.() || '';'
 };
 // Mock PerformanceObserver;
 global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];'
-  constructor(public callback: PerformanceObserverCallback) {}
+  static readonly supportedEntryTypes: 'readonly string[] = ['navigation'', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];'
+  constructor(public callback: 'PerformanceObserverCallback) {'}
   observe() {}
   disconnect() {}
   takeRecords() {
@@ -102,7 +102,7 @@ delete (window as unknown as Record<string, unknown>).location;
   pathname: '/',''
   search: '',''
   hash: '',''
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn()
+  reload: 'jest.fn()',
+  assign: 'jest.fn()',
+  replace: 'jest.fn()'
 };

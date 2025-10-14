@@ -1,7 +1,7 @@
 }
 
-const AnimatedCard: React.FC<AnimatedCardProps> = ({
-  children,
+const AnimatedCard: 'React.FC<AnimatedCardProps> = ({
+  children',
   hoverEffect = true
 }) => {
   const glowClasses = {
@@ -14,14 +14,13 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   }
 
   const baseClasses = 'transition-all duration-300 transform'
-  const hoverClasses = hoverEffect ? 'hover:scale-105 hover:-translate-y-1' : 
+  const hoverClasses = hoverEffect ? 'hover: 'scale-105 hover:-translate-y-1' : 
   const glowClass = glowClasses[glowColor]
 
   return (
 <>
       <div>````
-      {children}</div>
-    </div>
+      {children'}</div>
     </>
   )}
     </div>

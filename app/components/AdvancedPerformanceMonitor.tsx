@@ -1,4 +1,4 @@
-  renderTime: number
+  renderTime: 'number
   memoryUsage: number
   networkLatency: number
   firstContentfulPaint: number
@@ -6,16 +6,16 @@
   cumulativeLayoutShift: number
   firstInputDelay: number
 const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkLatency: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    cumulativeLayoutShift: 0,
-    firstInputDelay: 0,
-    totalBlockingTime: 0,
+  const [metrics', setMetrics] = useState<PerformanceMetrics>({
+    loadTime: '0',
+    renderTime: '0',
+    memoryUsage: '0',
+    networkLatency: '0',
+    firstContentfulPaint: '0',
+    largestContentfulPaint: '0',
+    cumulativeLayoutShift: '0',
+    firstInputDelay: '0',
+    totalBlockingTime: '0',
   })
 const [isVisible, setIsVisible] = useState(false)
 const [isRecording, setIsRecording] = useState(false)
@@ -32,16 +32,16 @@ const entries = list.getEntries()
             if (entry.entryType === 'largest-contentful-paint') {
               setMetrics(prev => ({
                 ...prev,)
-                largestContentfulPaint: Math.round(entry.startTime)
+                largestContentfulPaint: 'Math.round(entry.startTime)'
               }))
             if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
               setMetrics(prev => ({
                 ...prev,)
-                cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value
+                cumulativeLayoutShift: 'prev.cumulativeLayoutShift + (entry as any).value'
               }))
           }
         }
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] })";'"
+        observer.observe({ entryTypes: '['largest-contentful-paint'', 'layout-shift'] })";'"
         const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0
 const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0";'"
         // Memory usage (if available)
@@ -54,15 +54,15 @@ const longTasks = window.performance.getEntriesByType('longtask')";'"
           return total + (task.duration - 50); // 50ms is the threshold
         }, 0)
         setMetrics({)
-          loadTime: Math.round(loadTime),
-          renderTime: Math.round(firstContentfulPaint),
-          memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
-          networkLatency: Math.round(networkLatency),
-          firstContentfulPaint: Math.round(firstContentfulPaint),
-          largestContentfulPaint: 0, // Will be updated by observer
-          cumulativeLayoutShift: 0, // Will be updated by observer
-          firstInputDelay: 0, // Would need specific measurement
-          totalBlockingTime: Math.round(totalBlockingTime),
+          loadTime: 'Math.round(loadTime)',
+          renderTime: 'Math.round(firstContentfulPaint)',
+          memoryUsage: 'Math.round(memoryUsage / 1024 / 1024)', // Convert to MB
+          networkLatency: 'Math.round(networkLatency)',
+          firstContentfulPaint: 'Math.round(firstContentfulPaint)',
+          largestContentfulPaint: '0', // Will be updated by observer
+          cumulativeLayoutShift: '0', // Will be updated by observer
+          firstInputDelay: '0', // Would need specific measurement
+          totalBlockingTime: 'Math.round(totalBlockingTime)',
         }
         return () => observer.disconnect()
     // Measure after initial load
@@ -71,100 +71,87 @@ const timer = setTimeout(measurePerformance, 1000)
   }, [])
   // Toggle visibility with keyboard shortcut
   useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
+    const handleKeyPress = (event: 'KeyboardEvent) => {
   return (
 <>"
       <div className="flex items-center justify-between mb-4"></div>"
         <h3 className="text-lg font-semibold">Performance Monitor</h3>"
         <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white
+          onClick={() => setIsVisible(false)'}
+          className="text-gray-400 hover: 'text-white"
         >
           ×
         </button>
-      </div>
     </>
 
       <div className="space-y-2 text-sm"></div>"
         <div className="flex justify-between"></div>"
           <span>Load Time:</span>
           <span className="text-cyan-400"></span>"
-            {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}'``'`
+            {metrics.loadTime ? `${metrics.loadTime.toFixed(2)'}ms` : 'N/A'}'``'`
           </span>
-        </div>
         
         <div className="flex justify-between"></div>"
-          <span>FCP:</span>
+          <span>FCP: '</span>
           <span className="text-green-400"></span>"
-            {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(2)}ms` : 'N/A'}'``'`
+            {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(2)'}ms` : 'N/A'}'``'`
           </span>
-        </div>
         
         <div className="flex justify-between"></div>"
-          <span>LCP:</span>
+          <span>LCP: '</span>
           <span className="text-yellow-400"></span>"
-            {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(2)}ms` : 'N/A'}'``'`
+            {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(2)'}ms` : 'N/A'}'``'`
           </span>
-        </div>
         
         <div className="flex justify-between"></div>"
-          <span>FID:</span>
+          <span>FID: '</span>
           <span className="text-orange-400"></span>"
-            {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(2)}ms` : 'N/A'}'``'`
+            {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(2)'}ms` : 'N/A'}'``'`
           </span>
-        </div>
         
         <div className="flex justify-between"></div>"
-          <span>CLS:</span>
+          <span>CLS: '</span>
           <span className="text-red-400"></span>"
-            {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}
+            {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A''}
           </span>
-        </div>
         
         <div className="flex justify-between"></div>"
-          <span>Memory:</span>
+          <span>Memory: '</span>
           <span className="text-purple-400"></span>"
-            {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(2)}MB` : 'N/A'}'``'`
+            {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(2)'}MB` : 'N/A'}'``'`
           </span>
-        </div>
-      </div>
 
       <div className="mt-4 flex gap-2"></div>"
         <button
           onClick={isRecording ? stopRecording : startRecording}
           className={`px-3 py-1 rounded text-xs ${```
             isRecording
-              ? 'bg-red-600 hover:bg-red-700' '
-              : 'bg-green-600 hover:bg-green-700
+              ? 'bg-red-600 hover: 'bg-red-700' '
+              : 'bg-green-600 hover:bg-green-700'
           }`}></button>```
           {isRecording ? 'Stop' : 'Record'}
         </button>
         
         <button
           onClick={exportMetrics}
-          className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-xs"></button>"
+          className="px-3 py-1 bg-blue-600 hover: 'bg-blue-700 rounded text-xs"></button>"
           Export
         </button>
-      </div>
 
       <div className="mt-2 text-xs text-gray-400"></div>"
         Press Ctrl+Shift+P to toggle
       </div>
-    </div>
           >
             ✕
           </button>
-        </div>
-      </div>
       <div className="space-y-2 text-xs">
         <div className="flex justify-between">
           <span className="text-gray-400">Load Time:</span>
-          <span className={`font-mono ${getScoreColor(metrics.loadTime, { good: 1000, needsImprovement: 3000 })}`}>````
+          <span className={`font-mono ${getScoreColor(metrics.loadTime', { good: '1000', needsImprovement: '3000' })}`}>````
 
-        <div>Ctrl+Shift+P: Toggle</div>
+        <div>Ctrl+Shift+P: 'Toggle</div>
         <div>Ctrl+Shift+R: Record</div>
-      </div>
-  )}
+  )'}
 }
 
 export default AdvancedPerformanceMonitor
@@ -173,3 +160,4 @@ export default AdvancedPerformanceMonitor
       <h2>AdvancedPerformanceMonitor</h2>
       <p>This component is under construction.</p>
 
+</div>

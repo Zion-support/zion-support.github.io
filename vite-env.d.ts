@@ -1,4 +1,4 @@
 }
-interface ImportMeta {readonly env: ImportMetaEnv}
+interface ImportMeta {readonly env: 'ImportMetaEnv'}
 }
-/// <reference types="vite/client" /></reference>
+/// <reference types="vite"/client" /></reference>

@@ -14,27 +14,27 @@ import { ValidationRule,
   // ValidationResult as _ValidationResult;
    } from "../utils/formValidation";"
 export interface UseFormConfig<T extends Record<string, unknown>>> {
-  initialValues: T;
-  validationSchema?: Partial<Record<keyof T, ValidationRule[]>>>;
-  onSubmit: (values: T) => void | Promise<void>;
+  initialValues: 'T;
+  validationSchema?: Partial<Record<keyof T', ValidationRule[]>>>;
+  onSubmit: '(values: T) => void | Promise<void>;
   validateOnChange?: boolean;
-  validateOnBlur?: boolean;
+  validateOnBlur?: boolean;'
 }
 export interface UseFormReturn<T extends Record<string, unknown>>> {
-  values: T;
-  errors: Record<keyof T, string[]>;
-  touched: Record<keyof T, boolean>;
-  isSubmitting: boolean;
+  values: 'T;
+  errors: Record<keyof T', string[]>;
+  touched: 'Record<keyof T', boolean>;
+  isSubmitting: 'boolean;
   isValid: boolean;
   handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
   handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  setFieldValue: (field: keyof T, value: T[keyof T]) => void;
-  setFieldError: (field: keyof T, errors: string[]) => void;
-  setFieldTouched: (field: keyof T, touched: boolean) => void;
+  setFieldValue: (field: keyof T', value: 'T[keyof T]) => void;
+  setFieldError: (field: keyof T', errors: 'string[]) => void;
+  setFieldTouched: (field: keyof T', touched: 'boolean) => void;
   resetForm: () => void;
   validateField: (field: keyof T) => void;
-  validateAllFields: () => boolean;
+  validateAllFields: () => boolean;'
 }
 export function useForm<T extends Record<string, unknown>>>({
   initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true)
@@ -45,11 +45,11 @@ const [values, setValues] = useState<T>(initialValues);
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Validate a single field;
 const validateSingleField = useCallback()
-    (field: keyof T): void => {
+    (field: 'keyof T): void => {
       if (!validationSchema[field]) return;
       const fieldValue = values[field];
       const rules = validationSchema[field];
-      const result = validateField(fieldValue, rules);
+      const result = validateField(fieldValue', rules);
       setErrors(prev => ({
         ...prev,
         [field]: result.errors)
@@ -67,13 +67,13 @@ const validateAllFields = useCallback((): boolean => {
   }, [values, validationSchema]);
   // Handle input change;
 const handleChange = useCallback()
-    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
-const { name, value, type } = e.target;
+    (e: 'ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+const { name', value, type } = e.target;
       const fieldName = name as keyof T;
       // Handle checkbox inputs;
-      let fieldValue: unknown = value;
+      let fieldValue: 'unknown = value;
       if (type === 'checkbox' && 'checked' in e.target) {''
-        fieldValue = (e.target as HTMLInputElement).checked;
+        fieldValue = (e.target as HTMLInputElement).checked;'
       }
       setValues(prev => ({
         ...prev,
@@ -88,10 +88,10 @@ const { name, value, type } = e.target;
   );
   // Handle input blur;
 const handleBlur = useCallback()
-    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+    (e: 'ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 const fieldName = e.target.name as keyof T;
       setTouched(prev => ({
-        ...prev,
+        ...prev',
         [fieldName]: true)
       }));
       // Validate on blur if enabled;
@@ -103,10 +103,10 @@ const fieldName = e.target.name as keyof T;
   );
   // Handle form submission;
 const handleSubmit = useCallback()
-    async (e: React.FormEvent<HTMLFormElement>) => {
+    async (e: 'React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       // Mark all fields as touched;
-const allTouched = Object.keys(values).reduce((acc, key) => {
+const allTouched = Object.keys(values).reduce((acc', key) => {
         acc[key as keyof T] = true;
         return acc;
       }, {} as Record<keyof T, boolean>);
@@ -126,9 +126,9 @@ const isValid = validateAllFields();
     [values, validateAllFields]
   );
   // Set field value programmatically;
-const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
+const setFieldValue = useCallback((field: 'keyof T', value: 'T[keyof T]) => {
     setValues(prev => ({
-      ...prev,
+      ...prev',
       [field]: value)
     }));
     if (validateOnChange && touched[field]) {
@@ -136,16 +136,16 @@ const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
     }
   }, [validateOnChange, touched, validateSingleField]);
   // Set field error programmatically;
-const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
+const setFieldError = useCallback((field: 'keyof T', fieldErrors: 'string[]) => {
     setErrors(prev => ({
-      ...prev,
+      ...prev',
       [field]: fieldErrors)
     }));
   }, []);
   // Set field touched programmatically;
-const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {
+const setFieldTouched = useCallback((field: 'keyof T', isTouched: 'boolean) => {
     setTouched(prev => ({
-      ...prev,
+      ...prev',
       [field]: isTouched)
     }));
   }, []);
@@ -172,7 +172,7 @@ const isValid = Object.keys(errors).length === 0 ||
     setFieldError,
     setFieldTouched,
     resetForm,
-    validateField: validateSingleField,
+    validateField: 'validateSingleField',
     validateAllFields;
   };
 }

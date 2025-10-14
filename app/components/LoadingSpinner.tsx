@@ -2,8 +2,8 @@
   fullScreen?: boolean
   className?: string}
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
+const LoadingSpinner: 'React.FC<LoadingSpinnerProps> = ({
+  size = 'md'',
   color = 'primary',
   text,
   fullScreen = false,
@@ -21,7 +21,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           }></div>
           <Loader2 className="w-full h-full" />
         </div>
-      </div>
       {text && (
     </div>
   )

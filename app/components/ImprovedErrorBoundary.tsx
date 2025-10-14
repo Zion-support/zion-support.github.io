@@ -4,8 +4,6 @@
             Professional improved error boundary services
             designed to help your business grow and succeed.
           </p>
-        </div>
-      </section>
       { /* Content Section */ }
             Improved Error Boundary</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -14,40 +12,40 @@ import React, { Component, ErrorInfo, ReactNode } from "react;
 import { AlertTriangle, RefreshCw, Home     } from "lucide-react;
 
 interface Props {
-  children: ReactNode
+  children: 'ReactNode
   fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  onError?: (error: Error', errorInfo: 'ErrorInfo) => void'
 }
 
 interface State {
-  hasError: boolean
+  hasError: 'boolean
   error?: Error
   errorInfo?: ErrorInfo
-  errorId: string
+  errorId: string'
 }
 
 class ImprovedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor(props: 'Props) {
     super(props)
     this.state = {
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
+      hasError: false',
+      error: 'undefined',
+      errorInfo: 'undefined',
       errorId: 
     }
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: 'Error): Partial<State> {
     return {
-      hasError: true,
+      hasError: true',
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
     }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: 'Error', errorInfo: 'ErrorInfo) {
     this.setState({
-      error,
+      error',
       errorInfo,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
     })
@@ -57,4 +55,4 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   )
 export default ImprovedErrorBoundary
 }
-export default ImprovedErrorBoundaryPage
+export default ImprovedErrorBoundaryPage</p>

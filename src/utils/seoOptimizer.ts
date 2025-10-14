@@ -1,7 +1,7 @@
 'use client';'
 
 interface SEOConfig {
-  siteName: string;
+  siteName: 'string;
   siteUrl: string;
   defaultTitle: string;
   defaultDescription: string;
@@ -9,10 +9,10 @@ interface SEOConfig {
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string;
-  googleTagManagerId?: string;
+  googleTagManagerId?: string;'
 }
 interface PageSEOData {
-  title: string;
+  title: 'string;
   description: string;
   keywords: string[];
   image?: string;
@@ -24,13 +24,13 @@ interface PageSEOData {
   section?: string;
   tags?: string[];
   noindex?: boolean;
-  nofollow?: boolean;
+  nofollow?: boolean;'
 }
 class SEOOptimizer {
-  private config: SEOConfig;
+  private config: 'SEOConfig;
   private currentPageData: PageSEOData | null = null;
   constructor(config: SEOConfig) {
-    this.config = config;
+    this.config = config;'
   }
   
   init(): void {
@@ -40,10 +40,10 @@ class SEOOptimizer {
     this.setupPerformanceMonitoring();
   }
   
-  setPageData(data: PageSEOData): void {
+  setPageData(data: 'PageSEOData): void {
     this.currentPageData = data;
     this.updateMetaTags();
-    this.updateStructuredData();
+    this.updateStructuredData();'
   }
   
   generateTitle(pageTitle?: string): string {;
@@ -80,19 +80,19 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName);'
     this.setMetaTag('robots', this.getRobotsContent());'
     // Open Graph tags;
-    this.setMetaTag('og:title', title, 'property');'
-    this.setMetaTag('og:description', description, 'property');'
-    this.setMetaTag('og:image', image, 'property');'
-    this.setMetaTag('og:url', url, 'property');'
-    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property');'
-    this.setMetaTag('og:site_name', this.config.siteName, 'property');'
+    this.setMetaTag('og: 'title'', title, 'property');'
+    this.setMetaTag('og: 'description'', description, 'property');'
+    this.setMetaTag('og: 'image'', image, 'property');'
+    this.setMetaTag('og: 'url'', url, 'property');'
+    this.setMetaTag('og: 'type'', this.currentPageData.type || 'website', 'property');'
+    this.setMetaTag('og: 'site_name'', this.config.siteName, 'property');'
     // Twitter Card tags;
     if (this.config.twitterHandle) {
-      this.setMetaTag('twitter:card', 'summary_large_image');'
-      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`);``'`
-      this.setMetaTag('twitter:title', title);'
-      this.setMetaTag('twitter:description', description);'
-      this.setMetaTag('twitter:image', image);'
+      this.setMetaTag('twitter: 'card'', 'summary_large_image');'
+      this.setMetaTag('twitter: 'site'', `@${this.config.twitterHandle}`);``'`
+      this.setMetaTag('twitter: 'title'', title);'
+      this.setMetaTag('twitter: 'description'', description);'
+      this.setMetaTag('twitter: 'image'', image);'
     }
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');'
@@ -100,8 +100,8 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
     this.setMetaTag('msapplication-TileColor', '#1e40af');'
   }
   
-  private setMetaTag(name: string, content: string, attribute: string = 'name'): void {''
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;``"`
+  private setMetaTag(name: 'string', content: 'string', attribute: 'string = 'name'): void {''
+    let meta = document.querySelector(`meta[${attribute'}="${name}"]`) as HTMLMetaElement;``"`
     if (!meta) {
       meta = document.createElement('meta');'
       meta.setAttribute(attribute, name);
@@ -112,9 +112,9 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
   
   private getRobotsContent(): string {
     if (!this.currentPageData) return 'index, follow';'
-    const directives: string[] = [];
+    const directives: 'string[] = [];
     if (this.currentPageData.noindex) {
-      directives.push('noindex');'
+      directives.push('noindex');''
     } else {
       directives.push('index');'
     }
@@ -128,12 +128,12 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
   
   private setupStructuredData(): void {;
 const structuredData = {
-      '@context': 'https://schema.org',''
+      '@context': 'https: '//schema.org'',''
       '@type': 'WebSite',''
-      name: this.config.siteName,
-      url: this.config.siteUrl,
-      potentialAction: {
-        '@type': 'SearchAction',''
+      name: 'this.config.siteName',
+      url: 'this.config.siteUrl',
+      potentialAction: '{
+        '@type': 'SearchAction'',''
         target: `${this.config.siteUrl}/search?q={search_term_string}`,```
         'query-input': 'required name=search_term_string'''
       }
@@ -144,39 +144,39 @@ const structuredData = {
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
     const structuredData = {
-      '@context': 'https://schema.org',''
+      '@context': 'https: '//schema.org'',''
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',''
-      headline: this.generateTitle(),
-      description: this.generateDescription(),
-      url: this.currentPageData.url || window.location.href,
-      image: this.currentPageData.image || this.config.defaultImage,
-      publisher: {
-        '@type': 'Organization',''
-        name: this.config.siteName,
-        url: this.config.siteUrl;
+      headline: 'this.generateTitle()',
+      description: 'this.generateDescription()',
+      url: 'this.currentPageData.url || window.location.href',
+      image: 'this.currentPageData.image || this.config.defaultImage',
+      publisher: '{
+        '@type': 'Organization'',''
+        name: 'this.config.siteName',
+        url: 'this.config.siteUrl;'
       }
     };
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {''
       Object.assign(structuredData, {
-        author: {
-          '@type': 'Person',''
-          name: this.currentPageData.author || this.config.siteName;
+        author: '{
+          '@type': 'Person'',''
+          name: 'this.currentPageData.author || this.config.siteName;'
         },
-        datePublished: this.currentPageData.publishedTime,
-        dateModified: this.currentPageData.modifiedTime,
-        articleSection: this.currentPageData.section,)
-        keywords: this.generateKeywords()
+        datePublished: 'this.currentPageData.publishedTime',
+        dateModified: 'this.currentPageData.modifiedTime',
+        articleSection: 'this.currentPageData.section',)
+        keywords: 'this.generateKeywords()'
       });
     }
     this.addStructuredData(structuredData);
   }
   
-  private addStructuredData(data: any): void {;
+  private addStructuredData(data: 'any): void {;
 const script = document.createElement('script');'
     script.type = 'application/ld+json';'
     script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
+    document.head.appendChild(script);'
   }
   
   private setupCanonicalUrls(): void {;
@@ -196,7 +196,7 @@ const entries = list.getEntries();
         if (lastEntry.startTime > 4000) { // Poor LCP;
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);'
         }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });'
+      }).observe({ entryTypes: '['largest-contentful-paint']' });'
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0;
       new PerformanceObserver((list) => {
@@ -208,50 +208,50 @@ const entries = list.getEntries();
         if (clsValue > 0.25) { // Poor CLS;
           this.trackSEOMetric('poor_cls', clsValue);'
         }
-      }).observe({ entryTypes: ['layout-shift'] });'
+      }).observe({ entryTypes: '['layout-shift']' });'
     }
   }
   
-  private trackSEOMetric(metric: string, value: number): void {
+  private trackSEOMetric(metric: 'string', value: 'number): void {
     if (typeof window !== 'undefined' && (window as any).gtag) {''
-      (window as any).gtag('event', 'seo_metric', {''
-        metric_name: metric,)
-        metric_value: Math.round(value),
+      (window as any).gtag('event'', 'seo_metric', {''
+        metric_name: 'metric',)
+        metric_value: 'Math.round(value)',
         event_category: 'seo'''
       });
     }
   }
   
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {
+  generateSitemapData(): Array<{ url: 'string; lastmod: string; changefreq: string; priority: number' }> {
     // This would typically come from your CMS or routing system;
     return [
       {
-        url: this.config.siteUrl,
-        lastmod: new Date().toISOString(),
+        url: 'this.config.siteUrl',
+        lastmod: 'new Date().toISOString()',
         changefreq: 'daily',''
-        priority: 1.0;
+        priority: '1.0;'
       }
     ];
   }
   
   generateRobotsTxt(): string {
-    return `User-agent: *```
+    return `User-agent: '*```
 Allow: /
-Sitemap: ${this.config.siteUrl}/sitemap.xml;
+Sitemap: ${this.config.siteUrl'}/sitemap.xml;
 # Disallow admin and private areas;
-Disallow: /admin/
+Disallow: '/admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/`;```
+Disallow: /static/`;```'
   }
   
   checkSEOIssues(): string[] {;
-const issues: string[] = [];
+const issues: 'string[] = [];
     // Check title length;
 const title = document.title;
     if (title.length < 30) {
-      issues.push('Title is too short (less than 30 characters)');'
+      issues.push('Title is too short (less than 30 characters)');''
     } else if (title.length > 60) {
       issues.push('Title is too long (more than 60 characters)');'
     }
@@ -289,15 +289,15 @@ const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
   }
 }
 // Default configuration;
-const defaultConfig: SEOConfig = {
-  siteName: 'Zion Tech Group',''
+const defaultConfig: 'SEOConfig = {
+  siteName: 'Zion Tech Group'',''
   siteUrl: 'https://zion.app',''
   defaultTitle: 'Advanced AI and IT Solutions',''
   defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',''
   defaultImage: 'https://zion.app/og-image.jpg',''
   twitterHandle: 'ZionTechGroup',''
-  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID;
+  googleAnalyticsId: 'process.env.GOOGLE_ANALYTICS_ID',
+  googleTagManagerId: 'process.env.GOOGLE_TAG_MANAGER_ID;'
 };
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;""

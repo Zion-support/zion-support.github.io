@@ -22,7 +22,6 @@
                     <li>• Machine Learning</li>
                     <li>• Natural Language Processing</li>
                     <li>• Computer Vision</li>
-                  </ul>
                 </div>""
                 <div className="bg-gray-800 p-6 rounded-lg"></div>""
                   <div className="h-12 w-12 bg-green-600 rounded-lg mb-4 flex items-center justify-center"></div>""
@@ -36,7 +35,6 @@
                     <li>• Cloud Migration</li>
                     <li>• Network Security</li>
                     <li>• Data Management</li>
-                  </ul>
                 </div>""
                 <div className="bg-gray-800 p-6 rounded-lg"></div>""
                   <div className="h-12 w-12 bg-purple-600 rounded-lg mb-4 flex items-center justify-center"></div>""
@@ -50,7 +48,6 @@
                     <li>• Quantum Algorithms</li>
                     <li>• Optimization</li>
                     <li>• Simulation</li>
-                  </ul>
                 </div>""
                 <div className="bg-gray-800 p-6 rounded-lg"></div>""
                   <div className="h-12 w-12 bg-red-600 rounded-lg mb-4 flex items-center justify-center"></div>""
@@ -64,9 +61,7 @@
                     <li>• Threat Detection</li>
                     <li>• Data Encryption</li>
                     <li>• Compliance Management</li>
-                  </ul>
                 </div>
-              </div>
             </section>
             <section>""
               <h2 className="text-2xl font-semibold mb-6">Ready to Get Started?</h2>""
@@ -75,17 +70,14 @@
               </p>""
               <div className="flex justify-center space-x-4"></div>"
                 <a""
-                  href="/contact"""
+                  href=""/contact"""
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"></a>"
                   Contact Us;
                 </a>
                 <a""
-                  href="/demo"""
+                  href=""/demo"""
                   className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"></a>"
                   Request Demo;
                 </a>
-              </div>
             </section>
-          </div>
         </div>
-      </div>

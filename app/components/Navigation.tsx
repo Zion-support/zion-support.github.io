@@ -16,44 +16,44 @@ import {
   CpuChipIcon,
   SignalIcon,
   UserGroupIcon
-  const isActive = (href: string) => {
+  const isActive = (href: 'string) => {
     if (href === '/') {
-      return location.pathname === '/'"}"'"'"
+      return location.pathname === '/'"'}"'"'"
     return location.pathname.startsWith(href)
-  const toggleExpanded = (item: string) => {
+  const toggleExpanded = (item: 'string) => {
     setExpandedItems(prev => 
       prev.includes(item) 
         ? prev.filter(i => i !== item)
-        : [...prev, item]
+        : [...prev', item]
 interface NavigationProps {
   onSidebarToggle?: () => void
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+const Navigation: 'React.FC<NavigationProps> = ({ onSidebarToggle' }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const location = useLocation()
   const navigation = [
-    { name: "Home", href: "/", icon: HomeIcon },"
-    { name: "About", href: "/about", icon: InformationCircleIcon },"
+    { name: "Home", href: "/", icon: 'HomeIcon' },"
+    { name: "About", href: "/about", icon: 'InformationCircleIcon' },"
     { 
       ]
     },
     { 
       name: 'Solutions','
       href: '/solutions','
-      icon: CogIcon,
-      submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+      icon: 'CogIcon',
+      submenu: '[
+        { name: 'AI Solutions'', href: '/ai-solutions', icon: 'CpuChipIcon' },
+        { name: '5G Solutions', href: '/5g-solutions', icon: 'SignalIcon' }
       ]
     },
-    { name: "Blog", href: "/blog", icon: DocumentTextIcon },"
-    { name: "Tutorials", href: "/tutorials", icon: AcademicCapIcon },"
-    { name: "Demo", href: "/demo", icon: PlayIcon },"
-    { name: "Support", href: "/support", icon: QuestionMarkCircleIcon },"
-    { name: "Pricing", href: "/pricing", icon: CurrencyDollarIcon },"
-    { name: "Contact", href: "/contact", icon: PhoneIcon }"
+    { name: "Blog", href: "/blog", icon: 'DocumentTextIcon' },"
+    { name: "Tutorials", href: "/tutorials", icon: 'AcademicCapIcon' },"
+    { name: "Demo", href: "/demo", icon: 'PlayIcon' },"
+    { name: "Support", href: "/support", icon: 'QuestionMarkCircleIcon' },"
+    { name: "Pricing", href: "/pricing", icon: 'CurrencyDollarIcon' },"
+    { name: "Contact", href: "/contact", icon: 'PhoneIcon' }"
   ]
 const Navigation: React.FC = () => {
   return (

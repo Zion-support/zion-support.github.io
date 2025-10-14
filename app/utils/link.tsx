@@ -3,8 +3,6 @@
             Professional link services
             designed to help your business grow and succeed.
           </p>
-        </div>
-      </section>
             <div></div>"
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
@@ -23,8 +21,7 @@
                 <li className="flex items-center">"
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                   Ongoing support
-                </li>
-              </ul>"
+                </li>"
             </div>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>"
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
@@ -36,9 +33,6 @@
                 className="$1"></a>
                 Contact Us
               </a>
-            </div>
-          </div>
-        </div>
       </section>
             Ready to Get Started?
           </h2>
@@ -52,10 +46,7 @@
             href="$1
             className="$1"></a>
             Get Started Today
-          </a>
-        </div>
-      </section>
-    </div>)
+          </a>)
   )
 export default 
                 We provide comprehensive link
@@ -69,9 +60,8 @@ export default
                   Expert consultation</li>
                 <li className="flex items-center">"
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support</li></ul></div>
+                  Ongoing support</li>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>"
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
               <p className="mb-6">
-                Ready to transform your business with our link services?</p>
-
+                Ready to transform your business with our link services?</p></ul></ul>

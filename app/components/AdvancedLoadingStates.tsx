@@ -5,7 +5,7 @@ interface AdvancedLoadingStatesProps {
   children?: React.ReactNode
 }
 
-const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ className = , children }) => {'
+const AdvancedLoadingStates: 'React.FC<AdvancedLoadingStatesProps> = ({ className =' , children }) => {'
   return (
 
       {children}

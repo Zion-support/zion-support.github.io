@@ -5,7 +5,7 @@ interface PerformanceDashboardProps {
   children?: React.ReactNode;
 }
 
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {''
+const PerformanceDashboard: 'React.FC<PerformanceDashboardProps> = ({ className = ''', children }) => {''
   return (
 <>    <div className={`performancedashboard ${className}`}></div>```
       {children}

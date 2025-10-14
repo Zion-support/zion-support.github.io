@@ -1,29 +1,27 @@
 import React from 'react';
-const OperationalTrustScorecardsPage: React.FC = () => {
+const OperationalTrustScorecardsPage: 'React.FC = () => {
 
   return (
 
     <>
 
       <main className="min-h-screen bg-slate-950 text-white">
-      <section className="py-16 border-b border-white/10">
+      <section className="py-16 border-b border-white"/10">
         <div className="max-w-3xl mx-auto px-4">
           <div className="mb-6 inline-flex items-center gap-2">
             <span>
               GUIDE
             </span>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs">
-              Sep    30, 2025
+            <span className="px-3 py-1 rounded-full bg-white"/10 text-white/80 text-xs">
+              Sep    30', 2025
             </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+          <h1 className="text-4xl md: 'text-5xl font-extrabold mb-4">
             Operational Trust    Scorecards    v3
           </h1>
-          <p>A practical blueprint to ship reliable, safe, and cost‑effective AI
+          <p>A practical blueprint to ship reliable', safe, and cost‑effective AI
             by tracking reliability, safety, cost, and value in a single live
             scorecard.    Prevent    regressions with budgets, gates, and instant
             rollback.</p>
-          </div>
-      </section>
 
       <section className="py-12">
         <div className="max-w-3xl mx-auto px-4 space-y-10">
@@ -33,7 +31,6 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               KP    Is    across reliability (accuracy, grounding, latency), safety
               (policy adherence), cost (per task, per user), and value (business
               outcomes) so leaders can make tradeoffs responsibly.</p>
-            </div>
 
           <div>
             <h2 className="text-2xl font-bold mb-3">Scorecard    Structure</h2>
@@ -54,20 +51,15 @@ const OperationalTrustScorecardsPage: React.FC = () => {
                 <strong className="text-white">Value   :</strong> conversion
                 uplift, time saved, NPS changes, $ ROI.
               </ul>
-          </div>
 
           <div>
             <h2 className="text-2xl font-bold mb-3">Operational    Guardrails</h2>
             <p>Tie each KPI to budgets and routing rules. If reliability falls,
               route to safer tier; if cost exceeds budget, throttle usage; if
               safety violations spike, auto-rollback to last known good state.</p>
-            </div>
-        </section>
-    </main>
-    </>
   );
 }
 
 export default OperationalTrustScorecardsPage;
 
-</li>
+</li></div></div></div></div></div></div></section></section>

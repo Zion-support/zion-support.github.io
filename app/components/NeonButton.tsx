@@ -1,7 +1,7 @@
 }
 
-const NeonButton: React.FC<NeonButtonProps> = ({
-  children,
+const NeonButton: 'React.FC<NeonButtonProps> = ({
+  children',
   to,
   href,
   onClick,
@@ -41,3 +41,4 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       <Link to={to} className={classes}></Link>
         {children}
       </Link>
+</>

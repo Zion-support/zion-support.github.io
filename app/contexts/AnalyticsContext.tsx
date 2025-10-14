@@ -1,6 +1,6 @@
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean }
+  trackPageView: '(pageName: string) => void;
+  setUser: (userId: string', properties?: Record<string, any>) => void;
+  isEnabled: 'boolean' }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 }
 

@@ -7,7 +7,6 @@ describe("Component Tests", () => {""
     render(
       <HelmetProvider></HelmetProvider>
         <div>Test Component</div>
-      </HelmetProvider>
     );
   });
 });

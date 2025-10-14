@@ -7,6 +7,5 @@ export default function AdvancedSEOOptimizer() {
           name="description"""
           content="Professional advanced SEO optimization services by Zion Tech Group.""
         /></meta>
-      </Helmet>
 }
 ;

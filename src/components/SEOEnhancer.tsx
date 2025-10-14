@@ -7,8 +7,7 @@ export default function SEOEnhancer() {
         <meta""
           name="description"""
           content="Professional SEO enhancement services by Zion Tech Group.""
-        /></meta>
-      </Helmet>""
+        /></meta>""
       <div className="min-h-screen bg-white"></div>""
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">""
           <div className="max-w-6xl mx-auto text-center"></div>""
@@ -18,9 +17,7 @@ export default function SEOEnhancer() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>"
               Professional SEO enhancement services by Zion Tech Group.
             </p>
-          </div>
         </section>
-      </div>
     </div>
   </>
 );

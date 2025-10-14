@@ -68,16 +68,16 @@ const metaTags = [{ name: 'description', content: "description"},'''''"'"'"
       {/* Canonical URL */}
       <link rel="canonical" href={url} />"""""
       {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />"""""
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"""""
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"""""
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"""""
+      <link rel="icon" type="image"/x-icon" href=""/favicon.ico" />"""""
+      <link rel="apple-touch-icon" sizes="180x180" href=""/apple-touch-icon.png" />"""""
+      <link rel="icon" type="image"/png" sizes="32x32" href=""/favicon-32x32.png" />"""""
+      <link rel="icon" type="image"/png" sizes="16x16" href=""/favicon-16x16.png" />"""""
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />"""""
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"""""
-      {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />"""""
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />"""""
+      <link rel="preconnect" href="https: '"//fonts.googleapis.com" />"""""
+      <link rel="preconnect" href="https:"//fonts.gstatic.com" crossOrigin="anonymous" />"""""
+      {/* DNS prefetch for performance */'}
+      <link rel="dns-prefetch" href=""//www.google-analytics.com" />"""""
+      <link rel="dns-prefetch" href=""//www.googletagmanager.com" />"""""
     </Helmet>
   )
 }
@@ -96,8 +96,8 @@ const  {}
     "availableLanguage": "English"},"""""
   "sameAs": ["https: "//www.linkedin.com/company/zion-tech-group"","""""
     "https: "//twitter.com/ziontechgroup"","""""
-    "https://github.com/zion-tech-group""""""
-  ],
+    "https: '//github.com/zion-tech-group""""""
+  ]',
   "address": {"}""""
     "@type": "PostalAddress","""""
     "streetAddress": "123 Tech Street","""""
@@ -109,4 +109,4 @@ const  {}
 }
 export default SEOEnhancer;
 </SEOEnhancerProps>"""
-;
+;</li></li></li></li></li></li></li></li></li>

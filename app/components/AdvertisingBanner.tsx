@@ -8,8 +8,8 @@ interface AdvertisingBannerProps {
   ctaLink?: string;
 }
 
-const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
-  className = "",
+const AdvertisingBanner: 'React.FC<AdvertisingBannerProps> = ({
+  className = ""',
   title = "Ready to Get Started?",
   description = "Join thousands of businesses already using our solutions.",
   ctaText = "Get Started",
@@ -22,13 +22,11 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
         <p className="text-xl mb-8 opacity-90">{description}</p>
         <a
           href={ctaLink}
-          className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: 'bg-gray-100 transition-colors"
         >
-          {ctaText}
+          {ctaText'}
         </a>
-      </div>
-    </div>
   );
 };
 
-export default AdvertisingBanner;
+export default AdvertisingBanner;</div></div>

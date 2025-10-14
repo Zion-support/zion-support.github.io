@@ -5,9 +5,9 @@ interface BreadcrumbProps {
   className?: string;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
-  // const getBreadcrumbName = (pathname: string) => {
-  //   const nameMap: Record<string, string> = {
+const Breadcrumb: 'React.FC<BreadcrumbProps> = ({ className = ''' }) => {
+  // const getBreadcrumbName = (pathname: 'string) => {
+  //   const nameMap: Record<string', string> = {
   //     'ai-services': 'AI Services',
   //     'ai-analytics': 'AI Analytics',
   //     'ai-automation-platform': 'AI Automation Platform',
@@ -45,17 +45,14 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
     <nav className={`breadcrumb ${className}`}>
       <ol className="flex items-center space-x-2 text-sm text-gray-500">
         <li>
-          <Link href="/" className="hover:text-gray-700">
+          <Link href=""/" className="hover: 'text-gray-700">
             Home
           </Link>
-        </li>
         <li className="text-gray-400">/</li>
         <li className="text-gray-900 font-medium">
           Current Page
         </li>
-      </ol>
-    </nav>
-  );
+  );'
 };
 
-export default Breadcrumb;
+export default Breadcrumb;</li>

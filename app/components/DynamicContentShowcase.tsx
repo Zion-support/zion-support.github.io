@@ -6,7 +6,7 @@ const DynamicContentShowcase = () => {
       <p className="text-gray-300">
         This is a placeholder component for DynamicContentShowcase.
       </p>
-    </div>
   );
 };
 export default DynamicContentShowcase;
+</div>

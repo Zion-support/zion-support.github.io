@@ -16,7 +16,6 @@ export default function AiCustomerService()   {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">""
             Discover our comprehensive aicustomerservice solutions designed to transform your business;
           </p>
-        </div>
     </>
         <div className="text-center">""
 
@@ -24,7 +23,7 @@ export default function AiCustomerService()   {
 
 <p className="text-gray-300">Coming Soon - AI Customer Service Solutions</p>""
         </div>
-      </div>
     </div>
   )};
 }
+</div></div>

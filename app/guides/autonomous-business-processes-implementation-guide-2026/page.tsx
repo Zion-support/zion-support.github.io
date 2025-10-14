@@ -13,8 +13,8 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
       <header className="bg-gradient-to-r from-green-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
           <Link
-            to="/"
-            className="inline-flex items-center text-green-200 hover:text-white transition-colors mb-8"
+            to=""/"
+            className="inline-flex items-center text-green-200 hover: 'text-white transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
@@ -22,7 +22,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
 
           <h1 className="text-5xl font-bold mb-6">🤖 Autonomous Business Processes Implementation Guide 2026</h1>
           <p>Complete Enterprise Automation and Intelligent Workflow Implementation</p>
-          </p>
 
           <div className="flex flex-wrap gap-4">
             <span className="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-full text-sm font-semibold">
@@ -37,9 +36,8 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               <BarChart className="w-4 h-4 mr-2" />
               $5.2B PROVEN
             </div>
-        </header>
 
-      {/* Article Content */}
+      {/* Article Content */'}
       <article className="max-w-6xl mx-auto px-4 py-12">
         {/* Executive Summary */}
         <div className="mb-12">
@@ -48,7 +46,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
             deploying autonomous business processes in your enterprise. Based on successful
             deployments delivering $5.2B in enterprise value, this guide ensures maximum
             automation and seamless integration.</p>
-          </div>
 
         {/* Pre-Implementation Checklist */}
         <div className="mb-12">
@@ -57,7 +54,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
           <div className="bg-gray-50 p-8 rounded-lg mb-8">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">✅ Prerequisites</h3>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md: 'grid-cols-2 gap-8">
               <div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Technical Requirements</h4>
                 <ul className="space-y-3">
@@ -73,7 +70,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                     <span>Integration and API management</li>
-                </div>
 
               <div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">
@@ -92,9 +88,8 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                     <span>Data governance and quality</li>
-                </div>
 
-        {/* Implementation Phases */}
+        {/* Implementation Phases */'}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">🚀 Implementation Phases</h2>
 
@@ -102,12 +97,11 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
             <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg border-l-4 border-green-500">
               <div className="flex items-center mb-4">
                 <div>1</div>
-                </div>
                 <h3 className="text-2xl font-semibold text-gray-900">
                   Process Discovery & Analysis (Months 1-3)
                 </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md: 'grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">
                     Process Mining
@@ -117,7 +111,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Identify automation opportunities</li>
                     <li>• Analyze process performance metrics</li>
                     <li>• Document process variations</ul>
-                </div>
 
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">Stakeholder Engagement</h4>
@@ -126,18 +119,16 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Gather requirements and pain points</li>
                     <li>• Define success criteria</li>
                     <li>• Establish governance structure</ul>
-                </div>
 
-            {/* Phase 2 */}
+            {/* Phase 2 */'}
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg border-l-4 border-blue-500">
               <div className="flex items-center mb-4">
                 <div>2</div>
-                </div>
                 <h3 className="text-2xl font-semibold text-gray-900">
                   Automation Design & Development (Months 4-9)
                 </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md: 'grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">
                     Process Design
@@ -147,7 +138,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Implement decision logic and rules</li>
                     <li>• Create exception handling mechanisms</li>
                     <li>• Develop monitoring and alerting</ul>
-                </div>
 
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">Technology Implementation</h4>
@@ -156,18 +146,16 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Integrate with existing systems</li>
                     <li>• Implement AI/ML models</li>
                     <li>• Configure security and compliance</ul>
-                </div>
 
-            {/* Phase 3 */}
+            {/* Phase 3 */'}
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-lg border-l-4 border-purple-500">
               <div className="flex items-center mb-4">
                 <div>3</div>
-                </div>
                 <h3 className="text-2xl font-semibold text-gray-900">
                   Testing & Deployment (Months 10-12)
                 </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md: 'grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">
                     Testing & Validation
@@ -177,7 +165,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Validate process performance</li>
                     <li>• Test exception scenarios</li>
                     <li>• Perform user acceptance testing</ul>
-                </div>
 
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">Deployment & Training</h4>
@@ -186,18 +173,16 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Train end users and administrators</li>
                     <li>• Monitor initial performance</li>
                     <li>• Gather feedback and optimize</ul>
-                </div>
 
-            {/* Phase 4 */}
+            {/* Phase 4 */'}
             <div className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-lg border-l-4 border-orange-500">
               <div className="flex items-center mb-4">
                 <div>4</div>
-                </div>
                 <h3 className="text-2xl font-semibold text-gray-900">
                   Optimization & Scale (Months 13-18)
                 </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md: 'grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">
                     Continuous Improvement
@@ -207,7 +192,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Optimize process efficiency</li>
                     <li>• Implement advanced AI capabilities</li>
                     <li>• Expand automation scope</ul>
-                </div>
 
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">
@@ -218,13 +202,12 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                     <li>• Integrate additional processes</li>
                     <li>• Develop advanced analytics</li>
                     <li>• Achieve full autonomy</ul>
-                </div>
 
-        {/* Expected Outcomes */}
+        {/* Expected Outcomes */'}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">📊 Expected Outcomes</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md: 'grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-lg text-center">
               <Brain className="w-12 h-12 mx-auto mb-4" />
               <div className="text-3xl font-bold mb-2">95%</div>
@@ -245,11 +228,11 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               <div className="text-3xl font-bold mb-2">18</div>
               <div className="text-orange-100">Months to ROI</div>
 
-        {/* Key Technologies */}
+        {/* Key Technologies */'}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">🔧 Key Technologies</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md: 'grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-lg border">
               <Cpu className="w-8 h-8 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Process Mining</h3>
@@ -280,36 +263,29 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Integration Platforms</h3>
               <p className="text-gray-600">Seamless integration with existing enterprise systems</p>
 
-        {/* CTA Section */}
+        {/* CTA Section */'}
         <div className="bg-gradient-to-r from-green-900 to-blue-900 text-white p-12 rounded-lg text-center">
           <h3 className="text-3xl font-bold mb-4">
             Ready to Transform Your Business with Autonomous Processes?
           </h3>
           <p>Join the leaders in autonomous business process implementation. Get your personalized
             implementation plan today.</p>
-          </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-green-900 rounded-lg hover:bg-green-50 transition-colors font-semibold"
+              to=""/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-green-900 rounded-lg hover: 'bg-green-50 transition-colors font-semibold"
             >
               Get Your Implementation Plan
               <ArrowLeft className="w-5 h-5 ml-2" />
             </Link>
             <Link 
-              to="/case-studies"
+              to=""/case-studies"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-900 transition-colors font-semibold"
             >
               View Success Stories
               <ArrowLeft className="w-5 h-5 ml-2" />
             </div>
-        </article>
-    </div>
-  );
+  );'
 }
 </span>
-</span>
-</span>
-</span>
-</span>
-</span>
+</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></ul></li></li></li></li></span></span></span></h3></h3></h3></h3></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></ul></li></li></li></li></span></span></span></span>

@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: 'React.ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
+  enableFocusManagement?: boolean;'
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
+const AccessibilityEnhancer: 'React.FC<AccessibilityEnhancerProps> = ({
+  children',
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
@@ -21,7 +21,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50';
+      skipLink.className = 'sr-only focus: 'not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50';
       skipLink.style.cssText = `
         position: absolute;
         width: 1px;
@@ -29,11 +29,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         padding: 0;
         margin: -1px;
         overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
+        clip: rect(0', 0, 0, 0);
+        white-space: 'nowrap;
         border: 0;
       `;
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      document.body.insertBefore(skipLink', document.body.firstChild);
     };
 
     // High contrast mode

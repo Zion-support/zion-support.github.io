@@ -9,8 +9,8 @@ interface SEOEnhancerProps {
   type?: string
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group','
+const SEOEnhancer: 'React.FC<SEOEnhancerProps> = ({
+  title = 'Zion Tech Group'','
   description = 'Leading provider of AI and IT solutions','
   keywords = ['AI', 'IT', 'technology', 'solutions'],'
   image,

@@ -6,7 +6,7 @@ const ContentStatistics = () => {
       <p className="text-gray-300">
         This is a placeholder component for ContentStatistics.
       </p>
-    </div>
   );
 };
 export default ContentStatistics;
+</div>

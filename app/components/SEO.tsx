@@ -7,8 +7,8 @@ const SEO = () => {
       <p className="text-gray-300">
         This is a placeholder component for SEO.
       </p>
-    </div>
   );
 };
 
 export default SEO;
+</div>

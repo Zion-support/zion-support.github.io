@@ -7,9 +7,6 @@ export default function Page() {
     <>
       <Helmet>
         <title>Mobile Development - Zion Tech Group</title>
-
-        </div>
-      </div>
     </>
   );
 }

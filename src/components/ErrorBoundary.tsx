@@ -5,7 +5,7 @@ interface ErrorBoundaryProps {
   children?: React.ReactNode;
 }
 
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {''
+const ErrorBoundary: 'React.FC<ErrorBoundaryProps> = ({ className = ''', children }) => {''
   return (
 <>    <div className={`errorboundary ${className}`}></div>```
       {children}

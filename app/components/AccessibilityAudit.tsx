@@ -9,10 +9,8 @@ const AccessibilityAudit = () => {
           <p className="text-gray-300 text-lg">
             This component is under construction. Please check back later.
           </p>
-        </div>
-      </div>
     </>
   );
 };
 
-export default AccessibilityAudit;
+export default AccessibilityAudit;</div></div>

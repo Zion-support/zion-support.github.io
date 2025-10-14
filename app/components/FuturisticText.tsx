@@ -2,16 +2,16 @@ import React from "react;
 import { cn    } from "../utils/cn;
 
 interface FuturisticTextProps {
-  children: React.ReactNode
+  children: 'React.ReactNode
   variant?: 'primary' | 'secondary' | 'accent' | 'muted';'
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl';'
   weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black';'
   glow?: boolean
-  animate?: boolean
+  animate?: boolean'
 }
 
-const FuturisticText: React.FC<FuturisticTextProps> = ({
-  as: Component = 'p','
+const FuturisticText: 'React.FC<FuturisticTextProps> = ({
+  as: Component = 'p'','
   className = ,'
   children,
   variant = 'primary','
@@ -66,7 +66,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     className
   )
   return React.createElement(Component, {
-    className: combinedClasses,
+    className: 'combinedClasses',
     ...props
   }, children)
 }

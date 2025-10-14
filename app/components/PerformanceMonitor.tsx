@@ -1,10 +1,10 @@
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null
+const PerformanceMonitor: 'React.FC = () => {
+  const [metrics', setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 'null',
+    firstContentfulPaint: 'null',
+    largestContentfulPaint: 'null',
+    firstInputDelay: 'null',
+    cumulativeLayoutShift: 'null'
   })
 
   const [isVisible, setIsVisible] = useState(false)
@@ -17,35 +17,35 @@ const PerformanceMonitor: React.FC = () => {
             if (entry.name === 'first-contentful-paint') {'
               setMetrics(prev => ({
                 ...prev,
-                fcp: entry.startTime
+                fcp: 'entry.startTime'
               }))
             }
           } else if (entry.entryType === 'largest-contentful-paint') {'
             setMetrics(prev => ({
               ...prev,
-              lcp: entry.startTime
+              lcp: 'entry.startTime'
             }))
           } else if (entry.entryType === 'first-input') {'
             setMetrics(prev => ({
               ...prev,
-              fid: (entry as any).processingStart - entry.startTime
+              fid: '(entry as any).processingStart - entry.startTime'
             }))
           } else if (entry.entryType === 'layout-shift') {'
             setMetrics(prev => ({
               ...prev,
-              cls: (prev?.cls || 0) + (entry as any).value
+              cls: '(prev?.cls || 0) + (entry as any).value'
             }))
           }
         }
       })
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });'
+      observer.observe({ entryTypes: '['paint'', 'largest-contentful-paint', 'first-input', 'layout-shift'] });'
 
       // Get TTFB
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
       if (navigationEntry) {
         setMetrics(prev => ({
           ...prev,
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart
+          ttfb: 'navigationEntry.responseStart - navigationEntry.requestStart'
         }))
       }
 
@@ -56,11 +56,11 @@ const PerformanceMonitor: React.FC = () => {
           const entries = list.getEntries()
           const fcp = entries.find(entry => entry.name === 'first-contentful-paint');'
           if (fcp) {
-            setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime }))
+            setMetrics(prev => ({ ...prev, firstContentfulPaint: 'fcp.startTime' }))
           }
         })
-    ttfb: null,
-    loadTime: null
+    ttfb: 'null',
+    loadTime: 'null'
   }
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
@@ -73,12 +73,12 @@ const PerformanceMonitor: React.FC = () => {
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')";'"
       const lcp = performance.getEntriesByType('largest-contentful-paint')";'"
       setMetrics({
-        cls: 0, // Would need to be calculated with observer
-        inp: 0, // Would need to be calculated with observer
-        fcp: fcp ? fcp.startTime : null,
-        lcp: lcp.length > 0 ? lcp[lcp.length - 1].startTime : null,
-        ttfb: navigation ? navigation.responseStart - navigation.requestStart : null,
-        loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : null
+        cls: '0', // Would need to be calculated with observer
+        inp: '0', // Would need to be calculated with observer
+        fcp: 'fcp ? fcp.startTime : null',
+        lcp: 'lcp.length > 0 ? lcp[lcp.length - 1].startTime : null',
+        ttfb: 'navigation ? navigation.responseStart - navigation.requestStart : null',
+        loadTime: 'navigation ? navigation.loadEventEnd - navigation.navigationStart : null'
       }
     // Wait for page load
   return (
@@ -91,32 +91,26 @@ const PerformanceMonitor: React.FC = () => {
           <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
           <div className="space-y-2 text-xs">
             <div className="flex justify-between">
-              <span>FCP:</span>
-              <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}></span>
+              <span>FCP: '</span>
+              <span className={getScoreColor(metrics.fcp', { good: '1800', poor: '3000' })}></span>
                 {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}"`"`'"``'"`
               </span>
-            </div>
     </>
             <div className="flex justify-between">
-              <span>LCP:</span>
-              <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}></span>
+              <span>LCP: '</span>
+              <span className={getScoreColor(metrics.lcp', { good: '2500', poor: '4000' })}></span>
                 {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}"`"`'"``'"`
               </span>
-            </div>
             <div className="flex justify-between">
-              <span>TTFB:</span>
-              <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}></span>
+              <span>TTFB: '</span>
+              <span className={getScoreColor(metrics.ttfb', { good: '800', poor: '1800' })}></span>
                 {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}"`"`'"``'"`
               </span>
-            </div>
             <div className="flex justify-between">
-              <span>Load Time:</span>
-              <span className={getScoreColor(metrics.loadTime, { good: 3000, poor: 5000 })}></span>
+              <span>Load Time: '</span>
+              <span className={getScoreColor(metrics.loadTime', { good: '3000', poor: '5000' })}></span>
                 {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}"`"`'"``'"`
               </span>
-            </div>
-          </div>
-        </div>
     }
     // Measure after initial load
     const timer = setTimeout(measurePerformance, 1000)
@@ -124,13 +118,13 @@ const PerformanceMonitor: React.FC = () => {
   }, [])
   // Toggle visibility with keyboard shortcut
   useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {}
+    const handleKeyPress = (event: 'KeyboardEvent) => {'}
     }
     measurePerformance()
     // Set up keyboard shortcut to toggle visibility
-    const handleKeyPress = (e: KeyboardEvent) => {
+    const handleKeyPress = (e: 'KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {'
-        setIsVisible(prev => !prev)
+        setIsVisible(prev => !prev)'
       }
     }
     window.addEventListener('keydown', handleKeyPress);'
@@ -142,9 +136,8 @@ const PerformanceMonitor: React.FC = () => {
         <button></button>
           ×
         </button>
-      </div>
 import React from "react;
-const PerformanceMonitor: React.FC = () => { return null; }
+const PerformanceMonitor: 'React.FC = () => { return null;' }
 export default PerformanceMonitor
       )}
     </div>
@@ -152,4 +145,4 @@ export default PerformanceMonitor
       )}
     </div>
 }
-export default PerformanceMonitor
+export default PerformanceMonitor</div></div></div></div>

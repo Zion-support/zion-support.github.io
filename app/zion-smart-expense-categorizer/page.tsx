@@ -9,7 +9,6 @@ export default function Page() {
         <title>Zion Smart Expense Categorizer - Zion Tech Group</title>
         <meta name="description" content="Zion Smart Expense Categorizer services and solutions from Zion Tech Group" />
       </Helmet>
-      </Helmet>
       
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
@@ -17,8 +16,6 @@ export default function Page() {
           <p className="text-xl text-gray-600">
             This page is under development. Please check back soon for more information about our zion smart expense categorizer services.
           </p>
-        </div>
-      </div>
     </>
   );
-}
+}</div></div>

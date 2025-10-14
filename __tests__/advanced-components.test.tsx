@@ -14,7 +14,7 @@ jest.mock('../app/components/AdvancedPerformanceMonitor', () => {''
 });
 
 describe('EnhancedErrorBoundary', () => {''
-  const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  const ThrowError = ({ shouldThrow }: { shouldThrow: 'boolean' }) => {
     if (shouldThrow) {
       throw new Error('Test error');'
     }
@@ -25,7 +25,6 @@ describe('EnhancedErrorBoundary', () => {''
     render(
       <EnhancedErrorBoundary></EnhancedErrorBoundary>
         <div>No error content</div>
-      </EnhancedErrorBoundary>
     );
 
     expect(screen.getByText('No error content')).toBeInTheDocument();'
@@ -40,7 +39,6 @@ describe('EnhancedErrorBoundary', () => {''
       <MemoryRouter></MemoryRouter>
         <EnhancedErrorBoundary></EnhancedErrorBoundary>
           <ThrowError shouldThrow={true} /></ThrowError>
-        </EnhancedErrorBoundary>
       </MemoryRouter>
     );
 
@@ -58,7 +56,6 @@ describe('EnhancedErrorBoundary', () => {''
     render(
       <EnhancedErrorBoundary onError={onError}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} /></ThrowError>
-      </EnhancedErrorBoundary>
     );
 
     expect(onError).toHaveBeenCalled();
@@ -82,7 +79,6 @@ describe('EnhancedErrorBoundary', () => {''
       <MemoryRouter></MemoryRouter>
         <EnhancedErrorBoundary></EnhancedErrorBoundary>
           <ThrowError /></ThrowError>
-        </EnhancedErrorBoundary>
       </MemoryRouter>
     );
 
@@ -100,7 +96,6 @@ describe('AdvancedSEOOptimizer', () => {''
     render(
       <HelmetProvider></HelmetProvider>
         <AdvancedSEOOptimizer /></AdvancedSEOOptimizer>
-      </HelmetProvider>
     );
     expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();'
   });
@@ -109,7 +104,6 @@ describe('AdvancedSEOOptimizer', () => {''
     render(
       <HelmetProvider></HelmetProvider>
         <AdvancedSEOOptimizer /></AdvancedSEOOptimizer>
-      </HelmetProvider>
     );
     
     expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();'
@@ -119,7 +113,6 @@ describe('AdvancedSEOOptimizer', () => {''
     render(
       <HelmetProvider></HelmetProvider>
         <AdvancedSEOOptimizer /></AdvancedSEOOptimizer>
-      </HelmetProvider>
     );
     
     expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();'

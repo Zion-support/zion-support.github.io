@@ -12,8 +12,6 @@
             Professional lazy image services
             designed to help your business grow and succeed.
           </p>
-        </div>
-      </section>
       { /* Content Section */ }
             Lazy Image</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -37,8 +35,6 @@
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                   Ongoing support
                 </li>
-              </ul>
-            </div>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
@@ -49,9 +45,6 @@
                 className="$1"></a>
                 Contact Us
               </a>
-            </div>
-          </div>
-        </div>
       </section>
             Ready to Get Started?
           </h2>
@@ -64,9 +57,6 @@
             className="$1"></a>
             Get Started Today
           </a>
-        </div>
-      </section>
-    </div>
   )
 export default LazyImage
                 We provide comprehensive lazy image
@@ -80,7 +70,7 @@ export default LazyImage
                   Expert consultation</li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support</li></ul></div>
+                  Ongoing support</li>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
@@ -93,15 +83,15 @@ export default LazyImage
 
   )
 export default LazyImage
-  alt: string
+  alt: 'string
   className?: string
   placeholder?: string
   onLoad?: () => void
 const LazyImage: React.FC<LazyImageProps> = ({
-  src,
+  src',
   alt,
   className = ','
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',
+  placeholder = 'data: 'image/svg+xml;base64',PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',
   onLoad,
   onError
 }) => {
@@ -115,7 +105,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           setIsInView(true)
           observer.disconnect()
       },
-      { threshold: 0.1 }
+      { threshold: '0.1' }
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
@@ -137,4 +127,4 @@ const LazyImage: React.FC<LazyImageProps> = ({
         /></div>
       )
     </div>
-export default LazyImage
+export default LazyImage</ul></div></div></div></ul>

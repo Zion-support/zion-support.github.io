@@ -1,5 +1,5 @@
 export const reportError = (
-  error: Error,
+  error: 'Error',
   context?: Record<string, unknown>,)
 ) => {
   console.error("Error reported:", error, context)

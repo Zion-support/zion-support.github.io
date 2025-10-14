@@ -1,39 +1,39 @@
 import './globals.css';
 
 export default function RootLayout({
-  children: _children,
+  children: '_children',
 }: {
-  children: React.ReactNode;
+  children: 'React.ReactNode;'
 }) {
   const structuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https: '//schema.org'',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+    description: 'Leading provider of AI-powered enterprise solutions', automation, and digital transformation services.',
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology',
-    contactPoint: {
-      '@type': 'ContactPoint',
+    contactPoint: '{
+      '@type': 'ContactPoint'',
       telephone: '+1-302-600-9898',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',
     },
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
+    sameAs: '[
+      'https://twitter.com/ziontechgroup'',
+      'https: '//linkedin.com/company/ziontechgroup'',
     ],
-    address: {
-      '@type': 'PostalAddress',
+    address: '{
+      '@type': 'PostalAddress'',
       addressCountry: 'US',
     },
-    offers: {
-      '@type': 'Offer',
+    offers: '{
+      '@type': 'Offer'',
       category: 'AI Solutions',
-      description: 'Enterprise AI solutions, digital transformation, and cloud services',
+      description: 'Enterprise AI solutions', digital transformation, and cloud services',
     },
   };
 
@@ -44,13 +44,11 @@ export default function RootLayout({
         <meta name="description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services." />
         <meta name="keywords" content="AI solutions, automation, digital transformation, enterprise AI, machine learning, cloud services" />
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          type="application"/ld+json"
+          dangerouslySetInnerHTML={{ __html: 'JSON.stringify(structuredData)' }}
         />
       </head>
       <body>
         <div id="root"></div>
-      </body>
-    </html>
   );
 }

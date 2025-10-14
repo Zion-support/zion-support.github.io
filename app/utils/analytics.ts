@@ -1,6 +1,6 @@
 
 
-export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+export const trackEvent = (eventName: 'string', properties?: Record<string, unknown>) => {
   // Basic analytics tracking
   console.log('Analytics Event:', eventName, properties);
   
@@ -10,13 +10,13 @@ export const trackEvent = (eventName: string, properties?: Record<string, unknow
   }
 };
 
-export const trackPageView = (pageName: string) => {
-  console.log('Page View:', pageName);
+export const trackPageView = (pageName: 'string) => {
+  console.log('Page View:'', pageName);
   
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
-      page_title: pageName,
-      page_location: window.location.href,
+      page_title: 'pageName',
+      page_location: 'window.location.href',
     });
   }
 };

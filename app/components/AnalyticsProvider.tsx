@@ -6,7 +6,6 @@ const AnalyticsProvider = () => {
       <p className="text-gray-300">
         This is a placeholder component for AnalyticsProvider.
       </p>
-    </div>
   );
 };
-export default AnalyticsProvider;
+export default AnalyticsProvider;</div>

@@ -1,12 +1,12 @@
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: 'React.FC<PerformanceOptimizerProps> = ({ children' }) => {
   useEffect(() => {
     // Performance optimization code;'
 const optimizeImages = () => {
 const images = document.querySelectorAll('img')
       images.forEach((img) => {}
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
+const PerformanceOptimizer: 'React.FC<PerformanceOptimizerProps> = ({
+  children',
   enableImageOptimization = true,
   enableLazyLoading = true,
   enableCodeSplitting = true,

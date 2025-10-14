@@ -5,7 +5,7 @@ interface AdvancedPerformanceMonitorProps {
   children?: React.ReactNode;
 }
 
-const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {''
+const AdvancedPerformanceMonitor: 'React.FC<AdvancedPerformanceMonitorProps> = ({ className = ''', children }) => {''
   return (
 <>    <div className={`advancedperformancemonitor ${className}`}></div>```
       {children}

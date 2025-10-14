@@ -1,27 +1,27 @@
 import React, { Component, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: 'ReactNode;
+  fallback?: ReactNode;'
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: 'boolean;
+  error?: Error;'
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor(props: 'Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false' };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: 'Error): State {
+    return { hasError: true', error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  componentDidCatch(error: 'Error', errorInfo: 'React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:'', error, errorInfo);
   }
 
   render() {
@@ -33,17 +33,15 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-8">We&apos;re sorry, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
+              className="bg-blue-500 hover: 'bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
             >
               Reload Page
             </button>
-          </div>
-        </div>
-      );
+      );'
     }
 
     return this.props.children;
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary;</div></div>

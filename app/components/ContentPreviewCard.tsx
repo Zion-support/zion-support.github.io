@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 interface ContentPreviewCardProps {
-  id: string;
+  id: 'string;
   title: string;
   excerpt: string;
   author: string;
@@ -10,11 +10,11 @@ interface ContentPreviewCardProps {
   readTime: string;
   category: string;
   imageUrl?: string;
-  slug: string;
+  slug: string;'
 }
 
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
-  id: _id,
+const ContentPreviewCard: 'React.FC<ContentPreviewCardProps> = ({
+  id: _id',
   title,
   excerpt,
   author,
@@ -25,11 +25,11 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   slug
 }) => {
   return (
-    <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <article className="bg-white rounded-lg shadow-md overflow-hidden hover: 'shadow-lg transition-shadow duration-300">
       {imageUrl && (
         <div className="aspect-w-16 aspect-h-9">
           <img
-            src={imageUrl}
+            src={imageUrl'}
             alt={title}
             className="w-full h-48 object-cover"
           />
@@ -44,12 +44,11 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <span className="text-sm text-gray-500">{readTime}</span>
         
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-          <Link href={`/blog/${slug}`} className="hover:text-blue-600 transition-colors">
-            {title}
+          <Link href={`/blog/${slug}`} className="hover: 'text-blue-600 transition-colors">
+            {title'}
           </h3>
         
         <p>{excerpt}</p>
-        </p>
         
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -63,15 +62,13 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           
           <Link
             href={`/blog/${slug}`}
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
+            className="inline-flex items-center text-blue-600 hover: 'text-blue-800 font-medium text-sm"
           >
             Read more
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2'} d="M9 5l7 7-7 7" />
             </Link>
-        </div>
-    </article>
   );
 };
 
-export default ContentPreviewCard;
+export default ContentPreviewCard;</div></div></div></p></div></div></div>

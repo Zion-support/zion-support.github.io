@@ -9,16 +9,13 @@ const AppPage = () => {
         <title>App - Zion Tech Group</title>
         <meta name="description" content="App - Zion Tech Group" />
       </Helmet>
-        </Helmet>
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">App</h1>
 
           </div>
-        </div>
-      </div>
     </>
   );
 };
 
-export default AppPage;
+export default AppPage;</div></div>

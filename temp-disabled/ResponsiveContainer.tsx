@@ -1,7 +1,7 @@
 import React from "react";'''''"
 interface ResponsiveContainerProps {}
-  children: React.ReactNode;
-  className?: string}
+  children: 'React.ReactNode;
+  className?: string'}
 const ResponsiveContainer: "React.FC<ResponsiveContainerProps> = ({ children", className = '' }) => {''}''''"'"
   return (
   <>
