@@ -56,4 +56,7 @@ const initApp = async () => {
       try {
         // Add any initialization logic here
         setIsInitialized(true);
-
+      }
+    };
+    initApp();
+  }, []);

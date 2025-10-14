@@ -1,4 +1,6 @@
-
+import React from "react";
+import { Helmet } from "react-helmet-async";
+const PagePage = () => {
   return (
     <>
       <SEOOptimizer title="Web Development Services - Zion Tech Group"
@@ -15,7 +17,7 @@
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
-      ></AccessibilityEnhancer>
+      >
         <div></div>
       </AccessibilityEnhancer>
       <SecurityEnhancer enableCSP={true}
@@ -161,4 +163,4 @@
     </>
   );
 };
-
+export default PagePage;

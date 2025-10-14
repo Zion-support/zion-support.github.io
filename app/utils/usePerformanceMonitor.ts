@@ -1,37 +1,41 @@
-import { useEffect, useState } from 'react';
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage?: number;
-}
+import { useEffect, useState } from 'react';,
 
-export const usePerformanceMonitor = (): PerformanceMetrics => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>({
+interface PerformanceMetrics {,
+
+  loadTime: number;,
+  renderTime: number;,
+  memoryUsage?: number;}
+
+export const usePerformanceMonitor = (): PerformanceMetrics => {,
+
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({,
+
     loadTime: 0,
-    renderTime: 0,
-  });
+    renderTime: 0});,
 
-  useEffect(() => {
-    const startTime = performance.now();
+  useEffect(() => {,
+
+    const startTime = performance.now();,
     
     const measurePerformance = () => {
-      const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
+
+      const loadTime = performance.now() - startTime;,
+      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;,
       
-      setMetrics({
+      setMetrics({,
+
         loadTime,
         renderTime: performance.now() - startTime,
-        memoryUsage,
-      });
-    };
+        memoryUsage});,
+    };,
 
-    // Measure after component mount
-    const timeoutId = setTimeout(measurePerformance, 100);
+    // Measure after component mount,
+    const timeoutId = setTimeout(measurePerformance, 100);,
     
-    return () => clearTimeout(timeoutId);
-  }, []);
+    return () => clearTimeout(timeoutId);,
+  }, []);,
 
-  return metrics;
-};
+  return metrics;,
+};,
 
-export default usePerformanceMonitor;
+export default usePerformanceMonitor;,

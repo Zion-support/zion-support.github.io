@@ -1,6 +1,6 @@
 import fs from "fs
 import { glob } from "glob
-
+// Fix broken import statements
 function fixImports(content) {
   // Fix malformed import statements where quotes are missing
   content = content.replace(/from\s+([a-zA-Z-]+)import/g, 'from "$1";\nimport')
@@ -37,4 +37,5 @@ const fixedContent = fixImports(content)
 } catch (error) {
     console.error(`Error processing ${file}:`, error.message)
 })
-
+console.log(`Fixed ${fixedCount} files.`)"
+}

@@ -1,16 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import path from 'path';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+  ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './app'),
-      '@components': resolve(__dirname, './app/components'),
-      '@utils': resolve(__dirname, './app/utils'),
-      '@hooks': resolve(__dirname, './app/hooks'),
-      '@contexts': resolve(__dirname, './app/contexts'),
+      '@': path.resolve(__dirname, './src'),
+      '@app': path.resolve(__dirname, './app'),
     },
   },
   build: {
@@ -21,7 +20,6 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react'],
         },
       },
     },
@@ -29,7 +27,6 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    host: true,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],

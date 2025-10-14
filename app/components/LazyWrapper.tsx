@@ -1,9 +1,10 @@
-
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const LazyWrapperPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet></Helmet>
+      <Helmet>
         <title>LazyWrapper - Zion Tech Group</title>
         <meta name="description" content="Professional LazyWrapper services by Zion Tech Group." />
         <meta name="keywords" content="LazyWrapper, AI solutions, IT services" />
@@ -46,3 +47,4 @@ const LazyWrapperPage = () => {
   );
 };
 
+export default LazyWrapperPage;

@@ -1,5 +1,5 @@
 import React from 'react'
-
+#!/usr/bin/env node
 import fs from "fs
 import path from "path
 import { execSync } from "child_process
@@ -93,7 +93,14 @@ const fixes = [
     return false
 }
 // Function to find all TypeScript/JavaScript files
-
+function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
+  const files = []
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir)
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item)
+      const stat = fs.statSync(fullPath)
+      if (
         stat.isDirectory() &&
         !item.startsWith(".") &&
         item !== "node_modules
@@ -130,4 +137,4 @@ const files = findFiles("./app")
 } catch (error) {
   console.error("❌ Error during fix process:", error.message)
   process.exit(1)
-
+}"
