@@ -111,10 +111,181 @@ const MicroSAASSolutionsPage: React.FC = () => {
       pricing: '$79/month',
       category: 'Productivity',
       icon: '📊'
+    },
+    {
+      id: 'ai-code-reviewer',
+      title: 'AI Code Reviewer Pro',
+      description: 'Automated code review with security analysis, performance optimization, and best practices enforcement',
+      features: ['Security vulnerability detection', 'Performance analysis', 'Code quality metrics', 'Automated suggestions'],
+      pricing: '$149/month',
+      category: 'Development',
+      icon: '🔍'
+    },
+    {
+      id: 'smart-contract-auditor',
+      title: 'Smart Contract Auditor',
+      description: 'AI-powered smart contract security analysis and vulnerability detection for blockchain applications',
+      features: ['Security audit', 'Gas optimization', 'Vulnerability detection', 'Compliance checking'],
+      pricing: '$299/month',
+      category: 'Blockchain',
+      icon: '⛓️'
+    },
+    {
+      id: 'ai-translation-engine',
+      title: 'AI Translation Engine',
+      description: 'Real-time translation service with 100+ languages and context-aware accuracy',
+      features: ['100+ languages', 'Real-time translation', 'Context awareness', 'API integration'],
+      pricing: '$89/month',
+      category: 'Communication',
+      icon: '🌐'
+    },
+    {
+      id: 'predictive-maintenance-ai',
+      title: 'Predictive Maintenance AI',
+      description: 'IoT-based predictive maintenance system that prevents equipment failures before they happen',
+      features: ['IoT sensor integration', 'Failure prediction', 'Maintenance scheduling', 'Cost optimization'],
+      pricing: '$199/month',
+      category: 'IoT',
+      icon: '🔧'
+    },
+    {
+      id: 'ai-voice-cloning',
+      title: 'AI Voice Cloning Studio',
+      description: 'High-quality voice cloning and synthesis for content creation and accessibility',
+      features: ['Voice cloning', 'Text-to-speech', 'Voice conversion', 'Emotion control'],
+      pricing: '$179/month',
+      category: 'Media',
+      icon: '🎤'
+    },
+    {
+      id: 'blockchain-analytics',
+      title: 'Blockchain Analytics Pro',
+      description: 'Comprehensive blockchain data analysis and cryptocurrency market insights',
+      features: ['Transaction analysis', 'Market trends', 'Risk assessment', 'Portfolio tracking'],
+      pricing: '$129/month',
+      category: 'Analytics',
+      icon: '📈'
+    },
+    {
+      id: 'ai-video-editor',
+      title: 'AI Video Editor Pro',
+      description: 'Automated video editing with AI-powered scene detection, transitions, and effects',
+      features: ['Auto scene detection', 'Smart transitions', 'Color correction', 'Audio sync'],
+      pricing: '$99/month',
+      category: 'Media',
+      icon: '🎬'
+    },
+    {
+      id: 'quantum-crypto-generator',
+      title: 'Quantum Crypto Generator',
+      description: 'Quantum-resistant cryptography solutions for future-proof security',
+      features: ['Quantum key distribution', 'Post-quantum algorithms', 'Security analysis', 'Compliance tools'],
+      pricing: '$399/month',
+      category: 'Security',
+      icon: '🔐'
+    },
+    {
+      id: 'ai-3d-model-generator',
+      title: 'AI 3D Model Generator',
+      description: 'Generate 3D models from text descriptions using advanced AI algorithms',
+      features: ['Text-to-3D generation', 'Model optimization', 'Format conversion', 'Quality enhancement'],
+      pricing: '$159/month',
+      category: 'Design',
+      icon: '🎨'
+    },
+    {
+      id: 'neural-network-optimizer',
+      title: 'Neural Network Optimizer',
+      description: 'Automated neural network architecture search and hyperparameter optimization',
+      features: ['Architecture search', 'Hyperparameter tuning', 'Performance optimization', 'Model compression'],
+      pricing: '$249/month',
+      category: 'AI',
+      icon: '🧠'
+    },
+    {
+      id: 'ai-weather-predictor',
+      title: 'AI Weather Predictor Pro',
+      description: 'Advanced weather forecasting using machine learning and satellite data',
+      features: ['Long-term forecasting', 'Precision agriculture', 'Climate analysis', 'API integration'],
+      pricing: '$79/month',
+      category: 'Analytics',
+      icon: '🌤️'
+    },
+    {
+      id: 'smart-energy-manager',
+      title: 'Smart Energy Manager',
+      description: 'AI-powered energy consumption optimization for buildings and facilities',
+      features: ['Energy monitoring', 'Consumption optimization', 'Cost analysis', 'Renewable integration'],
+      pricing: '$119/month',
+      category: 'Sustainability',
+      icon: '⚡'
+    },
+    {
+      id: 'ai-medical-diagnosis',
+      title: 'AI Medical Diagnosis Assistant',
+      description: 'AI-powered medical image analysis and diagnostic support for healthcare professionals',
+      features: ['Medical image analysis', 'Diagnostic suggestions', 'Risk assessment', 'Compliance tools'],
+      pricing: '$499/month',
+      category: 'Healthcare',
+      icon: '🏥'
+    },
+    {
+      id: 'autonomous-vehicle-simulator',
+      title: 'Autonomous Vehicle Simulator',
+      description: 'Advanced simulation platform for testing and training autonomous vehicle systems',
+      features: ['Realistic simulation', 'Scenario testing', 'Performance analysis', 'Safety validation'],
+      pricing: '$799/month',
+      category: 'Automotive',
+      icon: '🚗'
+    },
+    {
+      id: 'ai-cyber-threat-hunter',
+      title: 'AI Cyber Threat Hunter',
+      description: 'Advanced threat detection and response system using machine learning',
+      features: ['Threat detection', 'Behavioral analysis', 'Incident response', 'Forensic analysis'],
+      pricing: '$299/month',
+      category: 'Security',
+      icon: '🛡️'
+    },
+    {
+      id: 'quantum-computing-simulator',
+      title: 'Quantum Computing Simulator',
+      description: 'Cloud-based quantum computing simulation and algorithm development platform',
+      features: ['Quantum simulation', 'Algorithm development', 'Circuit design', 'Performance analysis'],
+      pricing: '$599/month',
+      category: 'Quantum',
+      icon: '⚛️'
+    },
+    {
+      id: 'ai-space-analytics',
+      title: 'AI Space Analytics',
+      description: 'Satellite data analysis and space mission optimization using AI',
+      features: ['Satellite data processing', 'Mission planning', 'Orbital mechanics', 'Resource optimization'],
+      pricing: '$999/month',
+      category: 'Space',
+      icon: '🛰️'
+    },
+    {
+      id: 'ai-robotics-controller',
+      title: 'AI Robotics Controller',
+      description: 'Intelligent robotics control system with machine learning and computer vision',
+      features: ['Motion planning', 'Object recognition', 'Path optimization', 'Collision avoidance'],
+      pricing: '$399/month',
+      category: 'Robotics',
+      icon: '🤖'
+    },
+    {
+      id: 'ai-augmented-reality',
+      title: 'AI Augmented Reality Studio',
+      description: 'Create immersive AR experiences with AI-powered object recognition and tracking',
+      features: ['Object recognition', 'Spatial mapping', 'Gesture control', 'Real-time rendering'],
+      pricing: '$199/month',
+      category: 'AR/VR',
+      icon: '🥽'
     }
   ];
 
-  const categories = ['All', 'Marketing', 'Operations', 'Analytics', 'Finance', 'Productivity', 'Sales', 'Support', 'Security'];
+  const categories = ['All', 'Marketing', 'Operations', 'Analytics', 'Finance', 'Productivity', 'Sales', 'Support', 'Security', 'Development', 'Blockchain', 'Communication', 'IoT', 'Media', 'Design', 'AI', 'Sustainability', 'Healthcare', 'Automotive', 'Quantum', 'Space', 'Robotics', 'AR/VR'];
 
   return (
     <>
@@ -256,6 +427,7 @@ const MicroSAASSolutionsPage: React.FC = () => {
               <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>
               <p>✉️ <strong>Email:</strong> kleber@ziontechgroup.com</p>
               <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>🌐 <strong>Website:</strong> https://ziontechgroup.com</p>
             </div>
           </div>
         </div>

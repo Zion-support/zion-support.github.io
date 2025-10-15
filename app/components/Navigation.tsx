@@ -6,20 +6,20 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="nav-futuristic">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              <h1 className="text-2xl font-bold gradient-text">Zion Tech Group</h1>
             </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/" className="nav-link-futuristic">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/about" className="nav-link-futuristic">
               About
             </Link>
             
@@ -116,19 +116,19 @@ const Navigation: React.FC = () => {
               )}
             </div>
             
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/pricing" className="nav-link-futuristic">
               Pricing
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/blog" className="nav-link-futuristic">
               Blog
             </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/team" className="nav-link-futuristic">
               Team
             </Link>
-            <Link to="/careers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/careers" className="nav-link-futuristic">
               Careers
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/contact" className="nav-link-futuristic">
               Contact
             </Link>
           </div>

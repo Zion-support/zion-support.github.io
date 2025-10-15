@@ -873,6 +873,420 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-customer-support'
       }
+    },
+    {
+      id: 'ai-quantum-computing',
+      title: 'AI Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing services with AI-powered optimization for complex problem solving',
+      shortDescription: 'Harness quantum computing power with AI',
+      icon: '⚛️',
+      features: [
+        'Quantum Algorithm Development',
+        'Quantum Machine Learning',
+        'Quantum Optimization',
+        'Quantum Simulation',
+        'Quantum Cryptography',
+        'Quantum Error Correction',
+        'Hybrid Classical-Quantum Systems',
+        'Quantum Cloud Access',
+        'Custom Quantum Solutions',
+        'Performance Optimization'
+      ],
+      pricing: {
+        basic: 5000,
+        pro: 25000,
+        enterprise: 100000
+      },
+      benefits: [
+        'Exponential computational power',
+        'Complex problem solving',
+        'Revolutionary breakthroughs',
+        'Competitive advantage',
+        'Future-proof technology',
+        'Unprecedented speed'
+      ],
+      useCases: [
+        'Drug discovery',
+        'Financial modeling',
+        'Cryptography',
+        'Optimization problems',
+        'Machine learning',
+        'Scientific research'
+      ],
+      marketPrice: '$5,000 - $100,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-quantum-computing'
+      }
+    },
+    {
+      id: 'ai-neural-interface',
+      title: 'AI Neural Interface Technology',
+      description: 'Cutting-edge brain-computer interface solutions with AI-powered neural signal processing',
+      shortDescription: 'Connect minds with AI-powered neural interfaces',
+      icon: '🧠',
+      features: [
+        'Neural Signal Processing',
+        'Brain-Computer Interface',
+        'AI Pattern Recognition',
+        'Real-time Analysis',
+        'Medical Applications',
+        'Assistive Technology',
+        'Research Tools',
+        'Custom Algorithms',
+        'Safety Protocols',
+        'Integration APIs'
+      ],
+      pricing: {
+        basic: 10000,
+        pro: 50000,
+        enterprise: 200000
+      },
+      benefits: [
+        'Revolutionary communication',
+        'Medical breakthroughs',
+        'Assistive technology',
+        'Research advancement',
+        'Quality of life improvement',
+        'Cutting-edge innovation'
+      ],
+      useCases: [
+        'Medical rehabilitation',
+        'Assistive communication',
+        'Research applications',
+        'Gaming interfaces',
+        'Educational tools',
+        'Therapeutic applications'
+      ],
+      marketPrice: '$10,000 - $200,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-neural-interface'
+      }
+    },
+    {
+      id: 'ai-space-analytics',
+      title: 'AI Space Analytics Platform',
+      description: 'Advanced space data analysis and satellite mission optimization using AI and machine learning',
+      shortDescription: 'Analyze space data with AI-powered insights',
+      icon: '🛰️',
+      features: [
+        'Satellite Data Processing',
+        'Orbital Mechanics AI',
+        'Space Weather Prediction',
+        'Mission Planning',
+        'Resource Optimization',
+        'Anomaly Detection',
+        'Real-time Monitoring',
+        'Predictive Analytics',
+        'Custom Algorithms',
+        'Integration APIs'
+      ],
+      pricing: {
+        basic: 15000,
+        pro: 75000,
+        enterprise: 300000
+      },
+      benefits: [
+        'Space mission success',
+        'Cost optimization',
+        'Risk reduction',
+        'Data insights',
+        'Operational efficiency',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Satellite operations',
+        'Space mission planning',
+        'Earth observation',
+        'Space weather monitoring',
+        'Orbital debris tracking',
+        'Space exploration'
+      ],
+      marketPrice: '$15,000 - $300,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-space-analytics'
+      }
+    },
+    {
+      id: 'ai-robotics-controller',
+      title: 'AI Robotics Controller Pro',
+      description: 'Advanced AI-powered robotics control system with machine learning and computer vision',
+      shortDescription: 'Control robots with AI intelligence',
+      icon: '🤖',
+      features: [
+        'Motion Planning AI',
+        'Computer Vision',
+        'Object Recognition',
+        'Path Optimization',
+        'Collision Avoidance',
+        'Learning Algorithms',
+        'Real-time Control',
+        'Multi-robot Coordination',
+        'Custom Behaviors',
+        'Integration APIs'
+      ],
+      pricing: {
+        basic: 8000,
+        pro: 35000,
+        enterprise: 150000
+      },
+      benefits: [
+        'Intelligent automation',
+        'Improved efficiency',
+        'Safety enhancement',
+        'Cost reduction',
+        'Scalable operations',
+        'Advanced capabilities'
+      ],
+      useCases: [
+        'Manufacturing automation',
+        'Warehouse operations',
+        'Service robotics',
+        'Medical robotics',
+        'Agricultural automation',
+        'Research applications'
+      ],
+      marketPrice: '$8,000 - $150,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-robotics-controller'
+      }
+    },
+    {
+      id: 'ai-augmented-reality',
+      title: 'AI Augmented Reality Studio',
+      description: 'Create immersive AR experiences with AI-powered object recognition and spatial computing',
+      shortDescription: 'Build AI-powered augmented reality experiences',
+      icon: '🥽',
+      features: [
+        'Object Recognition AI',
+        'Spatial Mapping',
+        'Gesture Control',
+        'Real-time Rendering',
+        'Multi-platform Support',
+        'Custom AR Experiences',
+        'Integration APIs',
+        'Performance Optimization',
+        'Analytics Dashboard',
+        'Cloud Processing'
+      ],
+      pricing: {
+        basic: 5000,
+        pro: 25000,
+        enterprise: 100000
+      },
+      benefits: [
+        'Immersive experiences',
+        'Enhanced user engagement',
+        'Innovative solutions',
+        'Competitive advantage',
+        'Future-ready technology',
+        'Creative possibilities'
+      ],
+      useCases: [
+        'Retail experiences',
+        'Training simulations',
+        'Gaming applications',
+        'Educational content',
+        'Industrial maintenance',
+        'Marketing campaigns'
+      ],
+      marketPrice: '$5,000 - $100,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-augmented-reality'
+      }
+    },
+    {
+      id: 'ai-3d-model-generator',
+      title: 'AI 3D Model Generator Pro',
+      description: 'Generate high-quality 3D models from text descriptions using advanced AI algorithms',
+      shortDescription: 'Create 3D models with AI from text descriptions',
+      icon: '🎨',
+      features: [
+        'Text-to-3D Generation',
+        'Model Optimization',
+        'Format Conversion',
+        'Quality Enhancement',
+        'Custom Styling',
+        'Batch Processing',
+        'API Integration',
+        'Real-time Generation',
+        'Custom Training',
+        'Export Options'
+      ],
+      pricing: {
+        basic: 299,
+        pro: 1299,
+        enterprise: 4999
+      },
+      benefits: [
+        'Rapid 3D creation',
+        'Cost reduction',
+        'Creative freedom',
+        'Time savings',
+        'Quality consistency',
+        'Scalable production'
+      ],
+      useCases: [
+        'Game development',
+        'Architectural visualization',
+        'Product design',
+        'Marketing materials',
+        'Educational content',
+        'Virtual reality'
+      ],
+      marketPrice: '$299 - $4,999/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-3d-model-generator'
+      }
+    },
+    {
+      id: 'ai-cyber-threat-hunter',
+      title: 'AI Cyber Threat Hunter Pro',
+      description: 'Advanced AI-powered cybersecurity platform with real-time threat detection and response',
+      shortDescription: 'Hunt cyber threats with AI intelligence',
+      icon: '🛡️',
+      features: [
+        'AI Threat Detection',
+        'Behavioral Analysis',
+        'Real-time Monitoring',
+        'Incident Response',
+        'Forensic Analysis',
+        'Threat Intelligence',
+        'Automated Response',
+        'Custom Rules',
+        'Integration APIs',
+        'Compliance Reporting'
+      ],
+      pricing: {
+        basic: 2000,
+        pro: 8000,
+        enterprise: 25000
+      },
+      benefits: [
+        'Proactive security',
+        'Threat prevention',
+        'Rapid response',
+        'Cost reduction',
+        'Compliance assurance',
+        'Peace of mind'
+      ],
+      useCases: [
+        'Enterprise security',
+        'Threat hunting',
+        'Incident response',
+        'Compliance monitoring',
+        'Security operations',
+        'Risk management'
+      ],
+      marketPrice: '$2,000 - $25,000/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-cyber-threat-hunter'
+      }
+    },
+    {
+      id: 'ai-medical-diagnosis',
+      title: 'AI Medical Diagnosis Assistant',
+      description: 'AI-powered medical image analysis and diagnostic support for healthcare professionals',
+      shortDescription: 'Enhance medical diagnosis with AI assistance',
+      icon: '🏥',
+      features: [
+        'Medical Image Analysis',
+        'Diagnostic Suggestions',
+        'Risk Assessment',
+        'Treatment Recommendations',
+        'Patient Monitoring',
+        'Drug Interaction Analysis',
+        'Clinical Decision Support',
+        'Integration APIs',
+        'Compliance Tools',
+        'Research Analytics'
+      ],
+      pricing: {
+        basic: 5000,
+        pro: 25000,
+        enterprise: 100000
+      },
+      benefits: [
+        'Improved accuracy',
+        'Faster diagnosis',
+        'Better patient outcomes',
+        'Reduced errors',
+        'Cost efficiency',
+        'Enhanced care'
+      ],
+      useCases: [
+        'Radiology analysis',
+        'Pathology diagnosis',
+        'Clinical decision support',
+        'Patient monitoring',
+        'Drug development',
+        'Medical research'
+      ],
+      marketPrice: '$5,000 - $100,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-medical-diagnosis'
+      }
+    },
+    {
+      id: 'ai-autonomous-vehicles',
+      title: 'AI Autonomous Vehicle Platform',
+      description: 'Advanced AI platform for autonomous vehicle development and testing',
+      shortDescription: 'Develop autonomous vehicles with AI',
+      icon: '🚗',
+      features: [
+        'Computer Vision AI',
+        'Path Planning',
+        'Obstacle Detection',
+        'Traffic Analysis',
+        'Simulation Environment',
+        'Safety Systems',
+        'Real-time Processing',
+        'Integration APIs',
+        'Testing Tools',
+        'Performance Analytics'
+      ],
+      pricing: {
+        basic: 15000,
+        pro: 75000,
+        enterprise: 300000
+      },
+      benefits: [
+        'Safer transportation',
+        'Reduced accidents',
+        'Cost efficiency',
+        'Environmental benefits',
+        'Innovation leadership',
+        'Future mobility'
+      ],
+      useCases: [
+        'Autonomous cars',
+        'Delivery vehicles',
+        'Public transportation',
+        'Fleet management',
+        'Safety testing',
+        'Research development'
+      ],
+      marketPrice: '$15,000 - $300,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-autonomous-vehicles'
+      }
     }
   ],
   microSaas: [
