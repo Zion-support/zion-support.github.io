@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import '@testing-library/jest-dom';
-import React from 'react';
-import { TextEncoder, TextDecoder } from 'util';
-
-// Polyfill for TextEncoder/TextDecoder
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-
-// Mock TextEncoder and TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-=======
-require("@testing-library/jest-dom");
-// Polyfill for TextEncoder/TextDecoder
-const { TextEncoder, TextDecoder } = require("util");
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-// Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
-=======
 import '@testing-library/jest-dom';
 
 // Mock TextEncoder and TextDecoder
@@ -66,9 +44,8 @@ global.ResizeObserver = class ResizeObserver {
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
@@ -79,14 +56,11 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
-<<<<<<< HEAD
 
 // Mock scrollTo
 Object.defineProperty(window, 'scrollTo', {
   writable: true,
   value: jest.fn(),
-<<<<<<< HEAD
-=======
 });
 
 // Suppress console warnings
@@ -98,31 +72,22 @@ beforeAll(() => {
     }
     originalError.call(console, ...args);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 });
+
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn(),
-=======
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 };
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
+global.localStorage = localStorageMock;
+
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
 };
-// Mock window.gtag
-global.gtag = jest.fn();
-// Mock window.dataLayer
-global.dataLayer = [];
+global.sessionStorage = sessionStorageMock;
