@@ -57,7 +57,8 @@ const Footer: React.FC = () => {
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'News', path: '/news' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
+    { name: 'Sitemap', path: '/sitemap' }
   ];
 
   const legalLinks = [

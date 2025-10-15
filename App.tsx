@@ -21,6 +21,15 @@ const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PrivacyPolicyPage = React.lazy(() => import('./app/privacy-policy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const SlaPage = React.lazy(() => import('./app/sla/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const GdprPage = React.lazy(() => import('./app/gdpr/page'));
+const HelpPage = React.lazy(() => import('./app/help/page'));
+const DocsPage = React.lazy(() => import('./app/docs/page'));
+const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
+const StatusPage = React.lazy(() => import('./app/status/page'));
+const SupportPage = React.lazy(() => import('./app/support/page'));
+const CareersPage = React.lazy(() => import('./app/careers/page'));
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 
 const App: React.FC = () => {
   // Initialize performance monitoring
@@ -54,6 +63,15 @@ const App: React.FC = () => {
                 <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/sla" element={<SlaPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
+                <Route path="/gdpr" element={<GdprPage />} />
+                <Route path="/help" element={<HelpPage />} />
+                <Route path="/docs" element={<DocsPage />} />
+                <Route path="/api-docs" element={<ApiDocsPage />} />
+                <Route path="/status" element={<StatusPage />} />
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/sitemap" element={<SitemapPage />} />
                 <Route path="*" element={
                   <div className="container mx-auto px-4 py-16 text-center">
                     <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
