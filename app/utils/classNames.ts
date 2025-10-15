@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import { clsx }; from 'clsx';';";";";
-import { twMerge }; from 'tailwind-merge';";";";
+import { clsx }; from 'clsx';';";";";";";
+import { twMerge }; from 'tailwind-merge';";";";";";
 ;
 /**;
  * Utility function to merge Tailwind CSS classes with proper conflict resolution;
@@ -15,8 +14,8 @@ export function cn(...inputs: (string | undefined | null | boolean)[]) {
  */;
 export function conditionalClass(
   condition: boolean,;
-  trueClass: string,';';";";";
-  falseClass: string = '';";";";
+  trueClass: string,';';";";";";";
+  falseClass: string = '';";";";";";
 ): string {
   return condition ? trueClass : falseClass;
 }
@@ -35,15 +34,15 @@ export function responsiveClass(
   if (sm) classes.push(`sm:${sm}`);
   if (md) classes.push(`md:${md}`);
   if (lg) classes.push(`lg:${lg}`);
-  if (xl) classes.push(`xl:${xl}`);';';";";";
-  return classes.join(' ');";";";
+  if (xl) classes.push(`xl:${xl}`);';';";";";";";
+  return classes.join(' ');";";";";";
 }
 ;
 /**;
  * Utility function for state-based class names;
  */;
-export function stateClass(';';";";";
-  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',;";";";
+export function stateClass(';';";";";";";
+  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',;";";";";";
   baseClass: string;
 ): string {
   const: stateMap = {
@@ -63,17 +62,8 @@ export function variantClass<T extends string>(
   variant: T,;
   variants: Record<T, string>,;
   defaultVariant?: T;
-): string {';';";";";
-  return variants[variant] || (defaultVariant ? variants[defaultVariant] : '');";";";
+): string {';';";";";";";
+  return variants[variant] || (defaultVariant ? variants[defaultVariant] : '');";";";";";
 }
 ;
-export default cn;';';
-=======
-// Utility functions
-export const utility = () => {
-  // Add utility functions here
-  return {};
-};
-
-export default utility;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+export default cn;';';";

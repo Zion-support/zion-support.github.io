@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 interface LoggerOptions {
   // Add your options here;
@@ -8,8 +7,8 @@ interface LoggerState {
   // Add your state here;
 }
 ;
-export const Logger = (options: LoggerOptions = {}) => {
-  const stateRef = useRef<LoggerState>({
+export const: Logger = (options: LoggerOptions = {}) => {
+  const: stateRef = useRef<LoggerState>({;
     // Initialize your state here;
   });
 ;
@@ -23,13 +22,4 @@ export const Logger = (options: LoggerOptions = {}) => {
   };
 };
 ;
-export default Logger;';';
-=======
-// Utility functions
-export const utility = () => {
-  // Add utility functions here
-  return {};
-};
-
-export default utility;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+export default Logger;';';";
