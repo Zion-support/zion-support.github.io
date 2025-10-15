@@ -73,8 +73,16 @@ class ErrorHandler {
   }
 
   private logError(errorReport: ErrorReport): void {
-    console.error('Error reported:', errorReport);
-    // Here you could send to external logging service
+    // Log to console only in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reported:', errorReport);
+    }
+    
+    // Send to external logging service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Example: Send to external service like Sentry, LogRocket, etc.
+      // this.sendToExternalService(errorReport);
+    }
   }
 }
 
