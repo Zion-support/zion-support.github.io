@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
+import { Send } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -47,7 +47,8 @@ export default function Contact() {
       title: "Phone",
       details: ["+1 302 464 0950", "Mon-Fri 9AM-6PM EST"],
       action: "Call Now"
-    },    {
+    },
+    {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       details: "kleber@ziontechgroup.com",
@@ -66,11 +67,27 @@ export default function Contact() {
       description: "Middletown DE 19709"
     },
     {
+      description: 'Mon-Fri 9AM-6PM EST'
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'contact@ziontechgroup.com',
+      description: 'We respond within 24 hours'
+    },
+    {
+      icon: MapPin,
+      title: 'Address',
+      value: '123 Tech Street, Suite 100',
+      description: 'San Francisco, CA 94105'
+    },
+    {
       icon: <Clock className="w-6 h-6" />,
       title: "Business Hours",
       details: ["Mon-Fri: 9AM-6PM EST", "Sat: 10AM-4PM EST"],
       action: "Schedule Call"
-    }  ];
+    }
+  ];
 
   const services = [
     "AI Business Intelligence",

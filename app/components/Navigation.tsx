@@ -10,7 +10,6 @@ import {
   PhoneIcon,
   DocumentTextIcon,
   AcademicCapIcon,
-  PlayIcon,
   QuestionMarkCircleIcon,
   ShieldCheckIcon,
   CurrencyDollarIcon,
@@ -36,7 +35,7 @@ interface NavigationProps {
   onSidebarToggle?: () => void;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+const Navigation: React.FC<NavigationProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);

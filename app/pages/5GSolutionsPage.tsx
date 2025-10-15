@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Wifi, ArrowRight } from 'lucide-react';const FiveGSolutionsPage: React.FC = () => {
+import { Wifi } from "lucide-react";
+
+const FiveGSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>

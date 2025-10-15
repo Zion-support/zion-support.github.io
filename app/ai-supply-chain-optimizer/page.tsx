@@ -1,4 +1,5 @@
-import { ArrowRight, Globe, BarChart3, Zap, Target, CheckCircle, Sparkles, Mail, Smartphone, TrendingUp } from 'lucide-react';import { Helmet } from "react-helmet-async";
+import { TrendingUp } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function AISupplyChainOptimizer() {
@@ -99,7 +100,8 @@ export default function AISupplyChainOptimizer() {
     }
   ];
 
-  return (<>
+  return (
+    <>
       <Helmet>
         <title>AI Supply Chain Optimizer - Zion Tech Group | Intelligent Logistics Solutions</title>
         <meta
@@ -108,7 +110,7 @@ export default function AISupplyChainOptimizer() {
         />
         <meta
           name="keywords"
-          content="AI supply chain, _logistics optimization, _demand forecasting, _route optimization, _inventory management, _supplier management, supply chain AI"
+          content="AI supply chain, logistics optimization, demand forecasting, route optimization, inventory management, supplier management, supply chain AI"
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
       </Helmet>
@@ -136,7 +138,8 @@ export default function AISupplyChainOptimizer() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your supply chain with AI-powered optimization. Intelligent demand forecasting, _route planning, and inventory management that reduces costs and improves efficiency.
+              Transform your supply chain with AI-powered optimization. Intelligent demand forecasting, 
+              route planning, and inventory management that reduces costs and improves efficiency.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -186,7 +189,8 @@ export default function AISupplyChainOptimizer() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (<div
+              {features.map((feature, index) => (
+                <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
                 >

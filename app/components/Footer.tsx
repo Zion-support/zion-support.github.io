@@ -3,25 +3,22 @@ import { Link } from 'react-router-dom';
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
-  MapPinIcon,
-  ArrowRightIcon
+  MapPinIcon
 } from '@heroicons/react/24/outline';
-import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';import { 
-  HeartIcon
-} from '@heroicons/react/24/outline';
+import { Facebook, Twitter, Linkedin, Github } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing-automation' },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
-    { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
-    { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
-    { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+    { name: 'IT Solutions', href: '/it-solutions' },
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' }
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: '5G Solutions', href: '/5g-solutions' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+    { name: 'Software Development', href: '/software-development' }
   ];
 
   const company = [
@@ -30,8 +27,7 @@ const Footer: React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'News & Updates', href: '/blog' },
-    { name: 'Partnerships', href: '/partnerships' },
-    { name: 'Contact Us', href: '/contact' }
+    { name: 'Partnerships', href: '/partnerships' }
   ];
 
   const resources = [
@@ -58,13 +54,14 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
+    { name: 'Facebook', href: '#', icon: 'facebook' },
+    { name: 'Twitter', href: '#', icon: 'twitter' },
+    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
+    { name: 'GitHub', href: '#', icon: 'github' }
   ];
 
-  return (<footer className="bg-slate-900 border-t border-slate-700">
+  return (
+    <footer className="bg-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
@@ -76,7 +73,7 @@ const Footer: React.FC = () => {
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Leading provider of AI solutions, cybersecurity, _cloud infrastructure, and digital transformation services. 
+              Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. 
               Transforming businesses with cutting-edge technology.
             </p>
             <div className="flex space-x-4">

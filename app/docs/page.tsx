@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Zap, Search, BookOpen, Code, Settings, Shield, Cloud, Cpu, Database, Globe, Users, FileText, ChevronDown, ChevronRight } from "lucide-react";
+import { ArrowRight, Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink } from "lucide-react";
 
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -12,6 +11,8 @@ const DocsPage: React.FC = () => {
     {
       id: 'getting-started',
       title: 'Getting Started',
+      description: 'Learn how to get started with our AI solutions',
+      content: 'Comprehensive guide to implementing AI in your business',
       icon: <Zap className="w-6 h-6" />,
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
@@ -50,7 +51,6 @@ const DocsPage: React.FC = () => {
       icon: <Book className="w-6 h-6" />,
       description: 'Complete API documentation and examples',
       content: 'Detailed API reference with examples and best practices',
-      content: 'Detailed API reference with examples and best practices',
       articles: [
         { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
         { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
@@ -70,12 +70,17 @@ const DocsPage: React.FC = () => {
 
   const filteredSections = documentationSections.map(section => ({
     ...section,
-    articles: section.articles?.filter((article: unknown) =>
+    articles: section.articles?.filter((article: { title: string; description: string }) =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   })).filter(section => section.articles?.length > 0);
 
+  return (
+    <>
+      <Helmet>
+        <title>Docs - Zion Tech Group</title>
+      </Helmet>
   return (
     <>
       <Helmet>
@@ -163,8 +168,6 @@ const DocsPage: React.FC = () => {
                   >
                     <div className="flex items-center">
                       <div className="text-cyan-400 mr-4">
-                        {(section as any).icon || <Book className="w-6 h-6" />}
-                        {section.icon || <Book className="w-6 h-6" />}
                         {section.icon || <Book className="w-6 h-6" />}
                       </div>
                       <div>
@@ -273,6 +276,6 @@ const DocsPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
 
 export default DocsPage;

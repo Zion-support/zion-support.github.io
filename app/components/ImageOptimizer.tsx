@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -18,7 +17,17 @@ interface ImageOptimizerProps {
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src, alt, className = '', _width, _height, priority = false, _placeholder, effect = 'blur', threshold = 100, _onLoad, _onError
+  src,
+  alt,
+  className = '',
+  width,
+  height,
+  priority = false,
+  placeholder,
+  effect = 'blur',
+  threshold = 100,
+  onLoad,
+  onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -35,7 +44,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   };
 
   // Generate optimized src with WebP support
-  const getOptimizedSrc = (_originalSrc: string) => {
+  const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
       return originalSrc;
     }
@@ -50,7 +59,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   };
 
   // Generate responsive srcset
-  const generateSrcSet = (_baseSrc: string) => {
+  const generateSrcSet = (baseSrc: string) => {
     if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {
       return baseSrc;
     }

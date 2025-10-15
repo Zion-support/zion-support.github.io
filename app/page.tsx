@@ -1,19 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
-import { 
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  GlobeAltIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
+import { CpuChipIcon, ShieldCheckIcon, CloudIcon, CheckCircleIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const HomePage: React.FC = () => {
   const services = [
@@ -22,12 +10,6 @@ const HomePage: React.FC = () => {
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
       href: '/ai-solutions'
-    },
-    {
-      icon: GlobeAltIcon,
-      title: 'Micro SaaS Solutions',
-      description: 'Powerful micro SAAS applications designed to solve specific business challenges.',
-      href: '/micro-saas-solutions'
     },
     {
       icon: ShieldCheckIcon,
@@ -40,12 +22,6 @@ const HomePage: React.FC = () => {
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
       href: '/cloud-solutions'
-    },
-    {
-      icon: CogIcon,
-      title: 'IT Solutions',
-      description: 'Complete IT services including development, infrastructure, and support.',
-      href: '/it-solutions'
     },
     {
       icon: RocketLaunchIcon,
@@ -65,8 +41,8 @@ const HomePage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '1000+', label: 'Projects Completed' },
-    { number: '200+', label: 'Happy Clients' },
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
@@ -111,7 +87,7 @@ const HomePage: React.FC = () => {
               
               {/* Stats */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
-                {stats.map((stat, index) => (
+                {stats.map((stat) => (
                   <div key={index} className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
                     <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-400 mb-1 lg:mb-2">
                       {stat.number}
@@ -139,7 +115,7 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {services.map((service, index) => (
+              {services.map((service) => (
                 <Link
                   key={index}
                   to={service.href}
@@ -177,7 +153,7 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature) => (
                 <div key={index} className="flex items-center space-x-4 p-4 sm:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors group">
                   <CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
                   <span className="text-gray-300 font-medium text-sm sm:text-base group-hover:text-white transition-colors">{feature}</span>

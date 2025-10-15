@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Copy, Search, BookOpen, Zap, Shield, Clock, Users, Database, Globe, Smartphone, BarChart3, MessageSquare, FileText, Play, Download } from 'lucide-react';const APIDocsPage: React.FC = () => {
+import { Copy, Search, BookOpen, MessageSquare, Play, Download } from "lucide-react";
+
+const APIDocsPage: React.FC = () => {
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -136,11 +136,12 @@ import { ArrowRight, Code, Copy, Search, BookOpen, Zap, Shield, Clock, Users, Da
   const selectedAPIData = apis.find(api => api.id === selectedAPI);
   const selectedCodeExample = codeExamples[selectedAPI as keyof typeof codeExamples];
 
-  return (<>
+  return (
+    <>
       <Helmet>
         <title>API Documentation - Zion Tech Group | Developer Resources</title>
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group's AI and IT solutions. Get started with our developer-friendly APIs." />
-        <meta name="keywords" content="API documentation, developer resources, _REST API, _SDK, _integration, developer tools" />
+        <meta name="keywords" content="API documentation, developer resources, REST API, SDK, integration, developer tools" />
         <link rel="canonical" href="https://ziontechgroup.com/api-docs" />
       </Helmet>
 
@@ -194,7 +195,7 @@ import { ArrowRight, Code, Copy, Search, BookOpen, Zap, Shield, Clock, Users, Da
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
@@ -231,14 +232,15 @@ import { ArrowRight, Code, Copy, Search, BookOpen, Zap, Shield, Clock, Users, Da
                     type="text"
                     placeholder="Search APIs..."
                     value={searchTerm}
-                    onChange={(_e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                {filteredAPIs.map((api) => (<button
+                {filteredAPIs.map((api) => (
+                  <button
                     key={api.id}
                     onClick={() => setSelectedAPI(api.id)}
                     className={`w-full p-4 rounded-lg border transition-all duration-300 text-left ${

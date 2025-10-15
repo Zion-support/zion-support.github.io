@@ -1,111 +1,111 @@
-#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-import fs from "fs";
-import { glob } from "glob";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Common unused imports that need to be removed
-const unusedImports = [
-  "Cloud",
-  "Code",
-  "Monitor",
-  "BarChart",
-  "Star",
-  "Settings",
-  "Users",
-  "DollarSign",
-  "TrendingUp",
-  "Shield",
-  "Target",
-  "Mail",
-  "Phone",
-  "Clock",
-  "PieChart",
-  "Activity",
-  "Award",
-  "BookOpen",
-  "Briefcase",
-  "Building",
-  "Calendar",
-  "Camera",
-  "Command",
-  "CreditCard",
-  "FileText",
-  "Gift",
-  "Heart",
-  "Home",
-  "Image",
-  "Laptop",
-  "Lock",
-  "MessageCircle",
-  "Palette",
-  "Play",
-  "Search",
-  "ShoppingCart",
-  "Smartphone",
-  "Tablet",
-  "Terminal",
-  "Truck",
-  "Wifi",
-  "Cpu",
-  "Database",
-  "Server",
-  "Layers",
+// List of files with many unused imports
+const filesToFix = [
+  'app/ai-services/page.tsx',
+  'app/ai-solutions/page.tsx',
+  'app/ai-supply-chain-optimizer/page.tsx',
+  'app/case-studies/page.tsx',
+  'app/cloud-services/page.tsx',
+  'app/components/EnhancedNavigation.tsx',
+  'app/components/Footer.tsx',
+  'app/components/Navigation.tsx',
+  'app/consultation/page.tsx',
+  'app/contact/page.tsx',
+  'app/custom-development/page.tsx',
+  'app/customer-relationship-manager/page.tsx',
+  'app/devops-services/page.tsx',
+  'app/email-marketing-platform/page.tsx',
+  'app/employee-time-tracker/page.tsx',
+  'app/financial-reporting-tool/page.tsx',
+  'app/hooks/usePerformance.ts',
+  'app/inventory-management-system/page.tsx',
+  'app/it-solutions/page.tsx',
+  'app/layout.tsx',
+  'app/micro-saas-solutions/page.tsx',
+  'app/micro-saas/page.tsx'
 ];
 
-function fixUnusedImports(filePath) {
-  let content = fs.readFileSync(filePath, "utf8");
-  let modified = false;
+// Common unused imports to remove
+const unusedImports = [
+  'ShoppingCart', 'CreditCard', 'Wallet', 'Banknote', 'Coins', 'Gift', 'Tag', 'Percent',
+  'PieChart', 'LineChart', 'Activity', 'Grid', 'List', 'Map', 'Compass', 'Navigation',
+  'Globe2', 'WifiOff', 'Signal', 'Bluetooth', 'Usb', 'HardDrive', 'MemoryStick',
+  'Printer', 'Scanner', 'Fax', 'Phone', 'Voicemail', 'Headset', 'Speaker', 'Volume2',
+  'VolumeX', 'Play', 'Pause', 'Stop', 'SkipBack', 'SkipForward', 'RotateCcw', 'RotateCw',
+  'Shuffle', 'Repeat', 'Repeat1', 'Shuffle2', 'Maximize', 'Minimize', 'Square', 'Circle',
+  'Triangle', 'Hexagon', 'Octagon', 'Diamond', 'StarIcon', 'Moon', 'Sun', 'Sunrise',
+  'Sunset', 'CloudRain', 'CloudSnow', 'CloudLightning', 'Wind', 'Droplets', 'Thermometer',
+  'Gauge', 'Timer', 'Stopwatch', 'Hourglass', 'Brain', 'Star', 'Users', 'Shield', 'Clock',
+  'Database', 'Smartphone', 'Globe', 'Target', 'Lightbulb', 'Rocket', 'Award', 'Mail',
+  'MapPin', 'Zap', 'Code', 'Cpu', 'ExternalLink', 'Cloud', 'Sparkles', 'ArrowRightIcon',
+  'ArrowRight', 'HeartIcon', 'PlayIcon', 'CheckCircle', 'Link', 'Server', 'BarChart3',
+  'Lock', 'Wifi', 'Monitor', 'Layers', 'MessageSquare', 'Eye', 'FileText', 'Network',
+  'Settings', 'Calendar', 'Filter', 'Download', 'Upload', 'Bell', 'ThumbsUp', 'Image',
+  'Music', 'BookOpen', 'Puzzle', 'Gamepad2', 'PerformanceMetrics'
+];
 
-  // Fix 'use client' directive placement
-  if (
-    content.includes("'use client';") &&
-    !content.startsWith("'use client';")
-  ) {
-    content = content.replace(/'use client';\s*\n/, "");
-    content = "'use client';\n" + content;
-    modified = true;
-  }
+function fixFile(filePath) {
+  try {
+    const fullPath = path.join(__dirname, filePath);
+    if (!fs.existsSync(fullPath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
+    }
 
-  // Remove unused imports
-  const lucideImportMatch = content.match(
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/,
-  );
+    let content = fs.readFileSync(fullPath, 'utf8');
+    let modified = false;
 
-  if (lucideImportMatch) {
-    const existingIcons = lucideImportMatch[1].split(",").map((i) => i.trim());
-    const usedIcons = existingIcons.filter((icon) => {
-      // Check if the icon is actually used in the file
-      const iconRegex = new RegExp(`\\b${icon}\\b`, "g");
-      const matches = content.match(iconRegex);
-      return matches && matches.length > 1; // More than just the import
+    // Fix unused imports in lucide-react imports
+    const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react["']/g;
+    content = content.replace(lucideImportRegex, (match, imports) => {
+      const importList = imports.split(',').map(imp => imp.trim());
+      const usedImports = importList.filter(imp => {
+        const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
+        return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
+      });
+      
+      if (usedImports.length !== importList.length) {
+        modified = true;
+        return `import { ${usedImports.join(', ')} } from "lucide-react"`;
+      }
+      return match;
     });
 
-    if (usedIcons.length !== existingIcons.length) {
-      if (usedIcons.length > 0) {
-        content = content.replace(
-          lucideImportMatch[0],
-          `import { ${usedIcons.join(", ")} } from 'lucide-react';`,
-        );
-      } else {
-        content = content.replace(lucideImportMatch[0] + "\n", "");
+    // Fix unused variables
+    content = content.replace(/const\s+(\w+)\s*=\s*[^;]+;\s*$/gm, (match, varName) => {
+      if (unusedImports.includes(varName) && !content.includes(varName + '.')) {
+        modified = true;
+        return '';
       }
-      modified = true;
+      return match;
+    });
+
+    // Remove unused parameter names
+    content = content.replace(/\(\s*(\w+)\s*:\s*\w+\s*\)\s*=>/g, (match, paramName) => {
+      if (unusedImports.includes(paramName)) {
+        modified = true;
+        return '(_) =>';
+      }
+      return match;
+    });
+
+    if (modified) {
+      fs.writeFileSync(fullPath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+    } else {
+      console.log(`No changes needed: ${filePath}`);
     }
-  }
-
-  if (modified) {
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Main execution
-async function main() {
-  const pageFiles = await glob("app/**/page.tsx");
-  console.log(`Found ${pageFiles.length} page files to fix...`);
-
-  pageFiles.forEach(fixUnusedImports);
-  console.log("Unused imports fix completed!");
-}
-
-main().catch(console.error);
+// Fix all files
+filesToFix.forEach(fixFile);
+console.log('Unused imports cleanup completed!');

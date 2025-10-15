@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, MessageSquare, Code, BookOpen, Award } from 'lucide-react';const CommunityPage: React.FC = () => {
+import { MessageSquare, Star, BookOpen } from "lucide-react";
+
+const CommunityPage: React.FC = () => {
   const communityFeatures = [
     {
       icon: <MessageSquare className="w-8 h-8 text-blue-400" />,
@@ -25,11 +25,12 @@ import { ArrowRight, MessageSquare, Code, BookOpen, Award } from 'lucide-react';
     }
   ];
 
-  return (<>
+  return (
+    <>
       <Helmet>
         <title>Community - Zion Tech Group | Developer Community</title>
         <meta name="description" content="Join our vibrant developer community. Connect, learn, and collaborate with other developers using Zion Tech Group's solutions." />
-        <meta name="keywords" content="community, _developer community, _forums, _code sharing, learning resources" />
+        <meta name="keywords" content="community, developer community, forums, code sharing, learning resources" />
         <link rel="canonical" href="https://ziontechgroup.com/community" />
       </Helmet>
 
@@ -48,7 +49,7 @@ import { ArrowRight, MessageSquare, Code, BookOpen, Award } from 'lucide-react';
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join our vibrant community of developers, _share knowledge, and collaborate on innovative projects.
+              Join our vibrant community of developers, share knowledge, and collaborate on innovative projects.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -68,12 +69,12 @@ import { ArrowRight, MessageSquare, Code, BookOpen, Award } from 'lucide-react';
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Community Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect, _learn, and grow with our developer community.
+              Connect, learn, and grow with our developer community.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {communityFeatures.map((feature, index) => (
+            {communityFeatures.map((feature) => (
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Users, BarChart3, CheckCircle, ArrowRight, Target, Zap, Shield, Globe, Database } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
+import {  } from "lucide-react";
+import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -115,11 +115,12 @@ const EmailMarketingPlatformPage = () => {
     }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Email Marketing Platform - Zion Tech Group | Advanced Email Marketing & Automation"
-        description="Powerful email marketing platform with drag-and-drop builder, automation workflows, _advanced segmentation, and analytics. Boost your email marketing ROI."
-        keywords="email marketing platform, _email automation, _email builder, _email segmentation, _email analytics, marketing automation"
+        description="Powerful email marketing platform with drag-and-drop builder, automation workflows, advanced segmentation, and analytics. Boost your email marketing ROI."
+        keywords="email marketing platform, email automation, email builder, email segmentation, email analytics, marketing automation"
         canonical="https://ziontechgroup.com/email-marketing-platform"
       />
 
@@ -132,7 +133,7 @@ const EmailMarketingPlatformPage = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Create, _send, and track email campaigns that drive results. Our comprehensive platform 
+            Create, send, and track email campaigns that drive results. Our comprehensive platform 
             makes email marketing easy and effective for businesses of all sizes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -164,11 +165,12 @@ const EmailMarketingPlatformPage = () => {
               Powerful Email Marketing Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Everything you need to create, _send, and optimize your email campaigns.
+              Everything you need to create, send, and optimize your email campaigns.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (<FuturisticCard key={index} className="h-full">
+            {features.map((feature) => (
+              <FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     {feature.icon}
@@ -202,7 +204,7 @@ const EmailMarketingPlatformPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map((plan) => (
               <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -253,7 +255,7 @@ const EmailMarketingPlatformPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit) => (
               <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   {benefit.icon}

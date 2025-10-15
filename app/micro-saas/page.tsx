@@ -1,6 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, DollarSign, Globe, Smartphone, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Share, Eye, Heart, Battery, Camera, Headphones, Mic, Video, Image, ShoppingCart, Calculator, Grid, HardDrive, Phone, Speaker, Maximize, Minimize, Star as StarIcon, Calendar as CalendarIcon, Package, Receipt, ClipboardList, Workflow } from 'lucide-react';import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function MicroSaas() {
@@ -1585,7 +1584,7 @@ export default function MicroSaas() {
         <div className="py-16 bg-black/20 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat) => (
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-4">
                     <div className="text-cyan-400">{stat.icon}</div>
@@ -1602,7 +1601,7 @@ export default function MicroSaas() {
         <div className="py-8 bg-black/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center gap-2">
-              {categories.map((category, index) => (
+              {categories.map((category) => (
                 <button
                   key={index}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -1633,7 +1632,7 @@ export default function MicroSaas() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasServices.filter(service => service.featured).map((service, index) => (
+              {microSaasServices.filter(service => service.featured).map((service) => (
                 <div
                   key={service.id}
                   className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl"
@@ -1715,7 +1714,7 @@ export default function MicroSaas() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {microSaasServices.map((service, index) => (
+              {microSaasServices.map((service) => (
                 <div
                   key={service.id}
                   className="group relative bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
@@ -1783,7 +1782,7 @@ export default function MicroSaas() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
@@ -1799,7 +1798,7 @@ export default function MicroSaas() {
                   </div>
                   
                   <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map(( i) => (
+                    {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -1885,7 +1884,7 @@ export default function MicroSaas() {
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
+              {stats.map((stat) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
@@ -1911,7 +1910,7 @@ export default function MicroSaas() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasServices.map((service, index) => (
+              {microSaasServices.map((service) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
@@ -1996,13 +1995,13 @@ export default function MicroSaas() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map(( i) => (
+                    {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target, MessageSquare } from 'lucide-react';const MicroSaaSSolutionsPage: React.FC = () => {
+import {  } from "lucide-react";
+
+const MicroSaaSSolutionsPage: React.FC = () => {
   const microSaasProducts = [
     {
       id: 'task-manager-pro',
@@ -167,6 +167,8 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
     }
   ];
 
+  const categories = ['All', 'Productivity', 'Analytics', 'Customer Service', 'Inventory', 'Marketing', 'Finance'];
+
   const pricingTiers = [
     {
       name: 'Starter',
@@ -211,11 +213,12 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
     }
   ];
 
-  return (<>
+  return (
+    <>
       <Helmet>
         <title>Micro SAAS Solutions - Innovative Software for Modern Businesses | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive micro SAAS solutions designed to streamline business operations. From task management to analytics, find the perfect tools for your business." />
-        <meta name="keywords" content="micro SAAS, business software, _productivity tools, _analytics, _customer support, _inventory management, _social media scheduling, expense tracking" />
+        <meta name="keywords" content="micro SAAS, business software, productivity tools, analytics, customer support, inventory management, social media scheduling, expense tracking" />
         <meta property="og:title" content="Micro SAAS Solutions - Innovative Software for Modern Businesses" />
         <meta property="og:description" content="Discover our comprehensive micro SAAS solutions designed to streamline business operations." />
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />
@@ -274,7 +277,7 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasProducts.map((product, index) => (
+            {microSaasProducts.map((product) => (
               <div key={index} className={`bg-slate-700/50 hover:bg-slate-600/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${
                 product.popular ? 'ring-2 ring-purple-500' : ''
               }`}>
@@ -352,7 +355,7 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tier) => (
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                 tier.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : ''
               }`}>
