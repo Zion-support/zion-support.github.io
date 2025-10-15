@@ -84,7 +84,11 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
         
+<<<<<<< HEAD
         <div className="mt-8 pt-8 border-t border-gray-700">
+=======
+        <div className="mt-12 pt-8 border-t border-gray-700">
+>>>>>>> 826c6db48091 (fix: resolve merge conflicts and duplicate key warnings)
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-center md:text-left text-gray-300">
               © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>

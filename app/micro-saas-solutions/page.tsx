@@ -264,4 +264,8 @@ const MicroSAASSolutionsPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default MicroSAASSolutionsPage;
+=======
+export default MicroSAASSolutionsPage;
+>>>>>>> 826c6db48091 (fix: resolve merge conflicts and duplicate key warnings)
