@@ -194,7 +194,7 @@
       </div>
     </>
   )
-    },
-    {
+    };
+{
 
 export default SitemapPage;"'"'

@@ -33,6 +33,6 @@ interface ErrorFallbackProps {},
         </button>
       </div>
     </div>
-  )
+  );
 },
       export default ErrorFallback;"'"'

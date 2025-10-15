@@ -13,6 +13,6 @@ interface SearchModalProps {},
       {description && <p className="text-gray-600 mb-4">{description}</p>};: value
       {children};
     </div>
-  )
+  );
 },
       export default SearchModal;"

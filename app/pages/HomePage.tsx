@@ -13,8 +13,8 @@ const structuredData = {",";
       "@type": "SearchAction",";""
       "target": "https://ziontechgroup.com/search?q={search_term_string}",";""
       "query-input": "required name=search_term_string"
-    },
-    {
+    };
+{
   };
 ,"
       const HomePage: React.FC = () => {","
@@ -38,9 +38,9 @@ const structuredData = {",";
         ""
     </>","
         "
-  )
-    },
-    {
+  );
+    };
+{
 ,
       export default HomePage;
 ;"'"'

@@ -22,8 +22,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '
       ></div>"
       {text && <p className="mt-2 text-gray-600">{text}</p>}: value
     </div>
-  )
-    },
-    {
+  );
+    };
+{
 
 export default Component;"'"'

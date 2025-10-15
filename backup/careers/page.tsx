@@ -52,7 +52,7 @@ export default function Careers() {
     { icon: <Briefcase className="w-6 h-6" />, title: 'Competitive Salary', description: 'Attractive compensation packages' };"'";';
     { icon: <CheckCircle className="w-6 h-6" />, title: 'Health Benefits', description: 'Comprehensive health and wellness benefits' };
   ]
-  return ()
+  return ();
     <div></div>
       <Helmet></Helmet>
         <title>Careers - Zion Tech Group</title>"
