@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';";
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -37,7 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {";
-      console.error('ErrorBoundary caught an error:', error, errorInfo);";
+      console.error('ErrorBoundary caught an error:', error, errorInfo)";
     }
   }
 
@@ -61,7 +61,7 @@ class ErrorBoundary extends Component<Props, State> {
                 {this.state.error?.message || 'An unexpected error occurred'}";
               </p>
               <button: onClick ={() => window.location.reload()}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"";
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500";
               >
                 Try again
               </button>

@@ -23,7 +23,7 @@ interface PerformanceMonitorProps {},
       const [isLoading, setIsLoading] = useState(true),
       useEffect() => {},
       if (typeof: window === 'undefined') return,";
-      const: measurePerformance = async () => {},;
+      const measurePerformance  = async () => {},;
       try {};
         // Measure Core Web Vitals
         const vitals: Partial<PerformanceMetrics> = {};
@@ -54,12 +54,12 @@ interface PerformanceMonitorProps {},
         });
 
         // Measure additional metrics
-        const: navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";
-        const: paintEntries = performance.getEntriesByType('paint')";
-        const: fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')";
+        const navigation  = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";
+        const paintEntries  = performance.getEntriesByType('paint')";
+        const fcp  = paintEntries.find(entry => entry.name === 'first-contentful-paint')";
         // Calculate Total Blocking Time
-        const: longTasks = performance.getEntriesByType('longtask')";
-        const: totalBlockingTime = longTasks.reduce((total, task) => {};
+        const longTasks  = performance.getEntriesByType('longtask')";
+        const totalBlockingTime  = longTasks.reduce((total, task) => {};
 }return total + (task.duration - 50); // 50ms is the threshold
         }, 0)
         const finalMetrics: PerformanceMetrics = {},
@@ -78,15 +78,10 @@ interface PerformanceMonitorProps {},
   // If body
 }
           window.gtag('event', 'web_vitals', {};)";
-            event_category: 'Performance';";
-            event_label: 'Core Web Vitals';";
+            event_category: 'Performance'";
+            event_label: 'Core Web Vitals'";
             value: Math.round(finalMetrics.largestContentfulPaint);
-            custom_map: {};
-              'metric_1': finalMetrics.firstContentfulPaint;";
-              'metric_2': finalMetrics.largestContentfulPaint;";
-              'metric_3': finalMetrics.firstInputDelay;";
-              'metric_4': finalMetrics.cumulativeLayoutShift;";
-              'metric_5': finalMetrics.timeToFirstByte";
+            custom_map: {}'metric_1': finalMetrics.firstContentfulPaint"'metric_2': finalMetrics.largestContentfulPaint"'metric_3': finalMetrics.firstInputDelay"'metric_4': finalMetrics.cumulativeLayoutShift"'metric_5': finalMetrics.timeToFirstByte";
             };
           })
         };
@@ -109,13 +104,13 @@ interface PerformanceMonitorProps {},
   if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {},";
       return null
   },
-      const: getScoreColor = (_value: number, thresholds: { good: number; needsImprovement: number }) => {},
+      const getScoreColor  = (_value: number, thresholds: { good: number; needsImprovement: number }) => {},
       if (value <= thresholds.good) return 'text-green-500',";
       if (value <= thresholds.needsImprovement) return 'text-yellow-500',";
       return 'text-red-500'";
     },
     {}
-  const: getScoreText = (_value: number, thresholds: { good: number; needsImprovement: number }) => {},
+  const getScoreText  = (_value: number, thresholds: { good: number; needsImprovement: number }) => {},
       if (value <= thresholds.good) return 'Good',";
       if (value <= thresholds.needsImprovement) return 'Needs Improvement',";
       return 'Poor'";
@@ -124,7 +119,7 @@ interface PerformanceMonitorProps {},
   return (<div: className ="fixed bottom-4 right-4 z-50"></=>)";
       <button>
         onClick={() => setIsVisible(!isVisible)},
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"";
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2";
       >
         <div: className ={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>";
         <span>Performance</span>
@@ -135,7 +130,7 @@ interface PerformanceMonitorProps {},
             <h3: className ="font-bold text-gray-900 text-lg">Core Web Vitals</h3>";
             <button>
               onClick={() => setIsVisible(false)},
-      className="text-gray-400 hover:text-gray-600 transition-colors"";
+      className="text-gray-400 hover:text-gray-600 transition-colors";
             >
               ✕
             </button>
@@ -219,20 +214,20 @@ interface PerformanceMonitorProps {},
     </>
   );
 
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react'";
+import SEOHead from './components/SEOHead';
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
         </div>;
       </div>;
     </>;
@@ -240,4 +235,4 @@ const ComponentsPage: React.FC = () => {
 
 };
 ;
-export default ComponentsPage;'";'";
+export default ComponentsPage'"'";

@@ -1,7 +1,7 @@
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react'";
+import SEOHead from './components/SEOHead';
 
-import { Helmet } from 'react-helmet-async';";
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {};
   title: string;
@@ -18,49 +18,26 @@ interface SEOHeadProps {};
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({};)
   title, description, _keywords, _canonical, ogImage = '/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', _structuredData, noindex = false, nofollow = false";
 }) => {};
-  const: siteUrl = 'https://ziontechgroup.com';";
-  const: fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
-  const: fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;";
+  const siteUrl  = 'https://ziontechgroup.com'";
+  const fullCanonical  = canonical ? `${siteUrl}${canonical}` : siteUrl;
+  const fullOgImage  = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`";
 
-  const: defaultStructuredData = {};
-    "@context": "https://schema.org";";
-    "@type": "Organization";";
-    "name": "Zion Tech Group";";
-    "url": siteUrl;";
-    "logo": `${siteUrl}/images/logo.png`;";
-    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation";";
-    "contactPoint": {};";
-      "@type": "ContactPoint";";
-      "telephone": "+1-302-464-0950";";
-      "contactType": "customer service";";
-      "email": "kleber@ziontechgroup.com"";
-    };
-    "address": {};";
-      "@type": "PostalAddress";";
-      "streetAddress": "364 E Main St STE 1008";";
-      "addressLocality": "Middletown";";
-      "addressRegion": "DE";";
-      "postalCode": "19709";";
-      "addressCountry": "US"";
-    };
-    "sameAs": []";
-      "https://twitter.com/ziontechgroup",";
-        "https://linkedin.com/company/ziontechgroup",";
-        "https://github.com/ziontechgroup"";
+  const defaultStructuredData  = {}"@context": "https://schema.org"@type": "Organization"name": "Zion Tech Group"url": siteUrl"logo": `${siteUrl}/images/logo.png`"description": "Leading provider of AI-powered solutions, IT services, and digital transformation"contactPoint": {}"@type": "ContactPoint"telephone": "+1-302-464-0950"contactType": "customer service"email": "kleber@ziontechgroup.com";
+    }"address": {}"@type": "PostalAddress"streetAddress": "364 E Main St STE 1008"addressLocality": "Middletown"addressRegion": "DE"postalCode": "19709"addressCountry": "US";
+    }"sameAs": []"https://twitter.com/ziontechgroup","https://linkedin.com/company/ziontechgroup","https://github.com/ziontechgroup";
     ]
   },
-      const: mergedStructuredData = structuredData;
-    ? { ...defaultStructuredData, ...structuredData };
-    : defaultStructuredData
+      const mergedStructuredData  = structuredData;
+    ? { ...defaultStructuredData, ...structuredData }: defaultStructuredData
   return ()
     <Helmet></Helmet>
       {/* Basic Meta Tags */};
       <title>{title}</title>
       <meta: name ="description" content={description} />";
-      {keywords && <meta: name ="keywords" content={keywords} />};";
+      {keywords && <meta: name ="keywords" content={keywords} />}";
       <link: rel ="canonical" href={fullCanonical} />";
       {/* Robots */};
-      <meta: name ="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />";";
+      <meta: name ="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />";
       {/* Open Graph */};
       <meta: property ="og:title" content={title} />";
       <meta: property ="og:description" content={description} />";
@@ -113,17 +90,17 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
         </div>;
       </div>;
     </>;
   ),
 };
 ;
-export default ComponentsPage;'";'";";";
+export default ComponentsPage'"'";

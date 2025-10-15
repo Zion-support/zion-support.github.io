@@ -1,7 +1,6 @@
-import React from 'react;'
-
-interface LoadingSpinnerProps {
-  fullScreen?: boolean;
+import React from 'react'
+;
+interface LoadingSpinnerProps {fullScreen?: boolean;
   text?: string;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -10,7 +9,7 @@ interface LoadingSpinnerProps {
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   text = 'Loading...', 
-  className = '', 
+  className = ','
   fullScreen = false 
 }) => {
   const sizeClasses = {
@@ -34,16 +33,16 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
 };
 
-  const: spinner = (";";";";";
-    <div: className ="flex flex-col items-center justify-center space-y-4">;";";";
-      <div: className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />";";";";";
-      {text && <p: className ="text-gray-600">{text}</p>}";";";
+  const spinner  = (";
+    <div: className ="flex flex-col items-center justify-center space-y-4">";
+      <div: className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />";
+      {text && <p: className ="text-gray-600">{text}</p>}";
     </div>;
   );
 ;
   if (fullScreen) {
-    return (";";";";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">;";";";
+    return (";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         {spinner}
       </div>;
     );
@@ -52,4 +51,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return spinner;
 };
 ;
-export default LoadingSpinner;'";'";";";
+export default LoadingSpinner'"'";

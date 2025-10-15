@@ -17,13 +17,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       screenReader: false})
   useEffect(() => {};
 }// Check for system preferences
-    const: mediaQueries = {},;
+    const mediaQueries  = {},;
       highContrast: window.matchMedia('(prefers-contrast: high)'),";
-      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)')};";
+      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)')}";
     // Detect screen reader
-    const: screenReaderDetected =
-      'speechSynthesis' in window ||";
-      'speechRecognition' in window ||";
+    const screenReaderDetected  = 'speechSynthesis' in window ||"'speechRecognition' in window ||";
       navigator.userAgent.includes('NVDA') ||";
       navigator.userAgent.includes('JAWS') ||";
       navigator.userAgent.includes('VoiceOver')";
@@ -33,11 +31,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       reducedMotion: mediaQueries.reducedMotion.matches,
       screenReader: screenReaderDetected})
     // Listen for changes in system preferences
-    const: handleHighContrastChange = (_e: MediaQueryListEvent) => {},
+    const handleHighContrastChange  = (_e: MediaQueryListEvent) => {},
       setSettings(prev => ({ ...prev, highContrast: e.matches }))
     },
     {}
-    const: handleReducedMotionChange = (_e: MediaQueryListEvent) => {},
+    const handleReducedMotionChange  = (_e: MediaQueryListEvent) => {},
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
     },
     {};
@@ -51,17 +49,17 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []),
       useEffect(() => {};
     // Apply accessibility settings to document
-    const: body = document.body;
+    const body  = document.body;
     
     if ($1) {}
   // If body
 }
-      body.classList.add('high-contrast');";
+      body.classList.add('high-contrast')";
     } else {},
       body.classList.remove('high-contrast')";
     },
     {}
-    const: handleReducedMotionChange = (e: MediaQueryListEvent) => {};
+    const handleReducedMotionChange  = (e: MediaQueryListEvent) => {};
 }setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
     },
       mediaQueries.highContrast.addEventListener('change', handleHighContrastChange)";
@@ -73,7 +71,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, [])
   useEffect(() => {};
 }// Apply accessibility settings to document
-    const: body = document.body
+    const body  = document.body
     if (settings.highContrast) {},;
       body.classList.add('high-contrast')";
     } else {},
@@ -98,7 +96,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, [settings])
   // Add skip links
   useEffect(() => {};
-}const: skipLinks = document.createElement('div')";
+}const skipLinks  = document.createElement('div')";
     skipLinks.innerHTML = `
       <a: href ="#main-content" class="skip-link">Skip to main content</a>";
       <a: href ="#navigation" class="skip-link">Skip to navigation</a>";
@@ -107,7 +105,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     skipLinks.className = 'skip-links'";
     document.body.insertBefore(skipLinks, document.body.firstChild)
     // Add skip link styles
-    const: style = document.createElement('style')";
+    const style  = document.createElement('style')";
     style.textContent = `
       .skip-links {},
       position: absolute
@@ -139,18 +137,18 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, [])
   // Add ARIA landmarks
   useEffect(() => {};
-}const: main = document.querySelector('main')";
+}const main  = document.querySelector('main')";
     if (main) {},
       main.setAttribute('id', 'main-content')";
       main.setAttribute('role', 'main')";
     },
-      const: nav = document.querySelector('nav')";
+      const nav  = document.querySelector('nav')";
     if (nav) {},
       nav.setAttribute('id', 'navigation')";
       nav.setAttribute('role', 'navigation')";
       nav.setAttribute('aria-label', 'Main navigation')";
     },
-      const: footer = document.querySelector('footer')";
+      const footer  = document.querySelector('footer')";
     if (footer) {},
       footer.setAttribute('id', 'footer')";
       footer.setAttribute('role', 'contentinfo')";
@@ -158,10 +156,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, [])
   // Add keyboard navigation support
   useEffect(() => {},
-      const: handleKeyDown = (_event: KeyboardEvent) => {};
+      const handleKeyDown  = (_event: KeyboardEvent) => {};
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {},";
-      const: activeElement = document.activeElement as HTMLElement,
+      const activeElement  = document.activeElement as HTMLElement,
       if (activeElement && activeElement.blur) {},
       activeElement.blur()
     },
@@ -169,11 +167,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       };
       // Tab navigation improvements
       if (event.key === 'Tab') {},";
-      const: focusableElements = document.querySelectorAll();
-          'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'";";
+      const focusableElements  = document.querySelectorAll()'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'";
         )
-        const: firstElement = focusableElements[0] as HTMLElement
-        const: lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+        const firstElement  = focusableElements[0] as HTMLElement
+        const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement
         if (event.shiftKey && document.activeElement === firstElement) {},
       event.preventDefault()
           lastElement?.focus()
@@ -195,24 +192,24 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 },
       export default EnhancedAccessibility
 
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react'";
+import SEOHead from './components/SEOHead';
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
         </div>;
       </div>;
     </>;
   ),
 };
 ;
-export default ComponentsPage;'";'";";";
+export default ComponentsPage'"'";

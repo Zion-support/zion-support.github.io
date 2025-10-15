@@ -23,9 +23,9 @@ async function removeConsoleLogs() {
         
         // Remove console.log statements (but keep console.error, console.warn, etc.)
         const cleanedContent = content
-          .replace(/console\.log\([^)]*\);?/g, '')
-          .replace(/console\.debug\([^)]*\);?/g, '')
-          .replace(/console\.info\([^)]*\);?/g, '');
+          .replace(/console\.log\([^)]*\);?/g, ')'
+          .replace(/console\.debug\([^)]*\);?/g, ')'
+          .replace(/console\.info\([^)]*\);?/g, ')'
         
         if (cleanedContent !== content) {
           fs.writeFileSync(file, cleanedContent);

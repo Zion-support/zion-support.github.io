@@ -7,9 +7,8 @@ interface ApiClientState {
   // Add your state here;
 }
 ;
-export const: ApiClient = (options: ApiClientOptions = {}) => {
-  const: stateRef = useRef<ApiClientState>({;
-    // Initialize your state here;
+export const ApiClient  = (options: ApiClientOptions = {}) => {
+  const stateRef  = useRef<ApiClientState>({// Initialize your state here;
   });
 ;
   // Add your hooks logic here;
@@ -22,4 +21,4 @@ export const: ApiClient = (options: ApiClientOptions = {}) => {
   };
 };
 ;
-export default ApiClient;';';";";";
+export default ApiClient''"";

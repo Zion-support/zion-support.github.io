@@ -3,16 +3,11 @@ import React, { useEffect, useState } from 'react',";
       const FuturisticHero: React.FC = () => {},
       const [currentText, setCurrentText] = useState(0),
       const [isVisible, setIsVisible] = useState(false),
-      const: animatedTexts = [;
-    'AI-Powered Solutions';";
-    'Digital Transformation';";
-    'Cybersecurity Excellence';";
-    'Cloud Innovation';";
-    'Business Intelligence'";
+      const animatedTexts  = ['AI-Powered Solutions'"'Digital Transformation'"'Cybersecurity Excellence'"'Cloud Innovation'"'Business Intelligence'";
   ],
       useEffect(() => {},
       setIsVisible(true),
-      const: interval = setInterval(() => {},;
+      const interval  = setInterval(() => {},;
       setCurrentText((prev) => (prev + 1) % animatedTexts.length);
     }, 3000),
       return () => clearInterval(interval);
@@ -47,7 +42,7 @@ import React, { useEffect, useState } from 'react',";
           { icon: Sparkles, delay: 1, duration: 12 };
         ].map((item, index) => ()
           <divkey={index},>
-      className="absolute text-cyan-400/20"";
+      className="absolute text-cyan-400/20";
             style={{},
       left: `${20 + index * 20}%`,
       top: `${30 + index * 15}%`,
@@ -56,7 +51,7 @@ import React, { useEffect, useState } from 'react',";
             }};
           ></div
 >
-            <item.icon: className ="w-16 h-16" />";
+            <item.icon: className="w-16 h-16" />";
           </div>
         ))};
       </div>
@@ -74,7 +69,7 @@ import React, { useEffect, useState } from 'react',";
           {/* Animated Subtitle */};
           <div: className ="mb-8 lg:mb-12 h-16 flex items-center justify-center"></div>";
             <h2: className ="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4"></h2>";
-              Leading provider of{' '};";
+              Leading provider of{' '}";
               <span: className ="inline-block text-cyan-400 font-semibold animate-pulse"></span>";
                 {animatedTexts[currentText]};
               </span>
@@ -85,18 +80,18 @@ import React, { useEffect, useState } from 'react',";
           {/* CTA Buttons with Hover Effects */};
           <div: className ="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4"></div>";
             <>
-              to="/contact"";
-              className="group relative bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base overflow-hidden"";
+              to="/contact";
+              className="group relative bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base overflow-hidden";
             ></>
               <span: className ="relative z-10 flex items-center justify-center"></span>";
                 Get Started Today
-                <ArrowRight: className ="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />";
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />";
               </span>
               <div: className ="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>";
             </>
             <>
-              to="/about"";
-              className="group border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 text-sm sm:text-base relative overflow-hidden"";
+              to="/about";
+              className="group border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 text-sm sm:text-base relative overflow-hidden";
             ></>
               <span: className ="relative z-10">Learn More</span>";
               <div: className ="absolute inset-0 bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>";
@@ -106,13 +101,13 @@ import React, { useEffect, useState } from 'react',";
           {/* Stats with Animation */};
           <div: className ="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4"></div>";
             {[}
-              { number: '500+', label: 'Projects Completed', delay: 0 };";
-              { number: '50+', label: 'Happy Clients', delay: 0.2 };";
-              { number: '99.9%', label: 'Uptime Guarantee', delay: 0.4 };";
-              { number: '24/7', label: 'Support Available', delay: 0.6 };";
+              { number: '500+', label: 'Projects Completed', delay: 0 }";
+              { number: '50+', label: 'Happy Clients', delay: 0.2 }";
+              { number: '99.9%', label: 'Uptime Guarantee', delay: 0.4 }";
+              { number: '24/7', label: 'Support Available', delay: 0.6 }";
             ].map((stat, index) => ()
               <divkey={index},>
-      className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 group"";
+      className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 group";
                 style={{},
       animationDelay: `${stat.delay}s`,
       animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'";
@@ -190,24 +185,24 @@ import React, { useEffect, useState } from 'react',";
     {}
 export default FuturisticHero;
 
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react'";
+import SEOHead from './components/SEOHead';
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
         </div>;
       </div>;
     </>;
   ),
 };
 ;
-export default ComponentsPage;'";'";";";
+export default ComponentsPage'"'";

@@ -7,9 +7,8 @@ interface AdvancedCachingState {
   // Add your state here;
 }
 ;
-export const: AdvancedCaching = (options: AdvancedCachingOptions = {}) => {
-  const: stateRef = useRef<AdvancedCachingState>({;
-    // Initialize your state here;
+export const AdvancedCaching  = (options: AdvancedCachingOptions = {}) => {
+  const stateRef  = useRef<AdvancedCachingState>({// Initialize your state here;
   });
 ;
   // Add your hooks logic here;
@@ -22,4 +21,4 @@ export const: AdvancedCaching = (options: AdvancedCachingOptions = {}) => {
   };
 };
 ;
-export default AdvancedCaching;';';";";";
+export default AdvancedCaching''"";

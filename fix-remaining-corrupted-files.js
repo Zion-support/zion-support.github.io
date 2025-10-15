@@ -1,12 +1,11 @@
-import React from 'react';;";";";";";";";
+import React from 'react'"";
 ;
 interface fix-remaining-corrupted-filesProps {
   className?: string;
   children?: React.ReactNode;
 }
 ;
-const fix-remaining-corrupted-files: React.FC<fix-remaining-corrupted-filesProps> = ({ ;
-  className = '',;";";";";";";";
+const fix-remaining-corrupted-files: React.FC<fix-remaining-corrupted-filesProps> = ({className = ',""'"
   children;
 }) => {
   return (
@@ -16,4 +15,4 @@ const fix-remaining-corrupted-files: React.FC<fix-remaining-corrupted-filesProps
   );
 };
 ;
-export default fix-remaining-corrupted-files;';';
+export default fix-remaining-corrupted-files';

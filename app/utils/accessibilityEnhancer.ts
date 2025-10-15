@@ -7,9 +7,8 @@ interface AccessibilityEnhancerState {
   // Add your state here;
 }
 ;
-export const: AccessibilityEnhancer = (options: AccessibilityEnhancerOptions = {}) => {
-  const: stateRef = useRef<AccessibilityEnhancerState>({;
-    // Initialize your state here;
+export const AccessibilityEnhancer  = (options: AccessibilityEnhancerOptions = {}) => {
+  const stateRef  = useRef<AccessibilityEnhancerState>({// Initialize your state here;
   });
 ;
   // Add your hooks logic here;
@@ -22,4 +21,4 @@ export const: AccessibilityEnhancer = (options: AccessibilityEnhancerOptions = {
   };
 };
 ;
-export default AccessibilityEnhancer;';';";";";
+export default AccessibilityEnhancer''"";

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react;'";
-import { Helmet } from 'react-helmet-async;'";
-interface OptimizedImageProps {
-  src: string;
+import React, { useState, useRef, useEffect } from 'react"'"
+import { Helmet  } from 'react-helmet-async';
+interface OptimizedImageProps {src: string;
   alt: string;
   width?: number;
   height?: number;
@@ -11,7 +9,7 @@ interface OptimizedImageProps {
   placeholder?: string;
   sizes?: string;
   quality?: number;
-  loading?: 'lazy' | 'eager''";
+  loading?: 'lazy' | 'eager'";
   onLoad?: () => void;
   onError?: () => void}
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -19,22 +17,20 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width,
   height,
-  className = '''";
+  className = '"'"
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+''";
-  sizes = '100vw''";
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+'";
+  sizes = '100vw'";
   quality = 85,
-  loading = 'lazy''";
+  loading = 'lazy'";
   onLoad,
   onError });
-}) => {;
-const [isLoaded, setIsLoaded] = useState(false);
+}) => {const [isLoaded, setIsLoaded] = useState(false);
 const [isError, setIsError] = useState(false);
 const [isInView, setIsInView] = useState(priority);
-const: imgRef = useRef<HTMLImageElement>(null)
-  useEffect(() => {;
-    if (priority) return;
-const: observer = new IntersectionObserver()
+const imgRef  = useRef<HTMLImageElement>(null)
+  useEffect(() => {if (priority) return;
+const observer  = new IntersectionObserver()
       ([entry]) => {
         if (entry.isIntersecting) {};
           setIsInView(true);}
@@ -44,33 +40,30 @@ const: observer = new IntersectionObserver()
       },
       {
         threshold: 0.1,
-        rootMargin: '50px'}''";
+        rootMargin: '50px'}'"'"
       });
     if (imgRef.current) {}
       observer.observe(imgRef.current)}
     return () => observer.disconnect()}, [priority]);
-  const: handleLoad = () => {;
-    setIsLoaded(true);
+  const handleLoad  = () => {setIsLoaded(true);
     onLoad?.()};
-  const: handleError = () => {;
-    setIsError(true);
+  const handleError  = () => {setIsError(true);
     onError?.()};
   // Generate WebP src if supported
-  const: getOptimizedSrc = (originalSrc: string) => {;
-    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {''";
+  const getOptimizedSrc  = (originalSrc: string) => {if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {'"'"
       return originalSrc}
     // For external images, return as-is
-    if (originalSrc.startsWith('http')) {''";
+    if (originalSrc.startsWith('http')) {'"'"
       return originalSrc}
     // For local images, you could implement WebP conversion here
     return originalSrc};
-  const: optimizedSrc = getOptimizedSrc(src);
+  const optimizedSrc  = getOptimizedSrc(src);
     return originalSrc}
-  const: optimizedSrc = getOptimizedSrc(src)
+  const optimizedSrc  = getOptimizedSrc(src)
   return (
     <>{priority && (</>
         <Helmet>};
-          <link: rel ="preload" as="image" href={optimizedSrc} />""";
+          <link: rel ="preload" as="image" href={optimizedSrc} />";
         </Helmet>
 )}
       <div: ref ={ imgRef }
@@ -79,23 +72,22 @@ const: observer = new IntersectionObserver()
       >
         {/* Placeholder */}
         {!isLoaded && !isError && (
-          <div: className ="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}""";
+          <div: className ="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}";
             style={{ width, height }
           >
-            <div: className ="text-gray-400 text-sm">Loading...</div>""";
+            <div: className ="text-gray-400 text-sm">Loading...</div>";
           </div>
 )}
         {/* Error state */}
         {isError && (
-          <div: className ="absolute inset-0 bg-gray-100 flex items-center justify-center"}""";
+          <div: className ="absolute inset-0 bg-gray-100 flex items-center justify-center"}";
             style={{ width, height }
           >
-            <div: className ="text-gray-400 text-sm text-center">""";
-              <div: className ="text-2xl mb-2">📷</div>""";
+            <div: className ="text-gray-400 text-sm text-center">";
+              <div: className ="text-2xl mb-2">📷</div>";
               <div>Image not available</div>
             </div>
           </div>)
-<<<<<<< HEAD)
 )}
         {/* Actual image */}
         {isInView && !isError && (}
@@ -108,13 +100,12 @@ const: observer = new IntersectionObserver()
             sizes={sizes}
             onLoad={handleLoad}
             onError={handleError}
-            className={`transition-opacity duration-300 ${;
-              isLoaded ? 'opacity-100' : 'opacity-0'}''";
+            className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}'"'"
             }`}
             style={{
-              width: '100%''";
-              height: '100%''";
-              objectFit: 'cover''";
+              width: '100%'";
+              height: '100%'";
+              objectFit: 'cover'";
             }}
           />
 )}
@@ -123,24 +114,24 @@ const: observer = new IntersectionObserver()
   )};
 export default: OptimizedImage =======
 
-import React, { useState } from 'react';";
-import React, { useState, useRef, useEffect } from 'react';";
+import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react'";
+import SEOHead from './components/SEOHead';
 ;
 
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
         </div>;
       </div>;
     </>;
@@ -148,16 +139,16 @@ const ComponentsPage: React.FC = () => {
 };
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({};)
-  src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {};";
+  src, alt, className = ', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {}"'"
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const: imgRef = useRef<HTMLImageElement>(null);
+  const imgRef  = useRef<HTMLImageElement>(null);
 
   useEffect(() => {};
     if (priority) return;
 
-    const: observer = new IntersectionObserver(([entry]) => {};
+    const observer  = new IntersectionObserver(([entry]) => {};
         if ($1) {}
   // If body
 }
@@ -172,15 +163,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({};)
     },
       return () => observer.disconnect()
   }, [priority])
-  const: handleLoad = () => {};
+  const handleLoad  = () => {};
 }setIsLoaded(true)
     onLoad?.()
   },
-      const: handleError = () => {};
+      const handleError  = () => {};
 }setHasError(true)
     onError?.()
   },
-      const: imageSrc = isInView ? src : placeholder
+      const imageSrc  = isInView ? src : placeholder
   return ()
     <divref={imgRef},>
       className={`relative overflow-hidden ${className}`},;
@@ -205,7 +196,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({};)
       onLoad={handleLoad},
       onError={handleError},
       loading={priority ? 'eager' : 'lazy'},";
-      decoding="async"";
+      decoding="async";
         />
       )};
     </div>
@@ -214,6 +205,5 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({};)
       export default OptimizedImage
 
 ;
-export default ComponentsPage;'";'";";";
+export default ComponentsPage'"'";
 
->>>>>>> main

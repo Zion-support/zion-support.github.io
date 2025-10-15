@@ -1,5 +1,5 @@
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react'";
+import SEOHead from './components/SEOHead';
 
 interface EnhancedLoadingProps {},
       message?: string
@@ -42,7 +42,7 @@ interface EnhancedLoadingProps {},
         <div: className ="flex justify-center space-x-2"></div>";
           {[...Array(3)].map(( i) => ()}
             <divkey={i},>
-      className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce"";
+      className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce";
               style={{},
       animationDelay: `${i * 0.1}s`,
       animationDuration: '1s'";
@@ -64,13 +64,13 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
         </div>;
       </div>;
     </>;
@@ -78,4 +78,4 @@ const ComponentsPage: React.FC = () => {
 
 };
 ;
-export default ComponentsPage;'";'";
+export default ComponentsPage'"'";
