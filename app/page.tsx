@@ -52,16 +52,41 @@ const HomePage: React.FC = () => {
         </script>
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative">
+        {/* Animated Background */}
+        <div className="absolute inset-0 cyber-grid opacity-20"></div>
+        <div className="absolute inset-0 particles"></div>
+        
+        {/* Matrix Rain Effect */}
+        <div className="matrix-bg">
+          {Array.from({ length: 50 }).map((_, i) => (
+            <div
+              key={i}
+              className="matrix-rain"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 10}s`,
+                animationDuration: `${10 + Math.random() * 20}s`
+              }}
+            >
+              {Array.from({ length: 20 }).map((_, j) => (
+                <div key={j} style={{ opacity: Math.random() }}>
+                  {String.fromCharCode(0x30A0 + Math.random() * 96)}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
+        <section className="relative py-20 overflow-hidden z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center space-y-8">
-              <div className="text-8xl mb-8 floating">🚀</div>
-              <h1 className="text-5xl md:text-7xl font-bold">
-                Transform Your Business with <span className="gradient-text">AI & IT Solutions</span>
+              <div className="text-8xl mb-8 floating neon-text">🚀</div>
+              <h1 className="text-5xl md:text-7xl font-bold slide-in-left">
+                Transform Your Business with <span className="gradient-text holographic">AI & IT Solutions</span>
               </h1>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed fade-in-up">
                 Leading provider of cutting-edge AI and IT solutions. We help businesses accelerate growth, 
                 optimize operations, and achieve digital transformation through innovative technology.
               </p>
