@@ -6,35 +6,63 @@ const MicroSaasPage: React.FC = () => {
   const saasProducts = [
     {
       name: "AI Content Writer Pro",
-      description: "Advanced AI-powered content creation tool that generates high-quality articles, blogs, and marketing copy.",
-      features: ["Natural language generation", "SEO optimization", "Multi-language support", "Brand voice customization"],
-      price: "$29/month",
-      popular: true,
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      name: "Analytics Dashboard Pro",
-      description: "Comprehensive business intelligence dashboard with real-time data visualization and insights.",
-      features: ["Real-time analytics", "Custom reports", "Data export", "Team collaboration"],
+      description: "Advanced AI-powered content creation tool that generates high-quality articles, blogs, and marketing copy with SEO optimization.",
+      features: ["Natural language generation", "SEO optimization", "Multi-language support", "Brand voice customization", "Plagiarism detection", "Content scheduling"],
       price: "$49/month",
-      popular: false,
-      icon: <BarChart3 className="w-8 h-8" />
+      popular: true,
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$99/month",
+      savings: "50% off"
     },
     {
-      name: "Security Shield",
-      description: "Enterprise-grade security monitoring and threat detection for your applications and data.",
-      features: ["24/7 monitoring", "Threat detection", "Compliance reporting", "Incident response"],
+      name: "AI Analytics Dashboard Pro",
+      description: "Comprehensive business intelligence dashboard with real-time data visualization, AI insights, and predictive analytics.",
+      features: ["Real-time analytics", "AI-powered insights", "Custom reports", "Data export", "Team collaboration", "Mobile app"],
+      price: "$99/month",
+      popular: false,
+      icon: <BarChart3 className="w-8 h-8" />,
+      marketPrice: "$199/month",
+      savings: "50% off"
+    },
+    {
+      name: "AI Security Shield Pro",
+      description: "Enterprise-grade security monitoring and threat detection with AI-powered anomaly detection and automated response.",
+      features: ["24/7 AI monitoring", "Threat detection", "Compliance reporting", "Incident response", "Security scoring", "Risk assessment"],
+      price: "$149/month",
+      popular: false,
+      icon: <Shield className="w-8 h-8" />,
+      marketPrice: "$299/month",
+      savings: "50% off"
+    },
+    {
+      name: "AI Project Manager Pro",
+      description: "Intelligent project management tool with AI-powered task optimization, resource allocation, and team coordination.",
+      features: ["Smart scheduling", "Resource optimization", "Progress tracking", "Team communication", "Risk prediction", "Budget management"],
       price: "$79/month",
       popular: false,
-      icon: <Shield className="w-8 h-8" />
+      icon: <Users className="w-8 h-8" />,
+      marketPrice: "$159/month",
+      savings: "50% off"
     },
     {
-      name: "Project Manager AI",
-      description: "Intelligent project management tool with AI-powered task optimization and team coordination.",
-      features: ["Smart scheduling", "Resource optimization", "Progress tracking", "Team communication"],
-      price: "$39/month",
+      name: "AI Email Marketing Pro",
+      description: "Intelligent email marketing platform with AI-powered personalization, A/B testing, and automated campaigns.",
+      features: ["AI personalization", "A/B testing", "Automated campaigns", "Analytics", "List management", "Template library"],
+      price: "$69/month",
       popular: false,
-      icon: <Users className="w-8 h-8" />
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$139/month",
+      savings: "50% off"
+    },
+    {
+      name: "AI Customer Support Pro",
+      description: "Advanced AI-powered customer support system with chatbots, ticket management, and sentiment analysis.",
+      features: ["AI chatbots", "Ticket management", "Sentiment analysis", "Knowledge base", "Multi-channel support", "Performance analytics"],
+      price: "$89/month",
+      popular: false,
+      icon: <Users className="w-8 h-8" />,
+      marketPrice: "$179/month",
+      savings: "50% off"
     }
   ];
 
@@ -106,7 +134,7 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {saasProducts.map((product, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${product.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                   {product.popular && (
@@ -134,13 +162,19 @@ const MicroSaasPage: React.FC = () => {
                     ))}
                   </ul>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="text-3xl font-bold text-white">{product.price}</div>
-                    <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center">
-                      Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
+                  <div className="mb-4">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="text-3xl font-bold text-white">{product.price}</span>
+                      <span className="text-lg text-gray-400 line-through">{product.marketPrice}</span>
+                      <span className="bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold">{product.savings}</span>
+                    </div>
+                    <p className="text-sm text-gray-400">Billed monthly • Cancel anytime</p>
                   </div>
+                  
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                    Start Free Trial
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
                 </div>
               ))}
             </div>

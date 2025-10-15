@@ -7,76 +7,83 @@ const PricingPage: React.FC = () => {
 
   const pricingPlans = [
     {
-      name: "Starter",
+      name: "Micro SAAS Starter",
       description: "Perfect for small businesses and startups",
-      monthlyPrice: 99,
-      annualPrice: 79,
+      monthlyPrice: 49,
+      annualPrice: 39,
       features: [
-        "Up to 5 team members",
-        "Basic AI tools access",
+        "1 AI tool of choice",
+        "Up to 3 team members",
         "Email support",
         "Standard security",
         "Basic analytics",
-        "5GB storage"
+        "5GB storage",
+        "API access",
+        "Mobile app access"
       ],
       limitations: [
-        "Limited AI requests",
+        "Limited AI requests (1,000/month)",
         "Basic customization",
         "Standard templates"
       ],
       popular: false,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
+      category: "Micro SAAS"
     },
     {
-      name: "Professional",
+      name: "AI Services Professional",
       description: "Ideal for growing businesses",
       monthlyPrice: 299,
       annualPrice: 239,
       features: [
         "Up to 25 team members",
-        "Advanced AI tools",
+        "Advanced AI tools suite",
         "Priority support",
         "Enhanced security",
         "Advanced analytics",
         "100GB storage",
-        "API access",
-        "Custom integrations"
+        "Full API access",
+        "Custom integrations",
+        "Real-time monitoring"
       ],
       limitations: [
-        "Monthly AI limits",
-        "Standard SLA"
+        "Monthly AI limits (10,000 requests)",
+        "Standard SLA (99.5%)"
       ],
       popular: true,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
+      category: "AI Services"
     },
     {
-      name: "Enterprise",
+      name: "IT Services Enterprise",
       description: "For large organizations with complex needs",
       monthlyPrice: 999,
       annualPrice: 799,
       features: [
         "Unlimited team members",
-        "Full AI suite access",
+        "Full AI & IT suite access",
         "24/7 dedicated support",
-        "Enterprise security",
-        "Custom analytics",
+        "Enterprise security (SOC 2)",
+        "Custom analytics dashboard",
         "Unlimited storage",
         "Full API access",
         "Custom integrations",
         "Dedicated account manager",
-        "SLA guarantee",
-        "Custom training"
+        "SLA guarantee (99.9%)",
+        "Custom training & onboarding",
+        "White-label solutions"
       ],
       limitations: [],
       popular: false,
-      cta: "Contact Sales"
+      cta: "Contact Sales",
+      category: "IT Services"
     }
   ];
 
   const addOns = [
     {
       name: "Additional Storage",
-      description: "Extra storage space for your projects",
+      description: "Extra storage space for your projects and data",
       price: "$10/100GB/month"
     },
     {
@@ -87,12 +94,32 @@ const PricingPage: React.FC = () => {
     {
       name: "Custom Development",
       description: "Tailored solutions for your specific needs",
-      price: "Contact us"
+      price: "From $150/hour"
     },
     {
       name: "Training & Onboarding",
       description: "Comprehensive training for your team",
       price: "$200/session"
+    },
+    {
+      name: "5G Solutions",
+      description: "Next-generation 5G infrastructure and applications",
+      price: "From $2,999/project"
+    },
+    {
+      name: "Cybersecurity Audit",
+      description: "Comprehensive security assessment and implementation",
+      price: "From $1,999/audit"
+    },
+    {
+      name: "Cloud Migration",
+      description: "Seamless migration to AWS, Azure, or Google Cloud",
+      price: "From $2,999/migration"
+    },
+    {
+      name: "AI Model Training",
+      description: "Custom AI model development and training",
+      price: "From $5,999/model"
     }
   ];
 
@@ -181,6 +208,7 @@ const PricingPage: React.FC = () => {
                   )}
                   
                   <div className="text-center mb-8">
+                    <div className="text-cyan-400 text-sm font-semibold mb-2">{plan.category}</div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="mb-4">
@@ -244,7 +272,7 @@ const PricingPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {addOns.map((addon, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-2">{addon.name}</h3>
