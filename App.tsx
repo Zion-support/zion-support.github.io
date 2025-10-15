@@ -2,6 +2,7 @@ import React, { Suspense, lazy, useEffect, memo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
+import './app/styles/futuristic-enhanced.css';
 // Components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
