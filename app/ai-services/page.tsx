@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -41,6 +42,575 @@ const AIServicesPage: React.FC = () => {
       description: 'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights with predictive analytics and automated reporting.',
       icon: BarChart3,
       category: 'Analytics & Intelligence',
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import SEOOptimizer from "../components/SEOOptimizer";
+
+export default function AIServices() {
+  const aiServices = [
+    {
+    },
+    {
+      id: "ai-cybersecurity-suite-pro",
+      name: "AI Cybersecurity Suite Pro",
+      description: "Next-generation AI-powered security platform with threat detection, behavioral analysis, and automated response",
+      price: "From $3,200/month",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "AI threat detection & prevention",
+        "Behavioral analysis & anomaly detection",
+        "Automated incident response",
+        "Zero-day vulnerability protection",
+        "Compliance monitoring (GDPR, HIPAA, SOX)",
+        "24/7 AI security monitoring",
+        "Predictive threat intelligence",
+        "Custom AI model training"
+      ],
+      benefits: [
+        "Protect against 99.9% of threats",
+        "Reduce security incidents by 98%",
+        "Ensure compliance requirements",
+        "Save on security costs"
+      ],
+      category: "Security",
+      rating: 4.8,
+      reviews: 892,
+      link: "/ai-cybersecurity-suite-pro",
+      featured: true
+    },
+    {
+      id: "ai-content-generation-pro",
+      name: "AI Content Generation Pro",
+      description: "Revolutionary AI content creation platform with natural language processing, multi-language support, and brand optimization",
+      price: "From $1,800/month",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Advanced NLP content generation",
+        "Multi-language support (100+ languages)",
+        "Brand voice customization",
+        "SEO optimization & keyword research",
+        "Content calendar management",
+        "Social media optimization",
+        "Plagiarism detection & originality",
+        "Performance analytics & insights"
+      ],
+      benefits: [
+        "Create 20x more content",
+        "Improve SEO rankings by 60%",
+        "Maintain brand consistency",
+        "Save 25+ hours weekly"
+      ],
+      category: "Content",
+      rating: 4.7,
+      reviews: 1834,
+      link: "/ai-content-generation-pro",
+      featured: true
+    },
+    {
+      id: "ai-customer-support-chatbot",
+      name: "AI Customer Support Chatbot",
+      description: "Intelligent conversational AI with natural language understanding, sentiment analysis, and seamless human handoff",
+      price: "From $2,200/month",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Natural language understanding",
+        "Sentiment analysis & emotion detection",
+        "Multi-channel support (web, mobile, social)",
+        "Knowledge base integration",
+        "Live chat handoff automation",
+        "Performance analytics & insights",
+        "Custom AI training & fine-tuning",
+        "Multi-language support (50+ languages)"
+      ],
+      benefits: [
+        "Reduce response time by 90%",
+        "Handle 95% of queries automatically",
+        "Improve customer satisfaction by 40%",
+        "Scale support operations 10x"
+      ],
+      category: "Customer Service",
+      rating: 4.8,
+      reviews: 1654,
+      link: "/ai-customer-support-chatbot",
+      featured: true
+    },
+    {
+      id: "ai-code-assistant-pro",
+      name: "AI Code Assistant Pro",
+      description: "Advanced AI-powered development tool with code generation, debugging, optimization, and intelligent suggestions",
+      price: "From $1,500/month",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "AI code generation & completion",
+        "Intelligent debugging & error detection",
+        "Code optimization suggestions",
+        "Multi-language support (50+ languages)",
+        "Security vulnerability detection",
+        "Performance analysis & optimization",
+        "Code review automation",
+        "Team collaboration features"
+      ],
+      benefits: [
+        "Increase development speed by 50%",
+        "Reduce bugs by 70%",
+        "Improve code quality",
+        "Accelerate learning & onboarding"
+      ],
+      category: "Development",
+      rating: 4.9,
+      reviews: 2156,
+      link: "/ai-code-assistant-pro",
+      featured: false
+    },
+    {
+      id: "ai-business-intelligence-pro",
+      name: "AI Business Intelligence Pro",
+      description: "Comprehensive AI-driven BI platform with predictive modeling, automated insights, and strategic recommendations",
+      price: "From $2,800/month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "Predictive modeling & forecasting",
+        "Automated insight generation",
+        "Strategic recommendation engine",
+        "Real-time data processing",
+        "Advanced visualization tools",
+        "Custom dashboard creation",
+        "API integration & data connectors",
+        "White-label & customization"
+      ],
+      benefits: [
+        "Make strategic decisions 3x faster",
+        "Increase revenue by 45%",
+        "Identify opportunities automatically",
+        "Reduce analysis time by 80%"
+      ],
+      category: "Business Intelligence",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/ai-business-intelligence-pro",
+      featured: false
+    },
+    {
+      id: "ai-automation-platform",
+      name: "AI Automation Platform",
+      description: "Intelligent process automation with machine learning, workflow optimization, and adaptive decision making",
+      price: "From $2,000/month",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "Intelligent process automation",
+        "Machine learning workflow optimization",
+        "Adaptive decision making",
+        "500+ app integrations",
+        "Natural language process design",
+        "Error handling & self-correction",
+        "Performance analytics & optimization",
+        "Custom AI model integration"
+      ],
+      benefits: [
+        "Automate 90% of repetitive tasks",
+        "Reduce errors by 95%",
+        "Save 30+ hours weekly",
+        "Improve process efficiency by 60%"
+      ],
+      category: "Automation",
+      rating: 4.7,
+      reviews: 1347,
+      link: "/ai-automation-platform",
+      featured: false
+    },
+    {
+      id: "ai-data-analytics-pro",
+      name: "AI Data Analytics Pro",
+      description: "Advanced data analytics platform with machine learning, pattern recognition, and predictive insights",
+      price: "From $2,300/month",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "Machine learning data analysis",
+        "Pattern recognition & anomaly detection",
+        "Predictive data modeling",
+        "Real-time data processing",
+        "Advanced statistical analysis",
+        "Custom algorithm development",
+        "Data visualization & reporting",
+        "API integration & data connectors"
+      ],
+      benefits: [
+        "Uncover hidden data insights",
+        "Predict trends with 85% accuracy",
+        "Reduce analysis time by 75%",
+        "Make data-driven decisions"
+      ],
+      category: "Data Analytics",
+      rating: 4.8,
+      reviews: 987,
+      link: "/ai-data-analytics-pro",
+      featured: false
+    },
+    {
+      id: "ai-marketing-automation",
+      name: "AI Marketing Automation",
+      description: "Intelligent marketing automation with AI-powered personalization, campaign optimization, and customer journey mapping",
+      price: "From $1,900/month",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "AI-powered personalization",
+        "Behavioral trigger campaigns",
+        "Customer journey mapping",
+        "A/B testing automation",
+        "Predictive customer scoring",
+        "Multi-channel campaign management",
+        "Performance optimization",
+        "ROI analysis & reporting"
+      ],
+      benefits: [
+        "Increase conversion rates by 55%",
+        "Improve customer engagement by 40%",
+        "Reduce marketing costs by 35%",
+        "Scale marketing efforts 10x"
+      ],
+      category: "Marketing",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/ai-marketing-automation",
+      featured: false
+    },
+    {
+      id: "ai-hr-recruitment-pro",
+      name: "AI HR & Recruitment Pro",
+      description: "Intelligent HR platform with AI-powered candidate screening, skill matching, and employee analytics",
+      price: "From $2,100/month",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "AI candidate screening & matching",
+        "Skill assessment & evaluation",
+        "Bias-free hiring algorithms",
+        "Employee performance analytics",
+        "Predictive retention modeling",
+        "Automated interview scheduling",
+        "Onboarding automation",
+        "Compliance monitoring"
+      ],
+      benefits: [
+        "Reduce hiring time by 60%",
+        "Improve candidate quality by 45%",
+        "Eliminate hiring bias",
+        "Increase employee retention by 30%"
+      ],
+      category: "HR & Recruitment",
+      rating: 4.8,
+      reviews: 876,
+      link: "/ai-hr-recruitment-pro",
+      featured: false
+    },
+    {
+      id: "ai-financial-analysis",
+      name: "AI Financial Analysis",
+      description: "Advanced AI financial platform with risk assessment, fraud detection, and automated financial reporting",
+      price: "From $2,600/month",
+      icon: <Calculator className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "AI risk assessment & modeling",
+        "Fraud detection & prevention",
+        "Automated financial reporting",
+        "Predictive financial analytics",
+        "Compliance monitoring",
+        "Real-time transaction analysis",
+        "Custom financial models",
+        "Integration with accounting systems"
+      ],
+      benefits: [
+        "Reduce financial risks by 70%",
+        "Detect fraud with 99% accuracy",
+        "Automate 80% of financial tasks",
+        "Improve financial decision making"
+      ],
+      category: "Finance",
+      rating: 4.9,
+      reviews: 654,
+      link: "/ai-financial-analysis",
+      featured: false
+    },
+    {
+      id: "ai-supply-chain-optimizer",
+      name: "AI Supply Chain Optimizer",
+      description: "Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning",
+      price: "From $2,400/month",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-sky-500 to-blue-500",
+      features: [
+        "Demand forecasting & planning",
+        "Inventory optimization algorithms",
+        "Logistics route optimization",
+        "Supplier risk assessment",
+        "Real-time supply chain monitoring",
+        "Cost optimization analysis",
+        "Sustainability tracking",
+        "Integration with ERP systems"
+      ],
+      benefits: [
+        "Reduce inventory costs by 25%",
+        "Improve demand accuracy by 40%",
+        "Optimize logistics efficiency",
+        "Minimize supply chain risks"
+      ],
+      category: "Supply Chain",
+      rating: 4.7,
+      reviews: 432,
+      link: "/ai-supply-chain-optimizer",
+      featured: false
+    },
+    {
+      id: "ai-voice-assistant-pro",
+      name: "AI Voice Assistant Pro",
+      description: "Advanced conversational AI with natural language understanding, voice synthesis, and multi-modal interactions",
+      price: "From $1,700/month",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      features: [
+        "Natural language understanding",
+        "Voice synthesis & generation",
+        "Multi-modal interactions",
+        "Context-aware conversations",
+        "Multi-language support (100+ languages)",
+        "Custom voice training",
+        "Integration with smart devices",
+        "Real-time voice processing"
+      ],
+      benefits: [
+        "Enhance customer experience",
+        "Reduce support costs by 50%",
+        "Enable hands-free operations",
+        "Scale voice interactions"
+      ],
+      category: "Voice AI",
+      rating: 4.8,
+      reviews: 789,
+      link: "/ai-voice-assistant-pro",
+      featured: false
+    },
+    {
+      id: "ai-image-recognition-pro",
+      name: "AI Image Recognition Pro",
+      description: "Advanced computer vision with object detection, facial recognition, and image analysis capabilities",
+      price: "From $1,600/month",
+      icon: <Image className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "Object detection & classification",
+        "Facial recognition & analysis",
+        "OCR text extraction",
+        "Image quality assessment",
+        "Custom model training",
+        "Real-time processing",
+        "Batch image analysis",
+        "API integration"
+      ],
+      benefits: [
+        "Automate visual inspections",
+        "Improve security systems",
+        "Extract data from images",
+        "Enhance user experience"
+      ],
+      category: "Computer Vision",
+      rating: 4.9,
+      reviews: 1123,
+      link: "/ai-image-recognition-pro",
+      featured: false
+    },
+    {
+      id: "ai-predictive-maintenance",
+      name: "AI Predictive Maintenance",
+      description: "Intelligent equipment monitoring with failure prediction, maintenance scheduling, and cost optimization",
+      price: "From $2,200/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "Equipment failure prediction",
+        "Maintenance scheduling optimization",
+        "Sensor data analysis",
+        "Cost-benefit analysis",
+        "Real-time monitoring",
+        "Alert & notification system",
+        "Maintenance history tracking",
+        "Integration with IoT devices"
+      ],
+      benefits: [
+        "Reduce downtime by 60%",
+        "Lower maintenance costs by 40%",
+        "Extend equipment lifespan",
+        "Optimize resource allocation"
+      ],
+      category: "IoT & Maintenance",
+      rating: 4.7,
+      reviews: 654,
+      link: "/ai-predictive-maintenance",
+      featured: false
+    },
+    {
+      id: "ai-sentiment-analysis-pro",
+      name: "AI Sentiment Analysis Pro",
+      description: "Advanced sentiment analysis with emotion detection, brand monitoring, and social media insights",
+      price: "From $1,400/month",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "Multi-language sentiment analysis",
+        "Emotion detection & classification",
+        "Brand monitoring & tracking",
+        "Social media analysis",
+        "Real-time sentiment tracking",
+        "Custom sentiment models",
+        "Trend analysis & reporting",
+        "API integration"
+      ],
+      benefits: [
+        "Monitor brand reputation",
+        "Improve customer satisfaction",
+        "Identify market trends",
+        "Enhance marketing strategies"
+      ],
+      category: "Analytics",
+      rating: 4.6,
+      reviews: 987,
+      link: "/ai-sentiment-analysis-pro",
+      featured: false
+    },
+    {
+      id: "ai-recommendation-engine",
+      name: "AI Recommendation Engine",
+      description: "Intelligent recommendation system with personalization, collaborative filtering, and content-based suggestions",
+      price: "From $1,800/month",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "Collaborative filtering",
+        "Content-based recommendations",
+        "Hybrid recommendation models",
+        "Real-time personalization",
+        "A/B testing framework",
+        "Performance analytics",
+        "Custom algorithm development",
+        "Multi-platform integration"
+      ],
+      benefits: [
+        "Increase conversion rates by 35%",
+        "Improve user engagement",
+        "Boost sales and revenue",
+        "Enhance customer experience"
+      ],
+      category: "Personalization",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/ai-recommendation-engine",
+      featured: false
+    },
+    {
+      id: "ai-fraud-detection-pro",
+      name: "AI Fraud Detection Pro",
+      description: "Advanced fraud detection with real-time monitoring, pattern recognition, and risk scoring",
+      price: "From $2,500/month",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Real-time fraud detection",
+        "Pattern recognition algorithms",
+        "Risk scoring & assessment",
+        "Transaction monitoring",
+        "Behavioral analysis",
+        "Machine learning models",
+        "False positive reduction",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Detect fraud with 99.5% accuracy",
+        "Reduce false positives by 80%",
+        "Protect against new fraud types",
+        "Ensure regulatory compliance"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 876,
+      link: "/ai-fraud-detection-pro",
+      featured: false
+    },
+    {
+      id: "ai-language-translation",
+      name: "AI Language Translation",
+      description: "Advanced neural machine translation with real-time processing, context awareness, and domain-specific models",
+      price: "From $1,300/month",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      features: [
+        "Neural machine translation",
+        "Real-time translation",
+        "Context-aware translation",
+        "Domain-specific models",
+        "100+ language support",
+        "Batch translation processing",
+        "API integration",
+        "Custom model training"
+      ],
+      benefits: [
+        "Break language barriers",
+        "Improve global communication",
+        "Reduce translation costs",
+        "Maintain translation quality"
+      ],
+      category: "Language Processing",
+      rating: 4.7,
+      reviews: 1234,
+      link: "/ai-language-translation",
+      featured: false
+    },
+    {
+      id: "ai-chatbot-enterprise",
+      name: "AI Chatbot Enterprise",
+      description: "Enterprise-grade conversational AI with advanced NLP, knowledge management, and multi-channel deployment",
+      price: "From $2,800/month",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "Advanced NLP capabilities",
+        "Knowledge base integration",
+        "Multi-channel deployment",
+        "Human handoff automation",
+        "Conversation analytics",
+        "Custom training & fine-tuning",
+        "Enterprise security",
+        "Scalable infrastructure"
+      ],
+      benefits: [
+        "Reduce support costs by 70%",
+        "Improve response times",
+        "Scale customer service",
+        "Enhance user satisfaction"
+      ],
+      category: "Customer Service",
+      rating: 4.8,
+      reviews: 1654,
+      link: "/ai-chatbot-enterprise",
+      featured: false
+    },
+    {
+      id: "ai-data-mining-pro",
+      name: "AI Data Mining Pro",
+      description: "Advanced data mining with pattern discovery, anomaly detection, and predictive modeling",
+      price: "From $2,100/month",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
       features: [
         'Real-time data processing and analysis',
         'Predictive analytics and forecasting',
@@ -96,6 +666,7 @@ const AIServicesPage: React.FC = () => {
       link: 'https://ziontechgroup.com/ai-cybersecurity-suite-pro'
     },
     {
+<<<<<<< HEAD
       id: 'ai-content-generation-pro',
       name: 'AI Content Generation Pro',
       description: 'Advanced AI content creation platform that generates high-quality text, images, and videos for marketing, sales, and communication needs.',
@@ -334,6 +905,93 @@ const AIServicesPage: React.FC = () => {
       ],
       useCases: ['Manufacturing equipment', 'Fleet management', 'Building systems', 'Industrial machinery'],
       link: 'https://ziontechgroup.com/ai-predictive-maintenance'
+=======
+      id: "ai-blockchain-solutions",
+      name: "AI Blockchain Solutions",
+      description: "Intelligent blockchain applications with AI-powered smart contracts and analytics",
+      price: "From $3,999/month",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-purple-500 to-indigo-500",
+      features: [
+        "Smart contracts automation",
+        "DeFi analytics & insights",
+        "NFT generation & analysis",
+        "Blockchain monitoring",
+        "Cryptocurrency analysis",
+        "Risk assessment & compliance",
+        "Automated trading strategies",
+        "Cross-chain integration"
+      ],
+      benefits: [
+        "Automated smart contracts",
+        "Real-time blockchain analysis",
+        "Fraud detection & prevention",
+        "Optimized transaction processing"
+      ],
+      category: "Blockchain",
+      rating: 4.9,
+      reviews: 445,
+      link: "/ai-blockchain-solutions",
+      featured: false
+    },
+    {
+      id: "ai-time-series-forecasting",
+      name: "AI Time Series Forecasting",
+      description: "Advanced time series analysis with forecasting, trend detection, and seasonal pattern recognition",
+      price: "From $1,500/month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Time series forecasting",
+        "Trend detection & analysis",
+        "Seasonal pattern recognition",
+        "Anomaly detection",
+        "Multiple forecasting models",
+        "Confidence intervals",
+        "Real-time predictions",
+        "Custom model development"
+      ],
+      benefits: [
+        "Improve forecasting accuracy",
+        "Identify trends early",
+        "Optimize resource planning",
+        "Make better predictions"
+      ],
+      category: "Analytics",
+      rating: 4.8,
+      reviews: 876,
+      link: "/ai-time-series-forecasting",
+      featured: false
+    },
+    {
+      id: "ai-nlp-text-analysis",
+      name: "AI NLP Text Analysis",
+      description: "Comprehensive natural language processing with text classification, entity extraction, and semantic analysis",
+      price: "From $1,600/month",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "Text classification & categorization",
+        "Named entity recognition",
+        "Sentiment analysis",
+        "Topic modeling",
+        "Text summarization",
+        "Language detection",
+        "Custom model training",
+        "Batch processing"
+      ],
+      benefits: [
+        "Extract insights from text",
+        "Automate text processing",
+        "Improve content organization",
+        "Enhance search capabilities"
+      ],
+      category: "Language Processing",
+      rating: 4.7,
+      reviews: 1123,
+      link: "/ai-nlp-text-analysis",
+      featured: false
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
     }
   ];
 
@@ -361,6 +1019,7 @@ const AIServicesPage: React.FC = () => {
     <>
       <SEOHead 
         title="AI Services - Zion Tech Group"
+<<<<<<< HEAD
         description="Discover our comprehensive suite of AI services designed to transform your business. From machine learning to natural language processing, we provide cutting-edge AI solutions."
         keywords="AI services, artificial intelligence, machine learning, AI solutions, AI consulting, AI development"
       />
@@ -575,3 +1234,16 @@ const AIServicesPage: React.FC = () => {
 };
 
 export default AIServicesPage;
+=======
+        description="Comprehensive AI services including analytics, automation, and intelligent solutions for modern businesses."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                AI Services
+              </span>
+            </h1>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743

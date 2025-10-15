@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -23,6 +24,15 @@ const MicroSaaSSolutionsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('all');
 
   const solutions = [
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target, MessageSquare } from 'lucide-react';
+
+const MicroSaaSSolutionsPage: React.FC = () => {
+  const microSaasProducts = [
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
     {
       id: 'social-media-scheduler',
       name: 'Social Media Scheduler',
@@ -66,11 +76,63 @@ const MicroSaaSSolutionsPage: React.FC = () => {
     {
       id: 'inventory-manager',
       name: 'Inventory Manager',
+<<<<<<< HEAD
       description: 'Track inventory levels, automate reordering, and manage suppliers efficiently.',
       price: '$59/month',
       features: ['Real-time tracking', 'Auto reordering', 'Supplier management', 'Analytics'],
       icon: <Server className="w-8 h-8" />,
       category: 'business',
+=======
+      price: '$35/mo',
+      originalPrice: '$59/mo',
+      description: 'Smart inventory management with automated reordering and demand forecasting',
+      longDescription: 'Optimize your inventory with our intelligent management system that predicts demand and automates reordering processes.',
+      features: [
+        'Automated reorder points',
+        'Demand forecasting',
+        'Multi-location tracking',
+        'Barcode scanning',
+        'Supplier management',
+        'Cost optimization',
+        'Reporting & analytics',
+        'Mobile accessibility'
+      ],
+      benefits: [
+        'Reduce stockouts by 70%',
+        'Lower inventory costs by 30%',
+        'Improve cash flow',
+        'Streamline operations'
+      ],
+      category: 'Inventory',
+      icon: <Database className="w-8 h-8 text-orange-400" />,
+      popular: false
+    },
+    {
+      id: 'social-media-scheduler',
+      name: 'Social Media Scheduler',
+      price: '$25/mo',
+      originalPrice: '$45/mo',
+      description: 'Schedule and manage social media posts across multiple platforms with AI optimization',
+      longDescription: 'Boost your social media presence with our intelligent scheduling platform that optimizes posting times and content for maximum engagement.',
+      features: [
+        'Multi-platform scheduling',
+        'AI-optimized posting times',
+        'Content calendar',
+        'Hashtag suggestions',
+        'Analytics & insights',
+        'Team collaboration',
+        'Content library',
+        'Automated responses'
+      ],
+      benefits: [
+        'Increase engagement by 65%',
+        'Save 15+ hours weekly',
+        'Improve content strategy',
+        'Grow social following'
+      ],
+      category: 'Marketing',
+      icon: <Globe className="w-8 h-8 text-cyan-400" />,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
       popular: false
     },
     {
@@ -94,6 +156,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
     { id: 'support', name: 'Support', count: solutions.filter(s => s.category === 'support').length }
   ];
 
+<<<<<<< HEAD
   const filteredSolutions = activeTab === 'all' 
     ? solutions 
     : solutions.filter(solution => solution.category === activeTab);
@@ -105,6 +168,15 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         <meta name="description" content="Discover powerful micro SaaS solutions designed to streamline your business operations and boost productivity." />
         <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" />
         <meta property="og:description" content="Discover powerful micro SaaS solutions designed to streamline your business operations and boost productivity." />
+=======
+  return (<>
+      <Helmet>
+        <title>Micro SAAS Solutions - Innovative Software for Modern Businesses | Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive micro SAAS solutions designed to streamline business operations. From task management to analytics, find the perfect tools for your business." />
+        <meta name="keywords" content="micro SAAS, business software, _productivity tools, _analytics, _customer support, _inventory management, _social media scheduling, expense tracking" />
+        <meta property="og:title" content="Micro SAAS Solutions - Innovative Software for Modern Businesses" />
+        <meta property="og:description" content="Discover our comprehensive micro SAAS solutions designed to streamline business operations." />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas-solutions" />
       </Helmet>
@@ -115,6 +187,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
+<<<<<<< HEAD
         
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -215,9 +288,15 @@ const MicroSaaSSolutionsPage: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
       </section>
     </>
   );
 };
 
+<<<<<<< HEAD
 export default MicroSaaSSolutionsPage;
+=======
+export default MicroSaasSolutionsPage;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743

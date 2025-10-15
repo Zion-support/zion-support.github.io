@@ -1,10 +1,95 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight, Globe, Brain, Shield, Zap, BarChart3 } from "lucide-react";
 
-  return (<>
+export default function Sitemap() {
+  const mainPages = [
+    { name: "Home", path: "/", description: "Zion Tech Group homepage" },
+    { name: "About Us", path: "/about", description: "Learn about our company and mission" },
+    { name: "Services", path: "/services", description: "Our comprehensive AI and IT services" },
+    { name: "AI Services", path: "/ai-services", description: "Advanced artificial intelligence solutions" },
+    { name: "Micro SAAS", path: "/micro-saas", description: "Ready-to-use business software solutions" },
+    { name: "5G Solutions", path: "/5g-solutions", description: "Next-generation 5G technology solutions" },
+    { name: "Team", path: "/team", description: "Meet our expert team" },
+    { name: "Careers", path: "/careers", description: "Join our growing team" },
+    { name: "Case Studies", path: "/case-studies", description: "Success stories and client projects" },
+    { name: "Blog", path: "/blog", description: "Latest insights and technology news" },
+    { name: "Contact", path: "/contact", description: "Get in touch with us" },
+    { name: "Pricing", path: "/pricing", description: "Transparent pricing for all services" },
+    { name: "Demo", path: "/demo", description: "See our solutions in action" },
+    { name: "Support", path: "/support", description: "Get help and support" },
+    { name: "Consultation", path: "/consultation", description: "Free consultation with our experts" }
+  ];
+
+  const aiServices = [
+    { name: "AI Analytics Dashboard Pro", path: "/ai-analytics-dashboard-pro" },
+    { name: "AI Cybersecurity Suite Pro", path: "/ai-cybersecurity-suite-pro" },
+    { name: "AI Content Generation Pro", path: "/ai-content-generation-pro" },
+    { name: "AI Customer Support Chatbot", path: "/ai-customer-support-chatbot" },
+    { name: "AI Code Assistant Pro", path: "/ai-code-assistant-pro" },
+    { name: "AI Business Intelligence Pro", path: "/ai-business-intelligence-pro" },
+    { name: "AI Automation Platform", path: "/ai-automation-platform" },
+    { name: "AI Data Analytics Pro", path: "/ai-data-analytics-pro" },
+    { name: "AI Marketing Automation", path: "/ai-marketing-automation" },
+    { name: "AI HR & Recruitment Pro", path: "/ai-hr-recruitment-pro" },
+    { name: "AI Financial Analysis", path: "/ai-financial-analysis" },
+    { name: "AI Supply Chain Optimizer", path: "/ai-supply-chain-optimizer" },
+    { name: "AI Voice Assistant Pro", path: "/ai-voice-assistant-pro" },
+    { name: "AI Image Recognition Pro", path: "/ai-image-recognition-pro" },
+    { name: "AI Predictive Maintenance", path: "/ai-predictive-maintenance" },
+    { name: "AI Sentiment Analysis Pro", path: "/ai-sentiment-analysis-pro" },
+    { name: "AI Recommendation Engine", path: "/ai-recommendation-engine" },
+    { name: "AI Fraud Detection Pro", path: "/ai-fraud-detection-pro" },
+    { name: "AI Language Translation", path: "/ai-language-translation" },
+    { name: "AI Chatbot Enterprise", path: "/ai-chatbot-enterprise" }
+  ];
+
+  const microSaasServices = [
+    { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
+    { name: "Zion Security Shield", path: "/zion-security-shield" },
+    { name: "Zion Cloud Vault", path: "/zion-cloud-vault" },
+    { name: "Zion AI Inventory Manager", path: "/zion-ai-inventory-manager" },
+    { name: "Zion HR Assistant Pro", path: "/zion-hr-assistant-pro" },
+    { name: "Zion AI Accounting Suite", path: "/zion-ai-accounting-suite" },
+    { name: "Zion E-commerce Optimizer", path: "/zion-ecommerce-optimizer" },
+    { name: "Zion AI Customer Insights", path: "/zion-ai-customer-insights" },
+    { name: "Zion AI Lead Scoring", path: "/zion-ai-lead-scoring" },
+    { name: "Zion AI Document Processor", path: "/zion-ai-document-processor" },
+    { name: "Zion AI Social Listener", path: "/zion-ai-social-listener" },
+    { name: "Zion AI Email Optimizer", path: "/zion-ai-email-optimizer" },
+    { name: "Zion AI Meeting Assistant", path: "/zion-ai-meeting-assistant" },
+    { name: "Zion AI Expense Tracker", path: "/zion-ai-expense-tracker" },
+    { name: "Zion AI Survey Builder", path: "/zion-ai-survey-builder" },
+    { name: "Zion AI Chatbot Builder", path: "/zion-ai-chatbot-builder" },
+    { name: "Zion AI Workflow Automation", path: "/zion-ai-workflow-automation" },
+    { name: "Zion AI SEO Optimizer", path: "/zion-ai-seo-optimizer" },
+    { name: "Zion AI Data Warehouse", path: "/zion-ai-data-warehouse" },
+    { name: "Zion AI Mobile App Builder", path: "/zion-ai-mobile-app-builder" }
+  ];
+
+  const fiveGServices = [
+    { name: "5G Data Analytics", path: "/5g-data-analytics" },
+    { name: "5G Edge Computing", path: "/5g-edge-computing" },
+    { name: "5G Implementation", path: "/5g-implementation" },
+    { name: "5G IoT Solutions", path: "/5g-iot-solutions" },
+    { name: "5G Mobile Applications", path: "/5g-mobile-applications" },
+    { name: "5G Network Infrastructure", path: "/5g-network-infrastructure" },
+    { name: "5G Private Networks", path: "/5g-private-networks" },
+    { name: "5G Smart City Solutions", path: "/5g-smart-city-solutions" }
+  ];
+
+  const legalPages = [
+    { name: "Privacy Policy", path: "/privacy" },
+    { name: "Terms of Service", path: "/terms" },
+    { name: "Cookie Policy", path: "/cookies" }
+  ];
+
+  return (
+    <>
       <Helmet>
         <title>Sitemap - Zion Tech Group | Complete Website Directory</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, micro SAAS solutions, _5G technology, and company information." />
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, micro SAAS solutions, 5G technology, and company information." />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
@@ -18,7 +103,7 @@ import SEOHead from '../components/SEOHead';
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Navigate through our complete website directory. Find all our AI services, _micro SAAS solutions, _5G technology, and company information.
+              Navigate through our complete website directory. Find all our AI services, micro SAAS solutions, 5G technology, and company information.
             </p>
           </div>
         </div>

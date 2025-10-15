@@ -32,9 +32,9 @@ class ErrorHandler extends Component<Props, State> {}
       errorInfo
     })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      }
-
+    if (process.env.NODE_ENV === 'development') {}
+      console.error('Error caught by handler:', error, errorInfo)
+    }
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {}
       // You can integrate with services like Sentry, LogRocket, etc.
@@ -52,12 +52,14 @@ class ErrorHandler extends Component<Props, State> {}
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString()
-      };
+      }
+      console.log('Error logged:', errorData)
       // Send to your error reporting service here
 
-      } catch (reportingError) {
-      } catch (reportingError) {
-      }
+      console.log('Error data prepared for reporting:', errorData);
+    } catch (reportingError) {
+      console.error('Failed to prepare error data for reporting:', reportingError);
+    }
   }
   handleRetry = () => {}
 }this.setState({}
