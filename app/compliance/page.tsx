@@ -1,12 +1,12 @@
 import React from 'react';
-import SEOHead from './components/SEOHead';
+import SEOHead from '../components/SEOHead';
 
 const CompliancePage: React.FC = () => {
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Compliance - Zion Tech Group"
-        description="Comprehensive compliance solutions for regulatory requirements and industry standards."
+        description="Comprehensive compliance solutions including GDPR, HIPAA, SOX, and industry-specific regulatory compliance services."
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
@@ -15,15 +15,7 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
-    },;
-    {
-export default CompliancePage;
-"'"'
-=======
   );
 };
 
 export default CompliancePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017

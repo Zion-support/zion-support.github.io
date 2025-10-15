@@ -1,12 +1,12 @@
 import React from 'react';
-import SEOHead from './components/SEOHead';
+import SEOHead from '../components/SEOHead';
 
 const CommunityPage: React.FC = () => {
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Community - Zion Tech Group"
-        description="Join our vibrant community of developers, innovators, and technology enthusiasts."
+        description="Join our vibrant community of developers, innovators, and technology enthusiasts. Connect, collaborate, and learn together."
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
@@ -15,15 +15,7 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
-    },;
-    {
-export default CommunityPage;
-"'"'
-=======
   );
 };
 
 export default CommunityPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
