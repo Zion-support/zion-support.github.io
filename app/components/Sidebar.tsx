@@ -14,6 +14,9 @@ const Sidebar: React.FC = () => {
             <Link to="/ai-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Services
             </Link>
+            <Link to="/ai-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Solutions
+            </Link>
             <Link to="/it-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               IT Services
             </Link>
@@ -23,11 +26,23 @@ const Sidebar: React.FC = () => {
             <Link to="/5g-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               5G Solutions
             </Link>
+            <Link to="/digital-transformation" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Digital Transformation
+            </Link>
+            <Link to="/data-analytics" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Data Analytics
+            </Link>
             <Link to="/web-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Web Development
             </Link>
             <Link to="/mobile-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Mobile Development
+            </Link>
+            <Link to="/database-management" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Database Management
+            </Link>
+            <Link to="/network-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Network Infrastructure
             </Link>
             <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Micro SaaS Solutions
@@ -42,11 +57,23 @@ const Sidebar: React.FC = () => {
             <Link to="/zion-ai-customer-churn-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Churn Predictor
             </Link>
+            <Link to="/zion-ai-customer-churn-predictor-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Churn Predictor Pro
+            </Link>
+            <Link to="/zion-ai-customer-sentiment-tracker" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Sentiment Tracker
+            </Link>
+            <Link to="/zion-ai-customer-support-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Customer Support Pro
+            </Link>
             <Link to="/zion-ai-sales-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Sales Predictor
             </Link>
             <Link to="/zion-ai-workflow-automator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Workflow Automator
+            </Link>
+            <Link to="/zion-ai-workflow-automator-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Workflow Automator Pro
             </Link>
             <Link to="/zion-ai-financial-forecaster" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Financial Forecaster
@@ -57,11 +84,22 @@ const Sidebar: React.FC = () => {
             <Link to="/zion-ai-task-scheduler" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Task Scheduler
             </Link>
+            <Link to="/zion-ai-email-marketing-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Email Marketing Pro
+            </Link>
+            <Link to="/zion-ai-social-scheduler-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Social Scheduler Pro
+            </Link>
+            <Link to="/zion-customer-satisfaction-monitor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Satisfaction Monitor
+            </Link>
+            <Link to="/zion-smart-expense-tracker" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Smart Expense Tracker
+            </Link>
           </div>
           
           <div className="mb-4">
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Company</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
             <Link to="/about" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               About Us
             </Link>
@@ -77,11 +115,7 @@ const Sidebar: React.FC = () => {
           </div>
           
           <div className="mb-4">
-<<<<<<< HEAD
-            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
-=======
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
             <Link to="/blog" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Blog
             </Link>
@@ -94,12 +128,9 @@ const Sidebar: React.FC = () => {
             <Link to="/api-docs" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               API Docs
             </Link>
-<<<<<<< HEAD
-=======
             <Link to="/help" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Help Center
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
           </div>
           
           <div>
