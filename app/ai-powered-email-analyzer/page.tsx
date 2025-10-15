@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
@@ -14,6 +13,7 @@ import {
   Target,
   Globe
 } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const AIPoweredEmailAnalyzerPage = () => {
   const features = [
@@ -49,81 +49,124 @@ const AIPoweredEmailAnalyzerPage = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for small teams and individuals",
-      features: [
-        "Up to 1,000 emails/month",
-        "Basic sentiment analysis",
-        "Response suggestions",
-        "Email templates",
-        "Basic analytics",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 emails/month",
-        "Advanced AI analysis",
-        "Custom response templates",
-        "Team collaboration",
-        "Advanced analytics",
-        "Priority support",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited emails",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
-        "Custom integrations",
-        "Dedicated support",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
+  const benefits = [
+    "Increase email response rates by 40%",
+    "Reduce email composition time by 60%",
+    "Improve customer satisfaction scores",
+    "Enhance team communication efficiency",
+    "Ensure compliance with industry standards",
+    "Gain valuable communication insights"
   ];
 
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "2.5x", label: "Faster Response Time" },
-    { number: "40%", label: "Increase in Engagement" },
-    { number: "10k+", label: "Happy Customers" }
-  ];
-=======
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
-
-const AiPoweredEmailAnalyzerPage: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>AI-Powered Email Analyzer - Zion Tech Group</title>
+        <meta name="description" content="Revolutionize your email communication with our AI-powered analyzer. Get sentiment analysis, smart suggestions, and performance insights for better email management." />
+        <meta name="keywords" content="AI email analyzer, email sentiment analysis, email automation, email insights, communication AI" />
+      </Helmet>
       <SEOHead 
-        title="ai-powered-email-analyzer - Zion Tech Group"
-        description="Zion Tech Group ai-powered-email-analyzer service page"
+        title="AI-Powered Email Analyzer"
+        description="Revolutionize your email communication with our AI-powered analyzer. Get sentiment analysis, smart suggestions, and performance insights for better email management."
+        keywords="AI email analyzer, email sentiment analysis, email automation, email insights, communication AI"
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">ai-powered-email-analyzer</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                AI-Powered Email Analyzer
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Transform your email communication with intelligent analysis, smart suggestions, 
+                and performance insights. Our AI-powered platform helps you craft perfect emails 
+                every time.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
+                  Watch Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Intelligent Email Features</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Everything you need to master email communication
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300"
+                >
+                  <div className="mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Proven Results</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                See the impact of AI-powered email analysis
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-lg text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Email Communication?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of professionals using our AI email analyzer
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started Today
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
 };
 
-export default AiPoweredEmailAnalyzerPage;
+export default AIPoweredEmailAnalyzerPage;

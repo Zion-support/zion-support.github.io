@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
+import SEOHead from "../components/SEOHead";
 
 export default function AiPoweredDevops() {
   const features = [
@@ -21,12 +20,12 @@ export default function AiPoweredDevops() {
     "AI-driven continuous integration and deployment"
   ];
 
-  // const benefits = [
-  //   "Reduce deployment time by 80%",
-  //   "Eliminate 95% of manual DevOps tasks",
-  //   "Improve system reliability by 99.9%",
-  //   "Cut infrastructure costs by 40%"
-  // ];
+  const benefits = [
+    "Reduce deployment time by 80%",
+    "Eliminate 95% of manual DevOps tasks",
+    "Improve system reliability by 99.9%",
+    "Cut infrastructure costs by 40%"
+  ];
 
   const pricingPlans = [
     {
@@ -49,117 +48,171 @@ export default function AiPoweredDevops() {
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
-      description: "Ideal for growing companies and development teams",
-      features: [
-        "Up to 100 applications",
-        "Advanced AI automation",
-        "Comprehensive monitoring",
-        "Priority support",
-        "Advanced analytics",
-        "25 team members",
-        "Multi-cloud deployment",
-        "API access",
-        "Custom integrations",
-        "24/7 monitoring"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise Plus",
-      price: "$4,999",
-      period: "/month",
-      description: "For large organizations with complex DevOps needs",
+      description: "Comprehensive solution for large organizations",
       features: [
         "Unlimited applications",
-        "Full AI automation suite",
-        "Enterprise monitoring",
-        "24/7 dedicated support",
-        "Custom analytics",
+        "Advanced AI automation",
+        "Real-time monitoring",
+        "24/7 priority support",
+        "Advanced analytics",
         "Unlimited team members",
-        "Hybrid cloud deployment",
-        "Advanced API access",
-        "Custom AI model training",
-        "Dedicated DevOps engineers",
-        "White-label solution",
-        "On-premise deployment"
+        "Multi-cloud deployment",
+        "Custom integrations",
+        "SLA guarantee"
       ],
-      popular: false
+      popular: true
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "AI-powered DevOps has transformed our development process. We've reduced deployment time by 85% and our system uptime is now 99.9%. The AI predictions are incredibly accurate.",
-      rating: 5,
-      avatar: "JM"
-    },
-    {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Head of Engineering",
-      content: "The automated testing and deployment features are game-changing. We can now deploy multiple times per day with confidence, and our bug rate has dropped by 90%.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "DevOps Director",
-      content: "The AI-driven security monitoring and compliance checking have been invaluable. We've achieved 100% compliance and our security incidents have dropped to zero.",
-      rating: 5,
-      avatar: "LT"
-    }
-  ];
-
-  const capabilities = [
-    {
-      title: "Automated Testing",
-      description: "AI generates and executes comprehensive test suites automatically",
-      icon: <CheckCircle className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Smart Deployment",
-      description: "Intelligent deployment strategies with automatic rollback capabilities",
-      icon: <Rocket className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Predictive Scaling",
-      description: "AI predicts traffic patterns and scales infrastructure proactively",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Intelligent Monitoring",
-      description: "AI-powered monitoring with anomaly detection and alerting",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-=======
-import React from 'react';
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
-
-const AiPoweredDevopsPage: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>AI-Powered DevOps - Zion Tech Group</title>
+        <meta name="description" content="Revolutionize your DevOps with AI-powered automation. Streamline deployments, optimize infrastructure, and enhance reliability with intelligent DevOps solutions." />
+        <meta name="keywords" content="AI DevOps, automated deployment, DevOps automation, infrastructure optimization, AI monitoring" />
+      </Helmet>
       <SEOHead 
-        title="ai-powered-devops - Zion Tech Group"
-        description="Zion Tech Group ai-powered-devops service page"
+        title="AI-Powered DevOps"
+        description="Revolutionize your DevOps with AI-powered automation. Streamline deployments, optimize infrastructure, and enhance reliability with intelligent DevOps solutions."
+        keywords="AI DevOps, automated deployment, DevOps automation, infrastructure optimization, AI monitoring"
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">ai-powered-devops</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                AI-Powered DevOps
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Transform your development and operations with intelligent automation. 
+                Our AI-powered DevOps platform streamlines deployments, optimizes infrastructure, 
+                and ensures maximum reliability and performance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
+                  Watch Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Intelligent DevOps Features</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Everything you need to automate and optimize your development pipeline
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Proven Results</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                See the impact of AI-powered DevOps on your organization
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{benefit}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Choose Your Plan</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Flexible pricing options for teams of all sizes
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-purple-500' : 'border-slate-700'} hover:border-purple-500 transition-all duration-300`}>
+                  {plan.popular && (
+                    <div className="text-center mb-4">
+                      <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                    <div className="text-4xl font-bold mb-2">
+                      {plan.price}
+                      <span className="text-lg text-gray-400">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <button className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 ${
+                    plan.popular 
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white' 
+                      : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
+                  }`}>
+                    Get Started
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your DevOps?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of teams already using our AI-powered DevOps platform
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
-};
-
-export default AiPoweredDevopsPage;
+}
