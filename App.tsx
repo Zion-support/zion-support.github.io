@@ -161,9 +161,8 @@ const AICustomerFeedbackAnalyzerPage = lazy(() => import('./app/ai-customer-feed
 const AIInventoryOptimizerProPage = lazy(() => import('./app/ai-inventory-optimizer-pro/page'));
 const AILegalDocumentAnalyzerPage = lazy(() => import('./app/ai-legal-document-analyzer/page'));
 
-// New IT Solutions
-const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
-const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
+  // New IT Solutions
+  const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
 
 // New AI Medical Services
 const AIMedicalDiagnosisAssistantPage = lazy(() => import('./app/ai-medical-diagnosis-assistant/page'));
