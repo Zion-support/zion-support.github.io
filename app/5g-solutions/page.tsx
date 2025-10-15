@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3 } from 'lucide-react';
+import { Wifi, CheckCircle, ArrowRight, Network, Cpu, Smartphone, BarChart3 } from 'lucide-react';
 import UnifiedSEOHead from '../components/UnifiedSEOHead';
 
 const FiveGSolutionsPage: React.FC = () => {
