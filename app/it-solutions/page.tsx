@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-'use client';
 import React, { useState } from 'react';
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { 
   CheckCircle, 
   ArrowRight, 
@@ -850,11 +844,8 @@ const ITSolutionsPage: React.FC = () => {
       link: 'https://ziontechgroup.com/it-audit-compliance'
     }
   ];
-<<<<<<< HEAD
 
   const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance'];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
   const features = [
     '24/7 Expert Support',
@@ -930,7 +921,6 @@ const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development. Transform your business with our expert IT services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, networking, data center, software development, IT support, technology consulting" />
@@ -981,7 +971,6 @@ const ITSolutionsPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 

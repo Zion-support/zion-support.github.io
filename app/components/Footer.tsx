@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'Blog', href: '/blog' },
     { name: 'API Reference', href: '/api-docs' },
-    { name: 'Help Center', href: '/help' },
+    { name: 'Help Center', href: '/support' },
     { name: 'Community', href: '/community' }
   ];
 
