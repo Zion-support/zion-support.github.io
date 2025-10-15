@@ -20,7 +20,7 @@ export function usePerformance(componentName: string) {
 
     return () => {
       const renderTime = performance.now() - renderStartTime.current;
-      if (renderTime > 16) { // More than one frame (16ms)
+      if (renderTime > 16 && process.env.NODE_ENV === 'development') { // More than one frame (16ms)
         console.warn(`Slow render detected in ${componentName}`, {
           renderTime,
           renderCount: renderCount.current,
@@ -84,7 +84,9 @@ export function usePerformance(componentName: string) {
       const end = performance.now();
       const duration = end - start;
 
-      console.log(`Performance - ${operation}:`, duration, { componentName });
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Performance - ${operation}:`, duration, { componentName });
+      }
 
       return duration;
     },
@@ -112,7 +114,7 @@ export function useMemoryMonitor(componentName: string) {
           const used = memory.usedJSHeapSize / 1024 / 1024; // MB
           const total = memory.totalJSHeapSize / 1024 / 1024; // MB
           const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-          if (used > limit * 0.8) {
+          if (used > limit * 0.8 && process.env.NODE_ENV === 'development') {
             console.warn(`High memory usage detected in ${componentName}`, {
               used: `${used.toFixed(2)}MB`,
               total: `${total.toFixed(2)}MB`,
