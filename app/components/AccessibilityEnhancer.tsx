@@ -1,3 +1,4 @@
+import { Check } from 'lucide-react';
 import React, { useEffect, useRef } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {

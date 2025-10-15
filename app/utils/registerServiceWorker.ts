@@ -3,10 +3,10 @@ export const registerServiceWorker = () => { if (typeof window !== 'undefined' &
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           if (process.env.NODE_ENV === 'development') {
-            console.log('SW registered:', registration); }
+            }
         })
         .catch((registrationError) => { if (process.env.NODE_ENV === 'development') {
-            console.error('SW registration failed:', registrationError); }
+            }
         });
     });
   }

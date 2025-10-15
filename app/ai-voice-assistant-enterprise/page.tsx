@@ -1,42 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Mic, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Download, 
-  Play, 
-  Pause, 
-  RefreshCw, 
-  Settings, 
-  Eye, 
-  Filter, 
-  Calendar, 
-  Target, 
-  Volume2, 
-  Headphones, 
-  Radio, 
-  MessageSquare, 
-  Languages, 
-  Users, 
-  Award, 
-  TrendingUp, 
-  Cpu, 
-  Database, 
-  BarChart3, 
-  Activity, 
-  Lock, 
-  Clock, 
-  Smartphone 
-} from 'lucide-react';
+import { Activity, Brain, CheckCircle, Globe, Headphones, Languages, Mic, Settings, Shield, Smartphone, Star, Users, Volume2 } from 'lucide-react';
 
 const AiVoiceAssistantEnterprisePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

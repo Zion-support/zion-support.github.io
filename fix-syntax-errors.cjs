@@ -1,169 +1,132 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Function to fix common TypeScript/JSX syntax errors
-function fixSyntaxErrors(content) {
-  // Fix unescaped entities in JSX
-  content = content.replace(/([^&])'([^']*[^&])'/g, '$1&apos;$2&apos;');
-  content = content.replace(/([^&])"([^"]*[^&])"/g, '$1&quot;$2&quot;');
-  
-  // Fix malformed JSX closing tags
-  content = content.replace(/<\s*\/\s*([^>]+)\s*>/g, '</$1>');
-  
-  // Fix missing semicolons in import statements
-  content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');
-  
-  // Fix missing semicolons in export statements
-  content = content.replace(/export\s+default\s+([^;]+)\s*$/gm, 'export default $1;');
-  
-  // Fix malformed JSX attributes
-  content = content.replace(/className\s*=\s*"([^"]*)"\s*>/g, 'className="$1">');
-  content = content.replace(/className\s*=\s*'([^']*)'\s*>/g, 'className="$1">');
-  
-  // Fix missing closing tags
-  content = content.replace(/<(\w+)([^>]*?)(?<!\/)>/g, (match, tag, attrs) => {
-    if (match.endsWith('/>')) return match;
-    return `<${tag}${attrs}>`;
-  });
-  
-  // Fix duplicate imports
-  const importLines = content.split('\n').filter(line => line.trim().startsWith('import'));
-  const uniqueImports = [...new Set(importLines)];
-  const nonImportLines = content.split('\n').filter(line => !line.trim().startsWith('import'));
-  
-  // Reconstruct content with unique imports at the top
-  const newContent = [...uniqueImports, ...nonImportLines].join('\n');
-  
-  return newContent;
+// Function to fix HTML entities back to normal quotes
+function fixHtmlEntities(content) {
+  return content
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
 }
 
-// Function to remove unused imports
-function removeUnusedImports(content) {
+// Function to fix unused imports more carefully
+function fixUnusedImports(content) {
+  // Only remove imports that are clearly unused and safe to remove
   const lines = content.split('\n');
-  const cleanedLines = [];
-  const usedSymbols = new Set();
-  
-  // Find all used symbols in the content
-  const symbolPattern = /\b([A-Z][a-zA-Z0-9]*)\b/g;
-  let match;
-  while ((match = symbolPattern.exec(content)) !== null) {
-    usedSymbols.add(match[1]);
-  }
-  
-  // Process each line
-  for (const line of lines) {
-    if (line.trim().startsWith('import')) {
-      const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*['"]([^'"]+)['"]/);
-      if (importMatch) {
-        const imports = importMatch[1].split(',').map(imp => imp.trim());
-        const usedImports = imports.filter(imp => {
-          const importName = imp.replace(/\s+as\s+\w+/, '').trim();
-          return usedSymbols.has(importName);
-        });
-        
-        if (usedImports.length > 0) {
-          cleanedLines.push(`import { ${usedImports.join(', ')} } from '${importMatch[2]}';`);
-        }
-      } else {
-        cleanedLines.push(line);
-      }
-    } else {
-      cleanedLines.push(line);
-    }
-  }
-  
-  return cleanedLines.join('\n');
-}
-
-// Function to fix JSX structure issues
-function fixJSXStructure(content) {
-  // Fix malformed JSX fragments
-  content = content.replace(/<>\s*<\s*\/\s*>/g, '<></>');
-  
-  // Fix unclosed JSX tags
-  const openTags = [];
-  const lines = content.split('\n');
-  const fixedLines = [];
+  const newLines = [];
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    const openTagMatch = line.match(/<(\w+)([^>]*?)(?<!\/)>/g);
-    const closeTagMatch = line.match(/<\/(\w+)>/g);
     
-    if (openTagMatch) {
-      openTagMatch.forEach(match => {
-        const tagName = match.match(/<(\w+)/)[1];
-        openTags.push(tagName);
-      });
-    }
-    
-    if (closeTagMatch) {
-      closeTagMatch.forEach(match => {
-        const tagName = match.match(/<\/(\w+)>/)[1];
-        const index = openTags.lastIndexOf(tagName);
-        if (index !== -1) {
-          openTags.splice(index, 1);
+    // Check if this is a lucide-react import line
+    if (line.includes("from 'lucide-react'") || line.includes('from "lucide-react"')) {
+      // Extract the import statement and check what's actually used
+      const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
+      if (importMatch) {
+        const imports = importMatch[1].split(',').map(imp => imp.trim());
+        
+        // Check which imports are actually used in the file
+        const usedImports = imports.filter(imp => {
+          const importName = imp.trim();
+          // Skip if it's a default import or has spaces (complex destructuring)
+          if (importName.includes(' ') || importName.includes('as ')) {
+            return true;
+          }
+          
+          // Check if this import is used in the file content
+          const usageRegex = new RegExp(`\\b${importName}\\b`, 'g');
+          const matches = content.match(usageRegex);
+          return matches && matches.length > 1; // More than just the import statement
+        });
+        
+        if (usedImports.length === 0) {
+          // Remove the entire import line if no imports are used
+          continue;
+        } else if (usedImports.length !== imports.length) {
+          // Replace with only used imports
+          newLines.push(`import { ${usedImports.join(', ')} } from 'lucide-react';`);
+          continue;
         }
-      });
-    }
-    
-    fixedLines.push(line);
-  }
-  
-  return fixedLines.join('\n');
-}
-
-// Main function to process files
-function processFiles() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let processedFiles = 0;
-  let errorFiles = 0;
-  
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    
-    files.forEach(file => {
-      try {
-        const filePath = path.join(process.cwd(), file);
-        let content = fs.readFileSync(filePath, 'utf8');
-        
-        // Skip if file is empty or has no content
-        if (!content.trim()) {
-          return;
-        }
-        
-        // Fix syntax errors
-        content = fixSyntaxErrors(content);
-        
-        // Remove unused imports
-        content = removeUnusedImports(content);
-        
-        // Fix JSX structure
-        content = fixJSXStructure(content);
-        
-        // Write the cleaned content back
-        fs.writeFileSync(filePath, content, 'utf8');
-        processedFiles++;
-        
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
-        errorFiles++;
       }
-    });
-  });
+    }
+    
+    newLines.push(line);
+  }
   
-  console.log(`\nProcessed ${processedFiles} files`);
-  if (errorFiles > 0) {
-    console.log(`Errors in ${errorFiles} files`);
+  return newLines.join('\n');
+}
+
+// Function to remove console statements
+function removeConsoleStatements(content) {
+  return content.replace(/console\.(log|warn|error|info)\([^)]*\);?\s*/g, '');
+}
+
+// Function to process a file
+function processFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    const originalContent = content;
+    
+    // Fix HTML entities first
+    content = fixHtmlEntities(content);
+    
+    // Fix unused imports
+    content = fixUnusedImports(content);
+    
+    // Remove console statements
+    content = removeConsoleStatements(content);
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      modified = true;
+    }
+    
+    return modified;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Run the script
-processFiles();
+// Function to recursively find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
+
+console.log(`Found ${files.length} files to process...`);
+
+let modifiedCount = 0;
+for (const file of files) {
+  if (processFile(file)) {
+    modifiedCount++;
+  }
+}
+
+console.log(`\nProcessed ${files.length} files, modified ${modifiedCount} files.`);

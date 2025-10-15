@@ -8,8 +8,7 @@ import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import UnifiedErrorBoundary from "./app/components/UnifiedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
@@ -151,15 +150,14 @@ function App() {
   }, []);
 
   return (
-    <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
+    <UnifiedErrorBoundary maxRetries={3} showDetails={process.env.NODE_ENV === 'development'}>
         <HelmetProvider>
           <AnalyticsProvider>
             <PerformanceMonitor>
               <WebVitalsTracker>
-                <AccessibilityEnhancer>
-                  <CoreWebVitals>
-                    <Router>
+                <AccessibilityEnhancer />
+                <CoreWebVitals>
+                  <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
                           <Navigation onSidebarToggle={toggleSidebar} />
@@ -289,15 +287,13 @@ function App() {
                           <Footer />
                         </FuturisticBackground>
                       </div>
-                    </Router>
-                  </CoreWebVitals>
-                </AccessibilityEnhancer>
+                  </Router>
+                </CoreWebVitals>
               </WebVitalsTracker>
             </PerformanceMonitor>
           </AnalyticsProvider>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </GlobalErrorBoundary>
+    </UnifiedErrorBoundary>
   );
 }
 

@@ -1,3 +1,4 @@
+import { Search } from 'lucide-react';
 import { Helmet } from "react-helmet-async"; const SearchPage: React.FC = () => { return ( <> <Helmet> <title>Search</title> <meta name="description" content="Professional search solutions and services" /> <meta name="keywords" content="search" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">

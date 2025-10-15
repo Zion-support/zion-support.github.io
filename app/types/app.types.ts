@@ -1,3 +1,4 @@
+import { User } from 'lucide-react';
 export interface User { id: string
   name: string
   email: string

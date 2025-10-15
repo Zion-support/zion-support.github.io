@@ -1,26 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  Clock,
-  Globe,
-  Target,
-  Award,
-  Sparkles,
-  Brain,
-  Database,
-  PieChart,
-  LineChart,
-  Activity
-} from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Clock, Shield, Sparkles, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 const ZionAIAnalyticsProPage: React.FC = () => {
   const features = [

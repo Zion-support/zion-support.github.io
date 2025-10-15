@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { X, Menu, Home, Brain, Shield, Zap, Globe, BarChart3, Users, Settings } from 'lucide-react';
+import { BarChart3, Brain, Globe, Home, Settings, Shield, Users, X, Zap } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -15,11 +15,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'IT Services', href: '/services', icon: Shield },
     { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
     { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
-    { name: 'Resources', href: '/resources', icon: BarChart3 },
     { name: 'Portfolio', href: '/portfolio', icon: BarChart3 },
     { name: 'Blog', href: '/blog', icon: Globe },
-    { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+    { name: 'Tutorials', href: '/tutorials', icon: Settings },
+    { name: 'Demo', href: '/demo', icon: Settings },
     { name: 'Support', href: '/support', icon: Settings },
+    { name: 'FAQ', href: '/faq', icon: Settings },
     { name: 'Contact', href: '/contact', icon: Settings },
   ];
 

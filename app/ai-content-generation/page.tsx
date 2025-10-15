@@ -2,16 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  FileText, 
-  Wand2, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Target,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+import { CheckCircle, FileText, Globe, Shield, Target, Wand2, Zap } from 'lucide-react';
 
 const AiContentGenerationPage: React.FC = () => {
   const features = [
