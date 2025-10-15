@@ -1,11 +1,11 @@
 // Advancedanalytics utility functions
 
-export const Advancedanalytics = {};
-  init: () => {};
-    };
-  process: (data: unknown) => {};
+export const Advancedanalytics = {}
+  init: () => {}
+    }
+  process: (data: unknown) => {}
     return data;
-  };
-  cleanup: () => {};
-} }};
+  }
+  cleanup: () => {}
+} }}
 export default Advancedanalytics

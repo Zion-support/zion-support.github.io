@@ -1,21 +1,21 @@
 
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead'
 
-const AiContentStudioPage: React.FC = () => {};
+const AiContentStudioPage: React.FC = () => {}
   return (
     <>
       <SEOHead 
-        title="ai-content-studio - Zion Tech Group"
-        description="Zion Tech Group ai-content-studio service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">ai-content-studio</h1>
+        title="ai-content-studio - Zion Tech Group"""
+        description="Zion Tech Group ai-content-studio service page""
+      />""
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold mb-4">ai-content-studio</h1>""
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
-};
-
-export default AiContentStudioPage;
+}
+"
+export default AiContentStudioPage;""

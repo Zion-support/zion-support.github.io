@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import { Helmet } from 'react-helmet-async';
-import {};
+import { Helmet } from 'react-helmet-async'
+import {}
   Server;
   Shield;
   Cloud;
@@ -35,5 +35,5 @@ import {};
   Search;
   Target;
   Workflow
-} from 'lucide-react';
+} from 'lucide-react'
 

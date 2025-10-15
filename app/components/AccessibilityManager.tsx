@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react'
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -95,7 +95,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
   // Toggle accessibility panel
   const togglePanel = () => {
     setIsVisible(!isVisible);
-  };
+  }
 
   // Update individual setting
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
@@ -103,7 +103,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       ...prev,
       [key]: value
     }));
-  };
+  }
 
   return (
     <>
@@ -112,85 +112,85 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       {/* Accessibility Toggle Button */}
       <button
         onClick={togglePanel}
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
-        aria-label="Toggle accessibility settings"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"""
+        aria-label="Toggle accessibility settings""
+      >""
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">""
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
         </svg>
       </button>
 
-      {/* Accessibility Settings Panel */}
-      {isVisible && (
-        <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">
+      {/* Accessibility Settings Panel */}"
+      {isVisible && (""
+        <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">""
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
             Accessibility Settings
-          </h3>
-          
-          <div className="space-y-4">
-            <label className="flex items-center justify-between">
-              <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
-              <input
+          </h3>"
+          ""
+          <div className="space-y-4">""
+            <label className="flex items-center justify-between">""
+              <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>"
+              <input""
                 type="checkbox"
-                checked={settings.highContrast}
-                onChange={(e) => updateSetting('highContrast', e.target.checked)}
+                checked={settings.highContrast}"
+                onChange={(e) => updateSetting('highContrast', e.target.checked)}""
                 className="rounded"
               />
-            </label>
-            
-            <label className="flex items-center justify-between">
-              <span className="text-sm text-gray-700 dark:text-gray-300">Large Text</span>
-              <input
+            </label>"
+            ""
+            <label className="flex items-center justify-between">""
+              <span className="text-sm text-gray-700 dark:text-gray-300">Large Text</span>"
+              <input""
                 type="checkbox"
-                checked={settings.largeText}
-                onChange={(e) => updateSetting('largeText', e.target.checked)}
+                checked={settings.largeText}"
+                onChange={(e) => updateSetting('largeText', e.target.checked)}""
                 className="rounded"
               />
-            </label>
-            
-            <label className="flex items-center justify-between">
-              <span className="text-sm text-gray-700 dark:text-gray-300">Reduced Motion</span>
-              <input
+            </label>"
+            ""
+            <label className="flex items-center justify-between">""
+              <span className="text-sm text-gray-700 dark:text-gray-300">Reduced Motion</span>"
+              <input""
                 type="checkbox"
-                checked={settings.reducedMotion}
-                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+                checked={settings.reducedMotion}"
+                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}""
                 className="rounded"
               />
-            </label>
-            
-            <label className="flex items-center justify-between">
-              <span className="text-sm text-gray-700 dark:text-gray-300">Screen Reader Optimized</span>
-              <input
+            </label>"
+            ""
+            <label className="flex items-center justify-between">""
+              <span className="text-sm text-gray-700 dark:text-gray-300">Screen Reader Optimized</span>"
+              <input""
                 type="checkbox"
-                checked={settings.screenReader}
-                onChange={(e) => updateSetting('screenReader', e.target.checked)}
+                checked={settings.screenReader}"
+                onChange={(e) => updateSetting('screenReader', e.target.checked)}""
                 className="rounded"
               />
-            </label>
-            
-            <label className="flex items-center justify-between">
-              <span className="text-sm text-gray-700 dark:text-gray-300">Focus Visible</span>
-              <input
+            </label>"
+            ""
+            <label className="flex items-center justify-between">""
+              <span className="text-sm text-gray-700 dark:text-gray-300">Focus Visible</span>"
+              <input""
                 type="checkbox"
-                checked={settings.focusVisible}
-                onChange={(e) => updateSetting('focusVisible', e.target.checked)}
+                checked={settings.focusVisible}"
+                onChange={(e) => updateSetting('focusVisible', e.target.checked)}""
                 className="rounded"
               />
-            </label>
-            
-            <label className="flex items-center justify-between">
-              <span className="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>
-              <input
+            </label>"
+            ""
+            <label className="flex items-center justify-between">""
+              <span className="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>"
+              <input""
                 type="checkbox"
-                checked={settings.keyboardNavigation}
-                onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
+                checked={settings.keyboardNavigation}"
+                onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}""
                 className="rounded"
               />
             </label>
           </div>
           
-          <button
-            onClick={togglePanel}
+          <button"
+            onClick={togglePanel}""
             className="mt-4 w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-2 px-4 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
           >
             Close
@@ -199,6 +199,6 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       )}
     </>
   );
-};
-
+}"
+""
 export default AccessibilityManager;

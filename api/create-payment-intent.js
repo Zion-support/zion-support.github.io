@@ -9,8 +9,8 @@ const withErrorLogging = (handler) => {
         message: error.message 
       });
     }
-  };
-};
+  }
+}
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
@@ -30,7 +30,7 @@ export default withErrorLogging(async (req, res) => {
       amount: amount,
       currency: currency,
       status: 'requires_payment_method'
-    };
+    }
 
     res.status(200).json({ paymentIntent });
   } catch (error) {

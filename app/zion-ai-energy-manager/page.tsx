@@ -1,21 +1,21 @@
 
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead'
 
-const ZionAiEnergyManagerPage: React.FC = () => {};
+const ZionAiEnergyManagerPage: React.FC = () => {}
   return (
     <>
       <SEOHead 
-        title="zion-ai-energy-manager - Zion Tech Group"
-        description="Zion Tech Group zion-ai-energy-manager service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">zion-ai-energy-manager</h1>
+        title="zion-ai-energy-manager - Zion Tech Group"""
+        description="Zion Tech Group zion-ai-energy-manager service page""
+      />""
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold mb-4">zion-ai-energy-manager</h1>""
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
-};
-
-export default ZionAiEnergyManagerPage;
+}
+"
+export default ZionAiEnergyManagerPage;""

@@ -1,21 +1,21 @@
 
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead'
 
-const SystemIntegrationPage: React.FC = () => {};
+const SystemIntegrationPage: React.FC = () => {}
   return (
     <>
       <SEOHead 
-        title="system-integration - Zion Tech Group"
-        description="Zion Tech Group system-integration service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">system-integration</h1>
+        title="system-integration - Zion Tech Group"""
+        description="Zion Tech Group system-integration service page""
+      />""
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold mb-4">system-integration</h1>""
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
-};
-
-export default SystemIntegrationPage;
+}
+"
+export default SystemIntegrationPage;""

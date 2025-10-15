@@ -9,8 +9,8 @@ const withErrorLogging = (handler) => {
         message: error.message 
       });
     }
-  };
-};
+  }
+}
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
@@ -31,7 +31,7 @@ export default withErrorLogging(async (req, res) => {
       url: 'https://checkout.stripe.com/test',
       amount: amount,
       currency: currency
-    };
+    }
 
     res.status(200).json({ session });
   } catch (error) {

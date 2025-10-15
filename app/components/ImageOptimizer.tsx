@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react'
 
 interface ImageOptimizerProps {
   src: string;
@@ -20,11 +20,11 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 
   const handleLoad = () => {
     setIsLoaded(true);
-  };
+  }
 
   const handleError = () => {
     setHasError(true);
-  };
+  }
 
   // Generate optimized src with WebP support
   const getOptimizedSrc = (originalSrc: string) => {
@@ -39,7 +39,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     }
     
     return originalSrc;
-  };
+  }
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -86,14 +86,14 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       src={getOptimizedSrc(src)}
       alt={alt}
       width={width}
-      height={height}
-      className={className}
-      loading={priority ? "eager" : "lazy"}
+      height={height}"
+      className={className}""
+      loading={priority ? "eager" : "lazy"}""
       decoding="async"
       onLoad={handleLoad}
       onError={handleError}
     />
   );
-};
-
-export default ImageOptimizer;
+}
+"
+export default ImageOptimizer;""

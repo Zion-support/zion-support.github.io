@@ -1,21 +1,21 @@
 
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead'
 
-const AiFinancialServicesPage: React.FC = () => {};
+const AiFinancialServicesPage: React.FC = () => {}
   return (
     <>
       <SEOHead 
-        title="ai-financial-services - Zion Tech Group"
-        description="Zion Tech Group ai-financial-services service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">ai-financial-services</h1>
+        title="ai-financial-services - Zion Tech Group"""
+        description="Zion Tech Group ai-financial-services service page""
+      />""
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold mb-4">ai-financial-services</h1>""
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
-};
-
-export default AiFinancialServicesPage;
+}
+"
+export default AiFinancialServicesPage;""

@@ -1,21 +1,21 @@
 
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead'
 
-const AiImageRecognitionPage: React.FC = () => {};
+const AiImageRecognitionPage: React.FC = () => {}
   return (
     <>
       <SEOHead 
-        title="ai-image-recognition - Zion Tech Group"
-        description="Zion Tech Group ai-image-recognition service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">ai-image-recognition</h1>
+        title="ai-image-recognition - Zion Tech Group"""
+        description="Zion Tech Group ai-image-recognition service page""
+      />""
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold mb-4">ai-image-recognition</h1>""
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
-};
-
-export default AiImageRecognitionPage;
+}
+"
+export default AiImageRecognitionPage;""

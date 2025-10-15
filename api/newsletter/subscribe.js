@@ -1,1 +1,1 @@
-const isValidEmail = (email) => {};
+const isValidEmail = (email) => {}
