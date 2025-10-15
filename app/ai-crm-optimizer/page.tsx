@@ -6,12 +6,9 @@ import {
   ChartBarIcon, 
   CogIcon, 
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  SparklesIcon
+  SparklesIcon,
+  ShieldCheckIcon
 } from '@heroicons/react/24/outline';
 
 const AICRMOptimizerPage: React.FC = () => {

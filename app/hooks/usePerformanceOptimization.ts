@@ -24,7 +24,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const {
     enableLazyLoading = true,
     enablePreloading = true,
-    enableCodeSplitting = true,
     enableImageOptimization = true,
     enableBundleAnalysis = false
   } = options;
@@ -90,6 +89,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       };
     });
   }, [enablePreloading]);
+
+  // Export preloadImages for external use
+  const preloadImagesExport = preloadImages;
 
   // Optimize images
   const optimizeImages = useCallback(() => {
@@ -237,6 +239,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     getMetrics: () => metricsRef.current,
     clearMetrics: () => {
       metricsRef.current = {};
-    }
+    },
+    preloadImages: preloadImagesExport
   };
 };
