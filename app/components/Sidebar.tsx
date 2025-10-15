@@ -26,6 +26,15 @@ const Sidebar: React.FC = () => {
             <Link to="/data-analytics" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Data Analytics
             </Link>
+            <Link to="/web-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Web Development
+            </Link>
+            <Link to="/mobile-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Mobile Development
+            </Link>
+            <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Micro SaaS Solutions
+            </Link>
           </div>
           
           <div className="mb-4">
@@ -45,6 +54,12 @@ const Sidebar: React.FC = () => {
             <Link to="/zion-ai-financial-forecaster" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Financial Forecaster
             </Link>
+            <Link to="/zion-ai-document-analyzer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Document Analyzer
+            </Link>
+            <Link to="/zion-ai-task-scheduler" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Task Scheduler
+            </Link>
           </div>
           
           <div className="mb-4">
@@ -63,7 +78,7 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
-          <div>
+          <div className="mb-4">
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
             <Link to="/blog" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Blog
@@ -76,6 +91,22 @@ const Sidebar: React.FC = () => {
             </Link>
             <Link to="/help" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Help Center
+            </Link>
+          </div>
+          
+          <div>
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Legal</h3>
+            <Link to="/privacy" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Terms of Service
+            </Link>
+            <Link to="/cookies" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Cookie Policy
+            </Link>
+            <Link to="/accessibility" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Accessibility
             </Link>
           </div>
         </nav>
