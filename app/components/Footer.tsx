@@ -118,15 +118,15 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center">
               <Phone className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
+              <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">+1 (302) 464-0950</a>
             </div>
             <div className="flex items-center">
               <Mail className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">info@ziontechgroup.com</span>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">kleber@ziontechgroup.com</a>
             </div>
             <div className="flex items-center">
               <MapPin className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">San Francisco, CA</span>
+              <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
