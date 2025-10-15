@@ -648,14 +648,13 @@ const benefits = [
     },
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including machine learning, NLP, computer vision, and automation. Enterprise-grade AI solutions starting at $800/month." />
         <meta name="keywords" content="ai services, machine learning, nlp, computer vision, ai consulting, automation, artificial intelligence" />
       </Helmet>
-      
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           
@@ -857,8 +856,7 @@ const benefits = [
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Grid */}
       <section className="py-16 px-4">
@@ -968,7 +966,8 @@ const benefits = [
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 export default AIServicesPage;

@@ -132,8 +132,7 @@ const stats = [
         <meta property="og:description" content="Join our team and help build the future of technology" />
         <meta property="og:type" content="website" />
       </Helmet>
-      
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20">
           
@@ -163,7 +162,7 @@ const stats = [
                   Contact Us
                 </a>
               </div>
-            ))}
+            </div>
           </div>
         </section>
         {/* Stats Section */}
@@ -325,10 +324,9 @@ const stats = [
                   Email Us
                 </a>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -355,7 +353,8 @@ const stats = [
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 export default CareersPage;

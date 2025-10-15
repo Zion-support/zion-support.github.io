@@ -1,8 +1,9 @@
+import React from 'react';
+import { Zap, Shield, FileText, Settings, Clock, BarChart3, Target, Users, Globe, CheckCircle, Bug, ArrowRight, Star, Brain, Leaf, Coins, Link, Calculator, TestTube } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function ZionEmailAutomation() {
-  return;
-},
+  const features = [
     {
       title: "Automated Workflows",
       description: "Set up complex email automation workflows with triggers, conditions, and actions",

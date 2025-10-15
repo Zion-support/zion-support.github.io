@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
-import {BarChart3, Zap, Users, Mail, Lock} from 'lucide-react';
+import {BarChart3, Zap, Users, Mail, Lock, Shield, FileText, Settings, Clock, Target, Globe, CheckCircle} from 'lucide-react';
 import { Shield } from 'lucide-react';
 const ZionAIFraudDetectionPro = () => {
-  return;
-},
+  const features = [
     {
       title: "Machine Learning Models",
       description: "Self-learning models that continuously improve detection accuracy based on new fraud patterns",

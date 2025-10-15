@@ -1,8 +1,9 @@
+import React from 'react';
+import { Zap, Shield, FileText, Settings, Clock, BarChart3, Target, Users, Globe, CheckCircle, Bug, ArrowRight, Star, Brain, Leaf, Coins, Link, Calculator, TestTube } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function ZionComplianceManager() {
-  return;
-},
+  const features = [
     {
       title: "Regulatory Framework Support",
       description: "Support for GDPR, HIPAA, SOC 2, PCI DSS, and 50+ other regulatory frameworks",

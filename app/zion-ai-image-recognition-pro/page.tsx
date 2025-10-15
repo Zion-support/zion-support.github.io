@@ -1,9 +1,9 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
-import { BarChart3, Settings, Zap, Users, FileText, Mail } from 'lucide-react';
+import { BarChart3, Settings, Zap, Users, FileText, Mail , Shield, Clock, Target, Globe, CheckCircle, Bug, ArrowRight, Star, Brain, Leaf, Coins, Link, Calculator, TestTube} from 'lucide-react';
 const ZionAIImageRecognitionPro = () => {
-  return;
-},
+  const features = [
     {
       title: "Facial Recognition",
       description: "Advanced facial recognition with emotion detection, age estimation, and identity verification",

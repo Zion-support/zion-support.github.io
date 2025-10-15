@@ -1,9 +1,8 @@
-import { ArrowRight, Target, CheckCircle, Globe, Bot } from 'lucide-react';
+import { ArrowRight, Target, CheckCircle, Globe, Bot , Zap, Shield, FileText, Settings, Clock, BarChart3, Users} from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIChatbotBuilder() {
-  return;
-},
+  const features = [
     {
       title: "Natural Language Processing",
       description: "Advanced NLP that understands context, sentiment, and intent to provide human-like conversations",

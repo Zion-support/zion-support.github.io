@@ -1,12 +1,12 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-import { BarChart3, Users } from 'lucide-react';
+import { BarChart3, Users , Zap, Shield, FileText, Settings, Clock, Target, Globe, CheckCircle, Bug, ArrowRight, Star, Brain, Leaf, Coins, Link, Calculator, TestTube} from 'lucide-react';
 import { Clock } from 'lucide-react';
 const ZionAICustomerInsightsPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Real-Time Sentiment Analysis",
       description: "Monitor customer sentiment across all touchpoints with real-time analysis of reviews, social media, and support tickets.",

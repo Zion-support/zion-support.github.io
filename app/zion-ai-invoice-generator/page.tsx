@@ -1,12 +1,12 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-import {Users, FileText, DollarSign} from 'lucide-react';
+import {Users, FileText, DollarSign, Zap, Shield, Settings, Clock, BarChart3, Target, Globe, CheckCircle, Bug, ArrowRight, Star, Brain, Leaf, Coins, Link, Calculator, TestTube} from 'lucide-react';
 import { Shield, Clock } from 'lucide-react';
 const ZionAIInvoiceGeneratorPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Smart Data Extraction",
       description: "Automatically extract billing information from emails, contracts, and project management tools to populate invoices.",

@@ -1,12 +1,12 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-import { Users, FileText } from 'lucide-react';
+import { Users, FileText , Zap, Shield, Settings, Clock, BarChart3, Target, Globe, CheckCircle, Bug, ArrowRight, Star, Brain, Leaf, Coins, Link, Calculator, TestTube} from 'lucide-react';
 import { Clock } from 'lucide-react';
 const ZionAIVideoGeneratorPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Multiple Video Formats",
       description: "Support for all major video formats including MP4, MOV, AVI, and WebM. Optimized for social media platforms.",

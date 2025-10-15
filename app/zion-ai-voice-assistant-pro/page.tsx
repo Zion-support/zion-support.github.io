@@ -1,10 +1,10 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
-import { Settings, Zap, Users, Mail } from 'lucide-react';
+import { Settings, Zap, Users, Mail , Shield, FileText, Clock, BarChart3, Target, Globe, CheckCircle, Bug, ArrowRight, Star, Brain, Leaf, Coins, Link, Calculator, TestTube} from 'lucide-react';
 import { Cloud } from 'lucide-react';
 const ZionAIVoiceAssistantPro = () => {
-  return;
-},
+  const features = [
     {
       title: "Multi-Language Support",
       description: "Supports 50+ languages with accurate pronunciation and cultural context understanding",
