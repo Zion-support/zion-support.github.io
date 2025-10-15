@@ -52,7 +52,8 @@ const Header: React.FC = memo(() => {
         { name: 'API Reference', path: '/api-docs' },
         { name: 'Help Center', path: '/help' },
         { name: 'System Status', path: '/status' },
-        { name: 'Support', path: '/support' }
+        { name: 'Support', path: '/support' },
+        { name: 'Sitemap', path: '/sitemap' }
       ]
     },
     { 
@@ -64,6 +65,17 @@ const Header: React.FC = memo(() => {
         { name: 'Careers', path: '/careers' },
         { name: 'News & Updates', path: '/news' },
         { name: 'Contact Us', path: '/contact' }
+      ]
+    },
+    { 
+      name: 'Legal', 
+      path: '#',
+      dropdown: [
+        { name: 'Privacy Policy', path: '/privacy-policy' },
+        { name: 'Terms of Service', path: '/terms' },
+        { name: 'Service Level Agreement', path: '/sla' },
+        { name: 'Cookie Policy', path: '/cookies' },
+        { name: 'GDPR Compliance', path: '/gdpr' }
       ]
     },
     { name: 'Contact', path: '/contact' }
@@ -108,15 +120,24 @@ const Header: React.FC = memo(() => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-white/10 backdrop-blur-md border-b border-white/20">
+      <nav className="bg-white/10 backdrop-blur-md border-b border-white/20 relative">
+        {/* Neon glow effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5"></div>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl group">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/50 transition-all duration-300 group-hover:scale-110">
-                <span className="text-white font-bold group-hover:text-cyan-200 transition-colors">Z</span>
+            <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl group relative">
+              <div className="relative">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/50 transition-all duration-300 group-hover:scale-110">
+                  <span className="text-white font-bold group-hover:text-cyan-200 transition-colors">Z</span>
+                </div>
+                {/* Neon ring effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
               </div>
-              <span className="group-hover:text-cyan-300 transition-colors duration-300">Zion Tech Group</span>
+              <span className="group-hover:text-cyan-300 transition-colors duration-300 relative">
+                Zion Tech Group
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></div>
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -171,6 +192,8 @@ const Header: React.FC = memo(() => {
               >
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Neon glow effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover:opacity-30 blur-sm transition-opacity duration-300"></div>
               </Link>
             </div>
 

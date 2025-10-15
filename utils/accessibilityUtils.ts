@@ -104,6 +104,17 @@ export const screenReader = {
 
 // Keyboard navigation utilities
 export const keyboardNavigation = {
+  // Handle escape key
+  handleEscape: (callback: () => void) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        callback();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  },
+
   // Handle arrow key navigation
   handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {
     let newIndex = currentIndex;
@@ -135,14 +146,6 @@ export const keyboardNavigation = {
     }
     
     return currentIndex;
-  },
-
-  // Handle escape key
-  handleEscape: (e: KeyboardEvent, callback: () => void) => {
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      callback();
-    }
   }
 };
 

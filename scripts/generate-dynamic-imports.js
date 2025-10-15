@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // Generate dynamic imports for all pages in the app directory
 const appDir = path.join(__dirname, '../app');

@@ -331,19 +331,40 @@ const ServicesPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative overflow-hidden">
+        {/* Futuristic background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               Our
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 animate-pulse">
                 Services
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
               Comprehensive AI, IT, and Micro SAAS solutions designed to accelerate your business growth. 
               Choose from our range of services tailored to meet your specific needs.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
+                Call +1 302 464 0950
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -371,11 +392,17 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-20 relative">
+        {/* Background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl animate-pulse delay-300"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl animate-pulse delay-700"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {filteredServices.map((service) => (
-              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
+              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
                 service.popular 
                   ? 'border-purple-500/60 ring-2 ring-purple-500/20' 
                   : 'border-purple-500/20 hover:border-purple-500/40'
@@ -388,61 +415,61 @@ const ServicesPage: React.FC = () => {
                   </div>
                 )}
 
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+                <div className="mb-4 sm:mb-6">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <h3 className="text-lg sm:text-xl font-semibold text-white leading-tight">{service.name}</h3>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-sm text-gray-300">{service.rating}</span>
+                      <span className="text-xs sm:text-sm text-gray-300">{service.rating}</span>
                     </div>
                   </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4 leading-relaxed">{service.description}</p>
                   
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-2xl font-bold text-white">{service.price}</div>
-                    <div className="text-sm text-gray-400">{service.clients} clients</div>
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <div className="text-xl sm:text-2xl font-bold text-white">{service.price}</div>
+                    <div className="text-xs sm:text-sm text-gray-400">{service.clients} clients</div>
                   </div>
                 </div>
 
-                <div className="space-y-4 mb-8">
-                  <h4 className="text-white font-semibold">Key Features:</h4>
-                  <ul className="space-y-2">
+                <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                  <h4 className="text-white font-semibold text-sm sm:text-base">Key Features:</h4>
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {service.features.slice(0, 4).map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={index} className="flex items-center text-gray-300 text-xs sm:text-sm">
+                        <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="space-y-4 mb-8">
-                  <h4 className="text-white font-semibold">Benefits:</h4>
-                  <ul className="space-y-2">
+                <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                  <h4 className="text-white font-semibold text-sm sm:text-base">Benefits:</h4>
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {service.benefits.map((benefit, index) => (
-                      <li key={index} className="text-gray-300 text-sm">
+                      <li key={index} className="text-gray-300 text-xs sm:text-sm">
                         • {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-2 sm:space-y-3">
                   <Link
                     to={`/service/${service.id}`}
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
                       service.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'border border-purple-500 text-purple-300 hover:bg-purple-500/10'
                     }`}
                   >
                     Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                    <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
                   </Link>
                   
                   <a
                     href="/contact"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700/50 transition-all duration-300"
+                    className="w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-sm sm:text-base"
                   >
                     Get Quote
                   </a>
