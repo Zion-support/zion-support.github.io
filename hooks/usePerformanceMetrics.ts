@@ -29,9 +29,9 @@ export const usePerformanceMetrics = () => {
     // First Input Delay
     new PerformanceObserver((list) => {
       const entries = list.getEntries()
-      const fidEntry = entries[0] as any
-      if (fidEntry && fidEntry.processingStart) {
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))
+      const fidEntry = entries[0] as PerformanceEventTiming
+      if (fidEntry && 'processingStart' in fidEntry) {
+        setMetrics(prev => ({ ...prev, fid: (fidEntry as PerformanceEventTiming & { processingStart: number }).processingStart - fidEntry.startTime }))
       }
     }).observe({ entryTypes: ['first-input'] })
 
@@ -40,7 +40,7 @@ export const usePerformanceMetrics = () => {
       let clsValue = 0
       const entries = list.getEntries()
       entries.forEach(entry => {
-        const layoutShiftEntry = entry as any
+        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number }
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0
         }
