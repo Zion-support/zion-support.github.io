@@ -1,25 +1,21 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-} from 'lucide-react''
-    'Natural Language Processing (NLP)''
-    'Multi-language support (50+ languages)''
-    '24/7 automated customer support''
-    'Seamless human handoff''
-    'Integration with CRM systems''
-    'Real-time conversation analytics''
-    'Custom knowledge base training''
-    'Sentiment analysis and mood detection''
-    'Voice and text support''
-    'Advanced conversation routing''
-    'Reduce support costs by 60%''
-    'Improve response time by 90%''
-    'Handle 1000+ conversations simultaneously''
-    'Increase customer satisfaction by 45%''
-    'Available 24/7 without breaks''
-    'Scale support without additional staff''
-    { name: 'Salesforce''
-    { name: 'HubSpot''
-    { name: 'Zendesk''
-    { name: 'Intercom''
-    { name: 'Slack''
-    { name: 'Microsoft Teams''}
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const AiCustomerSupportChatbotPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="AI Customer Support Chatbot - Zion Tech Group"
+        description="Advanced AI-powered customer support chatbot with natural language processing and multi-language support."
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">AI Customer Support Chatbot</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AiCustomerSupportChatbotPage;
