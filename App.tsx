@@ -33,6 +33,28 @@ const DatabaseManagementPage = lazy(() => import('./app/database-management/page
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
 
+// New AI Services
+const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+
+// New Micro SaaS Services
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
+const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
+const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
+const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
+const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
+
+// New IT Services
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+const DataEngineeringPage = lazy(() => import('./app/data-engineering/page'));
+const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
+
 // Zion AI Product Pages
 const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
 const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
@@ -119,6 +141,28 @@ export default function App() {
                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                   <Route path="/database-management" element={<DatabaseManagementPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  
+                  {/* New AI Services */}
+                  <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                  <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} />
+                  <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
+                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                  
+                  {/* New Micro SaaS Services */}
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
+                  <Route path="/ai-scheduling-assistant" element={<AISchedulingAssistantPage />} />
+                  <Route path="/ai-document-processor" element={<AIDocumentProcessorPage />} />
+                  <Route path="/ai-lead-scoring" element={<AILeadScoringPage />} />
+                  <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
+                  
+                  {/* New IT Services */}
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+                  <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
+                  <Route path="/api-development" element={<APIDevelopmentPage />} />
+                  <Route path="/data-engineering" element={<DataEngineeringPage />} />
+                  <Route path="/security-audit" element={<SecurityAuditPage />} />
                   
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />
