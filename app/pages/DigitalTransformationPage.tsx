@@ -1,179 +1,265 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react;
-const DigitalTransformationPage: React.FC = () => {
-  const services = [{
-      icon: RefreshCw,
-      title: 'Process Automation',';
-      description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',';
-      features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']';
-    },
-    {
-      icon: Users,
-      title: 'Change Management',';
-      description: 'Guide your team through digital transformation with effective change management strategies.',';
-      features: ['Training Programs', 'Communication Plans', 'Resistance Management', 'Success Metrics']';
-    },
-    {
-      icon: Target,
-      title: 'Digital Strategy',';
-      description: 'Develop comprehensive digital strategies aligned with your business objectives.',';
-      features: ['Digital Assessment', 'Technology Roadmap', 'Implementation Planning', 'ROI Analysis']';
-    },
-    {
-      icon: TrendingUp,
-      title: 'Data Analytics',';
-      description: 'Transform data into actionable insights to drive better business decisions.',';
-      features: ['Data Collection', 'Analytics Platforms', 'Dashboard Development', 'Insight Generation']';
-    },
-    {
-      icon: Lightbulb,
-      title: 'Innovation Consulting',';
-      description: 'Identify and implement innovative technologies to stay competitive in the digital age.',';
-      features: ['Technology Research', 'Innovation Workshops', 'Pilot Programs', 'Scalability Planning']';
-    },
-    {
-      icon: CheckCircle,
-      title: 'Digital Maturity',';
-      description: 'Assess and improve your organization\'s digital maturity across all business functions.',';
-      features: ['Maturity Assessment', 'Gap Analysis', 'Improvement Plans', 'Progress Tracking']';
-    }
-  ];
-const DigitalTransformationPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-      <Helmet>
-        <title>Digital Transformation | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive digital transformation services to modernize your business processes and technology infrastructure." />
-        <meta name="keywords" content="digital transformation, process automation, change management, digital strategy, innovation" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Transformation</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business for the digital age with comprehensive strategies, 
-            modern technologies, and innovative solutions.;
-          </p>
-        </div>
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, _index) => {
-            const Icon = service.icon;
-            return (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg mr-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-                      <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-        </div>
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 mb-6">
-              Our digital transformation experts can help you modernize your operations and stay competitive.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300">
-                Start Transformation;
-              </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Get Assessment;
-=======
+import { Link } from 'react-router-dom';
+import { 
+  ArrowPathIcon,
+  UserGroupIcon,
+  CursorArrowRaysIcon,
+  ChartBarIcon,
+  LightBulbIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  PhoneIcon,
+  EnvelopeIcon
+} from '@heroicons/react/24/outline';
 
 const DigitalTransformationPage: React.FC = () => {
+  const services = [
+    {
+      title: "Process Automation",
+      description: "Streamline your business processes with intelligent automation solutions that reduce manual work and increase efficiency.",
+      icon: ArrowPathIcon,
+      features: [
+        "Workflow automation",
+        "Document processing",
+        "Data integration",
+        "Task scheduling",
+        "Error reduction",
+        "Cost savings"
+      ],
+      price: "Starting at $2,000/month"
+    },
+    {
+      title: "Technology Integration",
+      description: "Seamlessly integrate new technologies with your existing systems for a unified digital ecosystem.",
+      icon: CursorArrowRaysIcon,
+      features: [
+        "System integration",
+        "API development",
+        "Data migration",
+        "Cloud migration",
+        "Legacy modernization",
+        "Performance optimization"
+      ],
+      price: "Starting at $3,500/month"
+    },
+    {
+      title: "Change Management",
+      description: "Guide your team through digital transformation with comprehensive change management strategies.",
+      icon: UserGroupIcon,
+      features: [
+        "Training programs",
+        "Change communication",
+        "Resistance management",
+        "Adoption strategies",
+        "Performance monitoring",
+        "Continuous improvement"
+      ],
+      price: "Starting at $1,500/month"
+    },
+    {
+      title: "Digital Strategy",
+      description: "Develop comprehensive digital strategies that align with your business goals and market opportunities.",
+      icon: LightBulbIcon,
+      features: [
+        "Digital roadmap",
+        "Technology assessment",
+        "ROI analysis",
+        "Risk management",
+        "Implementation planning",
+        "Success metrics"
+      ],
+      price: "Starting at $2,500/month"
+    }
+  ];
+
+  const process = [
+    {
+      step: "Assessment",
+      title: "Current State Analysis",
+      description: "We analyze your current technology stack, processes, and identify areas for improvement.",
+      icon: ChartBarIcon
+    },
+    {
+      step: "Strategy",
+      title: "Digital Roadmap",
+      description: "We develop a comprehensive digital transformation strategy tailored to your business needs.",
+      icon: LightBulbIcon
+    },
+    {
+      step: "Implementation",
+      title: "Solution Deployment",
+      description: "We implement the digital solutions with minimal disruption to your ongoing operations.",
+      icon: ArrowPathIcon
+    },
+    {
+      step: "Optimization",
+      title: "Continuous Improvement",
+      description: "We monitor performance and continuously optimize your digital solutions for maximum ROI.",
+      icon: CursorArrowRaysIcon
+    }
+  ];
+
+  const benefits = [
+    "Increased Efficiency",
+    "Cost Reduction",
+    "Better Customer Experience",
+    "Data-Driven Decisions",
+    "Competitive Advantage",
+    "Future-Proof Technology"
+  ];
+
   return (
     <>
       <Helmet>
         <title>Digital Transformation - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our digital transformation services." />
+        <meta name="description" content="Transform your business with our comprehensive digital transformation services. Process automation, technology integration, and change management." />
+        <meta name="keywords" content="digital transformation, process automation, technology integration, change management, business transformation" />
       </Helmet>
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+
+      <div className="min-h-screen bg-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Digital Transformation
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Transform your business with our comprehensive digital transformation services.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business for the digital age with our comprehensive digital transformation services. 
+              From process automation to technology integration, we help you stay competitive and future-ready.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Strategy & Planning
-                </h3>
-                <p className="text-blue-700">
-                  Develop a comprehensive digital transformation strategy tailored to your business.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Technology Implementation
-                </h3>
-                <p className="text-green-700">
-                  Implement cutting-edge technologies to modernize your operations.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  Change Management
-                </h3>
-                <p className="text-purple-700">
-                  Guide your team through the transformation process with expert support.
-                </p>
-              </div>
-            </div>
-            <div className="mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Get Started Today
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Start Transformation
+              </Link>
+              <Link 
+                to="/demo" 
+                className="border border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Schedule Demo
+              </Link>
             </div>
           </div>
-=======
+        </section>
 
-const DigitalTransformationPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>DigitalTransformationPage - Zion Tech Group</title>
-        <meta name="description" content="DigitalTransformationPage - Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">DigitalTransformationPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-        </div>
+        {/* Services Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+              Our Digital Transformation Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-all duration-300 transform hover:scale-105 border border-slate-700">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <div className="mb-6">
+                    <p className="text-orange-400 font-semibold text-lg">{service.price}</p>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link 
+                    to="/contact"
+                    className="text-orange-400 hover:text-orange-300 font-medium flex items-center"
+                  >
+                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+              Our Digital Transformation Process
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {process.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-6">
+                    <step.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-orange-400 font-bold text-lg mb-2">Step {index + 1}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                  <p className="text-gray-300 text-sm">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+              Benefits of Digital Transformation
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                    <CheckCircleIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-900/30 to-red-900/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our digital transformation services can help you stay competitive and future-ready.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Get Free Consultation
+              </Link>
+              <Link 
+                to="/demo" 
+                className="border border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Schedule Demo
+              </Link>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-300 mt-12">
+              <div className="flex items-center gap-3">
+                <PhoneIcon className="w-6 h-6 text-orange-400" />
+                <span>+1-302-464-0950</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <EnvelopeIcon className="w-6 h-6 text-orange-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-<<<<<<< HEAD
-    </div>;  );
-}
-export default DigitalTransformationPage;
-=======
     </>
   );
 };
 
 export default DigitalTransformationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
