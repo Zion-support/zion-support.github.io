@@ -20,7 +20,23 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Global error caught:', error, errorInfo);
+    // Log error in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Global error caught:', error, errorInfo);
+    }
+    
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Send to error tracking service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'exception', {
+          description: error.message,
+          fatal: true,
+          error_stack: error.stack,
+          component_stack: errorInfo.componentStack
+        });
+      }
+    }
   }
 
   render() {

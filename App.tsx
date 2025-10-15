@@ -68,10 +68,14 @@ export default function App() {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gray-50">
+            {/* Skip to content link for accessibility */}
+            <a href="#main-content" className="skip-link">
+              Skip to main content
+            </a>
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main id="main-content" className="flex-1" role="main">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               

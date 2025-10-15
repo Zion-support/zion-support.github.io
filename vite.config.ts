@@ -6,22 +6,36 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: process.env.NODE_ENV === 'development',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: process.env.NODE_ENV === 'production',
+        drop_debugger: process.env.NODE_ENV === 'production',
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'framer-motion']
+          ui: ['@heroicons/react', 'framer-motion'],
+          helmet: ['react-helmet-async'],
+          utils: ['clsx', 'tailwind-merge']
         }
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
-    open: true
+    open: true,
+    host: true
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']
+    include: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async']
+  },
+  define: {
+    __DEV__: process.env.NODE_ENV === 'development',
   }
 })
