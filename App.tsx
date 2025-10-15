@@ -1,150 +1,121 @@
-import React, { useState, useCallback, useEffect, Suspense } from 'react';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
-import Sidebar from "./app/components/Sidebar";
-import HomePage from "./app/page";
-import LoadingStates from './app/components/LoadingStates';
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
-// Lazy load pages for better performance
-const AboutPage = React.lazy(() => import("./app/about/page"));
-const ContactPage = React.lazy(() => import("./app/contact/page"));
-const ServicesPage = React.lazy(() => import("./app/services/page"));
-const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
-const TermsPage = React.lazy(() => import("./app/terms/page"));
-const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
-const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
-const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
-const DemoPage = React.lazy(() => import("./app/demo/page"));
-const SupportPage = React.lazy(() => import("./app/support/page"));
-const BlogPage = React.lazy(() => import("./app/blog/page"));
+// Components
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import LazyWrapper from './app/components/LazyWrapper';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
-// AI Services Pages
-const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
-const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
-const AIBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
-const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
-const AICustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
-const AIDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
-const AIEmailAutomationPage = React.lazy(() => import("./app/ai-email-automation/page"));
-const AIFraudDetectionPage = React.lazy(() => import("./app/ai-fraud-detection/page"));
-const AIHealthcarePage = React.lazy(() => import("./app/ai-healthcare/page"));
-const AIMarketingPage = React.lazy(() => import("./app/ai-marketing/page"));
-const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
-const AIProjectManagementPage = React.lazy(() => import("./app/ai-project-management/page"));
+// Lazy loaded page components
+const HomePage = React.lazy(() => import('./app/page'));
+const AboutPage = React.lazy(() => import('./app/pages/AboutPage'));
+const ContactPage = React.lazy(() => import('./app/pages/ContactPage'));
+const ServicesPage = React.lazy(() => import('./app/pages/ServicesPage'));
+const BlogPage = React.lazy(() => import('./app/pages/BlogPage'));
+const TutorialsPage = React.lazy(() => import('./app/pages/TutorialsPage'));
+const DemoPage = React.lazy(() => import('./app/pages/DemoPage'));
+const SupportPage = React.lazy(() => import('./app/pages/SupportPage'));
+const PrivacyPage = React.lazy(() => import('./app/pages/PrivacyPage'));
+const TermsPage = React.lazy(() => import('./app/pages/TermsPage'));
+const PricingPage = React.lazy(() => import('./app/pages/PricingPage'));
+const SolutionsPage = React.lazy(() => import('./app/pages/SolutionsPage'));
+const MicroSaaSSolutionsPage = React.lazy(() => import('./app/micro-saas-solutions/page'));
+const AISolutionsPage = React.lazy(() => import('./app/ai-solutions/page'));
+const ITSolutionsPage = React.lazy(() => import('./app/it-solutions/page'));
 
-// 5G Solutions Pages
-const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
-const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
-const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
-const FiveGSmartCitiesPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
+// Service Pages
+const AIServicesPage = React.lazy(() => import('./app/pages/AIServicesPage'));
+const ITServicesPage = React.lazy(() => import('./app/pages/ITServicesPage'));
+const CloudInfrastructurePage = React.lazy(() => import('./app/pages/CloudInfrastructurePage'));
+const DigitalTransformationPage = React.lazy(() => import('./app/pages/DigitalTransformationPage'));
+const CaseStudiesPage = React.lazy(() => import('./app/pages/CaseStudiesPage'));
+const CareersPage = React.lazy(() => import('./app/pages/CareersPage'));
+
+// Error fallback component
+export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+      <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+        </svg>
+      </div>
+      <div className="mt-4 text-center">
+        <h1 className="text-lg font-medium text-gray-900">Something went wrong</h1>
+        <p className="mt-2 text-sm text-gray-500">
+          {error.message}
+        </p>
+        <div className="mt-6">
+          <button
+            onClick={resetErrorBoundary}
+            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Try again
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-
-  const closeSidebar = useCallback(() => {
-    setIsSidebarOpen(false);
-  }, []);
-
-  useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
-    }
-  }, []);
-
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Current Page' }
-  ];
-
   return (
-    <EnhancedErrorBoundary>
-      <HelmetProvider>
-        <AnalyticsProvider>
-          <PerformanceMonitor className="performance-monitor" />
-          <WebVitalsTracker className="web-vitals-tracker" />
-          <EnhancedAccessibility className="enhanced-accessibility" />
-          <AccessibilityEnhancer>
-            <CoreWebVitals className="core-web-vitals" />
-            <Router>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                        <FuturisticBackground>
-                          <PerformanceOptimizer>
-                            <Navigation />
-                            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                            <Breadcrumb items={breadcrumbItems} />
-                            
-                            <main className="relative z-10" id="main-content" role="main">
-                              <Suspense fallback={<LoadingStates isLoading={true}><div>Loading...</div></LoadingStates>}>
-                                <Routes>
-                                  {/* Main Pages */}
-                                  <Route path="/" element={<HomePage />} />
-                                  <Route path="/about" element={<AboutPage />} />
-                                  <Route path="/contact" element={<ContactPage />} />
-                                  <Route path="/services" element={<ServicesPage />} />
-                                  <Route path="/privacy" element={<PrivacyPage />} />
-                                  <Route path="/terms" element={<TermsPage />} />
-                                  <Route path="/tutorials" element={<TutorialsPage />} />
-                                  <Route path="/demo" element={<DemoPage />} />
-                                  <Route path="/support" element={<SupportPage />} />
-                                  <Route path="/blog" element={<BlogPage />} />
-
-                                  {/* AI Services */}
-                                  <Route path="/ai-services" element={<AIServicesPage />} />
-                                  <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
-                                  <Route path="/ai-automation" element={<AIAutomationPage />} />
-                                  <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
-                                  <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                                  <Route path="/ai-customer-service" element={<AICustomerServicePage />} />
-                                  <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-                                  <Route path="/ai-email-automation" element={<AIEmailAutomationPage />} />
-                                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
-                                  <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
-                                  <Route path="/ai-marketing" element={<AIMarketingPage />} />
-                                  <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
-                                  <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
-
-                                  {/* 5G Solutions */}
-                                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                                  <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
-                                  <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-                                  <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
-                                  <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                                  <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitiesPage />} />
-
-                                  {/* Cloud Infrastructure */}
-                                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-
-                                  {/* Catch all route */}
-                                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-white">404 - Page Not Found</h1></div>} />
-                                </Routes>
-                              </Suspense>
-                            </main>
-                            
-                            <Footer />
-                          </PerformanceOptimizer>
-                        </FuturisticBackground>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <div className="min-h-screen bg-slate-900">
+            <Navigation />
+            <main className="relative z-10" id="main-content" role="main">
+              <Suspense fallback={<LoadingSpinner size="xl" text="Loading page..." className="min-h-screen" />}>
+                <Routes>
+                  {/* Main Pages */}
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/tutorials" element={<TutorialsPage />} />
+                  <Route path="/demo" element={<DemoPage />} />
+                  <Route path="/support" element={<SupportPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/solutions" element={<SolutionsPage />} />
+                  
+                  {/* Service Pages */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  
+                  {/* Catch all route */}
+                  <Route path="*" element={
+                    <div className="min-h-screen flex items-center justify-center bg-slate-900">
+                      <div className="text-center">
+                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
+                          Go Home
+                        </a>
                       </div>
-                    </Router>
-            </AccessibilityEnhancer>
-        </AnalyticsProvider>
-      </HelmetProvider>
-    </EnhancedErrorBoundary>
+                    </div>
+                  } />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

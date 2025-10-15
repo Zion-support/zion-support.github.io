@@ -1,1 +1,1 @@
-
+// Utility functions for class name handling
