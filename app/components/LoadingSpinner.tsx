@@ -1,14 +1,21 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const LoadingSpinner: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900">"
-      <div className="text-center">"
-        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mb-4"></div>"
-        <p className="text-white text-lg">Loading...</p>
+    <>
+      <Helmet>
+        <title>LoadingSpinner - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">LoadingSpinner</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default LoadingSpinner;"
+export default LoadingSpinner;
