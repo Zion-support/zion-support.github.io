@@ -1,149 +1,49 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircle, ArrowRight, Star, Users, Shield, Clock, TrendingUp, BarChart3, Database, Smartphone, Globe, Target, Lightbulb, Rocket, Award, Phone, Mail, MapPin, Zap, Code, Eye, MessageSquare, Cpu, Network, FileText, Settings, CreditCard, Lock, Cloud, Wifi, Monitor, Server, Key, Search, Filter, Download, Upload, Share, Edit, Trash, Plus, Minus, Refresh, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
 
-  return (<>
+const PageComponent: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
-        <meta
-          name="description"
-          content="Join our vibrant tech community. Connect with like-minded professionals, attend events, _participate in workshops, and grow your career with Zion Tech Group."
-        />
-        <meta
-          name="keywords"
-          content="tech community, _developer community, _tech events, _workshops, _mentorship, _open source, _networking, professional development"
-        />
+        <meta name="description" content="Join our vibrant tech community. Connect with like-minded professionals, attend events, _participate in workshops, and grow your career with Zion Tech Group." />
+        <meta name="keywords" content="technology, solutions, services" />
+        <meta property="og:title" content="Community - Zion Tech Group | Tech Community & Events" />
+        <meta property="og:description" content="Join our vibrant tech community. Connect with like-minded professionals, attend events, _participate in workshops, and grow your career with Zion Tech Group." />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Join Our Community
-              </span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Community - Zion Tech Group | Tech Community & Events
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Connect with thousands of tech professionals, _attend exclusive events, and be part of a community that's shaping the future of technology.
+              Join our vibrant tech community. Connect with like-minded professionals, attend events, _participate in workshops, and grow your career with Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
               >
-                Join Now
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Get Started
               </Link>
               <Link
-                to="/events"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                to="/demo"
+                className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
-                View Events
+                Learn More
               </Link>
             </div>
           </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 px-4 bg-gray-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
-                    {stat.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Events Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Upcoming Events</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join our upcoming events and workshops to learn, network, and grow
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {events.map((event, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <Calendar className="w-5 h-5 text-cyan-400" />
-                    <span className="text-sm text-gray-400">{event.date}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
-                  <p className="text-gray-300 mb-4">{event.description}</p>
-                  <div className="space-y-2 text-sm text-gray-400">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {event.time}
-                    </div>
-                    <div className="flex items-center">
-                      <Globe className="w-4 h-4 mr-2" />
-                      {event.location}
-                    </div>
-                    <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-2" />
-                      {event.attendees} attendees
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Initiatives Section */}
-        <section className="py-20 px-4 bg-gray-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Community Initiatives</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Get involved in our community programs and make a difference
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {initiatives.map((initiative, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300 text-center">
-                  <div className="text-cyan-400 mb-4 flex justify-center">
-                    {initiative.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{initiative.title}</h3>
-                  <p className="text-gray-300 mb-4">{initiative.description}</p>
-                  <div className="text-cyan-400 font-semibold">{initiative.participants}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Connect with thousands of professionals, attend exclusive events, and be part of something bigger.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Join Our Community
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
-        </section>
+        </div>
       </div>
     </>
   );
 };
 
-export default CommunityPage;
+export default PageComponent;

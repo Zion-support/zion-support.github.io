@@ -1,5 +1,130 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Mail, Zap, Shield, Clock, Users, BarChart3, CheckCircle, Star, ArrowRight, Brain, Target, Globe, Smartphone, Cloud, Database, Settings, MessageSquare, FileText, Calendar, Search, Filter, Download, Upload, Share, Edit, Trash, Plus, Minus, Refresh, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
+
+const AiEmailAssistantPage: React.FC = () => {
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8 text-blue-400" />,
+      title: 'Smart Classification',
+      description: 'Automatically categorize and prioritize emails using AI'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: 'Auto-Responses',
+      description: 'Generate intelligent responses based on email content'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-green-400" />,
+      title: 'Spam Protection',
+      description: 'Advanced filtering to keep your inbox clean and secure'
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-purple-400" />,
+      title: 'Scheduling',
+      description: 'Smart scheduling and follow-up reminders'
+    }
+  ];
+
+  const useCases = [
+    {
+      icon: <Users className="w-6 h-6 text-blue-400" />,
+      title: 'Customer Support',
+      description: 'Handle customer inquiries efficiently'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
+      title: 'Sales Follow-up',
+      description: 'Automate sales pipeline communications'
+    },
+    {
+      icon: <Target className="w-6 h-6 text-purple-400" />,
+      title: 'Lead Generation',
+      description: 'Identify and nurture potential leads'
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-cyan-400" />,
+      title: 'Marketing Campaigns',
+      description: 'Personalize and optimize email marketing'
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$49/mo',
+      originalPrice: '$79/mo',
+      description: 'Perfect for small teams',
+      features: [
+        'Up to 1,000 emails/month',
+        'Basic AI responses',
+        'Email classification',
+        'Spam protection',
+        'Basic analytics',
+        'Email support'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$99/mo',
+      originalPrice: '$149/mo',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 10,000 emails/month',
+        'Advanced AI capabilities',
+        'Priority support',
+        'Advanced analytics',
+        'Custom templates',
+        'Team collaboration',
+        'API access',
+        'Integration support'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$199/mo',
+      originalPrice: '$299/mo',
+      description: 'For large organizations',
+      features: [
+        'Unlimited emails',
+        'Full AI suite',
+        'Dedicated account manager',
+        'Custom integrations',
+        'White-label options',
+        'Advanced security',
+        'SLA guarantees',
+        'On-premise deployment'
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'Marketing Director',
+      company: 'TechCorp',
+      content: 'The AI Email Assistant has revolutionized our email management. We save 5 hours per week on email tasks.',
+      rating: 5
+    },
+    {
+      name: 'Mike Chen',
+      role: 'Sales Manager',
+      company: 'SalesPro',
+      content: 'Our response time improved by 80% and customer satisfaction increased significantly.',
+      rating: 5
+    },
+    {
+      name: 'Emily Davis',
+      role: 'CEO',
+      company: 'StartupXYZ',
+      content: 'This tool has been a game-changer for our small team. Highly recommended!',
+      rating: 5
+    }
+  ];
 
   return (<>
       <Helmet>

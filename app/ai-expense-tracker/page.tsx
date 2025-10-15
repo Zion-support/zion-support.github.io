@@ -1,6 +1,9 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { DollarSign, BarChart3, Camera, Shield, Clock, Users, CheckCircle, Star, ArrowRight, Brain, Target, Globe, Smartphone, Cloud, Database, Settings, MessageSquare, FileText, Calendar, Search, Filter, Download, Upload, Share, Edit, Trash, Plus, Minus, Refresh, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
 
+const AiExpenseTrackerPage: React.FC = () => {
   return (<>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>

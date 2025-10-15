@@ -1,7 +1,11 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Heart, BarChart3, Users, MessageSquare, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Target, Globe, Smartphone, Cloud, Database, Settings, FileText, Calendar, Search, Filter, Download, Upload, Share, Edit, Trash, Plus, Minus, Refresh, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const AiCustomerSentimentTrackerPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Sentiment Tracker | Zion Tech Group</title>
         <meta name="description" content="Monitor and analyze customer sentiment across all channels with AI-powered insights and real-time alerts." />
@@ -50,7 +54,8 @@ import SEOHead from '../components/SEOHead';
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
+    </div>
     </>
   );
 };
