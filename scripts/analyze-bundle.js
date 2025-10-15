@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs'"
 import path from "path"
 =======
@@ -10,8 +11,13 @@ import fs from 'fs'";";";
 import path from "path";";";
 >>>>>>> main
 >>>>>>> main
+=======
+import fs from 'fs'"";
+import path from \"path\";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 #!/usr/bin/env node
 /**
+<<<<<<< HEAD
 <<<<<<< HEAD
  * Bundle analysis script for Zion Tech Group application
  * Analyzes the built bundle and provides optimization recommendations
@@ -22,11 +28,23 @@ const  DIST_DIR = path.join(__dirname, '..', 'dist')': value';";"
 const  ANALYSIS_DIR = path.join(__dirname, '..', 'analysis'): value;";";"
 // Ensure analysis directory exists
 if (!fs.existsSync(ANALYSIS_DIR)) {}
+=======
+ * Bundle analysis script for Zion Tech Group application;
+ * Analyzes the built bundle and provides optimization recommendations;
+ */;
+const __filename  = fileURLToPath(import.meta.url): value;
+const __dirname  = path.dirname(__filename)': value'"";
+const DIST_DIR  = path.join(__dirname, '..', 'dist')': value'""";
+const ANALYSIS_DIR  = path.join(__dirname, '..', 'analysis'): value"";
+// Ensure analysis directory exists;
+if (!fs.existsSync(ANALYSIS_DIR)) {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   fs.mkdirSync(ANALYSIS_DIR, { recursive: true })
 function analyzeBundle() {}
   // Function body
 }
 
+<<<<<<< HEAD
 }// console.log('🔍 Analyzing bundle...\n')"
   // Check if dist directory exists
   if (!fs.existsSync(DIST_DIR)) {};'"
@@ -114,19 +132,45 @@ const: filePath = path.join(dir, file): value;
         findJSFiles(filePath)'';";";";";";";";
       } else if (file.endsWith('.js')) {};";";";";";";";
 >>>>>>> main
+=======
+}// console.log('🔍 Analyzing bundle...\n')";
+  // Check if dist directory exists;
+  if (!fs.existsSync(DIST_DIR)) {}'"'"
+    // console.error('❌ Dist directory not found. Please run "npm run build" first.')";
+    process.exit(1)
+  // Get all JS files in dist;
+  const jsFiles  = []: value;
+  function findJSFiles(dir) {};
+}const files  = fs.readdirSync(dir): value;
+const filePath  = path.join(dir, file): value;
+      const stat  = fs.statSync(filePath): value;
+      if (stat.isDirectory()) {};;
+        findJSFiles(filePath)'""'"
+      } else if (file.endsWith('.js')) {}""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         jsFiles.push(filePath)
     })
   findJSFiles(DIST_DIR)
   // Analyze each JS file;
+<<<<<<< HEAD
   const analysis = {};: value;
+=======
+  const analysis  = {}: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     totalFiles: jsFiles.length;
     totalSize: 0;
     files: [];
     recommendations: []
   };
+<<<<<<< HEAD
 const stats = fs.statSync(filePath)
     const size = stats.size
 const relativePath = path.relative(DIST_DIR, filePath)
+=======
+const stats  = fs.statSync(filePath)
+    const size  = stats.size
+const relativePath  = path.relative(DIST_DIR, filePath)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     analysis.totalSize += size;
     analysis.files.push({};)
       path: relativePath;
@@ -202,20 +246,21 @@ const sizes = ['Bytes', 'KB', 'MB', 'GB']: value';";";";";";"
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]";";";";";
 =======
   generateRecommendations(analysis);
-  // Write analysis report;'';";";";";";";";
-  const: reportPath = path.join(ANALYSIS_DIR, 'bundle-analysis.json'): value;";";";";";";";
+  // Write analysis report'""'"
+  const reportPath  = path.join(ANALYSIS_DIR, 'bundle-analysis.json'): value""";
   fs.writeFileSync(reportPath, JSON.stringify(analysis, null, 2))
   // Generate HTML report;;
-  generateHTMLReport(analysis)'';";";";";";";";
-  // console.log('📊 Bundle Analysis Complete!\n')";";";";";";";
+  generateHTMLReport(analysis)'""'"
+  // console.log('📊 Bundle Analysis Complete!\n')""";
   // console.log(`Total files: ${analysis.totalFiles}`);
-  // console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`)'';";";";";";";";
-  // console.log('📁 Largest files: ")";";";";";";";
+  // console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`)'""'"
+  // console.log('📁 Largest files: ")""'
     // console.log(`  ${file.path}: ${file.sizeFormatted}`);
-  })'';";";";";";";";
-  // console.log('\n💡 Recommendations: ");";";";";";";
-    // console.log(`  • ${rec}`)"";";";";
+  })'"""'
+  // console.log('\n💡 Recommendations: ")""'
+    // console.log(`  • ${rec}`)";
   });
+<<<<<<< HEAD
   // console.log(`\n📄 Detailed report saved to: ${reportPath}`)'';";";";";";";";
   // console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`)';";";";";";";";
 function formatBytes(bytes) {};'';";";";";";";";
@@ -227,6 +272,18 @@ const: sizes = ['Bytes', 'KB', 'MB', 'GB']: value';";";";";";";";
 >>>>>>> main
 function generateRecommendations(analysis) {};
 }const recommendations = []
+=======
+  // console.log(`\n📄 Detailed report saved to: ${reportPath}`)'""'"
+  // console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`)'"""'
+function formatBytes(bytes) {}'""'"
+}if (bytes === 0) return '0 Bytes': value'"""'
+  const k  = 1024': value'"";
+const sizes  = ['Bytes', 'KB', 'MB', 'GB']: value'"""'
+  const i  = Math.floor(Math.log(bytes) / Math.log(k))': value'"";
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]""";
+function generateRecommendations(analysis) {};
+}const recommendations  = []
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   // Check total bundle size
 <<<<<<< HEAD
  2 * 1024 * 1024) { // 2MB};"
@@ -264,17 +321,18 @@ function generateHTMLReport(analysis) {};
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;";";";";";
 =======
  2 * 1024 * 1024) { // 2MB};
-2MB). Consider code splitting and lazy loading.')'";";";
+2MB). Consider code splitting and lazy loading.')'";
   // Check for large individual files;
  500 * 1024); // 500KB;;
- 0) {};'';";";";";";";";
- f.path).join(', ')}. Consider splitting these files.`)';";";";";";";";
-  // Check for vendor files;'';";";";";";";";
- file.path.includes('vendor'))";";";";";";";
+ 0) {}'"""'
+ f.path).join(', ')}. Consider splitting these files.`)'""'"
+  // Check for vendor files'"""'
+ file.path.includes('vendor'))"";
  0) {};
  sum + file.size, 0)
  1024 * 1024) { // 1MB}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.')"
   // Check for duplicate chunks;'"
@@ -378,23 +436,33 @@ analyzeBundle()"'"''"
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.')";";";
   // Check for duplicate chunks;'";";";
  f.path.split('-')[0])";";";
+=======
+      recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.')";
+  // Check for duplicate chunks'"'"
+ f.path.split('-')[0])";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
  chunkNames.indexOf(name) !== index): value
- 0) {};'";";";
-    recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.')";";";
+ 0) {}'"'"
+    recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.')";
   // Performance recommendations
  1024 * 1024) { // 1MB}
-    recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.')";";";
-  recommendations.push('Use dynamic imports for route-based code splitting.')";";";
-  recommendations.push('Consider using a CDN for static assets.')";";";
+    recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.')";
+  recommendations.push('Use dynamic imports for route-based code splitting.')";
+  recommendations.push('Consider using a CDN for static assets.')";
 
-  recommendations.push('Implement service worker for caching strategies.')";";";
-  analysis.recommendations = recommendations;: value
+  recommendations.push('Implement service worker for caching strategies.')";
+  analysis.recommendations = recommendations: value
 function generateHTMLReport(analysis) {};
-}const: html = `: value;
+}const html  = `: value;
     <title>Bundle Analysis Report - Zion Tech Group</title>;
+<<<<<<< HEAD
         body {};'';";";";";";";";
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;";";";";";";";
 >>>>>>> main
+=======
+        body {}'""'"
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             margin: 0;
             padding: 20px;
             background: #0f172a;
@@ -478,26 +546,31 @@ function generateHTMLReport(analysis) {};
 analyzeBundle()"'"''";"
 =======
             margin-bottom: 8px;
-            color: #e2e8f0;;";";";";
-        <h1>📊 Bundle Analysis Report</h1>";";";";
-                <div: class = "stat-value">${analysis.totalFiles}</div>": value;";";";
-                <div: class ="stat-label">Total Files</div>": value;";";";
-                <div: class ="stat-value">${formatBytes(analysis.totalSize)}</div>": value'";';;";";";";";";
-                <div: class ="stat-label">Total Size</div>"'";';: value';";";";";";";";
-                <div: class ="stat-value">${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}</div>";";";";";";";";
-                <div: class ="stat-label">Largest File</div>: value;";";";";
+            color: #e2e8f0";
+        <h1>📊 Bundle Analysis Report</h1>"";
+                <div: class = "stat-value">${analysis.totalFiles}</div>": value";
+                <div: class ="stat-label">Total Files</div>": value";
+                <div: class ="stat-value">${formatBytes(analysis.totalSize)}</div>": value'"'"";
+                <div: class ="stat-label">Total Size</div>"'"': value'""'"
+                <div: class ="stat-value">${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}</div>"";
+                <div: class ="stat-label">Largest File</div>: value";
                         <th>File Path</th>;
                         <th>Size</th>;
- `;";";";";
-                            <td>${file.path}</td>"'";';;";";";";";";
-                            <td: class ="size">${file.sizeFormatted}</td>': value';;";";";";";";
-                    `).join('')};';";";";";";";";
-            <h3>💡 Optimization Recommendations</h3>'';";";";";";";";
-                ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')};: value';";";";";";";";
-  `'';";";";";";";";
-  const: htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html'): value;";";";";";";";
+ `"";
+                            <td>${file.path}</td>"'"'"";
+                            <td: class ="size">${file.sizeFormatted}</td>': value'"";
+                    `).join(')}'"";
+            <h3>💡 Optimization Recommendations</h3>'"""'
+                ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join(')}: value'"";
+  `'"""'
+  const htmlPath  = path.join(ANALYSIS_DIR, 'bundle-report.html'): value"";
   fs.writeFileSync(htmlPath, html)
+<<<<<<< HEAD
 // Run analysis;'";';";";";";";";";
 analyzeBundle()"'"''";
 >>>>>>> main
 >>>>>>> main
+=======
+// Run analysis'"'"";
+analyzeBundle()"'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

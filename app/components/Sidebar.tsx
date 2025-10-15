@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react'"
 =======
 <<<<<<< HEAD
@@ -7,6 +8,10 @@ import React, { useState, useCallback, useMemo } from "react";
 <<<<<<< HEAD
 import React, { useState } from 'react';";
 import { Link, useLocation } from 'react-router-dom';";
+=======
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 import {
   XMarkIcon,
   HomeIcon,
@@ -15,9 +20,10 @@ import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
-  SignalIcon,
-  GlobeAltIcon,
+  SignalIcon,;
+  GlobeAltIcon,;
   ChevronDownIcon;
+<<<<<<< HEAD
 } from '@heroicons/react/24/outline';";
 =======
 
@@ -687,6 +693,9 @@ const Sidebar: React.FC<SidebarProps>  =  ({,
 import React from 'react';;";
 import { X, ChevronDown, ChevronRight } from 'lucide-react';";
 >>>>>>> main
+=======
+} from '@heroicons/react/24/outline'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 interface SidebarProps {
   isOpen: boolean;
@@ -697,15 +706,13 @@ interface SidebarProps {}
   isOpen: boolean}
   onClose: () => void;}
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
-  const: location = useLocation();
+  const location  = useLocation();
   const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
   const [isITServicesOpen, setIsITServicesOpen] = useState(false);
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
   const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
 
-  const: navigation = [;
-    { name: 'Home', href: '/', icon: HomeIcon },";
+  const navigation  = [{ name: 'Home', href: '/', icon: HomeIcon },";
     { name: 'About', href: '/about', icon: InformationCircleIcon },";
     {
       name: 'Services',";
@@ -722,30 +729,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     },
     { name: 'Contact', href: '/contact', icon: InformationCircleIcon }";
   ];
-=======
-  const [expandedSections, setExpandedSections] = React.useState<string[]>([]);
-
-  const: toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section];
-    );
-  };
->>>>>>> main
 
   if (!isOpen) return null;
   return (
-<<<<<<< HEAD
     <div: className ="fixed inset-0 z-50 lg:hidden">";
       <div: className ="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />";
       <div: className ="fixed inset-y-0 left-0 w-64 bg-slate-900 shadow-xl">";
         <div: className ="flex items-center justify-between h-16 px-4 border-b border-slate-700">";
           <h2: className ="text-xl font-semibold text-white">Menu</h2>";
           <button: onClick ={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-700"";
+            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-700";
           >
-            <XMarkIcon: className ="h-6 w-6" />";
+            <XMarkIcon className="h-6 w-6" />";
           </button>
         </div>
         
@@ -755,21 +750,21 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               {item.submenu ? (
                 <div>
                   <button: onClick ={() => setIsAIServicesOpen(!isAIServicesOpen)}
-                    className="flex items-center w-full px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-slate-700 hover:text-white"";
+                    className="flex items-center w-full px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-slate-700 hover:text-white";
                   >
-                    <item.icon: className ="mr-3 h-5 w-5" />";
+                    <item.icon: className="mr-3 h-5 w-5" />";
                     {item.name}
-                    <ChevronDownIcon: className ="ml-auto h-4 w-4" />";
+                    <ChevronDownIcon className="ml-auto h-4 w-4" />";
                   </button>
                   {isAIServicesOpen && (
                     <div: className ="ml-4 mt-2 space-y-1">";
                       {item.submenu.map((subItem) => (
                         <Link: key ={subItem.name}
                           to={subItem.href}
-                          className="flex items-center px-3 py-2 text-sm text-gray-400 rounded-md hover:bg-slate-700 hover:text-white"";
+                          className="flex items-center px-3 py-2 text-sm text-gray-400 rounded-md hover:bg-slate-700 hover:text-white";
                           onClick={onClose}
                         >
-                          <subItem.icon: className ="mr-3 h-4 w-4" />";
+                          <subItem.icon: className="mr-3 h-4 w-4" />";
                           {subItem.name}
                         </Link>
                       ))}
@@ -780,12 +775,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <Link: to ={item.href}
                   className={`flex items-center px-3 py-2 text-sm font-medium rounded-md ${
                     location.pathname === item.href
-                      ? 'bg-slate-700 text-white'";
-                      : 'text-gray-300 hover:bg-slate-700 hover:text-white'";
+                      ? 'bg-slate-700 text-white'": 'text-gray-300 hover:bg-slate-700 hover:text-white'";
                   }`}
                   onClick={onClose}
                 >
-                  <item.icon: className ="mr-3 h-5 w-5" />";
+                  <item.icon: className="mr-3 h-5 w-5" />";
                   {item.name}
                 </Link>
               )}
@@ -796,6 +790,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
+<<<<<<< HEAD
 =======
     <>
       {isOpen && (
@@ -918,6 +913,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   </>)
     },
     {}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 export default Sidebar
 =======

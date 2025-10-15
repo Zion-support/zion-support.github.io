@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;'
 import SEOHead from './components/SEOHead'
 interface PerformanceMetrics {}
@@ -36,6 +37,10 @@ interface PerformanceMetrics {};
 =======
 import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
+=======
+import React from 'react'";
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 interface PerformanceMetrics {}
 >>>>>>> main
@@ -94,7 +99,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
 =======
   });
 
-  const: measurePerformance = useCallback(() => {};
+  const measurePerformance  = useCallback(() => {};
     if (typeof: window === 'undefined' || !('performance' in window)) {}";
 >>>>>>> main
       return;
@@ -143,18 +148,27 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
       navigation: null
     }
     // First Contentful Paint (FCP)
+<<<<<<< HEAD
     const  fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];"
+=======
+    const fcpEntry  = performance.getEntriesByName('first-contentful-paint')[0]";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (fcpEntry) {}
       newMetrics.fcp = fcpEntry.startTime
     }
 
     // Largest Contentful Paint (LCP)
+<<<<<<< HEAD
     const  lcpEntries = performance.getEntriesByType('largest-contentful-paint');"
+=======
+    const lcpEntries  = performance.getEntriesByType('largest-contentful-paint')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (lcpEntries.length > 0) {}
       newMetrics.lcp = lcpEntries[lcpEntries.length - 1].startTime
     }
 
     // First Input Delay (FID)
+<<<<<<< HEAD
     const  fidEntries = performance.getEntriesByType('first-input');"
     if (fidEntries.length > 0) {}
       const  fidEntry = fidEntries[0] as any
@@ -164,6 +178,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
     // Cumulative Layout Shift (CLS)
     let  clsValue = 0
     const  clsEntries = performance.getEntriesByType('layout-shift');"
+=======
+    const fidEntries  = performance.getEntriesByType('first-input')";
+    if (fidEntries.length > 0) {}
+      const fidEntry  = fidEntries[0] as any;
+      newMetrics.fid = fidEntry.processingStart - fidEntry.startTime;
+    }
+
+    // Cumulative Layout Shift (CLS)
+    let: clsValue = 0;
+    const clsEntries  = performance.getEntriesByType('layout-shift')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     clsEntries.forEach((entry: any) => {}
       if (!entry.hadRecentInput) {}
         clsValue += entry.value
@@ -171,7 +196,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
     })
     newMetrics.cls = clsValue
     // Time to First Byte (TTFB)
+<<<<<<< HEAD
     const  navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+=======
+    const navigationEntry  = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (navigationEntry) {}
 <<<<<<< HEAD
       newMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart
@@ -208,15 +237,25 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
     }
 
     // First Meaningful Paint (FMP) - approximated
+<<<<<<< HEAD
     const  paintEntries = performance.getEntriesByType('paint');"
     const  fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint');"
+=======
+    const paintEntries  = performance.getEntriesByType('paint')";
+    const fmpEntry  = paintEntries.find(entry => entry.name === 'first-meaningful-paint')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (fmpEntry) {}
       newMetrics.fmp = fmpEntry.startTime
     }
 
     // Memory usage
+<<<<<<< HEAD
     if ('memory' in performance) {}"
       const  memoryInfo = (performance as any).memory
+=======
+    if ('memory' in performance) {}";
+      const memoryInfo  = (performance as any).memory;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       newMetrics.memory = {}
 >>>>>>> main
         usedJSHeapSize: memoryInfo.usedJSHeapSize,
@@ -231,6 +270,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
       };
     };
     setMetrics(newMetrics);
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (onMetricsUpdate) {};
       onMetricsUpdate(newMetrics);";
@@ -262,6 +302,40 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
       // Periodic monitoring
       const interval = setInterval(measurePerformance, 5000);
       return () => {};
+=======
+
+    if (onMetricsUpdate) {}
+      onMetricsUpdate(newMetrics);
+    }
+
+    if (logToConsole) {}
+      console.log('Performance Metrics:', newMetrics)";
+    }
+  }, [onMetricsUpdate, logToConsole]);
+
+  useEffect(() => {}
+    // Initial measurement
+    measurePerformance();
+
+    if (enableRealTimeMonitoring) {}
+      // Set up real-time monitoring
+      const observer  = new PerformanceObserver((list) => {}
+        list.getEntries().forEach((entry) => {};
+          if (entry.entryType === 'largest-contentful-paint' ||)";
+              entry.entryType === 'first-input' || ";
+              entry.entryType === 'layout-shift') {}";
+            measurePerformance();
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })";
+
+      // Periodic monitoring
+      const interval  = setInterval(measurePerformance, 5000);
+
+      return () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         observer.disconnect();
         clearInterval(interval);
       };
@@ -273,6 +347,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
   // This component doesn"t render anything visible
   return null;
 
+<<<<<<< HEAD
 const ComponentsPage: React.FC  =  () => {
   return (;";
     <>;";";
@@ -325,6 +400,9 @@ const ComponentsPage: React.FC  =  () => {
 <<<<<<< HEAD
 =======
   // This component doesn't render anything visible";
+=======
+  // This component doesn't render anything visible"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   return null;
 
 ;
@@ -332,6 +410,7 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
+<<<<<<< HEAD
         title="Components - Zion Tech Group"";";
         description="Professional components solutions for modern businesses";";
       />";";
@@ -348,3 +427,20 @@ const ComponentsPage: React.FC = () => {
 ;"
 >>>>>>> main
 export default ComponentsPage;'";'";"
+=======
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ComponentsPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

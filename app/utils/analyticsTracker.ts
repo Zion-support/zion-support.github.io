@@ -29,12 +29,19 @@ export default AnalyticsTracker;';'
 };
 interface AnalyticsTrackerState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const AnalyticsTracker = (options: AnalyticsTrackerOptions = {,
   }) => {;
     const stateRef = useRef<AnalyticsTrackerState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const AnalyticsTracker  = (options: AnalyticsTrackerOptions = {}) => {
+  const stateRef  = useRef<AnalyticsTrackerState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default AnalyticsTracker;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default AnalyticsTracker;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default AnalyticsTracker''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

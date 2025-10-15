@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Mock LoadingSpinner component
 const LoadingSpinner = () => (
@@ -71,4 +72,16 @@ describe('LoadingSpinner', () => {
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
   });
+=======
+import '@testing-library/jest-dom';
+
+// Mock loading spinner component for testing
+const MockLoadingSpinner = () => <div>Loading...</div>;
+
+describe('Loading Spinner', () => {
+  test('renders loading spinner', () => {
+    render(<MockLoadingSpinner />);
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+  });
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 });

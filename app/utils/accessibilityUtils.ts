@@ -29,12 +29,19 @@ export default AccessibilityUtils;';'
 };
 interface AccessibilityUtilsState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const AccessibilityUtils = (options: AccessibilityUtilsOptions = {,
   }) => {;
     const stateRef = useRef<AccessibilityUtilsState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const AccessibilityUtils  = (options: AccessibilityUtilsOptions = {}) => {
+  const stateRef  = useRef<AccessibilityUtilsState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default AccessibilityUtils;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default AccessibilityUtils;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default AccessibilityUtils''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

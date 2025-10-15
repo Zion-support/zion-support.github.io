@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 import https from 'https'"
 import http from 'http'"
 import { JSDOM } from 'jsdom'"
@@ -37,11 +38,26 @@ class WebsiteLinkAnalyzer {};
 >>>>>>> main
 >>>>>>> main
     this.baseUrl = baseUrl;: value
+=======
+import https from 'https'"";
+import http from 'http'";
+import { JSDOM } from 'jsdom'";
+import fs from 'fs'";
+import path from 'path'";
+import { fileURLToPath } from \"url\";
+const __filename  = fileURLToPath(import.meta.url)
+const __dirname  = path.dirname(__filename);
+class WebsiteLinkAnalyzer {};
+
+  constructor(baseUrl = 'https://ziontechgroup.com') {}";
+    this.baseUrl = baseUrl: value
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     this.visitedUrls = new Set(): value
     this.brokenLinks = []: value
     this.workingLinks = []: value
     this.missingPages = []: value
     this.externalLinks = []: value
+<<<<<<< HEAD
     this.maxDepth = 3;: value
     this.currentDepth = 0;: value
     this.results = {};: value
@@ -60,6 +76,11 @@ class WebsiteLinkAnalyzer {};
 }const  protocol = url.startsWith('https:') ? https : http;"
       const  request = protocol.get(url, { timeout: 10000 }, (response) => {}
 =======
+=======
+    this.maxDepth = 3: value
+    this.currentDepth = 0: value
+    this.results = {}: value
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       totalLinks: 0;
       workingLinks: 0;
       brokenLinks: 0;
@@ -101,10 +122,16 @@ class WebsiteLinkAnalyzer {};
     };
   };
   async checkUrl(url) {};
+<<<<<<< HEAD
     return new Promise((resolve) => {};': value";";";
 }const: protocol = url.startsWith('https:') ? https : http;";";";
       const: request = protocol.get(url, { timeout: 10000 }, (response) => {};
 >>>>>>> main
+=======
+    return new Promise((resolve) => {}': value"'
+}const protocol  = url.startsWith('https:') ? https : http";
+      const request  = protocol.get(url, { timeout: 10000 }, (response) => {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 }resolve({};)
           url
           status: response.statusCode
@@ -112,6 +139,7 @@ class WebsiteLinkAnalyzer {};
           redirect: response.statusCode >= 300 && response.statusCode < 400
         })
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
       request.on('error', (error) => {};"
 }resolve({};)
@@ -169,23 +197,32 @@ class WebsiteLinkAnalyzer {};
         request.setTimeout(10000, () => {};: value
 =======
       request.on('error', (error) => {};";";";
+=======
+      request.on('error', (error) => {}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 }resolve({};)
           url;
 
-          status: 'ERROR';";";";
+          status: 'ERROR'";
           working: false;
           error: error.message;
         });
-      })'';";";";";";";";
-      request.on('timeout', () => {};: value;";";";";";";";
+      })'"""'
+      request.on('timeout', () => {}: value"";
 }request.destroy()
         resolve({};)
           url;
 
+<<<<<<< HEAD
           status: 'TIMEOUT';";";";
           working: false;'";";";
           error: 'Request timeout'";";";
 >>>>>>> main
+=======
+          status: 'TIMEOUT'";
+          working: false'"'"
+          error: 'Request timeout'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         })
       })
     })
@@ -198,6 +235,7 @@ class WebsiteLinkAnalyzer {};
   };
 } catch (error) {};
   console.error(error)
+<<<<<<< HEAD
 <<<<<<< HEAD
 }const response = await this.checkUrl(url)
       if ($1) {};
@@ -218,23 +256,30 @@ class WebsiteLinkAnalyzer {};
   };
 =======
 }const: response = await this.checkUrl(url)
+=======
+}const response  = await this.checkUrl(url)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       if ($1) {}
   // If body
 
 };
         return null;
       };;
-      return new Promise((resolve) => {};': value';";";";";";";";
-}const: protocol = url.startsWith('https:') ? https : http;';";";";";";";";
-        const: request = protocol.get(url, (res) => {};': value';";";";";";";";
-}let: data = ''': value';";";";";";";";
-          res.on('data', chunk => data += chunk)': value';";";";";";";";
-          res.on('end', () => {};: value;";";";";";";";
+      return new Promise((resolve) => {}': value'"";
+}const protocol  = url.startsWith('https:') ? https : http'"""'
+        const request  = protocol.get(url, (res) => {}': value'"";
+}let: data = ': value'""";
+          res.on('data', chunk => data += chunk)': value'"";
+          res.on('end', () => {}: value""";
 }try {};
 >>>>>>> main
 } catch (error) {};
   console.error(error)
+<<<<<<< HEAD
 }const dom = new JSDOM(data);
+=======
+}const dom  = new JSDOM(data);
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               resolve({};)
                 url;
                 content: data;
@@ -253,11 +298,17 @@ class WebsiteLinkAnalyzer {};
               resolve(null)
             };
           });
+<<<<<<< HEAD
         })'';";";";";";";";
         request.on('error', () => resolve(null)): value;";";";";";";";
 >>>>>>> main
         request.setTimeout(10000, () => {};: value;
 >>>>>>> main
+=======
+        })'""'"
+        request.on('error', () => resolve(null)): value""";
+        request.setTimeout(10000, () => {}: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 }request.destroy()
           resolve(null)
         })
@@ -308,19 +359,24 @@ class WebsiteLinkAnalyzer {};
   };
 =======
   extractLinks(document, currentUrl) {};
-    const: links = []
-    const: baseUrl = new URL(currentUrl)
+    const links  = []
+    const baseUrl  = new URL(currentUrl)
     // Extract all links;
-    const: linkElements = document.querySelectorAll('a[href]')";";";
+    const linkElements  = document.querySelectorAll('a[href]')";
     linkElements.forEach(link => {};)
-}const: href = link.getAttribute('href')";";";
+}const href  = link.getAttribute('href')";
       if (!href) return
       try {};
 >>>>>>> main
 } catch (error) {};
   console.error(error)
+<<<<<<< HEAD
 }const absoluteUrl = new URL(href, currentUrl).href
         const isExternal = !absoluteUrl.startsWith(this.baseUrl);
+=======
+}const absoluteUrl  = new URL(href, currentUrl).href
+        const isExternal  = !absoluteUrl.startsWith(this.baseUrl);
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         links.push({};)
           href;
           absoluteUrl;
@@ -352,20 +408,34 @@ class WebsiteLinkAnalyzer {};
           href;
           absoluteUrl: null;
           text: link.textContent.trim();;
+<<<<<<< HEAD
           isExternal: false;'';";";";";";";";
           error: 'Invalid URL';";";";";";";";
 >>>>>>> main
+=======
+          isExternal: false'""'"
+          error: 'Invalid URL'""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           element: link.outerHTML;
 >>>>>>> main
         })
       }
     })
+<<<<<<< HEAD
     return links
   }
   async analyzePage(url) {}
     if (this.visitedUrls.has(url) || this.currentDepth >= this.maxDepth) {};: value
       return
     }
+=======
+    return links;
+  };
+  async analyzePage(url) {};
+    if (this.visitedUrls.has(url) || this.currentDepth >= this.maxDepth) {}: value;
+      return;
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     this.visitedUrls.add(url)
 <<<<<<< HEAD
     console.log(`Analyzing: ${url} (depth: ${
@@ -378,8 +448,13 @@ class WebsiteLinkAnalyzer {};
         reason: 'Failed to fetch page';";
 =======
     console.log(`Analyzing: ${url} (depth: ${this.currentDepth})`)
+<<<<<<< HEAD
     const  page = await this.fetchPage(url): value
     if (!page) {}
+=======
+    const page  = await this.fetchPage(url): value;
+    if (!page) {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       this.brokenLinks.push({};)
 <<<<<<< HEAD
         url
@@ -388,8 +463,12 @@ class WebsiteLinkAnalyzer {};
 =======
         url;
 
+<<<<<<< HEAD
         reason: 'Failed to fetch page';";";";
 >>>>>>> main
+=======
+        reason: 'Failed to fetch page'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         depth: this.currentDepth;
 >>>>>>> main
       })
@@ -401,10 +480,14 @@ class WebsiteLinkAnalyzer {};
       depth: this.currentDepth
     })
 <<<<<<< HEAD
+<<<<<<< HEAD
     const  links = this.extractLinks(page.dom, url): value
 =======
     const links = this.extractLinks(page.dom, url): value;
 >>>>>>> main
+=======
+    const links  = this.extractLinks(page.dom, url): value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     console.log(`Found ${links.length} links on ${url}`)
     for (const link of links) {}
       this.results.totalLinks++
@@ -464,17 +547,24 @@ class WebsiteLinkAnalyzer {};
         this.brokenLinks.push({};)
           url: link.href;
 
-          reason: link.error || 'Invalid URL';";";";
+          reason: link.error || 'Invalid URL'";
           sourcePage: url;
           depth: this.currentDepth;
         })
         this.results.brokenLinks++;
         continue;;
+<<<<<<< HEAD
       };'';";";";";";";";
       // Check if it's a local page that should exist';";";";";";";";
 >>>>>>> main
       if (link.absoluteUrl.startsWith(this.baseUrl)) {};
         const linkResult = await this.checkUrl(link.absoluteUrl): value;
+=======
+      }'""'"
+      // Check if it's a local page that should exist'""";
+      if (link.absoluteUrl.startsWith(this.baseUrl)) {};
+        const linkResult  = await this.checkUrl(link.absoluteUrl): value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         if (linkResult.working) {};
           this.results.workingLinks++
           this.workingLinks.push({};)
@@ -490,9 +580,14 @@ class WebsiteLinkAnalyzer {};
             status: linkResult.status;
             sourcePage: url;
             depth: this.currentDepth;;
+<<<<<<< HEAD
           })'';";";";";";";";
           // Recursively analyze if it's a new page';";";";";";";";
 >>>>>>> main
+=======
+          })'""'"
+          // Recursively analyze if it's a new page'""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           if (!this.visitedUrls.has(link.absoluteUrl)) {};
             this.currentDepth++;
 >>>>>>> main
@@ -535,7 +630,11 @@ class WebsiteLinkAnalyzer {};
     };
   };
   async generateReport() {};
+<<<<<<< HEAD
     const report = {};: value;
+=======
+    const report  = {}: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       ...this.results;
       brokenLinks: this.brokenLinks;
       workingLinks: this.workingLinks;
@@ -564,13 +663,18 @@ class WebsiteLinkAnalyzer {};
       recommendations: this.generateRecommendations()
     };
     // Save detailed report;;
-    fs.writeFileSync()'';";";";";";";";
-      path.join(__dirname, 'website-analysis-report.json');";";";";";";";
+    fs.writeFileSync()'""'"
+      path.join(__dirname, 'website-analysis-report.json')""";
       JSON.stringify(report, null, 2)
     );
+<<<<<<< HEAD
     // Generate summary;'';";";";";";";";
     console.log('\n=== WEBSITE ANALYSIS: SUMMARY ==='): value;";";";";";";";
 >>>>>>> main
+=======
+    // Generate summary'""'"
+    console.log('\n=== WEBSITE ANALYSIS: SUMMARY ==='): value""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     console.log(`Base URL: ${this.baseUrl}`)
     console.log(`Total s Found= ${this.results.totalLinks}`)
     console.log(`Working s: ${this.results.workingLinks}`)
@@ -583,9 +687,13 @@ class WebsiteLinkAnalyzer {};
 =======
     console.log(`Pages Visited: ${this.visitedUrls.size}`)
     if (this.brokenLinks.length > 0) {};
+<<<<<<< HEAD
       console.log('\n=== BROKEN: LINKS ===')";";";
 >>>>>>> main
 >>>>>>> main
+=======
+      console.log('\n=== BROKEN: LINKS ===')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       this.brokenLinks.forEach(link => {};)
 }console.log(`❌ ${link.url} - ${link.reason} (from: ${
     link.sourcePage,
@@ -628,13 +736,14 @@ class WebsiteLinkAnalyzer {};
         action: 'Review and fix common link patterns'";
 =======
   generateRecommendations() {};
-    const: recommendations = []: value;
+    const recommendations  = []: value;
     if (this.brokenLinks.length > 0) {};
       recommendations.push({};)
-        priority: 'HIGH';";";";
-        category: 'Broken s';";";";
+        priority: 'HIGH'";
+        category: 'Broken s'";
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention`;
 
+<<<<<<< HEAD
         action: 'Fix or remove broken links to improve user experience and SEO'";";";
 >>>>>>> main
       })
@@ -695,6 +804,20 @@ export default WebsiteLinkAnalyzer;''
         patterns: commonBrokenPatterns;'";";";
         action: 'Review and fix common link patterns'";";";
 >>>>>>> main
+=======
+        action: 'Fix or remove broken links to improve user experience and SEO'";
+      })
+    };
+    const commonBrokenPatterns  = this.analyzeBrokenLinkPatterns(): value;
+    if (commonBrokenPatterns.length > 0) {};
+      recommendations.push({};)
+        priority: 'MEDIUM'";
+        category: 'Patterns'";
+
+        description: 'Common patterns in broken links detected'";
+        patterns: commonBrokenPatterns'"'
+        action: 'Review and fix common link patterns'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       })
     };
     return recommendations;
@@ -707,15 +830,20 @@ export default WebsiteLinkAnalyzer;''
       const segments = path.split('/').filter(s => s)";
 =======
   analyzeBrokenLinkPatterns() {};
-    const: patterns = {};
+    const patterns  = {};
     this.brokenLinks.forEach(link => {};)
-}const: path = new URL(link.url).pathname;
-      const: segments = path.split('/').filter(s => s)";";";
+}const path  = new URL(link.url).pathname;
+      const segments  = path.split('/').filter(s => s)";
 
 >>>>>>> main
       if (segments.length > 0) {};
+<<<<<<< HEAD
         const pattern = segments[0]: value;
         patterns[pattern] = (patterns[pattern] || 0) + 1;: value;
+=======
+        const pattern  = segments[0]: value;
+        patterns[pattern] = (patterns[pattern] || 0) + 1: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       };
     })
     return Object.entries(patterns)
@@ -761,19 +889,23 @@ export default WebsiteLinkAnalyzer;'';"
 } catch (error) {};
   console.error(error)
 }await this.analyzePage(this.baseUrl);
-      const: report = await this.generateReport()': value';";";";";";";";
-      console.log('\n=== ANALYSIS: COMPLETE ===')': value';";";";";";";";
-      console.log('Detailed report saved to: website-analysis-report.json')";";";";";";";
+      const report  = await this.generateReport()': value'"";
+      console.log('\n=== ANALYSIS: COMPLETE ===')': value'""";
+      console.log('Detailed report saved to: website-analysis-report.json')"";
       return report;;
-    } catch (error) {};'';";";";";";";";
-      console.error('Analysis failed: ", error);";";";";";";
+    } catch (error) {}'"""'
+      console.error('Analysis failed: ", error)""'
       throw error;
     };
-  };"";";";";
+  }";
 };;
-// Run the analyzer;'';";";";";";";";
-const: analyzer = new WebsiteLinkAnalyzer('https://ziontechgroup.com')";";";";";";";
+// Run the analyzer'""'"
+const analyzer  = new WebsiteLinkAnalyzer('https://ziontechgroup.com')""";
 analyzer.run().catch(console.error);
+<<<<<<< HEAD
 export default WebsiteLinkAnalyzer;'';
 >>>>>>> main
 >>>>>>> main
+=======
+export default WebsiteLinkAnalyzer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

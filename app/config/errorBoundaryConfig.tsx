@@ -10,6 +10,7 @@ import React from 'react';";";";";
 import SEOHead from './components/SEOHead";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ConfigPage: React.FC  =  () => {";
   return (;";";
     <>;";";";
@@ -25,13 +26,22 @@ const ConfigPage: React.FC  =  () => {";
 import { Helmet } from "react-helmet-async";";
 const: ErrorboundaryconfigPage = () => {}
 >>>>>>> main
+=======
+import { Helmet } from "react-helmet-async";
+const ErrorboundaryconfigPage  = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 }
   return ()
     <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Helmet></Helmet>
         <title>Errorboundaryconfig | Zion Tech Group</title>
+<<<<<<< HEAD
         <metaname="description">"
           content="Professional errorboundaryconfig services by Zion Tech Group""
+=======
+        <metaname="description">";
+          content="Professional errorboundaryconfig services by Zion Tech Group";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         />
       </Helmet>
       <div  className ="pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
@@ -50,6 +60,7 @@ const: ErrorboundaryconfigPage = () => {}
           </p>
           <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>"
             <>
+<<<<<<< HEAD
               to="/contact""
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center""
             ></>
@@ -59,6 +70,17 @@ const: ErrorboundaryconfigPage = () => {}
             <>
               to="/contact""
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300""
+=======
+              to="/contact";
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center";
+            ></>
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />";
+            </>
+            <>
+              to="/contact";
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             ></>
               Learn More
             </>
@@ -70,16 +92,22 @@ const: ErrorboundaryconfigPage = () => {}
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
+=======
+import React from 'react'";
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 ;
 const ConfigPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
+<<<<<<< HEAD
         title="Config - Zion Tech Group"";";
         description="Professional config solutions for modern businesses";";
       />";";
@@ -96,3 +124,20 @@ const ConfigPage: React.FC = () => {
 ;"
 >>>>>>> main
 export default ConfigPage;'";'";"
+=======
+        title="Config - Zion Tech Group";
+        description="Professional config solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Config</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ConfigPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

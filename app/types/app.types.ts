@@ -6,6 +6,7 @@
  * Performance Metrics Interface
  * Web Vitals and performance measurement types
  */;
+<<<<<<< HEAD
 export interface PerformanceMetrics {;
   fcp?: number; // First Contentful Paint;
   lcp?: number; // Largest Contentful Paint;};
@@ -13,6 +14,14 @@ export interface PerformanceMetrics {;
   cls?: number; // Cumulative Layout Shift;};
   ttfb?: number; // Time to First Byte};
 };
+=======
+export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;
+  lcp?: number; // Largest Contentful Paint;}
+  fid?: number; // First Input Delay;}
+  cls?: number; // Cumulative Layout Shift;}
+  ttfb?: number; // Time to First Byte}
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 /**;
  * Performance Report Interface;
  */;
@@ -45,9 +54,9 @@ export interface MemoryStats {";";";
   totalJSHeapSiz",""
 =======
 export interface PerformanceReport {
-  webVitals: "Partial<PerformanceMetrics>;""";
+  webVitals: "Partial<PerformanceMetrics>";
   resources: ResourceStats;
-  memor",""";
+  memor",";
     y: MemoryStats | null;
   timestam,
     p: number;
@@ -56,10 +65,10 @@ export interface PerformanceReport {
  * Resource Statistics Interface;
  */;
 export interface ResourceStats {
-  total: "number;""";
+  total: "number";
   scripts: number;
   styles: number;
-  image",""";
+  image",";
     s: number;
   font,
     s: number;
@@ -68,9 +77,14 @@ export interface ResourceStats {
  * Memory Statistics Interface;
  */;
 export interface MemoryStats {
+<<<<<<< HEAD
   usedJSHeapSize: "number;""";
   totalJSHeapSiz",""";
 >>>>>>> main
+=======
+  usedJSHeapSize: "number";
+  totalJSHeapSiz",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     e: number;
   jsHeapSizeLimi,
     t: number;
@@ -102,10 +116,14 @@ export interface LayoutShift extends PerformanceEntry {}
  * Performance with Memory Interface;
  */;
 export interface PerformanceWithMemory extends Performance {
-  memory: "{""";
+  memory: "{";
     usedJSHeapSize: number;
+<<<<<<< HEAD
     totalJSHeapSiz",""";
 >>>>>>> main
+=======
+    totalJSHeapSiz",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     e: number;
     jsHeapSizeLimi,
     t: number;
@@ -130,15 +148,19 @@ export interface ServiceConfig {";";";
  * Service Configuration Interface;
  */;
 export interface ServiceConfig {
-  id: "string;""";
+  id: "string";
   name: string;
   description: string;
   icon: string;
   category: string;
   features: string[];
   pricing?: {
+<<<<<<< HEAD
     startin",""";
 >>>>>>> main
+=======
+    startin",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     g: number;
     currenc,
     y: string;
@@ -156,8 +178,12 @@ export interface BlogPost {";";";
  * Blog Post Interface;
  */;
 export interface BlogPost {
+<<<<<<< HEAD
   id: "string;""";
 >>>>>>> main
+=======
+  id: "string";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   title: string;
   slug: string;
   excerpt: string;
@@ -178,8 +204,12 @@ export interface BlogPost {
   readingTime: number;
   seo: {
     title: string;
+<<<<<<< HEAD
     descriptio",""";
 >>>>>>> main
+=======
+    descriptio",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     n: string;
     keyword,
     s: string[];
@@ -202,13 +232,17 @@ export interface ContactForm {";";";
  * Contact Form Interface;
  */;
 export interface ContactForm {
-  name: "string;""";
+  name: "string";
   email: string;
   company?: string;
   phone?: string;
   service: string;
+<<<<<<< HEAD
   messag",""";
 >>>>>>> main
+=======
+  messag",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     e: string;
   budget?: string;
   timeline?: string;
@@ -242,9 +276,14 @@ export interface SEOMetadata {";";";
  * SEO Metadata Interface;
  */;
 export interface SEOMetadata {
+<<<<<<< HEAD
   title: "string;""";
   descriptio",""";
 >>>>>>> main
+=======
+  title: "string";
+  descriptio",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     n: string;
   keyword,
     s: string[];
@@ -284,13 +323,17 @@ export interface Testimonial {";";";
  * Testimonial Interface;
  */;
 export interface Testimonial {
-  id: "string;""";
+  id: "string";
   name: string;
   company: string;
   position: string;
   content: string;
+<<<<<<< HEAD
   ratin",""";
 >>>>>>> main
+=======
+  ratin",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     g: number;
   avatar?: string;
   feature,
@@ -308,8 +351,12 @@ export interface CaseStudy {";";";
  * Case Study Interface;
  */;
 export interface CaseStudy {
+<<<<<<< HEAD
   id: "string;""";
 >>>>>>> main
+=======
+  id: "string";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   title: string;
   slug: string;
   client: string;
@@ -347,16 +394,16 @@ export interface TeamMember {";";";
   solution: string;
   results: {
     metric: string;
-    valu",""";
+    valu",";
     e: string;
     improvemen,
     t: string;
   }[];
-  technologies: "string[];""";
+  technologies: "string[]";
   duration: string;
   teamSize: number;
   featured: boolean;
-  image",""";
+  image",";
     s: string[];
   publishedA,
     t: string;
@@ -365,12 +412,16 @@ export interface TeamMember {";";";
  * Team Member Interface;
  */;
 export interface TeamMember {
-  id: "string;""";
+  id: "string";
   name: string;
   position: string;
   bio: string;
+<<<<<<< HEAD
   avata",""";
 >>>>>>> main
+=======
+  avata",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     r: string;
   socia,
     l: {
@@ -409,10 +460,10 @@ export interface NewsletterSubscription {";";";
  * FAQ Item Interface;
  */;
 export interface FAQItem {
-  id: "string;""";
+  id: "string";
   question: string;
   answer: string;
-  categor",""";
+  categor",";
     y: string;
   orde,
     r: number;
@@ -421,11 +472,15 @@ export interface FAQItem {
  * Newsletter Subscription Interface;
  */;
 export interface NewsletterSubscription {
-  email: "string;""";
+  email: "string";
   name?: string;
   interests: string[];
+<<<<<<< HEAD
   subscribedA",""";
 >>>>>>> main
+=======
+  subscribedA",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     t: string;
   activ,
     e: boolean;
@@ -462,12 +517,16 @@ export interface ThemeConfig {";";";
  * Theme Configuration Interface;
  */;
 export interface ThemeConfig {
-  mode: "'light' | 'dark' | 'system;"'"'"'"";";
+  mode: "'light' | 'dark' | 'system"'"'"'";
   primaryColor: string;
   secondaryColor: string;
   accentColor: string;
+<<<<<<< HEAD
   fontFamil",""";
 >>>>>>> main
+=======
+  fontFamil",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     y: string;
   borderRadiu,
     s: number;
@@ -506,19 +565,23 @@ export interface UserPreferences {";";";
  * User Preferences Interface;
  */;
 export interface UserPreferences {
-  theme: "ThemeConfig;""";
+  theme: "ThemeConfig";
   language: string;
   notifications: {
     email: boolean;
-    pus",""";
+    pus",";
     h: boolean;
     sm,
     s: boolean;
   };
-  privacy: "{""";
+  privacy: "{";
     analytics: boolean;
+<<<<<<< HEAD
     marketin",""";
 >>>>>>> main
+=======
+    marketin",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     g: boolean;
     functiona,
     l: boolean;
@@ -574,31 +637,35 @@ export interface BuildConfig {";";";
  * API Endpoint Types;
  */;
 export type: ApiEndpoint =;
-  | '/api/contact;''";
-  | '/api/newsletter;''";
-  | '/api/analytics;''";
-  | '/api/performance;''";
-  | '/api/health;''";
+  | '/api/contact'";
+  | '/api/newsletter'";
+  | '/api/analytics'";
+  | '/api/performance'";
+  | '/api/health'";
 /**;
  * HTTP Method Types;
  */;
-export type: HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH;''";
+export type: HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'";
 /**;
  * Environment Types;
  */;
-export type: Environment = 'development' | 'staging' | 'production;''";
+export type: Environment = 'development' | 'staging' | 'production'";
 /**;
  * Build Configuration Interface;
  */;
 export interface BuildConfig {
-  environment: "Environment;""";
+  environment: "Environment";
   version: string;
   buildTime: string;
   features: {
     analytics: boolean;
     performanceMonitoring: boolean;
+<<<<<<< HEAD
     errorReportin",""";
 >>>>>>> main
+=======
+    errorReportin",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     g: boolean;
     pw,";
     a: boolean;";";

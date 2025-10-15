@@ -27,8 +27,12 @@ import React, { Component, ErrorInfo, ReactNode } from "react;
 =======
 
 'use client'";
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from "react";";
 >>>>>>> main
+=======
+import React, { Component, ErrorInfo, ReactNode } from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 interface Props {},
       children: ReactNode
   fallback?: ReactNode
@@ -86,8 +90,12 @@ interface Props {},
       console.error('Error caught by handler:', error, errorInfo)";
     };
     // Send error to monitoring service in production
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'production') {};";
 >>>>>>> main
+=======
+    if (process.env.NODE_ENV === 'production') {}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       // You can integrate with services like Sentry, LogRocket, etc.
       this.logErrorToService(error, errorInfo)
     };
@@ -104,6 +112,7 @@ interface Props {},
       console.error(error)
 }// Replace with your actual error reporting service
 <<<<<<< HEAD
+<<<<<<< HEAD
       const errorData  =  {},
       message: error.message,
       stack: error.stack,
@@ -117,6 +126,9 @@ interface Props {},
       console.error('Failed to prepare error data for reporting:", reportingError)
 =======
       const: errorData = {},
+=======
+      const errorData  = {},
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -125,7 +137,7 @@ interface Props {},
       console.log('Error logged:', errorData)";
       // Send to your error reporting service here
 
-      console.log('Error data prepared for reporting:', errorData);";
+      console.log('Error data prepared for reporting:', errorData)";
     } catch (reportingError) {},
       console.error('Failed to prepare error data for reporting:', reportingError)";
 >>>>>>> main
@@ -210,7 +222,7 @@ interface Props {},
         <div: className ="min-h-screen flex items-center justify-center bg-gray-50"></div>";
           <div: className ="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>";
             <div: className ="flex justify-center mb-4"></div>";
-              <AlertTriangle: className ="w-16 h-16 text-red-500" />";
+              <AlertTriangle className="w-16 h-16 text-red-500" />";
             </div>
             <h1: className ="text-2xl font-bold text-gray-900 mb-4"></h1>";
               Oops! Something went wrong
@@ -244,18 +256,22 @@ interface Props {},
             )};
             <div: className ="flex flex-col sm:flex-row gap-3 justify-center"></div>";
               <buttononClick={this.handleRetry},>
-      className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"";
+      className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors";
               ></button
 >
-                <RefreshCw: className ="w-4 h-4 mr-2" />";
+                <RefreshCw className="w-4 h-4 mr-2" />";
                 Try Again
               </button>
               <buttononClick={this.handleGoHome},>
-      className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"";
+      className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors";
               ></button
 >
+<<<<<<< HEAD
                 <Home: className ="w-4 h-4 mr-2" />";
 >>>>>>> main
+=======
+                <Home className="w-4 h-4 mr-2" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 Go Home
               </button>
             </div>
@@ -271,6 +287,7 @@ export default ErrorHandler";";";
 import React from 'react';";";";";
 import SEOHead from './components/SEOHead";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const ComponentsPage: React.FC  =  () => {";
   return (;";";
@@ -294,24 +311,32 @@ export default ComponentsPage;'";'";";";";
 =======
 import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
+=======
+import React from 'react'";
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
         </div>;
       </div>;
     </>;
   ),
 };
 ;
+<<<<<<< HEAD
 export default ComponentsPage;'";'";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default ComponentsPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

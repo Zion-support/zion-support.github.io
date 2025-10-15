@@ -20,10 +20,14 @@ class Logger {
  * Only logs in development environment;
  */;
 <<<<<<< HEAD
+<<<<<<< HEAD
 type: LogLevel = 'log' | 'warn' | 'error' | 'info' | 'debug';";";";";";
 
 =======
 type: LogLevel = 'log' | 'warn' | 'error' | 'info' | 'debug';";";";";";";";
+=======
+type: LogLevel = 'log' | 'warn' | 'error' | 'info' | 'debug'""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 ;
 >>>>>>> main
 interface LoggerConfig {
@@ -63,13 +67,17 @@ class Logger {
     return `[${timestamp}] [${level.toUpperCase()}] ${message}`
 =======
 ;
-  private shouldLog(): boolean {';';";";";";";";";
-    return process.env.NODE_ENV === 'development' || this.config.enableConsole;";";";";";";";
+  private shouldLog(): boolean {'""'"
+    return process.env.NODE_ENV === 'development' || this.config.enableConsole""";
   }
 ;
 >>>>>>> main
   private formatMessage(level: LogLevel, message: string): string {
+<<<<<<< HEAD
     const timestamp = new Date().toISOString();,
+=======
+    const timestamp  = new Date().toISOString();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
 <<<<<<< HEAD
   };";
@@ -133,16 +141,22 @@ class Logger {
 
   log(message: string, ...args: any[]): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (this.shouldLog()) {';';";"
       console.log(this.formatMessage('log', message), ...args);";";"
 =======
     if (this.shouldLog()) {';';";";";";";";";
       console.log(this.formatMessage('log', message), ...args);";";";";";";";
 >>>>>>> main
+=======
+    if (this.shouldLog()) {'""'"
+      console.log(this.formatMessage('log', message), ...args)""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
   }
 
   info(message: string, ...args: any[]): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (this.shouldLog()) {';';";"
       console.info(this.formatMessage('info', message), ...args);";";"
@@ -150,10 +164,15 @@ class Logger {
     if (this.shouldLog()) {';';";";";";";";";
       console.info(this.formatMessage('info', message), ...args);";";";";";";";
 >>>>>>> main
+=======
+    if (this.shouldLog()) {'""'"
+      console.info(this.formatMessage('info', message), ...args)""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
   }
 
   warn(message: string, ...args: any[]): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (this.shouldLog()) {';';";"
       console.warn(this.formatMessage('warn', message), ...args);";";"
@@ -161,10 +180,15 @@ class Logger {
     if (this.shouldLog()) {';';";";";";";";";
       console.warn(this.formatMessage('warn', message), ...args);";";";";";";";
 >>>>>>> main
+=======
+    if (this.shouldLog()) {'""'"
+      console.warn(this.formatMessage('warn', message), ...args)""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
   }
 
   error(message: string, ...args: any[]): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Always log errors, even in production';';";"
     console.error(this.formatMessage('error', message), ...args);";";"
@@ -178,10 +202,18 @@ class Logger {
     if (this.config.enableRemote) {';';";";";";";";";
       this.sendToRemote('error', message, args);";";";";";";";
 >>>>>>> main
+=======
+    // Always log errors, even in production'""'"
+    console.error(this.formatMessage('error', message), ...args)""";
+    // Send to remote logging service in production;
+    if (this.config.enableRemote) {'""'"
+      this.sendToRemote('error', message, args)""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
   }
 
   debug(message: string, ...args: any[]): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (this.shouldLog()) {';';";"
       console.debug(this.formatMessage('debug', message), ...args);";";"
@@ -189,12 +221,17 @@ class Logger {
     if (this.shouldLog()) {';';";";";";";";";
       console.debug(this.formatMessage('debug', message), ...args);";";";";";";";
 >>>>>>> main
+=======
+    if (this.shouldLog()) {'""'"
+      console.debug(this.formatMessage('debug', message), ...args)""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
   }
 
   private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void> {
     try {
       if (this.config.remoteEndpoint) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         await fetch(this.config.remoteEndpoint, {';';";"
           method= 'POST',;";";"
@@ -230,6 +267,11 @@ export default logger;';'
           method: 'POST',;";";";";";";";
           headers: {';';";";";";";";";
             'Content-Type': 'application/json';";";";";";";";
+=======
+        await fetch(this.config.remoteEndpoint, {'""'"
+          method: 'POST',""";
+          headers: {'""'Content-Type': 'application/json'"""'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           },;
           body: JSON.stringify({
             level,;
@@ -267,12 +309,16 @@ export default logger;';';";";";";
 }
 ;
 // Create singleton instance;
-const: logger = new Logger({';';";";";";";";";
-  enableConsole: process.env.NODE_ENV === 'development',';";";";";";";";
-  enableRemote: process.env.NODE_ENV === 'production',;";";";";";";";
+const logger  = new Logger({'""'"
+  enableConsole: process.env.NODE_ENV === 'development','"""'
+  enableRemote: process.env.NODE_ENV === 'production',"";
   remoteEndpoint: process.env.REACT_APP_LOGGING_ENDPOINT;
 });
 ;
+<<<<<<< HEAD
 export default logger;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default logger'"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -29,12 +29,19 @@ export default PerformanceMetrics;';'
 };
 interface PerformanceMetricsState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const PerformanceMetrics = (options: PerformanceMetricsOptions = {,
   }) => {;
     const stateRef = useRef<PerformanceMetricsState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const PerformanceMetrics  = (options: PerformanceMetricsOptions = {}) => {
+  const stateRef  = useRef<PerformanceMetricsState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default PerformanceMetrics;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default PerformanceMetrics;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default PerformanceMetrics''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

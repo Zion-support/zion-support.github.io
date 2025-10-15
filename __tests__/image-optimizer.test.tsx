@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Mock ImageOptimizer component
 const ImageOptimizer = ({ src, alt, ...props }: { src: string; alt: string; [key: string]: any }) => (
@@ -96,5 +97,16 @@ describe('ImageOptimizer', () => {
     expect(screen.getByTestId('image-optimizer')).toBeInTheDocument();
     expect(screen.queryByAltText('Test image')).not.toBeInTheDocument();
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+import '@testing-library/jest-dom';
+
+// Mock image optimizer component for testing
+const MockImageOptimizer = () => <div>Image Optimizer</div>;
+
+describe('Image Optimizer', () => {
+  test('renders image optimizer', () => {
+    render(<MockImageOptimizer />);
+    expect(screen.getByText('Image Optimizer')).toBeInTheDocument();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 });

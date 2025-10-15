@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';";"
 import { RefreshCw, Home, Bug }; from 'lucide-react';";"
 import { Link }; from 'react-router-dom';";"
@@ -180,6 +181,11 @@ interface Props {
 import React, { Component, ErrorInfo, ReactNode } from 'react';";
 import { RefreshCw, Home, Bug } from 'lucide-react';";
 import { Link } from 'react-router-dom';";
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { RefreshCw, Home, Bug } from 'lucide-react';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 >>>>>>> main
 interface Props {
@@ -251,6 +257,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {";";"
       console.error('Global Error Boundary caught an error:', error, errorInfo);";";"
     }
@@ -262,13 +269,21 @@ class GlobalErrorBoundary extends Component<Props, State> {
 =======
     if (process.env.NODE_ENV === 'development') {";";";";";";";
       console.error('Global Error Boundary caught an error:', error, errorInfo);";";";";";";";
+=======
+    if (process.env.NODE_ENV === 'development') {""";
+      console.error('Global Error Boundary caught an error:', error, errorInfo)"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
 
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {";";";";";";";
+    if (process.env.NODE_ENV === 'production') {""";
       // Here you would typically send the error to a logging service
+<<<<<<< HEAD
       console.error('Production error:', error, errorInfo);";";";";";";";
 >>>>>>> main
+=======
+      console.error('Production error:', error, errorInfo)"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
 
 >>>>>>> main
@@ -328,6 +343,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">";"
           <div  className ="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">";"
             <div  className ="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">";"
@@ -355,31 +371,42 @@ class GlobalErrorBoundary extends Component<Props, State> {
           <div: className ="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">";";";";
             <div: className ="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">";";";";
               <Bug: className ="w-8 h-8 text-red-400" />";";";";
+=======
+        <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">";
+          <div: className ="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">";
+            <div: className ="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">";
+              <Bug className="w-8 h-8 text-red-400" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </div>
             
-            <h1: className ="text-2xl font-bold text-white mb-4">";";";";
+            <h1: className ="text-2xl font-bold text-white mb-4">";
               Oops! Something went wrong
             </h1>
             
-            <p: className ="text-gray-300 mb-6">";";";";
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.";";";";";";";
+            <p: className ="text-gray-300 mb-6">";
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.""'"
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (";";";";";";";
-              <div: className ="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">";";";";
-                <h3: className ="text-red-400 font-semibold mb-2">Error Details:</h3>";";";";
-                <p: className ="text-red-200 text-sm font-mono break-all">";";";";
+            {process.env.NODE_ENV === 'development' && this.state.error && (""";
+              <div: className ="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">";
+                <h3: className ="text-red-400 font-semibold mb-2">Error Details:</h3>";
+                <p: className ="text-red-200 text-sm font-mono break-all">";
                   {this.state.error.message}
                 </p>
                 {this.state.errorId && (
+<<<<<<< HEAD
                   <p: className ="text-gray-400 text-xs mt-2">";";";";
 >>>>>>> main
+=======
+                  <p: className ="text-gray-400 text-xs mt-2">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                     Error ID: {this.state.errorId}
                   </p>
                 )}
               </div>
             )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div  className ="flex flex-col sm:flex-row gap-3">";"
               <button  onClick ={() => window.location.reload()}
@@ -395,19 +422,26 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 <Home: className ="w-4 h-4" />";"
 =======
             <div: className ="flex flex-col sm:flex-row gap-3">";";";";
+=======
+            <div: className ="flex flex-col sm:flex-row gap-3">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               <button: onClick ={() => window.location.reload()}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"";";";";
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300";
               >
-                <RefreshCw: className ="w-4 h-4" />";";";";
+                <RefreshCw className="w-4 h-4" />";
                 Try Again
               </button>
               
-              <Link: to ="/"";";";";
-                className="flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300"";";";";
+              <Link: to ="/";
+                className="flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300";
               >
+<<<<<<< HEAD
                 <Home: className ="w-4 h-4" />";";";";
 >>>>>>> main
 >>>>>>> main
+=======
+                <Home className="w-4 h-4" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 Go Home
               </Link>
             </div>

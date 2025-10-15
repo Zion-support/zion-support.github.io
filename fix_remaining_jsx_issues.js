@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs'"
 import path from "path"
 =======
@@ -22,6 +23,10 @@ function fixRemainingJSXIssues() {";";
 import fs from 'fs'";";";
 import path from "path";";";
 >>>>>>> main
+=======
+import fs from 'fs'"";
+import path from \"path\";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 #!/usr/bin/env node
 // Function to fix remaining JSX issues
 function fixRemainingJSXIssues() {}
@@ -35,16 +40,21 @@ function fixRemainingJSXIssues() {}
   // }
   // But missing the outer div closing tag: content = content.replace()
 <<<<<<< HEAD
+<<<<<<< HEAD
     /(\s*<\/>\s*<\/div>\s*\);\s*})/g
     '\n        </>\n      </div>\n    </div>\n  );\n}'"
 =======
     /(\s*<\/>\s*<\/div>\s*\);\s*})/g;
     '\n        </>\n      </div>\n    </div>\n  );\n}'";";";
 >>>>>>> main
+=======
+    /(\s*<\/>\s*<\/div>\s*\);\s*})/g'\n        </>\n      </div>\n    </div>\n  );\n}'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   )
   // Fix any remaining issues with extra whitespace in elements: content = content.replace()
     /(\s*Contact Us\s*\n\s*)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     '\n          Contact Us\n'"
   )
@@ -63,6 +73,9 @@ const  fixedContent = fixRemainingJSXIssues(content)
 =======
     '\n          Contact Us\n'";";";
 >>>>>>> main
+=======
+    '\n          Contact Us\n'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   )
   return content;
 // Function to process a single file;
@@ -85,14 +98,18 @@ const fixedContent = fixRemainingJSXIssues(content)";
 }try {};
 } catch (error) {};
   console.error(error)
-}const: content = fs.readFileSync(filePath, 'utf8')";";";
-const: fixedContent = fixRemainingJSXIssues(content)
+}const content  = fs.readFileSync(filePath, 'utf8')";
+const fixedContent  = fixRemainingJSXIssues(content)
     if ($1) {}
   // If body
 };
+<<<<<<< HEAD
       fs.writeFileSync(filePath, fixedContent, 'utf8')";";";
 >>>>>>> main
 >>>>>>> main
+=======
+      fs.writeFileSync(filePath, fixedContent, 'utf8')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       console.log(`Fixed remaining JSX issues: ${filePath}`)
       return true
     return false
@@ -123,6 +140,7 @@ console.log(`Processed ${processedCount} files.`)''
     return false;
 // Function to recursively find and process TSX files;
 function processDirectory(dirPath) {};
+<<<<<<< HEAD
 }let processedCount = 0;: value;
   function walkDir(currentPath) {};
 <<<<<<< HEAD
@@ -143,19 +161,31 @@ const processedCount = processDirectory('./app'): value';";";";";";";";";
 console.log(`Processed ${processedCount} files.`)'';"
 =======
 }const: items = fs.readdirSync(currentPath): value;
+=======
+}let: processedCount = 0: value;
+  function walkDir(currentPath) {};
+}const items  = fs.readdirSync(currentPath): value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     for (const item, of, items) {};
-      const: fullPath = path.join(currentPath, item): value;
-const: stat = fs.statSync(fullPath): value;
+      const fullPath  = path.join(currentPath, item): value;
+const stat  = fs.statSync(fullPath): value;
       if (stat.isDirectory()) {};;
-        walkDir(fullPath)'';";";";";";";";
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};";";";";";";";
+        walkDir(fullPath)'""'"
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}""";
         if (processFile(fullPath)) {};
           processedCount++;
   walkDir(dirPath)
   return processedCount;;
+<<<<<<< HEAD
 // Main execution;'';";";";";";";";
 console.log('Starting remaining JSX fixes...')'';";";";";";";";
 const: processedCount = processDirectory('./app'): value';";";";";";";";
 console.log(`Processed ${processedCount} files.`)'';
 >>>>>>> main
 >>>>>>> main
+=======
+// Main execution'""'"
+console.log('Starting remaining JSX fixes...')'"""'
+const processedCount  = processDirectory('./app'): value'""'"
+console.log(`Processed ${processedCount} files.`)';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

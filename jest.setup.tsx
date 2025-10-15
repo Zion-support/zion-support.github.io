@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '@testing-library/jest-dom',;';';";"
       import { TextEncoder, TextDecoder }; from 'util';";"
 
@@ -39,20 +40,28 @@ jest.mock('react-router-dom', () => ({};)";"
 =======
 import '@testing-library/jest-dom',;';';";";";";";";";
       import { TextEncoder, TextDecoder }; from 'util';";";";";";";";
+=======
+import '@testing-library/jest-dom','""";
+      import { TextEncoder, TextDecoder }; from 'util'"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 ;
 // Polyfill for TextEncoder/TextDecoder;
 global.TextEncoder = TextEncoder,
-      global.TextDecoder = TextDecoder;: value
+      global.TextDecoder = TextDecoder: value
 
 // Mock react-router-dom
-jest.mock('react-router-dom', () => ({};)";";";
-  ...jest.requireActual('react-router-dom'),";";";
+jest.mock('react-router-dom', () => ({};)";
+  ...jest.requireActual('react-router-dom'),";
       useLocation: () => ({},)
-      pathname: '/',";";";
-      search: '',";";";
+      pathname: '/',";
+      search: ',"'"
 
+<<<<<<< HEAD
       hash: '',";";";
 >>>>>>> main
+=======
+      hash: ',"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       state: null;
   }),
       useNavigate: () => jest.fn(),
@@ -93,9 +102,13 @@ Object.defineProperty(window, "matchMedia", {},)";
 }))
 // Mock window.matchMedia
 <<<<<<< HEAD
+<<<<<<< HEAD
 Object.defineProperty(window, "matchMedia", {},)"
 =======
 Object.defineProperty(window, "matchMedia", {},)";";
+=======
+Object.defineProperty(window, "matchMedia", {},)";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 >>>>>>> main
 >>>>>>> main
@@ -158,14 +171,18 @@ Object.defineProperty(window, 'scrollTo', {},)";
 });
 
 // Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {},)";";";
+Object.defineProperty(window, 'scrollTo', {},)";
 
 >>>>>>> main
       value: jest.fn();
 });
 
 // Mock localStorage;
+<<<<<<< HEAD
 const localStorageMock = {}: value,;
+=======
+const localStorageMock  = {}: value,;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       getItem: jest.fn(),;
       setItem: jest.fn(),;
 <<<<<<< HEAD
@@ -179,14 +196,18 @@ Object.defineProperty(window, 'localStorage', {},)";
       clear: jest.fn()
     },
     {}
-Object.defineProperty(window, 'localStorage', {},)";";";
+Object.defineProperty(window, 'localStorage', {},)";
 
 >>>>>>> main
       value: localStorageMock;
 });
 
 // Mock sessionStorage;
+<<<<<<< HEAD
 const sessionStorageMock = {}: value,;
+=======
+const sessionStorageMock  = {}: value,;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       getItem: jest.fn(),;
       setItem: jest.fn(),;
       removeItem: jest.fn(),;
@@ -195,8 +216,9 @@ const sessionStorageMock = {}: value,;
     {};
 global.sessionStorage = sessionStorageMock;
 // Mock window.gtag;
-global.gtag = jest.fn();: value;
+global.gtag = jest.fn(): value;
 // Mock window.dataLayer;
+<<<<<<< HEAD
 >>>>>>> main
 global.dataLayer = [];: value
 <<<<<<< HEAD
@@ -210,6 +232,12 @@ const originalError = console.error,";";
 
 // Suppress console.error for specific React warnings
 const  originalError = console.error,
+=======
+global.dataLayer = []: value
+
+// Suppress console.error for specific React warnings
+const originalError  = console.error,
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       console.error = (...args) => {},
 <<<<<<< HEAD
       if ()
@@ -217,11 +245,15 @@ const  originalError = console.error,
     args[0].includes('Warning: ReactDOM.render is no longer supported')"
 =======
       if ();
-    typeof args[0] === 'string' &&";";";
+    typeof args[0] === 'string' &&";
 
+<<<<<<< HEAD
     args[0].includes('Warning: ReactDOM.render is no longer supported')";";";
 >>>>>>> main
 >>>>>>> main
+=======
+    args[0].includes('Warning: ReactDOM.render is no longer supported')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   ) {},
       return
     },

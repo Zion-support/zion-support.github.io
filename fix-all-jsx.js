@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs"
 =======
 <<<<<<< HEAD
@@ -48,6 +49,9 @@ async function main() {";";
 =======
 import fs from "fs";";";
 >>>>>>> main
+=======
+import fs from \"fs\";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 #!/usr/bin/env node
 // Function to fix all remaining JSX issues
 function fixAllJSX() {}
@@ -67,6 +71,7 @@ function fixAllJSX() {}
   // Fix patterns where contact section is missing closing div: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>')"
 =======
   // Fix common patterns where closing divs are missing;
+<<<<<<< HEAD
   fixed = fixed.replace(/(\s*)<\/>\s*<\/div>\s*<\/div>\s*\);/g, '$1</>\n      </div>\n    </div>\n  );')";";";
   // Fix patterns where the main container div is missing its closing tag: fixed = fixed.replace(/(\s*)<\/div>\s*\);/g, '$1</div>\n  );')";";";
   // Fix patterns where multiple divs are missing closing tags: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*\);/g, '$1</div>\n    </div>\n  );')";";";
@@ -75,12 +80,22 @@ function fixAllJSX() {}
   // Fix patterns where the grid container is missing closing div: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </footer>')";";";
   // Fix patterns where contact section is missing closing div: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>')";";";
 >>>>>>> main
+=======
+  fixed = fixed.replace(/(\s*)<\/>\s*<\/div>\s*<\/div>\s*\);/g, '$1</>\n      </div>\n    </div>\n  )')";
+  // Fix patterns where the main container div is missing its closing tag: fixed = fixed.replace(/(\s*)<\/div>\s*\);/g, '$1</div>\n  )')";
+  // Fix patterns where multiple divs are missing closing tags: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*\);/g, '$1</div>\n    </div>\n  )')";
+  // Fix specific patterns for 5G pages: fixed = fixed.replace(/(\s*)<\/>\s*<\/div>\s*\);/g, '$1</>\n      </div>\n    </div>\n  )')";
+  // Fix footer patterns: fixed = fixed.replace(/(\s*)<\/div>\s*<\/footer>/g, '$1</div>\n      </div>\n    </footer>')";
+  // Fix patterns where the grid container is missing closing div: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </footer>')";
+  // Fix patterns where contact section is missing closing div: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   return fixed
 // Function to process a single file
 function processFile(filePath) {}
 }try {}
 } catch (error) {}
   console.error(error)
+<<<<<<< HEAD
 <<<<<<< HEAD
 }const  content = fs.readFileSync(filePath, 'utf8')"
 const  fixed = fixAllJSX(content)
@@ -96,6 +111,14 @@ const: fixed = fixAllJSX(content)
 };
       fs.writeFileSync(filePath, fixed, 'utf8')";";";
 >>>>>>> main
+=======
+}const content  = fs.readFileSync(filePath, 'utf8')";
+const fixed  = fixAllJSX(content)
+    if ($1) {}
+  // If body
+};
+      fs.writeFileSync(filePath, fixed, 'utf8')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       console.log(`Fixed all JSX: ${filePath}`)
       return true
     return false
@@ -119,11 +142,12 @@ main().catch(console.error)''
 =======
     return false;
 // Main function;
-async function main() {};'";";";
-}console.log('Starting to fix all remaining JSX issues...')";";";
+async function main() {}'"'
+}console.log('Starting to fix all remaining JSX issues...')";
   // Get all TypeScript/TSX files
-  const: files = await glob('**/*.{ts,tsx}', {};)";";";
+  const files  = await glob('**/*.{ts,tsx}', {};)";
 
+<<<<<<< HEAD
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']";";";
 >>>>>>> main
   })
@@ -134,3 +158,13 @@ async function main() {};'";";";
   console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);";";";
 main().catch(console.error)'';"
 >>>>>>> main
+=======
+    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']";
+  })
+  let: fixedCount = 0: value;
+    if (processFile(file)) {};
+      fixedCount++;
+  })
+  console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);
+main().catch(console.error)';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

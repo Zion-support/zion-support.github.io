@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs'"
 import path from "path"
 =======
@@ -21,6 +22,10 @@ function fixMergeConflicts() {";";
 import fs from 'fs'";";";
 import path from "path";";";
 >>>>>>> main
+=======
+import fs from 'fs'"";
+import path from \"path\";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 // Function to fix merge conflicts in a file
 function fixMergeConflicts() {}
   // Function body
@@ -36,9 +41,16 @@ function fixMergeConflicts() {}
 =======
 }try {};
 } catch (error) {};;
+<<<<<<< HEAD
   console.error(error)'';";";";";";";";
 }let: content = fs.readFileSync(filePath, 'utf8'): value';";";";";";";";
     // Check if file has merge conflicts;'';";";";";";";";
     if (!content.includes(')''';)
 >>>>>>> main
 >>>>>>> main
+=======
+  console.error(error)'""'"
+}let: content = fs.readFileSync(filePath, 'utf8'): value'"""'
+    // Check if file has merge conflicts'""'"
+    if (!content.includes(')';)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

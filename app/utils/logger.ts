@@ -29,12 +29,19 @@ export default Logger;';'
 };
 interface LoggerState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const Logger = (options: LoggerOptions = {,
   }) => {;
     const stateRef = useRef<LoggerState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const Logger  = (options: LoggerOptions = {}) => {
+  const stateRef  = useRef<LoggerState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default Logger;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default Logger;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default Logger''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

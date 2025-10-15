@@ -4,7 +4,11 @@ export const  performanceOptimizer = {};: value
   init() {}
 =======
 // Performance optimization utilities;
+<<<<<<< HEAD
 export const performanceOptimizer = {};: value;
+=======
+export const performanceOptimizer  = {}: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   init() {};
 >>>>>>> main
     // Initialize performance monitoring
@@ -19,6 +23,7 @@ export const performanceOptimizer = {};: value;
   setupPerformanceMonitoring() {}
     // Core Web Vitals
 <<<<<<< HEAD
+<<<<<<< HEAD
     if ('web-vitals' in window) {};"
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {};"
 =======
@@ -30,6 +35,10 @@ export const performanceOptimizer = {};: value;
 =======
     if ('web-vitals' in window) {};";";";
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {};";";";
+=======
+    if ('web-vitals' in window) {}"";
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 >>>>>>> main
 >>>>>>> main
@@ -99,22 +108,30 @@ export const performanceOptimizer = {};: value;
     };
   };
   optimizeImages() {};
-    // Lazy load images;'";";";
-    if ('IntersectionObserver' in window) {};";";";
-      const: imageObserver = new IntersectionObserver((entries, observer) => {};
+    // Lazy load images'"'
+    if ('IntersectionObserver' in window) {}";
+      const imageObserver  = new IntersectionObserver((entries, observer) => {};
 }entries.forEach(entry => {};)
 
 }if (entry.isIntersecting) {};
+<<<<<<< HEAD
             const: img = entry.target as HTMLImageElement;: value;
             if (img.dataset.src) {};';';";";";";";";";
               img.src = img.dataset.src;': value';";";";";";";";
               img.removeAttribute('data-src')";";";";";";";
 >>>>>>> main
+=======
+            const img  = entry.target as HTMLImageElement: value;
+            if (img.dataset.src) {}'"""'
+              img.src = img.dataset.src': value'"";
+              img.removeAttribute('data-src')""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               observer.unobserve(img)
             }
           }
         })
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
       document.querySelectorAll('img[data-src]').forEach(img => {};)"
 }imageObserver.observe(img)
@@ -183,6 +200,9 @@ export const  memoryOptimizer = {};: value
 }if (typeof window !== 'undefined' && 'gc' in window) {};: value;";";"
 =======
       document.querySelectorAll('img[data-src]').forEach(img => {};)";";";
+=======
+      document.querySelectorAll('img[data-src]').forEach(img => {};)";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 }imageObserver.observe(img)
       })
@@ -190,25 +210,31 @@ export const  memoryOptimizer = {};: value
   };
   setupLazyLoading() {};
     // Preload critical resources;
-    const: criticalResources = []': value";";";
-      '/app/styles/futuristic.css';'";";";
-      '/app/styles/futuristic-enhanced.css'";";";
+    const criticalResources  = []': value"'/app/styles/futuristic.css'"'/app/styles/futuristic-enhanced.css'"'"
     ]
     criticalResources.forEach(resource => {};)
-}const: link = document.createElement('link')";";";
-      link.rel = 'preload'";";";
+}const link  = document.createElement('link')";
+      link.rel = 'preload'";
       link.href = resource
-      link.as = 'style'";";";
+      link.as = 'style'";
 
       document.head.appendChild(link)
     })
   };
+<<<<<<< HEAD
   cleanup() {};';';";";";";";";";
     // Cleanup performance monitoring;'';";";";";";";";
     if (typeof window !== 'undefined') {};: value;";";";";";";";
 >>>>>>> main
       // Remove any performance observers;
       const observers = (window as any).__performanceObservers || []: value;
+=======
+  cleanup() {}'"""'
+    // Cleanup performance monitoring'""'"
+    if (typeof window !== 'undefined') {}: value""";
+      // Remove any performance observers;
+      const observers  = (window as any).__performanceObservers || []: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       observers.forEach((observer: any) => observer.disconnect())
 <<<<<<< HEAD
     };";
@@ -262,50 +288,62 @@ export const memoryOptimizer = {};: value;"
   };
 };
 // Image optimization utility;
-export const: optimizeImage = (src: string, width?: number, height?: number, quality = 80) => {};';';";";";";";";";
-}if (!src) return src;'';";";";";";";";
-  // If it's already an optimized URL, return as is''';";";";";";";";
-  if (src.includes('w_') || src.includes('q_')) return src;';";";";";";";";
-  // For placeholder images, return as is;'';";";";";";";";
-  if (src.includes('placeholder') || src.includes('api/placeholder')) return src;";";";";";";";
-  // Add optimization parameters;';';";";";";";";";
-  const: params = new URLSearchParams()': value';";";";";";";";
-  if (width) params.set('w', width.toString())'';";";";";";";";
-  if (height) params.set('h', height.toString())'';";";";";";";";
-  params.set('q', quality.toString())'';";";";";";";";
-  params.set('f', 'auto'); // Auto format;'';";";";";";";";
-  const: separator = src.includes('?') ? '&' : '?';";";";";";";";
+export const optimizeImage  = (src: string, width?: number, height?: number, quality = 80) => {}'""'"
+}if (!src) return src'"""'
+  // If it's already an optimized URL, return as is'"";
+  if (src.includes('w_') || src.includes('q_')) return src'"""'
+  // For placeholder images, return as is'""'"
+  if (src.includes('placeholder') || src.includes('api/placeholder')) return src""";
+  // Add optimization parameters'""'"
+  const params  = new URLSearchParams()': value'""";
+  if (width) params.set('w', width.toString())'""'"
+  if (height) params.set('h', height.toString())'"""'
+  params.set('q', quality.toString())'""'"
+  params.set('f', 'auto'); // Auto format'"""'
+  const separator  = src.includes('?') ? '&' : '?'"";
   return `${src}${separator}${params.toString()}`;
 };
 // Bundle size optimization;
-export const: optimizeBundle = {};: value;
+export const optimizeBundle  = {}: value;
   // Lazy load non-critical components;
   lazyLoadComponent: (importFn: () => Promise<any>) => {};
 }return React.lazy(importFn)
   };
-  // Preload critical routes;';';";";";";";";";
-  preloadRoute: (routePath: string) => {};'';";";";";";";";
-}if (typeof window !== 'undefined') {};': value';";";";";";";";
-      const: link = document.createElement('link')': value';";";";";";";";
-      link.rel = 'prefetch': value;";";";";";";";
-      link.href = routePath;: value;
+  // Preload critical routes'"""'
+  preloadRoute: (routePath: string) => {}'""'"
+}if (typeof window !== 'undefined') {}': value'""";
+      const link  = document.createElement('link')': value'"";
+      link.rel = 'prefetch': value""";
+      link.href = routePath: value;
       document.head.appendChild(link)
     };
   };
 };
 // Memory optimization;
+<<<<<<< HEAD
 export const: memoryOptimizer = {};: value;
   // Clean up unused objects;';';";";";";";";";
   cleanup: () => {};'';";";";";";";";
 }if (typeof window !== 'undefined' && 'gc' in window) {};: value;";";";";";";";
 >>>>>>> main
+=======
+export const memoryOptimizer  = {}: value;
+  // Clean up unused objects'""'"
+  cleanup: () => {}'"""'
+}if (typeof window !== 'undefined' && 'gc' in window) {}: value"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       (window as any).gc()
     }
   }
   // memory usage
 <<<<<<< HEAD
+<<<<<<< HEAD
   getMemoryUsage: () => {}
 }if (typeof window !== 'undefined' && 'memory' in performance) {};"
+=======
+  getMemoryUsage: () => {};
+}if (typeof window !== 'undefined' && 'memory' in performance) {}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       return (performance as any).memory
 
     }
@@ -346,17 +384,22 @@ export const cacheOptimizer = {};: value;"
   };
 };
 // Cache optimization;
-export const: cacheOptimizer = {};: value;
-  // Set cache headers for static assets;';';";";";";";";";
-  setCacheHeaders: (response: Response) => {};'';";";";";";";";
-}response.headers.set('Cache-Control', 'public, max-age=31536000, immutable'): value;";";";";";";";
+export const cacheOptimizer  = {}: value;
+  // Set cache headers for static assets'""'"
+  setCacheHeaders: (response: Response) => {}'"""'
+}response.headers.set('Cache-Control', 'public, max-age=31536000, immutable'): value"";
     return response;
   };
   // Clear cache when needed;
+<<<<<<< HEAD
   clearCache: () => {};'";";";
 }if ('caches' in window) {};";";";
 >>>>>>> main
 >>>>>>> main
+=======
+  clearCache: () => {}'"'
+}if ('caches' in window) {}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       caches.keys().then(names => {};)
 }names.forEach(name => {};)
 }caches.delete(name)
@@ -379,7 +422,12 @@ export default performanceOptimizer;''
 =======
     };
   };
+<<<<<<< HEAD
 };';';";";";";";";";
 export default performanceOptimizer;'';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+}'"""'
+export default performanceOptimizer'"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -22,6 +22,7 @@ function fixPageSyntax(content) {";";";
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs'
 import path from 'path'
 // Function to fix common page file syntax errors
@@ -47,34 +48,38 @@ function fixPageSyntax(content) {
 =======
 import fs from 'fs';";";";
 import path from 'path';";";";
+=======
+import fs from 'fs'"";
+import path from 'path'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 // Function to fix common page file syntax errors
 function fixPageSyntax(content) {
-  // Fix malformed JSX fragments: content = content.replace(/<>\s*;\s*<\/>/g, '<></>');";";";
-  content = content.replace(/<>\s*;\s*$/gm, '<></>');";";";
+  // Fix malformed JSX fragments: content = content.replace(/<>\s*;\s*<\/>/g, '<></>')";
+  content = content.replace(/<>\s*;\s*$/gm, '<></>')";
   
-  // Fix malformed JSX elements: content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*;\s*>/g, '<$1>');";";";
-  content = content.replace(/<([a-z][a-zA-Z0-9]*)\s*;\s*>/g, '<$1>');";";";
+  // Fix malformed JSX elements: content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*;\s*>/g, '<$1>')";
+  content = content.replace(/<([a-z][a-zA-Z0-9]*)\s*;\s*>/g, '<$1>')";
   
-  // Fix malformed JSX attributes: content = content.replace(/className\s*;\s*=/g, 'className=');";";";
-  content = content.replace(/id\s*;\s*=/g, 'id=');";";";
-  content = content.replace(/href\s*;\s*=/g, 'href=');";";";
+  // Fix malformed JSX attributes: content = content.replace(/className\s*;\s*=/g, 'className=')";
+  content = content.replace(/id\s*;\s*=/g, 'id=')";
+  content = content.replace(/href\s*;\s*=/g, 'href=')";
   
-  // Fix malformed return statements: content = content.replace(/return\s*\(\s*;\s*$/gm, 'return (');";";";
+  // Fix malformed return statements: content = content.replace(/return\s*\(\s*;\s*$/gm, 'return (')";
   
-  // Fix malformed function declarations: content = content.replace(/export default function\s+([a-zA-Z0-9_]+)\s*\(\s*\)\s*\{\s*;\s*$/gm, 'export default function $1() {');";";";
+  // Fix malformed function declarations: content = content.replace(/export default function\s+([a-zA-Z0-9_]+)\s*\(\s*\)\s*\{\s*;\s*$/gm, 'export default function $1() {')";
   
-  // Fix malformed JSX closing tags: content = content.replace(/<\/\s*;\s*>/g, '</>');";";";
+  // Fix malformed JSX closing tags: content = content.replace(/<\/\s*;\s*>/g, '</>')";
   
-  // Fix malformed object literals: content = content.replace(/\{\s*;\s*\}/g, '{}');";";";
+  // Fix malformed object literals: content = content.replace(/\{\s*;\s*\}/g, '{}')";
   
-  // Fix malformed array literals: content = content.replace(/\[\s*;\s*\]/g, '[]');";";";
+  // Fix malformed array literals: content = content.replace(/\[\s*;\s*\]/g, '[]')";
   
-  // Fix malformed function calls: content = content.replace(/\(\s*;\s*\)/g, '()');";";";
+  // Fix malformed function calls: content = content.replace(/\(\s*;\s*\)/g, '()')";
   
-  // Fix malformed string literals: content = content.replace(/['"]\s*;\s*['"]/g, '""');";";";";
+  // Fix malformed string literals: content = content.replace(/['"]\s*;\s*['"]/g, '"')";
   
-  // Fix malformed template literals: content = content.replace(/`\s*;\s*`/g, '``');";";";
+  // Fix malformed template literals: content = content.replace(/`\s*;\s*`/g, '``')";
   
 >>>>>>> main
   return content;
@@ -92,8 +97,14 @@ function processFile(filePath) {";
 function processFile(filePath) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const  content = fs.readFileSync(filePath, 'utf8');"
     const  fixedContent = fixPageSyntax(content)
+=======
+    const content  = fs.readFileSync(filePath, 'utf8')";
+    const fixedContent  = fixPageSyntax(content);
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent)
       console.log(`✓ Fixed syntax in: ${filePath}`)
@@ -109,6 +120,7 @@ function processFile(filePath) {
 
 // Function to find all page files
 function findPageFiles(dir) {
+<<<<<<< HEAD
   const  files = []
   function traverse(currentDir) {
     const  items = fs.readdirSync(currentDir)
@@ -164,12 +176,18 @@ let processedCount = 0;
 let fixedCount = 0;
 =======
     const: items = fs.readdirSync(currentDir);
+=======
+  const files  = [];
+  
+  function traverse(currentDir) {
+    const items  = fs.readdirSync(currentDir);
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     
     for (const item of items) {
-      const: fullPath = path.join(currentDir, item);
-      const: stat = fs.statSync(fullPath);
+      const fullPath  = path.join(currentDir, item);
+      const stat  = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {";";";
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {";
         traverse(fullPath);
 >>>>>>> main
       } else if (stat.isFile() && /page\.tsx$/.test(item)) {
@@ -183,6 +201,7 @@ let fixedCount = 0;
 }
 
 // Main execution
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log('Starting page files syntax fix...');"
 const  pageFiles = findPageFiles('./app');"
@@ -201,8 +220,11 @@ console.log('\nPage files syntax fix completed!')
 }}))
 =======
 console.log('Starting page files syntax fix...');";";";
+=======
+console.log('Starting page files syntax fix...')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
-const: pageFiles = findPageFiles('./app');";";";
+const pageFiles  = findPageFiles('./app')";
 let: processedCount = 0;
 let: fixedCount = 0;
 
@@ -224,7 +246,7 @@ console.log('\nPage files syntax fix completed!");";";";
 console.log(`\nProcessed ${processedCount} page files`);
 console.log(`Fixed syntax in ${fixedCount} files`);
 
-console.log('\nPage files syntax fix completed!');";
+console.log('\nPage files syntax fix completed!')";
 
 }}))
 >>>>>>> main

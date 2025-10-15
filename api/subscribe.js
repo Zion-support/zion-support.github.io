@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // API endpoint for general subscription
 <<<<<<< HEAD
 import fs from 'fs'
@@ -215,3 +216,8 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+export default function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

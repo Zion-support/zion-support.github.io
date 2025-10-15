@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import SEOHead from '../components/SEOHead'
 =======
 <<<<<<< HEAD
@@ -53,106 +54,108 @@ const TutorialsPage: React.FC  =  () => {};";";";
       image: '/api/placeholder/600/400",
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
-import React from 'react;'";
-import { Helmet } from 'react-helmet-async;'";
-import { Link } from 'react-router-dom;'";
+import React from 'react'
+import { Helmet  } from 'react-helmet-async'
+import { Link  } from 'react-router-dom'
 import {
   AcademicCapIcon,
   PlayIcon,
   DocumentTextIcon,
-  ClockIcon,
-  UserGroupIcon,
+  ClockIcon,;
+  UserGroupIcon,;
   ArrowRightIcon;
-} from '@heroicons/react/24/outline;'";
+} from '@heroicons/react/24/outline'";
 const TutorialsPage: React.FC = () => {
-  const: tutorials = [
+  const tutorials  = [
     {
       id: 1,;
-      title: 'Getting Started with AI Solutions',''";
-      description: 'Learn the fundamentals of artificial intelligence and how to implement AI solutions in your business.',''";
-      duration: '2 hours',''";
-      level: 'Beginner',''";
-      category: 'AI Solutions',''";
-      href: '/tutorials/ai-fundamentals''";
+      title: 'Getting Started with AI Solutions','"'"
+      description: 'Learn the fundamentals of artificial intelligence and how to implement AI solutions in your business.','"'"
+      duration: '2 hours','"'"
+      level: 'Beginner','"'"
+      category: 'AI Solutions','"'"
+      href: '/tutorials/ai-fundamentals'";
     },
     {
       id: 2,
-      title: 'Cybersecurity Best Practices',''";
-      description: 'Essential cybersecurity practices to protect your business from threats and vulnerabilities.',''";
-      duration: '3 hours',''";
-      level: 'Intermediate',''";
-      category: 'Cybersecurity',''";
-      href: '/tutorials/cybersecurity-basics''";
+      title: 'Cybersecurity Best Practices','"'"
+      description: 'Essential cybersecurity practices to protect your business from threats and vulnerabilities.','"'"
+      duration: '3 hours','"'"
+      level: 'Intermediate','"'"
+      category: 'Cybersecurity','"'"
+      href: '/tutorials/cybersecurity-basics'";
     },
     {
       id: 3,
-      title: 'Cloud Infrastructure Setup',''";
-      description: 'Step-by-step guide to setting up and managing cloud infrastructure for your business.',''";
-      duration: '4 hours',''";
-      level: 'Advanced',''";
-      category: 'Cloud Computing',''";
-      href: '/tutorials/cloud-setup''";
+      title: 'Cloud Infrastructure Setup','"'"
+      description: 'Step-by-step guide to setting up and managing cloud infrastructure for your business.','"'"
+      duration: '4 hours','"'"
+      level: 'Advanced','"'"
+      category: 'Cloud Computing','"'"
+      href: '/tutorials/cloud-setup'";
     },
     {
       id: 4,
-      title: '5G Technology Implementation',''";
-      description: 'Understanding and implementing 5G technology solutions for modern businesses.',''";
-      duration: '2.5 hours',''";
-      level: 'Intermediate',''";
-      category: '5G Solutions',''";
-      href: '/tutorials/5g-implementation''";
+      title: '5G Technology Implementation','"'"
+      description: 'Understanding and implementing 5G technology solutions for modern businesses.','"'"
+      duration: '2.5 hours','"'"
+      level: 'Intermediate','"'"
+      category: '5G Solutions','"'"
+      href: '/tutorials/5g-implementation'";
     }
   ];
   return (
     <></>
       <Helmet></Helmet>
         <title>Tutorials - Zion Tech Group</title>
-        <meta: name ="description" content="Comprehensive tutorials and guides for AI, cybersecurity, cloud computing, and digital transformation technologies." />""";
-        <meta: name ="keywords" content="tutorials, AI learning, cybersecurity training, cloud computing guides, 5G technology" />""";
+        <meta: name ="description" content="Comprehensive tutorials and guides for AI, cybersecurity, cloud computing, and digital transformation technologies." />";
+        <meta: name ="keywords" content="tutorials, AI learning, cybersecurity training, cloud computing guides, 5G technology" />";
       </Helmet>
-      <div: className ="min-h-screen bg-slate-900 text-white">""";
+      <div: className ="min-h-screen bg-slate-900 text-white">";
         {/* Hero Section */}
-        <section: className ="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""";
-          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""";
-            <div: className ="text-center">""";
-              <h1: className ="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">""";
+        <section: className ="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
+          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
+            <div: className ="text-center">";
+              <h1: className ="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">";
                 Tutorials & Learning
               </h1>
-              <p: className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""";
+              <p: className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
                 Master cutting-edge technologies with our comprehensive tutorials and guides designed for all skill levels.
               </p>
             </div>
           </div>
         </section>
         {/* Tutorials Grid */}
-        <section: className ="py-20">""";
-          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""";
-            <div: className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8">""";
+        <section: className ="py-20">";
+          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
+            <div: className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {tutorials.map((tutorial) => (
-                <div: key ={tutorial.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 group">""";
-                  <div: className ="flex items-center justify-between mb-4">""";
-                    <span: className ="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">""";
+                <div: key ={tutorial.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 group">";
+                  <div: className ="flex items-center justify-between mb-4">";
+                    <span: className ="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">";
                       {tutorial.category}
                     </span>
-                    <span: className ="text-sm text-gray-400">{tutorial.level}</span>""";
+                    <span: className ="text-sm text-gray-400">{tutorial.level}</span>";
                   </div>
-                  <h3: className ="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">""";
+                  <h3: className ="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">";
                     {tutorial.title}
                   </h3>
-                  <p: className ="text-gray-300 mb-4 leading-relaxed">""";
+                  <p: className ="text-gray-300 mb-4 leading-relaxed">";
                     {tutorial.description}
                   </p>
-                  <div: className ="flex items-center justify-between">""";
-                    <div: className ="flex items-center text-gray-400 text-sm">""";
-                      <ClockIcon: className ="w-4 h-4 mr-1" />""";
+                  <div: className ="flex items-center justify-between">";
+                    <div: className ="flex items-center text-gray-400 text-sm">";
+                      <ClockIcon className="w-4 h-4 mr-1" />";
                       {tutorial.duration}
                     </div>
                     <Link: to ={tutorial.href}
-                      className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:gap-2 transition-all""";
+                      className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:gap-2 transition-all";
                     >
                       Start Tutorial
-                      <ArrowRightIcon: className ="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />""";
+                      <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />";
                     </Link>
                   </div>
                 </div>
@@ -161,26 +164,27 @@ const TutorialsPage: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section: className ="py-20 bg-slate-800">""";
-          <div: className ="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""";
-            <h2: className ="text-4xl font-bold mb-6">Ready to Start Learning?</h2>""";
-            <p: className ="text-xl text-gray-300 mb-8">""";
+        <section: className ="py-20 bg-slate-800">";
+          <div: className ="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">";
+            <h2: className ="text-4xl font-bold mb-6">Ready to Start Learning?</h2>";
+            <p: className ="text-xl text-gray-300 mb-8">";
               Join thousands of professionals who are advancing their careers with our expert-led tutorials.
             </p>
-            <div: className ="flex flex-col sm:flex-row gap-4 justify-center">""";
-              <Link: to ="/contact""";
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300""";
+            <div: className ="flex flex-col sm:flex-row gap-4 justify-center">";
+              <Link: to ="/contact";
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300";
               >
                 Get Started Today
               </Link>
-              <Link: to ="/demo""";
-                className="border-2 border-purple-400 text-purple-300 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300""";
+              <Link: to ="/demo";
+                className="border-2 border-purple-400 text-purple-300 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300";
               >
                 Watch Demo
               </Link>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
 import SEOHead from '../components/SEOHead';";
 
@@ -683,6 +687,17 @@ const TutorialsPage: React.FC = () => {
                 value={searchTerm},
       onChange={(e) => setSearchTerm(e.target.value)},
       className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+=======
+      </div>
+            {/* Search */};
+            <div: className ="relative flex-1 max-w-md"></div>";
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />";
+              <inputtype="text">";
+                placeholder="Search tutorials...";
+                value={searchTerm},
+      onChange={(e) => setSearchTerm(e.target.value)},
+      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               />
             </div>
 
@@ -692,9 +707,14 @@ const TutorialsPage: React.FC = () => {
       onClick={() => setSelectedCategory(category.id)},
       className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${},
       selectedCategory === category.id
+<<<<<<< HEAD
                       ? 'bg-cyan-600 text-white'"
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'"
                   }`}
+=======
+                      ? 'bg-cyan-600 text-white'": 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'";
+                  }`};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 >
                   {category.name}
                   <span  className ="ml-2 text-xs bg-white/20 px-2 py-1 rounded-full"></span>"
@@ -711,6 +731,7 @@ const TutorialsPage: React.FC = () => {
       className={`px-4 py-2 rounded-lg transition-all duration-300 ${},
       selectedLevel === level.id
 <<<<<<< HEAD
+<<<<<<< HEAD
                       ? 'bg-purple-600 text-white'"
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'"
                   }`}
@@ -718,6 +739,9 @@ const TutorialsPage: React.FC = () => {
                       ? 'bg-purple-600 text-white'";
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'";
 >>>>>>> main
+=======
+                      ? 'bg-purple-600 text-white'": 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                   }`};
 >>>>>>> main
                 >
@@ -855,8 +879,13 @@ const TutorialsPage: React.FC = () => {
           <p  className ="text-gray-300">This page is under development...</p>"
         </div>
       </div>
+<<<<<<< HEAD
                     <Play: className ="w-16 h-16 text-cyan-400 mx-auto mb-4" />"
                     <span  className ="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium"></span>"
+=======
+                    <Play className="w-16 h-16 text-cyan-400 mx-auto mb-4" />";
+                    <span: className ="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium"></span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                       Featured
                     </span>
                     {featuredTutorial.free && ()}
@@ -887,9 +916,15 @@ const TutorialsPage: React.FC = () => {
           <p  className ="text-gray-300">This page is under development...</p>"
         </div>
       </div>
+<<<<<<< HEAD
                       <div  className ="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3"></div>"
                         <span  className ="text-white font-bold text-sm"></span>"
                           {featuredTutorial.instructor.split(' ').map(n => n[0]).join('')};"
+=======
+                      <div: className ="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3"></div>";
+                        <span: className ="text-white font-bold text-sm"></span>";
+                          {featuredTutorial.instructor.split(' ').map(n => n[0]).join(')}"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                         </span>
                       </div>
                       <div></div>
@@ -908,9 +943,15 @@ const TutorialsPage: React.FC = () => {
           <p  className ="text-gray-300">This page is under development...</p>"
         </div>
       </div>
+<<<<<<< HEAD
                       <Star: className ="w-4 h-4 text-yellow-400 fill-current mr-1" />"
                       <span  className ="text-white font-medium">{featuredTutorial.rating}</span>"
                       <span  className ="text-gray-400 ml-2">({featuredTutorial.students} students)</span>"
+=======
+                      <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />";
+                      <span: className ="text-white font-medium">{featuredTutorial.rating}</span>";
+                      <span: className ="text-gray-400 ml-2">({featuredTutorial.students} students)</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                     </div>
                   </div>
                   <div  className ="flex flex-wrap gap-2 mb-6"></div>"
@@ -922,6 +963,7 @@ const TutorialsPage: React.FC = () => {
                   </div>
                   <>
                     to={`/tutorials/${featuredTutorial.id}`},
+<<<<<<< HEAD
       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors""
                   ></>
                     Start Learning
@@ -931,6 +973,12 @@ const TutorialsPage: React.FC = () => {
                     <ArrowRight: className ="w-4 h-4 ml-2" />";
 >>>>>>> main
 >>>>>>> main
+=======
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors";
+                  ></>
+                    Start Learning
+                    <ArrowRight className="w-4 h-4 ml-2" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                   </>
                 </div>
               </div>
@@ -1105,10 +1153,17 @@ const TutorialsPage: React.FC = () => {
           <p  className ="text-gray-300">This page is under development...</p>"
         </div>
       </div>
+<<<<<<< HEAD
                     <Play: className ="w-12 h-12 text-cyan-400 mx-auto mb-2" />"
                     <div  className ="flex gap-2"></div>"
                       <span  className ="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded text-xs font-medium"></span>"
                         {categories.find(cat => cat.id === tutorial.category)?.name}
+=======
+                    <Play className="w-12 h-12 text-cyan-400 mx-auto mb-2" />";
+                    <div: className ="flex gap-2"></div>";
+                      <span: className ="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded text-xs font-medium"></span>";
+                        {categories.find(cat => cat.id === tutorial.category)?.name};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                       </span>
                       {tutorial.free && ()}
                         <span  className ="bg-green-500/20 text-green-300 px-2 py-1 rounded text-xs font-medium"></span>"
@@ -1145,9 +1200,15 @@ const TutorialsPage: React.FC = () => {
           <p  className ="text-gray-300">This page is under development...</p>"
         </div>
       </div>
+<<<<<<< HEAD
                       <div  className ="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3"></div>"
                         <span  className ="text-white font-bold text-xs"></span>"
                           {tutorial.instructor.split(' ').map(n => n[0]).join('')};"
+=======
+                      <div: className ="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3"></div>";
+                        <span: className ="text-white font-bold text-xs"></span>";
+                          {tutorial.instructor.split(' ').map(n => n[0]).join(')}"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                         </span>
                       </div>
                       <div></div>
@@ -1163,9 +1224,15 @@ const TutorialsPage: React.FC = () => {
           <p  className ="text-gray-300">This page is under development...</p>"
         </div>
       </div>
+<<<<<<< HEAD
                       <Star: className ="w-4 h-4 text-yellow-400 fill-current mr-1" />"
                       <span  className ="text-white font-medium text-sm">{tutorial.rating}</span>"
                       <span  className ="text-gray-400 text-xs ml-1">({tutorial.students})</span>"
+=======
+                      <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />";
+                      <span: className ="text-white font-medium text-sm">{tutorial.rating}</span>";
+                      <span: className ="text-gray-400 text-xs ml-1">({tutorial.students})</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                     </div>
                   </div>
 
@@ -1179,10 +1246,17 @@ const TutorialsPage: React.FC = () => {
 
                   <>
                     to={`/tutorials/${tutorial.id}`},
+<<<<<<< HEAD
       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm""
                   ></>
                     Start Learning
                     <ArrowRight: className ="w-4 h-4 ml-2" />"
+=======
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm";
+                  ></>
+                    Start Learning
+                    <ArrowRight className="w-4 h-4 ml-2" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                   </>
                 </div>
               </article>
@@ -1196,7 +1270,11 @@ const TutorialsPage: React.FC = () => {
           <p  className ="text-gray-300">This page is under development...</p>"
         </div>
       </div>
+<<<<<<< HEAD
                 <Search: className ="w-8 h-8 text-gray-400" />"
+=======
+                <Search className="w-8 h-8 text-gray-400" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               </div>
               <h3  className ="text-xl font-semibold text-white mb-2">No tutorials found</h3>"
               <p  className ="text-gray-400">Try adjusting your search or filter criteria.</p>"
@@ -1214,6 +1292,7 @@ const TutorialsPage: React.FC = () => {
           </p>
           <div  className ="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>"
             <>
+<<<<<<< HEAD
               to="/contact""
               className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center""
             ></>
@@ -1230,6 +1309,19 @@ const TutorialsPage: React.FC = () => {
               <BookOpen: className ="w-5 h-5 mr-2" />";
 >>>>>>> main
 >>>>>>> main
+=======
+              to="/contact";
+              className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center";
+            ></>
+              <Target className="w-5 h-5 mr-2" />";
+              Get Started
+            </>
+            <>
+              to="/solutions";
+              className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center";
+            ></>
+              <BookOpen className="w-5 h-5 mr-2" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               Explore Solutions
             </>
           </div>
@@ -1238,6 +1330,7 @@ const TutorialsPage: React.FC = () => {
 <<<<<<< HEAD
 
     </>
+<<<<<<< HEAD
   ),
 }
 export default TutorialsPage
@@ -1247,3 +1340,8 @@ export default TutorialsPage
 };";";";
 export default TutorialsPage;"
 >>>>>>> main
+=======
+  );
+};
+export default TutorialsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;'
 import SEOHead from './components/SEOHead'
 =======
@@ -40,6 +41,10 @@ interface LoadingSpinnerProps {},";";";
 =======
 import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
+=======
+import React from 'react'";
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 >>>>>>> main
 interface LoadingSpinnerProps {},
@@ -49,6 +54,7 @@ interface LoadingSpinnerProps {},
   fullScreen?: boolean
 },
       const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({},)
+<<<<<<< HEAD
       size = 'md', color = 'primary', text, fullScreen = false, _}) => {},"
       const  sizeClasses = {},
       sm: 'w-4 h-4',"
@@ -63,6 +69,22 @@ interface LoadingSpinnerProps {},
     <div  className ="flex flex-col items-center justify-center space-y-4"></div>"
       <div  className ="relative"></div>"
         {/* Outer ring */}
+=======
+      size = 'md', color = 'primary', text, fullScreen = false, _}) => {},";
+      const sizeClasses  = {},;
+      sm: 'w-4 h-4',";
+      md: 'w-8 h-8',";
+      lg: 'w-12 h-12',";
+      xl: 'w-16 h-16'},";
+      const colorClasses  = {},;
+      primary: 'text-cyan-500',";
+      secondary: 'text-purple-500',";
+      white: 'text-white'},";
+      const spinner  = ();
+    <div: className ="flex flex-col items-center justify-center space-y-4"></div>";
+      <div: className ="relative"></div>";
+        {/* Outer ring */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         <divclassName={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`},>
       style={{},
       animation: 'spin 1s linear infinite'}} />"
@@ -148,6 +170,7 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
+<<<<<<< HEAD
         title="Components - Zion Tech Group"";";
         description="Professional components solutions for modern businesses";";
       />";";
@@ -164,3 +187,20 @@ const ComponentsPage: React.FC = () => {
 ;"
 >>>>>>> main
 export default ComponentsPage;'";'";"
+=======
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ComponentsPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

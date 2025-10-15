@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async (req, res) => {
   if (req.method !== 'POST') {"
     return res.status(405).json({ error: 'Method not allowed' });"
@@ -165,3 +166,8 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+export default function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

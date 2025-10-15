@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useEffect} from "react"
 interface PerformanceMetrics {}
 =======
@@ -7,6 +8,9 @@ import {useEffect} from "react;
 =======
 import {useEffect} from "react";";";
 >>>>>>> main
+=======
+import {useEffect} from \"react\";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 interface PerformanceMetrics {};
 >>>>>>> main
   loadTime: number
@@ -34,6 +38,7 @@ export const  usePerformanceMonitor = () => {}
 =======
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const usePerformanceMonitor = () => {};
 }const metricsRef = useRef<PerformanceMetrics>({};)
     loadTime: 0;";
@@ -52,6 +57,10 @@ export const usePerformanceMonitor = () => {};
 =======
 export const: usePerformanceMonitor = () => {};
 }const: metricsRef = useRef<PerformanceMetrics>({};)
+=======
+export const usePerformanceMonitor  = () => {};
+}const metricsRef  = useRef<PerformanceMetrics>({};)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     loadTime: 0;
     firstContentfulPaint: 0;
     largestContentfulPaint: 0;
@@ -60,17 +69,22 @@ export const: usePerformanceMonitor = () => {};
     timeToInteractive: 0
   })
   useEffect(() => {};
-}const: measurePerformance = () => {};
-}if (typeof: window === 'undefined' || !window.performance) return";";";
+}const measurePerformance  = () => {};
+}if (typeof: window === 'undefined' || !window.performance) return";
       // Measure page load time
+<<<<<<< HEAD
       const: navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";";";
 >>>>>>> main
+=======
+      const navigation  = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       if ($1) {}
 >>>>>>> main
   // If body
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 
 export const  usePerformanceMonitor = () => {
   const  metricsRef = useRef<PerformanceMetrics>({
@@ -113,6 +127,11 @@ export const  usePerformanceMonitor = () => {
 export const usePerformanceMonitor = () => {;
     const metricsRef = useRef<PerformanceMetrics>({;
     loadTime: 0,;
+=======
+;
+export const usePerformanceMonitor  = () => {
+  const metricsRef  = useRef<PerformanceMetrics>({loadTime: 0,;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     firstContentfulPaint: 0,;
     largestContentfulPaint: 0,;
     firstInputDelay: 0,;
@@ -139,24 +158,30 @@ export const usePerformanceMonitor = () => {;
   });
 ;
   useEffect(() => {
-    const: measurePerformance = () => {';';";";";
-      if (typeof: window === 'undefined' || !window.performance) return;";";";";";
+    const measurePerformance  = () => {'"'"
+      if (typeof: window === 'undefined' || !window.performance) return";
 ;
-      // Measure page load time';';";";";
-      const: navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;";";";";";
+      // Measure page load time'""'
+      const navigation  = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming"";
       if (navigation) {
         metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart,
       }
 ;
       // Measure Core Web Vitals;
+<<<<<<< HEAD
       const: measureWebVitals = () => {;
         // First Contentful Paint (FCP)';';";";";
         const: fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];";";";";";
 >>>>>>> main
+=======
+      const measureWebVitals  = () => {// First Contentful Paint (FCP)'"'"
+        const fcpEntry  = performance.getEntriesByName('first-contentful-paint')[0]";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         if (fcpEntry) {
           metricsRef.current.firstContentfulPaint = fcpEntry.startTime;
         };
         // Largest Contentful Paint (LCP)
+<<<<<<< HEAD
 <<<<<<< HEAD
         const lcpObserver = new PerformanceObserver((list) => {";
           const entries = list.getEntries();";";
@@ -186,14 +211,22 @@ export const usePerformanceMonitor = () => {;
         const: lcpObserver = new PerformanceObserver((list) => {;
           const: entries = list.getEntries();
           const: lastEntry = entries[entries.length - 1];
+=======
+        const lcpObserver  = new PerformanceObserver((list) => {const entries  = list.getEntries();
+          const lastEntry  = entries[entries.length - 1];
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           metricsRef.current.largestContentfulPaint = lastEntry.startTime;
-        });';';";";";
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });";";";";";
+        })'""'
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })"";
 ;
 >>>>>>> main
         // First Input Delay (FID)
+<<<<<<< HEAD
         const  fidObserver = new PerformanceObserver((list) => {
           const  entries = list.getEntries()
+=======
+        const fidObserver  = new PerformanceObserver((list) => {const entries  = list.getEntries();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           entries.forEach((entry: any) => {
             metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime,
 <<<<<<< HEAD
@@ -207,15 +240,20 @@ export const usePerformanceMonitor = () => {;
           const  entries = list.getEntries()
 =======
           });
-        });';';";";";
-        fidObserver.observe({ entryTypes: ['first-input'] });";";";";";
+        })'"'"
+        fidObserver.observe({ entryTypes: ['first-input'] })";
 ;
 >>>>>>> main
         // Cumulative Layout Shift (CLS)
+<<<<<<< HEAD
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {;
           const entries = list.getEntries();
 >>>>>>> main
+=======
+        let: clsValue = 0;
+        const clsObserver  = new PerformanceObserver((list) => {const entries  = list.getEntries();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           entries.forEach((entry: any) => {
 <<<<<<< HEAD
             if (!entry.hadRecentInput) {,
@@ -308,16 +346,15 @@ export default usePerformanceMonitor;';'
 =======
           });
           metricsRef.current.cumulativeLayoutShift = clsValue;
-        });';';";";";
-        clsObserver.observe({ entryTypes: ['layout-shift'] });";";";";";
+        })'""'
+        clsObserver.observe({ entryTypes: ['layout-shift'] })"";
 ;
         // Time to Interactive (TTI) - approximation;
-        const: ttiObserver = new PerformanceObserver((list) => {;
-          const: entries = list.getEntries();
-          const: lastEntry = entries[entries.length - 1];
+        const ttiObserver  = new PerformanceObserver((list) => {const entries  = list.getEntries();
+          const lastEntry  = entries[entries.length - 1];
           metricsRef.current.timeToInteractive = lastEntry.startTime;
-        });';';";";";
-        ttiObserver.observe({ entryTypes: ['measure'] });";";";";";
+        })'"'"
+        ttiObserver.observe({ entryTypes: ['measure'] })";
 ;
 >>>>>>> main
         // Cleanup observers after 10 seconds;
@@ -338,11 +375,16 @@ export default usePerformanceMonitor;';'
       };
 
       // Log performance metrics
-      const: logMetrics = () => {};
+      const logMetrics  = () => {};
 }// Send to analytics service
+<<<<<<< HEAD
         if (typeof window !== 'undefined' && (window as any).gtag) {};";";";
           (window as any).gtag('event', 'performance_metrics', {};)";";";
 >>>>>>> main
+=======
+        if (typeof window !== 'undefined' && (window as any).gtag) {}"";
+          (window as any).gtag('event', 'performance_metrics', {};)";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             load_time: metricsRef.current.loadTime;
             first_contentful_paint: metricsRef.current.firstContentfulPaint;
             largest_contentful_paint: metricsRef.current.largestContentfulPaint;
@@ -365,11 +407,11 @@ export default usePerformanceMonitor;';'
         }
       };
 ;
-      // Start measuring after page load';';";";";
-      if (document.readyState === 'complete') {";";";";";
+      // Start measuring after page load'"'"
+      if (document.readyState === 'complete') {"";
         measureWebVitals();
-      } else {';';";";";
-        window.addEventListener('load', measureWebVitals);";";";";";
+      } else {'"'"
+        window.addEventListener('load', measureWebVitals)";
       }
 ;
 >>>>>>> main
@@ -398,6 +440,10 @@ export default usePerformanceMonitor;';';";";";";
   return metricsRef.current;
 };
 ;
+<<<<<<< HEAD
 export default usePerformanceMonitor;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default usePerformanceMonitor'""'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

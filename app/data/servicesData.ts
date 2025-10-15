@@ -4,10 +4,14 @@ export interface Service {;
         description: string;
   shortDescription: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT;'"
 =======
   category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT;''";
 >>>>>>> main
+=======
+  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   icon: string;
   features: string[];};
   pricing: {};
@@ -95,19 +99,14 @@ export const services: Service[]  =  [;";";
 }
 export const services: Service[] = [
   {
-    id: 'ai-solutions',''";
-    title: 'AI Solutions',''";
-    description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.',''";
-    shortDescription: 'Advanced AI solutions for business transformation',''";
-    category: 'AI',''";
-    icon: 'CpuChipIcon',''";
+    id: 'ai-solutions','"'"
+    title: 'AI Solutions','"'"
+    description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.','"'"
+    shortDescription: 'Advanced AI solutions for business transformation','"'"
+    category: 'AI','"'"
+    icon: 'CpuChipIcon','"'"
     features: [
-      'Machine Learning Models',''";
-      'Natural Language Processing',''";
-      'Computer Vision',''";
-      'Predictive Analytics',''";
-      'AI Chatbots',''";
-      'Automated Decision Making;''";
+      'Machine Learning Models','"'Natural Language Processing','"'Computer Vision','"'Predictive Analytics','"'AI Chatbots','"'Automated Decision Making'"'
     ],
     pricing: {}
       basic: 5000,}
@@ -115,45 +114,30 @@ export const services: Service[] = [
       enterprise: 50000;}
     },
     benefits: [
-      'Increased Efficiency',''";
-      'Cost Reduction',''";
-      'Better Decision Making',''";
-      'Automated Processes',''";
-      'Improved Customer Experience',''";
-      'Competitive Advantage;''";
+      'Increased Efficiency','"'Cost Reduction','"'Better Decision Making','"'Automated Processes','"'Improved Customer Experience','"'Competitive Advantage'"'
     ],
     useCases: [
-      'Customer Service Automation',''";
-      'Predictive Maintenance',''";
-      'Fraud Detection',''";
-      'Content Generation',''";
-      'Data Analysis',''";
-      'Process Optimization;''";
+      'Customer Service Automation','"'Predictive Maintenance','"'Fraud Detection','"'Content Generation','"'Data Analysis','"'Process Optimization'"'
     ],
     technologies: [
-      'TensorFlow',''";
-      'PyTorch',''";
-      'OpenAI GPT',''";
-      'Hugging Face',''";
-      'Scikit-learn',''";
-      'Pandas',''";
-      'NumPy;''";
+      'TensorFlow','"'PyTorch','"'OpenAI GPT','"'Hugging Face','"'Scikit-learn','"'Pandas','"'NumPy'";
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',''";
-      email: 'ai@ziontechgroup.com',''";
-      website: 'https://ziontechgroup.com/ai-solutions;''";
+      phone: '+1-302-464-0950','"'"
+      email: 'ai@ziontechgroup.com','"'"
+      website: 'https://ziontechgroup.com/ai-solutions'";
     },
-    href: '/ai-solutions;''";
+    href: '/ai-solutions'";
   },
   {
-    id: 'cybersecurity',''";
-    title: 'Cybersecurity',''";
-    description: 'Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.',''";
-    shortDescription: 'Comprehensive cybersecurity protection',''";
-    category: 'Cybersecurity',''";
-    icon: 'ShieldCheckIcon',''";
+    id: 'cybersecurity','"'"
+    title: 'Cybersecurity','"'"
+    description: 'Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.','"'"
+    shortDescription: 'Comprehensive cybersecurity protection','"'"
+    category: 'Cybersecurity','"'"
+    icon: 'ShieldCheckIcon','"'"
     features: [
+<<<<<<< HEAD
       'Threat Detection',''";
       'Vulnerability Assessment',''";
       'Security Monitoring',''";
@@ -161,6 +145,9 @@ export const services: Service[] = [
       'Incident Response',''";
       'Security Training;''";
 >>>>>>> main
+=======
+      'Threat Detection','"'Vulnerability Assessment','"'Security Monitoring','"'Compliance Management','"'Incident Response','"'Security Training'"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     ],
     pricing: {,
       basic: 3000,
@@ -219,45 +206,30 @@ export const services: Service[] = [
     ,
   },
     benefits: [
-      'Enhanced Security',''";
-      'Compliance Assurance',''";
-      'Risk Mitigation',''";
-      '24/7 Monitoring',''";
-      'Expert Support',''";
-      'Peace of Mind;''";
+      'Enhanced Security','"'Compliance Assurance','"'Risk Mitigation','"'24/7 Monitoring','"'Expert Support','"'Peace of Mind'"'
     ],
     useCases: [
-      'Network Security',''";
-      'Data Protection',''";
-      'Compliance Auditing',''";
-      'Threat Hunting',''";
-      'Security Awareness',''";
-      'Incident Management;''";
+      'Network Security','"'Data Protection','"'Compliance Auditing','"'Threat Hunting','"'Security Awareness','"'Incident Management'"'
     ],
     technologies: [
-      'SIEM',''";
-      'EDR',''";
-      'XDR',''";
-      'SOAR',''";
-      'NGFW',''";
-      'WAF',''";
-      'DLP;''";
+      'SIEM','"'EDR','"'XDR','"'SOAR','"'NGFW','"'WAF','"'DLP'";
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',''";
-      email: 'security@ziontechgroup.com',''";
-      website: 'https://ziontechgroup.com/cybersecurity;''";
+      phone: '+1-302-464-0950','"'"
+      email: 'security@ziontechgroup.com','"'"
+      website: 'https://ziontechgroup.com/cybersecurity'";
     },
-    href: '/cybersecurity;''";
+    href: '/cybersecurity'";
   },
   {
-    id: 'cloud-infrastructure',''";
-    title: 'Cloud Infrastructure',''";
-    description: 'Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.',''";
-    shortDescription: 'Scalable cloud infrastructure solutions',''";
-    category: 'Cloud',''";
-    icon: 'CloudIcon',''";
+    id: 'cloud-infrastructure','"'"
+    title: 'Cloud Infrastructure','"'"
+    description: 'Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.','"'"
+    shortDescription: 'Scalable cloud infrastructure solutions','"'"
+    category: 'Cloud','"'"
+    icon: 'CloudIcon','"'"
     features: [
+<<<<<<< HEAD
       'Cloud Migration',''";
       'Architecture Design',''";
       'DevOps Implementation',''";
@@ -265,6 +237,9 @@ export const services: Service[] = [
       'Auto-scaling',''";
       'Disaster Recovery;''";
 >>>>>>> main
+=======
+      'Cloud Migration','"'Architecture Design','"'DevOps Implementation','"'Cloud Management','"'Auto-scaling','"'Disaster Recovery'"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     ],
     pricing: {,
       basic: 2000,
@@ -322,45 +297,30 @@ export const services: Service[] = [
       enterprise: 25000
     },
     benefits: [
-      'Scalability',''";
-      'Cost Efficiency',''";
-      'High Availability',''";
-      'Flexibility',''";
-      'Global Reach',''";
-      'Reduced Maintenance;''";
+      'Scalability','"'Cost Efficiency','"'High Availability','"'Flexibility','"'Global Reach','"'Reduced Maintenance'"'
     ],
     useCases: [
-      'Application Hosting',''";
-      'Data Storage',''";
-      'Backup Solutions',''";
-      'Development Environments',''";
-      'Production Workloads',''";
-      'Hybrid Cloud;''";
+      'Application Hosting','"'Data Storage','"'Backup Solutions','"'Development Environments','"'Production Workloads','"'Hybrid Cloud'"'
     ],
     technologies: [
-      'AWS',''";
-      'Azure',''";
-      'Google Cloud',''";
-      'Docker',''";
-      'Kubernetes',''";
-      'Terraform',''";
-      'Ansible;''";
+      'AWS','"'Azure','"'Google Cloud','"'Docker','"'Kubernetes','"'Terraform','"'Ansible'";
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',''";
-      email: 'cloud@ziontechgroup.com',''";
-      website: 'https://ziontechgroup.com/cloud-infrastructure;''";
+      phone: '+1-302-464-0950','"'"
+      email: 'cloud@ziontechgroup.com','"'"
+      website: 'https://ziontechgroup.com/cloud-infrastructure'";
     },
-    href: '/cloud-infrastructure;''";
+    href: '/cloud-infrastructure'";
   },
   {
-    id: 'digital-transformation',''";
-    title: 'Digital Transformation',''";
-    description: 'Complete digital transformation services including process automation, workflow optimization, system integration, and change management.',''";
-    shortDescription: 'Complete digital transformation services',''";
-    category: 'IT',''";
-    icon: 'RocketLaunchIcon',''";
+    id: 'digital-transformation','"'"
+    title: 'Digital Transformation','"'"
+    description: 'Complete digital transformation services including process automation, workflow optimization, system integration, and change management.','"'"
+    shortDescription: 'Complete digital transformation services','"'"
+    category: 'IT','"'"
+    icon: 'RocketLaunchIcon','"'"
     features: [
+<<<<<<< HEAD
       'Process Automation',''";
       'Workflow Optimization',''";
       'System Integration',''";
@@ -368,6 +328,9 @@ export const services: Service[] = [
       'Digital Strategy',''";
       'Technology Adoption;''";
 >>>>>>> main
+=======
+      'Process Automation','"'Workflow Optimization','"'System Integration','"'Change Management','"'Digital Strategy','"'Technology Adoption'"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     ],
     pricing: {,
       basic: 10000,
@@ -425,45 +388,30 @@ export const services: Service[] = [
       enterprise: 100000
     },
     benefits: [
-      'Improved Efficiency',''";
-      'Better Customer Experience',''";
-      'Increased Agility',''";
-      'Cost Reduction',''";
-      'Competitive Advantage',''";
-      'Future-Ready Operations;''";
+      'Improved Efficiency','"'Better Customer Experience','"'Increased Agility','"'Cost Reduction','"'Competitive Advantage','"'Future-Ready Operations'"'
     ],
     useCases: [
-      'Process Modernization',''";
-      'System Integration',''";
-      'Workflow Automation',''";
-      'Digital Strategy',''";
-      'Change Management',''";
-      'Technology Adoption;''";
+      'Process Modernization','"'System Integration','"'Workflow Automation','"'Digital Strategy','"'Change Management','"'Technology Adoption'"'
     ],
     technologies: [
-      'RPA',''";
-      'API Integration',''";
-      'Workflow Engines',''";
-      'Data Analytics',''";
-      'Cloud Platforms',''";
-      'Mobile Solutions',''";
-      'IoT Integration;''";
+      'RPA','"'API Integration','"'Workflow Engines','"'Data Analytics','"'Cloud Platforms','"'Mobile Solutions','"'IoT Integration'";
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',''";
-      email: 'transformation@ziontechgroup.com',''";
-      website: 'https://ziontechgroup.com/digital-transformation;''";
+      phone: '+1-302-464-0950','"'"
+      email: 'transformation@ziontechgroup.com','"'"
+      website: 'https://ziontechgroup.com/digital-transformation'";
     },
-    href: '/digital-transformation;''";
+    href: '/digital-transformation'";
   },
   {
-    id: '5g-solutions',''";
-    title: '5G Solutions',''";
-    description: 'Next-generation 5G solutions including network implementation, IoT connectivity, mobile optimization, and enterprise 5G services.',''";
-    shortDescription: 'Next-generation 5G solutions',''";
-    category: '5G',''";
-    icon: 'SignalIcon',''";
+    id: '5g-solutions','"'"
+    title: '5G Solutions','"'"
+    description: 'Next-generation 5G solutions including network implementation, IoT connectivity, mobile optimization, and enterprise 5G services.','"'"
+    shortDescription: 'Next-generation 5G solutions','"'"
+    category: '5G','"'"
+    icon: 'SignalIcon','"'"
     features: [
+<<<<<<< HEAD
       'Network Implementation',''";
       'IoT Connectivity',''";
       'Mobile Optimization',''";
@@ -471,6 +419,9 @@ export const services: Service[] = [
       'Edge Computing',''";
       'Network Slicing;''";
 >>>>>>> main
+=======
+      'Network Implementation','"'IoT Connectivity','"'Mobile Optimization','"'Enterprise Services','"'Edge Computing','"'Network Slicing'"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     ],
     pricing: {,
       basic: 15000,
@@ -528,45 +479,30 @@ export const services: Service[] = [
       enterprise: 150000
     },
     benefits: [
-      'Ultra-Fast Speeds',''";
-      'Low Latency',''";
-      'Massive Connectivity',''";
-      'Enhanced Mobility',''";
-      'Edge Computing',''";
-      'Future-Ready Infrastructure;''";
+      'Ultra-Fast Speeds','"'Low Latency','"'Massive Connectivity','"'Enhanced Mobility','"'Edge Computing','"'Future-Ready Infrastructure'"'
     ],
     useCases: [
-      'Smart Cities',''";
-      'Industrial IoT',''";
-      'Autonomous Vehicles',''";
-      'Remote Work',''";
-      'AR/VR Applications',''";
-      'Real-time Analytics;''";
+      'Smart Cities','"'Industrial IoT','"'Autonomous Vehicles','"'Remote Work','"'AR/VR Applications','"'Real-time Analytics'"'
     ],
     technologies: [
-      '5G NR',''";
-      'Edge Computing',''";
-      'Network Slicing',''";
-      'MEC',''";
-      'IoT Platforms',''";
-      'SDN/NFV',''";
-      'AI/ML;''";
+      '5G NR','"'Edge Computing','"'Network Slicing','"'MEC','"'IoT Platforms','"'SDN/NFV','"'AI/ML'";
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',''";
-      email: '5g@ziontechgroup.com',''";
-      website: 'https://ziontechgroup.com/5g-solutions;''";
+      phone: '+1-302-464-0950','"'"
+      email: '5g@ziontechgroup.com','"'"
+      website: 'https://ziontechgroup.com/5g-solutions'";
     },
-    href: '/5g-solutions;''";
+    href: '/5g-solutions'";
   },
   {
-    id: 'micro-saas',''";
-    title: 'Micro SaaS Solutions',''";
-    description: 'Custom micro SaaS solutions including application development, API integration, subscription management, and scalable architecture design.',''";
-    shortDescription: 'Custom micro SaaS solutions',''";
-    category: 'SaaS',''";
-    icon: 'GlobeAltIcon',''";
+    id: 'micro-saas','"'"
+    title: 'Micro SaaS Solutions','"'"
+    description: 'Custom micro SaaS solutions including application development, API integration, subscription management, and scalable architecture design.','"'"
+    shortDescription: 'Custom micro SaaS solutions','"'"
+    category: 'SaaS','"'"
+    icon: 'GlobeAltIcon','"'"
     features: [
+<<<<<<< HEAD
       'Application Development',''";
       'API Integration',''";
       'Subscription Management',''";
@@ -574,6 +510,9 @@ export const services: Service[] = [
       'Multi-tenancy',''";
       'Analytics Dashboard;''";
 >>>>>>> main
+=======
+      'Application Development','"'API Integration','"'Subscription Management','"'Scalable Architecture','"'Multi-tenancy','"'Analytics Dashboard'"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     ],
     pricing: {,
       basic: 8000,
@@ -625,40 +564,28 @@ export const getServiceById  =  (id: string) => {;";,";
       enterprise: 75000
     },
     benefits: [
-      'Rapid Deployment',''";
-      'Scalable Architecture',''";
-      'Cost-Effective',''";
-      'Easy Maintenance',''";
-      'Multi-tenant Support',''";
-      'Revenue Generation;''";
+      'Rapid Deployment','"'Scalable Architecture','"'Cost-Effective','"'Easy Maintenance','"'Multi-tenant Support','"'Revenue Generation'"'
     ],
     useCases: [
-      'Business Tools',''";
-      'Productivity Apps',''";
-      'Industry Solutions',''";
-      'API Services',''";
-      'Data Management',''";
-      'Automation Tools;''";
+      'Business Tools','"'Productivity Apps','"'Industry Solutions','"'API Services','"'Data Management','"'Automation Tools'"'
     ],
     technologies: [
-      'React',''";
-      'Node.js',''";
-      'PostgreSQL',''";
-      'Redis',''";
-      'Docker',''";
-      'Kubernetes',''";
-      'Stripe API;''";
+      'React','"'Node.js','"'PostgreSQL','"'Redis','"'Docker','"'Kubernetes','"'Stripe API'";
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',''";
-      email: 'saas@ziontechgroup.com',''";
-      website: 'https://ziontechgroup.com/micro-saas-solutions;''";
+      phone: '+1-302-464-0950','"'"
+      email: 'saas@ziontechgroup.com','"'"
+      website: 'https://ziontechgroup.com/micro-saas-solutions'";
     },
-    href: '/micro-saas-solutions;''";
+    href: '/micro-saas-solutions'";
   }
 ];
-export const: getServicesByCategory = (category: Service['category']) => {''";
+export const getServicesByCategory  = (category: Service['category']) => {'"'"
   return services.filter(service => service.category === category)};
+<<<<<<< HEAD
 export const: getServiceById = (id: string) => {;
   return services.find(service => service.id === id)};
 >>>>>>> main
+=======
+export const getServiceById  = (id: string) => {return services.find(service => service.id === id)};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

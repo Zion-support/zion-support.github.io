@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;';";"
 import SEOHead from './components/SEOHead';";"
 
@@ -50,20 +51,23 @@ const FuturisticCard: React.FC<FuturisticCardProps>  =  ({},)";";
 =======
 <<<<<<< HEAD
 import React from 'react;''";
+=======
+import React from 'react'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 interface FuturisticCardProps {
-  children: React.ReactNode";""";
+  children: React.ReactNode";
   className?: string;
-  variant?: 'default' | 'glow' | 'gradient'}''";
+  variant?: 'default' | 'glow' | 'gradient'}'"'"
 const FuturisticCard: React.FC<FuturisticCardProps> = ({
-  children, ''";
-  className = ',''";
-  variant = 'default';}''";
-}) => {''";
-  const: baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm;''";
-  const: variantClasses = {''";
-    default: 'bg-white/10',''";
-    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',''";
-    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20';}''";
+  children, '"'"
+  className = ','";
+  variant = 'default';}'"'"
+}) => {'"'"
+  const baseClasses  = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm'";
+  const variantClasses  = {'"'"
+    default: 'bg-white/10','"'"
+    glow: 'bg-white/10 shadow-lg shadow-blue-500/20','"'"
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20';}'"'"
   };
   return (
     <div: className ="{`${baseClasses}" ${variantClasses[variant]} ${className}`}></div>";
@@ -72,6 +76,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   );
 };
 export default FuturisticCard;
+<<<<<<< HEAD
 =======
 import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
@@ -192,3 +197,5 @@ export default ComponentsPage;'";'";";";
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

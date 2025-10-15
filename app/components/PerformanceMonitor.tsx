@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 =======
 <<<<<<< HEAD
@@ -101,6 +102,9 @@ export default ComponentsPage;'";'";";";";
 "
 =======
 import React, { useEffect, useState } from 'react';";
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 >>>>>>> main
 interface PerformanceMetrics {
@@ -121,15 +125,25 @@ const PerformanceMonitor: React.FC = () => {
   })
   useEffect(() => {
     // Only run in browser environment
+<<<<<<< HEAD
     if (typeof: window === 'undefined') return;"
     // Measure First Contentful Paint (FCP)
     const  measureFCP = () => {
       const  observer = new PerformanceObserver((list) => {
         const  entries = list.getEntries()
         const  fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');"
+=======
+    if (typeof: window === 'undefined') return";
+
+    // Measure First Contentful Paint (FCP)
+    const measureFCP  = () => {
+      const observer  = new PerformanceObserver((list) => {const entries  = list.getEntries();
+        const fcpEntry  = entries.find(entry => entry.name === 'first-contentful-paint')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         if (fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))
         }
+<<<<<<< HEAD
       })
       observer.observe({ entryTypes: ['paint'] });"
     }
@@ -138,9 +152,20 @@ const PerformanceMonitor: React.FC = () => {
       const  observer = new PerformanceObserver((list) => {
         const  entries = list.getEntries()
         const  lastEntry = entries[entries.length - 1]
+=======
+      });
+      observer.observe({ entryTypes: ['paint'] })";
+    };
+
+    // Measure Largest Contentful Paint (LCP)
+    const measureLCP  = () => {
+      const observer  = new PerformanceObserver((list) => {const entries  = list.getEntries();
+        const lastEntry  = entries[entries.length - 1];
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         if (lastEntry) {
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
         }
+<<<<<<< HEAD
       })
       observer.observe({ entryTypes: ['largest-contentful-paint'] });"
     }
@@ -162,10 +187,33 @@ const PerformanceMonitor: React.FC = () => {
       let  clsValue = 0
       const  observer = new PerformanceObserver((list) => {
         const  entries = list.getEntries()
+=======
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })";
+    };
+
+    // Measure First Input Delay (FID)
+    const measureFID  = () => {
+      const observer  = new PerformanceObserver((list) => {const entries  = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (entry.processingStart && entry.startTime) {
+            const fid  = entry.processingStart - entry.startTime;
+            setMetrics(prev => ({ ...prev, fid }));
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['first-input'] })";
+    };
+
+    // Measure Cumulative Layout Shift (CLS)
+    const measureCLS  = () => {let: clsValue = 0;
+      const observer  = new PerformanceObserver((list) => {const entries  = list.getEntries();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value
           }
+<<<<<<< HEAD
         })
         setMetrics(prev => ({ ...prev, cls: clsValue }))
       })
@@ -177,6 +225,19 @@ const PerformanceMonitor: React.FC = () => {
       if (navigationEntry) {
         const  ttfb = navigationEntry.responseStart - navigationEntry.requestStart
         setMetrics(prev => ({ ...prev, ttfb }))
+=======
+        });
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      });
+      observer.observe({ entryTypes: ['layout-shift'] })";
+    };
+
+    // Measure Time to First Byte (TTFB)
+    const measureTTFB  = () => {const navigationEntry  = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";
+      if (navigationEntry) {
+        const ttfb  = navigationEntry.responseStart - navigationEntry.requestStart;
+        setMetrics(prev => ({ ...prev, ttfb }));
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       }
     }
     // Initialize measurements
@@ -186,6 +247,7 @@ const PerformanceMonitor: React.FC = () => {
     measureCLS()
     measureTTFB()
     // Log metrics to console in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {"
       const  logMetrics = () => {
         console.log('🚀 Performance Metrics:', {"
@@ -196,16 +258,32 @@ const PerformanceMonitor: React.FC = () => {
           'Time to First Byte (TTFB)': metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Measuring...'"
         })
       }
+=======
+    if (process.env.NODE_ENV === 'development') {";
+      const logMetrics  = () => {console.log('🚀 Performance Metrics:', {"'First Contentful Paint (FCP)': metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Measuring...',"'Largest Contentful Paint (LCP)': metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Measuring...',"'First Input Delay (FID)': metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Measuring...',"'Cumulative Layout Shift (CLS)': metrics.cls ? metrics.cls.toFixed(4) : 'Measuring...',"'Time to First Byte (TTFB)': metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Measuring...'";
+        });
+      };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       // Log metrics after a delay to allow measurements to complete
       setTimeout(logMetrics, 3000)
     }
 
     // Send metrics to analytics in production
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'production') {"
       const  sendMetrics = () => {
         // In a real application, you would send these metrics to your analytics service
         console.log('📊 Sending performance metrics to analytics:', metrics);"
       }
+=======
+    if (process.env.NODE_ENV === 'production') {";
+      const sendMetrics  = () => {
+        // In a real application, you would send these metrics to your analytics service;
+        console.log('📊 Sending performance metrics to analytics:', metrics)";
+      };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       // Send metrics after 5 seconds to allow all measurements to complete
       setTimeout(sendMetrics, 5000)
     }
@@ -216,6 +294,7 @@ const PerformanceMonitor: React.FC = () => {
     }
   }, [metrics])
   // Performance warnings
+<<<<<<< HEAD
   const  getPerformanceWarnings = () => {
     const  warnings = []
     if (metrics.fcp && metrics.fcp > 1800) {
@@ -240,6 +319,34 @@ const PerformanceMonitor: React.FC = () => {
   // Don't render anything in production"
   if (process.env.NODE_ENV === 'production') {"
     return null
+=======
+  const getPerformanceWarnings  = () => {const warnings  = [];
+    
+    if (metrics.fcp && metrics.fcp > 1800) {
+      warnings.push('FCP is slow (>1.8s)')";
+    }
+    if (metrics.lcp && metrics.lcp > 2500) {
+      warnings.push('LCP is slow (>2.5s)')";
+    }
+    if (metrics.fid && metrics.fid > 100) {
+      warnings.push('FID is slow (>100ms)')";
+    }
+    if (metrics.cls && metrics.cls > 0.1) {
+      warnings.push('CLS is poor (>0.1)')";
+    }
+    if (metrics.ttfb && metrics.ttfb > 600) {
+      warnings.push('TTFB is slow (>600ms)')";
+    }
+    
+    return warnings;
+  };
+
+  const warnings  = getPerformanceWarnings();
+
+  // Don't render anything in production"'"
+  if (process.env.NODE_ENV === 'production') {";
+    return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   }
 
   return (

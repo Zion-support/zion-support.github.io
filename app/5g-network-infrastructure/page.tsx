@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Wifi, Server, Shield, Zap, Globe, Settings } from 'lucide-react'
@@ -109,52 +110,52 @@ const: Page = () => {
       icon: <CheckCircle: className ="w-8 h-8" />,""";
       title: 'Advanced Features',''";
       description: 'Cutting-edge technology for maximum efficiency''";
+=======
+import React from 'react';
+import { ArrowRight, CheckCircle, Users, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: '5G Network Infrastructure',
+      description: 'Complete 5G network infrastructure design and deployment'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     },
     {
-      icon: <Shield: className ="w-8 h-8" />,""";
-      title: 'Secure & Reliable',''";
-      description: 'Enterprise-grade security and 99.9% uptime''";
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: <Users: className ="w-8 h-8" />,""";
-      title: 'Expert Support',''";
-      description: '24/7 support from our team of specialists''";
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ];
+
   return (
     <>
-      <EnhancedSEO: title ="Page - Zion Tech Group""";
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""";
-        keywords="page, business solutions, technology services, professional services""";
-      />
-      <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""";
-        {/* Hero Section */}
-        <section: className ="relative py-20 px-4 sm:px-6 lg:px-8">""";
-          <div: className ="max-w-7xl mx-auto text-center">""";
-            <h1: className ="text-4xl md:text-6xl font-bold text-white mb-6">""";
-              Page
-              <span: className ="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""";
-                Solutions
-              </span>
+      <EnhancedSEO title="5G Network Infrastructure - Zion Tech Group" description="Complete 5G network infrastructure design and deployment services" />
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              5G Network Infrastructure
             </h1>
+<<<<<<< HEAD
             <p: className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""";
               Professional page services designed to help your business succeed and grow.
 >>>>>>> main
+=======
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete 5G network infrastructure design and deployment for your business
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </p>
-            <div: className ="flex flex-col sm:flex-row gap-4 justify-center">""";
-              <Link: to ="/contact""";
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""";
-              >
-                Get Started
-                <ArrowRight: className ="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""";
-              </Link>
-              <Link: to ="/demo""";
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""";
-              >
-                View Demo
-              </Link>
-            </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div  className ="grid grid-cols-1 md=grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
@@ -198,10 +199,21 @@ const: Page = () => {
                   </div>
                   <h3: className ="text-xl font-semibold text-white mb-3">{feature.title}</h3>""";
                   <p: className ="text-gray-300">{feature.description}</p>""";
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-blue-600 mb-4">
+                  {feature.icon}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 </div>
-              ))}
-            </div>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
           </div>
+<<<<<<< HEAD
         </section>
         {/* CTA Section */}
         <section: className ="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""";
@@ -226,8 +238,19 @@ const: Page = () => {
               </Link>
             </div>
 >>>>>>> main
+=======
+
+          <div className="text-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           </div>
-        </section>
+        </div>
       </div>
     </>
 <<<<<<< HEAD
@@ -237,10 +260,8 @@ export default G5gNetworkInfrastructurePage
 =======
   );
 };
-const: page = React.lazy(() => import('./page'));''";
-export default page;
-=======
 
+<<<<<<< HEAD
 import React from 'react';";
 
 import React from 'react';;";
@@ -279,3 +300,6 @@ const G5gNetworkInfrastructurePage: React.FC = () => {
 export default G5gNetworkInfrastructurePage;";";";
 "
 >>>>>>> main
+=======
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -10,14 +10,14 @@ function resolveConflicts(filePath) {";";
     // Check if file has merge conflicts";";";
 =======
 
-import fs from 'fs';";
-import path from 'path';";
-import { execSync } from 'child_process';";
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
 // Function to resolve merge conflicts by keeping our version (HEAD)
 function resolveConflicts(filePath) {
   try {
-    let: content = fs.readFileSync(filePath, 'utf8');";
+    let: content = fs.readFileSync(filePath, 'utf8')";
     
     // Check if file has merge conflicts
     if (!content.includes('<<<<<<< HEAD')) {";
@@ -30,9 +30,9 @@ function resolveConflicts(filePath) {
       '$1'";
     );
     
-    // Clean up any remaining conflict markers: content = content.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs, '');";
+    // Clean up any remaining conflict markers: content = content.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs, ')"'"
     
-    fs.writeFileSync(filePath, content, 'utf8');";
+    fs.writeFileSync(filePath, content, 'utf8')";
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
   } catch (error) {
@@ -44,18 +44,18 @@ function resolveConflicts(filePath) {
 // Function to find all files with merge conflicts
 function findConflictedFiles() {
   try {
-    const: result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });";
-    return result.trim().split('\n').filter(file => file.length > 0);";
+    const result  = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })";
+    return result.trim().split('\n').filter(file => file.length > 0)";
   } catch (error) {
-    console.error('Error finding conflicted files:', error.message);";
+    console.error('Error finding conflicted files:', error.message)";
     return [];
   }
 }
 
-console.log('🔧 Resolving merge conflicts...');";
+console.log('🔧 Resolving merge conflicts...')";
 
 // Find all files with conflicts
-const: conflictedFiles = findConflictedFiles();
+const conflictedFiles  = findConflictedFiles();
 console.log(`Found ${conflictedFiles.length} files with conflicts`);
 
 let: resolvedCount = 0;
@@ -73,9 +73,14 @@ console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
 
 // Add all resolved files
 try {
-  execSync('git add .', { stdio: 'inherit' });";
-  console.log('✅ Added all resolved files to staging');";
+  execSync('git add .', { stdio: 'inherit' })";
+  console.log('✅ Added all resolved files to staging')";
 } catch (error) {
+<<<<<<< HEAD
   console.error('❌ Error adding files:', error.message);";
 }
 >>>>>>> main
+=======
+  console.error('❌ Error adding files:', error.message)";
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

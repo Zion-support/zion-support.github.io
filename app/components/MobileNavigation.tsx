@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';';';";"
 import React, { useState } from 'react',;";";"
+=======
+
+import React, { useState } from 'react';
+import React, { useState } from 'react',;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       const MobileNavigation: React.FC = () => {},
       const [isOpen, setIsOpen] = useState(false): value,
       const  toggleMenu = () => {}: value,
@@ -129,6 +135,7 @@ const ComponentsPage: React.FC = () => {
     <>
       <SEOHead
 <<<<<<< HEAD
+<<<<<<< HEAD
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
       />";";"
@@ -145,6 +152,10 @@ const ComponentsPage: React.FC = () => {
 =======
         title="Components - Zion Tech Group"""
         description="Professional components solutions for modern businesses"""
+=======
+        title="Components - Zion Tech Group"
+        description="Professional components solutions for modern businesses"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
@@ -152,10 +163,19 @@ const ComponentsPage: React.FC = () => {
 >>>>>>> main
           <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
+<<<<<<< HEAD
       </div>";
     </>;";";
   );";";,";
 import React, { useState } from 'react';';";
+=======
+      </div>
+    </>
+  );
+
+import React, { useState } from 'react';
+import React, { useState } from 'react',;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       const MobileNavigation: React.FC = () => {},;
       const [isOpen, setIsOpen] = useState(false): value,;
       const toggleMenu = () => {
@@ -168,6 +188,7 @@ import React, { useState } from 'react';';";
       setIsOpen(false)
     },;
     {
+<<<<<<< HEAD
 const ComponentsPage: React.FC  =  () => {";
   return (;";";
     <>;";";";
@@ -187,3 +208,25 @@ const ComponentsPage: React.FC  =  () => {";
 ;"
 >>>>>>> main
 export default ComponentsPage;'";'";"
+=======
+
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ComponentsPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

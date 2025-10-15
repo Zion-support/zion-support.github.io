@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import SEOHead from '../components/SEOHead'
@@ -15,6 +16,12 @@ import React from 'react';";
 import { Link } from 'react-router-dom';";
 import SEOHead from '../components/SEOHead';";
 >>>>>>> main
+=======
+'use client'";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 import { 
 >>>>>>> main
   ChartBarIcon,
@@ -24,6 +31,7 @@ import {
   CurrencyDollarIcon,
   UserGroupIcon,
   ShieldCheckIcon,
+<<<<<<< HEAD
 <<<<<<< HEAD
   CpuChipIcon,";
   GlobeAltIcon,";";
@@ -260,38 +268,33 @@ const AnalyticsDashboardPage: React.FC = () => {
         '1 data source'"
 =======
   GlobeAltIcon,
+=======
+  CpuChipIcon,;
+  GlobeAltIcon,;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   DevicePhoneMobileIcon;
-} from '@heroicons/react/24/outline';";
+} from '@heroicons/react/24/outline'";
 
 const AnalyticsDashboardPage: React.FC = () => {
-  const: features = [;
-    'Real-time data visualization',";
-    'Custom dashboard creation',";
-    'Predictive analytics and forecasting',";
-    'Multi-source data integration',";
-    'Advanced reporting tools',";
-    'Mobile-responsive design',";
-    'API access for custom integrations',";
-    'Automated alerts and notifications',";
-    'Data export capabilities',";
-    'Team collaboration features',";
-    'White-label options',";
-    '24/7 customer support'";
+  const features  = ['Real-time data visualization',"'Custom dashboard creation',"'Predictive analytics and forecasting',"'Multi-source data integration',"'Advanced reporting tools',"'Mobile-responsive design',"'API access for custom integrations',"'Automated alerts and notifications',"'Data export capabilities',"'Team collaboration features',"'White-label options',"'24/7 customer support'";
   ];
 
-  const: pricingPlans = [
-    {;
-      name: 'Starter',";
+  const pricingPlans  = [
+    {name: 'Starter',";
       price: '$99',";
       period: '/month',";
       description: 'Perfect for small businesses',";
       features: [
+<<<<<<< HEAD
         '5 dashboards',";
         'Basic data sources',";
         'Standard reports',";
         'Email support',";
         '1 user account'";
 >>>>>>> main
+=======
+        '5 dashboards',"'Basic data sources',"'Standard reports',"'Email support',"'1 user account'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       ],
       popular: false
     },
@@ -314,6 +317,7 @@ const AnalyticsDashboardPage: React.FC = () => {
       period: '/month',";
       description: 'Ideal for growing businesses',";
       features: [
+<<<<<<< HEAD
         'Unlimited dashboards',";
         'All data sources',";
         'Advanced analytics',";
@@ -322,6 +326,9 @@ const AnalyticsDashboardPage: React.FC = () => {
         'API access',";
         'Custom integrations'";
 >>>>>>> main
+=======
+        'Unlimited dashboards',"'All data sources',"'Advanced analytics',"'Priority support',"'Up to 10 users',"'API access',"'Custom integrations'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       ],
       popular: true
     },
@@ -344,6 +351,7 @@ const AnalyticsDashboardPage: React.FC = () => {
       period: '/month',";
       description: 'For large organizations',";
       features: [
+<<<<<<< HEAD
         'Everything in Pro',";
         'Unlimited users',";
         'White-label solution',";
@@ -352,12 +360,16 @@ const AnalyticsDashboardPage: React.FC = () => {
         'SLA guarantee',";
         'On-premise deployment'";
 >>>>>>> main
+=======
+        'Everything in Pro',"'Unlimited users',"'White-label solution',"'Dedicated support',"'Custom development',"'SLA guarantee',"'On-premise deployment'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       ],
       popular: false
     }
   ]
   return (
     <>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <SEOHead= title ="Analytics Dashboard - Zion Tech Group""
         description="Advanced analytics dashboard solution with real-time data visualization, predictive insights, and custom reporting capabilities.""
@@ -367,6 +379,11 @@ const AnalyticsDashboardPage: React.FC = () => {
         description="Comprehensive business intelligence platform with real-time insights, predictive analytics, and custom reporting. Transform your data into actionable insights."";
         keywords="business analytics, data visualization, business intelligence, dashboard, reporting, predictive analytics"";
 >>>>>>> main
+=======
+      <SEOHead: title ="Business Analytics Dashboard Pro - Real-time Data Visualization";
+        description="Comprehensive business intelligence platform with real-time insights, predictive analytics, and custom reporting. Transform your data into actionable insights.";
+        keywords="business analytics, data visualization, business intelligence, dashboard, reporting, predictive analytics";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       />
       
       <div  className ="min-h-screen bg-slate-900 text-white">"
@@ -394,14 +411,14 @@ const AnalyticsDashboardPage: React.FC = () => {
         <section: className ="relative overflow-hidden py-20 lg:py-32">";
           <div: className ="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-pink-900/30"></div>";
           <div: className ="absolute inset-0 opacity-20" style={{";
-            backgroundImage: `url("data:image/svg+xml,%3Csvg: width ='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg: fill ='none' fill-rule='evenodd'%3E%3Cg: fill ='%23A855F7' fill-opacity='0.1'%3E%3Ccircle: cx ='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`";";
+            backgroundImage: `url("data:image/svg+xml,%3Csvg: width ='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg: fill ='none' fill-rule='evenodd'%3E%3Cg: fill ='%23A855F7' fill-opacity='0.1'%3E%3Ccircle: cx ='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`";
           }}></div>
           
           <div: className ="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
             <div: className ="text-center">";
               <div: className ="flex items-center justify-center mb-6">";
                 <div: className ="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">";
-                  <ChartBarIcon: className ="w-8 h-8 text-white" />";
+                  <ChartBarIcon className="w-8 h-8 text-white" />";
                 </div>
               </div>
               <h1: className ="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">";
@@ -411,13 +428,13 @@ const AnalyticsDashboardPage: React.FC = () => {
                 Transform your data into actionable insights with our comprehensive business intelligence platform. Real-time dashboards, predictive analytics, and custom reporting for data-driven decisions.
               </p>
               <div: className ="flex flex-col sm:flex-row gap-4 justify-center mb-12">";
-                <Link: to ="/contact"";
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"";
+                <Link: to ="/contact";
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105";
                 >
                   Start Free Trial
                 </Link>
-                <Link: to ="#demo"";
-                  className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"";
+                <Link: to ="#demo";
+                  className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300";
                 >
 >>>>>>> main
                   View Demo
@@ -482,9 +499,9 @@ const AnalyticsDashboardPage: React.FC = () => {
             <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {features.map((feature, index) => (
                 <div: key ={index}
-                  className="flex items-start space-x-3 p-6 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group"";
+                  className="flex items-start space-x-3 p-6 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group";
                 >
-                  <CheckCircleIcon: className ="w-6 h-6 text-purple-400 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />";
+                  <CheckCircleIcon className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />";
                   <div>
                     <h3: className ="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">";
                       {feature}
@@ -537,8 +554,7 @@ const AnalyticsDashboardPage: React.FC = () => {
                 <div: key ={index}
                   className={`relative bg-slate-800/50 rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular 
-                      ? 'border-purple-500 shadow-xl shadow-purple-500/20' ";
-                      : 'border-slate-700 hover:border-purple-500'";
+                      ? 'border-purple-500 shadow-xl shadow-purple-500/20' ": 'border-slate-700 hover:border-purple-500'";
                   }`}
                 >
                   {plan.popular && (
@@ -579,13 +595,14 @@ const AnalyticsDashboardPage: React.FC = () => {
                   <div: className ="space-y-4 mb-8">";
                     {plan.features.map((feature, featureIndex) => (
                       <div: key ={featureIndex} className="flex items-center">";
-                        <CheckCircleIcon: className ="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />";
+                        <CheckCircleIcon className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />";
                         <span: className ="text-gray-300">{feature}</span>";
                       </div>
 >>>>>>> main
                     ))}
                   </div>
                   
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <button  className ={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -594,10 +611,12 @@ const AnalyticsDashboardPage: React.FC = () => {
                   }`}>
 =======
                   <Link: to ="/contact"";
+=======
+                  <Link: to ="/contact";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white'";
-                        : 'border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white'";
+                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white'": 'border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white'";
                     }`}
 >>>>>>> main
                   >
@@ -661,13 +680,13 @@ const AnalyticsDashboardPage: React.FC = () => {
               Start your free trial today and discover the power of data-driven decision making.
             </p>
             <div: className ="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link: to ="/contact"";
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"";
+              <Link: to ="/contact";
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105";
               >
                 Start Free Trial
               </Link>
-              <Link: to ="/pricing"";
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"";
+              <Link: to ="/pricing";
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300";
               >
 >>>>>>> main
                 View Pricing

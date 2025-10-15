@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Mock advanced components
 const AdvancedButton = ({ children, variant = 'primary', ...props }: { 
@@ -117,5 +118,16 @@ describe('Advanced Components', () => {
     );
     expect(screen.getByText('Advanced Analytics')).toBeInTheDocument();
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+import '@testing-library/jest-dom';
+
+// Mock components for testing
+const MockComponent = () => <div>Test Component</div>;
+
+describe('Advanced Components', () => {
+  test('renders mock component', () => {
+    render(<MockComponent />);
+    expect(screen.getByText('Test Component')).toBeInTheDocument();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 });

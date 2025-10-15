@@ -29,10 +29,17 @@ export default Monitoring;';'
 };
 interface MonitoringState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const Monitoring = (options: MonitoringOptions = {,
   }) => {
     const stateRef = useRef<MonitoringState>({;
+=======
+}
+;
+export const Monitoring  = (options: MonitoringOptions = {}) => {
+  const stateRef  = useRef<MonitoringState>({
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     // Initialize your state here;
   
   });
@@ -53,6 +60,10 @@ export default Monitoring;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default Monitoring;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default Monitoring''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

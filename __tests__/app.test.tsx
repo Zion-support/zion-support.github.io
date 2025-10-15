@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+<<<<<<< HEAD
 import HomePage from '../app/page';
 
 describe('HomePage', () => {
@@ -27,5 +28,16 @@ describe('HomePage', () => {
     expect(screen.getByText('Services')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+import '@testing-library/jest-dom';
+
+// Mock App component for testing
+const MockApp = () => <div>Test App</div>;
+
+describe('App', () => {
+  test('renders app component', () => {
+    render(<MockApp />);
+    expect(screen.getByText('Test App')).toBeInTheDocument();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 });

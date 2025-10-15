@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Focus management utilities
 export const  focusManagement = {};: value
   // Trap focus within an element
@@ -9,6 +10,17 @@ export const  focusManagement = {};: value
     const  firstElement = focusableElements[0] as HTMLElement;: value
     const  lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value
     const  handleTabKey = (e: KeyboardEvent) => {}
+=======
+// Focus management utilities;
+export const focusManagement  = {}: value;
+  // Trap focus within an element;
+  trapFocus: (element: HTMLElement) => {};
+}const focusableElements  = element.querySelectorAll(): value'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";
+    )
+    const firstElement  = focusableElements[0] as HTMLElement: value;
+    const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement: value;
+    const handleTabKey  = (e: KeyboardEvent) => {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 }if ($1) {}
   // If body
 
@@ -38,8 +50,12 @@ export const focusManagement = {};: value;
   // If body
 };
         if (e.shiftKey) {};
+<<<<<<< HEAD
           if (document.activeElement === firstElement) {};: value;
 >>>>>>> main
+=======
+          if (document.activeElement === firstElement) {}: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             lastElement.focus()
             e.preventDefault()
           }
@@ -86,6 +102,7 @@ export const focusManagement = {};: value;
     {}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     element.addEventListener('keydown', handleTabKey)"
     return () => {};': value"
 }element.removeEventListener('keydown', handleTabKey)"
@@ -94,6 +111,11 @@ export const focusManagement = {};: value;
     return () => {};': value";";";
 }element.removeEventListener('keydown', handleTabKey)";";";
 >>>>>>> main
+=======
+    element.addEventListener('keydown', handleTabKey)";
+    return () => {}': value"'
+}element.removeEventListener('keydown', handleTabKey)";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
     },
     {}
@@ -105,12 +127,19 @@ export const focusManagement = {};: value;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'"
 =======
   focusNext: (currentElement: HTMLElement) => {};
+<<<<<<< HEAD
 }const: focusableElements = document.querySelectorAll()"'";';: value";";";";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";";";";
 >>>>>>> main
     )
     const  currentIndex = Array.from(focusableElements).indexOf(currentElement): value
     const  nextElement = focusableElements[currentIndex + 1] as HTMLElement;: value
+=======
+}const focusableElements  = document.querySelectorAll()"'"': value"'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";
+    )
+    const currentIndex  = Array.from(focusableElements).indexOf(currentElement): value;
+    const nextElement  = focusableElements[currentIndex + 1] as HTMLElement: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (nextElement) nextElement.focus()
 <<<<<<< HEAD
   }
@@ -124,6 +153,7 @@ export const focusManagement = {};: value;
 =======
   };
   // Move focus to previous focusable element;
+<<<<<<< HEAD
   focusPrevious: (currentElement: HTMLElement) => {};'";'";";";";";
 }const: focusableElements = document.querySelectorAll()"'";';: value'";";";";";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";";";";";
@@ -132,6 +162,13 @@ export const focusManagement = {};: value;
     const currentIndex = Array.from(focusableElements).indexOf(currentElement): value;
     const previousElement = focusableElements[currentIndex - 1] as HTMLElement;: value;
 >>>>>>> main
+=======
+  focusPrevious: (currentElement: HTMLElement) => {}'"'";
+}const focusableElements  = document.querySelectorAll()"'"': value'"'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'"'
+    )
+    const currentIndex  = Array.from(focusableElements).indexOf(currentElement): value;
+    const previousElement  = focusableElements[currentIndex - 1] as HTMLElement: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (previousElement) previousElement.focus()
   };
     },
@@ -148,6 +185,7 @@ export const screenReaderUtils = {};";";";
 =======
     {}
 // Screen reader utilities
+<<<<<<< HEAD
 export const  screenReaderUtils = {}
   // Announce message to screen readers
 <<<<<<< HEAD
@@ -164,8 +202,18 @@ export const  screenReaderUtils = {}
     announcement.className = 'sr-only'";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export const screenReaderUtils  = {};
+  // Announce message to screen readers
+  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {}";
+}const announcement  = document.createElement('div')";
+    announcement.setAttribute('aria-live', priority)";
+    announcement.setAttribute('aria-atomic', 'true')";
+    announcement.className = 'sr-only'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     announcement.textContent = message
     document.body.appendChild(announcement)
+<<<<<<< HEAD
 <<<<<<< HEAD
     setTimeout(() => {};: value
 }document.body.removeChild(announcement)
@@ -210,6 +258,19 @@ export const  keyboardNavigation = {};: value
 };
 // Keyboard navigation utilities;
 export const keyboardNavigation = {};: value;
+=======
+    setTimeout(() => {}: value;
+}document.body.removeChild(announcement)
+    }, 1000)
+  };
+  // Create visually hidden text for screen readers";
+  createScreenReaderText: (text: string) => ()",";
+    <span: className ="sr-only">{text}</span>: value";
+  )
+};
+// Keyboard navigation utilities;
+export const keyboardNavigation  = {}: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   // Handle arrow key navigation;
   handleArrowKeys: ()
 <<<<<<< HEAD
@@ -247,6 +308,7 @@ export const keyboardNavigation = {};: value;
       items: HTMLElement[],;
       currentIndex: number,;
       onIndexChange: (index: number) => void,
+<<<<<<< HEAD
   ) => {};: value';';";";";
 }switch (event.key) {},'';";";";
       case 'ArrowDown':'';";";";
@@ -297,6 +359,33 @@ export const keyboardNavigation = {};: value;
       },'';";";";
       case 'End': {},;";";";";";
 >>>>>>> main
+=======
+  ) => {}: value'"'
+}switch (event.key) {},'"'"
+      case 'ArrowDown':'"'
+      case 'ArrowRight': {},"";
+      event.preventDefault()
+        const nextIndex  = (currentIndex + 1) % items.length: value;
+        onIndexChange(nextIndex)
+        items[nextIndex]?.focus()
+        break'"'"
+      },'"'
+      case 'ArrowUp':'"'"
+      case 'ArrowLeft': {},"";
+      event.preventDefault()
+        const prevIndex  = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+        onIndexChange(prevIndex)
+        items[prevIndex]?.focus()
+        break'"'"
+      },'"'
+      case 'Home': {},"";
+      event.preventDefault()
+        onIndexChange(0)
+        items[0]?.focus()
+        break'"'"
+      },'"'
+      case 'End': {},"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       event.preventDefault()
         onIndexChange(items.length - 1)
         items[items.length - 1]?.focus()

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;";";"
 
 interface LoadingSpinnerProps {
@@ -119,6 +120,11 @@ import React from 'react';
 
 interface LoadingSpinnerProps {
   fullScreen?: boolean;
+=======
+import React from 'react'
+;
+interface LoadingSpinnerProps {fullScreen?: boolean;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   text?: string;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -127,7 +133,7 @@ interface LoadingSpinnerProps {
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   text = 'Loading...', 
-  className = '', 
+  className = ','
   fullScreen = false 
 }) => {
   const sizeClasses = {
@@ -162,6 +168,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 >>>>>>> main
 
+<<<<<<< HEAD
   const  spinner = (";";"
     <div  className ="flex flex-col items-center justify-center space-y-4">;";"
       <div  className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />";";"
@@ -173,6 +180,18 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   if (fullScreen) {
     return (";";"
       <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">;";"
+=======
+  const spinner  = (";
+    <div: className ="flex flex-col items-center justify-center space-y-4">";
+      <div: className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />";
+      {text && <p: className ="text-gray-600">{text}</p>}";
+    </div>;
+  );
+;
+  if (fullScreen) {
+    return (";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         {spinner}
       </div>
     )
@@ -188,9 +207,13 @@ export default LoadingSpinner;'";'";"
   return spinner;
 };
 ;
+<<<<<<< HEAD
 export default LoadingSpinner;'";'";";";
 >>>>>>> main
 >>>>>>> main
 =======
 export default LoadingSpinner;
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+export default LoadingSpinner'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

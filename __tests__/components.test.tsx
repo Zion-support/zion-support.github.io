@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { BrowserRouter } from 'react-router-dom';
 
 // Mock components for testing
@@ -62,4 +63,16 @@ describe('Component Tests', () => {
     expect(screen.getByText('Test with router')).toBeInTheDocument();
   });
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+import '@testing-library/jest-dom';
+
+// Mock component for testing
+const MockComponent = () => <div>Test Component</div>;
+
+describe('Components', () => {
+  test('renders component', () => {
+    render(<MockComponent />);
+    expect(screen.getByText('Test Component')).toBeInTheDocument();
+  });
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 });

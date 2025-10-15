@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react"
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"
 const EnhancedFooter: React.FC = () => {}
@@ -153,13 +154,18 @@ const EnhancedFooter: React.FC  =  () => {}";";";";
 =======
 import React from "react";";";
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";";";
+=======
+import React from 'react';
+import { Mail, Phone } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
-const EnhancedFooter: React.FC = () => {}
-  return ()
-    <footer: className ="bg-slate-900 text-white">";";
-      <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">";";
-        <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";";
+const EnhancedFooter: React.FC = () => {
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
+<<<<<<< HEAD
             <h3: className ="text-2xl font-bold text-white mb-4">";";
               Zion Tech Group
             </h3>
@@ -235,10 +241,17 @@ const EnhancedFooter: React.FC = () => {}
                   Cybersecurity
                 </>
               </li>
+=======
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li><a href="/about" className="hover:text-gray-300">About</a></li>
+              <li><a href="/services" className="hover:text-gray-300">Services</a></li>
+              <li><a href="/contact" className="hover:text-gray-300">Contact</a></li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </ul>
           </div>
-
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h4  className ="text-lg font-semibold text-white mb-4">Company</h4>"
             <ul: className ="space-y-2">"
@@ -297,10 +310,17 @@ const EnhancedFooter: React.FC = () => {}
                   Case Studies
                 </>
               </li>
+=======
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li><a href="/ai-solutions" className="hover:text-gray-300">AI Solutions</a></li>
+              <li><a href="/it-services" className="hover:text-gray-300">IT Services</a></li>
+              <li><a href="/consulting" className="hover:text-gray-300">Consulting</a></li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </ul>
           </div>
-
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h4  className ="text-lg font-semibold text-white mb-4">Contact</h4>"
             <div  className ="space-y-3">"
@@ -330,10 +350,30 @@ const EnhancedFooter: React.FC = () => {}
                 <MapPin: className ="h-5 w-5 text-cyan-400 mr-3" />";";
                 <span: className ="text-gray-300">San Francisco, CA</span>";";
 >>>>>>> main
+=======
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-2">
+              <div className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <span>info@ziontech.com</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <span>+1 (555) 123-4567</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               </div>
             </div>
           </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="hover:text-gray-300">LinkedIn</a>
+              <a href="#" className="hover:text-gray-300">Twitter</a>
+              <a href="#" className="hover:text-gray-300">GitHub</a>
+            </div>
+          </div>
         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         <div  className ="border-t border-gray-700 mt-8 pt-8">"
@@ -386,3 +426,14 @@ export default EnhancedFooter
 export default EnhancedFooter;";";";
 "
 >>>>>>> main
+=======
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default EnhancedFooter;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

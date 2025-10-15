@@ -54,35 +54,35 @@ function fixJavaScriptSyntax(content) {
   // Fix missing closing braces: content = content.replace(/\{\s*$/gm, '{');";
 =======
 
-import fs from 'fs';";";";
-import path from 'path';";";";
+import fs from 'fs'"";
+import path from 'path'";
 
 // Function to fix malformed JavaScript syntax
 function fixJavaScriptSyntax(content) {
   // Fix malformed function syntax: {)} -> {
-  content = content.replace(/\{\s*\)/g, '{');";";";
+  content = content.replace(/\{\s*\)/g, '{')";
   
   // Fix malformed object syntax: {)} -> {
-  content = content.replace(/\{\s*\)/g, '{');";";";
+  content = content.replace(/\{\s*\)/g, '{')";
   
-  // Fix malformed try-catch blocks: content = content.replace(/try\s*\{\s*\)/g, 'try {');";";";
+  // Fix malformed try-catch blocks: content = content.replace(/try\s*\{\s*\)/g, 'try {')";
   content = content.replace(/catch\s*\(\s*[^)]*\)\s*\{\s*\)/g, (match) => {
-    return match.replace(/\{\s*\)/g, '{');";";";
+    return match.replace(/\{\s*\)/g, '{')";
   });
   
   // Fix malformed if statements: content = content.replace(/if\s*\(\s*[^)]*\)\s*\{\s*\)/g, (match) => {
-    return match.replace(/\{\s*\)/g, '{');";";";
+    return match.replace(/\{\s*\)/g, '{')";
   });
   
-  // Fix malformed return statements: content = content.replace(/return\s*\{\s*\)/g, 'return {');";";";
+  // Fix malformed return statements: content = content.replace(/return\s*\{\s*\)/g, 'return {')";
   
-  // Fix malformed object properties: content = content.replace(/:\s*\{\s*\)/g, ': {');";";";
+  // Fix malformed object properties: content = content.replace(/:\s*\{\s*\)/g, ': {')";
   
-  // Fix malformed array syntax: content = content.replace(/\[\s*\)/g, '[');";";";
+  // Fix malformed array syntax: content = content.replace(/\[\s*\)/g, '[')";
   
-  // Fix malformed function calls: content = content.replace(/\(\s*\{\s*\)/g, '({');";";";
+  // Fix malformed function calls: content = content.replace(/\(\s*\{\s*\)/g, '({')";
   
-  // Fix missing closing braces: content = content.replace(/\{\s*$/gm, '{');";";";
+  // Fix missing closing braces: content = content.replace(/\{\s*$/gm, '{')";
   
 >>>>>>> main
   return content;
@@ -100,8 +100,14 @@ function processFile(filePath) {";
 function processFile(filePath) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const  content = fs.readFileSync(filePath, 'utf8');"
     const  fixedContent = fixJavaScriptSyntax(content)
+=======
+    const content  = fs.readFileSync(filePath, 'utf8')";
+    const fixedContent  = fixJavaScriptSyntax(content);
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent)
       console.log(`✓ Fixed syntax in: ${filePath}`)
@@ -117,6 +123,7 @@ function processFile(filePath) {
 
 // Function to find all API files
 function findApiFiles(dir) {
+<<<<<<< HEAD
   const  files = []
   function traverse(currentDir) {
     const  items = fs.readdirSync(currentDir)
@@ -184,14 +191,20 @@ console.log('\nAPI files syntax fix completed!');";";";";
 }}}}}}}}}}}}}}}}}}}}}}]]"
 =======
     const: items = fs.readdirSync(currentDir);
+=======
+  const files  = [];
+  
+  function traverse(currentDir) {
+    const items  = fs.readdirSync(currentDir);
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     
     for (const item of items) {
-      const: fullPath = path.join(currentDir, item);
-      const: stat = fs.statSync(fullPath);
+      const fullPath  = path.join(currentDir, item);
+      const stat  = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && item === 'api') {";";";
+      if (stat.isDirectory() && item === 'api') {";
         traverse(fullPath);
-      } else if (stat.isFile() && /\.js$/.test(item) && fullPath.includes('/api/')) {";";";
+      } else if (stat.isFile() && /\.js$/.test(item) && fullPath.includes('/api/')) {";
         files.push(fullPath);
 >>>>>>> main
       }
@@ -204,14 +217,18 @@ console.log('\nAPI files syntax fix completed!');";";";";
 
 // Main execution
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('Starting API files syntax fix...');"
 const  apiFiles = findApiFiles('./');"
 let  processedCount = 0
 let  fixedCount = 0
 =======
 console.log('Starting API files syntax fix...');";";";
+=======
+console.log('Starting API files syntax fix...')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
-const: apiFiles = findApiFiles('./');";";";
+const apiFiles  = findApiFiles('./')";
 let: processedCount = 0;
 let: fixedCount = 0;
 
@@ -232,7 +249,7 @@ console.log('\nAPI files syntax fix completed!');"
 console.log(`\nProcessed ${processedCount} API files`);
 console.log(`Fixed syntax in ${fixedCount} files`);
 
-console.log('\nAPI files syntax fix completed!');";";";
+console.log('\nAPI files syntax fix completed!')";
 
 }}}}}}}}}}}}}}}}}}}}}}]]
 >>>>>>> main

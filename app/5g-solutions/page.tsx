@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import SEOHead from '../components/SEOHead'
 import { Wifi, CheckCircle, Network, Cpu, Smartphone } from 'lucide-react'
@@ -259,38 +260,27 @@ const: Page = () => {
                   <h3: className ="text-xl font-semibold text-white mb-3">{feature.title}</h3>""";
                   <p: className ="text-gray-300">{feature.description}</p>""";
 =======
+=======
+import React from 'react';
+import { ArrowRight, CheckCircle, Users, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
-import React from 'react';";
-import { Helmet } from 'react-helmet-async';";
-import { Wifi, Network, Cpu, CheckCircle, ArrowRight } from 'lucide-react';";
-
-import React from 'react';;";
-import SEOHead from '../components/SEOHead';";
-import { Wifi, CheckCircle, Network, Cpu, Smartphone } from 'lucide-react';";
-
-const FiveGSolutionsPage: React.FC = () => {
-  const: solutions = [
-    {;
-      name: "5G Implementation",";";
-      description: "Complete 5G network deployment with zero-downtime migration and comprehensive testing.",";";
-      features: ["Network planning & design", "Equipment installation", "Performance testing", "Compliance certification", "24/7 monitoring", "Maintenance support"],";";
-      price: "From $5,999",";";
-      marketPrice: "$12,999-49,999",";";
-      popular: true,
-      icon: <Wifi: className ="w-8 h-8" />,";";
-      benefits: "Deploy 5G networks 60% faster than industry average"",";
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: '5G Solutions',
+      description: 'Comprehensive 5G technology solutions for modern businesses'
     },
     {
-      name: "5G Network Infrastructure",";";
-      description: "Robust 5G infrastructure with advanced tower installation and fiber optic connectivity.",";";
-      features: ["Tower installation", "Fiber optics deployment", "Coverage optimization", "Signal boosting", "Maintenance contracts", "Performance monitoring"],";";
-      price: "From $4,999",";";
-      marketPrice: "$9,999-39,999",";";
-      popular: false,
-      icon: <Network: className ="w-8 h-8" />,";";
-      benefits: "Achieve 99.9% network uptime with our infrastructure"",";
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
+<<<<<<< HEAD
       name: "5G IoT Solutions",";";
       description: "Comprehensive IoT connectivity solutions powered by 5G for smart devices and sensors.",";";
       features: ["Device connectivity", "Data analytics", "Real-time monitoring", "Edge computing", "Security protocols", "Scalable architecture"],";";
@@ -310,10 +300,16 @@ const FiveGSolutionsPage: React.FC = () => {
       icon: <Smartphone: className ="w-8 h-8" />,";";
       benefits: "Achieve sub-1ms latency for real-time applications"",";
 >>>>>>> main
+=======
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
   ]
   return (
     <>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <SEOHead= title ="5G Solutions - Zion Tech Group""
         description="Comprehensive 5G network solutions including implementation, infrastructure, IoT connectivity, and mobile applications.""
@@ -363,9 +359,21 @@ const FiveGSolutionsPage: React.FC = () => {
                 </button>
               </div>
             </div>
+=======
+      <EnhancedSEO title="5G Solutions - Zion Tech Group" description="Comprehensive 5G technology solutions for modern businesses" />
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              5G Solutions
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive 5G technology solutions for modern businesses
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           </div>
-        </div>
 
+<<<<<<< HEAD
         {/* Solutions Section */}
 <<<<<<< HEAD
         <div  className ="py-24">"
@@ -542,85 +550,41 @@ export default FiveGSolutionsPage;";";";
             </p>
           </div>
           <div: className ="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""";
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             {features.map((feature, index) => (
-              <div: key ={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">""";
-                <div: className ="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg mb-4">""";
-                  <feature.icon: className ="w-6 h-6 text-white" />""";
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-blue-600 mb-4">
+                  {feature.icon}
                 </div>
-              )}
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
             ))}
           </div>
-        </div>
-      </div>
-      {/* Solutions Section */}
-      <div: className ="py-20 bg-slate-800/30">""";
-        <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""";
-          <div: className ="text-center mb-16">""";
-            <h2: className ="text-3xl md:text-4xl font-bold text-white mb-4">""";
-              Our 5G Solutions
-            </h2>
-            <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">""";
-              Comprehensive 5G services tailored to your business needs
-            </p>
-          </div>
-          <div: className ="grid md:grid-cols-3 gap-8">""";
-            {solutions.map((solution, index) => (
-              <div: key ={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">""";
-                <h3: className ="text-2xl font-bold text-white mb-4">{solution.title}</h3>""";
-                <p: className ="text-gray-300 mb-6">{solution.description}</p>""";
-                <div: className ="text-3xl font-bold text-blue-400 mb-6">{solution.price}</div>""";
-                <ul: className ="space-y-3 mb-8">""";
-                  {solution.features.map((feature, idx) => (
-                    <li: key ={idx} className="flex items-center text-gray-300">""";
-                      <Right: className ="w-5 h-5 text-green-400 mr-3" />""";
-                      {feature}
-                    </li>
-))}
-                </ul>
-                <button: className ="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">""";
-                  Get Started
-                </button>
-              </div>
-))}
+
+          <div className="text-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </div>
         </div>
       </div>
-      {/* CTA Section */}
-      <div: className ="py-20">""";
-        <div: className ="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""";
-          <h2: className ="text-3xl md:text-4xl font-bold text-white mb-6">""";
-            Ready to Transform Your Business with 5G?
-          </h2>
-          <p: className ="text-xl text-gray-300 mb-8">""";
-            Contact our experts to discuss your 5G implementation strategy
-          </p>
-          <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>";
-            <div: className ="bg-white p-6 rounded-lg shadow-md"></div>";
-              <h3: className ="text-xl font-semibold mb-3">Feature 1</h3>";
-              <p>Description of feature 1</p>
-            </div>
-            <div: className ="bg-white p-6 rounded-lg shadow-md"></div>";
-              <h3: className ="text-xl font-semibold mb-3">Feature 2</h3>";
-              <p>Description of feature 2</p>
-            </div>
-            <div: className ="bg-white p-6 rounded-lg shadow-md"></div>";
-              <h3: className ="text-xl font-semibold mb-3">Feature 3</h3>";
-              <p>Description of feature 3</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-const: page = React.lazy(() => import('./page'));''";
-export default page;
-=======
     </>
-  ),
+  );
 };
 
+<<<<<<< HEAD
 export default FiveGSolutionsPage;
 >>>>>>> main
 )
 >>>>>>> main
 >>>>>>> main
+=======
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

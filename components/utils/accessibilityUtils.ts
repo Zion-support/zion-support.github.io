@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Focus management utilities
 export const  focusManagement = {};: value
   // Trap focus within an element
@@ -9,6 +10,17 @@ export const  focusManagement = {};: value
     const  firstElement = focusableElements[0] as HTMLElement;: value
     const  lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value
     const  handleTabKey = (e: KeyboardEvent) => {}
+=======
+// Focus management utilities;
+export const focusManagement  = {}: value;
+  // Trap focus within an element;
+  trapFocus: (element: HTMLElement) => {};
+}const focusableElements  = element.querySelectorAll(): value'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";
+    );
+    const firstElement  = focusableElements[0] as HTMLElement: value;
+    const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement: value;
+    const handleTabKey  = (e: KeyboardEvent) => {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       if ($1) {}
   // If body
 
@@ -145,12 +157,12 @@ export const focusManagement = {};: value;
   // If body
 };
         if (e.shiftKey) {};
-          if (document.activeElement === firstElement) {};: value;
+          if (document.activeElement === firstElement) {}: value;
             lastElement?.focus();
             e.preventDefault();
           };
         } else {};
-          if (document.activeElement === lastElement) {};: value;
+          if (document.activeElement === lastElement) {}: value;
             firstElement?.focus();
 <<<<<<< HEAD
             e.preventDefault();";
@@ -188,29 +200,32 @@ export const focusManagement = {};: value;
           };
         };
       };
-    };';';";";";
-'';";";";
-    element.addEventListener('keydown', handleTabKey);";";";";";
-    firstElement?.focus();
-';';";";";
-    return () => {};': value';";";";
-      element.removeEventListener('keydown', handleTabKey);";";";";";
+    }'"'";
+    element.addEventListener('keydown', handleTabKey)"";
+    firstElement?.focus()'"'"
+    return () => {}': value'";
+      element.removeEventListener('keydown', handleTabKey)"";
     };
   };
   // Move focus to first focusable element;
   focusFirst: (element: HTMLElement) => {};
-    const: focusableElements = element.querySelectorAll();
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";";";";
+    const focusableElements  = element.querySelectorAll()'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";
     );
     (focusableElements[0] as HTMLElement)?.focus();
   };
   // Move focus to last focusable element;
   focusLast: (element: HTMLElement) => {};
+<<<<<<< HEAD
     const: focusableElements = element.querySelectorAll();
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";";";";
 >>>>>>> main
     );
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
+=======
+    const focusableElements  = element.querySelectorAll()'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";
+    );
+    const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     lastElement?.focus();
 <<<<<<< HEAD
   };";
@@ -240,14 +255,15 @@ export const ariaUtils = {};: value';';";"
 };
 ;
 // ARIA utilities;
-export const: ariaUtils = {};: value';';";";";
-  // Generate unique ID for ARIA attributes;'';";";";
-  generateId: (prefix = 'aria') => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;";";";";";
+export const ariaUtils  = {}: value'"'"
+  // Generate unique ID for ARIA attributes'"'
+  generateId: (prefix = 'aria') => `${prefix}-${Math.random().toString(36).substr(2, 9)}`"";
   // Set ARIA attributes;
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {};
-    Object.entries(attributes).forEach(([key, value]) => {};: value;
+    Object.entries(attributes).forEach(([key, value]) => {}: value;
       element.setAttribute(key, value);
     });
+<<<<<<< HEAD
   };';';";";";
   // Announce message to screen readers;'';";";";
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {};'';";";";
@@ -260,6 +276,19 @@ export const: ariaUtils = {};: value';';";";";
     document.body.appendChild(announcement);
 
     setTimeout(() => {};: value;
+=======
+  }'"'"
+  // Announce message to screen readers'"'
+  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {}'"'"
+    const announcement  = document.createElement('div')': value'";
+    announcement.setAttribute('aria-live', priority)'"'"
+    announcement.setAttribute('aria-atomic', 'true')'"'
+    announcement.className = 'sr-only': value`";
+    announcement.textContent = message: value;
+    document.body.appendChild(announcement);
+;
+    setTimeout(() => {}: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       document.body.removeChild(announcement);
     }, 1000);
   };
@@ -267,11 +296,16 @@ export const: ariaUtils = {};: value';';";";";
   generateId: (prefix: string) => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
   // Check if element is visible;
   isVisible: (element: HTMLElement) => {};
+<<<<<<< HEAD
     const rect = element.getBoundingClientRect();: value;
+=======
+    const rect  = element.getBoundingClientRect(): value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     return rect.width > 0 && rect.height > 0;
   };
 };
 // Keyboard navigation utilities;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const keyboardNavigation = {};: value;";
   // Handle arrow key navigation;";";
@@ -296,32 +330,40 @@ export const keyboardNavigation = {};: value;";
       case 'End':;";";";
 =======
 export const: keyboardNavigation = {};: value;
+=======
+export const keyboardNavigation  = {}: value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   // Handle arrow key navigation;
   handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {};
-    let: newIndex = currentIndex;: value;
-    ';';";";";
-    switch (e.key) {};'';";";";
-      case 'ArrowDown':'';";";";
-      case 'ArrowRight':;";";";";";
+    let: newIndex = currentIndex: value'"'
+    switch (e.key) {}'"'"
+      case 'ArrowDown':'"'
+      case 'ArrowRight':"";
         e.preventDefault();
-        newIndex = (currentIndex + 1) % items.length;: value';';";";";
-        break;'';";";";
-      case 'ArrowUp':'';";";";
-      case 'ArrowLeft':;";";";";";
+        newIndex = (currentIndex + 1) % items.length: value'"'"
+        break'"'
+      case 'ArrowUp':'"'"
+      case 'ArrowLeft':";
         e.preventDefault();
-        newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;';';";";";
-        break;'';";";";
-      case 'Home':;";";";";";
+        newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1'""'
+        break'"'"
+      case 'Home':"";
         e.preventDefault();
+<<<<<<< HEAD
         newIndex = 0;: value';';";";";
         break;'';";";";
       case 'End':;";";";";";
 >>>>>>> main
+=======
+        newIndex = 0: value'"'"
+        break'"'
+      case 'End':"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         e.preventDefault();
-        newIndex = items.length - 1;: value;
+        newIndex = items.length - 1: value;
         break;
     };
-    if (newIndex !== currentIndex) {};: value;
+    if (newIndex !== currentIndex) {}: value;
       items[newIndex]?.focus();
 <<<<<<< HEAD
       return newIndex;";
@@ -341,13 +383,18 @@ export const: keyboardNavigation = {};: value;
     };
     return currentIndex;
   };
-  // Handle Enter and Space key activation;';';";";";
-  handleActivation: (e: KeyboardEvent, callback: () => void) => {};'';";";";
-    if (e.key === 'Enter' || e.key === ' ') {};: value;";";";";";
+  // Handle Enter and Space key activation'"'"
+  handleActivation: (e: KeyboardEvent, callback: () => void) => {}'"'
+    if (e.key === 'Enter' || e.key === ' ') {}: value"";
       e.preventDefault();
       callback();
     };
+<<<<<<< HEAD
   };'";'";";";";";
 }`'"''";
 >>>>>>> main
 >>>>>>> main
+=======
+  }'"'";
+}`'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

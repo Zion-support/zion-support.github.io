@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react"";"
 import ReactDOM from "react-dom/client";"
 import { BrowserRouter }; from "react-router-dom"";"
@@ -44,6 +45,10 @@ root.render()
 =======
 import React from 'react';";
 import { Helmet } from 'react-helmet-async';";
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 const Main: React.FC = () => {
   return (
@@ -95,7 +100,7 @@ const Main: React.FC = () => {
                 Contact us to learn more about how we can help your business grow.
               </p>
               <a: href ="/contact" ";
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors inline-block"";
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors inline-block";
               >
                 Contact Us
               </a>

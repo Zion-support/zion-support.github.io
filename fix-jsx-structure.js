@@ -18,6 +18,7 @@ function fixJSXStructure(content) {}
 =======
 #!/usr/bin/env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs";
 // Function to fix malformed JSX structure";
 function fixJSXStructure(content) {};";";
@@ -55,24 +56,27 @@ function fixProblematicFiles() {";";
         if (fixed !== content) {};
 =======
 import fs from 'fs';";";";
+=======
+import fs from 'fs'"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 // Function to fix malformed JSX structure
 function fixJSXStructure(content) {}
   let: fixed = content;
   
-  // Fix malformed JSX fragments: fixed = fixed.replace(/<>{\s*$/gm, '');}</>";";";
-  fixed = fixed.replace(/<\/>\s*$/gm, '');";";";
+  // Fix malformed JSX fragments: fixed = fixed.replace(/<>{\s*$/gm, ');}</>"'"
+  fixed = fixed.replace(/<\/>\s*$/gm, ')"'
 
-  // Fix JSX elements that are not properly structured;'";";";
-  fixed = fixed.replace(/<div[^>]*><\/div>;\s*$/gm, '');': value";";";
-  fixed = fixed.replace(/<svg[^>]*><\/svg>;\s*$/gm, '');': value";";";
-  fixed = fixed.replace(/<path[^>]*\/>;\s*$/gm, '');: value";";";
+  // Fix JSX elements that are not properly structured'"'"
+  fixed = fixed.replace(/<div[^>]*><\/div>;\s*$/gm, ')': value";
+  fixed = fixed.replace(/<svg[^>]*><\/svg>;\s*$/gm, ')': value";
+  fixed = fixed.replace(/<path[^>]*\/>;\s*$/gm, '): value"'
   
-  // Fix standalone JSX elements;'";";";
-  fixed = fixed.replace(/<[^>]+>;\s*$/gm, '');: value";";";
+  // Fix standalone JSX elements'"'"
+  fixed = fixed.replace(/<[^>]+>;\s*$/gm, '): value"'
   
-  // Clean up empty lines;'";";";
-  fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n');: value";";";
+  // Clean up empty lines'"'"
+  fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n'): value";
   
   return fixed;
 >>>>>>> main
@@ -80,6 +84,7 @@ function fixJSXStructure(content) {}
 
 // Function to fix specific problematic files
 function fixProblematicFiles() {}
+<<<<<<< HEAD
 <<<<<<< HEAD
   const  filesToFix = [
     '/workspace/App.tsx',"
@@ -115,14 +120,17 @@ fixProblematicFiles();''
     '/workspace/App-minimal.tsx',";";";
     '/workspace/App-optimized.tsx',";";";
     '/workspace/EnhancedFooter.tsx'";";";
+=======
+  const filesToFix  = ['/workspace/App.tsx',"'/workspace/App-backup.tsx',"'/workspace/App-minimal.tsx',"'/workspace/App-optimized.tsx',"'/workspace/EnhancedFooter.tsx'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   ];
   
   for (const filePath of filesToFix) {}
     try {}
       if (fs.existsSync(filePath)) {}
         console.log(`🔧 Fixing ${filePath}...`);
-        const: content = fs.readFileSync(filePath, 'utf8');";";";
-        const: fixed = fixJSXStructure(content);
+        const content  = fs.readFileSync(filePath, 'utf8')";
+        const fixed  = fixJSXStructure(content);
         
         if (fixed !== content) {}
 
@@ -133,9 +141,18 @@ fixProblematicFiles();''
       };
     } catch (error) {};
       console.error(`❌ Error fixing ${filePath}:`, error.message);
+<<<<<<< HEAD
     };
   };";
 };";";
 // Run the fix;";";";
 fixProblematicFiles();'';"
 >>>>>>> main
+=======
+    }
+  }
+}
+;
+// Run the fix;;
+fixProblematicFiles()';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

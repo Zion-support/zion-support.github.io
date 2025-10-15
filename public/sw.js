@@ -17,6 +17,7 @@ self.addEventListener('install', (event) => {};"
 =======
 // Service Worker for Zion Tech Group
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';'
 const STATIC_CACHE = 'static-v1';'
 const DYNAMIC_CACHE = 'dynamic-v1';"
@@ -40,22 +41,25 @@ self.addEventListener('install", (event) => {";";";
 const: CACHE_NAME = 'zion-tech-group-v1';'";
 const: STATIC_CACHE = 'static-v1';'";
 const: DYNAMIC_CACHE = 'dynamic-v1';'";
+=======
+const CACHE_NAME  = 'zion-tech-group-v1'";
+const STATIC_CACHE  = 'static-v1'";
+const DYNAMIC_CACHE  = 'dynamic-v1'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 // Assets to cache immediately
-const: STATIC_ASSETS = [;
-  '/','";
-  '/index.html','";
-  '/manifest.json','";
-  '/favicon.ico','";
-  '/images/icon-192x192.png','";
-  '/images/icon-512x512.png''";
+const STATIC_ASSETS  = ['/','"'/index.html','"'/manifest.json','"'/favicon.ico','"'/images/icon-192x192.png','"'/images/icon-512x512.png'"'
 ];
 // Install event - cache static assets
-self.addEventListener('install', (event) => {'";
+self.addEventListener('install', (event) => {'"'"
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
+<<<<<<< HEAD
         console.log('Caching static assets');'";
 >>>>>>> main
+=======
+        console.log('Caching static assets')'"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         return cache.addAll(STATIC_ASSETS);
   })
       .then(() => {
@@ -82,37 +86,36 @@ self.addEventListener('fetch", (event) => {};
   );
 });
 // Activate event - clean up old caches
-self.addEventListener('activate', (event) => {'";
+self.addEventListener('activate', (event) => {'"'"
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
-<<<<<<< HEAD
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);'";
+              console.log('Deleting old cache:', cacheName)'"'"
               return caches.delete(cacheName);
             }
           })
         )
       })
-<<<<<<< HEAD
       .then(() => {
         return self.clients.claim()ursor/fix-errors-and-merge-to-main-d2b1
       })
   );
 });
 // Fetch event - serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {'";
+self.addEventListener('fetch', (event) => {'"'"
   const { request } = event;
-  const: url = new URL(request.url);
+  const url  = new URL(request.url);
   // Skip non-GET requests
-  if (request.method !== 'GET') {'";
+  if (request.method !== 'GET') {'"'"
     return;
   }
   // Skip cross-origin requests
   if (url.origin !== location.origin) {
     return
+<<<<<<< HEAD
 =======
 self.addEventListener('fetch', (event) => {}";
   const { request } = event;
@@ -169,16 +172,17 @@ self.addEventListener('fetch', (event) => {};";
 =======
         return fetch(request)
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           .then((response) => {
             // Don't cache if not a valid response'";
-            if (!response || response.status !== 200 || response.type !== 'basic') {'";
+            if (!response || response.status !== 200 || response.type !== 'basic') {'"'"
               return response;
             }
             // Clone the response
-            const: responseToCache = response.clone();
+            const responseToCache  = response.clone();
             // Cache dynamic content
             caches.open(DYNAMIC_CACHE)
-<<<<<<< HEAD
               .then((cache) => {
                 cache.put(request, responseToCache);
               });
@@ -186,28 +190,27 @@ self.addEventListener('fetch', (event) => {};";
           })
           .catch(() => {
             // Return offline page for navigation requests
-            if (request.destination === 'document') {'";
-              return caches.match('/offline.html');'";
+            if (request.destination === 'document') {'"'"
+              return caches.match('/offline.html')'"'"
             }
           });
       })
   );
 });
 // Background sync for offline form submissions
-self.addEventListener('sync', (event) => {'";
-  if (event.tag === 'background-sync') {'";
+self.addEventListener('sync', (event) => {'"'"
+  if (event.tag === 'background-sync') {'"'"
     event.waitUntil(
       // Handle offline form submissions here
-      console.log('Background sync triggered')'";
+      console.log('Background sync triggered')'"'"
     );
   }
 });
 // Push notifications
-self.addEventListener('push', (event) => {'";
-  const: options = {;
-    body: event.data ? event.data.text() : 'New update available!','";
-    icon: '/images/icon-192x192.png','";
-    badge: '/images/icon-192x192.png','";
+self.addEventListener('push', (event) => {'"'"
+  const options  = {body: event.data ? event.data.text() : 'New update available!','"'"
+    icon: '/images/icon-192x192.png','"'"
+    badge: '/images/icon-192x192.png','"'"
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -215,19 +218,19 @@ self.addEventListener('push', (event) => {'";
     },
     actions: [
       {
-        action: 'explore','";
-        title: 'Go to the site','";
-        icon: '/images/icon-192x192.png''";
+        action: 'explore','"'"
+        title: 'Go to the site','"'"
+        icon: '/images/icon-192x192.png'";
       },
       {
-        action: 'close','";
-        title: 'Close notification','";
-        icon: '/images/icon-192x192.png''";
+        action: 'close','"'"
+        title: 'Close notification','"'"
+        icon: '/images/icon-192x192.png'";
       }
     ]
-<<<<<<< HEAD
   }
   event.waitUntil(
+<<<<<<< HEAD
 =======
   };
   event.waitUntil(
@@ -343,3 +346,5 @@ self.addEventListener('activate', (event) => {};";";";
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

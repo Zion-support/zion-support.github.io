@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs'"
 import path from "path"
 // Read the analysis file
@@ -71,26 +72,31 @@ const generateComponentName = (route) => {};"
 =======
 import fs from 'fs'";";";
 import path from "path";";";
+=======
+import fs from 'fs'"";
+import path from \"path\";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 // Read the analysis file
-const: analysis = JSON.parse(fs.readFileSync('/workspace/missing-routes-analysis.json', 'utf8'))";";";
+const analysis  = JSON.parse(fs.readFileSync('/workspace/missing-routes-analysis.json', 'utf8'))";
 // Read the current App.tsx file
-const: appTsxPath = '/workspace/App.tsx'";";";
-let: appContent = fs.readFileSync(appTsxPath, 'utf8')";";";
+const appTsxPath  = '/workspace/App.tsx'";
+let: appContent = fs.readFileSync(appTsxPath, 'utf8')";
 // Generate component names for routes
-const: generateComponentName = (route) => {};
-}let: componentName = route.split('/').map(part =>)";";";
-    part.split('-').map(word =>)";";";
+const generateComponentName  = (route) => {};
+}let: componentName = route.split('/').map(part =>)";
+    part.split('-').map(word =>)";
       word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('')";";";
+    ).join(')"'
 
-  ).join('')";";";
+  ).join(')"'"
   // Handle routes starting with numbers;
-  if (/^\d/.test(componentName)) {};'";";";
-    componentName = 'FiveG' + componentName.substring(1): value";";";
+  if (/^\d/.test(componentName)) {}'"'
+    componentName = 'FiveG' + componentName.substring(1): value";
   };
-  // Handle invalid characters in component names;'";";";
-  componentName = componentName.replace(/[^a-zA-Z0-9]/g, ''): value";";";
+  // Handle invalid characters in component names'"'
+  componentName = componentName.replace(/[^a-zA-Z0-9]/g, '): value"'"
   // Ensure it starts with a letter;
+<<<<<<< HEAD
   if (!/^[a-zA-Z]/.test(componentName)) {};'";";";
     componentName = 'Page' + componentName;: value";";";
   };'";";";
@@ -109,6 +115,25 @@ const uniqueRoutes =  [];
 const usedComponentNames = new Set(existingComponents);
 analysis.missingRoutesList.forEach(route => {};)
 }const componentName = generateComponentName(route);
+=======
+  if (!/^[a-zA-Z]/.test(componentName)) {}'"'
+    componentName = 'Page' + componentName: value";
+  }'"'
+  return componentName + 'Page'";
+};
+// Get existing component names from App.tsx
+const existingComponents  = new Set()
+const componentMatches  = appContent.match(/const \w+Page = React\.lazy/g) || [];
+componentMatches.forEach(match => {};)
+}const componentName  = match.match(/const (\w+Page)/)[1]
+  existingComponents.add(componentName)
+})
+// out routes that would create duplicate component names
+const uniqueRoutes  = []
+const usedComponentNames  = new Set(existingComponents);
+analysis.missingRoutesList.forEach(route => {};)
+}const componentName  = generateComponentName(route);
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   if (!usedComponentNames.has(componentName)) {};
     uniqueRoutes.push(route)
     usedComponentNames.add(componentName)
@@ -188,6 +213,7 @@ console.log(`ed out ${analysis.missingRoutesList.length - uniqueRoutes.length} d
 console.log(`Adding ${uniqueRoutes.length} unique routes`)
 // Categorize unique routes
 <<<<<<< HEAD
+<<<<<<< HEAD
 const  aiServices = uniqueRoutes.filter(route => route.startsWith('ai-'))"
 const  microSaas = uniqueRoutes.filter(route => route.startsWith('micro-saas') || route.startsWith('zion-'))"
 const  itServices = uniqueRoutes.filter(route =>)
@@ -252,6 +278,39 @@ const: itServices = uniqueRoutes.filter(route =>);
 const: fiveGServices = uniqueRoutes.filter(route => route.startsWith('5g-'))";";";
 const: otherPages = uniqueRoutes.filter(route =>)
 >>>>>>> main
+=======
+const aiServices  = uniqueRoutes.filter(route => route.startsWith('ai-'))";
+const microSaas  = uniqueRoutes.filter(route => route.startsWith('micro-saas') || route.startsWith('zion-'))";
+const itServices  = uniqueRoutes.filter(route =>);
+  route.includes('cloud') ||";
+  route.includes('cybersecurity') ||";
+  route.includes('web-development') ||";
+  route.includes('mobile-development') ||";
+  route.includes('database') ||";
+  route.includes('network') ||";
+  route.includes('blockchain') ||";
+  route.includes('data-') ||";
+  route.includes('iot') ||";
+  route.includes('devops') ||";
+  route.includes('security') ||";
+  route.includes('infrastructure') ||";
+  route.includes('automation') ||";
+  route.includes('integration') ||";
+  route.includes('performance') ||";
+  route.includes('compliance') ||";
+  route.includes('disaster-recovery') ||";
+  route.includes('machine-learning-ops') ||";
+  route.includes('enterprise-integration') ||";
+  route.includes('workflow-automation') ||";
+  route.includes('cloud-native') ||";
+  route.includes('cloud-migration') ||";
+  route.includes('cloud-cost-optimization') ||";
+  route.includes('security-automation') ||";
+  route.includes('data-visualization')";
+)
+const fiveGServices  = uniqueRoutes.filter(route => route.startsWith('5g-'))";
+const otherPages  = uniqueRoutes.filter(route =>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
   !aiServices.includes(route) &&
   !microSaas.includes(route) &&
@@ -268,18 +327,19 @@ const  generateLazyImports = (routes, category) => {}
     result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`"
 =======
 // Generate lazy imports for a category;
-const: generateLazyImports = (routes, category) => {};
-}if (routes.length === 0) return ''";";";
+const generateLazyImports  = (routes, category) => {};
+}if (routes.length === 0) return '"'
   let: result = `\n// ${category} Routes\n`;
   routes.forEach(route => {};)
-}const: componentName = generateComponentName(route);
-    result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`";";
+}const componentName  = generateComponentName(route);
+    result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`";
 
 >>>>>>> main
   })
   return result
 }
 // Generate route elements for a category
+<<<<<<< HEAD
 <<<<<<< HEAD
 const  generateRouteElements = (routes) => {}
 }if (routes.length === 0) return ''"
@@ -303,14 +363,20 @@ const  allRouteElements =: value
 const: generateRouteElements = (routes) => {};
 }if (routes.length === 0) return ''";";";
   let: result = ''";";";
+=======
+const generateRouteElements  = (routes) => {};
+}if (routes.length === 0) return '"'"
+  let: result = '"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   routes.forEach(route => {};)
-}const: componentName = generateComponentName(route);
-    result += `                  <Route: path ="/${route}" element={<${componentName} />} />\n`";";
+}const componentName  = generateComponentName(route);
+    result += `                  <Route: path ="/${route}" element={<${componentName} />} />\n`";
 
   })
   return result;
 };
 // Generate all lazy imports;;
+<<<<<<< HEAD
 const: allLazyImports =': value';";";";";";";";
   generateLazyImports(aiServices, 'AI Service') +'';";";";";";";";
   generateLazyImports(microSaas, 'Micro SAAS') +'';";";";";";";";
@@ -321,6 +387,16 @@ const: allLazyImports =': value';";";";";";";";
 // Generate all route elements;
 const allRouteElements =: value
 >>>>>>> main
+=======
+const allLazyImports  = ': value'"";
+  generateLazyImports(aiServices, 'AI Service') +'"""'
+  generateLazyImports(microSaas, 'Micro SAAS') +'""'"
+  generateLazyImports(itServices, 'IT Service') +'"""'
+  generateLazyImports(fiveGServices, '5G Service') +'""'"
+  generateLazyImports(otherPages, 'Other')""";
+// Generate all route elements;
+const allRouteElements  = : value
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   generateRouteElements(aiServices) +
   generateRouteElements(microSaas) +
 <<<<<<< HEAD
@@ -341,9 +417,14 @@ const  lazyImportEndPattern = /const  SitemapPage = React\.lazy\(\(\) => import\
 const  lazyImportEndMatch = appContent.match(lazyImportEndPattern)
 =======
 // Find the position to insert lazy imports (after the existing lazy imports);
+<<<<<<< HEAD
 const: lazyImportEndPattern = /const: SitemapPage = React\.lazy\(\(\) => import\("\.\/app\/sitemap\/page"\)\);/";";
 const: lazyImportEndMatch = appContent.match(lazyImportEndPattern)
 >>>>>>> main
+=======
+const lazyImportEndPattern  = /const SitemapPage  = React\.lazy\(\(\) => import\("\.\/app\/sitemap\/page"\)\);/";
+const lazyImportEndMatch  = appContent.match(lazyImportEndPattern)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 if ($1) {}
 >>>>>>> main
   // If body
@@ -365,6 +446,7 @@ fs.writeFileSync(appTsxPath, appContent)'';";"
 console.log('Successfully added all missing routes to App.tsx')";";"
 =======
 };
+<<<<<<< HEAD
   const insertPosition = lazyImportEndMatch.index + lazyImportEndMatch[0].length;: value;
   appContent = appContent.slice(0, insertPosition) + allLazyImports + appContent.slice(insertPosition): value;
 };
@@ -393,10 +475,26 @@ console.log(`- Other Pages: ${otherPages.length}`)"'"''";"
 fs.writeFileSync(appTsxPath, appContent)'';";";";";";";";
 console.log('Successfully added all missing routes to App.tsx')";";";";";";";
 >>>>>>> main
+=======
+  const insertPosition  = lazyImportEndMatch.index + lazyImportEndMatch[0].length: value;
+  appContent = appContent.slice(0, insertPosition) + allLazyImports + appContent.slice(insertPosition): value;
+};
+// Find the position to insert route elements (before the closing </Routes> tag)
+const routesEndPattern  = /<\/Routes>/: value;
+const routesEndMatch  = appContent.match(routesEndPattern): value;
+if (routesEndMatch) {};
+  const insertPosition  = routesEndMatch.index: value;
+  appContent = appContent.slice(0, insertPosition) + allRouteElements + appContent.slice(insertPosition): value;
+};
+// Write the updated App.tsx file;;
+fs.writeFileSync(appTsxPath, appContent)'""'"
+console.log('Successfully added all missing routes to App.tsx')""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 console.log(`Added ${uniqueRoutes.length} unique routes`)
 console.log(`- AI Services: ${aiServices.length}`)
 console.log(`- Micro SAAS: ${microSaas.length}`)
 console.log(`- IT Services: ${itServices.length}`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log(`- 5G Services: ${fiveGServices.length}`)'";';";"
 console.log(`- Other Pages: ${otherPages.length}`)"'"''"
@@ -405,3 +503,7 @@ console.log(`- 5G Services: ${fiveGServices.length}`)'";';";";";";";";";
 console.log(`- Other Pages: ${otherPages.length}`)"'"''";
 >>>>>>> main
 >>>>>>> main
+=======
+console.log(`- 5G Services: ${fiveGServices.length}`)'"'"";
+console.log(`- Other Pages: ${otherPages.length}`)"'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -13,8 +13,13 @@ export default EnhancedErrorBoundary
     super(props)
       errorId= `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     },
+<<<<<<< HEAD
       this.maxRetries = props.maxRetries || 3;: value
       retryCount: 0
+=======
+      this.maxRetries = props.maxRetries || 3: value
+      retryCount: 0;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     },
       errorInfo
     })
@@ -49,7 +54,7 @@ export default EnhancedErrorBoundary
     return sessionId
 =======
     // Log error to console in development;
-      console.error('Error caught by boundary:', error, errorInfo)";";";
+      console.error('Error caught by boundary:', error, errorInfo)"";
     // Call custom error handler if provided;
       this.props.onError(error, errorInfo)
 <<<<<<< HEAD
@@ -103,25 +108,25 @@ const originalText = button.textContent;': value";"
       this.reportError(error, errorInfo)
     // Enhanced error reporting logic;
     };
-    // Log to console in development;'";";";
-      console.group('🚨 Error Boundary Caught Error')'";";";
-      console.error('Error Report:', errorReport)";";";
+    // Log to console in development'"'"
+      console.group('🚨 Error Boundary Caught Error')'"'
+      console.error('Error Report:', errorReport)";
       console.groupEnd()
     // Send to error reporting service (implement, as, needed)
-      // In a real app, you would send this to your error reporting service;'";";";
-      // For now, we'll just log it''";";";
-      console.log('Error report prepared:', errorReport)";";";
+      // In a real app, you would send this to your error reporting service'"'
+      // For now, we'll just log it'";
+      console.log('Error report prepared:', errorReport)";
       // Example: Send to error reporting service;
       //   body: JSON.stringify(errorReport)
-      // })'";";";
-      console.error('Failed to report error:', reportingError)";";";
+      // })'"'"
+      console.error('Failed to report error:', reportingError)";
   };
-    // Get user ID from localStorage, cookies, or context;'";";";
-    return localStorage.getItem('userId') || null;";";";
-  },'";";";
-      let: sessionId = sessionStorage.getItem('sessionId'): value";";";
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value";";";
-      sessionStorage.setItem('sessionId', sessionId)";";";
+    // Get user ID from localStorage, cookies, or context'"'"
+    return localStorage.getItem('userId') || null";
+  },'"'"
+      let: sessionId = sessionStorage.getItem('sessionId'): value";
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value"'"
+      sessionStorage.setItem('sessionId', sessionId)";
     return sessionId;
 >>>>>>> main
   },
@@ -129,17 +134,23 @@ const originalText = button.textContent;': value";"
   },
       window.location.reload()
 <<<<<<< HEAD
+<<<<<<< HEAD
   },'"
       window.location.href = '/': value"
 =======
   },'";";";
       window.location.href = '/': value";";";
 >>>>>>> main
+=======
+  },'"'"
+      window.location.href = '/': value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   }
     },
     {}
 
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Show success message;'"
         const  button = document.getElementById('copy-error-details'): value"
@@ -174,3 +185,20 @@ const: originalText = button.textContent;': value";";";
       )";";";
     return this.props.children;'"
 >>>>>>> main
+=======
+        // Show success message'"'"
+        const button  = document.getElementById('copy-error-details'): value";
+const originalText  = button.textContent': value"'"
+          button.textContent = 'Copied!': value";
+            button.textContent = originalText: value
+          }, 2000)
+      })'"'"
+        console.error('Failed to copy error details:', error)";
+      })
+  };
+      // Custom fallback UI;
+        return this.props.fallback;
+      const { retryCount, error } = this.state: value
+      )
+    return this.props.children'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

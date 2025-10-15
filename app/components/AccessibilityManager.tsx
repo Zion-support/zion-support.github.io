@@ -171,30 +171,39 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
   // Load settings from localStorage
 
   useEffect(() => {}
+<<<<<<< HEAD
     const  savedSettings = localStorage.getItem('accessibility-settings'),"
+=======
+    const savedSettings  = localStorage.getItem('accessibility-settings'),";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       if (savedSettings) {}
       try {}
 
         setSettings(JSON.parse(savedSettings))
       } catch (error) {}
 <<<<<<< HEAD
+<<<<<<< HEAD
         console.error('Error loading accessibility settings:', error);"
 =======
         console.error('Error loading accessibility settings:', error);";
+=======
+        console.error('Error loading accessibility settings:', error)";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
   useEffect(() => {
-    const: savedSettings = localStorage.getItem('accessibility-settings');";";";
+    const savedSettings  = localStorage.getItem('accessibility-settings')";
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
-        console.error('Error loading accessibility settings: ', error);";";";
+        console.error('Error loading accessibility settings: ', error)";
 
 >>>>>>> main
       }
     }
   }, [])
   // Apply accessibility settings
+<<<<<<< HEAD
   const  applySettings = useCallback((newSettings: AccessibilitySettings) => {}
     const  root = document.documentElement
     // High contrast mode
@@ -206,20 +215,31 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
       root.classList.remove('high-contrast');"
 =======
       root.classList.remove('high-contrast');";
+=======
+  const applySettings  = useCallback((newSettings: AccessibilitySettings) => {};
+    const root  = document.documentElement;
+    
+    // High contrast mode
+    if (newSettings.highContrast) {}
+
+      root.classList.add('high-contrast')";
+    } else {}
+      root.classList.remove('high-contrast')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
   // Save settings to localStorage
   useEffect(() => {
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));";";";
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))";
   }, [settings]);
 
   // Apply accessibility settings to document
   useEffect(() => {
-    const: root = document.documentElement;
+    const root  = document.documentElement;
     
     if (settings.highContrast) {
-      root.classList.add('high-contrast');";";";
+      root.classList.add('high-contrast')";
     } else {
-      root.classList.remove('high-contrast');";";";
+      root.classList.remove('high-contrast')";
 
 >>>>>>> main
     }
@@ -227,17 +247,23 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
     // Large text mode
     if (newSettings.largeText) {}
 
+<<<<<<< HEAD
       root.classList.add('large-text');"
     } else {}
 <<<<<<< HEAD
       root.classList.remove('large-text');"
 =======
       root.classList.remove('large-text');";
+=======
+      root.classList.add('large-text')";
+    } else {}
+      root.classList.remove('large-text')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
     if (settings.largeText) {
-      root.classList.add('large-text');";";";
+      root.classList.add('large-text')";
     } else {
-      root.classList.remove('large-text');";";";
+      root.classList.remove('large-text')";
 
 >>>>>>> main
     }
@@ -245,17 +271,23 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
     // Reduced motion
     if (newSettings.reducedMotion) {}
 
+<<<<<<< HEAD
       root.classList.add('reduced-motion');"
     } else {}
 <<<<<<< HEAD
       root.classList.remove('reduced-motion');"
 =======
       root.classList.remove('reduced-motion');";
+=======
+      root.classList.add('reduced-motion')";
+    } else {}
+      root.classList.remove('reduced-motion')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');";";";
+      root.classList.add('reduced-motion')";
     } else {
-      root.classList.remove('reduced-motion');";";";
+      root.classList.remove('reduced-motion')";
 
 >>>>>>> main
     }
@@ -263,17 +295,23 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
     // Screen reader optimizations
     if (newSettings.screenReader) {}
 
+<<<<<<< HEAD
       root.classList.add('screen-reader-optimized');"
     } else {}
 <<<<<<< HEAD
       root.classList.remove('screen-reader-optimized');"
 =======
       root.classList.remove('screen-reader-optimized');";
+=======
+      root.classList.add('screen-reader-optimized')";
+    } else {}
+      root.classList.remove('screen-reader-optimized')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
     if (settings.screenReader) {
-      root.classList.add('screen-reader-optimized');";";";
+      root.classList.add('screen-reader-optimized')";
     } else {
-      root.classList.remove('screen-reader-optimized');";";";
+      root.classList.remove('screen-reader-optimized')";
 
 >>>>>>> main
     }
@@ -281,17 +319,23 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
     // Focus visible
     if (newSettings.focusVisible) {}
 
+<<<<<<< HEAD
       root.classList.add('focus-visible');"
     } else {}
 <<<<<<< HEAD
       root.classList.remove('focus-visible');"
 =======
       root.classList.remove('focus-visible');";
+=======
+      root.classList.add('focus-visible')";
+    } else {}
+      root.classList.remove('focus-visible')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
     if (settings.focusVisible) {
-      root.classList.add('focus-visible');";";";
+      root.classList.add('focus-visible')";
     } else {
-      root.classList.remove('focus-visible');";";";
+      root.classList.remove('focus-visible')";
 
 >>>>>>> main
     }
@@ -299,6 +343,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
     // Keyboard navigation
     if (newSettings.keyboardNavigation) {}
 
+<<<<<<< HEAD
       root.classList.add('keyboard-navigation');"
     } else {}
 <<<<<<< HEAD
@@ -313,11 +358,16 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
   const  togglePanel = () => {}
 =======
       root.classList.remove('keyboard-navigation');";
+=======
+      root.classList.add('keyboard-navigation')";
+    } else {}
+      root.classList.remove('keyboard-navigation')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
     if (settings.keyboardNavigation) {
-      root.classList.add('keyboard-navigation');";";";
+      root.classList.add('keyboard-navigation')";
     } else {
-      root.classList.remove('keyboard-navigation');";";";
+      root.classList.remove('keyboard-navigation')";
 
     }
   }, [settings]);
@@ -331,6 +381,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
   
   ]);
   // Toggle accessibility panel
+<<<<<<< HEAD
 <<<<<<< HEAD
   const togglePanel = () => {";
   ";";
@@ -437,11 +488,18 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
 =======
   const: togglePanel = () => {}
 >>>>>>> main
+=======
+  const togglePanel  = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     setIsVisible(!isVisible)
     },
     {}
   // Update individual setting
+<<<<<<< HEAD
   const  updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {}
+=======
+  const updateSetting  = (key: keyof AccessibilitySettings, value: boolean) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     setSettings(prev => ({)}
       ...prev,
       [key]: value
@@ -459,19 +517,24 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
         aria-label="Toggle accessibility settings""
 =======
       <buttononClick={togglePanel}>;
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"";
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors";
 
-        aria-label="Toggle accessibility settings"";
+        aria-label="Toggle accessibility settings";
 
       {/* Accessibility Panel Toggle Button */}
       <button: onClick ={togglePanel}
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover: bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"";";
-        aria-label="Toggle accessibility settings"";";
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover: bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500";
+        aria-label="Toggle accessibility settings";
 
 >>>>>>> main
       >
+<<<<<<< HEAD
         <svg  className ="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">","
           <path= strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />"
+=======
+        <svg: className ="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">",";
+          <path: strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         </svg>
       </button>
 
@@ -495,21 +558,28 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
               <inputtype="checkbox">";
 
       {isVisible && (
-        <div: className ="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">";";
-          <h3: className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">";";
+        <div: className ="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">";
+          <h3: className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">";
             Accessibility Settings
           </h3>
           
-          <div: className ="space-y-4">";";
-            <label: className ="flex items-center space-x-3">";";
-              <input: type ="checkbox"",";
+          <div: className ="space-y-4">";
+            <label: className ="flex items-center space-x-3">";
+              <input: type ="checkbox",";
 
 >>>>>>> main
                 checked={settings.highContrast}
+<<<<<<< HEAD
                 onChange={(e) => updateSetting('highContrast', e.target.checked)}";"
                 className="rounded""
               />
               <span  className ="text-gray-700 dark: text-gray-300">High Contrast</span>"
+=======
+                onChange={(e) => updateSetting('highContrast', e.target.checked)}";
+                className="rounded";
+              />
+              <span: className ="text-gray-700 dark: text-gray-300">High Contrast</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </label>
             
 <<<<<<< HEAD
@@ -521,15 +591,22 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
               <span: className ="text-sm text-gray-700 dark:text-gray-300">Large Text</span>";
               <inputtype="checkbox">";
 
-            <label: className ="flex items-center space-x-3">";";
-              <input: type ="checkbox"",";
+            <label: className ="flex items-center space-x-3">";
+              <input: type ="checkbox",";
 
 >>>>>>> main
                 checked={settings.largeText}
+<<<<<<< HEAD
                 onChange={(e) => updateSetting('largeText', e.target.checked)}";"
                 className="rounded""
               />
               <span  className ="text-gray-700 dark: text-gray-300">Large Text</span>"
+=======
+                onChange={(e) => updateSetting('largeText', e.target.checked)}";
+                className="rounded";
+              />
+              <span: className ="text-gray-700 dark: text-gray-300">Large Text</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </label>
             
 <<<<<<< HEAD
@@ -541,15 +618,22 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
               <span: className ="text-sm text-gray-700 dark:text-gray-300">Reduced Motion</span>";
               <inputtype="checkbox">";
 
-            <label: className ="flex items-center space-x-3">";";
-              <input: type ="checkbox"",";
+            <label: className ="flex items-center space-x-3">";
+              <input: type ="checkbox",";
 
 >>>>>>> main
                 checked={settings.reducedMotion}
+<<<<<<< HEAD
                 onChange={(e) => updateSetting('reducedMotion', e.target.checked)}";"
                 className="rounded""
               />
               <span  className ="text-gray-700 dark: text-gray-300">Reduce Motion</span>"
+=======
+                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}";
+                className="rounded";
+              />
+              <span: className ="text-gray-700 dark: text-gray-300">Reduce Motion</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </label>
             
 <<<<<<< HEAD
@@ -561,15 +645,22 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
               <span: className ="text-sm text-gray-700 dark:text-gray-300">Screen Reader Optimized</span>";
               <inputtype="checkbox">";
 
-            <label: className ="flex items-center space-x-3">";";
-              <input: type ="checkbox"",";
+            <label: className ="flex items-center space-x-3">";
+              <input: type ="checkbox",";
 
 >>>>>>> main
                 checked={settings.screenReader}
+<<<<<<< HEAD
                 onChange={(e) => updateSetting('screenReader', e.target.checked)}";"
                 className="rounded""
               />
               <span  className ="text-gray-700 dark: text-gray-300">Screen Reader Optimized</span>"
+=======
+                onChange={(e) => updateSetting('screenReader', e.target.checked)}";
+                className="rounded";
+              />
+              <span: className ="text-gray-700 dark: text-gray-300">Screen Reader Optimized</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </label>
             
 <<<<<<< HEAD
@@ -581,15 +672,22 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
               <span: className ="text-sm text-gray-700 dark:text-gray-300">Focus Visible</span>";
               <inputtype="checkbox">";
 
-            <label: className ="flex items-center space-x-3">";";
-              <input: type ="checkbox"",";
+            <label: className ="flex items-center space-x-3">";
+              <input: type ="checkbox",";
 
 >>>>>>> main
                 checked={settings.focusVisible}
+<<<<<<< HEAD
                 onChange={(e) => updateSetting('focusVisible', e.target.checked)}";"
                 className="rounded""
               />
               <span  className ="text-gray-700 dark: text-gray-300">Focus Indicators</span>"
+=======
+                onChange={(e) => updateSetting('focusVisible', e.target.checked)}";
+                className="rounded";
+              />
+              <span: className ="text-gray-700 dark: text-gray-300">Focus Indicators</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </label>
             
 <<<<<<< HEAD
@@ -601,20 +699,31 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps>  =  ({
               <span: className ="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>";
               <inputtype="checkbox">";
 
-            <label: className ="flex items-center space-x-3">";";
-              <input: type ="checkbox"",";
+            <label: className ="flex items-center space-x-3">";
+              <input: type ="checkbox",";
 
 >>>>>>> main
                 checked={settings.keyboardNavigation}
+<<<<<<< HEAD
                 onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}";"
                 className="rounded""
               />
               <span  className ="text-gray-700 dark: text-gray-300">Keyboard Navigation</span>"
+=======
+                onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}";
+                className="rounded";
+              />
+              <span: className ="text-gray-700 dark: text-gray-300">Keyboard Navigation</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </label>
           </div>
 
           <buttononClick={togglePanel}>
+<<<<<<< HEAD
             className="mt-4 w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-2 px-4 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors""
+=======
+            className="mt-4 w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-2 px-4 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           >
             Close
           </button>
@@ -624,13 +733,17 @@ export default AccessibilityManager
 =======
           <div: className ="mt-6 flex space-x-3">",";
             <button: onClick ={resetSettings}
-              className="px-4 py-2 text-sm bg-gray-200 text-gray-700 rounded hover: bg-gray-300 transition-colors"",";
+              className="px-4 py-2 text-sm bg-gray-200 text-gray-700 rounded hover: bg-gray-300 transition-colors",";
             >
               Reset
             </button>
             <button: onClick ={togglePanel}
+<<<<<<< HEAD
               className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover: bg-blue-700 transition-colors"",";
 >>>>>>> main
+=======
+              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover: bg-blue-700 transition-colors",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             >
               Close
             </button>

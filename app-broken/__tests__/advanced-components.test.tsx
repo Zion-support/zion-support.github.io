@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',"
     import { render, screen } from '@testing-library/react',"
     import { Helmet, HelmetProvider } from 'react-helmet-async'
@@ -13,11 +14,20 @@ import React from 'react',;"
 import React from 'react',";";";
     import { render, screen } from '@testing-library/react',";";";
     import { Helmet, HelmetProvider } from 'react-helmet-async';";";";
+=======
+import React from 'react',"";
+    import { render, screen } from '@testing-library/react',";
+    import { Helmet, HelmetProvider } from 'react-helmet-async'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 >>>>>>> main
 // Mock components
+<<<<<<< HEAD
 const AdvancedErrorBoundary = ({)};
 >>>>>>> main
+=======
+const AdvancedErrorBoundary  = ({)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   children, 
   enableRetry, 
   onError 
@@ -30,7 +40,11 @@ const AdvancedErrorBoundary = ({)};
   const [hasError, setHasError] = React.useState(false),
       const [error, setError] = React.useState<Error | null>(null),
       React.useEffect(() => {}
+<<<<<<< HEAD
     const  handleError = (error: Error) => {}
+=======
+    const handleError  = (error: Error) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       setHasError(true),
       setError(error),
       if (onError) {}
@@ -84,14 +98,19 @@ const AdvancedErrorBoundary = ({)};
       if (hasError) {}
     return ()
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div data-testid="error-boundary">"
 =======
       <div data-testid="error-boundary">";";
 >>>>>>> main
+=======
+      <div data-testid="error-boundary">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         <h2>Unexpected Application Error!</h2>
         <p>Oops! Something went wrong</p>
         {error && ()}
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h3  style ={{ fontStyle: 'italic' }}>{error.message}</h3>"
             <pre: style ={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>"
@@ -99,6 +118,10 @@ const AdvancedErrorBoundary = ({)};
             <h3: style ={{ fontStyle: 'italic' }}>{error.message}</h3>";";";
             <pre: style ={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>";";";
 >>>>>>> main
+=======
+            <h3: style ={{ fontStyle: 'italic' }}>{error.message}</h3>";
+            <pre: style ={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               {error.stack}
 >>>>>>> main
             </pre>
@@ -164,15 +187,22 @@ const TestComponent = () => <div>Test Component</div>,;"
   return <>{children}</>
 };
 
+<<<<<<< HEAD
 const: TestComponent = () => <div>Test Component</div>,;
       describe('Advanced Components', () => {}";";";
   test('AdvancedErrorBoundary renders children when no error', () => {}";";";
 >>>>>>> main
+=======
+const TestComponent  = () => <div>Test Component</div>,;
+      describe('Advanced Components', () => {}";
+  test('AdvancedErrorBoundary renders children when no error', () => {}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     render()
       <AdvancedErrorBoundary>
         <TestComponent />
       </AdvancedErrorBoundary>
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
       expect(screen.getByText('Test Component')).toBeInTheDocument();"
   }),
@@ -180,13 +210,20 @@ const: TestComponent = () => <div>Test Component</div>,;
     const  consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});"
 =======
       expect(screen.getByText('Test Component')).toBeInTheDocument();";";";
+=======
+      expect(screen.getByText('Test Component')).toBeInTheDocument()";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   }),
-      test('AdvancedErrorBoundary shows error UI when error occurs', () => {}";";";
-    const: consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});";";";
+      test('AdvancedErrorBoundary shows error UI when error occurs', () => {}";
+    const consoleSpy  = jest.spyOn(console, 'error').mockImplementation(() => {})";
     
 >>>>>>> main
     // Mock the error boundary to actually catch errors
+<<<<<<< HEAD
     const  ErrorBoundaryWrapper = () => {}
+=======
+    const ErrorBoundaryWrapper  = () => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       const [hasError, setHasError] = React.useState(false),
       React.useEffect(() => {}
 <<<<<<< HEAD
@@ -194,14 +231,19 @@ const: TestComponent = () => <div>Test Component</div>,;
           throw new Error('Test error');"
 =======
         try {};
+<<<<<<< HEAD
           throw new Error('Test error');";";";
 >>>>>>> main
+=======
+          throw new Error('Test error')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         } catch {}
           setHasError(true)
         }
       }, []),
       if (hasError) {}
         return ()
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div data-testid="error-boundary">"
             <h2>Unexpected Application Error!</h2>
@@ -211,6 +253,9 @@ const: TestComponent = () => <div>Test Component</div>,;
 =======
           <div data-testid="error-boundary">";";
 >>>>>>> main
+=======
+          <div data-testid="error-boundary">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             <h2>Unexpected Application Error!</h2>
             <p>Oops! Something went wrong</p>
           </div>
@@ -238,6 +283,7 @@ const: TestComponent = () => <div>Test Component</div>,;
     {}
     render(<ErrorBoundaryWrapper />),
 <<<<<<< HEAD
+<<<<<<< HEAD
       expect(screen.getByTestId('error-boundary')).toBeInTheDocument(),"
       expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument(),"
       consoleSpy.mockRestore()
@@ -250,15 +296,23 @@ const: TestComponent = () => <div>Test Component</div>,;
 =======
       expect(screen.getByTestId('error-boundary')).toBeInTheDocument(),";";";
       expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument(),";";";
+=======
+      expect(screen.getByTestId('error-boundary')).toBeInTheDocument(),";
+      expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument(),";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       consoleSpy.mockRestore();
   }),
-      test('SEOEnhancer works with HelmetProvider', () => {}";";";
-    const: SEOEnhancer = () => ()
+      test('SEOEnhancer works with HelmetProvider', () => {}";
+    const SEOEnhancer  = () => ()
       <Helmet>
         <title>Test Title</title>;
+<<<<<<< HEAD
         <meta: name ="description" content="Test description" />";";
 >>>>>>> main
 >>>>>>> main
+=======
+        <meta: name ="description" content="Test description" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       </Helmet>
     ),
       render()
@@ -279,6 +333,7 @@ const: TestComponent = () => <div>Test Component</div>,;
     // Wait for Helmet to update the document title
     setTimeout(() => {}
 <<<<<<< HEAD
+<<<<<<< HEAD
       expect(document.title).toBe('Test Title');"
     }, 100)
   })
@@ -290,3 +345,11 @@ const: TestComponent = () => <div>Test Component</div>,;
 });
 >>>>>>> main
 >>>>>>> main
+=======
+      expect(document.title).toBe('Test Title')";
+    }, 100);
+  });
+});
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

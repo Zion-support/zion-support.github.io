@@ -29,12 +29,19 @@ export default UseEnhancedPerformance;';'
 };
 interface UseEnhancedPerformanceState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const UseEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {,
   }) => {;
     const stateRef = useRef<UseEnhancedPerformanceState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const UseEnhancedPerformance  = (options: UseEnhancedPerformanceOptions = {}) => {
+  const stateRef  = useRef<UseEnhancedPerformanceState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default UseEnhancedPerformance;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default UseEnhancedPerformance;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default UseEnhancedPerformance''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -29,12 +29,19 @@ export default AdvancedAnalytics;';'
 };
 interface AdvancedAnalyticsState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const AdvancedAnalytics = (options: AdvancedAnalyticsOptions = {,
   }) => {;
     const stateRef = useRef<AdvancedAnalyticsState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const AdvancedAnalytics  = (options: AdvancedAnalyticsOptions = {}) => {
+  const stateRef  = useRef<AdvancedAnalyticsState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default AdvancedAnalytics;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default AdvancedAnalytics;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default AdvancedAnalytics''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

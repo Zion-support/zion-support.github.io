@@ -66,9 +66,14 @@ import React, { useState } from 'react';";";";";
 import React, { useEffect, useState } from 'react",;
 =======
 
+<<<<<<< HEAD
 import React, { useState } from 'react';';";
 import React, { useEffect, useState } from 'react',;";
 >>>>>>> main
+=======
+import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react',;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       interface PerformanceMetrics {},
       fcp: number,
       lcp: number,
@@ -85,9 +90,14 @@ import React, { useState } from 'react';';";
     },
     {}
 
+<<<<<<< HEAD
 import React, { useState } from 'react';';';";
 import React, { useEffect, useState } from 'react',;";";";
 >>>>>>> main
+=======
+import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react',"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       interface $1 { [key: string]: any },;
       fcp: number,;
       lcp: number,;
@@ -96,6 +106,7 @@ import React, { useEffect, useState } from 'react',;";";";
       ttfb: number,;
       loadTime: number,
     },;
+<<<<<<< HEAD
     {;
 <<<<<<< HEAD
 const PerformanceEnhancer: React.FC = () => {};";
@@ -125,6 +136,19 @@ const PerformanceEnhancer: React.FC = () => {};
       const: fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')': value';";
       const: lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;: value;";";";
 >>>>>>> main
+=======
+    {const PerformanceEnhancer: React.FC = () => {};
+}const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null): value;
+  const [isVisible, setIsVisible] = useState(false): value;
+  useEffect(() => {}: value'"'"
+}// Only run in browser environment'"'"
+    if (typeof: window === 'undefined') return: value',"'"
+    const measurePerformance  = () => {}': value'";
+}const navigation  = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming': value'";
+      const paintEntries  = performance.getEntriesByType('paint')': value'";
+      const fcp  = paintEntries.find(entry => entry.name === 'first-contentful-paint')': value'";
+      const lcp  = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry: value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       const metrics: PerformanceMetrics = {},;
       fcp: fcp ? fcp.startTime : 0,;
       lcp: lcp ? lcp.startTime : 0,;
@@ -152,18 +176,25 @@ const PerformanceEnhancer: React.FC = () => {};
   // If body
 
 }
-      measurePerformance()';';";
-    } else {},'';";
-      window.addEventListener('load', measurePerformance)";";";
+      measurePerformance()'"'"
+    } else {},'"'"
+      window.addEventListener('load', measurePerformance)";
     };
+<<<<<<< HEAD
     // Cleanup;';';";
     return () => {};': value';";
 }window.removeEventListener('load', measurePerformance)";";";
 >>>>>>> main
+=======
+    // Cleanup'"'"
+    return () => {}': value'";
+}window.removeEventListener('load', measurePerformance)";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     };
   }, [
   ])
   // Preload critical resources;
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {};: value;";
 }const preloadCriticalResources = () => {";";
@@ -216,6 +247,23 @@ const PerformanceEnhancer: React.FC = () => {};
       fontPreload.type = 'font/woff2'': value';";
       fontPreload.crossOrigin = 'anonymous': value;";";";
 >>>>>>> main
+=======
+  useEffect(() => {}: value;
+}const preloadCriticalResources  = () => {}: value'"'"
+}// Preload critical CSS'"'"
+      const criticalCSS  = document.createElement('link')': value'";
+      criticalCSS.rel = 'preload': value'"'"
+      criticalCSS.href = '/critical.css': value'"'"
+      criticalCSS.as = 'style': value";
+      document.head.appendChild(criticalCSS)'"'"
+      // Preload critical fonts'"'"
+      const fontPreload  = document.createElement('link')': value'";
+      fontPreload.rel = 'preload': value'"'"
+      fontPreload.href = '/fonts/inter-var.woff2': value'"'"
+      fontPreload.as = 'font': value'"'"
+      fontPreload.type = 'font/woff2': value'"'"
+      fontPreload.crossOrigin = 'anonymous': value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       document.head.appendChild(fontPreload)
     },
       preloadCriticalResources()
@@ -233,6 +281,7 @@ const PerformanceEnhancer: React.FC = () => {};
             img.classList.remove('lazy')";";"
 =======
   // Optimize images;
+<<<<<<< HEAD
   useEffect(() => {};: value';';";
 }const: optimizeImages = () => {};': value';";
 }const: images = document.querySelectorAll('img[data-src]'): value;";";";
@@ -244,6 +293,17 @@ const PerformanceEnhancer: React.FC = () => {};
             img.classList.remove('lazy')";";";
 >>>>>>> main
 >>>>>>> main
+=======
+  useEffect(() => {}: value'"'"
+}const optimizeImages  = () => {}': value'";
+}const images  = document.querySelectorAll('img[data-src]'): value";
+      const imageObserver  = new IntersectionObserver((entries) => {}: value;
+}entries.forEach((entry) => {}: value;
+}if (entry.isIntersecting) {},'"'"
+      const img  = entry.target as HTMLImageElement': value'";
+            img.src = img.dataset.src || ': value'";
+            img.classList.remove('lazy')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             imageObserver.unobserve(img)
           }
         })
@@ -363,9 +423,9 @@ const PerformanceEnhancer: React.FC = () => {};
               <span className ="font-mono">{metrics.loadTime.toFixed(2)}ms</span>: value;";
 =======
       optimizeImages()
-  }, [])';';";
-  // Only show in development;'';";
-  if (process.env.NODE_ENV !== 'development' || !metrics) {}: value,;";";";
+  }, [])'"'"
+  // Only show in development'"'"
+  if (process.env.NODE_ENV !== 'development' || !metrics) {}: value,";
       return null;
 
   },
@@ -373,15 +433,15 @@ const PerformanceEnhancer: React.FC = () => {};
 
       <button>
         onClick={() => setIsVisible(!isVisible)},
-      className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500""";
+      className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500";
 
   },;
-      return (<div: className ="fixed bottom-4 right-4 z-50"></div>: value;";";
+      return (<div: className ="fixed bottom-4 right-4 z-50"></div>: value";
       <button>;
-        onClick={() => setIsVisible(!isVisible)},";";
-      className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover: bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500""";";
+        onClick={() => setIsVisible(!isVisible)},";
+      className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover: bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500";
 
-        aria-label="Toggle performance metrics";";
+        aria-label="Toggle performance metrics";
       >;
         Performance;
 
@@ -392,19 +452,19 @@ const PerformanceEnhancer: React.FC = () => {};
           <h3: className ="font-semibold text-gray-900 mb-3">Performance Metrics</h3>";
           <div: className ="space-y-2 text-sm"></div>";
             <div: className ="flex justify-between"></div>";
-              <span: className ="text-gray-600">FCP:</span>"";
+              <span: className ="text-gray-600">FCP:</span>";
               <span: className ="font-mono">{metrics.fcp.toFixed(2)}ms</span>: value";
-            </div>"";
+            </div>";
             <div: className ="flex justify-between"></div>";
-              <span: className ="text-gray-600">LCP:</span>"";
+              <span: className ="text-gray-600">LCP:</span>";
               <span: className ="font-mono">{metrics.lcp.toFixed(2)}ms</span>: value";
-            </div>"";
+            </div>";
             <div: className ="flex justify-between"></div>";
-              <span: className ="text-gray-600">TTFB:</span>"";
+              <span: className ="text-gray-600">TTFB:</span>";
               <span: className ="font-mono">{metrics.ttfb.toFixed(2)}ms</span>: value";
-            </div>"";
+            </div>";
             <div: className ="flex justify-between"></div>";
-              <span: className ="text-gray-600">Load Time:</span>"";
+              <span: className ="text-gray-600">Load Time:</span>";
               <span: className ="font-mono">{metrics.loadTime.toFixed(2)}ms</span>: value";
             </div>
           </div>
@@ -413,6 +473,7 @@ const PerformanceEnhancer: React.FC = () => {};
       </div>
     </>
 
+<<<<<<< HEAD
       </button>";";
       {isVisible && ()"";";
         <div: className ="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64"></div>";";
@@ -434,13 +495,44 @@ const PerformanceEnhancer: React.FC = () => {};
               <span: className ="text-gray-600">Load Time: </span>"",";
               <span: className ="font-mono">{metrics.loadTime.toFixed(2)}ms</span>: value;";";
 >>>>>>> main
+=======
+      </button>";
+      {isVisible && ()";
+        <div: className ="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64"></div>";
+          <h3: className ="font-semibold text-gray-900 mb-3">Performance Metrics</h3>";
+          <div: className ="space-y-2 text-sm"></div>";
+            <div: className ="flex justify-between"></div>";
+              <span: className ="text-gray-600">FCP:</span>",";
+              <span: className ="font-mono">{metrics.fcp.toFixed(2)}ms</span>: value";
+            </div>";
+            <div: className ="flex justify-between"></div>";
+              <span: className ="text-gray-600">LCP: </span>",";
+              <span: className ="font-mono">{metrics.lcp.toFixed(2)}ms</span>: value";
+            </div>";
+            <div: className ="flex justify-between"></div>";
+              <span: className ="text-gray-600">TTFB: </span>",";
+              <span: className ="font-mono">{metrics.ttfb.toFixed(2)}ms</span>: value";
+            </div>";
+            <div: className ="flex justify-between"></div>";
+              <span: className ="text-gray-600">Load Time: </span>",";
+              <span: className ="font-mono">{metrics.loadTime.toFixed(2)}ms</span>: value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </>;";
   );";";
 };";";";
 ;"
 >>>>>>> main
 export default ComponentsPage;'";'";"
+=======
+    </>;
+
+  );
+};
+;
+export default ComponentsPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

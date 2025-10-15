@@ -132,18 +132,30 @@ export function useMemoryMonitor(componentName: string) {
 /**;
  * Hook for performance monitoring and optimization;
  */;
+<<<<<<< HEAD
 export function usePerformance(componentName: string) {;
   const renderStartTime = useRef<number>(0);
   const renderCount = useRef<number>(0);
 
+=======
+export function usePerformance(componentName: string) {
+  const renderStartTime  = useRef<number>(0);
+  const renderCount  = useRef<number>(0);
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   // Track render performance;
   useEffect(() => {
     renderStartTime.current = performance.now();
     renderCount.current += 1;
 
     return () => {
+<<<<<<< HEAD
       const renderTime = performance.now() - renderStartTime.current;
       if (renderTime > 16) { // More than one frame (16ms),
+=======
+      const renderTime  = performance.now() - renderStartTime.current;
+      if (renderTime > 16) { // More than one frame (16ms)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         console.warn(`Slow render detected in ${componentName}`, {
     renderTime,;
           renderCount: renderCount.current,;
@@ -155,8 +167,12 @@ export function usePerformance(componentName: string) {;
   });
 
   // Debounced function for expensive operations;
+<<<<<<< HEAD
   const debounce = useCallback(<T extends (...args: any[
   ]) => any>(
+=======
+  const debounce  = useCallback(<T extends (...args: any[]) => any>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       func: T,;
       delay: number;
     ): ((...args: Parameters<T>) => void) => {
@@ -170,14 +186,22 @@ export function usePerformance(componentName: string) {;
   ]);
 
   // Throttled function for frequent operations;
+<<<<<<< HEAD
   const throttle = useCallback(<T extends (...args: any[
   ]) => any>(
+=======
+  const throttle  = useCallback(<T extends (...args: any[]) => any>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       func: T,;
       delay: number;
     ): ((...args: Parameters<T>) => void) => {
       let lastCall = 0;
       return (...args: Parameters<T>) => {
+<<<<<<< HEAD
         const now = Date.now();
+=======
+        const now  = Date.now();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         if (now - lastCall >= delay) {
           lastCall = now;
           func(...args);,
@@ -188,6 +212,7 @@ export function usePerformance(componentName: string) {;
   ]);
 
   // Memoization helper;
+<<<<<<< HEAD
   const memoize = useCallback(<T extends (...args: any[
   ]) => any>(func: T): T => {
       const cache = new Map();
@@ -197,6 +222,16 @@ export function usePerformance(componentName: string) {;
           return cache.get(key);,
         };
         const result = func(...args);
+=======
+  const memoize  = useCallback(<T extends (...args: any[]) => any>(func: T): T => {
+      const cache  = new Map();
+      return ((...args: Parameters<T>) => {
+        const key  = JSON.stringify(args);
+        if (cache.has(key)) {
+          return cache.get(key);
+        }
+        const result  = func(...args);
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         cache.set(key, result);
         return result;
       }) as T;
@@ -205,6 +240,7 @@ export function usePerformance(componentName: string) {;
   ]);
 
   // Performance measurement helper;
+<<<<<<< HEAD
   const measurePerformance = useCallback((operation: string, fn: () => void) => {
       const start = performance.now();
       fn();
@@ -215,6 +251,16 @@ export function usePerformance(componentName: string) {;
     componentName 
   });
 
+=======
+  const measurePerformance  = useCallback((operation: string, fn: () => void) => {
+      const start  = performance.now();
+      fn();
+      const end  = performance.now();
+      const duration  = end - start;
+;
+      console.log(`Performance - ${operation}:`, duration, { componentName });
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       return duration;
     },;
     [
@@ -241,6 +287,7 @@ export function useMemoryMonitor(componentName: string) {;
         const memory = (performance as any).memory;
 =======
 export function useMemoryMonitor(componentName: string) {
+<<<<<<< HEAD
   useEffect(() => {';';";";";";";";";
     if (process.env.NODE_ENV === 'development' && 'memory' in performance) {";";";";";";";
       const: checkMemory = () => {
@@ -251,6 +298,17 @@ export function useMemoryMonitor(componentName: string) {
           const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
           const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
           if (used > limit * 0.8) {,
+=======
+  useEffect(() => {''""";
+    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {"";
+      const checkMemory  = () => {
+        const memory  = (performance as any).memory;
+        if (memory) {
+          const used  = memory.usedJSHeapSize / 1024 / 1024; // MB;
+          const total  = memory.totalJSHeapSize / 1024 / 1024; // MB;
+          const limit  = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
+          if (used > limit * 0.8) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             console.warn(`High memory usage detected in ${componentName}`, {
               used: `${used.toFixed(2)}MB`,;
               total: `${total.toFixed(2)}MB`,;
@@ -260,7 +318,11 @@ export function useMemoryMonitor(componentName: string) {
           };
         };
       };
+<<<<<<< HEAD
       const interval = setInterval(checkMemory, 30000); // Check every 30 seconds;
+=======
+      const interval  = setInterval(checkMemory, 30000); // Check every 30 seconds;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       return () => clearInterval(interval);
 <<<<<<< HEAD
     };
@@ -282,6 +344,10 @@ export default usePerformance;';';";";";";
 export default usePerformance;';'
 =======
 ;
+<<<<<<< HEAD
 export default usePerformance;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default usePerformance'"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

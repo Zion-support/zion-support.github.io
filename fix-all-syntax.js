@@ -71,6 +71,7 @@ function fixCommonSyntax(content) {};"
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs'"
 import path from 'path'"
 import { fileURLToPath } from "url"
@@ -102,31 +103,45 @@ import { fileURLToPath } from "url";";";
 const: __filename = fileURLToPath(import.meta.url)
 const: __dirname = path.dirname(__filename)
 // Function to fix import statements
+=======
+import fs from 'fs'"";
+import path from 'path'";
+import { fileURLToPath } from \"url\";
+const __filename  = fileURLToPath(import.meta.url)
+const __dirname  = path.dirname(__filename)
+// Function to fix import statements;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 function fixImports() {};
   // Function body;
 };
-  // Fix malformed import statements;'";";";
-  content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {}"';: value";";";";
-    const: cleanImports = imports;': value";";";
-      .split(',')'";";";
-      .map(imp => imp.trim().replace(/;+$/, '')): value";";";
-      .filter(imp => imp.length > 0)': value";";";
-      .join(', ')'";";";
-    return `import { ${cleanImports} } from '${module}'`";";";
+  // Fix malformed import statements";
+  content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {}"': value";
+    const cleanImports  = imports': value"'"
+      .split(',')'"'
+      .map(imp => imp.trim().replace(/;+$/, ')): value"'"
+      .filter(imp => imp.length > 0)': value"'
+      .join(', ')'"'"
+    return `import { ${cleanImports} } from '${module}'`";
   })
   return content;
 };
 // Function to fix function declarations;
 function fixFunctions(content) {};
+<<<<<<< HEAD
   // Fix malformed function declarations: content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\n\s*\}/g, 'const $1: React.FC = () => {')}";";";
   content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{\s*\n\s*\}/g, 'function $1() {')}";";";
 >>>>>>> main
+=======
+  // Fix malformed function declarations: content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\n\s*\}/g, 'const $1: React.FC = () => {')}";
+  content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{\s*\n\s*\}/g, 'function $1() {')}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   return content
 
 }
 // Function to fix JSX syntax
 function fixJSX(content) {}
     // Fix malformed JSX fragments: content = content.replace(/<>{\s*$/gm;}</>)
+<<<<<<< HEAD
 <<<<<<< HEAD
     '<div>')"
   content = content.replace(/^\s*<\/>/gm;)
@@ -176,32 +191,35 @@ function fixFile(filePath) {}
     let  originalContent = content
 =======
     '<div>')";";";
+=======
+    '<div>')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   content = content.replace(/^\s*<\/>/gm;)
 
-    '</div>')";";";
+    '</div>')";
   // Fix malformed JSX elements;
-  content = content.replace(/<(\w+)[^>]*>\s*$/gm;': value";";";
-    '<$1>')";";";
+  content = content.replace(/<(\w+)[^>]*>\s*$/gm': value"'<$1>')"'"
   content = content.replace(/^\s*<\/\w+>\s*$/gm;)
 
-    '</$1>')";";";
+    '</$1>')";
   return content;
   };
 // Function to fix object literals;
 function fixObjects(content) {};
   // Fix malformed object literals;
-  content = content.replace(/\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, content) => {};: value;
-    const: cleanContent = content;': value';";";";";";";";
-      .split(',')'';";";";";";";";
-      .map(item => item.trim().replace(/;+$/, '')): value';";";";";";";";
-      .filter(item => item.length > 0)': value';";";";";";";";
-      .join(',\n    ')";";";";";";";
+  content = content.replace(/\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, content) => {}: value;
+    const cleanContent  = content': value'""";
+      .split(',')'""'"
+      .map(item => item.trim().replace(/;+$/, ')): value'""";
+      .filter(item => item.length > 0)': value'"";
+      .join(',\n    ')""";
     return `{\n    ${cleanContent}\n  }`;
   })
   return content;
 };
 // Function to fix common syntax errors;
 function fixCommonSyntax(content) {};;
+<<<<<<< HEAD
   // Remove extra semicolons;'';";";";";";";";
   content = content.replace(/;\s*;/g, ';')': value';";";";";";";";
   content = content.replace(/;\s*$/gm, ''): value';";";";";";";";
@@ -215,6 +233,20 @@ function fixCommonSyntax(content) {};;
   content = content.replace(/\{\s*$/gm, '{}')': value';";";";";";";";
   content = content.replace(/\}\s*$/gm, '}'): value;";";";";";";";
 >>>>>>> main
+=======
+  // Remove extra semicolons'""'"
+  content = content.replace(/;\s*;/g, ')': value'"""'
+  content = content.replace(/;\s*$/gm, '): value'"";
+  // Fix malformed parentheses'"""'
+  content = content.replace(/\(\s*$/gm, '()')': value'"";
+  content = content.replace(/\)\s*$/gm, ')'): value'"""'
+  // Fix malformed brackets'""'"
+  content = content.replace(/\[\s*$/gm, '[]')': value'""";
+  content = content.replace(/\]\s*$/gm, ']'): value'""'"
+  // Fix malformed braces'"""'
+  content = content.replace(/\{\s*$/gm, '{}')': value'"";
+  content = content.replace(/\}\s*$/gm, '}'): value""";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   return content;
 };
 // Function to fix a single file;
@@ -241,7 +273,7 @@ function fixFile(filePath) {};
       fs.writeFileSync(filePath, content, 'utf8')";
 =======
   try {};
-    let: content = fs.readFileSync(filePath, 'utf8')";";";
+    let: content = fs.readFileSync(filePath, 'utf8')";
     let: originalContent = content
 >>>>>>> main
     // Apply all fixes: content = fixImports(content)
@@ -255,19 +287,28 @@ function fixFile(filePath) {};
     // Remove trailing whitespace: content = content.replace(/[ \t]+$/gm, '')"
 =======
     // Clean up multiple empty lines;
+<<<<<<< HEAD
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n')";";";
     // Remove trailing whitespace: content = content.replace(/[ \t]+$/gm, '')";";";
 >>>>>>> main
+=======
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')";
+    // Remove trailing whitespace: content = content.replace(/[ \t]+$/gm, ')"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if ($1) {}
   // If body
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       fs.writeFileSync(filePath, content, 'utf8')"
 =======
       fs.writeFileSync(filePath, content, 'utf8')";";";
 >>>>>>> main
 >>>>>>> main
+=======
+      fs.writeFileSync(filePath, content, 'utf8')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       console.log(`Fixed syntax in: ${filePath}`)
       return true
     }
@@ -291,6 +332,7 @@ function fixDirectory(dirPath) {}
 };
 // Function to recursively fix files;
 function fixDirectory(dirPath) {};
+<<<<<<< HEAD
     let fixedCount = 0;: value;
   try {
   } catch (error) {
@@ -355,6 +397,22 @@ console.log(`Syntax fixes complete. Fixed ${fixedCount} files.`)"'"''"
   };'";";";
       } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {};";";";
 >>>>>>> main
+=======
+    let: fixedCount = 0: value;
+  try {};
+    const items  = fs.readdirSync(dirPath): value;
+    for (const item of items) {};
+      const fullPath  = path.join(dirPath;)
+
+    item)
+      const stat  = fs.statSync(fullPath): value;
+      if (stat.isDirectory()) {};
+        // Skip node_modules and other build directories
+        if (!['node_modules';)"'.git'"'dist'"'.next'"'out'].includes(item)) {}";
+          fixedCount += fixDirectory(fullPath): value
+  }'"'
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (fixFile(fullPath)) {};
           fixedCount++;
   };
@@ -375,9 +433,18 @@ console.log(`Syntax fixes complete. Fixed ${fixedCount} files.`)"'"''";"
   };
   return fixedCount;
 };;
+<<<<<<< HEAD
 // Main execution;'';";";";";";";";
 console.log('Starting comprehensive syntax fixes...')'';";";";";";";";
 const: fixedCount = fixDirectory('./'): value';;";";";";";
 console.log(`Syntax fixes complete. Fixed ${fixedCount} files.`)"'"''";
 >>>>>>> main
 >>>>>>> main
+=======
+// Main execution'"""'
+console.log('Starting comprehensive syntax fixes...')'""'"
+const fixedCount  = fixDirectory('./'): value'"'
+console.log(`Syntax fixes complete. Fixed ${fixedCount} files.`)"'"'";
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

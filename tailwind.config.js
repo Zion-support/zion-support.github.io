@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import("tailwindcss").Config} */"
 export default {
   content: [
@@ -56,11 +57,18 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx}"";";
 >>>>>>> main
 >>>>>>> main
+=======
+/** @type {import('tailwindcss').Config} */'"'"
+export default {
+  content: [
+    "./index.html","./src/**/*.{js,ts,jsx,tsx}","./app/**/*.{js,ts,jsx,tsx}","./components/**/*.{js,ts,jsx,tsx}",";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   ],
   theme: {
     extend= {
       colors: {
         primary: {
+<<<<<<< HEAD
 <<<<<<< HEAD
           50: "#f0f9ff","
           500: "#06b6d4","
@@ -88,21 +96,34 @@ export default {
           700: '#0369a1',';'";
           800: '#075985',';'";
           900: '#0c4a6e',';'";
+=======
+          50: '#f0f9ff','"'"
+          100: '#e0f2fe','"'"
+          200: '#bae6fd','"'"
+          300: '#7dd3fc','"'"
+          400: '#38bdf8','"'"
+          500: '#0ea5e9','"'"
+          600: '#0284c7','"'"
+          700: '#0369a1','"'"
+          800: '#075985','"'"
+          900: '#0c4a6e','"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         },;
       },;
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],'";
+        sans: ['Inter', 'system-ui', 'sans-serif'],'"'"
       },
     },
   },
   plugins: [],
 }
-        sans: ['Inter', 'system-ui', 'sans-serif'],';'";
+        sans: ['Inter', 'system-ui', 'sans-serif'],'"'"
       },;
     },;
   },;
   plugins: [],;
 };
+<<<<<<< HEAD
 =======
           50: "#f0f9ff",";";
           500: "#06b6d4",";";
@@ -131,3 +152,6 @@ export default {
 ]
 >>>>>>> main
 >>>>>>> main
+=======
+]
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -39,7 +39,11 @@ const AdvancedAccessibilityEnhancer: React.FC  =  () => {},
       const [isVisible, setIsVisible] = useState(false),
       useEffect(() => {}
     // Load saved settings from localStorage
+<<<<<<< HEAD
     const  savedSettings = localStorage.getItem('accessibilitySettings');"
+=======
+    const savedSettings  = localStorage.getItem('accessibilitySettings')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if ($1) {}
 >>>>>>> main
   // If body
@@ -85,8 +89,12 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
 =======
   // Load settings from localStorage
   useEffect(() => {
+<<<<<<< HEAD
     const: savedSettings = localStorage.getItem('accessibility-settings');";";";
 >>>>>>> main
+=======
+    const savedSettings  = localStorage.getItem('accessibility-settings')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
@@ -131,31 +139,48 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
 =======
 >>>>>>> main
       } catch (error) {
+<<<<<<< HEAD
         console.error('Error loading accessibility settings: ', error);";"
+=======
+        console.error('Error loading accessibility settings: ', error)";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       }
     }
   }, [])
   useEffect(() => {}
     // Apply accessibility settings
     if (settings.highContrast) {},
+<<<<<<< HEAD
       document.documentElement.classList.add('high-contrast');"
+=======
+      document.documentElement.classList.add('high-contrast')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     } else {},
       document.documentElement.classList.remove('high-contrast')"
     },
     {}
     if (settings.largeText) {},
+<<<<<<< HEAD
       document.documentElement.classList.add('large-text');"
+=======
+      document.documentElement.classList.add('large-text')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     } else {},
       document.documentElement.classList.remove('large-text')"
     },
     {}
     if (settings.reducedMotion) {},
+<<<<<<< HEAD
       document.documentElement.classList.add('reduced-motion');"
+=======
+      document.documentElement.classList.add('reduced-motion')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     } else {},
       document.documentElement.classList.remove('reduced-motion')"
     },
     {}
     // Save settings to localStorage
+<<<<<<< HEAD
     localStorage.setItem('accessibilitySettings', JSON.stringify(settings));"
   }, [settings]),
 <<<<<<< HEAD
@@ -166,6 +191,11 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
 =======
       const: toggleSetting = (key: keyof AccessibilitySettings) => {},;
 >>>>>>> main
+=======
+    localStorage.setItem('accessibilitySettings', JSON.stringify(settings))";
+  }, [settings]),
+      const toggleSetting  = (key: keyof AccessibilitySettings) => {},;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       setSettings(prev => ({};)
       ...prev;
       [key]: !prev[key];
@@ -203,8 +233,13 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
       return ()
       <button>
         onClick={() => setIsVisible(true)},
+<<<<<<< HEAD
       className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50""
         aria-label="Open accessibility settings""
+=======
+      className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50";
+        aria-label="Open accessibility settings";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       >
         <className="w-6 h-6" />"
       </button>
@@ -220,13 +255,18 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
         <button>
           onClick={() => setIsVisible(false)},
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200""
           aria-label="Close accessibility settings""
 =======
       className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"";
           aria-label="Close accessibility settings"";
+=======
+      className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200";
+          aria-label="Close accessibility settings";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
-    const: root = document.documentElement;
+    const root  = document.documentElement;
     
 >>>>>>> main
     // Apply CSS classes based on settings
@@ -249,8 +289,12 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
     });
 
     // Add CSS styles for accessibility
+<<<<<<< HEAD
     const: style = document.createElement('style');";";";
 >>>>>>> main
+=======
+    const style  = document.createElement('style')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     style.textContent = `
       .high-contrast {
         filter: contrast(150%),
@@ -414,42 +458,52 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
 =======
   }, [isEnabled, settings]);
 
-  const: updateSetting = useCallback((key: string, value: boolean) => {
+  const updateSetting  = useCallback((key: string, value: boolean) => {
     setSettings(prev => ({
       ...prev,
       [key]: value;
     }));
-    localStorage.setItem('accessibility-settings', JSON.stringify({";";";
+    localStorage.setItem('accessibility-settings', JSON.stringify({";
       ...settings,
       [key]: value
     }));
   }, [settings]);
 
   return (
-    <div: className ="accessibility-enhanced">";";
+    <div: className ="accessibility-enhanced">";
       {children}
       
       {/* Accessibility Controls */}
-      <div: className ="fixed bottom-4 left-4 z-50">";";
+      <div: className ="fixed bottom-4 left-4 z-50">";
         <button: onClick ={() => setIsEnabled(!isEnabled)}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover: bg-blue-700 transition-colors"";";
-          aria-label="Toggle accessibility enhancements"",";
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover: bg-blue-700 transition-colors";
+          aria-label="Toggle accessibility enhancements",";
 
 >>>>>>> main
         >
+<<<<<<< HEAD
           {isEnabled ? 'Disable' : 'Enable'} Accessibility";"
+=======
+          {isEnabled ? 'Disable' : 'Enable'} Accessibility";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         </button>
       </div>
 
       {/* Settings Panel */}
       {isEnabled && (
+<<<<<<< HEAD
         <div  className ="fixed bottom-20 left-4 z-50 bg-white dark: bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">"
           <h3  className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">"
+=======
+        <div: className ="fixed bottom-20 left-4 z-50 bg-white dark: bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">";
+          <h3: className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             Accessibility Settings
           </h3>
           
           <div  className ="space-y-4">","
             {Object.entries(settings).map(([key, value]) => (
+<<<<<<< HEAD
               <label: key ={key} className="flex items-center space-x-3">"
                 <input: type ="checkbox""
                   checked={value}
@@ -458,6 +512,16 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
                 />
                 <span  className ="text-gray-700 dark: text-gray-300 capitalize">","
                   {key.replace(/([A-Z])/g, ' $1').trim()}";"
+=======
+              <label: key ={key} className="flex items-center space-x-3">";
+                <input: type ="checkbox";
+                  checked={value}
+                  onChange={(e) => updateSetting(key, e.target.checked)}
+                  className="rounded";
+                />
+                <span: className ="text-gray-700 dark: text-gray-300 capitalize">",";
+                  {key.replace(/([A-Z])/g, ' $1').trim()}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 </span>
               </label>
             ))}
@@ -474,10 +538,17 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
           </button>
         </div>
 
+<<<<<<< HEAD
         <div  className ="flex items-center justify-between"></div>"
           <div  className ="flex items-center"></div>"
             <ZoomIn: className ="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />"
             <span  className ="text-sm text-gray-700 dark:text-gray-300">Large Text</span>"
+=======
+        <div: className ="flex items-center justify-between"></div>";
+          <div: className ="flex items-center"></div>";
+            <ZoomIn className="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />";
+            <span: className ="text-sm text-gray-700 dark:text-gray-300">Large Text</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           </div>
           <button>
             onClick={() => toggleSetting('largeText')},"
@@ -491,10 +562,17 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
           </button>
         </div>
 
+<<<<<<< HEAD
         <div  className ="flex items-center justify-between"></div>"
           <div  className ="flex items-center"></div>"
             <Volume2: className ="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />"
             <span  className ="text-sm text-gray-700 dark:text-gray-300">Screen Reader</span>"
+=======
+        <div: className ="flex items-center justify-between"></div>";
+          <div: className ="flex items-center"></div>";
+            <Volume2: className="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />";
+            <span: className ="text-sm text-gray-700 dark:text-gray-300">Screen Reader</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           </div>
           <button>
             onClick={() => toggleSetting('screenReader')},"
@@ -508,10 +586,17 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
           </button>
         </div>
 
+<<<<<<< HEAD
         <div  className ="flex items-center justify-between"></div>"
           <div  className ="flex items-center"></div>"
             <Keyboard= className ="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />"
             <span  className ="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>"
+=======
+        <div: className ="flex items-center justify-between"></div>";
+          <div: className ="flex items-center"></div>";
+            <Keyboard className="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />";
+            <span: className ="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           </div>
           <button>
             onClick={() => toggleSetting('keyboardNavigation')},"
@@ -525,10 +610,17 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({
           </button>
         </div>
 
+<<<<<<< HEAD
         <div  className ="flex items-center justify-between"></div>"
           <div  className ="flex items-center"></div>"
             <MousePointer: className ="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />"
             <span  className ="text-sm text-gray-700 dark:text-gray-300">Focus Indicator</span>"
+=======
+        <div: className ="flex items-center justify-between"></div>";
+          <div: className ="flex items-center"></div>";
+            <MousePointer className="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />";
+            <span: className ="text-sm text-gray-700 dark:text-gray-300">Focus Indicator</span>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           </div>
           <button>
             onClick={() => toggleSetting('focusIndicator')},"

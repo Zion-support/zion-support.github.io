@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;';";"
 import SEOHead from './components/SEOHead';";"
 
@@ -34,16 +35,20 @@ export const Icon = ({}: value,;";";";
 =======
 import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
+=======
+import React from 'react'";
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
-export const: Icon = ({},)
+export const Icon  = ({},)
 
       name,;
-      className = "";: value";
+      className = ": value";
 
 ;
-export const: Icon = ({}: value,;
+export const Icon  = ({}: value,;
       name,;
-      className = "";: value;";";
+      className = ": value";
 
 >>>>>>> main
   ...props;
@@ -79,6 +84,10 @@ export default ComponentsPage;'";'";";";";
     };
 {
 
+<<<<<<< HEAD
 export default ComponentsPage;'";'";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default ComponentsPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

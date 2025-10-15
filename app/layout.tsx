@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;';";"
 import SEOHead from '../../components/SEOHead';";"
 
@@ -410,18 +411,24 @@ import React from 'react';";
 import { HelmetProvider } from "react-helmet-async";";
 import { ErrorBoundary } from "react-error-boundary";";
 import SEOHead from './components/SEOHead';";
+=======
+import React from 'react';
+import { HelmetProvider } from "react-helmet-async";
+import { ErrorBoundary } from "react-error-boundary";
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-const: ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+const ErrorFallback  = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div: className ="min-h-screen flex items-center justify-center bg-gray-100">";
     <div: className ="text-center p-8 bg-white rounded-lg shadow-lg max-w-md">";
       <h2: className ="text-2xl font-bold text-red-600 mb-4">Something went wrong</h2>";
       <p: className ="text-gray-600 mb-4">{error.message}</p>";
       <button: onClick ={resetErrorBoundary}
-        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors"";
+        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors";
       >
         Try again
       </button>

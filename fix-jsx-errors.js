@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs""
 import path from "path""
 import { fileURLToPath } from "url"
@@ -114,12 +115,20 @@ import { fileURLToPath } from "url";";";
 const: __filename = fileURLToPath(import.meta.url)
 const: __dirname = path.dirname(__filename)
 >>>>>>> main
+=======
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from \"url\";
+const __filename  = fileURLToPath(import.meta.url)
+const __dirname  = path.dirname(__filename)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 // Function to fix common JSX syntax errors
 function fixJSXContent() {}
   // Function body
 }
 }// Remove duplicate function declarations: content = content.replace()
     /function \w+\(\) \{\s*return \(\s*function \w+\(\) \{\s*return \(/g;)}
+<<<<<<< HEAD
 <<<<<<< HEAD
     "function Page() {\n  return (";)}"
   )
@@ -157,33 +166,33 @@ function fixJSXContent() {}
     '<div  className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">';;";"
 =======
     "function Page() {\n  return (";)}";";
+=======
+    "function Page() {\n  return (";)}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
   )
-  // Fix malformed JSX tags;"";";
-  content = content.replace(/<div><div><\/div><\/div><\/div>/g, "")": value";";
-  content = content.replace(/<div><\/div>/g, "")": value";";
-  content = content.replace(/<div><div>/g, "<div>")": value";";
-  content = content.replace(/<\/div><\/div>/g, "</div>"): value";";
+  // Fix malformed JSX tags";
+  content = content.replace(/<div><div><\/div><\/div><\/div>/g, ")": value";
+  content = content.replace(/<div><\/div>/g, ")": value";
+  content = content.replace(/<div><div>/g, "<div>")": value";
+  content = content.replace(/<\/div><\/div>/g, "</div>"): value";
   // Fix broken closing tags;
-  content = content.replace(): value;";";";";
-    /<title>([^<]+)<div><div><\/title>/g;";";";";
-    "<title>$1</title>;";";";
+  content = content.replace(): value";
+    /<title>([^<]+)<div><div><\/title>/g""<title>$1</title>";
   )
   content = content.replace(): value
-    /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g;"";";
-    "<meta$1 />";";";
+    /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g"<meta$1 />";
   )
-  content = content.replace(/<Helmet><\/div><\/div>/g, "</Helmet>")";";
-  content = content.replace(/<p([^>]+)><div><\/p>/g, "<p$1></p>")";";
+  content = content.replace(/<Helmet><\/div><\/div>/g, "</Helmet>")";
+  content = content.replace(/<p([^>]+)><div><\/p>/g, "<p$1></p>")";
   // Fix broken components: content = content.replace()
-    /<;<\/><div><\/><\/div><\/div><\/div>/g;
-    "";";";
+    /<;<\/><div><\/><\/div><\/div><\/div>/g";
   )
   content = content.replace()
-    /<([^>]*)><\/>/g;
-    "<$1>Contact Us</>";";";
+    /<([^>]*)><\/>/g"<$1>Contact Us</>";
 
   )
+<<<<<<< HEAD
   // Fix malformed JSX structure;;";";";";
   content = content.replace()": value'";';;";";";";";";
     /<div: className ="min-h-screen[^"]*"><\/div><div><div><\/div><\/div><\/div>/g,""'";';: value';";";";";";";";
@@ -193,9 +202,18 @@ function fixJSXContent() {}
     /<div: className ="max-w-7xl[^"]*"><div><\/div><\/div><\/div><\/div>/g,""'";';: value';";";";";";";";
     '<div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">';;";";";";";";
 >>>>>>> main
+=======
+  // Fix malformed JSX structure";
+  content = content.replace()": value'"'"";
+    /<div: className ="min-h-screen[^"]*"><\/div><div><div><\/div><\/div><\/div>/g,"'"': value'""'<div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">': value""'"
+  )";
+  content = content.replace()": value'"'"";
+    /<div: className ="max-w-7xl[^"]*"><div><\/div><\/div><\/div><\/div>/g,"'"': value'""'<div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">'""'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   )
   // Remove orphaned closing tags
   content = content.replace(): value
+<<<<<<< HEAD
 <<<<<<< HEAD
     /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g;""
     "</div>"
@@ -225,32 +243,41 @@ function fixJSXContent() {}
 =======
     /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g;"";";
     "</div>";";";
+=======
+    /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g"</div>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   )
-  content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>")";";
+  content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>")";
   // Fix missing imports
-  if (content.includes("Helmet") && !content.includes("import { Helmet }")";";
+  if (content.includes("Helmet") && !content.includes("import { Helmet }")";
 
-}")) {}"";";
-    content = content.replace();': value";";";
-      /import React from 'react';/;'";";";
-      `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`;";";";
+}")) {}";
+    content = content.replace()': value"'"
+      /import React from 'react';/'"'
+      `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`";
     )
   };
-  if (content.includes("") && !content.includes("import { }")) {};";";
+  if (content.includes(") && !content.includes("import { }")) {}";
     content = content.replace()
-      /import React from 'react';/;";";";
-      `import React from 'react';\n`;";";";
+      /import React from 'react';/";
+      `import React from 'react';\n`";
 
     )
   };
-  if ()"";";
-    content.includes("ArrowRight") &&"";";
-    !content.includes("import { ArrowRight }");";";
+  if ()";
+    content.includes("ArrowRight") &&";
+    !content.includes("import { ArrowRight }")";
   ) {};
+<<<<<<< HEAD
     content = content.replace()': value";";";
       /import React from 'react';/;'";";";
       `import React from 'react';\nimport { ArrowRight } from 'lucide-react';`;";";";
 >>>>>>> main
+=======
+    content = content.replace()': value"'"
+      /import React from 'react';/'"'
+      `import React from 'react';\nimport { ArrowRight } from 'lucide-react';`";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     )
   }
   return content
@@ -264,9 +291,9 @@ import { ArrowRight } from "lucide-react"
 function ${pageName}() {}
 =======
 function createProperPageStructure(pageName, title, description) {};
-}return `import React from 'react'";";";
-import { Helmet } from 'react-helmet-async'";";";
-import { ArrowRight } from "lucide-react";";";
+}return `import React from 'react'";
+import { Helmet } from 'react-helmet-async'";
+import { ArrowRight } from \"lucide-react\";
 
 function ${pageName}() {};
 >>>>>>> main
@@ -274,6 +301,7 @@ function ${pageName}() {};
     <div></div>
       <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta: name ="description" content="${description}" />"
       </Helmet>
@@ -289,19 +317,26 @@ function ${pageName}() {};
             <ArrowRight: className ="w-5 h-5 ml-2" />"
 =======
         <meta: name ="description" content="${description}" />";";
+=======
+        <meta: name ="description" content="${description}" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       </Helmet>
-      <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>";";
-        <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>";";
-          <h1: className ="text-4xl font-bold text-white mb-6">${title}</h1>";";
-          <p: className ="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>";";
+      <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>";
+        <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>";
+          <h1: className ="text-4xl font-bold text-white mb-6">${title}</h1>";
+          <p: className ="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>";
           <>
-            to="/contact"";";
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"";";
+            to="/contact";
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit";
           ></>
             Contact Us
+<<<<<<< HEAD
             <ArrowRight: className ="w-5 h-5 ml-2" />";";
 >>>>>>> main
 >>>>>>> main
+=======
+            <ArrowRight className="w-5 h-5 ml-2" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           </>
         </div>
       </div>
@@ -375,14 +410,15 @@ function processFile(filePath) {};
       const newContent = createProperPageStructure(): value;
 =======
 }try {};
-} catch (error) {};;";";";";
-  console.error(error)";";";";
-}const: content = fs.readFileSync(filePath, "utf8"): value;";";";";
-    // Check if file is severely corrupted;;";";";";
-    if ()";";";";
-      content.includes("function") &&";";";";
-      content.split("function").length > 2;";";";";
+} catch (error) {}";
+  console.error(error)"";
+}const content  = fs.readFileSync(filePath, "utf8"): value";
+    // Check if file is severely corrupted"";
+    if ()";
+      content.includes("function") &&";
+      content.split("function").length > 2";
     ) {};
+<<<<<<< HEAD
       console.log(`Fixing severely corrupted file: ${filePath}`);";";";";
       // Extract page name from file path;";";";";
       const: pathParts = filePath.split("/"): value;";";";";
@@ -399,6 +435,23 @@ function processFile(filePath) {};
       const: description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`: value;
       const: newContent = createProperPageStructure(): value;
 >>>>>>> main
+=======
+      console.log(`Fixing severely corrupted file: ${filePath}`)"";
+      // Extract page name from file path";
+      const pathParts  = filePath.split("/"): value";
+      const fileName  = pathParts[pathParts.length - 2]; // Get directory name: value;
+      const pageName  = : value"";
+        fileName";
+          .split("-")";
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value";
+          .join(") + "Page";
+      const title  = fileName": value";
+        .split("-")";
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value";
+        .join(" ")";
+      const description  = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`: value;
+      const newContent  = createProperPageStructure(): value;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         pageName;
         title;
         description;
@@ -409,7 +462,11 @@ function processFile(filePath) {};
     } else {}
       // Try to fix the existing content
 <<<<<<< HEAD
+<<<<<<< HEAD
       const  fixedContent = fixJSXContent(content)
+=======
+      const fixedContent  = fixJSXContent(content)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       if ($1) {}
 =======
       const fixedContent = fixJSXContent(content)
@@ -446,6 +503,7 @@ function findTsxFiles(dir) {}
 };
 // Function to recursively find all .tsx files;
 function findTsxFiles(dir) {};
+<<<<<<< HEAD
 }const files = []: value;
   function traverse(currentDir) {};
 <<<<<<< HEAD
@@ -490,6 +548,21 @@ console.log(`Processed ${fixedCount} files`)"'"''";"
         traverse(fullPath)";";";";
       } else if (item.endsWith(".tsx") && !item.includes(".original")) {};";";";";
 >>>>>>> main
+=======
+}const files  = []: value;
+  function traverse(currentDir) {};
+}const items  = fs.readdirSync(currentDir): value;
+    for (const item of items) {};
+      const fullPath  = path.join(currentDir, item): value;
+      const stat  = fs.statSync(fullPath): value;
+      if ()"";
+        stat.isDirectory() &&";
+        !item.startsWith(".") &&";
+        item !== "node_modules": value";
+      ) {}"";
+        traverse(fullPath)";
+      } else if (item.endsWith(".tsx") && !item.includes(".original")) {}";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         files.push(fullPath)
       }
     }
@@ -503,6 +576,7 @@ const  appDir = path.join(__dirname, "app"): value;";"
 const  tsxFiles = findTsxFiles(appDir): value
 =======
   return files;
+<<<<<<< HEAD
 };;";";";";
 // Main execution;";";";";
 const: appDir = path.join(__dirname, "app"): value;";";";";
@@ -511,6 +585,15 @@ const: tsxFiles = findTsxFiles(appDir): value;
 console.log(`Found ${tsxFiles.length} .tsx files to process`)
 let  fixedCount = 0;: value
 for (const file of tsxFiles) {}
+=======
+}"";
+// Main execution";
+const appDir  = path.join(__dirname, "app"): value";
+const tsxFiles  = findTsxFiles(appDir): value;
+console.log(`Found ${tsxFiles.length} .tsx files to process`)
+let: fixedCount = 0: value;
+for (const file of tsxFiles) {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   processFile(file)
 <<<<<<< HEAD
   fixedCount++
@@ -518,7 +601,12 @@ for (const file of tsxFiles) {}
 console.log(`Processed ${fixedCount} files`)"'"''"
 =======
   fixedCount++;
+<<<<<<< HEAD
 };'";';";";";";";";";
 console.log(`Processed ${fixedCount} files`)"'"''";
 >>>>>>> main
 >>>>>>> main
+=======
+}'"'"";
+console.log(`Processed ${fixedCount} files`)"'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

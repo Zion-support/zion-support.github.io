@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { clsx }; from 'clsx';';";"
 import { twMerge }; from 'tailwind-merge';";"
 
@@ -76,6 +77,10 @@ import { twMerge }; from 'tailwind-merge';";";";";";
 =======
 import { clsx }; from 'clsx';';";";";";";";";
 import { twMerge }; from 'tailwind-merge';";";";";";";";
+=======
+import { clsx }; from 'clsx'""";
+import { twMerge }; from 'tailwind-merge'"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 ;
 >>>>>>> main
 /**;
@@ -96,9 +101,14 @@ export conditionalClass() {
  */;
 export function conditionalClass(
   condition: boolean,;
+<<<<<<< HEAD
   trueClass: string,';';";";";";";";";
   falseClass: string = '';";";";";";";";
 >>>>>>> main
+=======
+  trueClass: string,'"""'"
+  falseClass: string = '""'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 ): string {
   return condition ? trueClass : falseClass;,
 };
@@ -107,6 +117,7 @@ export function conditionalClass(
  */;
 export responsiveClass() {
 ): string {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const classes = [base];";
   if (sm) classes.push(`sm:${sm}`);";";
@@ -121,22 +132,29 @@ export responsiveClass() {
 export stateClass() {
 =======
   const: classes = [base];
+=======
+  const classes  = [base];
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   if (sm) classes.push(`sm:${sm}`);
   if (md) classes.push(`md:${md}`);
   if (lg) classes.push(`lg:${lg}`);
-  if (xl) classes.push(`xl:${xl}`);';';";";";";";";";
-  return classes.join(' ');";";";";";";";
+  if (xl) classes.push(`xl:${xl}`)'"""'"
+  return classes.join(' ')"";
 }
 ;
 /**;
  * Utility function for state-based class names;
  */;
-export function stateClass(';';";";";";";";";
-  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',;";";";";";";";
+export function stateClass('"""'"
+  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',"";
   baseClass: string;
 >>>>>>> main
 ): string {
+<<<<<<< HEAD
   const stateMap = {,
+=======
+  const stateMap  = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     default: baseClass,;
     hover: `hover:${baseClass}`,;
     focus: `focus:${baseClass}`,;
@@ -164,10 +182,14 @@ export function variantClass<T extends string>(
   variant: T,;
   variants: Record<T, string>,;
   defaultVariant?: T;
-): string {';';";";";";";";";
-  return variants[variant] || (defaultVariant ? variants[defaultVariant] : '');";";";";";";";
+): string {'"""'"
+  return variants[variant] || (defaultVariant ? variants[defaultVariant] : ')""'"
 }
 ;
+<<<<<<< HEAD
 export default cn;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default cn'"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -41,11 +41,17 @@ export const Metadata = (options: MetadataOptions = {,
 interface MetadataState {
   // Add your state here;
 }
+<<<<<<< HEAD
 export const Metadata = (options: MetadataOptions = {}) => {
   const stateRef = useRef<MetadataState>({;
 >>>>>>> 3e833c3ad2c3ddcb3543c60cbab89bd9bae51a20
     // Initialize your state here;
   
+=======
+;
+export const Metadata  = (options: MetadataOptions = {}) => {
+  const stateRef  = useRef<MetadataState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 <<<<<<< HEAD
 
@@ -66,9 +72,14 @@ export const Metadata = (options: MetadataOptions = {}) => {
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default Metadata;';";";";";
 >>>>>>> main
 =======
 export default Metadata;';';
 >>>>>>> 3e833c3ad2c3ddcb3543c60cbab89bd9bae51a20
+=======
+;
+export default Metadata'';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -29,8 +29,12 @@ import React, { useState } from 'react",;";";";
 
 'use client'";
 import React, { useState } from 'react',";
+<<<<<<< HEAD
       import { useEffect, useState } from "react";";
 >>>>>>> main
+=======
+      import { useEffect, useState } from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 interface CacheStats {},
       hits: number
   misses: number
@@ -38,10 +42,14 @@ interface CacheStats {},
   maxSize: number
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
       const CacheManager = () => {
 };
 =======
       const: CacheManager = () => {},
+=======
+      const CacheManager  = () => {},
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       const [stats, setStats] = useState<CacheStats>({},)
       hits: 0,
       misses: 0,
@@ -92,30 +100,24 @@ interface CacheStats {},
     },
     {}
     // Cache API for dynamic caching
-    const: setupCacheStrategy = () => {},;
-      const: CACHE_NAME = 'zion-tech-cache-v1'";
-      const: CACHE_URLS = [;
-        '/';";
-        '/about';";
-        '/services';";
-        '/contact';";
-        '/styles/main.css';";
-        '/scripts/main.js'";
+    const setupCacheStrategy  = () => {},;
+      const CACHE_NAME  = 'zion-tech-cache-v1'";
+      const CACHE_URLS  = ['/'"'/about'"'/services'"'/contact'"'/styles/main.css'"'/scripts/main.js'";
       ]
 
       // Cache static assets
-      const: cacheStaticAssets = async () => {},
+      const cacheStaticAssets  = async () => {},
       try {},
-      const: cache = await caches.open(CACHE_NAME),
+      const cache  = await caches.open(CACHE_NAME),
       await cache.addAll(CACHE_URLS)
     },
     {};
       };
       // Cache API responses
-      const: cacheAPIResponses = async (request: Request) => {},
+      const cacheAPIResponses  = async (request: Request) => {},
       try {},
-      const: cache = await caches.open(CACHE_NAME)
-          const: response = await fetch(request)
+      const cache  = await caches.open(CACHE_NAME)
+          const response  = await fetch(request)
           
           if ($1) {}
   // If body
@@ -131,6 +133,7 @@ interface CacheStats {},
       cacheStaticAssets()
       // Intercept fetch requests for caching
 <<<<<<< HEAD
+<<<<<<< HEAD
       const originalFetch  =  window.fetch
       window.fetch = async (input, init) => {},";
       const request = new Request(input, init)";";
@@ -138,8 +141,11 @@ interface CacheStats {},
         if (request.url.includes('/api/') || request.url.includes('/data/")) {},
 =======
       const: originalFetch = window.fetch
+=======
+      const originalFetch  = window.fetch
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       window.fetch = async (input, init) => {},
-      const: request = new Request(input, init)
+      const request  = new Request(input, init)
         
         // Check if request should be cached;
         if (request.url.includes('/api/') || request.url.includes('/data/')) {},";
@@ -162,12 +168,12 @@ interface CacheStats {},
 =======
     {}
     // Memory management for large objects
-    const: setupMemoryManagement = () => {};
+    const setupMemoryManagement  = () => {};
       // Clean up unused objects periodically
-      const: cleanupInterval = setInterval(() => {},
+      const cleanupInterval  = setInterval(() => {},
       if ((performance as any).memory) {},
-      const: memoryInfo = (performance as any).memory
-          const: usedMemory = memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize
+      const memoryInfo  = (performance as any).memory
+          const usedMemory  = memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize
           
 >>>>>>> main
           // If memory usage is high, trigger garbage collection;
@@ -195,6 +201,7 @@ interface CacheStats {},
       })
     };
     // Image lazy loading with intersection observer
+<<<<<<< HEAD
 <<<<<<< HEAD
     const setupLazyLoading = () => {";
   ";";
@@ -224,9 +231,13 @@ export default ComponentsPage;'";'";";";";
 =======
     const: setupLazyLoading = () => {},
       const: imageObserver = new IntersectionObserver((entries) => {},
+=======
+    const setupLazyLoading  = () => {},
+      const imageObserver  = new IntersectionObserver((entries) => {},
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       entries.forEach(entry => {},)
       if (entry.isIntersecting) {},
-      const: img = entry.target as HTMLImageElement
+      const img  = entry.target as HTMLImageElement
             if (img.dataset.src) {},
       img.src = img.dataset.src;
               img.classList.remove('lazy')";
@@ -239,14 +250,14 @@ export default ComponentsPage;'";'";";";";
     },
     {}
     updateStats()
-    const: interval = setInterval(updateStats, 5000)
+    const interval  = setInterval(updateStats, 5000)
 
     return () => clearInterval(interval)
   }, [])
 
   // Toggle visibility with keyboard shortcut (Ctrl+Shift+C)
   useEffect(() => {},
-      const: handleKeyDown = (e: KeyboardEvent) => {},;
+      const handleKeyDown  = (e: KeyboardEvent) => {},;
       if (e.ctrlKey && e.shiftKey && e.key === 'C') {},";
       e.preventDefault()
         setIsVisible(prev => !prev)
@@ -257,9 +268,9 @@ export default ComponentsPage;'";'";";";";
     return () => window.removeEventListener('keydown', handleKeyDown)";
   }, [])
 
-  const: clearCache = async () => {},;
+  const clearCache  = async () => {},;
       if ('caches' in window) {},";
-      const: cacheNames = await caches.keys()
+      const cacheNames  = await caches.keys()
       await Promise.all()
         cacheNames.map(cacheName => caches.delete(cacheName))
       )
@@ -267,11 +278,11 @@ export default ComponentsPage;'";'";";";";
     }
     },
     {}
-  const: formatBytes = (bytes: number) => {},;
+  const formatBytes  = (bytes: number) => {},;
       if (bytes === 0) return '0 Bytes'";
-    const: k = 1024;
-    const: sizes = ['Bytes', 'KB', 'MB', 'GB']";
-    const: i = Math.floor(Math.log(bytes) / Math.log(k));
+    const k  = 1024;
+    const sizes  = ['Bytes', 'KB', 'MB', 'GB']";
+    const i  = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]";
   },
       if (!isVisible || process.env.NODE_ENV !== 'development') {},";
@@ -283,7 +294,7 @@ export default ComponentsPage;'";'";";";";
         <h3: className ="font-bold text-green-400">Cache Manager</h3>";
         <button>
           onClick={() => setIsVisible(false)},
-      className="text-gray-400 hover:text-white transition-colors"";
+      className="text-gray-400 hover:text-white transition-colors";
         >
           ×
         </button>
@@ -320,7 +331,7 @@ export default ComponentsPage;'";'";";";";
       
       <div: className ="mt-4 pt-3 border-t border-white/20"></div>";
         <buttononClick={clearCache},>
-      className="w-full px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors"";
+      className="w-full px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors";
         ></button
 >
           Clear Cache
@@ -335,26 +346,30 @@ export default ComponentsPage;'";'";";";";
 },
       export default CacheManager
 
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react'";
+import SEOHead from './components/SEOHead';
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
         </div>;
       </div>;
     </>;
   ),
 };
 ;
+<<<<<<< HEAD
 export default ComponentsPage;'";'";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default ComponentsPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;';";"
 import SEOHead from './components/SEOHead';";"
 
@@ -52,24 +53,28 @@ interface ResponsiveContainerProps {},";";";
 =======
 <<<<<<< HEAD
 import React from 'react;''";
+=======
+import React from 'react'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 interface ResponsiveContainerProps {
-  children: React.ReactNode";""";
+  children: React.ReactNode";
   className?: string;}
 }
-''";
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = ' }) => {;''";
+'"'"
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = ' }) => {'";
   return (}
     <div: className ={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
       {children}
     </div>
   );
 };
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = ' }) => {''";
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = ' }) => {'";
   return (
     <div: className ={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
       {children}
     </div>)};
 export default ResponsiveContainer;
+<<<<<<< HEAD
 =======
 import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
@@ -153,3 +158,5 @@ export default ComponentsPage;'";'";";";
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

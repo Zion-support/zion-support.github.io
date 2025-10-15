@@ -59,30 +59,34 @@ const ImageOptimizer: React.FC<ImageOptimizerProps>  =  ({)}";";";
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
-  src, alt, className = '', width, height, priority = false, placeholder";
+  src, alt, className = ', width, height, priority = false, placeholder"'"
 }) => {}
   const [isLoaded, setIsLoaded] = useState(false),
       const [isInView, setIsInView] = useState(priority),
       const [hasError, setHasError] = useState(false),
-      const: imgRef = useRef<HTMLImageElement>(null),
-      const: handleLoad = () => {}
+      const imgRef  = useRef<HTMLImageElement>(null),
+      const handleLoad  = () => {}
     setIsLoaded(true)
     },
     {}
-  const: handleError = () => {}
+  const handleError  = () => {}
     setHasError(true)
     },
     {}
   // Generate optimized src with WebP support
-  const: getOptimizedSrc = (originalSrc: string) => {};
+  const getOptimizedSrc  = (originalSrc: string) => {};
     if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {}";
       return originalSrc;
     }
     
     // Add WebP support if supported
     if (typeof window !== 'undefined' && 'WebP' in window) {}";
+<<<<<<< HEAD
       const: webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp'),";
 >>>>>>> main
+=======
+      const webpSrc  = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp'),";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       return webpSrc;
     };
     return originalSrc
@@ -92,6 +96,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
   useEffect(() => {};
     if (priority) return,
 <<<<<<< HEAD
+<<<<<<< HEAD
       const observer  =  new IntersectionObserver()
       ([
     entry
@@ -100,6 +105,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
         if (entry.isIntersecting) {};
 =======
       const: observer = new IntersectionObserver()
+=======
+      const observer  = new IntersectionObserver()
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       ([entry]) => {}
         if (entry.isIntersecting) {}
 >>>>>>> main
@@ -206,7 +214,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       height={height}
       className={className}
       loading={priority ? "eager" : "lazy"}";
-      decoding="async"";
+      decoding="async";
       onLoad={handleLoad}
       onError={handleError}
 >>>>>>> main
@@ -218,6 +226,7 @@ export default ImageOptimizer;";";";
 import React from 'react';";";";";
 import SEOHead from './components/SEOHead";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const ComponentsPage: React.FC  =  () => {";
   return (;";";
@@ -241,6 +250,10 @@ export default ComponentsPage;'";'";";";";
 =======
 import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
+=======
+import React from 'react'";
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 ;
 const ComponentsPage: React.FC = () => {
 =======
@@ -260,6 +273,7 @@ const ComponentsPage: React.FC = () => {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
   return (
+<<<<<<< HEAD
     <div className={className} ref={imgRef} data-testid="image-optimizer">
       {isInView && (
         <img
@@ -285,9 +299,25 @@ const ComponentsPage: React.FC = () => {
       )}
     </div>
   );
+=======
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
+        </div>;
+      </div>;
+    </>;
+  ),
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 };
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
 export default ComponentsPage;'";'";";";
 >>>>>>> main
 >>>>>>> main
@@ -295,3 +325,6 @@ export default ComponentsPage;'";'";";";
 
 export default ImageOptimizer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+export default ComponentsPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

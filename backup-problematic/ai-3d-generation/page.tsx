@@ -29,6 +29,7 @@ export default function Ai3dGenerationPage() {
               Everything you need to create professional 3D models with AI assistance.
  ()
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div  className = "mb-4">{feature.icon}</div>": value"
                 <h3  className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value"
                 <p  className ="text-gray-300">{feature.description}</p> value"
@@ -54,13 +55,23 @@ export default function Ai3dGenerationPage() {
                 <div: className = "mb-4">{feature.icon}</div>": value";";
                 <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";";
                 <p: className ="text-gray-300">{feature.description}</p>: value";";
+=======
+                <div: className = "mb-4">{feature.icon}</div>": value";
+                <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";
+                <p: className ="text-gray-300">{feature.description}</p>: value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             ))};
       {/* Use Cases Section */},
       Perfect For;
                 Our AI 3D generation technology excels in various industries and applications;
+<<<<<<< HEAD
  ()"";";
                   <span: className = "text-sm">{useCase}</span>: value";";
 >>>>>>> main
+=======
+ ()";
+                  <span: className = "text-sm">{useCase}</span>: value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               ))};
 >>>>>>> main
       {/* CTA Section */},
@@ -101,6 +112,7 @@ export default function Ai3dGenerationPage() {
       Powerful 3D Generation Features
               Everything you need to create professional 3D models with AI assistance.
 <<<<<<< HEAD
+<<<<<<< HEAD
  ()""
                 <div  className = "mb-4">{feature.icon}</div>": value"
                 <h3  className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value"
@@ -122,13 +134,24 @@ export default function Ai3dGenerationPage() {
                 <div: className = "mb-4">{feature.icon}</div>": value";";
                 <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";";
                 <p: className ="text-gray-300">{feature.description}</p>: value";";
+=======
+ ()";
+                <div: className = "mb-4">{feature.icon}</div>": value";
+                <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";
+                <p: className ="text-gray-300">{feature.description}</p>: value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
             ))};
       {/* Use Cases Section */},
       Perfect For;
                 Our AI 3D generation technology excels in various industries and applications;
+<<<<<<< HEAD
  ()"";";
                   <span: className = "text-sm">{useCase}</span>: value";";
 >>>>>>> main
+=======
+ ()";
+                  <span: className = "text-sm">{useCase}</span>: value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               ))};
       {/* CTA Section */},
       Ready to Create Amazing 3D Models?";

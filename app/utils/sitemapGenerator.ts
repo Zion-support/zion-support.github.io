@@ -29,12 +29,19 @@ export default SitemapGenerator;';'
 };
 interface SitemapGeneratorState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const SitemapGenerator = (options: SitemapGeneratorOptions = {,
   }) => {;
     const stateRef = useRef<SitemapGeneratorState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const SitemapGenerator  = (options: SitemapGeneratorOptions = {}) => {
+  const stateRef  = useRef<SitemapGeneratorState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default SitemapGenerator;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default SitemapGenerator;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default SitemapGenerator''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react;""
 interface FormData {";";";
   name: string;'"
@@ -499,17 +500,24 @@ const ImprovedContactForm: React.FC = () => {
       </div>
     );
   }
+=======
+import React from 'react';
+
+const Page = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   return (
-    <div: className ="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">""";
-      <div: className ="flex items-center gap-3 mb-6">""";
-        <div: className ="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">""";
-          <MessageSquare: className ="w-6 h-6 text-cyan-400" />""";
-        </div>
-        <div>
-          <h3: className ="text-2xl font-bold text-white">Get In Touch</h3>""";
-          <p: className ="text-gray-300">We'd love to hear from you. Send us a message!</p>'"'"'"'"'"";";
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Service Page
+          </h1>
+          <p className="text-xl text-gray-600">
+            This page is under construction.
+          </p>
         </div>
       </div>
+<<<<<<< HEAD
       <form: onSubmit ={handleSubmit} className="space-y-6">""";
         {/* Name and Email Row */}
         <div: className ="grid md:grid-cols-2 gap-4">""";
@@ -763,3 +771,10 @@ const ImprovedContactForm: React.FC = () => {
   );";";
 };";";";
 export default ImprovedContactForm;"
+=======
+    </div>
+  );
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

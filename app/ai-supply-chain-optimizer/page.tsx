@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;";";"
 import SEOHead from '../components/SEOHead';";"
 const AiSupplyChainOptimizerPage: React.FC = () => {
@@ -323,148 +324,28 @@ export default function AISupplyChainOptimizerPage() {
       description: 'Manage complex supply chains across multiple countries and time zones''";
     }
   ];
+=======
+import React from 'react';
+
+const Page = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   return (
-    <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""";
-      <Helmet>
-        <title>AI Supply Chain Optimizer - Zion Tech Group</title>
-        <meta: name ="description" content="Optimize your supply chain with AI-powered route planning, inventory management, and predictive analytics." />""";
-        <meta: name ="keywords" content="supply chain optimization, AI logistics, inventory management, route optimization" />""";
-      </Helmet>
-      <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""";
-        {/* Hero Section */}
-        <section: className ="relative py-20 overflow-hidden">""";
-          <div: className ="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>""";
-          <ResponsiveContainer>
-            <div: className ="relative z-10 text-center">""";
-              <h1: className ="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-green-200 to-blue-200 bg-clip-text text-transparent mb-6">""";
-                AI Supply Chain Optimizer
-              </h1>
-              <p: className ="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">""";
-                Transform your supply chain with AI-powered optimization, predictive analytics, and intelligent automation.
-              </p>
-              <div: className ="flex flex-col sm:flex-row gap-4 justify-center">""";
-                <FuturisticButton: className ="bg-green-600 hover:bg-green-700">""";
-                  Get Started
-                </FuturisticButton>
-                <FuturisticButton: variant ="outline">""";
-                  View Demo
-                </FuturisticButton>
-              </div>
-            </div>
-          </ResponsiveContainer>
-        </section>
-        {/* Features Section */}
-        <section: className ="py-20">""";
-          <ResponsiveContainer>
-            <div: className ="text-center mb-16">""";
-              <h2: className ="text-4xl font-bold text-white mb-4">Powerful Features</h2>""";
-              <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">""";
-                Our AI-powered supply chain optimizer provides comprehensive tools to streamline your logistics operations.
-              </p>
-            </div>
-            <div: className ="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""";
-              {features.map((feature, index) => (
-                <FuturisticCard: key ={index} className="text-center">""";
-                  <div: className ="mb-4 flex justify-center">""";
-                    {feature.icon}
-                  </div>
-                  <h3: className ="text-xl font-semibold text-white mb-2">{feature.title}</h3>""";
-                  <p: className ="text-gray-300">{feature.description}</p>""";
-                </FuturisticCard>
-              ))}
-            </div>
-          </ResponsiveContainer>
-        </section>
-        {/* Benefits Section */}
-        <section: className ="py-20 bg-white/5">""";
-          <ResponsiveContainer>
-            <div: className ="text-center mb-16">""";
-              <h2: className ="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>""";
-              <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">""";
-                Experience the benefits of AI-powered supply chain optimization.
-              </p>
-            </div>
-            <div: className ="grid md:grid-cols-3 gap-8">""";
-              {benefits.map((benefit, index) => (
-                <FuturisticCard: key ={index} className="text-center">""";
-                  <div: className ="mb-4 flex justify-center">""";
-                    {benefit.icon}
-                  </div>
-                  <h3: className ="text-xl font-semibold text-white mb-2">{benefit.title}</h3>""";
-                  <p: className ="text-gray-300">{benefit.description}</p>""";
-                </FuturisticCard>
-              ))}
-            </div>
-          </ResponsiveContainer>
-        </section>
-        {/* Pricing Section */}
-        <section: className ="py-20">""";
-          <ResponsiveContainer>
-            <div: className ="text-center mb-16">""";
-              <h2: className ="text-4xl font-bold text-white mb-4">Pricing Plans</h2>""";
-              <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">""";
-                Choose the perfect plan for your business needs.
-              </p>
-            </div>
-            <div: className ="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">""";
-              {pricingPlans.map((plan, index) => (
-                <FuturisticCard: key ={index} className={`${plan.popular ? 'ring-2 ring-green-400' : '}`}>''";
-                  {plan.popular && (
-                    <div: className ="absolute -top-4 left-1/2 transform -translate-x-1/2">""";
-                      <span: className ="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium">""";
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div: className ="text-center mb-8">""";
-                    <h3: className ="text-2xl font-bold text-white mb-2">{plan.name}</h3>""";
-                    <div: className ="text-4xl font-bold text-green-400 mb-2">""";
-                      {plan.price}
-                      <span: className ="text-lg text-gray-400">{plan.period}</span>""";
-                    </div>
-                    <p: className ="text-gray-300">{plan.description}</p>""";
-                  </div>
-                  <ul: className ="space-y-3 mb-8">""";
-                    {plan.features.map((feature, featureIndex) => (
-                      <li: key ={featureIndex} className="flex items-center text-gray-300">""";
-                        <CheckCircle: className ="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />""";
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <FuturisticButton: className ="w-full justify-center">""";
-                    Get Started
-                  </FuturisticButton>
-                </FuturisticCard>
-              ))}
-            </div>
-          </ResponsiveContainer>
-        </section>
-        {/* CTA Section */}
-        <section: className ="py-20">""";
-          <ResponsiveContainer>
-            <div: className ="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-center">""";
-              <h2: className ="text-4xl font-bold text-white mb-4">Ready to Optimize Your Supply Chain?</h2>""";
-              <p: className ="text-xl text-green-100 mb-8 max-w-3xl mx-auto">""";
-                Join thousands of businesses that have transformed their supply chain operations with our AI-powered solution.
-              </p>
-              <div: className ="flex flex-col sm:flex-row gap-4 justify-center">""";
-                <FuturisticButton: className ="bg-white text-green-600 hover:bg-gray-100">""";
-                  Start Free Trial
-                </FuturisticButton>
-                <FuturisticButton: variant ="outline" className="border-white text-white hover:bg-white hover:text-green-600">""";
-                  Contact Sales
-                </FuturisticButton>
-              </div>
-            </div>
-          </ResponsiveContainer>
-        </section>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Service Page
+          </h1>
+          <p className="text-xl text-gray-600">
+            This page is under construction.
+          </p>
+        </div>
       </div>
     </div>
   );
-}
-=======
+};
 
+<<<<<<< HEAD
 import { TrendingUp } from "lucide-react";";
 import { Helmet } from "react-helmet-async";";
 export default function AISupplyChainOptimizer() {}
@@ -987,3 +868,6 @@ const AiSupplyChainOptimizerPage: React.FC = () => {
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

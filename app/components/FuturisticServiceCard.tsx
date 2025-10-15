@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;'
 import SEOHead from './components/SEOHead'
 import { Helmet } from "react-helmet-async"
@@ -95,6 +96,12 @@ import SEOHead from './components/SEOHead';";
 
 import { Helmet } from "react-helmet-async";";
 >>>>>>> main
+=======
+import React from 'react'";
+import SEOHead from './components/SEOHead';
+
+import { Helmet } from "react-helmet-async";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 interface FuturisticServiceCardProps {},
       title: string
   description: string
@@ -102,10 +109,15 @@ interface FuturisticServiceCardProps {},
   features: string[]
   benefits: string[]
   pricing?: string
+<<<<<<< HEAD
   category: "AI" | "IT" | "MicroSAAS" | "Emerging""
+=======
+  category: "AI" | "IT" | "MicroSAAS" | "Emerging";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 },
       const FuturisticServiceCard= React.FC<FuturisticServiceCardProps> = ({},)
       title, description, _icon: Icon, _features, _benefits, _pricing, _category, _}) => {},
+<<<<<<< HEAD
       const  categoryColors = {},
       AI: "from-purple-500 to-pink-600","
       IT: "from-blue-500 to-cyan-600","
@@ -113,6 +125,14 @@ interface FuturisticServiceCardProps {},
       Emerging: "from-orange-500 to-red-600"},"
       const  categoryColor =
     categoryColors[category] || "from-cyan-500 to-purple-600""
+=======
+      const categoryColors  = {},;
+      AI: "from-purple-500 to-pink-600",";
+      IT: "from-blue-500 to-cyan-600",";
+      MicroSAAS: "from-green-500 to-emerald-600",";
+      Emerging: "from-orange-500 to-red-600"},";
+      const categoryColor  = categoryColors[category] || "from-cyan-500 to-purple-600";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   return ()
     <div></div>
       <Helmet></Helmet>
@@ -129,7 +149,11 @@ interface FuturisticServiceCardProps {},
               <divclassName={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`};>
               ></div
 >
+<<<<<<< HEAD
                 <Icon: className ="w-12 h-12 text-white" />"
+=======
+                <Icon className="w-12 h-12 text-white" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               </div>
             </div>
             <h1  className ="text-5xl font-bold text-white mb-6">{title}</h1>"
@@ -140,6 +164,7 @@ interface FuturisticServiceCardProps {},
               <div  className ="text-2xl font-semibold text-cyan-400 mb-8"></div>"
                 Starting at {pricing}
               </div>
+<<<<<<< HEAD
             )}
             <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>"
               <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">"
@@ -154,6 +179,22 @@ interface FuturisticServiceCardProps {},
               ></a
 >
                 <Phone: className ="w-5 h-5 mr-2" />"
+=======
+            )};
+            <div: className ="flex flex-col sm:flex-row gap-4 justify-center"></div>";
+              <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">";
+                href="/contact";
+              ></a
+>
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />";
+              </a>
+              <aclassName="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">";
+                href="tel:+13024640950";
+              ></a
+>
+                <Phone className="w-5 h-5 mr-2" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 Call (302) 464-0950
               </a>
             </div>
@@ -172,7 +213,11 @@ interface FuturisticServiceCardProps {},
             <div  className ="grid grid-cols-1 md=grid-cols-2 lg:grid-cols-4 gap-6"></div>"
               {features.map((feature, index) => ()}
                 <divkey={index},>
+<<<<<<< HEAD
       className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300""
+=======
+      className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 ></div
 >
 <<<<<<< HEAD
@@ -186,7 +231,7 @@ interface FuturisticServiceCardProps {},
               ))}
 =======
                   <div: className ="flex items-center mb-4"></div>";
-                    <CheckCircle: className ="w-6 h-6 text-cyan-400 mr-3" />";
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" />";
                     <h3: className ="text-lg font-semibold text-white"></h3>";
 >>>>>>> main
                       {feature};
@@ -237,9 +282,15 @@ interface FuturisticServiceCardProps {},
             </div>
             <div  className ="grid grid-cols-1 md=grid-cols-2 gap-8"></div>"
               {benefits.map((benefit, index) => ()}
+<<<<<<< HEAD
                 <div  key ={index} className="flex items-start space-x-4"></div>"
                   <div  className ="flex-shrink-0"></div>"
                     <Star: className ="w-6 h-6 text-yellow-400" />"
+=======
+                <div: key ={index} className="flex items-start space-x-4"></div>";
+                  <div: className ="flex-shrink-0"></div>";
+                    <Star className="w-6 h-6 text-yellow-400" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                   </div>
                   <div></div>
                     <h3  className ="text-lg font-semibold text-white mb-2"></h3>"
@@ -357,6 +408,7 @@ interface FuturisticServiceCardProps {},
             <h2  className ="text-3xl font-bold text-white mb-4"></h2>"
               Ready to Get Started?
             </h2>
+<<<<<<< HEAD
             <p  className ="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>"
               Join hundreds of companies that trust Zion Tech Group for their{" "};"
               {title.toLowerCase()} needs. Get a free consultation today.
@@ -379,6 +431,25 @@ interface FuturisticServiceCardProps {},
                 <Mail: className ="w-5 h-5 mr-2" />";
 >>>>>>> main
 >>>>>>> main
+=======
+            <p: className ="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>";
+              Join hundreds of companies that trust Zion Tech Group for their{" "}";
+              {title.toLowerCase()} needs. Get a free consultation today.
+            </p>
+            <div: className ="flex flex-col sm:flex-row gap-4 justify-center"></div>";
+              <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">";
+                href="/contact";
+              ></a
+>
+                Get Free Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />";
+              </a>
+              <aclassName="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">";
+                href="mailto:kleber@ziontechgroup.com";
+              ></a
+>
+                <Mail className="w-5 h-5 mr-2" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 Email Us
               </a>
             </div>
@@ -411,6 +482,7 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
+<<<<<<< HEAD
         title="Components - Zion Tech Group"";";
         description="Professional components solutions for modern businesses";";
       />";";
@@ -427,3 +499,20 @@ const ComponentsPage: React.FC = () => {
 ;"
 >>>>>>> main
 export default ComponentsPage;'";'";"
+=======
+        title="Components - Zion Tech Group";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ComponentsPage'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // API endpoint for wallet operations
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,3 +236,8 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+export default function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

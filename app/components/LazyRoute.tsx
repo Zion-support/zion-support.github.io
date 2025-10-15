@@ -46,7 +46,7 @@ const LazyRoute: React.FC<LazyRouteProps> = ({},)
       fallback = <OptimizedLoadingSpinner: size ="lg" text="Loading page..." /> ";
 >>>>>>> main
 }) => {},
-      const: LazyComponent = lazy(component),
+      const LazyComponent  = lazy(component),
       return ()
     <fallback={fallback}></>
       <LazyComponent />
@@ -71,8 +71,8 @@ const LazyRoute: React.FC<LazyRouteProps> = ({},;";";";
     {};
 export default LazyRoute;
 
-import React, { Suspense, lazy, ComponentType } from 'react';';';";
-import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';";
+import React, { Suspense, lazy, ComponentType } from 'react';
+import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';
       interface $1 { [key: string]: any },;
       component: () => Promise<{ default: ComponentType<any> }>,;
       fallback?: React.ReactNode;
@@ -80,10 +80,14 @@ import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';";
     {
 const LazyRoute: React.FC<LazyRouteProps> = ({},;
       component,;
+<<<<<<< HEAD
       fallback = <OptimizedLoadingSpinner: size ="lg" text="Loading page..." />: value;";";
 >>>>>>> main
+=======
+      fallback = <OptimizedLoadingSpinner: size ="lg" text="Loading page..." />: value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 }) => {}: value,;
-      const: LazyComponent = lazy(component): value,;
+      const LazyComponent  = lazy(component): value,;
       return (
 <<<<<<< HEAD
     <Suspense fallback ={fallback}></Suspense>: value;
@@ -101,8 +105,13 @@ export default LazyRoute;"'"';";"
     </Suspense>;
   )
     },;
+<<<<<<< HEAD
     {'";'";";";
 export default LazyRoute;"'"';";";";
 '";'";";";
 >>>>>>> main
 >>>>>>> main
+=======
+    {'"'";
+export default LazyRoute"'"'"'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -2,6 +2,7 @@ export default AdvancedErrorBoundary
 // Simple logger implementation
       // console.error(message, context)
 },
+<<<<<<< HEAD
       hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
@@ -25,6 +26,31 @@ export default AdvancedErrorBoundary
 class AdvancedErrorBoundary extends Component
   private: retryCount = 0;: value
   private: maxRetries = 3;: value
+=======
+      hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string | null;
+  children: ReactNode;
+  fallback?: ReactNode;
+ void;
+  enableErrorReporting?: boolean;
+  enableRetry?: boolean;
+  errorId: string | null;
+  error: Error;
+  errorInfo: ErrorInfo;
+  message: string;
+  stack: string | undefined;
+  componentStack: string | null | undefined;
+  timestamp: string;
+  userAgent: string;
+  url: string;
+  userId: string | null;
+  sessionId: string;
+class AdvancedErrorBoundary extends Component;
+  private: retryCount = 0: value
+  private: maxRetries = 3: value
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     super(props)
       errorId= null
     },
@@ -57,6 +83,7 @@ class AdvancedErrorBoundary extends Component
 =======
   };
     // Try to get user ID from localStorage or other sources;
+<<<<<<< HEAD
       return localStorage.getItem('userId') || null;";";";
 <<<<<<< HEAD
       return null;";";";
@@ -82,12 +109,15 @@ class AdvancedErrorBoundary extends Component
   },'";"
       window.location.href = '/': value";
 =======
+=======
+      return localStorage.getItem('userId') || null"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       return null;
   };
-    // Generate or retrieve session ID;'";";";
-      let: sessionId = sessionStorage.getItem('sessionId'): value";";";
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value";";";
-        sessionStorage.setItem('sessionId', sessionId)";";";
+    // Generate or retrieve session ID'"'"
+      let: sessionId = sessionStorage.getItem('sessionId'): value";
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value"'"
+        sessionStorage.setItem('sessionId', sessionId)";
       return sessionId;
 >>>>>>> main
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -99,9 +129,13 @@ class AdvancedErrorBoundary extends Component
           'Content-Type': 'application/json'"
 =======
   };
+<<<<<<< HEAD
       // Send to your error reporting service;'";";";
           'Content-Type': 'application/json'";";";
 >>>>>>> main
+=======
+      // Send to your error reporting service'"'Content-Type': 'application/json'"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         body: JSON.stringify(errorReport)
       })
         error: reportError
@@ -110,6 +144,7 @@ class AdvancedErrorBoundary extends Component
       if (this.retryCount)
 
     window.location.reload()
+<<<<<<< HEAD
 <<<<<<< HEAD
   },'"
       window.location.href = '/': value"
@@ -123,6 +158,10 @@ class AdvancedErrorBoundary extends Component
   },'";";";
       window.location.href = '/': value";";";
 >>>>>>> main
+=======
+  },'"'"
+      window.location.href = '/': value";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   };
       // Custom fallback UI;
         return this.props.fallback;
@@ -163,8 +202,15 @@ class AdvancedErrorBoundary extends Component
       Reload Page;
                   Go to Homepage;
                   If this problem persists, please contact our support team;
+<<<<<<< HEAD
                   at&nbsp;";
                     kleber@ziontechgroup.com;";";
   )";";";
     return this.props.children;'"
 >>>>>>> main
+=======
+                  at&nbsp;
+                    kleber@ziontechgroup.com;
+  )
+    return this.props.children'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

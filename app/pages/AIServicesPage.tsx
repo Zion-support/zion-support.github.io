@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import SEOHead from '../components/SEOHead';";"
 const AIServicesPage: React.FC = () => {
   return (
@@ -77,72 +78,24 @@ const AIServicesPage: React.FC = () => {";";
                   <button className="text-purple-600 hover:text-purple-800 font-medium">
 =======
 <<<<<<< HEAD
-
-const AIServicesPage: React.FC = () => {
-  const: services = [{;
-      icon: Brain,''";
-      title: 'AI Strategy & Consulting',''";
-      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',''";
-      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning'];}''";
-    },
-    {
-      icon: Bot,''";
-      title: 'Conversational AI',''";
-      description: 'Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.',''";
-      features: ['Natural Language Processing', 'Multi-channel Integration', 'Sentiment Analysis', '24/7 Availability'];}''";
-    },
-    {
-      icon: BarChart3,''";
-      title: 'Predictive Analytics',''";
-      description: 'Leverage machine learning to predict trends, behaviors, and outcomes for better decision making.',''";
-      features: ['Data Mining', 'Pattern Recognition', 'Forecasting Models', 'Real-time Insights'];}''";
-    },
-    {
-      icon: Shield,''";
-      title: 'AI Security Solutions',''";
-      description: 'Protect your AI systems and data with advanced security measures and compliance frameworks.',''";
-      features: ['Threat Detection', 'Data Privacy', 'Model Security', 'Compliance Management'];}''";
-    },
-    {
-      icon: Zap,''";
-      title: 'Process Automation',''";
-      description: 'Automate repetitive tasks and workflows using AI to increase efficiency and reduce costs.',''";
-      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Quality Control'];}''";
-    },
-    {
-      icon: Target,''";
-      title: 'Computer Vision',''";
-      description: 'Implement visual recognition systems for quality control, security, and enhanced user experiences.',''";
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Inspection'];}''";
-    }
-  ];
-  return (
-  );
-};
 =======
-import SEOHead from '../components/SEOHead';";
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
-const AIServicesPage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="AIServicesPage - Zion Tech Group"";
-
-        description="Zion Tech Group AIServicesPage page"";
-
-const AIServicesPage: React.FC = () => {
+const Page = () => {
   return (
-    <>
-      <SEOHead: title ="AIServicesPage - Zion Tech Group - Zion Tech Group"";";
-        description="Zion Tech Group AIServicesPage page"";";
-
-      />
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">AIServicesPage - Zion Tech Group</h1>";";
-          <p: className ="text-gray-300">Coming soon...</p>";";
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Service Page
+          </h1>
+          <p className="text-xl text-gray-600">
+            This page is under construction.
+          </p>
         </div>
       </div>
+<<<<<<< HEAD
     </>
   ),
 };
@@ -341,3 +294,10 @@ const AIServicesPage: React.FC = () => {
 }";";";
 "
 >>>>>>> main
+=======
+    </div>
+  );
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

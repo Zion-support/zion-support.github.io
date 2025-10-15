@@ -22,6 +22,7 @@ function removeConsoleLogs(filePath) {
     // Clean up empty lines
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
     
+<<<<<<< HEAD
     if (newContent !== originalContent) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Removed console logs from: ${filePath}`);
@@ -63,6 +64,27 @@ async function processDistFiles() {
       const filePath = path.join(distPath, file);
       if (removeConsoleLogs(filePath)) {
         processedCount++;
+=======
+    for (const file of files) {
+      totalFiles++;
+      
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        
+        // Remove console.log statements (but keep console.error, console.warn, etc.)
+        const cleanedContent = content
+          .replace(/console\.log\([^)]*\);?/g, ')'
+          .replace(/console\.debug\([^)]*\);?/g, ')'
+          .replace(/console\.info\([^)]*\);?/g, ')'
+        
+        if (cleanedContent !== content) {
+          fs.writeFileSync(file, cleanedContent);
+          modifiedFiles++;
+          console.log(`✅ Cleaned: ${file}`);
+        }
+      } catch (error) {
+        console.error(`❌ Error processing ${file}:`, error.message);
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       }
     }
     

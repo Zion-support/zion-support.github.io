@@ -29,14 +29,14 @@ function resolveConflicts(filePath) {
     fs.writeFileSync(filePath, content, 'utf8');";
 =======
 
-import fs from 'fs';";";";
-import path from 'path';";";";
-import { execSync } from 'child_process';";";";
+import fs from 'fs'"";
+import path from 'path'";
+import { execSync } from 'child_process'";
 
 // Function to resolve merge conflicts by keeping our version (HEAD)
 function resolveConflicts(filePath) {
   try {
-    let: content = fs.readFileSync(filePath, 'utf8');";";";
+    let: content = fs.readFileSync(filePath, 'utf8')";
     
 >>>>>>> main
     // Check if file has merge conflicts
@@ -45,6 +45,7 @@ function resolveConflicts(filePath) {
     
     // Replace merge conflict markers with HEAD version (our changes)
     content = content.replace(
+<<<<<<< HEAD
 <<<<<<< HEAD
       '$1'"
     )
@@ -61,12 +62,19 @@ function resolveConflicts(filePath) {
 
 =======
       '$1'";";";
+=======
+      '$1'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     );
     
     // Clean up any remaining conflict markers
     
+<<<<<<< HEAD
     fs.writeFileSync(filePath, content, 'utf8');";";";
 >>>>>>> main
+=======
+    fs.writeFileSync(filePath, content, 'utf8')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
   } catch (error) {
@@ -104,6 +112,7 @@ function findConflictedFiles() {
   }
 }
 
+<<<<<<< HEAD
 console.log('🔧 Resolving final merge conflicts...');"
 // Find all files with conflicts
 const  conflictedFiles = findConflictedFiles()
@@ -129,17 +138,28 @@ try {
 =======
     const: result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });";";";
     return result.trim().split('\n').filter(file => file.length > 0);";";";
+=======
+// Function to find all files with merge conflicts
+function findConflictedFiles() {
+  try {
+    const result  = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })";
+    return result.trim().split('\n').filter(file => file.length > 0)";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   } catch (error) {
-    console.error('Error finding conflicted files:', error.message);";";";
+    console.error('Error finding conflicted files:', error.message)";
     return [];
   }
 }
 
-console.log('🔧 Resolving final merge conflicts...');";";";
+console.log('🔧 Resolving final merge conflicts...')";
 
 >>>>>>> main
 // Find all files with conflicts
+<<<<<<< HEAD
 const conflictedFiles = findConflictedFiles();
+=======
+const conflictedFiles  = findConflictedFiles();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 console.log(`Found ${conflictedFiles.length} files with conflicts`);
 let resolvedCount = 0;
 conflictedFiles.forEach(filePath => {
@@ -170,10 +190,15 @@ try {";";
 
 // Add all resolved files
 try {
-  execSync('git add .', { stdio: 'inherit' });";";";
-  console.log('✅ Added all resolved files to staging');";";";
+  execSync('git add .', { stdio: 'inherit' })";
+  console.log('✅ Added all resolved files to staging')";
 } catch (error) {
+<<<<<<< HEAD
   console.error('❌ Error adding files:', error.message);";";";
 }
 >>>>>>> main
 >>>>>>> main
+=======
+  console.error('❌ Error adding files:', error.message)";
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

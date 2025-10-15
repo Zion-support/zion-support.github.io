@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react',"
 =======
 <<<<<<< HEAD
@@ -24,6 +25,9 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';";
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 interface Props {
   children: ReactNode;
@@ -316,11 +320,15 @@ export default ErrorBoundary;'";'";";";";
 "
 =======
     if (process.env.NODE_ENV === 'development') {";
+<<<<<<< HEAD
       console.error('ErrorBoundary caught an error:', error, errorInfo);";
 =======
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+      console.error('ErrorBoundary caught an error:', error, errorInfo)";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     }
 
     // Here you would typically send the error to a logging service
@@ -346,9 +354,14 @@ export default ErrorBoundary;'";'";";";";
               <p className="mt-2 text-sm text-gray-500">
                 {this.state.error?.message || 'An unexpected error occurred'}
               </p>
+<<<<<<< HEAD
               <button 
                 onClick={() => window.location.reload()}
                 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+              <button: onClick ={() => window.location.reload()}
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               >
                 Try again
               </button>

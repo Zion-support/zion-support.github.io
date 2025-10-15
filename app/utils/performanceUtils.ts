@@ -29,12 +29,19 @@ export default PerformanceUtils;';'
 };
 interface PerformanceUtilsState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const PerformanceUtils = (options: PerformanceUtilsOptions = {,
   }) => {;
     const stateRef = useRef<PerformanceUtilsState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const PerformanceUtils  = (options: PerformanceUtilsOptions = {}) => {
+  const stateRef  = useRef<PerformanceUtilsState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default PerformanceUtils;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default PerformanceUtils;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default PerformanceUtils''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

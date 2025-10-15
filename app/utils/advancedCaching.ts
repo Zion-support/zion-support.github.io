@@ -29,12 +29,19 @@ export default AdvancedCaching;';'
 };
 interface AdvancedCachingState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const AdvancedCaching = (options: AdvancedCachingOptions = {,
   }) => {;
     const stateRef = useRef<AdvancedCachingState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const AdvancedCaching  = (options: AdvancedCachingOptions = {}) => {
+  const stateRef  = useRef<AdvancedCachingState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default AdvancedCaching;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default AdvancedCaching;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default AdvancedCaching''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -29,12 +29,19 @@ export default ApiClient;';'
 };
 interface ApiClientState {
   // Add your state here;
+<<<<<<< HEAD
 };
 export const ApiClient = (options: ApiClientOptions = {,
   }) => {;
     const stateRef = useRef<ApiClientState>({;
     // Initialize your state here;
   
+=======
+}
+;
+export const ApiClient  = (options: ApiClientOptions = {}) => {
+  const stateRef  = useRef<ApiClientState>({// Initialize your state here;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   });
 
   // Add your hooks logic here;
@@ -53,6 +60,10 @@ export default ApiClient;';';";";";";
 "
 =======
 ;
+<<<<<<< HEAD
 export default ApiClient;';';";";";
 >>>>>>> main
 >>>>>>> main
+=======
+export default ApiClient''"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

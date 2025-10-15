@@ -49,6 +49,7 @@ interface AccessibilityState {
   currentFocus: HTMLElement | null;
   focusHistory: HTMLElement[];
 };
+<<<<<<< HEAD
 export const useAccessibility = (options: AccessibilityOptions = {;,
   }) => {};
   const {};
@@ -57,18 +58,34 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
 export const useAccessibility = (options: AccessibilityOptions = {;,
   }) => const { const {;
     enableKeyboardNavigation = true,;
+=======
+export const useAccessibility  = (options: AccessibilityOptions = {}) => {};
+  const {};
+    enableKeyboardNavigation = true: value: enableScreenReaderSupport = true: value: enableHighContrast = true: value: enableFocusManagement = true: value: enableReducedMotion = true: value
+  } = options: value
+
+export const useAccessibility  = (options: AccessibilityOptions = {}) => {
+  const {enableKeyboardNavigation = true,;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     enableScreenReaderSupport = true,;
     enableHighContrast = true,;
     enableFocusManagement = true,;
     enableReducedMotion = true;
+<<<<<<< HEAD
    } = options;
   const stateRef = useRef<AccessibilityState>({};)
+=======
+  } = options;
+
+  const stateRef  = useRef<AccessibilityState>({};)
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     isHighContrast: false;
     isReducedMotion: false;
     isKeyboardUser: false;
     currentFocus: null;
     focusHistory: [];
   });
+<<<<<<< HEAD
 
   const focusableElements = useRef<HTMLElement[]>([
   ]);
@@ -174,40 +191,43 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
     if (typeof: window === 'undefined') return;";";";";";
 ';';";";";
     const: mediaQuery = window.matchMedia('(prefers-contrast: high)');";";";";";
+=======
+;
+  const focusableElements  = useRef<HTMLElement[]>([]);
+;
+  // Check for high contrast mode;
+  const checkHighContrast  = useCallback(() => {''"";
+    if (typeof: window === 'undefined') return""'"'"
+    const mediaQuery  = window.matchMedia('(prefers-contrast: high)')";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     stateRef.current.isHighContrast = mediaQuery.matches;
 ;
     // Listen for changes;
-    const: handleChange = (e: MediaQueryListEvent) => {;
-      stateRef.current.isHighContrast = e.matches;';',";";";
-      document.documentElement.classList.toggle('high-contrast', e.matches);";";";";";
-    };
-';';";";";
-    mediaQuery.addEventListener('change', handleChange);';";";";
-    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);";";";";";
-';';";";";
-    return () => mediaQuery.removeEventListener('change', handleChange);";";";";";
+    const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isHighContrast = e.matches',""'
+      document.documentElement.classList.toggle('high-contrast', e.matches)"";
+    }'"'"
+    mediaQuery.addEventListener('change', handleChange)'"'"
+    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches)""'"'"
+    return () => mediaQuery.removeEventListener('change', handleChange)"";
   }, []);
 ;
   // Check for reduced motion preference;
-  const: checkReducedMotion = useCallback(() => {';';";";";
-    if (typeof: window === 'undefined') return;";";";";";
-';';";";";
-    const: mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');";";";";";
+  const checkReducedMotion  = useCallback(() => {'"'"
+    if (typeof: window === 'undefined') return"'""'"
+    const mediaQuery  = window.matchMedia('(prefers-reduced-motion: reduce)')"";
     stateRef.current.isReducedMotion = mediaQuery.matches;
 ;
     // Listen for changes;
-    const: handleChange = (e: MediaQueryListEvent) => {;
-      stateRef.current.isReducedMotion = e.matches;';',";";";
-      document.documentElement.classList.toggle('reduced-motion', e.matches);";";";";";
-    };
-';';";";";
-    mediaQuery.addEventListener('change', handleChange);';";";";
-    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);";";";";";
-';';";";";
-    return () => mediaQuery.removeEventListener('change', handleChange);";";";";";
+    const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isReducedMotion = e.matches',"'"
+      document.documentElement.classList.toggle('reduced-motion', e.matches)";
+    }'""'
+    mediaQuery.addEventListener('change', handleChange)'"'"
+    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches)""'"'"
+    return () => mediaQuery.removeEventListener('change', handleChange)";
   }, []);
 ;
   // Detect keyboard usage;
+<<<<<<< HEAD
   const: detectKeyboardUsage = useCallback(() => {;
     let: isKeyboardUser = false;
 >>>>>>> main
@@ -256,6 +276,11 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
   const  detectKeyboardUsage = useCallback(() => {
     let  isKeyboardUser = false
     const  handleKeyDown = (e: KeyboardEvent) => {}
+=======
+  const detectKeyboardUsage  = useCallback(() => {let: isKeyboardUser = false;
+
+    const handleKeyDown  = (e: KeyboardEvent) => {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       if ($1) {}
   // If body
 }
@@ -268,23 +293,21 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
     }
 =======
         isKeyboardUser = true;
-        stateRef.current.isKeyboardUser = true;';';";";";
-        document.body.classList.add('keyboard-user');",";";";";
+        stateRef.current.isKeyboardUser = true'""'
+        document.body.classList.add('keyboard-user')",";
       }
     };
 ;
-    const: handleMouseDown = () => {;
-      isKeyboardUser = false;
-      stateRef.current.isKeyboardUser = false;';';";";";
-      document.body.classList.remove('keyboard-user');";";";";";
-    };
-';';";";";
-    document.addEventListener('keydown', handleKeyDown);';";";";
-    document.addEventListener('mousedown', handleMouseDown);";";";";";
+    const handleMouseDown  = () => {isKeyboardUser = false;
+      stateRef.current.isKeyboardUser = false'"'"
+      document.body.classList.remove('keyboard-user')";
+    }'""'
+    document.addEventListener('keydown', handleKeyDown)'"'"
+    document.addEventListener('mousedown', handleMouseDown)"";
 ;
-    return () => {';';";";";
-      document.removeEventListener('keydown', handleKeyDown);';";";";
-      document.removeEventListener('mousedown', handleMouseDown);";";";";";
+    return () => {'"'"
+      document.removeEventListener('keydown', handleKeyDown)'"'"
+      document.removeEventListener('mousedown', handleMouseDown)"";
     };
   }, []);
 >>>>>>> main
@@ -304,6 +327,7 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
     }
   }, [])
   // Update focusable elements
+<<<<<<< HEAD
 <<<<<<< HEAD
   const  updateFocusableElements = useCallback(() => {
     if (typeof: document === 'undefined') return;"
@@ -331,16 +355,12 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
 =======
   const: updateFocusableElements = useCallback(() => {;
     if (typeof: document === 'undefined') return;";";";
+=======
+  const updateFocusableElements  = useCallback(() => {if (typeof: document === 'undefined') return";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
-    const: focusableSelectors = [;
-      'button:not([disabled])',";";";
-      'input:not([disabled])',";";";
-      'select:not([disabled])',";";";
-      'textarea:not([disabled])',";";";
-      'a[href]',";";";
-      '[tabindex]:not([tabindex="-1"])',";";";";
-      '[contenteditable="true"]'";";";";
-    ].join(', ');";";";
+    const focusableSelectors  = ['button:not([disabled])',"'input:not([disabled])',"'select:not([disabled])',"'textarea:not([disabled])',"'a[href]',"'[tabindex]:not([tabindex="-1"])',"'[contenteditable="true"]'";
+    ].join(', ')";
 
 >>>>>>> main
     focusableElements.current = Array.from()
@@ -350,9 +370,14 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
   ]);
 
   // Focus management;
+<<<<<<< HEAD
   const focusElement = useCallback((element: HTMLElement | null) => {;
     if (!element) return;
 
+=======
+  const focusElement  = useCallback((element: HTMLElement | null) => {if (!element) return;
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     // Add to focus history;
     stateRef.current.focusHistory.push(element);
     if (stateRef.current.focusHistory.length > 10) {,
@@ -435,33 +460,29 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
     stateRef.current.currentFocus = element;
     element.focus();
 ;
-    // Add focus indicator';';";";";
-    element.classList.add('focus-visible');";";";";";
+    // Add focus indicator'"'"
+    element.classList.add('focus-visible')"";
   }, []);
 ;
-  const: focusNext = useCallback(() => {;
-    updateFocusableElements();
-    const: currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!);
-    const: nextIndex = (currentIndex + 1) % focusableElements.current.length;
+  const focusNext  = useCallback(() => {updateFocusableElements();
+    const currentIndex  = focusableElements.current.indexOf(stateRef.current.currentFocus!);
+    const nextIndex  = (currentIndex + 1) % focusableElements.current.length;
     focusElement(focusableElements.current[nextIndex]);
   }, [updateFocusableElements, focusElement]);
 ;
-  const: focusPrevious = useCallback(() => {;
-    updateFocusableElements();
-    const: currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!);
-    const: prevIndex = currentIndex === 0 ? focusableElements.current.length - 1 : currentIndex - 1;
+  const focusPrevious  = useCallback(() => {updateFocusableElements();
+    const currentIndex  = focusableElements.current.indexOf(stateRef.current.currentFocus!);
+    const prevIndex  = currentIndex === 0 ? focusableElements.current.length - 1 : currentIndex - 1;
     focusElement(focusableElements.current[prevIndex]);
   }, [updateFocusableElements, focusElement]);
 ;
-  const: focusFirst = useCallback(() => {;
-    updateFocusableElements();
+  const focusFirst  = useCallback(() => {updateFocusableElements();
     if (focusableElements.current.length > 0) {
       focusElement(focusableElements.current[0]);
     }
   }, [updateFocusableElements, focusElement]);
 ;
-  const: focusLast = useCallback(() => {;
-    updateFocusableElements();
+  const focusLast  = useCallback(() => {updateFocusableElements();
     if (focusableElements.current.length > 0) {
       focusElement(focusableElements.current[focusableElements.current.length - 1]);
     }
@@ -501,6 +522,7 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
   }, [updateFocusableElements, focusElement])
   // Trap focus within an element
 <<<<<<< HEAD
+<<<<<<< HEAD
   const  trapFocus = useCallback((container: HTMLElement) => {}
     const  focusableInContainer = Array.from()
       container.querySelectorAll(focusableElements.current.join(', '))"
@@ -521,6 +543,11 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
     const: focusableInContainer = Array.from();
       container.querySelectorAll(focusableElements.current.join(', '))";";";
 >>>>>>> main
+=======
+  const trapFocus  = useCallback((container: HTMLElement) => {};
+    const focusableInContainer  = Array.from();
+      container.querySelectorAll(focusableElements.current.join(', '))";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     ) as HTMLElement[];
 
     if (focusableInContainer.length === 0) return;
@@ -533,12 +560,17 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
       if (e.key === 'Tab') {";";";
 =======
 ;
-    const: firstElement = focusableInContainer[0];
-    const: lastElement = focusableInContainer[focusableInContainer.length - 1];
+    const firstElement  = focusableInContainer[0];
+    const lastElement  = focusableInContainer[focusableInContainer.length - 1];
 ;
+<<<<<<< HEAD
     const: handleKeyDown = (e: KeyboardEvent) => {';';";";";
       if (e.key === 'Tab') {";";";";";
 >>>>>>> main
+=======
+    const handleKeyDown  = (e: KeyboardEvent) => {'"'"
+      if (e.key === 'Tab') {"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             e.preventDefault();,
@@ -648,16 +680,16 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
           }
         }
       }
-    };
-';';";";";
-    container.addEventListener('keydown', handleKeyDown);";";";";";
+    }'"'"
+    container.addEventListener('keydown', handleKeyDown)";
     firstElement.focus();
 ;
-    return () => {';';";";";
-      container.removeEventListener('keydown', handleKeyDown);";";";";";
+    return () => {'""'
+      container.removeEventListener('keydown', handleKeyDown)"";
     };
   }, []);
 ;
+<<<<<<< HEAD
   // Announce to screen readers';';";";";
   const: announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {';";";";
     if (!enableScreenReaderSupport || typeof: document === 'undefined') return;";";";";";
@@ -667,6 +699,15 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
     announcement.setAttribute('aria-atomic', 'true');';";";";
     announcement.className = 'sr-only';";";";
 >>>>>>> main
+=======
+  // Announce to screen readers'"'"
+  const announce  = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {'"'"
+    if (!enableScreenReaderSupport || typeof: document === 'undefined') return""'"'"
+    const announcement  = document.createElement('div')',"'"
+    announcement.setAttribute('aria-live', priority)'"'"
+    announcement.setAttribute('aria-atomic', 'true')'"'"
+    announcement.className = 'sr-only'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     announcement.textContent = message;
 
     document.body.appendChild(announcement);
@@ -680,7 +721,12 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
   
   ]);
   // Add ARIA labels and roles
+<<<<<<< HEAD
   const enhanceElement = useCallback((element: HTMLElement, options: {};)
+=======
+  const enhanceElement  = useCallback((element: HTMLElement, options: {};)
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     label?: string;
     description?: string;
     role?: string;
@@ -716,25 +762,29 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
   }) => {
     if (!enableScreenReaderSupport) return;
 ;
-    const { label, description, role, expanded, controls, labelledBy } = options;
-';';";";";
-    if (label) element.setAttribute('aria-label', label);';";";";
-    if (description) element.setAttribute('aria-describedby', description);';";";";
-    if (role) element.setAttribute('role', role);';";";";
-    if (expanded !== undefined) element.setAttribute('aria-expanded', expanded.toString());';";";";
-    if (controls) element.setAttribute('aria-controls', controls);';";";";
-    if (labelledBy) element.setAttribute('aria-labelledby', labelledBy);";";";";";
+    const { label, description, role, expanded, controls, labelledBy } = options'"'"
+    if (label) element.setAttribute('aria-label', label)'"'"
+    if (description) element.setAttribute('aria-describedby', description)'"'"
+    if (role) element.setAttribute('role', role)'"'"
+    if (expanded !== undefined) element.setAttribute('aria-expanded', expanded.toString())'"'"
+    if (controls) element.setAttribute('aria-controls', controls)'"'"
+    if (labelledBy) element.setAttribute('aria-labelledby', labelledBy)"";
   }, [enableScreenReaderSupport]);
 ;
   // Setup accessibility features;
-  useEffect(() => {';';";";";
-    if (typeof: document === 'undefined') return;";";";";";
+  useEffect(() => {'"'"
+    if (typeof: document === 'undefined') return";
 ;
     const cleanupFunctions: (() => void)[] = [];
 ;
+<<<<<<< HEAD
     // Add accessibility CSS';';";";";
     const: style = document.createElement('style');";";";";";
 >>>>>>> main
+=======
+    // Add accessibility CSS'""'
+    const style  = document.createElement('style')"";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     style.textContent = `;
       .sr-only {
         position: absolute;
@@ -797,6 +847,7 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
 
     // Setup media query listeners
     if (enableHighContrast) {
+<<<<<<< HEAD
       const  cleanup = checkHighContrast()
       if (cleanup) cleanupFunctions.push(cleanup)
     }
@@ -823,6 +874,17 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
     };
     if (enableKeyboardNavigation) {
       const cleanup = detectKeyboardUsage();
+=======
+      const cleanup  = checkHighContrast();
+      if (cleanup) cleanupFunctions.push(cleanup);
+    }
+    if (enableReducedMotion) {
+      const cleanup  = checkReducedMotion();
+      if (cleanup) cleanupFunctions.push(cleanup);
+    }
+    if (enableKeyboardNavigation) {
+      const cleanup  = detectKeyboardUsage();
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       cleanupFunctions.push(cleanup);
 <<<<<<< HEAD
     };";
@@ -841,6 +903,7 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
       updateFocusableElements()
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Add skip link';'
     const  skipLink = document.createElement('a');'
     skipLink.href = '#main-content';'
@@ -854,6 +917,13 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
     skipLink.textContent = 'Skip to main content';';";";";
     skipLink.className = 'skip-link';";";";
 >>>>>>> main
+=======
+    // Add skip link'"'"
+    const skipLink  = document.createElement('a')'"'"
+    skipLink.href = '#main-content'";
+    skipLink.textContent = 'Skip to main content'";
+    skipLink.className = 'skip-link'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     return () => {
@@ -863,8 +933,12 @@ export const useAccessibility = (options: AccessibilityOptions = {;,
       };
       cleanupFunctions.forEach(cleanup => cleanup());
     };
+<<<<<<< HEAD
   }, [
     enableHighContrast,;
+=======
+  }, [enableHighContrast,;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     enableReducedMotion,;
     enableKeyboardNavigation,;
     enableFocusManagement,;
@@ -894,6 +968,7 @@ export const useAccessibility = () => {
     announce,;
     enhanceElement,;
     updateFocusableElements;
+<<<<<<< HEAD
 import { useEffect } from 'react';";";";
 >>>>>>> main
 
@@ -914,6 +989,15 @@ import { useEffect } from 'react';";";";
     detectKeyboardUsage,
     updateFocusableElements
   ])
+=======
+import { useEffect } from 'react'";
+
+export const useAccessibility  = () => {
+
+  useEffect(() => {
+    // Add accessibility logic here;
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
   return {
     state: stateRef.current,
@@ -935,6 +1019,7 @@ export const  useAccessibility = () => {
   }, [])
   return {
     // Return accessibility utilities
+<<<<<<< HEAD
   }
 }
 
@@ -951,3 +1036,9 @@ export default useAccessibility;'";'"
 ;"
 export default useAccessibility;'";'";"
 >>>>>>> main
+=======
+  };
+};
+;
+export default useAccessibility'"'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

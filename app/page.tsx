@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -15,6 +16,8 @@ import {
   ShieldCheckIcon, 
   CloudIcon, 
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -31,6 +34,7 @@ import {
   CheckCircleIcon,
   ArrowRightIcon,
   BoltIcon,
+<<<<<<< HEAD
   SparklesIcon,
   ChartBarIcon,
 <<<<<<< HEAD
@@ -40,6 +44,23 @@ import {
 } from '@heroicons/react/24/outline'
 const HomePage: React.FC = () => {
   const  services = [
+=======
+  SparklesIcon,;
+  ChartBarIcon,;
+  CogIcon;
+} from '@heroicons/react/24/outline'";
+import FuturisticBackground from './components/FuturisticBackground';
+import SEOHead from './components/SEOHead';
+
+const HomePage: React.FC = () => {
+  const structuredData  = {"@context": "https://schema.org","@type": "Organization","name": "Zion Tech Group","url": "https://ziontechgroup.com/","description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.","address": {"@type": "PostalAddress","streetAddress": "364 E Main St STE 1008","addressLocality": "Middletown","addressRegion": "DE","postalCode": "19709","addressCountry": "US";
+    },
+    "contactPoint": {"@type": "ContactPoint","telephone": "+1-302-555-0123","contactType": "customer service";
+    }
+  };
+
+  const services  = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',"
@@ -245,6 +266,7 @@ const HomePage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const features = [
     '24/7 Expert Support',
     'Cutting-edge Technology',
@@ -267,6 +289,17 @@ const HomePage: React.FC = () => {
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'AI Models Deployed' },
     { number: '10M+', label: 'API Calls Processed' }
+=======
+  const features  = ['24/7 Expert Support',"'Cutting-edge Technology',"'Scalable Solutions',"'Industry Expertise',"'Proven Results',"'Custom Implementation',"'AI-Powered Solutions',"'Real-time Analytics',"'Enterprise Security',"'Cloud-Native Architecture',"'Mobile-First Design',"'API-First Approach'";
+  ];
+
+  const stats  = [{ number: '1000+', label: 'Projects Completed' },";
+    { number: '200+', label: 'Happy Clients' },";
+    { number: '99.9%', label: 'Uptime Guarantee' },";
+    { number: '24/7', label: 'Support Available' },";
+    { number: '50+', label: 'AI Models Deployed' },";
+    { number: '10M+', label: 'API Calls Processed' }";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
   ];
 
   return (
@@ -279,10 +312,17 @@ const HomePage: React.FC = () => {
       
       <div: className ="min-h-screen bg-slate-900 text-white">";";
         {/* Hero Section */}
+<<<<<<< HEAD
         <section: className ="relative overflow-hidden min-h-screen flex items-center">";";
           <div: className ="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>";";
           <div: className ="absolute inset-0 opacity-30" style={{";";
             backgroundImage: `url("data:image/svg+xml,%3Csvg: width ='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg: fill ='none' fill-rule='evenodd'%3E%3Cg: fill ='%239C92AC' fill-opacity='0.1'%3E%3Ccircle: cx ='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`";";";";
+=======
+        <section: className ="relative overflow-hidden min-h-screen flex items-center">";
+          <div: className ="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>";
+          <div: className ="absolute inset-0 opacity-30" style={{";
+            backgroundImage: `url("data:image/svg+xml,%3Csvg: width ='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg: fill ='none' fill-rule='evenodd'%3E%3Cg: fill ='%239C92AC' fill-opacity='0.1'%3E%3Ccircle: cx ='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
           }}></div>
           
           {/* Animated Background Elements */}
@@ -306,19 +346,34 @@ const HomePage: React.FC = () => {
               <p: className ="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">";";
                 Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
               </p>
+<<<<<<< HEAD
               <div: className ="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">";";
                 <Link: to ="/contact"";";
                   className="relative group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"";";
+=======
+              <div: className ="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">";
+                <Link: to ="/contact";
+                  className="relative group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 >
                   <span: className ="relative z-10 flex items-center">";";
                     Get Started Today
+<<<<<<< HEAD
                     <ArrowRightIcon: className ="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />";";
+=======
+                    <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                   </span>
                   <div: className ="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>";";
                 </Link>
+<<<<<<< HEAD
                 <Link: to ="/about"";";
                   className="border-2 border-purple-400 text-purple-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-purple-400/25"";";
 >>>>>>> main
+=======
+                <Link: to ="/about";
+                  className="border-2 border-purple-400 text-purple-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-purple-400/25";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 >
                   Learn More
                 </Link>
@@ -334,8 +389,12 @@ const HomePage: React.FC = () => {
               <div: className ="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">";";
                 {stats.map((stat, index) => (
                   <div: key ={index} 
+<<<<<<< HEAD
                     className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"";";
 >>>>>>> main
+=======
+                    className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                     style={{
                       animationDelay: `${index * 100}ms`
                     }}
@@ -360,6 +419,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Services Section */}
 <<<<<<< HEAD
         <section: className ="py-16 sm:py-20 bg-slate-800/30">";"
@@ -690,10 +750,54 @@ const HomePage: React.FC = () => {
                 >
                   Try Free Trial
                 </Link>
+=======
+        {/* Features Section */}
+        <section: className ="py-20 bg-slate-800/30">";
+          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
+            <div: className ="text-center mb-16">";
+              <h2: className ="text-3xl md:text-4xl font-bold text-white mb-4">";
+                Why Choose Zion Tech Group?
+              </h2>
+              <p: className ="text-xl text-gray-300 max-w-2xl mx-auto">";
+                We deliver innovative solutions that drive real business results
+              </p>
+            </div>
+            
+            <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+              <div: className ="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">";
+                <div: className ="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg mb-4">";
+                  <CpuChipIcon className="w-6 h-6 text-white" />";
+                </div>
+                <h3: className ="text-xl font-semibold text-white mb-2">AI Solutions</h3>";
+                <p: className ="text-gray-300">";
+                  Advanced artificial intelligence solutions that automate processes and enhance decision-making.
+                </p>
+              </div>
+              
+              <div: className ="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">";
+                <div: className ="flex items-center justify-center w-12 h-12 bg-green-600 rounded-lg mb-4">";
+                  <ShieldCheckIcon className="w-6 h-6 text-white" />";
+                </div>
+                <h3: className ="text-xl font-semibold text-white mb-2">Cybersecurity</h3>";
+                <p: className ="text-gray-300">";
+                  Comprehensive security solutions to protect your business from evolving threats.
+                </p>
+              </div>
+              
+              <div: className ="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">";
+                <div: className ="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-lg mb-4">";
+                  <CloudIcon className="w-6 h-6 text-white" />";
+                </div>
+                <h3: className ="text-xl font-semibold text-white mb-2">Cloud Infrastructure</h3>";
+                <p: className ="text-gray-300">";
+                  Scalable and secure cloud solutions that grow with your business needs.
+                </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Features Section */}
 <<<<<<< HEAD
@@ -910,3 +1014,11 @@ export default HomePage
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+      </div>
+    </>
+  )};
+};
+
+export default HomePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import SEOHead from '../components/SEOHead'
 const __tests__Page: React.FC = () => {
@@ -35,18 +36,29 @@ const __tests__Page: React.FC = () => {";
 =======
 import React from 'react';";";";
 import SEOHead from '../components/SEOHead';";";";
+=======
+import React from 'react'"";
+import SEOHead from '../components/SEOHead'";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 const __tests__Page: React.FC = () => {
   return (
     <>
-      <SEOHead: title ="__tests__ - Zion Tech Group"";";
-        description="Professional __tests__ solutions for modern businesses"";";
+      <SEOHead: title ="__tests__ - Zion Tech Group";
+        description="Professional __tests__ solutions for modern businesses";
       />
+<<<<<<< HEAD
       <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">__tests__</h1>";";
           <p: className ="text-gray-300">Professional solutions coming soon...</p>";";
 >>>>>>> main
+=======
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">__tests__</h1>";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
         </div>
       </div>
     </>

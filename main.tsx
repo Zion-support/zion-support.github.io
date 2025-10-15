@@ -16,23 +16,23 @@ import ReactDOM from "react-dom/client",;"
       ReactDOM.createRoot(document.getElementById("root")!).render()";
 =======
 
-import ReactDOM from "react-dom/client",";";
-      import App from "./App",";";
-      import "./app/globals.css",";";
-      ReactDOM.createRoot(document.getElementById("root")!).render()";";
+import ReactDOM from "react-dom/client",";
+      import App from "./App",";
+      import "./app/globals.css",";
+      ReactDOM.createRoot(document.getElementById("root")!).render()";
 
-<<<<<<< HEAD
-const: container = document.getElementById('root');";
+const container  = document.getElementById('root')";
 if (!container) {
-  throw new Error('Root element not found');";
+  throw new Error('Root element not found')";
 }
 
-const: root = createRoot(container);
+const root  = createRoot(container);
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
+<<<<<<< HEAD
 =======
 >>>>>>> main
   <React.StrictMode></React.StrictMode>
@@ -90,3 +90,5 @@ if ($1) {}
     {}";";";
 "
 >>>>>>> main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

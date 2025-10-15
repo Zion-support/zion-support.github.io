@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs'"
 import path from 'path'"
 import React from "react"
@@ -54,13 +55,15 @@ console.log('Page fixes completed!')"'"''";";";";
 "
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 #!/usr/bin/env node
 
-import fs from 'fs';";
-import { execSync } from 'child_process';";
+import fs from 'fs';
+import { execSync } from 'child_process';
 
 // Get all page files
-const: files = execSync('find ./app -name "page.tsx" -o -name "*.tsx" | grep -v components', { encoding: 'utf8' })";";
+const files  = execSync('find ./app -name "page.tsx" -o -name "*.tsx" | grep -v components', { encoding: 'utf8' })";
   .trim()
   .split('\n')";
   .filter(file => file.length > 0);
@@ -71,31 +74,31 @@ let: fixedCount = 0;
 
 files.forEach(file => {
   try {
-    let: content = fs.readFileSync(file, 'utf8');";
-    const: originalContent = content;
+    let: content = fs.readFileSync(file, 'utf8')";
+    const originalContent  = content;
     
-    // Fix all malformed quote patterns: content = content.replace(/';'/g, ';');";
-    content = content.replace(/";'/g, ';');";";
-    content = content.replace(/'";'/g, ';');";";
-    content = content.replace(/'";"/g, ';');";";
-    content = content.replace(/""/g, '"');";";
-    content = content.replace(/''/g, "'");";";
+    // Fix all malformed quote patterns: content = content.replace(/'/g, ')"'"'
+    content = content.replace(/"'/g, ')";
+    content = content.replace(/'"'/g, ')"'
+    content = content.replace(/'"/g, ')";
+    content = content.replace(/"/g, '"')";
+    content = content.replace(/'/g, "'")";
     
     // Fix specific malformed import patterns;
-    content = content.replace(/import\s+([^']*?)'";'"/g, "import $1';");";";
-    content = content.replace(/import\s+([^"]*?)";'"/g, 'import $1";');";";
-    content = content.replace(/from\s+'([^']*?)'";'"/g, "from '$1';");";";
-    content = content.replace(/from\s+"([^"]*?)";'"/g, 'from "$1";');";";
+    content = content.replace(/import\s+([^']*?)'"'"/g, "import $1')";
+    content = content.replace(/import\s+([^"]*?)"'"/g, 'import $1")";
+    content = content.replace(/from\s+'([^']*?)'"'"/g, "from '$1'")";
+    content = content.replace(/from\s+"([^"]*?)"'"/g, 'from "$1"')"'"
     
-    // Clean up any remaining malformed patterns: content = content.replace(/';'"/g, ';');";";
-    content = content.replace(/";'"/g, ';');";";
-    content = content.replace(/';'"/g, ';');";";
+    // Clean up any remaining malformed patterns: content = content.replace(/'"/g, ')"'
+    content = content.replace(/"'"/g, ')";
+    content = content.replace(/'"/g, ')"'
     
-    // Fix unterminated strings: content = content.replace(/'([^']*?)\n/g, "'$1'\n");";";
-    content = content.replace(/"([^"]*?)\n/g, '"$1"\n');";";
+    // Fix unterminated strings: content = content.replace(/'([^']*?)\n/g, "'$1'\n")";
+    content = content.replace(/"([^"]*?)\n/g, '"$1"\n')";
     
-    // Clean up extra whitespace: content = content.replace(/\n\s*\n\s*\n/g, '\n\n');";
-    content = content.replace(/\s+\n/g, '\n');";
+    // Clean up extra whitespace: content = content.replace(/\n\s*\n\s*\n/g, '\n\n')";
+    content = content.replace(/\s+\n/g, '\n')";
     
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
@@ -108,6 +111,7 @@ files.forEach(file => {
 });
 
 console.log(`Fixed ${fixedCount} page files`);
+<<<<<<< HEAD
 =======
 import fs from 'fs'";";";
 import path from 'path'";";";
@@ -177,3 +181,5 @@ console.log('Page fixes completed!')"'"''";";";
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

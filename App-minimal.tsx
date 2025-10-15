@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react";
 // Minimal working App component";
 function App() {";";
@@ -89,3 +90,20 @@ export default App;";";";
 =======
 export default App;
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+import React from 'react';
+
+// Minimal working App component
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Minimal App</h1>
+        <p className="text-xl text-gray-600">This is a minimal working version.</p>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04

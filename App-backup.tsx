@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { lazy } from 'react',"
       import { HelmetProvider } from 'react-helmet-async'
 // Components
@@ -144,6 +145,9 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: {;";
             className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"";
 =======
 import React, { lazy } from 'react';
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
@@ -153,6 +157,7 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
+<<<<<<< HEAD
 // Lazy load non-critical components
 const HomePage = lazy(() => import('./app/page'));
 const AboutPage = lazy(() => import('./app/about/page'));
@@ -499,6 +504,29 @@ function App() {
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
 }
+=======
+const App = () => {
+  return (
+    <HelmetProvider>
+      <ErrorBoundary>
+        <PerformanceMonitor>
+          <div className="min-h-screen bg-gray-50">
+            <Navigation />
+            <main className="flex">
+              <Sidebar />
+              <div className="flex-1 p-6">
+                <h1 className="text-2xl font-bold mb-4">App Backup</h1>
+                <p>This is a backup version of the app.</p>
+              </div>
+            </main>
+            <Footer />
+          </div>
+        </PerformanceMonitor>
+      </ErrorBoundary>
+    </HelmetProvider>
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 export default App
 =======
