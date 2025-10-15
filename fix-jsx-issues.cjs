@@ -1,20 +1,17 @@
 const fs = require("fs");
 const path = require("path");
-
 // Function to fix common JSX issues in a file
 function fixJSXIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-
     // Fix missing function declaration
     if (
       content.includes("return (") &&
       !content.includes("export default function")
     ) {
       const lines = content.split("\n");
-      let functionName = "Page";
-
+      let functionName = "Page
       // Try to extract function name from file path
       const pathParts = filePath.split("/");
       const fileName = pathParts[pathParts.length - 2]; // Get directory name
@@ -23,9 +20,8 @@ function fixJSXIssues(filePath) {
           fileName
             .split("-")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join("") + "Page";
+            .join("") + "Page
       }
-
       // Find the return statement and add function declaration before it
       const returnIndex = lines.findIndex((line) =>
         line.trim().startsWith("return ("),
@@ -40,7 +36,6 @@ function fixJSXIssues(filePath) {
         modified = true;
       }
     }
-
     // Fix JSX without parent element
     if (
       content.includes("JSX expressions must have one parent element") ||
@@ -52,13 +47,11 @@ function fixJSXIssues(filePath) {
           /(\s*return\s*\(\s*)(<title>)/,
           "$1<>\n      $2",
         );
-
         // Add closing fragment before the last closing parenthesis
         content = content.replace(/(\s*)(\s*\)\s*;?\s*$)/, "$1    </>\n  );");
         modified = true;
       }
     }
-
     // Fix missing imports
     if (content.includes("Helmet") && !content.includes("import { Helmet }")) {
       const importIndex = content.indexOf("import React");
@@ -71,7 +64,6 @@ function fixJSXIssues(filePath) {
         modified = true;
       }
     }
-
     if (modified) {
       fs.writeFileSync(filePath, content);
       return true;
@@ -82,16 +74,13 @@ function fixJSXIssues(filePath) {
     return false;
   }
 }
-
 // Get all page.tsx files
 function getAllPageFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
-
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-
     if (stat.isDirectory()) {
       const pageFile = path.join(fullPath, "page.tsx");
       if (fs.existsSync(pageFile)) {
@@ -101,16 +90,12 @@ function getAllPageFiles(dir) {
       files.push(...getAllPageFiles(fullPath));
     }
   }
-
   return files;
 }
-
 // Fix all page files
 const appDir = path.join(__dirname, "app");
 const pageFiles = getAllPageFiles(appDir);
-
 console.log(`Found ${pageFiles.length} page files to check...`);
-
 let fixedCount = 0;
 pageFiles.forEach((file) => {
   if (fixJSXIssues(file)) {
@@ -118,5 +103,4 @@ pageFiles.forEach((file) => {
     fixedCount++;
   }
 });
-
 console.log(`Fixed ${fixedCount} files`);

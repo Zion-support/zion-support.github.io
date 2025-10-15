@@ -1,11 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-
 // Generate sitemap.xml for better SEO
 const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
-  
   // Define all the routes
   const routes = [
     { url: '', priority: '1.0', changefreq: 'daily' },
@@ -23,7 +21,6 @@ const generateSitemap = () => {
     { url: '/terms', priority: '0.5', changefreq: 'yearly' },
     { url: '/cookies', priority: '0.5', changefreq: 'yearly' },
     { url: '/sitemap', priority: '0.6', changefreq: 'monthly' },
-    
     // AI Services
     { url: '/ai-analytics', priority: '0.8', changefreq: 'weekly' },
     { url: '/ai-automation', priority: '0.8', changefreq: 'weekly' },
@@ -40,7 +37,6 @@ const generateSitemap = () => {
     { url: '/ai-recommendation-engine', priority: '0.8', changefreq: 'weekly' },
     { url: '/ai-sales-automation', priority: '0.8', changefreq: 'weekly' },
     { url: '/ai-workflow-automation', priority: '0.8', changefreq: 'weekly' },
-    
     // Micro SAAS
     { url: '/zion-analytics-pro', priority: '0.8', changefreq: 'weekly' },
     { url: '/zion-security-shield', priority: '0.8', changefreq: 'weekly' },
@@ -56,7 +52,6 @@ const generateSitemap = () => {
     { url: '/zion-inventory-smart', priority: '0.8', changefreq: 'weekly' },
     { url: '/zion-compliance-manager', priority: '0.8', changefreq: 'weekly' },
     { url: '/zion-performance-monitor', priority: '0.8', changefreq: 'weekly' },
-    
     // 5G Solutions
     { url: '/5g-solutions', priority: '0.8', changefreq: 'weekly' },
     { url: '/5g-data-analytics', priority: '0.8', changefreq: 'weekly' },
@@ -68,12 +63,10 @@ const generateSitemap = () => {
     { url: '/5g-smart-city-solutions', priority: '0.8', changefreq: 'weekly' },
     { url: '/5g-iot-solutions', priority: '0.8', changefreq: 'weekly' }
   ];
-
   // Generate XML sitemap
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 `;
-
   routes.forEach(route => {
     const fullUrl = `${baseUrl}${route.url}`;
     sitemap += `  <url>
@@ -84,31 +77,24 @@ const generateSitemap = () => {
   </url>
 `;
   });
-
   sitemap += `</urlset>`;
-
   // Write sitemap to public directory
   const publicDir = path.join(__dirname, '..', 'public');
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
   }
-  
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
   console.log('Sitemap generated successfully!');
-  
   // Also generate robots.txt
   const robotsTxt = `User-agent: *
 Allow: /
-
 Sitemap: ${baseUrl}/sitemap.xml
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
-
 # Allow important pages
 Allow: /
 Allow: /about
@@ -120,9 +106,7 @@ Allow: /5g-solutions
 Allow: /blog
 Allow: /pricing
 `;
-
   fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
   console.log('Robots.txt generated successfully!');
 };
-
 generateSitemap();

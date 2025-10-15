@@ -1,25 +1,20 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
 // Get all TypeScript/JavaScript files in the app directory
 function getAllFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
-
   files.forEach((file) => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-
     if (stat.isDirectory()) {
       getAllFiles(filePath, fileList);
     } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
       fileList.push(filePath);
     }
   });
-
   return fileList;
 }
-
 // Common unused imports to remove
 const unusedImports = [
   "Helmet",
@@ -145,16 +140,13 @@ const unusedImports = [
   "Kiss8",
   "Tongue8",
 ];
-
 function removeUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-
     // Remove unused imports from lucide-react
     const lucideImportRegex =
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
-
     content = content.replace(lucideImportRegex, (match, imports) => {
       const importList = imports.split(",").map((imp) => imp.trim());
       const usedImports = importList.filter((imp) => {
@@ -164,7 +156,6 @@ function removeUnusedImports(filePath) {
         const usageCount = (content.match(usageRegex) || []).length;
         return usageCount > 1; // More than 1 because the import itself counts as 1
       });
-
       if (usedImports.length === 0) {
         modified = true;
         return ""; // Remove the entire import line
@@ -172,10 +163,8 @@ function removeUnusedImports(filePath) {
         modified = true;
         return `import { ${usedImports.join(", ")} } from 'lucide-react';`;
       }
-
       return match;
     });
-
     // Remove unused Helmet imports
     if (
       content.includes("import { Helmet } from 'react-helmet-async';") &&
@@ -187,7 +176,6 @@ function removeUnusedImports(filePath) {
       );
       modified = true;
     }
-
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed unused imports in: ${filePath}`);
@@ -196,13 +184,10 @@ function removeUnusedImports(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
-
 // Get all files and process them
 const files = getAllFiles("./app");
 console.log(`Processing ${files.length} files...`);
-
 files.forEach((file) => {
   removeUnusedImports(file);
 });
-
 console.log("Unused imports cleanup completed!");

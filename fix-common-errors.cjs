@@ -1,15 +1,12 @@
 #!/usr/bin/env node
-
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
 // Function to fix common parsing errors
 function fixCommonErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-
     // Fix 1: Add missing opening brace for function definitions
     if (content.match(/const \w+Page: React\.FC = \(\) =>\s*$/m)) {
       content = content.replace(
@@ -18,7 +15,6 @@ function fixCommonErrors(filePath) {
       );
       modified = true;
     }
-
     // Fix 2: Fix malformed object literals that are missing opening braces
     // Pattern: lines that start with just a property name and colon
     const malformedObjectPattern = /^(\s+)(\w+):\s*\[([^\]]*)\]\s*,\s*$/gm;
@@ -29,8 +25,7 @@ function fixCommonErrors(filePath) {
         const lines = content.split("\n");
         const currentLineIndex =
           content.substring(0, content.indexOf(match)).split("\n").length - 1;
-        const prevLine = lines[currentLineIndex - 1] || "";
-
+        const prevLine = lines[currentLineIndex - 1] || "
         // If previous line doesn't have an opening brace, this should be an object property
         if (
           !prevLine.includes("{") &&
@@ -42,7 +37,6 @@ function fixCommonErrors(filePath) {
         return match;
       },
     );
-
     // Fix 3: Fix missing opening braces for arrays that should be objects
     content = content.replace(
       /^(\s+)(\w+):\s*\[\s*$/gm,
@@ -50,23 +44,19 @@ function fixCommonErrors(filePath) {
         return `${indent}  ${propName}: [`;
       },
     );
-
     // Fix 4: Fix malformed function calls that are missing opening braces
     content = content.replace(
       /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*(\w+):\s*\[/gm,
       "const $1 = () => {\n  $2: [",
     );
-
     // Fix 5: Fix missing closing braces and brackets
     const lines = content.split("\n");
     let braceCount = 0;
     let bracketCount = 0;
     let inFunction = false;
     let functionStartLine = -1;
-
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-
       if (
         line.includes("const ") &&
         line.includes("Page: React.FC = () => {")
@@ -74,7 +64,6 @@ function fixCommonErrors(filePath) {
         inFunction = true;
         functionStartLine = i;
       }
-
       if (inFunction) {
         braceCount += (line.match(/\{/g) || []).length;
         braceCount -= (line.match(/\}/g) || []).length;
@@ -82,30 +71,26 @@ function fixCommonErrors(filePath) {
         bracketCount -= (line.match(/\]/g) || []).length;
       }
     }
-
     // Add missing closing braces and brackets
     if (inFunction && (braceCount > 0 || bracketCount > 0)) {
-      let missingClosures = "";
+      let missingClosures = "
       if (bracketCount > 0) {
         missingClosures += "]".repeat(bracketCount);
       }
       if (braceCount > 0) {
         missingClosures += "}".repeat(braceCount);
       }
-
       if (missingClosures) {
         content += "\n" + missingClosures;
         modified = true;
       }
     }
-
     // Fix 6: Fix malformed imports with extra semicolons
     content = content.replace(/import\s+([^;]+);\s*,/g, "import $1,");
     content = content.replace(
       /import\s+([^,]+),\s*\{([^}]+)\}\s*from/g,
       "import $1, {$2} from",
     );
-
     // Fix 7: Fix missing return statement
     if (
       content.includes("const ") &&
@@ -117,7 +102,6 @@ function fixCommonErrors(filePath) {
       if (lastBraceIndex > 0) {
         const beforeLastBrace = content.substring(0, lastBraceIndex);
         const afterLastBrace = content.substring(lastBraceIndex);
-
         if (!beforeLastBrace.includes("return (")) {
           content =
             beforeLastBrace +
@@ -127,7 +111,6 @@ function fixCommonErrors(filePath) {
         }
       }
     }
-
     // Fix 8: Fix malformed object properties that are missing opening braces
     content = content.replace(
       /^(\s+)(\w+):\s*\[([^\]]*)\]\s*,\s*$/gm,
@@ -136,8 +119,7 @@ function fixCommonErrors(filePath) {
         const lines = content.split("\n");
         const currentLineIndex =
           content.substring(0, content.indexOf(match)).split("\n").length - 1;
-        const prevLine = lines[currentLineIndex - 1] || "";
-
+        const prevLine = lines[currentLineIndex - 1] || "
         if (
           !prevLine.includes("{") &&
           !prevLine.includes("const") &&
@@ -148,19 +130,16 @@ function fixCommonErrors(filePath) {
         return match;
       },
     );
-
     if (modified) {
       fs.writeFileSync(filePath, content, "utf8");
       return true;
     }
-
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
-
 // Get all TypeScript files with parsing errors
 function getFilesWithErrors() {
   try {
@@ -181,13 +160,10 @@ function getFilesWithErrors() {
     return [];
   }
 }
-
 // Main execution
 console.log("Finding files with parsing errors...");
 const filesWithErrors = getFilesWithErrors();
-
 console.log(`Found ${filesWithErrors.length} files with parsing errors`);
-
 let fixedCount = 0;
 filesWithErrors.forEach((file) => {
   if (fixCommonErrors(file)) {
@@ -195,5 +171,4 @@ filesWithErrors.forEach((file) => {
     console.log(`Fixed: ${file}`);
   }
 });
-
 console.log(`Fixed ${fixedCount} files.`);
