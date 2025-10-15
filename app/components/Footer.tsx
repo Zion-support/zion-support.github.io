@@ -94,23 +94,34 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Advanced AI Services</h4>
+            <h4 className="text-md font-semibold mb-4">Innovative Micro SAAS</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-voice-assistant-pro" className="text-gray-300 hover:text-white">AI Voice Assistant Pro</Link></li>
-              <li><Link to="/ai-image-recognition-pro" className="text-gray-300 hover:text-white">AI Image Recognition Pro</Link></li>
-              <li><Link to="/ai-fraud-detection-pro" className="text-gray-300 hover:text-white">AI Fraud Detection Pro</Link></li>
-              <li><Link to="/ai-lead-scoring-pro" className="text-gray-300 hover:text-white">AI Lead Scoring Pro</Link></li>
-              <li><Link to="/ai-predictive-maintenance-pro" className="text-gray-300 hover:text-white">AI Predictive Maintenance Pro</Link></li>
-              <li><Link to="/ai-price-optimizer-pro" className="text-gray-300 hover:text-white">AI Price Optimizer Pro</Link></li>
+              <li><Link to="/ai-video-generator-pro" className="text-gray-300 hover:text-white">AI Video Generator Pro</Link></li>
+              <li><Link to="/ai-code-assistant-pro" className="text-gray-300 hover:text-white">AI Code Assistant Pro</Link></li>
+              <li><Link to="/ai-translator-pro" className="text-gray-300 hover:text-white">AI Translator Pro</Link></li>
+              <li><Link to="/ai-voice-cloner-pro" className="text-gray-300 hover:text-white">AI Voice Cloner Pro</Link></li>
+              <li><Link to="/ai-data-cleaner-pro" className="text-gray-300 hover:text-white">AI Data Cleaner Pro</Link></li>
+              <li><Link to="/ai-contract-analyzer-pro" className="text-gray-300 hover:text-white">AI Contract Analyzer Pro</Link></li>
+              <li><Link to="/ai-recruitment-pro" className="text-gray-300 hover:text-white">AI Recruitment Pro</Link></li>
+              <li><Link to="/ai-project-manager-pro" className="text-gray-300 hover:text-white">AI Project Manager Pro</Link></li>
+              <li><Link to="/ai-customer-feedback-pro" className="text-gray-300 hover:text-white">AI Customer Feedback Pro</Link></li>
+              <li><Link to="/ai-seo-optimizer-pro" className="text-gray-300 hover:text-white">AI SEO Optimizer Pro</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Enterprise Solutions</h4>
+            <h4 className="text-md font-semibold mb-4">Advanced IT Solutions</h4>
             <ul className="space-y-2">
-              <li><Link to="/blockchain-solutions-pro" className="text-gray-300 hover:text-white">Blockchain Solutions Pro</Link></li>
-              <li><Link to="/iot-solutions-pro" className="text-gray-300 hover:text-white">IoT Solutions Pro</Link></li>
-              <li><Link to="/devops-automation-pro" className="text-gray-300 hover:text-white">DevOps Automation Pro</Link></li>
+              <li><Link to="/ai-powered-cybersecurity" className="text-gray-300 hover:text-white">AI-Powered Cybersecurity</Link></li>
+              <li><Link to="/quantum-computing-solutions" className="text-gray-300 hover:text-white">Quantum Computing</Link></li>
+              <li><Link to="/edge-computing-solutions" className="text-gray-300 hover:text-white">Edge Computing</Link></li>
+              <li><Link to="/ar-vr-solutions" className="text-gray-300 hover:text-white">AR/VR Solutions</Link></li>
+              <li><Link to="/robotic-process-automation" className="text-gray-300 hover:text-white">RPA Solutions</Link></li>
+              <li><Link to="/digital-twin-solutions" className="text-gray-300 hover:text-white">Digital Twin Solutions</Link></li>
+              <li><Link to="/low-code-platform" className="text-gray-300 hover:text-white">Low-Code Platform</Link></li>
+              <li><Link to="/serverless-architecture" className="text-gray-300 hover:text-white">Serverless Architecture</Link></li>
+              <li><Link to="/container-orchestration" className="text-gray-300 hover:text-white">Container Orchestration</Link></li>
+              <li><Link to="/ai-mlops-platform" className="text-gray-300 hover:text-white">AI/MLOps Platform</Link></li>
             </ul>
           </div>
           

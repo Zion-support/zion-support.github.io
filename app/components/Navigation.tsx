@@ -27,7 +27,8 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  CalendarIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -72,12 +73,23 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
+        { name: 'AI Video Generator Pro', href: '/ai-video-generator-pro', icon: CpuChipIcon },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: CodeBracketIcon },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: GlobeAltIcon },
+        { name: 'AI Voice Cloner Pro', href: '/ai-voice-cloner-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Data Cleaner Pro', href: '/ai-data-cleaner-pro', icon: CircleStackIcon },
+        { name: 'AI Contract Analyzer Pro', href: '/ai-contract-analyzer-pro', icon: DocumentTextIcon },
+        { name: 'AI Recruitment Pro', href: '/ai-recruitment-pro', icon: UserGroupIcon },
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro', icon: ChartBarIcon },
+        { name: 'AI Customer Feedback Pro', href: '/ai-customer-feedback-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI SEO Optimizer Pro', href: '/ai-seo-optimizer-pro', icon: EyeIcon },
+        { name: 'AI Competitor Tracker Pro', href: '/ai-competitor-tracker-pro', icon: EyeIcon },
+        { name: 'AI Supply Chain Pro', href: '/ai-supply-chain-pro', icon: CircleStackIcon },
+        { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro', icon: CheckCircleIcon },
+        { name: 'AI Knowledge Base Pro', href: '/ai-knowledge-base-pro', icon: DocumentTextIcon },
+        { name: 'AI Event Planner Pro', href: '/ai-event-planner-pro', icon: CalendarIcon },
+        { name: 'AI Health Monitor Pro', href: '/ai-health-monitor-pro', icon: ShieldCheckIcon },
+        { name: 'AI Learning Platform Pro', href: '/ai-learning-platform-pro', icon: AcademicCapIcon }
       ]
     },
     {
@@ -86,6 +98,21 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: CogIcon,
       submenu: [
         { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
+        { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
+        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
+        { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: EyeIcon },
+        { name: 'RPA Solutions', href: '/robotic-process-automation', icon: CogIcon },
+        { name: 'Digital Twin Solutions', href: '/digital-twin-solutions', icon: CpuChipIcon },
+        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
+        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
+        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
+        { name: 'AI/MLOps Platform', href: '/ai-mlops-platform', icon: CpuChipIcon },
+        { name: 'Real-time Analytics', href: '/real-time-analytics', icon: ChartBarIcon },
+        { name: 'API Gateway Solutions', href: '/api-gateway-solutions', icon: CodeBracketIcon },
+        { name: 'Multi-Cloud Management', href: '/multi-cloud-management', icon: CloudIcon },
+        { name: 'Zero Trust Security', href: '/zero-trust-security', icon: ShieldCheckIcon },
+        { name: 'Green Tech Solutions', href: '/green-tech-solutions', icon: GlobeAltIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
         { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
         { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
