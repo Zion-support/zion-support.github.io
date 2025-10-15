@@ -31,27 +31,27 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const vitals: Partial<PerformanceMetrics> = {};
 
         // Get FCP
-        onFCP((metric: any) => {
+        onFCP((metric: { value: number }) => {
           vitals.firstContentfulPaint = metric.value;
         });
 
         // Get LCP
-        onLCP((metric: any) => {
+        onLCP((metric: { value: number }) => {
           vitals.largestContentfulPaint = metric.value;
         });
 
         // Get INP (replaces FID)
-        onINP((metric: any) => {
+        onINP((metric: { value: number }) => {
           vitals.firstInputDelay = metric.value;
         });
 
         // Get CLS
-        onCLS((metric: any) => {
+        onCLS((metric: { value: number }) => {
           vitals.cumulativeLayoutShift = metric.value;
         });
 
         // Get TTFB
-        onTTFB((metric: any) => {
+        onTTFB((metric: { value: number }) => {
           vitals.timeToFirstByte = metric.value;
         });
 
@@ -96,7 +96,9 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
         }
       } catch (error) {
-        console.error('Error measuring performance:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.error('Error measuring performance:', error);
+        }
         setIsLoading(false);
       }
     };

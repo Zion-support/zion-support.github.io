@@ -1,15 +1,21 @@
-// Performanceutils utility functions
+// Performance utility functions
 
-export const Performanceutils = {
-  init: () => {
-    },
+interface PerformanceData {
+  [key: string]: unknown;
+}
 
-  process: (data: any) => {
+export const PerformanceUtils = {
+  init: (): void => {
+    // Initialize performance monitoring
+  },
+
+  process: (data: PerformanceData): PerformanceData => {
     return data;
   },
 
-  cleanup: () => {
-    },
+  cleanup: (): void => {
+    // Cleanup performance monitoring
+  },
 };
 
-export default Performanceutils;
+export default PerformanceUtils;

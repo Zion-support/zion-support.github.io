@@ -28,7 +28,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a logging service
-      console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
+      // console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
     }
   }
 

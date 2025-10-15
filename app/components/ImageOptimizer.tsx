@@ -33,6 +33,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
@@ -104,15 +105,14 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   }
 
   return (
+    <div className="relative">
+      {!isLoaded && (
         <div 
           className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
           style={{ width, height }}
-        >
-          style={{ width, height }}
         />
       )}
-    </div>
-    <LazyLoadImage
+      <LazyLoadImage
       src={optimizedSrc}
       srcSet={srcSet}
       alt={alt}
@@ -127,6 +127,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       loading="lazy"
       decoding="async"
     />
+    </div>
   );
 };
 
