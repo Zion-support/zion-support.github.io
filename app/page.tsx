@@ -244,101 +244,218 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Content Generator */}
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+              {/* AI Chatbot Builder Pro */}
               <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <SparklesIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-cyan-400 font-medium">AI Content</span>
+                  <span className="text-sm text-cyan-400 font-medium">AI Chatbot</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                  AI Content Generator Pro
+                  Zion AI Chatbot Builder Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI.
+                  Build intelligent chatbots without coding. Deploy across multiple channels with advanced AI capabilities.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-cyan-400">$199/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
+                  <span className="text-2xl font-bold text-cyan-400">$99/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$199/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Unlimited content generation</span>
+                    <span>No-code builder</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>SEO optimization</span>
+                    <span>Multi-channel deployment</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Multi-language support</span>
+                    <span>Real-time analytics</span>
                   </div>
                 </div>
-                <Link to="/ai-content-generator"
+                <Link to="/zion-ai-chatbot-builder"
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
 
-              {/* Analytics Dashboard */}
+              {/* AI Content Moderator Pro */}
+              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <ShieldCheckIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-red-400 font-medium">Content Safety</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-300 transition-colors">
+                  Zion AI Content Moderator Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Automate content moderation with AI-powered detection across text, images, and videos.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-red-400">$199/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$399/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>99.5% accuracy</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time processing</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Multi-media support</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-content-moderator"
+                  className="block w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI CRM Optimizer Pro */}
               <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <ChartBarIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-purple-400 font-medium">Analytics</span>
+                  <span className="text-sm text-purple-400 font-medium">CRM AI</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  Business Analytics Pro
+                  Zion AI CRM Optimizer Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Comprehensive business intelligence and analytics platform with real-time insights and reporting.
+                  Optimize your CRM with AI-powered lead scoring, behavior prediction, and sales process optimization.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-purple-400">$349/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$499/mo</span>
+                  <span className="text-2xl font-bold text-purple-400">$149/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time dashboards</span>
+                    <span>AI lead scoring</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Predictive analytics</span>
+                    <span>Behavior prediction</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Custom reports</span>
+                    <span>Sales optimization</span>
                   </div>
                 </div>
-                <Link to="/analytics-dashboard"
+                <Link to="/zion-ai-crm-optimizer"
                   className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
 
-              {/* Task Manager */}
+              {/* AI Data Visualizer Pro */}
               <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <CheckCircleIcon className="w-6 h-6 text-white" />
+                    <ChartBarIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-green-400 font-medium">Productivity</span>
+                  <span className="text-sm text-green-400 font-medium">Data Viz</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
-                  Task Manager Pro
+                  Zion AI Data Visualizer Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Advanced task management with AI-powered prioritization and team collaboration features.
+                  Transform data into stunning visualizations with AI-powered chart generation and interactive dashboards.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-green-400">$29/mo</span>
+                  <span className="text-2xl font-bold text-green-400">$79/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$149/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Auto chart generation</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Interactive dashboards</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time sync</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-data-visualizer"
+                  className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Code Assistant Pro */}
+              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <CogIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-blue-400 font-medium">Dev Tools</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  Zion AI Code Assistant Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  AI-powered coding assistant that helps developers write better code, debug issues, and optimize performance.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-400">$49/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$99/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Code generation</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Bug detection</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Performance optimization</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-code-assistant"
+                  className="block w-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* Task Manager Pro */}
+              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-yellow-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <CheckCircleIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-yellow-400 font-medium">Productivity</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                  Zion Task Manager Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced task management with AI-powered insights, team collaboration, and automated workflows.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-yellow-400">$29/mo</span>
                   <span className="text-sm text-gray-400 line-through">$49/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
@@ -356,11 +473,21 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <Link to="/task-manager"
-                  className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
+            </div>
+
+            {/* View All Button */}
+            <div className="text-center mt-12">
+              <Link to="/micro-saas-solutions"
+                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25"
+              >
+                View All Micro SAAS Solutions
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </Link>
             </div>
           </div>
         </section>

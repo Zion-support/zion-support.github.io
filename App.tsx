@@ -68,6 +68,60 @@ const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
 
+// New Zion AI Services
+const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
+const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
+const ZionAICRMOptimizerPage = lazy(() => import('./app/zion-ai-crm-optimizer/page'));
+const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
+const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
+const ZionAIDocumentAnalyzerPage = lazy(() => import('./app/zion-ai-document-analyzer/page'));
+const ZionAICustomerSentimentTrackerPage = lazy(() => import('./app/zion-ai-customer-sentiment-tracker/page'));
+const ZionAICustomerSupportProPage = lazy(() => import('./app/zion-ai-customer-support-pro/page'));
+const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
+const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimizer/page'));
+const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
+const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
+
+// Pro AI Services
+const AIVoiceAssistantProPage = lazy(() => import('./app/ai-voice-assistant-pro/page'));
+const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
+const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
+const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
+const AIPredictiveMaintenanceProPage = lazy(() => import('./app/ai-predictive-maintenance-pro/page'));
+const AIPriceOptimizerProPage = lazy(() => import('./app/ai-price-optimizer-pro/page'));
+
+// Pro IT Solutions
+const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions-pro/page'));
+const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
+const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
+
+// Additional Micro SaaS Services
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const SmartExpenseTrackerProPage = lazy(() => import('./app/smart-expense-tracker-pro/page'));
+const LeadGeneratorProPage = lazy(() => import('./app/lead-generator-pro/page'));
+const TimeTrackerProPage = lazy(() => import('./app/time-tracker-pro/page'));
+const InvoiceGeneratorProPage = lazy(() => import('./app/invoice-generator-pro/page'));
+const CRMProPage = lazy(() => import('./app/crm-pro/page'));
+const AnalyticsDashboardProPage = lazy(() => import('./app/analytics-dashboard-pro/page'));
+const FormBuilderProPage = lazy(() => import('./app/form-builder-pro/page'));
+const SurveyBuilderProPage = lazy(() => import('./app/survey-builder-pro/page'));
+const AppointmentSchedulerProPage = lazy(() => import('./app/appointment-scheduler-pro/page'));
+const PasswordManagerProPage = lazy(() => import('./app/password-manager-pro/page'));
+const FileManagerProPage = lazy(() => import('./app/file-manager-pro/page'));
+const BackupManagerProPage = lazy(() => import('./app/backup-manager-pro/page'));
+const MonitoringDashboardProPage = lazy(() => import('./app/monitoring-dashboard-pro/page'));
+const APIManagerProPage = lazy(() => import('./app/api-manager-pro/page'));
+const SecurityScannerProPage = lazy(() => import('./app/security-scanner-pro/page'));
+const WorkflowAutomatorProPage = lazy(() => import('./app/workflow-automator-pro/page'));
+
+// Additional IT Services
+const PerformanceOptimizationPage = lazy(() => import('./app/performance-optimization/page'));
+const DisasterRecoveryPage = lazy(() => import('./app/disaster-recovery/page'));
+const ComplianceManagementPage = lazy(() => import('./app/compliance-management/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const MachineLearningOpsPage = lazy(() => import('./app/machine-learning-ops/page'));
+const MicroservicesArchitecturePage = lazy(() => import('./app/microservices-architecture/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -174,22 +228,72 @@ function App() {
                     <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
                     <Route path="/ai-scheduling-assistant" element={<AISchedulingAssistantPage />} />
                     
+                    {/* Zion AI Services */}
+                    <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
+                    <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
+                    <Route path="/zion-ai-crm-optimizer" element={<ZionAICRMOptimizerPage />} />
+                    <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
+                    <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
+                    <Route path="/zion-ai-document-analyzer" element={<ZionAIDocumentAnalyzerPage />} />
+                    <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
+                    <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                    <Route path="/zion-ai-code-assistant" element={<ZionAICodeAssistantPage />} />
+                    <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
+                    <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
+                    <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
+                    
+                    {/* Pro AI Services */}
+                    <Route path="/ai-voice-assistant-pro" element={<AIVoiceAssistantProPage />} />
+                    <Route path="/ai-fraud-detection-pro" element={<AIFraudDetectionProPage />} />
+                    <Route path="/ai-image-recognition-pro" element={<AIImageRecognitionProPage />} />
+                    <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
+                    <Route path="/ai-predictive-maintenance-pro" element={<AIPredictiveMaintenanceProPage />} />
+                    <Route path="/ai-price-optimizer-pro" element={<AIPriceOptimizerProPage />} />
+                    
                     {/* Advanced Solutions */}
                     <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                    <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
                     <Route path="/iot-solutions" element={<IOTSolutionsPage />} />
+                    <Route path="/iot-solutions-pro" element={<IOTSolutionsProPage />} />
                     <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
+                    <Route path="/devops-automation-pro" element={<DevOpsAutomationProPage />} />
                     <Route path="/data-engineering" element={<DataEngineeringPage />} />
                     <Route path="/api-development" element={<APIDevelopmentPage />} />
                     <Route path="/security-audit" element={<SecurityAuditPage />} />
                     
-                    {/* Additional Services */}
+                    {/* Micro SaaS Solutions */}
                     <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
+                    <Route path="/task-manager" element={<TaskManagerProPage />} />
+                    <Route path="/smart-expense-tracker" element={<SmartExpenseTrackerProPage />} />
+                    <Route path="/lead-generator-pro" element={<LeadGeneratorProPage />} />
+                    <Route path="/time-tracker-pro" element={<TimeTrackerProPage />} />
+                    <Route path="/invoice-generator-pro" element={<InvoiceGeneratorProPage />} />
+                    <Route path="/crm-pro" element={<CRMProPage />} />
+                    <Route path="/analytics-dashboard-pro" element={<AnalyticsDashboardProPage />} />
+                    <Route path="/form-builder-pro" element={<FormBuilderProPage />} />
+                    <Route path="/survey-builder-pro" element={<SurveyBuilderProPage />} />
+                    <Route path="/appointment-scheduler-pro" element={<AppointmentSchedulerProPage />} />
+                    <Route path="/password-manager-pro" element={<PasswordManagerProPage />} />
+                    <Route path="/file-manager-pro" element={<FileManagerProPage />} />
+                    <Route path="/backup-manager-pro" element={<BackupManagerProPage />} />
+                    <Route path="/monitoring-dashboard-pro" element={<MonitoringDashboardProPage />} />
+                    <Route path="/api-manager-pro" element={<APIManagerProPage />} />
+                    <Route path="/security-scanner-pro" element={<SecurityScannerProPage />} />
+                    <Route path="/workflow-automator" element={<WorkflowAutomatorProPage />} />
+                    
+                    {/* Additional Services */}
                     <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
                     <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                     <Route path="/web-development" element={<WebDevelopmentPage />} />
                     <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                     <Route path="/database-management" element={<DatabaseManagementPage />} />
                     <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                    <Route path="/performance-optimization" element={<PerformanceOptimizationPage />} />
+                    <Route path="/disaster-recovery" element={<DisasterRecoveryPage />} />
+                    <Route path="/compliance-management" element={<ComplianceManagementPage />} />
+                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                    <Route path="/machine-learning-ops" element={<MachineLearningOpsPage />} />
+                    <Route path="/microservices-architecture" element={<MicroservicesArchitecturePage />} />
                     <Route path="/help" element={<HelpPage />} />
                     <Route path="/accessibility" element={<AccessibilityPage />} />
                     <Route path="/api-docs" element={<APIDocsPage />} />
