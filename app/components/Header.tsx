@@ -184,7 +184,7 @@ const Header: React.FC = () => {
 
                   {/* Dropdown Menu */}
                   {item.dropdown && (
-                    <div className={`absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 ${
+                    <div className={`absolute top-full left-0 mt-2 w-72 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 ${
                       activeDropdown === item.name 
                         ? 'opacity-100 visible translate-y-0' 
                         : 'opacity-0 invisible translate-y-2'
