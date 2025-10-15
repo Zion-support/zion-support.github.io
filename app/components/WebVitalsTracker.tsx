@@ -1,29 +1,21 @@
+import React from 'react';
 
-interface WebVitalsData {},
-      name: string,
-  value: number
-  delta: number,
-  id: string
-  navigationType: string
+interface WebVitalsTrackerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-    },
-    {};
-    };
-    // Track Core Web Vitals
-    onCLS(sendToAnalytics)
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
-    onFCP(sendToAnalytics)
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`webvitalstracker-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">WebVitalsTracker</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
+    </div>
+  );
+};
 
-    },
-    {};
-  }, [
-  ])
-  return null";
-},";";
-      export default WebVitalsTracker";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
-
-
-
+export default WebVitalsTracker;

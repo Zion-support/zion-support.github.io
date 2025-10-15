@@ -1,17 +1,24 @@
+import { useCallback, useEffect, useRef, useState } from 'react';
 
-) {
-    const ref = useRef<HTMLElement>(null);
+interface use Intersection ObserverOptions {
+  // Options will be defined here
+}
+
+export const use Intersection Observer = (options: use Intersection ObserverOptions = {}) => {
+  const [state, setState] = useState({});
+  
+  const init = useCallback(() => {
+    // Hook implementation will be here
+  }, []);
 
   useEffect(() => {
+    init();
+  }, [init]);
 
-      ...options;
-  
-  });
+  return {
+    state,
+    init
+  };
+};
 
-    observer.observe(element);
-
-    return () => {
-      observer.unobserve(element);
-    };
-
-
+export default use Intersection Observer;

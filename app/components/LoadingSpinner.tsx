@@ -1,28 +1,21 @@
+import React from 'react';
 
+interface LoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-<<<<<<< HEAD
-export default function LoadingSpinner() {
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', children, ...props }) => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+    <div className={`loadingspinner-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">LoadingSpinner</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
     </div>
   );
-}
-=======
-  const  spinner = (";";"
-    <div  className ="flex flex-col items-center justify-center space-y-4">;";"
-      <div  className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />";";"
-      {text && <p  className ="text-gray-600">{text}</p>}";"
-    </div>
-  )
+};
 
-  if (fullScreen) {
-    return (";";"
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">;";"
-        {spinner}
-      </div>
-    )
-  }
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
+export default LoadingSpinner;

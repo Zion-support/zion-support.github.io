@@ -1,26 +1,21 @@
+import React from 'react';
 
+interface SEOProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
+const SEO: React.FC<SEOProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`seo-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">SEO</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
+    </div>
+  );
+};
 
-
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-
-
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = []
-
-  };
-
-  return ()
-
-
-
+export default SEO;

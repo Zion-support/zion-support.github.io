@@ -1,12 +1,15 @@
+import { Metadata } from 'next';
 
-interface MetadataOptions {
-
-    // Initialize your state here;
-  
-  });
-
-  return {
-    // Return your hook values here;
-  };
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI solutions, cloud services, and IT consulting.',
+  keywords: ['AI', 'Cloud', 'IT Solutions', 'Technology'],
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Zion Tech Group',
+    description: 'Advanced AI and IT Solutions',
+    type: 'website',
+  },
 };
 
+export default metadata;

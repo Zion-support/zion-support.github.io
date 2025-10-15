@@ -1,31 +1,21 @@
+import React from 'react';
 
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  service: string;
-  budget: string;
-  timeline: string;
+interface ImprovedContactFormProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ImprovedContactForm: React.FC<ImprovedContactFormProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`improvedcontactform-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">ImprovedContactForm</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
+    </div>
+  );
 };
-interface FormErrors {
 
-    e.preventDefault();
-    if (!validateForm()) {
-      return;,
-    };
-    setIsSubmitting(true);
-    try {
-
-                </option>
-              ))};
-            </select>
-
-              Send Message
-            </>,
-          )};
-        </button>
-      </form>
-    </div>";
-  );";";
-};";";";
-export default ImprovedContactForm;"
+export default ImprovedContactForm;

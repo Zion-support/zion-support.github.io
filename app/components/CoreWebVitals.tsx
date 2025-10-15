@@ -1,27 +1,21 @@
+import React from 'react';
 
-      metric_name: data.name,
-      metric_value: Math.round(data.value),
-      metric_delta: Math.round(data.delta),
-      metric_id: data.id,
-      metric_navigation_type: data.navigationType
+interface CoreWebVitalsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-      metric: data.name,
-      value: data.value,
-      delta: data.delta,
-      id: data.id
-      })
-    };
-    // Log in development
-    if ($1) {};
-  // If body
+const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`corewebvitals-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">CoreWebVitals</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
+    </div>
+  );
 };
-      };
-  }, [";
-    ";";
-  ]);";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
 
-
-
-
+export default CoreWebVitals;

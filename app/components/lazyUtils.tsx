@@ -1,35 +1,21 @@
+import React from 'react';
 
-// Higher-order component for lazy loading;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any;
-export function withLazyLoading<T extends ComponentType<any>>(
-  Component: T,;
-  fallback?: React.ReactNode;
-) {
+interface lazyUtilsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-      <LazyComponent {...(props as any)} />
-    </Suspense>
+const lazyUtils: React.FC<lazyUtilsProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`lazyutils-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">lazyUtils</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
+    </div>
   );
 };
-// Utility function to create lazy-loaded components;
-// eslint-disable-next-line @;
-export function createLazyComponent<T extends ComponentType<any>>();
-  importFunction: () => Promise<{};
-    default: T ,};
-  }>,
-  fallback?: React.ReactNode;
 
-      <LazyComponent {...(props as any)} /></LazyComponent>
-    </Suspense>
-  );,
-},
-// Utility function to create lazy-loaded components,
-// eslint-disable-next-line @,
-export function createLazyComponent<T extends ComponentType<any>>()
-  importFunction: () => Promise<{ default: T }>
-  fallback?: React.ReactNode,
-
-  return (props: ComponentProps<T>) => ()
-,
-    <Suspense: fallback ={fallback || <div>Loading...</div>}>,
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */},
-
+export default lazyUtils;

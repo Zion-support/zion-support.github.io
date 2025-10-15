@@ -1,28 +1,21 @@
+import React from 'react';
 
 interface ImprovedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: any;
-  noindex?: boolean;
+  className?: string;
+  children?: React.ReactNode;
+}
 
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  structuredData,
+const ImprovedSEO: React.FC<ImprovedSEOProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`improvedseo-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">ImprovedSEO</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
+    </div>
+  );
+};
 
-        </script>
-      )};
-    </Helmet>";
-  );";";
-};";";";
-export default ImprovedSEO;"
+export default ImprovedSEO;

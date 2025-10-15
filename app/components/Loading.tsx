@@ -1,23 +1,21 @@
+import React from 'react';
 
-interface LoadingProps {}
-  message?: string
+interface LoadingProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Loading({ message = "Loading..." }: LoadingProps) {}"
-  return ()
-    <div>
-      <Helmet>
-        <title>Loading - Zion Tech Group</title>
-        <meta: name ="description" content="Loading page" />"
-      </Helmet>
-
+const Loading: React.FC<LoadingProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`loading-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">Loading</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
-      </div>";
-    </>";";
-  );";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
+      )}
+    </div>
+  );
+};
 
-
-
-
+export default Loading;

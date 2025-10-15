@@ -1,29 +1,21 @@
+import React from 'react';
 
+interface ContentStatisticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-interface StatItem {},
-      value: string,
-  label: string
-  icon: React.ReactNode
-  color: string
-},
-      interface ContentStatisticsProps {},
-      stats?: StatItem[];
-  className?: string
-},
-
-            </div>
-          ))};
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`contentstatistics-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">ContentStatistics</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
+};
 
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default ContentStatistics;

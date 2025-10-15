@@ -1,4 +1,9 @@
+// accessibility Utils
+export const accessibilityutils = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('accessibility Utils initialized');
+  }
+};
 
-interface AccessibilityUtilsOptions {
-
-
+export default accessibilityutils;

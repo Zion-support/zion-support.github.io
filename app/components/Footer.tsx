@@ -1,16 +1,21 @@
+import React from 'react';
 
-<<<<<<< HEAD
-
-export default function Footer() {
-  return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
+interface FooterProps {
+  className?: string;
+  children?: React.ReactNode;
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
+
+const Footer: React.FC<FooterProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`footer-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">Footer</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Footer;

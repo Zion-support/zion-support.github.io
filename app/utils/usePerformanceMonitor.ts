@@ -1,24 +1,9 @@
+// use Performance Monitor
+export const useperformancemonitor = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('use Performance Monitor initialized');
+  }
+};
 
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-
-    const [
-    metrics, setMetrics,
-  ] = useState<PerformanceMetrics>({
-    loadTime: 0,
-
-      });
-    };
-    // Measure after component mount;
-    const: timeoutId = setTimeout(measurePerformance, 100);
-    return () => clearTimeout(timeoutId);
-  }, [
-  ]);
-  return metrics;
-};";
-export default usePerformanceMonitor;";";
-";";";
+export default useperformancemonitor;

@@ -1,95 +1,66 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Layers } from 'lucide-react';
 
-  CheckCircle, 
-  ArrowRight, 
-  TrendingUp, 
+export default function AiAnalyticsDashboardProPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Ai Analytics Dashboard Pro | Zion Tech Group</title>
+        <meta name="description" content="Professional ai analytics dashboard pro solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+            Ai Analytics Dashboard Pro
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ai analytics dashboard pro solutions for modern businesses.
+          </p>
+        </div>
 
-  const features = [
-    'AI-powered data analysis and insights',";
-    'Real-time dashboard customization',";
-    'Predictive analytics and forecasting',";
-    'Automated report generation',";
-    'Multi-source data integration',";
-    'Advanced visualization tools',";
-    'Custom KPI tracking and alerts',";
-    'White-label dashboard options',";
-    'Mobile-responsive design',";
-    'API access and custom integrations'";
-  ];
-
-  const benefits = [
-
-    'Make data-driven decisions 3x faster',
-    'Identify trends and opportunities automatically',
-    'Reduce reporting time by 90%',
-    'Improve business performance by 35%',
-    'Save 20+ hours weekly on data analysis',
-    'Scale analytics with business growth'
-  ],
-      const integrations = [
-    { name: 'Google Analytics', icon: <className="w-6 h-6 text-orange-400" /> },
-    { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> },
-    { name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> },
-    { name: 'MySQL', icon: <className="w-6 h-6 text-blue-600" /> },
-    { name: 'PostgreSQL', icon: <className="w-6 h-6 text-indigo-400" /> },
-    { name: 'MongoDB', icon: <className="w-6 h-6 text-green-400" /> }
-  ],
-      const pricingPlans = [
-    {}
-
-      name: 'Starter',
-      price: '$79/mo',
-      originalPrice: '$129/mo',
-      description: 'Perfect for small businesses',
-
-    'Make data-driven decisions 3x faster',";
-    'Identify trends and opportunities automatically',";
-    'Reduce reporting time by 90%',";
-    'Improve business performance by 35%',";
-    'Save 20+ hours weekly on data analysis',";
-    'Scale analytics with business growth'";
-  ];
-
-  const integrations = [
-    { name: 'Google Analytics', icon: <BarChart3 className ="w-6 h-6 text-orange-400" /> },";
-    { name: 'Salesforce', icon: <Cloud className ="w-6 h-6 text-blue-400" /> },";
-    { name: 'HubSpot', icon: <Target className ="w-6 h-6 text-orange-400" /> },";
-    { name: 'MySQL', icon: <Database className ="w-6 h-6 text-blue-600" /> },";
-    { name: 'PostgreSQL', icon: <Database className ="w-6 h-6 text-indigo-400" /> },";
-    { name: 'MongoDB', icon: <Database className ="w-6 h-6 text-green-400" /> }";
-  ];
-
-  const pricingPlans = [
-    {
-
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/services""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View All Services
-              </Link>
-            </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Layers className="w-12 h-12 text-cyan-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
+            <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
           </div>
-        </section>
-      </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Layers className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
+            <p className="text-gray-300">Dedicated support team to help you succeed with our solutions.</p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Layers className="w-12 h-12 text-yellow-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
+            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
+          </div>
+        </div>
 
-                >
-                  Start Free Trial
-                </>
-              </div>
-
+        <div className="text-center">
+          <p className="text-lg text-gray-300 mb-8">
+            Ready to get started with ai analytics dashboard pro?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
             >
-              Schedule Demo
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
             </Link>
           </div>
         </div>
-      </section>
-
+      </div>
+    </div>
+  );
+}

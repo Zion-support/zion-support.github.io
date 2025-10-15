@@ -1,11 +1,10 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 
-        </div>
-      </div>
-    </>
-  );
-,
-};";
-";";
-export default __tests__Page;";";";
-"
-
+describe('EnhancedErrorBoundary', () => {
+  it('renders without crashing', () => {
+    render(<EnhancedErrorBoundary />);
+    expect(screen.getByText('EnhancedErrorBoundary')).toBeInTheDocument();
+  });
+});

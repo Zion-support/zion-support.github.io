@@ -1,48 +1,21 @@
+import React from 'react';
 
-      declare global {},
-      interface Window {},
-      gtag: (_...args: unknown[
-  ]) => void
-    },
-    {};
-},
-      interface AnalyticsContextType {},
-      trackEvent: (_eventName: string, parameters?: Record<string, _unknown>) => void,
-      trackPageView: (_pageName: string) => void
-    },
+interface AnalyticsProviderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-  };
-  return context
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`analyticsprovider-component ${className}`} {...props}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white mb-2">AnalyticsProvider</h3>
+          <p className="text-gray-300">This component is ready for implementation.</p>
+        </div>
+      )}
+    </div>
+  );
 };
 
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true
-        document.head.appendChild(script)
-        window.gtag =
-
-    },
-    {};
-    };
-
-      page_title: pageName,
-      page_location: window.location.href})
-    };
-    },
-    {};
-  const value: AnalyticsContextType = {},
-      trackEvent,
-      trackPageView},
-      return ()
-
-      {children};
-    </AnalyticsContext.Provider>
-  )
-};";
-};";";
-export default AnalyticsProvider";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
-
-
-
+export default AnalyticsProvider;

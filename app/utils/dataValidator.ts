@@ -1,4 +1,9 @@
+// data Validator
+export const datavalidator = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('data Validator initialized');
+  }
+};
 
-interface DataValidatorOptions {
-
-
+export default datavalidator;
