@@ -23,52 +23,45 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SAAS Solutions',
       services: [
-        { name: 'AI Content Writer Pro', path: '/ai-content-generation-pro' },
-        { name: 'AI Project Manager', path: '/ai-project-manager' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
-        { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
-        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
-        { name: 'AI Healthcare Assistant', path: '/ai-healthcare-assistant' },
         { name: 'AI Smart Contracts', path: '/ai-smart-contracts' },
         { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
         { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
-        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' }
+        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' },
+        { name: 'View All Micro SAAS', path: '/micro-saas' }
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Automation', path: '/ai-automation' },
         { name: 'Machine Learning', path: '/ai-services' },
-        { name: 'Computer Vision', path: '/ai-computer-vision' },
+        { name: 'Computer Vision', path: '/ai-services' },
         { name: 'Natural Language Processing', path: '/ai-services' },
-        { name: 'Predictive Analytics', path: '/ai-analytics' },
-        { name: 'AI Security Solutions', path: '/ai-security-solutions' }
+        { name: 'Predictive Analytics', path: '/ai-services' },
+        { name: 'View All AI Services', path: '/ai-services' }
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', path: '/cloud-migration-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
-        { name: 'DevOps Solutions', path: '/devops-solutions' },
-        { name: 'Mobile Development', path: '/mobile-app-development' },
-        { name: 'Web Development', path: '/web-application-development' },
-        { name: 'Database Solutions', path: '/database-solutions' },
+        { name: 'Cloud Infrastructure', path: '/it-services' },
+        { name: 'Cybersecurity', path: '/it-services' },
+        { name: 'Web Development', path: '/it-services' },
+        { name: 'Mobile Development', path: '/it-services' },
         { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
-        { name: 'Edge Computing', path: '/edge-computing-solutions' }
+        { name: 'Edge Computing', path: '/edge-computing-solutions' },
+        { name: 'View All IT Services', path: '/it-services' }
       ]
     },
     {
       title: '5G Solutions',
       services: [
-        { name: '5G Implementation', path: '/5g-implementation' },
-        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
-        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
-        { name: '5G Edge Computing', path: '/5g-edge-computing' },
-        { name: '5G Private Networks', path: '/5g-private-networks' },
-        { name: '5G Security Solutions', path: '/5g-security' }
+        { name: '5G Implementation', path: '/5g-solutions' },
+        { name: '5G Network Infrastructure', path: '/5g-solutions' },
+        { name: '5G IoT Solutions', path: '/5g-solutions' },
+        { name: '5G Smart City Solutions', path: '/5g-solutions' },
+        { name: '5G Edge Computing', path: '/5g-solutions' },
+        { name: '5G Private Networks', path: '/5g-solutions' },
+        { name: 'View All 5G Solutions', path: '/5g-solutions' }
       ]
     }
   ];
