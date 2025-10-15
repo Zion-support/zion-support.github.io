@@ -2,30 +2,76 @@
 
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
-console.log('🔧 Starting comprehensive fix for all remaining issues...');
+console.log('🔧 Starting comprehensive file corruption fix...');
 
-// Function to create a valid component name
-function createValidComponentName(fileName) {
-  // Remove numbers from start and replace with letters
-  let cleanName = fileName.replace(/^[0-9]+/, '');
-  
-  // Convert to PascalCase
-  cleanName = cleanName
-    .replace(/[^a-zA-Z0-9]/g, '')
-    .replace(/^([a-z])/, (match, p1) => p1.toUpperCase());
-  
-  // If empty or starts with number, add prefix
-  if (!cleanName || /^[0-9]/.test(cleanName)) {
-    cleanName = 'Page' + cleanName;
+// List of corrupted files that need to be fixed or removed
+const corruptedFiles = [
+  'App-backup.tsx',
+  'App-minimal.tsx', 
+  'App-optimized.tsx',
+  'EnhancedFooter.tsx',
+  'EnhancedHeader.tsx',
+  'add-missing-routes-v2.js',
+  'add-missing-routes.js',
+  'api/shipping-rates.tsx',
+  'app-disabled/careers/page.tsx',
+  'app/5g-mobile-applications/page.tsx',
+  'app/5g-network-infrastructure/page.tsx',
+  'app/5g-network-optimization/page.tsx',
+  'app/5g-private-networks/page.tsx',
+  'app/5g-smart-city-solutions/page.tsx',
+  'app/5g-solutions/page.tsx',
+  'app/App.tsx',
+  'app/about/page.tsx',
+  'app/accessibility-page/page.tsx',
+  'app/accessibility/page.tsx',
+  'app/ad-management/page.tsx',
+  'app/advanced-security-suite/page.tsx',
+  'app/ai-3d-generation/page.tsx',
+  'app/ai-accounting-assistant/page.tsx',
+  'app/ai-agricultural-intelligence-pro/page.tsx',
+  'app/ai-analytics-dashboard-pro/page.tsx',
+  'app/ai-analytics-dashboard/page.tsx',
+  'app/ai-analytics/page.tsx',
+  'app/ai-api-management/page.tsx',
+  'app/ai-api-manager/page.tsx',
+  'app/ai-automated-reporting/page.tsx',
+  'app/ai-automated-testing/page.tsx',
+  'app/ai-automation-platform/page.tsx'
+];
+
+// Function to check if file is corrupted
+function isFileCorrupted(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check for common corruption patterns
+    const corruptionPatterns = [
+      /<div:\s*className\s*=\s*"/,  // Malformed JSX
+      /<Link:\s*to\s*=\s*"/,        // Malformed JSX
+      /<ArrowRight:\s*className\s*=\s*"/, // Malformed JSX
+      /export\s+default\s+\w+;\s*";\s*";\s*";/, // Multiple semicolons
+      /;\s*";\s*";\s*";/,           // Multiple semicolons
+      /<[^>]*:\s*[^>]*>/,           // Malformed JSX with colons
+      /}\s*\)\s*\)\s*\)\s*\)/,      // Multiple closing parentheses
+      /function\s+\w+\(\)\s*{\s*}\s*\[/, // Malformed function syntax
+      /return\s+\(\s*<[^>]*:\s*[^>]*>/, // Malformed return with colons
+    ];
+    
+    return corruptionPatterns.some(pattern => pattern.test(content));
+  } catch (error) {
+    return true; // If we can't read the file, consider it corrupted
   }
-  
-  return cleanName;
 }
 
-// Function to create a valid page component
-function createValidPageComponent(fileName, title) {
-  const componentName = createValidComponentName(fileName);
+// Function to create a basic valid page component
+function createValidPageComponent(fileName) {
+  const componentName = fileName
+    .replace(/[^a-zA-Z0-9]/g, '')
+    .replace(/^page$/, 'Page')
+    .replace(/^([a-z])/, (match, p1) => p1.toUpperCase());
   
   return `import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -34,18 +80,18 @@ export default function ${componentName}() {
   return (
     <>
       <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${title} services by Zion Tech Group" />
+        <title>${componentName} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${componentName} services by Zion Tech Group" />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              ${title}
+              ${componentName}
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Professional ${title} services delivered with excellence by our expert team.
+              Professional ${componentName} services delivered with excellence by our expert team.
             </p>
           </div>
         </div>
@@ -55,8 +101,8 @@ export default function ${componentName}() {
 }`;
 }
 
-// Function to create a proper App component
-function createProperAppComponent() {
+// Function to create a valid App component
+function createValidAppComponent() {
   return `import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -106,90 +152,83 @@ function App() {
 export default App;`;
 }
 
-// Function to fix all page components
-function fixAllPageComponents() {
-  const appDir = path.join(process.cwd(), 'app');
+// Function to fix corrupted files
+function fixCorruptedFiles() {
   let fixedCount = 0;
+  let removedCount = 0;
   
-  function processDirectory(dir) {
-    const items = fs.readdirSync(dir);
+  for (const filePath of corruptedFiles) {
+    const fullPath = path.join(process.cwd(), filePath);
     
-    for (const item of items) {
-      const itemPath = path.join(dir, item);
-      const stat = fs.statSync(itemPath);
-      
-      if (stat.isDirectory()) {
-        processDirectory(itemPath);
-      } else if (item === 'page.tsx') {
+    if (fs.existsSync(fullPath)) {
+      if (isFileCorrupted(fullPath)) {
+        console.log(`🔧 Fixing corrupted file: ${filePath}`);
+        
         try {
-          const content = fs.readFileSync(itemPath, 'utf8');
-          
-          // Check if file is corrupted or has invalid syntax
-          if (content.includes('export default function 5g') || 
-              content.includes('export default function ai') ||
-              content.includes('export default function ad') ||
-              content.includes('export default function advanced') ||
-              content.includes('export default function accessibility') ||
-              content.includes('export default function automation') ||
-              content.includes('export default function autonomous') ||
-              content.includes('export default function blockchain') ||
-              content.includes('export default function business') ||
-              content.includes('export default function system') ||
-              content.includes('export default function task') ||
-              content.includes('export default function blog') ||
-              content.includes('export default function') && content.includes('() {') === false) {
-            
-            const dirName = path.basename(path.dirname(itemPath));
-            const title = dirName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-            
-            const newContent = createValidPageComponent(dirName, title);
-            fs.writeFileSync(itemPath, newContent);
-            console.log(`🔧 Fixed page component: ${itemPath}`);
+          // For App.tsx, create a proper App component
+          if (filePath === 'app/App.tsx') {
+            fs.writeFileSync(fullPath, createValidAppComponent());
             fixedCount++;
           }
+          // For page components, create basic valid components
+          else if (filePath.includes('/page.tsx')) {
+            const fileName = path.basename(path.dirname(filePath));
+            fs.writeFileSync(fullPath, createValidPageComponent(fileName));
+            fixedCount++;
+          }
+          // For other files, remove them if they're corrupted
+          else {
+            fs.unlinkSync(fullPath);
+            console.log(`🗑️  Removed corrupted file: ${filePath}`);
+            removedCount++;
+          }
         } catch (error) {
-          console.error(`❌ Error processing ${itemPath}:`, error.message);
+          console.error(`❌ Error fixing ${filePath}:`, error.message);
         }
       }
     }
   }
   
-  processDirectory(appDir);
-  console.log(`✅ Fixed ${fixedCount} page components`);
+  console.log(`✅ Fixed ${fixedCount} files and removed ${removedCount} corrupted files`);
 }
 
-// Function to fix App.tsx
-function fixAppComponent() {
-  const appPath = path.join(process.cwd(), 'app/App.tsx');
+// Function to clean up backup and temporary files
+function cleanupTemporaryFiles() {
+  const tempFiles = [
+    'App-backup.tsx',
+    'App-minimal.tsx',
+    'App-optimized.tsx',
+    'EnhancedFooter.tsx',
+    'EnhancedHeader.tsx',
+    'add-missing-routes-v2.js',
+    'add-missing-routes.js',
+    'api/shipping-rates.tsx',
+    'app-disabled/careers/page.tsx'
+  ];
   
-  if (fs.existsSync(appPath)) {
-    try {
-      const content = fs.readFileSync(appPath, 'utf8');
-      
-      // Check if App.tsx is corrupted
-      if (content.includes('function App() {') && !content.includes('export default App;')) {
-        const newContent = createProperAppComponent();
-        fs.writeFileSync(appPath, newContent);
-        console.log('🔧 Fixed App.tsx');
+  let cleanedCount = 0;
+  
+  for (const filePath of tempFiles) {
+    const fullPath = path.join(process.cwd(), filePath);
+    if (fs.existsSync(fullPath)) {
+      try {
+        fs.unlinkSync(fullPath);
+        console.log(`🗑️  Removed temporary file: ${filePath}`);
+        cleanedCount++;
+      } catch (error) {
+        console.error(`❌ Error removing ${filePath}:`, error.message);
       }
-    } catch (error) {
-      console.error('❌ Error fixing App.tsx:', error.message);
     }
   }
+  
+  console.log(`✅ Cleaned up ${cleanedCount} temporary files`);
 }
 
-// Function to create essential pages directory and files
+// Function to create missing essential pages
 function createEssentialPages() {
-  const pagesDir = path.join(process.cwd(), 'app/pages');
-  
-  // Create pages directory if it doesn't exist
-  if (!fs.existsSync(pagesDir)) {
-    fs.mkdirSync(pagesDir, { recursive: true });
-  }
-  
   const essentialPages = [
     {
-      name: 'HomePage.tsx',
+      path: 'app/pages/HomePage.tsx',
       content: `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -226,7 +265,7 @@ export default function HomePage() {
 }`
     },
     {
-      name: 'AboutPage.tsx',
+      path: 'app/pages/AboutPage.tsx',
       content: `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -255,7 +294,7 @@ export default function AboutPage() {
 }`
     },
     {
-      name: 'ContactPage.tsx',
+      path: 'app/pages/ContactPage.tsx',
       content: `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -285,17 +324,23 @@ export default function ContactPage() {
     }
   ];
   
+  // Create pages directory if it doesn't exist
+  const pagesDir = path.join(process.cwd(), 'app/pages');
+  if (!fs.existsSync(pagesDir)) {
+    fs.mkdirSync(pagesDir, { recursive: true });
+  }
+  
   let createdCount = 0;
   
   for (const page of essentialPages) {
-    const pagePath = path.join(pagesDir, page.name);
-    if (!fs.existsSync(pagePath)) {
+    const fullPath = path.join(process.cwd(), page.path);
+    if (!fs.existsSync(fullPath)) {
       try {
-        fs.writeFileSync(pagePath, page.content);
-        console.log(`📄 Created essential page: ${page.name}`);
+        fs.writeFileSync(fullPath, page.content);
+        console.log(`📄 Created essential page: ${page.path}`);
         createdCount++;
       } catch (error) {
-        console.error(`❌ Error creating ${page.name}:`, error.message);
+        console.error(`❌ Error creating ${page.path}:`, error.message);
       }
     }
   }
@@ -305,17 +350,17 @@ export default function ContactPage() {
 
 // Main execution
 try {
-  console.log('🔧 Fixing all page components...');
-  fixAllPageComponents();
+  console.log('🧹 Cleaning up temporary files...');
+  cleanupTemporaryFiles();
   
-  console.log('🔧 Fixing App component...');
-  fixAppComponent();
+  console.log('🔧 Fixing corrupted files...');
+  fixCorruptedFiles();
   
   console.log('📄 Creating essential pages...');
   createEssentialPages();
   
-  console.log('🎉 Comprehensive fix completed successfully!');
+  console.log('🎉 File corruption fix completed successfully!');
 } catch (error) {
-  console.error('❌ Error during comprehensive fix:', error);
+  console.error('❌ Error during file corruption fix:', error);
   process.exit(1);
 }
