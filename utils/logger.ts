@@ -1,9 +1,9 @@
 export interface LogContext {
-  component?: string;
-  action?: string;
-  userId?: string;
-  sessionId?: string;
-  timestamp?: number;
+  component?: string | undefined;
+  action?: string | undefined;
+  userId?: string | undefined;
+  sessionId?: string | undefined;
+  timestamp?: number | undefined;
 }
 
 export interface LogEntry {

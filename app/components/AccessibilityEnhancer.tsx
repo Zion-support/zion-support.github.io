@@ -1,17 +1,31 @@
 import React, { useEffect, useState } from 'react';
 
+interface AccessibilitySettings {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  screenReader: boolean;
+}
+
 const AccessibilityEnhancer: React.FC = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState(100);
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: 'medium',
+    screenReader: false
+  });
 
   useEffect(() => {
-    // Check user preferences
+    // Detect user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     
-    setIsReducedMotion(prefersReducedMotion);
-    setIsHighContrast(prefersHighContrast);
+    setSettings(prev => ({
+      ...prev,
+      reducedMotion: prefersReducedMotion,
+      highContrast: prefersHighContrast
+    }));
+
     // Add skip links
     const existingSkipLink = document.querySelector('.skip-link');
     if (!existingSkipLink) {
@@ -23,16 +37,37 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
 
+    // Add additional skip links for better navigation
+    const skipLinks = [
+      { href: '#navigation', text: 'Skip to navigation' },
+      { href: '#main-content', text: 'Skip to main content' },
+      { href: '#footer', text: 'Skip to footer' }
+    ];
+
+    skipLinks.forEach(({ href, text }) => {
+      const existingLink = document.querySelector(`.skip-link[href="${href}"]`);
+      if (!existingLink) {
+        const skipLink = document.createElement('a');
+        skipLink.href = href;
+        skipLink.textContent = text;
+        skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50 mr-2';
+        skipLink.setAttribute('aria-label', text);
+        document.body.insertBefore(skipLink, document.body.firstChild);
+      }
+    });
+
     // Add main content landmark
     const main = document.querySelector('main');
     if (main && !main.id) {
       main.id = 'main-content';
       main.setAttribute('role', 'main');
+      main.setAttribute('aria-label', 'Main content');
     }
 
     // Add navigation landmark
     const nav = document.querySelector('nav');
     if (nav && !nav.getAttribute('role')) {
+      nav.id = 'navigation';
       nav.setAttribute('role', 'navigation');
       nav.setAttribute('aria-label', 'Main navigation');
     }
@@ -40,8 +75,38 @@ const AccessibilityEnhancer: React.FC = () => {
     // Add footer landmark
     const footer = document.querySelector('footer');
     if (footer && !footer.getAttribute('role')) {
+      footer.id = 'footer';
       footer.setAttribute('role', 'contentinfo');
+      footer.setAttribute('aria-label', 'Site footer');
     }
+
+    // Add heading hierarchy validation
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let previousLevel = 0;
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (index === 0 && level !== 1) {
+        console.warn('First heading should be h1');
+      }
+      if (level > previousLevel + 1) {
+        console.warn(`Heading level skipped: ${heading.tagName} after h${previousLevel}`);
+      }
+      previousLevel = level;
+    });
+
+    // Add ARIA landmarks for better screen reader navigation
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+      if (!section.getAttribute('aria-label') && !section.getAttribute('aria-labelledby')) {
+        const heading = section.querySelector('h1, h2, h3, h4, h5, h6');
+        if (heading) {
+          section.setAttribute('aria-labelledby', heading.id || `section-heading-${index}`);
+          if (!heading.id) {
+            heading.id = `section-heading-${index}`;
+          }
+        }
+      }
+    });
 
     // Enhance focus management
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -62,7 +127,7 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.classList.remove('keyboard-navigation');
     };
 
-    // Add focus visible styles and accessibility enhancements
+    // Add comprehensive accessibility styles
     const style = document.createElement('style');
     style.textContent = `
       .keyboard-navigation *:focus {
@@ -74,34 +139,84 @@ const AccessibilityEnhancer: React.FC = () => {
         outline: 2px solid #ffffff !important;
         outline-offset: 2px !important;
       }
-      
+
+      /* High contrast mode */
       .high-contrast {
-        filter: contrast(150%) brightness(110%);
+        filter: contrast(150%) brightness(1.2);
       }
-      
+
+      /* Reduced motion */
       .reduced-motion * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
-      
-      .font-size-125 { font-size: 125% !important; }
-      .font-size-150 { font-size: 150% !important; }
-      .font-size-175 { font-size: 175% !important; }
-      .font-size-200 { font-size: 200% !important; }
+
+      /* Font size adjustments */
+      .font-small {
+        font-size: 0.875rem;
+      }
+
+      .font-large {
+        font-size: 1.125rem;
+      }
+
+      .font-extra-large {
+        font-size: 1.25rem;
+      }
+
+      /* Focus indicators */
+      .focus-visible:focus-visible {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+
+      /* Screen reader only content */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .sr-only:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: inherit;
+        margin: inherit;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+      }
     `;
     document.head.appendChild(style);
 
+    // Apply accessibility settings
+    const body = document.body;
+    if (settings.highContrast) {
+      body.classList.add('high-contrast');
+    }
+    if (settings.reducedMotion) {
+      body.classList.add('reduced-motion');
+    }
+    body.classList.add(`font-${settings.fontSize}`);
+
+    // Add live region for announcements
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.id = 'live-region';
+    document.body.appendChild(liveRegion);
+
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-
-    // Apply accessibility settings
-    if (isHighContrast) {
-      document.body.classList.add('high-contrast');
-    }
-    if (isReducedMotion) {
-      document.body.classList.add('reduced-motion');
-    }
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
@@ -109,57 +224,42 @@ const AccessibilityEnhancer: React.FC = () => {
       if (style.parentNode) {
         style.parentNode.removeChild(style);
       }
+      const liveRegion = document.getElementById('live-region');
+      if (liveRegion) {
+        liveRegion.remove();
+      }
     };
-  }, [isHighContrast, isReducedMotion]);
+  }, [settings]);
 
-  // Apply font size changes
-  useEffect(() => {
-    const body = document.body;
-    body.classList.remove('font-size-125', 'font-size-150', 'font-size-175', 'font-size-200');
-    
-    if (fontSize > 100) {
-      if (fontSize <= 125) body.classList.add('font-size-125');
-      else if (fontSize <= 150) body.classList.add('font-size-150');
-      else if (fontSize <= 175) body.classList.add('font-size-175');
-      else body.classList.add('font-size-200');
+  // Accessibility announcement function
+  const announceToScreenReader = (message: string) => {
+    const liveRegion = document.getElementById('live-region');
+    if (liveRegion) {
+      liveRegion.textContent = message;
     }
-  }, [fontSize]);
+  };
 
-  return (
-    <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
-      <h3 className="text-white text-sm font-semibold mb-2">Accessibility</h3>
-      <div className="space-y-2">
-        <button
-          onClick={() => setIsHighContrast(!isHighContrast)}
-          className={`text-xs px-2 py-1 rounded ${isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-600 text-gray-300'}`}
-          aria-label="Toggle high contrast mode"
-        >
-          High Contrast
-        </button>
-        <button
-          onClick={() => setIsReducedMotion(!isReducedMotion)}
-          className={`text-xs px-2 py-1 rounded ${isReducedMotion ? 'bg-blue-600 text-white' : 'bg-gray-600 text-gray-300'}`}
-          aria-label="Toggle reduced motion"
-        >
-          Reduce Motion
-        </button>
-        <div className="flex items-center space-x-2">
-          <label htmlFor="font-size" className="text-xs text-white">Font Size:</label>
-          <input
-            id="font-size"
-            type="range"
-            min="100"
-            max="200"
-            value={fontSize}
-            onChange={(e) => setFontSize(Number(e.target.value))}
-            className="w-16"
-            aria-label="Adjust font size"
-          />
-          <span className="text-xs text-white">{fontSize}%</span>
-        </div>
-      </div>
-    </div>
-  );
+  // Expose accessibility functions globally for other components
+  useEffect(() => {
+    (window as any).accessibilityUtils = {
+      announce: announceToScreenReader,
+      setHighContrast: (enabled: boolean) => {
+        setSettings(prev => ({ ...prev, highContrast: enabled }));
+        document.body.classList.toggle('high-contrast', enabled);
+      },
+      setReducedMotion: (enabled: boolean) => {
+        setSettings(prev => ({ ...prev, reducedMotion: enabled }));
+        document.body.classList.toggle('reduced-motion', enabled);
+      },
+      setFontSize: (size: 'small' | 'medium' | 'large') => {
+        setSettings(prev => ({ ...prev, fontSize: size }));
+        document.body.className = document.body.className.replace(/font-\w+/, '');
+        document.body.classList.add(`font-${size}`);
+      }
+    };
+  }, []);
+
+  return null;
 };
 
 export default AccessibilityEnhancer;

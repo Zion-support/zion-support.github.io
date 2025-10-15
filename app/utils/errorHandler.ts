@@ -7,9 +7,9 @@ export interface AppError {
 }
 
 export class CustomError extends Error {
-  public code?: string;
-  public statusCode?: number;
-  public details?: Record<string, unknown>;
+  public code?: string | undefined;
+  public statusCode?: number | undefined;
+  public details?: Record<string, unknown> | undefined;
 
   constructor(message: string, code: string = 'UNKNOWN_ERROR', statusCode: number = 500, details: Record<string, unknown> = {}) {
     super(message);
