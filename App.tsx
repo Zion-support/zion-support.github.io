@@ -75,9 +75,6 @@ const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
 
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
-const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
-const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
-const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
@@ -283,9 +280,6 @@ function App() {
                     
                     {/* Additional missing pages */}
                     <Route path="/accessibility-page" element={<AccessibilityPagePage />} />
-                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
-                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
-                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
                     <Route path="/ai-fraud-detection-pro" element={<AIFraudDetectionProPage />} />
                     <Route path="/ai-image-recognition-pro" element={<AIImageRecognitionProPage />} />
                     <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
