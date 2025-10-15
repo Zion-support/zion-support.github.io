@@ -2,6 +2,7 @@ import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
+import { useScrollTracking } from './app/hooks/useScrollTracking'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -61,6 +62,7 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
+import Analytics from './app/components/Analytics';
 
 // Loading component
 const LoadingFallback = () => (
@@ -76,9 +78,23 @@ export default function App() {
     enableIntersectionObserver: true,
   });
 
+  // Track scroll behavior
+  useScrollTracking();
+
   useEffect(() => {
     // Preload critical resources
     preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
+    
+    // Register service worker
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
   }, [preloadResource])
 
   return (
@@ -90,6 +106,7 @@ export default function App() {
             <Sidebar />
             
             <main className="flex-1">
+              <Analytics />
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
