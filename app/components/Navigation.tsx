@@ -32,10 +32,9 @@ import {
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
-  sidebarOpen?: boolean;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = false }) => {
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -263,13 +262,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                     (item.name === 'IT Solutions' && isResourcesOpen) ||
                     (item.name === 'Resources' && isResourcesOpen) ||
-                    (item.name === 'Company' && isCompanyOpen) : undefined}
-                  aria-haspopup={item.submenu ? 'true' : undefined}
-                >
-                  <item.icon className="w-4 h-4" aria-hidden="true" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" aria-hidden="true" />}
-                </Link>
+                    (item.name === 'Company' && isCompanyOpen)
+                      ? 'block' : 'hidden'
+                  }`}>
                 {/* Dropdown Menu */}
                 {item.submenu && (
                   <div 
@@ -305,13 +300,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
           <div className="lg:hidden flex items-center">
             <button
               onClick={onSidebarToggle}
-<<<<<<< HEAD
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-label="Toggle navigation menu"
-              aria-expanded={sidebarOpen}
-              aria-controls="mobile-menu"
-            >
-              <span className="sr-only">Open main menu</span>
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 transition-all duration-300 neon-glow"
             >
               <span className="sr-only">Open main menu</span>
