@@ -11,7 +11,13 @@ const Footer: React.FC = memo(() => {
             <p className="text-gray-300 mb-6 leading-relaxed">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            <div className="space-y-2 text-sm text-gray-300">
+              <p><strong>Phone:</strong> <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a></p>
+              <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a></p>
+              <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p><strong>Website:</strong> <a href="https://ziontechgroup.com" className="hover:text-white">https://ziontechgroup.com</a></p>
+            </div>
+            <div className="flex space-x-4 mt-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
                 <span className="sr-only">Website</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
