@@ -9,6 +9,7 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+import PerformanceMetrics from './app/components/PerformanceMetrics';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
@@ -131,6 +132,7 @@ function App() {
             <main className="flex-1">
               <ErrorBoundary>
                 <PerformanceMonitor />
+                <PerformanceMetrics />
                 <AccessibilityEnhancer />
                 <SEOOptimizer />
                 

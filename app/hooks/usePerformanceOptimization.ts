@@ -92,6 +92,13 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       if (process.env.NODE_ENV === 'development') {
         console.warn(`Failed to preload resource: ${href}`);
       }
+      // In production, send to error tracking service
+      if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'preload_error', {
+          resource_url: href,
+          resource_type: as,
+        });
+      }
     };
     
     document.head.appendChild(link);
@@ -108,10 +115,22 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         if (process.env.NODE_ENV === 'development') {
           console.log(`Preloaded image: ${url}`);
         }
+        // In production, track successful preloads
+        if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'image_preloaded', {
+            image_url: url,
+          });
+        }
       };
       img.onerror = () => {
         if (process.env.NODE_ENV === 'development') {
           console.warn(`Failed to preload image: ${url}`);
+        }
+        // In production, track failed preloads
+        if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'image_preload_error', {
+            image_url: url,
+          });
         }
       };
     });
