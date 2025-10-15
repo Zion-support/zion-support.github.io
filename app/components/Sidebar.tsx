@@ -66,6 +66,28 @@ const Sidebar: React.FC = () => {
           </div>
           
           <div className="mb-4">
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Advanced AI Services</h3>
+            <Link to="/zion-ai-fraud-detection" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Fraud Detection
+            </Link>
+            <Link to="/zion-ai-image-recognition" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Image Recognition
+            </Link>
+            <Link to="/zion-ai-lead-scoring" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Lead Scoring
+            </Link>
+            <Link to="/zion-ai-predictive-maintenance" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Predictive Maintenance
+            </Link>
+            <Link to="/zion-ai-price-optimizer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Price Optimizer
+            </Link>
+            <Link to="/zion-ai-voice-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Voice Assistant
+            </Link>
+          </div>
+          
+          <div className="mb-4">
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Company</h3>
             <Link to="/about" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               About Us

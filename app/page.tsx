@@ -12,16 +12,16 @@ const HomePage: React.FC = memo(() => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -112,6 +112,44 @@ const HomePage: React.FC = memo(() => {
                 <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
             </div>
+            
+            {/* Advanced AI Services Preview */}
+            <div className="mt-16">
+              <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Advanced AI Services</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Fraud Detection</h3>
+                  <p className="text-gray-600 text-sm mb-3">Real-time fraud prevention with ML</p>
+                  <Link to="/zion-ai-fraud-detection" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Image Recognition</h3>
+                  <p className="text-gray-600 text-sm mb-3">Advanced computer vision solutions</p>
+                  <Link to="/zion-ai-image-recognition" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Lead Scoring</h3>
+                  <p className="text-gray-600 text-sm mb-3">Intelligent lead qualification</p>
+                  <Link to="/zion-ai-lead-scoring" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Predictive Maintenance</h3>
+                  <p className="text-gray-600 text-sm mb-3">Prevent equipment failures</p>
+                  <Link to="/zion-ai-predictive-maintenance" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Price Optimizer</h3>
+                  <p className="text-gray-600 text-sm mb-3">Dynamic pricing intelligence</p>
+                  <Link to="/zion-ai-price-optimizer" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Voice Assistant</h3>
+                  <p className="text-gray-600 text-sm mb-3">Intelligent voice interactions</p>
+                  <Link to="/zion-ai-voice-assistant" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
+              </div>
+            </div>
+            
             <div className="text-center mt-8">
               <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
             </div>
