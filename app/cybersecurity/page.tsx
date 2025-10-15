@@ -216,7 +216,6 @@ export default function Cybersecurity() {
                 </div>
               </div>
               
-<<<<<<< HEAD
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-8">
                   <div className="flex items-start space-x-4">

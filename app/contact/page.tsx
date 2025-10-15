@@ -43,10 +43,6 @@ export default function Contact() {
 
   const contactInfo = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
       details: ["+1 302 464 0950", "Mon-Fri 9AM-6PM EST"],

@@ -89,13 +89,8 @@ export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> 
   <StructuredData
     type="Service"
     data={{
-<<<<<<< HEAD
-      name: service['name'],
-      description: service['description'],
-=======
       name: service['name'] as string,
       description: service['description'] as string,
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
       provider: {
         '@type': 'Organization',
         name: 'Zion Tech Group',
