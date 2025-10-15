@@ -3,7 +3,7 @@
 const fs = require('fs');
 const glob = require('glob');
 
-// Specific unused imports for 5G pages
+// Common unused imports to remove
 const UNUSED_IMPORTS = [
   'Zap', 'Brain', 'MapPin', 'Download', 'Pause', 'RefreshCw', 'Eye', 'Filter',
   'Calendar', 'Target', 'Lock', 'Users', 'Award', 'TrendingUp', 'Database',
@@ -15,6 +15,7 @@ const UNUSED_IMPORTS = [
   'Tag', 'Headphones', 'Bell', 'Gift', 'memo', 'lazy', 'Suspense'
 ];
 
+// Function to clean a single file
 function cleanFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -27,13 +28,11 @@ function cleanFile(filePath) {
       modified = true;
     }
     
-    // Process each line
+    // Remove unused imports from import statements
     const lines = content.split('\n');
     const cleanedLines = [];
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
+    for (const line of lines) {
       if (line.trim().startsWith('import ')) {
         let cleanedLine = line;
         let hasChanges = false;
@@ -52,10 +51,11 @@ function cleanFile(filePath) {
         cleanedLine = cleanedLine.replace(/,\s*}/g, '}'); // Remove trailing comma before }
         cleanedLine = cleanedLine.replace(/{\s*,/g, '{'); // Remove leading comma after {
         cleanedLine = cleanedLine.replace(/{\s*}/g, ''); // Remove empty destructuring
-        cleanedLine = cleanedLine.replace(/,\s*$/, ''); // Remove trailing comma
         
         // Only keep the line if it's not empty or just whitespace
         if (cleanedLine.trim() && !cleanedLine.match(/^import\s*{\s*}\s*from/)) {
+          cleanedLines.push(cleanedLine);
+        } else if (cleanedLine.trim()) {
           cleanedLines.push(cleanedLine);
         }
         
@@ -88,6 +88,7 @@ function cleanFile(filePath) {
     
     // Fix export issues - ensure components are properly exported
     if (finalContent.includes('const ') && finalContent.includes('Page') && !finalContent.includes('export default')) {
+      // Find the component name
       const componentMatch = finalContent.match(/const\s+(\w+Page)\s*=/);
       if (componentMatch) {
         const componentName = componentMatch[1];
@@ -108,19 +109,27 @@ function cleanFile(filePath) {
   }
 }
 
+// Main function
 function main() {
-  console.log('🚀 Starting 5G pages cleanup...\n');
+  console.log('🚀 Starting comprehensive code cleanup...\n');
   
-  const patterns = ['app/5g-*/page.tsx'];
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
   let allFiles = [];
   for (const pattern of patterns) {
     const files = glob.sync(pattern);
     allFiles = allFiles.concat(files);
   }
   
-  console.log(`Found ${allFiles.length} 5G pages to process...\n`);
+  console.log(`Found ${allFiles.length} files to process...\n`);
   
   let processedCount = 0;
+  let errorCount = 0;
   
   for (const file of allFiles) {
     if (cleanFile(file)) {
@@ -132,10 +141,13 @@ function main() {
   console.log(`\n📊 Summary:`);
   console.log(`- Files cleaned: ${processedCount}`);
   console.log(`- Total files: ${allFiles.length}`);
+  console.log(`- Errors: ${errorCount}`);
   
-  console.log('\n🎉 5G pages cleanup completed!');
+  console.log('\n🎉 Cleanup completed!');
 }
 
 if (require.main === module) {
   main();
 }
+
+module.exports = { cleanFile };

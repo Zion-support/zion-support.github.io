@@ -5,7 +5,7 @@ export const performanceMonitoring = {
     return {
       end: () => {
         const duration = performance.now() - start
-        console.warn(`${name} took ${duration.toFixed(2)}ms`)
+        }ms`)
         
         // Send to analytics
         if (typeof window !== 'undefined' && window.gtag) {

@@ -3,7 +3,7 @@
 const fs = require('fs');
 const glob = require('glob');
 
-// Specific unused imports for 5G pages
+// Extended list of unused imports
 const UNUSED_IMPORTS = [
   'Zap', 'Brain', 'MapPin', 'Download', 'Pause', 'RefreshCw', 'Eye', 'Filter',
   'Calendar', 'Target', 'Lock', 'Users', 'Award', 'TrendingUp', 'Database',
@@ -12,7 +12,16 @@ const UNUSED_IMPORTS = [
   'MessageCircle', 'Globe', 'Settings', 'Clock', 'Languages', 'Send',
   'ThumbsUp', 'ThumbsDown', 'AlertCircle', 'CheckSquare', 'XCircle',
   'ShoppingCart', 'CreditCard', 'Truck', 'Heart', 'StarIcon', 'ShoppingBag',
-  'Tag', 'Headphones', 'Bell', 'Gift', 'memo', 'lazy', 'Suspense'
+  'Tag', 'Headphones', 'Bell', 'Gift', 'memo', 'lazy', 'Suspense',
+  'FiveGConsulting', 'FiveGDataAnalytics', 'FiveGDeployment', 'FiveGEdgeComputingPage',
+  'FiveGImplementationPage', 'FiveGInfrastructure', 'FiveGIntegration',
+  'FiveGIotSolutionsPage', 'FiveGMaintenance', 'FiveGMigration',
+  'FiveGMobileApplicationsPage', 'FiveGModernization', 'FiveGMonitoring',
+  'FiveGNetworkInfrastructurePage', 'FiveGNetworkOptimizationPage',
+  'FiveGOptimization', 'FiveGPerformance', 'FiveGPrivateNetworksPage',
+  'FiveGReliability', 'FiveGScalability', 'FiveGSecurity',
+  'FiveGSmartCitySolutionsPage', 'FiveGSolutions', 'FiveGSupport',
+  'FiveGTesting', 'FiveGTraining', 'FiveGTransformation', 'FiveGUpgrade'
 ];
 
 function cleanFile(filePath) {
@@ -109,16 +118,16 @@ function cleanFile(filePath) {
 }
 
 function main() {
-  console.log('🚀 Starting 5G pages cleanup...\n');
+  console.log('🚀 Starting comprehensive cleanup...\n');
   
-  const patterns = ['app/5g-*/page.tsx'];
+  const patterns = ['app/**/*.tsx'];
   let allFiles = [];
   for (const pattern of patterns) {
     const files = glob.sync(pattern);
     allFiles = allFiles.concat(files);
   }
   
-  console.log(`Found ${allFiles.length} 5G pages to process...\n`);
+  console.log(`Found ${allFiles.length} TSX files to process...\n`);
   
   let processedCount = 0;
   
@@ -133,7 +142,7 @@ function main() {
   console.log(`- Files cleaned: ${processedCount}`);
   console.log(`- Total files: ${allFiles.length}`);
   
-  console.log('\n🎉 5G pages cleanup completed!');
+  console.log('\n🎉 Cleanup completed!');
 }
 
 if (require.main === module) {

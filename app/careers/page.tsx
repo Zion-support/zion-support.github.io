@@ -1,4 +1,4 @@
-import { Brain, CheckCircle, Clock, Heart, MapPin, Rocket, Star, Users, Zap } from 'lucide-react';
+import { CheckCircle, Rocket, Star} from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
 

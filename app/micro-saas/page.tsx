@@ -1,4 +1,4 @@
-import { CheckCircle, Filter, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import { CheckCircle, Star} from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";

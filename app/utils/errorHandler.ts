@@ -37,11 +37,9 @@ export const errorHandler = {
   },
   
   log: (error: Error, context?: Record<string, unknown>) => {
-    console.error('Error logged:', error, context);
-  },
+    },
   
   report: (error: Error, context?: Record<string, unknown>) => {
     // Error reporting logic
-    console.error('Error reported:', error, context);
-  }
+    }
 };

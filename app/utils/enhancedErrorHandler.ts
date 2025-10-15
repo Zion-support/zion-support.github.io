@@ -1,7 +1,5 @@
 export const enhancedErrorHandler = {
   handleError: (error: Error, context?: string) => {
-    console.error('Error occurred: ', error);
-    
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
@@ -37,7 +35,6 @@ export const enhancedErrorHandler = {
   },
   
   handleNetworkError: (error: unknown) => {
-    console.error('Network error: ', error);
     return {
       message: 'Network error. Please check your connection.',
       code: 'NETWORK_ERROR'

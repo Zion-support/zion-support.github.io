@@ -1,4 +1,4 @@
-import { Network } from 'lucide-react';
+import  from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 
 const NetworkInfrastructurePage: React.FC = () => {

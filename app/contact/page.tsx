@@ -1,5 +1,5 @@
-import { Calendar, CheckCircle, Clock, Mail, MapPin, MessageSquare, Phone, Send } from 'lucide-react';
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import { CheckCircle, Mail, MessageSquare, Phone} from 'lucide-react';
+import React, { useState, useEffect} from 'react';
 import { Helmet } from 'react-helmet-async';
 
 // Contact information

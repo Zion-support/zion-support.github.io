@@ -55,18 +55,14 @@ class Logger {
     // Console logging
     switch (level) {
       case 'error':
-        console.error(formattedMessage);
         break;
       case 'warn':
-        console.warn(formattedMessage);
         break;
       case 'info':
-        console.info(formattedMessage);
         break;
       case 'debug':
         if (this.isDevelopment) {
-          console.debug(formattedMessage);
-        }
+          }
         break;
     }
 

@@ -1,5 +1,5 @@
-import { Network, Router, Shield } from 'lucide-react';
-import { Suspense, lazy } from 'react';
+import { Shield } from 'lucide-react';
+import  from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -186,21 +186,7 @@ const ZionAITestingAutomationPage = lazy(
 
 // 5G Solutions
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
-const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
-const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"));
 const FiveGIoTSolutionsPage = lazy(() => import("./5g-iot-solutions/page"));
-const FiveGMobileApplicationsPage = lazy(
-  () => import("./5g-mobile-applications/page"),
-);
-const FiveGNetworkInfrastructurePage = lazy(
-  () => import("./5g-network-infrastructure/page"),
-);
-const FiveGPrivateNetworksPage = lazy(
-  () => import("./5g-private-networks/page"),
-);
-const FiveGSmartCitySolutionsPage = lazy(
-  () => import("./5g-smart-city-solutions/page"),
-);
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
 const App: React.FC = () => {
