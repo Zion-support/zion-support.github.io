@@ -32,6 +32,7 @@ import MicroSAASSolutionsPage from './app/micro-saas-solutions/page';
 import APIDocsPage from './app/api-docs/page';
 import AccessibilityPage from './app/accessibility/page';
 import AIContentGeneratorPage from './app/ai-content-generator/page';
+import AIVoiceAssistantPage from './app/ai-voice-assistant/page';
 
 // Import Zion AI Tools
 import ZionAIContentModeratorPage from './app/zion-ai-content-moderator/page';
@@ -86,11 +87,11 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main className="flex-1 relative z-10">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
@@ -136,6 +137,7 @@ export default function App() {
                   
                   {/* AI Tools Pages */}
                   <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                  <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
                   
                   {/* Zion AI Tools */}
                   <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
