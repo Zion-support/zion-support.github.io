@@ -1,4 +1,7 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
       icon: <>
       benefits: ["Auto-start/stop", "Idle detection", "Manual entry", "Time rounding"]""
 
@@ -102,50 +105,31 @@
             <span  className ="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>""
               Employee Time Tracker
             </span>
+=======
+const Page = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced page solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
           </h1>
-          <p  className ="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>""
-            Track time effortlessly and boost team productivity with our comprehensive time tracking solution. 
-            Automatic tracking, project management, and detailed analytics all in one place.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive page solutions designed to transform your business
           </p>
-          <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>""
-            <FuturisticButton>
-              href="/contact"""
-              variant="primary"""
-              size="lg"""
-              icon={<ArrowRight: className ="w-5 h-5" />};""
-              Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton>
-              href="/demo"""
-              variant="outline"""
-              size="lg"""
-              icon={<Globe: className ="w-5 h-5" />};""
-              Watch Demo
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Features Section */}
-      <section: className ="py-20 px-4 sm:px-6 lg:px-8"></section>""
-        <ResponsiveContainer></ResponsiveContainer>
-          <div  className ="text-center mb-16"></div>""
-            <h2  className ="text-3xl md=text-4xl font-bold text-white mb-6"></h2>""
-              Powerful Time Tracking Features
-            </h2>
-            <p  className ="text-xl text-gray-300 max-w-4xl mx-auto"></p>""
-              Everything you need to track time effectively and manage team productivity.
-            </p>
-          </div>
-          <div  className ="grid grid-cols-1 md=grid-cols-2 lg:grid-cols-3 gap-8"></div>""
-            {features.map((feature) => ()}
-              <FuturisticCard= key ={index} className="h-full"></FuturisticCard>""
-                <div  className ="text-center mb-6">""
-        <div  className ="text-center mb-6">""
-          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p  className ="text-gray-300">This page is under development...</p>""
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - Page Solutions</p>
         </div>
       </div>
+<<<<<<< HEAD
                     {feature.icon}
                   </div>
                   <h3  className ="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
@@ -277,3 +261,10 @@
 
 
 
+=======
+    </div>
+  );
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

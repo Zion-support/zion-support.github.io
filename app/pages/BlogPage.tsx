@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import SEOHead from '../components/SEOHead'
 ;
@@ -284,13 +285,34 @@ const BlogPage: React.FC = () => {}
           <h2  className ="text-4xl font-bold text-white mb-4">Stay Updated</h2>""
           <p  className ="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"></p>""
             Get the latest insights and updates delivered directly to your inbox.
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const BlogPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>BlogPage - Zion Tech Group</title>
+        <meta name="description" content="Advanced BlogPage solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            BlogPage <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive BlogPage solutions designed to transform your business
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
           </p>
-          <div  className ="max-w-md mx-auto">""
-        <div  className ="max-w-md mx-auto">""
-          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p  className ="text-gray-300">This page is under development...</p>""
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - BlogPage Solutions</p>
         </div>
       </div>
+<<<<<<< HEAD
               <inputtype="email">""
                 placeholder="Enter your email"""
                 className="flex-1 px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-white text-gray-900"""
@@ -307,3 +329,10 @@ const BlogPage: React.FC = () => {}
 
 
 
+=======
+    </div>
+  );
+};
+
+export default BlogPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

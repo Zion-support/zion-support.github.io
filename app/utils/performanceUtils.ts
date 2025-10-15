@@ -1,4 +1,5 @@
 interface PerformanceUtilsOptions {
+<<<<<<< HEAD
   enableMetrics: boolean;
   enableMonitoring: boolean;
   sampleRate: number;
@@ -118,3 +119,18 @@ class PerformanceUtils {
 
 export const performanceUtils = new PerformanceUtils();
 export default PerformanceUtils;
+=======
+});
+
+// Add your hooks logic here;
+useEffect(() => {
+// Add your effect logic here;
+}, [
+]);
+
+return {
+// Return your hook values here;
+};
+};
+export default PerformanceUtils'";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

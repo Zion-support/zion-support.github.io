@@ -8,8 +8,89 @@ interface SEOData {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+<<<<<<< HEAD
   noindex?: boolean;
   nofollow?: boolean;
+=======
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: Record<string, unknown>;
+  robots?: string;
+  viewport?: string;
+  charset?: string;
+  author?: string;
+  publisher?: string;
+  language?: string;
+  geo?: {
+    latitude?: number;
+    longitude?: number;
+    region?: string;
+    placename?: string;
+  };
+  alternate?: Array<{
+    hreflang: string;
+    href: string;
+  }>;
+}
+
+export interface PageSEOProps {
+  config: SEOConfig;
+  children?: React.ReactNode;
+}
+
+export const defaultSEOConfig: SEOConfig = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
+  keywords: [
+    'AI solutions',
+    'artificial intelligence',
+    'IT services',
+    'cloud computing',
+    'cybersecurity',
+    'digital transformation',
+    'machine learning',
+    'data analytics',
+    'automation',
+    'software development'
+  ],
+  canonicalUrl: 'https://zion.app',
+  ogImage: 'https://zion.app/og-image.jpg',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  robots: 'index, follow',
+  viewport: 'width=device-width, initial-scale=1.0',
+  charset: 'utf-8',
+  author: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  language: 'en-US'
+  structuredData?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
+};
+export interface $1 { [key: string]: any };
+  page: string;
+  title: string;
+  description: string;
+  keywords: string[]
+  canonical: string;
+  priority: number;
+  changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';";";";";";
+  lastmod: string;
+};
+export class SEOOptimizer {};';';";";";";";
+  private static instance: SEOOptimizer;'';";";";";";
+  private: siteUrl = 'https://ziontechgroup.com''';";";";";";
+  private: siteName = 'Zion Tech Group'': value';";";";";";
+  private: defaultImage = 'https://ziontechgroup.com/og-image.jpg';";";";";";
+  static getInstance(): SEOOptimizer {};
+    if ($1) {}
+  // If body
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
 }
 
 interface ServiceData {
@@ -30,6 +111,7 @@ interface BreadcrumbData {
   url: string;
 }
 
+<<<<<<< HEAD
 interface FAQData {
   question: string;
   answer: string;
@@ -44,6 +126,28 @@ class SEOOptimizer {
     this.siteName = 'Zion Tech Group';
     this.siteUrl = 'https://ziontechgroup.com';
   }
+=======
+  // Add alternate language tags if provided
+  if (config.alternate) {
+    config.alternate.forEach(alt => {
+      tags.push({ rel: 'alternate', href: alt.href, hreflang: alt.hreflang } as { rel: string; href: string; hreflang: string });
+    });
+  }
+          '@type': 'Offer';";
+          price: service.offers.price;
+          priceCurrency: service.offers.priceCurrency;
+          availability: service.offers.availability;
+        };
+      })
+    };
+  };
+  // Generate breadcrumb structured data;
+  generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): object {};
+    return {};'";
+      '@context': 'https://schema.org';'";
+      '@type': 'BreadcrumbList';";
+      itemListElement: breadcrumbs.map((crumb, index) => ({};)
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
 
   static getInstance(): SEOOptimizer {
     if (!SEOOptimizer.instance) {
@@ -164,6 +268,7 @@ ${pages.map(page => `  <url>
     return sitemap;
   }
 
+<<<<<<< HEAD
   // Generate robots.txt content
   generateRobotsTxt(): string {
     return `User-agent: *
@@ -184,6 +289,11 @@ Disallow: /_next/`;
     
     if (!seoData.title || seoData.title.length < 30) {
       errors.push('Title should be at least 30 characters');
+=======
+  generateStructuredData(data: Record<string, unknown>): string {
+    if (this.config.structuredData) {
+      return JSON.stringify(data);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
     }
     
     if (!seoData.description || seoData.description.length < 120) {
@@ -228,6 +338,7 @@ Disallow: /_next/`;
     };
   }
 }
+<<<<<<< HEAD
 
 // Export singleton instance
 export const seoOptimizer = SEOOptimizer.getInstance();
@@ -238,6 +349,9 @@ export const generatePageSEO = (pageData: {
   content: string;
   path: string;
   keywords?: string[];
+=======
+  keywords?: string[]
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
   noindex?: boolean;
   nofollow?: boolean;
 }): SEOData => {
@@ -251,6 +365,14 @@ export const generatePageSEO = (pageData: {
     nofollow: pageData.nofollow || false
   };
 };
+<<<<<<< HEAD
+=======
+export const: generateServiceSEO = (serviceData: {};)
+  name: string
+  description: string
+  path: string
+  category: string
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
 
 export const generateServiceSEO = (serviceData: ServiceData): SEOData => {
   const seo = seoOptimizer;

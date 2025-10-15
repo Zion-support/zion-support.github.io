@@ -1,5 +1,6 @@
 import { ComponentType, lazy } from 'react';
 
+<<<<<<< HEAD
 // Lazy loading helper function
 export const createLazyComponent = <T extends Record<string, unknown>>(
   importFunc: () => Promise<{ default: ComponentType<T> }>
@@ -28,3 +29,8 @@ export const useIntersectionObserver = (
     disconnect: () => observer.disconnect()
   };
 };
+=======
+// Lazy loading helper function;
+importFunc: () => Promise<{ default: ComponentType<T> }>;
+}'"'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
         </div>"
         <h2 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h2>
@@ -154,3 +155,35 @@ export default LoadingPage;"'"'`;"
 '";'";";";";
 "
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const LoadingStates = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>LoadingStates - Zion Tech Group</title>
+        <meta name="description" content="Advanced LoadingStates solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            LoadingStates <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive LoadingStates solutions designed to transform your business
+          </p>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - LoadingStates Solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LoadingStates;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

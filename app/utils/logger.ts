@@ -1,4 +1,5 @@
 interface LoggerOptions {
+<<<<<<< HEAD
   level: 'debug' | 'info' | 'warn' | 'error';
   context?: string;
   timestamp?: boolean;
@@ -73,3 +74,18 @@ export const debugLogger = new Logger({ level: 'debug' });
 export const errorLogger = new Logger({ level: 'error' });
 
 export default Logger;
+=======
+});
+
+// Add your hooks logic here;
+useEffect(() => {
+// Add your effect logic here;
+}, [
+]);
+
+return {
+// Return your hook values here;
+};
+};
+export default Logger'";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

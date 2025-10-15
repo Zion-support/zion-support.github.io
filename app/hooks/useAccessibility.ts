@@ -1,47 +1,88 @@
 
 interface AccessibilityOptions {
+<<<<<<< HEAD
 
+=======
+enableScreenReaderSupport = true,;
+enableHighContrast = true,;
+enableFocusManagement = true,;
+enableReducedMotion = true;
+isHighContrast: false;
+isReducedMotion: false;
+isKeyboardUser: false;
+currentFocus: null;
+focusHistory: [];
+});
+stateRef.current.isHighContrast = mediaQuery.matches;
 
-  const  focusableElements = useRef<HTMLElement[]>([])
+// Listen for changes;
+const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isHighContrast = e.matches',"'
+document.documentElement.classList.toggle('high-contrast', e.matches)";"
+}'"'"
+mediaQuery.addEventListener('change', handleChange)'"'"
+document.documentElement.classList.toggle('high-contrast', mediaQuery.matches)"'"'"
+return () => mediaQuery.removeEventListener('change', handleChange)";"
+}, []);
 
-  // Check for high contrast mode;
-const  checkHighContrast = useCallback(() => {';''
-    if (typeof: window === 'undefined') return;";""
-';''
-    const  mediaQuery = window.matchMedia('(prefers-contrast: high)');";""
-    stateRef.current.isHighContrast = mediaQuery.matches
+// Check for reduced motion preference;
+const checkReducedMotion  = useCallback(() => {'"'"
+if (typeof: window === 'undefined') return"'"'"
+const mediaQuery  = window.matchMedia('(prefers-reduced-motion: reduce)')";"
+stateRef.current.isReducedMotion = mediaQuery.matches;
 
-    // Listen for changes;
+// Listen for changes;
+const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isReducedMotion = e.matches',"'"
+document.documentElement.classList.toggle('reduced-motion', e.matches)";"
+}'"'
+mediaQuery.addEventListener('change', handleChange)'"'"
+document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches)"'"'"
+return () => mediaQuery.removeEventListener('change', handleChange)";"
+}, []);
+
+// Detect keyboard usage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
+
+const  focusableElements = useRef<HTMLElement[]>([])
+
+// Check for high contrast mode;
+const  checkHighContrast = useCallback(() => {';'
+if (typeof: window === 'undefined') return;";"
+';'
+const  mediaQuery = window.matchMedia('(prefers-contrast: high)');";"
+stateRef.current.isHighContrast = mediaQuery.matches
+
+// Listen for changes;
 const  handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isHighContrast = e.matches;';',""
-      document.documentElement.classList.toggle('high-contrast', e.matches);";""
-    }
-';''
-    mediaQuery.addEventListener('change', handleChange);''
-    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);";""
-';''
-    return () => mediaQuery.removeEventListener('change', handleChange);";""
-  }, [])
+stateRef.current.isHighContrast = e.matches;';',"
+document.documentElement.classList.toggle('high-contrast', e.matches);";"
+}
+';'
+mediaQuery.addEventListener('change', handleChange);'
+document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);";"
+';'
+return () => mediaQuery.removeEventListener('change', handleChange);";"
+}, [])
 
-  // Check for reduced motion preference;
-const  checkReducedMotion = useCallback(() => {';''
-    if (typeof: window === 'undefined') return;";""
-';''
-    const  mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');";""
-    stateRef.current.isReducedMotion = mediaQuery.matches
+// Check for reduced motion preference;
+const  checkReducedMotion = useCallback(() => {';'
+if (typeof: window === 'undefined') return;";"
+';'
+const  mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');";"
+stateRef.current.isReducedMotion = mediaQuery.matches
 
-    // Listen for changes;
+// Listen for changes;
 const  handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isReducedMotion = e.matches;';',""
-      document.documentElement.classList.toggle('reduced-motion', e.matches);";""
-    }
-';''
-    mediaQuery.addEventListener('change', handleChange);''
-    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);";""
-';''
-    return () => mediaQuery.removeEventListener('change', handleChange);";""
-  }, [])
+stateRef.current.isReducedMotion = e.matches;';',"
+document.documentElement.classList.toggle('reduced-motion', e.matches);";"
+}
+';'
+mediaQuery.addEventListener('change', handleChange);'
+document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);";"
+';'
+return () => mediaQuery.removeEventListener('change', handleChange);";"
+}, [])
 
+<<<<<<< HEAD
   // Detect keyboard usage
   const  detectKeyboardUsage = useCallback(() => {
     let  isKeyboardUser = false
@@ -67,13 +108,45 @@ stateRef.current.isKeyboardUser = false;';''
     }
   }, [])
   // Update focusable elements
+=======
+// Detect keyboard usage;
+const  detectKeyboardUsage = useCallback(() => {
+let  isKeyboardUser = false;
+const  handleKeyDown = (e: KeyboardEvent) => {}
+const detectKeyboardUsage  = useCallback(() => {let: isKeyboardUser = false;
 
-    focusableElements.current = Array.from()
-      document.querySelectorAll(focusableSelectors)
-    ) as HTMLElement[];
-  }, [
-  ]);
+const handleKeyDown  = (e: KeyboardEvent) => {};
+if ($1) {}
+// If body
+}
 
+
+const  handleMouseDown = () => {
+isKeyboardUser = false;
+stateRef.current.isKeyboardUser = false;';'
+document.body.classList.remove('keyboard-user');";"
+}
+';'
+document.addEventListener('keydown', handleKeyDown);'
+document.addEventListener('mousedown', handleMouseDown);";"
+
+return () => {';'
+document.removeEventListener('keydown', handleKeyDown);'
+document.removeEventListener('mousedown', handleMouseDown);";"
+}
+}, [])
+// Update focusable elements;
+const focusableSelectors  = ['button:not([disabled])',"'input:not([disabled])',"'select:not([disabled])',"'textarea:not([disabled])',"'a[href]',"'[tabindex]:not([tabindex="-1"])',"'[contenteditable="true"]'";"
+].join(', ')";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
+
+focusableElements.current = Array.from()
+document.querySelectorAll(focusableSelectors)
+) as HTMLElement[];
+}, [
+]);
+
+<<<<<<< HEAD
   // Focus management;
   const focusElement = useCallback((element: HTMLElement | null) => {;
     if (!element) return;
@@ -88,28 +161,40 @@ stateRef.current.isKeyboardUser = false;';''
     // Add focus indicator';'
     element.classList.add('focus-visible');";"
   }, [])
+=======
+// Focus management;
+// Add to focus history;
+stateRef.current.focusHistory.push(element);
+if (stateRef.current.focusHistory.length > 10) {,
+stateRef.current.focusHistory.shift(),
 
-  const  focusNext = useCallback(() => {
-    updateFocusableElements()
-    const  currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
-    const  nextIndex = (currentIndex + 1) % focusableElements.current.length;
+// Add focus indicator';'
+element.classList.add('focus-visible');";"
+}, [])
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
+
+const  focusNext = useCallback(() => {
+updateFocusableElements()
+const  currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
+const  nextIndex = (currentIndex + 1) % focusableElements.current.length;
 focusElement(focusableElements.current[nextIndex])
-  }, [updateFocusableElements, focusElement])
+}, [updateFocusableElements, focusElement])
 
-  const  focusPrevious = useCallback(() => {
-    updateFocusableElements()
-    const  currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
-    const  prevIndex = currentIndex === 0 ? focusableElements.current.length - 1 : currentIndex - 1;
+const  focusPrevious = useCallback(() => {
+updateFocusableElements()
+const  currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
+const  prevIndex = currentIndex === 0 ? focusableElements.current.length - 1 : currentIndex - 1;
 focusElement(focusableElements.current[prevIndex])
-  }, [updateFocusableElements, focusElement])
+}, [updateFocusableElements, focusElement])
 
-  const  focusFirst = useCallback(() => {
-    updateFocusableElements()
-    if (focusableElements.current.length > 0) {
-      focusElement(focusableElements.current[0])
-    }
-  }, [updateFocusableElements, focusElement])
+const  focusFirst = useCallback(() => {
+updateFocusableElements()
+if (focusableElements.current.length > 0) {
+focusElement(focusableElements.current[0])
+}
+}, [updateFocusableElements, focusElement])
 
+<<<<<<< HEAD
   const  focusLast = useCallback(() => {
     updateFocusableElements()
     if (focusableElements.current.length > 0) {
@@ -132,9 +217,42 @@ focusElement(focusableElements.current[prevIndex])
           if (document.activeElement === lastElement) {
 
     announcement.textContent = message;
+=======
+const  focusLast = useCallback(() => {
+updateFocusableElements()
+if (focusableElements.current.length > 0) {
+focusElement(focusableElements.current[focusableElements.current.length - 1])
+}
+}, [updateFocusableElements, focusElement])
+// Trap focus within an element;
+const trapFocus  = useCallback((container: HTMLElement) => {};
+const focusableInContainer  = Array.from();
+container.querySelectorAll(focusableElements.current.join(', '))";"
+) as HTMLElement[];
 
-    document.body.appendChild(announcement);
+if (focusableInContainer.length === 0) return;
+const handleKeyDown  = (e: KeyboardEvent) => {'"'"
+if (e.key === 'Tab') {";"
+if (e.shiftKey) {
+if (document.activeElement === firstElement) {
+e.preventDefault();,
+lastElement.focus(),
+};
+} else {
+if (document.activeElement === lastElement) {
+// Announce to screen readers'"'"
+const announce  = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {'"'"
+if (!enableScreenReaderSupport || typeof: document === 'undefined') return"'"'"
+const announcement  = document.createElement('div')',"'"
+announcement.setAttribute('aria-live', priority)'"'"
+announcement.setAttribute('aria-atomic', 'true')'"'"
+announcement.className = 'sr-only'";"
+announcement.textContent = message;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
 
+document.body.appendChild(announcement);
+
+<<<<<<< HEAD
     // Remove after announcement;
     setTimeout(() => {
       document.body.removeChild(announcement);
@@ -166,11 +284,44 @@ focusElement(focusableElements.current[prevIndex])
       }
       .focus-visible {}
         outline: 2px solid #3b82f6;
+=======
+// Remove after announcement;
+setTimeout(() => {
+document.body.removeChild(announcement);
+}, 1000);
+}, [
+enableScreenReaderSupport
+
+]);
+// Add ARIA labels and roles;
+label?: string;
+description?: string;
+role?: string;
+expanded?: boolean;
+controls?: string;
+// Add accessibility CSS'"'
+const style  = document.createElement('style')";"
+style.textContent = `;
+.sr-only {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;,
+overflow: hidden,
+clip: rect(0, 0, 0, 0)
+white-space: nowrap;
+border: 0
+}
+.focus-visible {}
+outline: 2px solid #3b82f6;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
 outline-offset: 2px,
-      }
-      .keyboard-user *:focus {}
-        outline: 2px solid #3b82f6;
+}
+.keyboard-user *:focus {}
+outline: 2px solid #3b82f6;
 outline-offset: 2px,
+<<<<<<< HEAD
       }
       .high-contrast {}
         filter: contrast(1.2)
@@ -208,18 +359,59 @@ outline-offset: 2px,
     checkReducedMotion,;
     detectKeyboardUsage,;
     updateFocusableElements;
+=======
+}
+.high-contrast {}
+filter: contrast(1.2)
+}
+.reduced-motion * {}
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
+transition-duration: 0.01ms !important,
+border-radius: 4px
+}
+.skip-link:focus {}
+top: 6px,
+cleanupFunctions.push(cleanup);
+}
+if (enableFocusManagement) {
+updateFocusableElements()
+}
+// Add skip link'"'"
+const skipLink  = document.createElement('a')'"'"
+skipLink.href = '#main-content'";"
+skipLink.textContent = 'Skip to main content'";"
+skipLink.className = 'skip-link'";"
+document.body.insertBefore(skipLink, document.body.firstChild);
 
-  ]);
+return () => {
+document.head.removeChild(style);
+if (document.body.contains(skipLink)) {
+document.body.removeChild(skipLink);
+};
+cleanupFunctions.forEach(cleanup => cleanup());
+};
+enableReducedMotion,;
+enableKeyboardNavigation,;
+enableFocusManagement,;
+checkHighContrast,;
+checkReducedMotion,;
+detectKeyboardUsage,;
+updateFocusableElements;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
 
-  return {
-    state: stateRef.current,;
-    focusElement,;
-    focusNext,;
-    focusPrevious,;
-    focusFirst,;
-    focusLast,;
-    trapFocus,;
+]);
 
+return {
+state: stateRef.current,;
+focusElement,;
+focusNext,;
+focusPrevious,;
+focusFirst,;
+focusLast,;
+trapFocus,;
+
+<<<<<<< HEAD
 
     return () => {
       document.head.removeChild(style)
@@ -264,4 +456,57 @@ export const  useAccessibility = () => {
 };";";";
 ;"
 export default useAccessibility;'";'";"
+=======
+return () => {
+document.head.removeChild(style)
+if (document.body.contains(skipLink)) {
+document.body.removeChild(skipLink)
+}
+cleanupFunctions.forEach(cleanup => cleanup())
+}
+}, [
+enableHighContrast,
+enableReducedMotion,
+enableKeyboardNavigation,
+enableFocusManagement,
+checkHighContrast,
+checkReducedMotion,
+detectKeyboardUsage,
+updateFocusableElements
+])
+import { useEffect } from 'react'";"
+
+export const useAccessibility  = () => {
+
+useEffect(() => {
+// Add accessibility logic here;
+}, []);
+
+return {
+state: stateRef.current,
+focusElement,
+focusNext,
+focusPrevious,
+focusFirst,
+focusLast,
+trapFocus,
+announce,
+enhanceElement,
+updateFocusableElements;
+import { useEffect } from 'react''
+export const  useAccessibility = () => {
+
+useEffect(() => {
+// Add accessibility logic here;
+}, [
+]);
+return {
+// Return accessibility utilities";"
+};";";"
+};";";";"
+;"
+export default useAccessibility;'";'";"
+};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
 

@@ -1,4 +1,7 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 const AiQuantumComputingPage: React.FC = () => {}
   const  services = [
 
@@ -32,21 +35,26 @@ const AiQuantumComputingPage: React.FC = () => {}
   ]
   return ()
     <div  className ="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100">""
+=======
+const Page = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
       <Helmet>
-        <title>AI Quantum Computing - Zion Tech Group</title>
-        <meta: name ="description" content="Revolutionary AI quantum computing solutions for advanced algorithms, security, and infrastructure development." />""
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced page solutions" />
       </Helmet>
-
-      <div  className ="container mx-auto px-4 py-16">""
-        <div  className ="text-center mb-16">""
-          <h1  className ="text-4xl md=text-6xl font-bold text-gray-900 mb-6">""
-            AI Quantum Computing Solutions
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
-          <p  className ="text-xl text-gray-600 max-w-3xl mx-auto">""
-            Pioneer the future of computing with our AI-powered quantum solutions. 
-            Unlock unprecedented computational power and solve previously impossible problems.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive page solutions designed to transform your business
           </p>
         </div>
+<<<<<<< HEAD
 
         <div  className ="grid md=grid-cols-2 lg:grid-cols-3 gap-8 mb-16">""
           {services.map((service, index) => ()}
@@ -150,3 +158,15 @@ const AiQuantumComputingPage: React.FC = () => {}
 
 
 
+=======
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - Page Solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

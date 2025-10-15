@@ -1,4 +1,7 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 const AiPoweredDevopsPage: React.FC = () => {}
   const  services = [
 
@@ -32,21 +35,26 @@ const AiPoweredDevopsPage: React.FC = () => {}
   ]
   return ()
     <div  className ="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">""
+=======
+const Page = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
       <Helmet>
-        <title>AI-Powered DevOps - Zion Tech Group</title>
-        <meta: name ="description" content="Revolutionary AI-powered DevOps solutions for automated CI/CD, infrastructure management, and security operations." />""
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced page solutions" />
       </Helmet>
-
-      <div  className ="container mx-auto px-4 py-16">""
-        <div  className ="text-center mb-16">""
-          <h1  className ="text-4xl md=text-6xl font-bold text-gray-900 mb-6">""
-            AI-Powered DevOps Solutions
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
-          <p  className ="text-xl text-gray-600 max-w-3xl mx-auto">""
-            Transform your development workflow with intelligent automation. Deploy faster, 
-            scale smarter, and secure your infrastructure with AI-driven DevOps solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive page solutions designed to transform your business
           </p>
         </div>
+<<<<<<< HEAD
 
         <div  className ="grid md=grid-cols-2 lg:grid-cols-3 gap-8 mb-16">""
           {services.map((service, index) => ()}
@@ -153,3 +161,15 @@ const AiPoweredDevopsPage: React.FC = () => {}
 export default AiPoweredDevopsPage;";";";
 "
 
+=======
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - Page Solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

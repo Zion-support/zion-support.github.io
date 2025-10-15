@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const PartnersPage: React.FC = () => {}
   return ()
@@ -6,24 +7,38 @@ const PartnersPage: React.FC = () => {}
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
         <meta: name ="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />""
         <meta: name ="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />""
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const Page = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced page solutions" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
       </Helmet>
-      <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-        <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p  className ="text-gray-300">This page is under development...</p>""
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive page solutions designed to transform your business
+          </p>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - Page Solutions</p>
         </div>
       </div>
-          <div  className ="text-center"></div>""
-            <h1  className ="text-4xl md=text-5xl font-bold text-white mb-6"></h1>""
-              <span  className ="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>""
-                Our Partners
-              </span>
-            </h1>
-            <p  className ="text-xl text-gray-300 max-w-3xl mx-auto"></p>""
-              Strategic partnerships that drive innovation and deliver exceptional value to our clients.
-            </p>
-          </div>
+    </div>
+  );
+};
 
+<<<<<<< HEAD
           {/* Partners Grid */}
           <div  className ="grid grid-cols-1 md=grid-cols-2 lg:grid-cols-3 gap-8 mt-16"></div>""
             {partners.map((partner, index) => ()}
@@ -63,3 +78,6 @@ const PartnersPage: React.FC = () => {}
 
   ),
 
+=======
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

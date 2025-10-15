@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -323,31 +324,34 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
         </div>
 >>>>>>> main
-      </div>
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden bg-slate-900/95 backdrop-blur-sm border-t border-purple-500/20">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                  isActive(item.path)
-                    ? 'text-purple-400 bg-purple-500/20'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                {item.icon}
-                <span>{item.name}</span>
-              </Link>
-            ))}
-          </div>
+const Navigation = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Navigation - Zion Tech Group</title>
+        <meta name="description" content="Advanced Navigation solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Navigation <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive Navigation solutions designed to transform your business
+          </p>
         </div>
-      )}
-    </nav>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - Navigation Solutions</p>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
+      </div>
+    </div>
   );
 };
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -24,3 +25,9 @@ export default function CloudInfrastructurePage() {
 "
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
+=======
+import React from 'react';
+ursor/fix-errors-and-merge-to-main-9be1
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

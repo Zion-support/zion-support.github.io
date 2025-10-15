@@ -1,21 +1,30 @@
+<<<<<<< HEAD
 
   return ()
     <div  className ="min-h-screen bg-white">;""
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const FuturisticTextEnhanced = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
       <Helmet>
-        <title>Futuristic Text Enhanced - Zion Tech Group</title>
-        <meta: name ="description" content="Professional futuristic text enhanced services by Zion Tech Group." />;""
+        <title>FuturisticTextEnhanced - Zion Tech Group</title>
+        <meta name="description" content="Advanced FuturisticTextEnhanced solutions" />
       </Helmet>
-      {/* Hero Section */}
-      <section: className ="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;""
-        <div  className ="max-w-6xl mx-auto text-center">;""
-          <h1  className ="text-5xl font-bold text-gray-900 mb-6">;""
-            Futuristic Text Enhanced
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            FuturisticTextEnhanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
-          <p  className ="text-xl text-gray-600 max-w-3xl mx-auto">;""
-            Professional futuristic text enhanced services;
-designed to help your business grow and succeed.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive FuturisticTextEnhanced solutions designed to transform your business
           </p>
         </div>
+<<<<<<< HEAD
       </section>
       {/* Content Section */}
       <section: className ="py-16 px-4">;""
@@ -85,3 +94,15 @@ import SEOHead from './components/SEOHead";"'
 ;"
 
 export default ComponentsPage;'";'";"
+=======
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - FuturisticTextEnhanced Solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FuturisticTextEnhanced;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d

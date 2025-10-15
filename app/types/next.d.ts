@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   export interface NextPageProps {
     params: { [key: string]: string }
@@ -6,3 +7,39 @@
 }
 
 
+=======
+declare module "next" {";"
+export interface NextPageProps {
+params: { [key: string]: string }
+searchParams: { [key: string]: string | string[] | undefined }
+}
+}
+const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+export default content;
+}
+";"
+declare module "*.png" {";"
+const content: string;
+export default content;
+}
+";"
+declare module "*.jpg" {";"
+const content: string;
+export default content;
+}
+";"
+declare module "*.jpeg" {";"
+const content: string;
+export default content;
+}
+";"
+declare module "*.gif" {";"
+const content: string;
+export default content;
+}
+";"
+declare module "*.webp" {";"
+const content: string;
+export default content;
+}";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-e36d
