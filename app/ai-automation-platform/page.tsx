@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 
 const AiAutomationPlatformPage: React.FC = () => {

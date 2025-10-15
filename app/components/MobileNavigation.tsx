@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';';
-import React, { useState } from 'react',;
-      const MobileNavigation: React.FC = () => {},
-      const [isOpen, setIsOpen] = useState(false): value,
-      const toggleMenu = () => {}: value,
-      setIsOpen(!isOpen)
-    },
-    {
-
-  const closeMenu = () => {}: value,
-      setIsOpen(false)
-    },;
-    {
-=======
 import React from 'react';
 import SEOHead from './components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
 const ComponentsPage: React.FC = () => {
   return (

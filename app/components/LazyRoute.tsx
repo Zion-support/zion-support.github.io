@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React, { Suspense, lazy, ComponentType } from 'react';';
-import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';
-      interface LazyRouteProps {},
-      component: () => Promise<{ default: ComponentType<any> }>,
-      fallback?: React.ReactNode;
-    },
-    {
-const LazyRoute: React.FC<LazyRouteProps> = ({},
-      component,
-      fallback = <OptimizedLoadingSpinner size="lg" text="Loading page..." />: value
-}) => {}: value,
-      const LazyComponent = lazy(component): value,
-      return (
-    <Suspense fallback={fallback}></Suspense>: value
-      <LazyComponent />
-    </Suspense>
-  )
-    },;
-    {
-export default LazyRoute;"'"'
-=======
 import React from 'react';
 import SEOHead from './components/SEOHead';
 
@@ -41,4 +19,3 @@ const ComponentsPage: React.FC = () => {
 };
 
 export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017

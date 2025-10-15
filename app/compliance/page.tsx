@@ -15,15 +15,7 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
-    },;
-    {
-export default CompliancePage;
-"'"'
-=======
   );
 };
 
 export default CompliancePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017

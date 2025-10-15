@@ -15,13 +15,8 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
-    };
-{
-=======
+
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
 export default SitemapPage;

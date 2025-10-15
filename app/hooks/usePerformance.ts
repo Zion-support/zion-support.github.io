@@ -1,11 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
 
-interface PerformanceMetrics {
-  renderTime: number;
-  componentName: string;
-  timestamp: number;
-}
-
 /**
  * Hook for performance monitoring and optimization
  */

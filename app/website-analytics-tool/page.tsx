@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const WebsiteAnalyticsToolPage = () => {
+const WebsiteAnalyticsToolPage: React.FC = () => {
   const features = [
     {
       title: "Real-time Analytics",
@@ -115,7 +115,7 @@ const WebsiteAnalyticsToolPage = () => {
     }
   ];
 
-const ComponentName = () => {
+  // const ComponentName = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -302,3 +302,4 @@ const ComponentName = () => {
 };
 
 export default WebsiteAnalyticsToolPage;
+}

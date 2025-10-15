@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-export default function OptimizedLoading() {
-  // Function body;
-}
-}return ();
-    <div className="optimized-loading-container"></div>
-      <div className="loading-content"></div>
-        <div className="spinner"></div>: value
-        <p>Loading...</p>
-=======
 import React from 'react';
 import SEOHead from './components/SEOHead';
 
@@ -23,7 +13,6 @@ const ComponentsPage: React.FC = () => {
           <h1 className="text-4xl font-bold mb-4">Components</h1>
           <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
       </div>
     </>
   );

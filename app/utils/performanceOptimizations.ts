@@ -1,26 +1,7 @@
-import { useEffect, useCallback, useRef } from 'react';
-
-interface PerformanceOptimizationsOptions {
-  // Add your options here
-}
-
-interface PerformanceOptimizationsState {
-  // Add your state here
-}
-
-export const PerformanceOptimizations = (options: PerformanceOptimizationsOptions = {}) => {
-  const stateRef = useRef<PerformanceOptimizationsState>({
-    // Initialize your state here
-  });
-
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, []);
-
-  return {
-    // Return your hook values here
-  };
+// Utility functions
+export const utility = () => {
+  // Add utility functions here
+  return {};
 };
 
-export default PerformanceOptimizations;
+export default utility;

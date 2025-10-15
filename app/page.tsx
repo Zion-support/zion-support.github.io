@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
 import { 
@@ -10,14 +9,11 @@ import {
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon,
   BoltIcon,
   SparklesIcon,
-  LightBulbIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  CogIcon,
-  WrenchScrewdriverIcon
+  CogIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {

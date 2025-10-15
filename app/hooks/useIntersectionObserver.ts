@@ -1,20 +1,13 @@
 import { useEffect, useRef } from 'react';
 
-export function useIntersectionObserver(
-  callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
-) {
+export function useIntersectionObserver() {
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(callback, {
-      threshold: 0.1,
-      rootMargin: '50px',
-      ...options
-    });
+    const observer = new IntersectionObserver();
 
     observer.observe(element);
 

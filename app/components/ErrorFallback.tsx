@@ -14,15 +14,9 @@ const ComponentsPage: React.FC = () => {
           <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-},
-      export default ErrorFallback;"'"'
-=======
+
     </>
   );
 };
 
 export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017

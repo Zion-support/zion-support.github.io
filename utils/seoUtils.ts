@@ -1,5 +1,8 @@
 // SEO utilities and helpers;
-export interface SEOData {};
+export interface SEOData {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  [key: string]: unknown;
+};
   title: string;
   description: string;
   keywords: string[]
@@ -13,7 +16,10 @@ export interface SEOData {};
   noindex?: boolean;
   nofollow?: boolean;
 };
-export interface PageSEOData {};
+export interface PageSEOData {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  [key: string]: unknown;
+};
   page: string;
   title: string;
   description: string;

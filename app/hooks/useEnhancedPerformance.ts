@@ -1,17 +1,6 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect } from 'react';
 
-interface UseEnhancedPerformanceOptions {
-  // Add your options here
-}
-
-interface UseEnhancedPerformanceState {
-  // Add your state here
-}
-
-export const UseEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
-  const stateRef = useRef<UseEnhancedPerformanceState>({
-    // Initialize your state here
-  });
+export const UseEnhancedPerformance = () => {
 
   // Add your hooks logic here
   useEffect(() => {

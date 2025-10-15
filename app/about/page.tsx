@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { Brain, Shield, Users, Award } from 'lucide-react';
 
 const SEOHead = ({ title, description }: { title: string; description: string }) => (

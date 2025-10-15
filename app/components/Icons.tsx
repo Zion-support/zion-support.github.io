@@ -1,24 +1,6 @@
 import React from 'react';
 import SEOHead from './components/SEOHead';
 
-<<<<<<< HEAD
-export const Icon = ({}: value,
-      name,
-      className = "";: value
-  ...props;
-}: {},
-      name: string,
-      className?: string;
-  [key: string]: unknown;
-}) => {}: value,
-      return (
-    <span className={`icon ${className}`} {...props}></span>: value
-      {name};
-    </span>
-  );
-    };
-{
-=======
 const ComponentsPage: React.FC = () => {
   return (
     <>
@@ -35,6 +17,5 @@ const ComponentsPage: React.FC = () => {
     </>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
 export default ComponentsPage;
