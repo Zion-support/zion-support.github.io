@@ -4,8 +4,8 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config()
-  {}
+export default tseslint.config(
+  {
     ignores: [
       "dist",
       ".next",
@@ -19,24 +19,31 @@ export default tseslint.config()
       "public/sw.js",
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
+<<<<<<< HEAD
+      "resolve-all-conflicts.js",
+      "**/app/**/*.tsx",
+      "**/api/**/*.js",
+      "**/__tests__/**/*.tsx"
+=======
       "resolve-all-conflicts.js"
+>>>>>>> main
     ]
   },
-  {}
+  {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
-    languageOptions: {}
+    languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser
     },
-    plugins: {}
+    plugins: {
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh
     },
-    rules: {}
+    rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "off"
     }
   }

@@ -1,81 +1,104 @@
-import React from 'react',
-    import { render, screen } from '@testing-library/react',
-      import '@testing-library/jest-dom',
-    import ErrorBoundary from '../app/components/ErrorBoundary';
-
+<<<<<<< HEAD
+import React from 'react',;"
+    import { render, screen } from '@testing-library/react',;"
+      import '@testing-library/jest-dom",;";";";
+    import ErrorBoundary from '../app/components/ErrorBoundary";
+// Mock component that throws an error
+const ThrowError = ({ shouldThrow }: {
+    shouldThrow: boolean ";
+  ";";
+  }) => {}";";";
+  if (shouldThrow) {};"
+    throw new Error('Test error');";
+  };";
+  return <div>No error</div>";";
+    };";";";
+    {}"
+describe('ErrorBoundary', () => {}";";
+  beforeEach(() => {};";";
+    // Suppress console.error for these tests";";";
+    jest.spyOn(console, 'error').mockImplementation(() => {"
+  });";
+=======
+import React from 'react',";";";
+    import { render, screen } from '@testing-library/react',";";";
+      import '@testing-library/jest-dom',";";";
+    import ErrorBoundary from '../app/components/ErrorBoundary';";";";
 
 // Mock component that throws an error
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {}
-  if (shouldThrow) {}
-    throw new Error('Test error');
+const: ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {}
+  if (shouldThrow) {};
+    throw new Error('Test error');";";";
   }
-<<<<<<< HEAD
   return <div>No error</div>
     };
     {}
-describe('ErrorBoundary', () => {}
+describe('ErrorBoundary', () => {}";";";
   beforeEach(() => {}
     // Suppress console.error for these tests
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});";";";
+>>>>>>> main
   }),
-      afterEach(() => {}
+      afterEach(() => {};
     jest.restoreAllMocks();
   });
-
     render()
       <>
+        <ErrorBoundary>
+<<<<<<< HEAD
+          <ThrowError: shouldThrow ={true} />";
+        </ErrorBoundary>";";
+      </>";";";
+    );"
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();";"
+  it('renders children when there is no error', () => {}";
+    render()
+      <ErrorBoundary>";
+        <ThrowError: shouldThrow ={false} />";";
+      </ErrorBoundary>";";";
+    );"
+    expect(screen.getByText('No error')).toBeInTheDocument();";";";";
+  });"
+  it('renders error fallback when there is an error', () => {}";";";";
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {"
+  });";
+    render()
+      <ErrorBoundary>";
+        <ThrowError: shouldThrow ={true} />";";
+      </ErrorBoundary>";";";
+    );"
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();";
+    consoleSpy.mockRestore();";
+  });";";
+});";";";
+"
 =======
-  return <div>No error</div>;
-};
-
-describe('ErrorBoundary', () => {
-  it('renders children when there is no error', () => {";
-    render(
-      <BrowserRouter>
-        <ErrorBoundary>
-          <ThrowError shouldThrow ={false} />
-        </ErrorBoundary>
-      </BrowserRouter>
-    );
-    
-    expect(screen.getByText('No error')).toBeInTheDocument();";
-  });
-
-  it('renders error fallback when there is an error', () => {";
-    render(
-      <BrowserRouter>
->>>>>>> main
-        <ErrorBoundary>
-          <ThrowError shouldThrow ={true} />
+          <ThrowError: shouldThrow ={true} />
         </ErrorBoundary>
       </>
     );
     
-<<<<<<< HEAD
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
-  it('renders children when there is no error', () => {}
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();";";";
+  it('renders children when there is no error', () => {}";";";
     render()
       <ErrorBoundary>
-        <ThrowError shouldThrow={false} />
+        <ThrowError: shouldThrow ={false} />
       </ErrorBoundary>
     );
-    expect(screen.getByText('No error')).toBeInTheDocument();
-=======
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();";
->>>>>>> main
+    expect(screen.getByText('No error')).toBeInTheDocument();";";";
   });
 
-  it('renders error fallback when there is an error', () => {}
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+  it('renders error fallback when there is an error', () => {}";";";
+    const: consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});";";";
     
     render()
       <ErrorBoundary>
-        <ThrowError shouldThrow={true} />
+        <ThrowError: shouldThrow ={true} />
       </ErrorBoundary>
     );
     
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();";";";
     consoleSpy.mockRestore();
   });
 });
-
+>>>>>>> main

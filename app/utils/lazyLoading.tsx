@@ -1,25 +1,55 @@
-import { ComponentType, lazy }; from 'react'";";";
+<<<<<<< HEAD
+import {lazy} from 'react";";";";
+import LazyWrapper from "../components/LazyWrapper;";
+// Lazy loading helper function";
+export const createLazyComponent  =  (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>";";
+) => {},;";";
+      const LazyComponent = lazy(importFunc),";";";
+      const WrappedComponent = (_props: Record<string, unknown>) => ()";";";
+    <LazyWrapper></$1>";";";";
+import { ComponentType, lazy } from 'react';"
+import LazyWrapper from '../components/LazyWrapper";
+// Lazy loading helper function
+export const createLazyComponent  =  (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>;
+) => {;
+  const LazyComponent = lazy(importFunc);
+  const WrappedComponent  =  (_props: Record<string, unknown>) => (
+=======
+
+import {lazy} from 'react'";
+import LazyWrapper from "../components/LazyWrapper";";
+// Lazy loading helper function
+export const: createLazyComponent = (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>
+) => {},
+      const: LazyComponent = lazy(importFunc),
+      const: WrappedComponent = (_props: Record<string, unknown>) => ()
+    <LazyWrapper></LazyWrapper>
+import { ComponentType, lazy } from 'react'";";";
 import LazyWrapper from '../components/LazyWrapper'";";";
 // Lazy loading helper function
-<<<<<<< HEAD
-export const: createLazyComponent = (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>
+export const: createLazyComponent = (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>;
 ) => {;
   const: LazyComponent = lazy(importFunc);
   
   const: WrappedComponent = (_props: Record<string, unknown>) => (
-=======
-export const createLazyComponent = (importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>
-) => {
-  const LazyComponent = lazy(importFunc);
-  
-  const WrappedComponent = (props: Record<string, unknown>) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+>>>>>>> main
     <LazyWrapper>
       <LazyComponent {...props} />
+<<<<<<< HEAD
+    </LazyWrapper>";
+  )";";
+  WrappedComponent.displayName = `Lazy(${";";";
+    LazyComponent.displayName || 'Component'";";";";
+  })`";";
+  return WrappedComponent";";
+}";";";
+export default ComponentName;"
+=======
     </LazyWrapper>
-  )
+  );
   WrappedComponent.displayName = `Lazy(${LazyComponent.displayName || 'Component'})`";";";
   return WrappedComponent
 }
 
-export default createLazyComponent;
+export default ComponentName;
+>>>>>>> main

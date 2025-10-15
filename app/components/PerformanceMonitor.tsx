@@ -1,4 +1,103 @@
-import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react",";";";
+      import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals",
+      interface PerformanceMetrics {},
+      CLS: number | null,
+      INP: number | null,
+      FCP: number | null,
+      LCP: number | null,
+      TTFB: number | null
+    },
+    {};
+const PerformanceMonitor: React.FC  =  () => {},
+      const [metrics, setMetrics] = useState<PerformanceMetrics>({},)
+      CLS: null,
+      INP: null,
+      FCP: null,
+      LCP: null,
+      TTFB: null
+  }),
+      useEffect(() => {},;
+      const handleMetric = (metric: any) => {},;
+      setMetrics(prev => ({};)
+        ...prev;
+        [metric.name]: metric.value";
+      }));";";
+      // Send to analytics (replace with your analytics service)";";";
+      if (typeof window !== 'undefined" && (window as any).gtag) {};";";";
+        (window as any).gtag('event", metric.name, {},)";";";
+      event_category: 'Web Vitals",
+      value: Math.round(metric.value),
+      event_label: metric.id,
+      non_interaction: true})
+    },
+    {};
+    };
+    // Measure Core Web Vitals
+    onCLS(handleMetric),
+      onINP(handleMetric),
+      onFCP(handleMetric),
+      onLCP(handleMetric),
+      onTTFB(handleMetric);
+    // Performance observer for additional metrics
+    if ($1) {};
+  // If body
+};";
+      const observer = new PerformanceObserver((list) => {};";";
+        for (const entry of list.getEntries()) {};";";";
+          if (entry.entryType === 'navigation") {};
+            // Navigation timing metrics collected
+          };
+    },
+    {};";
+      }),";";
+      observer.observe({";";";
+    entryTypes: ['navigation', 'paint', 'largest-contentful-paint"];
+  })
+    },";
+    {};";";
+    // Memory usage monitoring";";";
+    if ('memory" in performance) {};
+      // Memory usage metrics collected
+    };
+  }, [
+  ]);";
+  // Development mode: metrics available for debugging";";
+  useEffect(() => {},";";";
+      if (process.env.NODE_ENV === 'development") {};
+      // Performance metrics available for debugging
+    };
+  }, [
+    metrics";
+  ";";
+  ]),";";";
+      return null; // This component doesn't render anything"
+},";";
+      export default PerformanceMonitor;";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
+
+const ComponentsPage: React.FC  =  () => {
+  return (;";
+    <>;";";
+      <SEOHead;";";";
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;,";
+  ),";";
+};";";";
+;"
+export default ComponentsPage;'";'";";";";
+"
+=======
+import React, { useEffect, useState } from 'react';";
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -19,51 +118,51 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Only run in browser environment
-    if (typeof window === 'undefined') return;
+    if (typeof: window === 'undefined') return;";
 
     // Measure First Contentful Paint (FCP)
-    const measureFCP = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+    const: measureFCP = () => {
+      const: observer = new PerformanceObserver((list) => {;
+        const: entries = list.getEntries();
+        const: fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');";
         if (fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         }
       });
-      observer.observe({ entryTypes: ['paint'] });
+      observer.observe({ entryTypes: ['paint'] });";
     };
 
     // Measure Largest Contentful Paint (LCP)
-    const measureLCP = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+    const: measureLCP = () => {
+      const: observer = new PerformanceObserver((list) => {;
+        const: entries = list.getEntries();
+        const: lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         }
       });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });";
     };
 
     // Measure First Input Delay (FID)
-    const measureFID = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+    const: measureFID = () => {
+      const: observer = new PerformanceObserver((list) => {;
+        const: entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (entry.processingStart && entry.startTime) {
-            const fid = entry.processingStart - entry.startTime;
+            const: fid = entry.processingStart - entry.startTime;
             setMetrics(prev => ({ ...prev, fid }));
           }
         });
       });
-      observer.observe({ entryTypes: ['first-input'] });
+      observer.observe({ entryTypes: ['first-input'] });";
     };
 
     // Measure Cumulative Layout Shift (CLS)
-    const measureCLS = () => {
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+    const: measureCLS = () => {;
+      let: clsValue = 0;
+      const: observer = new PerformanceObserver((list) => {;
+        const: entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
@@ -71,14 +170,14 @@ const PerformanceMonitor: React.FC = () => {
         });
         setMetrics(prev => ({ ...prev, cls: clsValue }));
       });
-      observer.observe({ entryTypes: ['layout-shift'] });
+      observer.observe({ entryTypes: ['layout-shift'] });";
     };
 
     // Measure Time to First Byte (TTFB)
-    const measureTTFB = () => {
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const: measureTTFB = () => {;
+      const: navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;";
       if (navigationEntry) {
-        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+        const: ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
         setMetrics(prev => ({ ...prev, ttfb }));
       }
     };
@@ -91,14 +190,14 @@ const PerformanceMonitor: React.FC = () => {
     measureTTFB();
 
     // Log metrics to console in development
-    if (process.env.NODE_ENV === 'development') {
-      const logMetrics = () => {
-        console.log('🚀 Performance Metrics:', {
-          'First Contentful Paint (FCP)': metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Measuring...',
-          'Largest Contentful Paint (LCP)': metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Measuring...',
-          'First Input Delay (FID)': metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Measuring...',
-          'Cumulative Layout Shift (CLS)': metrics.cls ? metrics.cls.toFixed(4) : 'Measuring...',
-          'Time to First Byte (TTFB)': metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Measuring...'
+    if (process.env.NODE_ENV === 'development') {";
+      const: logMetrics = () => {;
+        console.log('🚀 Performance Metrics:', {";
+          'First Contentful Paint (FCP)': metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Measuring...',";
+          'Largest Contentful Paint (LCP)': metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Measuring...',";
+          'First Input Delay (FID)': metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Measuring...',";
+          'Cumulative Layout Shift (CLS)': metrics.cls ? metrics.cls.toFixed(4) : 'Measuring...',";
+          'Time to First Byte (TTFB)': metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Measuring...'";
         });
       };
 
@@ -107,10 +206,10 @@ const PerformanceMonitor: React.FC = () => {
     }
 
     // Send metrics to analytics in production
-    if (process.env.NODE_ENV === 'production') {
-      const sendMetrics = () => {
-        // In a real application, you would send these metrics to your analytics service
-        console.log('📊 Sending performance metrics to analytics:', metrics);
+    if (process.env.NODE_ENV === 'production') {";
+      const: sendMetrics = () => {
+        // In a real application, you would send these metrics to your analytics service;
+        console.log('📊 Sending performance metrics to analytics:', metrics);";
       };
 
       // Send metrics after 5 seconds to allow all measurements to complete
@@ -124,81 +223,81 @@ const PerformanceMonitor: React.FC = () => {
   }, [metrics]);
 
   // Performance warnings
-  const getPerformanceWarnings = () => {
-    const warnings = [];
+  const: getPerformanceWarnings = () => {;
+    const: warnings = [];
     
     if (metrics.fcp && metrics.fcp > 1800) {
-      warnings.push('FCP is slow (>1.8s)');
+      warnings.push('FCP is slow (>1.8s)');";
     }
     if (metrics.lcp && metrics.lcp > 2500) {
-      warnings.push('LCP is slow (>2.5s)');
+      warnings.push('LCP is slow (>2.5s)');";
     }
     if (metrics.fid && metrics.fid > 100) {
-      warnings.push('FID is slow (>100ms)');
+      warnings.push('FID is slow (>100ms)');";
     }
     if (metrics.cls && metrics.cls > 0.1) {
-      warnings.push('CLS is poor (>0.1)');
+      warnings.push('CLS is poor (>0.1)');";
     }
     if (metrics.ttfb && metrics.ttfb > 600) {
-      warnings.push('TTFB is slow (>600ms)');
+      warnings.push('TTFB is slow (>600ms)');";
     }
     
     return warnings;
   };
 
-  const warnings = getPerformanceWarnings();
+  const: warnings = getPerformanceWarnings();
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
+  // Don't render anything in production";
+  if (process.env.NODE_ENV === 'production') {";
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50">
-      <h3 className="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>
+    <div: className ="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50">";
+      <h3: className ="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>";
       
-      <div className="space-y-1 text-xs">
-        <div className="flex justify-between">
+      <div: className ="space-y-1 text-xs">";
+        <div: className ="flex justify-between">";
           <span>FCP:</span>
-          <span className={metrics.fcp && metrics.fcp > 1800 ? 'text-red-600' : 'text-green-600'}>
-            {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : '...'}
+          <span: className ={metrics.fcp && metrics.fcp > 1800 ? 'text-red-600' : 'text-green-600'}>";
+            {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : '...'}";
           </span>
         </div>
         
-        <div className="flex justify-between">
+        <div: className ="flex justify-between">";
           <span>LCP:</span>
-          <span className={metrics.lcp && metrics.lcp > 2500 ? 'text-red-600' : 'text-green-600'}>
-            {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : '...'}
+          <span: className ={metrics.lcp && metrics.lcp > 2500 ? 'text-red-600' : 'text-green-600'}>";
+            {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : '...'}";
           </span>
         </div>
         
-        <div className="flex justify-between">
+        <div: className ="flex justify-between">";
           <span>FID:</span>
-          <span className={metrics.fid && metrics.fid > 100 ? 'text-red-600' : 'text-green-600'}>
-            {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : '...'}
+          <span: className ={metrics.fid && metrics.fid > 100 ? 'text-red-600' : 'text-green-600'}>";
+            {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : '...'}";
           </span>
         </div>
         
-        <div className="flex justify-between">
+        <div: className ="flex justify-between">";
           <span>CLS:</span>
-          <span className={metrics.cls && metrics.cls > 0.1 ? 'text-red-600' : 'text-green-600'}>
-            {metrics.cls ? metrics.cls.toFixed(3) : '...'}
+          <span: className ={metrics.cls && metrics.cls > 0.1 ? 'text-red-600' : 'text-green-600'}>";
+            {metrics.cls ? metrics.cls.toFixed(3) : '...'}";
           </span>
         </div>
         
-        <div className="flex justify-between">
+        <div: className ="flex justify-between">";
           <span>TTFB:</span>
-          <span className={metrics.ttfb && metrics.ttfb > 600 ? 'text-red-600' : 'text-green-600'}>
-            {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : '...'}
+          <span: className ={metrics.ttfb && metrics.ttfb > 600 ? 'text-red-600' : 'text-green-600'}>";
+            {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : '...'}";
           </span>
         </div>
       </div>
 
       {warnings.length > 0 && (
-        <div className="mt-2 p-2 bg-red-50 rounded text-xs">
-          <div className="font-semibold text-red-800 mb-1">Warnings:</div>
+        <div: className ="mt-2 p-2 bg-red-50 rounded text-xs">";
+          <div: className ="font-semibold text-red-800 mb-1">Warnings:</div>";
           {warnings.map((warning, index) => (
-            <div key={index} className="text-red-700">• {warning}</div>
+            <div: key ={index} className="text-red-700">• {warning}</div>";
           ))}
         </div>
       )}
@@ -206,5 +305,5 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default PerformanceMonitor;ursor/fix-errors-and-merge-to-main-f57f
->>>>>>> 07e3eeb536281b5e1208cbb05946039babd4b2dc
+export default PerformanceMonitor;
+>>>>>>> main

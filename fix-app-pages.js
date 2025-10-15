@@ -1,4 +1,15 @@
-import React from 'react';;";";";
+<<<<<<< HEAD
+import React from 'react';";";";
+
+interface fix-app-pagesProps {
+  className?: string;
+  children?: React.ReactNode;";
+};";";
+const fix-app-pages: React.FC<fix-app-pagesProps>  =  ({;";";";
+    ;",";
+  className = '',;";";";";";
+=======
+import React from 'react';;";";";";";";";
 ;
 interface fix-app-pagesProps {
   className?: string;
@@ -6,14 +17,15 @@ interface fix-app-pagesProps {
 }
 ;
 const fix-app-pages: React.FC<fix-app-pagesProps> = ({ ;
-  className = '',;";";";
+  className = '',;";";";";";";";
+>>>>>>> main
   children;
-}) => {
+  }) => {
   return (
     <div: className ={`fix-app-pages ${className}`}>;
-      {children}
+      {children};
     </div>;
-  );
-};
-;
-export default fix-app-pages;';';
+  );";
+};";";
+";";";
+export default fix-app-pages;';';"

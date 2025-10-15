@@ -1,35 +1,32 @@
-<<<<<<< HEAD
-;
+
 interface PerformanceMonitoringOptions {
   // Add your options here;
-}
-;
+};
 interface PerformanceMonitoringState {
   // Add your state here;
-}
-;
-export const PerformanceMonitoring = (options: PerformanceMonitoringOptions = {}) => {
-  const stateRef = useRef<PerformanceMonitoringState>({
+};
+export const PerformanceMonitoring = (options: PerformanceMonitoringOptions = {,
+  }) => {;
+    const stateRef = useRef<PerformanceMonitoringState>({;
     // Initialize your state here;
+  
   });
-;
+
   // Add your hooks logic here;
   useEffect(() => {
     // Add your effect logic here;
-  }, []);
-;
+  }, [
+  ]);
+
   return {
     // Return your hook values here;
   };
 };
-;
-export default PerformanceMonitoring;';';
-=======
-// Utility functions
-export const utility = () => {
-  // Add utility functions here
-  return {};
-};
+<<<<<<< HEAD
 
-export default utility;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+export default PerformanceMonitoring;';';";";";";
+"
+=======
+;
+export default PerformanceMonitoring;';';";";";
+>>>>>>> main

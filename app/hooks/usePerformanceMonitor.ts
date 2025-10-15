@@ -1,5 +1,8 @@
 <<<<<<< HEAD
-import {useEffect} from "react";
+import {useEffect} from "react;
+=======
+import {useEffect} from "react";";";
+>>>>>>> main
 interface PerformanceMetrics {};
   loadTime: number
   firstContentfulPaint: number
@@ -8,8 +11,25 @@ interface PerformanceMetrics {};
   cumulativeLayoutShift: number
   timeToInteractive: number
 };
+<<<<<<< HEAD
 export const usePerformanceMonitor = () => {};
 }const metricsRef = useRef<PerformanceMetrics>({};)
+    loadTime: 0;";
+    firstContentfulPaint: 0;";
+    largestContentfulPaint: 0;";
+    firstInputDelay: 0;";";
+    cumulativeLayoutShift: 0;";";
+    timeToInteractive: 0";";";
+  })";";";
+  useEffect(() => {};";";";";
+}const measurePerformance = () => {};"
+}if (typeof: window === 'undefined' || !window.performance) return";";";";
+      // Measure page load time"
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";
+      if ($1) {};
+=======
+export const: usePerformanceMonitor = () => {};
+}const: metricsRef = useRef<PerformanceMetrics>({};)
     loadTime: 0;
     firstContentfulPaint: 0;
     largestContentfulPaint: 0;
@@ -18,92 +38,151 @@ export const usePerformanceMonitor = () => {};
     timeToInteractive: 0
   })
   useEffect(() => {};
-}const measurePerformance = () => {};
-}if (typeof window === 'undefined' || !window.performance) return
+}const: measurePerformance = () => {};
+}if (typeof: window === 'undefined' || !window.performance) return";";";
       // Measure page load time
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const: navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";";";
       if ($1) {}
-  // If body
-
-=======
-import { useEffect, useRef } from 'react';
-;
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number,
 >>>>>>> main
-}
-;
-export const usePerformanceMonitor = () => {
-  const metricsRef = useRef<PerformanceMetrics>({
+  // If body
+};
+export const usePerformanceMonitor = () => {;
+    const metricsRef = useRef<PerformanceMetrics>({;
     loadTime: 0,;
     firstContentfulPaint: 0,;
     largestContentfulPaint: 0,;
     firstInputDelay: 0,;
     cumulativeLayoutShift: 0,;
     timeToInteractive: 0,
+<<<<<<< HEAD
+  ";
+  });";";
+";";";
+  useEffect(() => {"
+    const measurePerformance = () => {';';";"
+      if (typeof: window === 'undefined' || !window.performance) return;";";";";";";
+;"
+      // Measure page load time';';";"
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;";";";
+      if (navigation) {,
+        metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart,";
+      };";";
+      // Measure Core Web Vitals;";";";
+      const measureWebVitals = () => {;"
+        // First Contentful Paint (FCP)';';";"
+        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];";";";
+=======
   });
 ;
   useEffect(() => {
-    const measurePerformance = () => {';';
-      if (typeof: window === 'undefined' || !window.performance) return;";
+    const: measurePerformance = () => {';';";";";
+      if (typeof: window === 'undefined' || !window.performance) return;";";";";";
 ;
-      // Measure page load time';';
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;";
+      // Measure page load time';';";";";
+      const: navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;";";";";";
       if (navigation) {
         metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart,
       }
 ;
       // Measure Core Web Vitals;
-      const measureWebVitals = () => {
-        // First Contentful Paint (FCP)';';
-        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];";
+      const: measureWebVitals = () => {;
+        // First Contentful Paint (FCP)';';";";";
+        const: fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];";";";";";
+>>>>>>> main
         if (fcpEntry) {
           metricsRef.current.firstContentfulPaint = fcpEntry.startTime;
-        }
-;
+        };
         // Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          metricsRef.current.largestContentfulPaint = lastEntry.startTime;
-        });';';
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });";
-;
+<<<<<<< HEAD
+        const lcpObserver = new PerformanceObserver((list) => {";
+          const entries = list.getEntries();";";
+          const lastEntry = entries[entries.length - 1];";";";
+          metricsRef.current.largestContentfulPaint = lastEntry.startTime;"
+  ";";";
+  });';';";";";
+        lcpObserver.observe({";";";
+    entryTypes: ['largest-contentful-paint'] "
+  ";";";
+  });";";";
+
         // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
+          entries.forEach((entry: any) => {,";
+            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime,";";
+  ";";";
+  });"
+        });';';";";";
+        fidObserver.observe({";";";
+    entryTypes: ['first-input'] "
+  ";";";
+  });";";";
+
+=======
+        const: lcpObserver = new PerformanceObserver((list) => {;
+          const: entries = list.getEntries();
+          const: lastEntry = entries[entries.length - 1];
+          metricsRef.current.largestContentfulPaint = lastEntry.startTime;
+        });';';";";";
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });";";";";";
+;
+        // First Input Delay (FID)
+        const: fidObserver = new PerformanceObserver((list) => {;
+          const: entries = list.getEntries();
           entries.forEach((entry: any) => {
             metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime,
           });
-        });';';
-        fidObserver.observe({ entryTypes: ['first-input'] });";
+        });';';";";";
+        fidObserver.observe({ entryTypes: ['first-input'] });";";";";";
 ;
+>>>>>>> main
         // Cumulative Layout Shift (CLS)
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
+        const clsObserver = new PerformanceObserver((list) => {;
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
+<<<<<<< HEAD
+            if (!entry.hadRecentInput) {,
+              clsValue += entry.value,";
+            };";";
+          });";";";
+          metricsRef.current.cumulativeLayoutShift = clsValue;"
+        });';';";";";
+        clsObserver.observe({";";";
+    entryTypes: ['layout-shift'] "
+  ";";";
+  });";";";
+
+        // Time to Interactive (TTI) - approximation;
+        const ttiObserver = new PerformanceObserver((list) => {";
+          const entries = list.getEntries();";";
+          const lastEntry = entries[entries.length - 1];";";";
+          metricsRef.current.timeToInteractive = lastEntry.startTime;"
+  ";";";
+  });';';";";";
+        ttiObserver.observe({";";";
+    entryTypes: ['measure'] "
+  ";";";
+  });";";";
+
+=======
             if (!entry.hadRecentInput) {
               clsValue += entry.value,
             }
           });
           metricsRef.current.cumulativeLayoutShift = clsValue;
-        });';';
-        clsObserver.observe({ entryTypes: ['layout-shift'] });";
+        });';';";";";
+        clsObserver.observe({ entryTypes: ['layout-shift'] });";";";";";
 ;
         // Time to Interactive (TTI) - approximation;
-        const ttiObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
+        const: ttiObserver = new PerformanceObserver((list) => {;
+          const: entries = list.getEntries();
+          const: lastEntry = entries[entries.length - 1];
           metricsRef.current.timeToInteractive = lastEntry.startTime;
-        });';';
-        ttiObserver.observe({ entryTypes: ['measure'] });";
+        });';';";";";
+        ttiObserver.observe({ entryTypes: ['measure'] });";";";";";
 ;
+>>>>>>> main
         // Cleanup observers after 10 seconds;
         setTimeout(() => {
           lcpObserver.disconnect();
@@ -111,64 +190,76 @@ export const usePerformanceMonitor = () => {
           clsObserver.disconnect();
           ttiObserver.disconnect();
         }, 10000);
-      };
 <<<<<<< HEAD
+      };";
+      // Log performance metrics";";
+      const logMetrics = () => {};";";";
+}// Send to analytics service"
+        if (typeof window !== 'undefined' && (window as any).gtag) {};";"
+          (window as any).gtag('event', 'performance_metrics', {};)";
+=======
+      };
 
       // Log performance metrics
-      const logMetrics = () => {};
+      const: logMetrics = () => {};
 }// Send to analytics service
-        if (typeof window !== 'undefined' && (window as any).gtag) {};
-          (window as any).gtag('event', 'performance_metrics', {};)
+        if (typeof window !== 'undefined' && (window as any).gtag) {};";";";
+          (window as any).gtag('event', 'performance_metrics', {};)";";";
+>>>>>>> main
             load_time: metricsRef.current.loadTime;
             first_contentful_paint: metricsRef.current.firstContentfulPaint;
             largest_contentful_paint: metricsRef.current.largestContentfulPaint;
             first_input_delay: metricsRef.current.firstInputDelay;
             cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift;
-
             time_to_interactive: metricsRef.current.timeToInteractive
+<<<<<<< HEAD
+          });";
+        };";";
+      };";";";
+;"
+      // Start measuring after page load';';";"
+      if (document.readyState === 'complete') {";";";";";";
+        measureWebVitals();"
+      } else {';';";"
+        window.addEventListener('load', measureWebVitals);";";";
+      };
 =======
-;
-      // Log performance metrics;
-      const logMetrics = () => {
-        // Send to analytics service';';
-        if (typeof window !== 'undefined' && (window as any).gtag) {';
-          (window as any).gtag('event', 'performance_metrics', {";
-            load_time: metricsRef.current.loadTime,;
-            first_contentful_paint: metricsRef.current.firstContentfulPaint,;
-            largest_contentful_paint: metricsRef.current.largestContentfulPaint,;
-            first_input_delay: metricsRef.current.firstInputDelay,;
-            cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift,;
-            time_to_interactive: metricsRef.current.timeToInteractive,
->>>>>>> main
           });
         }
       };
 ;
-      // Start measuring after page load';';
-      if (document.readyState === 'complete') {";
+      // Start measuring after page load';';";";";
+      if (document.readyState === 'complete') {";";";";";
         measureWebVitals();
-      } else {';';
-        window.addEventListener('load', measureWebVitals);";
+      } else {';';";";";
+        window.addEventListener('load', measureWebVitals);";";";";";
       }
 ;
+>>>>>>> main
       // Log metrics after 5 seconds;
       setTimeout(logMetrics, 5000);
     };
-;
+
     measurePerformance();
-;
+
     // Cleanup;
     return () => {
       // Cleanup is handled by the setTimeout in measureWebVitals;
     };
+<<<<<<< HEAD
+  }, [
+  ]);
+";
+  return metricsRef.current;";";
+};";";";
+;"
+export default usePerformanceMonitor;';';";";";";
+"
+=======
   }, []);
 ;
   return metricsRef.current;
 };
-<<<<<<< HEAD
 ;
-export default usePerformanceMonitor;';';
-=======
-
-export default usePerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+export default usePerformanceMonitor;';';";";";
+>>>>>>> main

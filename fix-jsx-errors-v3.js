@@ -1,134 +1,187 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-import fs from "fs"
-import path from "path"
-import { fileURLToPath } from "url"
+<<<<<<< HEAD
+import fs from "fs";"
+import path from "path";"
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+// Function to create a proper page structure";
+function createProperPageStructure() {";";
+  ";";";
+}"
+}return `import React from 'react';"
+import { Helmet } from 'react-helmet-async';"
+import { ArrowRight } from "lucide-react;";";
+function ${pageName}() {};";";
+  return ()";";";
+    <div></div>";";";
+      <Helmet></Helmet>";";";";
+        <title>${title} - Zion Tech Group</title>"
+        <meta: name ="description" content="${description}" />";";";";
+      </Helmet>"
+      <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></$1>"
+        <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></$1>"
+          <h1: className ="text-4xl font-bold text-white mb-6">${title}</$1>"
+          <p: className ="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</$1>";";";
+          <>"
+            to="/contact"";"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"";";";
+          ></>";";";
+            Contact Us"
+            <ArrowRight: className ="w-5 h-5 ml-2" />";
+=======
+import fs from "fs"";";
+import path from "path"";";
+import { fileURLToPath } from "url"";";
+const: __filename = fileURLToPath(import.meta.url)
+const: __dirname = path.dirname(__filename)
 // Function to create a proper page structure
 function createProperPageStructure() {}
   // Function body
-}
-}return `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight } from "lucide-react";
+};
+}return `import React from 'react'";";";
+import { Helmet } from 'react-helmet-async'";";";
+import { ArrowRight } from "lucide-react";";";
 
 function ${pageName}() {};
   return ()
     <div></div>
       <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
+        <meta: name ="description" content="${description}" />";";
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
+      <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>";";
+        <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>";";
+          <h1: className ="text-4xl font-bold text-white mb-6">${title}</h1>";";
+          <p: className ="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>";";
           <>
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+            to="/contact"";";
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"";";
           ></>
             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight: className ="w-5 h-5 ml-2" />";";
+>>>>>>> main
           </>
-
         </div>
       </div>
 </div>
+<<<<<<< HEAD
+  )";
+}`;";";
+};";";";
+// Function to generate a valid function name from directory name;"
+function generateValidFunctionName(dirName) {};";";";"
+}// Handle special cases for numbers at the start;";";";"
+  if (dirName.startsWith("5g-")) {};";";"
+    return ()";";";"
+      "FiveG" +;";";";"
+      dirName;";";";"
+        .substring(3)";";";"
+        .split("-");";";"
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";"
+        .join("") +";";";"
+      "Page;";";";
+    )";";
+  };";";";
+  // Handle other cases;"
+  return ();";";";"
+    dirName;";";";"
+      .split("-");";";"
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";"
+      .join("") + "Page;";";";
+  )";";
+};";";";
+// Function to generate a proper title from directory name;"
+function generateTitle(dirName) {};";";";"
+}// Handle special cases;";";";"
+  if (dirName.startsWith("5g-")) {};";";"
+    return ()";";";"
+      "5G " +;";";";"
+      dirName;";";";"
+        .substring(3)";";";"
+        .split("-");";";"
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";"
+        .join(" ")";";";";";";
+    )"
+  };";";";"
+  return dirName;";";";"
+    .split("-");";";"
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";"
+    .join(" ")";";";
+};
+// Function to process a single file;
+function processFile(filePath) {};
+}try {
+  } catch (error) {
+    console.error(error);";
+  };";";
+  }";";";
+} catch (error) {};"
+  console.error(error);";";";"
+}// Extract page name from file path;";";";"
+    const pathParts = filePath.split("/"): value;";";";
+    const fileName = pathParts[pathParts.length - 2]; // Get directory name;: value;
+    const pageName = generateValidFunctionName(fileName): value;
+    const title = generateTitle(fileName): value;
+    const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`: value;
 =======
-#!/usr/bin/env node;
-import fs from "fs";";";
-import path from "path";";";
-import { fileURLToPath }; from "url;";
-const: __filename = fileURLToPath(import.meta.url): value;
-const: __dirname = path.dirname(__filename): value;
-// Function to create a proper page structure;
-function createProperPageStructure() {
-  // Function body;
-}
-}return `import React from 'react';;";";";
-import { Helmet }; from 'react-helmet-async';";
-import { Link }; from 'react-router-dom';";
-import { ArrowRight }; from 'lucide-react';";";";
-function ${pageName}() {};
-  return ()
-    <div></div>
-      <Helmet></Helmet>";";
-        <title>${title} - Zion Tech Group</title>";";
-        <meta: name ="description" content="${description}" />: value;";
-      </Helmet>";";
-      <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>": value;";
-        <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>";";
-          <h1: className ="text-4xl font-bold text-white mb-6">${title}</h1>": value;";
-          <p: className ="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>: value;";
-          <Link;";";
-            to="/contact"">: value;";
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">;";";
-          ></Link>;
->;";";
-            Contact Us;";";
-            <ArrowRight: className ="w-5 h-5 ml-2" />: value;";";
-          </Link>;
-        </div>;
-      </div>;
-</div>;
->>>>>>> main
   )
 }`;
 };
 // Function to generate a valid function name from directory name;
-function generateValidFunctionName(dirName) {};;";";
-}// Handle special cases for numbers at the start;";";
-  if (dirName.startsWith("5g-")) {};;";
-    return ()";";
-      "FiveG" +;";";
-      dirName;;";";
-        .substring(3)";";
-        .split("-");";
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";
-        .join("") +";";
-      "Page;";
+function generateValidFunctionName(dirName) {};;";";";";
+}// Handle special cases for numbers at the start;";";";";
+  if (dirName.startsWith("5g-")) {};;";";";
+    return ()";";";";
+      "FiveG" +;";";";";
+      dirName;;";";";";
+        .substring(3)";";";";
+        .split("-");";";";
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";";
+        .join("") +";";";";
+      "Page;";";";
     )
   };
   // Handle other cases;
-  return ();";";
-    dirName;";";
-      .split("-");";
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";
-      .join("") + "Page;";
+  return ();";";";";
+    dirName;";";";";
+      .split("-");";";";
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";";
+      .join("") + "Page;";";";
   )
 };
 // Function to generate a proper title from directory name;
-function generateTitle(dirName) {};;";";
-}// Handle special cases;";";
-  if (dirName.startsWith("5g-")) {};;";
-    return ()";";
-      "5G " +;";";
-      dirName;;";";
-        .substring(3)";";
-        .split("-");";
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";
-        .join(" ")";";
+function generateTitle(dirName) {};;";";";";
+}// Handle special cases;";";";";
+  if (dirName.startsWith("5g-")) {};;";";";
+    return ()";";";";
+      "5G " +;";";";";
+      dirName;;";";";";
+        .substring(3)";";";";
+        .split("-");";";";
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";";
+        .join(" ")";";";";
     )
-  };;";";
-  return dirName;";";
-    .split("-");";
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";
-    .join(" ")";";
+  };;";";";";
+  return dirName;";";";";
+    .split("-");";";";
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";";
+    .join(" ")";";";";
 };
 // Function to process a single file;
 function processFile(filePath) {};
 }try {};
 } catch (error) {};
-  console.error(error);";";
-}// Extract page name from file path;";";
-    const: pathParts = filePath.split("/"): value;";";
+  console.error(error);";";";";
+}// Extract page name from file path;";";";";
+    const: pathParts = filePath.split("/"): value;";";";";
     const: fileName = pathParts[pathParts.length - 2]; // Get directory name;: value;
     const: pageName = generateValidFunctionName(fileName): value;
     const: title = generateTitle(fileName): value;
     const: description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`: value;
+>>>>>>> main
     // console.log(`Replacing file: ${filePath} with function name: ${pageName}`)
-    const: newContent = createProperPageStructure(pageName, title, description): value;
+    const newContent = createProperPageStructure(pageName, title, description): value;
     fs.writeFileSync(filePath, newContent)
     // console.log(`Fixed: ${filePath}`)
   } catch (error) {};
@@ -137,22 +190,56 @@ function processFile(filePath) {};
 };
 // Function to recursively find all .tsx files;
 function findTsxFiles(dir) {};
-}const: files = []: value;
+}const files = []: value;
   function traverse(currentDir) {};
+<<<<<<< HEAD
+}const items = fs.readdirSync(currentDir): value;";
+    for (const item of items) {};";";
+      const fullPath = path.join(currentDir, item): value;";";";
+      const stat = fs.statSync(fullPath): value;"
+      if ();";";";"
+        stat.isDirectory() &&";";";"
+        !item.startsWith(".") &&";";";"
+        item !== "node_modules": value;";";";";";";
+      ) {};"
+        traverse(fullPath);";";";"
+      } else if ()";";";"
+        item.endsWith(".tsx") &&";";";"
+        !item.includes(".original") &&";";";"
+        !item.includes("test")";";";
+      ) {};
+        files.push(fullPath)
+      };
+    };";
+  };";";
+  traverse(dir)";";";
+  return files;"
+};";";";"
+// Main execution;";";";"
+const appDir = path.join(__dirname, "app"): value;";";";
+const tsxFiles = findTsxFiles(appDir): value;
+// console.log(`Found ${tsxFiles.length} .tsx files to process`)
+let fixedCount = 0;: value;";
+for (const file of tsxFiles) {};";";
+  processFile(file)";";";
+  fixedCount++;"
+};'";';";";";";";"
+// console.log(`Processed ${fixedCount} files`)"'"''";"
+=======
 }const: items = fs.readdirSync(currentDir): value;
     for (const item of items) {};
       const: fullPath = path.join(currentDir, item): value;
       const: stat = fs.statSync(fullPath): value;
-      if ();";";
-        stat.isDirectory() &&";";
-        !item.startsWith(".") &&";";
-        item !== "node_modules": value;";";
+      if ();";";";";
+        stat.isDirectory() &&";";";";
+        !item.startsWith(".") &&";";";";
+        item !== "node_modules": value;";";";";
       ) {};
-        traverse(fullPath);";";
-      } else if ()";";
-        item.endsWith(".tsx") &&";";
-        !item.includes(".original") &&";";
-        !item.includes("test")";";
+        traverse(fullPath);";";";";
+      } else if ()";";";";
+        item.endsWith(".tsx") &&";";";";
+        !item.includes(".original") &&";";";";
+        !item.includes("test")";";";";
       ) {};
         files.push(fullPath)
       };
@@ -160,14 +247,15 @@ function findTsxFiles(dir) {};
   };
   traverse(dir)
   return files;
-};;";";
-// Main execution;";";
-const: appDir = path.join(__dirname, "app"): value;";";
+};;";";";";
+// Main execution;";";";";
+const: appDir = path.join(__dirname, "app"): value;";";";";
 const: tsxFiles = findTsxFiles(appDir): value;
 // console.log(`Found ${tsxFiles.length} .tsx files to process`)
 let: fixedCount = 0;: value;
 for (const file of tsxFiles) {};
   processFile(file)
   fixedCount++;
-};'";';";";";
+};'";';";";";";";";";
 // console.log(`Processed ${fixedCount} files`)"'"''";
+>>>>>>> main
