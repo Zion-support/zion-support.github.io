@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
