@@ -200,7 +200,7 @@ const CookiesPage: React.FC = () => {
                       <span className="text-cyan-400 mr-3 mt-1">•</span>
                       <div>
                         <strong className="text-white">Browser Settings:</strong> Most browsers allow you to refuse cookies or delete them. 
-                        Check your browser's help section for instructions.
+                        Check your browser&apos;s help section for instructions.
                       </div>
                     </li>
                     <li className="flex items-start">

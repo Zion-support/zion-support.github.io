@@ -3,13 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Search, HelpCircle, ChevronUp, ChevronDown } from 'lucide-react';
 
 const FAQPage: React.FC = () => {
-  const [openItems] = useState<number[]>([]);
-
-const [searchTerm, setSearchTerm] = useState('');
-
-const toggleItem = (_index: number) => {
-  return;
-};
+  const [searchTerm, setSearchTerm] = useState('');
 
 const faqData = [
     {
@@ -65,7 +59,7 @@ const faqData = [
       questions: [
         {
           question: "What are micro SAAS solutions?",
-          answer: "Micro SAAS solutions are ready-to-use software applications that address specific business needs. They're designed for quick deployment and immediate value, covering areas like analytics, security, productivity, and automation."
+          answer: "Micro SAAS solutions are ready-to-use software applications that address specific business needs. They&apos;re designed for quick deployment and immediate value, covering areas like analytics, security, productivity, and automation."
         },
         {
           question: "Can micro SAAS solutions be customized?",
@@ -105,8 +99,14 @@ const faqData = [
         },
         {
           question: "Do you offer refunds?",
+<<<<<<< HEAD
           answer: "We offer a 30-day money-back guarantee for most of our services. If you're not satisfied with our solution within the first 30 days, we'll provide a full refund. Some custom development projects may have different terms."
         }]
+=======
+          answer: "We offer a 30-day money-back guarantee for most of our services. If you&apos;re not satisfied with our solution within the first 30 days, we&apos;ll provide a full refund. Some custom development projects may have different terms."
+        }
+      ]
+>>>>>>> cursor/analyze-improve-and-merge-code-0023
     }
   ];
 
@@ -121,7 +121,7 @@ const filteredData = faqData.map(category => ({
     <>
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to frequently asked questions about Zion Tech Group's AI services, IT solutions, micro SAAS, and 5G technology. Get help and support information." />
+        <meta name="description" content="Find answers to frequently asked questions about Zion Tech Group&apos;s AI services, IT solutions, micro SAAS, and 5G technology. Get help and support information." />
         <meta name="keywords" content="FAQ, frequently asked questions, support, help, AI services, IT solutions, micro SAAS, 5G technology" />
         <meta property="og:title" content="FAQ - Zion Tech Group" />
         <meta property="og:description" content="Frequently asked questions about our technology solutions" />
@@ -230,7 +230,7 @@ const isOpen = openItems.includes(globalIndex);
               <h2 className="text-4xl font-bold text-white mb-6">Still Have Questions?</h2>
               
           <p className="text-xl text-gray-300 mb-8">
-                Can't find what you're looking for? Our support team is here to help.
+                Can&apos;t find what you&apos;re looking for? Our support team is here to help.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

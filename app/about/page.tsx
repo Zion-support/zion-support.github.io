@@ -5,10 +5,10 @@ import { Brain, Shield, Users, Award, Zap, Globe, Target } from 'lucide-react';
 const values = [
   { icon: <Brain className="w-8 h-8" />,
     title: "Innovation First",
-    description: "We constantly push the boundaries of what's possible with cutting-edge technology and creative solutions." },
+    description: "We constantly push the boundaries of what&apos;s possible with cutting-edge technology and creative solutions." },
   { icon: <Shield className="w-8 h-8" />,
     title: "Security & Trust",
-    description: "We prioritize the security and privacy of our clients' data with enterprise-grade protection measures." },
+    description: "We prioritize the security and privacy of our clients&apos; data with enterprise-grade protection measures." },
   { icon: <Users className="w-8 h-8" />,
     title: "Client Success",
     description: "Our success is measured by our clients&apos; success. We&apos;re committed to delivering exceptional results." },
@@ -206,7 +206,7 @@ const AboutPage: React.FC = () => { return (
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Work With Us?</h2>
               
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Let's discuss how we can help transform your business with cutting-edge technology.
+                Let&apos;s discuss how we can help transform your business with cutting-edge technology.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

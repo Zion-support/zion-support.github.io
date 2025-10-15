@@ -19,39 +19,28 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Create chunks based on node_modules
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+              return 'vendor';
             }
             if (id.includes('react-router')) {
-              return 'vendor-router';
+              return 'router';
             }
             if (id.includes('framer-motion') || id.includes('lucide-react')) {
-              return 'vendor-ui';
+              return 'ui';
             }
-            if (id.includes('web-vitals') || id.includes('analytics')) {
-              return 'vendor-analytics';
+            if (id.includes('web-vitals')) {
+              return 'analytics';
             }
             if (id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'vendor-utils';
+              return 'utils';
             }
-            return 'vendor-other';
+            // Group other node_modules
+            return 'vendor';
           }
-          
-          // App chunks
-          if (id.includes('/app/components/')) {
-            return 'components';
-          }
-          if (id.includes('/app/hooks/')) {
-            return 'hooks';
-          }
-          if (id.includes('/app/utils/')) {
-            return 'utils';
-          }
-          if (id.includes('/app/pages/') || id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages';
-          }
+          // Don't create chunks for source files
+          return undefined;
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
