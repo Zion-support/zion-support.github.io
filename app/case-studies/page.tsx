@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function CaseStudiesPage() {
+export default function CasestudiesPage() {
   return (
     <>
       <Helmet>

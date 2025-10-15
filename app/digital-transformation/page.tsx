@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function DigitalTransformationPage() {
+export default function DigitaltransformationPage() {
   return (
     <>
       <Helmet>

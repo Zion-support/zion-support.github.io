@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Comprehensive merge conflict cleanup script
-This script will clean up all merge conflict markers and resolve conflicts
-by keeping the most recent/complete version of the code.
+Comprehensive merge conflict resolution script for Zion Tech Group website.
+This script will systematically resolve merge conflicts by choosing the appropriate version.
 """
 
 import os
@@ -10,106 +9,105 @@ import re
 import glob
 from pathlib import Path
 
-def clean_merge_conflicts(content):
-    """Clean merge conflict markers from file content"""
-    # Remove all merge conflict markers and their content
-    # Pattern matches: <<<<<<< HEAD, =======, >>>>>>> branch-name
+def resolve_merge_conflict(content, file_path):
+    """
+    Resolve merge conflicts in file content.
+    Strategy: Keep the HEAD version (current branch) and remove conflict markers.
+    """
     lines = content.split('\n')
-    cleaned_lines = []
+    resolved_lines = []
     in_conflict = False
-    conflict_depth = 0
+    conflict_type = None
     
-    for line in lines:
-        # Check for conflict start markers
-        if line.strip().startswith('<<<<<<<'):
+    for i, line in enumerate(lines):
+        if line.strip() == '<<<<<<< HEAD':
             in_conflict = True
-            conflict_depth += 1
+            conflict_type = 'head'
             continue
-        # Check for conflict separator
-        elif line.strip().startswith('======='):
+        elif line.strip() == '=======':
+            conflict_type = 'separator'
             continue
-        # Check for conflict end markers
-        elif line.strip().startswith('>>>>>>>'):
+        elif line.strip().startswith('>>>>>>> '):
             in_conflict = False
-            conflict_depth -= 1
+            conflict_type = None
             continue
-        # Skip lines within conflicts (keep only the last version)
-        elif in_conflict and conflict_depth > 0:
+        elif line.strip().startswith('<<<<<<< ') and not line.strip().startswith('<<<<<<< HEAD'):
+            in_conflict = True
+            conflict_type = 'other'
             continue
-        else:
-            cleaned_lines.append(line)
+        
+        if not in_conflict or conflict_type == 'head':
+            resolved_lines.append(line)
     
-    return '\n'.join(cleaned_lines)
-
-def fix_syntax_errors(content):
-    """Fix common syntax errors after merge conflict cleanup"""
-    # Fix unterminated strings
-    content = re.sub(r'(["\'])([^"\']*?)\n', r'\1\2\1\n', content)
-    
-    # Fix missing semicolons after statements
-    content = re.sub(r'(\w+)\s*\n\s*(\w+)', r'\1;\n\2', content)
-    
-    # Fix broken JSX closing tags
-    content = re.sub(r'<(\w+)([^>]*?)\s*$', r'<\1\2>', content)
-    
-    # Remove orphaned characters
-    content = re.sub(r'^\s*[;,]+\s*$', '', content, flags=re.MULTILINE)
-    
-    return content
+    return '\n'.join(resolved_lines)
 
 def clean_file(file_path):
-    """Clean a single file"""
+    """Clean a single file of merge conflicts."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Clean merge conflicts
-        cleaned_content = clean_merge_conflicts(content)
+        if '<<<<<<< HEAD' not in content:
+            return False
         
-        # Fix syntax errors
-        cleaned_content = fix_syntax_errors(cleaned_content)
+        print(f"Cleaning: {file_path}")
+        resolved_content = resolve_merge_conflict(content, file_path)
         
-        # Write back the cleaned content
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(cleaned_content)
+            f.write(resolved_content)
         
-        print(f"✓ Cleaned: {file_path}")
         return True
-        
     except Exception as e:
-        print(f"✗ Error cleaning {file_path}: {e}")
+        print(f"Error cleaning {file_path}: {e}")
         return False
 
-def main():
-    """Main cleanup function"""
-    print("Starting merge conflict cleanup...")
-    
-    # File patterns to clean
-    patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.js',
-        '**/*.jsx'
-    ]
-    
-    cleaned_count = 0
-    error_count = 0
+def find_files_with_conflicts():
+    """Find all files with merge conflicts."""
+    patterns = ['**/*.tsx', '**/*.ts', '**/*.js', '**/*.jsx']
+    files_with_conflicts = []
     
     for pattern in patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
-            # Skip node_modules and other directories
+        for file_path in glob.glob(pattern, recursive=True):
             if 'node_modules' in file_path or '.git' in file_path:
                 continue
-                
-            if clean_file(file_path):
-                cleaned_count += 1
-            else:
-                error_count += 1
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    if '<<<<<<< HEAD' in f.read():
+                        files_with_conflicts.append(file_path)
+            except:
+                continue
     
-    print(f"\nCleanup complete!")
-    print(f"✓ Files cleaned: {cleaned_count}")
-    print(f"✗ Errors: {error_count}")
+    return files_with_conflicts
+
+def main():
+    """Main function to resolve all merge conflicts."""
+    print("Starting merge conflict resolution...")
+    
+    # Change to workspace directory
+    os.chdir('/workspace')
+    
+    # Find all files with conflicts
+    files_with_conflicts = find_files_with_conflicts()
+    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
+    
+    # Clean each file
+    cleaned_count = 0
+    for file_path in files_with_conflicts:
+        if clean_file(file_path):
+            cleaned_count += 1
+    
+    print(f"Successfully cleaned {cleaned_count} files")
+    
+    # Verify no more conflicts
+    remaining_conflicts = find_files_with_conflicts()
+    if remaining_conflicts:
+        print(f"Warning: {len(remaining_conflicts)} files still have conflicts:")
+        for file_path in remaining_conflicts[:10]:  # Show first 10
+            print(f"  - {file_path}")
+        if len(remaining_conflicts) > 10:
+            print(f"  ... and {len(remaining_conflicts) - 10} more")
+    else:
+        print("All merge conflicts resolved successfully!")
 
 if __name__ == "__main__":
     main()

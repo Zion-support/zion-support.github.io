@@ -1,20 +1,9 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-const resolve = path.resolve;
-
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      jsxRuntime: "automatic",
-    }),
-  ],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './'),
-    },
-  },
+  plugins: [react()],
   build: {
     outDir: 'dist',
     sourcemap: true,
@@ -31,7 +20,9 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+  resolve: {
+    alias: {
+      '@': '/workspace',
+    },
   },
-});
+})
