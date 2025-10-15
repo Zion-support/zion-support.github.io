@@ -10,15 +10,72 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
+    { 
+      name: 'AI Services', 
+      href: '/ai-services', 
+      icon: Brain,
+      submenu: [
+        { name: 'AI Analytics', href: '/ai-analytics' },
+        { name: 'Content Generation', href: '/ai-content-generation' },
+        { name: 'Customer Support', href: '/ai-customer-support' },
+        { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+        { name: 'Marketing Automation', href: '/ai-marketing-automation' },
+        { name: 'Data Analytics', href: '/ai-data-analytics' },
+        { name: 'Voice Assistant', href: '/ai-voice-assistant' },
+        { name: 'Workflow Automation', href: '/ai-workflow-automation' }
+      ]
+    },
+    { 
+      name: 'IT Services', 
+      href: '/services', 
+      icon: Shield,
+      submenu: [
+        { name: 'Cloud Migration', href: '/cloud-migration' },
+        { name: 'DevOps Services', href: '/devops-services' },
+        { name: 'IT Consulting', href: '/it-consulting' },
+        { name: 'Network Security', href: '/network-security' },
+        { name: 'Web Development', href: '/web-development' },
+        { name: 'System Integration', href: '/system-integration' },
+        { name: 'Software Development', href: '/software-development' }
+      ]
+    },
+    { 
+      name: 'Micro SAAS', 
+      href: '/micro-saas', 
+      icon: Zap,
+      submenu: [
+        { name: 'Content Studio', href: '/zion-content-studio' },
+        { name: 'AI CRM Pro', href: '/zion-ai-crm-pro' },
+        { name: 'Inventory Smart', href: '/zion-inventory-smart' },
+        { name: 'Financial Analytics', href: '/ai-financial-analytics-pro' },
+        { name: 'Performance Monitor', href: '/zion-performance-monitor' },
+        { name: 'Marketing Automation', href: '/zion-ai-marketing-automation' },
+        { name: 'Email Automation', href: '/zion-email-automation' },
+        { name: 'Data Analytics', href: '/data-analytics' }
+      ]
+    },
+    { 
+      name: '5G Solutions', 
+      href: '/5g-solutions', 
+      icon: Globe,
+      submenu: [
+        { name: 'Network Infrastructure', href: '/5g-network-infrastructure' },
+        { name: 'Edge Computing', href: '/5g-edge-computing' },
+        { name: 'IoT Solutions', href: '/5g-iot-solutions' },
+        { name: 'Smart City Solutions', href: '/5g-smart-city-solutions' },
+        { name: 'Private Networks', href: '/5g-private-networks' },
+        { name: 'Mobile Applications', href: '/5g-mobile-applications' },
+        { name: 'Data Analytics', href: '/5g-data-analytics' },
+        { name: 'Implementation', href: '/5g-implementation' }
+      ]
+    },
     { name: 'About', href: '/about', icon: Users },
     { name: 'Portfolio', href: '/portfolio', icon: BarChart3 },
     { name: 'Blog', href: '/blog', icon: Globe },
-    { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+    { name: 'Tutorials', href: '/tutorials', icon: Settings },
+    { name: 'Demo', href: '/demo', icon: Settings },
     { name: 'Support', href: '/support', icon: Settings },
+    { name: 'FAQ', href: '/faq', icon: Settings },
     { name: 'Contact', href: '/contact', icon: Settings },
   ];
 
@@ -52,15 +109,30 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
         <nav className="p-4 space-y-2">
           {navigationItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              onClick={onClose}
-              className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 rounded-lg transition-colors duration-200"
-            >
-              <item.icon className="w-5 h-5" />
-              <span>{item.name}</span>
-            </Link>
+            <div key={item.name}>
+              <Link
+                to={item.href}
+                onClick={onClose}
+                className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 rounded-lg transition-colors duration-200"
+              >
+                <item.icon className="w-5 h-5" />
+                <span>{item.name}</span>
+              </Link>
+              {item.submenu && (
+                <div className="ml-8 mt-1 space-y-1">
+                  {item.submenu.map((subItem) => (
+                    <Link
+                      key={subItem.name}
+                      to={subItem.href}
+                      onClick={onClose}
+                      className="block px-3 py-1 text-sm text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded transition-colors duration-200"
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 

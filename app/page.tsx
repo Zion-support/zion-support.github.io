@@ -90,27 +90,35 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
+      name: "Zion AI Business Intelligence Pro",
+      description: "Advanced AI-powered business intelligence with real-time dashboards, predictive analytics, and automated reporting",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
+      link: "/zion-ai-business-intelligence-pro",
       featured: true
     },
     {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
+      name: "Zion AI Cybersecurity Pro",
+      description: "Enterprise-grade AI cybersecurity with threat detection, zero trust architecture, and 24/7 monitoring",
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
+      link: "/zion-ai-cybersecurity-pro",
       featured: true
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
+      name: "Zion AI Marketing Automation Pro",
+      description: "AI-powered marketing automation with content generation, multi-channel campaigns, and lead nurturing",
+      price: "From $149/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/zion-ai-marketing-automation-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Project Manager Pro",
+      description: "Intelligent project management with AI task assignment, team collaboration, and automated reporting",
       price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
+      icon: <Calendar className="w-6 h-6" />,
+      link: "/zion-ai-project-manager-pro",
       featured: true
     },
     {
@@ -122,19 +130,11 @@ const HomePage = () => {
       featured: true
     },
     {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+      name: "Zion Content Studio",
+      description: "AI-powered content creation platform for blogs, social media, and marketing materials",
+      price: "From $29/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/zion-content-studio",
       featured: true
     }
   ];
@@ -250,11 +250,11 @@ const HomePage = () => {
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
               >
                 <Link
                   to={feature.link}
@@ -296,12 +296,12 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
                 {saas.featured && (
                   <div className="absolute top-4 right-4">
@@ -354,11 +354,11 @@ const HomePage = () => {
               See what our clients say about working with Zion Tech Group
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -388,22 +388,22 @@ const HomePage = () => {
           </p>
           
           {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+              <p className="text-cyan-400 text-sm sm:text-base">kleber@ziontechgroup.com</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Smartphone className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-cyan-400">+1 302 464 0950</p>
+              <p className="text-cyan-400 text-sm sm:text-base">+1 302 464 0950</p>
             </div>
-            <div className="text-center">
+            <div className="text-center sm:col-span-2 lg:col-span-1">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Globe className="w-6 h-6 text-white" />
               </div>

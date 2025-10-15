@@ -94,6 +94,12 @@ const ZionAISupplyChainOptimizerPage = React.lazy(() => import("./app/zion-ai-su
 const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translator-pro/page"));
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 
+// New Innovative Micro SAAS Services
+const ZionAIBusinessIntelligenceProPage = React.lazy(() => import("./app/zion-ai-business-intelligence-pro/page"));
+const ZionAICybersecurityProPage = React.lazy(() => import("./app/zion-ai-cybersecurity-pro/page"));
+const ZionAIMarketingAutomationProPage = React.lazy(() => import("./app/zion-ai-marketing-automation-pro/page"));
+const ZionAIProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
+
 // Additional AI Services Pages
 const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
 const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
@@ -245,6 +251,12 @@ function App() {
                                 <Route path="/zion-ai-supply-chain-optimizer" element={<ZionAISupplyChainOptimizerPage />} />
                                 <Route path="/zion-ai-translator-pro" element={<ZionAITranslatorProPage />} />
                                 <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
+
+                                {/* New Innovative Micro SAAS Services */}
+                                <Route path="/zion-ai-business-intelligence-pro" element={<ZionAIBusinessIntelligenceProPage />} />
+                                <Route path="/zion-ai-cybersecurity-pro" element={<ZionAICybersecurityProPage />} />
+                                <Route path="/zion-ai-marketing-automation-pro" element={<ZionAIMarketingAutomationProPage />} />
+                                <Route path="/zion-ai-project-manager-pro" element={<ZionAIProjectManagerProPage />} />
 
                                 {/* Additional AI Services Routes */}
                                 <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
