@@ -11,7 +11,7 @@ interface SEOHeadProps {
   structuredData?: object;
   noIndex?: boolean;
 }
-;
+
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
@@ -25,7 +25,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
   const fullDescription = description || 'Professional AI and IT solutions for modern businesses';
   const fullKeywords = keywords || 'AI solutions, IT services, technology consulting, software development, artificial intelligence';
-;
   return (
     <Helmet>
       <title>{fullTitle}</title>

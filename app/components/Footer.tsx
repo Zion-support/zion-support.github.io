@@ -94,7 +94,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Advanced AI Services</h4>
+            <h4 className="text-md font-semibold mb-4">Pro AI Services</h4>
             <ul className="space-y-2">
               <li><Link to="/ai-voice-assistant-pro" className="text-gray-300 hover:text-white">AI Voice Assistant Pro</Link></li>
               <li><Link to="/ai-image-recognition-pro" className="text-gray-300 hover:text-white">AI Image Recognition Pro</Link></li>
@@ -133,7 +133,6 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
               <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>

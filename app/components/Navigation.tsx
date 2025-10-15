@@ -32,9 +32,10 @@ import {
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
+  sidebarOpen?: boolean;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -194,28 +195,39 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       ? 'border-blue-500 text-white'
                       : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
                   }`}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
-                </Link>
-                {/* Dropdown Menu */}
-                {item.submenu && (
-                  <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
-                    (item.name === 'AI Services' && isServicesOpen) ||
+                  aria-expanded={item.submenu ? (item.name === 'AI Services' && isServicesOpen) ||
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                     (item.name === 'IT Solutions' && isResourcesOpen) ||
                     (item.name === 'Resources' && isResourcesOpen) ||
-                    (item.name === 'Company' && isCompanyOpen)
-                      ? 'block' : 'hidden'
-                  }`}>
+                    (item.name === 'Company' && isCompanyOpen) : undefined}
+                  aria-haspopup={item.submenu ? 'true' : undefined}
+                >
+                  <item.icon className="w-4 h-4" aria-hidden="true" />
+                  <span>{item.name}</span>
+                  {item.submenu && <ChevronDownIcon className="w-4 h-4" aria-hidden="true" />}
+                </Link>
+                {/* Dropdown Menu */}
+                {item.submenu && (
+                  <div 
+                    className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                      (item.name === 'AI Services' && isServicesOpen) ||
+                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||
+                      (item.name === 'IT Solutions' && isResourcesOpen) ||
+                      (item.name === 'Resources' && isResourcesOpen) ||
+                      (item.name === 'Company' && isCompanyOpen)
+                        ? 'block' : 'hidden'
+                    }`}
+                    role="menu"
+                    aria-label={`${item.name} submenu`}
+                  >
                     {item.submenu.map((subItem) => (
-                      <div key={subItem.name}>
+                      <div key={subItem.name} role="none">
                         <Link
                           to={subItem.href}
                           className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                          role="menuitem"
                         >
-                          <subItem.icon className="w-4 h-4 mr-3" />
+                          <subItem.icon className="w-4 h-4 mr-3" aria-hidden="true" />
                           <span>{subItem.name}</span>
                         </Link>
                       </div>
@@ -231,9 +243,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             <button
               onClick={onSidebarToggle}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-label="Toggle navigation menu"
+              aria-expanded={sidebarOpen}
+              aria-controls="mobile-menu"
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" />
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
         </div>

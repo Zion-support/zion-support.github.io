@@ -36,7 +36,7 @@ const SEOOptimizer: React.FC = () => {
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
 
-    // Add meta tags for better SEO
+    // Add meta tags for better SEO (only if they don't exist)
     const metaTags = [
       { name: 'robots', content: 'index, follow' },
       { name: 'googlebot', content: 'index, follow' },
@@ -49,11 +49,16 @@ const SEOOptimizer: React.FC = () => {
     ];
 
     metaTags.forEach(tag => {
-      const meta = document.createElement('meta');
-      Object.entries(tag).forEach(([key, value]) => {
-        meta.setAttribute(key, value);
-      });
-      document.head.appendChild(meta);
+      const selector = Object.keys(tag).map(key => `[${key}="${tag[key]}"]`).join('');
+      const existingMeta = document.querySelector(`meta${selector}`);
+      
+      if (!existingMeta) {
+        const meta = document.createElement('meta');
+        Object.entries(tag).forEach(([key, value]) => {
+          meta.setAttribute(key, value);
+        });
+        document.head.appendChild(meta);
+      }
     });
 
     return () => {
