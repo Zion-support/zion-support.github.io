@@ -1,13 +1,8 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AlertTriangle, Brain, Camera, CheckCircle, FileText, Heart, Microscope, Pill, Star, Stethoscope, Syringe, Thermometer, Users } from 'lucide-react';
 
 const AiHealthcarePlatformPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
   const features = [
     { icon: <Brain className="w-6 h-6" />,
       title: "AI Diagnosis Assistant",
@@ -114,14 +109,6 @@ const AiHealthcarePlatformPage: React.FC = () => {
       role: "IT Director",
       content: "The platform's analytics have given us insights into patient care patterns that we never had before. Our operational efficiency has improved by 40%.",
       rating: 5 }
-  ];
-  const specialties = [
-    { name: "Cardiology", icon: <Heart className="w-6 h-6" /> },
-    { name: "Radiology", icon: <Camera className="w-6 h-6" /> },
-    { name: "Oncology", icon: <Microscope className="w-6 h-6" /> },
-    { name: "Neurology", icon: <Brain className="w-6 h-6" /> },
-    { name: "Pediatrics", icon: <Users className="w-6 h-6" /> },
-    { name: "Emergency Medicine", icon: <AlertTriangle className="w-6 h-6" /> }
   ];
   return (
     <>

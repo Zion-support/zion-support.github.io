@@ -23,6 +23,13 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 
+// Components
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">

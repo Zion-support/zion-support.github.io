@@ -1,4 +1,3 @@
-import { Database, Globe, Cloud, Zap } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Cloud, Server, Database, Shield, Zap, Globe } from "lucide-react";
