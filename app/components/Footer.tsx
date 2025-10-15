@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import {"}
         "
@@ -338,7 +340,7 @@ const Footer: React.FC = () => {"}
     </footer>",
         "
   )
+
 };
-,
-      export default Footer",
-        "
+
+export default ComponentsPage;

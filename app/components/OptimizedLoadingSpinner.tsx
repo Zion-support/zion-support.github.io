@@ -108,10 +108,11 @@ interface OptimizedLoadingSpinnerProps {},
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </>
+
         </div>
-</div>
-    )
-  };
-)
-OptimizedLoadingSpinner.displayName = "OptimizedLoadingSpinner"
-export default OptimizedLoadingSpinner
+      </div>
+    </>
+  );
+};
+
+export default ComponentsPage;

@@ -39,3 +39,4 @@ describe('LoadingSpinner', () => {}
     expect(container).toHaveClass('custom-class')
   })
 })
+

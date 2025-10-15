@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from '../../components/SEOHead';
 
 ,
       import { HelmetProvider } from "react-helmet-async",
@@ -358,3 +360,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {};
 },
       export default Layout",
         "
+

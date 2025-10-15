@@ -389,8 +389,8 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},)
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Helmet>
+
   );
-}
 };
 
-export default UnifiedSEOHead;
+export default ComponentsPage;

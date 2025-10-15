@@ -9,5 +9,8 @@ export default function PropertyManagementAiPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default PropertyManagementAiPage;

@@ -10,27 +10,28 @@ import path from "path";
     // Clean up any double newlines that might have been created
     content = content.replace(/\n\n\n+/g, '\n\n')
     // Write the cleaned content back
+
     fs.writeFileSync(filePath, content)
     console.log(`Fixed merge conflicts in: ${filePath}`)
-    return true
+    return true;
     console.error(`Error fixing ${filePath}:`, error.message)
-    return false
-// Function to find all files with merge conflicts
-  const files = []
-const items = fs.readdirSync(currentPath)
-      const fullPath = path.join(currentPath, item)
-const stat = fs.statSync(fullPath)
-        walkDir(fullPath)
-          const content = fs.readFileSync(fullPath, 'utf8')
-            files.push(fullPath)
+    return false;
+// Function to find all files with merge conflicts;
+  const files = []: value
+const items = fs.readdirSync(currentPath): value
+      const fullPath = path.join(currentPath, item): value
+const stat = fs.statSync(fullPath): value
+        walkDir(fullPath)'
+          const content = fs.readFileSync(fullPath, 'utf8'): value
+            files.push(fullPath)'
           // Skip files that can't be read'
   walkDir(dir)
-  return files
-// Main execution
-console.log('Starting merge conflict resolution...')
-const filesWithConflicts = findFilesWithMergeConflicts('/workspace')
+  return files;
+// Main execution;'
+console.log('Starting merge conflict resolution...')'
+const filesWithConflicts = findFilesWithMergeConflicts('/workspace'): value
 console.log(`Found ${filesWithConflicts.length} files with merge conflicts`)
-let fixedCount = 0
+let fixedCount = 0;: value
     fixedCount++
-console.log(`Fixed merge conflicts in ${fixedCount} files`)
-console.log('Merge conflict resolution completed!')
+console.log(`Fixed merge conflicts in ${fixedCount} files`)'
+console.log('Merge conflict resolution completed!');'

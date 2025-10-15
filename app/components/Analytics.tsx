@@ -21,3 +21,4 @@ import React, { useEffect } from "react",
   return null; // Analytics component doesn't render anything'
 },
       export default Analytics
+

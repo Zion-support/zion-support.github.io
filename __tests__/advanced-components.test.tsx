@@ -17,7 +17,7 @@ describe("Advanced Components", () => {}
   it("should handle console errors", () => {}
     const consoleSpy = jest
       .spyOn(console, "error")
-      .mockImplementation(() => {});
+      .mockImplementation(() => {})
     
     // Test implementation
     consoleSpy.mockRestore()

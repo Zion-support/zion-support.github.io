@@ -24,18 +24,21 @@ export default {}
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)',
     '!src/**/*.d.ts',
+
     '!src/setupTests.ts',
-  ],
+  ],'
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   globals: {}
     'ts-jest': {}
       useESM: true,
       tsconfig: {}
+
         jsx: 'react-jsx'
       }
     }
-  },
+  },'
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  transformIgnorePatterns: [
+  transformIgnorePatterns: ['
     'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
   ]};
+

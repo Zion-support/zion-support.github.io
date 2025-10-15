@@ -9,5 +9,8 @@ export default function AiLanguageTranslationPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default AiLanguageTranslationPage;

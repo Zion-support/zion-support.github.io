@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface ServiceWorkerProps {},
       children?: React.ReactNode
@@ -9,3 +11,4 @@ interface ServiceWorkerProps {},
     },
     {}
 export default ServiceWorker;
+

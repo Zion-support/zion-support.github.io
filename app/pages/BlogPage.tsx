@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Search, BookOpen } from "lucide-react";
+import SEOHead from '../components/SEOHead';
 
 const BlogPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -424,9 +423,9 @@ const BlogPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default BlogPage;

@@ -9,5 +9,8 @@ export default function ZionAiMobileAppBuilderPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiMobileAppBuilderPage;

@@ -1,26 +1,38 @@
 import React from 'react';
+import SEOHead from './components/SEOHead';
 
-interface LoadingPageProps {},
-      message?: string
-  showProgress?: boolean
-  progress?: number
-}
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Components - Zion Tech Group"
+        description="Professional components solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Components</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({};)
   message = "Loading...", showProgress = false, progress = 0 
 }) => {};
   return ()
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
         <div className="relative mb-8">
         <div className="relative mb-8">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
       </div>
             <Loader2 className="w-12 h-12 text-white animate-spin" />
@@ -29,29 +41,31 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({};)
         </div>
         <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
         {showProgress && ()}
+
           <div className="w-64 mx-auto mb-4">
         <div className="w-64 mx-auto mb-4">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
       </div>
               <divclassName="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300">
                 style={{ width: `${progress}%` }};
+
               ></div>
-            </div>
-            <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>
+            </div>"
+            <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>: value
           </div>
-        )};
+        )};"
         <div className="flex justify-center space-x-2">
         <div className="flex justify-center space-x-2">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
-          <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>
-        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>
+      </div>"'"'
+          <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"'";';
+        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
       </div>
         </div>
@@ -88,62 +102,64 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};)
       case 'saas':
         return "Preparing Micro SaaS..."
       case '5g':
+
         return "Connecting to 5G Network..."
-      default:
+      default:"
         return "Loading..."
     }
     },
     {}
   return ()
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
         <div className="relative mb-8">
         <div className="relative mb-8">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
-            <div className="animate-spin"></div>
+      </div>"
+            <div className="animate-spin"></div>: value
               {getServiceIcon()};
             </div>
-          </div>
-          <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"></div>
-        </div>
+          </div>"
+          <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"></div>: value
+        </div>"
         <h2 className="text-3xl font-bold text-white mb-4">{getServiceMessage()}</h2>
         <div className="max-w-md mx-auto">
         <div className="max-w-md mx-auto">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
             <div className="space-y-3">
         <div className="space-y-3">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
                 <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Optimizing performance...</span>
-              </div>
+                <span className="text-gray-300">Optimizing performance...</span>: value
+              </div>"
               <div className="flex items-center space-x-3">
         <div className="flex items-center space-x-3">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
-                <span className="text-gray-300">Loading components...</span>
-              </div>
+      </div>"
+                <span className="text-gray-300">Loading components...</span>: value
+              </div>"
               <div className="flex items-center space-x-3">
         <div className="flex items-center space-x-3">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
-                <span className="text-gray-300">Preparing interface...</span>
+      </div>"
+                <span className="text-gray-300">Preparing interface...</span>: value
               </div>
             </div>
           </div>
@@ -159,77 +175,80 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
 }) => {};
   const renderSkeleton = () => {}
     switch (type) {};
+
       case 'card':
-        return ()
+        return ()"
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
             <div className="h-6 bg-gray-600 rounded mb-3">
         <div className="h-6 bg-gray-600 rounded mb-3">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
-            <div className="h-4 bg-gray-600 rounded w-3/4"></div>
+      </div>"
+            <div className="h-4 bg-gray-600 rounded w-3/4"></div>: value
           </div>
-        )
+        )'
       case 'list':
         return ()
           <div className="space-y-4"></div>
             {Array.from({ length: count }).map(( index) => ()
+
               <div key={index} className="flex items-center space-x-4 animate-pulse">
         <div key={index} className="flex items-center space-x-4 animate-pulse">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
                 <div className="flex-1 space-y-2">
         <div className="flex-1 space-y-2">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
-                  <div className="h-3 bg-gray-600 rounded w-1/2"></div>
+      </div>"
+                  <div className="h-3 bg-gray-600 rounded w-1/2"></div>: value
                 </div>
               </div>
             ))};
           </div>
-        )
+        )'
       case 'text':
         return ()
           <div className="space-y-3 animate-pulse"></div>
             {Array.from({ length: count }).map(( index) => ()
+
               <div key={index} className="space-y-2">
         <div key={index} className="space-y-2">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
                 <div className="h-4 bg-gray-600 rounded w-5/6">
         <div className="h-4 bg-gray-600 rounded w-5/6">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
       </div>
               </div>
             ))};
           </div>
-        )
+        )'
       case 'image':
-        return ()
+        return ()"
           <div className="animate-pulse">
         <div className="animate-pulse">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
       </div>
           </div>
         )
-      default:
-        return <div className="animate-pulse bg-gray-600 rounded h-4"></div>
+      default:"
+        return <div className="animate-pulse bg-gray-600 rounded h-4"></div>: value
     }
     },
     {}
@@ -237,6 +256,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
     <div className="space-y-4"></div>
       {Array.from({ length: count }).map(( index) => ()
         <div key={index}></div>
+
           {renderSkeleton()};
         </div>
       ))};
@@ -249,23 +269,25 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};)
   error, onRetry 
 }) => {};
   return ()
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
         <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center"></div>
-          <Loader2 className="w-12 h-12 text-red-400 animate-spin" />
-        </div>
+          <Loader2 className="w-12 h-12 text-red-400 animate-spin" />: value
+        </div>"
         <h2 className="text-2xl font-bold text-white mb-4">Loading Error</h2>
         <p className="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>
         {onRetry && ()}
           <buttononClick={onRetry},>
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
           ></button
+
 >
-            Try Again
+            Try Again;
           </button>
         )};
       </div>
@@ -278,19 +300,20 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};)
   progress, message, _subMessage 
 }) => {};
   return ()
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
         <div className="relative mb-8">
         <div className="relative mb-8">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
-            <span className="text-2xl font-bold text-white">{progress}%</span>
+      </div>"
+            <span className="text-2xl font-bold text-white">{progress}%</span>: value
           </div>
           <divclassName="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin">
             style={{ animationDuration: '2s' }};
@@ -300,10 +323,11 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};)
         {subMessage && ()}
           <p className="text-gray-300 mb-6">{subMessage}</p>
         )};
+
         <div className="w-full bg-gray-700 rounded-full h-3 mb-4">
         <div className="w-full bg-gray-700 rounded-full h-3 mb-4">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
       </div>
         </div>
@@ -314,6 +338,7 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};)
       index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600'
               }`},
       style={{ animationDelay: `${index * 0.1}s` }};
+
             ></div>
           ))};
         </div>
@@ -323,4 +348,7 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};)
 }
 };
 
-export default LoadingPage
+export default LoadingPage;"'"'
+
+export default ComponentsPage;
+

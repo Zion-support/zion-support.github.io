@@ -6,6 +6,7 @@ import React, { useEffect, useState, useCallback } from 'react',
       screenReader: boolean,
       focusVisible: boolean,
       keyboardNavigation: boolean;
+
 }
 
 interface AccessibilityManagerProps {}
@@ -20,14 +21,16 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     screenReader: false,
     focusVisible: true,
     keyboardNavigation: true
-  }),
-      const [isVisible, setIsVisible] = useState(false);
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
 
   // Load settings from localStorage
   useEffect(() => {}
     const savedSettings = localStorage.getItem('accessibility-settings'),
       if (savedSettings) {}
       try {}
+
         setSettings(JSON.parse(savedSettings));
       } catch (error) {}
         console.error('Error loading accessibility settings:', error);
@@ -41,6 +44,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     
     // High contrast mode
     if (newSettings.highContrast) {}
+
       root.classList.add('high-contrast');
     } else {}
       root.classList.remove('high-contrast');
@@ -48,6 +52,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     
     // Large text mode
     if (newSettings.largeText) {}
+
       root.classList.add('large-text');
     } else {}
       root.classList.remove('large-text');
@@ -55,6 +60,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     
     // Reduced motion
     if (newSettings.reducedMotion) {}
+
       root.classList.add('reduced-motion');
     } else {}
       root.classList.remove('reduced-motion');
@@ -62,6 +68,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     
     // Screen reader optimizations
     if (newSettings.screenReader) {}
+
       root.classList.add('screen-reader-optimized');
     } else {}
       root.classList.remove('screen-reader-optimized');
@@ -69,6 +76,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     
     // Focus visible
     if (newSettings.focusVisible) {}
+
       root.classList.add('focus-visible');
     } else {}
       root.classList.remove('focus-visible');
@@ -76,15 +84,12 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     
     // Keyboard navigation
     if (newSettings.keyboardNavigation) {}
+
       root.classList.add('keyboard-navigation');
     } else {}
       root.classList.remove('keyboard-navigation');
     }
-    
-    // Save to localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
-      setSettings(newSettings);
-  }, []);
+  }, [settings]);
 
   // Update settings when they change
   useEffect(() => {}
@@ -111,6 +116,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       {/* Accessibility Toggle Button */}
       <buttononClick={togglePanel}>
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+
         aria-label="Toggle accessibility settings"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,6 +127,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       {/* Accessibility Settings Panel */}
       {isVisible && ()}
         <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">
+
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
             Accessibility Settings
           </h3>
@@ -129,55 +136,67 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
             <label className="flex items-center justify-between">
               <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
               <inputtype="checkbox">
+
                 checked={settings.highContrast}
                 onChange={(e) => updateSetting('highContrast', e.target.checked)}
                 className="rounded"
               />
+              <span className="text-gray-700 dark:text-gray-300">High Contrast</span>
             </label>
             
             <label className="flex items-center justify-between">
               <span className="text-sm text-gray-700 dark:text-gray-300">Large Text</span>
               <inputtype="checkbox">
+
                 checked={settings.largeText}
                 onChange={(e) => updateSetting('largeText', e.target.checked)}
                 className="rounded"
               />
+              <span className="text-gray-700 dark:text-gray-300">Large Text</span>
             </label>
             
             <label className="flex items-center justify-between">
               <span className="text-sm text-gray-700 dark:text-gray-300">Reduced Motion</span>
               <inputtype="checkbox">
+
                 checked={settings.reducedMotion}
                 onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                 className="rounded"
               />
+              <span className="text-gray-700 dark:text-gray-300">Reduce Motion</span>
             </label>
             
             <label className="flex items-center justify-between">
               <span className="text-sm text-gray-700 dark:text-gray-300">Screen Reader Optimized</span>
               <inputtype="checkbox">
+
                 checked={settings.screenReader}
                 onChange={(e) => updateSetting('screenReader', e.target.checked)}
                 className="rounded"
               />
+              <span className="text-gray-700 dark:text-gray-300">Screen Reader Optimized</span>
             </label>
             
             <label className="flex items-center justify-between">
               <span className="text-sm text-gray-700 dark:text-gray-300">Focus Visible</span>
               <inputtype="checkbox">
+
                 checked={settings.focusVisible}
                 onChange={(e) => updateSetting('focusVisible', e.target.checked)}
                 className="rounded"
               />
+              <span className="text-gray-700 dark:text-gray-300">Focus Indicators</span>
             </label>
             
             <label className="flex items-center justify-between">
               <span className="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>
               <inputtype="checkbox">
+
                 checked={settings.keyboardNavigation}
                 onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
                 className="rounded"
               />
+              <span className="text-gray-700 dark:text-gray-300">Keyboard Navigation</span>
             </label>
           </div>
           
@@ -192,4 +211,5 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
   )
     },
     {}
+
 export default AccessibilityManager;

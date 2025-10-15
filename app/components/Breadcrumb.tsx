@@ -1,4 +1,5 @@
-"use client"
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import { ChevronRight, Home } from "lucide-react";
 export default function Breadcrumb() {}
@@ -45,3 +46,4 @@ export default function Breadcrumb() {}
     </nav>
   )
 };
+

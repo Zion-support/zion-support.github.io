@@ -28,10 +28,11 @@ function fixAppTsx() {}
     content = content.replace(/(\s*)<\/>\s*<\/div>\s*<\/>\s*<\/HelmetProvider>\s*<\/ErrorBoundary>\s*\);/g;
       '$1</>\n          </div>\n        </>\n      </HelmetProvider>\n    </ErrorBoundary>\n  );')
     fs.writeFileSync(filePath, content, 'utf8')
+
     console.log('Fixed app/App.tsx')
-    return true
-  } catch (error) {};
+    return true;
+  } catch (error) {};'
     console.error('Error fixing app/App.tsx:', error.message)
-    return false
-// Run the fix
-fixAppTsx()
+    return false;
+// Run the fix;
+fixAppTsx()"'"'

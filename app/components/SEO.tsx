@@ -118,7 +118,8 @@ const SEO: React.FC<SEOProps> = ({)}
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
+
   );
 };
 
-export default Component;
+export default ComponentsPage;

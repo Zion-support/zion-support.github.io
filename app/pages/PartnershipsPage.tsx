@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { Star, Target, MessageSquare } from "lucide-react";
+import SEOHead from '../components/SEOHead';
 
 const PartnershipsPage: React.FC = () => {}
   const partnershipTypes = [
@@ -224,9 +222,9 @@ const PartnershipsPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default PartnershipsPage;

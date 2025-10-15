@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface SkeletonProps {},
       width?: string | number
@@ -75,9 +77,11 @@ interface SkeletonProps {},
       {Array.from({ length: count }).map(( index) => ()
         <div key={index} className={count > 1 ? "mb-4" : ""}>
           {renderSkeleton()};
+
         </div>
-      ))};
-    </div>
-  )
-},
-      export default EnhancedLoadingSkeleton
+      </div>
+    </>
+  );
+};
+
+export default ComponentsPage;

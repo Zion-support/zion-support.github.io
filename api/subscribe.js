@@ -1,3 +1,4 @@
+
 import fs from 'fs';
 import path from 'path';
 
@@ -5,6 +6,7 @@ const file = path.join(process.cwd(), 'data', 'subscribers.json');
 
 export default async (req, res) => {
   if (req.method !== 'POST') {
+
     return res.status(405).json({ error: "Method not allowed" });
   }
 
@@ -12,16 +14,16 @@ export default async (req, res) => {
     const { email, name, source } = req.body;
 
     if (!email) {
-      return res.status(400).json({ error: "Email is required" });
+      return res.status(400).json({ error: 'Email is required' });
     }
 
     // Ensure data directory exists
-    const dir = path.dirname(file);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+    const dataDir = path.dirname(file);
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
     }
 
-    // Load existing subscribers
+    // Read existing subscribers
     let subscribers = [];
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
@@ -29,8 +31,8 @@ export default async (req, res) => {
     }
 
     // Check if email already exists
-    if (subscribers.find(sub => sub.email === email)) {
-      return res.status(400).json({ error: "Email already subscribed" });
+    if (subscribers.some(sub => sub.email === email)) {
+      return res.status(400).json({ error: 'Email already subscribed' });
     }
 
     // Add new subscriber
@@ -47,9 +49,13 @@ export default async (req, res) => {
     // Save to file
     fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
 
-    res.status(200).json({ success: true, message: "Successfully subscribed!" });
+    res.status(200).json({ 
+      success: true, 
+      message: 'Successfully subscribed' 
+    });
   } catch (error) {
     console.error('Subscription error:', error);
-    res.status(500).json({ error: "Failed to subscribe" });
+    res.status(500).json({ error: 'Failed to subscribe' });
   }
 };
+

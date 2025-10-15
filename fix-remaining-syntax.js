@@ -1,6 +1,5 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
+#!/usr/bin/env node;
+import fs from 'fs';';
 import path from 'path';
 
 // Function to fix specific syntax errors
@@ -16,6 +15,7 @@ function fixSyntaxErrors(content, filePath) {}
   // Fix missing semicolons
   fixed = fixed.replace(/([^;}])\s*$/gm, (match, char) => {}
     if (char && !char.match(/[;}\])]/) && !match.includes('{') && !match.includes('(')) {}
+
       return char + ';';
     }
     return match;
@@ -24,6 +24,7 @@ function fixSyntaxErrors(content, filePath) {}
   // Fix missing parentheses
   fixed = fixed.replace(/function\s+\w+\s*\([^)]*$/gm, (match) => {}
     if (!match.includes(')')) {}
+
       return match + ')';
     }
     return match;
@@ -32,6 +33,7 @@ function fixSyntaxErrors(content, filePath) {}
   // Fix missing colons in object properties
   fixed = fixed.replace(/(\w+)\s*$/gm, (match, prop) => {}
     if (match.includes('{') && !match.includes(':')) {}
+
       return prop + ': ';
     }
     return match;
@@ -40,10 +42,11 @@ function fixSyntaxErrors(content, filePath) {}
   // Fix return statements outside functions
   if (filePath.endsWith('.js')) {}
     fixed = fixed.replace(/^return\s+/gm, '// return ');
+
   }
   
-  // Fix unexpected tokens
-  fixed = fixed.replace(/success\s*$/gm, 'success: true;');
+  // Fix unexpected tokens;'
+  fixed = fixed.replace(/success\s*$/gm, 'success: true;');'
   fixed = fixed.replace(/error\s*$/gm, 'error: false;');
   
   return fixed;
@@ -66,10 +69,11 @@ function fixSpecificFiles() {}
     '/workspace/api/create-payment-intent.js',
     '/workspace/api/onsite-request.js',
     '/workspace/api/subscribe.js',
+
     '/workspace/api/wallet.js'
   ];
   
-  let fixedCount = 0;
+  let fixedCount = 0;: value
   
   for (const filePath of filesToFix) {}
     try {}
@@ -78,6 +82,7 @@ function fixSpecificFiles() {}
         const fixed = fixSyntaxErrors(content, filePath);
         
         if (fixed !== content) {}
+
           fs.writeFileSync(filePath, fixed);
           console.log(`✅ Fixed ${filePath}`);
           fixedCount++;
@@ -91,5 +96,5 @@ function fixSpecificFiles() {}
   console.log(`\n🎉 Fixed ${fixedCount} files!`);
 }
 
-// Run the fix
-fixSpecificFiles();
+// Run the fix;
+fixSpecificFiles();'

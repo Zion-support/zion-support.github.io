@@ -68,13 +68,16 @@ class Logger {};
             userAgent: navigator.userAgent})})
       };
     } catch {};
+
       // Silently fail remote logging
-    };
-  };
-};
+    }
+  }
+}
+
 // Create singleton instance
 const logger = new Logger({};)
   enableConsole: process.env.NODE_ENV === 'development';
   enableRemote: process.env.NODE_ENV === 'production';
   remoteEndpoint: process.env.REACT_APP_LOGGING_ENDPOINT})
 export default logger
+

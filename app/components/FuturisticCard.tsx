@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface FuturisticCardProps {},
       children: React.ReactNode,
@@ -69,3 +71,4 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({},)
     },
     {}
 export default Component;
+

@@ -9,5 +9,8 @@ export default function OnlineLearningPlatformPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default OnlineLearningPlatformPage;

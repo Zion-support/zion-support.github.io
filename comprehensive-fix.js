@@ -1,7 +1,6 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
+#!/usr/bin/env node;
+import fs from 'fs';';
+import path from 'path';';
 import { execSync } from 'child_process';
 
 // Function to fix common syntax errors
@@ -166,3 +165,4 @@ try {}
 }
 
 console.log('\nComprehensive syntax fix completed!');
+

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SEOHead from '../components/SEOHead';
 
 const PagePage: React.FC = () => {}
@@ -13,3 +11,4 @@ const PagePage: React.FC = () => {}
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">analytics-tools</h1>
           <pclassName="text-gray-300">
+

@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import {Star, Target, Github, Search} from "lucide-react";
+import SEOHead from '../components/SEOHead';
 
 const PortfolioPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -500,9 +499,9 @@ const PortfolioPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default PortfolioPage;

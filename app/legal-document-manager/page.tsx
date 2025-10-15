@@ -9,5 +9,8 @@ export default function LegalDocumentManagerPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default LegalDocumentManagerPage;

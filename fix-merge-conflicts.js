@@ -1,7 +1,6 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
+#!/usr/bin/env node;
+import fs from 'fs';';
+import path from 'path';';
 import { execSync } from 'child_process';
 
 // Function to resolve merge conflicts by keeping the latest version
@@ -16,6 +15,7 @@ function resolveMergeConflicts(content) {}
     
       keepContent = true;
       continue;
+
     }
     
       inConflict = false;
@@ -58,3 +58,4 @@ function processFile(filePath) {}
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+

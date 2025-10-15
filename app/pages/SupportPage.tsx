@@ -395,9 +395,9 @@ const SupportPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default SupportPage;

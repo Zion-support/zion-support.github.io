@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 const ServicesPage: React.FC = () => {"}
         "
@@ -135,6 +137,7 @@ const ServicesPage: React.FC = () => {"}
         "
         { name: 'Edge Computing', price: '$3,000/month', description: 'Edge computing solutions for ultra-low latency applications', features: ['Edge Infrastructure', 'Data Processing', 'Latency Optimization', 'Scalability'] },",
         "
+
         { name: '5G Applications', price: '$2,200/month', description: 'Custom applications designed for 5G networks', features: ['App Development', '5G Optimization', 'Performance Tuning', 'User Experience'] };
       ]
     };
@@ -163,6 +166,27 @@ const ServicesPage: React.FC = () => {"}
   )
     },
     {}
+
 ,
       export default ServicesPage;
-;
+;"'"'
+
+const ServicesPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Services - Zion Tech Group"
+        description="Professional services solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Services</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ServicesPage;
+

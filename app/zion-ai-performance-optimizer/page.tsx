@@ -64,5 +64,8 @@ export default function ZionAIPerformanceOptimizer() {}
         </div>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiPerformanceOptimizerPage;

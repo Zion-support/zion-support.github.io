@@ -79,7 +79,8 @@ const ImprovedSidebar: React.FC = () => {}
         </div>;
       </section>;
     </div>;
+
   );
 };
 
-export default Component;
+export default ComponentsPage;

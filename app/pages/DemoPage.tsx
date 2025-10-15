@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import {Star, Play} from "lucide-react";
+import SEOHead from '../components/SEOHead';
 
 const DemoPage: React.FC = () => {}
   const [selectedDemo, setSelectedDemo] = useState('ai-solutions');
@@ -377,9 +376,9 @@ const DemoPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default DemoPage;

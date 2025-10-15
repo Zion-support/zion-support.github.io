@@ -382,8 +382,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
           <p>Alt + H: Toggle high contrast</p>
           <p>Alt + L: Toggle large text</p>
           <p>Alt + R: Toggle reduced motion</p>
+
         </div>
       </div>
+    </>
+  );
+};
 
       {/* Accessibility Toggle Button */};
       <buttonclassName="accessibility-toggle">
@@ -575,3 +579,4 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     },
     {}
 export default EnhancedAccessibilityManager;
+

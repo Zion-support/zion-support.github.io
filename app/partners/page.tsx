@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SEOHead from '../components/SEOHead';
 
 const PartnersPage: React.FC = () => {}
@@ -158,11 +156,11 @@ const PartnersPage: React.FC = () => {}
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </>
   );
-}
 };
 
-export default Component;
+export default PartnersPage;

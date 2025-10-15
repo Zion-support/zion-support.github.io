@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import { Helmet } from 'react-helmet-async',
       import {CheckCircle, Star} from 'lucide-react';
@@ -278,3 +280,4 @@ import { Helmet } from 'react-helmet-async',
 ,
       export default ServicePageTemplate;
 ;
+

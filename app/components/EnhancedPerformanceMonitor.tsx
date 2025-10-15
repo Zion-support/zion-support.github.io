@@ -212,9 +212,11 @@ interface PerformanceMonitorProps {},
               </div>
             </div>
           </div>
+
         </div>
-      )};
-    </div>
-  )
-},
-      export default EnhancedPerformanceMonitor
+      </div>
+    </>
+  );
+};
+
+export default ComponentsPage;

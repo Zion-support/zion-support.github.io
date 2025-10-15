@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import { cn } from "../lib/utils";
 interface FuturisticButtonProps {},
@@ -63,3 +65,4 @@ interface FuturisticButtonProps {},
   )
 },
       export default FuturisticButton
+

@@ -9,5 +9,8 @@ export default function ZionAiLeadScoringPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiLeadScoringPage;

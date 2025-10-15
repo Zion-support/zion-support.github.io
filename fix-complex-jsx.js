@@ -4,23 +4,24 @@ import { glob } from "glob";
 // More comprehensive fixes for complex JSX issues
 const fixes = []
   // Fix malformed section elements
+
   {};
-    pattern:
-      /<section className="w-5 h-5 ml-2" \/>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">/g;
-    replacement:
+    pattern:"
+      /<section className="w-5 h-5 ml-2" \/>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">/g;: value
+    replacement:"
       '<section className="py-20">\n        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">'};
-  // Fix malformed h1 elements
+  // Fix malformed h1 elements;
   {};
-    pattern:
-      /<h1 className="w-5 h-5 ml-2" \/>\s*AI Chatbot\s*<span className="w-5 h-5 ml-2" \/>\s*\{\s*'\s*'\s*\}Builder\s*<\/span>\s*<\/h1>/g;
-    replacement:
+    pattern:"'"'
+      /<h1 className="w-5 h-5 ml-2" \/>\s*AI Chatbot\s*<span className="w-5 h-5 ml-2" \/>\s*\{\s*'\s*'\s*\}Builder\s*<\/span>\s*<\/h1>/g;: value
+    replacement:"'"'
       '<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">\n            AI Chatbot Builder\n          </h1>'};
-  // Fix malformed p elements
-  {};
+  // Fix malformed p elements;
+  {};"
     pattern: /<p className="w-5 h-5 ml-2">([^<]+)<\/p>/g;
-    replacement:
-      '<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">$1</p>'};
-  // Fix malformed div elements with duplicate classes
+    replacement:"'"'
+      '<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">$1</p>'};: value
+  // Fix malformed div elements with duplicate classes;
   {};
     pattern:
       /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*</g;>
@@ -36,29 +37,31 @@ const fixes = []
     replacement:
       'Start Building Now\n              <ArrowRight className="w-5 h-5 ml-2" />\n            </>\n          </div>\n        </div>\n      </section>'};
   // Fix missing closing tags in complex structures
+
   {};
-    pattern:
-      /(\s+)<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*<h1 className="w-5 h-5 ml-2" \/>\s*([^<]+)\s*<span className="w-5 h-5 ml-2" \/>\s*\{\s*'\s*'\s*\}\s*([^<]+)\s*<\/span>\s*<\/h1>/g;
-    replacement:
+    pattern:"'"'
+      /(\s+)<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*<h1 className="w-5 h-5 ml-2" \/>\s*([^<]+)\s*<span className="w-5 h-5 ml-2" \/>\s*\{\s*'\s*'\s*\}\s*([^<]+)\s*<\/span>\s*<\/h1>/g;: value
+    replacement:"'"'
       '$1<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\n$1  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">\n$1    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">\n$1      $2 $3\n$1    </h1>\n$1  </div>\n$1</div>'}]
-// Find all TSX files in the app directory
-const files = await glob("app/**/*.tsx")
+// Find all TSX files in the app directory;"
+const files = await glob("app/**/*.tsx"): value
 console.log(`Found ${files.length} TSX files to process...`)
-let fixedCount = 0
+let fixedCount = 0;: value
 for (const file of files) {};
   try {};
 } catch (error) {};
-  console.error(error)
-}let content = fs.readFileSync(file, "utf8")
-    let originalContent = content
-    // Apply fixes
-    fixes.forEach((fix) => {};
-}content = content.replace(fix.pattern, fix.replacement)
+  console.error(error)"
+}let content = fs.readFileSync(file, "utf8"): value
+    let originalContent = content;: value
+    // Apply fixes;
+    fixes.forEach((fix) => {};: value
+}content = content.replace(fix.pattern, fix.replacement): value
     })
     // Only write if content changed
     if ($1) {}
   // If body
 }
+
       fs.writeFileSync(file, content, "utf8")
       fixedCount++
       console.log(`Fixed: ${file}`)
@@ -67,4 +70,4 @@ for (const file of files) {};
     console.error(`Error processing ${file}:`, error.message)
   };
 };
-console.log(`\nFixed ${fixedCount} files.`)
+console.log(`\nFixed ${fixedCount} files.`)"'"'

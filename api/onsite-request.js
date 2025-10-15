@@ -12,25 +12,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, company, phone, message, serviceType, preferredDate } = req.body;
+    const { name, email, company, phone, message, service } = req.body;
 
     if (!name || !email || !company) {
-      res.status(400).json({ error: 'Name, email, and company are required' });
-      return;
+      return res.status(400).json({ error: 'Name, email, and company are required' });
     }
-
-    const requestData = {
-      id: Date.now().toString(),
-      name,
-      email,
-      company,
-      phone: phone || '',
-      message: message || '',
-      serviceType: serviceType || 'General Consultation',
-      preferredDate: preferredDate || '',
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-    };
 
     // Ensure data directory exists
     if (!fs.existsSync(dir)) {
@@ -40,24 +26,34 @@ export default async function handler(req, res) {
     // Read existing requests
     let requests = [];
     if (fs.existsSync(file)) {
-      const fileContent = fs.readFileSync(file, 'utf8');
-      requests = JSON.parse(fileContent);
+      const data = fs.readFileSync(file, 'utf8');
+      requests = JSON.parse(data);
     }
 
     // Add new request
-    requests.push(requestData);
+    const newRequest = {
+      id: Date.now().toString(),
+      name,
+      email,
+      company,
+      phone: phone || '',
+      message: message || '',
+      service: service || '',
+      timestamp: new Date().toISOString()
+    };
 
-    // Write back to file
+    requests.push(newRequest);
+
+    // Save to file
     fs.writeFileSync(file, JSON.stringify(requests, null, 2));
 
     res.status(200).json({
       success: true, 
       message: 'Onsite request submitted successfully',
-      requestId: requestData.id
+      requestId: newRequest.id
     });
-
   } catch (error) {
-    console.error('Error processing onsite request:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('Onsite request error:', error);
+    res.status(500).json({ error: 'Failed to submit onsite request' });
   }
 }

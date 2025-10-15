@@ -10,13 +10,18 @@ export function useIntersectionObserver()
     const observer = new IntersectionObserver(callback, {};)
       threshold: 0.1;
       rootMargin: '50px';
+
       ...options
-    })
-    observer.observe(element)
-    return () => {};
-}observer.unobserve(element)
+    });
+
+    observer.observe(element);
+
+    return () => {
+      observer.unobserve(element);
     };
-  }, [callback, options])
-  return ref
-};
-export default useIntersectionObserver
+  }, [callback, options]);
+
+  return ref;
+}
+
+export default useIntersectionObserver;

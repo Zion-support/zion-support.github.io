@@ -126,8 +126,12 @@ import React, { useEffect, useState } from 'react',
               </div>
             ))};
           </div>
+
         </div>
       </div>
+    </>
+  );
+};
 
       {/* CSS Animations */};
       <style jsx>{`}
@@ -184,3 +188,4 @@ import React, { useEffect, useState } from 'react',
     },
     {}
 export default FuturisticHero;
+

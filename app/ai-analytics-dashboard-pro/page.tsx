@@ -1,6 +1,7 @@
 import React from 'react',
       import { Helmet } from 'react-helmet-async',
       import {}
+
   CheckCircle, 
   ArrowRight, 
   TrendingUp, 
@@ -11,6 +12,7 @@ import React from 'react',
 } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {}
+
   const features = [
     'AI-powered data analysis and insights',
     'Real-time dashboard customization',
@@ -22,8 +24,9 @@ const AIAnalyticsDashboardProPage: React.FC = () => {}
     'White-label dashboard options',
     'Mobile-responsive design',
     'API access and custom integrations'
-  ],
-      const benefits = [
+  ];
+
+  const benefits = [
     'Make data-driven decisions 3x faster',
     'Identify trends and opportunities automatically',
     'Reduce reporting time by 90%',
@@ -41,6 +44,7 @@ const AIAnalyticsDashboardProPage: React.FC = () => {}
   ],
       const pricingPlans = [
     {}
+
       name: 'Starter',
       price: '$79/mo',
       originalPrice: '$129/mo',
@@ -92,6 +96,7 @@ const AIAnalyticsDashboardProPage: React.FC = () => {}
   ],
       const useCases = [
     {}
+
       title: 'E-commerce',
       description: 'Track sales, customer behavior, and inventory analytics',
       icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
@@ -115,8 +120,9 @@ const AIAnalyticsDashboardProPage: React.FC = () => {}
       icon: <DollarSign className="w-6 h-6 text-green-600" />,
       results: '35% better financial forecasting'
     }
-  ],
-      const stats = [
+  ];
+
+  const stats = [
     { number: '3x', label: 'Faster Decisions' },
     { number: '90%', label: 'Less Reporting Time' },
     { number: '35%', label: 'Better Performance' },
@@ -124,6 +130,7 @@ const AIAnalyticsDashboardProPage: React.FC = () => {}
   ],
       return ()
     <>{}</>
+
       <Helmet>
         <title>AI Analytics Dashboard Pro - Intelligent Business Analytics | Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI-powered analytics. Make decisions 3x faster, reduce reporting time by 90%, and improve performance by 35% with our intelligent analytics platform." />
@@ -379,3 +386,4 @@ const AIAnalyticsDashboardProPage: React.FC = () => {}
             <>
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+

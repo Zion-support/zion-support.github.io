@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { MessageSquare } from "lucide-react";
+import SEOHead from '../components/SEOHead';
 
 const ChatPage: React.FC = () => {}
   return ()
@@ -49,9 +47,9 @@ const ChatPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default ChatPage;

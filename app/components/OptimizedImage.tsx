@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
-interface OptimizedImageProps {};
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void;
+
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Components - Zion Tech Group"
+        description="Professional components solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Components</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
 };
 const OptimizedImage: React.FC<OptimizedImageProps> = ({};)
   src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {};
@@ -77,3 +83,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({};)
   )
 },
       export default OptimizedImage
+

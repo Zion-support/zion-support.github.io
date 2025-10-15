@@ -6,9 +6,12 @@ export const createLazyComponent = <P extends Record<string, unknown>>(_importFu
       const LazyComponent = lazy(importFunc),
       const WrappedComponent = (_props: P) => ()
     <LazyWrapper></LazyWrapper>
+
       <LazyComponent {...(props as P)} />
     </LazyWrapper>
   )
   WrappedComponent.displayName = `LazyComponent(${LazyComponent.displayName || 'Unknown'})`
   return WrappedComponent
-};
+}
+
+export default ComponentName;

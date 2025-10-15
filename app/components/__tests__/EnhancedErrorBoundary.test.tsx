@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 import { render, screen, fireEvent, waitFor } from '@testing-library/react',
     import '@testing-library/jest-dom',
@@ -225,3 +227,4 @@ global.fetch = jest.fn(),
       expect(screen.getByText('No error')).toBeInTheDocument();
   });
 });
+

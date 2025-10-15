@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SEOHead from '../components/SEOHead';
 
 const AdvancedSecuritySuitePage: React.FC = () => {}
@@ -20,3 +18,4 @@ const AdvancedSecuritySuitePage: React.FC = () => {}
     },
     {}
 export default PagePage;
+

@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import {ArrowRight, CheckCircle} from "lucide-react",
       interface EnhancedHeroProps {},
@@ -199,3 +201,4 @@ import {ArrowRight, CheckCircle} from "lucide-react",
 },
       export default EnhancedHero",
         "
+

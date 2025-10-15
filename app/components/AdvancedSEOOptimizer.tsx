@@ -242,7 +242,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
       <meta name="description" content={seoData.description} />
       <meta name="keywords" content={seoData.keywords.join(', ')} />
     </Helmet>
+
   );
 };
 
-export default AdvancedSEOOptimizer;
+export default ComponentsPage;

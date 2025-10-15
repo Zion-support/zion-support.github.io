@@ -9,5 +9,8 @@ export default function AiDataMiningProPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default AiDataMiningProPage;

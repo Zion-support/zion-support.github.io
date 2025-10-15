@@ -1,4 +1,3 @@
-import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 export default function ZionAnalyticsPro() {}
@@ -71,14 +70,12 @@ const ZionAnalyticsProPage: React.FC = () => {}
       <SEOHead>
         title="Page - Zion Tech Group"
         description="Professional page solutions for modern businesses"
-      />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
-        {/* Animated Background */};
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">zion-analytics-pro - Zion Tech Group</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
         
@@ -332,3 +329,4 @@ const ZionAnalyticsProPage: React.FC = () => {}
             <div className="mt-8 text-sm text-gray-400"></div>
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
               <pclassName="mt-2">
+

@@ -72,3 +72,4 @@ interface WebVitalsData {},
   return null
 },
       export default WebVitalsTracker
+

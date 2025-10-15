@@ -1,13 +1,14 @@
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
-      return await handler(req, res);
+      await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
       res.status(500).json({
         error: 'Internal server error',
         message: error.message 
       });
+
     }
   };
 };
@@ -21,3 +22,4 @@ export default withErrorLogging(async (req, res) => {
     res.status(500).json({ error: 'Failed to create payment intent' });
   }
 });
+

@@ -16,29 +16,30 @@ import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from "lucide-react";
 function Page() {}
   // Function body
+
 }
 }return ()
     <div></div>
       <Helmet></Helmet>
-        <title>Service - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content="Service - Zion Tech Group" />
-        <meta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta property="og:type" content="website" />
+        <title>Service - Zion Tech Group</title>"
+        <meta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />": value
+        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />": value
+        <meta property="og:title" content="Service - Zion Tech Group" />"
+        <meta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />"
+        <meta property="og:type" content="website" />"
         <meta property="og:url" content="https://ziontechgroup.com/service" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></div>
-        <section className="py-20"></section>
-          <div className="container mx-auto px-4 text-center"></div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></span>
-                Service
+      </Helmet>"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></div>": value
+        <section className="py-20"></section>": value
+          <div className="container mx-auto px-4 text-center"></div>": value
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>"
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></span>: value
+                Service;
               </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            </h1>"
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>: value
               Professional services by Zion Tech Group. Expert solutions tailored to your business needs.
-            </p>
+            </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
               <>
                 to="/contact"
@@ -53,18 +54,19 @@ function Page() {}
               ></>
                 Learn More
               </>
+
             </div>
           </div>
-        </section>
-        <section className="py-20"></section>
-          <div className="container mx-auto px-4"></div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center"></div>
-              <h2 className="text-4xl font-bold text-white mb-6"></h2>
+        </section>"
+        <section className="py-20"></section>": value
+          <div className="container mx-auto px-4"></div>": value
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center"></div>": value
+              <h2 className="text-4xl font-bold text-white mb-6"></h2>: value
                 Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+              </h2>"
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>: value
                 Contact us to learn more about our solutions and how we can help your business.
-              </p>
+              </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <>
                   to="/contact"
@@ -78,6 +80,7 @@ function Page() {}
                 ></>
                   View All Services
                 </>
+
               </div>
             </div>
           </div>
@@ -85,7 +88,7 @@ function Page() {}
       </div>
 </div>
   )
-}`
+}`;
 for (const file of filesToFix) {};
   try {};
 } catch (error) {};
@@ -96,5 +99,5 @@ for (const file of filesToFix) {};
   } catch (error) {};
     console.error(`Error fixing ${file}:`, error.message)
   };
-};
-console.log("Finished fixing remaining merge conflicts!")
+};"
+console.log("Finished fixing remaining merge conflicts!")"'"'

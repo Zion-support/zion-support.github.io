@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface NeonButtonProps {},
       children?: React.ReactNode
@@ -50,3 +52,4 @@ interface NeonButtonProps {},
   )
 },
       export default NeonButton
+

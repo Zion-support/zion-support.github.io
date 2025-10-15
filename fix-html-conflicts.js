@@ -9,3 +9,4 @@ import { fileURLToPath } from "url";
     fs.writeFileSync(filePath, result.join('\n'), 'utf8''
         if (!['node_modules', '.git', 'dist', 'build', '.next'')
         if (['.html', '.htm'')
+

@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Search, MessageSquare, Star, BookOpen, HelpCircle, Video, Download, ChevronDown, ChevronRight } from "lucide-react";
+import SEOHead from '../components/SEOHead';
 
 const HelpPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');
@@ -447,9 +446,9 @@ const HelpPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default HelpPage;

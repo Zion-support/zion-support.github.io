@@ -361,3 +361,4 @@ export default function AISupplyChainOptimizer() {}
               ></>
                 Watch Demo
                 <SparklesclassName="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform">
+

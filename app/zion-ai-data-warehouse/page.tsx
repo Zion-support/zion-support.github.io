@@ -9,5 +9,8 @@ export default function ZionAiDataWarehousePage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiDataWarehousePage;

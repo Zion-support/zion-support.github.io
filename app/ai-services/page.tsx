@@ -130,3 +130,4 @@ import React from "react",
 
           <div className="text-center">
             <buttonclassName="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+

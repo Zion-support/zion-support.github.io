@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -293,3 +295,4 @@ const FinancialReportingToolPage = () => {}
               variant="outline"
               size="lg"
               icon={<GlobeclassName="w-5 h-5">}
+

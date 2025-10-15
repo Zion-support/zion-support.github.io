@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface PerformanceMetrics {}
   fcp: number | null;
@@ -157,6 +158,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
 
   // This component doesn't render anything visible
   return null;
+
 };
 
-export default AdvancedPerformanceMonitor;
+export default ComponentsPage;

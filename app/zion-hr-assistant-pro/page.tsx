@@ -9,5 +9,8 @@ export default function ZionHrAssistantProPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionHrAssistantProPage;

@@ -9,5 +9,8 @@ export default function AiFraudDetectionProPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default AiFraudDetectionProPage;

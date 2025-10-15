@@ -1,4 +1,5 @@
-import React, { useEffect, useCallback } from 'react';
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface PerformanceEnhancerProps {}
   enableImageOptimization?: boolean;
@@ -132,6 +133,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({)}
   }, [optimizeImages, preloadCriticalResources, optimizeCaching, optimizeCompression, monitorPerformance]);
 
   return null; // This component doesn't render anything
+
 };
 
-export default AdvancedPerformanceEnhancer;
+export default ComponentsPage;

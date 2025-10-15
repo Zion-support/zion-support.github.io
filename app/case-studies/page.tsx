@@ -174,6 +174,7 @@ const CaseStudiesPage: React.FC = () => {}
             </div>
           </div>
         </section>
+
       </div>
     </>
   );

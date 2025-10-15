@@ -64,5 +64,8 @@ export default function ZionSmartExpenseCategorizer() {}
         </div>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionSmartExpenseCategorizerPage;

@@ -9,5 +9,8 @@ export default function ZionAiDocumentProcessorPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiDocumentProcessorPage;

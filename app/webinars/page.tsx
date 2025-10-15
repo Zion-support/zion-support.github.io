@@ -9,5 +9,8 @@ export default function WebinarsPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default WebinarsPage;

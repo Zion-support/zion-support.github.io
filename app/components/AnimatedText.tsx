@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import React, { useState, useEffect } from "react";
 
-interface AnimatedTextProps {};
-  text: string;
-  className?: string;
-  delay?: number;
-  speed?: number;
+
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Components - Zion Tech Group"
+        description="Professional components solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Components</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
 };
 const AnimatedText: React.FC<AnimatedTextProps> = ({};)
   text, className = "", delay = 0, speed = 100}) => {};
@@ -28,3 +39,4 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({};)
   return <span className={className}>{displayedText}</span>
 },
       export default AnimatedText
+

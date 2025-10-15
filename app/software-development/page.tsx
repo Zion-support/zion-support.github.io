@@ -1,3 +1,9 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarChart3, Shield, Zap, Cpu } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import EnhancedSEO from '../components/EnhancedSEO';
 
 import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
@@ -53,7 +59,24 @@ import FuturisticCard from '../components/FuturisticCard',
       description: "Update and modernize existing systems for better performance and security",""
       icon: <className="w-8 h-8" />,""
       features: ["Code refactoring", "migration", "UI/UX updates", "Performance optimization"],""
+
       price: "From $30,000"
+    }
+  ];
+
+  const technologies = [
+    { name: "Frontend", items: ["React", "Vue.js", "Angular", "Next.js", "TypeScript"] },
+    { name: "Backend", items: ["Node.js", "Python", "Java", "C#", "Go"] },
+    { name: "Mobile", items: ["React Native", "Flutter", "Swift", "Kotlin"] },
+    { name: "Database", items: ["PostgreSQL", "MongoDB", "MySQL", "Redis"] },
+    { name: "Cloud", items: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"] }
+  ];
+
+  const process = [
+    {
+      step: "1",
+      title: "Discovery",
+      description: "Understand your requirements and define project scope"
     },
     {}
   ];
@@ -96,7 +119,16 @@ import FuturisticCard from '../components/FuturisticCard',
         "
       step: "5",""
       title: "Deployment",""
+
       description: "Deploy to production with monitoring and support"
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Custom Solutions",
+      description: "Tailored software that meets your specific business needs",
+      icon: <Code className="w-6 h-6" />
     },
     {}
   ];
@@ -429,3 +461,4 @@ import FuturisticCard from '../components/FuturisticCard',
 ,
       export default SoftwareDevelopmentPage;
 ;
+

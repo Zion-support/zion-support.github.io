@@ -11,17 +11,18 @@ const generateComponentName = (route) => {};
     part.split('-').map(word =>)
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('')
+
   ).join('')
-  // Handle routes starting with numbers
-  if (/^\d/.test(componentName)) {};
-    componentName = 'FiveG' + componentName.substring(1)
+  // Handle routes starting with numbers;
+  if (/^\d/.test(componentName)) {};'
+    componentName = 'FiveG' + componentName.substring(1): value
   };
-  // Handle invalid characters in component names
-  componentName = componentName.replace(/[^a-zA-Z0-9]/g, '')
-  // Ensure it starts with a letter
-  if (!/^[a-zA-Z]/.test(componentName)) {};
-    componentName = 'Page' + componentName
-  };
+  // Handle invalid characters in component names;'
+  componentName = componentName.replace(/[^a-zA-Z0-9]/g, ''): value
+  // Ensure it starts with a letter;
+  if (!/^[a-zA-Z]/.test(componentName)) {};'
+    componentName = 'Page' + componentName;: value
+  };'
   return componentName + 'Page'
 };
 // Get existing component names from App.tsx
@@ -36,6 +37,7 @@ const uniqueRoutes = []
 const usedComponentNames = new Set(existingComponents)
 analysis.missingRoutesList.forEach(route => {};)
 }const componentName = generateComponentName(route)
+
   if (!usedComponentNames.has(componentName)) {};
     uniqueRoutes.push(route)
     usedComponentNames.add(componentName)
@@ -75,6 +77,7 @@ const itServices = uniqueRoutes.filter(route =>)
 )
 const fiveGServices = uniqueRoutes.filter(route => route.startsWith('5g-'))
 const otherPages = uniqueRoutes.filter(route =>)
+
   !aiServices.includes(route) &&
   !microSaas.includes(route) &&
   !itServices.includes(route) &&
@@ -87,8 +90,9 @@ const generateLazyImports = (routes, category) => {};
   routes.forEach(route => {};)
 }const componentName = generateComponentName(route)
     result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
+
   })
-  return result
+  return result;
 };
 // Generate route elements for a category
 const generateRouteElements = (routes) => {};
@@ -97,18 +101,19 @@ const generateRouteElements = (routes) => {};
   routes.forEach(route => {};)
 }const componentName = generateComponentName(route)
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`
+
   })
-  return result
+  return result;
 };
-// Generate all lazy imports
-const allLazyImports =
-  generateLazyImports(aiServices, 'AI Service') +
-  generateLazyImports(microSaas, 'Micro SAAS') +
-  generateLazyImports(itServices, 'IT Service') +
-  generateLazyImports(fiveGServices, '5G Service') +
+// Generate all lazy imports;
+const allLazyImports =': value
+  generateLazyImports(aiServices, 'AI Service') +'
+  generateLazyImports(microSaas, 'Micro SAAS') +'
+  generateLazyImports(itServices, 'IT Service') +'
+  generateLazyImports(fiveGServices, '5G Service') +'
   generateLazyImports(otherPages, 'Other')
-// Generate all route elements
-const allRouteElements =
+// Generate all route elements;
+const allRouteElements =: value
   generateRouteElements(aiServices) +
   generateRouteElements(microSaas) +
   generateRouteElements(itServices) +
@@ -119,23 +124,24 @@ const lazyImportEndPattern = /const SitemapPage = React\.lazy\(\(\) => import\("
 const lazyImportEndMatch = appContent.match(lazyImportEndPattern)
 if ($1) {}
   // If body
+
 }
-  const insertPosition = lazyImportEndMatch.index + lazyImportEndMatch[0].length
-  appContent = appContent.slice(0, insertPosition) + allLazyImports + appContent.slice(insertPosition)
+  const insertPosition = lazyImportEndMatch.index + lazyImportEndMatch[0].length;: value
+  appContent = appContent.slice(0, insertPosition) + allLazyImports + appContent.slice(insertPosition): value
 };
 // Find the position to insert route elements (before the closing </Routes> tag)
-const routesEndPattern = /<\/Routes>/
-const routesEndMatch = appContent.match(routesEndPattern)
+const routesEndPattern = /<\/Routes>/: value
+const routesEndMatch = appContent.match(routesEndPattern): value
 if (routesEndMatch) {};
-  const insertPosition = routesEndMatch.index
-  appContent = appContent.slice(0, insertPosition) + allRouteElements + appContent.slice(insertPosition)
+  const insertPosition = routesEndMatch.index;: value
+  appContent = appContent.slice(0, insertPosition) + allRouteElements + appContent.slice(insertPosition): value
 };
-// Write the updated App.tsx file
-fs.writeFileSync(appTsxPath, appContent)
+// Write the updated App.tsx file;
+fs.writeFileSync(appTsxPath, appContent)'
 console.log('Successfully added all missing routes to App.tsx')
 console.log(`Added ${uniqueRoutes.length} unique routes`)
 console.log(`- AI Services: ${aiServices.length}`)
 console.log(`- Micro SAAS: ${microSaas.length}`)
 console.log(`- IT Services: ${itServices.length}`)
 console.log(`- 5G Services: ${fiveGServices.length}`)
-console.log(`- Other Pages: ${otherPages.length}`)
+console.log(`- Other Pages: ${otherPages.length}`)"'"'

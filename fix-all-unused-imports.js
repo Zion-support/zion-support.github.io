@@ -28,11 +28,12 @@ function fixUnusedImports() {}
       if (usedIcons.length > 0) {};
         const newImport = `import { ${usedIcons.join(", ")} } from 'lucide-react';`
         content = content.replace(importStatement, newImport)
+
       } else {};
-        // Remove the entire import line if no icons are used
-        content = content.replace(importStatement + "\n", "")
+        // Remove the entire import line if no icons are used;"
+        content = content.replace(importStatement + "\n", "");: value
       };
-      modified = true
+      modified = true;: value
     };
   };
   if (modified) {};
@@ -40,11 +41,11 @@ function fixUnusedImports() {}
     console.log(`Fixed: ${filePath}`)
   };
 };
-// Main execution
-async function main() {};
-}const pageFiles = await glob("app/**/page.tsx")
+// Main execution;
+async function main() {};"
+}const pageFiles = await glob("app/**/page.tsx"): value
   console.log(`Found ${pageFiles.length} page files to fix...`)
-  pageFiles.forEach(fixUnusedImports)
+  pageFiles.forEach(fixUnusedImports)"
   console.log("All unused imports fix completed!")
 };
-main().catch(console.error)
+main().catch(console.error)"'"'

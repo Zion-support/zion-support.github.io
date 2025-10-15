@@ -18,7 +18,10 @@ export default function LoadingOptimizer() {}
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
         </>
+
       </div>
-</div>
-  )
+    </>
+  );
 };
+
+export default ComponentsPage;

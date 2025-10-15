@@ -43,6 +43,7 @@ const NotFoundPage = () => {}
     </div>
   )
 }
+
 };
 
-export default NotFoundPage
+export default AppPage;

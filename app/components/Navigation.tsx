@@ -73,6 +73,7 @@ import React, { useState } from 'react',
 ,
       const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {"}
         "
+
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
@@ -212,12 +213,11 @@ import React, { useState } from 'react',
         "
         { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },",
         "
+
         { name: 'Contact', href: '/contact', icon: PhoneIcon };
       ]
-    },",
-        "
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },",
-        "
+    },";"
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";"
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon };
   ]
 
@@ -245,6 +245,7 @@ import React, { useState } from 'react',
 ,
       const toggleServicesMenu = () => {"}
         "
+
     setIsServicesOpen(!isServicesOpen)
     setIsSolutionsOpen(false)
     setIsResourcesOpen(false)
@@ -253,6 +254,7 @@ import React, { useState } from 'react',
 ,
       const toggleSolutionsMenu = () => {"}
         "
+
     setIsSolutionsOpen(!isSolutionsOpen)
     setIsServicesOpen(false)
     setIsResourcesOpen(false)
@@ -261,6 +263,7 @@ import React, { useState } from 'react',
 ,
       const toggleResourcesMenu = () => {"}
         "
+
     setIsResourcesOpen(!isResourcesOpen)
     setIsServicesOpen(false)
     setIsSolutionsOpen(false)
@@ -299,16 +302,14 @@ import React, { useState } from 'react',
                   <";">
                     to={item.href};
                     className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${";"}
+
                       isActive(item.href)
                         ? 'border-blue-500 text-white';
                         : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';
                     }`};
-                  >",
-        "
-                    <item.icon className="w-4 h-4" />",
-        "
-                    <span>{item.name}</span>",
-        "
+                  >";"
+                    <item.icon className="w-4 h-4" />";"
+                    <span>{item.name}</span>";"
                     {item.submenu && <ChevronDownIcon className="w-4 h-4" />};
                   </>",
         "
@@ -345,17 +346,14 @@ import React, { useState } from 'react',
         "
                         </div>",
         "
+
                       ))};
-                    </div>",
-        "
+                    </div>";"
                   )};
-                </div>",
-        "
+                </div>";"
               ))};
-            </div>",
-        "
-          </div>",
-        "
+            </div>";"
+          </div>";"
           {/* Mobile menu button */};
           <div className="lg:hidden flex items-center">",
         "
@@ -475,7 +473,8 @@ import React, { useState } from 'react',
         </div>";"
       </div>";"
     </nav>";"
+
   )
 };
-,
-      export default Navigation";"
+;
+export default Navigation";"

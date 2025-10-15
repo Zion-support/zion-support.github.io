@@ -43,6 +43,7 @@ const Pagebroken2Page = () => {}
     </div>
   )
 }
+
 };
 
-export default Pagebroken2Page
+export default ContactPage;

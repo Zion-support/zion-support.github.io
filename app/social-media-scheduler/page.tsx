@@ -1,3 +1,9 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users, Image } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import EnhancedSEO from '../components/EnhancedSEO';
 
 import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
@@ -439,3 +445,4 @@ import FuturisticCard from '../components/FuturisticCard',
 ,
       export default SocialMediaSchedulerPage;
 ;
+

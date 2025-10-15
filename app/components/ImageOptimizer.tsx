@@ -90,3 +90,4 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
     },
     {}
 export default ImageOptimizer;
+

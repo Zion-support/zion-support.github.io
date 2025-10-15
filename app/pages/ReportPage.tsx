@@ -1,4 +1,4 @@
-import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 import { Helmet } from 'react-helmet-async';
 import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {}
@@ -49,9 +49,9 @@ import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default ReportPage;

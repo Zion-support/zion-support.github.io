@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 ,
       import SEOOptimizer from "../../components/SEOOptimizer";
@@ -617,3 +619,4 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {""}
         </section>""
       </div>""
     </>""
+

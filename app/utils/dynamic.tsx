@@ -10,5 +10,8 @@ export default function UtilsPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default UtilsPage;

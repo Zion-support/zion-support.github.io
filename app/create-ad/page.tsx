@@ -9,5 +9,8 @@ export default function CreateAdPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default CreateAdPage;

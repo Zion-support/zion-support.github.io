@@ -3,47 +3,45 @@ import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
 
+
 // Components
 import Navigation from './app/components/Navigation';
-    import Sidebar from './app/components/Sidebar';
-    import Footer from './app/components/Footer';
-    import ErrorBoundary from './app/components/ErrorBoundary';
-    import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
-    import PerformanceMonitor from './app/components/PerformanceMonitor';
-    import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-    import LoadingSpinner from './app/components/LoadingSpinner';
+import Sidebar from './app/components/Sidebar';
+import Footer from './app/components/Footer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
-// Page Components
-import HomePage from './app/page';
-    import AboutPage from './app/pages/AboutPage';
-    import ContactPage from './app/pages/ContactPage';
-    import ServicesPage from './app/pages/ServicesPage';
-    import BlogPage from './app/pages/BlogPage';
-    import TutorialsPage from './app/pages/TutorialsPage';
-    import DemoPage from './app/pages/DemoPage';
-    import SupportPage from './app/pages/SupportPage';
-    import PrivacyPage from './app/pages/PrivacyPage';
-    import TermsPage from './app/pages/TermsPage';
-    import PricingPage from './app/pages/PricingPage';
-    import SolutionsPage from './app/pages/SolutionsPage';
-    import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-    import AISolutionsPage from './app/ai-solutions/page';
-    import ITSolutionsPage from './app/it-solutions/page';
+// Page Components (lazy loaded below)
+import BlogPage from './app/pages/BlogPage';
+import TutorialsPage from './app/pages/TutorialsPage';
+import DemoPage from './app/pages/DemoPage';
+import SupportPage from './app/pages/SupportPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import TermsPage from './app/pages/TermsPage';
+import PricingPage from './app/pages/PricingPage';
+import SolutionsPage from './app/pages/SolutionsPage';
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
+import AISolutionsPage from './app/ai-solutions/page';
+import ITSolutionsPage from './app/it-solutions/page';
+import TeamPage from './app/team/page';
+import DocumentationPage from './app/docs/page';
 
 // Service Pages
 import AIServicesPage from './app/ai-services/page';
-    import ITServicesPage from './app/it-services/page';
-    import CloudInfrastructurePage from './app/cloud-infrastructure/page';
-    import DigitalTransformationPage from './app/digital-transformation/page';
-    import CaseStudiesPage from './app/case-studies/page';
-    import CareersPage from './app/careers/page';
+import ITServicesPage from './app/it-services/page';
+import CloudInfrastructurePage from './app/cloud-infrastructure/page';
+import DigitalTransformationPage from './app/digital-transformation/page';
+import CaseStudiesPage from './app/case-studies/page';
+import CareersPage from './app/careers/page';
 
 // Additional Pages
 import CybersecurityPage from './app/cybersecurity-solutions/page';
-    import CloudSolutionsPage from './app/cloud-services/page';
-    import MicroSaaSPage from './app/micro-saas/page';
-    import FiveGSolutionsPage from './app/5g-solutions/page';
-    import DocumentationPage from './app/api-docs/page';
+import CloudSolutionsPage from './app/cloud-services/page';
+import MicroSaaSPage from './app/micro-saas/page';
+import FiveGSolutionsPage from './app/5g-solutions/page';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -75,6 +73,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
   
+
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
@@ -133,17 +132,17 @@ function App() {
                         </div>
                       } />
                     </Routes>
+
                 </ErrorBoundary>
               </main>
+              
               <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
             </div>
           </div>
         </Router>
       </HelmetProvider>
     </GlobalErrorBoundary>
   );
-}
+};
 
 export default App;

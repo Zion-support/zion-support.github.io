@@ -9,5 +9,8 @@ export default function AiNlpTextAnalysisPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default AiNlpTextAnalysisPage;

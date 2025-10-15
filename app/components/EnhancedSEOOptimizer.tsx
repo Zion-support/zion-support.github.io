@@ -490,6 +490,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},)
     </Helmet>
   )
 }
+
 };
 
-export default EnhancedSEOOptimizer
+export default ComponentsPage;

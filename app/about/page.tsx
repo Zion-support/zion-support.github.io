@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Lightbulb, Shield, Users, Target, Award, Globe } from 'lucide-react';
 
+
 export default function AboutPage() {
   const stats = [
     { number: "500+", label: "Projects Completed" },
@@ -51,6 +52,7 @@ export default function AboutPage() {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -62,6 +64,7 @@ export default function AboutPage() {
               and digital transformation. Our mission is to empower businesses with cutting-edge 
               technology that drives growth and innovation.
             </p>
+
           </div>
 
           {/* Stats Section */}
@@ -85,6 +88,7 @@ export default function AboutPage() {
               {values.map((value, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 shadow-lg">
                   <div className="text-blue-600 mb-4">
+
                     {value.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -113,6 +117,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+
       </div>
     </>
   );

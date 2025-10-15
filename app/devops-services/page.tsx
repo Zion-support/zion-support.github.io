@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -271,3 +273,4 @@ const DevOpsServicesPage = () => {}
               variant="outline"
               size="lg"
               icon={<UsersclassName="w-5 h-5">}
+

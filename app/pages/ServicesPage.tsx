@@ -419,9 +419,9 @@ const ServicesPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default ServicesPage;

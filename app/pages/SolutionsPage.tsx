@@ -1,4 +1,4 @@
-import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 import { Helmet } from 'react-helmet-async';
 const SolutionsPage: React.FC = () => {}
@@ -468,9 +468,9 @@ const SolutionsPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default SolutionsPage;

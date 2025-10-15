@@ -10,5 +10,8 @@ export default function ComponentsPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ComponentsPage;

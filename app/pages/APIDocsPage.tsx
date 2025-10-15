@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Copy, Search, BookOpen, MessageSquare, Play, Download } from "lucide-react";
+import SEOHead from '../components/SEOHead';
 
 const APIDocsPage: React.FC = () => {}
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');
@@ -382,9 +381,9 @@ const APIDocsPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default APIDocsPage;

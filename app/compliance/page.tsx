@@ -4,6 +4,7 @@ import React from 'react',
   return ()
     <>{}</>
       <SEOHead>
+
         title="Compliance - Zion Tech Group"
         description="Comprehensive compliance solutions for regulatory requirements and industry standards."
       />
@@ -15,6 +16,9 @@ import React from 'react',
       </div>
     </>
   )
+
     },
     {}
+
 export default CompliancePage;
+

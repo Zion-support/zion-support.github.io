@@ -9,5 +9,8 @@ export default function ZionAiApiManagerPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiApiManagerPage;

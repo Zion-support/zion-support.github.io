@@ -267,4 +267,5 @@ export default function Consultation() {}
   )
     },
     {}
+
 export default ConsultationPage;

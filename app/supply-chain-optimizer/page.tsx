@@ -9,5 +9,8 @@ export default function SupplyChainOptimizerPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default SupplyChainOptimizerPage;

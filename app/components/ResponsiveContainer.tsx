@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import { cn } from "../lib/utils";
 interface ResponsiveContainerProps {},
@@ -32,3 +34,4 @@ interface ResponsiveContainerProps {},
   )
 },
       export default ResponsiveContainer
+

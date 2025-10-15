@@ -1,8 +1,9 @@
 import React, { lazy, ComponentType } from 'react',
       import OptimizedLoadingSpinner from './OptimizedLoadingSpinner',
+
       interface LazyRouteProps {},
       component: () => Promise<{ default: ComponentType<any> }>,
-      fallback?: React.ReactNode
+      fallback?: React.ReactNode;
     },
     {}
 const LazyRoute: React.FC<LazyRouteProps> = ({},)
@@ -12,9 +13,12 @@ const LazyRoute: React.FC<LazyRouteProps> = ({},)
       const LazyComponent = lazy(component),
       return ()
     <fallback={fallback}></>
+
       <LazyComponent />
     </>
   )
     },
     {}
 export default LazyRoute;
+
+

@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import { cn } from "../lib/utils";
 interface ResponsiveTextProps {},
@@ -69,3 +71,4 @@ interface ResponsiveTextProps {},
   )
 },
       export default ResponsiveText
+

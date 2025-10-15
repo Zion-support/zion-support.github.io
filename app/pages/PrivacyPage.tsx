@@ -1,4 +1,4 @@
-import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 import { Helmet } from 'react-helmet-async';
 const PrivacyPage: React.FC = () => {}
@@ -308,9 +308,9 @@ const PrivacyPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default PrivacyPage;

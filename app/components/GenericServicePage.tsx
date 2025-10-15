@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import { Helmet } from "react-helmet-async";
 interface GenericServicePageProps {},
@@ -178,8 +180,10 @@ interface GenericServicePageProps {},
             </div>
           </section>
         </main>
+
       </div>
-</div>
-  )
-},
-      export default GenericServicePage
+    </>
+  );
+};
+
+export default ComponentsPage;

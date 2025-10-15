@@ -79,7 +79,8 @@ const ImprovedFooter: React.FC = () => {}
         </div>;
       </section>;
     </div>;
+
   );
 };
 
-export default Component;
+export default ComponentsPage;

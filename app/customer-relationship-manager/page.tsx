@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -300,8 +302,8 @@ const CustomerRelationshipManagerPage = () => {}
         </ResponsiveContainer>
       </section>
     </div>
+
   );
-}
 };
 
 export default CustomerRelationshipManagerPage;

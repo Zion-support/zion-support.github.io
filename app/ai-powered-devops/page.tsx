@@ -90,28 +90,13 @@ const AiPoweredDevopsPage: React.FC = () => {}
               <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
+
               </button>
             </div>
-          ))}
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionize Your DevOps</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Our AI-powered DevOps solutions help teams deliver software faster, more reliably, 
-            and with better security. Join thousands of companies already using our platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              Start Free Trial
-            </button>
-            <button className="border border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              View Documentation
-            </button>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

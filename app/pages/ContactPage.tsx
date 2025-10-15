@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Send, MessageSquare, Headphones } from "lucide-react";
+import SEOHead from '../components/SEOHead';
 
 const ContactPage: React.FC = () => {}
   const [formData, setFormData] = useState({};)
@@ -396,9 +395,9 @@ const ContactPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default ContactPage;

@@ -1,5 +1,5 @@
-import React, { useEffect, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface PerformanceOptimizerProps {}
   enableImageOptimization?: boolean;
@@ -122,6 +122,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({)}
   }, [location, optimizeImages, preloadCriticalResources, optimizeCaching, optimizeCompression, setupPerformanceMonitoring]);
 
   return null; // This component doesn't render anything
+
 };
 
-export default AdvancedPerformanceOptimizer;
+export default ComponentsPage;

@@ -3,7 +3,7 @@ import React from 'react',
       import '@testing-library/jest-dom',
     import ErrorBoundary from '../app/components/ErrorBoundary';
 
-;
+
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {}
   if (shouldThrow) {}
@@ -52,3 +52,4 @@ describe('ErrorBoundary', () => {}
     consoleSpy.mockRestore();
   });
 });
+

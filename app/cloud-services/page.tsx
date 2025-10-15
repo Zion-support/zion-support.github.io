@@ -128,31 +128,17 @@ const CloudServicesPage: React.FC = () => {}
               </ul>
 
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
+
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
+                Learn More
               </button>
             </div>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Move to the Cloud?</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Our cloud experts will help you design, migrate, and optimize your cloud infrastructure 
-            for maximum performance and cost efficiency.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              Schedule Consultation
-            </button>
-            <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              Download Cloud Guide
-            </button>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

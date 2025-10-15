@@ -144,22 +144,16 @@ import { Helmet } from 'react-helmet-async',
       description: 'Fees are non-refundable unless otherwise specified in writing'
     },
     {}
+
   ];
-,
-      const prohibitedUses = [",
-        "
-    'Violating any applicable laws or regulations',",
-        "
-    'Transmitting harmful or malicious code',",
-        "
-    'Attempting to gain unauthorized access to our systems',",
-        "
-    'Interfering with the proper functioning of the service',",
-        "
-    'Using the service for any unlawful or prohibited purpose',",
-        "
-    'Impersonating another person or entity',",
-        "
+;
+  const prohibitedUses = [";"
+    'Violating any applicable laws or regulations',";"
+    'Transmitting harmful or malicious code',";"
+    'Attempting to gain unauthorized access to our systems',";"
+    'Interfering with the proper functioning of the service',";"
+    'Using the service for any unlawful or prohibited purpose',";"
+    'Impersonating another person or entity',";"
     'Collecting user information without consent';
   ];
 ;
@@ -192,3 +186,9 @@ import { Helmet } from 'react-helmet-async',
 };
 ;
 export default TermsPage;
+
+  );
+};
+;
+export default TermsPage;
+

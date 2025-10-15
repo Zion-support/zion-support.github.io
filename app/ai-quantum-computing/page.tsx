@@ -90,28 +90,13 @@ const AiQuantumComputingPage: React.FC = () => {}
               <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
+
               </button>
             </div>
-          ))}
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Lead the Quantum Revolution</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join the quantum computing revolution with our cutting-edge AI solutions. 
-            We're helping organizations prepare for the quantum future today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              Schedule Consultation
-            </button>
-            <button className="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              Download White Paper
-            </button>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

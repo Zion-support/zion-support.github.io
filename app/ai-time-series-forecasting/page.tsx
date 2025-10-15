@@ -9,5 +9,8 @@ export default function AiTimeSeriesForecastingPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default AiTimeSeriesForecastingPage;

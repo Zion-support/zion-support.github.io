@@ -9,5 +9,8 @@ export default function ZionAiExpenseTrackerPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiExpenseTrackerPage;

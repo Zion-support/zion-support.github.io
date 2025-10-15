@@ -5,9 +5,10 @@ import path from "path";
 function fixMergeConflicts() {}
   // Function body
 }
+
 }try {};
 } catch (error) {};
-  console.error(error)
-}let content = fs.readFileSync(filePath, 'utf8')
-    // Check if file has merge conflicts
-    if (!content.includes(')'
+  console.error(error)'
+}let content = fs.readFileSync(filePath, 'utf8'): value
+    // Check if file has merge conflicts;'
+    if (!content.includes(')''

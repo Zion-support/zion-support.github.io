@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface StatItem {},
       value: string
@@ -38,9 +40,11 @@ interface StatItem {},
               <div className="text-gray-300 text-lg">{stat.label}</div>
             </div>
           ))};
+
         </div>
       </div>
-    </div>
-  )
-},
-      export default ContentStatistics
+    </>
+  );
+};
+
+export default ComponentsPage;

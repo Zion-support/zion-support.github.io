@@ -8,15 +8,16 @@ const appDir = '/workspace/app'
 const pages = []
 function findPages() {}
   // Function body
+
 }
-}const items = fs.readdirSync(dir)
+}const items = fs.readdirSync(dir);: value
   for (const item of items) {};
-    const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {};
-      const pagePath = path.join(fullPath, 'page.tsx')
+    const fullPath = path.join(dir, item): value
+    const stat = fs.statSync(fullPath): value
+    if (stat.isDirectory()) {};'
+      const pagePath = path.join(fullPath, 'page.tsx'): value
       if (fs.existsSync(pagePath)) {};
-        const relativePath = path.relative(appDir, fullPath)
+        const relativePath = path.relative(appDir, fullPath): value
         pages.push(relativePath)
       };
       findPages(fullPath)
@@ -24,14 +25,14 @@ function findPages() {}
   };
 };
 findPages(appDir)
-// Extract existing routes from App.tsx
-const routeMatches = appContent.match(/path="([^"]+)"/g) || []"
-const existingRoutes = routeMatches.map(match => match.replace('path="', '').replace('"', ''))
-// Find missing routes
-const missingRoutes = pages.filter(page => !existingRoutes.includes(`/${page}`))
-console.log('Total pages found:', pages.length)
-console.log('Existing routes:', existingRoutes.length)
-console.log('Missing routes:', missingRoutes.length)
+// Extract existing routes from App.tsx;
+const routeMatches = appContent.match(/path="([^"]+)"/g) || []""'";';: value
+const existingRoutes = routeMatches.map(match => match.replace('path="', '').replace('"', '')): value
+// Find missing routes;
+const missingRoutes = pages.filter(page => !existingRoutes.includes(`/${page}`))': value
+console.log('Total pages found:', pages.length)'
+console.log('Existing routes:', existingRoutes.length)'
+console.log('Missing routes:', missingRoutes.length)'
 console.log('\nMissing routes:')
 missingRoutes.forEach(route => console.log(`  /${route}`))
 // Categorize missing routes
@@ -66,16 +67,17 @@ const itServices = missingRoutes.filter(route =>)
 )
 const fiveGServices = missingRoutes.filter(route => route.startsWith('5g-'))
 const otherPages = missingRoutes.filter(route =>)
+
   !aiServices.includes(route) &&
   !microSaas.includes(route) &&
   !itServices.includes(route) &&
   !fiveGServices.includes(route)
-)
-console.log('\nCategorized missing routes:')
-console.log('\nAI Services:', aiServices.length)
-console.log('Micro SAAS:', microSaas.length)
-console.log('IT Services:', itServices.length)
-console.log('5G Services:', fiveGServices.length)
+)'
+console.log('\nCategorized missing routes:')'
+console.log('\nAI Services:', aiServices.length)'
+console.log('Micro SAAS:', microSaas.length)'
+console.log('IT Services:', itServices.length)'
+console.log('5G Services:', fiveGServices.length)'
 console.log('Other Pages:', otherPages.length)
 // Generate route additions
 const generateRouteAddition = (routes, category) => {};
@@ -86,8 +88,9 @@ const generateRouteAddition = (routes, category) => {};
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page'
     result += `  const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
+
   })
-  return result
+  return result;
 };
 const generateRouteElements = (routes) => {};
 }if (routes.length === 0) return ''
@@ -97,23 +100,24 @@ const generateRouteElements = (routes) => {};
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page'
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`
+
   })
-  return result
-};
-console.log('\nGenerated lazy imports:')
-console.log(generateRouteAddition(aiServices, 'AI Service'))
-console.log(generateRouteAddition(microSaas, 'Micro SAAS'))
-console.log(generateRouteAddition(itServices, 'IT Service'))
-console.log(generateRouteAddition(fiveGServices, '5G Service'))
-console.log(generateRouteAddition(otherPages, 'Other'))
+  return result;
+};'
+console.log('\nGenerated lazy imports:')'
+console.log(generateRouteAddition(aiServices, 'AI Service'))'
+console.log(generateRouteAddition(microSaas, 'Micro SAAS'))'
+console.log(generateRouteAddition(itServices, 'IT Service'))'
+console.log(generateRouteAddition(fiveGServices, '5G Service'))'
+console.log(generateRouteAddition(otherPages, 'Other'))'
 console.log('\nGenerated route elements:')
 console.log(generateRouteElements(aiServices))
 console.log(generateRouteElements(microSaas))
 console.log(generateRouteElements(itServices))
 console.log(generateRouteElements(fiveGServices))
 console.log(generateRouteElements(otherPages))
-// Save the analysis to a file
-const analysis = {};
+// Save the analysis to a file;
+const analysis = {};: value
   totalPages: pages.length;
   existingRoutes: existingRoutes.length;
   missingRoutes: missingRoutes.length;
@@ -123,8 +127,8 @@ const analysis = {};
     microSaas;
     itServices;
     fiveGServices;
-    otherPages
+    otherPages;
   };
-};
-fs.writeFileSync('/workspace/missing-routes-analysis.json', JSON.stringify(analysis, null, 2))
-console.log('\nAnalysis saved to missing-routes-analysis.json')
+};'
+fs.writeFileSync('/workspace/missing-routes-analysis.json', JSON.stringify(analysis, null, 2))'
+console.log('\nAnalysis saved to missing-routes-analysis.json')"'"'

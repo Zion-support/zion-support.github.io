@@ -44,3 +44,4 @@ export { createLazyComponent } from '../utils/lazyLoading';
 // Re-export the utility function
 export { createLazyComponent } from '../utils/lazyLoading',
       export default LazyWrapper;
+

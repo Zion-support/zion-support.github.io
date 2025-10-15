@@ -9,5 +9,8 @@ export default function ZionAiAccountingSuitePage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiAccountingSuitePage;

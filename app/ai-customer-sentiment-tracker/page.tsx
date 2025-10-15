@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 const AiCustomerSentimentTrackerPage: React.FC = () => {}
   return ()
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Sentiment Tracker | Zion Tech Group</title>
@@ -46,3 +47,4 @@ const AiCustomerSentimentTrackerPage: React.FC = () => {}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+

@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface EnhancedLoadingProps {},
       message?: string
@@ -52,8 +54,10 @@ interface EnhancedLoadingProps {},
         <p className="text-gray-400 text-sm mt-6 max-w-md mx-auto"></p>
           Preparing your experience with cutting-edge technology...
         </p>
+
       </div>
-    </div>
-  )
-},
-      export default EnhancedLoading
+    </>
+  );
+};
+
+export default ComponentsPage;

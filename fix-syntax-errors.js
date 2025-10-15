@@ -2,6 +2,8 @@
 
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(filePath) {}
@@ -38,16 +40,28 @@ function fixSyntaxErrors(filePath) {}
     ];
     
     for (const fix of fixes) {}
+
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {}
         content = newContent;
         modified = true;
       }
+    });
+    
+    // Additional specific fixes for common issues
+    // Fix missing closing tags
+    content = content.replace(/(<section[^>]*>)([^<]*<div[^>]*>)([^<]*<h1[^>]*>.*<\/h1>)([^<]*<p[^>]*>.*<\/p>)([^<]*<\/div>)([^<]*<\/div>)([^<]*<\/section>)([^<]*<\/div>)([^<]*<\/>)([^<]*\}\);)/gm, 
+      '$1$2$3$4$5$6$7$8$9$10');
+    
+    // Fix missing function declarations
+    if (content.includes('return (<div') && !content.includes('const ') && !content.includes('function ')) {
+      content = 'const ComponentName = () => {\n' + content;
     }
     
     if (modified) {}
+
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     
@@ -63,6 +77,7 @@ function findFilesWithErrors(dir) {}
   const files = [];
   
   function searchDirectory(currentDir) {}
+
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {}
@@ -72,20 +87,21 @@ function findFilesWithErrors(dir) {}
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
         searchDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {}
+
         files.push(fullPath);
       }
     }
   }
   
-  searchDirectory(dir);
+  traverse(dir);
   return files;
 }
 
 // Main execution
 console.log('Starting syntax error fixes...');
 
-const files = findFilesWithErrors('/workspace');
-console.log(`Checking ${files.length} files for syntax errors`);
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
 
 let fixedCount = 0;
 for (const file of files) {}
@@ -94,5 +110,25 @@ for (const file of files) {}
   }
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files`);
-console.log('Syntax error fixes completed!');
+
+files.forEach(file => {
+  try {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+    errorCount++;
+  }
+});
+
+console.log(`\nFixed ${fixedCount} files`);
+console.log(`Errors in ${errorCount} files`);
+
+// Run type check to see remaining errors
+console.log('\nRunning type check...');
+try {
+  execSync('pnpm run type-check', { stdio: 'inherit' });
+} catch (error) {
+  console.log('Type check completed with errors (expected)');
+}

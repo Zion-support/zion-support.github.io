@@ -9,5 +9,8 @@ export default function WhitepapersPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default WhitepapersPage;

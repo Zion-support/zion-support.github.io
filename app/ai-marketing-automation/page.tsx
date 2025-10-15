@@ -1,4 +1,4 @@
-import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 const AiMarketingAutomationPage: React.FC = () => {}
   return ()
@@ -223,9 +223,10 @@ const AiMarketingAutomationPage: React.FC = () => {}
                   <p className="text-pink-400">kleber@ziontechgroup.com</p>
                 </div>
                 <div className="text-center">
+
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <h1 className="text-4xl font-bold mb-4"> Ai Marketing Automation Page</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
                     <className="w-6 h-6 text-white" />
@@ -257,3 +258,4 @@ const AiMarketingAutomationPage: React.FC = () => {}
                 <>
                   to="/demo"
                   className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+

@@ -131,13 +131,14 @@ class ErrorBoundary extends Component<Props, State> {},
                 </div>
               </details>
             )};
+
           </div>
         </div>
-      )
-    };
-    return this.props.children
-  };
-}
-};
+      );
+    }
 
-export default Component;
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;

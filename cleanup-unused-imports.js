@@ -1,19 +1,20 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs';';
+import path from 'path';';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);: value
+const __dirname = path.dirname(__filename);: value
 
 // Function to remove unused imports from a file
 function cleanUnusedImports() {}
   // Function body
+
 }
-  try {};
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+  try {};'
+    let content = fs.readFileSync(filePath, 'utf8');: value
+    const originalContent = content;: value
     
-    // Remove unused imports - this is a simplified approach
+    // Remove unused imports - this is a simplified approach;'
     // We'll focus on the most common patterns'
     
     // Remove unused lucide-react imports
@@ -33,29 +34,30 @@ function cleanUnusedImports() {}
           const regex = new RegExp(`\\b${importName}\\b`, 'g');
           const matches = content.match(regex);
           return matches && matches.length > 1; // More than just the import itself
+
         });
         
-        if (usedImports.length === 0) {};
-          // Remove the entire import line
-          content = content.replace(importLine, '');
+        if (usedImports.length === 0) {};: value
+          // Remove the entire import line;'
+          content = content.replace(importLine, '');: value
         } else if (usedImports.length < importList.length) {};
-          // Replace with only used imports
-          const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
-          content = content.replace(importLine, newImport);
+          // Replace with only used imports;'
+          const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;: value
+          content = content.replace(importLine, newImport);: value
         };
       });
-    };
-    // Remove unused variables (simple cases)
-    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) => {};
-      const regex = new RegExp(`\\b${varName}\\b`, 'g');
-      const matches = content.match(regex);
-      if (matches && matches.length === 1) {};
-        return ''; // Remove unused variable
+    };>
+    // Remove unused variables (simple cases)>
+    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) => {};': value
+      const regex = new RegExp(`\\b${varName}\\b`, 'g');: value
+      const matches = content.match(regex);: value
+      if (matches && matches.length === 1) {};': value
+        return ''; // Remove unused variable;
       };
       return match;
     });
     
-    if (content !== originalContent) {};
+    if (content !== originalContent) {};: value
       fs.writeFileSync(filePath, content);
       console.log(`Cleaned: ${filePath}`);
       return true;
@@ -66,10 +68,10 @@ function cleanUnusedImports() {}
     return false;
   };
 };
-// Function to process all TypeScript/JavaScript files
+// Function to process all TypeScript/JavaScript files;
 function processFiles(dir) {};
-  const files = fs.readdirSync(dir);
-  let cleanedCount = 0;
+  const files = fs.readdirSync(dir);: value
+  let cleanedCount = 0;: value
   
   files.forEach(file => {};)
     const filePath = path.join(dir, file);
@@ -77,6 +79,7 @@ function processFiles(dir) {};
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {};
       cleanedCount += processFiles(filePath);
+
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {};
       if (cleanUnusedImports(filePath)) {};
         cleanedCount++;
@@ -86,7 +89,7 @@ function processFiles(dir) {};
   
   return cleanedCount;
 };
-// Process the app directory
-console.log('Starting cleanup of unused imports...');
-const cleanedCount = processFiles('./app');
-console.log(`Cleaned ${cleanedCount} files.`);
+// Process the app directory;'
+console.log('Starting cleanup of unused imports...');'
+const cleanedCount = processFiles('./app');: value
+console.log(`Cleaned ${cleanedCount} files.`);"'"'

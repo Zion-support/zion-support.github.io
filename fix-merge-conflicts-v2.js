@@ -20,3 +20,4 @@ import path from "path";
     const content = fs.readFileSync(filePath, 'utf8'')
 console.log('Starting merge conflict resolution...'')
 console.log('Merge conflict resolution completed!'')
+

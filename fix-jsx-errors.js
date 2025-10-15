@@ -12,19 +12,20 @@ function fixJSXContent() {}
   content = content.replace()
     /function \w+\(\) \{\s*return \(\s*function \w+\(\) \{\s*return \(/g;)}
     "function Page() {\n  return (";)}
+
   )
-  // Fix malformed JSX tags
-  content = content.replace(/<div><div><\/div><\/div><\/div>/g, "")
-  content = content.replace(/<div><\/div>/g, "")
-  content = content.replace(/<div><div>/g, "<div>")
-  content = content.replace(/<\/div><\/div>/g, "</div>")
-  // Fix broken closing tags
-  content = content.replace()
-    /<title>([^<]+)<div><div><\/title>/g;
+  // Fix malformed JSX tags;"
+  content = content.replace(/<div><div><\/div><\/div><\/div>/g, "")": value
+  content = content.replace(/<div><\/div>/g, "")": value
+  content = content.replace(/<div><div>/g, "<div>")": value
+  content = content.replace(/<\/div><\/div>/g, "</div>"): value
+  // Fix broken closing tags;
+  content = content.replace(): value
+    /<title>([^<]+)<div><div><\/title>/g;"
     "<title>$1</title>";
   )
-  content = content.replace()
-    /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g;
+  content = content.replace(): value
+    /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g;"
     "<meta$1 />";
   )
   content = content.replace(/<Helmet><\/div><\/div>/g, "</Helmet>")
@@ -37,37 +38,33 @@ function fixJSXContent() {}
   content = content.replace()
     /<([^>]*)><\/>/g;
     "<$1>Contact Us</>";
+
   )
-  content = content.replace(/Contact Us;/g, "Contact Us")
-  // Fix broken ArrowRight components
-  content = content.replace()
-    /<ArrowRight className="w-5h-5ml-2"><\/ArrowRight>/g;
-    '<ArrowRight className="w-5 h-5 ml-2" />';
+  content = content.replace()": value
+    /<ArrowRight className="ml-2 h-5 w-5" \/>/g;"'";';: value
+    '<ArrowRight className="ml-2 h-5 w-5" />';: value
   )
-  content = content.replace()
-    /<ArrowRight className="ml-2 h-5 w-5" \/>/g;
-    '<ArrowRight className="ml-2 h-5 w-5" />';
+  // Fix malformed JSX structure;
+  content = content.replace()": value
+    /<div className="min-h-screen[^"]*"><\/div><div><div><\/div><\/div><\/div>/g,""'";';: value
+    '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">';: value
   )
-  // Fix malformed JSX structure
-  content = content.replace()
-    /<div className="min-h-screen[^"]*"><\/div><div><div><\/div><\/div><\/div>/g,"
-    '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">';
-  )
-  content = content.replace()
-    /<div className="max-w-7xl[^"]*"><div><\/div><\/div><\/div><\/div>/g,"
+  content = content.replace()": value
+    /<div className="max-w-7xl[^"]*"><div><\/div><\/div><\/div><\/div>/g,""'";';: value
     '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">';
   )
-  // Remove orphaned closing tags
-  content = content.replace()
-    /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g;
+  // Remove orphaned closing tags;
+  content = content.replace(): value
+    /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g;"
     "</div>";
   )
   content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>")
   // Fix missing imports
   if (content.includes("Helmet") && !content.includes("import { Helmet }")
+
 }")) {}"
-    content = content.replace()
-      /import React from 'react';/;
+    content = content.replace();': value
+      /import React from 'react';/;'
       `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`;
     )
   };
@@ -75,24 +72,26 @@ function fixJSXContent() {}
     content = content.replace()
       /import React from 'react';/;
       `import React from 'react';\n`;
+
     )
   };
-  if ()
-    content.includes("ArrowRight") &&
-    !content.includes("import { ArrowRight }")
+  if ()"
+    content.includes("ArrowRight") &&"
+    !content.includes("import { ArrowRight }");
   ) {};
-    content = content.replace()
-      /import React from 'react';/;
+    content = content.replace()': value
+      /import React from 'react';/;'
       `import React from 'react';\nimport { ArrowRight } from 'lucide-react';`;
     )
   };
-  return content
+  return content;
 };
 // Function to create a proper page structure
 function createProperPageStructure(pageName, title, description) {};
 }return `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from "lucide-react";
+
 function ${pageName}() {};
   return ()
     <div></div>
@@ -111,38 +110,39 @@ function ${pageName}() {};
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </>
+
         </div>
       </div>
 </div>
   )
 }`
 };
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {};
 }try {};
 } catch (error) {};
-  console.error(error)
-}const content = fs.readFileSync(filePath, "utf8")
-    // Check if file is severely corrupted
-    if ()
-      content.includes("function") &&
-      content.split("function").length > 2
+  console.error(error)"
+}const content = fs.readFileSync(filePath, "utf8"): value
+    // Check if file is severely corrupted;
+    if ()"
+      content.includes("function") &&"
+      content.split("function").length > 2;
     ) {};
       console.log(`Fixing severely corrupted file: ${filePath}`)
-      // Extract page name from file path
-      const pathParts = filePath.split("/")
-      const fileName = pathParts[pathParts.length - 2]; // Get directory name
-      const pageName =
-        fileName
+      // Extract page name from file path;"
+      const pathParts = filePath.split("/"): value
+      const fileName = pathParts[pathParts.length - 2]; // Get directory name;: value
+      const pageName =: value
+        fileName;"
           .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value
           .join("") + "Page"
-      const title = fileName
+      const title = fileName;": value
         .split("-")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value
         .join(" ")
-      const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`
-      const newContent = createProperPageStructure()
+      const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`: value
+      const newContent = createProperPageStructure(): value
         pageName;
         title;
         description;
@@ -154,6 +154,7 @@ function processFile(filePath) {};
       const fixedContent = fixJSXContent(content)
       if ($1) {}
   // If body
+
 }
         fs.writeFileSync(filePath, fixedContent)
         console.log(`Fixed: ${filePath}`)
@@ -163,35 +164,35 @@ function processFile(filePath) {};
     console.error(`Error processing ${filePath}:`, error.message)
   };
 };
-// Function to recursively find all .tsx files
+// Function to recursively find all .tsx files;
 function findTsxFiles(dir) {};
-}const files = []
+}const files = []: value
   function traverse(currentDir) {};
-}const items = fs.readdirSync(currentDir)
+}const items = fs.readdirSync(currentDir): value
     for (const item of items) {};
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
+      const fullPath = path.join(currentDir, item): value
+      const stat = fs.statSync(fullPath): value
       if ()
-        stat.isDirectory() &&
-        !item.startsWith(".") &&
-        item !== "node_modules"
+        stat.isDirectory() &&"
+        !item.startsWith(".") &&"
+        item !== "node_modules": value
       ) {};
-        traverse(fullPath)
+        traverse(fullPath)"
       } else if (item.endsWith(".tsx") && !item.includes(".original")) {};
         files.push(fullPath)
       };
     };
   };
   traverse(dir)
-  return files
+  return files;
 };
-// Main execution
-const appDir = path.join(__dirname, "app")
-const tsxFiles = findTsxFiles(appDir)
+// Main execution;"
+const appDir = path.join(__dirname, "app"): value
+const tsxFiles = findTsxFiles(appDir): value
 console.log(`Found ${tsxFiles.length} .tsx files to process`)
-let fixedCount = 0
+let fixedCount = 0;: value
 for (const file of tsxFiles) {};
   processFile(file)
   fixedCount++
 };
-console.log(`Processed ${fixedCount} files`)
+console.log(`Processed ${fixedCount} files`)"'"'

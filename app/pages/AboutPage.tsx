@@ -1,4 +1,4 @@
-import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 const AboutPage: React.FC = () => {}
   const values = [
@@ -148,9 +148,9 @@ const AboutPage: React.FC = () => {}
           </div>
         </section>
       </div>
+
     </>
   );
-}
 };
 
 export default AboutPage;

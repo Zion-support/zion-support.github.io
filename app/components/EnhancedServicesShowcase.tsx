@@ -24,21 +24,23 @@ const EnhancedServicesShowcase: React.FC = () => {};
     {},
       icon: title: "Cloud Infrastructure",
       description: "Scalable and secure cloud solutions to modernize your infrastructure and reduce costs.",
+
       features: []
         "Cloud Migration",
         "Infrastructure as Code",
-        "Auto-scaling";
-        "Disaster Recovery"]};
-    {},
+        "Auto-scaling",
+        "Disaster Recovery"]},
+    {}
       icon: Globe,
       title: "Digital Transformation",
-      description: "Complete digital transformation services to modernize your business and stay competitive.",
+      description:
+        "Complete digital transformation services to modernize your business and stay competitive.",
       features: []
         "Strategy Development",
         "Technology Integration",
         "Change Management",
         "Training & Support",
-        ]
+      ],
     },
     {}
   ],
@@ -46,9 +48,10 @@ const EnhancedServicesShowcase: React.FC = () => {};
       <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center mb-16"></div>
           <h2 className="text-4xl font-bold text-white mb-4"></h2>
+
             Our Core Services
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your
             business and drive innovation
           </p>
@@ -59,14 +62,15 @@ const EnhancedServicesShowcase: React.FC = () => {};
             ></div
 >
               <div className="flex items-center mb-4"></div>
+
                 <service.icon className="h-12 w-12 text-cyan-400 mr-4" />
-                <h3 className="text-2xl font-semibold text-white"></h3>
-                  {service.title};
+                <h3 className="text-2xl font-semibold text-white">
+                  {service.title}
                 </h3>
               </div>
               <p className="text-gray-300 mb-6">{service.description}</p>
-              <div className="mb-6"></div>
-                <h4 className="text-sm font-semibold text-cyan-400 mb-3"></h4>
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-cyan-400 mb-3">
                   Key Features
                 </h4>
                 <ul className="space-y-2"></ul>
@@ -75,24 +79,26 @@ const EnhancedServicesShowcase: React.FC = () => {};
       className="flex items-center text-sm text-gray-300"
                     ></li
 >
+
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-                      {feature};
+                      {feature}
                     </li>
-                  ))};
+                  ))}
                 </ul>
               </div>
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"></button>
+              <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
-          ))};
+          ))}
         </div>
         <div className="text-center mt-16"></div>
           <>
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           ></>
+
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </>
@@ -100,5 +106,5 @@ const EnhancedServicesShowcase: React.FC = () => {};
       </div>
     </div>
   )
-},
-      export default EnhancedServicesShowcase
+}
+export default EnhancedServicesShowcase

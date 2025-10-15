@@ -43,6 +43,7 @@ const ErrorboundaryconfigPage = () => {}
     </div>
   )
 }
+
 };
 
-export default ErrorboundaryconfigPage
+export default ConfigPage;

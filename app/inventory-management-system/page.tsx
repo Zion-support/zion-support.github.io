@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import { Package, AlertTriangle } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
@@ -294,3 +296,4 @@ const InventoryManagementSystemPage = () => {}
               variant="outline"
               size="lg"
               icon={<GlobeclassName="w-5 h-5">}
+

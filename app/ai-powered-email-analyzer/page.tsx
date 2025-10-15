@@ -90,28 +90,13 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {}
               <button className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
+
               </button>
             </div>
-          ))}
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionize Email Management</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Our AI email analyzer helps organizations process emails faster, stay secure, 
-            and gain valuable insights from their email communications.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              Start Free Trial
-            </button>
-            <button className="border border-orange-600 text-orange-600 hover:bg-orange-50 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              Schedule Demo
-            </button>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

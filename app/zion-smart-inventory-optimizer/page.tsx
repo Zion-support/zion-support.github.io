@@ -64,5 +64,8 @@ export default function ZionSmartInventoryOptimizer() {}
         </div>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionSmartInventoryOptimizerPage;

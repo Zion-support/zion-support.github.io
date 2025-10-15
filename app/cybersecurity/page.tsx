@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import SEOHead from '../components/SEOHead',
       const CybersecurityPage: React.FC = () => {"}
@@ -241,3 +243,4 @@ import SEOHead from '../components/SEOHead',
     {}
 ,
       export default CybersecurityPage;
+

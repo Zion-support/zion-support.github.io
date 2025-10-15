@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 import {MessageSquare, BookOpen} from "lucide-react";
 ,
@@ -151,3 +153,4 @@ import {MessageSquare, BookOpen} from "lucide-react";
     {}
 ,
       export default CommunityPage;
+

@@ -273,8 +273,10 @@ const EnhancedNavigation = () => {};
             </div>
           </div>
         )};
+
       </div>
-    </header>
-  )
-},
-      export default EnhancedNavigation
+    </>
+  );
+};
+
+export default ComponentsPage;

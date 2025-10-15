@@ -9,5 +9,8 @@ export default function ZionAiWorkflowAutomationPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiWorkflowAutomationPage;

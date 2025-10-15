@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface LoadingSpinnerProps {},
       size?: 'sm' | 'md' | 'lg' | 'xl'
@@ -48,10 +50,11 @@ interface LoadingSpinnerProps {},
             <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
             <p className="text-gray-300">Loading amazing experiences...</p>
           </div>
+
         </div>
       </div>
-    )
-  },
-      return spinner
-},
-      export default ModernLoadingSpinner
+    </>
+  );
+};
+
+export default ComponentsPage;

@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface AnimatedCardProps {}
   children: React.ReactNode;
@@ -48,9 +49,10 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({)}
       {/* Content */}
       <div className="relative z-10">
         {children}
+
       </div>
-    </div>
+    </>
   );
 };
 
-export default Component;
+export default ComponentsPage;

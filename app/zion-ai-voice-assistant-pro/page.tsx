@@ -64,5 +64,8 @@ export default function ZionAIVoiceAssistantPro() {}
         </div>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiVoiceAssistantProPage;

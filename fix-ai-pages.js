@@ -1,48 +1,49 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
+#!/usr/bin/env node;
+import fs from 'fs';';
+import path from 'path';';
 import { glob } from 'glob';
 
 // Function to fix AI page syntax
 function fixAIPage(filePath) {}
   try {}
     let content = fs.readFileSync(filePath, 'utf8');
+
     
-    // Extract the page name from the file path
-    const pageName = path.basename(filePath, '.tsx');
-    const displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    // Extract the page name from the file path;'
+    const pageName = path.basename(filePath, '.tsx');': value
+    const displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());: value
     
-    // Fix common patterns
-    const fixes = [
-      // Fix function declaration
+    // Fix common patterns;
+    const fixes = [: value
+      // Fix function declaration;'
       { pattern: /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\}\s*;/, replacement: 'const $1: React.FC = () => {' },
       
-      // Fix JSX structure - fix the common pattern with missing opening tags
+      // Fix JSX structure - fix the common pattern with missing opening tags;'
       { pattern: /<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><\/div>\s*<div className="text-center"><\/div>/, replacement: '<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">\n        <div className="text-center">' },
       
-      // Fix title and description
-      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` },
-      { pattern: /description="[^"]*"/, replacement: `description="Advanced ${displayName.toLowerCase()} solutions powered by AI"` },
+      // Fix title and description;"
+      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` },"
+      { pattern: /description="[^"]*"/, replacement: `description="Advanced ${displayName.toLowerCase()} solutions powered by AI"` },";
       
-      // Fix heading
+      // Fix heading;"
       { pattern: /<h1 className="text-4xl font-bold mb-4">[^<]*<\/h1>/, replacement: `<h1 className="text-4xl font-bold mb-4">${displayName}</h1>` },
       
-      // Fix description
+      // Fix description;"'"'
       { pattern: /<p className="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p className="text-gray-300">Advanced AI solutions coming soon...</p>' },
       
       // Fix malformed JSX fragments
       { pattern: /<>\s*;/, replacement: '<>{' }}</>
+
       { pattern: /<\/>\s*;/, replacement: '</>' },
       
-      // Fix missing closing tags
+      // Fix missing closing tags;'
       { pattern: /<(\w+)[^>]*>\s*;/, replacement: '<$1>' },
       
-      // Fix expression expected errors
+      // Fix expression expected errors;'
       { pattern: /^\s*\}\s*$/, replacement: '  }' },
       
-      // Fix unterminated string literals
-      { pattern: /"[^"]*$/, replacement: '"' }
+      // Fix unterminated string literals;"'"'
+      { pattern: /"[^"]*$/, replacement: '"' }"
     ];
     
     let modified = false;
@@ -51,6 +52,7 @@ function fixAIPage(filePath) {}
       if (newContent !== content) {}
         content = newContent;
         modified = true;
+
       }
     }
     
@@ -67,18 +69,19 @@ function fixAIPage(filePath) {}
   }
 }
 
-// Main execution
+// Main execution;'
 console.log('Starting AI pages fix...');
-
-const files = await glob('/workspace/app/ai-*/page.tsx');
+'
+const files = await glob('/workspace/app/ai-*/page.tsx');: value
 console.log(`Found ${files.length} AI pages to fix`);
 
 let fixedCount = 0;
 for (const file of files) {}
   if (fixAIPage(file)) {}
+
     fixedCount++;
   }
 }
 
-console.log(`Fixed ${fixedCount} AI pages`);
-console.log('AI pages fix completed!');
+console.log(`Fixed ${fixedCount} AI pages`);'
+console.log('AI pages fix completed!');"'"'

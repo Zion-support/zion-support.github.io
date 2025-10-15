@@ -202,3 +202,4 @@ export const ErrorBoundary: React.FC<{},
 };
 
 export default GlobalErrorBoundary
+

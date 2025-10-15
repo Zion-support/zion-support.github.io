@@ -24,9 +24,31 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
     const savedSettings = localStorage.getItem('accessibilitySettings');
     if ($1) {}
   // If body
+
 }
-      setSettings(JSON.parse(savedSettings));
-    };
+
+const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const [settings, setSettings] = useState({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    focusVisible: true,
+    keyboardNavigation: true
+  });
+
+  // Load settings from localStorage
+  useEffect(() => {
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        setSettings(JSON.parse(savedSettings));
+        setIsEnabled(true);
+      } catch (error) {
+        console.error('Error loading accessibility settings:', error);
+      }
+    }
   }, []);
 
   useEffect(() => {};
@@ -81,16 +103,33 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
           onClick={() => setIsVisible(false)},
       className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
           aria-label="Close accessibility settings"
+
         >
-          ×
+          {isEnabled ? 'Disable' : 'Enable'} Accessibility
         </button>
       </div>
 
-      <div className="space-y-4"></div>
-        <div className="flex items-center justify-between"></div>
-          <div className="flex items-center"></div>
-            <Contrast className="w-5 h-5 text-gray-600 dark:text-gray-400 mr-2" />
-            <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
+      {/* Settings Panel */}
+      {isEnabled && (
+        <div className="fixed bottom-20 left-4 z-50 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">
+          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+            Accessibility Settings
+          </h3>
+          
+          <div className="space-y-4">
+            {Object.entries(settings).map(([key, value]) => (
+              <label key={key} className="flex items-center space-x-3">
+                <input
+                  type="checkbox"
+                  checked={value}
+                  onChange={(e) => updateSetting(key, e.target.checked)}
+                  className="rounded"
+                />
+                <span className="text-gray-700 dark:text-gray-300 capitalize">
+                  {key.replace(/([A-Z])/g, ' $1').trim()}
+                </span>
+              </label>
+            ))}
           </div>
           <button>
             onClick={() => toggleSetting('highContrast')},
@@ -176,4 +215,5 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
   )
     },
     {}
+
 export default AdvancedAccessibilityEnhancer;

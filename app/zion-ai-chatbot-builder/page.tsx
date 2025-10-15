@@ -9,5 +9,8 @@ export default function ZionAiChatbotBuilderPage() {}
         </p>;
       </div>;
     </div>;
+
   );
-}
+};
+
+export default ZionAiChatbotBuilderPage;

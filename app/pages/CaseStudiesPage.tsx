@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SEOHead from '../components/SEOHead';
 
 const CaseStudiesPage: React.FC = () => {}
@@ -7,21 +5,17 @@ const CaseStudiesPage: React.FC = () => {}
     <>{}</>
       <SEOHead>
         title="CaseStudiesPage - Zion Tech Group"
+
         description="Zion Tech Group CaseStudiesPage page"
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
-        </div>
-      </div>
-          <h1 className="text-4xl font-bold mb-4">CaseStudiesPage</h1>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">CaseStudiesPage - Zion Tech Group</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
-}
 };
 
       {/* Case Studies Section */}
@@ -92,3 +86,4 @@ const CaseStudiesPage: React.FC = () => {}
     </div>
   );
 }
+

@@ -46,6 +46,7 @@ function processFile(filePath) {
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent);
       console.log(`✓ Fixed 5G page: ${filePath}`);
+
       return true;
     }
     
@@ -89,6 +90,7 @@ let fixedCount = 0;
 
 for (const file of fiveGPages) {
   if (processFile(file)) {
+
     fixedCount++;
   }
   processedCount++;
@@ -98,3 +100,4 @@ console.log(`\nProcessed ${processedCount} 5G pages`);
 console.log(`Fixed ${fixedCount} pages`);
 
 console.log('\n5G pages fix completed!');
+

@@ -445,6 +445,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return children;
   };
 }
+
 };
 
-export default EnhancedErrorBoundary;
+export default ComponentsPage;

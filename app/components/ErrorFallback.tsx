@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
 interface ErrorFallbackProps {},
       error: Error
@@ -30,8 +32,10 @@ interface ErrorFallbackProps {},
           <RefreshCw className="w-4 h-4 mr-2" />
           Try Again
         </button>
+
       </div>
     </div>
-  )
+  );
 },
-      export default ErrorFallback
+      export default ErrorFallback;"'"'
+

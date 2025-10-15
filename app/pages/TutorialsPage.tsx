@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
 
 const TutorialsPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -497,9 +496,9 @@ const TutorialsPage: React.FC = () => {}
           </div>
         </div>
       </section>
+
     </>
   );
-}
 };
 
 export default TutorialsPage;
