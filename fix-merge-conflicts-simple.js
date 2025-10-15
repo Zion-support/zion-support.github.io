@@ -33,4 +33,4 @@ console.log(`Found ${filesWithConflicts.length} files with merge conflicts`)
 let fixedCount = 0
     fixedCount++
 console.log(`Fixed merge conflicts in ${fixedCount} files`)
-console.log('Merge conflict resolution completed!')
+console.log('Merge conflict resolution completed!'))';'

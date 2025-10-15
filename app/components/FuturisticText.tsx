@@ -9,7 +9,7 @@ interface FuturisticTextProps {
   animate?: boolean;
 }
 
-const FuturisticText: React.FC<FuturisticTextProps> = ({
+const FuturisticText: React.FC<FuturisticTextProps</FuturisticTextProps>> = ({
   children,
   variant = 'body',
   size = 'base',
@@ -93,10 +93,10 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
   `;
 
   return (
-    <span className={baseClasses}>
+    <span className={baseClasses}</span className={baseClasses}>>
       {children}
     </span>
   );
 };
 
-export default FuturisticText;
+export default FuturisticText;''

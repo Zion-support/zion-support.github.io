@@ -9,12 +9,12 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown</string, unknown>>;
   noindex?: boolean;
   nofollow?: boolean;
 }
 
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
+const EnhancedSEOHead: React.FC<SEOHeadProps</SEOHeadProps>> = ({
   title, description, _keywords, _canonical, ogImage = '/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', _structuredData, noindex = false, nofollow = false
 }) => {
   const siteUrl = 'https://ziontechgroup.com';
@@ -52,57 +52,57 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     ? { ...defaultStructuredData, ...structuredData }
     : defaultStructuredData
   return ()
-    <Helmet>
+    <Helmet</Helmet>>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={fullCanonical} />
+      <titl</titl>e>{title}</title>
+      <meta name="description" content={description} /</meta name="description" content={description} />>
+      {keywords && <meta name="keywords" content={keywords} /</meta name="keywords" content={keywords} />>}
+      <link rel="canonical" href={fullCanonical} /</link rel="canonical" href={fullCanonical} />>
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} /</meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />>
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={fullOgImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:title" content={title} /</meta property="og:title" content={title} />>
+      <meta property="og:description" content={description} /</meta property="og:description" content={description} />>
+      <meta property="og:type" content={ogType} /</meta property="og:type" content={ogType} />>
+      <meta property="og:url" content={fullCanonical} /</meta property="og:url" content={fullCanonical} />>
+      <meta property="og:image" content={fullOgImage} /</meta property="og:image" content={fullOgImage} />>
+      <meta property="og:image:width" content="1200" /</meta property="og:image:width" content="1200" />>
+      <meta property="og:image:height" content="630" /</meta property="og:image:height" content="630" />>
+      <meta property="og:site_name" content="Zion Tech Group" /</meta property="og:site_name" content="Zion Tech Group" />>
       {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:card" content={twitterCard} /</meta name="twitter:card" content={twitterCard} />>
+      <meta name="twitter:title" content={title} /</meta name="twitter:title" content={title} />>
+      <meta name="twitter:description" content={description} /</meta name="twitter:description" content={description} />>
+      <meta name="twitter:image" content={fullOgImage} /</meta name="twitter:image" content={fullOgImage} />>
+      <meta name="twitter:site" content="@ziontechgroup" /</meta name="twitter:site" content="@ziontechgroup" />>
       {/* Additional SEO Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="author" content="Zion Tech Group" /</meta name="author" content="Zion Tech Group" />>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /</meta name="viewport" content="width=device-width, initial-scale=1.0" />>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" /</meta httpEquiv="X-UA-Compatible" content="IE=edge" />>
       {/* Language and Region */}
-      <meta name="language" content="en-US" />
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown, Delaware" />
+      <meta name="language" content="en-US" /</meta name="language" content="en-US" />>
+      <meta name="geo.region" content="US-DE" /</meta name="geo.region" content="US-DE" />>
+      <meta name="geo.placename" content="Middletown, Delaware" /</meta name="geo.placename" content="Middletown, Delaware" />>
       {/* Mobile App Meta Tags */}
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="mobile-web-app-capable" content="yes" /</meta name="mobile-web-app-capable" content="yes" />>
+      <meta name="apple-mobile-web-app-capable" content="yes" /</meta name="apple-mobile-web-app-capable" content="yes" />>
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /</meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />>
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /</meta name="apple-mobile-web-app-title" content="Zion Tech Group" />>
       {/* Theme Color */}
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="msapplication-TileColor" content="#00ffff" />
+      <meta name="theme-color" content="#00ffff" /</meta name="theme-color" content="#00ffff" />>
+      <meta name="msapplication-TileColor" content="#00ffff" /</meta name="msapplication-TileColor" content="#00ffff" />>
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"</script type="application/ld+json">>
         {JSON.stringify(mergedStructuredData)}
       </script>
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /</link rel="preconnect" href="https://fonts.googleapis.com" />>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /</link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />>
+      <link rel="preconnect" href="https://www.google-analytics.com" /</link rel="preconnect" href="https://www.google-analytics.com" />>
       {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /</link rel="dns-prefetch" href="//fonts.googleapis.com" />>
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /</link rel="dns-prefetch" href="//www.google-analytics.com" />>
     </Helmet>
   )
 }
-export default EnhancedSEOHead
+export default EnhancedSEOHead""'"'

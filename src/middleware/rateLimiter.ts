@@ -15,7 +15,7 @@ export default RateLimiter
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
  */
-  private requests: Map<string, RequestRecord> = new Map()
+  private requests: Map<string, RequestRecord</string, RequestRecord>> = new Map()
   private config: RateLimitConfig
       ...config
     }
@@ -70,4 +70,4 @@ const cfConnectingIp = headers.get('cf-connecting-ip')
       )
     // Request allowed - headers can be added to response later
     return null
-  }
+  }''

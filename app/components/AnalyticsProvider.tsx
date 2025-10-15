@@ -7,10 +7,10 @@ declare global {
 }
 
 interface AnalyticsContextType {
-  trackEvent: (_eventName: string, parameters?: Record<string, _unknown>) => void;
+  trackEvent: (_eventName: string, parameters?: Record<string, _unknown</string, _unknown>>) => void;
   trackPageView: (_pageName: string) => void;
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
+const AnalyticsContext = createContext<AnalyticsContextType | undefined</AnalyticsContextType | undefined>>()
   undefined,
 )
 export const useAnalytics = () => {}
@@ -21,7 +21,7 @@ export const useAnalytics = () => {}
   return context
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps</AnalyticsProviderProps>> = ({
   children, }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -43,7 +43,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, []);
 
-  const trackEvent = (_eventName: string, parameters?: Record<string, _unknown>, ) => {
+  const trackEvent = (_eventName: string, parameters?: Record<string, _unknown</string, _unknown>>, ) => {
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", eventName, parameters);
     }
@@ -60,9 +60,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     trackEvent,
     trackPageView}
   return ()
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}</AnalyticsContext.Provider value={value}>>
       {children}
     </AnalyticsContext.Provider>
   )
 }
-export default AnalyticsProvider
+export default AnalyticsProvider"""

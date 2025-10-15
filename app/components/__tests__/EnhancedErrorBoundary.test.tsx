@@ -8,7 +8,7 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
     throw new Error('Test error');
   }
-  return <div>No error</div>;
+  return <di</di>v>No error</div>;
 };
 
 // Mock fetch for error reporting
@@ -27,8 +27,8 @@ describe('EnhancedErrorBoundary', () => {
 
   it('renders children when there is no error', () => {
     render(
-      <EnhancedErrorBoundary>
-        <div>Test content</div>
+      <EnhancedErrorBoundary</EnhancedErrorBoundary>>
+        <di</di>v>Test content</div>
       </EnhancedErrorBoundary>
     );
 
@@ -37,8 +37,8 @@ describe('EnhancedErrorBoundary', () => {
 
   it('renders error UI when child component throws', () => {
     render(
-      <EnhancedErrorBoundary>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary</EnhancedErrorBoundary>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -48,8 +48,8 @@ describe('EnhancedErrorBoundary', () => {
 
   it('shows error details when enableErrorDetails is true', () => {
     render(
-      <EnhancedErrorBoundary enableErrorDetails={true}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableErrorDetails={true}</EnhancedErrorBoundary enableErrorDetails={true}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -58,8 +58,8 @@ describe('EnhancedErrorBoundary', () => {
 
   it('hides error details when enableErrorDetails is false', () => {
     render(
-      <EnhancedErrorBoundary enableErrorDetails={false}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableErrorDetails={false}</EnhancedErrorBoundary enableErrorDetails={false}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -68,8 +68,8 @@ describe('EnhancedErrorBoundary', () => {
 
   it('shows retry button when enableRetry is true', () => {
     render(
-      <EnhancedErrorBoundary enableRetry={true}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableRetry={true}</EnhancedErrorBoundary enableRetry={true}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -78,8 +78,8 @@ describe('EnhancedErrorBoundary', () => {
 
   it('hides retry button when enableRetry is false', () => {
     render(
-      <EnhancedErrorBoundary enableRetry={false}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableRetry={false}</EnhancedErrorBoundary enableRetry={false}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -90,8 +90,8 @@ describe('EnhancedErrorBoundary', () => {
     const onError = jest.fn();
     
     render(
-      <EnhancedErrorBoundary onError={onError}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary onError={onError}</EnhancedErrorBoundary onError={onError}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -106,8 +106,8 @@ describe('EnhancedErrorBoundary', () => {
     const onRetry = jest.fn();
     
     render(
-      <EnhancedErrorBoundary onRetry={onRetry} enableRetry={true}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary onRetry={onRetry} enableRetry={true}</EnhancedErrorBoundary onRetry={onRetry} enableRetry={true}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -119,8 +119,8 @@ describe('EnhancedErrorBoundary', () => {
     (global.fetch as jest.Mock).mockResolvedValueOnce({ ok: true });
     
     render(
-      <EnhancedErrorBoundary enableErrorReporting={true}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableErrorReporting={true}</EnhancedErrorBoundary enableErrorReporting={true}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -137,8 +137,8 @@ describe('EnhancedErrorBoundary', () => {
 
   it('does not report error when enableErrorReporting is false', async () => {
     render(
-      <EnhancedErrorBoundary enableErrorReporting={false}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableErrorReporting={false}</EnhancedErrorBoundary enableErrorReporting={false}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -149,8 +149,8 @@ describe('EnhancedErrorBoundary', () => {
 
   it('shows retry count in error details', () => {
     render(
-      <EnhancedErrorBoundary enableErrorDetails={true} maxRetries={3}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableErrorDetails={true} maxRetries={3}</EnhancedErrorBoundary enableErrorDetails={true} maxRetries={3}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -159,15 +159,15 @@ describe('EnhancedErrorBoundary', () => {
 
   it('disables retry button when max retries reached', () => {
     const { rerender } = render(
-      <EnhancedErrorBoundary enableRetry={true} maxRetries={1}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableRetry={true} maxRetries={1}</EnhancedErrorBoundary enableRetry={true} maxRetries={1}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
     // Simulate reaching max retries
     rerender(
-      <EnhancedErrorBoundary enableRetry={true} maxRetries={1}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableRetry={true} maxRetries={1}</EnhancedErrorBoundary enableRetry={true} maxRetries={1}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -186,8 +186,8 @@ describe('EnhancedErrorBoundary', () => {
     });
 
     render(
-      <EnhancedErrorBoundary>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary</EnhancedErrorBoundary>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -206,8 +206,8 @@ describe('EnhancedErrorBoundary', () => {
     });
 
     render(
-      <EnhancedErrorBoundary>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary</EnhancedErrorBoundary>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -223,8 +223,8 @@ describe('EnhancedErrorBoundary', () => {
     });
 
     render(
-      <EnhancedErrorBoundary>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary</EnhancedErrorBoundary>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -233,11 +233,11 @@ describe('EnhancedErrorBoundary', () => {
   });
 
   it('renders custom fallback when provided', () => {
-    const customFallback = <div>Custom error message</div>;
+    const customFallback = <di</di>v>Custom error message</div>;
     
     render(
-      <EnhancedErrorBoundary fallback={customFallback}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary fallback={customFallback}</EnhancedErrorBoundary fallback={customFallback}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -247,8 +247,8 @@ describe('EnhancedErrorBoundary', () => {
 
   it('handles multiple errors correctly', () => {
     const { rerender } = render(
-      <EnhancedErrorBoundary enableErrorDetails={true}>
-        <ThrowError shouldThrow={true} />
+      <EnhancedErrorBoundary enableErrorDetails={true}</EnhancedErrorBoundary enableErrorDetails={true}>>
+        <ThrowError shouldThrow={true} /</ThrowError shouldThrow={true} />>
       </EnhancedErrorBoundary>
     );
 
@@ -256,11 +256,11 @@ describe('EnhancedErrorBoundary', () => {
 
     // Reset and throw another error
     rerender(
-      <EnhancedErrorBoundary enableErrorDetails={true}>
-        <ThrowError shouldThrow={false} />
+      <EnhancedErrorBoundary enableErrorDetails={true}</EnhancedErrorBoundary enableErrorDetails={true}>>
+        <ThrowError shouldThrow={false} /</ThrowError shouldThrow={false} />>
       </EnhancedErrorBoundary>
     );
 
     expect(screen.getByText('No error')).toBeInTheDocument();
   });
-});
+});""'"'

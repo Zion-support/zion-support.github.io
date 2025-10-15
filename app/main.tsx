@@ -8,11 +8,11 @@ const root = ReactDOM.createRoot()
   document.getElementById("root") as HTMLElement,
 )
 root.render()
-  <React.StrictMode>
-    <HelmetProvider></Helmet>
-      <BrowserRouter>
-        <App />
+  <React.StrictMode</React.StrictMode>>
+    <HelmetProvider</HelmetProvider>></Helmet>
+      <BrowserRouter</BrowserRouter>>
+        <App /</App />>
       </BrowserRouter>
     </HelmetProvider>
   </React.StrictMode>,
-)
+)"";"

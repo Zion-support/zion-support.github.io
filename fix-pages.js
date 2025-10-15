@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import React from 'react'
+import React from 'react';
 export default ${componentName};`
 // List of pages that need to be fixed
 const pagesToFix = []
@@ -9,12 +9,12 @@ const pagesToFix = []
 ]
  `'use client'
   return ()
-    <div>Content</div>
+    <di</di>v>Content</div>
   )
-        <title>${title} - Zion Tech Group</title>
+        <titl</titl>e>${title} - Zion Tech Group</title>
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
-            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <h2 className = "text-2xl font-bold text-white mb-4"</h2 className = "text-2xl font-bold text-white mb-4">>Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions.
               Contact us to learn more about our services.
               Contact Us
@@ -34,4 +34,4 @@ const pageFile = path.join(pageDir, 'page.tsx')
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName))
   console.log(`Fixed: ${pageFile}`)
 })
-console.log('Page fixes completed!')
+console.log('Page fixes completed!')""'"'

@@ -104,7 +104,7 @@ class ErrorHandler {
     return errorId;
   }
 
-  private async sendToExternalService(errorReport: ErrorReport): Promise<void> {
+  private async sendToExternalService(errorReport: ErrorReport): Promise<void</void>> {
     try {
       await fetch('/api/errors', {
         method: 'POST',
@@ -151,7 +151,7 @@ class ErrorHandler {
     total: number;
     resolved: number;
     unresolved: number;
-    bySeverity: Record<string, number>;
+    bySeverity: Record<string, number</string, number>>;
   } {
     const total = this.errors.length;
     const resolved = this.errors.filter(e => e.resolved).length;
@@ -160,7 +160,7 @@ class ErrorHandler {
     const bySeverity = this.errors.reduce((acc, error) => {
       acc[error.severity] = (acc[error.severity] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>);
+    }, {} as Record<string, number</string, number>>);
 
     return {
       total,
@@ -172,4 +172,4 @@ class ErrorHandler {
 }
 
 export const errorHandler = ErrorHandler.getInstance();
-export default errorHandler;
+export default errorHandler;''

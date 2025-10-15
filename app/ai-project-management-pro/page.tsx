@@ -1,4 +1,4 @@
-import React from 'react''
+import React from 'react'
 import { Helmet } from 'react-helmet-async''
 } from 'lucide-react''
     'AI-powered task prioritization and scheduling''
@@ -22,4 +22,4 @@ import { Helmet } from 'react-helmet-async''
     { name: 'Google Workspace''
     { name: 'Jira''
     { name: 'Trello''
-    { name: 'Asana''}
+    { name: 'Asana''}}}}}';'

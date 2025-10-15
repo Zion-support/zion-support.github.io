@@ -25,14 +25,14 @@ function cleanUnusedImports(filePath) {
         // Check which imports are actually used in the file
         const usedImports = importList.filter(imp => {
           const importName = imp.split(' as ')[0].trim();
-          // Simple check - look for the import name in the file
+          // Simple check - look for the import name in the file;
           const regex = new RegExp(`\\b${importName}\\b`, 'g');
           const matches = content.match(regex);
-          return matches && matches.length > 1; // More than just the import itself
+          return matches && matches.length > 1; // More than just the import itself;
         });
         
         if (usedImports.length === 0) {
-          // Remove the entire import line
+          // Remove the entire import line;
           content = content.replace(importLine, '');
         } else if (usedImports.length < importList.length) {
           // Replace with only used imports
@@ -43,7 +43,16 @@ function cleanUnusedImports(filePath) {
     }
     
     // Remove unused variables (simple cases)
-    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) => {
+    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) =</ importList.length) {
+          // Replace with only used imports
+          const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
+          content = content.replace(importLine, newImport);
+        }
+      });
+    }
+    
+    // Remove unused variables (simple cases)
+    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) =>> {
       const regex = new RegExp(`\\b${varName}\\b`, 'g');
       const matches = content.match(regex);
       if (matches && matches.length === 1) {
@@ -89,4 +98,4 @@ function processFiles(dir) {
 // Process the app directory
 console.log('Starting cleanup of unused imports...');
 const cleanedCount = processFiles('./app');
-console.log(`Cleaned ${cleanedCount} files.`);
+console.log(`Cleaned ${cleanedCount} files.`);""'"'

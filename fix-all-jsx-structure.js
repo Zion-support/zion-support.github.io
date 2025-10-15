@@ -5,27 +5,27 @@ function fixJSXStructure(content) {}
 }let fixed = content
   // Fix common patterns where closing tags are missing
   // Pattern: </div> followed by </> without proper nesting
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n      </div>\n    </>')
   // Pattern: </div> followed by </> with different nesting
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n        </div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n        </div>\n      </div>\n    </>')
   // Pattern: missing closing divs before fragments
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n      </div>\n    </>')
   // Fix specific patterns for different nesting levels
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n        </div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n        </div>\n      </div>\n    </>')
   // Fix patterns where there are too many closing divs
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/div</\/div>>\s*<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </>')
   // Fix patterns where there are too few closing divs
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n      </div>\n    </>')
   // Fix patterns where the main container is missing its closing tag
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n        </div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n        </div>\n      </div>\n    </>')
   // Fix patterns where the content div is missing its closing tag
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n      </div>\n    </>')
   // Fix patterns where the text-center div is missing its closing tag
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </>')
   // Fix patterns where the max-w-7xl div is missing its closing tag
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n        </div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n        </div>\n      </div>\n    </>')
   // Fix patterns where the min-h-screen div is missing its closing tag
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/</\/>>/g, '$1</div>\n      </div>\n    </>')
   return fixed
 // Function to process a single file
 function processFile(filePath) {}
@@ -54,4 +54,4 @@ async function main() {}
       fixedCount++
   })
   console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`)
-main().catch(console.error)
+main().catch(console.error)';'

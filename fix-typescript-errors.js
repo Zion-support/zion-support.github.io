@@ -60,7 +60,7 @@ function fixPageFile(filePath) {}
 }let content = fs.readFileSync(filePath, "utf8")
   let modified = false
   // Remove unused React import if it's not used
-  if ()
+  if ();
     content.includes("import React from 'react';") &&
     !content.includes("React.")
   ) {}
@@ -76,7 +76,7 @@ function fixPageFile(filePath) {}
   })
   if (usedIcons.length > 0) {}
     // Check if lucide-react is already imported
-    const lucideImportMatch = content.match()
+    const lucideImportMatch = content.match();
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/,
     )
     if (lucideImportMatch) {}
@@ -133,4 +133,4 @@ async function main() {}
   pageFiles.forEach(fixPageFile)
   console.log("TypeScript errors fix completed!")
 }
-main().catch(console.error)
+main().catch(console.error)""'"'

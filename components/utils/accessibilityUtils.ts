@@ -56,7 +56,7 @@ export const ariaUtils = {
   generateId: (prefix = 'aria') => `${prefix}-${Math.random().toString(36).substr(2, 9)}`,
 
   // Set ARIA attributes
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {
+  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string</string, string>>) => {
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
@@ -128,4 +128,4 @@ export const keyboardNavigation = {
       callback();
     }
   }
-}
+}""'"'

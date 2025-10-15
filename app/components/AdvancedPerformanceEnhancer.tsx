@@ -7,7 +7,7 @@ interface PerformanceEnhancerProps {
   enableCompression?: boolean;
 }
 
-const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
+const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps</PerformanceEnhancerProps>> = ({
   enableImageOptimization = true,
   enablePreloading = true,
   enableCaching = true,
@@ -35,7 +35,14 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   }, [enableImageOptimization]);
 
   // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
+  const preloadCriticalResources = useCallback(() =</ window.innerHeight) {
+        img.setAttribute('fetchpriority', 'high');
+      }
+    });
+  }, [enableImageOptimization]);
+
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() =>> {
     if (!enablePreloading) return;
     
     const criticalResources = [
@@ -116,4 +123,4 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   return null; // This component doesn't render anything
 };
 
-export default AdvancedPerformanceEnhancer;
+export default AdvancedPerformanceEnhancer;""'"'

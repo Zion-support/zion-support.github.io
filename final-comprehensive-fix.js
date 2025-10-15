@@ -10,7 +10,7 @@ function fixFileComprehensively(filePath) {}
   console.error(error)
 }let content = fs.readFileSync(filePath, 'utf8')
     const originalContent = content
-    // Fix merge conflict markers
+    // Fix merge conflict markers;
               content.includes('import React from \'react;') ||
               content.includes('import { Helmet } from \'react-helmet-async;') ||
               content.includes('<>') ||
@@ -63,4 +63,4 @@ async function main() {}
   }
   console.log('🎉 Final comprehensive error fixing process completed!')
 }
-main().catch(console.error)
+main().catch(console.error)''

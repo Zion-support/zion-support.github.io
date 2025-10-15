@@ -17,8 +17,8 @@ jest.mock('react-router-dom', () => ({
   }),
   useNavigate: () => jest.fn(),
   useParams: () => ({}),
-  Link: ({ children, ...props }) => <a {...props}>{children}</a>,
-  NavLink: ({ children, ...props }) => <a {...props}>{children}</a>,
+  Link: ({ children, ...props }) => <a {...props}</a {...props}>>{children}</a>,
+  NavLink: ({ children, ...props }) => <a {...props}</a {...props}>>{children}</a>,
   useSearchParams: () => [new URLSearchParams(), jest.fn()],
 }));
 
@@ -94,3 +94,4 @@ console.error = (...args) => {
   }
   originalError.call(console, ...args);
 };
+""'"'

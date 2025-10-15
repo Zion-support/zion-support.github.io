@@ -31,4 +31,4 @@ export default OptimizedLoadingSpinner
           )}
   )
 )
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'''

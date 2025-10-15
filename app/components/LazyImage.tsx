@@ -14,12 +14,12 @@ interface LazyImageProps {
   srcSet?: string;
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({
+const LazyImage: React.FC<LazyImageProps</LazyImageProps>> = ({
   src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLImageElement</HTMLImageElement>>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -49,9 +49,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
     return <>{fallback}</>
   }
   return ()
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}</div ref={imgRef} className={`relative overflow-hidden ${className}`}>>
       {!isLoaded && !isError && placeholder && ()
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700"</div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700">>
           {placeholder}
         </div>
       )}
@@ -68,9 +68,21 @@ const LazyImage: React.FC<LazyImageProps> = ({
           onLoad={handleLoad}
           onError={handleError}
           decoding="async"
-        />
+        /</img
+          src={src}
+          alt={alt}
+          className={`transition-opacity duration-300 ${}
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          } ${className}`}
+          loading={loading}
+          sizes={sizes}
+          srcSet={srcSet}
+          onLoad={handleLoad}
+          onError={handleError}
+          decoding="async"
+        />>
       )}
     </div>
   )
 }
-export default LazyImage
+export default LazyImage""'"'

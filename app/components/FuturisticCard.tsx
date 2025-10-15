@@ -8,7 +8,7 @@ interface FuturisticCardProps {
   glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green';
 }
 
-const FuturisticCard: React.FC<FuturisticCardProps> = ({
+const FuturisticCard: React.FC<FuturisticCardProps</FuturisticCardProps>> = ({
   children,
   className = '',
   variant = 'default',
@@ -57,19 +57,19 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   const cardClasses = `${baseClasses} ${getVariantClasses()} ${hoverClasses} ${glowClasses} ${className}`;
 
   return (
-    <div className={cardClasses}>
+    <div className={cardClasses}</div className={cardClasses}>>
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"</div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl">></div>
       
       {/* Animated border */}
-      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"</div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300">></div>
       
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10"</div className="relative z-10">>
         {children}
       </div>
     </div>
   );
 };
 
-export default FuturisticCard;
+export default FuturisticCard;""'"'

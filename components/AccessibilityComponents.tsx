@@ -1,21 +1,12 @@
-// Accessibility components
-import React, { useEffect, useRef, useState } from 'react';
 
-// Type definitions for better type safety
-
-// Import utilities
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 // Re-export utilities
 export { focusManagement, ariaUtils, keyboardNavigation };
 
 // Skip link component
-export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({}
+export const SkipLink: React.FC<{ target: string; children: React.ReactNode }</{ target: string; children: React.ReactNode }>> = ({}
   target,
   children}) => {}
-}const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {}
+}const handleClick = (e: React.MouseEvent<HTMLAnchorElement</HTMLAnchorElement>>) => {}
 }e.preventDefault()
     const targetElement = document.querySelector(target)
     if (targetElement) {}
@@ -28,27 +19,31 @@ export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> =
       href={target}
       onClick={handleClick}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-    >
+    </a
+      href={target}
+      onClick={handleClick}
+      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+    >>
       {children}
     </a>
   )
 }
 // Screen reader only text component
-export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => {}
-}return <span className="sr-only">{children}</span>
+export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }</{ children: React.ReactNode }>> = ({ children }) => {}
+}return <span className="sr-only"</span className="sr-only">>{children}</span>
 }
 // Focus trap component
-export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }> = ({}
+export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }</{ children: React.ReactNode; active: boolean }>> = ({}
   children,
   active}) => {}
-}const containerRef = useRef<HTMLDivElement>(null)
+}const containerRef = useRef<HTMLDivElement</HTMLDivElement>>(null)
   useEffect(() => {}
 }if (active && containerRef.current) {}
       return focusManagement.trapFocus(containerRef.current)
     }
     return undefined
   }, [active])
-  return <div ref={containerRef}>{children}</div>
+  return <div ref={containerRef}</div ref={containerRef}>>{children}</div>
 }
 // Responsive breakpoint hook
 export const useBreakpoint = (breakpoint: string) => {}
@@ -77,4 +72,4 @@ export const useHighContrast = () => {}
     return () => mediaQuery.removeEventListener('change', handleChange)
   }, [])
   return isHighContrast
-}
+}""'"'

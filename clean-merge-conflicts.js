@@ -12,12 +12,12 @@ function cleanMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove all merge conflict markers and keep the latest version
-    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
     
     // Clean up any remaining conflict markers
     content = content.replace(//g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    content = content.replace(/
     
     // Clean up multiple empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -59,4 +59,4 @@ function processFiles(dir) {
 // Process the app directory
 console.log('Starting cleanup of merge conflicts...');
 const cleanedCount = processFiles('./app');
-console.log(`Cleaned ${cleanedCount} files.`);
+console.log(`Cleaned ${cleanedCount} files.`);)))''

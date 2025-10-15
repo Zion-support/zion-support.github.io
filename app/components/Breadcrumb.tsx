@@ -8,12 +8,15 @@ export default function Breadcrumb() {}
     return null
   }
 
-  return (<nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
+  return (<nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4"</nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">>
       <Link
         to="/"
         className="flex items-center hover:text-white transition-colors"
-      >
-        <Home className="w-4 h-4 mr-1" />
+      </Link
+        to="/"
+        className="flex items-center hover:text-white transition-colors"
+      >>
+        <Home className="w-4 h-4 mr-1" /</Home className="w-4 h-4 mr-1" />>
         Home
       </Link>
       {pathnames.map((name, index) => {}
@@ -24,15 +27,18 @@ export default function Breadcrumb() {}
           .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
           .join(" ")
         return ()
-          <React.Fragment key={name}>
-            <ChevronRight className="w-4 h-4" />
+          <React.Fragment key={name}</React.Fragment key={name}>>
+            <ChevronRight className="w-4 h-4" /</ChevronRight className="w-4 h-4" />>
             {isLast ? ()
-              <span className="text-white font-medium">{displayName}</span>
+              <span className="text-white font-medium"</span className="text-white font-medium">>{displayName}</span>
             ) : ()
               <Link
                 to={routeTo}
                 className="text-gray-400 hover:text-white transition-colors"
-              >
+              </Link
+                to={routeTo}
+                className="text-gray-400 hover:text-white transition-colors"
+              >>
                 {displayName}
               </Link>
             )}
@@ -41,4 +47,4 @@ export default function Breadcrumb() {}
       })}
     </nav>
   )
-}
+}"";"

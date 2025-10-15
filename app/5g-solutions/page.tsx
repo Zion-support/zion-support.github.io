@@ -11,7 +11,7 @@ const FiveGSolutionsPage: React.FC = () => {
       price: "From $5,999",
       marketPrice: "$12,999-49,999",
       popular: true,
-      icon: <Wifi className="w-8 h-8" />,
+      icon: <Wifi className="w-8 h-8" /</Wifi className="w-8 h-8" />>,
       benefits: "Deploy 5G networks 60% faster than industry average"
     },
     {
@@ -21,7 +21,7 @@ const FiveGSolutionsPage: React.FC = () => {
       price: "From $4,999",
       marketPrice: "$9,999-39,999",
       popular: false,
-      icon: <Network className="w-8 h-8" />,
+      icon: <Network className="w-8 h-8" /</Network className="w-8 h-8" />>,
       benefits: "Achieve 99.9% network uptime with our infrastructure"
     },
     {
@@ -31,7 +31,7 @@ const FiveGSolutionsPage: React.FC = () => {
       price: "From $3,999",
       marketPrice: "$7,999-29,999",
       popular: true,
-      icon: <Cpu className="w-8 h-8" />,
+      icon: <Cpu className="w-8 h-8" /</Cpu className="w-8 h-8" />>,
       benefits: "Connect up to 1M devices per square kilometer"
     },
     {
@@ -41,4 +41,5 @@ const FiveGSolutionsPage: React.FC = () => {
       price: "From $2,999",
       marketPrice: "$5,999-19,999",
       popular: false,
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: <Smartphone className="w-8 h-8" /</Smartphone className="w-8 h-8" />>,
+"}}"']"'

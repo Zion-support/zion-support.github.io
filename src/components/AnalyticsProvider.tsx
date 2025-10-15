@@ -46,4 +46,4 @@ const text = target.textContent?.trim() || ''
     }
   }, [GA_TRACKING_ID])
   return <>{children}</>
-}
+}''

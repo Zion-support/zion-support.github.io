@@ -3,7 +3,7 @@ import path from 'path'
 #!/usr/bin/env node
 // console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n')
 // Function to execute git commands safely
-    // console.log(`📝 ${description}...`)
+    // console.log(`📝 ${description}...`);
   for (let i = 0; i
  setTimeout(resolve, 1000))}
   // Step 8: Final status check
@@ -12,4 +12,4 @@ import path from 'path'
   execGitCommand('git log --oneline -10', 'Recent commits')
   // console.log('\n🎉 Comprehensive merge conflict resolution and PR management completed!')}
 // Run the main function
-main().catch(console.error)
+main().catch(console.error)''

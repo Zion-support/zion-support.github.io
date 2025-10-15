@@ -8,14 +8,15 @@ interface AnimatedTextProps {
   speed?: number;
 }
 
-const AnimatedText: React.FC<AnimatedTextProps> = ({
+const AnimatedText: React.FC<AnimatedTextProps</AnimatedTextProps>> = ({
   text, className = "", delay = 0, speed = 100, }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
+      const timeout = setTimeout(() =</ text.length) {
+      const timeout = setTimeout(() =>> {
         setDisplayedText((prev) => prev + text[currentIndex]);
         setCurrentIndex((prev) => prev + 1);
       }, delay + speed);
@@ -24,6 +25,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     }
     return undefined
   }, [currentIndex, text, delay, speed])
-  return <span className={className}>{displayedText}</span>
+  return <span className={className}</span className={className}>>{displayedText}</span>
 }
-export default AnimatedText
+export default AnimatedText""'"'}

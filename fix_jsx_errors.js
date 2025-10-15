@@ -17,12 +17,12 @@ function fixJSXErrors(filePath) {}
 }let content = fs.readFileSync(filePath, 'utf8')
   let modified = false
   // Fix malformed JSX tags like "Page\n  </\n  <br />"
-  const malformedTagRegex = /(\s+Page\s*\n\s*<\/\s*\n\s*<br \/>)/g
+  const malformedTagRegex = /(\s+Page\s*\n\s*<\/\s*\n\s*<br \/</\/\s*\n\s*<br \/>>)/g
   if (malformedTagRegex.test(content)) {}
       // Extract the page name from the file path
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join(' ')
-      return `\n              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">\n                ${pageName}\n              </span>\n              <br />`
+      return `\n              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"</span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">>\n                ${pageName}\n              </span>\n              <br /</br />>`
     })
     modified = true
   // Fix generic "page solutions" text
@@ -47,4 +47,4 @@ for (const file, of, pageFiles) {}
     fixedCount++
   } catch (error) {}
     console.error(`Error fixing ${file}:`, error.message)
-console.log(`Fixed ${fixedCount} files`)
+console.log(`Fixed ${fixedCount} files`)""';"'

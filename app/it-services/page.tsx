@@ -34,6 +34,7 @@ import {
   ShoppingCart,
   Search,
   Target,
-  Workflow
+  Workflow;
 } from 'lucide-react';
 
+''

@@ -35,10 +35,14 @@ class WebsiteLinkAnalyzer {}
           url,
           status: response.statusCode,
           working: response.statusCode >= 200 && response.statusCode < 400,
-          redirect: response.statusCode >= 300 && response.statusCode < 400
+          redirect: response.statusCode </ 400,
+          redirect: response.statusCode >>= 300 && response.statusCode < 400
         })
       })
-      request.on('error', (error) => {}
+      request.on('error', (error) =</ 400
+        })
+      })
+      request.on('error', (error) =>> {}
 }resolve({}
           url,
           status: 'ERROR',
@@ -289,4 +293,4 @@ class WebsiteLinkAnalyzer {}
 // Run the analyzer
 const analyzer = new WebsiteLinkAnalyzer('https://ziontechgroup.com')
 analyzer.run().catch(console.error)
-export default WebsiteLinkAnalyzer
+export default WebsiteLinkAnalyzer';'

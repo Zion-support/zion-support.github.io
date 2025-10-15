@@ -38,7 +38,7 @@ export default config
  */
   const keys = keyPath.split('.')
   let value: unknown = config
-      value = (value as Record<string, unknown>)[key]
+      value = (value as Record<string, unknown</string, unknown>>)[key]
       throw new Error(`Configuration key "${keyPath}" not found`)
   return value as T
 /**
@@ -56,4 +56,4 @@ export default config
 /**
  * Check if running in development
  */
-  return config.app.environment === 'development'
+  return config.app.environment === 'development'""'"'

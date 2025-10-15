@@ -11,19 +11,19 @@ interface AccessibilityOptions {
 }
 
 interface AccessibilityManagerProps {
-  options?: Partial<AccessibilityOptions>;
+  options?: Partial<AccessibilityOptions</AccessibilityOptions>>;
   enableAutoDetection?: boolean;
   enableUserPreferences?: boolean;
   onAccessibilityChange?: (options: AccessibilityOptions) => void;
 }
 
-const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
+const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps</AccessibilityManagerProps>> = ({
   options = {},
   enableAutoDetection = true,
   enableUserPreferences = true,
   onAccessibilityChange
 }) => {
-  const [accessibilityOptions, setAccessibilityOptions] = useState<AccessibilityOptions>({
+  const [accessibilityOptions, setAccessibilityOptions] = useState<AccessibilityOptions</AccessibilityOptions>>({
     enableHighContrast: false,
     enableLargeText: false,
     enableReducedMotion: false,
@@ -184,7 +184,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   }, []);
 
   // Update accessibility options
-  const updateAccessibilityOptions = useCallback((newOptions: Partial<AccessibilityOptions>) => {
+  const updateAccessibilityOptions = useCallback((newOptions: Partial<AccessibilityOptions</AccessibilityOptions>>) => {
     setAccessibilityOptions(prev => {
       const updated = { ...prev, ...newOptions };
       applyAccessibilityOptions(updated);
@@ -290,9 +290,9 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     const skipLinksDiv = document.createElement('div');
     skipLinksDiv.className = 'skip-links';
     skipLinksDiv.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
-      <a href="#footer" class="skip-link">Skip to footer</a>
+      <a href="#main-content" class="skip-link"</a href="#main-content" class="skip-link">>Skip to main content</a>
+      <a href="#navigation" class="skip-link"</a href="#navigation" class="skip-link">>Skip to navigation</a>
+      <a href="#footer" class="skip-link"</a href="#footer" class="skip-link">>Skip to footer</a>
     `;
     
     const style = document.createElement('style');
@@ -329,12 +329,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   }, [addSkipLinks]);
 
   return (
-    <div className="accessibility-manager">
+    <div className="accessibility-manager"</div className="accessibility-manager">>
       {/* Accessibility Menu */}
-      <div className="accessibility-menu hidden">
-        <h3>Accessibility Options</h3>
-        <div className="accessibility-controls">
-          <label>
+      <div className="accessibility-menu hidden"</div className="accessibility-menu hidden">>
+        <h</h>3>Accessibility Options</h3>
+        <div className="accessibility-controls"</div className="accessibility-controls">>
+          <label</label>>
             <input
               type="checkbox"
               checked={accessibilityOptions.enableHighContrast}
@@ -342,7 +342,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
             />
             High Contrast Mode
           </label>
-          <label>
+          <label</label>>
             <input
               type="checkbox"
               checked={accessibilityOptions.enableLargeText}
@@ -350,7 +350,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
             />
             Large Text
           </label>
-          <label>
+          <label</label>>
             <input
               type="checkbox"
               checked={accessibilityOptions.enableReducedMotion}
@@ -358,7 +358,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
             />
             Reduced Motion
           </label>
-          <label>
+          <label</label>>
             <input
               type="checkbox"
               checked={accessibilityOptions.enableFocusIndicators}
@@ -366,7 +366,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
             />
             Focus Indicators
           </label>
-          <label>
+          <label</label>>
             <input
               type="checkbox"
               checked={accessibilityOptions.enableScreenReader}
@@ -374,7 +374,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
             />
             Screen Reader Optimized
           </label>
-          <label>
+          <label</label>>
             <input
               type="checkbox"
               checked={accessibilityOptions.enableKeyboardNavigation}
@@ -382,7 +382,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
             />
             Keyboard Navigation
           </label>
-          <label>
+          <label</label>>
             <input
               type="checkbox"
               checked={accessibilityOptions.enableVoiceControl}
@@ -391,8 +391,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
             Voice Control
           </label>
         </div>
-        <div className="keyboard-shortcuts">
-          <h4>Keyboard Shortcuts</h4>
+        <div className="keyboard-shortcuts"</div className="keyboard-shortcuts">>
+          <h</h>4>Keyboard Shortcuts</h4>
           <p>Alt + A: Toggle this menu</p>
           <p>Alt + H: Toggle high contrast</p>
           <p>Alt + L: Toggle large text</p>
@@ -403,7 +403,9 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       {/* Accessibility Toggle Button */}
       <button
         className="accessibility-toggle"
-        onClick={() => {
+        onClick={() =</button
+        className="accessibility-toggle"
+        onClick={() =>> {
           const menu = document.querySelector('.accessibility-menu');
           if (menu) {
             menu.classList.toggle('hidden');
@@ -415,7 +417,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
         ♿
       </button>
 
-      <style jsx>{`
+      <style jsx</style jsx>>{`
         .accessibility-manager {
           position: fixed;
           top: 20px;
@@ -577,4 +579,4 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   );
 };
 
-export default EnhancedAccessibilityManager;
+export default EnhancedAccessibilityManager;""'"'}

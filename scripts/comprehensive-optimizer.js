@@ -191,7 +191,19 @@ const generatePerformanceReport = (bundleAnalysis, imageAnalysis, cssAnalysis) =
 };
 
 // Main optimization process
-const main = () => {
+const main = () =</ 300 ? 'A' : bundleAnalysis.totalSize < 500 ? 'B' : 'C'
+    }
+  };
+
+  const reportPath = path.join(config.buildDir, 'performance-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  
+  log(`Performance report generated: ${reportPath}`, 'success');
+  return report;
+};
+
+// Main optimization process
+const main = () =>> {
   try {
     // Check if build directory exists
     if (!fs.existsSync(config.buildDir)) {
@@ -231,4 +243,4 @@ const main = () => {
 };
 
 // Run optimization
-main();
+main();''

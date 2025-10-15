@@ -69,4 +69,4 @@ const originalText = button.textContent
         return this.props.fallback
       const { retryCount, error } = this.state
       )
-    return this.props.children
+    return this.props.children''

@@ -27,9 +27,13 @@ const ResponsiveContainer = (_{
       'mx-auto px-4 sm:px-6 lg:px-8',
       maxWidthClasses[maxWidth],
       className
-    )}>
+    )}</div className={cn()
+      'mx-auto px-4 sm:px-6 lg:px-8',
+      maxWidthClasses[maxWidth],
+      className
+    )}>>
       {children}
     </div>
   )
 }
-export default ResponsiveContainer
+export default ResponsiveContainer';'

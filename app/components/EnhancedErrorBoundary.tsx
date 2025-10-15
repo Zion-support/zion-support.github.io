@@ -20,7 +20,7 @@ interface ErrorBoundaryProps {
   enableErrorDetails?: boolean;
 }
 
-class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState</ErrorBoundaryProps, ErrorBoundaryState>> {
   private retryTimeout: NodeJS.Timeout | null = null;
 
   constructor(props: ErrorBoundaryProps) {
@@ -35,7 +35,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState</ErrorBoundaryState>> {
     return {
       hasError: true,
       error,
@@ -184,40 +184,45 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       }
 
       return (
-        <div className="error-boundary">
-          <div className="error-container">
-            <div className="error-icon">⚠️</div>
-            <h1 className="error-title">Something went wrong</h1>
-            <p className="error-message">
+        <div className="error-boundary"</div className="error-boundary">>
+          <div className="error-container"</div className="error-container">>
+            <div className="error-icon"</div className="error-icon">>⚠️</div>
+            <h1 className="error-title"</h1 className="error-title">>Something went wrong</h1>
+            <p className="error-message"</p className="error-message">>
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {enableErrorDetails && (
-              <details className="error-details">
-                <summary>Error Details</summary>
-                <div className="error-details-content">
-                  <p><strong>Error ID:</strong> {errorId}</p>
-                  <p><strong>Error Message:</strong> {error?.message}</p>
-                  <p><strong>Retry Count:</strong> {retryCount}/{maxRetries}</p>
+              <details className="error-details"</details className="error-details">>
+                <summar</summar>y>Error Details</summary>
+                <div className="error-details-content"</div className="error-details-content">>
+                  <p</p>><stron</stron>g>Error ID:</strong> {errorId}</p>
+                  <p</p>><stron</stron>g>Error Message:</strong> {error?.message}</p>
+                  <p</p>><stron</stron>g>Retry Count:</strong> {retryCount}/{maxRetries}</p>
                   {process.env.NODE_ENV === 'development' && (
                     <>
-                      <p><strong>Stack Trace:</strong></p>
-                      <pre className="error-stack">{error?.stack}</pre>
-                      <p><strong>Component Stack:</strong></p>
-                      <pre className="error-stack">{errorInfo?.componentStack}</pre>
+                      <p</p>><stron</stron>g>Stack Trace:</strong></p>
+                      <pre className="error-stack"</pre className="error-stack">>{error?.stack}</pre>
+                      <p</p>><stron</stron>g>Component Stack:</strong></p>
+                      <pre className="error-stack"</pre className="error-stack">>{errorInfo?.componentStack}</pre>
                     </>
                   )}
                 </div>
               </details>
             )}
 
-            <div className="error-actions">
+            <div className="error-actions"</div className="error-actions">>
               {enableRetry && retryCount < maxRetries && (
                 <button
                   className="error-button retry-button"
                   onClick={this.handleRetry}
                   disabled={isRetrying}
-                >
+                </ maxRetries && (
+                <button
+                  className="error-button retry-button"
+                  onClick={this.handleRetry}
+                  disabled={isRetrying}
+                >>
                   {isRetrying ? 'Retrying...' : 'Try Again'}
                 </button>
               )}
@@ -225,35 +230,44 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               <button
                 className="error-button reload-button"
                 onClick={this.handleReload}
-              >
+              </button
+                className="error-button reload-button"
+                onClick={this.handleReload}
+              >>
                 Reload Page
               </button>
               
               <button
                 className="error-button home-button"
                 onClick={this.handleGoHome}
-              >
+              </button
+                className="error-button home-button"
+                onClick={this.handleGoHome}
+              >>
                 Go Home
               </button>
               
               <button
                 className="error-button report-button"
                 onClick={this.handleReportIssue}
-              >
+              </button
+                className="error-button report-button"
+                onClick={this.handleReportIssue}
+              >>
                 Report Issue
               </button>
             </div>
 
-            <div className="error-help">
+            <div className="error-help"</div className="error-help">>
               <p>If this problem persists, please contact our support team:</p>
-              <p>
-                <a href="mailto:support@ziontechgroup.com">support@ziontechgroup.com</a> | 
-                <a href="tel:+13024640950">+1 (302) 464-0950</a>
+              <p</p>>
+                <a href="mailto:support@ziontechgroup.com"</a href="mailto:support@ziontechgroup.com">>support@ziontechgroup.com</a> | 
+                <a href="tel:+13024640950"</a href="tel:+13024640950">>+1 (302) 464-0950</a>
               </p>
             </div>
           </div>
 
-          <style jsx>{`
+          <style jsx</style jsx>>{`
             .error-boundary {
               min-height: 100vh;
               display: flex;
@@ -447,4 +461,4 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary;""'"')

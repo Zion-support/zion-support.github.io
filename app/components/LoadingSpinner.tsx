@@ -5,7 +5,7 @@ interface LoadingSpinnerProps {
   text?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+const LoadingSpinner: React.FC<LoadingSpinnerProps</LoadingSpinnerProps>> = ({ 
   size = 'md', text = 'Loading...', className = '', fullScreen = false
 }) => {
   const sizeClasses = {
@@ -15,11 +15,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8">
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-purple-600 ${sizeClasses[size]}`}></div>
-      {text && <p className="mt-2 text-gray-600">{text}</p>}
+    <div className="flex flex-col items-center justify-center p-8"</div className="flex flex-col items-center justify-center p-8">>
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-purple-600 ${sizeClasses[size]}`}</div className={`animate-spin rounded-full border-2 border-gray-300 border-t-purple-600 ${sizeClasses[size]}`}>></div>
+      {text && <p className="mt-2 text-gray-600"</p className="mt-2 text-gray-600">>{text}</p>}
     </div>
   );
 };
 
-export default LoadingSpinner;
+export default LoadingSpinner;""'"'

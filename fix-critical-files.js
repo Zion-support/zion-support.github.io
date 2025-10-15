@@ -13,9 +13,9 @@ import path from 'path'
     // Fix unclosed tags by ensuring proper structure
     const lines = content.split('\n')
 const fixedLines = []
-    let openTags = []
+    let openTags = [];
     for (let i = 0; i
-      const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/)
+      const openTagMatch = trimmedLine.match(/<(\w+)([^</(\w+)([^>>]*)>/)
 const tagName = openTagMatch[1]
         const attributes = openTagMatch[2]
         // Skip self-closing tags
@@ -23,7 +23,7 @@ const tagName = openTagMatch[1]
         fixedLines.push(line)
         continue
       // Check for closing tags
-      const closeTagMatch = trimmedLine.match(/<\/(\w+)>/)
+      const closeTagMatch = trimmedLine.match(/<\/(\w+)</\/(\w+)>>/)
 const tagName = closeTagMatch[1]
         const lastOpenTag = openTags[openTags.length - 1]
           openTags.pop()
@@ -67,4 +67,4 @@ const tagName = closeTagMatch[1]
     execSync('pnpm run type-check', { stdio: 'inherit' })
     console.log('Type check passed!')
     console.log('Type check still has errors, but critical files have been processed.')
-main()
+main())'')

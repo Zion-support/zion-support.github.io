@@ -82,7 +82,7 @@ export const optimizeImage = (src: string, width?: number, height?: number, qual
 // Bundle size optimization
 export const optimizeBundle = {}
   // Lazy load non-critical components
-  lazyLoadComponent: (importFn: () => Promise<any>) => {}
+  lazyLoadComponent: (importFn: () => Promise<any</any>>) => {}
 }return React.lazy(importFn)
   },
   // Preload critical routes
@@ -129,4 +129,4 @@ export const cacheOptimizer = {}
     }
   }
 }
-export default performanceOptimizer
+export default performanceOptimizer''

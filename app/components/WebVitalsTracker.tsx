@@ -29,7 +29,7 @@ const WebVitalsTracker: React.FC = () => {
       }
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        }
+        };
     };
 
     // Track Core Web Vitals
@@ -68,4 +68,4 @@ const WebVitalsTracker: React.FC = () => {
   }, [])
   return null
 }
-export default WebVitalsTracker
+export default WebVitalsTracker''

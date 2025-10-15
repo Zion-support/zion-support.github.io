@@ -14,7 +14,7 @@ class RouteFixer {}
   // Get all existing routes from App.tsx
   getExistingRoutes() {}
     const content = fs.readFileSync(this.appPath, 'utf8')
-    const routeRegex = /<Route\s+path="([^"]+)"\s+element={<[^>]+>}\s*\/>/g
+    const routeRegex = /<Route\s+path="([^"]+)"\s+element={</Route\s+path="([^"]+)"\s+element={><[^>]+>}\s*\/>/g
     let match
     while ((match = routeRegex.exec(content)) !== null) {}
       this.existingRoutes.add(match[1])
@@ -62,12 +62,12 @@ class RouteFixer {}
   generateImportStatement(route, componentName) {}
     const importPath = route === '/' ?
       './app/page' :
-      `./app${route}/page`
+      `./app${route}/page`;
     return `const ${componentName} = React.lazy(() => import("${importPath}"));`
   }
   // Generate route element
   generateRouteElement(route, componentName) {}
-    return `                  <Route path="${route}" element={<${componentName} />} />`
+    return `                  <Route path="${route}" element={</Route path="${route}" element={><${componentName} />} />`
   }
   // Fix routes in App.tsx
   fixRoutes() {}
@@ -96,7 +96,7 @@ class RouteFixer {}
       importStatements.push(this.generateImportStatement(route, componentName))
       routeElements.push(this.generateRouteElement(route, componentName))
     }
-    // Find the position to insert new imports (after existing lazy imports)
+    // Find the position to insert new imports (after existing lazy imports);
     const lastLazyImportIndex = content.lastIndexOf('const ') + content.substring(content.lastIndexOf('const ')).indexOf(';')
     const insertPosition = content.indexOf(';', lastLazyImportIndex) + 1
     // Insert new imports
@@ -119,4 +119,4 @@ class RouteFixer {}
 }
 // Run the route fixer
 const fixer = new RouteFixer()
-fixer.fixRoutes()
+fixer.fixRoutes()""'"'

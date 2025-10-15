@@ -9,37 +9,37 @@ const FinancialReportingToolPage = () => {
     {
       title: "Real-time Financial Dashboards",
       description: "Interactive dashboards with real-time financial data and key performance indicators",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <BarChart3 className="w-8 h-8" /</BarChart3 className="w-8 h-8" />>,
       benefits: ["Live data updates", "Custom KPIs", "Interactive charts", "Mobile responsive"]
     },
     {
       title: "Automated Report Generation",
       description: "Generate comprehensive financial reports automatically with customizable templates",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-8 h-8" /</Zap className="w-8 h-8" />>,
       benefits: ["Scheduled reports", "Custom templates", "PDF/Excel export", "Email delivery"]
     },
     {
       title: "Cash Flow Analysis",
       description: "Track and analyze cash flow patterns to optimize financial planning",
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <TrendingUp className="w-8 h-8" /</TrendingUp className="w-8 h-8" />>,
       benefits: ["Cash flow forecasting", "Trend analysis", "Variance reporting", "Scenario planning"]
     },
     {
       title: "Budget vs Actual Analysis",
       description: "Compare actual performance against budgets with detailed variance analysis",
-      icon: <Target className="w-8 h-8" />,
+      icon: <Target className="w-8 h-8" /</Target className="w-8 h-8" />>,
       benefits: ["Variance analysis", "Budget tracking", "Performance metrics", "Alert system"]
     },
     {
       title: "Multi-entity Consolidation",
       description: "Consolidate financial data from multiple entities and subsidiaries",
-      icon: <Database className="w-8 h-8" />,
+      icon: <Database className="w-8 h-8" /</Database className="w-8 h-8" />>,
       benefits: ["Entity management", "Intercompany elimination", "Currency conversion", "Consolidation rules"]
     },
     {
       title: "Compliance & Audit Support",
       description: "Ensure compliance with accounting standards and support audit processes",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8" /</Shield className="w-8 h-8" />>,
       benefits: ["GAAP compliance", "Audit trails", "Documentation", "Regulatory reporting"]
     }
   ];
@@ -95,52 +95,61 @@ const FinancialReportingToolPage = () => {
     {
       title: "Save Time",
       description: "Reduce report generation time by up to 80% with automation",
-      icon: <Zap className="w-6 h-6" />
+      icon: <Zap className="w-6 h-6" /</Zap className="w-6 h-6" />>
     },
     {
       title: "Improve Accuracy",
       description: "Eliminate manual errors with automated data processing",
-      icon: <Shield className="w-6 h-6" />
+      icon: <Shield className="w-6 h-6" /</Shield className="w-6 h-6" />>
     },
     {
       title: "Better Insights",
       description: "Make informed decisions with comprehensive financial analytics",
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <BarChart3 className="w-6 h-6" /</BarChart3 className="w-6 h-6" />>
     },
     {
       title: "Ensure Compliance",
       description: "Stay compliant with automated regulatory reporting",
-      icon: <Target className="w-6 h-6" />
+      icon: <Target className="w-6 h-6" /</Target className="w-6 h-6" />>
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>
       <EnhancedSEO
         title="Financial Reporting Tool - Zion Tech Group | Automated Financial Reports & Analytics"
         description="Advanced financial reporting tool with automated report generation, real-time dashboards, cash flow analysis, and compliance support. Streamline your financial reporting."
         keywords="financial reporting tool, automated reports, financial dashboards, cash flow analysis, budget analysis, compliance reporting"
         canonical="https://ziontechgroup.com/financial-reporting-tool"
-      />
+      /</EnhancedSEO
+        title="Financial Reporting Tool - Zion Tech Group | Automated Financial Reports & Analytics"
+        description="Advanced financial reporting tool with automated report generation, real-time dashboards, cash flow analysis, and compliance support. Streamline your financial reporting."
+        keywords="financial reporting tool, automated reports, financial dashboards, cash flow analysis, budget analysis, compliance reporting"
+        canonical="https://ziontechgroup.com/financial-reporting-tool"
+      />>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"</section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">>
+        <ResponsiveContainer className="text-center"</ResponsiveContainer className="text-center">>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"</h1 className="text-4xl md:text-6xl font-bold text-white mb-6">>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"</span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">>
               Financial Reporting Tool
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"</p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">>
             Streamline your financial reporting with our comprehensive tool. Generate automated reports, 
             track performance, and ensure compliance with advanced analytics and dashboards.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"</div className="flex flex-col sm:flex-row gap-4 justify-center">>
             <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<ArrowRight className="w-5 h-5" /</FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />>}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +157,11 @@ const FinancialReportingToolPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<Globe className="w-5 h-5" /</FuturisticButton
+              href="/demo"
+              variant="outline"
+              size="lg"
+              icon={<Globe className="w-5 h-5" />>}
             >
               Watch Demo
             </FuturisticButton>
@@ -157,30 +170,30 @@ const FinancialReportingToolPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"</section className="py-20 px-4 sm:px-6 lg:px-8">>
+        <ResponsiveContainer</ResponsiveContainer>>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">>
               Powerful Reporting Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"</p className="text-xl text-gray-300 max-w-4xl mx-auto">>
               Everything you need to create comprehensive financial reports and gain valuable insights.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">>
             {features.map((feature) => (
-              <FuturisticCard key={index} className="h-full">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <FuturisticCard key={index} className="h-full"</FuturisticCard key={index} className="h-full">>
+                <div className="text-center mb-6"</div className="text-center mb-6">>
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"</div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">>
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3"</h3 className="text-xl font-semibold text-white mb-3">>{feature.title}</h3>
+                  <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>{feature.description}</p>
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-2"</ul className="space-y-2">>
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300"</li key={benefitIndex} className="flex items-center text-sm text-gray-300">>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />>
                       {benefit}
                     </li>
                   ))}
@@ -192,38 +205,38 @@ const FinancialReportingToolPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"</section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">>
+        <ResponsiveContainer</ResponsiveContainer>>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">>
               Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"</p className="text-xl text-gray-300 max-w-4xl mx-auto">>
               Choose the plan that fits your business size and reporting complexity. No hidden fees, no surprises.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"</div className="grid grid-cols-1 md:grid-cols-3 gap-8">>
             {pricing.map((plan) => (
-              <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}</FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"</div className="absolute -top-4 left-1/2 transform -translate-x-1/2">>
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold"</span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">>
                       Most Popular
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
+                <div className="text-center mb-6"</div className="text-center mb-6">>
+                  <h3 className="text-2xl font-bold text-white mb-2"</h3 className="text-2xl font-bold text-white mb-2">>{plan.name}</h3>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2"</div className="text-4xl font-bold text-cyan-400 mb-2">>
                     {plan.price}
-                    <span className="text-lg text-gray-400">{plan.period}</span>
+                    <span className="text-lg text-gray-400"</span className="text-lg text-gray-400">>{plan.period}</span>
                   </div>
-                  <p className="text-gray-300 text-sm">{plan.description}</p>
+                  <p className="text-gray-300 text-sm"</p className="text-gray-300 text-sm">>{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8"</ul className="space-y-3 mb-8">>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"</li key={featureIndex} className="flex items-center text-sm text-gray-300">>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /</CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />>
                       {feature}
                     </li>
                   ))}
@@ -233,7 +246,12 @@ const FinancialReportingToolPage = () => {
                   variant={plan.popular ? "primary" : "outline"}
                   size="sm"
                   className="w-full"
-                >
+                </FuturisticButton
+                  href="/contact"
+                  variant={plan.popular ? "primary" : "outline"}
+                  size="sm"
+                  className="w-full"
+                >>
                   Get Started
                 </FuturisticButton>
               </FuturisticCard>
@@ -243,24 +261,24 @@ const FinancialReportingToolPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"</section className="py-20 px-4 sm:px-6 lg:px-8">>
+        <ResponsiveContainer</ResponsiveContainer>>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">>
               Why Choose Our Financial Reporting Tool?
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"</p className="text-xl text-gray-300 max-w-4xl mx-auto">>
               Join thousands of businesses who have streamlined their financial reporting with our tool.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">>
             {benefits.map((benefit) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center"</div key={index} className="text-center">>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"</div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">>
                   {benefit.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2"</h3 className="text-lg font-semibold text-white mb-2">>{benefit.title}</h3>
+                <p className="text-gray-300 text-sm"</p className="text-gray-300 text-sm">>{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -268,20 +286,24 @@ const FinancialReportingToolPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <ResponsiveContainer className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"</section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">>
+        <ResponsiveContainer className="text-center"</ResponsiveContainer className="text-center">>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">>
             Ready to Streamline Your Financial Reporting?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"</p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">>
             Start your free trial today and see how our financial reporting tool can transform your reporting process.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"</div className="flex flex-col sm:flex-row gap-4 justify-center">>
             <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<ArrowRight className="w-5 h-5" /</FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />>}
             >
               Start Free Trial
             </FuturisticButton>
@@ -289,7 +311,11 @@ const FinancialReportingToolPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<Globe className="w-5 h-5" /</FuturisticButton
+              href="/demo"
+              variant="outline"
+              size="lg"
+              icon={<Globe className="w-5 h-5" />>}
             >
               Watch Demo
             </FuturisticButton>
@@ -301,3 +327,4 @@ const FinancialReportingToolPage = () => {
 };
 
 export default FinancialReportingToolPage;
+""'"'}}}}

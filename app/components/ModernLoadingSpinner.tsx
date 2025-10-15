@@ -6,7 +6,7 @@ interface LoadingSpinnerProps {}
   fullScreen?: boolean
 }
 
-const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+const ModernLoadingSpinner: React.FC<LoadingSpinnerProps</LoadingSpinnerProps>> = ({
   size = 'md', color = 'primary', text, fullScreen = false, _}) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -18,24 +18,32 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     secondary: 'text-purple-500',
     white: 'text-white'}
   const spinner = ()
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className="relative">
+    <div className="flex flex-col items-center justify-center space-y-4"</div className="flex flex-col items-center justify-center space-y-4">>
+      <div className="relative"</div className="relative">>
         {/* Outer ring */}
         <div
           className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`}
           style={{}
             animation: 'spin 1s linear infinite'}}
-        />
+        /</div
+          className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`}
+          style={{}
+            animation: 'spin 1s linear infinite'}}
+        />>
         {/* Inner ring */}
         <div
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`}
           style={{}
             animation: 'spin 1.5s linear infinite reverse'}}
-        />
+        /</div
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`}
+          style={{}
+            animation: 'spin 1.5s linear infinite reverse'}}
+        />>
       </div>
       {text && ()
-        <div className="text-center">
-          <p className={`text-sm font-medium ${colorClasses[color]} animate-pulse`}>
+        <div className="text-center"</div className="text-center">>
+          <p className={`text-sm font-medium ${colorClasses[color]} animate-pulse`}</p className={`text-sm font-medium ${colorClasses[color]} animate-pulse`}>>
             {text}
           </p>
         </div>
@@ -44,12 +52,12 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   )
   if (fullScreen) {}
     return ()
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50">
-        <div className="text-center">
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50"</div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50">>
+        <div className="text-center"</div className="text-center">>
           {spinner}
-          <div className="mt-8">
-            <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
-            <p className="text-gray-300">Loading amazing experiences...</p>
+          <div className="mt-8"</div className="mt-8">>
+            <h2 className="text-2xl font-bold text-white mb-2"</h2 className="text-2xl font-bold text-white mb-2">>Zion Tech Group</h2>
+            <p className="text-gray-300"</p className="text-gray-300">>Loading amazing experiences...</p>
           </div>
         </div>
       </div>
@@ -57,4 +65,4 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   }
   return spinner
 }
-export default ModernLoadingSpinner
+export default ModernLoadingSpinner""';"'

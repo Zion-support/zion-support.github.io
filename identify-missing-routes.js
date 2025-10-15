@@ -82,7 +82,7 @@ const generateRouteAddition = (routes, category) => {}
   routes.forEach(route => {}
 }const componentName = route.split('-').map(word =>
       word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('') + 'Page'
+    ).join('') + 'Page';
     result += `  const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
   })
   return result
@@ -94,7 +94,7 @@ const generateRouteElements = (routes) => {}
 }const componentName = route.split('-').map(word =>
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page'
-    result += `                  <Route path="/${route}" element={<${componentName} />} />\n`
+    result += `                  <Route path="/${route}" element={</Route path="/${route}" element={><${componentName} />} />\n`
   })
   return result
 }
@@ -125,4 +125,4 @@ const analysis = {}
   }
 }
 fs.writeFileSync('/workspace/missing-routes-analysis.json', JSON.stringify(analysis, null, 2))
-console.log('\nAnalysis saved to missing-routes-analysis.json')
+console.log('\nAnalysis saved to missing-routes-analysis.json')""'"'

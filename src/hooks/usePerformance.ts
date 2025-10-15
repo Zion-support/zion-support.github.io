@@ -4,7 +4,7 @@
   largestContentfulPaint: number
   cumulativeLayoutShift: number
   firstInputDelay: number
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null</PerformanceMetrics | null>>(null)
   const [isMonitoring, setIsMonitoring] = useState(false)
     if (typeof window === 'undefined' || !('performance' in window)) return
       )[0] as PerformanceNavigationTiming
@@ -46,4 +46,4 @@
     }
   }, [])
   return { metrics, isMonitoring }
-}
+}''

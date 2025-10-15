@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useState, useEffect } from "react";
 
 export const useEnhancedPerformance = () => {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any</any>>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null</string | null>>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -30,4 +30,4 @@ export const useEnhancedPerformance = () => {
     error,
     processData}
 }
-export default useEnhancedPerformance
+export default useEnhancedPerformance""'"'

@@ -15,7 +15,7 @@ interface SEOHeadProps {
   tags?: string[];
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
+const SEOHead: React.FC<SEOHeadProps</SEOHeadProps>> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions', description = 'Leading provider of AI-powered micro SAAS solutions, IT services, _and innovative technology solutions.', keywords = 'AI solutions, _micro SAAS, _IT services, _software development, _cloud computing, _cybersecurity, _data analytics', image = 'https://ziontechgroup.com/og-image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', _publishedTime, _modifiedTime, _section, tags = [], _canonical, _ogTitle, _ogDescription, _ogImage, _ogUrl, twitterCard = 'summary_large_image', twitterSite = '@ziontechgroup', twitterCreator = '@ziontechgroup', _structuredData, noindex = false, nofollow = false
 }) => {
   const structuredData = {
@@ -55,68 +55,68 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     ]
   };
 
-  return (<Helmet>
+  return (<Helmet</Helmet>>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <titl</titl>e>{title}</title>
+      <meta name="description" content={description} /</meta name="description" content={description} />>
+      <meta name="keywords" content={keywords} /</meta name="keywords" content={keywords} />>
+      <meta name="author" content={author} /</meta name="author" content={author} />>
+      <meta name="robots" content="index, follow" /</meta name="robots" content="index, follow" />>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /</meta name="viewport" content="width=device-width, initial-scale=1.0" />>
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /</meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />>
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:title" content={title} /</meta property="og:title" content={title} />>
+      <meta property="og:description" content={description} /</meta property="og:description" content={description} />>
+      <meta property="og:image" content={image} /</meta property="og:image" content={image} />>
+      <meta property="og:url" content={url} /</meta property="og:url" content={url} />>
+      <meta property="og:type" content={type} /</meta property="og:type" content={type} />>
+      <meta property="og:site_name" content="Zion Tech Group" /</meta property="og:site_name" content="Zion Tech Group" />>
+      <meta property="og:locale" content="en_US" /</meta property="og:locale" content="en_US" />>
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:card" content="summary_large_image" /</meta name="twitter:card" content="summary_large_image" />>
+      <meta name="twitter:title" content={title} /</meta name="twitter:title" content={title} />>
+      <meta name="twitter:description" content={description} /</meta name="twitter:description" content={description} />>
+      <meta name="twitter:image" content={image} /</meta name="twitter:image" content={image} />>
+      <meta name="twitter:site" content="@ziontechgroup" /</meta name="twitter:site" content="@ziontechgroup" />>
+      <meta name="twitter:creator" content="@ziontechgroup" /</meta name="twitter:creator" content="@ziontechgroup" />>
       
       {/* Article Meta Tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} /</meta property="article:published_time" content={publishedTime} />>}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} /</meta property="article:modified_time" content={modifiedTime} />>}
+      {section && <meta property="article:section" content={section} /</meta property="article:section" content={section} />>}
       {tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
+        <meta key={index} property="article:tag" content={tag} /</meta key={index} property="article:tag" content={tag} />>
       ))}
       
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={url} /</link rel="canonical" href={url} />>
       
       {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" /</link rel="icon" type="image/svg+xml" href="/favicon.svg" />>
+      <link rel="icon" type="image/png" href="/favicon.png" /</link rel="icon" type="image/png" href="/favicon.png" />>
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" /</link rel="apple-touch-icon" href="/apple-touch-icon.png" />>
       
       {/* Theme Color */}
-      <meta name="theme-color" content="#1e293b" />
-      <meta name="msapplication-TileColor" content="#1e293b" />
+      <meta name="theme-color" content="#1e293b" /</meta name="theme-color" content="#1e293b" />>
+      <meta name="msapplication-TileColor" content="#1e293b" /</meta name="msapplication-TileColor" content="#1e293b" />>
       
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"</script type="application/ld+json">>
         {JSON.stringify(structuredData)}
       </script>
       
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /</link rel="preconnect" href="https://fonts.googleapis.com" />>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /</link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />>
+      <link rel="preconnect" href="https://www.google-analytics.com" /</link rel="preconnect" href="https://www.google-analytics.com" />>
       
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /</link rel="dns-prefetch" href="//fonts.googleapis.com" />>
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /</link rel="dns-prefetch" href="//www.google-analytics.com" />>
     </Helmet>
   );
 };
 
-export default SEOHead;
+export default SEOHead;""'"'

@@ -10,10 +10,10 @@ export const Icon = ({
   [key: string]: unknown;
 }) => {
   return (
-    <span className={`icon ${className}`} {...props}>
+    <span className={`icon ${className}`} {...props}</span className={`icon ${className}`} {...props}>>
       {name}
     </span>
   );
 };
 
-export default Icon;
+export default Icon;""'"'

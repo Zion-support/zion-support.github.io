@@ -12,28 +12,28 @@ const pagesToRewrite = []
 // Template for a basic page
  `import React from 'react'
   return ()
-    <div>Content</div>
+    <di</di>v>Content</div>
   )
                 ${title}
               ${description}
-              <h3 className = "text-xl font-semibold text-white mb-4">Feature 1</h3>
+              <h3 className = "text-xl font-semibold text-white mb-4"</h3 className = "text-xl font-semibold text-white mb-4">>Feature 1</h3>
                 Description of the first key feature or service.
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <l</l>i>• Benefit 1</li>
+                <l</l>i>• Benefit 2</li>
+                <l</l>i>• Benefit 3</li>
+                <l</l>i>• Benefit 4</li>
+              <h3 className="text-xl font-semibold text-white mb-4"</h3 className="text-xl font-semibold text-white mb-4">>Feature 2</h3>
                 Description of the second key feature or service.
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <l</l>i>• Benefit 1</li>
+                <l</l>i>• Benefit 2</li>
+                <l</l>i>• Benefit 3</li>
+                <l</l>i>• Benefit 4</li>
+              <h3 className="text-xl font-semibold text-white mb-4"</h3 className="text-xl font-semibold text-white mb-4">>Feature 3</h3>
                 Description of the third key feature or service.
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
+                <l</l>i>• Benefit 1</li>
+                <l</l>i>• Benefit 2</li>
+                <l</l>i>• Benefit 3</li>
+                <l</l>i>• Benefit 4</li>
   )
 // Page configurations
 const pageConfigs = {}
@@ -71,4 +71,4 @@ const config = pageConfigs[page]
     // console.log(`Rewrote ${page} page`)
   } catch (error) {}
     // console.error(`Error rewriting ${page}:`, error.message)
-// console.log('Page rewriting completed')
+// console.log('Page rewriting completed')""';"'

@@ -12,9 +12,9 @@ interface NeonButtonProps {}
   disabled?: boolean
 }
 
-const NeonButton: React.FC<NeonButtonProps> = ({
+const NeonButton: React.FC<NeonButtonProps</NeonButtonProps>> = ({
   children, href, _onClick, variant = "primary", size = "md", className = "", _icon, disabled = false, _}) => {
-  const baseClasses =
+  const baseClasses =;
     "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100";
 
   const sizeClasses = {
@@ -32,23 +32,23 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     "before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10"
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`
   const content = ()
-    <div>
-      {icon && <span className="mr-2">{icon}</span>}
+    <div</div>>
+      {icon && <span className="mr-2"</span className="mr-2">>{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-5 h-5 ml-2" />}
+      {!icon && <ArrowRight className="w-5 h-5 ml-2" /</ArrowRight className="w-5 h-5 ml-2" />>}
 </div>
   )
   if (href) {}
     return ()
-      <a href={href} className={buttonClasses}>
+      <a href={href} className={buttonClasses}</a href={href} className={buttonClasses}>>
         {content}
       </a>
     )
   }
   return ()
-    <button onClick={onClick} disabled={disabled} className={buttonClasses}>
+    <button onClick={onClick} disabled={disabled} className={buttonClasses}</button onClick={onClick} disabled={disabled} className={buttonClasses}>>
       {content}
     </button>
   )
 }
-export default NeonButton
+export default NeonButton"""

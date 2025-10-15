@@ -8,4 +8,4 @@ function fixMergeConflicts(filePath) {}
   console.error(error)
 }let content = fs.readFileSync(filePath, 'utf8')
     // Check if file has merge conflicts
-    if (!content.includes(')
+    if (!content.includes('))';'

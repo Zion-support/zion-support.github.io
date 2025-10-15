@@ -13,7 +13,7 @@ interface FuturisticButtonProps {}
 
 const FuturisticButton = (_{ 
   children, href, _onClick, variant = 'primary', size = 'md', _className, _icon, disabled = false
-}: FuturisticButtonProps) => {
+}: FuturisticButtonProps) => {;
   const baseClasses = 'relative inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const sizeClasses = {
@@ -36,9 +36,9 @@ const FuturisticButton = (_{
     className
   )
   const content = ()
-    <div>
-      {icon && <span className="mr-2">{icon}</span>}
-      <span className="relative z-10">{children}</span>
+    <div</div>>
+      {icon && <span className="mr-2"</span className="mr-2">>{icon}</span>}
+      <span className="relative z-10"</span className="relative z-10">>{children}</span>
 </div>
   )
   if (href) {}
@@ -47,7 +47,11 @@ const FuturisticButton = (_{
         to={href}
         className={buttonClasses}
         onClick={onClick}
-      >
+      </Link
+        to={href}
+        className={buttonClasses}
+        onClick={onClick}
+      >>
         {content}
       </Link>
     )
@@ -57,9 +61,13 @@ const FuturisticButton = (_{
       className={buttonClasses}
       onClick={onClick}
       disabled={disabled}
-    >
+    </button
+      className={buttonClasses}
+      onClick={onClick}
+      disabled={disabled}
+    >>
       {content}
     </button>
   )
 }
-export default FuturisticButton
+export default FuturisticButton""'"'

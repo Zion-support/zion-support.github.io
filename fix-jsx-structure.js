@@ -18,20 +18,25 @@ function fixJSXStructure(content) {}
   fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20')
   fixed = fixed.replace(/py-16text-center/g, 'py-16 text-center')
   // Fix self-closing divs that should be opening tags
-  fixed = fixed.replace(/<div className="([^"]*)" \/></div>\s*<([^>]+)>/g, '<div className="$1"></div>\n        <$2>')
-  fixed = fixed.replace(/<footer className="([^"]*)" \/>\s*<div/g, '<footer className="$1"></div>\n      <div')
-  fixed = fixed.replace(/<ul className="([^"]*)" \/></div>\s*<li/g, '<ul className="$1">\n              <li')
-  fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)/g, '<p className="$1">\n              $2')
+  fixed = fixed.replace(/<div className="([^"]*)" \/</div className="([^"]*)" \/>></div>\s*<([^</([^>>]+)>/g, '<div className="$1"</div className="$1">></div>\n        <$2</$2>>')
+  fixed = fixed.replace(/<footer className="([^"]*)" \/</footer className="([^"]*)" \/>>\s*<div/g, '<footer className="$1"</div/g, '<footer className="$1">></div>\n      <div')
+  fixed = fixed.replace(/<ul className="([^"]*)" \/</div')
+  fixed = fixed.replace(/<ul className="([^"]*)" \/>></div>\s*<li/g, '<ul className="$1"</li/g, '<ul className="$1">>\n              <li')
+  fixed = fixed.replace(/<p className="([^"]*)" \/</li')
+  fixed = fixed.replace(/<p className="([^"]*)" \/>>\s*([^<]+)/g, '<p className="$1"</]+)/g, '<p className="$1">>\n              $2')
   // Fix missing closing tags
-  fixed = fixed.replace(/<div \/></div>\s*<h4/g, '<div></div>\n            <h4')
-  fixed = fixed.replace(/<div \/></div>\s*<h4/g, '<div></div>\n            <h4')
+  fixed = fixed.replace(/<div \/</div \/>></div>\s*<h4/g, '<div</h4/g, '<div>></div>\n            <h4')
+  fixed = fixed.replace(/<div \/</h4')
+  fixed = fixed.replace(/<div \/>></div>\s*<h4/g, '<div</h4/g, '<div>></div>\n            <h4')
   // Fix Link components that should be self-closing
-  fixed = fixed.replace(/<Link\s+([^>]+)\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, '<Link $1>\n          $2\n          <$3 />\n        </Link>')
+  fixed = fixed.replace(/</h4')
+  // Fix Link components that should be self-closing
+  fixed = fixed.replace(/><Link\s+([^>]+)\s*\/>\s*([^<]+)\s*</]+)\s*><([^>]+)\s*\/>/g, '<Link $1</Link $1>>\n          $2\n          <$3 /</$3 />>\n        </Link>')
   // Fix specific patterns
-  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="[^"]*"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,
-    '<Link\n          to="/contact"\n          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        >\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>')
+  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="[^"]*"\s*\/</Link\s+to="\/contact"\s+className="[^"]*"\s*\/>>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,
+    '<Link\n          to="/contact"\n          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        </Link\n          to="/contact"\n          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        >>\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" /</ArrowRight className="w-5 h-5 ml-2" />>\n        </Link>')
   // Fix malformed p tags
-  fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>')
+  fixed = fixed.replace(/<p className="([^"]*)" \/</p className="([^"]*)" \/>>\s*([^<]+)\s*<\/p</]+)\s*<\/p>>/g, '<p className="$1"</p className="$1">>\n              $2\n            </p>')
   return fixed
 // Function to process a single file
 function processFile(filePath) {}
@@ -60,4 +65,4 @@ async function main() {}
       fixedCount++
   })
   console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`)
-main().catch(console.error)
+main().catch(console.error)""';"'

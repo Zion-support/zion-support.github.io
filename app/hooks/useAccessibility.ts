@@ -25,7 +25,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     enableReducedMotion = true
   } = options;
 
-  const stateRef = useRef<AccessibilityState>({
+  const stateRef = useRef<AccessibilityState</AccessibilityState>>({
     isHighContrast: false,
     isReducedMotion: false,
     isKeyboardUser: false,
@@ -33,7 +33,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     focusHistory: []
   });
 
-  const focusableElements = useRef<HTMLElement[]>([]);
+  const focusableElements = useRef<HTMLElement[]</HTMLElement[]>>([]);
 
   // Check for high contrast mode
   const checkHighContrast = useCallback(() => {
@@ -357,4 +357,4 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
   };
 };
 
-export default useAccessibility;
+export default useAccessibility;""'"'

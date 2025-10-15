@@ -5,20 +5,20 @@ function fixAllJSX(content) {}
 }let fixed = content
   // Fix missing closing div tags - look for patterns where divs are not properly closed
   // This is a more aggressive approach to fix JSX structure
-  // Fix common patterns where closing divs are missing
-  fixed = fixed.replace(/(\s*)<\/Link>\s*<\/div>\s*<\/div>\s*\);/g, '$1</Link>\n      </div>\n    </div>\n  );')
+  // Fix common patterns where closing divs are missing;
+  fixed = fixed.replace(/(\s*)<\/Link</\/Link>>\s*<\/div</\/div>>\s*<\/div</\/div>>\s*\);/g, '$1</Link>\n      </div>\n    </div>\n  );')
   // Fix patterns where the main container div is missing its closing tag
-  fixed = fixed.replace(/(\s*)<\/div>\s*\);/g, '$1</div>\n  );')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*\);/g, '$1</div>\n  );')
   // Fix patterns where multiple divs are missing closing tags
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*\);/g, '$1</div>\n    </div>\n  );')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/div</\/div>>\s*\);/g, '$1</div>\n    </div>\n  );')
   // Fix specific patterns for 5G pages
-  fixed = fixed.replace(/(\s*)<\/Link>\s*<\/div>\s*\);/g, '$1</Link>\n      </div>\n    </div>\n  );')
+  fixed = fixed.replace(/(\s*)<\/Link</\/Link>>\s*<\/div</\/div>>\s*\);/g, '$1</Link>\n      </div>\n    </div>\n  );')
   // Fix footer patterns
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/footer>/g, '$1</div>\n      </div>\n    </footer>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/footer</\/footer>>/g, '$1</div>\n      </div>\n    </footer>')
   // Fix patterns where the grid container is missing closing div
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </footer>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/div</\/div>>\s*<\/div</\/div>>\s*<\/footer</\/footer>>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </footer>')
   // Fix patterns where contact section is missing closing div
-  fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>')
+  fixed = fixed.replace(/(\s*)<\/div</\/div>>\s*<\/div</\/div>>\s*<\/div</\/div>>\s*<\/div</\/div>>\s*<\/footer</\/footer>>/g, '$1</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>')
   return fixed
 // Function to process a single file
 function processFile(filePath) {}
@@ -47,4 +47,4 @@ async function main() {}
       fixedCount++
   })
   console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`)
-main().catch(console.error)
+main().catch(console.error)''

@@ -75,4 +75,4 @@ const resourceEntry = entry as PerformanceResourceTiming
   }, [reportMetric])
     reportMetric
   }
-}
+}''

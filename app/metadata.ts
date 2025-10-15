@@ -25,4 +25,4 @@ export const defaultMetadata = {}
     title: siteMetadata.title,
     description: siteMetadata.description,
     image: siteMetadata.image}}
-export default siteMetadata
+export default siteMetadata"""

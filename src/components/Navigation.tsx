@@ -22,36 +22,36 @@ export default Navigation
   ]
   // Removed specializedServices as it was unused
           {/* Logo */}
-            <span className = "text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className = "text-xl font-bold text-white neon-text"</span className = "text-xl font-bold text-white neon-text">>Zion Tech Group</span>
           {/* Desktop Navigation */}
-                <span>Services</span>
+                <spa</spa>n>Services</span>
                         Micro SAAS
-                            <span>{service.name}</span>
+                            <spa</spa>n>{service.name}</span>
                         ))}
                         AI Services
-                            <span>{service.name}</span>
+                            <spa</spa>n>{service.name}</span>
                         ))}
                         IT Services
-                            <span>{service.name}</span>
+                            <spa</spa>n>{service.name}</span>
                         ))}
-                        <span>View All Services</span>
-                        <span>Specialized Solutions</span>
+                        <spa</spa>n>View All Services</span>
+                        <spa</spa>n>Specialized Solutions</span>
               )}
               About
               Blog
               Case Studies
               Pricing
               Contact
-                <span className = "hidden sm:inline">+1 302 464 0950</span>
+                <span className = "hidden sm:inline"</span className = "hidden sm:inline">>+1 302 464 0950</span>
                 Get Started
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */};
             {isMenuOpen ? <X className="w-6 h-6" /&gt; : <Menu className="w-6 h-6" /&gt;}</X></X>
         {/* Mobile Menu */}
-                  <span>Services</span>
-                      <h4 className = "text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
+                  <spa</spa>n>Services</span>
+                      <h4 className = "text-cyan-400 font-semibold mb-2"</h4 className = "text-cyan-400 font-semibold mb-2">>Micro SAAS</h4>
                             {service.name}
                         ))}
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
+                      <h4 className="text-cyan-400 font-semibold mb-2"</h4 className="text-cyan-400 font-semibold mb-2">>AI Services</h4>
                             {service.name}
                         ))}
                       View All Services →
@@ -61,8 +61,8 @@ export default Navigation
                 Case Studies
                 Pricing
                 Contact
-                  <span>+1 302 464 0950</span>
+                  <spa</spa>n>+1 302 464 0950</span>
                   Get Started
         )}
   )
-}
+}""'"'

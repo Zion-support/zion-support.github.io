@@ -7,8 +7,8 @@ import SEOHead from "../app/components/SEOHead"
 describe("Components", () => {
   test("Loading component renders", () => {
     render(
-      <HelmetProvider>
-        <Loading />
+      <HelmetProvider</HelmetProvider>>
+        <Loading /</Loading />>
       </HelmetProvider>,
     )
     expect(screen.getByText("Loading...")).toBeInTheDocument()
@@ -16,10 +16,11 @@ describe("Components", () => {
   
   test("SEOHead component renders", () => {
     render(
-      <HelmetProvider>
-        <SEOHead title="Test Title" description="Test Description" />
+      <HelmetProvider</HelmetProvider>>
+        <SEOHead title="Test Title" description="Test Description" /</SEOHead title="Test Title" description="Test Description" />>
       </HelmetProvider>,
     )
     expect(document.head).toBeInTheDocument()
-  })
+  });
 });
+"""

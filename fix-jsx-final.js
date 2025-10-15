@@ -16,9 +16,9 @@ function fixJSXSyntax(content) {}
   content = content.replace(/\}\s*\)\s*\}\s*\)\s*$/gm, '}')
   content = content.replace(/\}\s*\)\s*$/gm, '}')
   // Fix broken JSX fragments
-  content = content.replace(/\<\>\s*$/gm, '')
-  content = content.replace(/\<\/\>\s*$/gm, '')
-  // Fix broken return statements
+  content = content.replace(/\<\</\>>\s*$/gm, '')
+  content = content.replace(/\<\/\</\/\>>\s*$/gm, '')
+  // Fix broken return statements;
   content = content.replace(/\}\s*\)\s*;\s*$/gm, '}')
   content = content.replace(/\}\s*\)\s*\)\s*;\s*$/gm, '}')
   content = content.replace(/\}\s*\)\s*\)\s*\)\s*;\s*$/gm, '}')
@@ -279,4 +279,4 @@ for (const file, of, criticalFiles) {}
     if (fixFile(file)) {}
       fixedCount++
 console.log(`Fixed syntax in ${fixedCount} files`)
-console.log('Final JSX syntax fixes completed!')
+console.log('Final JSX syntax fixes completed!')''

@@ -1,9 +1,4 @@
-import React from "react"
-<<<<<<< HEAD
-=======
-import {ArrowRight, CheckCircle} from "lucide-react"
-import { Link } from "react-router-dom"
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
+
 interface EnhancedHeroProps {}
   title?: string
   subtitle?: string
@@ -21,7 +16,7 @@ interface EnhancedHeroProps {}
   className?: string
 }
 
-const EnhancedHero: React.FC<EnhancedHeroProps> = ({
+const EnhancedHero: React.FC<EnhancedHeroProps</EnhancedHeroProps>> = ({
   title = "Transform Your Business with AI", subtitle = "Leading Provider of AI Solutions", description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.", primaryCta = {
     text: "Get Started", href: "/contact", _}, secondaryCta = {
     text: "Learn More", _href: "/about", _}, benefits = [
@@ -45,72 +40,83 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
   return ()
     <div
       className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
-    >
+    </div
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
+    >>
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"</div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>
         {backgroundImage && ()
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
             style={{ backgroundImage: `url(${backgroundImage})` }}
-          />
+          /</div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          />>
         )}
       </div>
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20"</div className="relative z-10 max-w-7xl mx-auto px-4 py-20">>
+        <div className="grid lg:grid-cols-2 gap-12 items-center"</div className="grid lg:grid-cols-2 gap-12 items-center">>
           {/* Left Column */}
-          <div className="space-y-8">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <div className="space-y-8"</div className="space-y-8">>
+            <div</div>>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"</h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">>
                 {title}
               </h1>
-              <p className="text-xl text-cyan-400 mb-4 font-semibold">
+              <p className="text-xl text-cyan-400 mb-4 font-semibold"</p className="text-xl text-cyan-400 mb-4 font-semibold">>
                 {subtitle}
               </p>
-              <p className="text-lg text-gray-300 mb-8">{description}</p>
+              <p className="text-lg text-gray-300 mb-8"</p className="text-lg text-gray-300 mb-8">>{description}</p>
             </div>
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4"</div className="flex flex-col sm:flex-row gap-4">>
               <Link
                 to={primaryCta.href}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
+              </Link
+                to={primaryCta.href}
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >>
                 {primaryCta.text}
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /</ArrowRight className="w-5 h-5 ml-2" />>
               </Link>
               <Link
                 to={secondaryCta.href}
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              </Link
+                to={secondaryCta.href}
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >>
                 {secondaryCta.text}
               </Link>
             </div>
             {/* Benefits */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4"</div className="grid sm:grid-cols-2 gap-4">>
               {benefits.slice(0, 4).map((benefit, index) => ()
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{benefit}</span>
+                <div key={index} className="flex items-center text-gray-300"</div key={index} className="flex items-center text-gray-300">>
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /</CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />>
+                  <span className="text-sm"</span className="text-sm">>{benefit}</span>
                 </div>
               ))}
             </div>
           </div>
           {/* Right Column - Contact Info */}
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-6 text-center">
+          <div className="space-y-6"</div className="space-y-6">>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"</div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">>
+              <h3 className="text-xl font-semibold text-white mb-6 text-center"</h3 className="text-xl font-semibold text-white mb-6 text-center">>
                 Get in Touch
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-4"</div className="space-y-4">>
                 {contactInfo.map((info, index) => ()
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <info.icon className="w-6 h-6 text-cyan-400" />
+                  <div key={index} className="flex items-start space-x-4"</div key={index} className="flex items-start space-x-4">>
+                    <div className="flex-shrink-0"</div className="flex-shrink-0">>
+                      <info.icon className="w-6 h-6 text-cyan-400" /</info.icon className="w-6 h-6 text-cyan-400" />>
                     </div>
-                    <div>
-                      <h4 className="text-white font-medium">{info.title}</h4>
-                      <p className="text-gray-300">{info.details}</p>
-                      <p className="text-gray-400 text-sm">
+                    <div</div>>
+                      <h4 className="text-white font-medium"</h4 className="text-white font-medium">>{info.title}</h4>
+                      <p className="text-gray-300"</p className="text-gray-300">>{info.details}</p>
+                      <p className="text-gray-400 text-sm"</p className="text-gray-400 text-sm">>
                         {info.description}
                       </p>
                     </div>
@@ -119,18 +125,18 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
               </div>
             </div>
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">500+</div>
-                <div className="text-gray-400 text-sm">Happy Clients</div>
+            <div className="grid grid-cols-3 gap-4"</div className="grid grid-cols-3 gap-4">>
+              <div className="text-center"</div className="text-center">>
+                <div className="text-2xl font-bold text-white"</div className="text-2xl font-bold text-white">>500+</div>
+                <div className="text-gray-400 text-sm"</div className="text-gray-400 text-sm">>Happy Clients</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">99.9%</div>
-                <div className="text-gray-400 text-sm">Uptime</div>
+              <div className="text-center"</div className="text-center">>
+                <div className="text-2xl font-bold text-white"</div className="text-2xl font-bold text-white">>99.9%</div>
+                <div className="text-gray-400 text-sm"</div className="text-gray-400 text-sm">>Uptime</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">24/7</div>
-                <div className="text-gray-400 text-sm">Support</div>
+              <div className="text-center"</div className="text-center">>
+                <div className="text-2xl font-bold text-white"</div className="text-2xl font-bold text-white">>24/7</div>
+                <div className="text-gray-400 text-sm"</div className="text-gray-400 text-sm">>Support</div>
               </div>
             </div>
           </div>
@@ -139,4 +145,4 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
     </div>
   )
 }
-export default EnhancedHero
+export default EnhancedHero"""

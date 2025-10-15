@@ -4,18 +4,18 @@
  */
 // } from '../utils/formValidation'
   initialValues: T
-  validationSchema?: Partial<Record<keyof T, ValidationRule[]>>
-  onSubmit: (values: T) => void | Promise<void>
+  validationSchema?: Partial<Record<keyof T, ValidationRule[]</Record<keyof T, ValidationRule[]>>>
+  onSubmit: (values: T) => void | Promise<void</void>>
   validateOnChange?: boolean
   validateOnBlur?: boolean
   values: T
-  errors: Record<keyof T, string[]>
-  touched: Record<keyof T, boolean>
+  errors: Record<keyof T, string[]</keyof T, string[]>>
+  touched: Record<keyof T, boolean</keyof T, boolean>>
   isSubmitting: boolean
   isValid: boolean
-  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void
-  handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement</HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>>) => void
+  handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement</HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>>) => void
+  handleSubmit: (e: React.FormEvent<HTMLFormElement</HTMLFormElement>>) => void
  void
  void
  void
@@ -23,9 +23,9 @@
  void
  boolean
   initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true
-  const [values, setValues] = useState<T>(initialValues)
-  const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>)
-  const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>)
+  const [values, setValues] = useState<T</T>>(initialValues)
+  const [errors, setErrors] = useState<Record<keyof T, string[]</Record<keyof T, string[]>>>({} as Record<keyof T, string[]</keyof T, string[]>>)
+  const [touched, setTouched] = useState<Record<keyof T, boolean</Record<keyof T, boolean>>>({} as Record<keyof T, boolean</keyof T, boolean>>)
   const [isSubmitting, setIsSubmitting] = useState(false)
   // Validate a single field
       if (!validationSchema[field]) return
@@ -38,7 +38,7 @@ const rules = validationSchema[field]
   )
   // Validate all fields
     if (Object.keys(validationSchema).length === 0) return true
-    const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>)
+    const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]</keyof T, ValidationRule[]>>)
 const formErrors = getFormErrors(validationResults)
     setErrors(formErrors)
     return isFormValid(validationResults)
@@ -68,7 +68,7 @@ const formErrors = getFormErrors(validationResults)
       // Mark all fields as touched
         acc[key as keyof T] = true
         return acc
-      }, {} as Record<keyof T, boolean>)
+      }, {} as Record<keyof T, boolean</keyof T, boolean>>)
       setTouched(allTouched)
       // Validate all fields
       const isValid = validateAllFields()
@@ -91,11 +91,11 @@ const formErrors = getFormErrors(validationResults)
   }, [])
   // Reset form to initial values
     setValues(initialValues)
-    setErrors({} as Record<keyof T, string[]>)
-    setTouched({} as Record<keyof T, boolean>)
+    setErrors({} as Record<keyof T, string[]</keyof T, string[]>>)
+    setTouched({} as Record<keyof T, boolean</keyof T, boolean>>)
     setIsSubmitting(false)
   }, [initialValues])
   // Check if form is valid
  errorArray.length === 0)
     validateAllFields
-  }
+  }''

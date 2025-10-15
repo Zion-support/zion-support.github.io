@@ -8,7 +8,7 @@ import 'whatwg-fetch'
 // beforeEach(() => {}
 }//   fetchMock.resetMocks()
 // })
-// Polyfill TextEncoder and TextDecoder for JSDOM environment
+// Polyfill TextEncoder and TextDecoder for JSDOM environment;
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as unknown as typeof global.TextEncoder;
 global.TextDecoder = TextDecoder as unknown as typeof global.TextDecoder;
@@ -62,4 +62,4 @@ if (typeof performance.getEntriesByType !== 'function') {
   (performance as Performance & { getEntriesByType: () => PerformanceEntry[] }).getEntriesByType = () => [];
 }
 // Ensure all code paths use the mock implementation
-// global.fetch = fetchMock
+// global.fetch = fetchMock''

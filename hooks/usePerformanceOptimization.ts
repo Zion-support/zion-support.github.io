@@ -13,7 +13,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableImageOptimization = true,
     enableCodeSplitting = true,
     enableCaching = true} = options
-  const observerRef = useRef<IntersectionObserver | null>(null)
+  const observerRef = useRef<IntersectionObserver | null</IntersectionObserver | null>>(null)
   // Lazy loading for images
   const setupLazyLoading = useCallback(() => {}
 }if (!enableLazyLoading || typeof window === 'undefined') return
@@ -128,7 +128,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         if (usedMB / totalMB > 0.8) {}
           console.warn('High memory usage detected:', { usedMB, totalMB })
         }
-      }
+      };
       setInterval(checkMemory, 30000); // Check every 30 seconds
     }
   }, [])
@@ -179,4 +179,4 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     optimizeImages,
     registerServiceWorker,
     setupPerformanceMonitoring}
-}
+}""'"'

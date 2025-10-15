@@ -3,42 +3,42 @@ import { Search, MessageSquare, Star, BookOpen, HelpCircle, Video, Download, Che
 
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null</number | null>>(null);
 
   const helpCategories = [
     {
       title: 'Getting Started',
-      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      icon: <Zap className="w-6 h-6 text-yellow-400" /</Zap className="w-6 h-6 text-yellow-400" />>,
       articles: 12,
       description: 'Learn the basics and get up and running quickly'
     },
     {
       title: 'Account & Billing',
-      icon: <Users className="w-6 h-6 text-blue-400" />,
+      icon: <Users className="w-6 h-6 text-blue-400" /</Users className="w-6 h-6 text-blue-400" />>,
       articles: 8,
       description: 'Manage your account, billing, and subscription'
     },
     {
       title: 'API & Integration',
-      icon: <Globe className="w-6 h-6 text-green-400" />,
+      icon: <Globe className="w-6 h-6 text-green-400" /</Globe className="w-6 h-6 text-green-400" />>,
       articles: 15,
       description: 'Integrate our services with your applications'
     },
     {
       title: 'Troubleshooting',
-      icon: <HelpCircle className="w-6 h-6 text-red-400" />,
+      icon: <HelpCircle className="w-6 h-6 text-red-400" /</HelpCircle className="w-6 h-6 text-red-400" />>,
       articles: 10,
       description: 'Common issues and how to resolve them'
     },
     {
       title: 'Security & Privacy',
-      icon: <Award className="w-6 h-6 text-purple-400" />,
+      icon: <Award className="w-6 h-6 text-purple-400" /</Award className="w-6 h-6 text-purple-400" />>,
       articles: 6,
       description: 'Keep your data secure and understand our privacy practices'
     },
     {
       title: 'Advanced Features',
-      icon: <Star className="w-6 h-6 text-orange-400" />,
+      icon: <Star className="w-6 h-6 text-orange-400" /</Star className="w-6 h-6 text-orange-400" />>,
       articles: 9,
       description: 'Unlock the full potential of our platform'
     }
@@ -85,7 +85,7 @@ const HelpPage: React.FC = () => {
 
   const supportChannels = [
     {
-      icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
+      icon: <MessageSquare className="w-8 h-8 text-cyan-400" /</MessageSquare className="w-8 h-8 text-cyan-400" />>,
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       availability: '24/7',
@@ -93,7 +93,7 @@ const HelpPage: React.FC = () => {
       action: 'Start Chat'
     },
     {
-      icon: <Phone className="w-8 h-8 text-green-400" />,
+      icon: <Phone className="w-8 h-8 text-green-400" /</Phone className="w-8 h-8 text-green-400" />>,
       title: 'Phone Support',
       description: 'Speak directly with our technical experts',
       availability: 'Mon-Fri 9AM-6PM EST',
@@ -101,7 +101,7 @@ const HelpPage: React.FC = () => {
       action: 'Call Now'
     },
     {
-      icon: <Mail className="w-8 h-8 text-purple-400" />,
+      icon: <Mail className="w-8 h-8 text-purple-400" /</Mail className="w-8 h-8 text-purple-400" />>,
       title: 'Email Support',
       description: 'Send us detailed questions and get comprehensive answers',
       availability: '24/7',
@@ -109,7 +109,7 @@ const HelpPage: React.FC = () => {
       action: 'Send Email'
     },
     {
-      icon: <Calendar className="w-8 h-8 text-orange-400" />,
+      icon: <Calendar className="w-8 h-8 text-orange-400" /</Calendar className="w-8 h-8 text-orange-400" />>,
       title: 'Schedule Call',
       description: 'Book a dedicated session with our experts',
       availability: 'Mon-Fri 9AM-6PM EST',
@@ -122,28 +122,28 @@ const HelpPage: React.FC = () => {
     {
       title: 'Documentation',
       description: 'Comprehensive guides and API references',
-      icon: <BookOpen className="w-6 h-6 text-blue-400" />,
+      icon: <BookOpen className="w-6 h-6 text-blue-400" /</BookOpen className="w-6 h-6 text-blue-400" />>,
       type: 'Documentation',
       items: 25
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides and walkthroughs',
-      icon: <Video className="w-6 h-6 text-red-400" />,
+      icon: <Video className="w-6 h-6 text-red-400" /</Video className="w-6 h-6 text-red-400" />>,
       type: 'Videos',
       items: 15
     },
     {
       title: 'Knowledge Base',
       description: 'Searchable articles and troubleshooting guides',
-      icon: <FileText className="w-6 h-6 text-green-400" />,
+      icon: <FileText className="w-6 h-6 text-green-400" /</FileText className="w-6 h-6 text-green-400" />>,
       type: 'Articles',
       items: 50
     },
     {
       title: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
-      icon: <Download className="w-6 h-6 text-purple-400" />,
+      icon: <Download className="w-6 h-6 text-purple-400" /</Download className="w-6 h-6 text-purple-400" />>,
       type: 'Downloads',
       items: 12
     }
@@ -161,37 +161,37 @@ const HelpPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Help Center - Zion Tech Group | Support & Documentation</title>
-        <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, documentation, and contact our expert support team." />
-        <meta name="keywords" content="help center, support, documentation, FAQ, troubleshooting, customer service" />
-        <link rel="canonical" href="https://ziontechgroup.com/help" />
+      <Helmet</Helmet>>
+        <titl</titl>e>Help Center - Zion Tech Group | Support & Documentation</title>
+        <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, documentation, and contact our expert support team." /</meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, documentation, and contact our expert support team." />>
+        <meta name="keywords" content="help center, support, documentation, FAQ, troubleshooting, customer service" /</meta name="keywords" content="help center, support, documentation, FAQ, troubleshooting, customer service" />>
+        <link rel="canonical" href="https://ziontechgroup.com/help" /</link rel="canonical" href="https://ziontechgroup.com/help" />>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"</section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">>
+        <div className="absolute inset-0 overflow-hidden"</div className="absolute inset-0 overflow-hidden">>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"</div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse">></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"</div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse">></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="container mx-auto px-4 relative z-10"</div className="container mx-auto px-4 relative z-10">>
+          <div className="text-center max-w-4xl mx-auto"</div className="text-center max-w-4xl mx-auto">>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"</h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">>
               How Can We
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"</span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">>
                 {' '}Help You?
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"</p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">>
               Find answers to your questions, access our documentation, and get the support you need 
               to succeed with our AI and IT solutions.
             </p>
             
             {/* Search */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="max-w-2xl mx-auto mb-8"</div className="max-w-2xl mx-auto mb-8">>
+              <div className="relative"</div className="relative">>
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /</Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />>
                 <input
                   type="text"
                   placeholder="Search for help articles, FAQs, and documentation..."
@@ -202,19 +202,25 @@ const HelpPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"</div className="flex flex-col sm:flex-row gap-4 justify-center items-center">>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
-              >
+              </Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
+              >>
                 Contact Support
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /</ArrowRight className="w-5 h-5 ml-2" />>
               </Link>
               <Link
                 to="/demo"
                 className="border-2 border-white/20 hover:border-purple-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
+              </Link
+                to="/demo"
+                className="border-2 border-white/20 hover:border-purple-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
+              >>
+                <Calendar className="w-5 h-5 mr-2" /</Calendar className="w-5 h-5 mr-2" />>
                 Schedule Demo
               </Link>
             </div>
@@ -223,32 +229,36 @@ const HelpPage: React.FC = () => {
       </section>
 
       {/* Help Categories */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Browse Help Topics</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+      <section className="py-20 bg-slate-800"</section className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl font-bold text-white mb-4"</h2 className="text-4xl font-bold text-white mb-4">>Browse Help Topics</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Find the information you need organized by topic and category.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"</div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">>
             {helpCategories.map((category) => (
               <Link
                 key={index}
                 to="/help"
                 className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              </Link
+                key={index}
+                to="/help"
+                className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
+              >>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"</div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">>
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors"</h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">>
                   {category.title}
                 </h3>
-                <p className="text-gray-300 mb-4">{category.description}</p>
-                <div className="flex items-center justify-center text-purple-400 font-semibold group-hover:text-purple-300 transition-colors">
-                  <span className="mr-2">{category.articles} articles</span>
-                  <ExternalLink className="w-4 h-4" />
+                <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>{category.description}</p>
+                <div className="flex items-center justify-center text-purple-400 font-semibold group-hover:text-purple-300 transition-colors"</div className="flex items-center justify-center text-purple-400 font-semibold group-hover:text-purple-300 transition-colors">>
+                  <span className="mr-2"</span className="mr-2">>{category.articles} articles</span>
+                  <ExternalLink className="w-4 h-4" /</ExternalLink className="w-4 h-4" />>
                 </div>
               </Link>
             ))}
@@ -257,34 +267,34 @@ const HelpPage: React.FC = () => {
       </section>
 
       {/* Support Channels */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Get Support</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"</section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl font-bold text-white mb-4"</h2 className="text-4xl font-bold text-white mb-4">>Get Support</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Choose the support channel that works best for you.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">>
             {supportChannels.map((channel) => (
-              <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"</div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"</div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">>
                   {channel.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
-                <p className="text-gray-300 mb-4">{channel.description}</p>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center justify-center text-gray-400 text-sm">
-                    <Clock className="w-4 h-4 mr-2" />
+                <h3 className="text-xl font-semibold text-white mb-3"</h3 className="text-xl font-semibold text-white mb-3">>{channel.title}</h3>
+                <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>{channel.description}</p>
+                <div className="space-y-2 mb-6"</div className="space-y-2 mb-6">>
+                  <div className="flex items-center justify-center text-gray-400 text-sm"</div className="flex items-center justify-center text-gray-400 text-sm">>
+                    <Clock className="w-4 h-4 mr-2" /</Clock className="w-4 h-4 mr-2" />>
                     {channel.availability}
                   </div>
-                  <div className="flex items-center justify-center text-gray-400 text-sm">
-                    <Zap className="w-4 h-4 mr-2" />
+                  <div className="flex items-center justify-center text-gray-400 text-sm"</div className="flex items-center justify-center text-gray-400 text-sm">>
+                    <Zap className="w-4 h-4 mr-2" /</Zap className="w-4 h-4 mr-2" />>
                     {channel.responseTime}
                   </div>
                 </div>
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"</button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">>
                   {channel.action}
                 </button>
               </div>
@@ -294,37 +304,38 @@ const HelpPage: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+      <section className="py-20 bg-slate-800"</section className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl font-bold text-white mb-4"</h2 className="text-4xl font-bold text-white mb-4">>Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Find quick answers to common questions about our services and solutions.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
+          <div className="max-w-4xl mx-auto"</div className="max-w-4xl mx-auto">>
+            <div className="space-y-4"</div className="space-y-4">>
               {filteredFAQs.map((faq) => (
-                <div key={faq.id} className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl hover:border-purple-500/50 transition-all duration-300">
+                <div key={faq.id} className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl hover:border-purple-500/50 transition-all duration-300"</div key={faq.id} className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl hover:border-purple-500/50 transition-all duration-300">>
                   <button
-                    onClick={() => toggleFAQ(faq.id)}
+                    onClick={() =</button
+                    onClick={() =>> toggleFAQ(faq.id)}
                     className="w-full p-6 text-left flex items-center justify-between"
                   >
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{faq.question}</h3>
-                      <span className="text-sm text-purple-400">{faq.category}</span>
+                    <div</div>>
+                      <h3 className="text-xl font-semibold text-white mb-2"</h3 className="text-xl font-semibold text-white mb-2">>{faq.question}</h3>
+                      <span className="text-sm text-purple-400"</span className="text-sm text-purple-400">>{faq.category}</span>
                     </div>
                     {expandedFAQ === faq.id ? (
-                      <ChevronDown className="w-5 h-5 text-gray-400" />
+                      <ChevronDown className="w-5 h-5 text-gray-400" /</ChevronDown className="w-5 h-5 text-gray-400" />>
                     ) : (
-                      <ChevronRight className="w-5 h-5 text-gray-400" />
+                      <ChevronRight className="w-5 h-5 text-gray-400" /</ChevronRight className="w-5 h-5 text-gray-400" />>
                     )}
                   </button>
                   
                   {expandedFAQ === faq.id && (
-                    <div className="px-6 pb-6">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    <div className="px-6 pb-6"</div className="px-6 pb-6">>
+                      <p className="text-gray-300 leading-relaxed"</p className="text-gray-300 leading-relaxed">>{faq.answer}</p>
                     </div>
                   )}
                 </div>
@@ -332,12 +343,12 @@ const HelpPage: React.FC = () => {
             </div>
 
             {filteredFAQs.length === 0 && (
-              <div className="text-center py-12">
-                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Search className="w-8 h-8 text-gray-400" />
+              <div className="text-center py-12"</div className="text-center py-12">>
+                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4"</div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">>
+                  <Search className="w-8 h-8 text-gray-400" /</Search className="w-8 h-8 text-gray-400" />>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">No FAQs found</h3>
-                <p className="text-gray-400">Try adjusting your search criteria.</p>
+                <h3 className="text-xl font-semibold text-white mb-2"</h3 className="text-xl font-semibold text-white mb-2">>No FAQs found</h3>
+                <p className="text-gray-400"</p className="text-gray-400">>Try adjusting your search criteria.</p>
               </div>
             )}
           </div>
@@ -345,32 +356,36 @@ const HelpPage: React.FC = () => {
       </section>
 
       {/* Resources */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Resources</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"</section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl font-bold text-white mb-4"</h2 className="text-4xl font-bold text-white mb-4">>Resources</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Access our comprehensive library of resources and documentation.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">>
             {resources.map((resource) => (
               <Link
                 key={index}
                 to="/resources"
                 className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              </Link
+                key={index}
+                to="/resources"
+                className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
+              >>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"</div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">>
                   {resource.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors"</h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">>
                   {resource.title}
                 </h3>
-                <p className="text-gray-300 mb-4">{resource.description}</p>
-                <div className="flex items-center justify-center text-purple-400 font-semibold group-hover:text-purple-300 transition-colors">
-                  <span className="mr-2">{resource.items} {resource.type}</span>
-                  <ExternalLink className="w-4 h-4" />
+                <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>{resource.description}</p>
+                <div className="flex items-center justify-center text-purple-400 font-semibold group-hover:text-purple-300 transition-colors"</div className="flex items-center justify-center text-purple-400 font-semibold group-hover:text-purple-300 transition-colors">>
+                  <span className="mr-2"</span className="mr-2">>{resource.items} {resource.type}</span>
+                  <ExternalLink className="w-4 h-4" /</ExternalLink className="w-4 h-4" />>
                 </div>
               </Link>
             ))}
@@ -379,26 +394,32 @@ const HelpPage: React.FC = () => {
       </section>
 
       {/* Contact Support CTA */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl p-12 text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">Still Need Help?</h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+      <section className="py-20 bg-slate-800"</section className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl p-12 text-center"</div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl p-12 text-center">>
+            <h2 className="text-4xl font-bold text-white mb-4"</h2 className="text-4xl font-bold text-white mb-4">>Still Need Help?</h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto"</p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">>
               Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"</div className="flex flex-col sm:flex-row gap-4 justify-center items-center">>
               <Link
                 to="/contact"
                 className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
-              >
-                <MessageSquare className="w-5 h-5 mr-2" />
+              </Link
+                to="/contact"
+                className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
+              >>
+                <MessageSquare className="w-5 h-5 mr-2" /</MessageSquare className="w-5 h-5 mr-2" />>
                 Contact Support
               </Link>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
+              </a
+                href="tel:+13024640950"
+                className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
+              >>
+                <Phone className="w-5 h-5 mr-2" /</Phone className="w-5 h-5 mr-2" />>
                 Call Now
               </a>
             </div>
@@ -409,4 +430,4 @@ const HelpPage: React.FC = () => {
   );
 };
 
-export default HelpPage;
+export default HelpPage;""'"'}

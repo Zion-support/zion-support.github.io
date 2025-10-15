@@ -7,8 +7,8 @@ interface PerformanceOptimizerProps {}
   enableCompression?: boolean
 }
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true, }) => {
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps</PerformanceOptimizerProps>> = ({
+  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true, }) => {;
   const location = useLocation();
 
   // Image optimization
@@ -29,7 +29,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
   }, [enableImageOptimization])
   // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {}
+  const preloadCriticalResources = useCallback(() =</= window.innerHeight) {}
+        img.setAttribute('fetchpriority', 'high')
+      }
+    })
+  }, [enableImageOptimization])
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() =>> {}
 }if (!enablePreloading) return
     // Preload critical CSS
     const criticalCSS = document.createElement('link')
@@ -167,7 +173,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             window.gc()
           }
         }
-      }
+      };
       setInterval(checkMemory, 30000); // Check every 30 seconds
     }
   }, [optimizeImages])
@@ -207,7 +213,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 }
 // Helper function to determine next likely page
 const getNextLikelyPage = (currentPath: string): string | null => {}
-}const likelyPages: Record<string, string> = {}
+}const likelyPages: Record<string, string</string, string>> = {}
     '/': '/about',
     '/about': '/services',
     '/services': '/contact',
@@ -216,4 +222,4 @@ const getNextLikelyPage = (currentPath: string): string | null => {}
     '/5g-solutions': '/5g-implementation'}
   return likelyPages[currentPath] || null
 }
-export default AdvancedPerformanceOptimizer
+export default AdvancedPerformanceOptimizer""'"'

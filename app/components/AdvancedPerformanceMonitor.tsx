@@ -26,12 +26,12 @@ interface PerformanceMonitorProps {
   logToConsole?: boolean;
 }
 
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps</PerformanceMonitorProps>> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
   logToConsole = false
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics</PerformanceMetrics>>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -46,7 +46,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   // Get Core Web Vitals
   const getCoreWebVitals = useCallback(() => {
-    const vitals: Partial<PerformanceMetrics> = {};
+    const vitals: Partial<PerformanceMetrics</PerformanceMetrics>> = {};
 
     // First Contentful Paint (FCP)
     const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
@@ -272,79 +272,113 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       factors++;
     }
 
-    return factors > 0 ? Math.round(score / factors) : 0;
+    return factors </= 1800) score += 100;
+      else if (metrics.fcp <= 3000) score += 80;
+      else if (metrics.fcp <= 4000) score += 60;
+      else score += 40;
+      factors++;
+    }
+
+    // LCP scoring (0-100)
+    if (metrics.lcp !== null) {
+      if (metrics.lcp <= 2500) score += 100;
+      else if (metrics.lcp <= 4000) score += 80;
+      else if (metrics.lcp <= 6000) score += 60;
+      else score += 40;
+      factors++;
+    }
+
+    // FID scoring (0-100)
+    if (metrics.fid !== null) {
+      if (metrics.fid <= 100) score += 100;
+      else if (metrics.fid <= 300) score += 80;
+      else if (metrics.fid <= 500) score += 60;
+      else score += 40;
+      factors++;
+    }
+
+    // CLS scoring (0-100)
+    if (metrics.cls !== null) {
+      if (metrics.cls <= 0.1) score += 100;
+      else if (metrics.cls <= 0.25) score += 80;
+      else if (metrics.cls <= 0.4) score += 60;
+      else score += 40;
+      factors++;
+    }
+
+    return factors >> 0 ? Math.round(score / factors) : 0;
   }, [metrics]);
 
   const performanceScore = getPerformanceScore();
 
   return (
-    <div className="performance-monitor">
+    <div className="performance-monitor"</div className="performance-monitor">>
       {enableRealTimeMonitoring && (
-        <div className="performance-status">
-          <div className={`status-indicator ${isMonitoring ? 'active' : 'inactive'}`}>
+        <div className="performance-status"</div className="performance-status">>
+          <div className={`status-indicator ${isMonitoring ? 'active' : 'inactive'}`}</div className={`status-indicator ${isMonitoring ? 'active' : 'inactive'}`}>>
             {isMonitoring ? '🟢 Monitoring' : '🔴 Stopped'}
           </div>
-          <div className="performance-score">
+          <div className="performance-score"</div className="performance-score">>
             Score: {performanceScore}/100
           </div>
         </div>
       )}
       
-      <div className="metrics-grid">
-        <div className="metric">
-          <span className="metric-label">FCP:</span>
-          <span className="metric-value">
+      <div className="metrics-grid"</div className="metrics-grid">>
+        <div className="metric"</div className="metric">>
+          <span className="metric-label"</span className="metric-label">>FCP:</span>
+          <span className="metric-value"</span className="metric-value">>
             {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
           </span>
         </div>
-        <div className="metric">
-          <span className="metric-label">LCP:</span>
-          <span className="metric-value">
+        <div className="metric"</div className="metric">>
+          <span className="metric-label"</span className="metric-label">>LCP:</span>
+          <span className="metric-value"</span className="metric-value">>
             {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
           </span>
         </div>
-        <div className="metric">
-          <span className="metric-label">FID:</span>
-          <span className="metric-value">
+        <div className="metric"</div className="metric">>
+          <span className="metric-label"</span className="metric-label">>FID:</span>
+          <span className="metric-value"</span className="metric-value">>
             {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
           </span>
         </div>
-        <div className="metric">
-          <span className="metric-label">CLS:</span>
-          <span className="metric-value">
+        <div className="metric"</div className="metric">>
+          <span className="metric-label"</span className="metric-label">>CLS:</span>
+          <span className="metric-value"</span className="metric-value">>
             {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
           </span>
         </div>
-        <div className="metric">
-          <span className="metric-label">TTFB:</span>
-          <span className="metric-value">
+        <div className="metric"</div className="metric">>
+          <span className="metric-label"</span className="metric-label">>TTFB:</span>
+          <span className="metric-value"</span className="metric-value">>
             {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
           </span>
         </div>
-        <div className="metric">
-          <span className="metric-label">FMP:</span>
-          <span className="metric-value">
+        <div className="metric"</div className="metric">>
+          <span className="metric-label"</span className="metric-label">>FMP:</span>
+          <span className="metric-value"</span className="metric-value">>
             {metrics.fmp ? `${metrics.fmp.toFixed(2)}ms` : 'N/A'}
           </span>
         </div>
       </div>
 
       {metrics.memory && (
-        <div className="memory-usage">
-          <h4>Memory Usage</h4>
-          <div className="memory-metric">
-            <span>Used: {(metrics.memory.usedJSHeapSize / 1024 / 1024).toFixed(2)} MB</span>
+        <div className="memory-usage"</div className="memory-usage">>
+          <h</h>4>Memory Usage</h4>
+          <div className="memory-metric"</div className="memory-metric">>
+            <spa</spa>n>Used: {(metrics.memory.usedJSHeapSize / 1024 / 1024).toFixed(2)} MB</span>
           </div>
-          <div className="memory-metric">
-            <span>Total: {(metrics.memory.totalJSHeapSize / 1024 / 1024).toFixed(2)} MB</span>
+          <div className="memory-metric"</div className="memory-metric">>
+            <spa</spa>n>Total: {(metrics.memory.totalJSHeapSize / 1024 / 1024).toFixed(2)} MB</span>
           </div>
-          <div className="memory-metric">
-            <span>Limit: {(metrics.memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)} MB</span>
+          <div className="memory-metric"</div className="memory-metric">>
+            <spa</spa>n>Limit: {(metrics.memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)} MB</span>
           </div>
         </div>
       )}
 
-      <style jsx>{`
+      <style jsx</style jsx>>{`
         .performance-monitor {
           position: fixed;
           top: 10px;
@@ -425,4 +459,4 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   );
 };
 
-export default AdvancedPerformanceMonitor;
+export default AdvancedPerformanceMonitor;""'"'

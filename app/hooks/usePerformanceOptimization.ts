@@ -25,8 +25,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     enableBundleAnalysis = true,
   } = options;
 
-  const metricsRef = useRef<PerformanceMetrics | null>(null);
-  const observerRef = useRef<PerformanceObserver | null>(null);
+  const metricsRef = useRef<PerformanceMetrics | null</PerformanceMetrics | null>>(null);
+  const observerRef = useRef<PerformanceObserver | null</PerformanceObserver | null>>(null);
 
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
@@ -83,7 +83,19 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, [enableImageOptimization]);
 
   // Setup performance monitoring
-  const setupPerformanceMonitoring = useCallback(() => {
+  const setupPerformanceMonitoring = useCallback(() =</ window.innerHeight) {
+        htmlImg.setAttribute('fetchpriority', 'high');
+      }
+      
+      // Mark as optimized
+      htmlImg.setAttribute('data-optimized', 'true');
+    });
+
+    logger.info(`Optimized ${images.length} images`);
+  }, [enableImageOptimization]);
+
+  // Setup performance monitoring
+  const setupPerformanceMonitoring = useCallback(() =>> {
     if (!enableMonitoring) return;
 
     // Monitor Core Web Vitals
@@ -217,4 +229,4 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     optimizeImages,
     analyzeBundle,
   };
-};
+};""'"'

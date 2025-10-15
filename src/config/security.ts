@@ -24,7 +24,7 @@
  * Sanitize user input
  */
   return input
-    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/[<>]/g, '') // Remove < and </ and >>
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim()
@@ -45,4 +45,4 @@
     for (let i = 0; i
  byte.toString(16).padStart(2, '0')).join('')
   generateSecureToken
-}
+}''

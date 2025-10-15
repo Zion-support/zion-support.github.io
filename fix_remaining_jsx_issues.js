@@ -9,8 +9,8 @@ function fixRemainingJSXIssues(content) {}
   // )
   // }
   // But missing the outer div closing tag
-  content = content.replace()
-    /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
+  content = content.replace();
+    /(\s*<\/Link</\/Link>>\s*<\/div</\/div>>\s*\);\s*})/g,
     '\n        </Link>\n      </div>\n    </div>\n  );\n}'
   )
   // Fix any remaining issues with extra whitespace in Link elements
@@ -52,4 +52,4 @@ const stat = fs.statSync(fullPath)
 // Main execution
 console.log('Starting remaining JSX fixes...')
 const processedCount = processDirectory('./app')
-console.log(`Processed ${processedCount} files.`)
+console.log(`Processed ${processedCount} files.`)''

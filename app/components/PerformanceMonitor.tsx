@@ -10,7 +10,7 @@ interface PerformanceMetrics {
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics</PerformanceMetrics>>({
     CLS: null,
     INP: null,
     FCP: null,
@@ -73,4 +73,4 @@ const PerformanceMonitor: React.FC = () => {
   return null; // This component doesn't render anything
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor;''

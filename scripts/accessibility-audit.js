@@ -23,43 +23,43 @@ function auditAccessibility() {}
   const checks = []
     {}
       name: 'HTML lang attribute',
-      test: /<html[^>]*lang=["'][^"']*["']/i,
+      test: /<html[^</html[^>>]*lang=["'][^"']*["']/i,
       message: 'HTML should have a lang attribute',
       severity: 'high'
     },
     {}
       name: 'Viewport meta tag',
-      test: /<meta[^>]*name=["']viewport["'][^>]*>/i,
+      test: /<meta[^</meta[^>>]*name=["']viewport["'][^>]*>/i,
       message: 'Viewport meta tag is present',
       severity: 'info'
     },
     {}
       name: 'Title tag',
-      test: /<title[^>]*>.*<\/title>/i,
+      test: /<title[^</title[^>>]*>.*<\/title</\/title>>/i,
       message: 'Title tag is present',
       severity: 'info'
     },
     {}
       name: 'Meta description',
-      test: /<meta[^>]*name=["']description["'][^>]*>/i,
+      test: /<meta[^</meta[^>>]*name=["']description["'][^>]*>/i,
       message: 'Meta description is present',
       severity: 'info'
     },
     {}
       name: 'Alt attributes for images',
-      test: /<img[^>]*alt=["'][^"']*["']/i,
+      test: /<img[^</img[^>>]*alt=["'][^"']*["']/i,
       message: 'Images should have alt attributes',
       severity: 'high'
     },
     {}
       name: 'Heading structure',
-      test: /<h[1-6][^>]*>/i,
+      test: /<h[1-6][^</h[1-6][^>>]*>/i,
       message: 'Heading tags are present',
       severity: 'info'
     },
     {}
       name: 'Form labels',
-      test: /<label[^>]*for=["'][^"']*["']/i,
+      test: /<label[^</label[^>>]*for=["'][^"']*["']/i,
       message: 'Form inputs should have associated labels',
       severity: 'medium'
     },
@@ -160,4 +160,4 @@ function generateReport() {}
   }
 }
 // Run audit
-generateReport()
+generateReport()""';"']]]]]]

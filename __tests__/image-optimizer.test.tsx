@@ -9,3 +9,4 @@ const mockImage = {
   src: '',
   onload: null,
   onerror: null
+}';'

@@ -4,73 +4,79 @@ import { Helmet } from 'react-helmet-async';
 const CloudServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
+      <Helmet</Helmet>>
+        <titl</titl>e>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
         <meta
           name="description"
           content="Transform your business with our comprehensive cloud services. Expert cloud migration, infrastructure management, and security solutions from Zion Tech Group."
-        />
+        /</meta
+          name="description"
+          content="Transform your business with our comprehensive cloud services. Expert cloud migration, infrastructure management, and security solutions from Zion Tech Group."
+        />>
         <meta
           name="keywords"
           content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting"
-        />
+        /</meta
+          name="keywords"
+          content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting"
+        />>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">>
+        <div className="container mx-auto px-4 py-16"</div className="container mx-auto px-4 py-16">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"</h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">>
               Cloud Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Transform your business with our comprehensive cloud services. Expert cloud migration, 
               infrastructure management, and security solutions.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
-              <h3 className="text-xl font-semibold mb-4 text-cyan-400">Cloud Migration</h3>
-              <p className="text-gray-300 mb-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"</div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20"</div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">>
+              <h3 className="text-xl font-semibold mb-4 text-cyan-400"</h3 className="text-xl font-semibold mb-4 text-cyan-400">>Cloud Migration</h3>
+              <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>
                 Seamless migration to cloud platforms with zero downtime and maximum efficiency.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• AWS Migration</li>
-                <li>• Azure Migration</li>
-                <li>• Google Cloud Migration</li>
-                <li>• Hybrid Cloud Solutions</li>
+              <ul className="text-sm text-gray-400 space-y-2"</ul className="text-sm text-gray-400 space-y-2">>
+                <l</l>i>• AWS Migration</li>
+                <l</l>i>• Azure Migration</li>
+                <l</l>i>• Google Cloud Migration</li>
+                <l</l>i>• Hybrid Cloud Solutions</li>
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
-              <h3 className="text-xl font-semibold mb-4 text-cyan-400">Infrastructure Management</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20"</div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">>
+              <h3 className="text-xl font-semibold mb-4 text-cyan-400"</h3 className="text-xl font-semibold mb-4 text-cyan-400">>Infrastructure Management</h3>
+              <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>
                 Complete cloud infrastructure setup, monitoring, and optimization services.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Cloud Architecture Design</li>
-                <li>• Auto-scaling Solutions</li>
-                <li>• Performance Optimization</li>
-                <li>• 24/7 Monitoring</li>
+              <ul className="text-sm text-gray-400 space-y-2"</ul className="text-sm text-gray-400 space-y-2">>
+                <l</l>i>• Cloud Architecture Design</li>
+                <l</l>i>• Auto-scaling Solutions</li>
+                <l</l>i>• Performance Optimization</li>
+                <l</l>i>• 24/7 Monitoring</li>
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
-              <h3 className="text-xl font-semibold mb-4 text-cyan-400">Cloud Security</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20"</div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">>
+              <h3 className="text-xl font-semibold mb-4 text-cyan-400"</h3 className="text-xl font-semibold mb-4 text-cyan-400">>Cloud Security</h3>
+              <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>
                 Advanced security solutions to protect your cloud infrastructure and data.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Security Assessment</li>
-                <li>• Compliance Management</li>
-                <li>• Data Encryption</li>
-                <li>• Threat Detection</li>
+              <ul className="text-sm text-gray-400 space-y-2"</ul className="text-sm text-gray-400 space-y-2">>
+                <l</l>i>• Security Assessment</li>
+                <l</l>i>• Compliance Management</li>
+                <l</l>i>• Data Encryption</li>
+                <l</l>i>• Threat Detection</li>
               </ul>
             </div>
           </div>
 
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+          <div className="text-center"</div className="text-center">>
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"</button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">>
               Get Started with Cloud Services
             </button>
           </div>
@@ -81,3 +87,4 @@ const CloudServicesPage: React.FC = () => {
 };
 
 export default CloudServicesPage;
+""'"'

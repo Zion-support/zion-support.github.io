@@ -63,9 +63,17 @@ const ResponsiveText = (_{
         alignClasses[align],
         className
       )}
-    >
+    </Component
+      className={cn()
+        sizeClasses[size],
+        weightClasses[weight],
+        colorClasses[color],
+        alignClasses[align],
+        className
+      )}
+    >>
       {children}
     </Component>
   )
 }
-export default ResponsiveText
+export default ResponsiveText';'

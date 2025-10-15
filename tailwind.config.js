@@ -19,4 +19,4 @@ export default {}
           700: "#6d28d9"}},
       fontFamily: {}
         sans: ["Inter", "system-ui", "sans-serif"]}}},
-  plugins: []}
+  plugins: []}""'"'

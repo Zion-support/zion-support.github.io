@@ -6,36 +6,36 @@ interface LazyWrapperProps {
 }
 
 const DefaultFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-slate-900">
-    <div className="flex flex-col items-center space-y-4">
-      <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
-      <p className="text-gray-300 text-lg">Loading...</p>
+  <div className="min-h-screen flex items-center justify-center bg-slate-900"</div className="min-h-screen flex items-center justify-center bg-slate-900">>
+    <div className="flex flex-col items-center space-y-4"</div className="flex flex-col items-center space-y-4">>
+      <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"</div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin">></div>
+      <p className="text-gray-300 text-lg"</p className="text-gray-300 text-lg">>Loading...</p>
     </div>
   </div>
 )
 
-export const LazyWrapper: React.FC<LazyWrapperProps> = ({
-  fallback = <DefaultFallback />,
+export const LazyWrapper: React.FC<LazyWrapperProps</LazyWrapperProps>> = ({
+  fallback = <DefaultFallback /</DefaultFallback />>,
   children
 }) => {
   return (
-    <Suspense fallback={fallback}>
+    <Suspense fallback={fallback}</Suspense fallback={fallback}>>
       {children}
-    </Suspense>
+    </Suspense>;
   );
 };
 
 LazyWrapper.displayName = 'LazyWrapper';
 
 // Lazy loading helper function
-export const createLazyComponent = <P extends Record<string, unknown>>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>
+export const createLazyComponent = <P extends Record<string, unknown</P extends Record<string, unknown>>>(
+  importFunc: () => Promise<{ default: ComponentType<P</{ default: ComponentType<P>> }>
 ) => {
   const LazyComponent = lazy(importFunc);
   
   const WrappedComponent = (props: P) => (
-    <LazyWrapper>
-      <LazyComponent {...props} />
+    <LazyWrapper</LazyWrapper>>
+      <LazyComponent {...props} /</LazyComponent {...props} />>
     </LazyWrapper>
   );
   
@@ -48,3 +48,4 @@ export { createLazyComponent } from '../utils/lazyLoading';
 export { createLazyComponent } from '../utils/lazyLoading';
 
 export default LazyWrapper;
+""'"'}

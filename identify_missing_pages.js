@@ -161,4 +161,4 @@ console.log(`Broken links: ${brokenLinks.length}`)
 console.log(`Existing pages: ${existingPages.length}`)
 // Write results to files
 fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'))
-fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n'))
+fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n'))';'

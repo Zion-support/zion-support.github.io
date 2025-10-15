@@ -11,13 +11,13 @@ interface ImageOptimizerProps {
   placeholder?: string;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+const ImageOptimizer: React.FC<ImageOptimizerProps</ImageOptimizerProps>> = ({
   src, alt, className = '', _width, _height, priority = false, _placeholder, effect = 'blur', threshold = 100, _onLoad, _onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLImageElement</HTMLImageElement>>(null);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -64,8 +64,11 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
-      >
-        <span className="text-gray-500 text-sm">Image failed to load</span>
+      </div 
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      >>
+        <span className="text-gray-500 text-sm"</span className="text-gray-500 text-sm">>Image failed to load</span>
       </div>
     );
   }
@@ -84,8 +87,21 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         onError={handleError}
         loading="eager"
         decoding="async"
-      />
+      /</img
+        ref={imgRef}
+        src={optimizedSrc}
+        srcSet={srcSet}
+        alt={alt}
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+        width={width}
+        height={height}
+        onLoad={handleLoad}
+        onError={handleError}
+        loading="eager"
+        decoding="async"
+      />>
     );
   }
 
   return (
+"})"'"'

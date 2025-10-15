@@ -1,4 +1,3 @@
-import React from "react";
 import { BarChart3, FileText, MessageSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
@@ -9,7 +8,7 @@ export default function AIServices() {
       name: "AI Analytics Dashboard Pro",
       description: "Advanced AI-powered business intelligence platform with predictive analytics, real-time insights, and automated reporting",
       price: "From $2,500/month",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <BarChart3 className="w-8 h-8" /</BarChart3 className="w-8 h-8" />>,
       color: "from-blue-500 to-cyan-500",
       features: [
         "Real-time predictive analytics",
@@ -31,7 +30,7 @@ export default function AIServices() {
       name: "AI Customer Service Pro",
       description: "Intelligent customer support system with natural language processing, automated responses, and 24/7 availability",
       price: "From $1,800/month",
-      icon: <MessageSquare className="w-8 h-8" />,
+      icon: <MessageSquare className="w-8 h-8" /</MessageSquare className="w-8 h-8" />>,
       color: "from-green-500 to-emerald-500",
       features: [
         "Natural language processing",
@@ -53,7 +52,7 @@ export default function AIServices() {
       name: "AI Content Generator Pro",
       description: "Advanced content creation platform with AI writing, image generation, and multi-format output capabilities",
       price: "From $2,200/month",
-      icon: <FileText className="w-8 h-8" />,
+      icon: <FileText className="w-8 h-8" /</FileText className="w-8 h-8" />>,
       color: "from-purple-500 to-pink-500",
       features: [
         "AI-powered writing",
@@ -74,67 +73,73 @@ export default function AIServices() {
 
   return (
     <>
-      <Helmet>
-        <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>
+      <Helmet</Helmet>>
+        <titl</titl>e>AI Services - Zion Tech Group | Advanced AI Solutions</title>
         <meta
           name="description"
           content="Transform your business with our comprehensive AI services. From machine learning to natural language processing, we deliver cutting-edge AI solutions."
-        />
+        /</meta
+          name="description"
+          content="Transform your business with our comprehensive AI services. From machine learning to natural language processing, we deliver cutting-edge AI solutions."
+        />>
         <meta
           name="keywords"
           content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI consulting, AI development"
-        />
+        /</meta
+          name="keywords"
+          content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI consulting, AI development"
+        />>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">>
+        <div className="container mx-auto px-4 py-16"</div className="container mx-auto px-4 py-16">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"</h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">>
               AI Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Transform your business with our comprehensive AI services. From machine learning to 
               natural language processing, we deliver cutting-edge AI solutions.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"</div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">>
             {aiServices.map((service) => (
-              <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4`}>
+              <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300"</div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">>
+                <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4`}</div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4`}>>
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">{service.name}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <p className="text-lg font-semibold text-green-400 mb-4">{service.price}</p>
+                <h3 className="text-xl font-semibold mb-3 text-cyan-400"</h3 className="text-xl font-semibold mb-3 text-cyan-400">>{service.name}</h3>
+                <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>{service.description}</p>
+                <p className="text-lg font-semibold text-green-400 mb-4"</p className="text-lg font-semibold text-green-400 mb-4">>{service.price}</p>
                 
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Features:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
+                <div className="mb-4"</div className="mb-4">>
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2"</h4 className="text-sm font-semibold text-gray-300 mb-2">>Features:</h4>
+                  <ul className="text-sm text-gray-400 space-y-1"</ul className="text-sm text-gray-400 space-y-1">>
                     {service.features.map((feature, index) => (
-                      <li key={index}>• {feature}</li>
+                      <li key={index}</li key={index}>>• {feature}</li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Benefits:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
+                <div className="mb-6"</div className="mb-6">>
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2"</h4 className="text-sm font-semibold text-gray-300 mb-2">>Benefits:</h4>
+                  <ul className="text-sm text-gray-400 space-y-1"</ul className="text-sm text-gray-400 space-y-1">>
                     {service.benefits.map((benefit, index) => (
-                      <li key={index}>• {benefit}</li>
+                      <li key={index}</li key={index}>>• {benefit}</li>
                     ))}
                   </ul>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"</button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">>
                   Learn More
                 </button>
               </div>
             ))}
           </div>
 
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+          <div className="text-center"</div className="text-center">>
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"</button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">>
               Get Started with AI Services
             </button>
           </div>
@@ -143,3 +148,4 @@ export default function AIServices() {
     </>
   );
 }
+"""

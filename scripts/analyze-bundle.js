@@ -78,7 +78,7 @@ function generateRecommendations(analysis) {}
   // Check total bundle size
  2 * 1024 * 1024) { // 2MB
 2MB). Consider code splitting and lazy loading.')
-  // Check for large individual files
+  // Check for large individual files;
  500 * 1024); // 500KB
  0) {}
  f.path).join(', ')}. Consider splitting these files.`)
@@ -102,7 +102,7 @@ function generateRecommendations(analysis) {}
   analysis.recommendations = recommendations
 function generateHTMLReport(analysis) {}
 }const html = `
-    <title>Bundle Analysis Report - Zion Tech Group</title>
+    <titl</titl>e>Bundle Analysis Report - Zion Tech Group</title>
         body {}
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
             margin: 0
@@ -165,23 +165,23 @@ function generateHTMLReport(analysis) {}
         .recommendations li {}
             margin-bottom: 8px
             color: #e2e8f0
-        <h1>📊 Bundle Analysis Report</h1>
-                <div class = "stat-value">${analysis.totalFiles}</div>
-                <div class="stat-label">Total Files</div>
-                <div class="stat-value">${formatBytes(analysis.totalSize)}</div>
-                <div class="stat-label">Total Size</div>
-                <div class="stat-value">${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}</div>
-                <div class="stat-label">Largest File</div>
-                        <th>File Path</th>
-                        <th>Size</th>
+        <h</h>1>📊 Bundle Analysis Report</h1>
+                <div class = "stat-value"</div class = "stat-value">>${analysis.totalFiles}</div>
+                <div class="stat-label"</div class="stat-label">>Total Files</div>
+                <div class="stat-value"</div class="stat-value">>${formatBytes(analysis.totalSize)}</div>
+                <div class="stat-label"</div class="stat-label">>Total Size</div>
+                <div class="stat-value"</div class="stat-value">>${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}</div>
+                <div class="stat-label"</div class="stat-label">>Largest File</div>
+                        <t</t>h>File Path</th>
+                        <t</t>h>Size</th>
  `
-                            <td>${file.path}</td>
-                            <td class="size">${file.sizeFormatted}</td>
+                            <t</t>d>${file.path}</td>
+                            <td class="size"</td class="size">>${file.sizeFormatted}</td>
                     `).join('')}
-            <h3>💡 Optimization Recommendations</h3>
-                ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+            <h</h>3>💡 Optimization Recommendations</h3>
+                ${analysis.recommendations.map(rec => `<l</l>i>${rec}</li>`).join('')}
   `
   const htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html')
   fs.writeFileSync(htmlPath, html)
 // Run analysis
-analyzeBundle()
+analyzeBundle()""'"'

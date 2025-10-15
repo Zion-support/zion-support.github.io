@@ -10,4 +10,4 @@ const url = '/api/analytics'
  observer.disconnect()
   }, [reportWebVitals])
   return { reportWebVitals }
-}
+}''

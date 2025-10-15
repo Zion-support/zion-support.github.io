@@ -27,7 +27,7 @@ const routeStatements = missingPages
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join("") + "Page"
-    return `                  <Route path="/${page}" element={<${componentName} />} />`
+    return `                  <Route path="/${page}" element={</Route path="/${page}" element={><${componentName} />} />`
   })
   .join("\n")
 // Add imports after the last import
@@ -60,4 +60,4 @@ console.log()
   "Routes added for:",
   brokenLinks.slice(0, 10).join(", "),
   "... and more",
-)
+)""';"'

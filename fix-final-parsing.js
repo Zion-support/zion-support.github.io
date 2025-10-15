@@ -18,13 +18,13 @@ function fixFinalParsing(content) {}
   fixed = fixed.replace(/const Ai3 dGenerationPage/g, 'const Ai3dGenerationPage')
   fixed = fixed.replace(/function Ai3 dGenerationPage/g, 'function Ai3dGenerationPage')
   // Fix malformed meta tags
-  fixed = fixed.replace(/<meta name="description" content="([^"]*)" \/ \/>/g, '<meta name="description" content="$1" />')
-  fixed = fixed.replace(/<meta name="keywords" content="([^"]*)" \/ \/>/g, '<meta name="keywords" content="$1" />')
+  fixed = fixed.replace(/<meta name="description" content="([^"]*)" \/ \/</meta name="description" content="([^"]*)" \/ \/>>/g, '<meta name="description" content="$1" /</meta name="description" content="$1" />>')
+  fixed = fixed.replace(/<meta name="keywords" content="([^"]*)" \/ \/</meta name="keywords" content="([^"]*)" \/ \/>>/g, '<meta name="keywords" content="$1" /</meta name="keywords" content="$1" />>')
   // Fix malformed title tags
-  fixed = fixed.replace(/<title>Ai 3 d Generation/g, '<title>AI 3D Generation')
+  fixed = fixed.replace(/<title</title>>Ai 3 d Generation/g, '<title</title>>AI 3D Generation')
   // Fix malformed Helmet tags
-  fixed = fixed.replace(/<Helmet></Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/ \/>/g,
-    '<Helmet></Helmet>\n        <title>$1</title>\n        <meta name="description" content="$2" />')
+  fixed = fixed.replace(/<Helme</Helme>t></Helmet>\s*<title</title>>([^<]*)<\/title</]*)<\/title>>\s*<meta name="description" content="([^"]*)" \/ \/</meta name="description" content="([^"]*)" \/ \/>>/g,
+    '<Helme</Helme>t></Helmet>\n        <titl</titl>e>$1</title>\n        <meta name="description" content="$2" /</meta name="description" content="$2" />>')
   return fixed
 // Function to process a single file
 function processFile(filePath) {}
@@ -53,4 +53,4 @@ async function main() {}
       fixedCount++
   })
   console.log(`\nFixed final parsing issues in ${fixedCount} files out of ${files.length} total files.`)
-main().catch(console.error)
+main().catch(console.error)""';"'

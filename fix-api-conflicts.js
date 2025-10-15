@@ -1,5 +1,5 @@
 import fs from 'fs
-#!/usr/bin// Fixed regex
+#!/usr/bin// Fixed regex;
   ''
   ''
   ''
@@ -13,4 +13,4 @@ import fs from 'fs
   console.error('Error:''
     const content = fs.readFileSync(filePath, 'utf8''
 console.log('Fixing API files merge conflicts...''
-console.log('API files merge conflict resolution completed!''
+console.log('API files merge conflict resolution completed!''))))))';'

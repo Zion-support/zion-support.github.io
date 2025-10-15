@@ -69,7 +69,7 @@ export default function EnhancedPerformanceOptimizer() {}
         font-family: 'Inter'
         font-display: swap
         src: url('/fonts/inter-var.woff2') format('woff2')
-      }
+      };
     `;
     document.head.appendChild(style);
   }, []);
@@ -179,4 +179,4 @@ export default function EnhancedPerformanceOptimizer() {}
     optimizeBundleLoading,
     setupServiceWorker])
   return null
-}
+}""'"'

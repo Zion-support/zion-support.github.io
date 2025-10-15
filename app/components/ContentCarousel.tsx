@@ -62,40 +62,50 @@ export default function ContentCarousel({}
 }setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
   return ()
-    <div className={`relative w-full ${className}`}>
+    <div className={`relative w-full ${className}`}</div className={`relative w-full ${className}`}>>
       {/* Carousel Container */}
-      <div className="relative overflow-hidden rounded-lg">
+      <div className="relative overflow-hidden rounded-lg"</div className="relative overflow-hidden rounded-lg">>
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
+        </div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >>
           {slides.map((slide) => ()
-            <div key={slide.id} className="w-full flex-shrink-0">
-              <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">
+            <div key={slide.id} className="w-full flex-shrink-0"</div key={slide.id} className="w-full flex-shrink-0">>
+              <div className="bg-gray-800 p-8 rounded-lg border border-gray-700"</div className="bg-gray-800 p-8 rounded-lg border border-gray-700">>
+                <div className="grid md:grid-cols-2 gap-8 items-center"</div className="grid md:grid-cols-2 gap-8 items-center">>
+                  <div</div>>
+                    <h3 className="text-2xl font-bold text-white mb-4"</h3 className="text-2xl font-bold text-white mb-4">>
                       {slide.title}
                     </h3>
-                    <p className="text-gray-300 mb-6">{slide.description}</p>
-                    <ul className="space-y-2">
+                    <p className="text-gray-300 mb-6"</p className="text-gray-300 mb-6">>{slide.description}</p>
+                    <ul className="space-y-2"</ul className="space-y-2">>
                       {slide.features.map((feature, index) => ()
                         <li
                           key={index}
                           className="flex items-center text-gray-300"
-                        >
-                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                        </li
+                          key={index}
+                          className="flex items-center text-gray-300"
+                        >>
+                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"</span className="w-2 h-2 bg-cyan-400 rounded-full mr-3">></span>
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center"</div className="flex justify-center">>
                     <img
                       src={slide.image}
                       alt={slide.title}
                       className="w-full max-w-md h-64 object-cover rounded-lg"
-                    />
+                    /</img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="w-full max-w-md h-64 object-cover rounded-lg"
+                    />>
                   </div>
                 </div>
               </div>
@@ -108,18 +118,26 @@ export default function ContentCarousel({}
         onClick={goToPrevious}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
         aria-label="Previous slide"
-      >
-        <ChevronLeft className="w-6 h-6" />
+      </button
+        onClick={goToPrevious}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
+        aria-label="Previous slide"
+      >>
+        <ChevronLeft className="w-6 h-6" /</ChevronLeft className="w-6 h-6" />>
       </button>
       <button
         onClick={goToNext}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
         aria-label="Next slide"
-      >
-        <ChevronRight className="w-6 h-6" />
+      </button
+        onClick={goToNext}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
+        aria-label="Next slide"
+      >>
+        <ChevronRight className="w-6 h-6" /</ChevronRight className="w-6 h-6" />>
       </button>
       {/* Dots Indicator */}
-      <div className="flex justify-center mt-6 space-x-2">
+      <div className="flex justify-center mt-6 space-x-2"</div className="flex justify-center mt-6 space-x-2">>
         {slides.map((_, index) => ()
           <button
             key={index}
@@ -133,4 +151,4 @@ export default function ContentCarousel({}
       </div>
     </div>
   )
-}
+}""'"'

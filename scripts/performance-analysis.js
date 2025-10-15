@@ -107,4 +107,4 @@ function generateReport() {}
   }
 }
 // Run analysis
-generateReport()
+generateReport()';'

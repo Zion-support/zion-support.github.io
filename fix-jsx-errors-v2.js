@@ -12,21 +12,24 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 export default function ${pageName}() {}
   return ()
-    <div>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
+    <div</div>>
+      <Helmet</Helmet>>
+        <titl</titl>e>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" /</meta name="description" content="${description}" />>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"</div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">>
+          <h1 className="text-4xl font-bold text-white mb-6"</h1 className="text-4xl font-bold text-white mb-6">>${title}</h1>
+          <p className="text-lg text-gray-300 mb-8"</p className="text-lg text-gray-300 mb-8">>Professional ${title.toLowerCase()} services coming soon.</p>
           <Link
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
+          </Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >>
             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-5 h-5 ml-2" /</ArrowRight className="w-5 h-5 ml-2" />>
           </Link>
         </div>
       </div>
@@ -81,7 +84,7 @@ function processFile(filePath) {}
   console.error(error)
 }const content = fs.readFileSync(filePath, "utf8")
     // Extract page name from file path
-    const pathParts = filePath.split("/")
+    const pathParts = filePath.split("/");
     const fileName = pathParts[pathParts.length - 2]; // Get directory name
     const pageName = generateValidFunctionName(fileName)
     const title = generateTitle(fileName)
@@ -148,4 +151,4 @@ for (const file of tsxFiles) {}
   processFile(file)
   fixedCount++
 }
-console.log(`Processed ${fixedCount} files`)
+console.log(`Processed ${fixedCount} files`)""'"'

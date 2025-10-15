@@ -1,9 +1,4 @@
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -88,11 +83,14 @@ const ServicesPage: React.FC = () => {ursor/analyze-improve-and-merge-code-4a9f
       <SEOHead 
         title="services - Zion Tech Group"
         description="Zion Tech Group services service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">services</h1>
-          <p className="text-gray-300">Coming soon...</p>
+      /</SEOHead 
+        title="services - Zion Tech Group"
+        description="Zion Tech Group services service page"
+      />>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"</div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">>
+        <div className="text-center"</div className="text-center">>
+          <h1 className="text-4xl font-bold mb-4"</h1 className="text-4xl font-bold mb-4">>services</h1>
+          <p className="text-gray-300"</p className="text-gray-300">>Coming soon...</p>
         </div>
       </div>
     </>
@@ -100,3 +98,4 @@ const ServicesPage: React.FC = () => {ursor/analyze-improve-and-merge-code-4a9f
 };
 
 export default ServicesPage;
+"}"'"'

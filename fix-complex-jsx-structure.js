@@ -16,13 +16,13 @@ async function fixComplexJSXStructure() {}
       // Fix broken JSX structure patterns
       // Fix malformed JSX fragments and elements
       content = content.replace()
-        /<>\s*<div([^>]*?)>\s*<Helmet([^>]*?)>\s*<title>([^<]*?)<\/title>\s*<meta([^>]*?)>\s*<\/Helmet>\s*<div([^>]*?)>\s*<h1([^>]*?)>([^<]*?)<\/h1>\s*<p([^>]*?)>([^<]*?)<\/p>\s*<\/div>\s*<\/div>\s*<>/g,
-        "<div$1><Helmet$2><title>$3</title><meta$4></Helmet><div$5><h1$6>$7</h1><p$8>$9</p></div></div>",
+        /<>\s*<div([^</div([^>>]*?)>\s*<Helmet([^</Helmet([^>>]*?)>\s*<title</title>>([^<]*?)<\/title</]*?)<\/title>>\s*<meta([^</meta([^>>]*?)>\s*<\/Helmet</\/Helmet>>\s*<div([^</div([^>>]*?)>\s*<h1([^</h1([^>>]*?)>([^<]*?)<\/h1</]*?)<\/h1>>\s*<p([^</p([^>>]*?)>([^<]*?)<\/p</]*?)<\/p>>\s*<\/div</\/div>>\s*<\/div</\/div>>\s*<>/g,
+        "<div$1</div$1>><Helmet$2</Helmet$2>><titl</titl>e>$3</title><meta$4</meta$4>></Helmet><div$5</div$5>><h1$6</h1$6>>$7</h1><p$8</p$8>>$9</p></div></div>",
       )
       // Fix broken div structures
       content = content.replace()
-        /<div([^>]*?)>\s*<div([^>]*?)>\s*<h1([^>]*?)>([^<]*?)<\/h1>\s*<p([^>]*?)>([^<]*?)<\/p>\s*<\/div>\s*<\/div>\s*$/gm,
-        "<div$1><div$2><h1$3>$4</h1><p$5>$6</p></div></div>",
+        /<div([^</div([^>>]*?)>\s*<div([^</div([^>>]*?)>\s*<h1([^</h1([^>>]*?)>([^<]*?)<\/h1</]*?)<\/h1>>\s*<p([^</p([^>>]*?)>([^<]*?)<\/p</]*?)<\/p>>\s*<\/div</\/div>>\s*<\/div</\/div>>\s*$/gm,
+        "<div$1</div$1>><div$2</div$2>><h1$3</h1$3>>$4</h1><p$5</p$5>>$6</p></div></div>",
       )
       // Fix malformed className attributes with missing spaces
       content = content.replace()
@@ -33,13 +33,13 @@ async function fixComplexJSXStructure() {}
       )
       // Fix broken JSX expressions
       content = content.replace()
-        /(\s*)(<[^>]+>\s*<[^>]+>\s*<[^>]+>)\s*$/gm,
-        "$1<div>$2</div>",
+        /(\s*)(<[^</[^>>]+>\s*<[^</[^>>]+>\s*<[^</[^>>]+>)\s*$/gm,
+        "$1<di</di>v>$2</div>",
       )
       // Fix missing closing tags for common patterns
       content = content.replace()
-        /<div([^>]*?)>\s*<h1([^>]*?)>([^<]*?)<\/h1>\s*<p([^>]*?)>([^<]*?)<\/p>\s*$/gm,
-        "<div$1><h1$2>$3</h1><p$4>$5</p></div>",
+        /<div([^</div([^>>]*?)>\s*<h1([^</h1([^>>]*?)>([^<]*?)<\/h1</]*?)<\/h1>>\s*<p([^</p([^>>]*?)>([^<]*?)<\/p</]*?)<\/p>>\s*$/gm,
+        "<div$1</div$1>><h1$2</h1$2>>$3</h1><p$4</p$4>>$5</p></div>",
       )
       // Fix broken map functions
       content = content.replace()
@@ -55,12 +55,12 @@ async function fixComplexJSXStructure() {}
 }return `className="${p1}${p2} ${p3.toLowerCase()}${p4}"`
         },
       )
-      // Fix missing semicolons
+      // Fix missing semicolons;
       content = content.replace(/import\s+([^;]+)\s*$/gm, "import $1;")
       // Fix broken JSX structure in return statements
       content = content.replace()
-        /return\s*\(\s*<>\s*<div([^>]*?)>\s*<Helmet([^>]*?)>\s*<title>([^<]*?)<\/title>\s*<meta([^>]*?)>\s*<\/Helmet>\s*<div([^>]*?)>\s*<h1([^>]*?)>([^<]*?)<\/h1>\s*<p([^>]*?)>([^<]*?)<\/p>\s*<\/div>\s*<\/div>\s*<>/g,
-        "return (<div$1><Helmet$2><title>$3</title><meta$4></Helmet><div$5><h1$6>$7</h1><p$8>$9</p></div></div>)",
+        /return\s*\(\s*<>\s*<div([^</div([^>>]*?)>\s*<Helmet([^</Helmet([^>>]*?)>\s*<title</title>>([^<]*?)<\/title</]*?)<\/title>>\s*<meta([^</meta([^>>]*?)>\s*<\/Helmet</\/Helmet>>\s*<div([^</div([^>>]*?)>\s*<h1([^</h1([^>>]*?)>([^<]*?)<\/h1</]*?)<\/h1>>\s*<p([^</p([^>>]*?)>([^<]*?)<\/p</]*?)<\/p>>\s*<\/div</\/div>>\s*<\/div</\/div>>\s*<>/g,
+        "return (<div$1</div$1>><Helmet$2</Helmet$2>><titl</titl>e>$3</title><meta$4</meta$4>></Helmet><div$5</div$5>><h1$6</h1$6>>$7</h1><p$8</p$8>>$9</p></div></div>)",
       )
       // Clean up any remaining syntax issues
       content = content.replace(/\s+$/gm, "")
@@ -76,4 +76,4 @@ async function fixComplexJSXStructure() {}
   }
   console.log(`\n🎉 Fixed complex JSX structure in ${fixedFiles} files`)
 }
-fixComplexJSXStructure().catch(console.error)
+fixComplexJSXStructure().catch(console.error)""")]]]]]]]]]]]]

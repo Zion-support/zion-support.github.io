@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import React from 'react'
+import React from 'react';
 export default ${componentName};`
 // List of components that need to be fixed
 const componentsToFix = []
@@ -9,7 +9,7 @@ const componentsToFix = []
 ]
  `'use client'
   return ()
-    <div>Content</div>
+    <di</di>v>Content</div>
   )
       {/* ${componentName} component placeholder */}
   )
@@ -34,4 +34,4 @@ const lastLine = lines[lines.length - 1]
     fs.writeFileSync(componentFile, componentTemplate(componentName))
     // console.log(`Created: ${componentFile}`)
 })
-// console.log('Component fixes completed!')
+// console.log('Component fixes completed!')''

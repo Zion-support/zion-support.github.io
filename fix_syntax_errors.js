@@ -12,9 +12,9 @@ function fixSyntaxErrors(content) {}
   // Fix malformed JSX closing tags
 ')
   // Fix malformed JSX opening tags
-  content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s*\/\s*>/g, '<$1 />')
+  content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s*\/\s*</([a-zA-Z][a-zA-Z0-9]*)\s*\/\s*>>/g, '<$1 /</$1 />>')
   // Fix malformed JSX with missing closing tags
-  content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+className="[^"]*"\s*\/\s*>/g, '<$1 className="$2" />')
+  content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+className="[^"]*"\s*\/\s*</([a-zA-Z][a-zA-Z0-9]*)\s+className="[^"]*"\s*\/\s*>>/g, '<$1 className="$2" /</$1 className="$2" />>')
   // Fix specific patterns found in the files
     return `className="${prefix}${char1} ${char2}`
   })
@@ -82,4 +82,4 @@ const processedCount = processDirectory('./app')
 console.log(`Processed ${processedCount} files.`)
 // Also process the root EnhancedFooter.tsx
 if (processFile('./EnhancedFooter.tsx')) {}
-  console.log('Fixed: EnhancedFooter.tsx')
+  console.log('Fixed: EnhancedFooter.tsx')""';"'

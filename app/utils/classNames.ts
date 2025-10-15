@@ -53,11 +53,11 @@ export function stateClass()
 /**
  * Utility function for creating variant-based class names
  */
-export function variantClass<T extends string>()
+export function variantClass<T extends string</T extends string>>()
   variant: T,
-  variants: Record<T, string>,
+  variants: Record<T, string</T, string>>,
   defaultVariant?: T
 ): string {}
   return variants[variant] || (defaultVariant ? variants[defaultVariant] : '')
 }
-export default cn
+export default cn';'

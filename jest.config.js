@@ -1,9 +1,9 @@
 
 export default {
   testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir</rootDir>>/jest.setup.js"],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir</rootDir>>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   transform: {
@@ -11,16 +11,17 @@ export default {
     '^.+\\.(js|jsx)$': 'babel-jest',
   },
   testMatch: [
-    "<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)",
-    "<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)",
+    "<rootDir</rootDir>>/app/**/*.(test|spec).(ts|tsx|js|jsx)",
+    "<rootDir</rootDir>>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)",
   ],
   collectCoverageFrom: [
     "app/**/*.{ts,tsx}",
     "!app/**/index.{ts,tsx}",
     "!app/**/*.d.ts",
   ],
-  testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
+  testPathIgnorePatterns: ["<rootDir</rootDir>>/out/", "<rootDir</rootDir>>/node_modules/"],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
   ],
 };
+""'"'

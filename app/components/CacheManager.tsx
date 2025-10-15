@@ -10,7 +10,7 @@ interface CacheStats {
 }
 
 const CacheManager = () => {
-  const [stats, setStats] = useState<CacheStats>({
+  const [stats, setStats] = useState<CacheStats</CacheStats>>({
     hits: 0,
     misses: 0,
     size: 0,
@@ -39,7 +39,7 @@ const CacheManager = () => {
 
       // Cache static assets
       const cacheStaticAssets = async () => {
-        try {
+        try {;
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
         }
@@ -159,60 +159,64 @@ const CacheManager = () => {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-sm font-mono max-w-sm z-50">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="font-bold text-green-400">Cache Manager</h3>
+    <div className="fixed bottom-4 left-4 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-sm font-mono max-w-sm z-50"</div className="fixed bottom-4 left-4 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-sm font-mono max-w-sm z-50">>
+      <div className="flex items-center justify-between mb-3"</div className="flex items-center justify-between mb-3">>
+        <h3 className="font-bold text-green-400"</h3 className="font-bold text-green-400">>Cache Manager</h3>
         <button
-          onClick={() => setIsVisible(false)}
+          onClick={() =</button
+          onClick={() =>> setIsVisible(false)}
           className="text-gray-400 hover:text-white transition-colors"
         >
           ×
         </button>
       </div>
       
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <span className="text-gray-300">Cache Size:</span>
-          <span className="text-white">{formatBytes(stats.size)}</span>
+      <div className="space-y-2"</div className="space-y-2">>
+        <div className="flex justify-between"</div className="flex justify-between">>
+          <span className="text-gray-300"</span className="text-gray-300">>Cache Size:</span>
+          <span className="text-white"</span className="text-white">>{formatBytes(stats.size)}</span>
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-300">Max Size:</span>
-          <span className="text-white">{formatBytes(stats.maxSize)}</span>
+        <div className="flex justify-between"</div className="flex justify-between">>
+          <span className="text-gray-300"</span className="text-gray-300">>Max Size:</span>
+          <span className="text-white"</span className="text-white">>{formatBytes(stats.maxSize)}</span>
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-300">Usage:</span>
-          <span className="text-white">
+        <div className="flex justify-between"</div className="flex justify-between">>
+          <span className="text-gray-300"</span className="text-gray-300">>Usage:</span>
+          <span className="text-white"</span className="text-white">>
             {((stats.size / stats.maxSize) * 100).toFixed(1)}%
           </span>
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-300">Cache Hits:</span>
-          <span className="text-green-400">{stats.hits}</span>
+        <div className="flex justify-between"</div className="flex justify-between">>
+          <span className="text-gray-300"</span className="text-gray-300">>Cache Hits:</span>
+          <span className="text-green-400"</span className="text-green-400">>{stats.hits}</span>
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-300">Cache Misses:</span>
-          <span className="text-red-400">{stats.misses}</span>
+        <div className="flex justify-between"</div className="flex justify-between">>
+          <span className="text-gray-300"</span className="text-gray-300">>Cache Misses:</span>
+          <span className="text-red-400"</span className="text-red-400">>{stats.misses}</span>
         </div>
       </div>
       
-      <div className="mt-4 pt-3 border-t border-white/20">
+      <div className="mt-4 pt-3 border-t border-white/20"</div className="mt-4 pt-3 border-t border-white/20">>
         <button
           onClick={clearCache}
           className="w-full px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors"
-        >
+        </button
+          onClick={clearCache}
+          className="w-full px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors"
+        >>
           Clear Cache
         </button>
       </div>
       
-      <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400">
+      <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400"</div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400">>
         Press Ctrl+Shift+C to toggle
       </div>
     </div>
   )
 }
 
-export default CacheManager
+export default CacheManager")"'"'

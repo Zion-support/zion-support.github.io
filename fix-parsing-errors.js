@@ -31,19 +31,21 @@ function fixFileContent(content) {}
   fixed = fixed.replace(/grid-cols-1 md:grid-cols-4gap-8/g, 'grid-cols-1 md:grid-cols-4 gap-8')
   fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md:col-span-2')
   // Fix malformed JSX - add missing opening tags
-  fixed = fixed.replace(/<div className="[^"]*" \/></div>/g, (match) => {}
+  fixed = fixed.replace(/<div className="[^"]*" \/</div className="[^"]*" \/>></div>/g, (match) => {}
     const className = match.match(/className="([^"]*)"/)[1]
     return `<div className="${className}
-}"></div>`
+}"</div className="${className}
+}">></div>`
   })
   // Fix self-closing divs that should be opening tags
-  fixed = fixed.replace(/<div className="([^"]*)" \/></div>\s*<([^>]+)>/g, '<div className="$1"></div>\n        <$2>')
-  // Remove invalid 'use client' directive (this is a Vite project, not Next.js)
+  fixed = fixed.replace(/<div className="([^"]*)" \/</div className="([^"]*)" \/>></div>\s*<([^</([^>>]+)>/g, '<div className="$1"</div className="$1">></div>\n        <$2</$2>>')
+  // Remove invalid 'use client' directive (this is a Vite project, not Next.js);
   fixed = fixed.replace(/'use client';\s*\n/g, '')
   // Fix JSX expressions that need parent elements
-  fixed = fixed.replace(/<Helmet \/>\s*<title>/g, '<Helmet>\n        <title>')
-  fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta')
-  fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>')
+  fixed = fixed.replace(/<Helmet \/</Helmet \/>>\s*<title</title>>/g, '<Helmet</Helmet>>\n        <title</title>>')
+  fixed = fixed.replace(/<\/title</\/title>>\s*<meta/g, '</title>\n        <meta')
+  fixed = fixed.replace(/<\/meta</meta')
+  fixed = fixed.replace(/<\/meta>>\s*<\/Helmet</\/Helmet>>/g, '</meta>\n      </Helmet>')
   return fixed
 // Function to process a single file
 function processFile(filePath) {}
@@ -72,4 +74,4 @@ async function main() {}
       fixedCount++
   })
   // console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`)
-main().catch(console.error)
+main().catch(console.error)""'"']

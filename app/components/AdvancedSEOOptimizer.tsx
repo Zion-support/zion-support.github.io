@@ -30,7 +30,7 @@ interface AdvancedSEOOptimizerProps {
   enableAdvancedFeatures?: boolean;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps</AdvancedSEOOptimizerProps>> = ({
   seoData,
   enableStructuredData = true,
   enableSocialMeta = true,
@@ -242,79 +242,79 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const serviceData = generateServiceStructuredData();
 
   return (
-    <Helmet>
+    <Helmet</Helmet>>
       {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
-      <meta name="keywords" content={seoData.keywords.join(', ')} />
-      <link rel="canonical" href={seoData.canonicalUrl} />
+      <titl</titl>e>{seoData.title}</title>
+      <meta name="description" content={seoData.description} /</meta name="description" content={seoData.description} />>
+      <meta name="keywords" content={seoData.keywords.join(', ')} /</meta name="keywords" content={seoData.keywords.join(', ')} />>
+      <link rel="canonical" href={seoData.canonicalUrl} /</link rel="canonical" href={seoData.canonicalUrl} />>
       
       {/* Robots Meta */}
-      {seoData.robots && <meta name="robots" content={seoData.robots} />}
+      {seoData.robots && <meta name="robots" content={seoData.robots} /</meta name="robots" content={seoData.robots} />>}
       
       {/* Author Meta */}
-      {seoData.author && <meta name="author" content={seoData.author} />}
+      {seoData.author && <meta name="author" content={seoData.author} /</meta name="author" content={seoData.author} />>}
       
       {/* Open Graph Meta Tags */}
       {enableSocialMeta && (
         <>
-          <meta property="og:title" content={seoData.ogTitle || seoData.title} />
-          <meta property="og:description" content={seoData.ogDescription || seoData.description} />
-          <meta property="og:image" content={seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg'} />
-          <meta property="og:url" content={seoData.ogUrl || seoData.canonicalUrl} />
-          <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="Zion Tech Group" />
-          <meta property="og:locale" content="en_US" />
+          <meta property="og:title" content={seoData.ogTitle || seoData.title} /</meta property="og:title" content={seoData.ogTitle || seoData.title} />>
+          <meta property="og:description" content={seoData.ogDescription || seoData.description} /</meta property="og:description" content={seoData.ogDescription || seoData.description} />>
+          <meta property="og:image" content={seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg'} /</meta property="og:image" content={seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg'} />>
+          <meta property="og:url" content={seoData.ogUrl || seoData.canonicalUrl} /</meta property="og:url" content={seoData.ogUrl || seoData.canonicalUrl} />>
+          <meta property="og:type" content="website" /</meta property="og:type" content="website" />>
+          <meta property="og:site_name" content="Zion Tech Group" /</meta property="og:site_name" content="Zion Tech Group" />>
+          <meta property="og:locale" content="en_US" /</meta property="og:locale" content="en_US" />>
         </>
       )}
       
       {/* Twitter Card Meta Tags */}
       {enableSocialMeta && (
         <>
-          <meta name="twitter:card" content={seoData.twitterCard || "summary_large_image"} />
-          <meta name="twitter:title" content={seoData.twitterTitle || seoData.title} />
-          <meta name="twitter:description" content={seoData.twitterDescription || seoData.description} />
-          <meta name="twitter:image" content={seoData.twitterImage || seoData.ogImage || 'https://ziontechgroup.com/twitter-image.jpg'} />
-          <meta name="twitter:site" content="@ziontechgroup" />
-          <meta name="twitter:creator" content="@ziontechgroup" />
+          <meta name="twitter:card" content={seoData.twitterCard || "summary_large_image"} /</meta name="twitter:card" content={seoData.twitterCard || "summary_large_image"} />>
+          <meta name="twitter:title" content={seoData.twitterTitle || seoData.title} /</meta name="twitter:title" content={seoData.twitterTitle || seoData.title} />>
+          <meta name="twitter:description" content={seoData.twitterDescription || seoData.description} /</meta name="twitter:description" content={seoData.twitterDescription || seoData.description} />>
+          <meta name="twitter:image" content={seoData.twitterImage || seoData.ogImage || 'https://ziontechgroup.com/twitter-image.jpg'} /</meta name="twitter:image" content={seoData.twitterImage || seoData.ogImage || 'https://ziontechgroup.com/twitter-image.jpg'} />>
+          <meta name="twitter:site" content="@ziontechgroup" /</meta name="twitter:site" content="@ziontechgroup" />>
+          <meta name="twitter:creator" content="@ziontechgroup" /</meta name="twitter:creator" content="@ziontechgroup" />>
         </>
       )}
       
       {/* Article Meta Tags */}
-      {seoData.publishedTime && <meta property="article:published_time" content={seoData.publishedTime} />}
-      {seoData.modifiedTime && <meta property="article:modified_time" content={seoData.modifiedTime} />}
-      {seoData.section && <meta property="article:section" content={seoData.section} />}
+      {seoData.publishedTime && <meta property="article:published_time" content={seoData.publishedTime} /</meta property="article:published_time" content={seoData.publishedTime} />>}
+      {seoData.modifiedTime && <meta property="article:modified_time" content={seoData.modifiedTime} /</meta property="article:modified_time" content={seoData.modifiedTime} />>}
+      {seoData.section && <meta property="article:section" content={seoData.section} /</meta property="article:section" content={seoData.section} />>}
       {seoData.tags && seoData.tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} />
+        <meta key={tag} property="article:tag" content={tag} /</meta key={tag} property="article:tag" content={tag} />>
       ))}
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"</script type="application/ld+json">>
           {JSON.stringify(structuredData)}
         </script>
       )}
       
       {breadcrumbData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"</script type="application/ld+json">>
           {JSON.stringify(breadcrumbData)}
         </script>
       )}
       
       {faqData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"</script type="application/ld+json">>
           {JSON.stringify(faqData)}
         </script>
       )}
       
       {organizationData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"</script type="application/ld+json">>
           {JSON.stringify(organizationData)}
         </script>
       )}
       
       {serviceData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"</script type="application/ld+json">>
           {JSON.stringify(serviceData)}
         </script>
       )}
@@ -322,19 +322,19 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {/* Additional SEO Meta Tags */}
       {enableAdvancedFeatures && (
         <>
-          <meta name="theme-color" content="#1e40af" />
-          <meta name="msapplication-TileColor" content="#1e40af" />
-          <meta name="msapplication-config" content="/browserconfig.xml" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-          <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-          <meta name="application-name" content="Zion Tech Group" />
-          <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="format-detection" content="telephone=no" />
+          <meta name="theme-color" content="#1e40af" /</meta name="theme-color" content="#1e40af" />>
+          <meta name="msapplication-TileColor" content="#1e40af" /</meta name="msapplication-TileColor" content="#1e40af" />>
+          <meta name="msapplication-config" content="/browserconfig.xml" /</meta name="msapplication-config" content="/browserconfig.xml" />>
+          <meta name="apple-mobile-web-app-capable" content="yes" /</meta name="apple-mobile-web-app-capable" content="yes" />>
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /</meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />>
+          <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /</meta name="apple-mobile-web-app-title" content="Zion Tech Group" />>
+          <meta name="application-name" content="Zion Tech Group" /</meta name="application-name" content="Zion Tech Group" />>
+          <meta name="mobile-web-app-capable" content="yes" /</meta name="mobile-web-app-capable" content="yes" />>
+          <meta name="format-detection" content="telephone=no" /</meta name="format-detection" content="telephone=no" />>
         </>
       )}
     </Helmet>
   );
 };
 
-export default AdvancedSEOOptimizer;
+export default AdvancedSEOOptimizer;""'"'

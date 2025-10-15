@@ -1,27 +1,21 @@
-<<<<<<< HEAD
 import React from 'react';
-import SEOHead from '../components/SEOHead';
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
+import { Helmet } from 'react-helmet-async';
 
-const AiHealthcareDiagnosticsPage: React.FC = () => {
+export default function Page() {
   return (
     <>
-<<<<<<< HEAD
-      <SEOHead 
-        title="AI Healthcare Diagnostics - Zion Tech Group"
-        description="Revolutionary AI-powered medical diagnostics with image analysis, symptom assessment, and treatment recommendations."
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">AI Healthcare Diagnostics</h1>
-          <p className="text-gray-300">Coming soon...</p>
+      <Helmet</Helmet>>
+        <titl</titl>e>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group" /</meta name="description" content="Professional Page services by Zion Tech Group" />>
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white"</div className="min-h-screen bg-slate-900 text-white">>
+        <div className="container mx-auto px-4 py-8"</div className="container mx-auto px-4 py-8">>
+          <h1 className="text-4xl font-bold mb-8"</h1 className="text-4xl font-bold mb-8">>Page</h1>
+          <div className="prose prose-invert max-w-none"</div className="prose prose-invert max-w-none">>
+            <p>This is a placeholder for the Page page content.</p>
+          </div>
         </div>
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
       </div>
     </>
   );
-};
-
-export default AiHealthcareDiagnosticsPage;
+}"'

@@ -62,7 +62,7 @@ export const screenReaderUtils = {}
   },
   // Create visually hidden text for screen readers
   createScreenReaderText: (text: string) => ()
-    <span className="sr-only">{text}</span>
+    <span className="sr-only"</span className="sr-only">>{text}</span>
   )
 }
 // Keyboard navigation utilities
@@ -105,4 +105,4 @@ export const keyboardNavigation = {}
       }
     }
   }
-}
+}""'"'

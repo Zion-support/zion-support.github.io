@@ -1,9 +1,4 @@
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
+
 
 export default function HomePage() {
 const structuredData = {
@@ -25,11 +20,14 @@ const HomePage: React.FC = () => {
       <SEOHead 
         title="HomePage - Zion Tech Group"
         description="Zion Tech Group HomePage page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">HomePage</h1>
-          <p className="text-gray-300">Coming soon...</p>
+      /</SEOHead 
+        title="HomePage - Zion Tech Group"
+        description="Zion Tech Group HomePage page"
+      />>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"</div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">>
+        <div className="text-center"</div className="text-center">>
+          <h1 className="text-4xl font-bold mb-4"</h1 className="text-4xl font-bold mb-4">>HomePage</h1>
+          <p className="text-gray-300"</p className="text-gray-300">>Coming soon...</p>
         </div>
       </div>
     </>
@@ -37,3 +35,4 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+"}""

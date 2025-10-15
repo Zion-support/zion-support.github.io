@@ -2,11 +2,11 @@ import React from "react"
 interface ServicesProps {}
   className?: string
 }
-const Services: React.FC<ServicesProps> = ({ className = "" }) => {}
+const Services: React.FC<ServicesProps</ServicesProps>> = ({ className = "" }) => {}
 }return ()
-    <div className={className}>
-      <h2>Services</h2>
+    <div className={className}</div className={className}>>
+      <h</h>2>Services</h2>
     </div>
   )
 }
-export default Services
+export default Services"";"

@@ -21,15 +21,15 @@ const FuturisticHero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden"</section className="relative min-h-screen flex items-center justify-center overflow-hidden">>
       {/* Futuristic Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"</div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"</div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse">></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"</div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]">></div>
       </div>
 
       {/* Animated Grid */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20"</div className="absolute inset-0 opacity-20">>
         <div 
           className="w-full h-full"
           style={{
@@ -40,11 +40,21 @@ const FuturisticHero: React.FC = () => {
             backgroundSize: '50px 50px',
             animation: 'gridMove 20s linear infinite'
           }}
-        />
+        /</div 
+          className="w-full h-full"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+            animation: 'gridMove 20s linear infinite'
+          }}
+        />>
       </div>
 
       {/* Floating Icons */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0"</div className="absolute inset-0">>
         {[
           { icon: Brain, delay: 0, duration: 8 },
           { icon: Shield, delay: 2, duration: 10 },
@@ -60,27 +70,36 @@ const FuturisticHero: React.FC = () => {
               animation: `floatIcon ${item.duration}s ease-in-out infinite`,
               animationDelay: `${item.delay}s`
             }}
-          >
-            <item.icon className="w-16 h-16" />
+          </div
+            key={index}
+            className="absolute text-cyan-400/20"
+            style={{
+              left: `${20 + index * 20}%`,
+              top: `${30 + index * 15}%`,
+              animation: `floatIcon ${item.duration}s ease-in-out infinite`,
+              animationDelay: `${item.delay}s`
+            }}
+          >>
+            <item.icon className="w-16 h-16" /</item.icon className="w-16 h-16" />>
           </div>
         ))}
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"</div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">>
+        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}</div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>>
           {/* Company Name with Glow Effect */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient-x">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 leading-tight"</h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 leading-tight">>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient-x"</span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient-x">>
               Zion Tech Group
             </span>
           </h1>
 
           {/* Animated Subtitle */}
-          <div className="mb-8 lg:mb-12 h-16 flex items-center justify-center">
-            <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
+          <div className="mb-8 lg:mb-12 h-16 flex items-center justify-center"</div className="mb-8 lg:mb-12 h-16 flex items-center justify-center">>
+            <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4"</h2 className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">>
               Leading provider of{' '}
-              <span className="inline-block text-cyan-400 font-semibold animate-pulse">
+              <span className="inline-block text-cyan-400 font-semibold animate-pulse"</span className="inline-block text-cyan-400 font-semibold animate-pulse">>
                 {animatedTexts[currentText]}
               </span>
               {' '}that drive innovation and growth
@@ -88,28 +107,34 @@ const FuturisticHero: React.FC = () => {
           </div>
 
           {/* CTA Buttons with Hover Effects */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4"</div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">>
             <Link
               to="/contact"
               className="group relative bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center justify-center">
+            </Link
+              to="/contact"
+              className="group relative bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base overflow-hidden"
+            >>
+              <span className="relative z-10 flex items-center justify-center"</span className="relative z-10 flex items-center justify-center">>
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /</ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"</div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">></div>
             </Link>
             <Link
               to="/about"
               className="group border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 text-sm sm:text-base relative overflow-hidden"
-            >
-              <span className="relative z-10">Learn More</span>
-              <div className="absolute inset-0 bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+            </Link
+              to="/about"
+              className="group border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 text-sm sm:text-base relative overflow-hidden"
+            >>
+              <span className="relative z-10"</span className="relative z-10">>Learn More</span>
+              <div className="absolute inset-0 bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"</div className="absolute inset-0 bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">></div>
             </Link>
           </div>
 
           {/* Stats with Animation */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4"</div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">>
             {[
               { number: '500+', label: 'Projects Completed', delay: 0 },
               { number: '50+', label: 'Happy Clients', delay: 0.2 },
@@ -123,11 +148,18 @@ const FuturisticHero: React.FC = () => {
                   animationDelay: `${stat.delay}s`,
                   animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
                 }}
-              >
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400 mb-1 lg:mb-2 group-hover:text-purple-400 transition-colors">
+              </div 
+                key={index}
+                className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 group"
+                style={{
+                  animationDelay: `${stat.delay}s`,
+                  animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
+                }}
+              >>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400 mb-1 lg:mb-2 group-hover:text-purple-400 transition-colors"</div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400 mb-1 lg:mb-2 group-hover:text-purple-400 transition-colors">>
                   {stat.number}
                 </div>
-                <div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors">
+                <div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors"</div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors">>
                   {stat.label}
                 </div>
               </div>
@@ -137,7 +169,7 @@ const FuturisticHero: React.FC = () => {
       </div>
 
       {/* CSS Animations */}
-      <style jsx>{`
+      <style jsx</style jsx>>{`
         @keyframes gridMove {
           0% { transform: translate(0, 0); }
           100% { transform: translate(50px, 50px); }
@@ -175,4 +207,4 @@ const FuturisticHero: React.FC = () => {
   );
 };
 
-export default FuturisticHero;
+export default FuturisticHero;""'"'

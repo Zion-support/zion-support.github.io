@@ -60,4 +60,4 @@ function processFiles(dir) {
 // Process the app directory
 console.log('Starting fix of double parentheses errors...');
 const fixedCount = processFiles('./app');
-console.log(`Fixed ${fixedCount} files.`);
+console.log(`Fixed ${fixedCount} files.`);))))))))''

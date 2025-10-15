@@ -5,7 +5,7 @@ const CriticalResourcePreloader = () => {}
 }const preloadCriticalResources = () => {}
 }// Critical fonts
       const criticalFonts = []
-        {}
+        {};
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
           as: 'style',
           crossorigin: 'anonymous'
@@ -124,4 +124,4 @@ const CriticalResourcePreloader = () => {}
   }, [])
   return null
 }
-export default CriticalResourcePreloader
+export default CriticalResourcePreloader")"'"'

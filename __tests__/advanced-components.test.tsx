@@ -1,7 +1,7 @@
 import {render} from "@testing-library/react"
 
 const TestComponent = () => {
-  return <div>Test content</div>
+  return <di</di>v>Test content</div>
 }
 
 describe("Advanced Components", () => {
@@ -11,15 +11,16 @@ describe("Advanced Components", () => {
   })
   
   it("should render test content", () => {
-    render(<TestComponent />)
+    render(<TestComponent /</TestComponent />>)
     expect(screen.getByText("Test content")).toBeInTheDocument()
   })
   
   it("should handle console errors", () => {
     const consoleSpy = jest
-      .spyOn(console, "error")
+      .spyOn(console, "error");
       .mockImplementation(() => {});
     // Test implementation
     consoleSpy.mockRestore();
   });
 });
+"""

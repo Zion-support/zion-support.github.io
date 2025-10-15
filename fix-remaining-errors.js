@@ -19,10 +19,10 @@ function fixFile(filePath) {
     
     // Fix malformed JSX
     content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
-    content = content.replace(/<Helmet>/g, '<Helmet>');
-    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
-    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
+    content = content.replace(/<\/</\/>>;/g, '</>');
+    content = content.replace(/<Helmet</Helmet>>/g, '<Helmet</Helmet>>');
+    content = content.replace(/<\/Helmet</\/Helmet>>;/g, '</Helmet>');
+    content = content.replace(/<title</title>>([^<]*)<\/title</]*)<\/title>>;/g, '<titl</titl>e>$1</title>');
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
     
     // Fix unterminated string constants
@@ -32,7 +32,7 @@ function fixFile(filePath) {
     content = content.replace(/export default function ([^  {]+)\s*{/g, 'export default function $1   {');
     
     // Fix missing closing parentheses
-    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\);/g, 'return (\n    <>\n$1\n    </>\n  );');
+    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/</\/>>;\s*\);/g, 'return (\n    <>\n$1\n    </>\n  );');
     
     // Fix test file issues by commenting out problematic lines
     if (filePath.includes('.test.') || filePath.includes('__tests__') || filePath.includes('test')) {
@@ -92,3 +92,4 @@ async function main() {
 }
 
 main().catch(console.error);
+""'"'

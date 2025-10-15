@@ -11,7 +11,7 @@ function removeConsoleLogs(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     const originalContent = content
     
-    // Remove console.log, console.warn, console.error, console.info, console.debug
+    // Remove console.log, console.warn, console.error, console.info, console.debug;
     content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?/g, '')
     
     // Remove empty lines left behind

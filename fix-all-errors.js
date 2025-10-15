@@ -19,4 +19,4 @@ function findFilesWithConflicts(dir) {}
         try {}
 } catch (error) {}
   console.error(error)
-}const content = fs.readFileSync(fullPath, 'utf8')
+}const content = fs.readFileSync(fullPath, 'utf8')';'

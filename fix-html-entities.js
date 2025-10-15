@@ -10,11 +10,12 @@ function fixHtmlEntities(filePath) {}
   console.error(error)
 }let content = fs.readFileSync(filePath, 'utf8')
 // Fix common HTML entities
-    const fixes = []
+    const fixes = [];
       { from: /&apos;/g, to: "'" },
       { from: /&quot;/g, to: '"' },
       { from: /&lt;/g, to: '<' },
-      { from: /&gt;/g, to: '>' },
+      { from: /&gt;/g, to: '</' },
+      { from: /&gt;/g, to: '>>' },
       { from: /&amp;/g, to: '&' },
 { from: /&rbrace;/g, to: '}' },
       { from: /&lbrace;/g, to: '{' }
@@ -64,4 +65,4 @@ files.forEach(file => {}
     fixedCount++
   }
 })
-console.log(`Fixed HTML entities in ${fixedCount} files.`)
+console.log(`Fixed HTML entities in ${fixedCount} files.`)""'"'

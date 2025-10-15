@@ -3,7 +3,7 @@ export function useIntersectionObserver()
   callback: IntersectionObserverCallback,
   options?: IntersectionObserverInit
 ) {}
-}const ref = useRef<HTMLElement>(null)
+}const ref = useRef<HTMLElement</HTMLElement>>(null)
   useEffect(() => {}
 }const element = ref.current
     if (!element) return
@@ -19,4 +19,4 @@ export function useIntersectionObserver()
   }, [callback, options])
   return ref
 }
-export default useIntersectionObserver
+export default useIntersectionObserver';'

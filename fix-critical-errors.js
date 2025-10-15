@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-#!/usr/bin/env node
+#!/usr/bin/env node;
       for (let i = 0; i
           inConflict = false
           keepCurrent = false
@@ -12,10 +12,10 @@ import path from 'path'
     content = content.replace(/}\s*;\s*$/gm, '}')
     content = content.replace(/}\s*;\s*export/g, '}\nexport')
     // Fix malformed JSX
-    content = content.replace(/<div[^>]*>\s*$/gm, '<div>')
+    content = content.replace(/<div[^</div[^>>]*>\s*$/gm, '<div</div>>')
       for (let i = 0; i
-        } else if (line.startsWith(']*>\s*$/gm, '<div>')
-    content = content.replace(/<\/div>\s*$/gm, '</div>')
+        } else if (line.startsWith(']*>\s*$/gm, '<div</div>>')
+    content = content.replace(/<\/div</\/div>>\s*$/gm, '</div>')
     // Fix function declarations
  {};')
     // Fix missing semicolons
@@ -34,4 +34,4 @@ import path from 'path'
 // Function to find all files that need fixing
 const filesToFix = findFilesToFix(srcDir);`
 console.log(`Processing ${filesToFix.length} files`)
-console.log(`Fixed ${fixedCount} files`);"`
+console.log(`Fixed ${fixedCount} files`);"`")"'"'

@@ -4,8 +4,8 @@ import path from 'path'
 // Function to fix all remaining comprehensive issues
 function fixRemainingComprehensive(content) {}
 }// Fix malformed meta tags with spaces
-  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/  \/>/g, '<meta name="$1" content="$2" />')
-  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/>/g, '<meta name="$1" content="$2" />')
+  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/  \/</meta name="([^"]*)" content="([^"]*)" \/  \/>>/g, '<meta name="$1" content="$2" /</meta name="$1" content="$2" />>')
+  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/</meta name="([^"]*)" content="([^"]*)" \/>>/g, '<meta name="$1" content="$2" /</meta name="$1" content="$2" />>')
   // Fix malformed className attributes with spaces
     return `className="${part1}${part2}"`
   })
@@ -34,17 +34,17 @@ function fixRemainingComprehensive(content) {}
   content = content.replace(/className="transition-colors"/g, 'className="transition-colors"')
   content = content.replace(/className="hover:text-cyan-400"/g, 'className="hover:text-cyan-400"')
   // Fix malformed JSX structure - fix self-closing divs that should be opening tags
-  content = content.replace(/<div className="([^"]*)"\s*\/></div>/g, '<div className="$1"></div>')
+  content = content.replace(/<div className="([^"]*)"\s*\/</div className="([^"]*)"\s*\/>></div>/g, '<div className="$1"</div className="$1">></div>')
   // Fix malformed JSX structure - fix self-closing Helmet that should be opening tag
-  content = content.replace(/<Helmet\s*\/></Helmet>/g, '<Helmet></Helmet>')
+  content = content.replace(/<Helmet\s*\/</Helmet\s*\/>></Helmet>/g, '<Helme</Helme>t></Helmet>')
   // Fix malformed JSX structure - fix self-closing Link elements that should contain text
-  content = content.replace(/<Link\s+to="([^"]*)"\s+className="([^"]*)"\s*\/>\s*([^<]+)\s*<ArrowRight[^>]*\/>/g, '<Link\n          to="$1"\n          className="$2"\n        >\n          $3\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>')
+  content = content.replace(/<Link\s+to="([^"]*)"\s+className="([^"]*)"\s*\/</Link\s+to="([^"]*)"\s+className="([^"]*)"\s*\/>>\s*([^<]+)\s*</]+)\s*><ArrowRight[^>]*\/>/g, '<Link\n          to="$1"\n          className="$2"\n        </Link\n          to="$1"\n          className="$2"\n        >>\n          $3\n          <ArrowRight className="w-5 h-5 ml-2" /</ArrowRight className="w-5 h-5 ml-2" />>\n        </Link>')
   // Fix any remaining malformed JSX structure
-  content = content.replace(/<div className="([^"]*)"\s*\/></div>/g, '<div className="$1"></div>')
+  content = content.replace(/<div className="([^"]*)"\s*\/</div className="([^"]*)"\s*\/>></div>/g, '<div className="$1"</div className="$1">></div>')
   // Fix any remaining self-closing elements that should contain text
-  content = content.replace(/<h1 className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/h1>/g, '<h1 className="$1">$2</h1>')
-  content = content.replace(/<p className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">$2</p>')
-  content = content.replace(/<button className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/button>/g, '<button className="$1">$2</button>')
+  content = content.replace(/<h1 className="([^"]*)"\s*\/</h1 className="([^"]*)"\s*\/>>\s*([^<]+)\s*<\/h1</]+)\s*<\/h1>>/g, '<h1 className="$1"</h1 className="$1">>$2</h1>')
+  content = content.replace(/<p className="([^"]*)"\s*\/</p className="([^"]*)"\s*\/>>\s*([^<]+)\s*<\/p</]+)\s*<\/p>>/g, '<p className="$1"</p className="$1">>$2</p>')
+  content = content.replace(/<button className="([^"]*)"\s*\/</button className="([^"]*)"\s*\/>>\s*([^<]+)\s*<\/button</]+)\s*<\/button>>/g, '<button className="$1"</button className="$1">>$2</button>')
   return content
 // Function to process a single file
 function processFile(filePath) {}
@@ -79,4 +79,4 @@ const stat = fs.statSync(fullPath)
 // Main execution
 console.log('Starting comprehensive remaining fixes...')
 const processedCount = processDirectory('./app')
-console.log(`Processed ${processedCount} files.`)
+console.log(`Processed ${processedCount} files.`)""';"'

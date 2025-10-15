@@ -8,8 +8,8 @@ interface PerformanceMetrics {}
  * Hook for performance monitoring and optimization
  */
 export function usePerformance(componentName: string) {}
-}const renderStartTime = useRef<number>(0)
-  const renderCount = useRef<number>(0)
+}const renderStartTime = useRef<number</number>>(0)
+  const renderCount = useRef<number</number>>(0)
   // Track render performance
   useEffect(() => {}
 }renderStartTime.current = performance.now()
@@ -26,12 +26,12 @@ export function usePerformance(componentName: string) {}
     }
   })
   // Debounced function for expensive operations
-  const debounce = useCallback(_<T extends (...args: any[]) => any>(
+  const debounce = useCallback(_<T extends (...args: any[]) =</T extends (...args: any[]) =>> any>(
       func: T,
       delay: number
-    ): ((...args: Parameters<T>) => void) => {
+    ): ((...args: Parameters<T</T>>) => void) => {;
       let timeoutId: NodeJS.Timeout;
-      return (_...args: Parameters<T>) => {
+      return (_...args: Parameters<T</T>>) => {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => func(...args), delay);
       };
@@ -39,12 +39,12 @@ export function usePerformance(componentName: string) {}
     []
   )
   // Throttled function for frequent operations
-  const throttle = useCallback(_<T extends (...args: any[]) => any>(
+  const throttle = useCallback(_<T extends (...args: any[]) =</T extends (...args: any[]) =>> any>(
       func: T,
       delay: number
-    ): ((...args: Parameters<T>) => void) => {
+    ): ((...args: Parameters<T</T>>) => void) => {
       let lastCall = 0;
-      return (_...args: Parameters<T>) => {
+      return (_...args: Parameters<T</T>>) => {
         const now = Date.now();
         if (now - lastCall >= delay) {
           lastCall = now;
@@ -55,9 +55,9 @@ export function usePerformance(componentName: string) {}
     []
   )
   // Memoization helper
-  const memoize = useCallback(_<T extends (...args: any[]) => any>(func: T): T => {
+  const memoize = useCallback(_<T extends (...args: any[]) =</T extends (...args: any[]) =>> any>(func: T): T => {
       const cache = new Map();
-      return ((...args: Parameters<T>) => {
+      return ((...args: Parameters<T</T>>) => {
         const key = JSON.stringify(args);
         if (cache.has(key)) {
           return cache.get(key);
@@ -118,4 +118,4 @@ export function useMemoryMonitor(componentName: string) {}
     }
   }, [componentName])
 }
-export default usePerformance
+export default usePerformance''

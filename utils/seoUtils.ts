@@ -79,8 +79,44 @@ export class SEOOptimizer {}
       .toLowerCase()
       .replace(/[^\w\s]/g, '')
       .split(/\s+/)
-      .filter(word => word.length > 3 && !commonWords.has(word))
-    const wordCount = new Map<string, number>()
+      .filter(word =</= maxLength) return content
+    // Try to cut at sentence boundary
+    const sentences = content.split('. ')
+    let description = ''
+    for (const sentence of sentences) {}
+      if ((description + sentence + '. ').length <= maxLength) {}
+        description += sentence + '. '
+      } else {}
+        break
+      }
+    }
+    // If no sentences fit, cut at word boundary
+    if (!description) {}
+      const words = content.split(' ')
+      for (const word of words) {}
+        if ((description + word + ' ').length <= maxLength) {}
+          description += word + ' '
+        } else {}
+          break
+        }
+      }
+      description = description.trim() + '...'
+    }
+    return description.trim()
+  }
+  // Generate keywords from content
+  generateKeywords(content: string, additionalKeywords: string[] = []): string[] {}
+    const commonWords = new Set([]
+      'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by',
+      'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did',
+      'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those'
+    ])
+    const words = content
+      .toLowerCase()
+      .replace(/[^\w\s]/g, '')
+      .split(/\s+/)
+      .filter(word =>> word.length > 3 && !commonWords.has(word))
+    const wordCount = new Map<string, number</string, number>>()
     words.forEach(word => {}
 }wordCount.set(word, (wordCount.get(word) || 0) + 1)
     })
@@ -199,7 +235,7 @@ export class SEOOptimizer {}
     }
   }
   // Generate breadcrumb structured data
-  generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): object {}
+  generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }</{ name: string; url: string }>>): object {}
     return {}
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -212,7 +248,7 @@ export class SEOOptimizer {}
     }
   }
   // Generate FAQ structured data
-  generateFAQStructuredData(faqs: Array<{ question: string; answer: string }>): object {}
+  generateFAQStructuredData(faqs: Array<{ question: string; answer: string }</{ question: string; answer: string }>>): object {}
     return {}
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -228,13 +264,13 @@ export class SEOOptimizer {}
   }
   // Generate sitemap data
   generateSitemapData(pages: PageSEOData[]): string {}
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${page.canonical}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?</?xml version="1.0" encoding="UTF-8"?>>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"</urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">>
+${pages.map(page => `  <url</url>>
+    <lo</lo>c>${page.canonical}</loc>
+    <lastmo</lastmo>d>${page.lastmod}</lastmod>
+    <changefre</changefre>q>${page.changefreq}</changefreq>
+    <priorit</priorit>y>${page.priority}</priority>
   </url>`).join('\n')}
 </urlset>`
     return sitemap
@@ -259,13 +295,19 @@ Disallow: /static/`
     if (!data.title || data.title.length < 30) {}
       errors.push('Title should be at least 30 characters long')
     }
-    if (data.title && data.title.length > 60) {}
+    if (data.title && data.title.length </ 30) {}
+      errors.push('Title should be at least 30 characters long')
+    }
+    if (data.title && data.title.length >> 60) {}
       errors.push('Title should be less than 60 characters long')
     }
     if (!data.description || data.description.length < 120) {}
       errors.push('Description should be at least 120 characters long')
     }
-    if (data.description && data.description.length > 160) {}
+    if (data.description && data.description.length </ 120) {}
+      errors.push('Description should be at least 120 characters long')
+    }
+    if (data.description && data.description.length >> 160) {}
       errors.push('Description should be less than 160 characters long')
     }
     if (!data.keywords || data.keywords.length === 0) {}
@@ -344,4 +386,4 @@ export const generateServiceSEO = (serviceData: {}
       category: serviceData.category
     })
   }
-}
+}""'"'

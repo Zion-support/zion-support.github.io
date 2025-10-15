@@ -214,7 +214,29 @@ const generatePerformanceBudget = (analysis) => {
 };
 
 // Main optimization process
-const main = () => {
+const main = () =</= 500 ? 'pass' : 'fail'
+    },
+    individual: {
+      max: 200, // KB
+      current: analysis.largestFile.size,
+      status: analysis.largestFile.size <= 200 ? 'pass' : 'fail'
+    },
+    recommendations: []
+  };
+
+  if (budget.total.status === 'fail') {
+    budget.recommendations.push('Total bundle size exceeds 500KB budget');
+  }
+
+  if (budget.individual.status === 'fail') {
+    budget.recommendations.push('Largest bundle exceeds 200KB budget');
+  }
+
+  return budget;
+};
+
+// Main optimization process
+const main = () =>> {
   try {
     // Check if build directory exists
     if (!fs.existsSync(config.buildDir)) {
@@ -285,4 +307,4 @@ const main = () => {
 };
 
 // Run optimization
-main();
+main();''

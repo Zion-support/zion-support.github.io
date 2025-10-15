@@ -8,7 +8,7 @@ interface PerformanceMetrics {}
   timeToInteractive: number
 }
 export const usePerformanceMonitor = () => {}
-}const metricsRef = useRef<PerformanceMetrics>({}
+}const metricsRef = useRef<PerformanceMetrics</PerformanceMetrics>>({}
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
@@ -104,4 +104,4 @@ export const usePerformanceMonitor = () => {}
   }, [])
   return metricsRef.current
 }
-export default usePerformanceMonitor
+export default usePerformanceMonitor';'

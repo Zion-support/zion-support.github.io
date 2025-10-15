@@ -60,4 +60,4 @@ function processFiles(dir) {
 // Process the app directory
 console.log('Starting fix of function parameter syntax errors...');
 const fixedCount = processFiles('./app');
-console.log(`Fixed ${fixedCount} files.`);
+console.log(`Fixed ${fixedCount} files.`);)''

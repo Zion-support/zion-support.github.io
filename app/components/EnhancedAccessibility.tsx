@@ -8,8 +8,8 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   screenReader: boolean;
 }
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {}
-}const [settings, setSettings] = useState<AccessibilitySettings>({}
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }</{ children: React.ReactNode }>> = ({ children }) => {}
+}const [settings, setSettings] = useState<AccessibilitySettings</AccessibilitySettings>>({}
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -97,9 +97,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   useEffect(() => {}
 }const skipLinks = document.createElement('div')
     skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
-      <a href="#footer" class="skip-link">Skip to footer</a>
+      <a href="#main-content" class="skip-link"</a href="#main-content" class="skip-link">>Skip to main content</a>
+      <a href="#navigation" class="skip-link"</a href="#navigation" class="skip-link">>Skip to navigation</a>
+      <a href="#footer" class="skip-link"</a href="#footer" class="skip-link">>Skip to footer</a>
     `
     skipLinks.className = 'skip-links'
     document.body.insertBefore(skipLinks, document.body.firstChild)
@@ -183,9 +183,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
   return ()
-    <div className="accessibility-wrapper">
+    <div className="accessibility-wrapper"</div className="accessibility-wrapper">>
       {children}
     </div>
   )
 }
-export default EnhancedAccessibility
+export default EnhancedAccessibility""'"'

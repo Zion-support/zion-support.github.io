@@ -10,7 +10,7 @@ interface PerformanceMetrics {
   loadTime: number;
 }
 const PerformanceEnhancer: React.FC = () => {}
-}const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
+}const [metrics, setMetrics] = useState<PerformanceMetrics | null</PerformanceMetrics | null>>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {}
 }// Only run in browser environment
@@ -84,33 +84,34 @@ const PerformanceEnhancer: React.FC = () => {}
     return null
   }
 
-  return (<div className="fixed bottom-4 right-4 z-50">
+  return (<div className="fixed bottom-4 right-4 z-50"</div className="fixed bottom-4 right-4 z-50">>
       <button
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={() =</button
+        onClick={() =>> setIsVisible(!isVisible)}
         className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
         aria-label="Toggle performance metrics"
       >
         Performance
       </button>
       {isVisible && ()
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
-          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="text-gray-600">FCP:</span>
-              <span className="font-mono">{metrics.fcp.toFixed(2)}ms</span>
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64"</div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">>
+          <h3 className="font-semibold text-gray-900 mb-3"</h3 className="font-semibold text-gray-900 mb-3">>Performance Metrics</h3>
+          <div className="space-y-2 text-sm"</div className="space-y-2 text-sm">>
+            <div className="flex justify-between"</div className="flex justify-between">>
+              <span className="text-gray-600"</span className="text-gray-600">>FCP:</span>
+              <span className="font-mono"</span className="font-mono">>{metrics.fcp.toFixed(2)}ms</span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">LCP:</span>
-              <span className="font-mono">{metrics.lcp.toFixed(2)}ms</span>
+            <div className="flex justify-between"</div className="flex justify-between">>
+              <span className="text-gray-600"</span className="text-gray-600">>LCP:</span>
+              <span className="font-mono"</span className="font-mono">>{metrics.lcp.toFixed(2)}ms</span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">TTFB:</span>
-              <span className="font-mono">{metrics.ttfb.toFixed(2)}ms</span>
+            <div className="flex justify-between"</div className="flex justify-between">>
+              <span className="text-gray-600"</span className="text-gray-600">>TTFB:</span>
+              <span className="font-mono"</span className="font-mono">>{metrics.ttfb.toFixed(2)}ms</span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Load Time:</span>
-              <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
+            <div className="flex justify-between"</div className="flex justify-between">>
+              <span className="text-gray-600"</span className="text-gray-600">>Load Time:</span>
+              <span className="font-mono"</span className="font-mono">>{metrics.loadTime.toFixed(2)}ms</span>
             </div>
           </div>
         </div>
@@ -118,4 +119,4 @@ const PerformanceEnhancer: React.FC = () => {}
     </div>
   )
 }
-export default PerformanceEnhancer
+export default PerformanceEnhancer""'"'

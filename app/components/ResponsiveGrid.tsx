@@ -39,9 +39,9 @@ const ResponsiveGrid = (_{
     gapClasses[gap]
   ].filter(Boolean).join(' ')
   return ()
-    <div className={cn(responsiveClasses, className)}>
+    <div className={cn(responsiveClasses, className)}</div className={cn(responsiveClasses, className)}>>
       {children}
     </div>
   )
 }
-export default ResponsiveGrid
+export default ResponsiveGrid';'

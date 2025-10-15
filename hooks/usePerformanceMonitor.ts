@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 export const usePerformanceMonitor = () => {}
-}const [data, setData] = useState<any>(null)
+}const [data, setData] = useState<any</any>>(null)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<string | null</string | null>>(null)
   useEffect(() => {}
 }setLoading(true)
     // Initialize hook logic here
@@ -28,4 +28,4 @@ export const usePerformanceMonitor = () => {}
     error,
     processData}
 }
-export default usePerformanceMonitor
+export default usePerformanceMonitor"";"

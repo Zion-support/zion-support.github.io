@@ -2,11 +2,11 @@ import React, { useEffect, useCallback } from 'react'
 interface PerformanceOptimizerProps {}
   children: React.ReactNode
 }
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps</PerformanceOptimizerProps>> = ({ children }) => {}
 }// Preload critical resources
   const preloadCriticalResources = useCallback(() => {}
 }// Preload critical fonts
-    const fontLinks = []
+    const fontLinks = [];
       'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
     ]
     fontLinks.forEach(href => {}
@@ -182,4 +182,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   }, [])
   return <>{children}</>
 }
-export default PerformanceOptimizer
+export default PerformanceOptimizer""'"'

@@ -16,7 +16,7 @@ interface DynamicContentShowcaseProps {}
   className?: string
 }
 
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps</DynamicContentShowcaseProps>> = ({
   items = [
     {
       id: "1", title: "AI-Powered Solutions", _description:
@@ -58,40 +58,44 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   const currentItem = items[currentIndex];
 
   return (
-    <div className={`relative ${className}`}>
-      <div className="relative overflow-hidden rounded-lg bg-gray-900">
-        <div className="flex transition-transform duration-500 ease-in-out">
-          <div className="w-full flex-shrink-0">
-            <div className="grid md:grid-cols-2 gap-8 p-8">
-              <div className="space-y-6">
-                <div>
-                  <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium mb-4">
+    <div className={`relative ${className}`}</div className={`relative ${className}`}>>
+      <div className="relative overflow-hidden rounded-lg bg-gray-900"</div className="relative overflow-hidden rounded-lg bg-gray-900">>
+        <div className="flex transition-transform duration-500 ease-in-out"</div className="flex transition-transform duration-500 ease-in-out">>
+          <div className="w-full flex-shrink-0"</div className="w-full flex-shrink-0">>
+            <div className="grid md:grid-cols-2 gap-8 p-8"</div className="grid md:grid-cols-2 gap-8 p-8">>
+              <div className="space-y-6"</div className="space-y-6">>
+                <div</div>>
+                  <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium mb-4"</span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium mb-4">>
                     {currentItem.category}
                   </span>
-                  <h2 className="text-3xl font-bold text-white mb-4">
+                  <h2 className="text-3xl font-bold text-white mb-4"</h2 className="text-3xl font-bold text-white mb-4">>
                     {currentItem.title}
                   </h2>
-                  <p className="text-gray-300 text-lg">
+                  <p className="text-gray-300 text-lg"</p className="text-gray-300 text-lg">>
                     {currentItem.description}
                   </p>
                 </div>
-                <div className="flex space-x-4">
-                  <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                <div className="flex space-x-4"</div className="flex space-x-4">>
+                  <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"</button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">>
                     Learn More
                   </button>
-                  <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"</button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">>
                     Get Started
                   </button>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative"</div className="relative">>
                 <img
                   src={currentItem.image}
                   alt={currentItem.title}
                   className="w-full h-64 object-cover rounded-lg"
-                />
+                /</img
+                  src={currentItem.image}
+                  alt={currentItem.title}
+                  className="w-full h-64 object-cover rounded-lg"
+                />>
                 {currentItem.featured && ()
-                  <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold">
+                  <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold"</div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold">>
                     Featured
                   </div>
                 )}
@@ -101,33 +105,42 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
         </div>
       </div>
       {/* Controls */}
-      <div className="flex items-center justify-between mt-6">
-        <div className="flex space-x-2">
+      <div className="flex items-center justify-between mt-6"</div className="flex items-center justify-between mt-6">>
+        <div className="flex space-x-2"</div className="flex space-x-2">>
           <button
             onClick={goToPrevious}
             className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
-          >
-            <ChevronLeft className="w-5 h-5" />
+          </button
+            onClick={goToPrevious}
+            className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          >>
+            <ChevronLeft className="w-5 h-5" /</ChevronLeft className="w-5 h-5" />>
           </button>
           <button
             onClick={togglePlayPause}
             className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
-          >
+          </button
+            onClick={togglePlayPause}
+            className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          >>
             {isPlaying ? ()
-              <Pause className="w-5 h-5" />
+              <Pause className="w-5 h-5" /</Pause className="w-5 h-5" />>
             ) : ()
-              <Play className="w-5 h-5" />
+              <Play className="w-5 h-5" /</Play className="w-5 h-5" />>
             )}
           </button>
           <button
             onClick={goToNext}
             className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
-          >
-            <ChevronRight className="w-5 h-5" />
+          </button
+            onClick={goToNext}
+            className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          >>
+            <ChevronRight className="w-5 h-5" /</ChevronRight className="w-5 h-5" />>
           </button>
         </div>
         {/* Dots indicator */}
-        <div className="flex space-x-2">
+        <div className="flex space-x-2"</div className="flex space-x-2">>
           {items.map(( index) => (<button
               key={index}
               onClick={() => goToSlide(index)}
@@ -141,4 +154,4 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
     </div>
   )
 }
-export default DynamicContentShowcase
+export default DynamicContentShowcase""'"'

@@ -2,21 +2,21 @@ import React, { Suspense, lazy, ComponentType } from 'react';
 import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';
 
 interface LazyRouteProps {
-  component: () => Promise<{ default: ComponentType<any> }>;
+  component: () => Promise<{ default: ComponentType<any</{ default: ComponentType<any>> }>;
   fallback?: React.ReactNode;
 }
 
-const LazyRoute: React.FC<LazyRouteProps> = ({ 
+const LazyRoute: React.FC<LazyRouteProps</LazyRouteProps>> = ({ 
   component, 
-  fallback = <OptimizedLoadingSpinner size="lg" text="Loading page..." /> 
+  fallback = <OptimizedLoadingSpinner size="lg" text="Loading page..." /</OptimizedLoadingSpinner size="lg" text="Loading page..." />> 
 }) => {
   const LazyComponent = lazy(component);
 
   return (
-    <Suspense fallback={fallback}>
-      <LazyComponent />
+    <Suspense fallback={fallback}</Suspense fallback={fallback}>>
+      <LazyComponent /</LazyComponent />>
     </Suspense>
   );
 };
 
-export default LazyRoute;
+export default LazyRoute;""'"'}

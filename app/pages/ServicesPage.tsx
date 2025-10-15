@@ -7,7 +7,7 @@ const ServicesPage: React.FC = () => {
     {
       title: 'Micro SAAS Solutions',
       description: 'Powerful, affordable micro software-as-a-service solutions designed for modern businesses',
-      icon: <Zap className="w-12 h-12 text-purple-400" />,
+      icon: <Zap className="w-12 h-12 text-purple-400" /</Zap className="w-12 h-12 text-purple-400" />>,
       link: '/micro-saas-solutions',
       color: 'from-purple-500 to-cyan-500',
       services: [
@@ -22,7 +22,7 @@ const ServicesPage: React.FC = () => {
     {
       title: 'AI Services',
       description: 'Advanced artificial intelligence services that transform your business operations',
-      icon: <Brain className="w-12 h-12 text-cyan-400" />,
+      icon: <Brain className="w-12 h-12 text-cyan-400" /</Brain className="w-12 h-12 text-cyan-400" />>,
       link: '/ai-solutions',
       color: 'from-cyan-500 to-purple-500',
       services: [
@@ -37,7 +37,7 @@ const ServicesPage: React.FC = () => {
     {
       title: 'IT Services',
       description: 'Comprehensive technology services including cloud, security, and development',
-      icon: <Server className="w-12 h-12 text-blue-400" />,
+      icon: <Server className="w-12 h-12 text-blue-400" /</Server className="w-12 h-12 text-blue-400" />>,
       link: '/it-solutions',
       color: 'from-blue-500 to-green-500',
       services: [
@@ -52,7 +52,7 @@ const ServicesPage: React.FC = () => {
     {
       title: '5G Solutions',
       description: 'Next-generation 5G implementation, IoT solutions, and smart city technologies',
-      icon: <Globe className="w-12 h-12 text-green-400" />,
+      icon: <Globe className="w-12 h-12 text-green-400" /</Globe className="w-12 h-12 text-green-400" />>,
       link: '/5g-solutions',
       color: 'from-green-500 to-blue-500',
       services: [
@@ -68,32 +68,32 @@ const ServicesPage: React.FC = () => {
 
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: <Shield className="w-8 h-8 text-green-400" /</Shield className="w-8 h-8 text-green-400" />>,
       title: 'Enterprise Security',
       description: 'Bank-level security with 99.9% uptime guarantee and comprehensive data protection'
     },
     {
-      icon: <Clock className="w-8 h-8 text-blue-400" />,
+      icon: <Clock className="w-8 h-8 text-blue-400" /</Clock className="w-8 h-8 text-blue-400" />>,
       title: '24/7 Support',
       description: 'Round-the-clock expert support to ensure your systems run smoothly at all times'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+      icon: <TrendingUp className="w-8 h-8 text-purple-400" /</TrendingUp className="w-8 h-8 text-purple-400" />>,
       title: 'Scalable Solutions',
       description: 'Solutions that grow with your business, from startup to enterprise scale'
     },
     {
-      icon: <Award className="w-8 h-8 text-yellow-400" />,
+      icon: <Award className="w-8 h-8 text-yellow-400" /</Award className="w-8 h-8 text-yellow-400" />>,
       title: 'Certified Experts',
       description: 'Our team consists of certified professionals with years of industry experience'
     },
     {
-      icon: <Rocket className="w-8 h-8 text-cyan-400" />,
+      icon: <Rocket className="w-8 h-8 text-cyan-400" /</Rocket className="w-8 h-8 text-cyan-400" />>,
       title: 'Fast Deployment',
       description: 'Quick implementation and deployment to get you up and running in no time'
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-400" />,
+      icon: <Users className="w-8 h-8 text-orange-400" /</Users className="w-8 h-8 text-orange-400" />>,
       title: '500+ Happy Clients',
       description: 'Trusted by businesses worldwide for our innovative solutions and exceptional service'
     }
@@ -104,31 +104,31 @@ const ServicesPage: React.FC = () => {
       step: '01',
       title: 'Discovery & Analysis',
       description: 'We analyze your business needs and current technology stack to understand your requirements.',
-      icon: <Target className="w-8 h-8 text-cyan-400" />
+      icon: <Target className="w-8 h-8 text-cyan-400" /</Target className="w-8 h-8 text-cyan-400" />>
     },
     {
       step: '02',
       title: 'Solution Design',
       description: 'Our experts design a customized solution that perfectly fits your business objectives.',
-      icon: <Lightbulb className="w-8 h-8 text-purple-400" />
+      icon: <Lightbulb className="w-8 h-8 text-purple-400" /</Lightbulb className="w-8 h-8 text-purple-400" />>
     },
     {
       step: '03',
       title: 'Implementation',
       description: 'We implement the solution with minimal disruption to your existing operations.',
-      icon: <Settings className="w-8 h-8 text-green-400" />
+      icon: <Settings className="w-8 h-8 text-green-400" /</Settings className="w-8 h-8 text-green-400" />>
     },
     {
       step: '04',
       title: 'Testing & Optimization',
       description: 'Thorough testing and optimization to ensure peak performance and reliability.',
-      icon: <BarChart3 className="w-8 h-8 text-blue-400" />
+      icon: <BarChart3 className="w-8 h-8 text-blue-400" /</BarChart3 className="w-8 h-8 text-blue-400" />>
     },
     {
       step: '05',
       title: 'Launch & Support',
       description: 'We launch your solution and provide ongoing support and maintenance.',
-      icon: <Rocket className="w-8 h-8 text-orange-400" />
+      icon: <Rocket className="w-8 h-8 text-orange-400" /</Rocket className="w-8 h-8 text-orange-400" />>
     }
   ];
 
@@ -160,49 +160,55 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (<>
-      <Helmet>
-        <title>Our Services - Comprehensive AI & IT Solutions | Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive range of services including micro SAAS solutions, AI services, _IT solutions, and 5G technologies. Expert solutions for your business needs." />
-        <meta name="keywords" content="services, _micro SAAS, _AI services, _IT solutions, _5G solutions, _cloud infrastructure, _cybersecurity, _web development, mobile development" />
-        <meta property="og:title" content="Our Services - Comprehensive AI & IT Solutions" />
-        <meta property="og:description" content="Discover our comprehensive range of services including micro SAAS solutions, _AI services, _IT solutions, and 5G technologies." />
-        <meta property="og:url" content="https://ziontechgroup.com/services" />
-        <link rel="canonical" href="https://ziontechgroup.com/services" />
+      <Helmet</Helmet>>
+        <titl</titl>e>Our Services - Comprehensive AI & IT Solutions | Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive range of services including micro SAAS solutions, AI services, _IT solutions, and 5G technologies. Expert solutions for your business needs." /</meta name="description" content="Discover our comprehensive range of services including micro SAAS solutions, AI services, _IT solutions, and 5G technologies. Expert solutions for your business needs." />>
+        <meta name="keywords" content="services, _micro SAAS, _AI services, _IT solutions, _5G solutions, _cloud infrastructure, _cybersecurity, _web development, mobile development" /</meta name="keywords" content="services, _micro SAAS, _AI services, _IT solutions, _5G solutions, _cloud infrastructure, _cybersecurity, _web development, mobile development" />>
+        <meta property="og:title" content="Our Services - Comprehensive AI & IT Solutions" /</meta property="og:title" content="Our Services - Comprehensive AI & IT Solutions" />>
+        <meta property="og:description" content="Discover our comprehensive range of services including micro SAAS solutions, _AI services, _IT solutions, and 5G technologies." /</meta property="og:description" content="Discover our comprehensive range of services including micro SAAS solutions, _AI services, _IT solutions, and 5G technologies." />>
+        <meta property="og:url" content="https://ziontechgroup.com/services" /</meta property="og:url" content="https://ziontechgroup.com/services" />>
+        <link rel="canonical" href="https://ziontechgroup.com/services" /</link rel="canonical" href="https://ziontechgroup.com/services" />>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden"</section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">>
+        <div className="absolute inset-0 overflow-hidden"</div className="absolute inset-0 overflow-hidden">>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"</div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse">></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"</div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000">></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="container mx-auto px-4 relative z-10"</div className="container mx-auto px-4 relative z-10">>
+          <div className="text-center max-w-4xl mx-auto"</div className="text-center max-w-4xl mx-auto">>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"</h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">>
               Our
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"</span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">>
                 {' '}Services
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"</p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">>
               Comprehensive AI and IT solutions designed to transform your business. 
               From micro SAAS platforms to enterprise-grade infrastructure, we have everything you need.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"</div className="flex flex-col sm:flex-row gap-4 justify-center items-center">>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group"
-              >
+              </Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group"
+              >>
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /</ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />>
               </Link>
               <Link
                 to="#categories"
                 className="border-2 border-white/30 hover:border-purple-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
-              >
+              </Link
+                to="#categories"
+                className="border-2 border-white/30 hover:border-purple-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
+              >>
                 Explore Services
-                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /</TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />>
               </Link>
             </div>
           </div>
@@ -210,47 +216,51 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Service Categories */}
-      <section id="categories" className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section id="categories" className="py-20 bg-slate-800"</section id="categories" className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               Service Categories
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Choose from our comprehensive range of services designed to meet every business need.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"</div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">>
             {serviceCategories.map((category, index) => (
               <Link
                 key={index}
                 to={category.link}
                 className="group bg-slate-700/50 hover:bg-slate-600/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10"
-              >
-                <div className="mb-6 group-hover:scale-110 transition-transform">
+              </Link
+                key={index}
+                to={category.link}
+                className="group bg-slate-700/50 hover:bg-slate-600/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10"
+              >>
+                <div className="mb-6 group-hover:scale-110 transition-transform"</div className="mb-6 group-hover:scale-110 transition-transform">>
                   {category.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors"</h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">>
                   {category.title}
                 </h3>
-                <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors">
+                <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors"</p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors">>
                   {category.description}
                 </p>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6"</ul className="space-y-2 mb-6">>
                   {category.services.slice(0, 3).map((service, serviceIndex) => (
-                    <li key={serviceIndex} className="flex items-center text-sm text-gray-300 group-hover:text-white transition-colors">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={serviceIndex} className="flex items-center text-sm text-gray-300 group-hover:text-white transition-colors"</li key={serviceIndex} className="flex items-center text-sm text-gray-300 group-hover:text-white transition-colors">>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />>
                       {service}
                     </li>
                   ))}
-                  <li className="text-sm text-purple-400 font-medium group-hover:text-purple-300 transition-colors">
+                  <li className="text-sm text-purple-400 font-medium group-hover:text-purple-300 transition-colors"</li className="text-sm text-purple-400 font-medium group-hover:text-purple-300 transition-colors">>
                     +{category.services.length - 3} more services
                   </li>
                 </ul>
-                <div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors font-medium">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors font-medium"</div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors font-medium">>
+                  <spa</spa>n>Learn More</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /</ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />>
                 </div>
               </Link>
             ))}
@@ -259,27 +269,27 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-slate-900"</section className="py-20 bg-slate-900">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               Why Choose Our Services?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               We deliver exceptional value through our expertise, innovation, and commitment to your success.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"</div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">>
             {features.map((feature, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <div key={index} className="text-center group"</div key={index} className="text-center group">>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"</div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">>
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors"</h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">>
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
+                <p className="text-gray-300 group-hover:text-gray-200 transition-colors"</p className="text-gray-300 group-hover:text-gray-200 transition-colors">>
                   {feature.description}
                 </p>
               </div>
@@ -289,32 +299,32 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-slate-800"</section className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               Our Process
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               We follow a proven methodology to ensure successful project delivery and maximum value.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid md:grid-cols-5 gap-8"</div className="grid md:grid-cols-5 gap-8">>
             {processSteps.map((step, index) => (
-              <div key={index} className="text-center group">
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+              <div key={index} className="text-center group"</div key={index} className="text-center group">>
+                <div className="relative mb-6"</div className="relative mb-6">>
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform"</div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">>
                     {step.icon}
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center text-sm font-bold text-white">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center text-sm font-bold text-white"</div className="absolute -top-2 -right-2 w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center text-sm font-bold text-white">>
                     {step.step}
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors"</h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">>
                   {step.title}
                 </h3>
-                <p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors">
+                <p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors"</p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors">>
                   {step.description}
                 </p>
               </div>
@@ -324,37 +334,41 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-slate-900"</section className="py-20 bg-slate-900">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Trusted by businesses worldwide for our innovative solutions and exceptional service.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8"</div className="grid md:grid-cols-3 gap-8">>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">
-                <div className="flex items-center mb-4">
+              <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300"</div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">>
+                <div className="flex items-center mb-4"</div className="flex items-center mb-4">>
                   {[...Array(testimonial.rating)].map(( i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" /</Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />>
                   ))}
                 </div>
-                <p className="text-gray-300 mb-6 italic">
+                <p className="text-gray-300 mb-6 italic"</p className="text-gray-300 mb-6 italic">>
                   "{testimonial.content}"
                 </p>
-                <div className="flex items-center">
+                <div className="flex items-center"</div className="flex items-center">>
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4 object-cover"
-                  />
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                  /</img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full mr-4 object-cover"
+                  />>
+                  <div</div>>
+                    <div className="font-semibold text-white"</div className="font-semibold text-white">>{testimonial.name}</div>
+                    <div className="text-cyan-400 text-sm"</div className="text-cyan-400 text-sm">>{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -364,26 +378,32 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600"</section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">>
+        <div className="container mx-auto px-4 text-center"</div className="container mx-auto px-4 text-center">>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"</p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">>
             Let our expert team help you choose the right services for your business needs. 
             Get started with a free consultation today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"</div className="flex flex-col sm:flex-row gap-4 justify-center">>
             <Link
               to="/contact"
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
+            </Link
+              to="/contact"
+              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >>
               Get Free Consultation
             </Link>
             <Link
               to="/pricing"
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
+            </Link
+              to="/pricing"
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+            >>
               View Pricing
             </Link>
           </div>
@@ -393,4 +413,4 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-export default ServicesPage;
+export default ServicesPage;""'"'

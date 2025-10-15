@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix import statements
 function fixImports(content) {}
-  // Fix malformed import statements
+  // Fix malformed import statements;
   content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {}
     const cleanImports = imports
       .split(',')
@@ -29,19 +29,19 @@ function fixFunctions(content) {}
 function fixJSX(content) {}
     // Fix malformed JSX fragments
   content = content.replace(/<>\s*$/gm,
-    '<div>')
-  content = content.replace(/^\s*<\/>/gm,
+    '<div</div>>')
+  content = content.replace(/^\s*<\/</\/>>/gm,
     '</div>')
   // Fix malformed JSX elements
-  content = content.replace(/<(\w+)[^>]*>\s*$/gm,
-    '<$1>')
-  content = content.replace(/^\s*<\/\w+>\s*$/gm,
+  content = content.replace(/<(\w+)[^</(\w+)[^>>]*>\s*$/gm,
+    '<$1</$1>>')
+  content = content.replace(/^\s*<\/\w+</\/\w+>>\s*$/gm,
     '</$1>')
   return content
   }
 // Function to fix object literals
 function fixObjects(content) {}
-  // Fix malformed object literals
+  // Fix malformed object literals;
   content = content.replace(/\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, content) => {}
     const cleanContent = content
       .split(',')
@@ -126,4 +126,4 @@ function fixDirectory(dirPath) {}
 // Main execution
 console.log('Starting comprehensive syntax fixes...')
 const fixedCount = fixDirectory('./')
-console.log(`Syntax fixes complete. Fixed ${fixedCount} files.`)
+console.log(`Syntax fixes complete. Fixed ${fixedCount} files.`)""'"'

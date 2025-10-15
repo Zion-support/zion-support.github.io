@@ -9,7 +9,7 @@ interface AnimatedCounterProps {
   suffix?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+const AnimatedCounter: React.FC<AnimatedCounterProps</AnimatedCounterProps>> = ({
   end, duration = 2000, className = "", prefix = "", suffix = "", }) => {
   const [count, setCount] = useState(0);
 
@@ -29,18 +29,23 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     }
     animationFrame = requestAnimationFrame(animate)
-    return () => {}
+    return () =</ 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    }
+    animationFrame = requestAnimationFrame(animate)
+    return () =>> {}
 }if (animationFrame) {}
         cancelAnimationFrame(animationFrame)
       }
     }
   }, [end, duration])
   return ()
-    <span className={className}>
+    <span className={className}</span className={className}>>
       {prefix}
       {count.toLocaleString()}
       {suffix}
     </span>
   )
 }
-export default AnimatedCounter
+export default AnimatedCounter""'"'

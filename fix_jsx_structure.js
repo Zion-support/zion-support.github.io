@@ -4,35 +4,35 @@ import path from 'path'
 // Function to fix JSX structure issues
 function fixJSXStructure(content) {}
 }// Fix the specific pattern where div has className="$2" and is self-closing
-  content = content.replace(/<div className="\$2" \/>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">')
+  content = content.replace(/<div className="\$2" \/</div className="\$2" \/>>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">>')
   // Fix the pattern where Helmet is self-closing
-  content = content.replace(/<Helmet \/>/g, '<Helmet>')
+  content = content.replace(/<Helmet \/</Helmet \/>>/g, '<Helmet</Helmet>>')
   // Fix the pattern where div has className = "$2" and is self-closing (for, inner, div)
-  content = content.replace(/<div className="\$2" \/>/g, '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">')
+  content = content.replace(/<div className="\$2" \/</div className="\$2" \/>>/g, '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"</div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">>')
   // Fix malformed className attributes with spaces
   content = content.replace(/className="t e xt-4xl/g, 'className="text-4xl')
   content = content.replace(/className="t e xt-lg/g, 'className="text-lg')
   content = content.replace(/className="b g-g radient-to-r/g, 'className="bg-gradient-to-r')
   content = content.replace(/className="\$2"/g, 'className="w-5 h-5 ml-2"')
   // Fix missing closing tags for Helmet
-  content = content.replace(/<\/Helmet>/g, '</Helmet>')
+  content = content.replace(/<\/Helmet</\/Helmet>>/g, '</Helmet>')
   // Fix missing closing tags for divs
-  content = content.replace(/<\/div>/g, '</div>')
+  content = content.replace(/<\/div</\/div>>/g, '</div>')
   // Fix the specific structure issue where we have:
-  // <div></div>
-  //   <Helmet></Helmet>
+  // <di</di>v></div>
+  //   <Helme</Helme>t></Helmet>
   //     ...
   //   </Helmet>
-  //   <div></div>
+  //   <di</di>v></div>
   //     ...
   //   </div>
   // </div>
   // This should be:
-  // <div></div>
-  //   <Helmet></Helmet>
+  // <di</di>v></div>
+  //   <Helme</Helme>t></Helmet>
   //     ...
   //   </Helmet>
-  //   <div></div>
+  //   <di</di>v></div>
   //     ...
   //   </div>
   // </div>
@@ -70,4 +70,4 @@ const stat = fs.statSync(fullPath)
 // Main execution
 console.log('Starting JSX structure fixes...')
 const processedCount = processDirectory('./app')
-console.log(`Processed ${processedCount} files.`)
+console.log(`Processed ${processedCount} files.`)""';"'

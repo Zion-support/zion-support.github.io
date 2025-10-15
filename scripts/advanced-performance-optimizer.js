@@ -131,19 +131,19 @@ class AdvancedPerformanceOptimizer {
       
       // Add preload hints for critical resources
       const preloadHints = `
-        <link rel="preload" href="/critical.css" as="style">
-        <link rel="preload" href="/static/js/bundle.js" as="script">
-        <link rel="preload" href="/static/css/main.css" as="style">
+        <link rel="preload" href="/critical.css" as="style"</link rel="preload" href="/critical.css" as="style">>
+        <link rel="preload" href="/static/js/bundle.js" as="script"</link rel="preload" href="/static/js/bundle.js" as="script">>
+        <link rel="preload" href="/static/css/main.css" as="style"</link rel="preload" href="/static/css/main.css" as="style">>
       `;
       
       content = content.replace('</head>', `${preloadHints}</head>`);
       
       // Add performance hints
       const performanceHints = `
-        <meta name="format-detection" content="telephone=no">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="format-detection" content="telephone=no"</meta name="format-detection" content="telephone=no">>
+        <meta name="mobile-web-app-capable" content="yes"</meta name="mobile-web-app-capable" content="yes">>
+        <meta name="apple-mobile-web-app-capable" content="yes"</meta name="apple-mobile-web-app-capable" content="yes">>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"</meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">>
       `;
       
       content = content.replace('</head>', `${performanceHints}</head>`);
@@ -217,4 +217,4 @@ class AdvancedPerformanceOptimizer {
 
 // Run the optimizer
 const optimizer = new AdvancedPerformanceOptimizer();
-optimizer.optimize();
+optimizer.optimize();""'"'

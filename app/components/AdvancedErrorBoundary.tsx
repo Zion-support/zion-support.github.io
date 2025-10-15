@@ -13,7 +13,7 @@ interface State {
   errorId?: string;
 }
 
-class AdvancedErrorBoundary extends Component<Props, State> {
+class AdvancedErrorBoundary extends Component<Props, State</Props, State>> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -84,67 +84,79 @@ Error Details:
       }
 
       return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center">
-            <div className="flex justify-center mb-4">
-              <AlertTriangle className="w-16 h-16 text-red-500" />
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4"</div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">>
+          <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center"</div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center">>
+            <div className="flex justify-center mb-4"</div className="flex justify-center mb-4">>
+              <AlertTriangle className="w-16 h-16 text-red-500" /</AlertTriangle className="w-16 h-16 text-red-500" />>
             </div>
             
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2"</h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">>
               Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-gray-600 dark:text-gray-300 mb-6"</p className="text-gray-600 dark:text-gray-300 mb-6">>
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-6 text-left">
-                <h3 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2">
+              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-6 text-left"</div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-6 text-left">>
+                <h3 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2"</h3 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2">>
                   Error Details (Development Only):
                 </h3>
-                <pre className="text-xs text-red-700 dark:text-red-300 whitespace-pre-wrap">
+                <pre className="text-xs text-red-700 dark:text-red-300 whitespace-pre-wrap"</pre className="text-xs text-red-700 dark:text-red-300 whitespace-pre-wrap">>
                   {this.state.error.message}
                   {this.state.error.stack && `\n\n${this.state.error.stack}`}
                 </pre>
                 {this.state.errorId && (
-                  <p className="text-xs text-red-600 dark:text-red-400 mt-2">
+                  <p className="text-xs text-red-600 dark:text-red-400 mt-2"</p className="text-xs text-red-600 dark:text-red-400 mt-2">>
                     Error ID: {this.state.errorId}
                   </p>
                 )}
               </div>
             )}
 
-            <div className="space-y-3">
+            <div className="space-y-3"</div className="space-y-3">>
               <button
                 onClick={this.handleRetry}
                 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
+              </button
+                onClick={this.handleRetry}
+                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+              >>
+                <RefreshCw className="w-4 h-4 mr-2" /</RefreshCw className="w-4 h-4 mr-2" />>
                 Try Again
               </button>
               
               <button
                 onClick={this.handleReload}
                 className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
+              </button
+                onClick={this.handleReload}
+                className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center"
+              >>
+                <RefreshCw className="w-4 h-4 mr-2" /</RefreshCw className="w-4 h-4 mr-2" />>
                 Reload Page
               </button>
               
               <button
                 onClick={this.handleGoHome}
                 className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center"
-              >
-                <Home className="w-4 h-4 mr-2" />
+              </button
+                onClick={this.handleGoHome}
+                className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center"
+              >>
+                <Home className="w-4 h-4 mr-2" /</Home className="w-4 h-4 mr-2" />>
                 Go Home
               </button>
               
               <button
                 onClick={this.handleReportError}
                 className="w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
-              >
-                <Mail className="w-4 h-4 mr-2" />
+              </button
+                onClick={this.handleReportError}
+                className="w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
+              >>
+                <Mail className="w-4 h-4 mr-2" /</Mail className="w-4 h-4 mr-2" />>
                 Report Issue
               </button>
             </div>
@@ -157,4 +169,4 @@ Error Details:
   }
 }
 
-export default AdvancedErrorBoundary;
+export default AdvancedErrorBoundary;""'"'

@@ -3,8 +3,9 @@ import {render} from '@testing-library/react'
 import '@testing-library/jest-dom'
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThrow) {
+  if (shouldThrow) {;
     throw new Error('Test error');
   }
-  return <div>No error</div>;
+  return <di</di>v>No error</div>;
 };
+''

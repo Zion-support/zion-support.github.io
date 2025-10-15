@@ -31,7 +31,7 @@ const AiSolutionsPage: React.FC = () => {
         'Consistent quality service'
       ],
       category: 'Conversational AI',
-      icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
+      icon: <MessageSquare className="w-8 h-8 text-cyan-400" /</MessageSquare className="w-8 h-8 text-cyan-400" />>,
       popular: true
     },
     {
@@ -61,7 +61,7 @@ const AiSolutionsPage: React.FC = () => {
         'Scalable across industries'
       ],
       category: 'Computer Vision',
-      icon: <Eye className="w-8 h-8 text-green-400" />,
+      icon: <Eye className="w-8 h-8 text-green-400" /</Eye className="w-8 h-8 text-green-400" />>,
       popular: false
     },
     {
@@ -91,7 +91,7 @@ const AiSolutionsPage: React.FC = () => {
         'Scale content marketing efforts'
       ],
       category: 'Content Creation',
-      icon: <FileText className="w-8 h-8 text-purple-400" />,
+      icon: <FileText className="w-8 h-8 text-purple-400" /</FileText className="w-8 h-8 text-purple-400" />>,
       popular: true
     },
     {
@@ -121,7 +121,7 @@ const AiSolutionsPage: React.FC = () => {
         'Scale with business growth'
       ],
       category: 'Analytics',
-      icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
+      icon: <BarChart3 className="w-8 h-8 text-blue-400" /</BarChart3 className="w-8 h-8 text-blue-400" />>,
       popular: false
     },
     {
@@ -151,7 +151,7 @@ const AiSolutionsPage: React.FC = () => {
         'Focus on strategic tasks'
       ],
       category: 'Automation',
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      icon: <Settings className="w-8 h-8 text-orange-400" /</Settings className="w-8 h-8 text-orange-400" />>,
       popular: true
     },
     {
@@ -181,7 +181,7 @@ const AiSolutionsPage: React.FC = () => {
         'Scale blockchain applications'
       ],
       category: 'Blockchain',
-      icon: <Network className="w-8 h-8 text-yellow-400" />,
+      icon: <Network className="w-8 h-8 text-yellow-400" /</Network className="w-8 h-8 text-yellow-400" />>,
       popular: false
     }
   ];
@@ -192,25 +192,25 @@ const AiSolutionsPage: React.FC = () => {
     {
       title: 'Customer Service',
       description: 'Automate customer support with intelligent chatbots',
-      icon: <MessageSquare className="w-6 h-6 text-cyan-400" />,
+      icon: <MessageSquare className="w-6 h-6 text-cyan-400" /</MessageSquare className="w-6 h-6 text-cyan-400" />>,
       benefits: ['24/7 Support', 'Instant Responses', 'Cost Reduction', 'Customer Satisfaction']
     },
     {
       title: 'Content Marketing',
       description: 'Generate high-quality content at scale',
-      icon: <FileText className="w-6 h-6 text-purple-400" />,
+      icon: <FileText className="w-6 h-6 text-purple-400" /</FileText className="w-6 h-6 text-purple-400" />>,
       benefits: ['Faster Creation', 'SEO Optimization', 'Brand Consistency', 'Scalable Output']
     },
     {
       title: 'Data Analysis',
       description: 'Extract insights from complex datasets',
-      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
+      icon: <BarChart3 className="w-6 h-6 text-blue-400" /</BarChart3 className="w-6 h-6 text-blue-400" />>,
       benefits: ['Predictive Insights', 'Real-time Analytics', 'Automated Reports', 'Better Decisions']
     },
     {
       title: 'Process Automation',
       description: 'Streamline business operations with AI',
-      icon: <Settings className="w-6 h-6 text-orange-400" />,
+      icon: <Settings className="w-6 h-6 text-orange-400" /</Settings className="w-6 h-6 text-orange-400" />>,
       benefits: ['Efficiency Gains', 'Error Reduction', 'Cost Savings', 'Scalable Growth']
     }
   ];
@@ -261,49 +261,55 @@ const AiSolutionsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." />
-        <meta name="keywords" content="AI solutions, artificial intelligence, chatbots, computer vision, content generation, analytics, automation, machine learning" />
-        <meta property="og:title" content="AI Solutions - Advanced Artificial Intelligence Services" />
-        <meta property="og:description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation." />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-solutions" />
+      <Helmet</Helmet>>
+        <titl</titl>e>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." /</meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." />>
+        <meta name="keywords" content="AI solutions, artificial intelligence, chatbots, computer vision, content generation, analytics, automation, machine learning" /</meta name="keywords" content="AI solutions, artificial intelligence, chatbots, computer vision, content generation, analytics, automation, machine learning" />>
+        <meta property="og:title" content="AI Solutions - Advanced Artificial Intelligence Services" /</meta property="og:title" content="AI Solutions - Advanced Artificial Intelligence Services" />>
+        <meta property="og:description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation." /</meta property="og:description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation." />>
+        <meta property="og:url" content="https://ziontechgroup.com/ai-solutions" /</meta property="og:url" content="https://ziontechgroup.com/ai-solutions" />>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-solutions" /</link rel="canonical" href="https://ziontechgroup.com/ai-solutions" />>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 overflow-hidden"</section className="relative py-20 bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 overflow-hidden">>
+        <div className="absolute inset-0 overflow-hidden"</div className="absolute inset-0 overflow-hidden">>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"</div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse">></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"</div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000">></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="container mx-auto px-4 relative z-10"</div className="container mx-auto px-4 relative z-10">>
+          <div className="text-center max-w-4xl mx-auto"</div className="text-center max-w-4xl mx-auto">>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"</h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">>
               AI Solutions
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"</span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">>
                 {' '}That Transform
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"</p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">>
               Harness the power of artificial intelligence to automate processes, gain insights, 
               and scale your business with our comprehensive AI solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"</div className="flex flex-col sm:flex-row gap-4 justify-center items-center">>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/25 flex items-center group"
-              >
+              </Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/25 flex items-center group"
+              >>
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /</ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />>
               </Link>
               <Link
                 to="#pricing"
                 className="border-2 border-white/30 hover:border-cyan-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
-              >
+              </Link
+                to="#pricing"
+                className="border-2 border-white/30 hover:border-cyan-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
+              >>
                 View Pricing
-                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /</TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />>
               </Link>
             </div>
           </div>
@@ -311,33 +317,33 @@ const AiSolutionsPage: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-slate-800"</section className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               AI Solutions for Every Business Need
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               From customer service to data analysis, our AI solutions are designed to solve real business challenges.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"</div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">>
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
-                <div className="mb-4 group-hover:scale-110 transition-transform">
+              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group"</div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">>
+                <div className="mb-4 group-hover:scale-110 transition-transform"</div className="mb-4 group-hover:scale-110 transition-transform">>
                   {useCase.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors"</h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">>
                   {useCase.title}
                 </h3>
-                <p className="text-gray-300 mb-4">
+                <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>
                   {useCase.description}
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2"</ul className="space-y-2">>
                   {useCase.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300"</li key={benefitIndex} className="flex items-center text-sm text-gray-300">>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />>
                       {benefit}
                     </li>
                   ))}
@@ -349,74 +355,82 @@ const AiSolutionsPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-slate-900"</section className="py-20 bg-slate-900">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               Our AI Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Choose from our comprehensive suite of AI-powered solutions designed to transform your business operations.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"</div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">>
             {aiServices.map((service, index) => (
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group relative ${
                 service.popular ? 'ring-2 ring-cyan-500' : ''
-              }`}>
+              }`}</div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group relative ${
+                service.popular ? 'ring-2 ring-cyan-500' : ''
+              }`}>>
                 {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"</div className="absolute -top-3 left-1/2 transform -translate-x-1/2">>
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold"</span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">>
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="group-hover:scale-110 transition-transform">
+                <div className="mb-6"</div className="mb-6">>
+                  <div className="flex items-center justify-between mb-4"</div className="flex items-center justify-between mb-4">>
+                    <div className="group-hover:scale-110 transition-transform"</div className="group-hover:scale-110 transition-transform">>
                       {service.icon}
                     </div>
-                    <span className="text-sm text-cyan-400 font-medium">{service.category}</span>
+                    <span className="text-sm text-cyan-400 font-medium"</span className="text-sm text-cyan-400 font-medium">>{service.category}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors"</h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">>
                     {service.name}
                   </h3>
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
-                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
+                  <div className="flex items-center space-x-2 mb-3"</div className="flex items-center space-x-2 mb-3">>
+                    <span className="text-3xl font-bold text-cyan-400"</span className="text-3xl font-bold text-cyan-400">>{service.price}</span>
+                    <span className="text-lg text-gray-400 line-through"</span className="text-lg text-gray-400 line-through">>{service.originalPrice}</span>
                   </div>
-                  <p className="text-gray-300 mb-4">
+                  <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>
                     {service.description}
                   </p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8"</ul className="space-y-3 mb-8">>
                   {service.features.slice(0, 5).map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"</li key={featureIndex} className="flex items-center text-sm text-gray-300">>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /</CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />>
                       {feature}
                     </li>
                   ))}
                   {service.features.length > 5 && (
-                    <li className="text-sm text-cyan-400 font-medium">
+                    <li className="text-sm text-cyan-400 font-medium"</li className="text-sm text-cyan-400 font-medium">>
                       +{service.features.length - 5} more features
                     </li>
                   )}
                 </ul>
 
-                <div className="space-y-4">
+                <div className="space-y-4"</div className="space-y-4">>
                   <Link
                     to={`/${service.id}`}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                  >
+                  </Link
+                    to={`/${service.id}`}
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  >>
                     Learn More
                   </Link>
                   <Link
                     to="/contact"
                     className="block w-full border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  </Link
+                    to="/contact"
+                    className="block w-full border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
+                  >>
                     Start Free Trial
                   </Link>
                 </div>
@@ -427,40 +441,42 @@ const AiSolutionsPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section id="pricing" className="py-20 bg-slate-800"</section id="pricing" className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               AI Solutions Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Choose the perfect AI solution plan for your business. All plans include 14-day free trial.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"</div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">>
             {pricingTiers.map((tier, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                 tier.popular ? 'ring-2 ring-cyan-500 bg-slate-700/50' : ''
-              }`}>
+              }`}</div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                tier.popular ? 'ring-2 ring-cyan-500 bg-slate-700/50' : ''
+              }`}>>
                 {tier.popular && (
-                  <div className="text-center mb-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="text-center mb-4"</div className="text-center mb-4">>
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold"</span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">>
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">{tier.price}</div>
-                  <p className="text-gray-300">{tier.description}</p>
+                <div className="text-center mb-8"</div className="text-center mb-8">>
+                  <h3 className="text-2xl font-bold text-white mb-2"</h3 className="text-2xl font-bold text-white mb-2">>{tier.name}</h3>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2"</div className="text-4xl font-bold text-cyan-400 mb-2">>{tier.price}</div>
+                  <p className="text-gray-300"</p className="text-gray-300">>{tier.description}</p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8"</ul className="space-y-4 mb-8">>
                   {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-gray-300"</li key={featureIndex} className="flex items-center text-gray-300">>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /</CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />>
                       {feature}
                     </li>
                   ))}
@@ -473,7 +489,14 @@ const AiSolutionsPage: React.FC = () => {
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white'
                       : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
                   }`}
-                >
+                </Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white'
+                      : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
+                  }`}
+                >>
                   Get Started
                 </Link>
               </div>
@@ -483,25 +506,31 @@ const AiSolutionsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600"</section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">>
+        <div className="container mx-auto px-4 text-center"</div className="container mx-auto px-4 text-center">>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
             Ready to Harness the Power of AI?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"</p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">>
             Transform your business with our cutting-edge AI solutions. Start your free trial today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"</div className="flex flex-col sm:flex-row gap-4 justify-center">>
             <Link
               to="/contact"
               className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
+            </Link
+              to="/contact"
+              className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >>
               Start Free Trial
             </Link>
             <Link
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
+            </Link
+              to="/demo"
+              className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+            >>
               Schedule Demo
             </Link>
           </div>
@@ -512,3 +541,4 @@ const AiSolutionsPage: React.FC = () => {
 };
 
 export default AISolutionsPage;
+""'"'

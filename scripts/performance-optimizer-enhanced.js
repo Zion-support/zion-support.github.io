@@ -371,4 +371,4 @@ async function optimize() {
 }
 
 // Run optimization
-optimize();
+optimize();''

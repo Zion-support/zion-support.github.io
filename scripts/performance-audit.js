@@ -70,7 +70,26 @@ function checkUnusedImports() {}
 function checkLazyLoading() {}
 }const srcPath = path.join(process.cwd(), 'app')
   const files = getAllFiles(srcPath, ['.tsx', '.ts'])
-  files.forEach(file => {}
+  files.forEach(file =</ 3) {}
+              performanceIssues.push({}
+                type: 'Potentially Unused Import',
+                file: path.relative(process.cwd(), file),
+                line: index + 1,
+                import: importName,
+                severity: 'low'
+              })
+            }
+          })
+        }
+      }
+    })
+  })
+}
+// Check for missing lazy loading
+function checkLazyLoading() {}
+}const srcPath = path.join(process.cwd(), 'app')
+  const files = getAllFiles(srcPath, ['.tsx', '.ts'])
+  files.forEach(file =>> {}
 }const content = fs.readFileSync(file, 'utf8')
     // Check for large components that should be lazy loaded
     if (content.includes('export default function') && content.length > 2000) {}
@@ -171,4 +190,4 @@ function main() {}
   }
   // console.log('✅ Performance audit complete! Report saved to performance-audit-report.json')
 }
-main()
+main()';'

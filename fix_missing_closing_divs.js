@@ -9,24 +9,24 @@ function fixMissingClosingDivs(content) {}
   // )
   // }
   // But missing the outer div closing tag
-  content = content.replace()
-    /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
+  content = content.replace();
+    /(\s*<\/Link</\/Link>>\s*<\/div</\/div>>\s*\);\s*})/g,
     '$1'
   )
   // More specific fix for the pattern
   content = content.replace()
-    /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
+    /(\s*<\/Link</\/Link>>\s*<\/div</\/div>>\s*\);\s*})/g,
       // Check if there's a missing closing div
       const beforeMatch = content.substring(0, content.indexOf(match))
 const openDivs = (beforeMatch.match(/
-      const closeDivs = (beforeMatch.match(/<\/div>/g) || []).length
+      const closeDivs = (beforeMatch.match(/<\/div</\/div>>/g) || []).length
  closeDivs) {}
         return match.replace(');', '</div>\n  );')
       return match
   )
   // Alternative approach - fix the specific pattern we see
   content = content.replace()
-    /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
+    /(\s*<\/Link</\/Link>>\s*<\/div</\/div>>\s*\);\s*})/g,
     '\n        </Link>\n      </div>\n    </div>\n  );\n}'
   )
   return content
@@ -63,4 +63,4 @@ const stat = fs.statSync(fullPath)
 // Main execution
 console.log('Starting missing closing div fixes...')
 const processedCount = processDirectory('./app')
-console.log(`Processed ${processedCount} files.`)
+console.log(`Processed ${processedCount} files.`)''

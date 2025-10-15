@@ -15,14 +15,14 @@ interface EnhancedSEOProps {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown</string, unknown>>;
   noIndex?: boolean;
   lang?: string;
   noindex?: boolean;
   nofollow?: boolean;
 }
 
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
+const EnhancedSEO: React.FC<EnhancedSEOProps</EnhancedSEOProps>> = ({
   title, description, _keywords, _canonical, _ogTitle, _ogDescription, ogImage = 'https://ziontechgroup.com/og-image.jpg', _ogUrl, ogType = 'website', twitterCard = 'summary_large_image', _twitterTitle, _twitterDescription, _twitterImage, _structuredData, noIndex = false, noindex = false, nofollow = false, lang = 'en'
 }) => {
   const siteName = 'Zion Tech Group';
@@ -66,51 +66,51 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   }
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData
   return ()
-    <Helmet>
+    <Helmet</Helmet>>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={finalKeywords} />
-      <meta name="author" content={siteName} />
-      <meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      <meta name="language" content={lang} />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="rating" content="general" />
+      <titl</titl>e>{fullTitle}</title>
+      <meta name="description" content={description} /</meta name="description" content={description} />>
+      <meta name="keywords" content={finalKeywords} /</meta name="keywords" content={finalKeywords} />>
+      <meta name="author" content={siteName} /</meta name="author" content={siteName} />>
+      <meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /</meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />>
+      <meta name="language" content={lang} /</meta name="language" content={lang} />>
+      <meta name="revisit-after" content="7 days" /</meta name="revisit-after" content="7 days" />>
+      <meta name="rating" content="general" /</meta name="rating" content="general" />>
       {/* Canonical URL */}
-      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
+      {fullCanonical && <link rel="canonical" href={fullCanonical} /</link rel="canonical" href={fullCanonical} />>}
       {/* Open Graph Meta Tags */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={ogTitle || fullTitle} />
-      <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:image" content={fullOgImage} />
-      <meta property="og:url" content={fullOgUrl} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} />
+      <meta property="og:type" content={ogType} /</meta property="og:type" content={ogType} />>
+      <meta property="og:title" content={ogTitle || fullTitle} /</meta property="og:title" content={ogTitle || fullTitle} />>
+      <meta property="og:description" content={ogDescription || description} /</meta property="og:description" content={ogDescription || description} />>
+      <meta property="og:image" content={fullOgImage} /</meta property="og:image" content={fullOgImage} />>
+      <meta property="og:url" content={fullOgUrl} /</meta property="og:url" content={fullOgUrl} />>
+      <meta property="og:site_name" content={siteName} /</meta property="og:site_name" content={siteName} />>
+      <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} /</meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} />>
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} />
-      <meta name="twitter:description" content={twitterDescription || ogDescription || description} />
-      <meta name="twitter:image" content={fullTwitterImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:card" content={twitterCard} /</meta name="twitter:card" content={twitterCard} />>
+      <meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} /</meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} />>
+      <meta name="twitter:description" content={twitterDescription || ogDescription || description} /</meta name="twitter:description" content={twitterDescription || ogDescription || description} />>
+      <meta name="twitter:image" content={fullTwitterImage} /</meta name="twitter:image" content={fullTwitterImage} />>
+      <meta name="twitter:site" content="@ziontechgroup" /</meta name="twitter:site" content="@ziontechgroup" />>
+      <meta name="twitter:creator" content="@ziontechgroup" /</meta name="twitter:creator" content="@ziontechgroup" />>
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="msapplication-TileColor" content="#8b5cf6" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /</meta name="viewport" content="width=device-width, initial-scale=1.0" />>
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /</meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />>
+      <meta name="theme-color" content="#00ffff" /</meta name="theme-color" content="#00ffff" />>
+      <meta name="msapplication-TileColor" content="#8b5cf6" /</meta name="msapplication-TileColor" content="#8b5cf6" />>
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"</script type="application/ld+json">>
         {JSON.stringify(mergedStructuredData)}
       </script>
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /</link rel="preconnect" href="https://fonts.googleapis.com" />>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /</link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />>
+      <link rel="preconnect" href="https://www.google-analytics.com" /</link rel="preconnect" href="https://www.google-analytics.com" />>
       {/* Favicon and Icons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/manifest.json" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" /</link rel="icon" type="image/svg+xml" href="/favicon.svg" />>
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" /</link rel="apple-touch-icon" href="/apple-touch-icon.png" />>
+      <link rel="manifest" href="/manifest.json" /</link rel="manifest" href="/manifest.json" />>
     </Helmet>
   )
 }
-export default EnhancedSEO
+export default EnhancedSEO""'"'

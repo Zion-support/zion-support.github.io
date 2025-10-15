@@ -4,8 +4,8 @@ import App from "./App";
 import "./app/globals.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
+  <React.StrictMode</React.StrictMode>>
+    <App /</App />>
   </React.StrictMode>
 );
 
@@ -21,4 +21,4 @@ if ("serviceWorker" in navigator) {
         console.log("SW registration failed: ", registrationError);
       });
   });
-}
+}"""

@@ -30,14 +30,14 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     enableLayoutShiftMonitoring = true,
     reportInterval = 30000,
     memoryThreshold = 0.8,
-    longTaskThreshold = 50,
+    longTaskThreshold = 50,;
   } = config;
 
-  const metricsRef = useRef<PerformanceMetrics>({});
-  const observerRef = useRef<PerformanceObserver | null>(null);
-  const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const metricsRef = useRef<PerformanceMetrics</PerformanceMetrics>>({});
+  const observerRef = useRef<PerformanceObserver | null</PerformanceObserver | null>>(null);
+  const reportIntervalRef = useRef<NodeJS.Timeout | null</NodeJS.Timeout | null>>(null);
 
-  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {
+  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown</string, unknown>>) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
@@ -168,7 +168,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         const usedMB = memory.usedJSHeapSize / 1048576;
         const totalMB = memory.totalJSHeapSize / 1048576;
         const limitMB = memory.jsHeapSizeLimit / 1048576;
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
+
 
           metricsRef.current.memory = {
             used: usedMB,
@@ -255,4 +255,4 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     metrics: metricsRef.current,
     reportMetric,
     reportMetrics}
-}
+}''

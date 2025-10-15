@@ -72,4 +72,4 @@ const link = document.createElement('link')
   }, [measurePerformance, optimizeImages, preloadCriticalResources])
     preloadCriticalResources
   }
-}
+}''

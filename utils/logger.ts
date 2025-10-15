@@ -48,7 +48,7 @@ class Logger {}
       console.debug(this.formatMessage('debug', message), ...args)
     }
   }
-  private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void> {}
+  private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void</void>> {}
     try {}
 } catch (error) {}
   console.error(error)
@@ -75,4 +75,4 @@ const logger = new Logger({}
   enableConsole: process.env.NODE_ENV === 'development',
   enableRemote: process.env.NODE_ENV === 'production',
   remoteEndpoint: process.env.REACT_APP_LOGGING_ENDPOINT})
-export default logger
+export default logger''

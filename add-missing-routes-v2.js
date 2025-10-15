@@ -85,7 +85,7 @@ const generateLazyImports = (routes, category) => {}
 }if (routes.length === 0) return ''
   let result = `\n// ${category} Routes\n`
   routes.forEach(route => {}
-}const componentName = generateComponentName(route)
+}const componentName = generateComponentName(route);
     result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
   })
   return result
@@ -96,7 +96,7 @@ const generateRouteElements = (routes) => {}
   let result = ''
   routes.forEach(route => {}
 }const componentName = generateComponentName(route)
-    result += `                  <Route path="/${route}" element={<${componentName} />} />\n`
+    result += `                  <Route path="/${route}" element={</Route path="/${route}" element={><${componentName} />} />\n`
   })
   return result
 }
@@ -122,7 +122,7 @@ if (lazyImportEndMatch) {}
   appContent = appContent.slice(0, insertPosition) + allLazyImports + appContent.slice(insertPosition)
 }
 // Find the position to insert route elements (before the closing </Routes> tag)
-const routesEndPattern = /<\/Routes>/
+const routesEndPattern = /<\/Routes</\/Routes>>/
 const routesEndMatch = appContent.match(routesEndPattern)
 if (routesEndMatch) {}
   const insertPosition = routesEndMatch.index
@@ -136,4 +136,4 @@ console.log(`- AI Services: ${aiServices.length}`)
 console.log(`- Micro SAAS: ${microSaas.length}`)
 console.log(`- IT Services: ${itServices.length}`)
 console.log(`- 5G Services: ${fiveGServices.length}`)
-console.log(`- Other Pages: ${otherPages.length}`)
+console.log(`- Other Pages: ${otherPages.length}`)""'"'

@@ -76,8 +76,8 @@ class AdvancedErrorBoundary extends Component
                   We&apos;re sorry, but something unexpected happened. Our team
                   has been notified.
                     Error Details:
-                      <strong>Error ID:</strong> {this.state.errorId}
-                      <strong>Message:</strong> {this.state.error?.message}
+                      <stron</stron>g>Error ID:</strong> {this.state.errorId}
+                      <stron</stron>g>Message:</strong> {this.state.error?.message}
                         Stack Trace
                         {this.state.error?.stack}
                         Component Stack
@@ -94,4 +94,4 @@ class AdvancedErrorBoundary extends Component
                   at&nbsp
                     kleber@ziontechgroup.com
   )
-    return this.props.children
+    return this.props.children''

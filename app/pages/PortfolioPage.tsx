@@ -208,45 +208,51 @@ const PortfolioPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Portfolio - Zion Tech Group | Our Work & Success Stories</title>
-        <meta name="description" content="Explore our portfolio of successful AI and IT projects. See how we've helped businesses transform with cutting-edge technology solutions." />
-        <meta name="keywords" content="portfolio, projects, case studies, AI solutions, web development, mobile apps, cloud solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/portfolio" />
+      <Helmet</Helmet>>
+        <titl</titl>e>Portfolio - Zion Tech Group | Our Work & Success Stories</title>
+        <meta name="description" content="Explore our portfolio of successful AI and IT projects. See how we've helped businesses transform with cutting-edge technology solutions." /</meta name="description" content="Explore our portfolio of successful AI and IT projects. See how we've helped businesses transform with cutting-edge technology solutions." />>
+        <meta name="keywords" content="portfolio, projects, case studies, AI solutions, web development, mobile apps, cloud solutions" /</meta name="keywords" content="portfolio, projects, case studies, AI solutions, web development, mobile apps, cloud solutions" />>
+        <link rel="canonical" href="https://ziontechgroup.com/portfolio" /</link rel="canonical" href="https://ziontechgroup.com/portfolio" />>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"</section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">>
+        <div className="absolute inset-0 overflow-hidden"</div className="absolute inset-0 overflow-hidden">>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"</div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse">></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"</div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse">></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="container mx-auto px-4 relative z-10"</div className="container mx-auto px-4 relative z-10">>
+          <div className="text-center max-w-4xl mx-auto"</div className="text-center max-w-4xl mx-auto">>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"</h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">>
               Our
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"</span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">>
                 {' '}Portfolio
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"</p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">>
               Discover our successful projects and see how we've helped businesses transform 
               with cutting-edge AI and IT solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"</div className="flex flex-col sm:flex-row gap-4 justify-center items-center">>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
-              >
+              </Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
+              >>
                 Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /</ArrowRight className="w-5 h-5 ml-2" />>
               </Link>
               <Link
                 to="/solutions"
                 className="border-2 border-white/20 hover:border-cyan-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
-              >
-                <Rocket className="w-5 h-5 mr-2" />
+              </Link
+                to="/solutions"
+                className="border-2 border-white/20 hover:border-cyan-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
+              >>
+                <Rocket className="w-5 h-5 mr-2" /</Rocket className="w-5 h-5 mr-2" />>
                 View Solutions
               </Link>
             </div>
@@ -255,13 +261,13 @@ const PortfolioPage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-20 bg-slate-800"</section className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"</div className="grid grid-cols-2 md:grid-cols-4 gap-8">>
             {stats.map((stat) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+              <div key={index} className="text-center"</div key={index} className="text-center">>
+                <div className="text-4xl font-bold text-cyan-400 mb-2"</div className="text-4xl font-bold text-cyan-400 mb-2">>{stat.number}</div>
+                <div className="text-gray-300 text-sm"</div className="text-gray-300 text-sm">>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -269,12 +275,12 @@ const PortfolioPage: React.FC = () => {
       </section>
 
       {/* Filter and Search */}
-      <section className="py-12 bg-gradient-to-br from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
+      <section className="py-12 bg-gradient-to-br from-slate-900 to-purple-900"</section className="py-12 bg-gradient-to-br from-slate-900 to-purple-900">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="flex flex-col md:flex-row gap-6 items-center justify-between"</div className="flex flex-col md:flex-row gap-6 items-center justify-between">>
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="relative flex-1 max-w-md"</div className="relative flex-1 max-w-md">>
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /</Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />>
               <input
                 type="text"
                 placeholder="Search projects..."
@@ -285,18 +291,20 @@ const PortfolioPage: React.FC = () => {
             </div>
 
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2"</div className="flex flex-wrap gap-2">>
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={() =</button
+                  key={category.id}
+                  onClick={() =>> setSelectedCategory(category.id)}
                   className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-600 text-white'
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
                   }`}
                 >
-                  <category.icon className="w-4 h-4 mr-2" />
+                  <category.icon className="w-4 h-4 mr-2" /</category.icon className="w-4 h-4 mr-2" />>
                   {category.name}
                 </button>
               ))}
@@ -306,60 +314,70 @@ const PortfolioPage: React.FC = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section className="py-20 bg-slate-800"</section className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"</div className="grid grid-cols-1 lg:grid-cols-2 gap-8">>
             {filteredProjects.map((project) => (
-              <div key={project.id} className="group bg-slate-700/50 hover:bg-slate-700/70 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden">
+              <div key={project.id} className="group bg-slate-700/50 hover:bg-slate-700/70 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"</div key={project.id} className="group bg-slate-700/50 hover:bg-slate-700/70 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden">>
                 {/* Project Image */}
-                <div className="relative h-64 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Zap className="w-8 h-8 text-white" />
+                <div className="relative h-64 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center"</div className="relative h-64 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">>
+                  <div className="text-center"</div className="text-center">>
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"</div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">>
+                      <Zap className="w-8 h-8 text-white" /</Zap className="w-8 h-8 text-white" />>
                     </div>
-                    <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                    <h3 className="text-xl font-semibold text-white"</h3 className="text-xl font-semibold text-white">>{project.title}</h3>
                   </div>
-                  <div className="absolute top-4 right-4 flex space-x-2">
+                  <div className="absolute top-4 right-4 flex space-x-2"</div className="absolute top-4 right-4 flex space-x-2">>
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4 text-white" />
+                    </a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors"
+                    >>
+                      <ExternalLink className="w-4 h-4 text-white" /</ExternalLink className="w-4 h-4 text-white" />>
                     </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors"
-                    >
-                      <Github className="w-4 h-4 text-white" />
+                    </a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors"
+                    >>
+                      <Github className="w-4 h-4 text-white" /</Github className="w-4 h-4 text-white" />>
                     </a>
                   </div>
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium">
+                <div className="p-6"</div className="p-6">>
+                  <div className="flex items-center justify-between mb-4"</div className="flex items-center justify-between mb-4">>
+                    <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium"</span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium">>
                       {categories.find(cat => cat.id === project.category)?.name}
                     </span>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium">5.0</span>
+                    <div className="flex items-center text-yellow-400"</div className="flex items-center text-yellow-400">>
+                      <Star className="w-4 h-4 fill-current" /</Star className="w-4 h-4 fill-current" />>
+                      <span className="ml-1 text-sm font-medium"</span className="ml-1 text-sm font-medium">>5.0</span>
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2"</h3 className="text-xl font-semibold text-white mb-2">>{project.title}</h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed"</p className="text-gray-300 mb-4 text-sm leading-relaxed">>{project.description}</p>
 
                   {/* Technologies */}
-                  <div className="mb-4">
-                    <h4 className="text-white font-medium mb-2 text-sm">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
+                  <div className="mb-4"</div className="mb-4">>
+                    <h4 className="text-white font-medium mb-2 text-sm"</h4 className="text-white font-medium mb-2 text-sm">>Technologies:</h4>
+                    <div className="flex flex-wrap gap-2"</div className="flex flex-wrap gap-2">>
                       {project.technologies.map((tech) => (
-                        <span key={index} className="bg-slate-600 text-gray-300 px-2 py-1 rounded text-xs">
+                        <span key={index} className="bg-slate-600 text-gray-300 px-2 py-1 rounded text-xs"</span key={index} className="bg-slate-600 text-gray-300 px-2 py-1 rounded text-xs">>
                           {tech}
                         </span>
                       ))}
@@ -367,12 +385,12 @@ const PortfolioPage: React.FC = () => {
                   </div>
 
                   {/* Key Results */}
-                  <div className="mb-6">
-                    <h4 className="text-white font-medium mb-2 text-sm">Key Results:</h4>
-                    <ul className="space-y-1">
+                  <div className="mb-6"</div className="mb-6">>
+                    <h4 className="text-white font-medium mb-2 text-sm"</h4 className="text-white font-medium mb-2 text-sm">>Key Results:</h4>
+                    <ul className="space-y-1"</ul className="space-y-1">>
                       {project.results.slice(0, 2).map((result) => (
-                        <li key={index} className="flex items-center text-green-400 text-sm">
-                          <CheckCircle className="w-3 h-3 mr-2 flex-shrink-0" />
+                        <li key={index} className="flex items-center text-green-400 text-sm"</li key={index} className="flex items-center text-green-400 text-sm">>
+                          <CheckCircle className="w-3 h-3 mr-2 flex-shrink-0" /</CheckCircle className="w-3 h-3 mr-2 flex-shrink-0" />>
                           {result}
                         </li>
                       ))}
@@ -380,36 +398,41 @@ const PortfolioPage: React.FC = () => {
                   </div>
 
                   {/* Project Info */}
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>Client: {project.client}</span>
-                    <span>{project.duration}</span>
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4"</div className="flex items-center justify-between text-sm text-gray-400 mb-4">>
+                    <spa</spa>n>Client: {project.client}</span>
+                    <spa</spa>n>{project.duration}</span>
                   </div>
 
                   {/* Testimonial */}
-                  <div className="bg-slate-600/30 p-4 rounded-lg mb-4">
-                    <p className="text-gray-300 text-sm italic mb-2">"{project.testimonial.text}"</p>
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
-                        <span className="text-white text-xs font-bold">
+                  <div className="bg-slate-600/30 p-4 rounded-lg mb-4"</div className="bg-slate-600/30 p-4 rounded-lg mb-4">>
+                    <p className="text-gray-300 text-sm italic mb-2"</p className="text-gray-300 text-sm italic mb-2">>"{project.testimonial.text}"</p>
+                    <div className="flex items-center"</div className="flex items-center">>
+                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3"</div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3">>
+                        <span className="text-white text-xs font-bold"</span className="text-white text-xs font-bold">>
                           {project.testimonial.author.split(' ').map(n => n[0]).join('')}
                         </span>
                       </div>
-                      <div>
-                        <div className="text-white text-sm font-medium">{project.testimonial.author}</div>
-                        <div className="text-gray-400 text-xs">{project.testimonial.role}</div>
+                      <div</div>>
+                        <div className="text-white text-sm font-medium"</div className="text-white text-sm font-medium">>{project.testimonial.author}</div>
+                        <div className="text-gray-400 text-xs"</div className="text-gray-400 text-xs">>{project.testimonial.role}</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex space-x-3">
+                  <div className="flex space-x-3"</div className="flex space-x-3">>
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center text-sm flex items-center justify-center"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
+                    </a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center text-sm flex items-center justify-center"
+                    >>
+                      <ExternalLink className="w-4 h-4 mr-2" /</ExternalLink className="w-4 h-4 mr-2" />>
                       View Live
                     </a>
                     <a
@@ -417,8 +440,13 @@ const PortfolioPage: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 border border-slate-600 hover:border-cyan-400 text-gray-300 hover:text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center text-sm flex items-center justify-center"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
+                    </a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 border border-slate-600 hover:border-cyan-400 text-gray-300 hover:text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center text-sm flex items-center justify-center"
+                    >>
+                      <Github className="w-4 h-4 mr-2" /</Github className="w-4 h-4 mr-2" />>
                       View Code
                     </a>
                   </div>
@@ -428,37 +456,43 @@ const PortfolioPage: React.FC = () => {
           </div>
 
           {filteredProjects.length === 0 && (
-            <div className="text-center py-12">
-              <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-8 h-8 text-gray-400" />
+            <div className="text-center py-12"</div className="text-center py-12">>
+              <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4"</div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">>
+                <Search className="w-8 h-8 text-gray-400" /</Search className="w-8 h-8 text-gray-400" />>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">No projects found</h3>
-              <p className="text-gray-400">Try adjusting your search or filter criteria.</p>
+              <h3 className="text-xl font-semibold text-white mb-2"</h3 className="text-xl font-semibold text-white mb-2">>No projects found</h3>
+              <p className="text-gray-400"</p className="text-gray-400">>Try adjusting your search or filter criteria.</p>
             </div>
           )}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600"</section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">>
+        <div className="container mx-auto px-4 text-center"</div className="container mx-auto px-4 text-center">>
+          <h2 className="text-4xl font-bold text-white mb-4"</h2 className="text-4xl font-bold text-white mb-4">>Ready to Start Your Project?</h2>
+          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"</p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">>
             Join our portfolio of successful projects and transform your business with cutting-edge technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"</div className="flex flex-col sm:flex-row gap-4 justify-center items-center">>
             <Link
               to="/contact"
               className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
-            >
-              <Target className="w-5 h-5 mr-2" />
+            </Link
+              to="/contact"
+              className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
+            >>
+              <Target className="w-5 h-5 mr-2" /</Target className="w-5 h-5 mr-2" />>
               Start Your Project
             </Link>
             <Link
               to="/services"
               className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
-            >
-              <Rocket className="w-5 h-5 mr-2" />
+            </Link
+              to="/services"
+              className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
+            >>
+              <Rocket className="w-5 h-5 mr-2" /</Rocket className="w-5 h-5 mr-2" />>
               View Our Services
             </Link>
           </div>
@@ -469,3 +503,4 @@ const PortfolioPage: React.FC = () => {
 };
 
 export default PortfolioPage;
+""'"'}

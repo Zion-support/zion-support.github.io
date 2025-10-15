@@ -27,7 +27,7 @@ const ITSolutionsPage: React.FC = () => {
         'Increase system reliability'
       ],
       category: 'Infrastructure',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+      icon: <Cloud className="w-8 h-8 text-blue-400" /</Cloud className="w-8 h-8 text-blue-400" />>,
       popular: true
     },
     {
@@ -56,7 +56,7 @@ const ITSolutionsPage: React.FC = () => {
         'Maintain business continuity'
       ],
       category: 'Security',
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: <Shield className="w-8 h-8 text-green-400" /</Shield className="w-8 h-8 text-green-400" />>,
       popular: true
     },
     {
@@ -85,7 +85,7 @@ const ITSolutionsPage: React.FC = () => {
         'Scalable and maintainable code'
       ],
       category: 'Development',
-      icon: <Code className="w-8 h-8 text-purple-400" />,
+      icon: <Code className="w-8 h-8 text-purple-400" /</Code className="w-8 h-8 text-purple-400" />>,
       popular: false
     },
     {
@@ -114,7 +114,7 @@ const ITSolutionsPage: React.FC = () => {
         'Streamline business processes'
       ],
       category: 'Mobile',
-      icon: <Mobile className="w-8 h-8 text-orange-400" />,
+      icon: <Mobile className="w-8 h-8 text-orange-400" /</Mobile className="w-8 h-8 text-orange-400" />>,
       popular: false
     },
     {
@@ -143,7 +143,7 @@ const ITSolutionsPage: React.FC = () => {
         'Scale with business growth'
       ],
       category: 'Database',
-      icon: <Database className="w-8 h-8 text-cyan-400" />,
+      icon: <Database className="w-8 h-8 text-cyan-400" /</Database className="w-8 h-8 text-cyan-400" />>,
       popular: false
     },
     {
@@ -172,7 +172,7 @@ const ITSolutionsPage: React.FC = () => {
         'Support business growth'
       ],
       category: 'Networking',
-      icon: <Network className="w-8 h-8 text-red-400" />,
+      icon: <Network className="w-8 h-8 text-red-400" /</Network className="w-8 h-8 text-red-400" />>,
       popular: false
     }
   ];
@@ -183,25 +183,25 @@ const ITSolutionsPage: React.FC = () => {
     {
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud',
-      icon: <Cloud className="w-6 h-6 text-blue-400" />,
+      icon: <Cloud className="w-6 h-6 text-blue-400" /</Cloud className="w-6 h-6 text-blue-400" />>,
       benefits: ['Cost Reduction', 'Scalability', 'Reliability', 'Security']
     },
     {
       title: 'Security Hardening',
       description: 'Strengthen your security posture with comprehensive solutions',
-      icon: <Shield className="w-6 h-6 text-green-400" />,
+      icon: <Shield className="w-6 h-6 text-green-400" /</Shield className="w-6 h-6 text-green-400" />>,
       benefits: ['Threat Protection', 'Compliance', 'Risk Mitigation', 'Monitoring']
     },
     {
       title: 'Digital Transformation',
       description: 'Modernize your technology stack and processes',
-      icon: <Rocket className="w-6 h-6 text-purple-400" />,
+      icon: <Rocket className="w-6 h-6 text-purple-400" /</Rocket className="w-6 h-6 text-purple-400" />>,
       benefits: ['Efficiency', 'Innovation', 'Competitive Edge', 'Growth']
     },
     {
       title: 'System Integration',
       description: 'Connect and integrate your existing systems',
-      icon: <Settings className="w-6 h-6 text-orange-400" />,
+      icon: <Settings className="w-6 h-6 text-orange-400" /</Settings className="w-6 h-6 text-orange-400" />>,
       benefits: ['Automation', 'Efficiency', 'Data Flow', 'Productivity']
     }
   ];
@@ -252,49 +252,55 @@ const ITSolutionsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, web development, mobile apps, and database management. Expert technology services for your business." />
-        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, web development, mobile development, database management, network infrastructure" />
-        <meta property="og:title" content="IT Solutions - Comprehensive Technology Services" />
-        <meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, web development, mobile apps, and database management." />
-        <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
+      <Helmet</Helmet>>
+        <titl</titl>e>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, web development, mobile apps, and database management. Expert technology services for your business." /</meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, web development, mobile apps, and database management. Expert technology services for your business." />>
+        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, web development, mobile development, database management, network infrastructure" /</meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, web development, mobile development, database management, network infrastructure" />>
+        <meta property="og:title" content="IT Solutions - Comprehensive Technology Services" /</meta property="og:title" content="IT Solutions - Comprehensive Technology Services" />>
+        <meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, web development, mobile apps, and database management." /</meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, web development, mobile apps, and database management." />>
+        <meta property="og:url" content="https://ziontechgroup.com/it-solutions" /</meta property="og:url" content="https://ziontechgroup.com/it-solutions" />>
+        <link rel="canonical" href="https://ziontechgroup.com/it-solutions" /</link rel="canonical" href="https://ziontechgroup.com/it-solutions" />>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden"</section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">>
+        <div className="absolute inset-0 overflow-hidden"</div className="absolute inset-0 overflow-hidden">>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"</div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse">></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"</div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000">></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="container mx-auto px-4 relative z-10"</div className="container mx-auto px-4 relative z-10">>
+          <div className="text-center max-w-4xl mx-auto"</div className="text-center max-w-4xl mx-auto">>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"</h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">>
               IT Solutions
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"</span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">>
                 {' '}That Scale
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"</p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">>
               Comprehensive technology solutions designed to accelerate your digital transformation 
               and drive business growth with cutting-edge IT services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"</div className="flex flex-col sm:flex-row gap-4 justify-center items-center">>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center group"
-              >
+              </Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center group"
+              >>
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /</ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />>
               </Link>
               <Link
                 to="#pricing"
                 className="border-2 border-white/30 hover:border-blue-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
-              >
+              </Link
+                to="#pricing"
+                className="border-2 border-white/30 hover:border-blue-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
+              >>
                 View Pricing
-                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /</TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />>
               </Link>
             </div>
           </div>
@@ -302,33 +308,33 @@ const ITSolutionsPage: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-slate-800"</section className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               IT Solutions for Every Business Need
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               From cloud migration to security hardening, our IT solutions are designed to solve real business challenges.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"</div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">>
             {useCases.map((useCase) => (
-              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
-                <div className="mb-4 group-hover:scale-110 transition-transform">
+              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group"</div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">>
+                <div className="mb-4 group-hover:scale-110 transition-transform"</div className="mb-4 group-hover:scale-110 transition-transform">>
                   {useCase.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors"</h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">>
                   {useCase.title}
                 </h3>
-                <p className="text-gray-300 mb-4">
+                <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>
                   {useCase.description}
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2"</ul className="space-y-2">>
                   {useCase.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300"</li key={benefitIndex} className="flex items-center text-sm text-gray-300">>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />>
                       {benefit}
                     </li>
                   ))}
@@ -340,74 +346,82 @@ const ITSolutionsPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-slate-900"</section className="py-20 bg-slate-900">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               Our IT Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Choose from our comprehensive suite of IT services designed to transform your business operations.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"</div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">>
             {itServices.map((service) => (
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${
                 service.popular ? 'ring-2 ring-blue-500' : ''
-              }`}>
+              }`}</div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${
+                service.popular ? 'ring-2 ring-blue-500' : ''
+              }`}>>
                 {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"</div className="absolute -top-3 left-1/2 transform -translate-x-1/2">>
+                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold"</span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">>
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="group-hover:scale-110 transition-transform">
+                <div className="mb-6"</div className="mb-6">>
+                  <div className="flex items-center justify-between mb-4"</div className="flex items-center justify-between mb-4">>
+                    <div className="group-hover:scale-110 transition-transform"</div className="group-hover:scale-110 transition-transform">>
                       {service.icon}
                     </div>
-                    <span className="text-sm text-blue-400 font-medium">{service.category}</span>
+                    <span className="text-sm text-blue-400 font-medium"</span className="text-sm text-blue-400 font-medium">>{service.category}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors"</h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">>
                     {service.name}
                   </h3>
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="text-3xl font-bold text-blue-400">{service.price}</span>
-                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
+                  <div className="flex items-center space-x-2 mb-3"</div className="flex items-center space-x-2 mb-3">>
+                    <span className="text-3xl font-bold text-blue-400"</span className="text-3xl font-bold text-blue-400">>{service.price}</span>
+                    <span className="text-lg text-gray-400 line-through"</span className="text-lg text-gray-400 line-through">>{service.originalPrice}</span>
                   </div>
-                  <p className="text-gray-300 mb-4">
+                  <p className="text-gray-300 mb-4"</p className="text-gray-300 mb-4">>
                     {service.description}
                   </p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8"</ul className="space-y-3 mb-8">>
                   {service.features.slice(0, 5).map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"</li key={featureIndex} className="flex items-center text-sm text-gray-300">>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /</CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />>
                       {feature}
                     </li>
                   ))}
                   {service.features.length > 5 && (
-                    <li className="text-sm text-blue-400 font-medium">
+                    <li className="text-sm text-blue-400 font-medium"</li className="text-sm text-blue-400 font-medium">>
                       +{service.features.length - 5} more features
                     </li>
                   )}
                 </ul>
 
-                <div className="space-y-4">
+                <div className="space-y-4"</div className="space-y-4">>
                   <Link
                     to={`/${service.id}`}
                     className="block w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                  >
+                  </Link
+                    to={`/${service.id}`}
+                    className="block w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  >>
                     Learn More
                   </Link>
                   <Link
                     to="/contact"
                     className="block w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  </Link
+                    to="/contact"
+                    className="block w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
+                  >>
                     Start Free Trial
                   </Link>
                 </div>
@@ -418,40 +432,42 @@ const ITSolutionsPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section id="pricing" className="py-20 bg-slate-800"</section id="pricing" className="py-20 bg-slate-800">>
+        <div className="container mx-auto px-4"</div className="container mx-auto px-4">>
+          <div className="text-center mb-16"</div className="text-center mb-16">>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
               IT Solutions Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"</p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Choose the perfect IT solution plan for your business. All plans include 14-day free trial.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"</div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">>
             {pricingTiers.map((tier) => (
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                 tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
-              }`}>
+              }`}</div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
+              }`}>>
                 {tier.popular && (
-                  <div className="text-center mb-4">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="text-center mb-4"</div className="text-center mb-4">>
+                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold"</span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">>
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{tier.price}</div>
-                  <p className="text-gray-300">{tier.description}</p>
+                <div className="text-center mb-8"</div className="text-center mb-8">>
+                  <h3 className="text-2xl font-bold text-white mb-2"</h3 className="text-2xl font-bold text-white mb-2">>{tier.name}</h3>
+                  <div className="text-4xl font-bold text-blue-400 mb-2"</div className="text-4xl font-bold text-blue-400 mb-2">>{tier.price}</div>
+                  <p className="text-gray-300"</p className="text-gray-300">>{tier.description}</p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8"</ul className="space-y-4 mb-8">>
                   {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-gray-300"</li key={featureIndex} className="flex items-center text-gray-300">>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /</CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />>
                       {feature}
                     </li>
                   ))}
@@ -464,7 +480,14 @@ const ITSolutionsPage: React.FC = () => {
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white'
                       : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
                   }`}
-                >
+                </Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white'
+                      : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+                  }`}
+                >>
                   Get Started
                 </Link>
               </div>
@@ -474,25 +497,31 @@ const ITSolutionsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600"</section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">>
+        <div className="container mx-auto px-4 text-center"</div className="container mx-auto px-4 text-center">>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"</h2 className="text-4xl md:text-5xl font-bold text-white mb-6">>
             Ready to Transform Your IT Infrastructure?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"</p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">>
             Transform your business with our cutting-edge IT solutions. Start your free trial today and see the difference our technology can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"</div className="flex flex-col sm:flex-row gap-4 justify-center">>
             <Link
               to="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
+            </Link
+              to="/contact"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >>
               Start Free Trial
             </Link>
             <Link
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
+            </Link
+              to="/demo"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+            >>
               Schedule Demo
             </Link>
           </div>
@@ -503,3 +532,4 @@ const ITSolutionsPage: React.FC = () => {
 };
 
 export default ItSolutionsPage;
+""'"'

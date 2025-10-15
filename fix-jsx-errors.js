@@ -1,194 +1,125 @@
 #!/usr/bin/env node
-import fs from "fs"
-import path from "path"
-import { fileURLToPath } from "url"
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Function to fix common JSX syntax errors
-function fixJSXContent(content) {}
-}// Remove duplicate function declarations
-  content = content.replace()
-    /export default function \w+\(\) \{\s*return \(\s*export default function \w+\(\) \{\s*return \(/g,
-    "export default function Page() {\n  return (",
-  )
-  // Fix malformed JSX tags
-  content = content.replace(/<div><div><\/div><\/div><\/div>/g, "")
-  content = content.replace(/<div><\/div>/g, "")
-  content = content.replace(/<div><div>/g, "<div>")
-  content = content.replace(/<\/div><\/div>/g, "</div>")
-  // Fix broken closing tags
-  content = content.replace()
-    /<title>([^<]+)<div><div><\/title>/g,
-    "<title>$1</title>",
-  )
-  content = content.replace()
-    /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g,
-    "<meta$1 />",
-  )
-  content = content.replace(/<Helmet><\/div><\/div>/g, "</Helmet>")
-  content = content.replace(/<p([^>]+)><div><\/p>/g, "<p$1></p>")
-  // Fix broken Link components
-  content = content.replace()
-    /<Link;<\/Link><div><\/Link><\/div><\/div><\/div>/g,
-    "",
-  )
-  content = content.replace()
-    /<Link([^>]*)><\/Link>/g,
-    "<Link$1>Contact Us</Link>",
-  )
-  content = content.replace(/Contact Us;/g, "Contact Us")
-  // Fix broken ArrowRight components
-  content = content.replace()
-    /<ArrowRight className="w-5h-5ml-2"><\/ArrowRight>/g,
-    '<ArrowRight className="w-5 h-5 ml-2" />',
-  )
-  content = content.replace()
-    /<ArrowRight className="ml-2 h-5 w-5" \/>/g,
-    '<ArrowRight className="ml-2 h-5 w-5" />',
-  )
-  // Fix malformed JSX structure
-  content = content.replace()
-    /<div className="min-h-screen[^"]*"><\/div><div><div><\/div><\/div><\/div>/g,
-    '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">',
-  )
-  content = content.replace()
-    /<div className="max-w-7xl[^"]*"><div><\/div><\/div><\/div><\/div>/g,
-    '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">',
-  )
-  // Remove orphaned closing tags
-  content = content.replace()
-    /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g,
-    "</div>",
-  )
-  content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>")
-  // Fix missing imports
-  if (content.includes("Helmet") && !content.includes("import { Helmet }
-}")) {}
-    content = content.replace()
-      /import React from 'react';/,
-      `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`,
-    )
-  }
-  if (content.includes("Link") && !content.includes("import { Link }")) {}
-    content = content.replace()
-      /import React from 'react';/,
-      `import React from 'react';\nimport { Link } from 'react-router-dom';`,
-    )
-  }
-  if ()
-    content.includes("ArrowRight") &&
-    !content.includes("import { ArrowRight }")
-  ) {}
-    content = content.replace()
-      /import React from 'react';/,
-      `import React from 'react';\nimport { ArrowRight } from 'lucide-react';`,
-    )
-  }
-  return content
-}
-// Function to create a proper page structure
-function createProperPageStructure(pageName, title, description) {}
-}return `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
-export default function ${pageName}() {}
-  return ()
-    <div>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-</div>
-  )
-}`
-}
-// Function to process a single file
-function processFile(filePath) {}
-}try {}
-} catch (error) {}
-  console.error(error)
-}const content = fs.readFileSync(filePath, "utf8")
-    // Check if file is severely corrupted
-    if ()
-      content.includes("export default function") &&
-      content.split("export default function").length > 2
-    ) {}
-      console.log(`Fixing severely corrupted file: ${filePath}`)
-      // Extract page name from file path
-      const pathParts = filePath.split("/")
-      const fileName = pathParts[pathParts.length - 2]; // Get directory name
-      const pageName =
-        fileName
-          .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join("") + "Page"
-      const title = fileName
-        .split("-")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ")
-      const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`
-      const newContent = createProperPageStructure()
-        pageName,
-        title,
-        description,
-      )
-      fs.writeFileSync(filePath, newContent)
-      console.log(`Fixed: ${filePath}`)
-    } else {}
-      // Try to fix the existing content
-      const fixedContent = fixJSXContent(content)
-      if (fixedContent !== content) {}
-        fs.writeFileSync(filePath, fixedContent)
-        console.log(`Fixed: ${filePath}`)
-      }
+
+import fs from 'fs';
+import path from 'path';
+
+// Function to fix JSX and syntax errors in a file
+function fixJSXErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix unterminated string literals
+    if (content.match(/"[^"]*$/)) {
+      content = content.replace(/"([^"]*)$/, '"$1"');
+      modified = true;
     }
-  } catch (error) {}
-    console.error(`Error processing ${filePath}:`, error.message)
+
+    if (content.match(/'[^']*$/)) {
+      content = content.replace(/'([^']*)$/, "'$1'");
+      modified = true;
+    }
+
+    // Fix missing catch or finally clauses
+    if (content.includes('try {') && !content.includes('catch') && !content.includes('finally')) {
+      content = content.replace(/try\s*\{[^}]*\}/g, (match) => {
+        return match + '\n  } catch (error) {\n    console.error(error);\n  }';
+      });
+      modified = true;
+    }
+
+    // Fix JSX syntax issues - add missing closing tags
+    content = content.replace(/<([^</([^>>]+)(?![^<]*\/</]*\/>>)(?![^<]*</]*><\/\1>)/g, (match, tagName) => {
+      if (!match.endsWith('/>') && !match.includes('</')) {
+        return match + `</${tagName}>`;
+      }
+      return match;
+    });
+
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    if (openBraces > closeBraces) {
+      content += '}'.repeat(openBraces - closeBraces);
+      modified = true;
+    }
+
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    if (openParens > closeParens) {
+      content += ')'.repeat(openParens - closeParens);
+      modified = true;
+    }
+
+    // Fix missing closing brackets
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+    if (openBrackets > closeBrackets) {
+      content += ']'.repeat(openBrackets - closeBrackets);
+      modified = true;
+    }
+
+    // Fix common React import issues
+    if (content.includes('import React from "react"') && !content.includes('React.')) {
+      content = content.replace(/import React from "react";\s*/, '');
+      modified = true;
+    }
+
+    // Fix empty files or files with only whitespace
+    if (content.trim() === '') {
+      content = `export default function Component() {
+  return <di</di>v>Component</div>;
+}`;
+      modified = true;
+    }
+
+    // Fix specific parsing errors
+    content = content.replace(/import\s+.*?from\s+['"][^'"]*$/gm, (match) => {
+      if (!match.endsWith(';')) {
+        return match + ';';
+      }
+      return match;
+    });
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed JSX errors in: ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
+  return false;
 }
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {}
-}const files = []
-  function traverse(currentDir) {}
-}const items = fs.readdirSync(currentDir)
-    for (const item of items) {}
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
-      if ()
-        stat.isDirectory() &&
-        !item.startsWith(".") &&
-        item !== "node_modules"
-      ) {}
-        traverse(fullPath)
-      } else if (item.endsWith(".tsx") && !item.includes(".original")) {}
-        files.push(fullPath)
+
+// Function to recursively find and fix files
+function fixFilesInDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      // Skip node_modules and other directories we don't want to modify
+      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(file)) {
+        fixedCount += fixFilesInDirectory(filePath);
+      }
+    } else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
+      if (fixJSXErrors(filePath)) {
+        fixedCount++;
       }
     }
   }
-  traverse(dir)
-  return files
+
+  return fixedCount;
 }
+
 // Main execution
-const appDir = path.join(__dirname, "app")
-const tsxFiles = findTsxFiles(appDir)
-console.log(`Found ${tsxFiles.length} .tsx files to process`)
-let fixedCount = 0
-for (const file of tsxFiles) {}
-  processFile(file)
-  fixedCount++
-}
-console.log(`Processed ${fixedCount} files`)
+console.log('Starting JSX error resolution...');
+const fixedCount = fixFilesInDirectory('/workspace');
+console.log(`Fixed ${fixedCount} files`);
+
+console.log('JSX error resolution completed!');"'

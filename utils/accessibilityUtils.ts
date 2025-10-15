@@ -167,7 +167,18 @@ export const colorContrast = {}
     return (brightest + 0.05) / (darkest + 0.05)
   },
   // Check if contrast meets WCAG standards
-  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {}
+  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean =</= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)
+      })
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b
+    }
+    const lum1 = getLuminance(color1)
+    const lum2 = getLuminance(color2)
+    const brightest = Math.max(lum1, lum2)
+    const darkest = Math.min(lum1, lum2)
+    return (brightest + 0.05) / (darkest + 0.05)
+  },
+  // Check if contrast meets WCAG standards
+  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean =>> {}
 }const ratio = colorContrast.getContrastRatio(color1, color2)
     return level === 'AA' ? ratio >= 4.5 : ratio >= 7
   }
@@ -197,4 +208,4 @@ export const screenReader = {}
 }element.removeAttribute('aria-hidden')
   }
 }
-export default accessibilityManager
+export default accessibilityManager""'"'

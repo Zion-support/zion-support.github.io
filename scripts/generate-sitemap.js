@@ -25,16 +25,16 @@ function getAllRoutes() {}
 function generateSitemap() {}
 }const routes = getAllRoutes()
   const baseUrl = 'https://ziontechgroup.com'
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?</?xml version="1.0" encoding="UTF-8"?>>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"</urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">>
 ${pages
   .map(
-    (page) => `  <url>
-    <loc>${baseUrl}${page.url}</loc>
-    <changefreq>${page.changefreq}</changefreq>    <priority>${page.priority}</priority>
+    (page) => `  <url</url>>
+    <lo</lo>c>${baseUrl}${page.url}</loc>
+    <changefre</changefre>q>${page.changefreq}</changefreq>    <priorit</priorit>y>${page.priority}</priority>
   </url>`,
   )
-  .join("\n")}
+  .join("\n")};
 </urlset>`;
   // Write to public directory;
 const publicDir = path.join(__dirname, '../public')
@@ -44,4 +44,4 @@ const publicDir = path.join(__dirname, '../public')
   fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);
 };
 
-generateSitemap();
+generateSitemap();""'"'

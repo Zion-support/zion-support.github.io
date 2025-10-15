@@ -5,7 +5,7 @@ interface ContentNewsletterSignupProps {
   className?: string;
 }
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps</ContentNewsletterSignupProps>> = ({
   className = "", }) => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -30,9 +30,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     return ()
       <div
         className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
-      >
-        <CheckCircle className="w-8 h-8 mx-auto mb-2" />
-        <h3 className="text-lg font-semibold mb-2">
+      </div
+        className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
+      >>
+        <CheckCircle className="w-8 h-8 mx-auto mb-2" /</CheckCircle className="w-8 h-8 mx-auto mb-2" />>
+        <h3 className="text-lg font-semibold mb-2"</h3 className="text-lg font-semibold mb-2">>
           Thank you for subscribing!
         </h3>
         <p>You'll receive our latest updates and exclusive content.</p>
@@ -42,16 +44,18 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 
   return (<div
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
-    >
-      <div className="text-center mb-6">
-        <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-        <p className="text-gray-300">
+    </div
+      className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
+    >>
+      <div className="text-center mb-6"</div className="text-center mb-6">>
+        <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" /</Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />>
+        <h3 className="text-2xl font-bold text-white mb-2"</h3 className="text-2xl font-bold text-white mb-2">>Stay Updated</h3>
+        <p className="text-gray-300"</p className="text-gray-300">>
           Get the latest AI and tech insights delivered to your inbox.
         </p>
       </div>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
+      <form onSubmit={handleSubmit} className="space-y-4"</form onSubmit={handleSubmit} className="space-y-4">>
+        <div</div>>
           <input
             type="email"
             value={email}
@@ -65,14 +69,18 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           type="submit"
           disabled={isLoading}
           className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
+        </button
+          type="submit"
+          disabled={isLoading}
+          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        >>
           {isLoading ? "Subscribing..." : "Subscribe Now"}
         </button>
       </form>
-      <p className="text-xs text-gray-400 text-center mt-4">
+      <p className="text-xs text-gray-400 text-center mt-4"</p className="text-xs text-gray-400 text-center mt-4">>
         We respect your privacy. Unsubscribe at any time.
       </p>
     </div>
   )
 }
-export default ContentNewsletterSignup
+export default ContentNewsletterSignup""'"'
