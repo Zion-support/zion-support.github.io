@@ -22,7 +22,17 @@ const PerformanceMonitor: React.FC = () => {
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log(`[Web Vitals] ${metric.name}:`, metric.value);
+      // Use a more structured logging approach
+      const logData = {
+        type: 'Web Vitals',
+        metric: metric.name,
+        value: metric.value,
+        timestamp: new Date().toISOString(),
+      };
+      // Only log in development and if console is available
+      if (typeof console !== 'undefined' && console.log) {
+        console.log('[Performance]', logData);
+      }
     }
   }, []);
 
@@ -34,8 +44,16 @@ const PerformanceMonitor: React.FC = () => {
         const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
         
         if (process.env.NODE_ENV === 'development') {
-          console.log(`[Performance] Page Load Time: ${loadTime}ms`);
-          console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);
+          // Use structured logging
+          const logData = {
+            type: 'Performance',
+            pageLoadTime: loadTime,
+            domContentLoaded: domContentLoaded,
+            timestamp: new Date().toISOString(),
+          };
+          if (typeof console !== 'undefined' && console.log) {
+            console.log('[Performance]', logData);
+          }
         }
       }
     }
@@ -88,7 +106,15 @@ const PerformanceMonitor: React.FC = () => {
         if (entry.entryType === 'resource') {
           const resource = entry as PerformanceResourceTiming;
           if (resource.duration > 1000) { // Log resources taking more than 1 second
-            console.warn(`[Performance] Slow resource: ${resource.name} took ${resource.duration}ms`);
+            const logData = {
+              type: 'Performance Warning',
+              resource: resource.name,
+              duration: resource.duration,
+              timestamp: new Date().toISOString(),
+            };
+            if (typeof console !== 'undefined' && console.warn) {
+              console.warn('[Performance]', logData);
+            }
           }
         }
       }
