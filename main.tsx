@@ -1,10 +1,10 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
-import "./index.css";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import './index.css';
 
 // Ensure scheduler is properly initialized
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
   if (!window.performance || !window.performance.now) {
     window.performance = window.performance || {};
@@ -12,17 +12,14 @@ if (typeof window !== "undefined") {
   }
 }
 
-const container = document.getElementById("root");
-if (!container) {
-  throw new Error("Root element not found");
-}
-
-const root = createRoot(container);
+const root = createRoot(
+  document.getElementById('root') as HTMLElement
+);
 
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
 // Register service worker for PWA functionality
@@ -31,14 +28,12 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw.js")
       .then((registration) => {
-        if (process.env.NODE_ENV === "development") {
-          console.log("Service Worker registered successfully:", registration);
-        }
+        // Service worker registered successfully
+        console.log('Service worker registered:', registration);
       })
-      .catch((error) => {
-        if (process.env.NODE_ENV === "development") {
-          console.error("Service Worker registration failed:", error);
-        }
+      .catch((registrationError) => {
+        // Service worker registration failed
+        console.log('Service worker registration failed:', registrationError);
       });
   });
 }
