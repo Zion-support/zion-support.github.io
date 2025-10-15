@@ -38,41 +38,63 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
-      name: 'Services', 
-      href: '/services', 
-      icon: BriefcaseIcon,
+      name: 'AI Services', 
+      href: '/ai-solutions', 
+      icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise', icon: CpuChipIcon },
+        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: CpuChipIcon },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: CpuChipIcon },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: CpuChipIcon },
+        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CpuChipIcon },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: CpuChipIcon },
+        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', icon: CpuChipIcon },
+        { name: 'AI Climate Prediction Engine', href: '/ai-climate-prediction-engine', icon: CpuChipIcon },
+        { name: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro', icon: ShieldCheckIcon }
+      ]
+    },
+    { 
+      name: 'IT Services', 
+      href: '/it-solutions', 
+      icon: CogIcon,
+      submenu: [
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Software Development', href: '/software-development', icon: CogIcon },
+        { name: 'Data Management', href: '/data-management', icon: CogIcon },
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
+        { name: 'IT Support & Maintenance', href: '/it-support', icon: CogIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
     { 
-      name: 'Solutions', 
-      href: '/solutions', 
-      icon: CogIcon,
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions', 
+      icon: GlobeAltIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon }
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: GlobeAltIcon },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: GlobeAltIcon },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: GlobeAltIcon },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: GlobeAltIcon },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: GlobeAltIcon },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: GlobeAltIcon },
+        { name: 'All Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon }
       ]
     },
     { name: 'Resources', href: '#', icon: DocumentTextIcon, submenu: [
       { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
       { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
       { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
-      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
+      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+      { name: 'API Documentation', href: '/api-docs', icon: DocumentTextIcon },
+      { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
     ]},
     { name: 'Company', href: '#', icon: UserGroupIcon, submenu: [
       { name: 'About Us', href: '/about', icon: InformationCircleIcon },
-      { name: 'Team', href: '/team', icon: UserGroupIcon },
+      { name: 'Our Team', href: '/team', icon: UserGroupIcon },
       { name: 'Careers', href: '/careers', icon: UserGroupIcon },
+      { name: 'Partnerships', href: '/partnerships', icon: UserGroupIcon },
       { name: 'Contact', href: '/contact', icon: PhoneIcon }
     ]},
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },

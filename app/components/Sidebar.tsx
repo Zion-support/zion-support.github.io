@@ -18,7 +18,13 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Calculator,
+  Eye,
+  FileText,
+  Network,
+  CheckCircle,
+  Globe
 } from 'lucide-react'
 
 interface SidebarProps {
@@ -43,46 +49,47 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   }, [])
 
   const aiServices = useMemo(() => [
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Computer Vision', path: '/ai-computer-vision', icon: <Eye className="w-4 h-4" /> },
+    { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro', icon: <FileText className="w-4 h-4" /> },
+    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Automation Platform', path: '/ai-automation-platform', icon: <Settings className="w-4 h-4" /> },
+    { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', icon: <Network className="w-4 h-4" /> },
+    { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant', icon: <Calculator className="w-4 h-4" /> },
+    { name: 'AI Climate Prediction Engine', path: '/ai-climate-prediction-engine', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity Suite Pro', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> }
   ], [])
 
   const itServices = useMemo(() => [
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
-    { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
-    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Software Development', path: '/software-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Data Management', path: '/data-management', icon: <Database className="w-4 h-4" /> },
+    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Network className="w-4 h-4" /> },
+    { name: 'IT Support & Maintenance', path: '/it-support', icon: <Settings className="w-4 h-4" /> },
+    { name: 'Digital Transformation', path: '/digital-transformation', icon: <Zap className="w-4 h-4" /> },
+    { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
-    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
-    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
-    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
-    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Task Manager Pro', path: '/task-manager-pro', icon: <CheckCircle className="w-4 h-4" />, featured: true },
+    { name: 'Analytics Dashboard', path: '/analytics-dashboard', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Customer Support Hub', path: '/customer-support-hub', icon: <Users className="w-4 h-4" />, featured: true },
+    { name: 'Inventory Manager', path: '/inventory-manager', icon: <Database className="w-4 h-4" /> },
+    { name: 'Social Media Scheduler', path: '/social-media-scheduler', icon: <Globe className="w-4 h-4" /> },
+    { name: 'Expense Tracker Pro', path: '/expense-tracker-pro', icon: <Calculator className="w-4 h-4" /> },
+    { name: 'All Micro SaaS Solutions', path: '/micro-saas-solutions', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
     { name: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
     { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
-    { name: 'Services', path: '/services', icon: <Settings className="w-4 h-4" /> },
-    { name: 'Micro SAAS', path: '/micro-saas-services', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Services', path: '/ai-solutions', icon: <Brain className="w-4 h-4" /> },
+    { name: 'IT Services', path: '/it-solutions', icon: <Settings className="w-4 h-4" /> },
+    { name: 'Micro SAAS', path: '/micro-saas-solutions', icon: <Zap className="w-4 h-4" /> },
     { name: 'Pricing', path: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Case Studies', path: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Blog', path: '/blog', icon: <Brain className="w-4 h-4" /> },
+    { name: 'Blog', path: '/blog', icon: <FileText className="w-4 h-4" /> },
     { name: 'Contact', path: '/contact', icon: <Phone className="w-4 h-4" /> }
   ], [])
 
