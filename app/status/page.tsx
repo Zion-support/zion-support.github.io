@@ -74,8 +74,8 @@ const incidents = [
         },
         {
           time: '2024-01-20T14:30:00Z',
-          message: 'We are investigating reports of slow file upload performance.']
-        }]]
+          message: 'We are investigating reports of slow file upload performance.'
+        }]
     },
     {
       id: 2,

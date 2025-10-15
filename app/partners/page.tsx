@@ -23,8 +23,8 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "AWS certified solutions",
         "Cost optimization services",
-        "Migration expertise"]
-        "24/7 cloud support"]]
+        "Migration expertise",
+        "24/7 cloud support"]
     },
     {
       name: "Google Cloud",

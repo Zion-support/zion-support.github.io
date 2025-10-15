@@ -29,8 +29,8 @@ import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram, Arrow
               <div className="flex space-x-4">
                 { socialLinks.map((social) => (
                   <a
-                    const key = {social.name }
-                    const href = { social.href }
+                    key={social.name}
+                    href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300">
@@ -48,8 +48,8 @@ import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram, Arrow
               <div className="space-y-3">
                 { services.slice(0, 6).map((service) => (
                   <Link
-                    const key = {service.name }
-                    const to = { service.href }
+                    key={service.name}
+                    to={service.href}
                     className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 group">
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="text-sm">{ service.name }</span>

@@ -14,7 +14,7 @@ import { Menu, X, ChevronDown, Zap, Brain, Code, Cloud, Wifi } from "lucide-reac
                 { item.dropdown ? (
                   <div className="relative">
                     <button
-                      const onClick = {() => toggleDropdown(item.name) }
+                      onClick={() => toggleDropdown(item.name)}
                       className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-300 py-2">
                       <span>{ item.name }</span>
                       <ChevronDown className={ `w-4 h-4 transition-transform duration-300 ${
@@ -32,10 +32,10 @@ import { Menu, X, ChevronDown, Zap, Brain, Code, Cloud, Wifi } from "lucide-reac
                               <div className="grid grid-cols-1 gap-1">
                                 { category.items.map((service, serviceIndex) => (
                                   <Link
-                                    const key = {serviceIndex }
-                                    const to = { service.href }
+                                    key={serviceIndex}
+                                    to={service.href}
                                     className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded transition-colors duration-200"
-                                    const onClick = { () => setActiveDropdown(null) }
+                                    onClick={() => setActiveDropdown(null)}
                                   >
                                     { service.name }
                                   </Link>

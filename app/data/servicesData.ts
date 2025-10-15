@@ -1,13 +1,14 @@
-export interface ServiceData { id: string;
+export interface ServiceData {
+  id: string;
   name: string;
   description: string;
   category: string;
-  features: string[];,
+  features: string[];
   pricing: {
-    },
     starter: number;
-    professional: number;}
-    enterprise: number; };
+    professional: number;
+    enterprise: number;
+  };
   icon: string;
 }
 export const servicesData: ServiceData[] = [
@@ -17,10 +18,10 @@ export const servicesData: ServiceData[] = [
     category: 'AI',
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
     pricing: {
-      },
       starter: 1000,
-      professional: 2500,}
-      enterprise: 5000 },
+      professional: 2500,
+      enterprise: 5000
+    },
     icon: 'robot'
   },
   { id: 'cloud-migration',
@@ -29,10 +30,10 @@ export const servicesData: ServiceData[] = [
     category: 'Cloud',
     features: ['Infrastructure Migration', 'Data Migration', 'Security Setup'],
     pricing: {
-      },
       starter: 2000,
-      professional: 5000,}
-      enterprise: 10000 },
+      professional: 5000,
+      enterprise: 10000
+    },
     icon: 'cloud'
   },
   { id: 'cybersecurity',

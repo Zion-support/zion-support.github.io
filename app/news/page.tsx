@@ -124,7 +124,8 @@ const featuredArticle = newsArticles.find(article => article.featured);
                   
         <div className="md:w-1/2">
                     <img
-    const src = {featuredArticle.image} alt={featuredArticle.title}
+                      src={featuredArticle.image} 
+                      alt={featuredArticle.title}
                       className="w-full h-64 md:h-full object-cover"
                     />
                   </div>
@@ -156,8 +157,9 @@ const featuredArticle = newsArticles.find(article => article.featured);
                         </div>
                       </div>
                       <a
-    const href = {featuredArticle.external ? featuredArticle.externalUrl : `/news/${featuredArticle.id}`}
-                        const target = {featuredArticle.external ? "_blank" : "_self"} rel={featuredArticle.external ? "noopener noreferrer" : ""}
+                        href={featuredArticle.external ? featuredArticle.externalUrl : `/news/${featuredArticle.id}`}
+                        target={featuredArticle.external ? "_blank" : "_self"} 
+                        rel={featuredArticle.external ? "noopener noreferrer" : ""}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read More</span>
@@ -182,7 +184,8 @@ const featuredArticle = newsArticles.find(article => article.featured);
         <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
-    const key = {category} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                  key={category} 
+                  className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                     category === 'All'
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800/50 text-gray-300 hover: bg-cyan-500/20 hover:text-cyan-400'
@@ -204,7 +207,8 @@ const featuredArticle = newsArticles.find(article => article.featured);
               {newsArticles.filter(article => !article.featured).map((article) => (
                 <article key={article.id} className="bg-white/10 backdrop-blur-sm border border-cyan-500/20 rounded-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group">
                   <img
-    const src = {article.image} alt={article.title}
+    src={article.image} 
+    alt={article.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   
@@ -237,8 +241,9 @@ const featuredArticle = newsArticles.find(article => article.featured);
                         </div>
                       </div>
                       <a
-    const href = {article.external ? article.externalUrl : `/news/${article.id}`}
-                        const target = {article.external ? "_blank" : "_self"} rel={article.external ? "noopener noreferrer" : ""}
+    href={article.external ? article.externalUrl : `/news/${article.id}`}
+                        target={article.external ? "_blank" : "_self"} 
+                        rel={article.external ? "noopener noreferrer" : ""}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read</span>

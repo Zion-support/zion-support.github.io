@@ -11,8 +11,8 @@ const SecurityPage: React.FC = () => {
       details: [
         'TLS 1.3 for data in transit',
         'AES-256 for data at rest',
-        'Perfect Forward Secrecy']
-        'Encrypted backups']]
+        'Perfect Forward Secrecy',
+        'Encrypted backups']
     },
     {
       icon: <Lock className="w-8 h-8" />,
@@ -21,8 +21,8 @@ const SecurityPage: React.FC = () => {
       details: [
         'Role-based access control (RBAC)',
         'Multi-factor authentication (MFA)',
-        'Single Sign-On (SSO) integration']
-        'Regular access reviews']]
+        'Single Sign-On (SSO) integration',
+        'Regular access reviews']
     },
     {
       icon: <Eye className="w-8 h-8" />,

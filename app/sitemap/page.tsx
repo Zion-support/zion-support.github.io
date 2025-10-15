@@ -11,8 +11,8 @@ const SitemapPage: React.FC = () => {
         { name: 'About Us', url: '/about', description: 'Company information and team' },
         { name: 'Contact', url: '/contact', description: 'Get in touch with us' },
         { name: 'Portfolio', url: '/portfolio', description: 'Our work and projects' },
-        { name: 'Blog', url: '/blog', description: 'Latest news and insights' }]
-        { name: 'Demo', url: '/demo', description: 'Schedule a product demo' }]]
+        { name: 'Blog', url: '/blog', description: 'Latest news and insights' },
+        { name: 'Demo', url: '/demo', description: 'Schedule a product demo' }]
     },
     {
       title: 'AI Services',
