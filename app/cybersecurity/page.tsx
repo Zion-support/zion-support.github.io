@@ -4,18 +4,10 @@ import SEOHead from '../components/SEOHead';
 const CybersecurityPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Cybersecurity Services - Zion Tech Group | Advanced Security Solutions</title>
-        <meta
-          name="description"
-          content="Comprehensive cybersecurity services including AI-powered threat detection, security monitoring, network security, and security automation. Protect your business with advanced security solutions."
-        />
-        <meta
-          name="keywords"
-          content="cybersecurity, security services, threat detection, security monitoring, network security, security automation, AI security, penetration testing, vulnerability assessment"
-        />
-      </Helmet>
+      <SEOHead 
+        title="Cybersecurity Services - Zion Tech Group | Advanced Security Solutions"
+        description="Comprehensive cybersecurity services including AI-powered threat detection, security monitoring, network security, and security automation. Protect your business with advanced security solutions."
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
@@ -224,8 +216,6 @@ const CybersecurityPage: React.FC = () => {
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Don&apos;t wait for a security breach. Get comprehensive protection with our advanced cybersecurity solutions.
               </p>
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -244,17 +234,6 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
-      <SEOHead 
-        title="cybersecurity - Zion Tech Group"
-        description="Zion Tech Group cybersecurity service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">cybersecurity</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
       </div>
     </>
   );
