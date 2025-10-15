@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug, Mail } from 'lucide-react';
 
 interface Props {
@@ -35,7 +35,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -91,8 +91,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
-        error: undefined,
-        errorInfo: undefined,
         retryCount: prevState.retryCount + 1
       }));
     }
@@ -101,8 +99,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   handleReset = () => {
     this.setState({
       hasError: false,
-      error: undefined,
-      errorInfo: undefined,
       retryCount: 0
     });
   };
@@ -123,7 +119,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.open(mailtoLink);
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
