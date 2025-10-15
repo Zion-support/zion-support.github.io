@@ -18,9 +18,14 @@ const AiSolutionsPage: React.FC = () => {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export default AiSolutionsPage;'";'";
 =======
 
 export default AiSolutionsPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+=======
+;
+export default AiSolutionsPage;'";'";
+>>>>>>> cursor/comprehensive-app-audit-and-update-5693
