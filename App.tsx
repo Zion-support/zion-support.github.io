@@ -51,6 +51,8 @@ const ZionAIWorkflowAutomatorPage = lazy(() => import('./app/zion-ai-workflow-au
 const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow-automator-pro/page'));
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
+const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
+const ZionAIProjectManagerPage = lazy(() => import('./app/zion-ai-project-manager/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -158,6 +160,8 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
+                  <Route path="/zion-ai-project-manager" element={<ZionAIProjectManagerPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={
