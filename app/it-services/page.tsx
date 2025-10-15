@@ -1,6 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { servicesData } from '../data/servicesData';
+import FuturisticBackground from '../components/FuturisticBackground';
+import FuturisticCard from '../components/FuturisticCard';
+import NeonButton from '../components/NeonButton';
 
 const ITServicesPage: React.FC = () => {
   return (
@@ -11,28 +14,24 @@ const ITServicesPage: React.FC = () => {
         <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, data analytics, mobile development, web development" />
       </Helmet>
       
-      <div className="min-h-screen relative overflow-hidden">
+      <FuturisticBackground className="min-h-screen">
         {/* Hero Section */}
         <section className="relative py-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-          <div className="cyber-grid absolute inset-0 opacity-20"></div>
-          <div className="particles absolute inset-0"></div>
-          
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="holographic">IT Services</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+              IT Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive <span className="text-pink-400 font-semibold">IT solutions</span> to power your 
               digital transformation and business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="cyber-button text-lg px-8 py-4">
+              <NeonButton to="/services" variant="primary" size="lg">
                 Explore Services
-              </button>
-              <button className="cyber-button text-lg px-8 py-4 border-pink-400 text-pink-400 hover:border-pink-300 hover:text-pink-300">
+              </NeonButton>
+              <NeonButton to="/contact" variant="secondary" size="lg">
                 Get Consultation
-              </button>
+              </NeonButton>
             </div>
           </div>
         </section>
@@ -41,8 +40,8 @@ const ITServicesPage: React.FC = () => {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="gradient-text">IT Solutions</span>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent mb-6">
+                Our IT Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 End-to-end IT services designed to modernize and secure your business
@@ -51,7 +50,7 @@ const ITServicesPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {servicesData.itSolutions.map((service) => (
-                <div key={service.id} className="card-cyber hover-lift group">
+                <FuturisticCard key={service.id} glowColor="pink" className="group">
                   <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
@@ -84,21 +83,23 @@ const ITServicesPage: React.FC = () => {
 
                   <div className="flex justify-between items-center mb-6">
                     <div>
-                      <span className="text-2xl font-bold text-pink-400">${service.pricing.basic}</span>
+                      <span className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+                        ${service.pricing.basic}
+                      </span>
                       <span className="text-gray-400 text-sm ml-1">/month</span>
                     </div>
                     <a 
                       href={service.contactInfo.website} 
-                      className="text-pink-400 hover:text-pink-300 text-sm font-semibold"
+                      className="text-pink-400 hover:text-pink-300 text-sm font-semibold transition-colors"
                     >
                       Learn More →
                     </a>
                   </div>
 
-                  <button className="w-full cyber-button">
+                  <NeonButton to="/contact" variant="primary" className="w-full">
                     Get Started
-                  </button>
-                </div>
+                  </NeonButton>
+                </FuturisticCard>
               ))}
             </div>
           </div>
@@ -108,8 +109,8 @@ const ITServicesPage: React.FC = () => {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Our <span className="gradient-text">Technology Stack</span>
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+                Our Technology Stack
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We use cutting-edge technologies to deliver exceptional results
@@ -118,23 +119,23 @@ const ITServicesPage: React.FC = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
               {[
-                { name: "AWS", icon: "☁️" },
-                { name: "Azure", icon: "🔷" },
-                { name: "Google Cloud", icon: "🌐" },
-                { name: "Docker", icon: "🐳" },
-                { name: "Kubernetes", icon: "⚙️" },
-                { name: "React", icon: "⚛️" },
-                { name: "Node.js", icon: "🟢" },
-                { name: "Python", icon: "🐍" },
-                { name: "TypeScript", icon: "📘" },
-                { name: "MongoDB", icon: "🍃" },
-                { name: "PostgreSQL", icon: "🐘" },
-                { name: "Redis", icon: "🔴" }
+                { name: "AWS", icon: "☁️", color: "cyan" },
+                { name: "Azure", icon: "🔷", color: "blue" },
+                { name: "Google Cloud", icon: "🌐", color: "green" },
+                { name: "Docker", icon: "🐳", color: "purple" },
+                { name: "Kubernetes", icon: "⚙️", color: "pink" },
+                { name: "React", icon: "⚛️", color: "cyan" },
+                { name: "Node.js", icon: "🟢", color: "green" },
+                { name: "Python", icon: "🐍", color: "yellow" },
+                { name: "TypeScript", icon: "📘", color: "blue" },
+                { name: "MongoDB", icon: "🍃", color: "green" },
+                { name: "PostgreSQL", icon: "🐘", color: "purple" },
+                { name: "Redis", icon: "🔴", color: "red" }
               ].map((tech, index) => (
-                <div key={index} className="glass-dark rounded-lg p-6 text-center hover-lift">
+                <FuturisticCard key={index} glowColor={tech.color as any} className="p-6 text-center">
                   <div className="text-4xl mb-3">{tech.icon}</div>
                   <h3 className="text-white font-semibold">{tech.name}</h3>
-                </div>
+                </FuturisticCard>
               ))}
             </div>
           </div>
@@ -144,8 +145,8 @@ const ITServicesPage: React.FC = () => {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Our <span className="gradient-text">Development Process</span>
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-6">
+                Our Development Process
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 A proven methodology that ensures successful project delivery
@@ -158,33 +159,37 @@ const ITServicesPage: React.FC = () => {
                   step: "01", 
                   title: "Discovery & Planning", 
                   description: "We analyze your requirements and create a detailed project roadmap",
-                  icon: "🔍"
+                  icon: "🔍",
+                  color: "cyan"
                 },
                 { 
                   step: "02", 
                   title: "Design & Architecture", 
                   description: "Our team designs the solution architecture and user experience",
-                  icon: "🎨"
+                  icon: "🎨",
+                  color: "purple"
                 },
                 { 
                   step: "03", 
                   title: "Development & Testing", 
                   description: "We build and thoroughly test your solution using agile methodologies",
-                  icon: "⚡"
+                  icon: "⚡",
+                  color: "green"
                 },
                 { 
                   step: "04", 
                   title: "Deployment & Support", 
                   description: "We deploy your solution and provide ongoing maintenance and support",
-                  icon: "🚀"
+                  icon: "🚀",
+                  color: "pink"
                 }
               ].map((process, index) => (
-                <div key={index} className="glass-dark rounded-lg p-8 text-center hover-lift">
+                <FuturisticCard key={index} glowColor={process.color as any} className="p-8 text-center">
                   <div className="text-6xl mb-4">{process.icon}</div>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{process.step}</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">{process.step}</div>
                   <h3 className="text-xl font-semibold text-white mb-4">{process.title}</h3>
                   <p className="text-gray-300">{process.description}</p>
-                </div>
+                </FuturisticCard>
               ))}
             </div>
           </div>
@@ -193,25 +198,30 @@ const ITServicesPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="glass-dark rounded-2xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">
+            <FuturisticCard glowColor="blue" className="p-12">
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent mb-6">
                 Ready to Transform Your IT Infrastructure?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Let's discuss how our IT solutions can modernize your business
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="cyber-button text-lg px-8 py-4">
+                <NeonButton to="/contact" variant="primary" size="lg">
                   Start Your Project
-                </button>
-                <button className="cyber-button text-lg px-8 py-4 border-green-400 text-green-400 hover:border-green-300 hover:text-green-300">
+                </NeonButton>
+                <NeonButton to="/contact" variant="accent" size="lg">
                   Schedule Consultation
-                </button>
+                </NeonButton>
               </div>
-            </div>
+              <div className="mt-8 text-sm text-gray-400 space-y-2">
+                <p>📞 <strong className="text-cyan-300">Phone:</strong> +1 302 464 0950</p>
+                <p>✉️ <strong className="text-cyan-300">Email:</strong> kleber@ziontechgroup.com</p>
+                <p>📍 <strong className="text-cyan-300">Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+              </div>
+            </FuturisticCard>
           </div>
         </section>
-      </div>
+      </FuturisticBackground>
     </>
   );
 };

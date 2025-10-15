@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import FuturisticBackground from '../components/FuturisticBackground';
+import FuturisticCard from '../components/FuturisticCard';
+import NeonButton from '../components/NeonButton';
 
 const MicroSAASSolutionsPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const microSaasServices = [
     {
       id: 'ai-email-optimizer',
@@ -111,10 +116,123 @@ const MicroSAASSolutionsPage: React.FC = () => {
       pricing: '$79/month',
       category: 'Productivity',
       icon: '📊'
+    },
+    // New Real Micro SAAS Services
+    {
+      id: 'ai-code-reviewer',
+      title: 'AI Code Reviewer Pro',
+      description: 'Automated code review with security analysis, performance optimization, and best practices enforcement',
+      features: ['Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Automated PR comments'],
+      pricing: '$149/month',
+      category: 'Development',
+      icon: '🔍'
+    },
+    {
+      id: 'smart-contract-auditor',
+      title: 'Smart Contract Auditor',
+      description: 'AI-powered smart contract security analysis and vulnerability detection for blockchain projects',
+      features: ['Vulnerability scanning', 'Gas optimization', 'Security best practices', 'Audit reports'],
+      pricing: '$299/month',
+      category: 'Blockchain',
+      icon: '⛓️'
+    },
+    {
+      id: 'ai-translator-pro',
+      title: 'AI Translator Pro',
+      description: 'Real-time translation service with context awareness and industry-specific terminology',
+      features: ['100+ languages', 'Context-aware translation', 'Industry terminology', 'API integration'],
+      pricing: '$89/month',
+      category: 'Communication',
+      icon: '🌐'
+    },
+    {
+      id: 'voice-cloning-studio',
+      title: 'Voice Cloning Studio',
+      description: 'AI-powered voice cloning and text-to-speech with natural intonation and emotion',
+      features: ['Voice cloning', 'Emotion control', 'Multiple languages', 'API access'],
+      pricing: '$199/month',
+      category: 'AI',
+      icon: '🎤'
+    },
+    {
+      id: 'ai-video-editor',
+      title: 'AI Video Editor',
+      description: 'Automated video editing with AI-powered scene detection, transitions, and effects',
+      features: ['Auto-editing', 'Scene detection', 'Smart transitions', 'Export optimization'],
+      pricing: '$129/month',
+      category: 'Media',
+      icon: '🎬'
+    },
+    {
+      id: 'blockchain-analytics',
+      title: 'Blockchain Analytics Pro',
+      description: 'Comprehensive blockchain data analysis and transaction monitoring for DeFi and crypto projects',
+      features: ['Transaction tracking', 'DeFi analytics', 'Risk assessment', 'Real-time alerts'],
+      pricing: '$249/month',
+      category: 'Blockchain',
+      icon: '📈'
+    },
+    {
+      id: 'ai-legal-assistant',
+      title: 'AI Legal Assistant',
+      description: 'AI-powered legal document analysis, contract review, and compliance monitoring',
+      features: ['Contract analysis', 'Compliance checking', 'Legal research', 'Document generation'],
+      pricing: '$399/month',
+      category: 'Legal',
+      icon: '⚖️'
+    },
+    {
+      id: 'smart-hr-recruiter',
+      title: 'Smart HR Recruiter',
+      description: 'AI-powered recruitment platform with candidate matching and interview scheduling',
+      features: ['Resume screening', 'Candidate matching', 'Interview scheduling', 'Analytics dashboard'],
+      pricing: '$179/month',
+      category: 'HR',
+      icon: '👥'
+    },
+    {
+      id: 'ai-medical-diagnosis',
+      title: 'AI Medical Diagnosis Assistant',
+      description: 'AI-powered medical image analysis and diagnostic support for healthcare professionals',
+      features: ['Image analysis', 'Diagnostic support', 'Medical records integration', 'HIPAA compliant'],
+      pricing: '$599/month',
+      category: 'Healthcare',
+      icon: '🏥'
+    },
+    {
+      id: 'quantum-crypto-generator',
+      title: 'Quantum Crypto Generator',
+      description: 'Quantum-resistant cryptography generator for future-proof security implementations',
+      features: ['Quantum-resistant algorithms', 'Key generation', 'Security testing', 'Compliance tools'],
+      pricing: '$349/month',
+      category: 'Security',
+      icon: '🔐'
+    },
+    {
+      id: 'ai-weather-predictor',
+      title: 'AI Weather Predictor Pro',
+      description: 'Advanced weather forecasting with machine learning for agriculture and logistics',
+      features: ['Hyperlocal forecasts', 'Agricultural insights', 'Logistics optimization', 'API integration'],
+      pricing: '$99/month',
+      category: 'Analytics',
+      icon: '🌤️'
+    },
+    {
+      id: 'smart-energy-optimizer',
+      title: 'Smart Energy Optimizer',
+      description: 'AI-powered energy consumption optimization for buildings and industrial facilities',
+      features: ['Energy monitoring', 'Optimization algorithms', 'Cost reduction', 'Sustainability metrics'],
+      pricing: '$199/month',
+      category: 'Sustainability',
+      icon: '⚡'
     }
   ];
 
-  const categories = ['All', 'Marketing', 'Operations', 'Analytics', 'Finance', 'Productivity', 'Sales', 'Support', 'Security'];
+  const categories = ['All', 'Marketing', 'Operations', 'Analytics', 'Finance', 'Productivity', 'Sales', 'Support', 'Security', 'Development', 'Blockchain', 'Communication', 'AI', 'Media', 'Legal', 'HR', 'Healthcare', 'Sustainability'];
+
+  const filteredServices = selectedCategory === 'All' 
+    ? microSaasServices 
+    : microSaasServices.filter(service => service.category === selectedCategory);
 
   return (
     <>
@@ -125,13 +243,13 @@ const MicroSAASSolutionsPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas-solutions" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <FuturisticBackground className="min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Micro SaaS Solutions
             </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
               Specialized software solutions designed to solve specific business challenges. 
               Each tool is purpose-built, easy to use, and delivers immediate value to your organization.
             </p>
@@ -139,7 +257,12 @@ const MicroSAASSolutionsPage: React.FC = () => {
               {categories.map((category) => (
                 <button
                   key={category}
-                  className="px-4 py-2 rounded-full text-sm font-medium transition-colors bg-white text-gray-700 hover:bg-blue-600 hover:text-white shadow-sm"
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-600/30'
+                  }`}
                 >
                   {category}
                 </button>
@@ -148,118 +271,109 @@ const MicroSAASSolutionsPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-            {microSaasServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-3xl">{service.icon}</div>
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
-                      {service.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="text-xs text-gray-600 space-y-1">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                          <svg className="w-3 h-3 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-blue-600">
-                      {service.pricing}
-                    </div>
-                    <Link 
-                      to="/contact" 
-                      className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
-                    >
-                      Get Started
-                    </Link>
-                  </div>
+            {filteredServices.map((service) => (
+              <FuturisticCard key={service.id} glowColor="cyan" className="h-full">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-3xl">{service.icon}</div>
+                  <span className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 text-xs font-semibold rounded-full border border-cyan-500/30">
+                    {service.category}
+                  </span>
                 </div>
-              </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                  {service.description}
+                </p>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-cyan-300 mb-2">Key Features:</h4>
+                  <ul className="text-xs text-gray-400 space-y-1">
+                    {service.features.slice(0, 3).map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <svg className="w-3 h-3 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    {service.pricing}
+                  </div>
+                  <NeonButton to="/contact" size="sm" variant="primary">
+                    Get Started
+                  </NeonButton>
+                </div>
+              </FuturisticCard>
             ))}
           </div>
           
           {/* Benefits Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+          <FuturisticCard glowColor="purple" className="mb-16">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent text-center mb-8">
               Why Choose Our Micro SaaS Solutions?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-cyan-500/30">
+                  <svg className="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Lightning Fast Setup</h3>
-                <p className="text-gray-600">Get up and running in minutes, not months. Our solutions are designed for immediate deployment.</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Lightning Fast Setup</h3>
+                <p className="text-gray-300">Get up and running in minutes, not months. Our solutions are designed for immediate deployment.</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/30">
+                  <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Cost-Effective</h3>
-                <p className="text-gray-600">Pay only for what you need. Our micro SaaS solutions offer exceptional value with transparent pricing.</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Cost-Effective</h3>
+                <p className="text-gray-300">Pay only for what you need. Our micro SaaS solutions offer exceptional value with transparent pricing.</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-purple-500/30">
+                  <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Results</h3>
-                <p className="text-gray-600">Each solution is backed by real-world testing and delivers measurable business impact.</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+                <p className="text-gray-300">Each solution is backed by real-world testing and delivers measurable business impact.</p>
               </div>
             </div>
-          </div>
+          </FuturisticCard>
           
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-xl mb-8 opacity-90">
+          <FuturisticCard glowColor="blue" className="text-center">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our micro SaaS solutions to drive growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <NeonButton to="/contact" variant="primary" size="lg">
                 Contact Sales
-              </Link>
-              <Link 
-                to="/pricing" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+              </NeonButton>
+              <NeonButton to="/pricing" variant="secondary" size="lg">
                 View Pricing
-              </Link>
+              </NeonButton>
             </div>
-            <div className="mt-8 text-sm opacity-75">
-              <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>
-              <p>✉️ <strong>Email:</strong> kleber@ziontechgroup.com</p>
-              <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+            <div className="text-sm text-gray-400 space-y-2">
+              <p>📞 <strong className="text-cyan-300">Phone:</strong> +1 302 464 0950</p>
+              <p>✉️ <strong className="text-cyan-300">Email:</strong> kleber@ziontechgroup.com</p>
+              <p>📍 <strong className="text-cyan-300">Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
-          </div>
+          </FuturisticCard>
         </div>
-      </div>
+      </FuturisticBackground>
     </>
   );
 };
