@@ -6,28 +6,33 @@ interface Props {
   fallback?: ReactNode;
   onError?: (_error: Error, errorInfo: ErrorInfo) => void;
 }
-interface State {}
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
-class AdvancedErrorBoundary extends Component<Props, State> {}
-  constructor(props: Props) {}
-    super(props)
-    this.state = { hasError: false }
+
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error: Error): State {}
-    return {}
+
+  static getDerivedStateFromError(error: Error): State {
+    return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }
+    };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    this.setState({}
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
       error,
-      errorInfo})
+      errorInfo
+    });
     // Call custom error handler if provided
     if (this.props.onError) {}
       this.props.onError(error, errorInfo)

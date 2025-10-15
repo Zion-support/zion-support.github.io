@@ -1,23 +1,25 @@
-import React, { useEffect, useCallback } from 'react'
-interface PerformanceEnhancerProps {}
-  enableImageOptimization?: boolean
-  enablePreloading?: boolean
-  enableCaching?: boolean
-  enableCompression?: boolean
+import React, { useEffect, useCallback } from 'react';
+
+interface PerformanceEnhancerProps {
+  enableImageOptimization?: boolean;
+  enablePreloading?: boolean;
+  enableCaching?: boolean;
+  enableCompression?: boolean;
 }
-const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
+
+const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   enableImageOptimization = true,
   enablePreloading = true,
   enableCaching = true,
   enableCompression = true
-}) => {}
-}// Image optimization
-  const optimizeImages = useCallback(() => {}
-}if (!enableImageOptimization) return
-    const images = document.querySelectorAll('img')
-    images.forEach((img) => {}
-}// Add loading="lazy" if not already present
-      if (!img.hasAttribute('loading')) {}
+}) => {
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" if not already present
+      if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy')
       }
       // Add decoding="async" for better performance

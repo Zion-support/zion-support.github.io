@@ -1,7 +1,9 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 
-  return (<>
+export default function ZionCloudVaultPage() {
+  return (
+    <>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage Platform | Zion Tech Group</title>
         <meta

@@ -1,7 +1,9 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 
-  return (<>
+export default function AiExpenseTrackerPage() {
+  return (
+    <>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
         <meta

@@ -1,7 +1,9 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 
-  return (<>
+export default function CommunityPage() {
+  return (
+    <>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
         <meta
