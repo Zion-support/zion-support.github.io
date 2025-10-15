@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -645,56 +645,35 @@ export default function AIServices() {
       featured: false
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      name: "AI Security Solutions",
-      description: "Advanced AI-powered security systems to protect your digital assets and infrastructure.",
-      features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response", "Zero-day protection", "Compliance monitoring"],
-      icon: <Shield className="w-8 h-8" />,
-      applications: ["Cybersecurity", "Fraud prevention", "Access control", "Network monitoring"],
-      price: "Starting at $2,499/month",
-      benefits: ["Prevent 99.9% of threats", "Reduce false positives by 80%", "Real-time threat response", "Compliance automation"]
-    },
-    {
-      name: "AI Content Generation",
-      description: "Revolutionary AI-powered content creation for marketing, documentation, and creative writing.",
-      features: ["Article generation", "Marketing copy", "Technical documentation", "Creative writing", "SEO optimization", "Multi-language support"],
-      icon: <MessageSquare className="w-8 h-8" />,
-      applications: ["Content marketing", "Technical writing", "Blog creation", "Social media content"],
-      price: "Starting at $799/month",
-      benefits: ["Generate 100+ articles daily", "Maintain brand voice consistency", "SEO-optimized content", "Multi-language support"]
-    },
-    {
-      name: "AI Data Analytics",
-      description: "Advanced data analysis and business intelligence powered by artificial intelligence.",
-      features: ["Data mining", "Pattern recognition", "Statistical analysis", "Visualization", "Real-time insights", "Custom reporting"],
-      icon: <BarChart3 className="w-8 h-8" />,
-      applications: ["Business intelligence", "Market research", "Customer analytics", "Performance tracking"],
-      price: "Starting at $1,299/month",
-      benefits: ["Process big data efficiently", "Generate actionable insights", "Real-time analytics", "Custom dashboards"]
-    },
-    {
-      name: "AI Voice & Speech",
-      description: "Cutting-edge voice recognition, synthesis, and conversational AI solutions.",
-      features: ["Speech recognition", "Voice synthesis", "Conversational AI", "Voice cloning", "Multi-language support", "Real-time processing"],
-      icon: <MessageSquare className="w-8 h-8" />,
-      applications: ["Voice assistants", "Call centers", "Accessibility", "Interactive systems"],
-      price: "Starting at $1,599/month",
-      benefits: ["99% speech accuracy", "Natural voice synthesis", "Real-time processing", "Multi-language support"]
-    },
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+      id: "ai-blockchain-solutions",
       name: "AI Blockchain Solutions",
-      description: "Intelligent blockchain applications with AI-powered smart contracts and analytics.",
-      features: ["Smart contracts", "DeFi analytics", "NFT generation", "Blockchain monitoring", "Cryptocurrency analysis", "Risk assessment"],
+      description: "Intelligent blockchain applications with AI-powered smart contracts and analytics",
+      price: "From $3,999/month",
       icon: <Shield className="w-8 h-8" />,
-      applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
-      price: "Starting at $3,999/month",
-      benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
-<<<<<<< HEAD
-    }  ];
-=======
+      color: "from-purple-500 to-indigo-500",
+      features: [
+        "Smart contracts automation",
+        "DeFi analytics & insights",
+        "NFT generation & analysis",
+        "Blockchain monitoring",
+        "Cryptocurrency analysis",
+        "Risk assessment & compliance",
+        "Automated trading strategies",
+        "Cross-chain integration"
+      ],
+      benefits: [
+        "Automated smart contracts",
+        "Real-time blockchain analysis",
+        "Fraud detection & prevention",
+        "Optimized transaction processing"
+      ],
+      category: "Blockchain",
+      rating: 4.9,
+      reviews: 445,
+      link: "/ai-blockchain-solutions",
+      featured: false
+    },
+    {
       id: "ai-time-series-forecasting",
       name: "AI Time Series Forecasting",
       description: "Advanced time series analysis with forecasting, trend detection, and seasonal pattern recognition",
@@ -753,7 +732,6 @@ export default function AIServices() {
       featured: false
     }
   ];
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
   const categories = [
     { name: "All", count: aiServices.length, active: true },
@@ -807,8 +785,6 @@ export default function AIServices() {
       content: "AI Content Generation Pro has transformed our content strategy. We're producing 20x more content with better quality and higher engagement rates.",
       rating: 5,
       avatar: "EW"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     }
   ];
 
