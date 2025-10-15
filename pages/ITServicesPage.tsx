@@ -166,8 +166,6 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'];
-
   const stats = [
     { number: '500+', label: 'Infrastructure Projects', icon: Server },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },

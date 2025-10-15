@@ -6,10 +6,8 @@ import {
   Star, 
   ArrowRight, 
   Brain, 
-  Server, 
-  Zap,
+  Server,
   Rocket,
-  Users,
   Settings
 } from 'lucide-react';
 
