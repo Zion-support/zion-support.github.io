@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async';
+import { Shield, Zap, Users, Database, Globe, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const AiDatabaseSolutionsPage = () => {
-  return;
-},
+export default function AiDatabaseSolutionsPage() {
+  const features = [
     { icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security & Compliance",
       description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data." },
@@ -37,7 +38,8 @@ const benefits = [
     "24/7 AI-Powered Support",
     "Compliance with Industry Standards"
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>AI Database Solutions - Zion Tech Group | Advanced Database Management</title>

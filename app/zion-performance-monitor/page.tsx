@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionPerformanceMonitor() {
-  return;
-},
-    {
-      title: "AI-Powered Analytics",
-      description: "Advanced AI analytics that predict issues before they occur and provide actionable insights",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Custom Dashboards",
-      description: "Create custom dashboards with widgets, charts, and metrics tailored to your specific needs",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Platform Support",
-      description: "Monitor applications across cloud platforms, on-premises, and hybrid environments",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Share insights with your team, set up alerts, and collaborate on incident response",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive performance reports with automated scheduling and distribution",
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 39,
-      period: "month",
-      description: "Perfect for small applications",
-      features: [
-        "Up to 10 monitors",
-        "Basic alerts",
-        "Email support",
-        "1 user account",
-        "Standard dashboards",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 99,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 100 monitors",
-        "Advanced alerts",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Custom dashboards",
-        "Advanced reporting",
-        "AI analytics",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 249,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited monitors",
-        "Custom alerts",
-        "Dedicated support",
-        "Unlimited users",
-        "White-label dashboards",
-        "Custom reporting",
-        "White-label solution",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const performanceStats = [
-    { number: "99.9%", label: "Uptime Monitoring", icon: <Activity className="w-6 h-6" /> },
-    { number: "50+", label: "Platform Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "90%", label: "Faster Issue Resolution", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring Coverage", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Alex Thompson",
-      company: "SaaS Platform",
-      role: "DevOps Engineer",
-      content: "Zion Performance Monitor has revolutionized our monitoring strategy. We've reduced our mean time to resolution by 90% and improved our uptime to 99.9%.",
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Maria Garcia",
-      company: "E-commerce Platform",
-      role: "Site Reliability Engineer",
-      content: "The AI-powered analytics are incredible. We can now predict and prevent issues before they impact our users, which has significantly improved our customer satisfaction.",
-      rating: 5,
-      avatar: "MG"
-    },
+export default function Component() {
     {
       name: "David Kim",
       company: "Financial Services",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "DK"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Performance Monitor - AI-Powered Application Performance Monitoring | Zion Tech Group</title>

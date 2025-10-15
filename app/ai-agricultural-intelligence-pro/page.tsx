@@ -1,118 +1,12 @@
 import { ArrowRight, Leaf, Target,   CheckCircle, Clock,   Settings, Globe, FileText, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAgriculturalIntelligencePro() {
-  return;
-},
-    {
-      title: "Yield Prediction",
-      description: "Advanced machine learning models that predict crop yields with 95% accuracy using weather, soil, and historical data",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Disease Detection",
-      description: "Early disease and pest detection using computer vision and AI to identify issues before they spread",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Weather Analytics",
-      description: "Hyperlocal weather forecasting and climate analysis to optimize planting, irrigation, and harvesting schedules",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Soil Analysis",
-      description: "Comprehensive soil health analysis with nutrient recommendations and pH optimization suggestions",
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Farm Management",
-      description: "Complete farm management dashboard with task scheduling, resource tracking, and performance analytics",
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 99,
-      period: "month",
-      description: "Perfect for small farms",
-      features: [
-        "Up to 100 acres",
-        "Basic monitoring",
-        "Email support",
-        "1 user account",
-        "Standard reports",
-        "Basic weather data"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 249,
-      period: "month",
-      description: "Ideal for medium farms",
-      features: [
-        "Up to 1,000 acres",
-        "Advanced monitoring",
-        "Priority support",
-        "Up to 5 user accounts",
-        "Advanced reports",
-        "Premium weather data",
-        "Disease detection",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 499,
-      period: "month",
-      description: "For large operations",
-      features: [
-        "Unlimited acres",
-        "Custom monitoring",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom reports",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const agriculturalStats = [
-    { number: "30%", label: "Increase in Yield", icon: <Leaf className="w-6 h-6" /> },
-    { number: "95%", label: "Prediction Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "50%", label: "Reduction in Pesticides", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "Field Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "John Smith",
-      company: "Smith Family Farm",
-      role: "Farm Owner",
-      content: "AI Agricultural Intelligence Pro has transformed our farming operations. We've increased our yield by 30% and reduced our pesticide use by 50%.",
-      rating: 5,
-      avatar: "JS"
-    },
-    {
-      name: "Maria Garcia",
-      company: "Garcia Agriculture",
-      role: "Farm Manager",
-      content: "The disease detection feature is incredible. We caught a fungal infection early and saved our entire crop. The AI predictions are spot-on.",
-      rating: 5,
-      avatar: "MG"
-    },
-    {
+export default function AiAgriculturalIntelligencePro() {
+  const testimonials = [
+        {
       name: "David Chen",
       company: "Chen Farms",
       role: "Operations Director",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "DC"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Agricultural Intelligence Pro - AI-Powered Smart Farming Platform | Zion Tech Group</title>

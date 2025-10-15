@@ -2,135 +2,8 @@ import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Settings, Zap, Users, Mail } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-const ZionAIVoiceAssistantPro = () => {
-  return;
-},
-    {
-      title: "Multi-Language Support",
-      description: "Supports 50+ languages with accurate pronunciation and cultural context understanding",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Voice Recognition",
-      description: "State-of-the-art voice recognition with 99.5% accuracy in noisy environments",
-      icon: <Mic className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Real-time Processing",
-      description: "Ultra-low latency processing for natural conversation flow and immediate responses",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice, tone, and specific terminology",
-      icon: <Settings className="w-8 h-8" />,
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Integration Ready",
-      description: "Seamless integration with 200+ business applications and platforms",
-      icon: <Cloud className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
-    }
-  ];
 
-const useCases = [
-    {
-      title: "Customer Service",
-      description: "Handle customer inquiries, complaints, and support requests 24/7",
-      icon: <Headphones className="w-6 h-6" />,
-      benefits: ["Reduce response time by 80%", "Handle 90% of queries automatically", "Improve customer satisfaction"]
-    },
-    {
-      title: "Sales Support",
-      description: "Qualify leads, answer product questions, and schedule meetings",
-      icon: <Target className="w-6 h-6" />,
-      benefits: ["Increase conversion rates by 35%", "Qualify leads 24/7", "Reduce sales cycle time"]
-    },
-    {
-      title: "Internal Operations",
-      description: "Assist employees with HR questions, IT support, and process guidance",
-      icon: <Users className="w-6 h-6" />,
-      benefits: ["Reduce internal support tickets", "Improve employee productivity", "Streamline operations"]
-    },
-    {
-      title: "Healthcare",
-      description: "Patient intake, appointment scheduling, and medical information assistance",
-      icon: <Heart className="w-6 h-6" />,
-      benefits: ["Improve patient experience", "Reduce administrative burden", "Ensure HIPAA compliance"]
-    }
-  ];
-
-const pricing = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 conversations/month",
-        "2 voice channels",
-        "Basic integrations",
-        "Email support",
-        "Standard voice quality"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for growing companies",
-      features: [
-        "Up to 10,000 conversations/month",
-        "10 voice channels",
-        "Advanced integrations",
-        "Priority support",
-        "High-quality voice synthesis",
-        "Custom voice training",
-        "Analytics dashboard"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited conversations",
-        "Unlimited voice channels",
-        "All integrations",
-        "24/7 dedicated support",
-        "Premium voice quality",
-        "Advanced custom training",
-        "White-label options",
-        "SLA guarantee"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Voice Assistant Pro transformed our customer service. We reduced response time by 85% and improved customer satisfaction scores significantly.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The voice recognition accuracy is incredible. Our customers love the natural conversation flow and the assistant handles complex queries effortlessly.",
-      rating: 5,
-      avatar: "MC"
-    },
+export default function ZionAIVoiceAssistantPro() {
     {
       name: "Emily Rodriguez",
       company: "Healthcare Plus",
@@ -140,7 +13,8 @@ const testimonials = [
       avatar: "ER"
     }
   ];
-  return (
+
+    return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO

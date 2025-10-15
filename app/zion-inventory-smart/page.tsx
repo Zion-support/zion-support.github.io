@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionInventorySmart() {
-  return;
-},
-    {
-      title: "Automated Reordering",
-      description: "Set up automatic reorder points and let the system handle your purchasing decisions",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Location Management",
-      description: "Manage inventory across multiple warehouses, stores, and locations from one dashboard",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Barcode Scanning",
-      description: "Scan barcodes with your mobile device for quick inventory updates and tracking",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Analytics & Reporting",
-      description: "Comprehensive inventory analytics with turnover rates, profit margins, and performance insights",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Integration Hub",
-      description: "Connect with 100+ e-commerce platforms, accounting software, and shipping providers",
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 products",
-        "1 location",
-        "Basic tracking",
-        "Email support",
-        "Standard reports",
-        "Basic integrations"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 products",
-        "Up to 5 locations",
-        "Advanced tracking",
-        "Priority support",
-        "Advanced reports",
-        "All integrations",
-        "Barcode scanning",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited products",
-        "Unlimited locations",
-        "Custom tracking",
-        "Dedicated support",
-        "Custom reports",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const inventoryStats = [
-    { number: "60%", label: "Reduction in Stockouts", icon: <Package className="w-6 h-6" /> },
-    { number: "40%", label: "Lower Inventory Costs", icon: <DollarSign className="w-6 h-6" /> },
-    { number: "100+", label: "Platform Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Michael Chen",
-      company: "E-commerce Retailer",
-      role: "Operations Manager",
-      content: "Zion Inventory Smart has completely transformed our inventory management. We've reduced stockouts by 60% and improved our cash flow significantly.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Lisa Rodriguez",
-      company: "Wholesale Distributor",
-      role: "Inventory Manager",
-      content: "The automated reordering feature is incredible. We never run out of stock anymore, and our inventory costs have decreased by 40%.",
-      rating: 5,
-      avatar: "LR"
-    },
+export default function Component() {
     {
       name: "James Wilson",
       company: "Multi-Store Chain",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "JW"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Inventory Smart - AI-Powered Inventory Management Platform | Zion Tech Group</title>

@@ -1,118 +1,12 @@
 import { ArrowRight, Globe, Zap, Target, BarChart3, CheckCircle, Clock,  Users,  Shield, FileText} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAPIManagement() {
-  return;
-},
-    {
-      title: "Smart Analytics",
-      description: "AI-driven analytics that provide insights into API performance, usage patterns, and optimization opportunities",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Automated Documentation",
-      description: "Auto-generate comprehensive API documentation with interactive testing and real-time updates",
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Security & Compliance",
-      description: "Advanced security features including OAuth 2.0, JWT validation, and compliance monitoring",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Developer Portal",
-      description: "Self-service developer portal with API discovery, testing tools, and community features",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Monitoring & Alerts",
-      description: "Real-time monitoring with intelligent alerts, performance metrics, and error tracking",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 49,
-      period: "month",
-      description: "Perfect for small APIs",
-      features: [
-        "Up to 10 APIs",
-        "Basic analytics",
-        "Email support",
-        "1 user account",
-        "Standard security",
-        "Basic monitoring"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 149,
-      period: "month",
-      description: "Ideal for growing APIs",
-      features: [
-        "Up to 100 APIs",
-        "Advanced analytics",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Advanced security",
-        "Advanced monitoring",
-        "Developer portal",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 399,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited APIs",
-        "Custom analytics",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom security",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const apiStats = [
-    { number: "99.9%", label: "API Uptime", icon: <Globe className="w-6 h-6" /> },
-    { number: "50%", label: "Faster Development", icon: <Zap className="w-6 h-6" /> },
-    { number: "1000+", label: "API Integrations", icon: <Target className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Alex Chen",
-      company: "SaaS Platform",
-      role: "API Architect",
-      content: "AI API Management has revolutionized our API strategy. We've improved our development speed by 50% and achieved 99.9% uptime.",
-      rating: 5,
-      avatar: "AC"
-    },
-    {
-      name: "Sarah Johnson",
-      company: "FinTech Company",
-      role: "DevOps Engineer",
-      content: "The AI-powered analytics and monitoring features are incredible. We can now predict and prevent API issues before they impact our users.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
+export default function AiApiManagement() {
+  const testimonials = [
+        {
       name: "Michael Rodriguez",
       company: "E-commerce Platform",
       role: "Backend Developer",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "MR"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI API Management - AI-Powered API Gateway & Management Platform | Zion Tech Group</title>

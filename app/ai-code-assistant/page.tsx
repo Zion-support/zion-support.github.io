@@ -3,167 +3,9 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import {Zap, Users, FileText} from 'lucide-react';
 import { Shield } from 'lucide-react';
-const AICodeAssistantPage = () => {
-  return;
-},
-    {
-      title: "Intelligent Code Review",
-      description: "Automated code review with security analysis, performance optimization suggestions, and best practice recommendations.",
-      icon: <Shield className="w-6 h-6" />,
-      stats: "99.5% accuracy"
-    },
-    {
-      title: "Bug Detection & Fixing",
-      description: "Automatically detect bugs, vulnerabilities, and code issues with intelligent suggestions for fixes and improvements.",
-      icon: <Bug className="w-6 h-6" />,
-      stats: "90% bug detection"
-    },
-    {
-      title: "Code Documentation",
-      description: "Generate comprehensive documentation, comments, and API docs automatically from your codebase.",
-      icon: <FileText className="w-6 h-6" />,
-      stats: "Auto-generated docs"
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Developer",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for individual developers and freelancers",
-      features: [
-        "1,000 code generations/month",
-        "Basic code review",
-        "5 programming languages",
-        "Standard documentation",
-        "Email support",
-        "Git integration"
-      ],
-      popular: false
-    },
-    {
-      name: "Team",
-      price: "$99",
-      period: "/month",
-      description: "Ideal for development teams and small companies",
-      features: [
-        "10,000 code generations/month",
-        "Advanced code review",
-        "20+ programming languages",
-        "AI-powered debugging",
-        "Team collaboration",
-        "Priority support",
-        "API access",
-        "Custom models"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$299",
-      period: "/month",
-      description: "For large organizations and development teams",
-      features: [
-        "Unlimited code generations",
-        "Enterprise-grade security",
-        "All programming languages",
-        "Custom AI training",
-        "Advanced analytics",
-        "24/7 support",
-        "On-premise deployment",
-        "Custom integrations",
-        "Dedicated support",
-        "SLA guarantee"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "Alex Rodriguez",
-      company: "Tech Startup",
-      role: "Lead Developer",
-      content: "Zion AI Code Assistant has increased our development speed by 3x. The code quality is excellent and it catches bugs we would have missed.",
-      rating: 5,
-      avatar: "AR"
-    },
-    {
-      name: "Emma Chen",
-      company: "Software Agency",
-      role: "Senior Developer",
-      content: "The AI code review is incredibly thorough. It's like having a senior developer reviewing every line of code. Our code quality has improved dramatically.",
-      rating: 5,
-      avatar: "EC"
-    },
-    {
-      name: "Michael Johnson",
-      company: "FinTech Company",
-      role: "CTO",
-      content: "The security analysis and vulnerability detection have been game-changers for our compliance requirements. Highly recommended for enterprise use.",
-      rating: 5,
-      avatar: "MJ"
-    }
-  ];
-
-const useCases = [
-    {
-      title: "Rapid Prototyping",
-      description: "Quickly build prototypes and MVPs with AI-generated code",
-      icon: <Zap className="w-8 h-8" />,
-      examples: ["MVP Development", "Proof of Concepts", "Quick Demos", "Feature Prototypes"]
-    },
-    {
-      title: "Code Review & Quality",
-      description: "Maintain high code quality with automated reviews and suggestions",
-      icon: <Shield className="w-8 h-8" />,
-      examples: ["Automated Reviews", "Security Audits", "Performance Optimization", "Best Practices"]
-    },
-    {
-      title: "Bug Fixing & Debugging",
-      description: "Identify and fix bugs faster with AI-powered analysis",
-      icon: <Bug className="w-8 h-8" />,
-      examples: ["Bug Detection", "Error Analysis", "Fix Suggestions", "Root Cause Analysis"]
-    },
-    {
-      title: "Documentation & Testing",
-      description: "Generate comprehensive docs and tests automatically",
-      icon: <FileText className="w-8 h-8" />,
-      examples: ["API Documentation", "Unit Tests", "Code Comments", "User Guides"]
-    }
-  ];
-
-const languages = [
-    { name: "Python", logo: "🐍", popularity: "95%" },
-    { name: "JavaScript", logo: "🟨", popularity: "98%" },
-    { name: "TypeScript", logo: "🔷", popularity: "92%" },
-    { name: "Java", logo: "☕", popularity: "90%" },
-    { name: "C++", logo: "⚡", popularity: "88%" },
-    { name: "Go", logo: "🐹", popularity: "85%" },
-    { name: "Rust", logo: "🦀", popularity: "82%" },
-    { name: "C#", logo: "🔷", popularity: "87%" }
-  ];
-
-const capabilities = [
-    {
-      title: "Code Generation",
-      description: "Generate complete functions, classes, and modules from natural language",
-      accuracy: "94%",
-      speed: "10x faster"
-    },
-    {
-      title: "Code Review",
-      description: "Comprehensive analysis of code quality, security, and performance",
-      accuracy: "96%",
-      speed: "Instant feedback"
-    },
-    {
-      title: "Bug Detection",
-      description: "Identify bugs, vulnerabilities, and potential issues automatically",
-      accuracy: "91%",
-      speed: "Real-time analysis"
-    },
+export default function AICodeAssistantPage() {
+  const features = [
     {
       title: "Documentation",
       description: "Generate comprehensive documentation and comments",
@@ -171,7 +13,8 @@ const capabilities = [
       speed: "Auto-generated"
     }
   ];
-  return (
+
+    return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO

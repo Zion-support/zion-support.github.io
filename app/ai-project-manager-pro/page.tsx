@@ -1,53 +1,10 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { Zap, Users, Target, CheckCircle, Star, ArrowRight, Calendar, BarChart3, Globe, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const AIProjectManagerProPage = () => {
-  return;
-}, []);
-
-const features = [
-    {
-      title: "AI-Powered Task Management",
-      description: "Intelligent task assignment and prioritization based on team capabilities and project requirements",
-      icon: <Brain className="w-6 h-6" />,
-      benefits: ["Smart task distribution", "Priority optimization", "Deadline management"]
-    },
-    {
-      title: "Predictive Risk Analysis",
-      description: "Advanced AI algorithms predict potential project risks and suggest mitigation strategies",
-      icon: <Shield className="w-6 h-6" />,
-      benefits: ["Risk prediction", "Mitigation strategies", "Early warning system"]
-    },
-    {
-      title: "Team Performance Analytics",
-      description: "Comprehensive analytics on team performance, productivity, and collaboration patterns",
-      icon: <Users className="w-6 h-6" />,
-      benefits: ["Performance tracking", "Productivity insights", "Team optimization"]
-    }
-  ];
-
-const integrations = [
-    { name: "Slack", description: "Real-time team communication", icon: "💬" },
-    { name: "Jira", description: "Issue tracking and project management", icon: "🎯" },
-    { name: "GitHub", description: "Code repository integration", icon: "💻" },
-    { name: "Trello", description: "Visual project boards", icon: "📋" }
-  ];
-
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "per month",
-      features: ["Up to 5 projects", "Basic AI insights", "Email support"],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "per month",
-      features: ["Up to 25 projects", "Advanced AI analytics", "Priority support", "Team collaboration"],
-      popular: true
-    },
+export default function AIProjectManagerProPage() {
+  const pricingPlans = [
     {
       name: "Enterprise",
       price: "$199",
@@ -61,7 +18,8 @@ const testimonials = [
     { name: "Sarah Johnson", role: "Project Manager", content: "Revolutionary project management!", rating: 5, company: "Tech Corp" },
     { name: "Mike Chen", role: "Team Lead", content: "AI insights changed our workflow!", rating: 5, company: "Innovation Labs" }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>AI Project Manager Pro - Zion Tech Group | Advanced Project Management</title>

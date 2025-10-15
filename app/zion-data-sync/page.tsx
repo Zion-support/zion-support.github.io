@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionDataSync() {
-  return;
-},
-    {
-      title: "Multi-platform Integration",
-      description: "Connect and sync data between 100+ platforms including CRM, ERP, marketing tools, and databases",
-      icon: <Database className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Data Transformation",
-      description: "Automatically transform and map data between different formats and schemas",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Error Handling",
-      description: "Advanced error detection and recovery with detailed logging and notification systems",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Work together with your team on data sync configurations with role-based access control",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Analytics & Monitoring",
-      description: "Monitor sync performance with detailed analytics, alerts, and performance dashboards",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 39,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 5 data sources",
-        "Basic sync rules",
-        "Email support",
-        "1 user account",
-        "Standard error handling",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 99,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 25 data sources",
-        "Advanced sync rules",
-        "Priority support",
-        "Up to 5 user accounts",
-        "Advanced error handling",
-        "Advanced analytics",
-        "API access",
-        "Custom transformations"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 249,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited data sources",
-        "Custom sync rules",
-        "Dedicated support",
-        "Unlimited users",
-        "Enterprise error handling",
-        "Custom analytics",
-        "White-label solution",
-        "Custom integrations"
-      ],
-      popular: false
-    }
-  ];
-
-const syncStats = [
-    { number: "99.9%", label: "Sync Success Rate", icon: <RefreshCw className="w-6 h-6" /> },
-    { number: "< 1s", label: "Average Sync Time", icon: <Zap className="w-6 h-6" /> },
-    { number: "100+", label: "Platform Integrations", icon: <Database className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Rachel Green",
-      company: "E-commerce Platform",
-      role: "Data Manager",
-      content: "Zion Data Sync has eliminated our data silos completely. We now have real-time visibility across all our systems, which has improved our decision-making significantly.",
-      rating: 5,
-      avatar: "RG"
-    },
-    {
-      name: "Tom Anderson",
-      company: "SaaS Company",
-      role: "CTO",
-      content: "The data transformation capabilities are incredible. We can sync data between completely different systems without any manual intervention.",
-      rating: 5,
-      avatar: "TA"
-    },
+export default function Component() {
     {
       name: "Lisa Park",
       company: "Marketing Agency",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "LP"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Data Sync - Real-time Data Synchronization Platform | Zion Tech Group</title>

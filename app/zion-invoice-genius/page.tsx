@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionInvoiceGenius() {
-  return;
-},
-    {
-      title: "Automated Billing",
-      description: "Set up recurring invoices, payment reminders, and automated follow-ups for overdue payments",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Payment Processing",
-      description: "Accept payments online with integrated payment gateways and multiple payment methods",
-      icon: <Calculator className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Client Management",
-      description: "Comprehensive client database with contact information, payment history, and communication logs",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Financial Reporting",
-      description: "Detailed financial reports, profit/loss statements, and tax-ready reports for accounting",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Currency Support",
-      description: "Invoice and accept payments in multiple currencies with automatic exchange rate updates",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 19,
-      period: "month",
-      description: "Perfect for freelancers",
-      features: [
-        "Up to 50 invoices/month",
-        "Basic templates",
-        "Email support",
-        "1 user account",
-        "Standard payment methods",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 49,
-      period: "month",
-      description: "Ideal for small businesses",
-      features: [
-        "Up to 500 invoices/month",
-        "Premium templates",
-        "Priority support",
-        "Up to 5 user accounts",
-        "All payment methods",
-        "Advanced reporting",
-        "Recurring invoices",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 129,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited invoices",
-        "Custom templates",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom payment methods",
-        "Custom reporting",
-        "White-label solution",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const invoiceStats = [
-    { number: "70%", label: "Faster Invoice Processing", icon: <FileText className="w-6 h-6" /> },
-    { number: "50%", label: "Faster Payment Collection", icon: <Send className="w-6 h-6" /> },
-    { number: "25+", label: "Payment Methods", icon: <Calculator className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Billing", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Jennifer Lee",
-      company: "Freelance Designer",
-      role: "Owner",
-      content: "Zion Invoice Genius has completely transformed my invoicing process. I can create and send professional invoices in minutes, and payments come in much faster.",
-      rating: 5,
-      avatar: "JL"
-    },
-    {
-      name: "David Rodriguez",
-      company: "Consulting Firm",
-      role: "Finance Manager",
-      content: "The automated billing features are incredible. We've reduced our accounts receivable by 50% and improved our cash flow significantly.",
-      rating: 5,
-      avatar: "DR"
-    },
+export default function Component() {
     {
       name: "Sarah Kim",
       company: "SaaS Startup",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "SK"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Invoice Genius - AI-Powered Invoicing & Payment Platform | Zion Tech Group</title>

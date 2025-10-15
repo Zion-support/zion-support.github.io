@@ -13,104 +13,12 @@ import {
   ShieldCheckIcon,
   CloudIcon} from '@heroicons/react/24/outline';
 
-export default function AiProjectManagementProPage() {
-  return;
-},
-    {
-      icon: ChartBarIcon,
-      title: 'Predictive Analytics',
-      description: 'Advanced forecasting to predict project timelines, resource needs, and potential bottlenecks.',
-      benefits: ['98% accurate timeline predictions', 'Early risk detection', 'Resource optimization']
-    },
-    {
-      icon: UsersIcon,
-      title: 'Smart Team Management',
-      description: 'AI-powered team matching, workload balancing, and performance optimization.',
-      benefits: ['Optimal team composition', 'Balanced workload distribution', 'Performance insights']
-    },
-    {
-      icon: ClockIcon,
-      title: 'Real-time Monitoring',
-      description: 'Continuous project monitoring with instant alerts and automated status updates.',
-      benefits: ['24/7 project visibility', 'Instant issue detection', 'Automated reporting']
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Risk Management',
-      description: 'Proactive risk identification and mitigation strategies powered by machine learning.',
-      benefits: ['Early risk detection', 'Automated mitigation plans', 'Reduced project failures']
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Integration',
-      description: 'Seamless integration with popular tools like Slack, Jira, GitHub, and Microsoft Teams.',
-      benefits: ['Unified workflow', 'No data silos', 'Enhanced collaboration']
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$199',
-      period: 'per month',
-      description: 'Perfect for small teams and startups',
-      features: [
-        'Up to 10 team members',
-        'Basic AI task automation',
-        'Project templates',
-        'Email support',
-        'Basic analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399',
-      period: 'per month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 50 team members',
-        'Advanced AI features',
-        'Predictive analytics',
-        'Custom integrations',
-        'Priority support',
-        'Advanced reporting'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$799',
-      period: 'per month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited team members',
-        'Full AI suite',
-        'Custom AI models',
-        'White-label options',
-        'Dedicated support',
-        'Advanced security'
-      ],
-      popular: false
-    }
-  ];
 
-const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'Project Manager',
-      company: 'TechCorp Solutions',
-      content: 'AI Project Management Pro has revolutionized how we handle complex projects. The predictive analytics helped us complete our last project 3 weeks ahead of schedule.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CTO',
-      company: 'InnovateLabs',
-      content: 'The AI task automation is incredible. It reduced our planning time by 80% and improved our team productivity significantly.',
-      rating: 5
-    },
-    {
+
+export default function AiProjectManagementPro() {
+  const testimonials = [
+        {
       name: 'Emily Rodriguez',
       role: 'Operations Director',
       company: 'Global Dynamics',
@@ -118,7 +26,8 @@ const testimonials = [
       rating: 5
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Project Management Pro - Zion Tech Group</title>

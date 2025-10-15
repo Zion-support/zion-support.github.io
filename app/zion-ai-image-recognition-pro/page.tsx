@@ -1,146 +1,8 @@
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { BarChart3, Settings, Zap, Users, FileText, Mail } from 'lucide-react';
-const ZionAIImageRecognitionPro = () => {
-  return;
-},
-    {
-      title: "Facial Recognition",
-      description: "Advanced facial recognition with emotion detection, age estimation, and identity verification",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Text Recognition (OCR)",
-      description: "Extract text from images with 99.8% accuracy, supporting 100+ languages and handwritten text",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Scene Understanding",
-      description: "Analyze image content to understand scenes, activities, and contextual information",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Quality Assessment",
-      description: "Automatically assess image quality, detect blur, noise, and other quality issues",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Real-time Processing",
-      description: "Process images in real-time with ultra-low latency for live applications",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
-    }
-  ];
 
-const useCases = [
-    {
-      title: "E-commerce",
-      description: "Product recognition, visual search, and automated cataloging",
-      icon: <ShoppingCart className="w-6 h-6" />,
-      benefits: ["Increase product discovery", "Automate cataloging", "Improve search accuracy"]
-    },
-    {
-      title: "Security & Surveillance",
-      description: "Facial recognition, object detection, and suspicious activity monitoring",
-      icon: <Camera className="w-6 h-6" />,
-      benefits: ["Enhance security", "Automate monitoring", "Reduce false alarms"]
-    },
-    {
-      title: "Healthcare",
-      description: "Medical image analysis, diagnostic assistance, and patient identification",
-      icon: <Heart className="w-6 h-6" />,
-      benefits: ["Improve diagnostics", "Speed up analysis", "Reduce errors"]
-    },
-    {
-      title: "Automotive",
-      description: "Autonomous driving, traffic monitoring, and vehicle recognition",
-      icon: <Car className="w-6 h-6" />,
-      benefits: ["Enable autonomous driving", "Improve safety", "Optimize traffic flow"]
-    },
-    {
-      title: "Retail",
-      description: "Inventory management, customer analytics, and loss prevention",
-      icon: <Store className="w-6 h-6" />,
-      benefits: ["Optimize inventory", "Analyze customer behavior", "Prevent theft"]
-    },
-    {
-      title: "Manufacturing",
-      description: "Quality control, defect detection, and automated inspection",
-      icon: <Settings className="w-6 h-6" />,
-      benefits: ["Improve quality", "Reduce defects", "Automate inspection"]
-    }
-  ];
-
-const pricing = [
-    {
-      name: "Starter",
-      price: "$149",
-      period: "/month",
-      description: "Perfect for small projects",
-      features: [
-        "Up to 10,000 images/month",
-        "Basic object detection",
-        "Standard OCR",
-        "Email support",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$399",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 100,000 images/month",
-        "All recognition types",
-        "Advanced analytics",
-        "Priority support",
-        "Custom models",
-        "API access",
-        "Real-time processing"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$999",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited images",
-        "All features included",
-        "Custom model training",
-        "24/7 support",
-        "White-label options",
-        "On-premise deployment",
-        "SLA guarantee"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "Jennifer Lee",
-      company: "RetailTech Solutions",
-      role: "CTO",
-      content: "Zion AI Image Recognition Pro revolutionized our visual search. Customer engagement increased by 60% and our cataloging process is now fully automated.",
-      rating: 5,
-      avatar: "JL"
-    },
-    {
-      name: "Dr. Michael Brown",
-      company: "MedTech Innovations",
-      role: "Chief Medical Officer",
-      content: "The medical image analysis capabilities are outstanding. We've reduced diagnostic time by 40% while improving accuracy significantly.",
-      rating: 5,
-      avatar: "MB"
-    },
+export default function ZionAIImageRecognitionPro() {
     {
       name: "Sarah Wilson",
       company: "SecurityFirst Corp",
@@ -150,7 +12,8 @@ const testimonials = [
       avatar: "SW"
     }
   ];
-  return (
+
+    return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO

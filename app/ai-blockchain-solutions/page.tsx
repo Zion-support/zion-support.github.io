@@ -1,118 +1,12 @@
 import { ArrowRight, Link, Zap, Target, BarChart3, CheckCircle, Clock,    Globe, Shield, Coins } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIBlockchainSolutions() {
-  return;
-},
-    {
-      title: "Decentralized AI Networks",
-      description: "Build and deploy AI models on blockchain networks with decentralized computing and data sharing",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Blockchain Integration",
-      description: "Seamlessly integrate blockchain technology into existing systems with AI-powered automation",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Cryptocurrency Solutions",
-      description: "Complete cryptocurrency solutions including wallets, exchanges, and payment processing",
-      icon: <Coins className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "DeFi Protocol Development",
-      description: "Build and deploy DeFi protocols with AI-powered optimization and risk management",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Security & Compliance",
-      description: "Advanced security features and compliance tools for blockchain applications and smart contracts",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 149,
-      period: "month",
-      description: "Perfect for small projects",
-      features: [
-        "Up to 3 blockchain projects",
-        "Basic smart contracts",
-        "Email support",
-        "1 user account",
-        "Standard security",
-        "Basic compliance"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 399,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 15 blockchain projects",
-        "Advanced smart contracts",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Advanced security",
-        "Advanced compliance",
-        "DeFi protocols",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 999,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited blockchain projects",
-        "Custom smart contracts",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom security",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const blockchainStats = [
-    { number: "99.9%", label: "Smart Contract Uptime", icon: <Link className="w-6 h-6" /> },
-    { number: "50+", label: "Blockchain Networks", icon: <Globe className="w-6 h-6" /> },
-    { number: "95%", label: "Security Score", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Dr. Michael Chen",
-      company: "FinTech Startup",
-      role: "CTO",
-      content: "AI Blockchain Solutions has enabled us to build sophisticated DeFi protocols that were previously impossible. Our smart contracts are now self-optimizing and secure.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Sarah Rodriguez",
-      company: "Crypto Exchange",
-      role: "Technical Director",
-      content: "The AI-powered smart contracts and security features have made our platform incredibly robust. We've achieved 99.9% uptime and zero security incidents.",
-      rating: 5,
-      avatar: "SR"
-    },
-    {
+export default function AiBlockchainSolutions() {
+  const testimonials = [
+        {
       name: "David Kim",
       company: "DeFi Protocol",
       role: "Lead Developer",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "DK"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Blockchain Solutions - AI-Powered Blockchain Development Platform | Zion Tech Group</title>

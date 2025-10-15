@@ -1,118 +1,12 @@
 import { ArrowRight, MessageCircle,  Target, BarChart3, CheckCircle, Clock,   Settings, Globe,  Bot } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIChatbotBuilder() {
-  return;
-},
-    {
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands context, sentiment, and intent to provide human-like conversations",
-      icon: <MessageCircle className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Channel Deployment",
-      description: "Deploy your chatbot across websites, mobile apps, social media, and messaging platforms",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Conversation Analytics",
-      description: "Track and analyze chatbot performance with detailed insights and conversation metrics",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Integration Hub",
-      description: "Connect with 100+ third-party services including CRM, helpdesk, and e-commerce platforms",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Custom Training",
-      description: "Train your chatbot on your specific data and knowledge base for personalized responses",
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1 chatbot",
-        "Basic templates",
-        "Email support",
-        "1 user account",
-        "Standard integrations",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 5 chatbots",
-        "Premium templates",
-        "Priority support",
-        "Up to 10 user accounts",
-        "All integrations",
-        "Advanced analytics",
-        "Custom training",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited chatbots",
-        "Custom templates",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom integrations",
-        "White-label solution",
-        "Custom training",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const chatbotStats = [
-    { number: "95%", label: "Customer Satisfaction", icon: <MessageCircle className="w-6 h-6" /> },
-    { number: "80%", label: "Query Resolution Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "100+", label: "Platform Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Support", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Sarah Martinez",
-      company: "E-commerce Store",
-      role: "Customer Success Manager",
-      content: "AI Chatbot Builder has transformed our customer support. We've achieved 95% customer satisfaction and resolved 80% of queries automatically.",
-      rating: 5,
-      avatar: "SM"
-    },
-    {
-      name: "David Chen",
-      company: "SaaS Platform",
-      role: "Support Director",
-      content: "The natural language processing and multi-channel deployment features are incredible. Our chatbot now handles complex conversations across all platforms.",
-      rating: 5,
-      avatar: "DC"
-    },
-    {
+export default function AiChatbotBuilder() {
+  const testimonials = [
+        {
       name: "Lisa Johnson",
       company: "Financial Services",
       role: "Operations Manager",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Chatbot Builder - AI-Powered Chatbot Creation Platform | Zion Tech Group</title>

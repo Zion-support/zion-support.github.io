@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionLeadMagnet() {
-  return;
-},
-    {
-      title: "Email Automation",
-      description: "Automated email sequences that nurture leads from first contact to conversion",
-      icon: <Mail className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Lead Scoring",
-      description: "AI-powered lead scoring that identifies the most qualified prospects automatically",
-      icon: <TrendingUp className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "CRM Integration",
-      description: "Seamlessly integrate with 50+ CRM platforms including Salesforce, HubSpot, and Pipedrive",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics to track lead generation, conversion rates, and ROI",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "A/B Testing",
-      description: "Test different versions of your lead magnets to optimize conversion rates",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 leads/month",
-        "Basic forms",
-        "Email support",
-        "1 user account",
-        "Standard templates",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 leads/month",
-        "Advanced forms",
-        "Priority support",
-        "Up to 5 user accounts",
-        "Premium templates",
-        "Advanced analytics",
-        "CRM integration",
-        "A/B testing"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited leads",
-        "Custom forms",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom templates",
-        "Custom analytics",
-        "White-label solution",
-        "API access"
-      ],
-      popular: false
-    }
-  ];
-
-const leadStats = [
-    { number: "300%", label: "Average Lead Increase", icon: <Target className="w-6 h-6" /> },
-    { number: "45%", label: "Higher Conversion Rate", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "50+", label: "CRM Integrations", icon: <Users className="w-6 h-6" /> },
-    { number: "24/7", label: "Lead Processing", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Jessica Lee",
-      company: "Marketing Agency",
-      role: "Lead Generation Manager",
-      content: "Zion Lead Magnet has tripled our lead generation. The automated email sequences and lead scoring have made our sales process so much more efficient.",
-      rating: 5,
-      avatar: "JL"
-    },
-    {
-      name: "David Kim",
-      company: "SaaS Startup",
-      role: "Growth Manager",
-      content: "The A/B testing features are incredible. We've optimized our lead capture forms and increased our conversion rate by 45% in just 2 months.",
-      rating: 5,
-      avatar: "DK"
-    },
+export default function Component() {
     {
       name: "Sarah Johnson",
       company: "E-commerce Brand",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "SJ"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Lead Magnet - AI-Powered Lead Generation Platform | Zion Tech Group</title>

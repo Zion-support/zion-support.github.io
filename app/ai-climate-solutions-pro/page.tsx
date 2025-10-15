@@ -1,118 +1,12 @@
 import { ArrowRight,  Zap, Target, BarChart3, CheckCircle, Clock,    Globe, Shield, Leaf } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIClimateSolutionsPro() {
-  return;
-},
-    {
-      title: "Carbon Footprint Analysis",
-      description: "Advanced AI algorithms that analyze and optimize carbon footprints across organizations and supply chains",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Sustainability Planning",
-      description: "Intelligent sustainability planning with AI-powered recommendations for environmental impact reduction",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Environmental Monitoring",
-      description: "Real-time environmental monitoring with AI-powered alerts and automated compliance reporting",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Climate Risk Management",
-      description: "Comprehensive climate risk assessment and management with predictive analytics and mitigation strategies",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Green Technology Integration",
-      description: "Integrate renewable energy, smart grids, and green technologies with AI-powered optimization",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 299,
-      period: "month",
-      description: "Perfect for small organizations",
-      features: [
-        "Up to 3 climate solutions",
-        "Basic carbon analysis",
-        "Email support",
-        "1 user account",
-        "Standard monitoring",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 699,
-      period: "month",
-      description: "Ideal for growing organizations",
-      features: [
-        "Up to 15 climate solutions",
-        "Advanced carbon analysis",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Advanced monitoring",
-        "Advanced reporting",
-        "Risk management",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 1499,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited climate solutions",
-        "Custom carbon analysis",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom monitoring",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const climateStats = [
-    { number: "40%", label: "Carbon Reduction", icon: <Leaf className="w-6 h-6" /> },
-    { number: "95%", label: "Compliance Rate", icon: <Shield className="w-6 h-6" /> },
-    { number: "100+", label: "Climate Solutions", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Environmental Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Dr. Sarah Chen",
-      company: "Global Manufacturing",
-      role: "Sustainability Director",
-      content: "AI Climate Solutions Pro has helped us reduce our carbon footprint by 40% and achieve 95% compliance with environmental regulations. The AI-powered recommendations are incredibly effective.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Energy Corporation",
-      role: "Environmental Manager",
-      content: "The sustainability planning and green technology integration features have transformed our approach to environmental management. We can now optimize our operations for maximum sustainability.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
+export default function AiClimateSolutionsPro() {
+  const testimonials = [
+        {
       name: "Lisa Johnson",
       company: "Urban Development",
       role: "Climate Risk Manager",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Climate Solutions Pro - AI-Powered Climate Solutions Platform | Zion Tech Group</title>

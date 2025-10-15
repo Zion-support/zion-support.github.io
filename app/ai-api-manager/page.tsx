@@ -1,118 +1,12 @@
 import { ArrowRight, Settings, Zap, Target, BarChart3, CheckCircle, Clock,  Users, Globe, Shield} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAPIManager() {
-  return;
-},
-    {
-      title: "Smart Load Balancing",
-      description: "Intelligent load balancing with predictive scaling and automatic failover for optimal performance",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "API Versioning",
-      description: "Automated API versioning with backward compatibility and seamless migration tools",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Comprehensive real-time monitoring with AI-powered anomaly detection and performance optimization",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Security Management",
-      description: "Advanced security features including API key management, OAuth 2.0, and threat detection",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Developer Tools",
-      description: "Comprehensive developer tools including API testing, debugging, and performance profiling",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 39,
-      period: "month",
-      description: "Perfect for small projects",
-      features: [
-        "Up to 5 APIs",
-        "Basic orchestration",
-        "Email support",
-        "1 user account",
-        "Standard monitoring",
-        "Basic security"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 99,
-      period: "month",
-      description: "Ideal for growing projects",
-      features: [
-        "Up to 50 APIs",
-        "Advanced orchestration",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Advanced monitoring",
-        "Advanced security",
-        "API versioning",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 249,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited APIs",
-        "Custom orchestration",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom monitoring",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const managerStats = [
-    { number: "99.9%", label: "API Reliability", icon: <Settings className="w-6 h-6" /> },
-    { number: "60%", label: "Faster Development", icon: <Zap className="w-6 h-6" /> },
-    { number: "500+", label: "API Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Management", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "David Kim",
-      company: "Microservices Platform",
-      role: "API Manager",
-      content: "AI API Manager has transformed our microservices architecture. We've improved our API reliability to 99.9% and reduced development time by 60%.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Chen",
-      company: "Cloud Services",
-      role: "DevOps Engineer",
-      content: "The intelligent orchestration and load balancing features are incredible. Our APIs now automatically scale and handle traffic spikes seamlessly.",
-      rating: 5,
-      avatar: "LC"
-    },
-    {
+export default function AiApiManager() {
+  const testimonials = [
+        {
       name: "Mark Johnson",
       company: "SaaS Platform",
       role: "Backend Architect",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "MJ"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI API Manager - AI-Powered API Orchestration & Management Platform | Zion Tech Group</title>

@@ -1,118 +1,12 @@
 import { ArrowRight, Cloud,  Target, BarChart3, CheckCircle, Clock,    Globe, Shield, Leaf } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIClimatePredictionEngine() {
-  return;
-},
-    {
-      title: "Predictive Weather Analytics",
-      description: "Long-term weather predictions with climate change impact analysis and extreme weather event forecasting",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Environmental Data Integration",
-      description: "Integrate data from satellites, weather stations, and environmental sensors for comprehensive climate analysis",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Climate Risk Assessment",
-      description: "Assess climate risks for businesses, agriculture, and infrastructure with detailed impact analysis",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Sustainability Analytics",
-      description: "Track and analyze sustainability metrics, carbon footprint, and environmental impact over time",
-      icon: <Leaf className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Monitor climate conditions in real-time with alerts and notifications for significant changes",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Researcher",
-      price: 199,
-      period: "month",
-      description: "Perfect for climate researchers",
-      features: [
-        "Up to 5 climate models",
-        "Basic predictions",
-        "Email support",
-        "1 user account",
-        "Standard data sources",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 499,
-      period: "month",
-      description: "Ideal for organizations",
-      features: [
-        "Up to 25 climate models",
-        "Advanced predictions",
-        "Priority support",
-        "Up to 10 user accounts",
-        "All data sources",
-        "Advanced analytics",
-        "Risk assessment",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 999,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited climate models",
-        "Custom predictions",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom data sources",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const climateStats = [
-    { number: "95%", label: "Prediction Accuracy", icon: <Cloud className="w-6 h-6" /> },
-    { number: "50+", label: "Climate Data Sources", icon: <Globe className="w-6 h-6" /> },
-    { number: "30%", label: "Risk Reduction", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "Climate Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Dr. Sarah Chen",
-      company: "Climate Research Institute",
-      role: "Senior Climate Scientist",
-      content: "AI Climate Prediction Engine has revolutionized our research. We've achieved 95% prediction accuracy and can now model complex climate scenarios that were previously impossible.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Agricultural Corporation",
-      role: "Risk Manager",
-      content: "The climate risk assessment and predictive analytics have helped us reduce our climate-related risks by 30%. We can now make informed decisions about crop planning and resource allocation.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
+export default function AiClimatePredictionEngine() {
+  const testimonials = [
+        {
       name: "Lisa Johnson",
       company: "Environmental NGO",
       role: "Program Director",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Climate Prediction Engine - AI-Powered Climate Modeling Platform | Zion Tech Group</title>

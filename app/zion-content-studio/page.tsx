@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionContentStudio() {
-  return;
-},
-    {
-      title: "Visual Design Tools",
-      description: "Professional design tools with templates, stock photos, and AI-powered image generation",
-      icon: <Image className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Video Creation",
-      description: "Create engaging videos with AI-powered editing, templates, and automated voiceovers",
-      icon: <Video className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Brand Consistency",
-      description: "Maintain brand consistency across all content with automated style guides and templates",
-      icon: <Palette className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Work together seamlessly with real-time editing, comments, and approval workflows",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Content Calendar",
-      description: "Plan and schedule content across all platforms with automated publishing and analytics",
-      icon: <Clock className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Creator",
-      price: 19,
-      period: "month",
-      description: "Perfect for individual creators",
-      features: [
-        "Unlimited content generation",
-        "Basic templates",
-        "1 brand profile",
-        "Email support",
-        "Standard export formats",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 49,
-      period: "month",
-      description: "Ideal for small teams",
-      features: [
-        "Everything in Creator",
-        "Premium templates",
-        "Up to 5 brand profiles",
-        "Priority support",
-        "All export formats",
-        "Advanced analytics",
-        "Team collaboration",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 129,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Everything in Professional",
-        "Custom templates",
-        "Unlimited brand profiles",
-        "Dedicated support",
-        "White-label solution",
-        "Advanced analytics",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const contentStats = [
-    { number: "10M+", label: "Content Pieces Created", icon: <FileText className="w-6 h-6" /> },
-    { number: "500+", label: "Templates Available", icon: <PenTool className="w-6 h-6" /> },
-    { number: "95%", label: "Time Saved", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Assistance", icon: <Sparkles className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Alex Thompson",
-      company: "Marketing Agency",
-      role: "Creative Director",
-      content: "Zion Content Studio has revolutionized our content creation process. We can now produce 10x more content with the same team while maintaining quality.",
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Maria Garcia",
-      company: "E-commerce Brand",
-      role: "Marketing Manager",
-      content: "The AI-powered content generation is incredible. It understands our brand voice and creates content that resonates with our audience perfectly.",
-      rating: 5,
-      avatar: "MG"
-    },
+export default function Component() {
     {
       name: "James Wilson",
       company: "SaaS Startup",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "JW"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Content Studio - AI-Powered Content Creation Platform | Zion Tech Group</title>

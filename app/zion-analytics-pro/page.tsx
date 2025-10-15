@@ -1,106 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionAnalyticsPro() {
-  return;
-},
-    {
-      title: "Predictive Analytics",
-      description: "AI-powered forecasting to predict trends and make data-driven decisions",
-      icon: <TrendingUp className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Custom Reports",
-      description: "Generate automated reports tailored to your business needs and schedule",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-source Integration",
-      description: "Connect data from 50+ platforms including Google Analytics, Facebook, Shopify, and more",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Share insights and collaborate with your team with role-based access control",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Advanced Security",
-      description: "Enterprise-grade security with end-to-end encryption and SOC 2 compliance",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses getting started",
-      features: [
-        "Up to 5 data sources",
-        "Basic dashboards",
-        "Email support",
-        "1 user account",
-        "30-day data retention"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 25 data sources",
-        "Advanced analytics",
-        "Custom reports",
-        "Priority support",
-        "Up to 5 user accounts",
-        "1-year data retention",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited data sources",
-        "White-label solution",
-        "Custom integrations",
-        "Dedicated support",
-        "Unlimited users",
-        "Unlimited data retention",
-        "Advanced security features"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion Analytics Pro transformed how we understand our business. The predictive analytics helped us increase revenue by 40% in just 3 months.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The real-time dashboards are incredible. We can now make decisions based on live data instead of waiting for weekly reports.",
-      rating: 5,
-      avatar: "MC"
-    },
+export default function Component() {
     {
       name: "Emily Rodriguez",
       company: "Digital Marketing Agency",
@@ -110,7 +11,8 @@ const testimonials = [
       avatar: "ER"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Analytics Pro - AI-Powered Business Intelligence Platform | Zion Tech Group</title>

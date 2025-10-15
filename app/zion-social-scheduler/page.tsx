@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionSocialScheduler() {
-  return;
-},
-    {
-      title: "Content Calendar",
-      description: "Visual content calendar with drag-and-drop scheduling and content planning tools",
-      icon: <Calendar className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "AI Content Suggestions",
-      description: "AI-powered content suggestions based on trending topics and your audience preferences",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Collaborate with your team with approval workflows, comments, and role-based access",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Analytics & Insights",
-      description: "Comprehensive social media analytics with engagement metrics and performance insights",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Hashtag Research",
-      description: "AI-powered hashtag research and optimization for maximum reach and engagement",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 19,
-      period: "month",
-      description: "Perfect for individuals",
-      features: [
-        "Up to 3 social accounts",
-        "Up to 30 posts/month",
-        "Basic scheduling",
-        "Email support",
-        "Basic analytics",
-        "Standard templates"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 49,
-      period: "month",
-      description: "Ideal for small teams",
-      features: [
-        "Up to 10 social accounts",
-        "Up to 200 posts/month",
-        "Advanced scheduling",
-        "Priority support",
-        "Advanced analytics",
-        "Premium templates",
-        "Team collaboration",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 129,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited social accounts",
-        "Unlimited posts",
-        "Custom scheduling",
-        "Dedicated support",
-        "Custom analytics",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const socialStats = [
-    { number: "500%", label: "Increase in Engagement", icon: <Share2 className="w-6 h-6" /> },
-    { number: "80%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "10+", label: "Social Platforms", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Posting", icon: <Zap className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Emma Thompson",
-      company: "Digital Marketing Agency",
-      role: "Social Media Manager",
-      content: "Zion Social Scheduler has transformed our social media management. We can now manage all our clients' accounts from one platform and have increased engagement by 500%.",
-      rating: 5,
-      avatar: "ET"
-    },
-    {
-      name: "Ryan Davis",
-      company: "E-commerce Brand",
-      role: "Marketing Director",
-      content: "The AI content suggestions are incredible. We never run out of ideas, and the hashtag research has helped us reach new audiences we never knew existed.",
-      rating: 5,
-      avatar: "RD"
-    },
+export default function Component() {
     {
       name: "Maria Garcia",
       company: "SaaS Startup",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "MG"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Social Scheduler - AI-Powered Social Media Management | Zion Tech Group</title>

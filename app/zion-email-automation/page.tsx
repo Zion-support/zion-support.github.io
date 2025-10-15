@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionEmailAutomation() {
-  return;
-},
-    {
-      title: "Automated Workflows",
-      description: "Set up complex email automation workflows with triggers, conditions, and actions",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "List Management",
-      description: "Advanced list segmentation, tagging, and subscriber management with detailed profiles",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Personalization Engine",
-      description: "AI-powered personalization that adapts content based on subscriber behavior and preferences",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Analytics & Reporting",
-      description: "Comprehensive email analytics with open rates, click rates, and conversion tracking",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "A/B Testing",
-      description: "Test different subject lines, content, and send times to optimize your email performance",
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 subscribers",
-        "Up to 10,000 emails/month",
-        "Basic templates",
-        "Email support",
-        "Basic analytics",
-        "Standard automation"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 subscribers",
-        "Up to 100,000 emails/month",
-        "Premium templates",
-        "Priority support",
-        "Advanced analytics",
-        "Advanced automation",
-        "A/B testing",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited subscribers",
-        "Unlimited emails",
-        "Custom templates",
-        "Dedicated support",
-        "Custom analytics",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const emailStats = [
-    { number: "300%", label: "Higher Open Rates", icon: <Mail className="w-6 h-6" /> },
-    { number: "45%", label: "Better Click Rates", icon: <Target className="w-6 h-6" /> },
-    { number: "50+", label: "Email Templates", icon: <FileText className="w-6 h-6" /> },
-    { number: "24/7", label: "Automation", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Sarah Martinez",
-      company: "E-commerce Brand",
-      role: "Marketing Manager",
-      content: "Zion Email Automation has revolutionized our email marketing. The automation workflows and personalization features have increased our open rates by 300%.",
-      rating: 5,
-      avatar: "SM"
-    },
-    {
-      name: "David Kim",
-      company: "SaaS Company",
-      role: "Growth Manager",
-      content: "The A/B testing features are incredible. We've optimized our email campaigns and improved our click rates by 45% in just 3 months.",
-      rating: 5,
-      avatar: "DK"
-    },
+export default function Component() {
     {
       name: "Lisa Chen",
       company: "Digital Agency",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "LC"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Email Automation - AI-Powered Email Marketing Platform | Zion Tech Group</title>

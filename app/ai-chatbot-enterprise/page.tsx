@@ -1,118 +1,12 @@
 import { ArrowRight, MessageCircle,  Target, BarChart3, CheckCircle, Clock,    Globe, Shield, Bot } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIChatbotEnterprise() {
-  return;
-},
-    {
-      title: "Advanced Natural Language Processing",
-      description: "State-of-the-art NLP that understands complex queries, context, and enterprise terminology",
-      icon: <MessageCircle className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Channel Enterprise Deployment",
-      description: "Deploy across enterprise systems including CRM, ERP, helpdesk, and internal communication platforms",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Enterprise Analytics & Reporting",
-      description: "Comprehensive analytics with custom reporting, compliance tracking, and enterprise dashboards",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Custom Integration Hub",
-      description: "Connect with enterprise systems including Salesforce, Microsoft, SAP, and custom internal tools",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Advanced Security & Compliance",
-      description: "Enterprise-grade security with SSO, encryption, audit trails, and compliance with GDPR, HIPAA, and SOC 2",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Professional",
-      price: 199,
-      period: "month",
-      description: "Perfect for mid-size companies",
-      features: [
-        "Up to 10 chatbots",
-        "Advanced templates",
-        "Priority support",
-        "Up to 25 user accounts",
-        "Standard integrations",
-        "Advanced analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Enterprise",
-      price: 499,
-      period: "month",
-      description: "Ideal for large organizations",
-      features: [
-        "Up to 50 chatbots",
-        "Custom templates",
-        "Dedicated support",
-        "Up to 100 user accounts",
-        "All integrations",
-        "Custom analytics",
-        "Custom training",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise Plus",
-      price: 999,
-      period: "month",
-      description: "For Fortune 500 companies",
-      features: [
-        "Unlimited chatbots",
-        "White-label solution",
-        "24/7 dedicated support",
-        "Unlimited users",
-        "Custom integrations",
-        "Custom reporting",
-        "Custom training",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const enterpriseStats = [
-    { number: "99.9%", label: "Uptime SLA", icon: <Bot className="w-6 h-6" /> },
-    { number: "95%", label: "Query Resolution Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "200+", label: "Enterprise Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Enterprise Support", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Dr. Sarah Chen",
-      company: "Fortune 500 Healthcare",
-      role: "IT Director",
-      content: "AI Chatbot Enterprise has transformed our patient support system. We've achieved 99.9% uptime and 95% query resolution with full HIPAA compliance.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Global Financial Services",
-      role: "Customer Experience Director",
-      content: "The enterprise analytics and custom integration features are incredible. Our chatbot now handles complex financial queries across all our systems seamlessly.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
+export default function AiChatbotEnterprise() {
+  const testimonials = [
+        {
       name: "Lisa Johnson",
       company: "Manufacturing Giant",
       role: "Operations Manager",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Chatbot Enterprise - Enterprise-Grade AI Chatbot Platform | Zion Tech Group</title>

@@ -1,118 +1,12 @@
 import { ArrowRight, TestTube, Zap, Target, BarChart3, CheckCircle, Clock,    Globe,  Bug } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAutomatedTesting() {
-  return;
-},
-    {
-      title: "Intelligent Test Execution",
-      description: "Smart test execution with parallel processing, intelligent retry logic, and automatic test prioritization",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Cross-Platform Testing",
-      description: "Test across multiple browsers, devices, and operating systems with automated cross-platform validation",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Visual Testing",
-      description: "AI-powered visual regression testing that detects UI changes and layout issues automatically",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Performance Testing",
-      description: "Automated performance testing with load testing, stress testing, and performance monitoring",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Bug Detection & Reporting",
-      description: "Intelligent bug detection with detailed reports, screenshots, and automatic issue tracking",
-      icon: <Bug className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 49,
-      period: "month",
-      description: "Perfect for small projects",
-      features: [
-        "Up to 100 test cases",
-        "Basic test generation",
-        "Email support",
-        "1 user account",
-        "Standard browsers",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 129,
-      period: "month",
-      description: "Ideal for growing teams",
-      features: [
-        "Up to 1,000 test cases",
-        "Advanced test generation",
-        "Priority support",
-        "Up to 10 user accounts",
-        "All browsers & devices",
-        "Advanced reporting",
-        "Visual testing",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 299,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited test cases",
-        "Custom test generation",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom environments",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const testingStats = [
-    { number: "80%", label: "Faster Test Execution", icon: <Zap className="w-6 h-6" /> },
-    { number: "95%", label: "Bug Detection Rate", icon: <Bug className="w-6 h-6" /> },
-    { number: "50+", label: "Browser & Device Support", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Testing", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Alex Thompson",
-      company: "SaaS Platform",
-      role: "QA Manager",
-      content: "AI Automated Testing has revolutionized our testing process. We've increased our test coverage by 80% and reduced our testing time by 80%.",
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Maria Garcia",
-      company: "E-commerce Platform",
-      role: "Test Engineer",
-      content: "The AI-powered test generation is incredible. It creates test cases we never would have thought of, and the visual testing catches UI issues we used to miss.",
-      rating: 5,
-      avatar: "MG"
-    },
-    {
+export default function AiAutomatedTesting() {
+  const testimonials = [
+        {
       name: "David Kim",
       company: "Mobile App Company",
       role: "QA Lead",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "DK"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Automated Testing - AI-Powered Test Automation Platform | Zion Tech Group</title>

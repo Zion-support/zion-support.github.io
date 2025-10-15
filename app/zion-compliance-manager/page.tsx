@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionComplianceManager() {
-  return;
-},
-    {
-      title: "Regulatory Framework Support",
-      description: "Support for GDPR, HIPAA, SOC 2, PCI DSS, and 50+ other regulatory frameworks",
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Risk Assessment",
-      description: "Automated risk assessments with scoring and recommendations for compliance improvements",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Document Management",
-      description: "Centralized document management with version control, approval workflows, and audit trails",
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Audit Preparation",
-      description: "Automated audit preparation with compliance reports, evidence collection, and gap analysis",
-      icon: <CheckCircle className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Training",
-      description: "Compliance training modules with progress tracking and certification management",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 49,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 3 compliance frameworks",
-        "Basic monitoring",
-        "Email support",
-        "1 user account",
-        "Standard reports",
-        "Basic training modules"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 129,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10 compliance frameworks",
-        "Advanced monitoring",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Advanced reports",
-        "Premium training modules",
-        "Risk assessment",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 299,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited compliance frameworks",
-        "Custom monitoring",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom reports",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const complianceStats = [
-    { number: "95%", label: "Compliance Success Rate", icon: <Shield className="w-6 h-6" /> },
-    { number: "50+", label: "Regulatory Frameworks", icon: <FileText className="w-6 h-6" /> },
-    { number: "80%", label: "Time Saved on Audits", icon: <Clock className="w-6 h-6" /> },
-    { number: "24/7", label: "Compliance Monitoring", icon: <AlertTriangle className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Healthcare Provider",
-      role: "Compliance Officer",
-      content: "Zion Compliance Manager has been a game-changer for our HIPAA compliance. We've achieved 95% compliance success rate and significantly reduced our audit preparation time.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Financial Services",
-      role: "Risk Manager",
-      content: "The automated risk assessment and monitoring features have helped us stay ahead of regulatory changes. We've never been more confident in our compliance posture.",
-      rating: 5,
-      avatar: "MC"
-    },
+export default function Component() {
     {
       name: "Lisa Rodriguez",
       company: "E-commerce Platform",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "LR"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Compliance Manager - AI-Powered Compliance Management Platform | Zion Tech Group</title>

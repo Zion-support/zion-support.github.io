@@ -1,118 +1,12 @@
 import { ArrowRight, BarChart3, Zap, Target, CheckCircle, Clock,    Globe,  Brain } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIBusinessIntelligencePro() {
-  return;
-},
-    {
-      title: "Real-time Dashboards",
-      description: "Interactive dashboards that update in real-time with AI-powered insights and predictive analytics",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Machine learning models that predict future trends, customer behavior, and business outcomes",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Natural Language Queries",
-      description: "Ask questions about your data in plain English and get instant answers with AI-powered natural language processing",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive reports automatically with AI-powered insights and recommendations",
-      icon: <CheckCircle className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Data Integration",
-      description: "Connect to 100+ data sources and automatically integrate and clean your data for analysis",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 99,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 5 data sources",
-        "Basic analytics",
-        "Email support",
-        "1 user account",
-        "Standard dashboards",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 249,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 25 data sources",
-        "Advanced analytics",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Advanced dashboards",
-        "Advanced reporting",
-        "Predictive analytics",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 599,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited data sources",
-        "Custom analytics",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom dashboards",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const biStats = [
-    { number: "95%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
-    { number: "100+", label: "Data Source Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "80%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "AI-Powered Insights", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "E-commerce Platform",
-      role: "Data Director",
-      content: "AI Business Intelligence Pro has transformed our decision-making process. We've improved our prediction accuracy to 95% and reduced our analysis time by 80%.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Financial Services",
-      role: "Analytics Manager",
-      content: "The natural language queries and automated reporting features are incredible. Our team can now get insights from data without needing technical expertise.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
+export default function AiBusinessIntelligencePro() {
+  const testimonials = [
+        {
       name: "Lisa Rodriguez",
       company: "Retail Chain",
       role: "Business Intelligence Lead",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "LR"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Business Intelligence Pro - AI-Powered Business Intelligence Platform | Zion Tech Group</title>

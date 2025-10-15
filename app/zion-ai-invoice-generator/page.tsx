@@ -4,130 +4,8 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import {Users, FileText, DollarSign} from 'lucide-react';
 import { Shield, Clock } from 'lucide-react';
-const ZionAIInvoiceGeneratorPage = () => {
-  return;
-},
-    {
-      title: "Smart Data Extraction",
-      description: "Automatically extract billing information from emails, contracts, and project management tools to populate invoices.",
-      icon: <Calculator className="w-6 h-6" />,
-      stats: "Auto-populate fields"
-    },
-    {
-      title: "Multi-Currency Support",
-      description: "Create invoices in 150+ currencies with real-time exchange rates and automatic tax calculations.",
-      icon: <DollarSign className="w-6 h-6" />,
-      stats: "150+ currencies"
-    },
-    {
-      title: "Automated Follow-ups",
-      description: "Set up automated payment reminders and follow-up sequences to improve collection rates and cash flow.",
-      icon: <Send className="w-6 h-6" />,
-      stats: "40% faster payments"
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Solo",
-      price: "$19",
-      period: "/month",
-      description: "Perfect for freelancers and solo entrepreneurs",
-      features: [
-        "50 invoices/month",
-        "Basic templates",
-        "PDF generation",
-        "Email delivery",
-        "Payment tracking",
-        "Basic reporting",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Business",
-      price: "$49",
-      period: "/month",
-      description: "Ideal for small to medium businesses",
-      features: [
-        "200 invoices/month",
-        "Premium templates",
-        "Custom branding",
-        "Multi-currency support",
-        "Automated reminders",
-        "Advanced reporting",
-        "API access",
-        "Priority support"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$99",
-      period: "/month",
-      description: "For large organizations and accounting firms",
-      features: [
-        "Unlimited invoices",
-        "Custom templates",
-        "White-label solution",
-        "Advanced automation",
-        "Team collaboration",
-        "Advanced analytics",
-        "24/7 support",
-        "Custom integrations",
-        "Bulk operations",
-        "Compliance tools"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "David Kim",
-      company: "Freelance Designer",
-      role: "Owner",
-      content: "Zion AI Invoice Generator has saved me hours every week. The automatic data extraction is incredible and the invoices look professional.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Martinez",
-      company: "Creative Agency",
-      role: "Finance Manager",
-      content: "We've reduced our invoice processing time by 80%. The automated reminders have significantly improved our payment collection rates.",
-      rating: 5,
-      avatar: "LM"
-    },
-    {
-      name: "James Wilson",
-      company: "Consulting Firm",
-      role: "CEO",
-      content: "The multi-currency support and tax calculations are spot-on. Our international clients love the professional invoices we generate.",
-      rating: 5,
-      avatar: "JW"
-    }
-  ];
-
-const useCases = [
-    {
-      title: "Freelancers & Consultants",
-      description: "Streamline billing for project-based work with automated invoice generation",
-      icon: <Users className="w-8 h-8" />,
-      examples: ["Project Invoices", "Hourly Billing", "Recurring Services", "Expense Tracking"]
-    },
-    {
-      title: "Small Businesses",
-      description: "Professional invoicing with automated follow-ups and payment tracking",
-      icon: <TrendingUp className="w-8 h-8" />,
-      examples: ["Product Sales", "Service Billing", "Subscription Management", "Payment Reminders"]
-    },
-    {
-      title: "Agencies & Studios",
-      description: "Manage multiple clients with branded invoices and detailed reporting",
-      icon: <Award className="w-8 h-8" />,
-      examples: ["Client Billing", "Project Tracking", "Team Collaboration", "Financial Reports"]
-    },
+export default function ZionAIInvoiceGeneratorPage() {
     {
       title: "E-commerce & Retail",
       description: "Automated order-to-invoice workflow with inventory integration",
@@ -146,7 +24,8 @@ const integrations = [
     { name: "HubSpot", logo: "HS" },
     { name: "Salesforce", logo: "SF" }
   ];
-  return (
+
+    return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO

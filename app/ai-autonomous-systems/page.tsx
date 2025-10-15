@@ -1,118 +1,12 @@
 import { ArrowRight, Cpu, Zap, Target, BarChart3, CheckCircle, Clock,  Users,  Globe, Shield, Brain } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAutonomousSystems() {
-  return;
-},
-    {
-      title: "Self-Learning Systems",
-      description: "Systems that continuously learn and adapt from their environment and performance data",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Predictive Maintenance",
-      description: "Intelligent maintenance scheduling that predicts failures before they occur and optimizes system performance",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Agent Coordination",
-      description: "Coordinate multiple autonomous systems to work together seamlessly with shared intelligence",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Comprehensive monitoring and analytics with AI-powered insights and performance optimization",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Safety & Compliance",
-      description: "Built-in safety protocols and compliance monitoring to ensure autonomous systems operate within regulations",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 199,
-      period: "month",
-      description: "Perfect for small systems",
-      features: [
-        "Up to 5 autonomous systems",
-        "Basic AI algorithms",
-        "Email support",
-        "1 user account",
-        "Standard monitoring",
-        "Basic safety protocols"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 499,
-      period: "month",
-      description: "Ideal for growing operations",
-      features: [
-        "Up to 25 autonomous systems",
-        "Advanced AI algorithms",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Advanced monitoring",
-        "Advanced safety protocols",
-        "Multi-agent coordination",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 999,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited autonomous systems",
-        "Custom AI algorithms",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom monitoring",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const autonomousStats = [
-    { number: "99.9%", label: "System Reliability", icon: <Cpu className="w-6 h-6" /> },
-    { number: "70%", label: "Efficiency Improvement", icon: <Zap className="w-6 h-6" /> },
-    { number: "50+", label: "System Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Autonomous Operation", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Dr. Sarah Chen",
-      company: "Manufacturing Plant",
-      role: "Automation Director",
-      content: "AI Autonomous Systems has transformed our manufacturing operations. We've achieved 99.9% system reliability and improved efficiency by 70%.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Smart City Project",
-      role: "Systems Engineer",
-      content: "The self-learning capabilities and multi-agent coordination are incredible. Our smart city systems now adapt and optimize themselves automatically.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
+export default function AiAutonomousSystems() {
+  const testimonials = [
+        {
       name: "Lisa Johnson",
       company: "Autonomous Vehicle Fleet",
       role: "Fleet Manager",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Autonomous Systems - AI-Powered Autonomous System Management | Zion Tech Group</title>

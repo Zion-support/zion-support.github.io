@@ -202,17 +202,10 @@ const contentTypes = [
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{type}</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}>• {benefit}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
+        </div>
         </section>
 
         {/* Process Section */}

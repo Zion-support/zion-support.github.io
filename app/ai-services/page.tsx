@@ -648,14 +648,14 @@ const benefits = [
     },
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including machine learning, NLP, computer vision, and automation. Enterprise-grade AI solutions starting at $800/month." />
         <meta name="keywords" content="ai services, machine learning, nlp, computer vision, ai consulting, automation, artificial intelligence" />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           
@@ -697,15 +697,13 @@ const benefits = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
-  return (
+                return (
                   <div key={index} className="text-center">
-                    
-        <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <IconComponent className="w-8 h-8 text-cyan-400" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                    
-          <p className="text-gray-300">{benefit.description}</p>
+                    <p className="text-gray-300">{benefit.description}</p>
                   </div>
                 );
               })}
@@ -723,7 +721,7 @@ const benefits = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service) => {
                 const IconComponent = service.icon;
-  return (
+                return (
                   <div
                     key={service.id}
                     className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
@@ -860,8 +858,8 @@ const benefits = [
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 px-4">
+    {/* Services Grid */}
+    <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Choose Your AI Solution
@@ -969,6 +967,8 @@ const benefits = [
         </div>
       </section>
     </div>
+    </>
   );
 };
+
 export default AIServicesPage;

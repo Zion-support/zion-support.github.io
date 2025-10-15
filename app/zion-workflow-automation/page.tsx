@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionWorkflowAutomation() {
-  return;
-},
-    {
-      title: "AI-Powered Automation",
-      description: "Intelligent automation that learns from your patterns and suggests optimizations",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Platform Integration",
-      description: "Connect and automate workflows across 200+ platforms and services",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Conditional Logic",
-      description: "Advanced conditional logic with if/then/else statements and complex decision trees",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Collaborate on workflow design with team members and role-based permissions",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Analytics & Monitoring",
-      description: "Comprehensive workflow analytics with performance metrics and error tracking",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 39,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 5 workflows",
-        "Up to 1,000 executions/month",
-        "Basic integrations",
-        "Email support",
-        "Standard templates",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 99,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 25 workflows",
-        "Up to 10,000 executions/month",
-        "Advanced integrations",
-        "Priority support",
-        "Premium templates",
-        "Advanced analytics",
-        "Team collaboration",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 249,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited workflows",
-        "Unlimited executions",
-        "Custom integrations",
-        "Dedicated support",
-        "Custom templates",
-        "Custom analytics",
-        "White-label solution",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const workflowStats = [
-    { number: "90%", label: "Time Saved", icon: <Zap className="w-6 h-6" /> },
-    { number: "200+", label: "Platform Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "99.9%", label: "Workflow Success Rate", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Execution", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Alex Thompson",
-      company: "E-commerce Platform",
-      role: "Operations Manager",
-      content: "Zion Workflow Automation has transformed our operations. We've automated 90% of our repetitive tasks and saved hundreds of hours every month.",
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Sarah Johnson",
-      company: "SaaS Company",
-      role: "Process Manager",
-      content: "The visual workflow builder is incredible. Even non-technical team members can create complex automations without any coding knowledge.",
-      rating: 5,
-      avatar: "SJ"
-    },
+export default function Component() {
     {
       name: "Mike Chen",
       company: "Marketing Agency",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "MC"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Workflow Automation - AI-Powered Business Process Automation | Zion Tech Group</title>

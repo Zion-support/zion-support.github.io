@@ -4,129 +4,8 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import { Users, FileText } from 'lucide-react';
 import { Clock } from 'lucide-react';
-const ZionAIVideoGeneratorPage = () => {
-  return;
-},
-    {
-      title: "Multiple Video Formats",
-      description: "Support for all major video formats including MP4, MOV, AVI, and WebM. Optimized for social media platforms.",
-      icon: <FileText className="w-6 h-6" />,
-      stats: "15+ formats"
-    },
-    {
-      title: "Voice Synthesis",
-      description: "Natural-sounding voice generation in 50+ languages with customizable tone, speed, and emotion.",
-      icon: <Music className="w-6 h-6" />,
-      stats: "50+ languages"
-    },
-    {
-      title: "Smart Templates",
-      description: "Pre-designed templates for different industries and use cases. Customize colors, fonts, and layouts easily.",
-      icon: <Image className="w-6 h-6" />,
-      stats: "200+ templates"
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for individuals and small businesses",
-      features: [
-        "10 video generations/month",
-        "HD quality (1080p)",
-        "Basic templates",
-        "5-minute max duration",
-        "Standard voice synthesis",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for content creators and agencies",
-      features: [
-        "50 video generations/month",
-        "4K quality (2160p)",
-        "Premium templates",
-        "15-minute max duration",
-        "Advanced voice synthesis",
-        "Custom branding",
-        "Priority support",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations and teams",
-      features: [
-        "Unlimited video generations",
-        "8K quality (4320p)",
-        "Custom templates",
-        "60-minute max duration",
-        "Premium voice synthesis",
-        "White-label solution",
-        "24/7 support",
-        "Advanced API",
-        "Team collaboration",
-        "Analytics dashboard"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "Sarah Chen",
-      company: "Digital Marketing Pro",
-      role: "Content Director",
-      content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce high-quality videos 10x faster than before.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "EduTech Solutions",
-      role: "CEO",
-      content: "The voice synthesis is incredibly natural. Our educational videos sound professional and engaging. Highly recommended!",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
-      name: "Emily Johnson",
-      company: "Social Media Agency",
-      role: "Creative Director",
-      content: "The templates are amazing and the customization options are endless. Our clients love the quality and speed of delivery.",
-      rating: 5,
-      avatar: "EJ"
-    }
-  ];
-
-const useCases = [
-    {
-      title: "Social Media Content",
-      description: "Create engaging videos for Instagram, TikTok, YouTube, and other platforms",
-      icon: <Share2 className="w-8 h-8" />,
-      examples: ["Instagram Reels", "TikTok Videos", "YouTube Shorts", "Facebook Stories"]
-    },
-    {
-      title: "Marketing Campaigns",
-      description: "Generate promotional videos, product demos, and brand awareness content",
-      icon: <TrendingUp className="w-8 h-8" />,
-      examples: ["Product Demos", "Brand Videos", "Ad Campaigns", "Testimonials"]
-    },
-    {
-      title: "Educational Content",
-      description: "Create training videos, tutorials, and educational materials",
-      icon: <Award className="w-8 h-8" />,
-      examples: ["Online Courses", "Training Videos", "Tutorials", "How-to Guides"]
-    },
+export default function ZionAIVideoGeneratorPage() {
     {
       title: "Corporate Communications",
       description: "Generate internal communications, announcements, and presentations",
@@ -134,7 +13,8 @@ const useCases = [
       examples: ["Company Updates", "Internal Training", "Presentations", "Announcements"]
     }
   ];
-  return (
+
+    return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO

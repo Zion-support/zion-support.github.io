@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionProjectMaster() {
-  return;
-},
-    {
-      title: "Team Collaboration",
-      description: "Real-time collaboration with team members, comments, and file sharing capabilities",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Task Management",
-      description: "Advanced task management with priorities, deadlines, and automated notifications",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Time Tracking",
-      description: "Built-in time tracking with detailed reports and productivity analytics",
-      icon: <Clock className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Resource Management",
-      description: "Manage team resources, workload distribution, and capacity planning",
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Reporting & Analytics",
-      description: "Comprehensive project reports and analytics to track progress and performance",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 19,
-      period: "month",
-      description: "Perfect for small teams",
-      features: [
-        "Up to 5 projects",
-        "Up to 10 team members",
-        "Basic task management",
-        "Email support",
-        "Standard templates",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 49,
-      period: "month",
-      description: "Ideal for growing teams",
-      features: [
-        "Up to 25 projects",
-        "Up to 50 team members",
-        "Advanced task management",
-        "Priority support",
-        "Premium templates",
-        "Advanced reporting",
-        "Time tracking",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 129,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited projects",
-        "Unlimited team members",
-        "Custom workflows",
-        "Dedicated support",
-        "Custom templates",
-        "Custom reporting",
-        "White-label solution",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const projectStats = [
-    { number: "40%", label: "Faster Project Delivery", icon: <CheckSquare className="w-6 h-6" /> },
-    { number: "60%", label: "Better Team Productivity", icon: <Users className="w-6 h-6" /> },
-    { number: "95%", label: "On-time Delivery Rate", icon: <Calendar className="w-6 h-6" /> },
-    { number: "24/7", label: "Project Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Michael Chen",
-      company: "Software Development",
-      role: "Project Manager",
-      content: "Zion Project Master has transformed how we manage projects. The real-time collaboration and advanced reporting features have improved our team productivity by 60%.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Lisa Rodriguez",
-      company: "Marketing Agency",
-      role: "Operations Director",
-      content: "The resource management features are incredible. We can now properly allocate team members across projects and avoid overloading anyone.",
-      rating: 5,
-      avatar: "LR"
-    },
+export default function Component() {
     {
       name: "James Wilson",
       company: "Construction Company",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "JW"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Project Master - Advanced Project Management Platform | Zion Tech Group</title>

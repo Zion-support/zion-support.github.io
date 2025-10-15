@@ -1,117 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAccountingAssistant() {
-  return;
-},
-    {
-      title: "Smart Expense Tracking",
-      description: "Intelligent expense tracking with receipt scanning, automatic categorization, and compliance monitoring",
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Financial Reporting",
-      description: "Generate comprehensive financial reports, profit/loss statements, and tax-ready documents automatically",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Tax Preparation",
-      description: "Automated tax preparation with deduction optimization, form generation, and compliance checking",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Bank Integration",
-      description: "Seamless integration with 10,000+ banks and financial institutions for real-time data synchronization",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Audit Trail",
-      description: "Complete audit trail with document management, change tracking, and compliance reporting",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Solo",
-      price: 29,
-      period: "month",
-      description: "Perfect for freelancers",
-      features: [
-        "Up to 100 transactions/month",
-        "Basic reporting",
-        "Email support",
-        "1 user account",
-        "Standard bank connections",
-        "Basic tax forms"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for small businesses",
-      features: [
-        "Up to 1,000 transactions/month",
-        "Advanced reporting",
-        "Priority support",
-        "Up to 5 user accounts",
-        "All bank connections",
-        "All tax forms",
-        "Receipt scanning",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited transactions",
-        "Custom reporting",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom integrations",
-        "White-label solution",
-        "Custom workflows",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const accountingStats = [
-    { number: "90%", label: "Time Saved on Bookkeeping", icon: <Calculator className="w-6 h-6" /> },
-    { number: "99.9%", label: "Accuracy Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "10,000+", label: "Bank Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Processing", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Jennifer Lee",
-      company: "Freelance Consultant",
-      role: "Owner",
-      content: "AI Accounting Assistant has completely transformed my bookkeeping. I save 90% of my time on accounting tasks and have never been more organized.",
-      rating: 5,
-      avatar: "JL"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Small Business",
-      role: "CFO",
-      content: "The automated expense tracking and receipt scanning are incredible. We've improved our accuracy to 99.9% and reduced our accounting costs by 60%.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
+export default function AiAccountingAssistant() {
+  const testimonials = [
+        {
       name: "Sarah Chen",
       company: "E-commerce Store",
       role: "Bookkeeper",
@@ -120,7 +14,8 @@ const testimonials = [
       avatar: "SC"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>AI Accounting Assistant - AI-Powered Accounting & Bookkeeping Platform | Zion Tech Group</title>

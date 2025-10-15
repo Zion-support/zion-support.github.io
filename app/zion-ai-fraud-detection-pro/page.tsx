@@ -2,147 +2,8 @@ import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import {BarChart3, Zap, Users, Mail, Lock} from 'lucide-react';
 import { Shield } from 'lucide-react';
-const ZionAIFraudDetectionPro = () => {
-  return;
-},
-    {
-      title: "Machine Learning Models",
-      description: "Self-learning models that continuously improve detection accuracy based on new fraud patterns",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Behavioral Analysis",
-      description: "Analyzes user behavior patterns to identify anomalies and suspicious activities",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      title: "Risk Scoring",
-      description: "Comprehensive risk scoring system that evaluates transaction likelihood of being fraudulent",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-orange-500 to-yellow-500"
-    },
-    {
-      title: "Multi-Channel Monitoring",
-      description: "Monitors fraud across all channels including online, mobile, and in-person transactions",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Compliance Ready",
-      description: "Built-in compliance features for PCI DSS, GDPR, and other regulatory requirements",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
-    }
-  ];
 
-const detectionTypes = [
-    {
-      title: "Payment Fraud",
-      description: "Detect unauthorized credit card transactions, chargebacks, and payment fraud",
-      icon: <CreditCard className="w-6 h-6" />,
-      accuracy: "99.7%"
-    },
-    {
-      title: "Identity Theft",
-      description: "Identify stolen identities and synthetic identity fraud attempts",
-      icon: <Users className="w-6 h-6" />,
-      accuracy: "98.9%"
-    },
-    {
-      title: "Account Takeover",
-      description: "Detect unauthorized access to user accounts and credential stuffing attacks",
-      icon: <Lock className="w-6 h-6" />,
-      accuracy: "99.2%"
-    },
-    {
-      title: "Money Laundering",
-      description: "Identify suspicious money movement patterns and laundering activities",
-      icon: <Coins className="w-6 h-6" />,
-      accuracy: "97.8%"
-    },
-    {
-      title: "Synthetic Fraud",
-      description: "Detect synthetic identities and fabricated customer information",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      accuracy: "96.5%"
-    },
-    {
-      title: "Friendly Fraud",
-      description: "Identify legitimate-looking transactions that are actually fraudulent",
-      icon: <Heart className="w-6 h-6" />,
-      accuracy: "95.3%"
-    }
-  ];
-
-const pricing = [
-    {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 10,000 transactions/month",
-        "Basic fraud detection",
-        "Email alerts",
-        "Standard support",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$599",
-      period: "/month",
-      description: "Ideal for growing companies",
-      features: [
-        "Up to 100,000 transactions/month",
-        "Advanced ML models",
-        "Real-time alerts",
-        "Priority support",
-        "Advanced analytics",
-        "Custom rules engine",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited transactions",
-        "All detection types",
-        "24/7 monitoring",
-        "Dedicated support",
-        "Custom ML models",
-        "White-label options",
-        "SLA guarantee",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "David Kim",
-      company: "FinTech Solutions",
-      role: "CISO",
-      content: "Zion AI Fraud Detection Pro reduced our fraud losses by 85% in just 3 months. The real-time detection is incredibly accurate and fast.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Martinez",
-      company: "E-commerce Giant",
-      role: "Risk Manager",
-      content: "The machine learning models are constantly improving. We've seen a 90% reduction in false positives while catching more fraud than ever.",
-      rating: 5,
-      avatar: "LM"
-    },
+export default function ZionAIFraudDetectionPro() {
     {
       name: "Robert Johnson",
       company: "Banking Corp",
@@ -152,7 +13,8 @@ const testimonials = [
       avatar: "RJ"
     }
   ];
-  return (
+
+    return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO

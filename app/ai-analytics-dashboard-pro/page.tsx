@@ -1,41 +1,10 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { Zap, BarChart3, TrendingUp, Users, Globe, Shield, Clock, Target, CheckCircle, Star, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const AiAnalyticsDashboardProPage = () => {
-  return;
-}, []);
-
-const features = [
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Analytics",
-      description: "Monitor your business metrics in real-time with live data streaming and instant updates.",
-      benefits: ["Live data updates", "Instant insights", "Real-time alerts", "Performance monitoring"]
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Insights",
-      description: "Leverage machine learning algorithms to uncover hidden patterns and predict future trends.",
-      benefits: ["Predictive analytics", "Pattern recognition", "Anomaly detection", "Smart recommendations"]
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Custom Dashboards",
-      description: "Create personalized dashboards tailored to your specific business needs and KPIs.",
-      benefits: ["Drag-and-drop builder", "Custom widgets", "Role-based views", "Mobile optimization"]
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Data Source Integration",
-      description: "Connect and analyze data from multiple sources including databases, APIs, and cloud services.",
-      benefits: ["100+ integrations", "Data transformation", "ETL pipelines", "API management"]
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, access controls, and compliance management.",
-      benefits: ["End-to-end encryption", "Role-based access", "Audit logs", "GDPR compliance"]
-    },
+export default function AiAnalyticsDashboardProPage() {
+  const features = [
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Automated Reporting",
@@ -107,7 +76,8 @@ const testimonials = [
       content: "The AI-powered insights have helped us identify opportunities we never knew existed. ROI was achieved within 2 months.",
       rating: 5 }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>AI Analytics Dashboard Pro - Advanced Business Intelligence | Zion Tech Group</title>

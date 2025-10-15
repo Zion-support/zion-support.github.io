@@ -4,156 +4,8 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import { BarChart3, Users } from 'lucide-react';
 import { Clock } from 'lucide-react';
-const ZionAICustomerInsightsPage = () => {
-  return;
-},
-    {
-      title: "Real-Time Sentiment Analysis",
-      description: "Monitor customer sentiment across all touchpoints with real-time analysis of reviews, social media, and support tickets.",
-      icon: <MessageSquare className="w-6 h-6" />,
-      stats: "Real-time monitoring"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast customer behavior, churn risk, and lifetime value using advanced machine learning models.",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "95% accuracy"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive reports and dashboards automatically with insights and recommendations.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stats: "Auto-generated insights"
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$39",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "1,000 customer profiles",
-        "Basic sentiment analysis",
-        "Standard reports",
-        "Email support",
-        "API access",
-        "Data export"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$99",
-      period: "/month",
-      description: "Ideal for growing businesses and agencies",
-      features: [
-        "10,000 customer profiles",
-        "Advanced sentiment analysis",
-        "Predictive analytics",
-        "Custom dashboards",
-        "Priority support",
-        "Advanced API",
-        "Team collaboration",
-        "White-label options"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$249",
-      period: "/month",
-      description: "For large organizations and enterprises",
-      features: [
-        "Unlimited customer profiles",
-        "AI-powered insights",
-        "Advanced predictive models",
-        "Custom integrations",
-        "24/7 support",
-        "Dedicated account manager",
-        "Custom reporting",
-        "On-premise deployment",
-        "Advanced security",
-        "SLA guarantee"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "Rachel Thompson",
-      company: "E-commerce Platform",
-      role: "Customer Success Director",
-      content: "Zion AI Customer Insights helped us reduce churn by 35% and increase customer satisfaction by 40%. The predictive analytics are incredibly accurate.",
-      rating: 5,
-      avatar: "RT"
-    },
-    {
-      name: "Mark Chen",
-      company: "SaaS Startup",
-      role: "CEO",
-      content: "The real-time sentiment analysis gives us instant feedback on our product releases. We can now respond to customer concerns before they become problems.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Sarah Williams",
-      company: "Retail Chain",
-      role: "Marketing Director",
-      content: "The customer segmentation and insights have transformed our marketing campaigns. Our conversion rates have increased by 60% since implementing this tool.",
-      rating: 5,
-      avatar: "SW"
-    }
-  ];
-
-const useCases = [
-    {
-      title: "Customer Retention",
-      description: "Identify at-risk customers and implement targeted retention strategies",
-      icon: <Target className="w-8 h-8" />,
-      examples: ["Churn Prediction", "Retention Campaigns", "Loyalty Programs", "Win-back Strategies"]
-    },
-    {
-      title: "Product Development",
-      description: "Understand customer needs and preferences to guide product decisions",
-      icon: <Eye className="w-8 h-8" />,
-      examples: ["Feature Requests", "User Feedback", "Product Roadmap", "A/B Testing"]
-    },
-    {
-      title: "Marketing Optimization",
-      description: "Create targeted campaigns based on customer behavior and preferences",
-      icon: <TrendingUp className="w-8 h-8" />,
-      examples: ["Segmentation", "Personalization", "Campaign Targeting", "ROI Optimization"]
-    },
-    {
-      title: "Customer Support",
-      description: "Improve support quality with proactive insights and sentiment monitoring",
-      icon: <MessageSquare className="w-8 h-8" />,
-      examples: ["Sentiment Tracking", "Issue Prevention", "Support Optimization", "Quality Monitoring"]
-    }
-  ];
-
-const insights = [
-    {
-      title: "Customer Lifetime Value Prediction",
-      description: "Predict how much each customer will spend over their lifetime",
-      accuracy: "94%",
-      impact: "Increase revenue by 25%"
-    },
-    {
-      title: "Churn Risk Scoring",
-      description: "Identify customers likely to churn before they leave",
-      accuracy: "91%",
-      impact: "Reduce churn by 40%"
-    },
-    {
-      title: "Sentiment Trend Analysis",
-      description: "Track customer sentiment changes over time",
-      accuracy: "89%",
-      impact: "Improve satisfaction by 35%"
-    },
+export default function ZionAICustomerInsightsPage() {
     {
       title: "Purchase Intent Prediction",
       description: "Predict when customers are ready to make a purchase",
@@ -161,7 +13,8 @@ const insights = [
       impact: "Increase conversions by 50%"
     }
   ];
-  return (
+
+    return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO

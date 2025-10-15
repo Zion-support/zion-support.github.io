@@ -1,118 +1,12 @@
 import { ArrowRight, Link, Zap, Target, BarChart3, CheckCircle, Clock,    Globe, Shield, Coins } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIBlockchainAnalytics() {
-  return;
-},
-    {
-      title: "Smart Contract Intelligence",
-      description: "Intelligent analysis of smart contracts with vulnerability detection and optimization suggestions",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "DeFi Analytics",
-      description: "Comprehensive DeFi protocol analysis with yield farming optimization and risk assessment",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Cryptocurrency Tracking",
-      description: "Real-time tracking of cryptocurrency prices, market cap, and trading volume across multiple exchanges",
-      icon: <Coins className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Risk Assessment",
-      description: "AI-powered risk assessment for investments, transactions, and smart contract interactions",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Portfolio Management",
-      description: "Intelligent portfolio management with automated rebalancing and performance optimization",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 79,
-      period: "month",
-      description: "Perfect for individual traders",
-      features: [
-        "Up to 5 portfolios",
-        "Basic analytics",
-        "Email support",
-        "1 user account",
-        "Standard data feeds",
-        "Basic risk assessment"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 199,
-      period: "month",
-      description: "Ideal for trading firms",
-      features: [
-        "Up to 25 portfolios",
-        "Advanced analytics",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Premium data feeds",
-        "Advanced risk assessment",
-        "Smart contract analysis",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 499,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited portfolios",
-        "Custom analytics",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom data feeds",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const blockchainStats = [
-    { number: "99.9%", label: "Data Accuracy", icon: <Link className="w-6 h-6" /> },
-    { number: "50+", label: "Blockchain Networks", icon: <Globe className="w-6 h-6" /> },
-    { number: "95%", label: "Risk Prediction Accuracy", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "Real-time Analysis", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Alex Chen",
-      company: "Crypto Trading Firm",
-      role: "Portfolio Manager",
-      content: "AI Blockchain Analytics has transformed our trading strategy. We've improved our risk prediction accuracy to 95% and increased our returns by 40%.",
-      rating: 5,
-      avatar: "AC"
-    },
-    {
-      name: "Sarah Martinez",
-      company: "DeFi Protocol",
-      role: "Risk Manager",
-      content: "The smart contract analysis and DeFi analytics features are incredible. We can now identify vulnerabilities and optimize our protocols automatically.",
-      rating: 5,
-      avatar: "SM"
-    },
-    {
+export default function AiBlockchainAnalytics() {
+  const testimonials = [
+        {
       name: "David Kim",
       company: "Crypto Investment Fund",
       role: "Investment Director",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "DK"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Blockchain Analytics - AI-Powered Blockchain Analysis Platform | Zion Tech Group</title>

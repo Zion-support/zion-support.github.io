@@ -1,117 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionCloudVault() {
-  return;
-},
-    {
-      title: "Real-time Sync",
-      description: "Automatic synchronization across all your devices with conflict resolution and version control",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Advanced Sharing",
-      description: "Secure file sharing with granular permissions, password protection, and expiration dates",
-      icon: <Share className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Work together seamlessly with real-time editing, comments, and activity tracking",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Backup & Recovery",
-      description: "Automated backups with point-in-time recovery and ransomware protection",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Compliance Ready",
-      description: "GDPR, HIPAA, and SOC 2 compliant with audit trails and data residency controls",
-      icon: <CheckCircle className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Personal",
-      price: 9,
-      period: "month",
-      description: "Perfect for individuals",
-      features: [
-        "100 GB storage",
-        "5 devices",
-        "Basic sharing",
-        "Email support",
-        "30-day version history",
-        "Standard encryption"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 29,
-      period: "month",
-      description: "Ideal for small teams",
-      features: [
-        "1 TB storage",
-        "Unlimited devices",
-        "Advanced sharing",
-        "Priority support",
-        "1-year version history",
-        "Advanced encryption",
-        "Team collaboration",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Business",
-      price: 79,
-      period: "month",
-      description: "For growing businesses",
-      features: [
-        "5 TB storage",
-        "Unlimited devices",
-        "Enterprise sharing",
-        "Dedicated support",
-        "Unlimited version history",
-        "Military-grade encryption",
-        "Advanced admin controls",
-        "SSO integration",
-        "Compliance reporting"
-      ],
-      popular: false
-    }
-  ];
-
-const storageStats = [
-    { number: "99.99%", label: "Uptime SLA", icon: <Cloud className="w-6 h-6" /> },
-    { number: "256-bit", label: "AES Encryption", icon: <Lock className="w-6 h-6" /> },
-    { number: "5x", label: "Faster Sync", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Jennifer Adams",
-      company: "Creative Agency",
-      role: "Creative Director",
-      content: "Zion Cloud Vault has revolutionized how our team collaborates. The real-time sync and sharing features have made remote work seamless and secure.",
-      rating: 5,
-      avatar: "JA"
-    },
-    {
-      name: "Mark Wilson",
-      company: "Legal Firm",
-      role: "Managing Partner",
-      content: "The compliance features are outstanding. We can confidently store sensitive client documents knowing they're protected with military-grade encryption.",
-      rating: 5,
-      avatar: "MW"
-    },
+export default function Component() {
     {
       name: "Sarah Chen",
       company: "Startup Inc.",
@@ -121,7 +11,8 @@ const testimonials = [
       avatar: "SC"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage & File Sharing | Zion Tech Group</title>

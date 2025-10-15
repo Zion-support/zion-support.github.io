@@ -1,118 +1,12 @@
 import { ArrowRight, FileText, Zap, Target, BarChart3, CheckCircle, Clock,  Users,  Globe} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAutomatedReporting() {
-  return;
-},
-    {
-      title: "Real-time Data Integration",
-      description: "Connect to 100+ data sources and automatically update reports with real-time information",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Custom Report Templates",
-      description: "Create and customize report templates with drag-and-drop builder and AI-powered suggestions",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Automated Scheduling",
-      description: "Schedule reports to be generated and delivered automatically via email, Slack, or other channels",
-      icon: <Clock className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Interactive Dashboards",
-      description: "Create interactive dashboards with drill-down capabilities and real-time data visualization",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Share reports with team members, add comments, and collaborate on report development",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small teams",
-      features: [
-        "Up to 10 reports/month",
-        "Basic templates",
-        "Email support",
-        "1 user account",
-        "Standard data sources",
-        "Basic scheduling"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing teams",
-      features: [
-        "Up to 100 reports/month",
-        "Premium templates",
-        "Priority support",
-        "Up to 10 user accounts",
-        "All data sources",
-        "Advanced scheduling",
-        "Interactive dashboards",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited reports",
-        "Custom templates",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom data sources",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
 
-const reportingStats = [
-    { number: "90%", label: "Time Saved on Reporting", icon: <FileText className="w-6 h-6" /> },
-    { number: "100+", label: "Data Source Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "95%", label: "Report Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Generation", icon: <Clock className="w-6 h-6" /> }
-  ];
 
-const testimonials = [
-    {
-      name: "Sarah Martinez",
-      company: "Marketing Agency",
-      role: "Analytics Manager",
-      content: "AI Automated Reporting has transformed our reporting process. We save 90% of our time on report generation and our clients love the interactive dashboards.",
-      rating: 5,
-      avatar: "SM"
-    },
-    {
-      name: "David Chen",
-      company: "E-commerce Platform",
-      role: "Data Analyst",
-      content: "The AI-powered insights and real-time data integration are incredible. Our reports are now more accurate and provide actionable insights we never had before.",
-      rating: 5,
-      avatar: "DC"
-    },
-    {
+export default function AiAutomatedReporting() {
+  const testimonials = [
+        {
       name: "Lisa Johnson",
       company: "Financial Services",
       role: "Reporting Manager",
@@ -121,7 +15,8 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+        return (
     <>
       <Helmet>
         <title>AI Automated Reporting - AI-Powered Report Generation Platform | Zion Tech Group</title>

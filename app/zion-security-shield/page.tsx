@@ -1,116 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionSecurityShield() {
-  return;
-},
-    {
-      title: "Zero Trust Architecture",
-      description: "Implement zero trust security model with continuous verification and least privilege access",
-      icon: <Lock className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Automated Incident Response",
-      description: "AI-driven incident response that automatically contains and mitigates security threats",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Compliance Management",
-      description: "Automated compliance monitoring for GDPR, HIPAA, SOC 2, and other regulatory requirements",
-      icon: <CheckCircle className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Security Analytics",
-      description: "Comprehensive security analytics and reporting with actionable insights and recommendations",
-      icon: <Eye className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-cloud Protection",
-      description: "Unified security across AWS, Azure, GCP, and on-premises infrastructure",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    }
-  ];
 
-const pricingPlans = [
-    {
-      name: "Essential",
-      price: 49,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 10 endpoints",
-        "Basic threat detection",
-        "Email support",
-        "Standard compliance reports",
-        "1 user account",
-        "30-day log retention"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 149,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 100 endpoints",
-        "Advanced threat detection",
-        "Priority support",
-        "Custom compliance reports",
-        "Up to 5 user accounts",
-        "1-year log retention",
-        "API access",
-        "Automated incident response"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 399,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited endpoints",
-        "AI-powered threat hunting",
-        "Dedicated support",
-        "Custom compliance frameworks",
-        "Unlimited users",
-        "Unlimited log retention",
-        "White-label solution",
-        "24/7 SOC monitoring"
-      ],
-      popular: false
-    }
-  ];
-
-const securityStats = [
-    { number: "99.9%", label: "Threat Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
-    { number: "< 1min", label: "Average Response Time", icon: <Zap className="w-6 h-6" /> },
-    { number: "1000+", label: "Threats Blocked Daily", icon: <AlertTriangle className="w-6 h-6" /> },
-    { number: "24/7", label: "SOC Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "David Kim",
-      company: "FinTech Solutions",
-      role: "CISO",
-      content: "Zion Security Shield has been a game-changer for our security posture. The AI-powered threat detection caught several advanced persistent threats that other solutions missed.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Healthcare Systems",
-      role: "IT Director",
-      content: "The compliance management features saved us months of work. We achieved SOC 2 compliance in record time with automated monitoring and reporting.",
-      rating: 5,
-      avatar: "LT"
-    },
+export default function Component() {
     {
       name: "Robert Martinez",
       company: "E-commerce Platform",
@@ -120,7 +11,8 @@ const testimonials = [
       avatar: "RM"
     }
   ];
-  return (
+
+    return (
     <>
       <Helmet>
         <title>Zion Security Shield - Advanced Cybersecurity Protection | Zion Tech Group</title>
