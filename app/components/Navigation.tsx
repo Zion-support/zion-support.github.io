@@ -214,16 +214,20 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
   };
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/30 relative">
+      {/* Animated background */}
+      <div className="absolute inset-0 cyber-grid opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+            <Link to="/" className="flex-shrink-0 flex items-center group">
+              <div className="h-8 w-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 neon-border-animated">
+                <span className="text-white font-bold text-lg neon-text-glow">Z</span>
               </div>
-              <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
+              <span className="ml-2 text-white font-bold text-xl group-hover:text-cyan-300 transition-colors duration-300 neon-text-glow">Zion Tech Group</span>
             </Link>
           </div>
 

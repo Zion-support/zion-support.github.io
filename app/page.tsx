@@ -124,10 +124,10 @@ const HomePage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>
           <div className="absolute inset-0 cyber-grid opacity-20"></div>
           
-          {/* Floating Particles */}
-          <div className="floating-particles">
-            {[...Array(30)].map((_, i) => (
-              <div key={i} className="particle" style={{
+          {/* Floating Cyber Elements */}
+          <div className="floating-cyber-elements">
+            {[...Array(40)].map((_, i) => (
+              <div key={i} className="cyber-element" style={{
                 left: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 15}s`,
                 animationDuration: `${15 + Math.random() * 10}s`
@@ -136,12 +136,15 @@ const HomePage: React.FC = () => {
           </div>
           
           {/* Animated Background Elements */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating cyber-glow"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating cyber-glow"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating cyber-glow"></div>
           
           {/* Holographic Overlay */}
           <div className="absolute inset-0 holographic-card opacity-10"></div>
+          
+          {/* Matrix-style Code Rain */}
+          <div className="absolute inset-0 cyber-matrix opacity-5"></div>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
             <div className="text-center">
               <div className="relative inline-block mb-6">
@@ -415,6 +418,84 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <Link to="/social-media-scheduler"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Code Assistant */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CogIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-blue-400 font-medium neon-text">Code AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  AI Code Assistant
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Revolutionary AI-powered code assistant with real-time suggestions, error detection, and optimization for 50+ languages.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-400 neon-text">$29/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$79/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>50+ programming languages</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time code suggestions</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Security vulnerability scanning</span>
+                  </div>
+                </div>
+                <Link to="/ai-code-assistant"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Translator */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <GlobeAltIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-green-400 font-medium neon-text">Translation</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  AI Translator
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Break down language barriers with AI-powered translation supporting 100+ languages with context-aware accuracy.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-green-400 neon-text">$19/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$49/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>100+ languages supported</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time translation</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Industry-specific terminology</span>
+                  </div>
+                </div>
+                <Link to="/ai-translator"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial

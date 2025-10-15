@@ -75,9 +75,6 @@ const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
 
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
-const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
-const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
-const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
@@ -89,6 +86,16 @@ const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'
 const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions-pro/page'));
 const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
 const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
+
+// New AI Micro SAAS Services
+const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
+const AITranslatorPage = lazy(() => import('./app/ai-translator/page'));
+const AIAudioProcessorPage = lazy(() => import('./app/ai-audio-processor/page'));
+const AI3DModelGeneratorPage = lazy(() => import('./app/ai-3d-model-generator/page'));
+const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
+
+// Advanced IT Solutions
+const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
 
 // Zion AI Services
 const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
@@ -345,6 +352,16 @@ function App() {
                     <Route path="/zion-smart-crm-automation" element={<ZionSmartCRMAutomationPage />} />
                     <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                     <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
+                    
+                    {/* New AI Micro SAAS Services */}
+                    <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                    <Route path="/ai-translator" element={<AITranslatorPage />} />
+                    <Route path="/ai-audio-processor" element={<AIAudioProcessorPage />} />
+                    <Route path="/ai-3d-model-generator" element={<AI3DModelGeneratorPage />} />
+                    <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                    
+                    {/* Advanced IT Solutions */}
+                    <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

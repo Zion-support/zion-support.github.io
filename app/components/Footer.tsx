@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="glass-card mt-20">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="relative mt-20 overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 cyber-grid opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-800 to-slate-900"></div>
+      
+      <div className="relative z-10 glass-card">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron']">ZION TECH GROUP</h3>
@@ -197,6 +202,18 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Floating particles */}
+      <div className="floating-cyber-elements">
+        {[...Array(15)].map((_, i) => (
+          <div key={i} className="cyber-element" style={{
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 10}s`,
+            animationDuration: `${10 + Math.random() * 5}s`
+          }}></div>
+        ))}
+      </div>
       </div>
     </footer>
   );
