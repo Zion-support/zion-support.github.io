@@ -1,16 +1,15 @@
-
 import SEOHead from '../components/SEOHead';
 
-const G5gMobileApplicationsPage: React.FC = () => {};
+const G5gMobileApplicationsPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="5g-mobile-applications - Zion Tech Group"
-        description="Zion Tech Group 5g-mobile-applications service page"
+        title="5G Mobile Applications - Zion Tech Group"
+        description="Advanced 5G mobile applications and services. Optimized mobile apps for 5G networks with low latency and high performance."
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">5g-mobile-applications</h1>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">5G Mobile Applications</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>

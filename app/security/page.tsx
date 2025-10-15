@@ -1,16 +1,15 @@
-
 import SEOHead from '../components/SEOHead';
 
-const SecurityPage: React.FC = () => {};
+const SecurityPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="security - Zion Tech Group"
+        title="security - Zion Tech Group - Zion Tech Group"
         description="Zion Tech Group security service page"
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">security</h1>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">security - Zion Tech Group</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>

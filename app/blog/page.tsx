@@ -1,13 +1,19 @@
+import SEOHead from '../components/SEOHead';
 
-const BlogPage: React.FC = () => {};
+const BlogPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
-        <title>Blog - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <SEOHead 
+        title=" Blog Page - Zion Tech Group"
+        description="Zion Tech Group  Blog Page service page"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4"> Blog Page</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </div>
+    </>
   );
 };
 

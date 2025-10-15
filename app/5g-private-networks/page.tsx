@@ -1,16 +1,15 @@
-
 import SEOHead from '../components/SEOHead';
 
-const G5gPrivateNetworksPage: React.FC = () => {};
+const G5gPrivateNetworksPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="5g-private-networks - Zion Tech Group"
-        description="Zion Tech Group 5g-private-networks service page"
+        title="5G Private Networks - Zion Tech Group"
+        description="Secure 5G private networks for enterprises. Dedicated 5G infrastructure with enhanced security and performance."
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">5g-private-networks</h1>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">5G Private Networks</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
