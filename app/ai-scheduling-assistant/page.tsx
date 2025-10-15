@@ -5,35 +5,78 @@ const AISchedulingAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Zion AI Scheduling Assistant - Zion Tech Group</title>
-        <meta name="description" content="Smart scheduling solution with AI-powered availability matching, time zone handling, and automated reminders." />
+        <title>AI Scheduling Assistant - Zion Tech Group</title>
+        <meta name="description" content="Intelligent scheduling assistant powered by AI to manage appointments, meetings, and calendar optimization." />
+        <meta name="keywords" content="AI scheduling assistant, appointment scheduling, meeting scheduler, calendar optimization, smart scheduling" />
       </Helmet>
       
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion AI Scheduling Assistant</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Scheduling Assistant</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Intelligent scheduling made simple with AI-powered availability matching and automated reminders
+              Intelligent scheduling assistant powered by AI to manage appointments, meetings, and calendar optimization
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Features</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• AI Availability Matching</li>
-                <li>• Time Zone Handling</li>
-                <li>• Automated Reminders</li>
-                <li>• Calendar Integration</li>
-                <li>• Meeting Optimization</li>
-                <li>• Conflict Resolution</li>
-              </ul>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Scheduling</h3>
+              <p className="text-gray-600">
+                AI-powered scheduling that finds optimal meeting times based on availability and preferences.
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Pricing</h3>
-              <div className="text-3xl font-bold text-green-600 mb-2">$39 - $299/month</div>
-              <p className="text-gray-600">Flexible pricing based on users and meetings scheduled</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Calendar Integration</h3>
+              <p className="text-gray-600">
+                Seamlessly integrate with popular calendar applications and scheduling systems.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Conflict Resolution</h3>
+              <p className="text-gray-600">
+                Automatically detect and resolve scheduling conflicts with intelligent suggestions.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Meeting Optimization</h3>
+              <p className="text-gray-600">
+                Optimize meeting schedules based on participant availability and time zones.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Automated Reminders</h3>
+              <p className="text-gray-600">
+                Send intelligent reminders and notifications to ensure no meetings are missed.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Resource Management</h3>
+              <p className="text-gray-600">
+                Manage meeting rooms, equipment, and other resources efficiently.
+              </p>
+            </div>
+          </div>
+          
+          <div className="bg-gray-50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Natural Language Processing</h3>
+                <p className="text-gray-600">Understand scheduling requests in natural language and convert them to appointments.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Time Zone Handling</h3>
+                <p className="text-gray-600">Automatically handle time zone conversions for global teams and participants.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Recurring Events</h3>
+                <p className="text-gray-600">Create and manage recurring meetings and appointments with intelligent patterns.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Availability Checking</h3>
+                <p className="text-gray-600">Check participant availability in real-time and suggest alternative times.</p>
+              </div>
             </div>
           </div>
         </div>
