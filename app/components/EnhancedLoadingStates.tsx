@@ -36,6 +36,92 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};)"
   )
 
 export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
+  serviceType, message;";
+}) => {};: value;";";
+  const getServiceIcon = () => {";";";
+  : value';';"
+    switch (serviceType) {";";";
+};'";"
+      case 'ai':"'";"
+        return <Brain className ="w-16 h-16 text-cyan-400" />': value'";"
+      case 'it':"'";"
+        return <Shield className ="w-16 h-16 text-green-400" />': value'";"
+      case 'saas':"'";"
+        return <Zap className ="w-16 h-16 text-purple-400" />': value'";"
+      case '5g':";"
+        return <Globe className ="w-16 h-16 text-orange-400" />: value";"
+      default: ";"
+        return <Loader2 className ="w-16 h-16 text-white" />: value;",
+    };
+  };
+  const getServiceMessage = () => {";
+  : value;";";
+";";";
+};';';"
+    switch (serviceType) {},'";"
+      case 'ai':"'";"
+        return "Initializing AI Solutions..."'";"
+      case 'it':"'";"
+        return "Loading IT Services..."'";"
+      case 'saas':"'";"
+        return "Preparing Micro SaaS..."'";"
+      case '5g':";"
+        return "Connecting to 5G Network...";"
+      default: ";"
+        return "Loading...",";";
+    }";";";
+    },;"
+    {";"
+  return ()";"
+    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>";"
+        <div className ="relative mb-8">";"
+        <div className ="relative mb-8">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>";"
+            <div className ="animate-spin"></div>: value;";";";";
+              {getServiceIcon()};"
+            </$1>"
+          </div>";"
+          <div className ="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"></div>: value";"
+        </div>";"
+        <h2 className ="text-3xl font-bold text-white mb-4">{getServiceMessage()}</$1>"
+        <div className ="max-w-md mx-auto">";"
+        <div className ="max-w-md mx-auto">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>";"
+            <div className ="space-y-3">";"
+        <div className ="space-y-3">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>";"
+                <div className ="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></$1>"
+                <span className ="text-gray-300">Optimizing performance...</span>: value";"
+              </div>";"
+              <div className ="flex items-center space-x-3">";"
+        <div className ="flex items-center space-x-3">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>";"
+                <span className ="text-gray-300">Loading components...</span>: value";"
+              </div>";"
+              <div className ="flex items-center space-x-3">";"
+        <div className ="flex items-center space-x-3">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>";"
+                <span className ="text-gray-300">Preparing interface...</span>: value;";
               </div>;
             </div>;
           </div>;

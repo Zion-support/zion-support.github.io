@@ -90,14 +90,3 @@
   )"""
 const page  = React.lazy(() => import('./page')'"'""
 
-                      {benefit};
-                    </li>
-                  )};
-                </ul>
-              </FuturisticCard>
-            )};
-                  Get Started
-                </FuturisticButton>
-              </FuturisticCard>"
-            )}""
-"""

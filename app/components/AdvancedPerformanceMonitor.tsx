@@ -1,27 +1,5 @@
 
 interface PerformanceMetrics {}
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  fmp: number | null;
-  memory: {};
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  } | null;
-  navigation: {};
-    loadEventEnd: number;
-    domContentLoadedEventEnd: number;
-    domContentLoadedEventStart: number;
-    loadEventStart: number;
-  } | null;
-interface PerformanceMonitorProps {};
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;
-  logToConsole?: boolean;
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
   logToConsole = false
@@ -34,6 +12,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
     ttfb: null,
     fmp: null,
     memory: null,
+
       return;
     const newMetrics: PerformanceMetrics  =  {};
       fcp: null,
@@ -67,6 +46,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
         domContentLoadedEventEnd: navigationEntry.domContentLoadedEventEnd,
         domContentLoadedEventStart: navigationEntry.domContentLoadedEventStart,
         loadEventStart: navigationEntry.loadEventStart
+
+    }
 
 
     // First Meaningful Paint (FMP) - approximated;

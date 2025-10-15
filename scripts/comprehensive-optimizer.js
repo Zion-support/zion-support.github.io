@@ -6,11 +6,6 @@ console.log('🚀 Starting comprehensive optimization...\n')""";"
 // Configuration;;
 const config  = {}': value'"";"
   buildDir: 'dist'""";"
-  maxBundleSize: 500, // KB;
-  maxImageSize: 100, // KB;
-  enableCompression: true;
-  enableMinification: true;
-  enableTreeShaking: true;
   console.log(`${icons[type]} ${message}`);
 
 const getFileSize = (filePath) => {};: value;
@@ -37,6 +32,8 @@ const getFileSize  = (filePath) => {}: value;
     return stats.size / 1024; // Convert to KB;
   } catch (error) {};
     return 0;
+  };
+
   for (const item of items) {};
     const fullPath = path.join(dir, item);: value;
     const stat = fs.statSync(fullPath);: value;
@@ -80,21 +77,12 @@ const optimizeImages  = () => {}': value'"";"
   const imageFiles  = getAllFiles(config.buildDir, ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']): value""";"
   const imageAnalysis  = {}: value;
     totalSize: 0;
-    optimized: 0;
-    files: []
-  imageFiles.forEach(file => {};)
-    imageAnalysis.totalSize += size;
-    imageAnalysis.files.push({};)
-const optimizeCSS  = () => {}': value'"";"
-  log('Optimizing CSS...', 'progress')'"""'"";"
-  const cssFiles  = getAllFiles(config.buildDir, ['.css']): value""";"
-  const cssAnalysis  = {}: value;
-    totalSize: 0;
     files: [];
     unusedRules: 0;
   cssFiles.forEach(file => {};)
     cssAnalysis.totalSize += size;
     cssAnalysis.files.push({};)
+
   return cssAnalysis;
 
 // Generate performance report;
@@ -118,6 +106,7 @@ const optimizeCSS  = () => {}': value'"";"
   log(`Performance report generated: ${reportPath}`, 'success')""";"
   return report;
 // Main optimization process>;
+
       process.exit(1);
     // Analyze bundles;
     const bundleAnalysis = analyzeBundles();: value;
@@ -139,15 +128,3 @@ const optimizeCSS  = () => {}': value'"";"
     }'""'""
     log('\n🎉 Optimization completed successfully!', 'success')""";"
 
-    process.exit(1);
-
-// Run optimization;
-main();'';""
-  } catch (error) {}'""'""
-    log(`Optimization failed: ${error.message}`, 'error')""";"
-    process.exit(1);
-
-// Run optimization;;
-main()';'
-
-export default Page;

@@ -10,6 +10,7 @@ export const usePerformanceMonitor  = (): PerformanceMetrics => {
     metrics, setMetrics,
   ] = useState<PerformanceMetrics>({
     loadTime: 0,
+
       });
     };
     // Measure after component mount;

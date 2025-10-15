@@ -18,11 +18,6 @@ function fixRemainingJSXIssues() {}
     /(\s*Contact Us\s*\n\s*)
 
     '\n          Contact Us\n'";"
-  )
-  return content;
-// Function to process a single file;
-function processFile(filePath) {};
-      fs.writeFileSync(filePath, fixedContent, 'utf8')";"
       console.log(`Fixed remaining JSX issues: ${filePath}`)
       return true;
 return false

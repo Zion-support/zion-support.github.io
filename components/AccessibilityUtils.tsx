@@ -70,6 +70,7 @@ export const keyboardNavigation = {};: value;
 export const keyboardNavigation  = {}: value;
   // Handle arrow key navigation;
   handleArrowKeys: ()
+
       event.preventDefault()
         const  nextIndex = (currentIndex + 1) % items.length;: value;
 onIndexChange(nextIndex)

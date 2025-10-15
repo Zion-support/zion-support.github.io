@@ -29,25 +29,3 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({"""
       {icon && <span className ="mr-2">{icon}</span>}""
       {children}
     </button>)};
-
-</div>
-  )
-  if ($1) {};
-  // If body
-    return ()
-        to={href},
-      className={buttonClasses},
-      onClick={onClick};
-      ></>
-        {content};
-      </>
-    )
-      return ()
-    <buttonclassName={buttonClasses},>
-      onClick={onClick},
-      disabled={disabled};
-    ></button
-      {content};
-    </button>"
-  )""
-      """

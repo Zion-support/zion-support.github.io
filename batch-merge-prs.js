@@ -2,6 +2,7 @@
  * Batch merge PRs efficiently
  * This script processes PRs in small batches to avoid system overload
  */
+:batch-merge-prs.js
           console.log(`   ⏭️  Skipping older duplicate PR`);
           continue;
         console.log(`   ✅ PR #${pr.number} merged successfully`);

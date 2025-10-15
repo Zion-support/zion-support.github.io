@@ -37,77 +37,6 @@ interface AccessibilityOptions {
   }, []);
 
   // Detect keyboard usage;
-
-  const  focusableElements = useRef<HTMLElement[]>([])
-"
-  // Check for high contrast mode""
-const  checkHighContrast = useCallback(() => {';''"""
-    if (typeof: window === 'undefined') return"""""
-';''"""
-    const  mediaQuery = window.matchMedia('(prefers-contrast: high)')"""
-    stateRef.current.isHighContrast = mediaQuery.matches
-"
-    // Listen for changes""
-const  handleChange = (e: MediaQueryListEvent) => {"""
-      stateRef.current.isHighContrast = e.matches;';',"""""
-      document.documentElement.classList.toggle('high-contrast', e.matches)"""
-    }"
-';''""
-    mediaQuery.addEventListener('change', handleChange);''"""
-    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches)"""""
-';''"""
-    return () => mediaQuery.removeEventListener('change', handleChange)"""
-  }, [])
-"
-  // Check for reduced motion preference""
-const  checkReducedMotion = useCallback(() => {';''"""
-    if (typeof: window === 'undefined') return"""""
-';''"""
-    const  mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')"""
-    stateRef.current.isReducedMotion = mediaQuery.matches
-"
-    // Listen for changes""
-const  handleChange = (e: MediaQueryListEvent) => {"""
-      stateRef.current.isReducedMotion = e.matches;';',"""""
-      document.documentElement.classList.toggle('reduced-motion', e.matches)"""
-    }"
-';''""
-    mediaQuery.addEventListener('change', handleChange);''"""
-    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches)"""""
-';''"""
-    return () => mediaQuery.removeEventListener('change', handleChange)"""
-  }, [])
-
-  // Detect keyboard usage;
-const  detectKeyboardUsage = useCallback(() => {
-    let  isKeyboardUser = false;
-const  handleKeyDown = (e: KeyboardEvent) => {}
-  const detectKeyboardUsage  = useCallback(() => {let: isKeyboardUser = false;
-
-    const handleKeyDown  = (e: KeyboardEvent) => {};
-      if ($1) {}
-  // If body
-}
-
-
-    const  handleMouseDown = () => {"
-      isKeyboardUser = false""
-stateRef.current.isKeyboardUser = false;';''"""
-      document.body.classList.remove('keyboard-user')"""
-    }"
-';''""
-    document.addEventListener('keydown', handleKeyDown);''"""
-    document.addEventListener('mousedown', handleMouseDown)"""
-"
-    return () => {';''""
-      document.removeEventListener('keydown', handleKeyDown);''"""
-      document.removeEventListener('mousedown', handleMouseDown)"""
-    }"
-  }, [])""
-  // Update focusable elements"""
-const focusableSelectors  = ['button:not([disabled])',"'input:not([disabled])',"'select:not([disabled])',"'textarea:not([disabled])',"'a[href]',"'[tabindex]:not([tabindex="-1"])',"'[contenteditable="true"]'"""""
-    ].join(', ')""
-
     focusableElements.current = Array.from()
       document.querySelectorAll(focusableSelectors)
     ) as HTMLElement[];
@@ -201,6 +130,7 @@ label?: string;
         height: 1px;
         padding: 0;
         margin: -1px;,
+
         overflow: hidden,
         clip: rect(0, 0, 0, 0)
         white-space: nowrap;

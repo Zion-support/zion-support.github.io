@@ -46,6 +46,7 @@ console.log(`   📥 Fetching branch...`);
 console.log(`   🔀 Attempting merge...`);
     try {
     console.log(`   ✅ PR #${pr.number} merged successfully`);
+:process-all-prs-comprehensive.js
   } catch (error) {
     console.error(`   ❌ Error processing PR #${pr.number}:`, error.message);
     } catch (abortError) {

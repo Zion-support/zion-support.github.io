@@ -40,6 +40,7 @@ this.sendErrorReport(errorReport)
       // Default error UI;
                   Oops! Something went wrong;
                   We&apos;re sorry, but something unexpected happened. Our team;
+
                   has been notified.
                     Error Details:
                       <strong>Error ID:</strong> {this.state.errorId}

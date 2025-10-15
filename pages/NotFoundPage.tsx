@@ -21,17 +21,6 @@ const NotFoundPage: React.FC = () => {};
               <div: className ="absolute inset-0 flex items-center justify-center"></div>";"
                 <div: className ="w-32 h-32 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center animate-pulse"></div>";"
                   <className="w-16 h-16 text-white" />";"
-
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Error Message */}";"
-          <div: className ="mb-12"></div>";"
-            <h1: className ="text-4xl md:text-6xl font-bold text-white mb-6"></h1>";"
-              Oops! Page Not Found;
-            </h1>";"
-            <p: className ="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>: value";"
               The page you&apos;re looking for seems to have vanished into the digital void.
               Don&apos;t worry, our AI-powered search can help you find what you need!
             </p>

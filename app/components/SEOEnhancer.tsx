@@ -87,20 +87,3 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'"'"""""
 const  {"""
   "@context": "https://schema.org","@type": "Organization","name": "Zion Tech Group","description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.","url": "https://ziontechgroup.com","logo": "https://ziontechgroup.com/images/logo.png","contactPoint": {"@type": "ContactPoint","telephone": "+1-555-0123","contactType": "customer service","availableLanguage": "English"},"sameAs": ["https://www.linkedin.com/company/zion-tech-group","https://twitter.com/ziontechgroup","https://github.com/zion-tech-group"],"address": {"@type": "PostalAddress","streetAddress": "123 Tech Street","addressLocality": "San Francisco","addressRegion": "CA","postalCode": "94105","addressCountry": "US"}"""""
 }"addressCountry": "US""
-
-interface SEOEnhancerProps {};
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: Record<string>
-  noIndex?: boolean;
-    ];
-    </Helmet>"
-  )""
-      """
-'"'""""
-"""

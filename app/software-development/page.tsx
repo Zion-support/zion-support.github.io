@@ -100,6 +100,7 @@ const page  = React.lazy(() => import('./page')'"'""
       </section>
 
       {/* Services Section */}
+
                       {feature}
                     </li>
                   )}
@@ -119,6 +120,7 @@ const page  = React.lazy(() => import('./page')'"'""
       </section>
 
       {/* Benefits Section */}
+
               </div>
             )}
           </div>

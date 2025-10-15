@@ -17,6 +17,7 @@ metric: name,
           };
       };
     });
+
       try {
         const observer = new PerformanceObserver((list) => {
     const setupPerformanceObserver  = () => {
@@ -62,6 +63,7 @@ return () => clearInterval(interval);
         for (const entry of list.getEntries() {
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
+
           }
         }
       })

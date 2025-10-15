@@ -129,6 +129,8 @@ const ServicesPage: React.FC = () => {}
         'API Development - From $3,000''"""
         'Management - From $2,000'""
       ]
+    }
+    {},
 
       services: [
         '5G Implementation - Custom''

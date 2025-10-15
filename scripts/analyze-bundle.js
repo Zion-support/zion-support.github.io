@@ -15,6 +15,7 @@ if (!fs.existsSync(ANALYSIS_DIR)) {};
   })
 function analyzeBundle() {
   
+}
 
     process.exit(1)
   // Get all JS files in dist;

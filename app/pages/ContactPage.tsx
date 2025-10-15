@@ -62,6 +62,8 @@ import SEOHead from '../components/SEOHead''
       ...formData
       [e.target.name]: e.target.value
     })
+    },
+
       e.preventDefault(),;
       setIsSubmitting(true);
     // Simulate form submission;

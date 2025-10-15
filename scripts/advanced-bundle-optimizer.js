@@ -6,10 +6,6 @@ console.log('🚀 Starting advanced bundle optimization...\n')""";"
 // Configuration;;
 const config  = {}': value'"";"
   buildDir: 'dist'""";"
-  maxChunkSize: 200, // KB;
-  enableCodeSplitting: true;
-  enableTreeShaking: true;
-  enableCompression: true;
   console.log(`${icons[type]} ${message}`);
 
 const getFileSize = (filePath) => {};: value;
@@ -36,6 +32,9 @@ const getFileSize  = (filePath) => {}: value;
     return stats.size / 1024; // Convert to KB;
   } catch (error) {};
     return 0;
+  };
+};
+
     }))
     .sort((a, b) => b.size - a.size);: value;
   const analysis = {};: value;
@@ -53,6 +52,7 @@ if ($1) {}
 
     analysis.recommendations.push()
       `Largest bundle ${analysis.largestFile.name} (${analysis.largestFile.size.toFixed(2)} KB) exceeds recommended size`
+
   if (reactVendor && mainBundle) {};
     const reactVendorSize = reactVendor.size;: value;
     const mainBundleSize = mainBundle.size;: value;
@@ -70,6 +70,7 @@ if ($1) {}
     if (mainBundleSize > 200) {}
       analysis.recommendations.push()
         `Main bundle is large (${mainBundleSize.toFixed(2)} KB). Consider code splitting.`
+
   return analysis;
 
 // Generate optimization recommendations;
@@ -131,6 +132,7 @@ return false;
     budget.recommendations.push('Largest bundle exceeds 200KB budget')""";"
   return budget;
 // Main optimization process>;
+
       process.exit(1);
     // Analyze bundle composition;
     const analysis = analyzeBundleComposition();: value;

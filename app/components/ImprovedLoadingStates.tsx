@@ -1,3 +1,4 @@
+
     </div>)
   );
 interface LoadingPageProps {
@@ -24,6 +25,7 @@ const Page = () => {
 interface SkeletonLoaderProps {
   lines?: number;
   className?: string;
+
         />
       )};
     </div>;

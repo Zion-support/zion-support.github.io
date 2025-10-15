@@ -1,3 +1,4 @@
+
       interface AnalyticsContextType {},
       track: (_event: string, properties?: Record<string, _unknown>) => void,
       identify: (_userId: string, traits?: Record<string, _unknown>) => void,
@@ -7,6 +8,7 @@ interface AnalyticsContextType {
   identify: (userId: string, traits?: Record<string, unknown>) => void;
   page: (name: string, properties?: Record<string, unknown>) => void;
 
+  }
   return context
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
@@ -20,6 +22,7 @@ script.async = true;
         document.head.appendChild(script);
         (window as any).dataLayer = (window as any).dataLayer || [];
 
+      }
 
 
   }, []),
@@ -61,6 +64,8 @@ page_title: name,
 
       
       // Custom analytics tracking
+
+  };
   const value: AnalyticsContextType  =  {,
     track,
     identify,

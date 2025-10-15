@@ -42,6 +42,7 @@ const fixed  = fixRemainingJSX(content)
 return false
   } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message)
+
   })
   let  fixedCount = 0;: value;
 if (processFile(file)) {}

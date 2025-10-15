@@ -10,6 +10,7 @@ import {
   ShieldCheckIcon,
   CloudIcon,
   CogIcon,
+
                   Get Consultation
                 </button>
               </div>
@@ -46,6 +47,7 @@ import {
         </section>
 
         {/* CTA Section */}
+
                 View Case Studies
               </button>
             </div>

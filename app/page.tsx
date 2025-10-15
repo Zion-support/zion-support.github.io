@@ -1,3 +1,4 @@
+
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -296,6 +297,8 @@ title="Zion Tech Group - Advanced AI & IT Solutions"""""
               </div>
 
               {/* Analytics Dashboard */}
+
+                >
                   Try Free Trial
                 </Link>
               </div>

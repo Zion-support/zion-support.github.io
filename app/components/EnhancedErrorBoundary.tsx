@@ -12,18 +12,6 @@ interface State {
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
-
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      hasError: false,
-      error: null,
-
-      errorId: '''
-
-
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,

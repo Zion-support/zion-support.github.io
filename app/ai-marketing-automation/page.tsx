@@ -89,20 +89,11 @@
     </>""
   )"""
 const page  = React.lazy(() => import('./page')'"'""
-
-        </div>
-      </div>
-                          {benefit};
-                        </div>
-                      )};
-                    </div>
-                  </div>
-                </div>
-              )};
         </div>
       </div>
                           </div>
                           {feature};
+
                       }`};
                     ></>
                       Get Started

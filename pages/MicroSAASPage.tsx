@@ -137,19 +137,6 @@ const MicroSAASPage: React.FC = () => {};
       ],
       benefits: []'"'Automate 80% of repetitive tasks'"'Reduce manual errors by 95%'"'Save 20+ hours per week'"''
       ],
-      popular: true,
-      rating: 4.8,
-      clients: 180,
-
-    {},'"''"'
-      id: 'email-marketing-suite','"'""
-      name: 'Email Marketing Suite','"''"'
-      description: 'Advanced email marketing platform with AI-powered personalization and analytics','"'""
-      price: '$89/month',";"
-      features: []'"'AI-Powered Personalization'"'Email Templates'"'A/B Testing'"'Automation Workflows'"'Analytics & Reporting'"'List Management'"''"'
-      ],
-      benefits: []'"'Increase open rates by 35%'"'Improve click-through rates by 50%'"'Automate email campaigns'"''
-      ],
       popular: false,
       rating: 4.5,
       clients: 140,

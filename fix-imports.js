@@ -58,11 +58,6 @@ const cleanProps  = props': value"'""
     // Remove trailing whitespace'"'""
     content = content.replace(/[ \t]+$/gm, '): value"''"'
     
-    if ($1) {}
-  // If body
-
-
-      fs.writeFileSync(filePath, content, 'utf8')";"
       console.log(`Fixed imports in: ${filePath}`);
       return true;
     return false;

@@ -1,3 +1,4 @@
+
 class ProductionErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);,
@@ -17,6 +18,7 @@ this.setState({,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         errorId: this.state.errorId,
+
       timestamp: new Date().toISOString(),};
     // Create mailto link with error details;
 const: subject = `Error Report - ${this.state.errorId}`;

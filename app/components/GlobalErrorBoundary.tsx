@@ -74,6 +74,7 @@ console.error('Production error:', error, errorInfo)"""
           </div>
         </div>
 
+    }
 
     return this.props.children
 

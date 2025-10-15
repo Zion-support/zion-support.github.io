@@ -20,31 +20,6 @@ const EnhancedServicesShowcase: React.FC = () => {};
         "Complete digital transformation services to modernize your business and stay competitive.",""""
       features: []"""
         "Strategy Development","Technology Integration","Change Management","Training & Support",""
-
-import {
-  Brain,
-  Shield,
-  Zap,
-  Globe,
-  CheckCircle,;"
-  ArrowRight,"""
-}; from \"lucide-react\"""""
-import { Link } from "react-router-dom;
-"
-const EnhancedServicesShowcase: React.FC = () => {""
-"""
-          <p className ="text-xl text-gray-300 max-w-3xl mx-auto">""
-            We provide comprehensive technology solutions to help your business thrive in the digital age.
-          </p>"
-        </div>""
-"""
-                <p className ="text-gray-300 text-sm mb-4">""
-                  {service.description}
-                </p>"
-              </div>""
-"""
-                  <li key ={idx} className="flex items-center gap-2 text-sm text-gray-400">"""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />""
                     <span>{feature}</span>
                   </li>
                 )}

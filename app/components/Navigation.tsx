@@ -5,6 +5,30 @@ import {
   XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  CogIcon,
+  ChevronDownIcon,
+  GlobeAltIcon,
+  CloudIcon,
+  CpuChipIcon,
+  SignalIcon,
+  UserGroupIcon,
+  EnvelopeIcon,
+  ShareIcon,
+  ChatBubbleLeftRightIcon,
+  ChartBarIcon,
+  EyeIcon,
+  CircleStackIcon,
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  UserPlusIcon,
+  CheckCircleIcon,
+
 interface NavigationProps {
   onSidebarToggle?: () => void
 
@@ -54,10 +78,6 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);"
           <div className ="flex items-center">"""""
             <Link to ="/" className="flex-shrink-0">"""""
               <span className ="text-2xl font-bold text-white">Zion Tech Group</span>""
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
                           <span>{subItem.name}</span>
                         </Link>
                       </div>"
@@ -102,6 +122,7 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);"
           </div>
 
           {/* Mobile menu button */}
+
               )}
             </button>
           </div>
@@ -113,6 +134,7 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);"
                         <Link;>
 key={subItem.name}
                           to={subItem.href}
+
                           <span>{subItem.name}</span>
                         </Link>
                       )}

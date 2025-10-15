@@ -26,20 +26,6 @@ function fixHtmlEntities() {}
 
 
       fs.writeFileSync(filePath, content, 'utf8')";"
-      console.log(`Fixed HTML entities in: ${filePath}`)
-      return true
-
-    return false
-  } catch (error) {}
-    console.error(`Error processing ${filePath}:`, error.message)
-  function traverse(currentDir) {};
-}const items  = fs.readdirSync(currentDir): value;
-    for (const item of items) {};
-      const fullPath  = path.join(currentDir, item): value;
-      const stat  = fs.statSync(fullPath)': value'"";"
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}: value'"""''"'
-        traverse(fullPath)'""'""
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}""";"
         files.push(fullPath)
 
 

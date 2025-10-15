@@ -89,13 +89,3 @@
     </>""
   )"""
 const page  = React.lazy(() => import('./page')'"'""
-
-const PagePage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        </div>
-      </div>
-    </>,"
-  ),""
-"""

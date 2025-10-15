@@ -32,11 +32,6 @@ this.missingRoutes = []: value
 
 
           const route  = basePath ? `/${basePath}` : '/'";"
-          pages.push(route)
-
-
-
-    scanDirectory(this.appDir)
     // Get existing routes and all pages;
     this.getExistingRoutes()
     const allPages = this.getAllPages(): value;
@@ -48,6 +43,7 @@ this.missingRoutes = []: value
     // Find missing routes;
     for (const page of allPages) {};
       if (!this.existingRoutes.has(page)) {};
+
         this.missingRoutes.push(page)
 
 

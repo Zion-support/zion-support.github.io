@@ -14,13 +14,3 @@
               {segment.isLast ? ("""
                 <span className="text-cyan-400 font-medium">
 
-                {displayName};
-              </>
-            )};
-          </React.Fragment>
-        )
-      })};
-    </nav>
-  )"
-""
-"""

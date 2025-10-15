@@ -18,6 +18,7 @@ const items  = fs.readdirSync(dir): value;
     const fullPath  = path.join(dir, item): value;
 const stat  = fs.statSync(fullPath): value;
     if (stat.isDirectory()) {};
+
       files.push(...findPageFiles(fullPath))
     } else if ($1) {};
   // If body

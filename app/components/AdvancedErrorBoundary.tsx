@@ -1,3 +1,5 @@
+
+
       interface Props {},
       children: ReactNode,
       fallback?: ReactNode,
@@ -33,6 +35,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props),
 
+  }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
@@ -121,6 +124,10 @@ if (this.props.fallback) {},
               </button>
               
               <buttononClick={this.handleReload},>
+      className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center"
+              ></button
+>
+                <RefreshCw: className ="w-4 h-4 mr-2" />"
                 Reload Page
               </button>
               

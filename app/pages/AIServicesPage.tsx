@@ -13,10 +13,6 @@ const Page = () => {
           </p>
         </div>
       </div>
-                    Learn More
-                  </button>
-                </div>
-              </div>
                 }`}>
                   Get Started
                 </button>

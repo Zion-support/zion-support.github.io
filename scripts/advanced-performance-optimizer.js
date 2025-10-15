@@ -78,3 +78,4 @@ console.log('📊 Generating performance report...');'
 
 // Run the script;
 optimizePerformance();
+

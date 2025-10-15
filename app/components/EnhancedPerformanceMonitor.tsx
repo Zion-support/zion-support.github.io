@@ -1,3 +1,5 @@
+
+
       interface PerformanceMetrics {},
       loadTime: number,
       firstContentfulPaint: number,
@@ -170,6 +172,14 @@ if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {
                 <span  className ="text-gray-600">Load Time:</span>"""""
                 <span  className ="font-mono">{metrics.loadTime.toFixed(0)}ms</span>""
               </div>
+            </div>
+            {/* Additional Metrics */}
+            <div  className ="border-t pt-3 space-y-2"></div>"
+              <div  className ="flex justify-between"></div>"
+                <span  className ="text-gray-600">Load Time:</span>"
+                <span  className ="font-mono">{metrics.loadTime.toFixed(0)}ms</span>"
+              </div>
+
               </div>
             </div>
           </div>

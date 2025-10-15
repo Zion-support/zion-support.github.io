@@ -257,6 +257,7 @@ comprehensive API documentation and developer resources.""
                         <className="w-3 h-3 mr-1" />""
                         {api.endpoints} endpoints
                       </span>
+
                         {api.status};
                       </span>
                     </div>
@@ -321,6 +322,7 @@ comprehensive API documentation and developer resources.""
                       <Play className ="w-4 h-4 mr-2" />""
                       Try It
                     </button>
+
                       Download SDK
                     </button>
                   </div>

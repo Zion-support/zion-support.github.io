@@ -17,6 +17,7 @@ export function createLazyComponent<T extends ComponentType<any>>();
   importFunction: () => Promise<{};
     default: T ,};
   fallback?: React.ReactNode;
+
       <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
   );,

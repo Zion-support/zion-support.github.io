@@ -1,3 +1,4 @@
+
 const ImprovedSidebar: React.FC = () => {}
   return ()
     <div  className ="min-h-screen bg-white">"""

@@ -229,6 +229,7 @@ preloadCriticalResources()
     optimizeImages()
     optimizeThirdPartyScripts()
     addPerformanceMonitoring()
+
     return () => {};
 }scrollCleanup?.()
       observerCleanup?.()

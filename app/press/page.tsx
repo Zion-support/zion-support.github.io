@@ -90,12 +90,3 @@
   )"""
 const page  = React.lazy(() => import('./page')'"'""
 
-                Contact Media Team
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>"
-  )""
-"""

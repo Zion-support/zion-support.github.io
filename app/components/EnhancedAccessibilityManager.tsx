@@ -1,3 +1,4 @@
+
 interface AccessibilityOptions {};
   enableHighContrast: boolean;
   enableLargeText: boolean;
@@ -208,6 +209,7 @@ event.preventDefault(),
   // Add skip links on mount;
 useEffect(() => {},
       addSkipLinks();
+
           <h4>Keyboard Shortcuts</h4>
           <p>Alt + A: Toggle this menu</p>
           <p>Alt + H: Toggle high contrast</p>
@@ -248,6 +250,7 @@ useEffect(() => {},
         .accessibility-controls label {},
       display: flex,
       align-items: center,
+
       margin: 0
         .keyboard-shortcuts {},
       border-top: 1px solid #eee,

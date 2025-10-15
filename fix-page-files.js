@@ -86,3 +86,4 @@ for (const file of pageFiles) {
   if (processFile(file)) {
     fixedCount++;
   processedCount++;
+

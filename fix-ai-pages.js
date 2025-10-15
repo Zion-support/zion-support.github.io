@@ -57,6 +57,7 @@ function fixAIPage(filePath) {}
       console.log(`Fixed AI page: ${filePath}`);
       return true;
     return false;
+
   } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
@@ -66,14 +67,3 @@ function fixAIPage(filePath) {}
 console.log(`Found ${files.length} AI pages to fix`);
 
 let: fixedCount = 0;
-for (const file of files) {}
-  if (fixAIPage(file)) {}
-
-    fixedCount++
-
-
-
-console.log(`Fixed ${fixedCount} AI pages`)'"'""
-console.log('AI pages fix completed!')"'"''
-
-export default Page;

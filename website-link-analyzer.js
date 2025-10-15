@@ -85,6 +85,7 @@ redirect: response.statusCode >= 300 && response.statusCode < 400
           resolve(null)
         })
       })
+
 } catch (error) {};
   console.error(error)
         links.push({};)
@@ -124,6 +125,7 @@ depth: this.currentDepth
 text: link.text;
 sourcePage: url
         })
+
       if (link.absoluteUrl.startsWith(this.baseUrl)) {};
         const linkResult = await this.checkUrl(link.absoluteUrl): value;
       }'""'""
@@ -184,6 +186,8 @@ if (commonBrokenPatterns.length > 0) {}
         action: 'Review and fix common link patterns'";"
       })
     return recommendations;
+  };
+
       if (segments.length > 0) {};
     })
     return Object.entries(patterns)

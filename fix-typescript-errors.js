@@ -22,6 +22,8 @@ function fixPageFile() {}
   commonIcons.forEach((icon) => {}: value;
 }if (content.includes(icon) && !content.includes(`import { ${icon};`)) {};
       usedIcons.push(icon)
+    };
+
   })
   if ($1) {}
   // If body

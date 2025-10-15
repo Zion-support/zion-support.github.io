@@ -168,11 +168,6 @@ console.log('Form submitted:', formData)'"'"""
       </div>
     </div>
   );
-
-    setFormData(prev => ({};)
-      ...prev;
-      [name]: value
-    })
                   </button>
                 </div>
               </form>

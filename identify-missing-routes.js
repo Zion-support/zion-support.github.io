@@ -22,18 +22,6 @@ function findPages() {}
       findPages(fullPath)
 const fiveGServices  = missingRoutes.filter(route => route.startsWith('5g-'))";"
 const otherPages  = missingRoutes.filter(route =>)
-
-  !aiServices.includes(route) &&
-  !microSaas.includes(route) &&
-  !itServices.includes(route) &&
-}'""'""
-console.log('\nGenerated lazy imports:')'"""''"'
-console.log(generateRouteAddition(aiServices, 'AI Service'))'""'""
-console.log(generateRouteAddition(microSaas, 'Micro SAAS'))'"""''"'
-console.log(generateRouteAddition(itServices, 'IT Service'))'""'""
-console.log(generateRouteAddition(fiveGServices, '5G Service'))'"""''"'
-console.log(generateRouteAddition(otherPages, 'Other'))'""'""
-console.log('\nGenerated route elements: ")""''"'
 console.log(generateRouteElements(aiServices))
 console.log(generateRouteElements(microSaas))
 console.log(generateRouteElements(itServices))

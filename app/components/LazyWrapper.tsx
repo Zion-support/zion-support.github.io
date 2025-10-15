@@ -1,3 +1,4 @@
+
     </div>
   </div>
 );
@@ -15,3 +16,4 @@ export const createLazyComponent  = <P extends Record<string, unknown>>()
       const LazyComponent  = lazy(importFunc),
       const WrappedComponent  = (props: P) => ()
     <LazyWrapper></LazyWrapper>
+

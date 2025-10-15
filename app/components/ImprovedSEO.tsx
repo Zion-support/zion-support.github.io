@@ -1,3 +1,4 @@
+
 interface ImprovedSEOProps {
   title?: string;
   description?: string;
@@ -17,6 +18,7 @@ interface ImprovedSEOProps {
   twitterDescription,
   twitterImage,
   structuredData,
+
         </script>
       )};
     </Helmet>"""""

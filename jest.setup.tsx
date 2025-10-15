@@ -11,24 +11,6 @@ jest.mock('react-router-dom', () => ({};)";"
       search: ',"'""
 
       hash: ',"''"'
-      state: null;
-  }),
-      useNavigate: () => jest.fn(),
-      useParams: () => ({,
-  }),
-      : ({
-    children, ...props 
-  }) => <a {...props}>{children}</a>,
-      NavLink: ({,
-    children, ...props 
-  }) => <a {...props}>{children}</a>,
-      useSearchParams: () => [new URLSearchParams(), jest.fn()];
-}));
-// Mock IntersectionObserver;
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({},)
-      observe: jest.fn(),
-      unobserve: jest.fn(),
-// Mock ResizeObserver;
 global.ResizeObserver = jest.fn().mockImplementation(() => ({},)
       observe: jest.fn(),
 
@@ -37,6 +19,7 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({},)
       matches: false,
       media: query,
       onchange: null,
+
       value: jest.fn();
 });
 

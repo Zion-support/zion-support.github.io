@@ -5,6 +5,7 @@ import path from \"path\";"
 function fixComprehensiveJSX() {}
   // Function body
 
+}
 
   )
   return content;

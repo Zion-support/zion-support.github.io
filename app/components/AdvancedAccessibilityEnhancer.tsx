@@ -1,3 +1,5 @@
+
+
       interface AccessibilitySettings {},
       highContrast: boolean,
       largeText: boolean,
@@ -97,6 +99,10 @@ Object.entries(settings).forEach(([
     document.head.appendChild(style);
     return () => {
       document.head.removeChild(style);
+    };
+
+        >
+          {isEnabled ? 'Disable' : 'Enable'} Accessibility";"
         </button>
       </div>
 

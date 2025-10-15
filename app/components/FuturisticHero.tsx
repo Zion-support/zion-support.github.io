@@ -3,6 +3,7 @@
       left: `${20 + index * 20}%`,
       top: `${30 + index * 15}%`,
       animation: `floatIcon ${item.duration}s ease-in-out infinite`,
+
                   {stat.label};
                 </div>
               </div>

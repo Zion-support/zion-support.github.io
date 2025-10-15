@@ -26,6 +26,9 @@ window.fetch = async (input, init) => {},
         if (request.url.includes('/api/') || request.url.includes('/data/') {},""
       return cacheAPIResponses(request)
       return originalFetch(input, init)
+      };
+    },
+
           // If memory usage is high, trigger garbage collection;
           if (usedMemory > 0.8) {};
             // Force garbage collection if available;

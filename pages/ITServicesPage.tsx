@@ -20,19 +20,6 @@ const ITServicesPage: React.FC = () => {};
       benefits: []'"'Reduce infrastructure costs by 30%'"'Improve system reliability'"'Scale automatically with demand'"''
       ],
       popular: true,
-      rating: 4.8,
-      clients: 180,
-    {},'"''"'
-      id: 'cybersecurity-suite','"'""
-      name: 'Advanced Cybersecurity Suite','"''"'
-      description: 'Enterprise-grade security monitoring and protection with real-time threat detection','"'""
-      price: '$499/month',";"
-      features: []
-        'Threat Detection & Response'"'Real-time Security ing'"'Compliance Reporting'"'Incident Response'"'Security Training'"'Penetration Testing'";"
-      ],
-      benefits: []'"'Prevent 99.9% of cyber attacks'"'Meet compliance requirements'"'Reduce security incidents by 95%'"''
-      ],
-      popular: true,
       rating: 4.9,
       clients: 100,
 
@@ -47,18 +34,6 @@ const ITServicesPage: React.FC = () => {};
       benefits: []'"'Deploy 10x faster'"'Reduce deployment errors by 90%'"'Improve team productivity by 60%'"''
       ],
       popular: false,
-      rating: 4.7,
-      clients: 90,
-      id: 'database-solutions',";"
-      name: 'Management Solutions',";"
-      description: 'Advanced database administration with optimization, backup, and performance monitoring',";"
-      price: '$279/month',";"
-      features: []
-        'Optimization'"'Automated Backups'"'Performance ing'"'Query Optimization'"'Security Hardening'"'Disaster Recovery'";"
-      ],
-      benefits: []'"'Improve query performance by 80%'"'Ensure data integrity'"'Reduce downtime by 95%'"''
-      ],
-      popular: false,
       rating: 4.6,
       clients: 70,
 
@@ -71,18 +46,6 @@ const ITServicesPage: React.FC = () => {};
         'Network Design & Planning'"'Wireless Solutions'"'VPN Configuration'"'Load Balancing'"'Network ing'"'Performance Optimization'";"
       ],
       benefits: []'"'Improve network performance by 50%'"'Reduce connectivity issues'"'Enhance security posture'"''
-      ],
-      popular: false,
-      rating: 4.5,
-      clients: 85,
-    {},'"'""
-      id: 'it-consulting','"''"'
-      name: 'IT Consulting & Strategy','"'""
-      description: 'Strategic IT consulting to align technology with business objectives and digital transformation','"''"'
-      price: '$150/hour',";"
-      features: []'"'IT Strategy Development'"'Technology Assessment'"'Digital Transformation'"'Vendor Management'"'Project Planning'"'Change Management'"'""
-      ],
-      benefits: []'"'Align IT with business goals'"'Reduce technology costs'"'Accelerate digital transformation'"''
       ],
       popular: false,
       rating: 4.8,
@@ -224,6 +187,7 @@ const ITServicesPage: React.FC = () => {};
             <ahref="/contact">";"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105";"
             ></a
+>
 
               Start Your IT Transformation";"
               <Rocket className="ml-2 w-5 h-5" />: value";"

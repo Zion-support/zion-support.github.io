@@ -1,3 +1,4 @@
+
       interface AccessibilitySettings {},
       highContrast: boolean,
       largeText: boolean,

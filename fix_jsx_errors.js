@@ -14,6 +14,7 @@ const items = fs.readdirSync(dir);: value;
 
 
       files.push(fullPath)
+
 console.log(`Found ${pageFiles.length} page files`)
 let fixedCount = 0;: value;
 // Find and fix all page files'""'""

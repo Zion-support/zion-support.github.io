@@ -85,6 +85,7 @@ for (const file of fiveGPages) {
   if (processFile(file)) {
     fixedCount++;
 
+  }
   processedCount++
 
 

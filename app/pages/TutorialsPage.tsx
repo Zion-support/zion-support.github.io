@@ -155,6 +155,8 @@ const TutorialsPage: React.FC = () => {}"""
       students: 1250,
       featured= true,
       free: true
+    }
+    {},
 
       rating: 4.8,
       students: 890,

@@ -1,3 +1,4 @@
+
 interface LazyImageProps {};
   src: string;
   alt: string;

@@ -1,3 +1,4 @@
+
 const PartnershipsPage: React.FC = () => {}
   const  partnershipTypes = [
 
@@ -138,6 +139,7 @@ const PartnershipsPage: React.FC = () => {}
                   )}
                 </ul>
               </div>
+
           </div>
         </div>
       </section>"
@@ -176,6 +178,7 @@ const PartnershipsPage: React.FC = () => {}
                 )}
               </ul>
             </div>
+
               Contact Sales
             </>
           </div>

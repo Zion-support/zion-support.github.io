@@ -1,3 +1,4 @@
+
   src: string,
       alt: string,
       className?: string,
@@ -59,6 +60,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     if (imgRef.current && !priority) {
       observer.observe(imgRef.current);
     return () => observer.disconnect();
+
       </div>
     );
   if (!isInView && !priority) {};

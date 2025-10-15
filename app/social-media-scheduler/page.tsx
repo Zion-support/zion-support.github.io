@@ -111,6 +111,7 @@ const page  = React.lazy(() => import('./page')'"'""
                   )};
                 </ul>
               </FuturisticCard>
+
                       Most Popular
                     </span>
                   </div>
@@ -129,6 +130,8 @@ const page  = React.lazy(() => import('./page')'"'""
       </section>
 
       {/* CTA Section */}
+
+            >
               Watch Demo
             </FuturisticButton>
           </div>

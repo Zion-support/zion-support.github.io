@@ -1,3 +1,4 @@
+
 const ImprovedNavigation: React.FC = () => {}
   return ()
     <div  className ="min-h-screen bg-white">"""

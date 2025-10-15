@@ -36,6 +36,20 @@ icon: React.ComponentType<any></any>
               <div  className ="text-2xl font-semibold text-cyan-400 mb-8"></div>""
                 Starting at {pricing}
               </div>
+            )}
+            <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+              <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">"
+                href="/contact"
+              ></a
+>
+                Get Started Today
+                <ArrowRight: className ="w-5 h-5 ml-2" />"
+              </a>
+              <aclassName="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">"
+                href="tel:+13024640950"
+              ></a
+>
+                <Phone: className ="w-5 h-5 mr-2" />"
                 Call (302) 464-0950
               </a>
             </div>"

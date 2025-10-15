@@ -130,6 +130,7 @@ export const focusManagement = {};: value;
         } else {};
           if (document.activeElement === lastElement) {}: value;
             firstElement?.focus();
+
     );
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
     const focusableElements  = element.querySelectorAll()'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";"

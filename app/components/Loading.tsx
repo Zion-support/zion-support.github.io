@@ -101,24 +101,3 @@ solutions tailored to your specific needs and requirements.</p>"""
           <a href ="/contact"">"""
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">""
             Get Started Today</a></div></section></div>
-
-interface LoadingProps {}
-  message?: string
-
-
-
-  return ()
-    <div>"
-      <Helmet>""
-        <title>Loading - Zion Tech Group</title>"""
-        <meta name ="description" content="Loading page" />"""
-      </Helmet>""
-        </div>"""
-      </div>"""""
-    </>""""""
-  )"""""""
-import React from 'react'""""""
-import SEOHead from './components/SEOHead;'""
-"""
-'"'""""
-"""

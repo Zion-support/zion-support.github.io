@@ -447,6 +447,7 @@ const EnhancedNavigation  = () => {const [isOpen, setIsOpen] = useState(false);"
                         onClick={() => setIsOpen(false)};
                         View All →
                       </>
+
                   {quickLinks.map((link) => ()}
                       key={link.href},
       to={link.href},

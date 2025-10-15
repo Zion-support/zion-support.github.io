@@ -9,11 +9,3 @@ import { Helmet } from 'react-helmet-async',;
       features: string[],""
       benefits: string[],"""
       pricing: {"}""
-    starting: string,
-      market: string
-  technologies: string[],
-      icon: React.ReactNode,
-  )
-"
-      ""
-"""

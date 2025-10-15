@@ -57,6 +57,7 @@ firstContentfulPaint: 0,;
             first_input_delay: metricsRef.current.firstInputDelay;
             cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift;
             time_to_interactive: metricsRef.current.timeToInteractive
+
       // Log metrics after 5 seconds;
       setTimeout(logMetrics, 5000);
     };

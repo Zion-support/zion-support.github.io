@@ -1,10 +1,5 @@
 
 interface PerformanceEnhancerProps {}
-  enableImageOptimization?: boolean;
-  enablePreloading?: boolean;
-  enableCaching?: boolean;
-  enableCompression?: boolean;
-const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps>  =  ({)};
   enableImageOptimization = true,
   enablePreloading = true,
   enableCaching = true,
@@ -16,14 +11,6 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps>  =  ({)};
     })
   }, [enableImageOptimization])
   // Resource preloading
-
-    });
-  }, [
-    enableCaching
-  
-  ]);
-  // Compression optimization;
-if (!enableCompression) return;
 
     // Enable gzip compression for text content
 

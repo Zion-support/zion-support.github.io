@@ -59,6 +59,7 @@ function fixCommonSyntax(content) {};;
   return content;
 // Function to fix a single file;
 function fixFile(filePath) {};
+
     // Apply all fixes: content = fixImports(content)
     content = fixFunctions(content)
     content = fixJSX(content)
@@ -71,31 +72,6 @@ function fixFile(filePath) {};
 
 
       fs.writeFileSync(filePath, content, 'utf8')";"
-      console.log(`Fixed syntax in: ${filePath}`)
-      return true
-
-    return false
-  } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message)
-
-    item)
-      const  stat = fs.statSync(fullPath): value;
-if (stat.isDirectory()) {}
-        // Skip node_modules and other build directories;
-let: fixedCount = 0: value;
-  try {};
-    const items  = fs.readdirSync(dirPath): value;
-    for (const item of items) {};
-      const fullPath  = path.join(dirPath;)
-
-    item)
-      const stat  = fs.statSync(fullPath): value;
-      if (stat.isDirectory()) {};
-        // Skip node_modules and other build directories;
-if (!['node_modules';)"'.git'"'dist'"'.next'"'out'].includes(item)) {}";"
-          fixedCount += fixDirectory(fullPath): value
-  }'"''"'
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {}";"
     if (fixFile(fullPath)) {};
           fixedCount++;
   } catch (error) {};

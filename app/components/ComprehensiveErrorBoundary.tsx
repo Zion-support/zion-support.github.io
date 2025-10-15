@@ -1,3 +1,6 @@
+
+    };
+  };
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {,
       hasError: true,
@@ -13,12 +16,15 @@ if (this.props.onError) {
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
     // In a real application, you would send this to an error reporting service;
     // like Sentry, LogRocket, or Bugsnag;
+
+    };
     // For now, just log to console
   handleRetry = () => {
     this.setState({
   handleReload = () => {
     window.location.reload();
   render() {
+
                 </p>
               )};
             </div>

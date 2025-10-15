@@ -1,3 +1,4 @@
+
 import {
   Menu,
   X,
@@ -23,6 +24,7 @@ import {
   const: location = useLocation()
   const: toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
+
     setIsSearchOpen(!isSearchOpen)
   }, [
     isSearchOpen
@@ -38,6 +40,7 @@ useEffect(() => {
                         )};
                       </div>
                     </Link>
+
                           </div>
                         )};
                       </div>
@@ -47,6 +50,7 @@ useEffect(() => {
     item.name
   })
                 </Link>)
+
                       </Link>
 )};
                   </div>
@@ -62,6 +66,7 @@ useEffect(() => {
                   </div>
                 )};
               </div>
+
               </FuturisticButton>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -33,6 +34,7 @@ useEffect(() => {
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
+
       return newSettings;
     });
   return null;
@@ -44,6 +46,7 @@ useEffect(() => {
               <p>Enter/Space: Activate elements</p>
             </div>
           </div>
+
         .high-contrast * {
           background-color: var(--tw-bg-opacity) !important;
           color: var(--tw-text-opacity) !important;
