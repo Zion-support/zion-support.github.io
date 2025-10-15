@@ -12,16 +12,16 @@ const HomePage: React.FC = memo(() => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -89,31 +89,91 @@ const HomePage: React.FC = memo(() => {
           
           {/* AI Tools Preview */}
           <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Micro SaaS Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
-                <Link to="/zion-ai-content-moderator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Chatbot Builder</h3>
+                <p className="text-gray-600 text-sm mb-3">Build intelligent chatbots without coding</p>
+                <Link to="/ai-chatbot-builder" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Sales Predictor</h3>
-                <p className="text-gray-600 text-sm mb-3">Predict sales trends with AI</p>
-                <Link to="/zion-ai-sales-predictor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Form Builder</h3>
+                <p className="text-gray-600 text-sm mb-3">Create smart forms with AI validation</p>
+                <Link to="/ai-form-builder" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Workflow Automator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automate business workflows</p>
-                <Link to="/zion-ai-workflow-automator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Document Processor</h3>
+                <p className="text-gray-600 text-sm mb-3">Process documents automatically with AI</p>
+                <Link to="/ai-document-processor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
-                <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
-                <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Scheduling Assistant</h3>
+                <p className="text-gray-600 text-sm mb-3">Automate scheduling with AI intelligence</p>
+                <Link to="/ai-scheduling-assistant" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
             </div>
             <div className="text-center mt-8">
-              <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
+              <Link to="/micro-saas-solutions" className="text-blue-600 hover:text-blue-800 font-medium">View All Micro SaaS Solutions →</Link>
+            </div>
+          </div>
+
+          {/* IT Solutions Preview */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Advanced IT Solutions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
+                <p className="text-gray-600 mb-4">
+                  Scalable and secure cloud solutions with advanced monitoring and optimization for your business needs.
+                </p>
+                <Link to="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Blockchain Solutions</h3>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive blockchain development and integration services for smart contracts, DeFi, and Web3 applications.
+                </p>
+                <Link to="/blockchain-solutions" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">IoT Solutions</h3>
+                <p className="text-gray-600 mb-4">
+                  End-to-end IoT development and management platform for connected devices, sensors, and smart systems.
+                </p>
+                <Link to="/iot-solutions" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All IT Solutions →</Link>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="mt-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16 rounded-2xl">
+            <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+              <p className="text-xl mb-8">
+                Let our expert team help you choose the right solutions for your business needs. Get a free consultation today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/contact" 
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Free Consultation
+                </a>
+                <a 
+                  href="tel:+13024640950" 
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Call +1 302 464 0950
+                </a>
+              </div>
+              <div className="mt-8 text-sm">
+                <p>Email: kleber@ziontechgroup.com</p>
+                <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+                <p>Website: <a href="https://ziontechgroup.com" className="underline hover:no-underline">https://ziontechgroup.com</a></p>
+              </div>
             </div>
           </div>
         </div>
