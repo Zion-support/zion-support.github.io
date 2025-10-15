@@ -25,7 +25,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   type = 'button',
   icon
 }) => {
-  const baseClasses = 'relative font-semibold rounded-lg transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
+  const baseClasses = 'relative font-semibold rounded-lg transition-all duration-300 transform focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
   
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',

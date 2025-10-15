@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
 // Function to fix syntax errors
 function fixSyntaxErrors(filePath) {
@@ -8,62 +7,77 @@ function fixSyntaxErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix HTML entities
-    content = content.replace(/&quot;/g, '"');
-    content = content.replace(/&apos;/g, "'");
-    content = content.replace(/&lt;/g, '<');
-    content = content.replace(/&gt;/g, '>');
-    content = content.replace(/&amp;/g, '&');
+    // Fix malformed object properties like {, -> {
+    content = content.replace(/{\s*,/g, '{');
+    modified = true;
 
-    // Fix specific syntax issues
-    content = content.replace(/import React from "react";\s*import { Helmet } from "react-helmet-async";\s*const/g, 'import React from "react";\nimport { Helmet } from "react-helmet-async";\n\nconst');
-    
-    // Fix missing newlines and formatting
-    content = content.replace(/;\s*const/g, ';\n\nconst');
-    content = content.replace(/;\s*return/g, ';\n  return');
-    content = content.replace(/return\s*\(\s*<>/g, 'return (\n    <>');
-    content = content.replace(/<\/>\s*\);\s*};/g, '</>\n  );\n};');
-    
-    // Fix JSX formatting
-    content = content.replace(/<div className="([^"]*)"[^>]*>/g, (match, className) => {
-      return `\n        <div className="${className}">`;
-    });
-    
-    content = content.replace(/<h1 className="([^"]*)"[^>]*>/g, (match, className) => {
-      return `\n          <h1 className="${className}">`;
-    });
-    
-    content = content.replace(/<p className="([^"]*)"[^>]*>/g, (match, className) => {
-      return `\n          <p className="${className}">`;
-    });
-    
-    content = content.replace(/<a href="([^"]*)"[^>]*>/g, (match, href) => {
-      return `\n          <a href="${href}" className="text-purple-400 hover:text-purple-300">`;
-    });
+    // Fix malformed interface properties like string;, -> string;
+    content = content.replace(/(\w+):\s*(\w+);,/g, '$1: $2;');
+    modified = true;
 
-    // Fix missing export
-    if (content.includes('const') && !content.includes('export default')) {
-      content = content.replace(/};\s*$/, '};\n\nexport default NotFoundPage;');
+    // Fix missing property names before colons
+    content = content.replace(/{\s*:\s*/g, '{');
+    modified = true;
+
+    // Fix malformed array elements
+    content = content.replace(/\[\s*,/g, '[');
+    modified = true;
+
+    // Fix missing commas between object properties
+    content = content.replace(/(\w+):\s*([^,}]+)(\n\s*)(\w+):/g, '$1: $2,$3$4:');
+    modified = true;
+
+    // Fix missing commas between array elements
+    content = content.replace(/(\w+):\s*\[([^\]]+)\]([^,}]+)(\n\s*)(\w+):/g, '$1: [$2],$3$4:');
+    modified = true;
+
+    // Fix missing closing braces
+    content = content.replace(/(\w+):\s*{([^}]+)(\n\s*)(\w+):/g, '$1: {$2},$3$4:');
+    modified = true;
+
+    // Fix extra commas in interface definitions
+    content = content.replace(/(\w+):\s*(\w+);,/g, '$1: $2;');
+    modified = true;
+
+    // Fix extra commas in object properties
+    content = content.replace(/(\w+):\s*([^,}]+),(\n\s*})/g, '$1: $2$3');
+    modified = true;
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors: ${filePath}`);
+      return true;
     }
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      modified = true;
-    }
+    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Get all TypeScript and TSX files
-const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
+// Function to recursively find and fix files
+function fixFilesInDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
 
-console.log(`Found ${files.length} files to process...`);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
 
-files.forEach(file => {
-  const fullPath = path.join(__dirname, file);
-  fixSyntaxErrors(fullPath);
-});
+    if (stat.isDirectory()) {
+      fixedCount += fixFilesInDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
 
-console.log('Syntax errors cleanup completed!');
+  return fixedCount;
+}
+
+// Fix files in the app directory
+const appDir = path.join(__dirname, 'app');
+console.log('Starting to fix syntax errors...');
+const fixedCount = fixFilesInDirectory(appDir);
+console.log(`Fixed ${fixedCount} files`);

@@ -12,7 +12,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Smartphone,
       features: ['Mobile-First Design', 'Cross-Browser Compatibility', 'Fast Loading', 'SEO Optimized'],
       price: 'Starting at $2,999',
-      popular: true,
+      popular: true
     },
     {
       id: 'e-commerce-solutions',
@@ -21,7 +21,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Globe,
       features: ['Payment Integration', 'Inventory Management', 'Order Tracking', 'Admin Dashboard'],
       price: 'Starting at $4,999',
-      popular: false,
+      popular: false
     },
     {
       id: 'web-applications',
@@ -30,7 +30,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Code,
       features: ['Custom Development', 'API Integration', 'Database Design', 'User Authentication'],
       price: 'Starting at $7,999',
-      popular: false,
+      popular: false
     },
     {
       id: 'cms-development',
@@ -39,7 +39,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Settings,
       features: ['Easy Content Updates', 'User Management', 'SEO Tools', 'Multi-language Support'],
       price: 'Starting at $3,999',
-      popular: false,
+      popular: false
     },
     {
       id: 'progressive-web-apps',
@@ -48,7 +48,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Zap,
       features: ['Offline Functionality', 'Push Notifications', 'App-like Experience', 'Installable'],
       price: 'Starting at $5,999',
-      popular: false,
+      popular: false
     },
     {
       id: 'web-maintenance',
@@ -57,7 +57,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Shield,
       features: ['Security Updates', 'Performance Optimization', 'Backup & Recovery', '24/7 Monitoring'],
       price: 'Starting at $299/month',
-      popular: false,
+      popular: false
     },
   ];
 
@@ -76,22 +76,22 @@ const benefits = [
     {
       title: 'Modern Technologies',
       description: 'We use the latest technologies and best practices for optimal performance.',
-      icon: Code,
+      icon: Code
     },
     {
       title: 'Mobile-First Approach',
       description: 'All our websites are designed mobile-first for the best user experience.',
-      icon: Smartphone,
+      icon: Smartphone
     },
     {
       title: 'SEO Optimized',
       description: 'Built-in SEO features to help your website rank higher in search results.',
-      icon: BarChart3,
+      icon: BarChart3
     },
     {
       title: 'Fast & Secure',
       description: 'Optimized for speed and security to protect your business and users.',
-      icon: Shield,
+      icon: Shield
     },
   ];
   return (

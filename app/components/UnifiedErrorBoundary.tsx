@@ -10,8 +10,8 @@ interface Props {
 }
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  error: Error | null;,
+  errorInfo: ErrorInfo | null;,
   retryCount: number;
   isRetrying: boolean;
 }
@@ -27,7 +27,7 @@ constructor(props: Props) {
       error: null,
       errorInfo: null,
       retryCount: 0,
-      isRetrying: false,
+      isRetrying: false
     };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -51,8 +51,9 @@ constructor(props: Props) {
         description: error.message,
         fatal: false,
         custom_map: {
+          },
           error_stack: error.stack,
-          component_stack: errorInfo.componentStack,
+          component_stack: errorInfo.componentStack
         },
       });
     }
@@ -74,7 +75,7 @@ constructor(props: Props) {
         error: null,
         errorInfo: null,
         retryCount: this.state.retryCount + 1,
-        isRetrying: false,
+        isRetrying: false
       });
     }, 1000);
   };
@@ -84,7 +85,7 @@ constructor(props: Props) {
       error: null,
       errorInfo: null,
       retryCount: 0,
-      isRetrying: false,
+      isRetrying: false
     });
   };
   get canRetry(): boolean {

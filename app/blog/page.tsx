@@ -14,7 +14,7 @@ const BlogPage: React.FC = () => {
       category: 'AI & Technology',
       readTime: '5 min read',
       image: '/api/placeholder/400/250',
-      featured: true,
+      featured: true
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const BlogPage: React.FC = () => {
       category: 'Cybersecurity',
       readTime: '7 min read',
       image: '/api/placeholder/400/250',
-      featured: false,
+      featured: false
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const BlogPage: React.FC = () => {
       category: '5G & IoT',
       readTime: '6 min read',
       image: '/api/placeholder/400/250',
-      featured: false,
+      featured: false
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ const BlogPage: React.FC = () => {
       category: 'Business Solutions',
       readTime: '8 min read',
       image: '/api/placeholder/400/250',
-      featured: false,
+      featured: false
     },
   ];
 

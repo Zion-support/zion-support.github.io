@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Award, Users, TrendingUp, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 

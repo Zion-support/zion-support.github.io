@@ -630,22 +630,22 @@ const benefits = [
     {
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and focus on strategic initiatives.',
-      icon: Zap,
+      icon: Zap
     },
     {
       title: 'Better Insights',
       description: 'Gain deeper understanding of your data and customer behavior.',
-      icon: BarChart3,
+      icon: BarChart3
     },
     {
       title: 'Cost Savings',
       description: 'Reduce operational costs through intelligent automation.',
-      icon: Award,
+      icon: Award
     },
     {
       title: 'Scalability',
       description: 'Scale your operations without proportional cost increases.',
-      icon: Globe,
+      icon: Globe
     },
   ];
   return (
@@ -829,8 +829,7 @@ const benefits = [
         </section>
         {/* CTA Section */}
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
-          
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             
         <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -968,7 +967,8 @@ const benefits = [
             </a>
           </div>
         </div>
-      </section>
+          </div>
+        </section>
     </div>
   );
 };

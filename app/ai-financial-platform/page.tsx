@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Helmet } from 'react-helmet-async';
 import { Brain, CreditCard, BarChart3, Shield, Calculator, TrendingUp, Eye, Receipt, DollarSign, Phone, Play, CheckCircle, Star, Mail } from 'lucide-react';

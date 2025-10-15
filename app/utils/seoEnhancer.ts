@@ -1,9 +1,9 @@
 interface EnhancedSEOData { title: string
   description: string
-  keywords: string
-  ogTitle: string
-  ogDescription: string
-  twitterTitle: string
+  keywords: string,
+  ogTitle: string,
+  ogDescription: string,
+  twitterTitle: string,
   twitterDescription: string }
 export const seoEnhancer = { enhance: (data: { title?: string; description?: string; keywords?: string }): EnhancedSEOData => { return {
       title: data.title || 'Zion Tech Group',

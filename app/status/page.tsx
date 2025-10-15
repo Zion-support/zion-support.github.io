@@ -108,7 +108,7 @@ const getStatusColor = (status: string) => {
       case 'operational': return 'text-green-400';
       case 'degraded': return 'text-yellow-400';
       case 'outage': return 'text-red-400';
-      case 'maintenance': return 'text-blue-400';
+      case 'maintenance': return 'text-blue-400';,
       default: return 'text-gray-400';
     }
   };
@@ -118,7 +118,7 @@ const getStatusIcon = (status: string) => {
       case 'operational': return <CheckCircle className="w-5 h-5" />;
       case 'degraded': return <AlertTriangle className="w-5 h-5" />;
       case 'outage': return <XCircle className="w-5 h-5" />;
-      case 'maintenance': return <Clock className="w-5 h-5" />;
+      case 'maintenance': return <Clock className="w-5 h-5" />;,
       default: return <Clock className="w-5 h-5" />;
     }
   };
@@ -128,7 +128,7 @@ const getSeverityColor = (severity: string) => {
       case 'critical': return 'bg-red-500/20 text-red-400 border-red-500/30';
       case 'major': return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
       case 'minor': return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
-      case 'maintenance': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
+      case 'maintenance': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';,
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
   };

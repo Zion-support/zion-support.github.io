@@ -2,17 +2,18 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Star, CheckCircleIcon } from 'lucide-react';
+import {
   CpuChipIcon, 
   ChartBarIcon, 
   ClockIcon,
   UsersIcon,
-  CheckCircleIcon,
-  
   StarIcon,
   ShieldCheckIcon,
-  CloudIcon} from '@heroicons/react/24/outline';
+  CloudIcon
+} from '@heroicons/react/24/outline';
 
 export default function AiProjectManagementProPage() {
+  const features = [
     {
       icon: ChartBarIcon,
       title: 'Predictive Analytics',

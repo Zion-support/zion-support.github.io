@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Eye, Lock, Users, BarChart3, Bug, Mail, Network, Phone, Play, CheckCircle, Star } from 'lucide-react';

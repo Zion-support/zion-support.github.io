@@ -8,8 +8,8 @@ ${pages.map(page => `  <url>
 </urlset>`;
   return sitemap;
   },
-  generateRobotsTxt: (sitemapUrl: string = 'https://ziontechgroup.com/sitemap.xml') => { return `User-agent: *
-Allow: /
+  generateRobotsTxt: (sitemapUrl: string = 'https://ziontechgroup.com/sitemap.xml') => { return `User-agent: *,
+Allow: /,
 Sitemap: ${sitemapUrl }`;
   }
 };

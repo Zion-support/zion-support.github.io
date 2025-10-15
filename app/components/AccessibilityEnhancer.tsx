@@ -146,7 +146,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         width: 1px;
         height: 1px;
         padding: 0;
-        margin: -1px;
+        margin: -1px;,
         overflow: hidden;
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;
@@ -154,7 +154,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
 
       .sr-only-focusable:focus,
-      .sr-only-focusable:active {
+      .sr-only-focusable: active {
         position: static;
         width: auto;
         height: auto;
@@ -168,7 +168,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         position: absolute;
         top: -40px;
         left: 0;
-        background: #3B82F6;
+        background: #3B82F6;,
         color: white;
         padding: 8px 16px;
         text-decoration: none;
@@ -177,7 +177,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         border-radius: 0 0 4px 0;
       }
 
-      .skip-link:focus {
+      .skip-link: focus {
         top: 0;
       }
 
@@ -201,7 +201,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
 
       /* Focus visible polyfill */
-      *:focus:not(:focus-visible) {
+      *:focus: not(:focus-visible) {
         outline: none;
       }
 

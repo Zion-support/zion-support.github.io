@@ -359,22 +359,22 @@ const benefits = [
     {
       title: 'Quick Setup',
       description: 'Get started in minutes with our intuitive setup process.',
-      icon: Zap,
+      icon: Zap
     },
     {
       title: 'Affordable Pricing',
       description: 'Access powerful tools at fraction of enterprise costs.',
-      icon: Award,
+      icon: Award
     },
     {
       title: 'No Long-term Contracts',
       description: 'Cancel anytime with our flexible monthly billing.',
-      icon: Heart,
+      icon: Heart
     },
     {
       title: '24/7 Support',
       description: 'Get help when you need it with our dedicated support team.',
-      icon: Globe,
+      icon: Globe
     },
   ];
   return (
