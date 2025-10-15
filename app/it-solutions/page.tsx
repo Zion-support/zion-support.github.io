@@ -1,20 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import SEOHead from '../components/SEOHead';
-import { 
-  CloudIcon, 
-  ShieldCheckIcon, 
-  CheckCircleIcon,
-  StarIcon,
-  SparklesIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  CircleStackIcon,
-  SignalIcon
-} from '@heroicons/react/24/outline';
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-merge-code-5d7e
 
 const ITSolutionsPage: React.FC = () => {
   return (

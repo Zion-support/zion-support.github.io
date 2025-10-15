@@ -1,25 +1,30 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-5d7e
+import { 
+  CheckCircleIcon, 
+  ClockIcon, 
+  UserGroupIcon, 
+  ChartBarIcon,
+  StarIcon,
+  SparklesIcon,
+  CpuChipIcon,
+  CalendarIcon
+} from '@heroicons/react/24/outline';
 
 const TaskManagerProPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Task Manager Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced task management solution with AI-powered features. Organize, prioritize, and track tasks with intelligent automation and collaboration tools." />
-        <meta name="keywords" content="task manager pro, project management, task automation, productivity tools, team collaboration" />
-        <link rel="canonical" href="https://ziontechgroup.com/task-manager-pro" />
-      </Helmet>
+      <SEOHead
+        title="Task Manager Pro - Zion Tech Group"
+        description="Advanced task management solution with AI-powered features. Organize, prioritize, and track tasks with intelligent automation and collaboration tools."
+        keywords="task manager pro, project management, task automation, productivity tools, team collaboration"
+        canonicalUrl="https://ziontechgroup.com/task-manager-pro"
+      />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6 holographic-text">
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Task Manager Pro
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -28,171 +33,153 @@ const TaskManagerProPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="glass-card p-6 hover:scale-105 transition-transform">
-              <div className="text-cyan-400 text-4xl mb-4">📋</div>
-              <h3 className="text-xl font-semibold text-white mb-4">Smart Task Creation</h3>
-              <p className="text-gray-300">
-                Create tasks with AI assistance, automatic categorization, and priority suggestions.
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                <CheckCircleIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">AI Task Prioritization</h3>
+              <p className="text-gray-400">
+                Intelligent task prioritization using machine learning algorithms to optimize your workflow.
               </p>
             </div>
 
-            <div className="glass-card p-6 hover:scale-105 transition-transform">
-              <div className="text-cyan-400 text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-4">AI Automation</h3>
-              <p className="text-gray-300">
-                Automate repetitive tasks and workflows with intelligent task automation.
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                <UserGroupIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Team Collaboration</h3>
+              <p className="text-gray-400">
+                Real-time collaboration tools for seamless team coordination and communication.
               </p>
             </div>
 
-            <div className="glass-card p-6 hover:scale-105 transition-transform">
-              <div className="text-cyan-400 text-4xl mb-4">👥</div>
-              <h3 className="text-xl font-semibold text-white mb-4">Team Collaboration</h3>
-              <p className="text-gray-300">
-                Collaborate with team members through shared workspaces and real-time updates.
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                <ChartBarIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Analytics Dashboard</h3>
+              <p className="text-gray-400">
+                Comprehensive analytics and reporting to track productivity and project progress.
               </p>
             </div>
 
-            <div className="glass-card p-6 hover:scale-105 transition-transform">
-              <div className="text-cyan-400 text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold text-white mb-4">Progress Tracking</h3>
-              <p className="text-gray-300">
-                Track progress with detailed analytics, reports, and performance metrics.
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
+                <ClockIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Time Tracking</h3>
+              <p className="text-gray-400">
+                Built-in time tracking with detailed reports and productivity insights.
               </p>
             </div>
 
-            <div className="glass-card p-6 hover:scale-105 transition-transform">
-              <div className="text-cyan-400 text-4xl mb-4">⏰</div>
-              <h3 className="text-xl font-semibold text-white mb-4">Time Management</h3>
-              <p className="text-gray-300">
-                Manage time effectively with scheduling, reminders, and deadline tracking.
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-4">
+                <CalendarIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Smart Scheduling</h3>
+              <p className="text-gray-400">
+                AI-powered scheduling that automatically optimizes your calendar and deadlines.
               </p>
             </div>
 
-            <div className="glass-card p-6 hover:scale-105 transition-transform">
-              <div className="text-cyan-400 text-4xl mb-4">📱</div>
-              <h3 className="text-xl font-semibold text-white mb-4">Mobile Access</h3>
-              <p className="text-gray-300">
-                Access and manage tasks from anywhere with mobile and desktop applications.
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Automation</h3>
+              <p className="text-gray-400">
+                Automated workflows and task creation based on your patterns and preferences.
               </p>
             </div>
           </div>
 
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Boost Your Productivity?</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 neon-glow"
-              >
-                Get Started Today
-              </a>
-              <a 
-                href="/pricing" 
-                className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-              >
-                View Pricing
-              </a>
-=======
-      <SEOHead
-        title="Task Manager Pro - Zion Tech Group"
-        description="Advanced task management with AI-powered prioritization and team collaboration features."
-        keywords="task manager, productivity, project management, AI prioritization, team collaboration"
-        canonicalUrl="https://ziontechgroup.com/task-manager-pro"
-      />
-      
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              Task Manager Pro
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced task management with AI-powered prioritization and team collaboration features.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-2xl font-bold mb-6 text-white">Features</h2>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">AI Task Prioritization</h3>
-                    <p className="text-gray-400">Automatically prioritize tasks based on deadlines, importance, and dependencies.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">Team Collaboration</h3>
-                    <p className="text-gray-400">Real-time collaboration with team members, comments, and file sharing.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">Time Tracking</h3>
-                    <p className="text-gray-400">Built-in time tracking and productivity analytics.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">Project Templates</h3>
-                    <p className="text-gray-400">Pre-built templates for common project types and workflows.</p>
-                  </div>
-                </div>
-              </div>
+          {/* Pricing Section */}
+          <div className="bg-slate-800/30 rounded-xl p-8 border border-slate-700">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold mb-4 text-white">Pricing Plans</h2>
+              <p className="text-gray-300">Choose the plan that fits your team size and needs</p>
             </div>
-            
-            <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
-              <h3 className="text-xl font-bold mb-6 text-white">Pricing</h3>
-              <div className="text-center mb-6">
-                <div className="text-4xl font-bold text-green-400 mb-2">$29/mo</div>
-                <div className="text-gray-400 line-through">$49/mo</div>
-                <div className="text-sm text-green-400">Limited Time Offer</div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                <h3 className="text-xl font-semibold mb-4 text-white">Starter</h3>
+                <div className="text-3xl font-bold text-purple-400 mb-4">$29<span className="text-lg text-gray-400">/mo</span></div>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                    Up to 5 team members
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                    Basic AI features
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                    Standard support
+                  </li>
+                </ul>
+                <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                  Get Started
+                </button>
               </div>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Unlimited Projects</span>
-                  <span className="text-green-400">✓</span>
+
+              <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl p-6 relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">Most Popular</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Up to 10 Team Members</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">AI Prioritization</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Time Tracking</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Mobile App</span>
-                  <span className="text-green-400">✓</span>
-                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Professional</h3>
+                <div className="text-3xl font-bold text-white mb-4">$79<span className="text-lg text-gray-200">/mo</span></div>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center text-gray-200">
+                    <CheckCircleIcon className="w-5 h-5 text-green-300 mr-3" />
+                    Up to 25 team members
+                  </li>
+                  <li className="flex items-center text-gray-200">
+                    <CheckCircleIcon className="w-5 h-5 text-green-300 mr-3" />
+                    Advanced AI features
+                  </li>
+                  <li className="flex items-center text-gray-200">
+                    <CheckCircleIcon className="w-5 h-5 text-green-300 mr-3" />
+                    Priority support
+                  </li>
+                  <li className="flex items-center text-gray-200">
+                    <CheckCircleIcon className="w-5 h-5 text-green-300 mr-3" />
+                    Custom integrations
+                  </li>
+                </ul>
+                <button className="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
               </div>
-              
-              <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                Start Free Trial
-              </button>
->>>>>>> cursor/analyze-improve-and-merge-code-5d7e
+
+              <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                <h3 className="text-xl font-semibold mb-4 text-white">Enterprise</h3>
+                <div className="text-3xl font-bold text-purple-400 mb-4">$199<span className="text-lg text-gray-400">/mo</span></div>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                    Unlimited team members
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                    Full AI suite
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                    24/7 dedicated support
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                    Custom development
+                  </li>
+                </ul>
+                <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                  Contact Sales
+                </button>
+              </div>
             </div>
           </div>
         </div>
