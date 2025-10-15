@@ -505,6 +505,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-workflow-automator-pro'
       }
+
     },
     {
       id: 'ai-consulting',
@@ -550,6 +551,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-consulting'
+
       }
     },
     {
