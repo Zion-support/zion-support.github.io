@@ -35,8 +35,11 @@ const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
 
 // IT Services Pages
 const ITServicesPage = lazy(() => import('./app/it-services/page'));
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
 const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
 const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const SolutionsPage = lazy(() => import('./app/solutions/page'));
 
 // 5G Solutions Pages
 const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
@@ -94,7 +97,7 @@ const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'
 const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 
 // Additional missing pages
-const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
+// const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
@@ -289,8 +292,11 @@ const App = memo(() => {
                     
                     {/* IT Services */}
                     <Route path="/it-services" element={<ITServicesPage />} />
+                    <Route path="/it-solutions" element={<ITSolutionsPage />} />
                     <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
                     
                     {/* 5G Solutions */}
                     <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />

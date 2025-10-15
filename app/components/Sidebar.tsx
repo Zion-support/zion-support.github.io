@@ -97,11 +97,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'IT Solutions',
       items: [
         { name: 'IT Solutions Overview', href: '/it-solutions', icon: Settings },
+        { name: 'IT Services', href: '/it-services', icon: Settings },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
         { name: 'Web Development', href: '/web-development', icon: Code },
         { name: 'Mobile Development', href: '/mobile-development', icon: Settings },
         { name: 'Database Management', href: '/database-management', icon: Settings },
         { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Cloud },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Settings },
         { name: '5G Solutions', href: '/5g-solutions', icon: Cloud },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
         { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Settings },

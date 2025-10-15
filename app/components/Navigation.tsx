@@ -63,6 +63,7 @@ const Navigation: React.FC<NavigationProps> = () => {
       href: '/solutions',
       icon: SparklesIcon,
       submenu: [
+        { name: 'All Solutions', href: '/solutions', icon: SparklesIcon, badge: 'Overview' },
         { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: CircleStackIcon, badge: 'Hot' },
         { name: 'IoT Solutions', href: '/iot-solutions', icon: SignalIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon },

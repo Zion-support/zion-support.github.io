@@ -209,6 +209,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     clearMetrics: () => {
       metricsRef.current = {};
     },
-    preloadImages
+    preloadCriticalResources
   };
 };

@@ -48,10 +48,16 @@ export const useSEO = (config: SEOConfig = {}) => {
 
     ogTags.forEach(({ property, content }) => {
       if (content) {
-        updateMetaTag(property, content);
+        let meta = document.querySelector(`meta[property="${property}"]`);
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('property', property);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
       }
     });
-  }, [updateMetaTag]);
+  }, []);
 
   const updateTwitterTags = useCallback((config: SEOConfig) => {
     const twitterTags = [
@@ -63,79 +69,60 @@ export const useSEO = (config: SEOConfig = {}) => {
 
     twitterTags.forEach(({ name, content }) => {
       if (content) {
-        updateMetaTag(name, content);
+        let meta = document.querySelector(`meta[name="${name}"]`);
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', name);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
       }
     });
-  }, [updateMetaTag]);
+  }, []);
 
   const addStructuredData = useCallback((data: object) => {
-    // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (existingScript) {
-      existingScript.remove();
-    }
-
-    // Add new structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
+    script.id = 'structured-data';
+    
+    // Remove existing structured data
+    const existing = document.getElementById('structured-data');
+    if (existing) {
+      existing.remove();
+    }
+    
     document.head.appendChild(script);
   }, []);
 
   const addPageStructuredData = useCallback((pathname: string) => {
-    const baseStructuredData = {
+    const baseUrl = 'https://ziontechgroup.com';
+    const fullUrl = `${baseUrl}${pathname}`;
+    
+    const pageStructuredData = {
       '@context': 'https://schema.org',
-      '@type': 'Organization',
-      'name': 'Zion Tech Group',
-      'url': 'https://ziontechgroup.com',
-      'logo': 'https://ziontechgroup.com/logo.png',
-      'description': 'Advanced AI and IT Solutions for modern businesses',
-      'contactPoint': {
-        '@type': 'ContactPoint',
-        'telephone': '+1-302-464-0950',
-        'contactType': 'customer service',
-        'email': 'kleber@ziontechgroup.com'
-      },
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': '364 E Main St STE 1008',
-        'addressLocality': 'Middletown',
-        'addressRegion': 'DE',
-        'postalCode': '19709',
-        'addressCountry': 'US'
+      '@type': 'WebPage',
+      name: config.title || 'Zion Tech Group',
+      description: config.description || 'Advanced AI and IT Solutions',
+      url: fullUrl,
+      publisher: {
+        '@type': 'Organization',
+        name: 'Zion Tech Group',
+        url: baseUrl,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${baseUrl}/logo.png`
+        }
       }
     };
 
-    // Add page-specific structured data
-    let pageStructuredData = baseStructuredData;
-
-    if (pathname === '/contact') {
-      pageStructuredData = {
-        ...baseStructuredData,
-        '@type': 'ContactPage'
-      } as any;
-    } else if (pathname.startsWith('/ai-') || pathname.startsWith('/zion-ai-')) {
-      pageStructuredData = {
-        ...baseStructuredData,
-        '@type': 'Service'
-      } as any;
-    } else if (pathname.startsWith('/it-') || pathname === '/services') {
-      pageStructuredData = {
-        ...baseStructuredData,
-        '@type': 'Service'
-      } as any;
-    }
-
     addStructuredData(pageStructuredData);
-  }, [addStructuredData]);
+  }, [config.title, config.description, addStructuredData]);
 
   useEffect(() => {
     // Update document title
     if (config.title) {
-      const fullTitle = config.title.includes('Zion Tech Group') 
-        ? config.title 
-        : `${config.title} - Zion Tech Group`;
-      document.title = fullTitle;
+      document.title = `${config.title} | Zion Tech Group`;
     }
 
     // Update meta description
@@ -161,11 +148,6 @@ export const useSEO = (config: SEOConfig = {}) => {
     // Update Twitter tags
     updateTwitterTags(config);
 
-    // Update robots meta
-    if (config.noIndex !== undefined) {
-      updateMetaTag('robots', config.noIndex ? 'noindex,nofollow' : 'index,follow');
-    }
-
     // Add structured data
     if (config.structuredData) {
       addStructuredData(config.structuredData);
@@ -174,132 +156,7 @@ export const useSEO = (config: SEOConfig = {}) => {
     // Add page-specific structured data
     addPageStructuredData(location.pathname);
 
-<<<<<<< HEAD
   }, [config, location.pathname, updateMetaTag, updateCanonicalUrl, updateOpenGraphTags, updateTwitterTags, addStructuredData, addPageStructuredData]);
-=======
-  }, [config, location.pathname, addPageStructuredData, updateOpenGraphTags, updateTwitterTags, addStructuredData]);
-
-  const updateMetaTag = (name: string, content: string) => {
-    let meta = document.querySelector(`meta[name="${name}"]`);
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('name', name);
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', content);
-  };
-
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', url);
-  };
-
-  const updateOpenGraphTags = useCallback((config: SEOConfig) => {
-    const ogTags = [
-      { property: 'og:title', content: config.title },
-      { property: 'og:description', content: config.description },
-      { property: 'og:type', content: config.ogType || 'website' },
-      { property: 'og:url', content: config.canonicalUrl || window.location.href },
-      { property: 'og:image', content: config.ogImage },
-      { property: 'og:site_name', content: 'Zion Tech Group' }
-    ];
-
-    ogTags.forEach(({ property, content }) => {
-      if (content) {
-        updateMetaTag(property, content);
-      }
-    });
-  }, []);
-
-  const updateTwitterTags = useCallback((config: SEOConfig) => {
-    const twitterTags = [
-      { name: 'twitter:card', content: config.twitterCard || 'summary_large_image' },
-      { name: 'twitter:title', content: config.title },
-      { name: 'twitter:description', content: config.description },
-      { name: 'twitter:image', content: config.ogImage }
-    ];
-
-    twitterTags.forEach(({ name, content }) => {
-      if (content) {
-        updateMetaTag(name, content);
-      }
-    });
-  }, []);
-
-  const addStructuredData = useCallback((data: object) => {
-    // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (existingScript) {
-      existingScript.remove();
-    }
-
-    // Add new structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-  }, []);
-
-  const addPageStructuredData = useCallback((pathname: string) => {
-    const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      'name': 'Zion Tech Group',
-      'url': 'https://ziontechgroup.com',
-      'logo': 'https://ziontechgroup.com/logo.png',
-      'description': 'Advanced AI and IT Solutions for modern businesses',
-      'contactPoint': {
-        '@type': 'ContactPoint',
-        'telephone': '+1-302-464-0950',
-        'contactType': 'customer service',
-        'email': 'kleber@ziontechgroup.com'
-      },
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': '364 E Main St STE 1008',
-        'addressLocality': 'Middletown',
-        'addressRegion': 'DE',
-        'postalCode': '19709',
-        'addressCountry': 'US'
-      }
-    };
-
-    // Add page-specific structured data
-    let pageStructuredData = baseStructuredData;
-
-    if (pathname === '/contact') {
-      pageStructuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'ContactPage',
-        mainEntity: {
-          '@type': 'Organization',
-          ...baseStructuredData
-        }
-      } as any;
-    } else if (pathname.startsWith('/ai-') || pathname.startsWith('/zion-ai-')) {
-      pageStructuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        serviceType: 'AI Solutions',
-        provider: baseStructuredData
-      } as any;
-    } else if (pathname.startsWith('/it-') || pathname === '/services') {
-      pageStructuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        serviceType: 'IT Services',
-        provider: baseStructuredData
-      } as any;
-    }
-
-    addStructuredData(pageStructuredData);
-  }, [addStructuredData]);
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-c0a0
 
   return {
     updateMetaTag,

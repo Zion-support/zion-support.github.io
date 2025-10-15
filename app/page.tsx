@@ -94,7 +94,7 @@ const HomePage: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link 
-                to="/" 
+                to="/services" 
                 className="btn-neon hover-glow focus-neon px-8 py-4 text-lg font-semibold"
               >
                 Explore Services
@@ -200,7 +200,7 @@ const HomePage: React.FC = () => {
 
           <div className="text-center mt-12">
             <Link 
-              to="/"
+              to="/services"
               className="btn-neon hover-glow px-8 py-4 text-lg font-semibold"
             >
               View All Services
