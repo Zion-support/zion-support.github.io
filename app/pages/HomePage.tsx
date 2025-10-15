@@ -1,7 +1,6 @@
 import { Phone } from 'lucide-react';
 import React from "react";
 import { Link } from "react-router-dom";
-import SEOHead from "../components/SEOHead";
 import FuturisticBackground from "../components/FuturisticBackground";
 import NeonButton from "../components/NeonButton";
 import AnimatedCard from "../components/AnimatedCard";
@@ -24,12 +23,6 @@ export default function HomePage() {
 
   return (
     <>
-      <SEOHead 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        structuredData={structuredData}
-      />
       <FuturisticBackground />
       
       {/* Hero Section */}

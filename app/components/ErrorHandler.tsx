@@ -1,1 +1,1 @@
-import React, { Suspense } from "react";
+// This file is intentionally empty - component removed
