@@ -68,6 +68,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
         { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: CogIcon },
+        { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: DocumentTextIcon },
+        { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: UserGroupIcon },
+        { name: 'AI Social Media Analyzer', href: '/ai-social-media-analyzer', icon: ChartBarIcon },
+        { name: 'AI Email Marketing Automation', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },

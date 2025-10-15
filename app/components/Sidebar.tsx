@@ -61,7 +61,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Image Recognition', href: '/ai-image-recognition', icon: Settings },
         { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Settings },
         { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings },
-        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: Settings }
+        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: Settings },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: Settings },
+        { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: Settings },
+        { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Settings },
+        { name: 'AI Social Media Analyzer', href: '/ai-social-media-analyzer', icon: Settings },
+        { name: 'AI Email Marketing Automation', href: '/ai-email-marketing-automation', icon: Settings }
       ]
     },
     {
