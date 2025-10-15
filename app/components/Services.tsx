@@ -6,9 +6,7 @@ import {
   Wifi, 
   Zap, 
   ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp
+  CheckCircle
 } from 'lucide-react';
 
 const Services: React.FC = () => {
