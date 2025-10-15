@@ -22,6 +22,8 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
     this.setState({
       error,
       errorInfo
@@ -100,11 +102,20 @@ class ErrorBoundary extends Component<Props, State> {
               
               <Link
                 to="/"
-                className="flex items-center justify-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-all duration-300"
+                className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 <Home className="w-4 h-4" />
                 Go Home
               </Link>
+            </div>
+
+            <div className="mt-6 pt-6 border-t border-slate-700">
+              <p className="text-sm text-gray-400">
+                If this problem persists, please{' '}
+                <Link to="/contact" className="text-purple-400 hover:text-purple-300">
+                  contact our support team
+                </Link>
+              </p>
             </div>
           </div>
         </div>

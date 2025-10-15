@@ -32,20 +32,17 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
 // Page Components
 import HomePage from './app/page';
-import AboutPage from './app/about';
-// import ContactPage from './app/pages/ContactPage';
-// import ServicesPage from './app/pages/ServicesPage';
-// import BlogPage from './app/pages/BlogPage';
-// import TutorialsPage from './app/pages/TutorialsPage';
-// import DemoPage from './app/pages/DemoPage';
-// import SupportPage from './app/pages/SupportPage';
-// import PrivacyPage from './app/pages/PrivacyPage';
-// import TermsPage from './app/pages/TermsPage';
-// import PricingPage from './app/pages/PricingPage';
-// import SolutionsPage from './app/pages/SolutionsPage';
-// import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-// import AISolutionsPage from './app/ai-solutions/page';
-// import ITSolutionsPage from './app/it-solutions/page';
+import AboutPage from './app/pages/AboutPage';
+import ContactPage from './app/pages/ContactPage';
+import ServicesPage from './app/pages/ServicesPage';
+import BlogPage from './app/pages/BlogPage';
+import TutorialsPage from './app/pages/TutorialsPage';
+import DemoPage from './app/pages/DemoPage';
+import SupportPage from './app/pages/SupportPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import TermsPage from './app/pages/TermsPage';
+import PricingPage from './app/pages/PricingPage';
+import AISolutionsPage from './app/ai-solutions/page';
 
 // Service Pages
 // import AIServicesPage from './app/pages/AIServicesPage';
@@ -55,7 +52,7 @@ import AboutPage from './app/about';
 // import CaseStudiesPage from './app/pages/CaseStudiesPage';
 // import CareersPage from './app/pages/CareersPage';
 
-// Additional Pages
+// Additional Pages - commented out until components are created
 // import CybersecurityPage from './app/pages/CybersecurityPage';
 // import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
 // import MicroSaaSPage from './app/pages/MicroSaaSPage';
@@ -107,19 +104,16 @@ function App() {
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
-                  {/* <Route path="/contact" element={<ContactPage />} /> */}
-                  {/* <Route path="/services" element={<ServicesPage />} /> */}
-                  {/* <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} /> */}
-                  {/* <Route path="/ai-solutions" element={<AISolutionsPage />} /> */}
-                  {/* <Route path="/it-solutions" element={<ITSolutionsPage />} /> */}
-                  {/* <Route path="/blog" element={<BlogPage />} /> */}
-                  {/* <Route path="/tutorials" element={<TutorialsPage />} /> */}
-                  {/* <Route path="/demo" element={<DemoPage />} /> */}
-                  {/* <Route path="/support" element={<SupportPage />} /> */}
-                  {/* <Route path="/privacy" element={<PrivacyPage />} /> */}
-                  {/* <Route path="/terms" element={<TermsPage />} /> */}
-                  {/* <Route path="/pricing" element={<PricingPage />} /> */}
-                  {/* <Route path="/solutions" element={<SolutionsPage />} /> */}
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/tutorials" element={<TutorialsPage />} />
+                  <Route path="/demo" element={<DemoPage />} />
+                  <Route path="/support" element={<SupportPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                    <Route path="/pricing" element={<PricingPage />} />
                   
                   {/* Service Pages */}
                   {/* <Route path="/ai-services" element={<AIServicesPage />} /> */}
@@ -129,15 +123,6 @@ function App() {
                   {/* <Route path="/case-studies" element={<CaseStudiesPage />} /> */}
                   {/* <Route path="/careers" element={<CareersPage />} /> */}
                   
-                  {/* Additional Service Pages */}
-                  {/* <Route path="/cybersecurity" element={<CybersecurityPage />} /> */}
-                  {/* <Route path="/cloud-solutions" element={<CloudSolutionsPage />} /> */}
-                  {/* <Route path="/micro-saas" element={<MicroSaaSPage />} /> */}
-                  {/* <Route path="/5g-solutions" element={<FiveGSolutionsPage />} /> */}
-                  
-                  {/* Additional Pages */}
-                  {/* <Route path="/team" element={<TeamPage />} /> */}
-                  {/* <Route path="/docs" element={<DocumentationPage />} /> */}
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">
@@ -154,10 +139,11 @@ function App() {
               </ErrorBoundary>
               </main>
               <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer>
-                <div>Content</div>
-              </AccessibilityEnhancer>
+              <PerformanceMonitor>
+                <AccessibilityEnhancer>
+                  <div></div>
+                </AccessibilityEnhancer>
+              </PerformanceMonitor>
             </div>
           </div>
         </Router>

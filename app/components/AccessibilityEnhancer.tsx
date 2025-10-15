@@ -52,12 +52,57 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
+
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
+
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+      }
+    };
+
+    // Add high contrast mode support
+    const addHighContrastSupport = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        @media (prefers-contrast: high) {
+          * {
+            border-color: currentColor !important;
+          }
+          
+          button, a, input, textarea, select {
+            border: 2px solid currentColor !important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    };
+
+    // Add reduced motion support
+    const addReducedMotionSupport = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
     };
 
     // Initialize accessibility features
     addSkipLink();
     addFocusStyles();
     addAriaLandmarks();
+    addHighContrastSupport();
+    addReducedMotionSupport();
 
     // Add event listeners
     document.addEventListener('keydown', handleKeyDown);
