@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+import React from 'react';
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
+<<<<<<< HEAD
   fullScreen?: boolean;
+=======
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
   className?: string;
   color?: 'primary' | 'secondary' | 'white';
 }
+<<<<<<< HEAD
   )
 const Loading Spinner: React.FC<Loading Spinner Props> = ({
   size = 'md'
@@ -39,6 +47,26 @@ const Loading Spinner: React.FC<Loading Spinner Props> = ({
         </p>
       )}
   )
+=======
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-6 h-6',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16'
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`${sizeClasses[size]} border-4 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin`}></div>
+      {text && (
+        <p className="mt-4 text-gray-300 text-sm font-medium">{text}</p>
+      )}
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
     </div>
   )
   if (full Screen) {

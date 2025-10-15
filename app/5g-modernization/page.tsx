@@ -50,11 +50,16 @@
   );
 };
 
+<<<<<<< HEAD
 export default Page5gModernizationPage;
 import React, { Suspense } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
+=======
+export default FiveGmodernizationPage;
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
 
 const FiveGModernizationPage = () => {
   const services = [

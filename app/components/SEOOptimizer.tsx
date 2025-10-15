@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 const SEOOptimizer: React.FC = () => {
   useEffect(() => {
+<<<<<<< HEAD
     // SEO optimization code
     const optimizeSEO = () => {
       // Set meta description if not already set
@@ -52,6 +53,35 @@ const SEOOptimizer: React.FC = () => {
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
+=======
+    // Set up structured data
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Zion Tech Group",
+      description:
+        "Leading provider of advanced AI and IT solutions, transforming businesses through cutting-edge technology.",
+      url: "https://ziontechgroup.com",
+      logo: "https://ziontechgroup.com/logo.png",
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-302-464-0950",
+        contactType: "customer service",
+        email: "kleber@ziontechgroup.com",
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "364 E Main St STE 1008",
+        addressLocality: "Middletown",
+        addressRegion: "DE",
+        postalCode: "19709",
+        addressCountry: "US",
+      },
+      sameAs: [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+      ],
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
     };
 
     optimizeSEO();

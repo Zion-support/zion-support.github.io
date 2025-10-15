@@ -62,4 +62,10 @@ const FiveGNetworkInfrastructure: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Page5gNetworkInfrastructurePage;
+=======
+export default FiveGnetworkinfrastructurePage;
+
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

@@ -98,3 +98,7 @@ const PropertyManagementAiPage: React.FC = () => {
 };
 
 export default PropertyManagementAiPage;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

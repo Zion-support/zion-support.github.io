@@ -98,3 +98,7 @@ const AiSupplyChainOptimizerPage: React.FC = () => {
 };
 
 export default AiSupplyChainOptimizerPage;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

@@ -61,4 +61,10 @@ const Page5gSolutionsPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Page5gSolutionsPage;
+=======
+export default FiveGsolutionsPage;
+
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

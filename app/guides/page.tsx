@@ -94,3 +94,7 @@ const GuidesPage: React.FC = () => {
 };
 
 export default GuidesPage;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

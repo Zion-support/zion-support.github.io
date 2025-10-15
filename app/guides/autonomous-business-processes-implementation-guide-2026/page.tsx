@@ -80,5 +80,12 @@ const AutonomousBusinessProcessesImplementationGuide20 2 6 Page: React.FC = () =
       </div>
 </>
   );
+<<<<<<< HEAD
 }
 export default AutonomousBusinessProcessesImplementationGuide20 2 6 Page;
+=======
+};
+
+export default AutonomousBusinessProcessesImplementationGuide2026Page;
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

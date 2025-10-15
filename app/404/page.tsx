@@ -65,4 +65,10 @@ const Page404Page: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Page404Page;
+=======
+export default NotFoundPage;
+
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

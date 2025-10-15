@@ -81,4 +81,10 @@ const Page5gUpgradePage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Page5gUpgradePage;
+=======
+export default FiveGupgradePage;
+
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

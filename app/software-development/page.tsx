@@ -98,3 +98,7 @@ const SoftwareDevelopmentPage: React.FC = () => {
 };
 
 export default SoftwareDevelopmentPage;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

@@ -80,5 +80,12 @@ const Ai202520 2 6 MegaTrendsBreakthroughPage: React.FC = () => {
       </div>
 </>
   );
+<<<<<<< HEAD
 }
 export default Ai202520 2 6 MegaTrendsBreakthroughPage;
+=======
+};
+
+export default Ai20252026MegaTrendsBreakthroughPage;
+
+>>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
