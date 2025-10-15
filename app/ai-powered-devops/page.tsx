@@ -1,13 +1,13 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import { Helmet } from "react-helmet-async";
 
-const AiPoweredDevopsPage: React.FC = () => {
+export default function AIPoweredDevOpsPage() {
   return (
     <>
-      <SEOHead 
-        title="ai-powered-devops - Zion Tech Group"
-        description="Zion Tech Group ai-powered-devops service page"
-      />
+      <Helmet>
+        <title>AI-Powered DevOps - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group AI-Powered DevOps service page" />
+      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

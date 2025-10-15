@@ -11,7 +11,6 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
 import SEOHead from './app/components/SEOHead';
-import LazyRoute from './app/components/LazyRoute';
 
 // Lazy load all page components
 const HomePage = lazy(() => import('./app/page'));
@@ -85,20 +84,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  const [showPerformanceDashboard, setShowPerformanceDashboard] = React.useState(false);
-
-  // Toggle performance dashboard with keyboard shortcut
-  React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault();
-        setShowPerformanceDashboard(prev => !prev);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   return (
     <LightweightErrorBoundary>

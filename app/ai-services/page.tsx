@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Code, Database, Users, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -102,53 +102,8 @@ const AiServicesPage: React.FC = () => {
       applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
       price: "Starting at $3,999/month",
       benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
-    }  ];
-
-  const categories = [
-    { name: "All", count: aiServices.length, active: true },
-    { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length, active: false },
-    { name: "Security", count: aiServices.filter(s => s.category === "Security").length, active: false },
-    { name: "Content", count: aiServices.filter(s => s.category === "Content").length, active: false },
-    { name: "Customer Service", count: aiServices.filter(s => s.category === "Customer Service").length, active: false },
-    { name: "Development", count: aiServices.filter(s => s.category === "Development").length, active: false },
-    { name: "Business Intelligence", count: aiServices.filter(s => s.category === "Business Intelligence").length, active: false },
-    { name: "Automation", count: aiServices.filter(s => s.category === "Automation").length, active: false },
-    { name: "Data Analytics", count: aiServices.filter(s => s.category === "Data Analytics").length, active: false },
-    { name: "Marketing", count: aiServices.filter(s => s.category === "Marketing").length, active: false },
-    { name: "HR & Recruitment", count: aiServices.filter(s => s.category === "HR & Recruitment").length, active: false },
-    { name: "Finance", count: aiServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false },
-    { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length, active: false },
-    { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length, active: false },
-    { name: "IoT & Maintenance", count: aiServices.filter(s => s.category === "IoT & Maintenance").length, active: false },
-    { name: "Personalization", count: aiServices.filter(s => s.category === "Personalization").length, active: false },
-    { name: "Language Processing", count: aiServices.filter(s => s.category === "Language Processing").length, active: false }
+    }
   ];
-
-  const stats = [
-    { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
-    { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Dr. Sarah Chen",
-      company: "Tech Innovations Inc",
-      role: "Chief Data Officer",
-      content: "The AI Analytics Dashboard Pro has revolutionized our data insights. We've increased revenue by 40% and reduced analysis time by 80% in just 6 months.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Global Finance Corp",
-      role: "CTO",
-      content: "The AI Cybersecurity Suite Pro is incredibly sophisticated. We've had zero security breaches since implementation, and our compliance scores are perfect.",
-      rating: 5,
-      avatar: "MR"
-    },
     {
       name: "Emily Watson",
       company: "Digital Marketing Agency",
@@ -159,44 +114,6 @@ const AiServicesPage: React.FC = () => {
     }
   ];
 
-  const aiCapabilities = [
-    {
-      title: "Machine Learning",
-      description: "Advanced ML algorithms for predictive analytics, pattern recognition, and intelligent decision making",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Natural Language Processing",
-      description: "Sophisticated NLP for content generation, sentiment analysis, and conversational AI",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Computer Vision",
-      description: "Advanced image and video analysis for automation, quality control, and visual insights",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Intelligent forecasting and trend analysis for strategic business planning",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Automated Decision Making",
-      description: "AI-powered decision engines for process optimization and intelligent automation",
-      icon: <Settings className="w-8 h-8" />,
-      color: "from-indigo-500 to-blue-500"
-    },
-    {
-      title: "Deep Learning",
-      description: "Neural networks for complex pattern recognition and advanced AI capabilities",
-      icon: <Layers className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
-    }
-  ];
 
   return (
     <>
