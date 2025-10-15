@@ -2,13 +2,10 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
-  ArrowLeft, 
   CheckCircle, 
   Star, 
   Users, 
-  Clock, 
   Shield, 
-  Zap,
   ArrowRight,
   Phone,
   Mail,
@@ -18,7 +15,6 @@ import {
   BarChart3,
   Code,
   Cloud,
-  Database,
   Settings
 } from 'lucide-react';
 
