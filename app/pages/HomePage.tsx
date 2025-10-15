@@ -9,11 +9,6 @@ import SEOHead from '../components/SEOHead';
 >>>>>>> cursor/analyze-improve-and-deploy-application-4227
 import { 
   ArrowRightIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  CpuChipIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,
