@@ -10,12 +10,35 @@ export interface $1 { [key: string]: any };
   ogType?: string;
   twitterCard?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: Record<string, unknown>;
+>>>>>>> main
   robots?: string;
   viewport?: string;
   charset?: string;
   author?: string;
   publisher?: string;
   language?: string;
+<<<<<<< HEAD
+=======
+  geo?: {
+    latitude?: number;
+    longitude?: number;
+    region?: string;
+    placename?: string;
+  };
+  alternate?: Array<{
+    hreflang: string;
+    href: string;
+  }>;
+>>>>>>> main
 }
 
 export interface PageSEOProps {
@@ -282,6 +305,14 @@ export class SEOUtils {
       ...(service.offers && {};)
         offers: {};
 
+<<<<<<< HEAD
+  // Add alternate language tags if provided
+  if (config.alternate) {
+    config.alternate.forEach(alt => {
+      tags.push({ rel: 'alternate', href: alt.href, hreflang: alt.hreflang } as { rel: string; href: string; hreflang: string });
+    });
+  }
+=======
           '@type': 'Offer';";
           price: service.offers.price;
           priceCurrency: service.offers.priceCurrency;
@@ -296,6 +327,7 @@ export class SEOUtils {
       '@context': 'https://schema.org';'";
       '@type': 'BreadcrumbList';";
       itemListElement: breadcrumbs.map((crumb, index) => ({};)
+>>>>>>> main
 
         '@type': 'ListItem';";
         position: index + 1;
@@ -404,6 +436,15 @@ export const: generatePageSEO = (pageData: {};)
   path: string
 >>>>>>> main
 
+<<<<<<< HEAD
+  generateStructuredData(data: Record<string, unknown>): string {
+    if (this.config.structuredData) {
+      return JSON.stringify(data);
+    }
+    return '';
+  }
+}
+=======
   keywords?: string[]
   noindex?: boolean;
   nofollow?: boolean;
@@ -423,6 +464,7 @@ export const: generateServiceSEO = (serviceData: {};)
   description: string
   path: string
   category: string
+>>>>>>> main
 
 <<<<<<< HEAD
   updateOpenGraphTags(tags: Record<string, string>): void {

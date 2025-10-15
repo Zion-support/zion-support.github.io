@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticTextProps {
@@ -9,17 +10,20 @@ interface FuturisticTextProps {
 export default function FuturisticText({ className = '', children, ...props }: FuturisticTextProps) {
   return (
     <div className={`futuristic-text ${className}`} {...props}>
+=======
+ursor/fix-errors-and-merge-to-main-234b
+>>>>>>> main
       {children}
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-
+>>>>>>> main
+=======
 interface FuturisticTextProps {},
       children: React.ReactNode,
       variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','
