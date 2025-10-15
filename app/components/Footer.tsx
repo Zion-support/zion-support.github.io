@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
-            </div>
+            </Link>
             <p className="text-gray-400 text-sm mb-4">
               Leading provider of AI solutions, cybersecurity, _cloud infrastructure, and digital transformation services. 
               Transforming businesses with cutting-edge technology.

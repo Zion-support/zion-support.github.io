@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -316,8 +315,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </Link>
         </nav>
       </div>
-    </div>
-  );
+  </>);
 };
 
 export default Sidebar;

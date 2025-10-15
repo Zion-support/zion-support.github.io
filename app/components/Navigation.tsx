@@ -299,11 +299,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     <item.icon className="w-5 h-5 mr-3" />
                     {item.name}
                   </Link>
-                )}
               </div>
             ))}
           </div>
-        )}
       </div>
     </nav>
   )

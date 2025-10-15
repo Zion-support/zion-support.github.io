@@ -234,6 +234,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         }
       `}</style>
     </>
-  );};
+  );
+};
 
 export default AccessibilityEnhancer;
