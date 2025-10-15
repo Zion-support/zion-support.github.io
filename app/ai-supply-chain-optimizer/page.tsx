@@ -2,16 +2,16 @@ import { TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AISupplyChainOptimizer() {};
+export default function AISupplyChainOptimizer() {
   const features = [
-    {};
-      title: "Demand Forecasting";
-      description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis";
-      icon: <BarChart3 className="w-6 h-6" />;
+    {
+      title: "Demand Forecasting",
+      description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis",
+      icon: <BarChart3 className="w-6 h-6" />,
       benefits: ["95% Forecast Accuracy", "Seasonal Pattern Recognition", "Market Trend Analysis", "Inventory Optimization"]
-    };
-    {};
-      title: "Route Optimization";
+    },
+    {
+      title: "Route Optimization",
       description: "Intelligent logistics planning with real-time traffic, weather, and cost optimization";
       icon: <Globe className="w-6 h-6" />;
       benefits: ["30% Cost Reduction", "Faster Delivery Times", "Fuel Efficiency", "Carbon Footprint Reduction"]

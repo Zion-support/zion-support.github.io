@@ -6,13 +6,7 @@ import {
   BarChart3, 
   TrendingUp, 
   Target, 
-  Database,
-<<<<<<< HEAD
-  Cloud,
-  ShoppingCart,
-  DollarSign
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
+  Database
 } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {

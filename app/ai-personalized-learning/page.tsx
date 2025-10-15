@@ -1,34 +1,37 @@
 
-const AiPersonalizedLearningPage: React.FC = () => {};
+import React from 'react';
+import { Brain, BookOpen } from 'lucide-react';
+
+const AiPersonalizedLearningPage: React.FC = () => {
   const features = [
-    {};
-      icon: <Brain className="w-6 h-6" />;
-      title: "Adaptive Learning Paths";
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "Adaptive Learning Paths",
       description: "AI creates personalized learning journeys based on individual strengths and weaknesses"
-    };
-    {};
-      icon: <BookOpen className="w-6 h-6" />;
-      title: "Multi-Modal Content";
+    },
+    {
+      icon: <BookOpen className="w-6 h-6" />,
+      title: "Multi-Modal Content",
       description: "Interactive videos, simulations, quizzes, and hands-on projects for comprehensive learning"
-    };
-    {};
-      icon: <Users className="w-6 h-6" />;
-      title: "Social Learning";
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Social Learning",
       description: "Collaborative features with peer learning, group projects, and expert mentorship"
-    };
-    {};
-      icon: <Target className="w-6 h-6" />;
-      title: "Progress Tracking";
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "Progress Tracking",
       description: "Real-time analytics and insights to track learning progress and achievements"
-    };
+    }
   ];
 
   const pricingPlans = [
-    {};
-      name: "Individual";
-      price: "$29";
-      period: "/month";
-      description: "Perfect for personal learning and skill development";
+    {
+      name: "Individual",
+      price: "$29",
+      period: "/month",
+      description: "Perfect for personal learning and skill development",
       features: [
         "Unlimited courses";
         "Basic AI personalization";
