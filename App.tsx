@@ -10,6 +10,8 @@ import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import ComprehensiveErrorBoundary from "./app/components/ComprehensiveErrorBoundary";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import Breadcrumb from "./app/components/Breadcrumb";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
@@ -32,6 +34,8 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
+const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
+const TermsPage = React.lazy(() => import("./app/terms/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -133,15 +137,17 @@ function App() {
   }, []);
 
   return (
-    <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
-        <HelmetProvider>
-          <AnalyticsProvider>
-            <PerformanceMonitor>
-              <WebVitalsTracker>
-                <AccessibilityEnhancer>
-                  <CoreWebVitals>
-                    <Router>
+    <ComprehensiveErrorBoundary>
+      <GlobalErrorBoundary>
+        <EnhancedErrorBoundary>
+          <HelmetProvider>
+            <AnalyticsProvider>
+              <PerformanceMonitor>
+                <WebVitalsTracker>
+                  <AccessibilityEnhancer>
+                    <CoreWebVitals>
+                      <PerformanceOptimizer>
+                        <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
                           <Navigation onSidebarToggle={toggleSidebar} />
@@ -248,7 +254,7 @@ function App() {
                                 <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
                                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
-                                <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+                                <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
 
                                 {/* Catch all route */}
                                 <Route path="*" element={
@@ -269,15 +275,17 @@ function App() {
                           <Footer />
                         </FuturisticBackground>
                       </div>
-                    </Router>
-                  </CoreWebVitals>
-                </AccessibilityEnhancer>
-              </WebVitalsTracker>
-            </PerformanceMonitor>
-          </AnalyticsProvider>
-        </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </GlobalErrorBoundary>
+                        </Router>
+                      </PerformanceOptimizer>
+                    </CoreWebVitals>
+                  </AccessibilityEnhancer>
+                </WebVitalsTracker>
+              </PerformanceMonitor>
+            </AnalyticsProvider>
+          </HelmetProvider>
+        </EnhancedErrorBoundary>
+      </GlobalErrorBoundary>
+    </ComprehensiveErrorBoundary>
   );
 }
 

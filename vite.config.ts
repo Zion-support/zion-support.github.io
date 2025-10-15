@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 150, // Balanced threshold for better performance
-    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 100, // Stricter threshold for better performance
+    assetsInlineLimit: 1024, // Smaller inline limit for better caching
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -83,15 +83,18 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split further
+          if (id.includes('react-dom')) {
+            return 'react-dom'
+          }
+          if (id.includes('react') && !id.includes('react-dom')) {
+            return 'react-core'
           }
           // Router
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split by size
           if (id.includes('framer-motion')) {
             return 'animations'
           }
