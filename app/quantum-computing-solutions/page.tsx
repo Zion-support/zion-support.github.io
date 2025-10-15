@@ -1,18 +1,7 @@
 'use client';
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  CpuChipIcon, 
-  CheckCircleIcon, 
-  ArrowRightIcon,
-  SparklesIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
-  GlobeAltIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
+import { CpuChipIcon, CheckCircleIcon, ArrowRightIcon, SparklesIcon, ShieldCheckIcon, DocumentTextIcon, GlobeAltIcon, CogIcon } from '@heroicons/react/24/outline';
 
 const QuantumComputingSolutionsPage: React.FC = () => {
   const features = [

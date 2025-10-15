@@ -1,17 +1,5 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-<<<<<<< HEAD
-import { 
-  ShareIcon, 
-  ChartBarIcon, 
-  CheckCircleIcon,
-  StarIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  CalendarIcon
-} from '@heroicons/react/24/outline';
-=======
->>>>>>> cursor/analyze-improve-and-merge-code-5d7e
 
 const SocialMediaSchedulerPage: React.FC = () => {
   return (

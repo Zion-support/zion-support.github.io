@@ -1,19 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  CheckCircleIcon, 
-  DocumentTextIcon, 
-  ScaleIcon, 
-  ShieldCheckIcon,
-  SparklesIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  GlobeAltIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  EyeIcon
-} from '@heroicons/react/24/outline';
+import { CheckCircleIcon, DocumentTextIcon, ScaleIcon, SparklesIcon, ArrowRightIcon, PhoneIcon, EnvelopeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 
 const AILegalDocumentAnalyzerPage: React.FC = () => {
   const features = [

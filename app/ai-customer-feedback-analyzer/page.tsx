@@ -1,18 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  CheckCircleIcon, 
-  ChartBarIcon, 
-  UserGroupIcon, 
-  ChatBubbleLeftRightIcon,
-  SparklesIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  GlobeAltIcon,
-  EyeIcon,
-  ArrowTrendingUpIcon
-} from '@heroicons/react/24/outline';
+import { CheckCircleIcon, ChartBarIcon, SparklesIcon, ArrowRightIcon, PhoneIcon, EnvelopeIcon, GlobeAltIcon, ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
 
 const AICustomerFeedbackAnalyzerPage: React.FC = () => {
   const features = [

@@ -1,19 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  CheckCircleIcon, 
-  ChartBarIcon, 
-  CubeIcon, 
-  TruckIcon,
-  SparklesIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  GlobeAltIcon,
-  ArrowTrendingUpIcon,
-  ClockIcon,
-  CurrencyDollarIcon
-} from '@heroicons/react/24/outline';
+import { CheckCircleIcon, CubeIcon, SparklesIcon, ArrowRightIcon, PhoneIcon, EnvelopeIcon, GlobeAltIcon, ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
 
 const AIInventoryOptimizerProPage: React.FC = () => {
   const features = [

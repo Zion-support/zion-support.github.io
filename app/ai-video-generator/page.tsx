@@ -1,19 +1,7 @@
 'use client';
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  VideoCameraIcon, 
-  CheckCircleIcon, 
-  ArrowRightIcon,
-  CpuChipIcon,
-  SparklesIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
-  MicrophoneIcon,
-  PhotoIcon
-} from '@heroicons/react/24/outline';
+import { VideoCameraIcon, CheckCircleIcon, ArrowRightIcon, CpuChipIcon, SparklesIcon, ShieldCheckIcon, DocumentTextIcon, MicrophoneIcon, PhotoIcon } from '@heroicons/react/24/outline';
 
 const AIVideoGeneratorPage: React.FC = () => {
   const features = [

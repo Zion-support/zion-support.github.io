@@ -1,30 +1,15 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEOHead from '../components/SEOHead';
-import { 
-  CloudIcon, 
-  ShieldCheckIcon, 
-  CheckCircleIcon,
-  StarIcon,
-  SparklesIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  CircleStackIcon,
-  SignalIcon
-} from '@heroicons/react/24/outline';
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-merge-code-5d7e
 
 const ITSolutionsPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, web development, mobile development, and more. Transform your business with our expert IT services." />
-        <meta name="keywords" content="IT solutions, cloud infrastructure, web development, mobile development, database management, network infrastructure" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
-      </Helmet>
+      <SEOHead
+        title="IT Solutions - Zion Tech Group"
+        description="Comprehensive IT solutions including cloud infrastructure, web development, mobile development, and more. Transform your business with our expert IT services."
+        keywords="IT solutions, cloud infrastructure, web development, mobile development, database management, network infrastructure"
+        canonicalUrl="https://ziontechgroup.com/it-solutions"
+      />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

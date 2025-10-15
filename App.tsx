@@ -94,7 +94,6 @@ const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'
 const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 
 // Additional missing pages
-const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
@@ -163,7 +162,6 @@ const AILegalDocumentAnalyzerPage = lazy(() => import('./app/ai-legal-document-a
 
 // New IT Solutions
 const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
-const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
 
 // New AI Medical Services
 const AIMedicalDiagnosisAssistantPage = lazy(() => import('./app/ai-medical-diagnosis-assistant/page'));

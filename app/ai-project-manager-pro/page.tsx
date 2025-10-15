@@ -1,17 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  CheckCircleIcon, 
-  ClockIcon, 
-  UserGroupIcon, 
-  ChartBarIcon,
-  CogIcon,
-  SparklesIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  GlobeAltIcon
-} from '@heroicons/react/24/outline';
+import { CheckCircleIcon, ChartBarIcon, SparklesIcon, ArrowRightIcon, PhoneIcon, EnvelopeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 
 const AIProjectManagerProPage: React.FC = () => {
   const features = [

@@ -1,31 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircleIcon, 
-  ArrowRightIcon,
-  SparklesIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ShieldCheckIcon,
-  GlobeAltIcon,
-  DocumentTextIcon,
-  EyeIcon,
-  ChatBubbleLeftRightIcon,
-  AcademicCapIcon,
-  HomeIcon,
-  TruckIcon,
-  HeartIcon,
-  ScaleIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  CloudIcon,
-  SignalIcon,
-  BoltIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';
+import { CheckCircleIcon, ArrowRightIcon, SparklesIcon, ChartBarIcon, UserGroupIcon, CurrencyDollarIcon, CogIcon, AcademicCapIcon, HomeIcon, TruckIcon, HeartIcon, ScaleIcon } from '@heroicons/react/24/outline';
 
 const MicroSAASSolutionsPage: React.FC = () => {
   const microSaasServices = [

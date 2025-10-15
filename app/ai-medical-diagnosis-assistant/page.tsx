@@ -1,19 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  CheckCircleIcon, 
-  HeartIcon, 
-  UserGroupIcon, 
-  ShieldCheckIcon,
-  SparklesIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  GlobeAltIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  ChartBarIcon
-} from '@heroicons/react/24/outline';
+import { CheckCircleIcon, HeartIcon, UserGroupIcon, SparklesIcon, ArrowRightIcon, PhoneIcon, EnvelopeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 
 const AIMedicalDiagnosisAssistantPage: React.FC = () => {
   const features = [

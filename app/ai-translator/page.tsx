@@ -1,19 +1,7 @@
 'use client';
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  GlobeAltIcon, 
-  CheckCircleIcon, 
-  ArrowRightIcon,
-  CpuChipIcon,
-  SparklesIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
-  MicrophoneIcon,
-  CameraIcon
-} from '@heroicons/react/24/outline';
+import { GlobeAltIcon, CheckCircleIcon, ArrowRightIcon, CpuChipIcon, ShieldCheckIcon, DocumentTextIcon, ChatBubbleLeftRightIcon, MicrophoneIcon, CameraIcon } from '@heroicons/react/24/outline';
 
 const AITranslatorPage: React.FC = () => {
   const features = [
