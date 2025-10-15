@@ -34,4 +34,4 @@ const metaDescription = document.querySelector('meta[name="description"]');
   }
 };
 
-export default NotFoundPage;
+export default seoEnhancer;

@@ -19,52 +19,6 @@ import {
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const serviceCategories = [
-    {
-      title: 'AI Solutions',
-      services: [
-        { name: 'AI Smart Contracts', path: '/ai-smart-contracts' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-        { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
-        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' },
-        { name: 'View All AI Services', path: '/ai-services' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      services: [
-        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
-        { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
-        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
-        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro' },
-        { name: 'View All Micro SAAS', path: '/micro-saas' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      services: [
-        { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
-        { name: 'Edge Computing', path: '/edge-computing-solutions' },
-        { name: 'Cloud Infrastructure', path: '/it-services' },
-        { name: 'Cybersecurity', path: '/it-services' },
-        { name: 'Web Development', path: '/it-services' },
-        { name: 'Mobile Development', path: '/it-services' },
-        { name: 'View All IT Services', path: '/it-services' }
-      ]
-    },
-    {
-      title: '5G Solutions',
-      services: [
-        { name: '5G Implementation', path: '/5g-solutions' },
-        { name: '5G Network Infrastructure', path: '/5g-solutions' },
-        { name: '5G IoT Solutions', path: '/5g-solutions' },
-        { name: '5G Smart City Solutions', path: '/5g-solutions' },
-        { name: '5G Edge Computing', path: '/5g-solutions' },
-        { name: '5G Private Networks', path: '/5g-solutions' },
-        { name: 'View All 5G Solutions', path: '/5g-solutions' }
-      ]
-    }
-  ];
 
   const quickLinks = [
     { name: 'About Us', path: '/about' },
@@ -73,6 +27,15 @@ const Footer: React.FC = () => {
     { name: 'News', path: '/news' },
     { name: 'Contact', path: '/contact' },
     { name: 'Sitemap', path: '/sitemap' }
+  ];
+
+  const serviceLinks = [
+    { name: 'Micro SAAS Solutions', path: '/micro-saas' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: '5G Solutions', path: '/5g-solutions' },
+    { name: 'Cloud Services', path: '/cloud-services' },
+    { name: 'Cybersecurity', path: '/cybersecurity' }
   ];
 
   const legalLinks = [
@@ -161,26 +124,19 @@ const Footer: React.FC = () => {
           {/* Services */}
           <div>
             <h3 className="text-xl font-semibold mb-6">Our Services</h3>
-            <div className="space-y-4">
-              {serviceCategories.map((category, index) => (
-                <div key={index}>
-                  <h4 className="text-lg font-medium text-blue-400 mb-3">{category.title}</h4>
-                  <ul className="space-y-2">
-                    {category.services.map((service, serviceIndex) => (
-                      <li key={serviceIndex}>
-                        <Link
-                          to={service.path}
-                          className="text-gray-300 hover:text-white transition-colors flex items-center group text-sm"
-                        >
-                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <ul className="space-y-2">
+              {serviceLinks.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-white transition-colors flex items-center group text-sm"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           {/* Quick Links */}

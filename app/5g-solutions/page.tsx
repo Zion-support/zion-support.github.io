@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Network, Cpu, Smartphone, BarChart3, Shield, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
-  const fiveGServices = [
+  const solutions = [
     {
       name: "5G Implementation",
       description: "Complete 5G network deployment with zero-downtime migration and comprehensive testing.",
@@ -140,7 +140,7 @@ const FiveGSolutionsPage: React.FC = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {fiveGServices.map((service, index) => (
+              {solutions.map((service, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative group ${service.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">

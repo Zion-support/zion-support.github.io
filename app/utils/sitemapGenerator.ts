@@ -14,4 +14,4 @@ ${pages.map(page => `  <url>
   }
 };
 
-export default NotFoundPage;
+export default sitemapGenerator;

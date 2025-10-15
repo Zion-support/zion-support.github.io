@@ -33,4 +33,4 @@ export const enhancedErrorHandler = { handleError: (error: Error, context?: stri
   }
 };
 
-export default NotFoundPage;
+export default enhancedErrorHandler;

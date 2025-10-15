@@ -8,16 +8,7 @@ import {
   Brain, 
   Server, 
   Zap,
-  Shield,
-  BarChart3,
-  Code,
-  Database,
-  Cloud,
-  Smartphone,
-  Globe,
-  Target,
   Rocket,
-  Users,
   Settings
 } from 'lucide-react';
 

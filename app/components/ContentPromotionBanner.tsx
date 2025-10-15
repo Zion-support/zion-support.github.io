@@ -79,6 +79,7 @@ const ContentPromotionBanner: React.FC = () => {
   if (!isVisible) return null;
 
   const banner = banners[currentBanner];
+  if (!banner) return null;
 
   return (
     <div className="relative overflow-hidden">

@@ -1,19 +1,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SEOOptimizer: React.FC = () => {
+interface SEOOptimizerProps {
+  children: React.ReactNode;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   return (
     <>
       <Helmet>
-        <title>SEOOptimizer - Zion Tech Group</title>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+        <meta name="keywords" content="AI solutions, IT services, 5G solutions, cloud computing, cybersecurity" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI and IT solutions" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI and IT solutions" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">SEOOptimizer</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>
+      {children}
     </>
   );
 };
