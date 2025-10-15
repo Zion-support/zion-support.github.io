@@ -351,6 +351,7 @@ const AIIoTManagementProPage = () => {
             </div>
           </section>
         </main>
+      </div>
     </>
   );
 };
