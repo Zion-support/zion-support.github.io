@@ -195,16 +195,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
   };
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
+    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/30 neon-border-animated">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <Link to="/" className="flex-shrink-0 flex items-center group">
+              <div className="h-8 w-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center neon-glow group-hover:scale-110 transition-transform">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
+              <span className="ml-2 text-white font-bold text-xl neon-text group-hover:text-cyan-300 transition-colors">Zion Tech Group</span>
             </Link>
           </div>
 
@@ -221,10 +221,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
                   }}
-                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
+                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 ${
                     isActive(item.href)
-                      ? 'border-blue-500 text-white'
-                      : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
+                      ? 'border-cyan-500 text-cyan-300 neon-text'
+                      : 'border-transparent text-gray-300 hover:border-cyan-400 hover:text-cyan-300 hover:neon-glow'
                   }`}
                   aria-expanded={item.submenu ? (item.name === 'AI Services' && isServicesOpen) ||
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||
@@ -240,7 +240,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                 {/* Dropdown Menu */}
                 {item.submenu && (
                   <div 
-                    className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    className={`absolute left-0 mt-2 w-56 glass-card rounded-lg shadow-lg py-2 z-50 border border-cyan-500/30 neon-border-animated ${
                       (item.name === 'AI Services' && isServicesOpen) ||
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
@@ -255,7 +255,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                       <div key={subItem.name} role="none">
                         <Link
                           to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 hover:neon-glow"
                           role="menuitem"
                         >
                           <subItem.icon className="w-4 h-4 mr-3" aria-hidden="true" />
@@ -273,7 +273,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
           <div className="lg:hidden flex items-center">
             <button
               onClick={onSidebarToggle}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 neon-glow transition-all duration-300"
               aria-label="Toggle navigation menu"
               aria-expanded={sidebarOpen}
               aria-controls="mobile-menu"

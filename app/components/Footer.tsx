@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="glass-card mt-20">
+    <footer className="glass-card mt-20 neon-border-animated">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron']">ZION TECH GROUP</h3>
+            <h3 className="text-2xl font-bold mb-6 holographic neon-text font-['Orbitron']">ZION TECH GROUP</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
@@ -28,9 +28,9 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-gradient">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 holographic neon-text">Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors hover:neon-glow">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Infrastructure</Link></li>
               <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors">Digital Transformation</Link></li>
@@ -50,7 +50,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">AI Services</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text">AI Services</h4>
             <ul className="space-y-2">
               <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-white">AI Chatbot Builder</Link></li>
               <li><Link to="/ai-document-processor" className="text-gray-300 hover:text-white">AI Document Processor</Link></li>
@@ -72,7 +72,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Zion AI Tools</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text">Zion AI Tools</h4>
             <ul className="space-y-2">
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
               <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
@@ -98,7 +98,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Advanced AI Services</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text">Advanced AI Services</h4>
             <ul className="space-y-2">
               <li><Link to="/zion-ai-fraud-detection" className="text-gray-300 hover:text-white">AI Fraud Detection</Link></li>
               <li><Link to="/zion-ai-image-recognition" className="text-gray-300 hover:text-white">AI Image Recognition</Link></li>
@@ -110,7 +110,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Pro AI Services</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text">Pro AI Services</h4>
             <ul className="space-y-2">
               <li><Link to="/ai-voice-assistant-pro" className="text-gray-300 hover:text-white">AI Voice Assistant Pro</Link></li>
               <li><Link to="/ai-image-recognition-pro" className="text-gray-300 hover:text-white">AI Image Recognition Pro</Link></li>
@@ -122,7 +122,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Micro SaaS Solutions</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text">Micro SaaS Solutions</h4>
             <ul className="space-y-2">
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Overview</Link></li>
               <li><Link to="/zion-smart-analytics-dashboard" className="text-gray-300 hover:text-white">Smart Analytics Dashboard</Link></li>
@@ -133,7 +133,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Enterprise Solutions</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text">Enterprise Solutions</h4>
             <ul className="space-y-2">
               <li><Link to="/blockchain-solutions-pro" className="text-gray-300 hover:text-white">Blockchain Solutions Pro</Link></li>
               <li><Link to="/iot-solutions-pro" className="text-gray-300 hover:text-white">IoT Solutions Pro</Link></li>
@@ -152,7 +152,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Company</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>
               <li><Link to="/team" className="text-gray-300 hover:text-white">Team</Link></li>
@@ -163,7 +163,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Resources</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text">Resources</h4>
             <ul className="space-y-2">
               <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
               <li><Link to="/tutorials" className="text-gray-300 hover:text-white">Tutorials</Link></li>
@@ -177,7 +177,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Legal</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text">Legal</h4>
             <ul className="space-y-2">
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>

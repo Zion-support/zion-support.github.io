@@ -152,12 +152,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      <div className="fixed top-0 left-0 h-full w-80 bg-slate-900 shadow-xl">
-        <div className="flex items-center justify-between p-4 border-b border-slate-700">
-          <h2 className="text-lg font-semibold text-white">Navigation</h2>
+      <div className="fixed top-0 left-0 h-full w-80 glass-card neon-border-animated shadow-xl">
+        <div className="flex items-center justify-between p-4 border-b border-cyan-500/30">
+          <h2 className="text-lg font-semibold text-white neon-text">Navigation</h2>
           <button
             onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-700"
+            className="p-2 rounded-md text-gray-400 hover:text-cyan-300 hover:bg-cyan-500/10 neon-glow transition-all duration-300"
           >
             <X className="h-5 w-5" />
           </button>
@@ -165,12 +165,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         
         <div className="overflow-y-auto h-full pb-20">
           {navigationSections.map((section) => (
-            <div key={section.title} className="border-b border-slate-700">
+            <div key={section.title} className="border-b border-cyan-500/30">
               <button
                 onClick={() => toggleSection(section.title)}
-                className="w-full flex items-center justify-between p-4 text-left text-white hover:bg-slate-800"
+                className="w-full flex items-center justify-between p-4 text-left text-white hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 neon-glow"
               >
-                <span className="font-medium">{section.title}</span>
+                <span className="font-medium neon-text">{section.title}</span>
                 {expandedSections.has(section.title) ? (
                   <ChevronDown className="h-4 w-4" />
                 ) : (
@@ -179,15 +179,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </button>
               
               {expandedSections.has(section.title) && (
-                <div className="bg-slate-800">
+                <div className="bg-slate-800/50 backdrop-blur-sm">
                   {section.items.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className={`flex items-center px-6 py-3 text-sm transition-colors ${
+                      className={`flex items-center px-6 py-3 text-sm transition-all duration-300 ${
                         isActive(item.href)
-                          ? 'bg-blue-600 text-white'
-                          : 'text-gray-300 hover:bg-slate-700 hover:text-white'
+                          ? 'bg-cyan-500/20 text-cyan-300 neon-glow'
+                          : 'text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 hover:neon-glow'
                       }`}
                     >
                       <item.icon className="h-4 w-4 mr-3" />
@@ -203,13 +203,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           ))}
         </div>
         
-        <div className="absolute bottom-0 left-0 right-0 p-4 bg-slate-900 border-t border-slate-700">
+        <div className="absolute bottom-0 left-0 right-0 p-4 glass-card border-t border-cyan-500/30">
           <div className="flex items-center space-x-4 text-sm text-gray-400">
-            <div className="flex items-center">
+            <div className="flex items-center hover:text-cyan-300 transition-colors">
               <Mail className="h-4 w-4 mr-2" />
               <span>kleber@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center hover:text-cyan-300 transition-colors">
               <MapPin className="h-4 w-4 mr-2" />
               <span>Middletown, DE</span>
             </div>
