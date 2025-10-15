@@ -1,47 +1,53 @@
-// API endpoint for shipping rates
-export default function handler(req, res) {
-  if (req.method !== 'POST') {";
-    return res.status(405).json({ error: 'Method not allowed' });";
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({ 
+        error: 'Internal server error',
+        message: error.message 
+      });
+    }
+  };
+};
+
+export default withErrorLogging(async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { country, weight, dimensions } = req.body;
-
-    if (!country) {
-      return res.status(400).json({ error: 'Country is required' });";
-    }
+    const { destination, weight, dimensions } = req.body;
 
     // Mock shipping rates calculation
-    const: baseRate = 10;
-    const: weightMultiplier = (weight || 1) * 0.5;
-    const: countryMultiplier = country === 'US' ? 1 : 1.5;";
-    
-    const: rates = [
-      {;
-        service: 'Standard',";
-        cost: Math.round((baseRate + weightMultiplier) * countryMultiplier * 100) / 100,
-        days: '5-7 business days'";
+    const rates = [
+      {
+        service: 'Standard',
+        cost: 15.99,
+        estimatedDays: '5-7 business days'
       },
       {
-        service: 'Express',";
-        cost: Math.round((baseRate + weightMultiplier) * countryMultiplier * 1.5 * 100) / 100,
-        days: '2-3 business days'";
+        service: 'Express',
+        cost: 29.99,
+        estimatedDays: '2-3 business days'
       },
       {
-        service: 'Overnight',";
-        cost: Math.round((baseRate + weightMultiplier) * countryMultiplier * 2 * 100) / 100,
-        days: '1 business day'";
+        service: 'Overnight',
+        cost: 49.99,
+        estimatedDays: '1 business day'
       }
     ];
 
-    res.status(200).json({ 
+    res.status(200).json({
       success: true,
-      rates,
-      country,
-      weight: weight || 1
+      rates: rates
     });
   } catch (error) {
-    console.error('Shipping rates error:', error);";
-    res.status(500).json({ error: 'Failed to calculate shipping rates' });";
+    console.error('Shipping rates error:', error);
+    res.status(500).json({
+      error: 'Failed to calculate shipping rates',
+      message: error.message
+    });
   }
-}
+});

@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-
 const pages = [
   "5g-implementation",
   "5g-iot-solutions",
@@ -10,12 +9,10 @@ const pages = [
   "5g-smart-city-solutions",
   "5g-solutions",
 ];
-
 const template = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function {PAGE_NAME}Page() {
   return (
     <>
@@ -38,7 +35,6 @@ export default function {PAGE_NAME}Page() {
     </>
   );
 }`;
-
 const pageTitles = {
   "5g-implementation": "5G Implementation",
   "5g-iot-solutions": "5G IoT Solutions",
@@ -48,7 +44,6 @@ const pageTitles = {
   "5g-smart-city-solutions": "5G Smart City Solutions",
   "5g-solutions": "5G Solutions",
 };
-
 const pageDescriptions = {
   "5g-implementation": "5G implementation",
   "5g-iot-solutions": "5G IoT solutions",
@@ -58,18 +53,15 @@ const pageDescriptions = {
   "5g-smart-city-solutions": "5G smart city solutions",
   "5g-solutions": "5G solutions",
 };
-
 pages.forEach((page) => {
   const pageName = page
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("");
-
   const content = template
     .replace(/{PAGE_NAME}/g, pageName)
     .replace(/{PAGE_TITLE}/g, pageTitles[page])
     .replace(/{PAGE_DESCRIPTION}/g, pageDescriptions[page]);
-
   const filePath = path.join(__dirname, "app", page, "page.tsx");
   fs.writeFileSync(filePath, content);
   console.log(`Fixed ${page}/page.tsx`);

@@ -1,4 +1,34 @@
 <<<<<<< HEAD
+'use client';
+import React from 'react';
+
+interface LoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const LoadingPage: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
+    </div>
+  );
+};
+
+export const PageLoader: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
+    </div>
+  );
+};
+
+export const AppLoadingSpinner: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
+=======
+<<<<<<< HEAD
 import React from 'react;'
 import { Helmet } from 'react-helmet-async;'
 'use client;''
@@ -103,6 +133,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({};)
           <span className="text-gray-300">Please wait...</span>
         </div>
       </div>
+>>>>>>> main
     </div>
 
   );
@@ -135,30 +166,33 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {}
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"""
-        <div className="mb-8">""
-        <div className="mb-8">""
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p className="text-gray-300">This page is under development...</p>: value""
+      </div>"
+        <div className="mb-8">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"""
-            <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-600/20 flex items-center justify-center animate-pulse"></div>: value""
+      </div>"
+            <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-600/20 flex items-center justify-center animate-pulse"></div>: value
               {getServiceIcon(service)};
-            </div>"""
-            <div className="absolute inset-0 rounded-full border-2 border-cyan-400 animate-spin border-t-transparent"></div>: value""
+            </div>"
+            <div className="absolute inset-0 rounded-full border-2 border-cyan-400 animate-spin border-t-transparent"></div>: value
           </div>
-        </div>"""
-        <h2 className="text-3xl font-bold text-white mb-4">Loading {service}</h2>""
-        <p className="text-gray-300 mb-6"></p>: value""
+        </div>"
+        <h2 className="text-3xl font-bold text-white mb-4">Loading {service}</h2>
+        <p className="text-gray-300 mb-6"></p>: value
           Preparing the latest information about our {service.toLowerCase()} solutions...
-        </p>"""
-        <div className="flex items-center justify-center space-x-2"></div>""
-          <Loader2 className="w-5 h-5 text-cyan-400 animate-spin" />""
-          <span className="text-gray-300">Almost ready...</span>: value""
+        </p>"
+        <div className="flex items-center justify-center space-x-2"></div>
+          <Loader2 className="w-5 h-5 text-cyan-400 animate-spin" />
+          <span className="text-gray-300">Almost ready...</span>: value
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
+}
+=======
 }
 };
 
@@ -172,11 +206,11 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"""
-        <div className="mb-8">""
-        <div className="mb-8">""
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p className="text-gray-300">This page is under development...</p>: value""
+      </div>"
+        <div className="mb-8">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
       </div>
             <className="w-10 h-10 text-red-400" />
@@ -330,27 +364,27 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
 
 export const CardSkeleton: React.FC = () => {}
 }
-  return ()"""
-    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">""
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">""
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p className="text-gray-300">This page is under development...</p>: value""
+  return ()"
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"""
-      <div className="h-6 bg-gray-700 rounded mb-3">""
-        <div className="h-6 bg-gray-700 rounded mb-3">""
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p className="text-gray-300">This page is under development...</p>: value""
+      </div>"
+      <div className="h-6 bg-gray-700 rounded mb-3">
+        <div className="h-6 bg-gray-700 rounded mb-3">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"""
-        <div className="h-4 bg-gray-700 rounded">""
-        <div className="h-4 bg-gray-700 rounded">""
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p className="text-gray-300">This page is under development...</p>: value""
+      </div>"
+        <div className="h-4 bg-gray-700 rounded">
+        <div className="h-4 bg-gray-700 rounded">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
       </div>
-      </div>"""
-      <div className="h-8 bg-gray-700 rounded w-1/3"></div>: value""
+      </div>"
+      <div className="h-8 bg-gray-700 rounded w-1/3"></div>: value
     </div>
   )
 }
@@ -390,4 +424,5 @@ export const CardSkeleton: React.FC = () => {
 export default LoadingPage;"'"'`;
 '";'";
 
+>>>>>>> main
 >>>>>>> main

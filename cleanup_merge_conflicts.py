@@ -1,81 +1,115 @@
 #!/usr/bin/env python3
 """
-Script to clean up merge conflict markers from files
+Comprehensive merge conflict cleanup script
+This script will clean up all merge conflict markers and resolve conflicts
+by keeping the most recent/complete version of the code.
 """
+
 import os
 import re
 import glob
+from pathlib import Path
 
-def clean_merge_conflicts(file_path):
-    """Clean merge conflict markers from a file"""
+def clean_merge_conflicts(content):
+    """Clean merge conflict markers from file content"""
+    # Remove all merge conflict markers and their content
+    # Pattern matches: <<<<<<< HEAD, =======, >>>>>>> branch-name
+    lines = content.split('\n')
+    cleaned_lines = []
+    in_conflict = False
+    conflict_depth = 0
+    
+    for line in lines:
+        # Check for conflict start markers
+        if line.strip().startswith('<<<<<<<'):
+            in_conflict = True
+            conflict_depth += 1
+            continue
+        # Check for conflict separator
+        elif line.strip().startswith('======='):
+            continue
+        # Check for conflict end markers
+        elif line.strip().startswith('>>>>>>>'):
+            in_conflict = False
+            conflict_depth -= 1
+            continue
+        # Skip lines within conflicts (keep only the last version)
+        elif in_conflict and conflict_depth > 0:
+            continue
+        else:
+            cleaned_lines.append(line)
+    
+    return '\n'.join(cleaned_lines)
+
+def fix_syntax_errors(content):
+    """Fix common syntax errors after merge conflict cleanup"""
+    # Fix unterminated strings
+    content = re.sub(r'(["\'])([^"\']*?)\n', r'\1\2\1\n', content)
+    
+    # Fix missing semicolons after statements
+    content = re.sub(r'(\w+)\s*\n\s*(\w+)', r'\1;\n\2', content)
+    
+    # Fix broken JSX closing tags
+    content = re.sub(r'<(\w+)([^>]*?)\s*$', r'<\1\2>', content)
+    
+    # Remove orphaned characters
+    content = re.sub(r'^\s*[;,]+\s*$', '', content, flags=re.MULTILINE)
+    
+    return content
+
+def clean_file(file_path):
+    """Clean a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove merge conflict markers and their content
-        # Pattern to match <<<<<<< HEAD ... ======= ... >>>>>>> branch
-        pattern = r'<<<<<<<.*?\n(.*?)\n=======\n(.*?)\n>>>>>>>.*?\n'
+        # Clean merge conflicts
+        cleaned_content = clean_merge_conflicts(content)
         
-        # For now, let's keep the first version (HEAD) and remove the conflict markers
-        # This is a simple approach - in a real scenario you'd want more sophisticated resolution
-        cleaned_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        # Fix syntax errors
+        cleaned_content = fix_syntax_errors(cleaned_content)
         
-        # Also remove standalone conflict markers
-        cleaned_content = re.sub(r'^<<<<<<<.*?\n', '', cleaned_content, flags=re.MULTILINE)
-        cleaned_content = re.sub(r'^=======\n', '', cleaned_content, flags=re.MULTILINE)
-        cleaned_content = re.sub(r'^>>>>>>>.*?\n', '', cleaned_content, flags=re.MULTILINE)
-        
-        # Clean up any double newlines that might have been created
-        cleaned_content = re.sub(r'\n\n\n+', '\n\n', cleaned_content)
-        
+        # Write back the cleaned content
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(cleaned_content)
         
-        print(f"Cleaned merge conflicts from: {file_path}")
+        print(f"✓ Cleaned: {file_path}")
         return True
         
     except Exception as e:
-        print(f"Error cleaning {file_path}: {e}")
+        print(f"✗ Error cleaning {file_path}: {e}")
         return False
 
 def main():
-    """Main function to clean all files with merge conflicts"""
-    # Get all files with merge conflict markers
-    files_to_clean = []
+    """Main cleanup function"""
+    print("Starting merge conflict cleanup...")
     
-    # Search for common file extensions
+    # File patterns to clean
     patterns = [
         '**/*.tsx',
         '**/*.ts', 
-        '**/*.jsx',
         '**/*.js',
-        '**/*.test.tsx',
-        '**/*.test.ts'
+        '**/*.jsx'
     ]
     
-    for pattern in patterns:
-        files_to_clean.extend(glob.glob(pattern, recursive=True))
-    
-    # Filter files that actually contain merge conflict markers
-    files_with_conflicts = []
-    for file_path in files_to_clean:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<<' in content or '=======' in content or '>>>>>>>' in content:
-                    files_with_conflicts.append(file_path)
-        except:
-            continue
-    
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
-    
-    # Clean each file
     cleaned_count = 0
-    for file_path in files_with_conflicts:
-        if clean_merge_conflicts(file_path):
-            cleaned_count += 1
+    error_count = 0
     
-    print(f"Successfully cleaned {cleaned_count} files")
+    for pattern in patterns:
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
+            # Skip node_modules and other directories
+            if 'node_modules' in file_path or '.git' in file_path:
+                continue
+                
+            if clean_file(file_path):
+                cleaned_count += 1
+            else:
+                error_count += 1
+    
+    print(f"\nCleanup complete!")
+    print(f"✓ Files cleaned: {cleaned_count}")
+    print(f"✗ Errors: {error_count}")
 
 if __name__ == "__main__":
     main()

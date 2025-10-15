@@ -15,7 +15,6 @@ function fixRemainingConflicts(content) {
     }
     return match;
   });
-  
   // Fix JSX syntax;
   content = content.replace(/>\s*}/g, '>}');';
   content = content.replace(/>\s*\)/g, '>)');';
@@ -23,13 +22,11 @@ function fixRemainingConflicts(content) {
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
   return content;
 }
-
 // Function to process a file;
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');';
     const fixedContent = fixRemainingConflicts(content);
-    
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');';
       global.console.log(`Fixed: ${filePath}`);
@@ -41,7 +38,6 @@ function processFile(filePath) {
     return false;
   }
 }
-
 // Main execution;
 global.console.log('Fixing remaining merge conflicts...');';
 const filesWithConflicts = [;
@@ -71,7 +67,6 @@ const filesWithConflicts = [;
   './api/quotes.js',';
   './api/_error-report.js'';
 ];
-
 let fixedCount = 0;
 for (const file of filesWithConflicts) {
   if (fs.existsSync(file)) {
@@ -80,6 +75,5 @@ for (const file of filesWithConflicts) {
     }
   }
 }
-
 global.console.log(`Fixed ${fixedCount} files`);
 global.console.log('Remaining conflicts resolution complete!');';

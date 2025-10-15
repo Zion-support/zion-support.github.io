@@ -1,28 +1,22 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-
 // Function to create a proper page template
 function createProperPageTemplate(filePath, pageName) {
   const fileName = path.basename(filePath, '.tsx');
   const pathParts = filePath.split('/');
   const directoryName = pathParts[pathParts.length - 2] || fileName;
-  
   // Create component name from directory name
   const componentName = directoryName.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  
   // Create title from directory name
   const title = directoryName.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
-  
   return `import React from 'react';
 import SEOHead from '../components/SEOHead';
-
 const ${componentName}: React.FC = () => {
   return (
     <>
@@ -39,15 +33,12 @@ const ${componentName}: React.FC = () => {
     </>
   );
 };
-
 export default ${componentName};`;
 }
-
 // Function to fix a single file
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
     // Skip if it's already properly formatted and doesn't have errors
     if (content.includes('export default') && 
         content.includes('React.FC') && 
@@ -64,14 +55,11 @@ function fixFile(filePath) {
         !content.includes('TS1351')) {
       return false;
     }
-    
     // Extract page name from file path
     const pathParts = filePath.split('/');
     const pageName = pathParts[pathParts.length - 2] || pathParts[pathParts.length - 1].replace('.tsx', '');
-    
     // Create proper template
     const fixed = createProperPageTemplate(filePath, pageName);
-    
     fs.writeFileSync(filePath, fixed, 'utf8');
     console.log(`Fixed: ${filePath}`);
     return true;
@@ -80,22 +68,17 @@ function fixFile(filePath) {
     return false;
   }
 }
-
 // Main function
 function main() {
   const pattern = 'app/**/*.tsx';
   const files = glob.sync(pattern);
-  
   console.log(`Found ${files.length} TSX files to process...`);
-  
   let fixedCount = 0;
   files.forEach(file => {
     if (fixFile(file)) {
       fixedCount++;
     }
   });
-  
   console.log(`Fixed ${fixedCount} files`);
 }
-
 main();

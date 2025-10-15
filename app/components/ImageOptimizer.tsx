@@ -1,5 +1,5 @@
 
-import React, { useState, useRef, useEffect } from 'react',";
+import React, { useState, useRef, useEffect } from 'react',
       interface ImageOptimizerProps {}
   src: string,
       alt: string,
@@ -10,30 +10,45 @@ import React, { useState, useRef, useEffect } from 'react',";
       placeholder?: string;
 }
 
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
+export default function ImageOptimizer({
+  src,
+  alt,
+  className = '',
+  lazy = true,
+<<<<<<< HEAD
+<<<<<<< HEAD=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b
+  placeholder
+}: ImageOptimizerProps) {
+  return (
+    <img
+      src={src}
+=======
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
-  src, alt, className = '', width, height, priority = false, placeholder";
+  src, alt, className = '', width, height, priority = false, placeholder
 }) => {}
   const [isLoaded, setIsLoaded] = useState(false),
       const [isInView, setIsInView] = useState(priority),
       const [hasError, setHasError] = useState(false),
-      const: imgRef = useRef<HTMLImageElement>(null),
-      const: handleLoad = () => {}
+      const imgRef = useRef<HTMLImageElement>(null),
+      const handleLoad = () => {}
     setIsLoaded(true)
     },
     {}
-  const: handleError = () => {}
+  const handleError = () => {}
     setHasError(true)
     },
     {}
   // Generate optimized src with WebP support
-  const: getOptimizedSrc = (originalSrc: string) => {};
-    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {}";
+  const getOptimizedSrc = (originalSrc: string) => {}
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {}
       return originalSrc;
     }
     
     // Add WebP support if supported
-    if (typeof window !== 'undefined' && 'WebP' in window) {}";
-      const: webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp'),";
+    if (typeof window !== 'undefined' && 'WebP' in window) {}
+      const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp'),
       return webpSrc;
     }
     
@@ -43,10 +58,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
   // Intersection Observer for lazy loading
   useEffect(() => {}
     if (priority) return,
-      const: observer = new IntersectionObserver()
+      const observer = new IntersectionObserver()
       ([entry]) => {}
         if (entry.isIntersecting) {}
-          setIsInView(true),;
+          setIsInView(true),
       observer.disconnect();
         }
       },
@@ -60,8 +75,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
   }, [priority]),
       if (hasError) {}
     return ()
-      <div: className ={`flex items-center justify-center bg-gray-200 ${className}`} style={{ width, height }}>
-        <span: className ="text-gray-500">Failed to load image</span>";
+      <div className={`flex items-center justify-center bg-gray-200 ${className}`} style={{ width, height }}>
+        <span className="text-gray-500">Failed to load image</span>
       </div>
     );
   }
@@ -78,12 +93,13 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
   return ()
     <imgref={imgRef}>
       src={getOptimizedSrc(src)}
+>>>>>>> main
       alt={alt}
       width={width}
       height={height}
       className={className}
-      loading={priority ? "eager" : "lazy"}";
-      decoding="async"";
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
       onLoad={handleLoad}
       onError={handleError}
     />
@@ -92,24 +108,25 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
     {}
 export default ImageOptimizer;
 
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
 };
 ;
-export default ComponentsPage;'";'";";";
+export default ComponentsPage;'";'";
+

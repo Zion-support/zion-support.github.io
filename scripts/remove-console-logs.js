@@ -1,50 +1,55 @@
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+import fs from 'fs'
+import path from 'path'
+import { glob } from 'glob'
 
 /**
- * Remove console.log statements from production build files
+ * Remove console.log statements from production build
+ * This helps reduce bundle size and improve performance
  */
-async function removeConsoleLogs() {
+function removeConsoleLogs(filePath) {
   try {
-    console.log('🧹 Starting console log removal...');
+    let content = fs.readFileSync(filePath, 'utf8')
     
+    // Remove console.log statements
+    content = content.replace(/console\.log\([^)]*\);?/g, '')
+    content = content.replace(/console\.warn\([^)]*\);?/g, '')
+    content = content.replace(/console\.error\([^)]*\);?/g, '')
+    content = content.replace(/console\.info\([^)]*\);?/g, '')
+    content = content.replace(/console\.debug\([^)]*\);?/g, '')
+    
+    // Remove empty lines that might be left behind
+    content = content.replace(/^\s*[\r\n]/gm, '')
+    
+    fs.writeFileSync(filePath, content)
+    console.log(`✅ Cleaned console logs from: ${filePath}`)
+  } catch (error) {
+    console.error(`❌ Error cleaning ${filePath}:`, error.message)
+  }
+}
+
+async function main() {
+  console.log('🧹 Starting console log removal...')
+  
+  try {
     // Find all JavaScript files in dist directory
-    const files = await glob('dist/**/*.js');
+    const files = await glob('dist/**/*.js')
     
-    let totalFiles = 0;
-    let modifiedFiles = 0;
-    
-    for (const file of files) {
-      totalFiles++;
-      
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Remove console.log statements (but keep console.error, console.warn, etc.)
-        const cleanedContent = content
-          .replace(/console\.log\([^)]*\);?/g, '')
-          .replace(/console\.debug\([^)]*\);?/g, '')
-          .replace(/console\.info\([^)]*\);?/g, '');
-        
-        if (cleanedContent !== content) {
-          fs.writeFileSync(file, cleanedContent);
-          modifiedFiles++;
-          console.log(`✅ Cleaned: ${file}`);
-        }
-      } catch (error) {
-        console.error(`❌ Error processing ${file}:`, error.message);
-      }
+    if (files.length === 0) {
+      console.log('ℹ️  No JavaScript files found in dist directory')
+      return
     }
     
-    console.log(`🎉 Console log removal completed!`);
-    console.log(`📊 Processed ${totalFiles} files, modified ${modifiedFiles} files`);
+    console.log(`📁 Found ${files.length} JavaScript files to process`)
     
+    // Process each file
+    files.forEach(removeConsoleLogs)
+    
+    console.log('🎉 Console log removal completed!')
   } catch (error) {
-    console.error('❌ Error during console log removal:', error);
-    process.exit(1);
+    console.error('❌ Error during console log removal:', error.message)
+    process.exit(1)
   }
 }
 
 // Run the script
-removeConsoleLogs();
+main()

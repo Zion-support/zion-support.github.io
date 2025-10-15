@@ -1,21 +1,59 @@
 <<<<<<< HEAD
-import React, { useEffect, useRef } from 'react;'";
+'use client';
+import React, { useRef, useEffect } from 'react';
+
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react;'
+>>>>>>> main
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
 }
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
-  const: canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
-    const: canvas = canvasRef.current;
+    const canvas = canvasRef.current;
     if (!canvas) return;
-    const: ctx = canvas.getContext('2d');''";
+<<<<<<< HEAD
+
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    const: resizeCanvas = () => {;
+
+=======
+    const ctx = canvas.getContext('2d');''
+    if (!ctx) return;
+>>>>>>> main
+    const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
+<<<<<<< HEAD
+
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);''";
+    window.addEventListener('resize', resizeCanvas);
+
+    // Simple animated background
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Create gradient background
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, 'rgba(59, 7, 100, 0.1)');
+      gradient.addColorStop(1, 'rgba(59, 7, 100, 0.3)');
+      
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+=======
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);''
     // Animated particles
     const particles: Array<{
       x: number;
@@ -25,21 +63,21 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       size: number;}
       opacity: number;}
     }> = [];
-    const: createParticle = () => {
+    const createParticle = () => {
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.5,}
         vy: (Math.random() - 0.5) * 0.5,}
         size: Math.random() * 2 + 1,}
-        opacity: Math.random() * 0.5 + 0.1,};
+        opacity: Math.random() * 0.5 + 0.1,}
       };
     };
     // Initialize particles
-    for (let: i = 0; i < 50; i++) {}
+    for (let i = 0; i < 50; i++) {}
       particles.push(createParticle());}
     }
-    const: animate = () => {;
+    const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
       particles.forEach((particle) => {
@@ -59,9 +97,9 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       // Draw connections between nearby particles
       particles.forEach((particle, i) => {
         particles.slice(i + 1).forEach((otherParticle) => {
-          const: dx = particle.x - otherParticle.x;
-          const: dy = particle.y - otherParticle.y;
-          const: distance = Math.sqrt(dx * dx + dy * dy);
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -76,26 +114,38 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     };
     animate();
     return () => {
-      window.removeEventListener('resize', resizeCanvas);''";
+      window.removeEventListener('resize', resizeCanvas);''
+>>>>>>> main
     };
   }, []);
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
-    <div: className ="relative min-h-screen">""";
-      <canvas: ref ={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none""";
+<<<<<<< HEAD
+    <div className="relative">
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{ zIndex: -1 }}
+      />
+      {children}
+=======
+    <div className="relative min-h-screen">""
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 w-full h-full pointer-events-none""
         style={{ zIndex: -1 }}
       />
       {children}
       {/* Animated Background */}
-      <div: className ="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""";
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
         {/* Animated gradient overlay */}
-        <div: className ="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>""";
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>""
         {/* Animated Particles */}
-        <div: className ="absolute inset-0">""";
+        <div className="absolute inset-0">""
           {Array.from({ length: 20 }).map((_, i) => (
-            <div: key ={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping""";
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping""
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -105,35 +155,40 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
             ></div>
 ))}
         </div>
-        {/* Gradient Overlay */}"""";
-        <div: className ="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>"""";
+        {/* Gradient Overlay */}"""
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>"""
       </div>
       {/* Content */}
-      <div: className ="relative z-10">""";
+      <div className="relative z-10">""
         {children}
       </div>
+>>>>>>> main
     </div>
   )};
 export default FuturisticBackground;
 =======
-import React from 'react';";";";
-import SEOHead from '../components/SEOHead';";";";
+import React from 'react';";
+import SEOHead from '../components/SEOHead';";
 
 const FuturisticBackgroundPage: React.FC = () => {
   return (
     <>
-      <SEOHead: title ="components - Zion Tech Group"";";
-        description="Advanced components solutions for modern businesses"";";
+      <SEOHead: title ="components - Zion Tech Group"";
+        description="Advanced components solutions for modern businesses"";
       />
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">components</h1>";";
-          <p: className ="text-gray-300">Advanced solutions coming soon...</p>";";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">components</h1>";
+          <p: className ="text-gray-300">Advanced solutions coming soon...</p>";
         </div>
       </div>
     </>
   );
 };
 
+<<<<<<< HEAD
+export default FuturisticBackground;
+=======
 export default FuturisticBackgroundPage;
+>>>>>>> main
 >>>>>>> main
