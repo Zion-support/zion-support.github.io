@@ -54,8 +54,6 @@ const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assista
 const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
 const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
 const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
 const IOTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
 const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
