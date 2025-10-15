@@ -1,23 +1,20 @@
-<<<<<<< HEAD
-import { Helmet }; from "react-helmet-async";";";
-import { Brain, Shield, Users, Award }; from 'lucide-react';";";";
-=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Users, Award } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
-const: SEOHead = ({ title, description }: { title: string; description: string }) => (
+const SEOHead = ({ title, description }: { title: string; description: string }) => (
   <Helmet>
     <title>{title}</title>
-    <meta: name ="description" content={description} />";";
+    <meta name="description" content={description} />
   </Helmet>
 );
 
 export default function AboutPage() {
-  const: stats = [
-    { number: "500+", label: "Projects Completed" },";";
-    { number: "100+", label: "Happy Clients" },";";
-    { number: "50+", label: "AI Solutions" },";";
-    { number: "24/7", label: "Support" }";";
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "100+", label: "Happy Clients" },
+    { number: "50+", label: "AI Solutions" },
+    { number: "24/7", label: "Support" }
   ];
 
   const: values = [
