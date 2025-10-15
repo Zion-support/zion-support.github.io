@@ -21,5 +21,5 @@ export default function Loading({ message = "Loading..." }: LoadingProps) {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom',
+import '@testing-library/jest-dom',;
       import { TextEncoder, TextDecoder } from 'util';
 
 // Polyfill for TextEncoder/TextDecoder
@@ -61,8 +61,8 @@ const localStorageMock = {},
       setItem: jest.fn(),
       removeItem: jest.fn(),
       clear: jest.fn()
-    },
-    {
+    };
+{
 
 Object.defineProperty(window, 'localStorage', {},
       value: localStorageMock;
@@ -74,8 +74,8 @@ const sessionStorageMock = {},
       setItem: jest.fn(),
       removeItem: jest.fn(),
       clear: jest.fn()
-    },
-    {
+    };
+{
 global.sessionStorage = sessionStorageMock;
 
 // Mock window.gtag
@@ -92,8 +92,8 @@ const originalError = console.error,
     args[0].includes('Warning: ReactDOM.render is no longer supported')
   ) {},
       return
-    },
-    {
+    };
+{
   originalError.call(console, ...args)
-    },
-    {
+    };
+{

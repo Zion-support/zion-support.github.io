@@ -16,7 +16,7 @@ interface ResponsiveTextProps {},
       xs: 'text-xs sm:text-sm',
       sm: 'text-sm sm:text-base',
       base: 'text-base sm:text-lg',
-      lg: 'text-lg sm:text-xl',
+      lg: 'text-lg sm:text-xl',;
       xl: 'text-xl sm:text-2xl';
     '2xl': 'text-2xl sm:text-3xl md:text-4xl';
     '3xl': 'text-3xl sm:text-4xl md:text-5xl';
@@ -53,7 +53,7 @@ interface ResponsiveTextProps {},
       right: 'text-right',
       justify: 'text-justify'
   },
-      return ()
+      return ();
     <Component
       className={cn()
         sizeClasses[size],

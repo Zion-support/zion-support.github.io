@@ -39,7 +39,7 @@ function fixJSXStructure() {
   //   </div>
   // </div>
   return content
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {};
 }try {};
 } catch (error) {};

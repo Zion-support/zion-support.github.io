@@ -26,8 +26,8 @@ interface FuturisticButtonProps {},
       ghost: 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 hover:scale-105'
   },
       const buttonClasses = cn()
-    baseClasses,
-      sizeClasses[size],
+    baseClasses,;
+      sizeClasses[size],;
       variantClasses[variant];
     'before:absolute before:inset-0 before:rounded-inherit before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300';
     'after:absolute after:inset-0 after:rounded-inherit after:bg-gradient-to-r after:from-transparent after:via-white/10 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300',
@@ -39,15 +39,8 @@ interface FuturisticButtonProps {},
       <span className="relative z-10">{children}</span>
 </div>
   )
-<<<<<<< HEAD
   if (href) {},
-      return ()
-=======
-  if ($1) {
-  // If body
-}
-    return ()
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+      return ();
       <Link
         to={href},
       className={buttonClasses},
@@ -58,7 +51,7 @@ interface FuturisticButtonProps {},
       </Link>
     )
   },
-      return ()
+      return ();
     <button
       className={buttonClasses},
       onClick={onClick},

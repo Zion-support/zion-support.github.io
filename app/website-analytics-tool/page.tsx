@@ -1,7 +1,7 @@
 
 import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
-      import ResponsiveContainer from '../components/ResponsiveContainer',
+      import ResponsiveContainer from '../components/ResponsiveContainer',;
       import EnhancedSEO from '../components/EnhancedSEO';
 ,
       const WebsiteAnalyticsToolPage = () => {",
@@ -332,7 +332,7 @@ import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database
                   href="/contact",
       variant={plan.popular ? "primary" : "outline"},
       size="sm",
-      className="w-full";
+      className="w-full"
                 >",
         "
                   Get Started",
@@ -434,8 +434,8 @@ import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database
         "
     </div>";"
   )
-    },
-    {
+    };
+{
 ,
       export default WebsiteAnalyticsToolPage;
 ;

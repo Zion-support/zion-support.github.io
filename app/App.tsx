@@ -20,22 +20,18 @@ const PrivacyPage = lazy(() => import("./privacy/page"))
 const TermsPage = lazy(() => import("./terms/page"))
 const CookiesPage = lazy(() => import("./cookies/page"))
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 // 5G Solutions Pages
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"))
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f3b2
 function App() {
   return (
     <HelmetProvider>
-<<<<<<< HEAD
       <BrowserRouter>
         <ErrorBoundary>
-          <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-slate-900">
+            <div className="text-white">Loading page...</div>
+          </div>}>
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
             <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
@@ -50,12 +46,13 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
+              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
               
               {/* Catch all route */}
               <Route path="*" element={
                 <div className="min-h-screen flex items-center justify-center bg-slate-900">
                   <div className="text-center">
-                    <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                    <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>;
                     <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
                     <Link to="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
                       Go Home
@@ -66,36 +63,9 @@ function App() {
             </Routes>
           </Suspense>
         </ErrorBoundary>
-=======
-      <ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-        <PerformanceMonitor />
-        <AccessibilityEnhancer />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/team" element={<TeamPage />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-          <Route path="/cookies" element={<CookiesPage />} />
-          <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-        </Routes>
-      </ErrorBoundary>
+      </BrowserRouter>
     </HelmetProvider>
-<<<<<<< HEAD
   );
 }
 
 export default App;
-=======
-  )
-}
-
-export default App
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

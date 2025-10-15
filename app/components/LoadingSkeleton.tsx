@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async"
 export default function LoadingSkeleton() {
   // Function body
 }
-}return ()
+}return ();
     <div></div>
       <Helmet></Helmet>
         <title>Loading Skeleton - Zion Tech Group</title>
@@ -23,5 +23,5 @@ export default function LoadingSkeleton() {
         </Link>
       </div>
 </div>
-  )
+  );
 };

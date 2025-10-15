@@ -3,7 +3,7 @@ import fs from "fs"
 import { glob } from "glob"
 // More comprehensive fixes for complex JSX issues
 const fixes = []
-  // Fix malformed section elements
+  // Fix malformed section elements;
   {};
     pattern:
       /<section className="w-5 h-5 ml-2" \/>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">/g;

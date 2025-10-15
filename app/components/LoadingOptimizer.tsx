@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async"
 export default function LoadingOptimizer() {
   // Function body
 }
-}return ()
+}return ();
     <div></div>
       <Helmet></Helmet>
         <title>Loading Optimizer - Zion Tech Group</title>
@@ -21,5 +21,5 @@ export default function LoadingOptimizer() {
         </Link>
       </div>
 </div>
-  )
+  );
 };

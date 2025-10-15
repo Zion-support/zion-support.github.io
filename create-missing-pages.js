@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import React from 'react'
+import React from 'react';
 export default ${title}Page;`
 // List of pages that need to be created based on App.tsx imports
 const missingPages = []
@@ -33,7 +33,7 @@ const missingPages = []
 ]
 // Template for page components
  `'use client'
-  return ()
+  return ();
     <div>Content</div>
   )
         <title>${title} - Zion Tech Group</title>

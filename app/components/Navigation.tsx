@@ -61,8 +61,8 @@ import React, { useState } from 'react',
         "
   RocketLaunchIcon,",
         "
-  ServerIcon",
-        "
+  ServerIcon",;
+        ";
 } from '@heroicons/react/24/outline';
 ,
       interface NavigationProps {",
@@ -293,7 +293,6 @@ import React, { useState } from 'react',
         "
             </div>";"
             {/* Desktop Navigation */};
-<<<<<<< HEAD
             <div className="hidden lg:ml-6 lg:flex lg:space-x-8">",
         "
               {navigation.map((item) => (",
@@ -305,14 +304,6 @@ import React, { useState } from 'react',
                     to={item.href},
       className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${",
         "
-=======
-            <div className="hidden lg:ml-6 lg:flex lg:space-x-8">";"
-              {navigation.map((item) => (";"
-                <div key={item.name} className="relative">";"
-                  <Link";"
-                    to={item.href};
-                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
                       isActive(item.href)
                         ? 'border-blue-500 text-white';
                         : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';
@@ -349,7 +340,7 @@ import React, { useState } from 'react',
         "
                           <Link";"
                             to={subItem.href},
-      className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white";
+      className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
                           >";"
                             <subItem.icon className="w-4 h-4 mr-3" />",
         "
@@ -376,7 +367,7 @@ import React, { useState } from 'react',
             <button",
         "
               onClick={() => setIsOpen(!isOpen)},
-      className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white";
+      className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >";"
               <span className="sr-only">Open main menu</span>",
         "
@@ -416,7 +407,7 @@ import React, { useState } from 'react',
       else if (item.name === 'Resources') toggleResourcesMenu(),
       else if (item.name === 'Company') toggleCompanyMenu();
                       }},
-      className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover:text-white hover:bg-slate-700";
+      className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover:text-white hover:bg-slate-700"
                     >";"
                       <item.icon className="w-5 h-5 mr-3" />",
         "
@@ -485,7 +476,6 @@ import React, { useState } from 'react',
               </div>",
         "
             ))};
-<<<<<<< HEAD
           </div>",
         "
         </div>",
@@ -494,12 +484,6 @@ import React, { useState } from 'react',
         "
     </nav>",
         "
-=======
-          </div>";"
-        </div>";"
-      </div>";"
-    </nav>";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   )
 };
 ,

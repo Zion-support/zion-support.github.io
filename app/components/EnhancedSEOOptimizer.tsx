@@ -14,8 +14,8 @@ import React, { useEffect } from 'react',
       modifiedTime?: string,
       section?: string,
       tags?: string[]
-    },
-    {
+    };
+{
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
       title = "Zion Tech Group - Advanced AI and IT Solutions",
       description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",'
@@ -27,8 +27,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
       author = "Zion Tech Group",
       publishedTime,
       modifiedTime = new Date().toISOString(),
-      section = "Technology",
-      tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
+      section = "Technology",;
+      tags = ["AI", "IT Services", "Technology", "Digital Transformation"];
 }) => {};
 }const location = useLocation()
   const currentUrl = `https://ziontechgroup.com${location.pathname}`
@@ -95,8 +95,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "priceCurrency": "USD";
             "category": "Technology Services"
           }
-    },
-    {
+    };
+{
         {};
           "@type": "Service";
           "name": "IT Services";
@@ -111,8 +111,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "priceCurrency": "USD";
             "category": "Technology Services"
           }
-    },
-    {
+    };
+{
         {};
           "@type": "Service";
           "name": "5G Implementation";
@@ -127,8 +127,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "priceCurrency": "USD";
             "category": "Technology Services"
           }
-    },
-    {
+    };
+{
         {};
           "@type": "Service";
           "name": "Micro SaaS Solutions";
@@ -143,8 +143,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "priceCurrency": "USD";
             "category": "Software Solutions"
           }
-    },
-    {
+    };
+{
       ];
       "hasOfferCatalog": {};
         "@type": "OfferCatalog";
@@ -157,8 +157,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
               "name": "AI Analytics";
               "description": "Advanced AI-powered analytics solutions"
             }
-    },
-    {
+    };
+{
           {};
             "@type": "Offer";
             "itemOffered": {};
@@ -166,8 +166,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
               "name": "Cybersecurity Solutions";
               "description": "Comprehensive cybersecurity protection services"
             }
-    },
-    {
+    };
+{
           {};
             "@type": "Offer";
             "itemOffered": {};
@@ -175,21 +175,15 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
               "name": "Cloud Infrastructure";
               "description": "Scalable cloud infrastructure solutions"
             }
-    },
-    {
+    };
+{
         ]
       }
-    },
-    {
+    };
+{
     // Add page-specific structured data
     const path = location.pathname
-<<<<<<< HEAD
     if (path === '/') {},
-=======
-    if ($1) {
-  // If body
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       return {};
         ...baseStructuredData;
         "@type": "WebSite";
@@ -227,8 +221,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             };
           ]
         }
-    },
-    {
+    };
+{
     },
       if (path === '/about') {},
       return {};
@@ -242,8 +236,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
           "numberOfEmployees": "50-100";
           "industry": "Technology"
         }
-    },
-    {
+    };
+{
     },
       if (path === '/contact') {},
       return {};
@@ -259,11 +253,11 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "email": "kleber@ziontechgroup.com";
             "areaServed": "US"
           }
-    },
-    {
+    };
+{
       }
-    },
-    {
+    };
+{
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {},
       return {};
         ...baseStructuredData;
@@ -298,12 +292,12 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
                 "name": title;
                 "description": description
               }
-    },
-    {
+    };
+{
           ]
         }
-    },
-    {
+    };
+{
     },
       return baseStructuredData
   };
@@ -343,8 +337,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
         };
       }))
     }
-    },
-    {
+    };
+{
   // Generate breadcrumb structured data
   const generateBreadcrumbStructuredData = () => {
 }const pathSegments = location.pathname.split('/').filter(Boolean)
@@ -375,8 +369,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
       "@type": "BreadcrumbList";
       "itemListElement": breadcrumbs
     }
-    },
-    {
+    };
+{
   const finalStructuredData = structuredData || generateEnhancedStructuredData()
   const faqStructuredData = generateFAQStructuredData()
   const breadcrumbStructuredData = generateBreadcrumbStructuredData()
@@ -401,7 +395,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
       })
     };
   }, [title, currentUrl])
-  return ()
+  return ();
     <Helmet></Helmet>
       {/* Basic Meta Tags */};
       <title>{title}</title>

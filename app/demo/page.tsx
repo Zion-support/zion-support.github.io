@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async',
       icon: BarChart3,
       title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
-      demo: 'Live Demo'
+      demo: 'Live Demo';
     };
     {},
       icon: Shield,
@@ -58,9 +58,9 @@ import { Helmet } from 'react-helmet-async',
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+    };
+{
 
 export default DemoPage,
       return (
@@ -76,8 +76,8 @@ export default DemoPage,
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+    };
+{
 
 export default Component;

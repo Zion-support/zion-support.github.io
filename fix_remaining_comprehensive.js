@@ -48,7 +48,7 @@ function fixRemainingComprehensive() {
   content = content.replace(/<p className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">$2</p>')"
   content = content.replace(/<button className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/button>/g, '<button className="$1">$2</button>')"
   return content
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {};
 }try {};
 } catch (error) {};

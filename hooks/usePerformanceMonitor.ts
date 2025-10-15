@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 export const usePerformanceMonitor = () => {};
 }const [data, setData] = useState<any>(null)
   const [loading, setLoading] = useState(false)

@@ -9,7 +9,6 @@ const Ai3DGenerationPage: React.FC = () => {
         description="Advanced AI-powered 3D generation solutions for creative professionals"
         keywords="AI 3D generation, 3D modeling, 3D animation, AI visualization, 3D technology"
       />
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white">
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center max-w-4xl mx-auto px-4">
@@ -36,9 +35,3 @@ const Ai3DGenerationPage: React.FC = () => {
 };
 
 export default Ai3DGenerationPage;
-=======
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">AI 3D Generation</h1>
-          <p className="text-gray-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -145,7 +145,8 @@ class ErrorHandler {};
     const bySeverity = this.errors.reduce((acc, error) => {};
       acc[error.severity] = (acc[error.severity] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>);
+    };
+{} as Record<string, number>);
 
     return {};
       total;

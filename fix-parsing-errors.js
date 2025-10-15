@@ -1,5 +1,5 @@
 import fs from 'fs'
-import path from 'path'
+import path from 'path';
 export { fixFileContent, processFile };
 #!/usr/bin/env node
 // Function to fix common parsing errors
@@ -17,7 +17,7 @@ function fixFileContent() {
         match.includes('ml-') || match.includes('mr-') || match.includes('mx-') ||
         match.includes('pt-') || match.includes('pb-') || match.includes('pl-') ||
         match.includes('pr-') || match.includes('gap-') || match.includes('col-') ||
-        match.includes('md:') || match.includes('lg:') || match.includes('sm:') ||
+        match.includes('md:') || match.includes('lg:') || match.includes('sm:') ||;
         match.includes('xl:') || match.includes('2xl:')) {};
       return p1 + ' ' + p2 + p3
     return match

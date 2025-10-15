@@ -37,8 +37,8 @@ interface ResponsiveGridProps {},
       cols.xl && `xl:${gridColsClasses[cols.xl]}`,
       gapClasses[gap]
   ].filter(Boolean).join(' ')
-  return ()
-    <div className={cn(responsiveClasses, className)}></div>
+  return ();
+    <div className={cn(responsiveClasses, className)}></div>;
       {children};
     </div>
   )

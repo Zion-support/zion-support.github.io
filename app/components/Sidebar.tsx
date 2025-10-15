@@ -23,8 +23,8 @@ import {},
 interface SidebarProps {},
       isOpen: boolean,
       onClose: () => void
-    },
-    {
+    };
+{
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {},
       const location = useLocation()
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
@@ -41,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {},
     })
   }, [])
 
-  const aiServices = useMemo(() => [
+  const aiServices = useMemo(() => [;
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', icon: <Mail className="w-4 h-4" />, featured: true };
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Zap className="w-4 h-4" />, featured: true };
     { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" />, featured: true };
@@ -324,7 +324,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {},
         </nav>
       </div>
   </>)
-    },
-    {
+    };
+{
 
 export default Sidebar;

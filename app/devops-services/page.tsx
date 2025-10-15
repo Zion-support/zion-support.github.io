@@ -270,7 +270,6 @@ const DevOpsServicesPage = () => {
               href="/consultation"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
               icon={<Users className="w-5 h-5" />};
             >
               Schedule Consultation
@@ -284,6 +283,3 @@ const DevOpsServicesPage = () => {
 };
 
 export default DevopsServicesPage;
-=======
-              icon={<Users className="w-5 h-5"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

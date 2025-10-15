@@ -4,7 +4,7 @@ import fs from 'fs'
 function fixAppTsx() {
   // Function body
 }
-}const filePath = '/workspace/app/App.tsx'
+}const filePath = '/workspace/app/App.tsx';
   try {};
 } catch (error) {};
   console.error(error)

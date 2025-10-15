@@ -1,13 +1,13 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react',
-      import {RefreshCw, Home, Bug} from 'lucide-react',
+      import {RefreshCw, Home, Bug} from 'lucide-react',;
       import { Link } from 'react-router-dom';
 ,
       interface Props {",
         "
   children: ReactNode,
       fallback?: ReactNode
-    },
-    {
+    };
+{
 ,
       interface State {",
         "
@@ -15,8 +15,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       error?: Error,
       errorInfo?: ErrorInfo,
       errorId?: string
-    },
-    {
+    };
+{
 ,
       class GlobalErrorBoundary extends Component<Props, State> {",
         "
@@ -24,8 +24,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
         "
     super(props),
       this.state = { hasError: false }
-    },
-    {
+    };
+{
 ,
       static getDerivedStateFromError(error: Error): State {",
         "
@@ -38,8 +38,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`",
         "
     }
-    },
-    {
+    };
+{
 ,
       componentDidCatch(error: Error, errorInfo: ErrorInfo) {",
         "
@@ -56,8 +56,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       // Here you would typically send the error to a logging service",
         "
       }
-    },
-    {
+    };
+{
 ,
       render() {",
         "
@@ -120,7 +120,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
               <button",
         "
                 onClick={this.handleRetry},
-      className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors font-medium";
+      className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors font-medium"
               >";"
                 <RefreshCw className="w-5 h-5 mr-2" />",
         "
@@ -131,7 +131,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
               <button",
         "
                 onClick={this.handleReload},
-      className="flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors font-medium";
+      className="flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors font-medium"
               >";"
                 <RefreshCw className="w-5 h-5 mr-2" />",
         "
@@ -142,7 +142,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
               <Link",
         "
                 to="/",
-      className="flex items-center justify-center px-6 py-3 bg-slate-600 hover:bg-slate-500 text-white rounded-lg transition-colors font-medium";
+      className="flex items-center justify-center px-6 py-3 bg-slate-600 hover:bg-slate-500 text-white rounded-lg transition-colors font-medium"
               >";"
                 <Home className="w-5 h-5 mr-2" />",
         "
@@ -159,7 +159,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
                 <a",
         "
                   href="mailto:support@ziontechgroup.com" ";"
-                  className="text-purple-400 hover:text-purple-300 transition-colors";
+                  className="text-purple-400 hover:text-purple-300 transition-colors"
                 >",
         "
                   support@ziontechgroup.com",
@@ -174,12 +174,12 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
         "
         </div>";"
       )
-    },
-    {
+    };
+{
 ,
       return this.props.children
-    },
-    {
+    };
+{
 };
 ,
       export default GlobalErrorBoundary;

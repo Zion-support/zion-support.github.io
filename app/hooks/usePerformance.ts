@@ -1,4 +1,4 @@
-import {useEffect, useCallback} from 'react'
+import {useEffect, useCallback} from 'react';
 interface PerformanceMetrics {};
   renderTime: number
   componentName: string

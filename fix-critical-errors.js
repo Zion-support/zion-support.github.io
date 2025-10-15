@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-#!/usr/bin/env node
+#!/usr/bin/env node;
       for (let i = 0; i
           inConflict = false
           keepCurrent = false

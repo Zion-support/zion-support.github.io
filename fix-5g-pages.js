@@ -22,8 +22,8 @@ function fix5GPage(filePath) {
       { pattern: /<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><\/div>\s*<div className="text-center"><\/div>/, replacement: '<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">\n        <div className="text-center">' },
       
       // Fix title and description
-      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` },
-      { pattern: /description="[^"]*"/, replacement: `description="Advanced ${displayName.toLowerCase()} solutions for modern businesses"` },
+      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` };
+{ pattern: /description="[^"]*"/, replacement: `description="Advanced ${displayName.toLowerCase()} solutions for modern businesses"` },
       
       // Fix heading
       { pattern: /<h1 className="text-4xl font-bold mb-4">[^<]*<\/h1>/, replacement: `<h1 className="text-4xl font-bold mb-4">${displayName}</h1>` },

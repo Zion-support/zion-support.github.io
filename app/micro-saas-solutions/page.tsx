@@ -1,6 +1,6 @@
 'use client',
       import React, { useState } from 'react',
-      import { Helmet } from 'react-helmet-async',
+      import { Helmet } from 'react-helmet-async',;
       import {CheckCircle, BarChart3, Database, Globe, Target, MessageSquare} from 'lucide-react';
 ,
       const MicroSaaSSolutionsPage: React.FC = () => {",
@@ -714,8 +714,8 @@
       popular: false,",
         "
       link: 'https://ziontechgroup.com/api-management'
-    },
-    {
+    };
+{
   ];
 ,
       const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development'];
@@ -899,7 +899,7 @@
               <Link",
         "
                 to="/contact",
-      className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group";
+      className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group"
               >",
         "
                 Get Started",
@@ -910,7 +910,7 @@
         "
               <Link";"
                 to="#pricing",
-      className="border-2 border-white/30 hover:border-purple-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group";
+      className="border-2 border-white/30 hover:border-purple-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
               >",
         "
                 View Pricing",
@@ -1078,7 +1078,7 @@
                     href={service.link},
       target="_blank",
       rel="noopener noreferrer",
-      className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm";
+      className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm"
                   >",
         "
                     Learn More",
@@ -1088,7 +1088,7 @@
                   <Link",
         "
                     to="/contact",
-      className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 text-sm";
+      className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 text-sm"
                   >",
         "
                     Start Free Trial",
@@ -1239,7 +1239,7 @@
             <Link",
         "
               to="/contact",
-      className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";
+      className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >",
         "
               Start Free Trial",
@@ -1249,7 +1249,7 @@
             <Link",
         "
               to="/demo",
-      className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105";
+      className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >",
         "
               Schedule Demo",
@@ -1264,7 +1264,7 @@
         "
     </>";"
   )
-    },
-    {
+    };
+{
 ,
       export default MicroSaaSSolutionsPage;

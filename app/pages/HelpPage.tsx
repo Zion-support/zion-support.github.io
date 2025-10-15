@@ -152,8 +152,8 @@ const HelpPage: React.FC = () => {
   ),
       const toggleFAQ = (id: number) => {},
       setExpandedFAQ(expandedFAQ === id ? null : id)
-    },
-    {
+    };
+{
 
   return (
     <>

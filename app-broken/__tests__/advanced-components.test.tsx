@@ -1,5 +1,5 @@
-import React from 'react',
-    import { render, screen } from '@testing-library/react',
+import React from 'react',;
+    import { render, screen } from '@testing-library/react',;
     import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // Mock components
@@ -54,12 +54,8 @@ const AdvancedErrorBoundary = ({
   }
 
   return <>{children}</>
-<<<<<<< HEAD
-    },
-    {
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+    };
+{
 
 const TestComponent = () => <div>Test Component</div>,
       describe('Advanced Components', () => {
@@ -93,8 +89,8 @@ const TestComponent = () => <div>Test Component</div>,
         );
       }
       return <div>No error</div>
-    },
-    {
+    };
+{
     
     render(<ErrorBoundaryWrapper />),
       expect(screen.getByTestId('error-boundary')).toBeInTheDocument(),

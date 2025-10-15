@@ -2,7 +2,7 @@ import React from 'react',
       interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
       text?: string,
-      className?: string,
+      className?: string,;
       fullScreen?: boolean;
 }
 
@@ -22,8 +22,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       ></div>
       {text && <p className="mt-2 text-gray-600">{text}</p>}
     </div>
-  )
-    },
-    {
+  );
+    };
+{
 
 export default Component;

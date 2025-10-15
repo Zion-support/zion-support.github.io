@@ -3,7 +3,7 @@ import path from 'path'
 import Layout from '../../layout'
 export default ${pageName}Page`
 // List of pages that need to be completely rewritten
-const pagesToRewrite = []
+const pagesToRewrite = [];
   'enterprise-security';
   'services-advertising';
   'smart-city-infrastructure';
@@ -11,9 +11,9 @@ const pagesToRewrite = []
 ]
 // Template for a basic page
  `import React from 'react'
-  return ()
+  return ();
     <div>Content</div>
-  )
+  );
                 ${title};
               ${description};
               <h3 className = "text-xl font-semibold text-white mb-4">Feature 1</h3>

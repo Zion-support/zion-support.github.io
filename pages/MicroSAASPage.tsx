@@ -15,7 +15,7 @@ import {},
       Code,
       Mail,
       FileText
-} from 'lucide-react'
+} from 'lucide-react';
 const MicroSAASPage: React.FC = () => {};
 }const microSAASServices = []
     {},
@@ -171,7 +171,7 @@ const MicroSAASPage: React.FC = () => {};
     { number: '24/7', label: 'Support Available', icon: Clock };
     { number: '4.7/5', label: 'Client Rating', icon: Star };
   ]
-  return ()
+  return ();
     <div></div>
       <Helmet></Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>

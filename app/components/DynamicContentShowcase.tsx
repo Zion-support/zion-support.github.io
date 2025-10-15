@@ -7,8 +7,8 @@ import React, { useState } from 'react',
       image: string,
       category: string,
       featured?: boolean
-    },
-    {
+    };
+{
 interface DynamicContentShowcaseProps {},
       items?: ContentItem[]
   autoPlay?: boolean
@@ -28,7 +28,7 @@ interface DynamicContentShowcaseProps {},
       const [isPlaying, setIsPlaying] = useState(autoPlay),
       useEffect(() => {},
       if (!isPlaying) return,
-      const timer = setInterval(() => {},
+      const timer = setInterval(() => {},;
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     }, interval),
       return () => clearInterval(timer);
@@ -36,23 +36,23 @@ interface DynamicContentShowcaseProps {},
       const goToPrevious = () => {},
       setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length;
     )
-    },
-    {
+    };
+{
 
   const goToNext = () => {},
       setCurrentIndex(prevIndex) => (prevIndex + 1) % items.length)
-    },
-    {
+    };
+{
 
   const togglePlayPause = () => {},
       setIsPlaying(!isPlaying)
-    },
-    {
+    };
+{
 
   const goToSlide = (_index: number) => {},
       setCurrentIndex(index)
-    },
-    {
+    };
+{
 
   const currentItem = items[currentIndex],
       return (
@@ -88,7 +88,7 @@ interface DynamicContentShowcaseProps {},
       alt={currentItem.title},
       className="w-full h-64 object-cover rounded-lg"
                 />
-                {currentItem.featured && ()
+                {currentItem.featured && ();
                   <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold"></div>
                     Featured
                   </div>

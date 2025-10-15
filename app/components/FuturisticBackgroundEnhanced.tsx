@@ -5,8 +5,8 @@ const FuturisticBackgroundEnhanced: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">;
       <Helmet>;
-        <title>Futuristic Background Enhanced - Zion Tech Group</title>;
-        <meta name="description" content="Professional futuristic background enhanced services by Zion Tech Group." />;
+        <title>Futuristic Background Enhanced - Zion Tech Group</title>
+        <meta name="description" content="Professional futuristic background enhanced services by Zion Tech Group." />
       </Helmet>;
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
@@ -50,9 +50,9 @@ const FuturisticBackgroundEnhanced: React.FC = () => {
               <p className="mb-6">;
                 Ready to transform your business with our futuristic background enhanced services?;
               </p>;
-              <a;
+              <a
                 href="/contact";
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >;
                 Contact Us;
               </a>;
@@ -70,9 +70,9 @@ const FuturisticBackgroundEnhanced: React.FC = () => {
             Let's discuss how our futuristic background enhanced';
             services can help you achieve your goals.;
           </p>;
-          <a;
+          <a
             href="/contact";
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
           >;
             Get Started Today;
           </a>;

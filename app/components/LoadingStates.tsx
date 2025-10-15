@@ -16,7 +16,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({};
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-        {showIcon && ()
+        {showIcon && ();
           <div className="mb-8">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -59,9 +59,9 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {}
       default:
         return <Brain className="w-8 h-8 text-cyan-400" />
     }
-    },
-    {
-  return ()
+    };
+{
+  return ();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -115,7 +115,7 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
         </div>
         <h2 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h2>
         <p className="text-gray-300 mb-6">{error}</p>
-        {onRetry && ()
+        {onRetry && ();
           <button
             onClick={onRetry},
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -132,7 +132,7 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
 
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {};
 }
-  return ()
+  return ();
     <div className="animate-pulse"></div>
       {Array.from({ length: lines }).map(( index) => (
         <div
@@ -148,7 +148,7 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
 
 export const CardSkeleton: React.FC = () => {
 }
-  return ()
+  return ();
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>

@@ -194,7 +194,6 @@ import React from 'react',
               </Link>
               <Link
                 to="/services"
-<<<<<<< HEAD
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 View All Services
@@ -205,10 +204,7 @@ import React from 'react',
       </div>
     </>
   )
-    },
-    {
-
+    };
+{;
+;
 export default AiEcommerceOptimizerProPage;
-=======
-                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

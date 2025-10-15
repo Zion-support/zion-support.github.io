@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from "fs"
 import path from "path"
-const filesToFix = []
+const filesToFix = [];
   "app/ai-voice-assistant/page.tsx";
   "app/ai-expense-tracker/page.tsx";
   "app/system-integration/page.tsx";
@@ -18,7 +18,7 @@ import { ArrowRight } from 'lucide-react'
 function Page() {
   // Function body
 }
-}return ()
+}return ();
     <div></div>
       <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
@@ -90,7 +90,7 @@ function Page() {
       </div>
 </div>
   )
-}`
+}`;
 for (const file of filesToFix) {};
   try {};
 } catch (error) {};

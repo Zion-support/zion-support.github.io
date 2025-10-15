@@ -1,4 +1,4 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react',;
       import {Brain, Server, Layers} from "lucide-react";
 ,
       const PricingPage: React.FC = () => {",
@@ -158,8 +158,8 @@ import React, { useState } from 'react',
       popular: false,",
         "
       category: 'micro-saas'
-    },
-    {
+    };
+{
   ];
 ,
       const aiServicesPricing = [",
@@ -314,8 +314,8 @@ import React, { useState } from 'react',
       popular: false,",
         "
       category: 'ai-services'
-    },
-    {
+    };
+{
   ];
 ,
       const itServicesPricing = [",
@@ -470,8 +470,8 @@ import React, { useState } from 'react',
       popular: false,",
         "
       category: 'it-services'
-    },
-    {
+    };
+{
   ];
 ,
       const categories = [",
@@ -544,7 +544,7 @@ import React, { useState } from 'react',
         "
               <button";"
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')},
-      className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2";
+      className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
               >",
         "
                 <span",
@@ -680,7 +680,7 @@ import React, { useState } from 'react',
                   <Link",
         "
                     to="/contact",
-      className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105";
+      className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                   >",
         "
                     Get Started",
@@ -690,7 +690,7 @@ import React, { useState } from 'react',
                   <Link",
         "
                     to={`/${service.name.toLowerCase().replace(/\s+/g, '-')}`},
-      className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300";
+      className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
                   >",
         "
                     Learn More",
@@ -799,7 +799,7 @@ import React, { useState } from 'react',
             <Link",
         "
               to="/contact",
-      className="inline-flex items-center bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";
+      className="inline-flex items-center bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >",
         "
               Contact Sales",
@@ -927,7 +927,7 @@ import React, { useState } from 'react',
             <Link",
         "
               to="/contact",
-      className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";
+      className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >",
         "
               Start Free Trial",
@@ -937,7 +937,7 @@ import React, { useState } from 'react',
             <Link",
         "
               to="/demo",
-      className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105";
+      className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >",
         "
               Schedule Demo",
@@ -952,8 +952,8 @@ import React, { useState } from 'react',
         "
     </>";"
   )
-    },
-    {
+    };
+{
 ,
       export default PricingPage;
 ;

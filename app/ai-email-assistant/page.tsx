@@ -1,5 +1,5 @@
 
-import { Helmet } from 'react-helmet-async',
+import { Helmet } from 'react-helmet-async',;
       import { Link } from 'react-router-dom';
 ,
       export default function AiEmailAssistantPage() {",
@@ -42,7 +42,7 @@ import { Helmet } from 'react-helmet-async',
               <Link",
         "
                 to="/contact",
-      className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105";
+      className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >",
         "
                 Get Started",
@@ -52,7 +52,7 @@ import { Helmet } from 'react-helmet-async',
               <Link",
         "
                 to="/contact",
-      className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105";
+      className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >",
         "
                 Learn More",
@@ -69,7 +69,7 @@ import { Helmet } from 'react-helmet-async',
         "
               <div";"
                 key={index},
-      className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center";
+      className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
               >";"
                 <div className="flex justify-center mb-4">{feature.icon}</div>";"
                 <h3 className="text-xl font-semibold text-white mb-2">",
@@ -96,7 +96,7 @@ import { Helmet } from 'react-helmet-async',
         "
                 <div";"
                   key={index},
-      className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center";
+      className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
                 >";"
                   <div className="flex justify-center mb-4">{useCase.icon}</div>";"
                   <h3 className="text-xl font-semibold text-white mb-2">",
@@ -165,7 +165,7 @@ import { Helmet } from 'react-helmet-async',
         "
                       <li";"
                         key={featureIndex},
-      className="text-gray-300 flex items-center";
+      className="text-gray-300 flex items-center"
                       >";"
                         <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />",
         "
@@ -211,7 +211,7 @@ import { Helmet } from 'react-helmet-async',
         "
                 <div";"
                   key={index},
-      className="bg-white/10 backdrop-blur-sm rounded-lg p-6";
+      className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >";"
                   <div className="flex items-center mb-4">",
         "
@@ -256,7 +256,6 @@ import { Helmet } from 'react-helmet-async',
               Ready to Transform Your Email Management?",
         "
             </h2>";"
-<<<<<<< HEAD
             <p className="text-lg text-gray-300 mb-8">",
         "
               Contact us to learn more about our AI email solutions and how we",
@@ -270,7 +269,7 @@ import { Helmet } from 'react-helmet-async',
               <Link",
         "
                 to="/contact",
-      className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25";
+      className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >",
         "
                 Contact Us",
@@ -280,7 +279,7 @@ import { Helmet } from 'react-helmet-async',
               <Link",
         "
                 to="/services",
-      className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105";
+      className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >",
         "
                 View All Services",
@@ -298,30 +297,6 @@ import { Helmet } from 'react-helmet-async',
     </>",
         "
   )
-    },
-    {
+    };
+{
 ;
-=======
-            <p className="text-lg text-gray-300 mb-8">";"
-              Contact us to learn more about our AI email solutions and how we";"
-              can help your business communicate more effectively.";"
-            </p>";"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">";"
-              <Link";"
-                to="/contact";
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25";
-              >";"
-                Contact Us";"
-              </Link>";"
-              <Link";"
-                to="/services";
-                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105";
-              >";"
-                View All Services";"
-              </Link>";"
-            </div>";"
-          </div>";"
-        </div>";"
-      </div>";"
-    </>";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

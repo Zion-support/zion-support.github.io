@@ -5,8 +5,8 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-white">;
       <Helmet>;
-        <title>UltimateContentAdvertisingBanner - Zion Tech Group</title>;
-        <meta name="description" content="Professional ultimatecontentadvertisingbanner services by Zion Tech Group." />;
+        <title>UltimateContentAdvertisingBanner - Zion Tech Group</title>
+        <meta name="description" content="Professional ultimatecontentadvertisingbanner services by Zion Tech Group." />
       </Helmet>;
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center">;

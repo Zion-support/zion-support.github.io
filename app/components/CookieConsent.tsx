@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
       import React, { useState, useEffect } from "react",
       const CookieConsent: React.FC = () => {},
@@ -8,25 +7,9 @@ import React, { useState } from 'react',
       const consent = localStorage.getItem("cookie-consent"),
       if (!consent) {},
       setIsVisible(true)
-    },
-    {
-=======
-import React, { useState } from 'react';
-import React, { useState, useEffect } from "react";
-
-const CookieConsent: React.FC = () => {};
-  const [isVisible, setIsVisible] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-
-  useEffect(() => {};
-    const consent = localStorage.getItem("cookie-consent");
-    if ($1) {
-  // If body
-}
-      setIsVisible(true);
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-  }, [])
+{;
+  }, []);
   const handleAccept = () => {};
 }localStorage.setItem("cookie-consent", "accepted")
     setIsVisible(false)
@@ -39,7 +22,7 @@ const CookieConsent: React.FC = () => {};
 }setShowSettings(!showSettings)
   },
       if (!isVisible) return null
-  return ()
+  return ();
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4"></div>
       <div className="max-w-6xl mx-auto"></div>
         <div className="flex items-start justify-between"></div>

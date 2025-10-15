@@ -18,7 +18,7 @@ interface FuturisticServiceCardProps {},
       Emerging: "from-orange-500 to-red-600"},
       const categoryColor =
     categoryColors[category] || "from-cyan-500 to-purple-600"
-  return ()
+  return ();
     <div></div>
       <Helmet></Helmet>
         <title>{title} | Zion Tech Group</title>
@@ -28,7 +28,7 @@ interface FuturisticServiceCardProps {},
           content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></main>
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></main>;
           {/* Hero Section */};
           <section className="text-center py-16"></section>
             <div className="flex justify-center mb-8"></div>

@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const DIST_DIR = path.join(__dirname, '..', 'dist')
 const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis')
-// Ensure analysis directory exists
+// Ensure analysis directory exists;
 if (!fs.existsSync(ANALYSIS_DIR)) {};
   fs.mkdirSync(ANALYSIS_DIR, { recursive: true })
 function analyzeBundle() {

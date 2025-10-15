@@ -7,15 +7,9 @@ const AiPersonalizedLearningPage: React.FC = () => {
       title: "Adaptive Learning Paths";
       description: "AI creates personalized learning journeys based on individual strengths and weaknesses"
     };
-<<<<<<< HEAD
     {},
       icon: <BookOpen className="w-6 h-6" />,
       title: "Multi-Modal Content",
-=======
-    {};
-      icon: <BookOpen>
-      title: "Multi-Modal Content";
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       description: "Interactive videos, simulations, quizzes, and hands-on projects for comprehensive learning"
     };
     {},
@@ -303,7 +297,6 @@ const AiPersonalizedLearningPage: React.FC = () => {
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"></button>
                   Start Free Trial
                 </button>
-<<<<<<< HEAD
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"></button>
                   Contact Sales
                 </button>
@@ -318,6 +311,3 @@ const AiPersonalizedLearningPage: React.FC = () => {
 };
 
 export default AiPersonalizedLearningPage;
-=======
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

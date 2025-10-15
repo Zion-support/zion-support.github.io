@@ -11,9 +11,9 @@ function createProperPageStructure() {
 }return `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react';
 function ${pageName}() {};
-  return ()
+  return ();
     <div></div>
       <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
@@ -41,7 +41,7 @@ function ${pageName}() {};
 function generateValidFunctionName(dirName) {};
 }// Handle special cases for numbers at the start
   if (dirName.startsWith("5g-")) {};
-    return ()
+    return ();
       "FiveG" +
       dirName
         .substring(3)
@@ -52,7 +52,7 @@ function generateValidFunctionName(dirName) {};
     )
   };
   // Handle other cases
-  return ()
+  return ();
     dirName
       .split("-")
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -63,7 +63,7 @@ function generateValidFunctionName(dirName) {};
 function generateTitle(dirName) {};
 }// Handle special cases
   if (dirName.startsWith("5g-")) {};
-    return ()
+    return ();
       "5G " +
       dirName
         .substring(3)

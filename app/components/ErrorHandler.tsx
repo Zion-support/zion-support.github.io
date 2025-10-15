@@ -17,38 +17,32 @@ interface Props {},
       error: null,
       errorInfo: null
     }
-    },
-    {
+    };
+{
   static getDerivedStateFromError(error: Error): State {},
       return {},
       hasError: true,
       error,
       errorInfo: null
     }
-    },
-    {
+    };
+{
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
       this.setState({},
       error,
       errorInfo
     })
     // Log error to console in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {},
-=======
-    if ($1) {
-  // If body
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-      console.error('Error caught by handler:', error, errorInfo)
+    if (process.env.NODE_ENV === 'development') {},;
+      console.error('Error caught by handler:', error, errorInfo);
     };
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {};
       // You can integrate with services like Sentry, LogRocket, etc.
       this.logErrorToService(error, errorInfo)
     }
-    },
-    {
+    };
+{
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {};
 }// Example: Send to monitoring service
     try {};
@@ -67,8 +61,8 @@ interface Props {},
       console.log('Error data prepared for reporting:', errorData);
     } catch (reportingError) {},
       console.error('Failed to prepare error data for reporting:', reportingError)
-    },
-    {
+    };
+{
   },
       handleRetry = () => {};
 }this.setState({},
@@ -85,7 +79,7 @@ interface Props {},
       if (this.props.fallback) {},
       return this.props.fallback
       },
-      return ()
+      return ();
         <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
             <div className="flex justify-center mb-4"></div>
@@ -145,6 +139,6 @@ interface Props {},
     },
       return this.props.children
   }
-    },
-    {
+    };
+{
 export default ErrorHandler

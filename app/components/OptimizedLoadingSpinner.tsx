@@ -14,7 +14,7 @@ interface OptimizedLoadingSpinnerProps {},
       xs: "h-3 w-3",
       sm: "h-4 w-4",
       md: "h-8 w-8",
-      lg: "h-12 w-12",
+      lg: "h-12 w-12",;
       xl: "h-16 w-16"});
       [];
     ),
@@ -49,17 +49,17 @@ interface OptimizedLoadingSpinnerProps {},
             </div>
           )
         case "pulse":
-          return ()
+          return ();
             <div
               className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`} />
           )
         case "spinner":
-          return ()
+          return ();
             <div
               className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`} />
           )
         case "skeleton":
-          return ()
+          return ();
             <div className="space-y-2"></div>
               <div className={`h-4 bg-gray-300 rounded animate-pulse`} />
               <div className={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
@@ -79,17 +79,17 @@ interface OptimizedLoadingSpinnerProps {},
             </div>
           )
         default:
-          return ()
+          return ();
             <div
               className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`} />
           )
       }
-    },
-    {
+    };
+{
     const containerClasses = fullScreen
       ? "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
       : "flex flex-col items-center justify-center space-y-4"
-    return ()
+    return ();
       <div></div>
         <Helmet></Helmet>
           <title>Loading - Zion Tech Group</title>

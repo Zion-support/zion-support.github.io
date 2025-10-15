@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename)
 function fixImports() {
   // Function body
 }
-  // Fix malformed import statements
+  // Fix malformed import statements;
   content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {}"
     const cleanImports = imports
       .split(',')
@@ -18,7 +18,7 @@ function fixImports() {
       .join(', ')
     return `import { ${cleanImports} } from '${module}'`
   })
-  return content
+  return content;
 };
 // Function to fix function declarations
 function fixFunctions(content) {};

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async',
       interface SEOEnhancerProps {},
       title?: string,
@@ -12,32 +11,12 @@ import { Helmet } from 'react-helmet-async',
       structuredData?: Record<string, unknown>,
       noIndex?: boolean,
       noFollow?: boolean
-    },
-    {
+    };
+{
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({},
-      title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Leading provider of AI-powered solutions, cybersecurity, _cloud infrastructure, _and digital transformation services. Transform your business with cutting-edge technology.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _technology services, _Zion Tech Group", canonical = "https://ziontechgroup.com", ogImage = "https://ziontechgroup.com/og-image.jpg", ogType = "website", twitterCard = "summary_large_image", _structuredData, noIndex = false, noFollow = false
-}) => {},
+      title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Leading provider of AI-powered solutions, cybersecurity, _cloud infrastructure, _and digital transformation services. Transform your business with cutting-edge technology.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _technology services, _Zion Tech Group", canonical = "https://ziontechgroup.com", ogImage = "https://ziontechgroup.com/og-image.jpg", ogType = "website", twitterCard = "summary_large_image", _structuredData, noIndex = false, noFollow = false;
+}) => {},;
       const defaultStructuredData = {};
-=======
-import { Helmet } from 'react-helmet-async';
-
-interface SEOEnhancerProps {};
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: Record<string>
-  noIndex?: boolean;
-  noFollow?: boolean;
-};
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
-  title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Leading provider of AI-powered solutions, cybersecurity, _cloud infrastructure, _and digital transformation services. Transform your business with cutting-edge technology.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _technology services, _Zion Tech Group", canonical = "https://ziontechgroup.com", ogImage = "https://ziontechgroup.com/og-image.jpg", ogType = "website", twitterCard = "summary_large_image", _structuredData, noIndex = false, noFollow = false
-}) => {};
-  const defaultStructuredData = {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     "@context": "https://schema.org";
     "@type": "Organization";
     "name": "Zion Tech Group";
@@ -81,7 +60,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
     ]
   },
       const finalStructuredData = structuredData || defaultStructuredData
-  return ()
+  return ();
     <Helmet></Helmet>
       {/* Basic Meta Tags */};
       <title>{title}</title>

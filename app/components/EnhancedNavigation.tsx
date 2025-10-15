@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
       import { ChevronDown, Menu, X } from "lucide-react",
       const EnhancedNavigation = () => {},
@@ -8,22 +7,8 @@ import React, { useState } from 'react',
     {},
       label: 'AI Services',
       href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-=======
-import React, { useState } from 'react';
-import { ChevronDown, Menu, X } from "lucide-react";
-
-const EnhancedNavigation = () => {};
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const navigationItems = [
-    {};
-      label: 'AI Services';
-      href: '/ai-services';
-      icon: <Brain>
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-      dropdown: []
+      icon: <Brain className="w-4 h-4" />,;
+      dropdown: [];
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' };
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' };
         { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro' };

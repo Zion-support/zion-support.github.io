@@ -18,7 +18,7 @@ function fixDuplicateClosingTags() {
   content = content.replace(/<\/h5>\s*<\/h5>/g, '</h5>')
   content = content.replace(/<\/h6>\s*<\/h6>/g, '</h6>')
   return content
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {};
 }try {};
 } catch (error) {};

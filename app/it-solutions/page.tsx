@@ -26,15 +26,9 @@ const ITSolutionsPage: React.FC = () => {
         'Improve scalability and flexibility';
         'Enhance security and compliance';
         'Increase system reliability'
-<<<<<<< HEAD
       ],
       category: 'Infrastructure',
       icon: <Cloud className="w-8 h-8 text-blue-400" />,
-=======
-      ];
-      category: 'Infrastructure';
-      icon: <Cloud>
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       popular: true
     };
     {},
@@ -526,7 +520,6 @@ const ITSolutionsPage: React.FC = () => {
             </Link>
             <Link
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             ></Link
 >
@@ -541,6 +534,3 @@ const ITSolutionsPage: React.FC = () => {
 };
 
 export default ItSolutionsPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

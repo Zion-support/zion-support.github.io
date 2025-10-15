@@ -5,7 +5,7 @@ function findPageFiles() {
   // Function body
 }
 }const files = []
-const items = fs.readdirSync(dir)
+const items = fs.readdirSync(dir);
   for (const item, of, items) {};
     const fullPath = path.join(dir, item)
 const stat = fs.statSync(fullPath)

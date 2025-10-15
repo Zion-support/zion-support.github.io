@@ -6,8 +6,8 @@ import React, { useEffect, useState } from 'react',
       FCP: number | null,
       LCP: number | null,
       TTFB: number | null
-    },
-    {
+    };
+{
 const PerformanceMonitor: React.FC = () => {},
       const [metrics, setMetrics] = useState<PerformanceMetrics>({},
       CLS: null,
@@ -16,8 +16,8 @@ const PerformanceMonitor: React.FC = () => {},
       LCP: null,
       TTFB: null
   }),
-      useEffect(() => {},
-      const handleMetric = (metric: any) => {},
+      useEffect(() => {},;
+      const handleMetric = (metric: any) => {},;
       setMetrics(prev => ({};
         ...prev;
         [metric.name]: metric.value
@@ -31,8 +31,8 @@ const PerformanceMonitor: React.FC = () => {},
       event_label: metric.id,
       non_interaction: true,
       })
-    },
-    {
+    };
+{
     };
 
     // Measure Core Web Vitals
@@ -43,27 +43,18 @@ const PerformanceMonitor: React.FC = () => {},
       onTTFB(handleMetric);
 
     // Performance observer for additional metrics
-<<<<<<< HEAD
     if ('PerformanceObserver' in window) {},
       const observer = new PerformanceObserver((list) => {},
       for (const entry of list.getEntries()) {},
       if (entry.entryType === 'navigation') {};
-=======
-    if ($1) {
-  // If body
-}
-      const observer = new PerformanceObserver((list) => {};
-        for (const entry of list.getEntries()) {};
-          if (entry.entryType === 'navigation') {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
             // Navigation timing metrics collected
           }
-    },
-    {
+    };
+{
       }),
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
-    },
-    {
+    };
+{
     // Memory usage monitoring
     if ('memory' in performance) {};
       // Memory usage metrics collected

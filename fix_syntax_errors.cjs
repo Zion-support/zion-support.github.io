@@ -3,54 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Remove merge conflict markers and keep the HEAD version
-    const lines = content.split('\n');
-    const newLines = [];
-    let inConflict = false;
-    let keepLines = false;
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.includes('<<<<<<< HEAD')) {
-        inConflict = true;
-        keepLines = true;
-        continue;
-      } else if (line.includes('=======')) {
-        keepLines = false;
-        continue;
-      } else if (line.includes('>>>>>>>')) {
-        inConflict = false;
-        keepLines = false;
-        continue;
-      }
-
-      if (!inConflict || keepLines) {
-        newLines.push(line);
-      }
-    }
-
-    const newContent = newLines.join('\n');
-    
-    if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed merge conflicts in: ${filePath}`);
-      modified = true;
-    }
-
-    return modified;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
 // Function to fix common syntax errors
 function fixSyntaxErrors(filePath) {
   try {
@@ -59,6 +11,15 @@ function fixSyntaxErrors(filePath) {
 
     // Fix common issues
     const fixes = [
+      // Fix trailing characters after closing parenthesis
+      { pattern: /\)\s*,\s*\{\s*\n\s*export default/g, replacement: ');\n};\n\nexport default' },
+      
+      // Fix missing semicolons after function declarations
+      { pattern: /\)\s*\}\s*\{\s*$/gm, replacement: ');\n};' },
+      
+      // Fix missing semicolons after imports
+      { pattern: /import\s+[^;]+$/gm, replacement: (match) => match + ';' },
+      
       // Fix semicolons in JSX
       { pattern: /<(\w+);/g, replacement: '<$1' },
       { pattern: /<\/(\w+);/g, replacement: '</$1' },
@@ -68,7 +29,6 @@ function fixSyntaxErrors(filePath) {
       
       // Fix function declarations
       { pattern: /export default async \(/g, replacement: 'export default async function handler(' },
-      { pattern: /export default function handler\(/g, replacement: 'export default async function handler(' },
       
       // Fix JSX fragments
       { pattern: /<>;/g, replacement: '<>' },
@@ -77,8 +37,17 @@ function fixSyntaxErrors(filePath) {
       // Fix trailing commas in function parameters
       { pattern: /,\s*\)/g, replacement: ')' },
       
-      // Fix missing semicolons after imports
-      { pattern: /import\s+[^;]+$/gm, replacement: (match) => match + ';' },
+      // Fix missing semicolons after return statements
+      { pattern: /return\s*\([^)]*\)\s*$/gm, replacement: (match) => match + ';' },
+      
+      // Fix object literal syntax
+      { pattern: /\}\s*,\s*\{/g, replacement: '};\n{' },
+      
+      // Fix component export syntax
+      { pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{[^}]*\}\s*,\s*\{/g, replacement: (match) => {
+        const componentName = match.match(/const\s+(\w+):/)[1];
+        return match.replace(/,\s*\{$/, ';');
+      }},
     ];
 
     for (const fix of fixes) {
@@ -101,8 +70,8 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles(dir) {
   const files = [];
   
   function walkDir(currentPath) {
@@ -115,10 +84,7 @@ function findFilesWithConflicts(dir) {
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         walkDir(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-          files.push(fullPath);
-        }
+        files.push(fullPath);
       }
     }
   }
@@ -128,20 +94,17 @@ function findFilesWithConflicts(dir) {
 }
 
 // Main execution
-console.log('Starting merge conflict resolution...');
+console.log('Starting syntax error fixes...');
 
-const filesWithConflicts = findFilesWithConflicts('.');
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+const sourceFiles = findSourceFiles('.');
+console.log(`Found ${sourceFiles.length} source files`);
 
 let fixedCount = 0;
-for (const file of filesWithConflicts) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
+for (const file of sourceFiles) {
   if (fixSyntaxErrors(file)) {
     fixedCount++;
   }
 }
 
 console.log(`Fixed ${fixedCount} files`);
-console.log('Merge conflict resolution complete!');
+console.log('Syntax error fixes complete!');

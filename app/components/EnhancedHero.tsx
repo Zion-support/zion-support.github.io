@@ -24,7 +24,7 @@ import {ArrowRight, CheckCircle} from "lucide-react",
   backgroundImage?: string",
         "
   className?: string",
-        "
+        ";
 };
 ,
       const EnhancedHero: React.FC<EnhancedHeroProps> = ({",
@@ -57,7 +57,7 @@ import {ArrowRight, CheckCircle} from "lucide-react",
       title: "Visit Us",";"
       details: "123 Tech Street, San Francisco, CA",";"
       description: "Schedule a meeting"}]
-  return ()
+  return ();
     <div",
         "
       className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`};
@@ -103,7 +103,7 @@ import {ArrowRight, CheckCircle} from "lucide-react",
               <Link",
         "
                 to={primaryCta.href},
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center";
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >";"
                 {primaryCta.text};
                 <ArrowRight className="w-5 h-5 ml-2" />",
@@ -112,7 +112,7 @@ import {ArrowRight, CheckCircle} from "lucide-react",
         "
               <Link";"
                 to={secondaryCta.href},
-      className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
+      className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >",
         "
                 {secondaryCta.text};

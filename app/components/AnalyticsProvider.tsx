@@ -2,15 +2,15 @@ import React, { createContext, useContext, useEffect, ReactNode } from "react",
       declare global {},
       interface Window {},
       gtag: (_...args: unknown[]) => void
-    },
-    {
+    };
+{
 },
       interface AnalyticsContextType {},
       trackEvent: (_eventName: string, parameters?: Record<string, _unknown>) => void,
       trackPageView: (_pageName: string) => void
-    },
-    {
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
+    };
+{
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>();
   undefined;
 )
 export const useAnalytics = () => {
@@ -39,19 +39,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
           function (...args: unknown[]) {};
             (window.gtag as any).q = (window.gtag as any).q || [];
             (window.gtag as any).q.push(args)
-    },
-    {
+    };
+{
         window.gtag("js", new Date()),
       window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
-    },
-    {
+    };
+{
     };
   }, []),
-      const trackEvent = (_eventName: string, parameters?: Record<string, _unknown>, ) => {},
+      const trackEvent = (_eventName: string, parameters?: Record<string, _unknown>) => {},
       if (typeof window !== "undefined" && window.gtag) {},
       window.gtag("event", eventName, parameters)
-    },
-    {
+    };
+{
   },
       const trackPageView = (_pageName: string) => {},
       if (typeof window !== "undefined" && window.gtag) {},
@@ -59,12 +59,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
       page_title: pageName,
       page_location: window.location.href})
     }
-    },
-    {
+    };
+{
   const value: AnalyticsContextType = {},
       trackEvent,
       trackPageView},
-      return ()
+      return ();
     <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>
       {children};
     </AnalyticsContext.Provider>

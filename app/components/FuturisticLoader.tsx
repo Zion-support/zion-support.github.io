@@ -1,7 +1,7 @@
 export default function FuturisticLoader() {
   // Function body
 }
-}return ()
+}return ();
     <div className="futuristic-loader-container"></div>
       <Link
         to="/contact"

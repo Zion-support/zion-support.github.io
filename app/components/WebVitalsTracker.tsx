@@ -7,27 +7,16 @@ interface WebVitalsData {},
   id: string
   navigationType: string
 },
-      const WebVitalsTracker: React.FC = () => {},
-      useEffect(() => {},
+      const WebVitalsTracker: React.FC = () => {},;
+      useEffect(() => {},;
       const sendToAnalytics = (_metric: WebVitalsData) => {};
       // Send to Google Analytics or other analytics service
-<<<<<<< HEAD
       if (typeof window !== 'undefined' && 'gtag' in window) {};
         (window as any).gtag('event', metric.name, {},
       event_category: 'Web Vitals',
       event_label: metric.id,
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       non_interaction: true})
-=======
-      if ($1) {
-  // If body
-}
-        (window as any).gtag('event', metric.name, {};
-          event_category: 'Web Vitals';
-          event_label: metric.id;
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value);
-          non_interaction: true})
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       };
       // Send to custom analytics endpoint
       if (process.env.NODE_ENV === 'production') {},
@@ -39,8 +28,8 @@ interface WebVitalsData {},
       };
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {}
-    },
-    {
+    };
+{
     };
 
     // Track Core Web Vitals
@@ -75,8 +64,8 @@ interface WebVitalsData {},
       id: 'memory-usage',
       navigationType: 'reload'})
       }
-    },
-    {
+    };
+{
   }, [])
   return null
 },

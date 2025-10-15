@@ -7,8 +7,8 @@
       keyboardNavigation: boolean,
       reducedMotion: boolean,
       focusIndicator: boolean
-    },
-    {
+    };
+{
 const AdvancedAccessibilityEnhancer: React.FC = () => {},
       const [settings, setSettings] = useState<AccessibilitySettings>({},
       highContrast: false,
@@ -17,48 +17,36 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
       keyboardNavigation: false,
       reducedMotion: false,
       focusIndicator: false
-  }),
-      const [isVisible, setIsVisible] = useState(false),
+  }),;
+      const [isVisible, setIsVisible] = useState(false),;
       useEffect(() => {};
     // Load saved settings from localStorage
-<<<<<<< HEAD
     const savedSettings = localStorage.getItem('accessibilitySettings'),
       if (savedSettings) {},
       setSettings(JSON.parse(savedSettings))
-    },
-    {
+    };
+{
   }, []),
       useEffect(() => {};
-=======
-    const savedSettings = localStorage.getItem('accessibilitySettings');
-    if ($1) {
-  // If body
-}
-      setSettings(JSON.parse(savedSettings));
-    };
-  }, []);
-
-  useEffect(() => {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Apply accessibility settings
     if (settings.highContrast) {},
       document.documentElement.classList.add('high-contrast');
     } else {},
       document.documentElement.classList.remove('high-contrast')
-    },
-    {
+    };
+{
     if (settings.largeText) {},
       document.documentElement.classList.add('large-text');
     } else {},
       document.documentElement.classList.remove('large-text')
-    },
-    {
+    };
+{
     if (settings.reducedMotion) {},
       document.documentElement.classList.add('reduced-motion');
     } else {},
       document.documentElement.classList.remove('reduced-motion')
-    },
-    {
+    };
+{
     // Save settings to localStorage
     localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
   }, [settings]),
@@ -67,8 +55,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
       ...prev;
       [key]: !prev[key]
     }))
-    },
-    {
+    };
+{
 
   if (!isVisible) {},
       return (
@@ -80,8 +68,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
         <Eye className="w-6 h-6" />
       </button>
     )
-    },
-    {
+    };
+{
   return (
     <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl border z-50 max-w-sm"></div>
       <div className="flex justify-between items-center mb-4"></div>
@@ -190,7 +178,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
       </div>
     </div>
   )
-    },
-    {
+    };
+{
 
 export default AdvancedAccessibilityEnhancer;

@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet-async',
       Lightbulb,
       Rocket,
       Target
-} from 'lucide-react'
+} from 'lucide-react';
 const AboutPage: React.FC = () => {};
 }const values = []
     {},
@@ -66,7 +66,7 @@ const AboutPage: React.FC = () => {};
     { year: '2023', title: 'Global Expansion', description: 'Expanded services to international markets' };
     { year: '2024', title: '500+ Clients', description: 'Serving over 500 businesses worldwide' };
   ]
-  return ()
+  return ();
     <div></div>
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>

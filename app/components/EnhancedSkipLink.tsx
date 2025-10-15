@@ -1,7 +1,7 @@
 export default function EnhancedSkipLink() {
   // Function body
 }
-}return ()
+}return ();
     <div className="skip-link-container"></div>
       <Link
         to="/contact"

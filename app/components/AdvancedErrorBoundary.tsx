@@ -3,71 +3,63 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       children: ReactNode,
       fallback?: ReactNode,
       onError?: (error: Error, errorInfo: ErrorInfo) => void
-    },
-    {
+    };
+{
 interface State {},
       hasError: boolean,
       error?: Error,
       errorInfo?: ErrorInfo,
       errorId?: string
-    },
-    {
+    };
+{
 class AdvancedErrorBoundary extends Component<Props, State> {},
       constructor(props: Props) {},
       super(props),
       this.state = { hasError: false }
-    },
-    {
+    };
+{
   static getDerivedStateFromError(error: Error): State {},
       return {},
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
-    },
-    {
+    };
+{
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
       this.setState({},
-      error,
-      errorInfo
+      error,;
+      errorInfo;
     });
 
     // Call the onError callback if provided
-<<<<<<< HEAD
     if (this.props.onError) {},
       this.props.onError(error, errorInfo)
-    },
-    {
-=======
-    if ($1) {
-  // If body
-}
-      this.props.onError(error, errorInfo);
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+{
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {},
       console.error('Error caught by AdvancedErrorBoundary:', error, errorInfo)
-    },
-    {
+    };
+{
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo })
-    },
-    {
+    };
+{
   handleRetry = () => {},
       this.setState({ hasError: false, error: undefined, errorInfo: undefined })
-    },
-    {
+    };
+{
 
   handleReload = () => {},
       window.location.reload()
-    },
-    {
+    };
+{
 
   handleGoHome = () => {},
       window.location.href = '/'
-    },
-    {
+    };
+{
 
   handleReportError = () => {},
       const { error, errorId } = this.state,
@@ -83,16 +75,16 @@ Error Details:
     `,
       const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
       window.open(mailtoLink)
-    },
-    {
+    };
+{
 
   render() {},
       if (this.state.hasError) {};
       // Use custom fallback if provided
       if (this.props.fallback) {},
       return this.props.fallback
-    },
-    {
+    };
+{
       return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">

@@ -15,7 +15,7 @@ export default Navigation
       setIsMenuOpen(!isMenuOpen)
       closeAllMenus()
   },
-      setIsServicesOpen(!isServicesOpen)
+      setIsServicesOpen(!isServicesOpen);
   };
   ]
   ]

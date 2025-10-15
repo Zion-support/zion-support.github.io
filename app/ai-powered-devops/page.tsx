@@ -12,8 +12,8 @@ const AiPoweredDevopsPage: React.FC = () => {
       popular: true,
       icon: <GitBranch className="w-8 h-8" />,
       benefits: "Reduce deployment time by 70%"
-    },
-    {
+    };
+{
       name: "Intelligent Infrastructure Management",
       description: "AI-driven infrastructure monitoring, scaling, and optimization for cloud environments.",
       features: ["Auto-scaling", "Resource optimization", "Cost management", "Performance tuning", "Predictive maintenance", "Security monitoring"],
@@ -22,8 +22,8 @@ const AiPoweredDevopsPage: React.FC = () => {
       popular: false,
       icon: <Settings className="w-8 h-8" />,
       benefits: "Cut infrastructure costs by 40%"
-    },
-    {
+    };
+{
       name: "AI Security Operations",
       description: "Advanced security monitoring and threat detection powered by machine learning.",
       features: ["Threat detection", "Vulnerability scanning", "Incident response", "Compliance monitoring", "Risk assessment", "Security automation"],

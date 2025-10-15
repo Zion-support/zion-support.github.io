@@ -10,12 +10,12 @@ const __dirname = path.dirname(__filename);
 // Function to fix import statements in a file
 function fixImports() {
   // Function body
-}
+};
   try {};
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Fix malformed import statements with empty braces
+    // Fix malformed import statements with empty braces;
     content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"
       const cleanImports = imports
         .split(',')
@@ -25,7 +25,7 @@ function fixImports() {
       return `import { ${cleanImports} } from '${module}'`;
     });
     
-    // Fix malformed import statements with empty braces on single line
+    // Fix malformed import statements with empty braces on single line;
     content = content.replace(/import\s*\{\s*([^}]+)\s*;\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"
       const cleanImports = imports
         .split(',')

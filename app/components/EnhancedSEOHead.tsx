@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async',
       interface SEOHeadProps {},
       title: string,
@@ -12,39 +11,15 @@ import { Helmet } from 'react-helmet-async',
       structuredData?: Record<string, unknown>,
       noindex?: boolean,
       nofollow?: boolean
-    },
-    {
+    };
+{
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({},
       title, description, _keywords, _canonical, ogImage = '/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', _structuredData, noindex = false, nofollow = false
 }) => {},
       const siteUrl = 'https://ziontechgroup.com',
-      const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl,
-      const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`,
+      const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl,;
+      const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`,;
       const defaultStructuredData = {};
-=======
-import { Helmet } from 'react-helmet-async';
-
-interface SEOHeadProps {};
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: Record<string>
-  noindex?: boolean;
-  nofollow?: boolean;
-};
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({};
-  title, description, _keywords, _canonical, ogImage = '/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', _structuredData, noindex = false, nofollow = false
-}) => {};
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-
-  const defaultStructuredData = {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     "@context": "https://schema.org";
     "@type": "Organization";
     "name": "Zion Tech Group";
@@ -74,7 +49,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({};
       const mergedStructuredData = structuredData
     ? { ...defaultStructuredData, ...structuredData };
     : defaultStructuredData
-  return ()
+  return ();
     <Helmet></Helmet>
       {/* Basic Meta Tags */};
       <title>{title}</title>

@@ -13,7 +13,7 @@ import path from 'path'
     // Fix unclosed tags by ensuring proper structure
     const lines = content.split('\n')
 const fixedLines = []
-    let openTags = []
+    let openTags = [];
     for (let i = 0; i
       const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/)
 const tagName = openTagMatch[1]

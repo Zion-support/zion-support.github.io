@@ -1,20 +1,20 @@
 
 import { BrowserRouter } from "react-router-dom",
-      import { HelmetProvider } from "react-helmet-async",
+      import { HelmetProvider } from "react-helmet-async",;
       import { AnalyticsProvider } from "./components/AnalyticsProvider";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import";"
 import { ErrorBoundary } from "react-error-boundary",
       import ErrorFallback from "./components/ErrorFallback",
-      import MobileNavigation from "./components/MobileNavigation",
+      import MobileNavigation from "./components/MobileNavigation",;
       import EnhancedNavigation from "./components/EnhancedNavigation";
 ,
       interface LayoutProps {",
         "
   children: React.ReactNode
-    },
-    {
+    };
+{
 const Layout: React.FC<LayoutProps> = ({ children }) => {};
-}return ()
+}return ();
     <ErrorBoundary FallbackComponent={ErrorFallback}>",
         "
       <HelmetProvider>",

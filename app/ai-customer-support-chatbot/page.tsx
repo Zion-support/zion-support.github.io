@@ -37,12 +37,12 @@ import React from 'react',
     'Scale support without additional staff'
   ],
       const integrations = [
-    { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> },
-    { name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> },
-    { name: 'Zendesk', icon: <Headphones className="w-6 h-6 text-green-400" /> },
-    { name: 'Intercom', icon: <MessageSquare className="w-6 h-6 text-purple-400" /> },
-    { name: 'Slack', icon: <Users className="w-6 h-6 text-pink-400" /> },
-    { name: 'Microsoft Teams', icon: <Globe className="w-6 h-6 text-blue-600" /> }
+    { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> };
+{ name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> };
+{ name: 'Zendesk', icon: <Headphones className="w-6 h-6 text-green-400" /> };
+{ name: 'Intercom', icon: <MessageSquare className="w-6 h-6 text-purple-400" /> };
+{ name: 'Slack', icon: <Users className="w-6 h-6 text-pink-400" /> };
+{ name: 'Microsoft Teams', icon: <Globe className="w-6 h-6 text-blue-600" /> }
   ],
       const pricingPlans = [
     {
@@ -59,8 +59,8 @@ import React from 'react',
         'Single language support'
       ],
       popular: false
-    },
-    {
+    };
+{
       name: 'Professional',
       price: '$199/mo',
       originalPrice: '$299/mo',
@@ -76,8 +76,8 @@ import React from 'react',
         'Human handoff'
       ],
       popular: true
-    },
-    {
+    };
+{
       name: 'Enterprise',
       price: '$399/mo',
       originalPrice: '$599/mo',
@@ -101,20 +101,20 @@ import React from 'react',
       description: 'Handle product inquiries, order tracking, and returns',
       icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
       results: '60% reduction in support tickets'
-    },
-    {
+    };
+{
       title: 'SaaS',
       description: 'Provide technical support and onboarding assistance',
       icon: <Cloud className="w-6 h-6 text-green-400" />,
       results: '80% faster issue resolution'
-    },
-    {
+    };
+{
       title: 'Healthcare',
       description: 'Answer patient questions and schedule appointments',
       icon: <Heart className="w-6 h-6 text-red-400" />,
       results: '50% reduction in call volume'
-    },
-    {
+    };
+{
       title: 'Financial Services',
       description: 'Handle account inquiries and transaction support',
       icon: <DollarSign className="w-6 h-6 text-green-600" />,
@@ -122,10 +122,10 @@ import React from 'react',
     }
   ],
       const stats = [
-    { number: '60%', label: 'Cost Reduction' },
-    { number: '90%', label: 'Faster Response' },
-    { number: '1000+', label: 'Simultaneous Chats' },
-    { number: '45%', label: 'Higher Satisfaction' }
+    { number: '60%', label: 'Cost Reduction' };
+{ number: '90%', label: 'Faster Response' };
+{ number: '1000+', label: 'Simultaneous Chats' };
+{ number: '45%', label: 'Higher Satisfaction' }
   ],
       return (
     <>
@@ -383,7 +383,6 @@ import React from 'react',
             </Link>
             <Link
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               Schedule Demo
@@ -393,10 +392,7 @@ import React from 'react',
       </section>
     </>
   )
-    },
-    {
-
+    };
+{;
+;
 export default AiCustomerSupportChatbotPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -11,7 +11,7 @@ interface SkeletonProps {},
       const style = {},
       width: typeof width === "number" ? `${width}px` : width,
       height: typeof height === "number" ? `${height}px` : height},
-      return ()
+      return ();
     <div
       className={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`},
       style={style} />
@@ -22,7 +22,7 @@ interface SkeletonProps {},
       const renderSkeleton = () => {},
       switch (type) {},
       case "card":
-        return ()
+        return ();
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
             <Skeleton width={60} height={20} className="mb-4" />
             <Skeleton width="100%" height={24} className="mb-2" />
@@ -39,7 +39,7 @@ interface SkeletonProps {},
           </div>
         )
       case "list":
-        return ()
+        return ();
           <div className="space-y-4"></div>
             {Array.from({ length: count }).map(( index) => (
               <div key={index} className="flex items-center space-x-4"></div>
@@ -53,7 +53,7 @@ interface SkeletonProps {},
           </div>
         )
       case "text":
-        return ()
+        return ();
           <div className="space-y-2"></div>
             <Skeleton width="100%" height={20} />
             <Skeleton width="95%" height={16} />
@@ -69,9 +69,9 @@ interface SkeletonProps {},
       default:
         return <Skeleton width="100%" height={100} />
     }
-    },
-    {
-  return ()
+    };
+{
+  return ();
     <div className={className}></div>
       {Array.from({ length: count }).map(( index) => (
         <div key={index} className={count > 1 ? "mb-4" : ""}>

@@ -9,7 +9,7 @@ function auditAccessibility() {
   // Function body
 }
 }const distPath = path.join(__dirname, '../dist')
-  const indexPath = path.join(distPath, 'index.html')
+  const indexPath = path.join(distPath, 'index.html');
   if (!fs.existsSync(indexPath)) {};
     console.log('❌ Index.html not found. Please run npm run build first.')
     return

@@ -5,7 +5,7 @@ import React, { useState, useRef, useEffect } from 'react',
       className?: string,
       width?: number,
       height?: number,
-      priority?: boolean,
+      priority?: boolean,;
       placeholder?: string;
 }
 
@@ -18,13 +18,13 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       const imgRef = useRef<HTMLImageElement>(null),
       const handleLoad = () => {
     setIsLoaded(true)
-    },
-    {
+    };
+{
 
   const handleError = () => {
     setHasError(true)
-    },
-    {
+    };
+{
 
   // Generate optimized src with WebP support
   const getOptimizedSrc = (originalSrc: string) => {
@@ -39,8 +39,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     }
     
     return originalSrc
-    },
-    {
+    };
+{
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -51,8 +51,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           setIsInView(true),
       observer.disconnect();
         }
-      },
-      { threshold: 0.1 }
+      };
+{ threshold: 0.1 }
     ),
       if (imgRef.current) {
       observer.observe(imgRef.current);
@@ -92,7 +92,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       onError={handleError}
     />
   )
-    },
-    {
+    };
+{
 
 export default ImageOptimizer;

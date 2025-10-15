@@ -3,5 +3,5 @@ import { twMerge } from "tailwind-merge"
 export function cn() {
   // Function body
 }
-}return twMerge(clsx(inputs))
+}return twMerge(clsx(inputs));
 };

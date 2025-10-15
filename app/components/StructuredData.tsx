@@ -12,7 +12,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {};
       ...data},
       return baseData
   },
-      return ()
+      return ();
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{},

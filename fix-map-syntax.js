@@ -14,16 +14,16 @@ function fixMapSyntax() {
     const originalContent = content;
     
     // Fix map functions missing parentheses around parameters
-    content = content.replace(/\.map\(([^,)]+),\s*([^)]+)\)\s*=>/g, '.map(($1, $2) =>');
+    content = content.replace(/\.map\(([^)]+),\s*([^)]+)\)\s*=>/g, '.map(($1, $2) =>');
     
     // Fix other similar patterns
-    content = content.replace(/\.map\(([^,)]+),\s*([^)]+),\s*([^)]+)\)\s*=>/g, '.map(($1, $2, $3) =>');
+    content = content.replace(/\.map\(([^)]+),\s*([^)]+),\s*([^)]+)\)\s*=>/g, '.map(($1, $2, $3) =>');
     
     // Fix filter functions with similar issues
-    content = content.replace(/\.filter\(([^,)]+),\s*([^)]+)\)\s*=>/g, '.filter(($1, $2) =>');
+    content = content.replace(/\.filter\(([^)]+),\s*([^)]+)\)\s*=>/g, '.filter(($1, $2) =>');
     
     // Fix forEach functions with similar issues
-    content = content.replace(/\.forEach\(([^,)]+),\s*([^)]+)\)\s*=>/g, '.forEach(($1, $2) =>');
+    content = content.replace(/\.forEach\(([^)]+),\s*([^)]+)\)\s*=>/g, '.forEach(($1, $2) =>');
     
     if ($1) {
   // If body

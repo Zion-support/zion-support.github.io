@@ -8,7 +8,7 @@ function fixRemainingJSXIssues() {
 }// Fix missing closing div tags - look for the pattern where we have:
   // </Link>
   // </div>
-  // )
+  // );
   // };
   // But missing the outer div closing tag
   content = content.replace()

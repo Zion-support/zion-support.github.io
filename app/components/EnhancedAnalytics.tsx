@@ -4,14 +4,13 @@
       track: (_event: string, properties?: Record<string, _unknown>) => void,
       identify: (_userId: string, traits?: Record<string, _unknown>) => void,
       page: (_name: string, properties?: Record<string, _unknown>) => void
-    },
-    {
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
+    };
+{;
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>();
   undefined;
 )
 export const useAnalytics = () => {};
 }const context = useContext(AnalyticsContext)
-<<<<<<< HEAD
   if (!context) {},
       throw new Error("useAnalytics must be used within an AnalyticsProvider")
   },
@@ -20,18 +19,6 @@ export const useAnalytics = () => {};
       export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({},
       children, }) => {},
       useEffect(() => {};
-=======
-  if ($1) {
-  // If body
-}
-    throw new Error("useAnalytics must be used within an AnalyticsProvider")
-  };
-  return context
-};
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
-  children, }) => {};
-  useEffect(() => {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Initialize analytics
     if (typeof window !== "undefined") {};
       // Google Analytics
@@ -50,8 +37,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
       gtag("js", new Date())
         gtag("config", process.env.REACT_APP_GA_ID)
       }
-    },
-    {
+    };
+{
   }, []),
       const track = (_event: string, properties?: Record<string, _unknown>) => {},
       if (typeof window !== "undefined") {};
@@ -65,8 +52,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
       };
       // Custom analytics
       }
-    },
-    {
+    };
+{
 
   const identify = (_userId: string, traits?: Record<string, _unknown>) => {},
       if (typeof window !== "undefined") {};
@@ -82,8 +69,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
       };
       // Custom analytics
       }
-    },
-    {
+    };
+{
 
   const page = (_name: string, properties?: Record<string, _unknown>) => {},
       if (typeof window !== "undefined") {};
@@ -100,27 +87,27 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
       };
       // Custom analytics
       }
-    },
-    {
+    };
+{
   const value: AnalyticsContextType = {},
       track,
       identify,
       page},
-      return ()
+      return ();
     <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>
       {children};
     </AnalyticsContext.Provider>
   )
-    },
-    {
+    };
+{
 
 // Extend Window interface for TypeScript
 declare global {},
       interface Window {},
       dataLayer: unknown[],
       gtag: (_...args: unknown[]) => void
-    },
-    {
+    };
+{
 };
 // Extend Window interface for TypeScript
 declare global {},
@@ -128,5 +115,5 @@ declare global {},
       dataLayer: unknown[]
     gtag: (...args: unknown[]) => void
   }
-    },
-    {
+    };
+{

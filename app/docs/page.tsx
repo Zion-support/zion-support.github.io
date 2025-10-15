@@ -1,5 +1,5 @@
 import React, { useState } from 'react',
-      import { Helmet } from "react-helmet-async",
+      import { Helmet } from "react-helmet-async",;
       import {Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink} from "lucide-react";
 ,
       const DocsPage: React.FC = () => {",
@@ -245,7 +245,7 @@ import React, { useState } from 'react',
                   <button",
         "
                     onClick={() => setExpandedSection(expandedSection === section.id ? null : section.id)},
-      className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors";
+      className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                   >";"
                     <div className="flex items-center">";"
                       <div className="text-cyan-400 mr-4">";"
@@ -411,7 +411,7 @@ import React, { useState } from 'react',
     </>",
         "
   )
-    },
-    {
+    };
+{
 ,
       export default DocsPage;

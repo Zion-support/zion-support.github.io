@@ -20,8 +20,8 @@ interface ContentPromotionBannerProps {},
       default:
         return "bg-gradient-to-r from-cyan-500 to-purple-600"
     }
-    },
-    {
+    };
+{
   const getIcon = () => {};
 }switch (variant) {},
       case "primary":
@@ -33,9 +33,9 @@ interface ContentPromotionBannerProps {},
       default:
         return <Zap className="w-6 h-6" />
     }
-    },
-    {
-  return ()
+    };
+{
+  return ();
     <div
       className={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`};
     ></div

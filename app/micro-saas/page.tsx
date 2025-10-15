@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD
-import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react",
+import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react",;
       import SEOOptimizer from "../components/SEOOptimizer";
 ,
       const MicroSaasPage: React.FC = () => {",
@@ -33,26 +32,6 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
         'Export to multiple formats',",
         "
-=======
-import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react";
-import SEOOptimizer from "../components/SEOOptimizer";
-;
-const MicroSaasPage: React.FC = () => {";"
-  const microSaasServices = [";"
-    {";"
-      id: 'zion-analytics-pro',";"
-      name: 'Zion Analytics Pro',";"
-      description: 'Advanced business intelligence and analytics platform with real-time dashboards, predictive analytics, and automated reporting.',";"
-      icon: BarChart3,";"
-      features: [";"
-        'Real-time data visualization',";"
-        'Predictive analytics & forecasting',";"
-        'Custom dashboard builder',";"
-        'Automated report generation',";"
-        'Multi-source data integration',";"
-        'Advanced filtering & segmentation',";"
-        'Export to multiple formats',";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
         'API access & webhooks';
       ],",
         "
@@ -560,20 +539,13 @@ const MicroSaasPage: React.FC = () => {";"
         'Save SEO management time',",
         "
         'Get actionable insights';
-<<<<<<< HEAD
       ],",
         "
       useCases: ['Website optimization', 'Content marketing', 'Local business SEO', 'E-commerce SEO'],",
         "
       link: 'https://ziontechgroup.com/zion-ai-seo-optimizer'
-    },
-    {
-=======
-      ],";"
-      useCases: ['Website optimization', 'Content marketing', 'Local business SEO', 'E-commerce SEO'],";"
-      link: 'https://ziontechgroup.com/zion-ai-seo-optimizer';
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+{
   ];
 ,
       const stats = [",
@@ -586,14 +558,9 @@ const MicroSaasPage: React.FC = () => {";"
         "
     { number: '30-day', label: 'Free Trial' };
   ];
-<<<<<<< HEAD
 ,
       const testimonials = [",
         "
-=======
-;
-  const testimonials = [";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     {";"
       name: "Sarah Johnson",";"
       company: "TechStart Inc.",";"
@@ -627,8 +594,8 @@ const MicroSaasPage: React.FC = () => {";"
       rating: 5,",
         "
       avatar: "ER"
-    },
-    {
+    };
+{
   ];
 ,
       return (",
@@ -802,7 +769,7 @@ const MicroSaasPage: React.FC = () => {";"
                       href={service.link},
       target="_blank",
       rel="noopener noreferrer",
-      className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center group";
+      className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center group"
                     >",
         "
                       Get Started",
@@ -813,7 +780,7 @@ const MicroSaasPage: React.FC = () => {";"
         "
                     <Link";"
                       to="/contact",
-      className="flex-1 border-2 border-cyan-400 text-cyan-300 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 text-center";
+      className="flex-1 border-2 border-cyan-400 text-cyan-300 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 text-center"
                     >",
         "
                       Learn More",
@@ -839,7 +806,6 @@ const MicroSaasPage: React.FC = () => {";"
               Ready to Transform Your Business?",
         "
             </h2>";"
-<<<<<<< HEAD
             <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">",
         "
               Start your free trial today and experience the power of our micro SAAS solutions.",
@@ -853,7 +819,7 @@ const MicroSaasPage: React.FC = () => {";"
               <Link",
         "
                 to="/contact",
-      className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
+      className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >",
         "
                 Start Free Trial",
@@ -863,7 +829,7 @@ const MicroSaasPage: React.FC = () => {";"
               <Link",
         "
                 to="/demo",
-      className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300";
+      className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >",
         "
                 Schedule Demo",
@@ -881,35 +847,7 @@ const MicroSaasPage: React.FC = () => {";"
     </>",
         "
   )
-    },
-    {
+    };
+{
 ,
       export default MicroSaaSPage;
-=======
-            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">";"
-              Start your free trial today and experience the power of our micro SAAS solutions.";"
-              No credit card required.";"
-            </p>";"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">";"
-              <Link";"
-                to="/contact";
-                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
-              >";"
-                Start Free Trial";"
-              </Link>";"
-              <Link";"
-                to="/demo";
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300";
-              >";"
-                Schedule Demo";"
-              </Link>";"
-            </div>";"
-          </div>";"
-        </section>";"
-      </div>";"
-    </>";"
-  );
-};
-;
-export default MicroSaaSPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

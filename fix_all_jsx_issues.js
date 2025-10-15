@@ -15,7 +15,7 @@ function fixAllJSXIssues() {
     </div>`
   })
   // Fix any remaining self-closing Link elements
-  content = content.replace()
+  content = content.replace();
     /<Link\s+to="([^"]*)"\s+className="([^"]*)"\s*\/>\s*([^<]+)\s*<ArrowRight[^>]*\/>/g;
     '<Link\n          to="$1"\n          className="$2"\n        >\n          $3\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>'
   )

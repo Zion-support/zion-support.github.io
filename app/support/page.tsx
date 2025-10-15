@@ -13,7 +13,7 @@ import React, { useState } from 'react',
     priority: '',",
         "
     category: '',",
-        "
+        ";
     description: '';
   }),
       const [isSubmitting, setIsSubmitting] = useState(false),
@@ -82,8 +82,8 @@ import React, { useState } from 'react',
       action: 'View Docs',",
         "
       color: 'from-orange-500 to-red-500'
-    },
-    {
+    };
+{
   ];
 ,
       const priorityLevels = [",
@@ -149,8 +149,8 @@ import React, { useState } from 'react',
       question: 'Is there a cost for support?',",
         "
       answer: 'Basic support is included with all plans. Premium support features and dedicated account management are available for Professional and Enterprise plans.'
-    },
-    {
+    };
+{
   ];
 ,
       const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {",
@@ -163,8 +163,8 @@ import React, { useState } from 'react',
       [name]: value",
         "
     }))
-    },
-    {
+    };
+{
 ,
       const handleSubmit = async (e: React.FormEvent) => {",
         "
@@ -198,8 +198,8 @@ import React, { useState } from 'react',
         description: '';
       });
     }, 3000)
-    },
-    {
+    };
+{
 ,
       export default function Support() {",
         "
@@ -222,9 +222,9 @@ import React, { useState } from 'react',
         "
     </>",
         "
-  )
-    },
-    {
+  );
+    };
+{
 ,
       export default SupportPage;
 ;

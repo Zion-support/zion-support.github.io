@@ -12,8 +12,8 @@ const AiQuantumComputingPage: React.FC = () => {
       popular: true,
       icon: <Atom className="w-8 h-8" />,
       benefits: "Solve problems 1000x faster than classical computers"
-    },
-    {
+    };
+{
       name: "Quantum Security Solutions",
       description: "Quantum-resistant cryptography and secure communication protocols for future-proof security.",
       features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Quantum random numbers", "Encryption protocols", "Security auditing"],
@@ -22,8 +22,8 @@ const AiQuantumComputingPage: React.FC = () => {
       popular: false,
       icon: <Shield className="w-8 h-8" />,
       benefits: "Future-proof security against quantum attacks"
-    },
-    {
+    };
+{
       name: "Quantum Computing Infrastructure",
       description: "Complete quantum computing infrastructure setup and management for research and development.",
       features: ["Quantum hardware setup", "Cryogenic systems", "Control systems", "Quantum software stack", "Maintenance support", "Training programs"],

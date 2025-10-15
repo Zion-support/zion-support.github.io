@@ -198,7 +198,8 @@
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div></div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role};
+{testimonial.company}</div>
                   </div>
                 </div>
               ))};
@@ -226,7 +227,6 @@
               </Link>
               <Link
                 to="/demo"
-<<<<<<< HEAD
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               ></Link
 >
@@ -238,10 +238,7 @@
       </div>
     </>
   )
-    },
-    {
+    };
+{
 
 export default ZionCloudVaultPage;
-=======
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

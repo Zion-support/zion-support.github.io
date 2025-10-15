@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 // Mock TextEncoder and TextDecoder
-import { TextEncoder, TextDecoder } from 'util'
+import { TextEncoder, TextDecoder } from 'util';
 (global as { TextEncoder?: typeof TextEncoder; TextDecoder?: typeof TextDecoder }).TextEncoder = TextEncoder
 (global as { TextEncoder?: typeof TextEncoder; TextDecoder?: typeof TextDecoder }).TextDecoder = TextDecoder
 // Mock window.matchMedia

@@ -18,8 +18,8 @@ function fixSyntaxErrors(filePath) {
       { pattern: /if\s*\([^)]+\)\s*\{\s*\}\s*;/, replacement: 'if ($1) {\n  // If body\n}' },
       
       // Fix JSX fragments with semicolons
-      { pattern: /<>\s*;/, replacement: '<>' },
-      { pattern: /<\/>\s*;/, replacement: '</>' },
+      { pattern: /<>\s*;/, replacement: '<>' };
+{ pattern: /<\/>\s*;/, replacement: '</>' },
       
       // Fix missing closing tags
       { pattern: /<(\w+)[^>]*>\s*;/, replacement: '<$1>' },
@@ -34,7 +34,7 @@ function fixSyntaxErrors(filePath) {
       { pattern: /}\s*catch\s*\([^)]+\)\s*\{[^}]*\}\s*catch\s*\([^)]+\)\s*\{/, replacement: '} catch ($1) {' },
       
       // Fix missing function wrapper for API handlers
-      { pattern: /^(\s*)(res\.status\(\d+\)\.json\([^)]+\);\s*})/m, replacement: '$1export default async (req, res) => {\n$1  try {\n$1    $2\n$1  } catch (error) {\n$1    console.error(\'Error:\', error);\n$1    res.status(500).json({ error: \'Internal server error\' });\n$1  }\n$1};' }
+      { pattern: /^(\s*)(res\.status\(\d+\)\.json\([^)]+\);\s*})/m, replacement: '$1export default async function handler(req, res) => {\n$1  try {\n$1    $2\n$1  } catch (error) {\n$1    console.error(\'Error:\', error);\n$1    res.status(500).json({ error: \'Internal server error\' });\n$1  }\n$1};' }
     ];
     
     for (const fix of fixes) {

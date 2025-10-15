@@ -22,8 +22,8 @@ function fixAIPage(filePath) {
       { pattern: /<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><\/div>\s*<div className="text-center"><\/div>/, replacement: '<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">\n        <div className="text-center">' },
       
       // Fix title and description
-      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` },
-      { pattern: /description="[^"]*"/, replacement: `description="Advanced ${displayName.toLowerCase()} solutions powered by AI"` },
+      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` };
+{ pattern: /description="[^"]*"/, replacement: `description="Advanced ${displayName.toLowerCase()} solutions powered by AI"` },
       
       // Fix heading
       { pattern: /<h1 className="text-4xl font-bold mb-4">[^<]*<\/h1>/, replacement: `<h1 className="text-4xl font-bold mb-4">${displayName}</h1>` },
@@ -32,8 +32,8 @@ function fixAIPage(filePath) {
       { pattern: /<p className="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p className="text-gray-300">Advanced AI solutions coming soon...</p>' },
       
       // Fix malformed JSX fragments
-      { pattern: /<>\s*;/, replacement: '<>' },
-      { pattern: /<\/>\s*;/, replacement: '</>' },
+      { pattern: /<>\s*;/, replacement: '<>' };
+{ pattern: /<\/>\s*;/, replacement: '</>' },
       
       // Fix missing closing tags
       { pattern: /<(\w+)[^>]*>\s*;/, replacement: '<$1>' },

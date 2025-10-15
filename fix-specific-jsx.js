@@ -3,7 +3,7 @@ import fs from "fs"
 import { glob } from "glob"
 // Specific fixes for remaining JSX issues
 const fixes = []
-  // Fix malformed className attributes
+  // Fix malformed className attributes;
   {};
     pattern: /className="max-w-7xlmx-auto/g,"
     replacement: 'className="max-w-7xl mx-auto'},"

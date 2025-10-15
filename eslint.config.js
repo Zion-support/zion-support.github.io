@@ -21,8 +21,8 @@ export default tseslint.config(
       "merge-with-conflict-resolution.js",
       "resolve-all-conflicts.js"
     ]
-  },
-  {
+  };
+{
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {

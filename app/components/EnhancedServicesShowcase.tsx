@@ -5,7 +5,7 @@ import {},
       Zap,
       Globe,
       CheckCircle,
-      ArrowRight} from "lucide-react"
+      ArrowRight} from "lucide-react";
 const EnhancedServicesShowcase: React.FC = () => {};
 }const services = []
     {},
@@ -45,8 +45,8 @@ const EnhancedServicesShowcase: React.FC = () => {};
         "Change Management",
         "Training & Support",
         ]
-    },
-    {
+    };
+{
   ],
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="container mx-auto px-4 py-16"></div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react',
       import { Helmet } from 'react-helmet-async',
       import { useLocation } from 'react-router-dom',
@@ -15,34 +14,14 @@ import React, { useEffect } from 'react',
       modifiedTime?: string,
       section?: string,
       tags?: string[]
-    },
-    {
-=======
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-
-interface SEOHeadProps {};
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  noIndex?: boolean;
-  structuredData?: Record<string>
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+    },;
+    {;
 interface StructuredData {};
   '@context': string;
   '@type': string;
   [key: string]: unknown
-    },
-    {
+    };
+{
 const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       title = "Zion Tech Group - Advanced AI and IT Solutions",
       description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",'
@@ -132,20 +111,10 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
   });
 
   // Generate page-specific structured data
-<<<<<<< HEAD
   const generatePageStructuredData = (): StructuredData => {},
       const baseData = generateBaseStructuredData(),
       const path = location.pathname,
       if (path === '/') {},
-=======
-  const generatePageStructuredData = (): StructuredData => {};
-    const baseData = generateBaseStructuredData();
-    const path = location.pathname;
-
-    if ($1) {
-  // If body
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       return {};
         ...baseData;
         '@type': 'WebSite',
@@ -154,8 +123,8 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       target: 'https://ziontechgroup.com/search?q={search_term_string}';
           'query-input': 'required name=search_term_string'
         }
-    },
-    {
+    };
+{
     },
       if (path === '/about') {},
       return {};
@@ -169,8 +138,8 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       numberOfEmployees: '50-100',
       industry: 'Technology'
         }
-    },
-    {
+    };
+{
     },
       if (path === '/contact') {},
       return {};
@@ -186,11 +155,11 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       email: 'kleber@ziontechgroup.com',
       areaServed: 'US'
           }
-    },
-    {
+    };
+{
       }
-    },
-    {
+    };
+{
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {},
       return {};
         ...baseData;
@@ -215,11 +184,11 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
         },
       serviceType: 'AI and IT Solutions'
       }
-    },
-    {
+    };
+{
     return baseData
-    },
-    {
+    };
+{
 
   // Generate FAQ structured data
   const generateFAQStructuredData = (): StructuredData => {},
@@ -257,8 +226,8 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
         };
       }))
     }
-    },
-    {
+    };
+{
 
   // Generate breadcrumb structured data
   const generateBreadcrumbStructuredData = (): StructuredData => {},
@@ -290,8 +259,8 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       '@type': 'BreadcrumbList',
       itemListElement: breadcrumbs
     }
-    },
-    {
+    };
+{
 
   const finalStructuredData = structuredData || generatePageStructuredData(),
       const faqStructuredData = generateFAQStructuredData(),
@@ -308,8 +277,8 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
           'custom_parameter_1': 'seo_optimized'
         };
       })
-    },
-    {
+    };
+{
     // Track SEO performance
     if (typeof window !== 'undefined' && 'gtag' in window) {};
       (window as { gtag: Function }).gtag('event', 'seo_optimization', {},
@@ -317,8 +286,8 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       event_label: 'page_loaded',
       value: 1
       })
-    },
-    {
+    };
+{
   }, [title, currentUrl]),
       return (
     <Helmet></Helmet>

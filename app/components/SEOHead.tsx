@@ -12,11 +12,11 @@ import { Helmet } from 'react-helmet-async',
       modifiedTime?: string,
       section?: string,
       tags?: string[]
-    },
-    {
+    };
+{
 const SEOHead: React.FC<SEOHeadProps> = ({},
       title = 'Zion Tech Group - Advanced AI and IT Solutions', description = 'Leading provider of AI-powered micro SAAS solutions, IT services, _and innovative technology solutions.', keywords = 'AI solutions, _micro SAAS, _IT services, _software development, _cloud computing, _cybersecurity, _data analytics', image = 'https://ziontechgroup.com/og-image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', _publishedTime, _modifiedTime, _section, tags = [], _canonical, _ogTitle, _ogDescription, _ogImage, _ogUrl, twitterCard = 'summary_large_image', twitterSite = '@ziontechgroup', twitterCreator = '@ziontechgroup', _structuredData, noindex = false, nofollow = false
-}) => {},
+}) => {},;
       const structuredData = {};
     "@context": "https://schema.org";
     "@type": "Organization";
@@ -112,7 +112,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({},
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
   )
-    },
-    {
+    };
+{
 
 export default Component;

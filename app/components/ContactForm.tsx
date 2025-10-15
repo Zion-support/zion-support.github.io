@@ -7,8 +7,8 @@ import React, { useState } from 'react',
       company: string,
       message: string,
       service: string
-    },
-    {
+    },;
+    {;
 const ContactForm: React.FC = () => {};
 }const [formData, setFormData] = useState<FormData>({},
       name: "",
@@ -22,14 +22,14 @@ const ContactForm: React.FC = () => {};
       const [isSubmitted, setIsSubmitted] = useState(false),
       const handleChange = (_e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >, ) => {},
+    >) => {},
       const { name, value } = e.target,
       setFormData((prev) => ({};
       ...prev;
       [name]: value;
     }))
-    },
-    {
+    };
+{
 
   const handleSubmit = async (_e: React.FormEvent) => {},
       e.preventDefault(),
@@ -48,24 +48,13 @@ const ContactForm: React.FC = () => {};
       });
 
     } catch (error) {};
-<<<<<<< HEAD
       } finally {},
       setIsSubmitting(false)
-    },
-    {
+    };
+{
   },
       if (isSubmitted) {},
-      return ()
-=======
-      } finally {};
-      setIsSubmitting(false);
-    };
-  };
-  if ($1) {
-  // If body
-}
-    return ()
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+      return ();
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center"></div>
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
@@ -75,7 +64,7 @@ const ContactForm: React.FC = () => {};
       </div>
     )
   },
-      return ()
+      return ();
     <form onSubmit={handleSubmit} className="space-y-6"></form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>

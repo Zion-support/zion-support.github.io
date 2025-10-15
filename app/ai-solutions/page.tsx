@@ -32,8 +32,8 @@ import React from 'react',
       category: 'Conversational AI',
       icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
       popular: true
-    },
-    {
+    };
+{
       id: 'ai-computer-vision',
       name: 'AI Computer Vision',
       price: '$399/mo',
@@ -62,8 +62,8 @@ import React from 'react',
       category: 'Computer Vision',
       icon: <Eye className="w-8 h-8 text-green-400" />,
       popular: false
-    },
-    {
+    };
+{
       id: 'ai-content-generation-pro',
       name: 'AI Content Generation Pro',
       price: '$199/mo',
@@ -92,8 +92,8 @@ import React from 'react',
       category: 'Content Creation',
       icon: <FileText className="w-8 h-8 text-purple-400" />,
       popular: true
-    },
-    {
+    };
+{
       id: 'ai-analytics-dashboard-pro',
       name: 'AI Analytics Dashboard Pro',
       price: '$349/mo',
@@ -122,8 +122,8 @@ import React from 'react',
       category: 'Analytics',
       icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
       popular: false
-    },
-    {
+    };
+{
       id: 'ai-automation-platform',
       name: 'AI Automation Platform',
       price: '$499/mo',
@@ -152,8 +152,8 @@ import React from 'react',
       category: 'Automation',
       icon: <Settings className="w-8 h-8 text-orange-400" />,
       popular: true
-    },
-    {
+    };
+{
       id: 'ai-blockchain-solutions',
       name: 'AI Blockchain Solutions',
       price: '$599/mo',
@@ -181,8 +181,8 @@ import React from 'react',
       ],
       category: 'Blockchain',
       icon: <Network className="w-8 h-8 text-yellow-400" />,
-      popular: false
-    }
+      popular: false;
+    };
   ];
 
   // const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'],
@@ -192,20 +192,20 @@ import React from 'react',
       description: 'Automate customer support with intelligent chatbots',
       icon: <MessageSquare className="w-6 h-6 text-cyan-400" />,
       benefits: ['24/7 Support', 'Instant Responses', 'Cost Reduction', 'Customer Satisfaction']
-    },
-    {
+    };
+{
       title: 'Content Marketing',
       description: 'Generate high-quality content at scale',
       icon: <FileText className="w-6 h-6 text-purple-400" />,
       benefits: ['Faster Creation', 'SEO Optimization', 'Brand Consistency', 'Scalable Output']
-    },
-    {
+    };
+{
       title: 'Data Analysis',
       description: 'Extract insights from complex datasets',
       icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
       benefits: ['Predictive Insights', 'Real-time Analytics', 'Automated Reports', 'Better Decisions']
-    },
-    {
+    };
+{
       title: 'Process Automation',
       description: 'Streamline business operations with AI',
       icon: <Settings className="w-6 h-6 text-orange-400" />,
@@ -225,8 +225,8 @@ import React from 'react',
         'Basic analytics'
       ],
       popular: false
-    },
-    {
+    };
+{
       name: 'Professional',
       price: '$499/mo',
       description: 'Ideal for growing businesses',
@@ -239,8 +239,8 @@ import React from 'react',
         'API access'
       ],
       popular: true
-    },
-    {
+    };
+{
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large organizations',
@@ -496,7 +496,6 @@ import React from 'react',
             </Link>
             <Link
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               Schedule Demo
@@ -506,10 +505,7 @@ import React from 'react',
       </section>
     </>
   )
-    },
-    {
+    };
+{
 
 export default AISolutionsPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

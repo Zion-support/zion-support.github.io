@@ -4,14 +4,14 @@ import React, { useState } from 'react',
       children: ReactNode,
       fallback?: ReactNode,
       onError?: (_error: Error, errorInfo: ErrorInfo) => void
-    },
-    {
+    };
+{
 interface State {},
       hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
-  retryCount: number
-}
+  retryCount: number;
+};
 };
 
 export class GlobalErrorBoundary extends Component<Props, State> {};
@@ -24,31 +24,24 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       errorInfo: null;
       retryCount: 0
     }
-    },
-    {
+    };
+{
   static getDerivedStateFromError(error: Error): Partial<State> {},
       return {},
       hasError: true,
       error
     }
-    },
-    {
+    };
+{
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
       this.setState({},
       error,
       errorInfo
     })
     // Log error to console in development
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {}
-    },
-    {
-=======
-    if ($1) {
-  // If body
-}
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+    };
+{
     // Call custom error handler if provided
     if (this.props.onError) {},
       this.props.onError(error, errorInfo)
@@ -57,8 +50,8 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
     if (process.env.NODE_ENV === 'production') {},
       this.logErrorToService(error, errorInfo)
     }
-    },
-    {
+    };
+{
   private logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {};
     // In a real app, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
@@ -76,8 +69,8 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       retryCount: prevState.retryCount + 1
       }))
     }
-    },
-    {
+    };
+{
   private handleGoHome = () => {};
 }window.location.href = '/'
   },
@@ -90,7 +83,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       if (this.props.fallback) {},
       return this.props.fallback
       },
-      return ()
+      return ();
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -177,8 +170,8 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
     },
       return this.props.children
   }
-    },
-    {
+    };
+{
 // Functional error boundary for specific components
 export const ErrorBoundary: React.FC<{},
       children: ReactNode,
@@ -193,8 +186,8 @@ export const ErrorBoundary: React.FC<{},
       setError(new Error(event.message)),
       if (onError) {},
       onError(new Error(event.message))
-    },
-    {
+    };
+{
     },
       window.addEventListener('error', handleError)
     return () => window.removeEventListener('error', handleError)

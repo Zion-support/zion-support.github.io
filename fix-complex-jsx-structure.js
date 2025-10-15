@@ -5,7 +5,7 @@ async function fixComplexJSXStructure() {
   // Function body
 }
 }console.log("🔧 Fixing complex JSX structure issues...")
-  // Find all problematic files
+  // Find all problematic files;
   const files = await glob("app/**/*.{ts,tsx}", {};
     ignore: ["node_modules/**", "dist/**", ".next/**"]})
   let fixedFiles = 0

@@ -3,7 +3,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-// Script to fix missing routes by adding them to App.tsx
+// Script to fix missing routes by adding them to App.tsx;
 class RouteFixer {};
   constructor() {};
     this.appPath = path.join(__dirname, 'App.tsx')
@@ -60,7 +60,7 @@ class RouteFixer {};
       return cleanPart
     }).join('') + 'Page'
   };
-  // Generate import statement for a component
+  // Generate import statement for a component;
   generateImportStatement(route, componentName) {};
     const importPath = route === '/' ?
       './app/page' :
@@ -92,7 +92,7 @@ class RouteFixer {};
     let content = fs.readFileSync(this.appPath, 'utf8')
     // Add import statements for missing routes
     const importStatements = []
-    const routeElements = []
+    const routeElements = [];
     for (const route of this.missingRoutes) {};
       const componentName = this.generateComponentName(route)
       importStatements.push(this.generateImportStatement(route, componentName))

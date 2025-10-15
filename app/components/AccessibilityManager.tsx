@@ -4,7 +4,7 @@ import React, { useEffect, useState, useCallback } from 'react',
       largeText: boolean,
       reducedMotion: boolean,
       screenReader: boolean,
-      focusVisible: boolean,
+      focusVisible: boolean,;
       keyboardNavigation: boolean;
 }
 
@@ -94,8 +94,8 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
   // Toggle accessibility panel
   const togglePanel = () => {
     setIsVisible(!isVisible)
-    },
-    {
+    };
+{
 
   // Update individual setting
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
@@ -103,8 +103,8 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       ...prev,
       [key]: value
     }))
-    },
-    {
+    };
+{
 
   return (
     <>
@@ -200,7 +200,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       )}
     </>
   )
-    },
-    {
+    };
+{
 
 export default AccessibilityManager;

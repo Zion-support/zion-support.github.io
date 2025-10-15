@@ -42,8 +42,8 @@ const PortfolioPage: React.FC = () => {
       author: 'Dr. Sarah Johnson',
       role: 'Chief Medical Officer'
       }
-    },
-    {
+    };
+{
     {},
       id: 2,
       title: 'E-commerce Personalization Engine',
@@ -72,8 +72,8 @@ const PortfolioPage: React.FC = () => {
       author: 'Michael Chen',
       role: 'VP of Technology'
       }
-    },
-    {
+    };
+{
     {},
       id: 3,
       title: 'Project Management SAAS',
@@ -102,8 +102,8 @@ const PortfolioPage: React.FC = () => {
       author: 'Emily Rodriguez',
       role: 'Project Director'
       }
-    },
-    {
+    };
+{
     {},
       id: 4,
       title: 'Mobile Banking App',
@@ -132,8 +132,8 @@ const PortfolioPage: React.FC = () => {
       author: 'David Kim',
       role: 'Chief Technology Officer'
       }
-    },
-    {
+    };
+{
     {},
       id: 5,
       title: 'Cloud Infrastructure Migration',
@@ -162,8 +162,8 @@ const PortfolioPage: React.FC = () => {
       author: 'Lisa Wang',
       role: 'IT Director'
       }
-    },
-    {
+    };
+{
     {},
       id: 6,
       title: 'Data Analytics Dashboard',
@@ -192,8 +192,8 @@ const PortfolioPage: React.FC = () => {
       author: 'Robert Smith',
       role: 'Chief Data Officer'
       }
-    },
-    {
+    };
+{
   ],
       const filteredProjects = projects.filter(project => {},
       const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory,

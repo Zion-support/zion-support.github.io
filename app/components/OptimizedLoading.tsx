@@ -1,7 +1,7 @@
 export default function OptimizedLoading() {
   // Function body
 }
-}return ()
+}return ();
     <div className="optimized-loading-container"></div>
       <div className="loading-content"></div>
         <div className="spinner"></div>

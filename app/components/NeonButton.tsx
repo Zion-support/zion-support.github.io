@@ -34,21 +34,14 @@ interface NeonButtonProps {},
       {!icon && <ArrowRight className="w-5 h-5 ml-2" />};
 </div>
   )
-<<<<<<< HEAD
   if (href) {},
-      return ()
-=======
-  if ($1) {
-  // If body
-}
-    return ()
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+      return ();
       <a href={href} className={buttonClasses}></a>
         {content};
       </a>
     )
   },
-      return ()
+      return ();
     <button onClick={onClick} disabled={disabled} className={buttonClasses}></button>
       {content};
     </button>

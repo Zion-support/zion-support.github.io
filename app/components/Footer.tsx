@@ -11,7 +11,7 @@ import {",
         "
   HeartIcon",
         "
-} from '@heroicons/react/24/outline',
+} from '@heroicons/react/24/outline',;
       import {Twitter, Linkedin, Github} from 'lucide-react';
 ",
         "
@@ -162,7 +162,7 @@ const Footer: React.FC = () => {",
                   <Link",
         "
                     to={service.href},
-      className="text-gray-300 hover:text-white transition-colors flex items-center";
+      className="text-gray-300 hover:text-white transition-colors flex items-center"
                   >";"
                     <ArrowRightIcon className="h-3 w-3 mr-2" />",
         "
@@ -189,7 +189,7 @@ const Footer: React.FC = () => {",
                   <Link",
         "
                     to={solution.href},
-      className="text-gray-300 hover:text-white transition-colors flex items-center";
+      className="text-gray-300 hover:text-white transition-colors flex items-center"
                   >";"
                     <ArrowRightIcon className="h-3 w-3 mr-2" />",
         "
@@ -216,7 +216,7 @@ const Footer: React.FC = () => {",
                   <Link",
         "
                     to={resource.href},
-      className="text-gray-300 hover:text-white transition-colors flex items-center";
+      className="text-gray-300 hover:text-white transition-colors flex items-center"
                   >";"
                     <ArrowRightIcon className="h-3 w-3 mr-2" />",
         "
@@ -243,7 +243,7 @@ const Footer: React.FC = () => {",
                   <Link",
         "
                     to={item.href},
-      className="text-gray-300 hover:text-white transition-colors flex items-center";
+      className="text-gray-300 hover:text-white transition-colors flex items-center"
                   >";"
                     <ArrowRightIcon className="h-3 w-3 mr-2" />",
         "
@@ -313,7 +313,7 @@ const Footer: React.FC = () => {",
               <Link";"
                 key={item.name},
       to={item.href},
-      className="text-gray-400 hover:text-white text-sm transition-colors";
+      className="text-gray-400 hover:text-white text-sm transition-colors"
               >",
         "
                 {item.name};

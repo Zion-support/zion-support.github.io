@@ -48,7 +48,7 @@ function fixSyntaxErrors() {
   content = content.replace(/className="([^"]*?)transition-colors"/g, 'className="$1 transition-colors"')"
   content = content.replace(/className="([^"]*?)hover:text-cyan-400"/g, 'className="$1 hover:text-cyan-400"')"
   return content
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {};
 }try {};
 } catch (error) {};

@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async"
 export default function MobileOptimizer() {
   // Function body
 }
-}return ()
+}return ();
     <div></div>
       <Helmet></Helmet>
         <title>Mobile Optimizer - Zion Tech Group</title>
@@ -22,5 +22,5 @@ export default function MobileOptimizer() {
         </Link>
       </div>
 </div>
-  )
+  );
 };

@@ -1,20 +1,11 @@
 
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async',
       import { motion } from 'framer-motion',
       const features = [
     {},
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Demand Forecasting",
-=======
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-  const features = [
-    {};
-      icon: <Brain>
-      title: "AI-Powered Demand Forecasting";
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
+      title: "AI-Powered Demand Forecasting",;
+      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations.";
     };
     {},
       icon: <Target className="w-8 h-8 text-purple-400" />,
@@ -158,7 +149,6 @@ import { motion } from 'framer-motion';
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
               </motion.button>
               <motion.button
-<<<<<<< HEAD
                 whileHover={{ scale: 1.05 }},
       whileTap={{ scale: 0.95 }},
       className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
@@ -171,13 +161,8 @@ import { motion } from 'framer-motion';
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+    };
+{
 
 export default SmartInventoryOptimizerPage;
-=======
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

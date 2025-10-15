@@ -34,12 +34,12 @@ import React from 'react',
     'Scale content production without additional staff'
   ],
       const platforms = [
-    { name: 'Instagram', icon: <Instagram className="w-6 h-6 text-pink-400" />, users: '2B+' },
-    { name: 'Facebook', icon: <Facebook className="w-6 h-6 text-blue-400" />, users: '3B+' },
-    { name: 'Twitter', icon: <Twitter className="w-6 h-6 text-sky-400" />, users: '450M+' },
-    { name: 'LinkedIn', icon: <Linkedin className="w-6 h-6 text-blue-600" />, users: '900M+' },
-    { name: 'YouTube', icon: <Youtube className="w-6 h-6 text-red-400" />, users: '2.7B+' },
-    { name: 'TikTok', icon: <Music className="w-6 h-6 text-white" />, users: '1B+' }
+    { name: 'Instagram', icon: <Instagram className="w-6 h-6 text-pink-400" />, users: '2B+' };
+{ name: 'Facebook', icon: <Facebook className="w-6 h-6 text-blue-400" />, users: '3B+' };
+{ name: 'Twitter', icon: <Twitter className="w-6 h-6 text-sky-400" />, users: '450M+' };
+{ name: 'LinkedIn', icon: <Linkedin className="w-6 h-6 text-blue-600" />, users: '900M+' };
+{ name: 'YouTube', icon: <Youtube className="w-6 h-6 text-red-400" />, users: '2.7B+' };
+{ name: 'TikTok', icon: <Music className="w-6 h-6 text-white" />, users: '1B+' }
   ],
       const pricingPlans = [
     {
@@ -56,8 +56,8 @@ import React from 'react',
         'Basic scheduling'
       ],
       popular: false
-    },
-    {
+    };
+{
       name: 'Professional',
       price: '$79/mo',
       originalPrice: '$119/mo',
@@ -73,8 +73,8 @@ import React from 'react',
         'Competitor analysis'
       ],
       popular: true
-    },
-    {
+    };
+{
       name: 'Enterprise',
       price: '$149/mo',
       originalPrice: '$199/mo',
@@ -98,20 +98,20 @@ import React from 'react',
       description: 'Drive sales with product showcases and customer testimonials',
       icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
       results: 'Average 150% increase in social sales'
-    },
-    {
+    };
+{
       title: 'SaaS',
       description: 'Build community and showcase product updates',
       icon: <Cloud className="w-6 h-6 text-green-400" />,
       results: '300% increase in user engagement'
-    },
-    {
+    };
+{
       title: 'Agencies',
       description: 'Manage multiple client accounts efficiently',
       icon: <Users className="w-6 h-6 text-purple-400" />,
       results: 'Manage 5x more clients with same team'
-    },
-    {
+    };
+{
       title: 'Personal Brands',
       description: 'Build personal brand and thought leadership',
       icon: <Star className="w-6 h-6 text-yellow-400" />,
@@ -385,7 +385,6 @@ import React from 'react',
             </Link>
             <Link
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               Schedule Demo
@@ -395,10 +394,7 @@ import React from 'react',
       </section>
     </>
   )
-    },
-    {
-
+    };
+{;
+;
 export default AISocialMediaManagerPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

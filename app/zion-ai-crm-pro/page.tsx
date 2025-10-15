@@ -1,4 +1,4 @@
-import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, MessageSquare, Phone, Mail, TrendingUp, Globe, Clock, Play, Star, Zap, Star} from 'lucide-react';import { Helmet } from "react-helmet-async",
+import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, MessageSquare, Phone, Mail, TrendingUp, Globe, Clock, Play, Star, Zap, Star} from 'lucide-react';import { Helmet } from "react-helmet-async",;
       import { Link } from "react-router-dom";
 ,
       export default function ZionAiCrmPro() {",
@@ -160,8 +160,8 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
       rating: 5,",
         "
       avatar: "MR"
-    },
-    {
+    };
+{
   ];
 ,
       const stats = [";"
@@ -233,7 +233,7 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
                   <Link",
         "
                     to="/contact",
-      className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-indigo-500/25 hover:scale-105";
+      className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-indigo-500/25 hover:scale-105"
                   >",
         "
                     Start Free Trial",
@@ -244,7 +244,7 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
         "
                   <Link";"
                     to="/demo",
-      className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";
+      className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                   >",
         "
                     Watch Demo",
@@ -359,7 +359,7 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
               {features.map((feature, index) => (<div",
         "
                   key={index},
-      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10";
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10"
                 >";"
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">",
         "
@@ -519,7 +519,7 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
         "
                 <div";"
                   key={index},
-      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105";
+      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >";"
                   <div className="flex items-center mb-4">",
         "
@@ -539,7 +539,8 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
         "
                     <div>";"
                       <div className="font-semibold text-white">{testimonial.name}</div>";"
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>",
+                      <div className="text-sm text-gray-400">{testimonial.role};
+{testimonial.company}</div>",
         "
                     </div>",
         "
@@ -608,7 +609,7 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
                 <Link",
         "
                   to="/contact",
-      className="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25 hover:scale-105";
+      className="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25 hover:scale-105"
                 >",
         "
                   Start Free Trial",
@@ -618,9 +619,8 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
                 </Link>",
         "
                 <Link";"
-<<<<<<< HEAD
                   to="/demo",
-      className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300 hover:scale-105";
+      className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >",
         "
                   Schedule Demo",
@@ -639,28 +639,8 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
         "
     </>";"
   )
-    },
-    {
+    };
+{
 ,
       export default ZionAiCrmProPage;
 ;
-=======
-                  to="/contact";
-                  className="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25 hover:scale-105";
-                >";"
-                  Start Free Trial";"
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />";"
-                </Link>";"
-                <Link";"
-                  to="/demo";
-                  className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300 hover:scale-105";
-                >";"
-                  Schedule Demo";"
-                </Link>";"
-              </div>";"
-            </div>";"
-          </div>";"
-        </section>";"
-      </div>";"
-    </>";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -28,7 +28,7 @@ function fixFinalParsing() {
   fixed = fixed.replace(/<Helmet></Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/ \/>/g,"
     '<Helmet></Helmet>\n        <title>$1</title>\n        <meta name="description" content="$2" />')
   return fixed
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {};
 }try {};
 } catch (error) {};

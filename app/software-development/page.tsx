@@ -1,7 +1,7 @@
 
 import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarChart3, Shield, Zap, Cpu } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
-      import ResponsiveContainer from '../components/ResponsiveContainer',
+      import ResponsiveContainer from '../components/ResponsiveContainer',;
       import EnhancedSEO from '../components/EnhancedSEO';
 ,
       const SoftwareDevelopmentPage = () => {",
@@ -59,8 +59,8 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
       icon: <Cpu className="w-8 h-8" />,";"
       features: ["Code refactoring", "Database migration", "UI/UX updates", "Performance optimization"],";"
       price: "From $30,000"
-    },
-    {
+    };
+{
   ];
 ,
       const technologies = [";"
@@ -106,8 +106,8 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
       step: "5",";"
       title: "Deployment",";"
       description: "Deploy to production with monitoring and support"
-    },
-    {
+    };
+{
   ];
 ,
       const benefits = [",
@@ -249,7 +249,7 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
                   href="/contact",
       variant="outline",
       size="sm",
-      className="w-full";
+      className="w-full"
                 >",
         "
                   Get Quote",
@@ -433,8 +433,8 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
         "
     </div>";"
   )
-    },
-    {
+    };
+{
 ,
       export default SoftwareDevelopmentPage;
 ;

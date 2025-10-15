@@ -4,9 +4,9 @@ import path from "path"
 const pageTemplate = `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react';
 function {PAGE_NAME}() {};
-  return ()
+  return ();
     <div></div>
       <Helmet></Helmet>
         <title>{PAGE_TITLE} - Zion Tech Group</title>

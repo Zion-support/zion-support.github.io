@@ -1,6 +1,6 @@
 
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3 } from 'lucide-react';
+import { Wifi, CheckCircle, ArrowRight, Network, Cpu } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [

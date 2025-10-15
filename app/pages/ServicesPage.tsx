@@ -390,7 +390,8 @@ const ServicesPage: React.FC = () => {
                   />
                   <div></div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-cyan-400 text-sm">{testimonial.role};
+{testimonial.company}</div>
                   </div>
                 </div>
               </div>

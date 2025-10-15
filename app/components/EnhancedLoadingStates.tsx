@@ -28,7 +28,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({};
           <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div>
         </div>
         <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
-        {showProgress && ()
+        {showProgress && ();
           <div className="w-64 mx-auto mb-4">
         <div className="w-64 mx-auto mb-4">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -93,9 +93,9 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
       default:
         return "Loading..."
     }
-    },
-    {
-  return ()
+    };
+{
+  return ();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -161,7 +161,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
   const renderSkeleton = () => {
     switch (type) {};
       case 'card':
-        return ()
+        return ();
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -178,7 +178,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
           </div>
         )
       case 'list':
-        return ()
+        return ();
           <div className="space-y-4"></div>
             {Array.from({ length: count }).map(( index) => (
               <div key={index} className="flex items-center space-x-4 animate-pulse">
@@ -200,7 +200,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
           </div>
         )
       case 'text':
-        return ()
+        return ();
           <div className="space-y-3 animate-pulse"></div>
             {Array.from({ length: count }).map(( index) => (
               <div key={index} className="space-y-2">
@@ -220,7 +220,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
           </div>
         )
       case 'image':
-        return ()
+        return ();
           <div className="animate-pulse">
         <div className="animate-pulse">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -232,9 +232,9 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
       default:
         return <div className="animate-pulse bg-gray-600 rounded h-4"></div>
     }
-    },
-    {
-  return ()
+    };
+{
+  return ();
     <div className="space-y-4"></div>
       {Array.from({ length: count }).map(( index) => (
         <div key={index}></div>
@@ -261,7 +261,7 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};
         </div>
         <h2 className="text-2xl font-bold text-white mb-4">Loading Error</h2>
         <p className="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>
-        {onRetry && ()
+        {onRetry && ();
           <button
             onClick={onRetry},
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -300,7 +300,7 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};
           ></div>
         </div>
         <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
-        {subMessage && ()
+        {subMessage && ();
           <p className="text-gray-300 mb-6">{subMessage}</p>
         )};
         <div className="w-full bg-gray-700 rounded-full h-3 mb-4">

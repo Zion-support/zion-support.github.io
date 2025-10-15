@@ -41,8 +41,8 @@ import React from 'react',
         'Basic analytics'
       ],
       popular: false
-    },
-    {
+    };
+{
       name: 'Professional',
       price: '$99/mo',
       originalPrice: '$149/mo',
@@ -58,8 +58,8 @@ import React from 'react',
         'Integration with 50+ platforms'
       ],
       popular: true
-    },
-    {
+    };
+{
       name: 'Enterprise',
       price: '$199/mo',
       originalPrice: '$299/mo',
@@ -83,20 +83,20 @@ import React from 'react',
       description: 'Drive sales with personalized product recommendations and abandoned cart recovery',
       icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
       results: 'Average 35% increase in revenue'
-    },
-    {
+    };
+{
       title: 'SaaS',
       description: 'Onboard users and reduce churn with targeted email sequences',
       icon: <Cloud className="w-6 h-6 text-green-400" />,
       results: '40% reduction in churn rate'
-    },
-    {
+    };
+{
       title: 'Education',
       description: 'Engage students with course updates and learning reminders',
       icon: <GraduationCap className="w-6 h-6 text-purple-400" />,
       results: '60% improvement in course completion'
-    },
-    {
+    };
+{
       title: 'Healthcare',
       description: 'Send appointment reminders and health tips to patients',
       icon: <Heart className="w-6 h-6 text-red-400" />,
@@ -340,7 +340,6 @@ import React from 'react',
             </Link>
             <Link
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               Schedule Demo
@@ -350,10 +349,7 @@ import React from 'react',
       </section>
     </>
   )
-    },
-    {
-
+    };
+{;
+;
 export default AIEmailMarketingAutomationPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

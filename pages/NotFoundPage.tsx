@@ -9,7 +9,7 @@ import {},
       Brain,
       Server,
       Target
-} from 'lucide-react'
+} from 'lucide-react';
 const NotFoundPage: React.FC = () => {};
 }const quickLinks = []
     { name: 'Home', href: '/', icon: Home };
@@ -18,7 +18,7 @@ const NotFoundPage: React.FC = () => {};
     { name: 'Micro SAAS', href: '/micro-saas', icon: Target };
     { name: 'Contact', href: '/contact', icon: Mail };
   ]
-  return ()
+  return ();
     <div></div>
       <Helmet></Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>

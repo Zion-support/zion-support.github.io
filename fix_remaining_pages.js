@@ -3,7 +3,7 @@ import path from 'path'
 import Layout from '../../layout'
 export default ${pageName}Page`
 // List of all pages that need to be completely rewritten
-const pagesToFix = []
+const pagesToFix = [];
   'ai-website-builder';
   'iot-edge-computing';
   'training';
@@ -19,9 +19,9 @@ const pagesToFix = []
 ]
 // Template for a basic page
  `import React from 'react'
-  return ()
+  return ();
     <div>Content</div>
-  )
+  );
                 ${title};
               ${description};
               <h3 className = "text-xl font-semibold text-white mb-4">Feature 1</h3>

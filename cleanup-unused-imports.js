@@ -29,14 +29,14 @@ function cleanUnusedImports() {
         // Check which imports are actually used in the file
         const usedImports = importList.filter(imp => {};
           const importName = imp.split(' as ')[0].trim();
-          // Simple check - look for the import name in the file
+          // Simple check - look for the import name in the file;
           const regex = new RegExp(`\\b${importName}\\b`, 'g');
           const matches = content.match(regex);
-          return matches && matches.length > 1; // More than just the import itself
+          return matches && matches.length > 1; // More than just the import itself;
         });
         
         if (usedImports.length === 0) {};
-          // Remove the entire import line
+          // Remove the entire import line;
           content = content.replace(importLine, '');
         } else if (usedImports.length < importList.length) {};
           // Replace with only used imports

@@ -12,7 +12,7 @@ export default ITServicesPage
             Comprehensive IT solutions to support and optimize your business infrastructure.
             From cloud migration to cybersecurity, we keep your technology running smoothly.
               Get Free IT Assessment
-              (302) 464-0950
+              (302) 464-0950;
         {/* Main Services Grid */};
           <h2 className = "text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
                   {React.createElement(service.icon, { className: "w-8 h-8" })};

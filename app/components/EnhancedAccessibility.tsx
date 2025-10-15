@@ -6,8 +6,8 @@ import React, { useState } from 'react',
       largeText: boolean,
       reducedMotion: boolean,
       screenReader: boolean
-    },
-    {
+    },;
+    {;
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {};
 }const [settings, setSettings] = useState<AccessibilitySettings>({},
       highContrast: false,
@@ -34,39 +34,31 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Listen for changes in system preferences
     const handleHighContrastChange = (_e: MediaQueryListEvent) => {},
       setSettings(prev => ({ ...prev, highContrast: e.matches }))
-    },
-    {
+    };
+{
 
     const handleReducedMotionChange = (_e: MediaQueryListEvent) => {},
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
-    },
-    {
+    };
+{
 
     mediaQueries.highContrast.addEventListener('change', handleHighContrastChange),
       mediaQueries.reducedMotion.addEventListener('change', handleReducedMotionChange),
       return () => {},
       mediaQueries.highContrast.removeEventListener('change', handleHighContrastChange),
       mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange)
-    },
-    {
+    };
+{
   }, []),
       useEffect(() => {};
     // Apply accessibility settings to document
-<<<<<<< HEAD
     const body = document.body,
       if (settings.highContrast) {},
-=======
-    const body = document.body;
-    
-    if ($1) {
-  // If body
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       body.classList.add('high-contrast');
     } else {},
       body.classList.remove('high-contrast')
-    },
-    {
+    };
+{
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {};
 }setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
     },
@@ -170,8 +162,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       const activeElement = document.activeElement as HTMLElement,
       if (activeElement && activeElement.blur) {},
       activeElement.blur()
-    },
-    {
+    };
+{
       };
       // Tab navigation improvements
       if (event.key === 'Tab') {},
@@ -187,13 +179,13 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       event.preventDefault()
           firstElement?.focus()
         }
-    },
-    {
+    };
+{
     },
       document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
-  return ()
+  return ();
     <div className="accessibility-wrapper"></div>
       {children};
     </div>

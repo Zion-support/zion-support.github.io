@@ -9,10 +9,10 @@ function fixJSXContent() {
   // Function body
 }
 }// Remove duplicate function declarations
-  content = content.replace()
+  content = content.replace();
     /function \w+\(\) \{\s*return \(\s*function \w+\(\) \{\s*return \(/g;
     "function Page() {\n  return (";
-  )
+  );
   // Fix malformed JSX tags
   content = content.replace(/<div><div><\/div><\/div><\/div>/g, "")
   content = content.replace(/<div><\/div>/g, "")
@@ -31,7 +31,7 @@ function fixJSXContent() {
   content = content.replace(/<p([^>]+)><div><\/p>/g, "<p$1></p>")
   // Fix broken Link components
   content = content.replace()
-    /<Link;<\/Link><div><\/Link><\/div><\/div><\/div>/g;
+    /<Link<\/Link><div><\/Link><\/div><\/div><\/div>/g;
     "";
   )
   content = content.replace()
@@ -66,7 +66,7 @@ function fixJSXContent() {
   // Fix missing imports
   if (content.includes("Helmet") && !content.includes("import { Helmet }"
 }")) {}"
-    content = content.replace()
+    content = content.replace();
       /import React from 'react';/;
       `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`;
     )
@@ -79,7 +79,7 @@ function fixJSXContent() {
   };
   if ()
     content.includes("ArrowRight") &&
-    !content.includes("import { ArrowRight }")
+    !content.includes("import { ArrowRight }");
   ) {};
     content = content.replace()
       /import React from 'react';/;
@@ -93,9 +93,9 @@ function createProperPageStructure(pageName, title, description) {};
 }return `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react';
 function ${pageName}() {};
-  return ()
+  return ();
     <div></div>
       <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>

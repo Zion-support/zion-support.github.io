@@ -8,7 +8,7 @@ function fixMissingClosingDivs() {
 }// Fix the pattern where we have:
   // </Link>
   // </div>
-  // )
+  // );
   // };
   // But missing the outer div closing tag
   content = content.replace()

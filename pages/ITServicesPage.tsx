@@ -15,7 +15,7 @@ import {},
       Rocket,
       Users,
       Clock
-} from 'lucide-react'
+} from 'lucide-react';
 const ITServicesPage: React.FC = () => {};
 }const itServices = []
     {},
@@ -171,7 +171,7 @@ const ITServicesPage: React.FC = () => {};
     { number: '24/7', label: 'Support Available', icon: Clock };
     { number: '4.8/5', label: 'Client Rating', icon: Star };
   ]
-  return ()
+  return ();
     <div></div>
       <Helmet></Helmet>
         <title>IT Services - Zion Tech Group</title>

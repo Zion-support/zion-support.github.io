@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';'lucide-react'
 interface JobPosition {};
   // Add properties here
 },
       id: number
-import { Right, Circle} from 'lucide-react'
+import { Right, Circle} from 'lucide-react';
 const PagePage: React.FC = () => {};
 }title: string
   department: string
@@ -16,13 +16,8 @@ const PagePage: React.FC = () => {};
   requirements: string[]
   benefits: string[]
   featured: boolean
-<<<<<<< HEAD
 },
       const eersPage: React.FC = () => {};
-=======
-};
-const eersPage: React.FC = () => {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 }const [selectedDepartment, setSelectedDepartment] = useState('all)'
   const [selectedLocation, setSelectedLocation] = useState('all)'
       title: 'Senior AI Engineer,'
@@ -66,7 +61,7 @@ const eersPage: React.FC = () => {};
         'Competitive salary and benefits,'
         'State-of-the-art facilities'
 const eersPage: React.FC = () => {};
-}return ()
+}return ();
     <div className="min-h-screen pt-20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"></div>
         <div className="text-center"></div>
@@ -81,7 +76,7 @@ const eersPage: React.FC = () => {};
     </div>
   )
 },
-      import {Star} from 'lucide-react'
+      import {Star} from 'lucide-react';
     };
     {},
       id: 3,

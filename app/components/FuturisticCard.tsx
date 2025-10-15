@@ -5,8 +5,8 @@ interface FuturisticCardProps {},
       variant?: 'default' | 'elevated' | 'glow' | 'gradient',
       hover?: boolean,
       glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green'
-    },
-    {
+    };
+{
 const FuturisticCard: React.FC<FuturisticCardProps> = ({},
       children,
       className = '',
@@ -24,8 +24,8 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({},
         return 'bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-white/10',
       default:
         return 'bg-slate-800/40 backdrop-blur-sm border border-white/10'
-    },
-    {
+    };
+{
   },
       const getGlowColor = () => {},
       switch (glowColor) {},
@@ -41,8 +41,8 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({},
         return 'hover:shadow-green-500/20 hover:border-green-400/30',
       default:
         return 'hover:shadow-cyan-500/20 hover:border-cyan-400/30'
-    },
-    {
+    };
+{
   },
       const hoverClasses = hover ? 'hover:scale-105 hover:shadow-xl' : '',
       const glowClasses = hover ? getGlowColor() : '',
@@ -65,8 +65,8 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({},
         {children};
       </div>
     </div>
-  )
-    },
-    {
+  );
+    };
+{
 
 export default Component;

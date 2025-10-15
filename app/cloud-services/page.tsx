@@ -12,8 +12,8 @@ const CloudServicesPage: React.FC = () => {
       popular: true,
       icon: <Cloud className="w-8 h-8" />,
       benefits: "Reduce infrastructure costs by 40%"
-    },
-    {
+    };
+{
       name: "Cloud Infrastructure",
       description: "Scalable and secure cloud infrastructure designed for your specific needs.",
       features: ["Architecture design", "Auto-scaling", "Load balancing", "Monitoring", "Backup solutions", "Disaster recovery"],
@@ -22,8 +22,8 @@ const CloudServicesPage: React.FC = () => {
       popular: false,
       icon: <Server className="w-8 h-8" />,
       benefits: "Achieve 99.9% uptime with our infrastructure"
-    },
-    {
+    };
+{
       name: "Cloud Security",
       description: "Comprehensive security solutions to protect your cloud environment and data.",
       features: ["Security assessment", "Access control", "Data encryption", "Compliance", "Threat monitoring", "Incident response"],
@@ -40,18 +40,18 @@ const CloudServicesPage: React.FC = () => {
       icon: <Cloud className="w-12 h-12" />,
       title: "Multi-Cloud Support",
       description: "Work with AWS, Azure, Google Cloud, and other major cloud providers"
-    },
-    {
+    };
+{
       icon: <Zap className="w-12 h-12" />,
       title: "Auto-Scaling",
       description: "Automatically scale resources based on demand to optimize costs"
-    },
-    {
+    };
+{
       icon: <Shield className="w-12 h-12" />,
       title: "Enterprise Security",
       description: "Bank-level security with encryption, monitoring, and compliance"
-    },
-    {
+    };
+{
       icon: <Database className="w-12 h-12" />,
       title: "Data Management",
       description: "Efficient data storage, backup, and recovery solutions"

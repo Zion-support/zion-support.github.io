@@ -1,7 +1,7 @@
 import { execSync } from 'child_process'
 import {writeFileSync} from 'fs'
 #!/usr/bin/env node
-console.log('🔄 Merging branches with automatic conflict resolution...')
+console.log('🔄 Merging branches with automatic conflict resolution...');
       return false; // No conflicts};
     console.log(`🔧 Resolving conflicts in ${filePath}...`)
     // Split by conflict markers and keep the incoming version (after )

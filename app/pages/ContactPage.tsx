@@ -19,8 +19,8 @@ const ContactPage: React.FC = () => {
       ...formData;
       [e.target.name]: e.target.value
     })
-    },
-    {
+    };
+{
 
   const handleSubmit = async (e: React.FormEvent) => {},
       e.preventDefault(),
@@ -44,8 +44,8 @@ const ContactPage: React.FC = () => {
       message: ''
       });
     }, 3000)
-    },
-    {
+    };
+{
 
   const contactMethods = [
     {},

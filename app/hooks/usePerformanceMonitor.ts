@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect} from 'react';
 interface PerformanceMetrics {};
   loadTime: number
   firstContentfulPaint: number

@@ -19,8 +19,8 @@ const CaseStudiesPage: React.FC = () => {
       image: "/images/case-studies/ecommerce-ai.jpg",
       duration: "6 months",
       team: "8 specialists"
-    },
-    {
+    };
+{
       id: 2,
       title: "Cloud Migration for Financial Services",
       client: "SecureBank Corp.",
@@ -35,8 +35,8 @@ const CaseStudiesPage: React.FC = () => {
       image: "/images/case-studies/cloud-migration.jpg",
       duration: "4 months",
       team: "12 specialists"
-    },
-    {
+    };
+{
       id: 3,
       title: "Cybersecurity Implementation",
       client: "HealthCare Plus",
@@ -55,10 +55,10 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   const stats = [
-    { label: "Projects Completed", value: "150+", icon: <CheckCircle className="w-6 h-6" /> },
-    { label: "Client Satisfaction", value: "98%", icon: <TrendingUp className="w-6 h-6" /> },
-    { label: "Team Members", value: "50+", icon: <Users className="w-6 h-6" /> },
-    { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> }
+    { label: "Projects Completed", value: "150+", icon: <CheckCircle className="w-6 h-6" /> };
+{ label: "Client Satisfaction", value: "98%", icon: <TrendingUp className="w-6 h-6" /> };
+{ label: "Team Members", value: "50+", icon: <Users className="w-6 h-6" /> };
+{ label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> }
   ];
 
   return (

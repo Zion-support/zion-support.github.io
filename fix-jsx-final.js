@@ -20,7 +20,7 @@ function fixJSXSyntax() {
   // Fix broken JSX fragments
   content = content.replace(/\<\>\s*$/gm, '')
   content = content.replace(/\<\/\>\s*$/gm, '')
-  // Fix broken return statements
+  // Fix broken return statements;
   content = content.replace(/\}\s*\)\s*;\s*$/gm, '}')
   content = content.replace(/\}\s*\)\s*\)\s*;\s*$/gm, '}')
   content = content.replace(/\}\s*\)\s*\)\s*\)\s*;\s*$/gm, '}')

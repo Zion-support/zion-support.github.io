@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
       import React, { useState, useRef, useEffect } from 'react',
       interface LazyImageProps {},
@@ -12,8 +11,8 @@ import React, { useState } from 'react',
       loading?: 'lazy' | 'eager',
       sizes?: string,
       srcSet?: string
-    },
-    {
+    };
+{
 const LazyImage: React.FC<LazyImageProps> = ({},
       src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {},
       const [isLoaded, setIsLoaded] = useState(false),
@@ -25,40 +24,8 @@ const LazyImage: React.FC<LazyImageProps> = ({},
       if (entry.isIntersecting) {},
       setIsInView(true),
       observer.disconnect()
-    },
-    {
-=======
-import React, { useState } from 'react';
-import React, { useState, useRef, useEffect } from 'react';
-
-interface LazyImageProps {};
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: React.ReactNode;
-  fallback?: React.ReactNode;
-  onLoad?: () => void;
-  onError?: () => void;
-  loading?: 'lazy' | 'eager';
-  sizes?: string;
-  srcSet?: string;
-};
-const LazyImage: React.FC<LazyImageProps> = ({};
-  src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {};
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {};
-    const observer = new IntersectionObserver(([entry]) => {};
-        if ($1) {
-  // If body
-}
-          setIsInView(true);
-          observer.disconnect();
-        };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+    },;
+    {;
       };
       {},
       threshold: 0.1,
@@ -80,7 +47,7 @@ const LazyImage: React.FC<LazyImageProps> = ({};
       if (isError && fallback) {},
       return <>{fallback}</>
   },
-      return ()
+      return ();
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
       {!isLoaded && !isError && placeholder && ()
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700"></div>

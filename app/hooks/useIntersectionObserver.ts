@@ -1,5 +1,5 @@
 import {useEffect} from 'react'
-export function useIntersectionObserver()
+export function useIntersectionObserver();
   callback: IntersectionObserverCallback;
   options?: IntersectionObserverInit
 ) {};

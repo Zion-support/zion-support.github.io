@@ -1,6 +1,6 @@
 
 import SEOHead from '../components/SEOHead',
-      import { Link } from 'react-router-dom',
+      import { Link } from 'react-router-dom',;
       import {ArrowRight, Shield} from 'lucide-react';
 ,
       const CybersecurityPage: React.FC = () => {",
@@ -46,7 +46,7 @@ import SEOHead from '../components/SEOHead',
               <Link",
         "
                 to="/contact",
-      className="group bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105";
+      className="group bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
               >",
         "
                 Get Security Assessment",
@@ -57,7 +57,7 @@ import SEOHead from '../components/SEOHead',
         "
               <Link";"
                 to="/consultation",
-      className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105";
+      className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >",
         "
                 Free Consultation",
@@ -215,7 +215,7 @@ import SEOHead from '../components/SEOHead',
             <Link",
         "
               to="/contact",
-      className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
+      className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >",
         "
               Get Started Now",
@@ -225,7 +225,7 @@ import SEOHead from '../components/SEOHead',
             <Link",
         "
               to="/consultation",
-      className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors";
+      className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
             >",
         "
               Schedule Consultation",
@@ -239,8 +239,8 @@ import SEOHead from '../components/SEOHead',
       </section>",
         "
     </>";"
-  )
-    },
-    {
+  );
+    };
+{
 ,
       export default CybersecurityPage;

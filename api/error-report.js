@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-export default function handler(req, res) {
-=======
-export default async (req, res) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -23,8 +19,4 @@ export default async (req, res) => {
     console.error('Error reporting failed:', error);
     res.status(500).json({ error: 'Failed to report error' });
   }
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

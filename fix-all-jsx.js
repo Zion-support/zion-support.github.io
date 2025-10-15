@@ -7,7 +7,7 @@ function fixAllJSX() {
 }let fixed = content
   // Fix missing closing div tags - look for patterns where divs are not properly closed
   // This is a more aggressive approach to fix JSX structure
-  // Fix common patterns where closing divs are missing
+  // Fix common patterns where closing divs are missing;
   fixed = fixed.replace(/(\s*)<\/Link>\s*<\/div>\s*<\/div>\s*\);/g, '$1</Link>\n      </div>\n    </div>\n  );')
   // Fix patterns where the main container div is missing its closing tag
   fixed = fixed.replace(/(\s*)<\/div>\s*\);/g, '$1</div>\n  );')

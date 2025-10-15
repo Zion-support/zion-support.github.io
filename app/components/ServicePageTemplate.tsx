@@ -1,6 +1,6 @@
 
 import { Helmet } from 'react-helmet-async',
-      import { Link } from 'react-router-dom',
+      import { Link } from 'react-router-dom',;
       import {CheckCircle, Star} from 'lucide-react';
 ,
       interface ServicePageProps {",
@@ -14,13 +14,13 @@ import { Helmet } from 'react-helmet-async',
         "
     starting: string,
       market: string
-    },
-    {
+    };
+{
   technologies: string[],
       icon: React.ReactNode,
       popular?: boolean
-    },
-    {
+    };
+{
 ,
       const ServicePageTemplate: React.FC<ServicePageProps> = ({",
         "
@@ -83,7 +83,7 @@ import { Helmet } from 'react-helmet-async',
                 <Link",
         "
                   to="/contact",
-      className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105";
+      className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >",
         "
                   Get Started Today",
@@ -93,7 +93,7 @@ import { Helmet } from 'react-helmet-async',
                 <Link",
         "
                   to="/demo",
-      className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300";
+      className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
                 >",
         "
                   Schedule Demo",
@@ -214,7 +214,7 @@ import { Helmet } from 'react-helmet-async',
                 <Link",
         "
                   to="/contact",
-      className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-block";
+      className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-block"
                 >",
         "
                   Get Started Now",
@@ -246,7 +246,7 @@ import { Helmet } from 'react-helmet-async',
               <Link",
         "
                 to="/contact",
-      className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105";
+      className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >",
         "
                 Get Started Today",
@@ -256,7 +256,7 @@ import { Helmet } from 'react-helmet-async',
               <Link",
         "
                 to="/demo",
-      className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300";
+      className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >",
         "
                 Schedule Demo",
@@ -274,8 +274,8 @@ import { Helmet } from 'react-helmet-async',
     </>",
         "
   )
-    },
-    {
+    };
+{
 ,
       export default ServicePageTemplate;
 ;

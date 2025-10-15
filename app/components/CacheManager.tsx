@@ -16,15 +16,15 @@ interface CacheStats {},
       maxSize: 50 * 1024 * 1024 // 50MB
   })
 
-  const [isVisible, setIsVisible] = useState(false)
-
+  const [isVisible, setIsVisible] = useState(false);
+;
   useEffect(() => {};
           } catch (error) {}
-    },
-    {
+    };
+{
       }
-    },
-    {
+    };
+{
     // Cache API for dynamic caching
     const setupCacheStrategy = () => {},
       const CACHE_NAME = 'zion-tech-cache-v1'
@@ -42,8 +42,8 @@ interface CacheStats {},
       try {},
       const cache = await caches.open(CACHE_NAME),
       await cache.addAll(CACHE_URLS)
-    },
-    {
+    };
+{
       };
       // Cache API responses
       const cacheAPIResponses = async (request: Request) => {},
@@ -51,24 +51,13 @@ interface CacheStats {},
       const cache = await caches.open(CACHE_NAME)
           const response = await fetch(request)
           
-<<<<<<< HEAD
           if (response.ok) {},
       cache.put(request, response.clone())
           },
       return response
           return fetch(request)
-    },
-    {
-=======
-          if ($1) {
-  // If body
-}
-            cache.put(request, response.clone())
-          };
-          return response
-          return fetch(request);
-        };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+    };
+{
       };
       // Initialize caching
       cacheStaticAssets()
@@ -84,8 +73,8 @@ interface CacheStats {},
         },
       return originalFetch(input, init)
       }
-    },
-    {
+    };
+{
     // Memory management for large objects
     const setupMemoryManagement = () => {};
       // Clean up unused objects periodically
@@ -100,8 +89,8 @@ interface CacheStats {},
             if ((window as any).gc) {};
               (window as any).gc()
             }
-    },
-    {
+    };
+{
         };
       }, 30000) // Check every 30 seconds
 
@@ -121,12 +110,12 @@ interface CacheStats {},
               img.classList.remove('lazy')
               imageObserver.unobserve(img)
             }
-    },
-    {
+    };
+{
         })
       }
-    },
-    {
+    };
+{
     updateStats()
     const interval = setInterval(updateStats, 5000)
 
@@ -140,8 +129,8 @@ interface CacheStats {},
       e.preventDefault()
         setIsVisible(prev => !prev)
       }
-    },
-    {
+    };
+{
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
@@ -154,8 +143,8 @@ interface CacheStats {},
       )
       setStats(prev => ({ ...prev, size: 0 }))
     }
-    },
-    {
+    };
+{
   const formatBytes = (bytes: number) => {},
       if (bytes === 0) return '0 Bytes'
     const k = 1024

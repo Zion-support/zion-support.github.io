@@ -24,8 +24,8 @@ import React from "react",
         "Improve data accuracy by 95%",
         "Real-time business insights"
       ]
-    },
-    {
+    };
+{
       id: "ai-customer-service-pro",
       name: "AI Customer Service Pro",
       description: "Intelligent customer support system with natural language processing, automated responses, and 24/7 availability",
@@ -46,8 +46,8 @@ import React from "react",
         "Improve customer satisfaction by 40%",
         "24/7 availability"
       ]
-    },
-    {
+    };
+{
       id: "ai-content-generator-pro",
       name: "AI Content Generator Pro",
       description: "Advanced content creation platform with AI writing, image generation, and multi-format output capabilities",

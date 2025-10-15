@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 import 'whatwg-fetch'
 // import fetchMock from 'jest-fetch-mock'
 // fetchMock.enableMocks()
-// Reset fetch mocks before each test to ensure isolation
+// Reset fetch mocks before each test to ensure isolation;
 // beforeEach(() => {};
 }//   fetchMock.resetMocks()
 // })

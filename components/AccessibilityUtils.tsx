@@ -8,19 +8,10 @@ export const focusManagement = {};
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
     const handleTabKey = (e: KeyboardEvent) => {};
-<<<<<<< HEAD
 }if (e.key === 'Tab') {},
       if (e.shiftKey) {},
       if (document.activeElement === firstElement) {},
       lastElement.focus()
-=======
-}if ($1) {
-  // If body
-}
-        if (e.shiftKey) {};
-          if (document.activeElement === firstElement) {};
-            lastElement.focus()
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
             e.preventDefault()
           };
         } else {},
@@ -28,17 +19,17 @@ export const focusManagement = {};
       firstElement.focus()
             e.preventDefault()
           }
-    },
-    {
+    };
+{
       }
-    },
-    {
+    };
+{
     element.addEventListener('keydown', handleTabKey)
     return () => {};
 }element.removeEventListener('keydown', handleTabKey)
     }
-    },
-    {
+    };
+{
   // Move focus to next focusable element
   focusNext: (currentElement: HTMLElement) => {};
 }const focusableElements = document.querySelectorAll()
@@ -57,8 +48,8 @@ export const focusManagement = {};
     const previousElement = focusableElements[currentIndex - 1] as HTMLElement
     if (previousElement) previousElement.focus()
   }
-    },
-    {
+    };
+{
 // Screen reader utilities
 export const screenReaderUtils = {};
   // Announce message to screen readers
@@ -116,8 +107,8 @@ export const keyboardNavigation = {};
         items[items.length - 1]?.focus()
         break
       }
-    },
-    {
+    };
+{
   }
-    },
-    {
+    };
+{

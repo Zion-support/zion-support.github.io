@@ -15,8 +15,8 @@ const CareersPage: React.FC = () => {
       requirements: ["PhD in AI/ML or 5+ years experience", "Python, TensorFlow, PyTorch", "Cloud platforms (AWS, GCP, Azure)", "Team leadership experience"],
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],
       icon: <Brain className="w-6 h-6" />
-    },
-    {
+    };
+{
       title: "DevOps Engineer",
       department: "Engineering",
       location: "Remote / New York",
@@ -26,8 +26,8 @@ const CareersPage: React.FC = () => {
       requirements: ["Kubernetes, Docker", "CI/CD pipelines", "Cloud infrastructure", "Monitoring tools"],
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],
       icon: <Settings className="w-6 h-6" />
-    },
-    {
+    };
+{
       title: "Product Manager",
       department: "Product",
       location: "San Francisco",
@@ -41,12 +41,12 @@ const CareersPage: React.FC = () => {
   ];
 
   const benefits = [
-    { icon: <DollarSign className="w-8 h-8" />, title: "Competitive Compensation", description: "Above-market salaries with equity options" },
-    { icon: <Heart className="w-8 h-8" />, title: "Health & Wellness", description: "Comprehensive health, dental, and vision coverage" },
-    { icon: <Home className="w-8 h-8" />, title: "Flexible Work", description: "Remote-first culture with flexible hours" },
-    { icon: <GraduationCap className="w-8 h-8" />, title: "Learning & Development", description: "Annual learning budget and conference attendance" },
-    { icon: <Zap className="w-8 h-8" />, title: "Cutting-Edge Tech", description: "Work with the latest AI and cloud technologies" },
-    { icon: <Shield className="w-8 h-8" />, title: "Job Security", description: "Stable company with strong growth trajectory" }
+    { icon: <DollarSign className="w-8 h-8" />, title: "Competitive Compensation", description: "Above-market salaries with equity options" };
+{ icon: <Heart className="w-8 h-8" />, title: "Health & Wellness", description: "Comprehensive health, dental, and vision coverage" };
+{ icon: <Home className="w-8 h-8" />, title: "Flexible Work", description: "Remote-first culture with flexible hours" };
+{ icon: <GraduationCap className="w-8 h-8" />, title: "Learning & Development", description: "Annual learning budget and conference attendance" };
+{ icon: <Zap className="w-8 h-8" />, title: "Cutting-Edge Tech", description: "Work with the latest AI and cloud technologies" };
+{ icon: <Shield className="w-8 h-8" />, title: "Job Security", description: "Stable company with strong growth trajectory" }
   ];
 
   return (

@@ -1,7 +1,7 @@
 
 import { Helmet } from 'react-helmet-async',
-      const TermsPage: React.FC = () => {",
-        "
+      const TermsPage: React.FC = () => {",;
+        ";
   const lastUpdated = 'January 1, 2024';
 ,
       const sections = [",
@@ -102,8 +102,8 @@ import { Helmet } from 'react-helmet-async',
       title: 'Contact Information',",
         "
       content: 'If you have any questions about these Terms of Service, please contact us at legal@ziontechgroup.com or call us at +1 302 464 0950.'
-    },
-    {
+    };
+{
   ];
 ,
       const keyPoints = [",
@@ -142,8 +142,8 @@ import { Helmet } from 'react-helmet-async',
       title: 'Payment Terms',",
         "
       description: 'Fees are non-refundable unless otherwise specified in writing'
-    },
-    {
+    };
+{
   ];
 ,
       const prohibitedUses = [",
@@ -162,7 +162,6 @@ import { Helmet } from 'react-helmet-async',
         "
     'Collecting user information without consent';
   ];
-<<<<<<< HEAD
 ,
       return (",
         "
@@ -172,13 +171,6 @@ import { Helmet } from 'react-helmet-async',
         "
         <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>",
         "
-=======
-;
-  return (";"
-    <>";"
-      <Helmet>";"
-        <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
         <meta name="description" content="Read Zion Tech Group's Terms of Service. Understand your rights and obligations when using our AI and IT solutions." />";"
         <meta name="keywords" content="terms of service, legal terms, conditions, user agreement, service terms" />";"
         <link rel="canonical" href="https://ziontechgroup.com/terms" />",
@@ -189,7 +181,6 @@ import { Helmet } from 'react-helmet-async',
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">";"
         <div className="absolute inset-0 overflow-hidden">";"
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>";"
-<<<<<<< HEAD
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>",
         "
         </div>",
@@ -200,13 +191,11 @@ import { Helmet } from 'react-helmet-async',
         "
       </section>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
-  )
-    },
-    {
+  );
+    };
+{
 ,
       export default TermsPage;
-=======
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>";"
         </div>";"
       </section>";"
@@ -217,4 +206,3 @@ import { Helmet } from 'react-helmet-async',
 };
 ;
 export default TermsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

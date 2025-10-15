@@ -3,7 +3,7 @@ import fs from "fs"
 import path from "path"
 import { glob } from "glob"
 // Common Lucide React icons used across pages
-const commonIcons = []
+const commonIcons = [];
   "ArrowRight";
   "Brain";
   "Shield";
@@ -62,7 +62,7 @@ function fixPageFile() {
 }let content = fs.readFileSync(filePath, "utf8")
   let modified = false
   // Remove unused React import if it's not used'
-  if ()
+  if ();
     content.includes("import React from 'react';") &&
     !content.includes("React.")
   ) {};
@@ -89,7 +89,7 @@ function fixPageFile() {
         .split(",")
         .map((i) => i.trim())
       const allIcons = [...new Set([...existingIcons, ...usedIcons])]
-      content = content.replace()
+      content = content.replace();
         lucideImportMatch[0];
         `import { ${allIcons.join(", ")} } from 'lucide-react';`;
       )

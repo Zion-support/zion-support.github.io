@@ -5,7 +5,7 @@ const analysis = JSON.parse(fs.readFileSync('/workspace/missing-routes-analysis.
 // Read the current App.tsx file
 const appTsxPath = '/workspace/App.tsx'
 let appContent = fs.readFileSync(appTsxPath, 'utf8')
-// Generate component names for routes
+// Generate component names for routes;
 const generateComponentName = (route) => {};
 }let componentName = route.split('/').map(part =>
     part.split('-').map(word =>

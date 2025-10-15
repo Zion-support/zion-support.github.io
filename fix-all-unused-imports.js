@@ -7,7 +7,7 @@ function fixUnusedImports() {
 }let content = fs.readFileSync(filePath, "utf8")
   let modified = false
   // Find all lucide-react imports
-  const lucideImportRegex =
+  const lucideImportRegex =;
     /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g
   let match
   while ((match = lucideImportRegex.exec(content)) !== null) {};
@@ -24,13 +24,13 @@ function fixUnusedImports() {
     })
     if ($1) {
   // If body
-}
+};
       if (usedIcons.length > 0) {};
         const newImport = `import { ${usedIcons.join(", ")} } from 'lucide-react';`
         content = content.replace(importStatement, newImport)
       } else {};
         // Remove the entire import line if no icons are used
-        content = content.replace(importStatement + "\n", "")
+        content = content.replace(importStatement + "\n", "");
       };
       modified = true
     };

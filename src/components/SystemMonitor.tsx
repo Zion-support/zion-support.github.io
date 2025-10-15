@@ -15,7 +15,7 @@ export default SystemMonitor
   // Deduct points for slow paint times
  2000) score -= 15
  3000) score -= 25
-  return Math.max(0, score)
+  return Math.max(0, score);
 };
 // Network connection interface
   effectiveType?: string
@@ -97,8 +97,8 @@ const performanceScore = calculatePerformanceScore()
       const percentage = (used / limit) * 100
       return { used, total, limit, percentage },
       return { used: 0, total: 0, limit: 0, percentage: 0 }
-    },
-    {
+    };
+{
   // Get network information
       const nav = navigator as NavigatorWithConnection
 const connection = nav.connection
@@ -106,8 +106,8 @@ const connection = nav.connection
       },
       saveData: false
     }
-    },
-    {
+    };
+{
   // Export data
     if (!metrics) return
     };

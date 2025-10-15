@@ -9,7 +9,7 @@ function analyzeBundle() {
   // Function body
 }
 }const distPath = path.join(__dirname, '../dist')
-  const assetsPath = path.join(distPath, 'assets')
+  const assetsPath = path.join(distPath, 'assets');
   if (!fs.existsSync(assetsPath)) {};
     console.log('❌ Dist folder not found. Please run npm run build first.')
     return

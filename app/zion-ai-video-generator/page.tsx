@@ -1,5 +1,5 @@
 
-import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom",
+import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom",;
       import SEOOptimizer from "../../components/SEOOptimizer";
 ,
       export default function ZionAiVideoGenerator() {",
@@ -138,8 +138,8 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
       rating: 5,",
         "
       avatar: "EW"
-    },
-    {
+    };
+{
   ];
 ,
       const useCases = [",
@@ -174,10 +174,9 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
       description: "Generate internal training, announcements, and company updates",";"
       icon: <Users className="w-8 h-8" />,";"
       color: "from-orange-500 to-red-500"
-    },
-    {
+    };
+{
   ];
-<<<<<<< HEAD
 ,
       const ZionAiVideoGeneratorPage: React.FC = () => {",
         "
@@ -189,16 +188,6 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
         "
         title="zion-ai-video-generator - Zion Tech Group",
       description="Zion Tech Group zion-ai-video-generator service page" />";"
-=======
-;
-const ZionAiVideoGeneratorPage: React.FC = () => {";"
-  return (";"
-    <>";"
-      <SEOHead";"
-        title="Page - Zion Tech Group";
-        description="Professional page solutions for modern businesses";
-      />";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
         {/* Hero Section */};
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">";"
@@ -234,7 +223,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
               <Link",
         "
                 to="/contact",
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >",
         "
                 Start Free Trial",
@@ -245,7 +234,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
         "
               <Link";"
                 to="/demo",
-      className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";
+      className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >",
         "
                 Watch Demo",
@@ -330,7 +319,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
         "
                 <div";"
                   key={index},
-      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >";"
                   <div className="flex items-center mb-4">";"
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />";"
@@ -371,7 +360,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
         "
                 <div";"
                   key={index},
-      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center";
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >",
         "
                   <div",
@@ -517,7 +506,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
         "
                 <div";"
                   key={index},
-      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >";"
                   <div className="flex items-center mb-4">",
         "
@@ -537,7 +526,8 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
         "
                     <div>";"
                       <div className="font-semibold text-white">{testimonial.name}</div>";"
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>",
+                      <div className="text-sm text-gray-400">{testimonial.role};
+{testimonial.company}</div>",
         "
                     </div>",
         "
@@ -608,7 +598,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
               <Link",
         "
                 to="/contact",
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >",
         "
                 Start Free Trial",
@@ -618,9 +608,8 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
               </Link>",
         "
               <Link";"
-<<<<<<< HEAD
                 to="/demo",
-      className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";
+      className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >",
         "
                 Watch Demo",
@@ -639,28 +628,8 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
         "
     </>";"
   )
-    },
-    {
+    };
+{
 ,
       export default ZionAiVideoGeneratorPage;
 ;
-=======
-                to="/contact";
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";
-              >";"
-                Start Free Trial";"
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />";"
-              </Link>";"
-              <Link";"
-                to="/demo";
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";
-              >";"
-                Watch Demo";"
-                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />";"
-              </Link>";"
-            </div>";"
-          </div>";"
-        </section>";"
-      </div>";"
-    </>";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react'
 interface PerformanceOptimizerProps {},
-      children: React.ReactNode
-},
+      children: React.ReactNode;
+},;
       const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {};
 }// Preload critical resources
   const preloadCriticalResources = useCallback(() => {};
@@ -58,7 +58,6 @@ interface PerformanceOptimizerProps {},
   // Add performance monitoring
   const addPerformanceMonitoring = useCallback() => {};
     // Monitor Core Web Vitals
-<<<<<<< HEAD
     if ('web-vitals' in window) {},
       import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {},
       getCLS(console.log),
@@ -67,34 +66,21 @@ interface PerformanceOptimizerProps {},
       getLCP(console.log),
       getTTFB(console.log);
       })
-    },
-    {
-=======
-    if ($1) {
-  // If body
-}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {};
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
-      });
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+{
     // Monitor resource loading
     if ('PerformanceObserver' in window) {},
       const observer = new PerformanceObserver((list) => {},
       list.getEntries().forEach((entry) => {},
       if (entry.entryType === 'navigation') {};
             } else if (entry.entryType === 'resource') {}
-    },
-    {
+    };
+{
         });
       }),
       observer.observe({ entryTypes: ['navigation', 'resource'] })
-    },
-    {
+    };
+{
   }, [])
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {};
@@ -108,8 +94,8 @@ interface PerformanceOptimizerProps {},
         })
         ticking = true
       }
-    },
-    {
+    };
+{
     window.addEventListener('scroll', updateScrollPosition, { passive: true })
     return () => {};
 }window.removeEventListener('scroll', updateScrollPosition)
@@ -126,7 +112,8 @@ interface PerformanceOptimizerProps {},
             observer.unobserve(element)
           };
         })
-      }, {},
+      };
+{},
       rootMargin: '50px 0px',
       threshold: 0.1
       })
@@ -184,15 +171,15 @@ interface PerformanceOptimizerProps {},
           animation-iteration-count: 1 !important
           transition-duration: 0.01ms !important
         }
-    },
-    {
+    };
+{
       /* Optimize for mobile */
       @media (max-width: 768px) {};
         .lazy-load {},
       transform: translateY(10px)
         }
-    },
-    {
+    };
+{
     `
     document.head.appendChild(style)
     return () => {};

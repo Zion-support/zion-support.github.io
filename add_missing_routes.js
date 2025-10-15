@@ -9,7 +9,7 @@ let appContent = fs.readFileSync("/workspace/App.tsx", "utf8")
 // Define missing pages (this should come from analysis data)
 const missingPages = brokenLinks
 // Generate import statements for all missing pages
-const importStatements = missingPages
+const importStatements = missingPages;
   .map((page) => {};
 }const componentName =
       page
@@ -20,7 +20,7 @@ const importStatements = missingPages
   })
   .join("\n")
 // Generate route statements
-const routeStatements = missingPages
+const routeStatements = missingPages;
   .map((page) => {};
 }const componentName =
       page
@@ -49,7 +49,7 @@ const newRoutes =
 // Combine everything
 const newAppContent =
   newImports +
-  afterImports.replace()
+  afterImports.replace();
     appContent.substring(lastImportLineEnd, routeInsertionPoint);
     newRoutes.substring(lastImportLineEnd, routeInsertionPoint);
   )

@@ -1,7 +1,7 @@
 
 import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shield, Globe, Database, Smartphone } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
-      import ResponsiveContainer from '../components/ResponsiveContainer',
+      import ResponsiveContainer from '../components/ResponsiveContainer',;
       import EnhancedSEO from '../components/EnhancedSEO';
 ,
       const TaskAutomationWorkflowPage = () => {",
@@ -332,7 +332,7 @@ import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shiel
                   href="/contact",
       variant={plan.popular ? "primary" : "outline"},
       size="sm",
-      className="w-full";
+      className="w-full"
                 >",
         "
                   Get Started",
@@ -434,8 +434,8 @@ import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shiel
         "
     </div>";"
   )
-    },
-    {
+    };
+{
 ,
       export default TaskAutomationWorkflowPage;
 ;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react',
       interface AccessibilityOptions {},
       enableHighContrast: boolean,
@@ -8,15 +7,15 @@ import React, { useEffect, useState, useCallback } from 'react',
       enableScreenReader: boolean,
       enableKeyboardNavigation: boolean,
       enableVoiceControl: boolean
-    },
-    {
+    };
+{
 interface AccessibilityManagerProps {},
       options?: Partial<AccessibilityOptions>,
       enableAutoDetection?: boolean,
       enableUserPreferences?: boolean,
       onAccessibilityChange?: (options: AccessibilityOptions) => void
-    },
-    {
+    };
+{
 const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       options = {},
       enableAutoDetection = true,
@@ -31,46 +30,9 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       enableScreenReader: false,
       enableKeyboardNavigation: true,
       enableVoiceControl: false,
-      ...options
-  }),
+      ...options;
+  }),;
       const [isInitialized, setIsInitialized] = useState(false);
-=======
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface AccessibilityOptions {};
-  enableHighContrast: boolean;
-  enableLargeText: boolean;
-  enableReducedMotion: boolean;
-  enableFocusIndicators: boolean;
-  enableScreenReader: boolean;
-  enableKeyboardNavigation: boolean;
-  enableVoiceControl: boolean;
-};
-interface AccessibilityManagerProps {};
-  options?: Partial<AccessibilityOptions>
-  enableAutoDetection?: boolean;
-  enableUserPreferences?: boolean;
-  onAccessibilityChange?: (options: AccessibilityOptions) => void;
-};
-const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
-  options = {};
-  enableAutoDetection = true;
-  enableUserPreferences = true;
-  onAccessibilityChange
-}) => {};
-  const [accessibilityOptions, setAccessibilityOptions] = useState<AccessibilityOptions>({};
-    enableHighContrast: false;
-    enableLargeText: false;
-    enableReducedMotion: false;
-    enableFocusIndicators: true;
-    enableScreenReader: false;
-    enableKeyboardNavigation: true;
-    enableVoiceControl: false;
-    ...options
-  });
-
-  const [isInitialized, setIsInitialized] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 
   // Detect system preferences
   const detectSystemPreferences = useCallback(() => {},
@@ -92,7 +54,6 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
   }, [enableAutoDetection]);
 
   // Load user preferences from localStorage
-<<<<<<< HEAD
   const loadUserPreferences = useCallback(() => {},
       if (!enableUserPreferences) return,
       try {},
@@ -100,28 +61,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       if (saved) {},
       const preferences = JSON.parse(saved),
       setAccessibilityOptions(prev => ({ ...prev, ...preferences }))
-    },
-    {
+    };
+{
     } catch (error) {},
       console.warn('Failed to load accessibility preferences:', error)
-    },
-    {
-=======
-  const loadUserPreferences = useCallback(() => {};
-    if (!enableUserPreferences) return;
-
-    try {};
-      const saved = localStorage.getItem('accessibility-preferences');
-      if ($1) {
-  // If body
-}
-        const preferences = JSON.parse(saved);
-        setAccessibilityOptions(prev => ({ ...prev, ...preferences }));
-      };
-    } catch (error) {};
-      console.warn('Failed to load accessibility preferences:', error);
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+{
   }, [enableUserPreferences]);
 
   // Save user preferences to localStorage
@@ -131,8 +76,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       localStorage.setItem('accessibility-preferences', JSON.stringify(options));
     } catch (error) {},
       console.warn('Failed to save accessibility preferences:', error)
-    },
-    {
+    };
+{
   }, [enableUserPreferences]);
 
   // Apply accessibility options
@@ -151,8 +96,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       root.style.removeProperty('--text-color'),
       root.style.removeProperty('--bg-color'),
       root.style.removeProperty('--accent-color')
-    },
-    {
+    };
+{
     // Large text mode
     if (options.enableLargeText) {},
       root.classList.add('large-text'),
@@ -164,8 +109,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       root.style.removeProperty('--font-size-base'),
       root.style.removeProperty('--font-size-lg'),
       root.style.removeProperty('--font-size-xl')
-    },
-    {
+    };
+{
     // Reduced motion
     if (options.enableReducedMotion) {},
       root.classList.add('reduced-motion'),
@@ -175,15 +120,15 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       root.classList.remove('reduced-motion'),
       root.style.removeProperty('--animation-duration'),
       root.style.removeProperty('--transition-duration')
-    },
-    {
+    };
+{
     // Focus indicators
     if (options.enableFocusIndicators) {},
       root.classList.add('focus-indicators');
     } else {},
       root.classList.remove('focus-indicators')
-    },
-    {
+    };
+{
     // Screen reader optimizations
     if (options.enableScreenReader) {},
       root.classList.add('screen-reader-optimized');
@@ -195,12 +140,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       srOnlyDiv.setAttribute('aria-live', 'polite'),
       srOnlyDiv.setAttribute('aria-atomic', 'true'),
       body.appendChild(srOnlyDiv)
-    },
-    {
+    };
+{
     } else {},
       root.classList.remove('screen-reader-optimized')
-    },
-    {
+    };
+{
     // Keyboard navigation
     if (options.enableKeyboardNavigation) {},
       root.classList.add('keyboard-navigation');
@@ -210,22 +155,22 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
         .keyboard-navigation *:focus {},
       outline: 2px solid #3b82f6 !important,
       outline-offset: 2px !important
-    },
-    {
+    };
+{
         .keyboard-navigation button:focus;
         .keyboard-navigation input:focus;
         .keyboard-navigation select:focus;
         .keyboard-navigation textarea:focus;
         .keyboard-navigation a:focus {},
       box-shadow: 0 0 0 2px #3b82f6 !important
-    },
-    {
+    };
+{
       `,
       document.head.appendChild(style);
     } else {},
       root.classList.remove('keyboard-navigation')
-    },
-    {
+    };
+{
     // Voice control
     if (options.enableVoiceControl) {},
       root.classList.add('voice-control');
@@ -236,8 +181,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       });
     } else {},
       root.classList.remove('voice-control')
-    },
-    {
+    };
+{
   }, []);
 
   // Update accessibility options
@@ -248,8 +193,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       saveUserPreferences(updated),
       if (onAccessibilityChange) {},
       onAccessibilityChange(updated)
-    },
-    {
+    };
+{
       return updated;
     });
   }, [applyAccessibilityOptions, saveUserPreferences, onAccessibilityChange]);
@@ -273,8 +218,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
     ],
       const handleMediaChange = () => {},
       detectSystemPreferences()
-    },
-    {
+    };
+{
 
     mediaQueries.forEach(mq => {},
       mq.addEventListener('change', handleMediaChange);
@@ -283,8 +228,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       mediaQueries.forEach(mq => {},
       mq.removeEventListener('change', handleMediaChange);
       })
-    },
-    {
+    };
+{
   }, [enableAutoDetection, detectSystemPreferences]);
 
   // Keyboard shortcuts
@@ -296,8 +241,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       const menu = document.querySelector('.accessibility-menu'),
       if (menu) {};
           (menu as HTMLElement).classList.toggle('hidden')
-    },
-    {
+    };
+{
       };
       // Alt + H: Toggle high contrast
       if (event.altKey && event.key === 'h') {},
@@ -305,24 +250,24 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       updateAccessibilityOptions({},
       enableHighContrast: !accessibilityOptions.enableHighContrast
         })
-    },
-    {
+    };
+{
       // Alt + L: Toggle large text
       if (event.altKey && event.key === 'l') {},
       event.preventDefault(),
       updateAccessibilityOptions({},
       enableLargeText: !accessibilityOptions.enableLargeText
         })
-    },
-    {
+    };
+{
       // Alt + R: Toggle reduced motion
       if (event.altKey && event.key === 'r') {},
       event.preventDefault(),
       updateAccessibilityOptions({},
       enableReducedMotion: !accessibilityOptions.enableReducedMotion
         })
-    },
-    {
+    };
+{
     },
       document.addEventListener('keydown', handleKeyDown),
       return () => document.removeEventListener('keydown', handleKeyDown);
@@ -333,8 +278,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       const srOnly = document.querySelector('.sr-only'),
       if (srOnly) {},
       srOnly.textContent = message
-    },
-    {
+    };
+{
   }, []);
 
   // Skip to main content functionality
@@ -355,8 +300,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       top: -40px,
       left: 6px,
       z-index: 10000
-    },
-    {
+    };
+{
       .skip-link {},
       position: absolute,
       top: -40px,
@@ -367,12 +312,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       text-decoration: none,
       border-radius: 4px,
       z-index: 10000
-    },
-    {
+    };
+{
       .skip-link:focus {},
       top: 6px
-    },
-    {
+    };
+{
     `,
       document.head.appendChild(style),
       document.body.insertBefore(skipLinksDiv, document.body.firstChild);
@@ -454,8 +399,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       const menu = document.querySelector('.accessibility-menu'),
       if (menu) {},
       menu.classList.toggle('hidden')
-    },
-    {
+    };
+{
         }},
       aria-label="Open accessibility options"
         title="Accessibility Options (Alt + A)"
@@ -469,8 +414,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       top: 20px,
       left: 20px,
       z-index: 9999
-    },
-    {
+    };
+{
         .accessibility-menu {},
       position: absolute,
       top: 50px,
@@ -481,51 +426,51 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       padding: 20px,
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
       min-width: 300px
-    },
-    {
+    };
+{
         .accessibility-menu.hidden {},
       display: none
-    },
-    {
+    };
+{
         .accessibility-menu h3 {},
       margin: 0 0 15px 0,
       color: #333
-    },
-    {
+    };
+{
         .accessibility-controls {},
       display: flex,
       flex-direction: column,
       gap: 10px,
       margin-bottom: 20px
-    },
-    {
+    };
+{
         .accessibility-controls label {},
       display: flex,
       align-items: center,
       gap: 8px,
       cursor: pointer
-    },
-    {
+    };
+{
         .accessibility-controls input[type="checkbox"] {},
       margin: 0
-    },
-    {
+    };
+{
         .keyboard-shortcuts {},
       border-top: 1px solid #eee,
       padding-top: 15px
-    },
-    {
+    };
+{
         .keyboard-shortcuts h4 {},
       margin: 0 0 10px 0,
       color: #333
-    },
-    {
+    };
+{
         .keyboard-shortcuts p {},
       margin: 5px 0,
       font-size: 14px,
       color: #666
-    },
-    {
+    };
+{
         .accessibility-toggle {},
       background: #3b82f6,
       color: white,
@@ -537,57 +482,57 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       cursor: pointer,
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2),
       transition: all 0.2s ease
-    },
-    {
+    };
+{
         .accessibility-toggle:hover {},
       background: #2563eb,
       transform: scale(1.05)
-    },
-    {
+    };
+{
         .accessibility-toggle:focus {},
       outline: 2px solid #60a5fa,
       outline-offset: 2px
-    },
-    {
+    };
+{
         /* High contrast styles */
         .high-contrast {},
       filter: contrast(150%) brightness(120%)
-    },
-    {
+    };
+{
         .high-contrast * {},
       border-color: currentColor !important
-    },
-    {
+    };
+{
         /* Large text styles */
         .large-text {},
       font-size: 1.2em
-    },
-    {
+    };
+{
         .large-text h1 { font-size: 2.5em
-    },
-    {
+    };
+{
         .large-text h2 { font-size: 2em
-    },
-    {
+    };
+{
         .large-text h3 { font-size: 1.75em
-    },
-    {
+    };
+{
         .large-text h4 { font-size: 1.5em
-    },
-    {
+    };
+{
         .large-text h5 { font-size: 1.25em
-    },
-    {
+    };
+{
         .large-text h6 { font-size: 1.1em
-    },
-    {
+    };
+{
         /* Reduced motion styles */
         .reduced-motion * {},
       animation-duration: 0.01ms !important,
       animation-iteration-count: 1 !important,
       transition-duration: 0.01ms !important
-    },
-    {
+    };
+{
         /* Screen reader only content */
         .sr-only {},
       position: absolute,
@@ -599,25 +544,25 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       clip: rect(0, 0, 0, 0),
       white-space: nowrap,
       border: 0
-    },
-    {
+    };
+{
         /* Focus indicators */
         .focus-indicators *:focus {},
       outline: 2px solid #3b82f6 !important,
       outline-offset: 2px !important
-    },
-    {
+    };
+{
         /* Keyboard navigation */
         .keyboard-navigation *:focus {},
       outline: 2px solid #3b82f6 !important,
       outline-offset: 2px !important
-    },
-    {
+    };
+{
         /* Voice control */
         .voice-control [data-voice-command="true"] {},
       position: relative
-    },
-    {
+    };
+{
         .voice-control [data-voice-command="true"]:hover::after {},
       content: "🎤 Voice command available",
       position: absolute,
@@ -630,12 +575,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       font-size: 12px,
       white-space: nowrap,
       z-index: 1000
-    },
-    {
+    };
+{
       `}</style>
     </div>
   )
-    },
-    {
+    };
+{
 
 export default EnhancedAccessibilityManager;

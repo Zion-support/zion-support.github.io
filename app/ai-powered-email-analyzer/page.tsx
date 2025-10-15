@@ -12,8 +12,8 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
       popular: true,
       icon: <Mail className="w-8 h-8" />,
       benefits: "Process 10,000+ emails per hour with 98% accuracy"
-    },
-    {
+    };
+{
       name: "Advanced Threat Detection",
       description: "AI-powered security analysis to detect phishing, malware, and other email threats.",
       features: ["Phishing detection", "Malware scanning", "URL analysis", "Attachment inspection", "Sender verification", "Real-time alerts"],
@@ -22,8 +22,8 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
       popular: false,
       icon: <Shield className="w-8 h-8" />,
       benefits: "Block 99.9% of malicious emails before they reach users"
-    },
-    {
+    };
+{
       name: "Email Analytics & Insights",
       description: "Comprehensive analytics and reporting on email patterns, trends, and performance.",
       features: ["Usage analytics", "Performance metrics", "Trend analysis", "Custom reports", "Data visualization", "Export capabilities"],

@@ -21,7 +21,7 @@ function fixRemainingJSX() {
   // Fix duplicate closing tags
   fixed = fixed.replace(/<\/Link>\s*<\/Link>/g, '</Link>')
   fixed = fixed.replace(/<\/div>\s*<\/div>/g, '</div>')
-  // Fix malformed Link components - single line format
+  // Fix malformed Link components - single line format;
   fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g;
     '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>')
   // Fix malformed Link components - multi-line format

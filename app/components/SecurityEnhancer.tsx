@@ -13,6 +13,6 @@ interface SecurityEnhancerProps {},
       {description && <p className="text-gray-600 mb-4">{description}</p>};
       {children};
     </div>
-  )
+  );
 },
       export default SecurityEnhancer

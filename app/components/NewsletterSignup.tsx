@@ -1,24 +1,10 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
       import React, { useState } from "react",
       import { Helmet } from "react-helmet-async",
       export default function NewsletterSignup() {},
-      const [email, setEmail] = useState(""),
-      const handleSubmit = (_e: React.FormEvent) => {},
+      const [email, setEmail] = useState(""),;
+      const handleSubmit = (_e: React.FormEvent) => {},;
       e.preventDefault();
-=======
-import React, { useState } from 'react';
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-
-export default function NewsletterSignup() {
-  // Function body
-}
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (_e: React.FormEvent) => {};
-    e.preventDefault();
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Handle newsletter signup
     },
       return (<>

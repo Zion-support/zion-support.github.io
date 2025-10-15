@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async"
 export default function UtilsPage() {
   // Function body
 }
-}return ()
+}return ();
     <div></div>
       <Helmet></Helmet>
         <title>Utils - Zion Tech Group</title>
@@ -28,5 +28,5 @@ export default function UtilsPage() {
         </div>
       </div>
 </div>
-  )
+  );
 };

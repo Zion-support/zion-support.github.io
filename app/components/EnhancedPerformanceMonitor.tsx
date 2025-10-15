@@ -9,8 +9,8 @@ import React, { useState } from 'react',
       cumulativeLayoutShift: number,
       timeToFirstByte: number,
       totalBlockingTime: number
-    },
-    {
+    };
+{
 interface PerformanceMonitorProps {},
       showInProduction?: boolean
 },
@@ -21,8 +21,8 @@ interface PerformanceMonitorProps {},
       const [isVisible, setIsVisible] = useState(false),
       const [isLoading, setIsLoading] = useState(true),
       useEffect() => {},
-      if (typeof window === 'undefined') return,
-      const measurePerformance = async () => {},
+      if (typeof window === 'undefined') return,;
+      const measurePerformance = async () => {},;
       try {};
         // Measure Core Web Vitals
         const vitals: Partial<PerformanceMetrics> = {};
@@ -73,23 +73,12 @@ interface PerformanceMonitorProps {},
       setMetrics(finalMetrics)
         setIsLoading(false)
         // Send metrics to analytics (if available)
-<<<<<<< HEAD
         if (typeof window !== 'undefined' && window.gtag) {},
       window.gtag('event', 'web_vitals', {},
       event_category: 'Performance',
       event_label: 'Core Web Vitals',
       value: Math.round(finalMetrics.largestContentfulPaint),
       custom_map: {};
-=======
-        if ($1) {
-  // If body
-}
-          window.gtag('event', 'web_vitals', {};
-            event_category: 'Performance';
-            event_label: 'Core Web Vitals';
-            value: Math.round(finalMetrics.largestContentfulPaint);
-            custom_map: {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
               'metric_1': finalMetrics.firstContentfulPaint;
               'metric_2': finalMetrics.largestContentfulPaint;
               'metric_3': finalMetrics.firstInputDelay;
@@ -100,8 +89,8 @@ interface PerformanceMonitorProps {},
         };
       } catch (error) {},
       setIsLoading(false)
-    },
-    {
+    };
+{
     };
     // Measure after page load
     if (document.readyState === 'complete') {},
@@ -121,15 +110,15 @@ interface PerformanceMonitorProps {},
       if (value <= thresholds.good) return 'text-green-500',
       if (value <= thresholds.needsImprovement) return 'text-yellow-500',
       return 'text-red-500'
-    },
-    {
+    };
+{
 
   const getScoreText = (_value: number, thresholds: { good: number; needsImprovement: number }) => {},
       if (value <= thresholds.good) return 'Good',
       if (value <= thresholds.needsImprovement) return 'Needs Improvement',
       return 'Poor'
-    },
-    {
+    };
+{
 
   return (<div className="fixed bottom-4 right-4 z-50"></=>
       <button

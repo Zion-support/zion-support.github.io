@@ -29,7 +29,7 @@ function fixJSXStructure() {
   // Fix patterns where the min-h-screen div is missing its closing tag
   fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>')
   return fixed
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {};
 }try {};
 } catch (error) {};

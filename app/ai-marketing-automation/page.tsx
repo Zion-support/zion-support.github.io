@@ -265,7 +265,6 @@ const AiMarketingAutomationPage: React.FC = () => {
                 </Link>
                 <Link
                   to="/demo"
-<<<<<<< HEAD
                   className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 ></Link
 >
@@ -282,6 +281,3 @@ const AiMarketingAutomationPage: React.FC = () => {
 };
 
 export default AiMarketingAutomationPage;
-=======
-                  className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

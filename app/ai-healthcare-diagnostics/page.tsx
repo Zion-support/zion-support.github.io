@@ -12,8 +12,8 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
       popular: true,
       icon: <Eye className="w-8 h-8" />,
       benefits: "99.7% accuracy in medical image analysis"
-    },
-    {
+    };
+{
       name: "Predictive Health Analytics",
       description: "Machine learning models to predict health outcomes and disease progression.",
       features: ["Risk assessment", "Early detection", "Treatment optimization", "Patient monitoring", "Data integration", "Predictive modeling"],
@@ -22,8 +22,8 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
       popular: false,
       icon: <Brain className="w-8 h-8" />,
       benefits: "Reduce readmission rates by 40%"
-    },
-    {
+    };
+{
       name: "AI-Powered Diagnostic Tools",
       description: "Comprehensive diagnostic solutions powered by artificial intelligence.",
       features: ["Symptom analysis", "Disease prediction", "Treatment recommendations", "Patient triage", "Clinical decision support", "Integration APIs"],

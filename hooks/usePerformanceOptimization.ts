@@ -1,4 +1,4 @@
-import {useEffect, useCallback} from 'react'
+import {useEffect, useCallback} from 'react';
 interface PerformanceOptimizationOptions {};
   enableLazyLoading?: boolean
   enablePreloading?: boolean

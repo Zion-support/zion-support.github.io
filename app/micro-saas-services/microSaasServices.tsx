@@ -8,6 +8,6 @@ interface MicrosaasservicesProps {},
     <div className={className}></div>
       <h2>Microsaasservices</h2>
     </div>
-  )
+  );
 },
       export default Microsaasservices

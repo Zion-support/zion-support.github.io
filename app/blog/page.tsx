@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 
 const BlogPage: React.FC = () => {
-=======
 import React from 'react',
       import { Helmet } from 'react-helmet-async',
       import SEOHead from '../components/SEOHead',
       const BlogPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-f3b2
   return (
     <>
       <Helmet>
@@ -20,7 +11,6 @@ import React from 'react',
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-12">
@@ -42,10 +32,7 @@ import React from 'react',
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
   );
 }
 };

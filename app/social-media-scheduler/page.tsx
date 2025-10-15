@@ -1,7 +1,7 @@
 
 import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users, Image } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
-      import ResponsiveContainer from '../components/ResponsiveContainer',
+      import ResponsiveContainer from '../components/ResponsiveContainer',;
       import EnhancedSEO from '../components/EnhancedSEO';
 ,
       const SocialMediaSchedulerPage = () => {",
@@ -332,7 +332,7 @@ import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users
                   href="/contact",
       variant={plan.popular ? "primary" : "outline"},
       size="sm",
-      className="w-full";
+      className="w-full"
                 >",
         "
                   Get Started",
@@ -434,8 +434,8 @@ import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users
         "
     </div>";"
   )
-    },
-    {
+    };
+{
 ,
       export default SocialMediaSchedulerPage;
 ;

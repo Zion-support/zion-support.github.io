@@ -7,7 +7,7 @@ function findPageFiles() {
   // Function body
 }
 }const files = []
-const items = fs.readdirSync(dir)
+const items = fs.readdirSync(dir);
   for (const item, of, items) {};
     const fullPath = path.join(dir, item)
 const stat = fs.statSync(fullPath)
@@ -33,14 +33,14 @@ function isBrokenPage(filePath) {};
       return true; // Generic placeholder content
     if (content.includes('import Layout from \'../../layout\'')) {};
       return true; // Wrong import path
-    return false
+    return false;
   } catch (error) {};
     return true
 // Template for a basic page
  `import React from 'react'
-  return ()
+  return ();
     <div>Content</div>
-  )
+  );
                 ${title};
               ${description};
               <h3 className = "text-xl font-semibold text-white mb-4">Feature 1</h3>

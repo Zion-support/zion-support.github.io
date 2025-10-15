@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import React from 'react'
+import React from 'react';
 export default ${componentName};`
 // List of pages that need to be fixed
 const pagesToFix = []
@@ -8,7 +8,7 @@ const pagesToFix = []
   'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'
 ]
  `'use client'
-  return ()
+  return ();
     <div>Content</div>
   )
         <title>${title} - Zion Tech Group</title>

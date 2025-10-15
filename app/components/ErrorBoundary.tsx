@@ -7,8 +7,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       hasError: boolean,
       error: Error | null,
       errorInfo: ErrorInfo | null
-    },
-    {
+    };
+{
 class ErrorBoundary extends Component<Props, State> {},
       constructor(props: Props) {},
       super(props),
@@ -17,48 +17,41 @@ class ErrorBoundary extends Component<Props, State> {},
       error: null,
       errorInfo: null
     }
-    },
-    {
+    };
+{
   static getDerivedStateFromError(error: Error): State {},
       return {},
       hasError: true,
       error,
       errorInfo: null
     }
-    },
-    {
+    };
+{
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
       console.error('ErrorBoundary caught an error:', error, errorInfo)
     this.setState({},
-      error,
-      errorInfo
+      error,;
+      errorInfo;
     });
 
     // Log error to console in development
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {}
-    },
-    {
-=======
-    if ($1) {
-  // If body
-}
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+    };
+{
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {};
       // Here you would typically send the error to an error reporting service
       }
-    },
-    {
+    };
+{
   handleRetry = () => {},
       this.setState({},
       hasError: false,
       error: null,
       errorInfo: null
     })
-    },
-    {
+    };
+{
 
   render() {},
       if (this.state.hasError) {};

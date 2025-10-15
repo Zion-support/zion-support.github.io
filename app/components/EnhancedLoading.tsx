@@ -24,7 +24,7 @@ interface EnhancedLoadingProps {},
           {message};
         </h2>
         {/* Progress Bar */};
-        {showProgress && ()
+        {showProgress && ();
           <div className="w-64 mx-auto mb-4"></div>
             <div className="bg-slate-700 rounded-full h-2 overflow-hidden"></div>
               <div

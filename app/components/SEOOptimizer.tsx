@@ -9,13 +9,13 @@ import React, { useEffect } from 'react',
       ogImage?: string,
       noIndex?: boolean,
       structuredData?: unknown
-    },
-    {
+    };
+{
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
       title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, _and digital transformation expertise. 99.9% uptime SLA, _24/7 support.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _business automation, _technology consulting, _Zion Tech Group, _machine learning, _5G solutions, _micro SaaS, _enterprise software", _canonical, ogImage = "https://ziontechgroup.com/og-image.jpg", noIndex = false, _structuredData'
 }) => {},
-      const location = useLocation(),
-      const currentUrl = `https://ziontechgroup.com${location.pathname}`,
+      const location = useLocation(),;
+      const currentUrl = `https://ziontechgroup.com${location.pathname}`,;
       const finalCanonical = canonical || currentUrl;
 
   // Generate breadcrumb structured data
@@ -48,8 +48,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
       "@type": "BreadcrumbList";
       "itemListElement": breadcrumbs
     }
-    },
-    {
+    };
+{
   // Default structured data
   const defaultStructuredData = {};
     "@context": "https://schema.org";
@@ -106,13 +106,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
   // Page-specific structured data
   const getPageStructuredData = () => {
 }const path = location.pathname
-<<<<<<< HEAD
     if (path === '/') {},
-=======
-    if ($1) {
-  // If body
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       return {};
         ...defaultStructuredData;
         "@type": "WebSite";
@@ -121,23 +115,23 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
           "target": "https://ziontechgroup.com/search?q={search_term_string}";
           "query-input": "required name=search_term_string"
         }
-    },
-    {
+    };
+{
     },
       if (path === '/about') {},
       return {};
         ...defaultStructuredData;
         "@type": "AboutPage"
       }
-    },
-    {
+    };
+{
     if (path === '/contact') {},
       return {};
         ...defaultStructuredData;
         "@type": "ContactPage"
       }
-    },
-    {
+    };
+{
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {},
       return {};
         ...defaultStructuredData;
@@ -160,8 +154,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
         };
         "serviceType": "AI and IT Solutions"
       }
-    },
-    {
+    };
+{
     return defaultStructuredData
   },
       const finalStructuredData = structuredData || getPageStructuredData()
@@ -175,7 +169,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
       page_location: currentUrl})
     };
   }, [title, currentUrl])
-  return ()
+  return ();
     <Helmet></Helmet>
       {/* Basic Meta Tags */};
       <title>{title}</title>

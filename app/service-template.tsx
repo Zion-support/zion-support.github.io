@@ -5,7 +5,7 @@ interface ServiceTemplateProps {},
   description: string
   features: Array<{},
       title: string
-    description: string
+    description: string;
   }></{};
 >
 },

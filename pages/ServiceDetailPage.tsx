@@ -35,7 +35,7 @@ import {Link} from 'react-router-dom',
         "
   Settings",
         "
-} from 'lucide-react',
+} from 'lucide-react',;
       const ServiceDetailPage: React.FC = () => {};
 }const { id } = useParams<{ id: string }>()
   // Mock service data - in a real app, this would come from an API",
@@ -199,8 +199,8 @@ import {Link} from 'react-router-dom',
       popular: true",
         "
     }
-    },
-    {
+    };
+{
   const service = serviceData[id as keyof typeof serviceData] || serviceData['ai-analytics-dashboard-pro']
   const relatedServices = []
     {},
@@ -236,7 +236,7 @@ import {Link} from 'react-router-dom',
         "
     };
   ]
-  return ()
+  return ();
     <div>",
         "
       <Helmet>",
@@ -326,7 +326,7 @@ import {Link} from 'react-router-dom',
                 <a",
         "
                   href="/contact",
-      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105";
+      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
                 >",
         "
                   Get Started Now",
@@ -337,7 +337,7 @@ import {Link} from 'react-router-dom',
         "
                 <a";"
                   href="tel:+13024640950",
-      className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300";
+      className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
                 >",
         "
                   Call +1 302 464 0950",
@@ -354,7 +354,7 @@ import {Link} from 'react-router-dom',
                 <a",
         "
                   href="tel:+13024640950",
-      className="flex items-center space-x-3 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors";
+      className="flex items-center space-x-3 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors"
                 >";"
                   <Phone className="w-5 h-5 text-purple-400" />",
         "
@@ -370,7 +370,7 @@ import {Link} from 'react-router-dom',
                 <a",
         "
                   href="mailto:kleber@ziontechgroup.com",
-      className="flex items-center space-x-3 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors";
+      className="flex items-center space-x-3 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors"
                 >";"
                   <Mail className="w-5 h-5 text-purple-400" />",
         "
@@ -386,7 +386,7 @@ import {Link} from 'react-router-dom',
                 <a",
         "
                   href="/contact",
-      className="flex items-center space-x-3 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors";
+      className="flex items-center space-x-3 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors"
                 >";"
                   <MessageCircle className="w-5 h-5 text-purple-400" />",
         "
@@ -529,7 +529,7 @@ import {Link} from 'react-router-dom',
                 <Link",
         "
                   to="/services",
-      className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors";
+      className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
                 >",
         "
                   Learn More",
@@ -568,7 +568,7 @@ import {Link} from 'react-router-dom',
             <a",
         "
               href="/contact",
-      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105";
+      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >",
         "
               Start Your Journey",
@@ -579,7 +579,7 @@ import {Link} from 'react-router-dom',
         "
             <a";"
               href="tel:+13024640950",
-      className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300";
+      className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
             >",
         "
               Call +1 302 464 0950",

@@ -68,7 +68,8 @@ const formErrors = getFormErrors(validationResults)
       // Mark all fields as touched
         acc[key as keyof T] = true
         return acc
-      }, {} as Record<keyof T, boolean>)
+      };
+{} as Record<keyof T, boolean>)
       setTouched(allTouched)
       // Validate all fields
       const isValid = validateAllFields()

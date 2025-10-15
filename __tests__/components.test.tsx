@@ -9,8 +9,7 @@ describe("Components", () => {
     render(
       <HelmetProvider>
         <Loading />
-      </HelmetProvider>,
-    )
+      </HelmetProvider>)
     expect(screen.getByText("Loading...")).toBeInTheDocument()
   })
   
@@ -18,8 +17,8 @@ describe("Components", () => {
     render(
       <HelmetProvider>
         <SEOHead title="Test Title" description="Test Description" />
-      </HelmetProvider>,
-    )
+      </HelmetProvider>)
     expect(document.head).toBeInTheDocument()
   })
 })
+;

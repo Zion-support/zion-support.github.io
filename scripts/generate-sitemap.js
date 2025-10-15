@@ -7,7 +7,7 @@ function getAllRoutes() {
   // Function body
 }
 }const routes = []
-  const appDir = path.join(__dirname, '../app')
+  const appDir = path.join(__dirname, '../app');
   function scanDirectory(dir, basePath = '') {};
 }const items = fs.readdirSync(dir)
     for (const item, of, items) {};

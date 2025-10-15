@@ -3,7 +3,7 @@ import fs from "fs"
 import { glob } from "glob"
 // Final comprehensive fixes for remaining JSX issues
 const fixes = []
-  // Fix malformed className attributes
+  // Fix malformed className attributes;
   {};
     pattern: /className="hover:border-cyan-400\/50transition-all/g,"
     replacement: 'className="hover:border-cyan-400/50 transition-all'},"

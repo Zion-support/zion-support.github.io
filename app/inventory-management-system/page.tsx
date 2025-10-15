@@ -293,7 +293,6 @@ const InventoryManagementSystemPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
               icon={<Globe className="w-5 h-5" />};
             >
               Watch Demo
@@ -307,6 +306,3 @@ const InventoryManagementSystemPage = () => {
 };
 
 export default InventoryManagementSystemPage;
-=======
-              icon={<Globe className="w-5 h-5"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react',
-      import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
+import React, { Suspense, lazy } from 'react',;
+      import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',;
       import { HelmetProvider } from 'react-helmet-async';
 
 // Core components - keep these synchronous for critical path
@@ -80,18 +80,10 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
       </div>
     </div>
   </div>
-<<<<<<< HEAD
 ),
       function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false),
       const [, setShowPerformanceDashboard] = React.useState(false);
-=======
-);
-
-function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  const [, setShowPerformanceDashboard] = React.useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 
   // Toggle performance dashboard with keyboard shortcut
   React.useEffect(() => {
@@ -100,21 +92,11 @@ function App() {
         event.preventDefault(),
       setShowPerformanceDashboard(prev => !prev);
       }
-<<<<<<< HEAD
     },
       document.addEventListener('keydown', handleKeyDown),
       return () => document.removeEventListener('keydown', handleKeyDown);
   }, []),
       return (
-=======
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     <LightweightErrorBoundary>
       <HelmetProvider>
         <Router>

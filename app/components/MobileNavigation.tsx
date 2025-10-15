@@ -4,13 +4,13 @@ import React, { useState } from 'react',
       const [isOpen, setIsOpen] = useState(false),
       const toggleMenu = () => {},
       setIsOpen(!isOpen)
-    },
-    {
+    };
+{
 
   const closeMenu = () => {},
       setIsOpen(false)
-    },
-    {
+    };
+{
 
   return (
     <>
@@ -25,7 +25,7 @@ import React, { useState } from 'react',
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
       </button>
       {/* Mobile menu overlay */};
-      {isOpen && ()
+      {isOpen && ();
         <div className="fixed inset-0 z-50 md:hidden"></div>
           {/* Backdrop */};
           <div

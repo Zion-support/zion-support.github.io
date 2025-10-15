@@ -10,18 +10,12 @@ const G5gDataAnalyticsPage: React.FC = () => {
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-<<<<<<< HEAD
-          <h1 className="text-4xl font-bold mb-4">5g-data-analytics</h1>
-          <p className="text-gray-300">Coming soon...</p>
-=======
-          <h1 className="text-4xl font-bold mb-4">Page</h1>
-          <p className="text-gray-300">Advanced solutions coming soon...</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+          <h1 className="text-4xl font-bold mb-4">5G Data Analytics</h1>
+          <p className="text-gray-300">Advanced 5G data analytics solutions coming soon...</p>
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default G5gDataAnalyticsPage;

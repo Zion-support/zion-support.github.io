@@ -102,19 +102,13 @@ const APIDocsPage: React.FC = () => {
     "tone": "professional"
   }'`'
     }
-    },
-    {
+    };
+{
 
   const features = [
-<<<<<<< HEAD
     {},
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       title: 'Fast & Reliable',
-=======
-    {};
-      icon: <Zap>
-      title: 'Fast & Reliable';
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       description: '99.9% uptime with sub-100ms response times'
     };
     {},

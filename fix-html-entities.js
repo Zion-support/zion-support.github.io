@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 function fixHtmlEntities() {
   // Function body
-}
+};
 }try {};
 } catch (error) {};
   console.error(error)

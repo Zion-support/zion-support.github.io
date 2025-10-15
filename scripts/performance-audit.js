@@ -14,7 +14,7 @@ const recommendations = []
 function checkBundleSize() {
   // Function body
 }
-}const distPath = path.join(__dirname, '..', 'dist')
+}const distPath = path.join(__dirname, '..', 'dist');
   if (!fs.existsSync(distPath)) {};
     // console.log('⚠️  No dist folder found. Run build first.')
     return
@@ -163,7 +163,7 @@ function main() {};
 }const severity = issue.severity === 'high' ? '🔴' : issue.severity === 'medium' ? '🟡' : '🟢'
       // console.log(`   ${severity} ${issue.type}: ${issue.file || issue.import || 'N/A'}`)
     })
-    // console.log('')
+    // console.log('');
   };
   if (recommendations.length > 0) {};
     // console.log('💡 Recommendations:')

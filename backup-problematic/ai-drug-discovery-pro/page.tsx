@@ -1,13 +1,13 @@
 export default function AiDrugDiscoveryProPage() {
   // Function body
 }
-}return ()
+}return ();
     <div>Content</div>
   )
     <div>Component content</div>
   )
 },
-      return ()
+      return ();
     <div>Content</div>
   )
         <title>AI Drug Discovery Pro - Zion Tech Group</title>

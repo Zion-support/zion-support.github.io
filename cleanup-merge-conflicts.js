@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename)
 // Function to clean merge conflict markers from a file
 function cleanMergeConflicts() {
   // Function body
-}
+};
   try {};
     let content = fs.readFileSync(filePath, 'utf8')
     let originalContent = content
