@@ -23,7 +23,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by EnhancedErrorBoundary:', error, errorInfo);
     this.setState({ error, errorInfo });
   }
 

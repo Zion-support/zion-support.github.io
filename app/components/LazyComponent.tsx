@@ -43,7 +43,6 @@ export const LazyComponent: React.FC<LazyComponentProps & { children: React.Reac
   fallback = <DefaultFallback />,
   delay = 0 }) => { const [shouldRender, setShouldRender] = React.useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
-  const isVisible = useLazyLoad(ref);
   React.useEffect(() => {
     if (isVisible) {
       if (delay > 0) {

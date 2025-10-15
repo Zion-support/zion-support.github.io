@@ -17,9 +17,7 @@ import { Code,
   Brain, 
   Database } from 'lucide-react';
 
-const AiCodeAssistantProPage = () => { const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
+const AiCodeAssistantProPage = () => { useEffect(() => {
     setIsVisible(true); }, []);
 
   const features = [

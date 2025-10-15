@@ -10,7 +10,8 @@ const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => { //
   const PageComponent = React.useMemo(() => {
     try {
       return lazy(() => import(`./${pagePath }`));
-    } catch (error) { console.error('Error loading page:', error);
+    } catch (error) { 
+      // Error loading page
       return lazy(() => import('./404')); }
   }, [pagePath]);
   return (

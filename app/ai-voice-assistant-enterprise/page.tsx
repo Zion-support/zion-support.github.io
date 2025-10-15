@@ -39,8 +39,6 @@ import {
 } from 'lucide-react';
 
 const AiVoiceAssistantEnterprisePage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);

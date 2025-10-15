@@ -75,17 +75,6 @@ const WebDevelopmentPage: React.FC = () => {
     },
   ];
 
-  const technologies = [
-    { name: 'React', icon: '⚛️' },
-    { name: 'Next.js', icon: '▲' },
-    { name: 'TypeScript', icon: '🔷' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'PostgreSQL', icon: '🐘' },
-    { name: 'AWS', icon: '☁️' },
-    { name: 'Docker', icon: '🐳' },
-  ];
-
   const benefits = [
     {
       title: 'Modern Technologies',

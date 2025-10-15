@@ -9,7 +9,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
   useEffect(() => {
     // Track Core Web Vitals
     onCLS((metric) => {
-      console.log('CLS:', metric);
       // Send to analytics service
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'web_vitals', {
@@ -21,7 +20,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
     });
 
     onINP((metric) => {
-      console.log('INP:', metric);
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
@@ -32,7 +30,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
     });
 
     onFCP((metric) => {
-      console.log('FCP:', metric);
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
@@ -43,7 +40,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
     });
 
     onLCP((metric) => {
-      console.log('LCP:', metric);
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
@@ -54,7 +50,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
     });
 
     onTTFB((metric) => {
-      console.log('TTFB:', metric);
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',

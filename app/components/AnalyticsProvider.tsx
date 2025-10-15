@@ -40,8 +40,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, parameters);
-    }
+      }
   };
 
   const trackPageView = (pageName: string, pagePath: string) => {
@@ -55,8 +54,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, pagePath);
-    }
+      }
   };
 
   const value: AnalyticsContextType = {

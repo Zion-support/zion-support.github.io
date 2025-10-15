@@ -23,7 +23,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by GlobalErrorBoundary:', error, errorInfo);
     this.setState({ error, errorInfo });
   }
 

@@ -117,8 +117,7 @@ client.ai.content.generate({
   type: 'blog',
   tone: 'professional'
 }).then(response => {
-  console.log(response.data.content);
-});`,
+  });`,
       icon: <Code className="w-6 h-6" />
     },
     {

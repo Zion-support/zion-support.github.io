@@ -1,45 +1,56 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Find all TypeScript/TSX files in the app directory
-const files = await glob('app/**/*.{ts,tsx}');
+// Function to fix HTML entity issues
+function fixHtmlEntities(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
 
-console.log(`Found ${files.length} files to process...`);
+  // Fix HTML entities in JSX attributes
+  const htmlEntityFixes = [
+    { pattern: /&quot;/g, replacement: '"' },
+    { pattern: /&apos;/g, replacement: "'" },
+    { pattern: /&lt;/g, replacement: '<' },
+    { pattern: /&gt;/g, replacement: '>' },
+    { pattern: /&amp;/g, replacement: '&' }
+  ];
 
-let totalFixed = 0;
-
-for (const file of files) {
-  const filePath = path.join(process.cwd(), file);
-  
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix HTML entities in JSX
-    content = content.replace(/&apos;/g, "'");
-    content = content.replace(/&quot;/g, '"');
-    content = content.replace(/&lt;/g, '<');
-    content = content.replace(/&gt;/g, '>');
-    content = content.replace(/&amp;/g, '&');
-    
-    // Fix any malformed JSX fragments
-    content = content.replace(/<>\s*<\/>/g, '<></>');
-    
-    // Fix any unclosed JSX fragments
-    content = content.replace(/<>\s*$/gm, '<>');
-    content = content.replace(/^\s*<\/>/gm, '</>');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${file}`);
-      totalFixed++;
+  for (const fix of htmlEntityFixes) {
+    if (content.includes(fix.pattern.source.replace(/[\\^$.*+?()[\]{}|]/g, '\\$&'))) {
+      content = content.replace(fix.pattern, fix.replacement);
+      modified = true;
     }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
   }
+
+  if (modified) {
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed HTML entities in: ${filePath}`);
+    return true;
+  }
+  return false;
 }
 
-console.log(`\nFixed ${totalFixed} files with HTML entity issues.`);
+// Main function
+async function main() {
+  // Find all TypeScript/JavaScript files
+  const files = await glob('app/**/*.{ts,tsx,js,jsx}');
+  
+  console.log(`Found ${files.length} files to check for HTML entity issues...`);
+  
+  let fixedCount = 0;
+  for (const file of files) {
+    const fullPath = path.join(process.cwd(), file);
+    try {
+      if (fixHtmlEntities(fullPath)) {
+        fixedCount++;
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+    }
+  }
+  
+  console.log(`Fixed HTML entities in ${fixedCount} files`);
+}
+
+main().catch(console.error);

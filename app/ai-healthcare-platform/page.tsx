@@ -44,8 +44,7 @@ import { Heart,
   Thermometer, 
   Syringe, 
   Bandage } from 'lucide-react';
-const AiHealthcarePlatformPage: React.FC = () => { const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
+const AiHealthcarePlatformPage: React.FC = () => { useEffect(() => {
     setIsVisible(true); }, []);
   const features = [
     { icon: <Brain className="w-6 h-6" />,
@@ -154,8 +153,7 @@ const AiHealthcarePlatformPage: React.FC = () => { const [isVisible, setIsVisibl
       content: "The platform's analytics have given us insights into patient care patterns that we never had before. Our operational efficiency has improved by 40%.",
       rating: 5 }
   ];
-  const specialties = [
-    { name: "Cardiology", icon: <Heart className="w-6 h-6" /> },
+  Cardiology", icon: <Heart className="w-6 h-6" /> },
     { name: "Radiology", icon: <Camera className="w-6 h-6" /> },
     { name: "Oncology", icon: <Microscope className="w-6 h-6" /> },
     { name: "Neurology", icon: <Brain className="w-6 h-6" /> },

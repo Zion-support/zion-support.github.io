@@ -15,8 +15,7 @@ import { Wifi,
   Cpu, 
   BarChart3, 
   Activity } from 'lucide-react';
-const FiveGImplementationPage: React.FC = () => { const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
+const FiveGImplementationPage: React.FC = () => { useEffect(() => {
     setIsVisible(true); }, []);
   const features = [
     { icon: <Wifi className="w-6 h-6" />,
@@ -123,14 +122,6 @@ const FiveGImplementationPage: React.FC = () => { const [isVisible, setIsVisible
       role: "IT Director",
       content: "The 5G network has revolutionized our telemedicine capabilities. We can now provide remote care with unprecedented quality and speed.",
       rating: 5 }
-  ];
-  const technologies = [
-    { name: "5G NR", description: "New Radio technology" },
-    { name: "Network Slicing", description: "Virtual network segments" },
-    { name: "Edge Computing", description: "Distributed processing" },
-    { name: "IoT Platforms", description: "Device management" },
-    { name: "AI/ML", description: "Intelligent optimization" },
-    { name: "Security", description: "Advanced protection" }
   ];
   return (
     <>
