@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+=======
+import React, { Suspense } from 'react';
+import {Routes, Route} from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1ef
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components

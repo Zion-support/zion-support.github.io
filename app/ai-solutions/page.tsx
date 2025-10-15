@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { TrendingUp } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { ArrowRight, TrendingUp, MessageSquare, Eye, FileText, BarChart3, Settings, Network, CheckCircle } from "lucide-react";
 
 const AiSolutionsPage: React.FC = () => {
   const aiServices = [
@@ -510,5 +511,7 @@ const AiSolutionsPage: React.FC = () => {
     </>
   );
 };
+
+export default AiSolutionsPage;
 
 export default AISolutionsPage;
