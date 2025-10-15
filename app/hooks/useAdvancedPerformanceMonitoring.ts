@@ -43,7 +43,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: any) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', name, {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
         event_category: category,
         value: Math.round(value),
         non_interaction: true,
@@ -98,7 +98,15 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            const metric = entry as any;
+            const metric = entry as PerformanceEntry & { 
+              startTime?: number; 
+              duration?: number;
+              processingStart?: number;
+              hadRecentInput?: boolean;
+              value?: number;
+              responseStart?: number;
+              requestStart?: number;
+            };
             
             switch (entry.entryType) {
               case 'paint':
@@ -112,17 +120,21 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 break;
               
               case 'first-input':
-                metricsRef.current.fid = metric.processingStart - metric.startTime;
+                if (metric.processingStart !== undefined && metric.startTime !== undefined) {
+                  metricsRef.current.fid = metric.processingStart - metric.startTime;
+                }
                 break;
               
               case 'layout-shift':
-                if (!metric.hadRecentInput) {
+                if (!metric.hadRecentInput && metric.value !== undefined) {
                   metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;
                 }
                 break;
               
               case 'navigation':
-                metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
+                if (metric.responseStart !== undefined && metric.requestStart !== undefined) {
+                  metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
+                }
                 break;
               
               case 'measure':
@@ -163,7 +175,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         observerRef.current = observer;
 
       } catch (error) {
-        console.warn('Performance Observer setup failed:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Performance Observer setup failed:', error);
+        }
       }
     };
 
@@ -171,7 +185,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       if (!enableMemoryMonitoring || !('memory' in performance)) return;
 
       const checkMemory = () => {
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        if (!memory) return;
         const usedMB = memory.usedJSHeapSize / 1048576;
         const totalMB = memory.totalJSHeapSize / 1048576;
         const limitMB = memory.jsHeapSizeLimit / 1048576;
@@ -200,8 +215,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const metric = entry as any;
-          if (!metric.hadRecentInput) {
+          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!metric.hadRecentInput && metric.value !== undefined) {
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
           }
@@ -211,7 +226,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
       } catch (error) {
-        console.warn('Layout shift monitoring not supported:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Layout shift monitoring not supported:', error);
+        }
       }
 
       return () => clsObserver.disconnect();
@@ -256,6 +273,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     memoryThreshold,
     longTaskThreshold,
     reportMetrics,
+    reportMetric,
   ]);
 
   return {

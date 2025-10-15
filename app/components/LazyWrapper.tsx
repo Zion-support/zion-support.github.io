@@ -28,14 +28,14 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({
 LazyWrapper.displayName = 'LazyWrapper';
 
 // Lazy loading helper function
-export const createLazyComponent = <P extends Record<string, any>>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>
+export const createLazyComponent = <T extends Record<string, unknown>>(
+  importFunc: () => Promise<{ default: ComponentType<T> }>
 ) => {
   const LazyComponent = lazy(importFunc);
   
-  const WrappedComponent = (props: P) => (
+  const WrappedComponent = (props: T & React.ComponentProps<typeof LazyComponent>) => (
     <LazyWrapper>
-      <LazyComponent {...(props as any)} />
+      <LazyComponent {...props} />
     </LazyWrapper>
   );
   

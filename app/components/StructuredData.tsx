@@ -2,7 +2,7 @@ import React from 'react';
 
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'BreadcrumbList';
-  data: any;
+  data: Record<string, unknown>;
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
@@ -85,22 +85,22 @@ export const WebSiteStructuredData: React.FC = () => (
   />
 );
 
-export const ServiceStructuredData: React.FC<{ service: any }> = ({ service }) => (
+export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> }> = ({ service }) => (
   <StructuredData
     type="Service"
     data={{
-      name: service.name,
-      description: service.description,
+      name: service['name'] as string,
+      description: service['description'] as string,
       provider: {
         '@type': 'Organization',
         name: 'Zion Tech Group',
         url: 'https://ziontechgroup.com',
       },
       areaServed: 'Worldwide',
-      serviceType: service.category,
-      offers: service.price ? {
+      serviceType: service['category'] as string,
+      offers: service['price'] ? {
         '@type': 'Offer',
-        price: service.price,
+        price: service['price'] as number,
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
       } : undefined,
