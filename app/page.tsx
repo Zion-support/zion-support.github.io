@@ -9,11 +9,14 @@ const HomePage: React.FC = () => {
     "description": "Leading provider of AI and IT solutions for modern businesses",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-555-123-4567",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "contact@ziontechgroup.com",
+      "availableLanguage": "English"
     },
     "address": {
       "@type": "PostalAddress",
@@ -26,6 +29,24 @@ const HomePage: React.FC = () => {
     "sameAs": [
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "description": "AI and IT solutions for businesses",
+      "category": "Technology Services"
+    }
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ziontechgroup.com"
+      }
     ]
   };
 
@@ -47,6 +68,9 @@ const HomePage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
         </script>
       </Helmet>
       

@@ -28,12 +28,12 @@ const ContactPage: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
+      // Form data would be sent to backend API
       
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      // Error would be logged to monitoring service in production
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
