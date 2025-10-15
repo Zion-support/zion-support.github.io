@@ -43,8 +43,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to console
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Log error to console (commented out for production)
+    // console.error('Error caught by boundary:', error, errorInfo);
 
     // Report error to monitoring service
     this.reportError(error, errorInfo);
@@ -75,8 +75,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           },
           body: JSON.stringify(errorReport),
         });
-      } catch (reportingError) {
-        console.warn('Failed to report error:', reportingError);
+      } catch {
+        // console.warn('Failed to report error:', reportingError);
       }
     }
 
@@ -146,7 +146,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6 text-lg">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {this.state.errorId && (

@@ -13,8 +13,8 @@ import 'whatwg-fetch';
 
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
 import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder as any;
-global.TextDecoder = TextDecoder as any;
+global.TextEncoder = TextEncoder as unknown as typeof global.TextEncoder;
+global.TextDecoder = TextDecoder as unknown as typeof global.TextDecoder;
 
 // Set up a mock for Vite environment variables accessed via import.meta.env
 process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup';
@@ -70,7 +70,7 @@ if (typeof window.IntersectionObserver === 'undefined') {
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
-  (performance as any).getEntriesByType = () => [];
+  (performance as Performance & { getEntriesByType: (type: string) => PerformanceEntry[] }).getEntriesByType = () => [];
 }
 
 // Ensure all code paths use the mock implementation
