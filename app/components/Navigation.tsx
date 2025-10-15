@@ -131,9 +131,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
-<<<<<<< HEAD
-        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon }
-=======
         { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
         { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
         { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
@@ -148,8 +145,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
         { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
         { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c09
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon }
       ]
     },
     {
