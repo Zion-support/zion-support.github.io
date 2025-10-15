@@ -20,6 +20,8 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
+import ImageOptimizer from "./app/components/ImageOptimizer";
+import AdvancedPerformanceOptimizer from "./app/components/AdvancedPerformanceOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -206,13 +208,14 @@ function App() {
       <ErrorBoundary>
         <HelmetProvider>
           <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
-                  <Navigation />
-                  <Breadcrumb />
-                  <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
+            <AdvancedPerformanceOptimizer>
+              <Router>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <FuturisticBackground>
+                    <Navigation />
+                    <Breadcrumb />
+                    <main id="main-content" role="main">
+                      <Suspense fallback={<LoadingPage />}>
                       <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -446,22 +449,22 @@ function App() {
                       </Routes>
                     </Suspense>
                   </main>
-                  <Footer />
-                  <EnhancedPerformanceOptimizer />
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
-                </FuturisticBackground>
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO />
-                  </div>
-                </AnalyticsProvider>
-              </div>
-            </Router>
+                    <Footer />
+                    <EnhancedAccessibility>
+                      <div></div>
+                    </EnhancedAccessibility>
+                  </FuturisticBackground>
+                  <AnalyticsProvider>
+                    <div>
+                      <PerformanceMonitor />
+                      <PerformanceEnhancer />
+                      <SEOOptimizer />
+                      <EnhancedSEO />
+                    </div>
+                  </AnalyticsProvider>
+                </div>
+              </Router>
+            </AdvancedPerformanceOptimizer>
           </AccessibilityEnhancer>
         </HelmetProvider>
       </ErrorBoundary>

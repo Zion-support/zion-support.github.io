@@ -1,100 +1,144 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import { ImageIcon, Loader2 } from 'lucide-react';
+import React, { useState, useRef, useCallback } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface ImageOptimizerProps {
   src: string;
   alt: string;
+  className?: string;
   width?: number;
   height?: number;
-  className?: string;
-  // placeholder?: string; // Available for future use
-  lazy?: boolean;
+  priority?: boolean;
+  placeholder?: string;
+  effect?: 'blur' | 'black-and-white' | 'opacity';
+  threshold?: number;
+  wrapperClassName?: string;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
-const ImageOptimizer = React.memo<ImageOptimizerProps>(({
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
   alt,
+  className = '',
   width,
   height,
-  className = '',
-  lazy = true
+  priority = false,
+  placeholder,
+  effect = 'blur',
+  threshold = 100,
+  wrapperClassName = '',
+  onLoad,
+  onError,
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   const handleLoad = useCallback(() => {
-    setIsLoading(false);
-  }, []);
+    setIsLoaded(true);
+    onLoad?.();
+  }, [onLoad]);
 
   const handleError = useCallback(() => {
-    setIsLoading(false);
     setHasError(true);
-  }, []);
+    onError?.();
+  }, [onError]);
 
-  const optimizedSrc = useMemo(() => {
-    // Add WebP format support and quality optimization
-    if (src.includes('?')) {
-      return `${src}&format=webp&quality=80`;
+  // Generate optimized image URL with WebP support
+  const getOptimizedSrc = (originalSrc: string) => {
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('data:')) {
+      return originalSrc;
     }
-    return `${src}?format=webp&quality=80`;
-  }, [src]);
+    
+    // Add WebP support and quality optimization
+    const baseUrl = originalSrc;
+    const params = new URLSearchParams();
+    
+    if (width) params.set('w', width.toString());
+    if (height) params.set('h', height.toString());
+    params.set('q', '85'); // Quality
+    params.set('f', 'webp'); // Format
+    
+    return `${baseUrl}?${params.toString()}`;
+  };
 
-  // Placeholder generation logic (currently unused but kept for future use)
-  // const placeholderSrc = useMemo(() => {
-  //   if (placeholder) return placeholder;
-  //   
-  //   // Generate a simple placeholder based on dimensions
-  //   const w = width || 300;
-  //   const h = height || 200;
-  //   return `data:image/svg+xml;base64,${btoa(`
-  //     <svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
-  //       <rect width="100%" height="100%" fill="#f3f4f6"/>
-  //       <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14">
-  //         Loading...
-  //       </text>
-  //     </svg>
-  //   `)}`;
-  // }, [placeholder, width, height]);
+  // Generate placeholder
+  const getPlaceholder = () => {
+    if (placeholder) return placeholder;
+    
+    // Generate a simple gradient placeholder
+    const canvas = document.createElement('canvas');
+    canvas.width = width || 300;
+    canvas.height = height || 200;
+    const ctx = canvas.getContext('2d');
+    
+    if (ctx) {
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, '#1e293b');
+      gradient.addColorStop(1, '#7c3aed');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    return canvas.toDataURL();
+  };
 
   if (hasError) {
     return (
       <div 
-        className={`flex items-center justify-center bg-gray-200 ${className}`}
+        className={`bg-gradient-to-br from-slate-700 to-purple-700 flex items-center justify-center ${className}`}
         style={{ width, height }}
+        role="img"
+        aria-label={alt}
       >
-        <ImageIcon className="w-8 h-8 text-gray-400" />
+        <div className="text-white text-center p-4">
+          <div className="text-4xl mb-2">🖼️</div>
+          <div className="text-sm">Image unavailable</div>
+        </div>
       </div>
     );
   }
 
+  const optimizedSrc = getOptimizedSrc(src);
+  const placeholderSrc = getPlaceholder();
+
   return (
-    <div className={`relative ${className}`} style={{ width, height }}>
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-          <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
-        </div>
-      )}
-      
-      <img
+    <div className={`relative overflow-hidden ${wrapperClassName}`}>
+      <LazyLoadImage
+        ref={imgRef}
         src={optimizedSrc}
         alt={alt}
+        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
         width={width}
         height={height}
-        loading={lazy ? 'lazy' : 'eager'}
+        effect={effect}
+        placeholderSrc={placeholderSrc}
+        threshold={threshold}
         onLoad={handleLoad}
         onError={handleError}
-        className={`transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
-        }`}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
         style={{
           width: width ? `${width}px` : '100%',
           height: height ? `${height}px` : 'auto',
         }}
       />
+      
+      {/* Loading indicator */}
+      {!isLoaded && !hasError && (
+        <div 
+          className="absolute inset-0 bg-gradient-to-br from-slate-700 to-purple-700 flex items-center justify-center animate-pulse"
+          style={{ width, height }}
+        >
+          <div className="text-white text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400 mx-auto mb-2"></div>
+            <div className="text-sm">Loading...</div>
+          </div>
+        </div>
+      )}
     </div>
   );
-});
-
-ImageOptimizer.displayName = 'ImageOptimizer';
+};
 
 export default ImageOptimizer;
