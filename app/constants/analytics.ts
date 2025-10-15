@@ -1,9 +1,15 @@
-// Analytics constants
-export const ANALYTICS_EVENTS = {
-  PAGE_VIEW: 'page_view',
-  CLICK: 'click',
-  SCROLL: 'scroll',
-  FORM_SUBMIT: 'form_submit',
-} as const;
+export const analyticsConfig = {
+  googleAnalytics: {
+    measurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '',
+    enabled: process.env.NODE_ENV === 'production',
+    pageView: 'page_view',
+    click: 'click',
+    scroll: 'scroll',
+    formSubmit: 'form_submit',
+    page: 'page',
+    section: 'section',
+    action: 'action'
+  }
+};
 
-export const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID';
+export default analyticsConfig;

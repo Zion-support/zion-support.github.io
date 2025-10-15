@@ -2,17 +2,19 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "module": "commonjs",
-    "target": "ES2020",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "strict": false
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": [
-    "__tests__/**/*",
-    "app/**/*.ts",
-    "app/**/*.tsx"
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }

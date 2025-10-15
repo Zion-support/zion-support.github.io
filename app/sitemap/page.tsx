@@ -1,266 +1,279 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Map, Globe, ArrowRight, Brain, Shield, Zap, Network } from "lucide-react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ExternalLink, ArrowRight } from 'lucide-react';
 
-export default function SitemapPage() {
+const SitemapPage: React.FC = () => {
   const mainPages = [
-    { name: "Home", path: "/", description: "Zion Tech Group homepage" },
-    { name: "About", path: "/about", description: "Learn about our company and mission" },
-    { name: "Services", path: "/services", description: "Our comprehensive AI and IT services" },
-    { name: "Contact", path: "/contact", description: "Get in touch with our team" },
-    { name: "Blog", path: "/blog", description: "Latest insights and technology trends" },
-    { name: "Privacy Policy", path: "/privacy", description: "How we protect your data" },
-    { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
+    { name: 'Home', path: '/', description: 'Main landing page' },
+    { name: 'About Us', path: '/about', description: 'Learn about our company and team' },
+    { name: 'Services', path: '#', description: 'Our service offerings' },
+    { name: 'Portfolio', path: '/portfolio', description: 'View our work and case studies' },
+    { name: 'Pricing', path: '/pricing', description: 'Service pricing and plans' },
+    { name: 'News', path: '/news', description: 'Latest news and updates' },
+    { name: 'Contact', path: '/contact', description: 'Get in touch with us' }
   ];
 
-  const aiServices = [
-    { name: "AI Analytics", path: "/ai-analytics", description: "Advanced AI-powered analytics solutions" },
-    { name: "AI Automation", path: "/ai-automation", description: "Intelligent process automation" },
-    { name: "AI Business Intelligence", path: "/ai-business-intelligence", description: "Data-driven business insights" },
-    { name: "AI Content Generation", path: "/ai-content-generation", description: "AI-powered content creation" },
-    { name: "AI Customer Service", path: "/ai-customer-service", description: "Intelligent customer support" },
-    { name: "AI Data Analytics", path: "/ai-data-analytics", description: "Advanced data analysis with AI" },
-    { name: "AI Email Automation", path: "/ai-email-automation", description: "Smart email marketing automation" },
-    { name: "AI Fraud Detection", path: "/ai-fraud-detection", description: "AI-powered fraud prevention" },
-    { name: "AI Healthcare", path: "/ai-healthcare", description: "Healthcare AI solutions" },
-    { name: "AI Marketing", path: "/ai-marketing", description: "AI-driven marketing strategies" },
-    { name: "AI Predictive Analytics", path: "/ai-predictive-analytics", description: "Predictive modeling and forecasting" },
-    { name: "AI Project Management", path: "/ai-project-management", description: "Intelligent project management tools" },
-    { name: "AI Recommendation Engine", path: "/ai-recommendation-engine", description: "Personalized recommendation systems" },
-    { name: "AI Sales Automation", path: "/ai-sales-automation", description: "Automated sales processes" },
-    { name: "AI Workflow Automation", path: "/ai-workflow-automation", description: "End-to-end workflow automation" },
+  const servicePages = [
+    { name: 'Micro SAAS Solutions', path: '/micro-saas', description: 'AI-powered micro SAAS tools' },
+    { name: 'AI Services', path: '/ai-services', description: 'Artificial intelligence solutions' },
+    { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT solutions' }
   ];
 
-  const itServices = [
-    { name: "Cloud Infrastructure", path: "/cloud-infrastructure", description: "Scalable cloud solutions" },
-    { name: "Cybersecurity Solutions", path: "/cybersecurity-solutions", description: "Comprehensive security services" },
-    { name: "Web Development", path: "/web-development", description: "Modern web applications" },
-    { name: "Mobile Development", path: "/mobile-development", description: "iOS and Android apps" },
-    { name: "Database Management", path: "/database-management", description: "Database design and optimization" },
-    { name: "Custom Software", path: "/custom-software", description: "Tailored software solutions" },
-    { name: "Network Infrastructure", path: "/network-infrastructure", description: "Network design and implementation" },
+  const supportPages = [
+    { name: 'Help Center', path: '/help', description: 'Get help and support' },
+    { name: 'Documentation', path: '/docs', description: 'Technical documentation' },
+    { name: 'API Reference', path: '/api-docs', description: 'API documentation and examples' },
+    { name: 'System Status', path: '/status', description: 'Service status and uptime' },
+    { name: 'Support', path: '/support', description: 'Contact support team' }
   ];
 
-  const microSaas = [
-    { name: "Zion Analytics Pro", path: "/zion-analytics-pro", description: "Advanced analytics platform" },
-    { name: "Zion Security Shield", path: "/zion-security-shield", description: "Comprehensive security suite" },
-    { name: "Zion Cloud Vault", path: "/zion-cloud-vault", description: "Secure cloud storage solution" },
-    { name: "Zion Content Studio", path: "/zion-content-studio", description: "AI-powered content creation" },
+  const companyPages = [
+    { name: 'About Us', path: '/about', description: 'Company information' },
+    { name: 'Careers', path: '/careers', description: 'Job opportunities' },
+    { name: 'News', path: '/news', description: 'Company news and updates' }
   ];
 
-  const fiveGServices = [
-    { name: "5G Solutions", path: "/5g-solutions", description: "Comprehensive 5G implementation" },
-    { name: "5G Data Analytics", path: "/5g-data-analytics", description: "5G-powered data analysis" },
-    { name: "5G Edge Computing", path: "/5g-edge-computing", description: "Edge computing with 5G" },
-    { name: "5G Implementation", path: "/5g-implementation", description: "5G network deployment" },
-    { name: "5G Mobile Applications", path: "/5g-mobile-applications", description: "5G-optimized mobile apps" },
-    { name: "5G Network Infrastructure", path: "/5g-network-infrastructure", description: "5G network design and setup" },
-    { name: "5G Private Networks", path: "/5g-private-networks", description: "Private 5G network solutions" },
-    { name: "5G Smart City Solutions", path: "/5g-smart-city-solutions", description: "Smart city 5G implementations" },
-    { name: "5G IoT Solutions", path: "/5g-iot-solutions", description: "5G-powered IoT applications" },
+  const legalPages = [
+    { name: 'Privacy Policy', path: '/privacy-policy', description: 'Data protection and privacy' },
+    { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
+    { name: 'Service Level Agreement', path: '/sla', description: 'SLA and support guarantees' },
+    { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' },
+    { name: 'GDPR Compliance', path: '/gdpr', description: 'GDPR compliance information' }
   ];
+
+  const allPages = [
+    ...mainPages,
+    ...servicePages,
+    ...supportPages,
+    ...companyPages,
+    ...legalPages
+  ].filter((page, index, self) => 
+    index === self.findIndex(p => p.path === page.path)
+  );
 
   return (
     <>
       <Helmet>
-        <title>Sitemap - Zion Tech Group | Complete Site Navigation</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and resources." />
-        <meta name="keywords" content="sitemap, navigation, AI services, IT solutions, Zion Tech Group" />
+        <title>Sitemap - Zion Tech Group | All Pages & Navigation</title>
+        <meta name="description" content="Complete sitemap of all pages on Zion Tech Group's website. Find any page quickly and easily." />
+        <meta name="keywords" content="sitemap, navigation, pages, website structure, links" />
         <meta property="og:title" content="Sitemap - Zion Tech Group" />
-        <meta property="og:description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and resources." />
+        <meta property="og:description" content="Complete website sitemap and navigation" />
         <meta property="og:type" content="website" />
       </Helmet>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
-                <Map className="w-8 h-8 text-white" />
-              </div>
+        {/* Hero Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                <ExternalLink className="w-16 h-16 inline-block mr-4 text-cyan-400" />
+                Sitemap
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                Complete overview of all pages on our website. Find what you're looking for quickly and easily.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Site <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Map</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Navigate through all our services, solutions, and resources. Find exactly what you're looking for.
-            </p>
           </div>
+        </section>
 
-          {/* Main Pages */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-              <Globe className="w-8 h-8 mr-3 text-cyan-400" />
-              Main Pages
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {mainPages.map((page) => (
-                <Link
-                  key={page.path}
-                  to={page.path}
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors mb-2">
+        {/* Main Pages */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-8">Main Pages</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {mainPages.map((page, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300">
+                    <Link 
+                      to={page.path} 
+                      className="block group"
+                    >
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                         {page.name}
                       </h3>
-                      <p className="text-gray-300 text-sm">
-                        {page.description}
-                      </p>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
+                      <p className="text-gray-300 mb-4">{page.description}</p>
+                      <div className="flex items-center text-cyan-400 group-hover:text-cyan-300">
+                        <span className="text-sm font-semibold">Visit Page</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </Link>
                   </div>
-                </Link>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* AI Services */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-              <Brain className="w-8 h-8 mr-3 text-cyan-400" />
-              AI Services
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {aiServices.map((service) => (
-                <Link
-                  key={service.path}
-                  to={service.path}
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors mb-2">
-                        {service.name}
+        {/* Service Pages */}
+        <section className="py-16 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-8">Services</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {servicePages.map((page, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300">
+                    <Link 
+                      to={page.path} 
+                      className="block group"
+                    >
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        {page.name}
                       </h3>
-                      <p className="text-gray-300 text-sm">
-                        {service.description}
-                      </p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
+                      <p className="text-gray-300 mb-4">{page.description}</p>
+                      <div className="flex items-center text-cyan-400 group-hover:text-cyan-300">
+                        <span className="text-sm font-semibold">Learn More</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </Link>
                   </div>
-                </Link>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* IT Services */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-              <Shield className="w-8 h-8 mr-3 text-cyan-400" />
-              IT Services
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {itServices.map((service) => (
-                <Link
-                  key={service.path}
-                  to={service.path}
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors mb-2">
-                        {service.name}
+        {/* Support Pages */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-8">Support & Resources</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {supportPages.map((page, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300">
+                    <Link 
+                      to={page.path} 
+                      className="block group"
+                    >
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        {page.name}
                       </h3>
-                      <p className="text-gray-300 text-sm">
-                        {service.description}
-                      </p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
+                      <p className="text-gray-300 mb-4">{page.description}</p>
+                      <div className="flex items-center text-cyan-400 group-hover:text-cyan-300">
+                        <span className="text-sm font-semibold">Access Resource</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </Link>
                   </div>
-                </Link>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* Micro SAAS */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-              <Zap className="w-8 h-8 mr-3 text-cyan-400" />
-              Micro SAAS Solutions
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {microSaas.map((service) => (
-                <Link
-                  key={service.path}
-                  to={service.path}
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors mb-2">
-                        {service.name}
+        {/* Company Pages */}
+        <section className="py-16 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-8">Company</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {companyPages.map((page, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300">
+                    <Link 
+                      to={page.path} 
+                      className="block group"
+                    >
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        {page.name}
                       </h3>
-                      <p className="text-gray-300 text-sm">
-                        {service.description}
-                      </p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
+                      <p className="text-gray-300 mb-4">{page.description}</p>
+                      <div className="flex items-center text-cyan-400 group-hover:text-cyan-300">
+                        <span className="text-sm font-semibold">Explore</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </Link>
                   </div>
-                </Link>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* 5G Services */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-              <Network className="w-8 h-8 mr-3 text-cyan-400" />
-              5G Solutions
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {fiveGServices.map((service) => (
-                <Link
-                  key={service.path}
-                  to={service.path}
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors mb-2">
-                        {service.name}
+        {/* Legal Pages */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-8">Legal & Policies</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {legalPages.map((page, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300">
+                    <Link 
+                      to={page.path} 
+                      className="block group"
+                    >
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        {page.name}
                       </h3>
-                      <p className="text-gray-300 text-sm">
-                        {service.description}
-                      </p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
+                      <p className="text-gray-300 mb-4">{page.description}</p>
+                      <div className="flex items-center text-cyan-400 group-hover:text-cyan-300">
+                        <span className="text-sm font-semibold">Read Policy</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </Link>
                   </div>
-                </Link>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* Search Box */}
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Can't Find What You're Looking For?
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Use our search functionality or contact us directly for assistance.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-              >
-                Contact Us
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
-              >
-                Browse All Services
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+        {/* All Pages List */}
+        <section className="py-16 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Complete Page List</h2>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <div className="grid md:grid-cols-2 gap-4">
+                  {allPages.map((page, index) => (
+                    <div key={index} className="flex items-center justify-between py-2 border-b border-white/10 last:border-b-0">
+                      <div>
+                        <Link 
+                          to={page.path} 
+                          className="text-cyan-400 hover:text-cyan-300 font-semibold"
+                        >
+                          {page.name}
+                        </Link>
+                        <p className="text-gray-400 text-sm">{page.description}</p>
+                      </div>
+                      <ExternalLink className="w-4 h-4 text-gray-400" />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-12 text-center max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-6">Need Help Finding Something?</h2>
+              <p className="text-xl text-white/90 mb-8">
+                Can't find what you're looking for? Contact our support team for assistance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                >
+                  Contact Us
+                </Link>
+                <Link 
+                  to="/help" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
+                >
+                  Get Help
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
-}
+};
+
+export default SitemapPage;

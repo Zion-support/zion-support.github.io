@@ -1,35 +1,20 @@
-import React, { createContext, useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-}
-
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const track = (event: string, properties?: Record<string, unknown>) => {
-    // Basic analytics tracking
-    console.log('Analytics Event:', event, properties);
-    
-    // Add your analytics implementation here
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-      (window as unknown as { gtag: (event: string, eventName: string, properties?: Record<string, unknown>) => void }).gtag('event', event, properties);
-    }
-  };
-
-  useEffect(() => {
-    // Initialize analytics
-    console.log('Analytics Provider initialized');
-  }, []);
-
+const AnalyticsProvider: React.FC = () => {
   return (
-    <AnalyticsContext.Provider value={{ track }}>
-      {children}
-    </AnalyticsContext.Provider>
+    <>
+      <Helmet>
+        <title>AnalyticsProvider - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">AnalyticsProvider</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+      </div>
+    </>
   );
 };
 

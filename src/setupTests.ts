@@ -1,7 +1,13 @@
-// Jest setup file
-import '@testing-library/jest-dom';'
+import '@testing-library/jest-dom';
+
+// Mock TextEncoder and TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {'  writable: true,
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
@@ -16,11 +22,16 @@ Object.defineProperty(window, 'matchMedia', {'  writable: true,
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
+  root = null;
+  rootMargin = '';
+  thresholds = [];
+  
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+  takeRecords() { return []; }
+} as unknown as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
