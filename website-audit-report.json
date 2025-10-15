@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-10-13T04:56:32.642Z",
+  "summary": {
+    "totalRoutes": 455,
+    "totalPages": 454,
+    "brokenLinks": 0,
+    "missingPages": 0,
+    "navigationIssues": 0,
+    "seoIssues": 0
+  },
+  "details": {
+    "totalPages": 0,
+    "brokenLinks": [],
+    "missingPages": [],
+    "navigationIssues": [],
+    "seoIssues": [],
+    "performanceIssues": [],
+    "accessibilityIssues": []
+  }
+}
