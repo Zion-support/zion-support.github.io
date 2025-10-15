@@ -54,7 +54,9 @@ const Header: React.FC = () => {
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' },
+        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
+        { name: 'AI Cloud Migration Pro', href: '/ai-cloud-migration-pro' }
       ]
     },
     {
@@ -81,7 +83,13 @@ const Header: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Automation', href: '/ai-email-marketing-automation' },
+        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro' },
+        { name: 'AI Health Monitoring Pro', href: '/ai-health-monitoring-pro' }
       ]
     },
     {
@@ -141,7 +149,7 @@ const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden xl:flex items-center space-x-1">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
@@ -185,7 +193,7 @@ const Header: React.FC = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden xl:flex items-center space-x-4">
               <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                 Get Quote
               </button>
@@ -194,7 +202,7 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+              className="xl:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -202,7 +210,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden transition-all duration-300 ${
+        <div className={`xl:hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20">

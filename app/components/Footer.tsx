@@ -46,7 +46,9 @@ const Footer: React.FC = () => {
         { name: 'Database Solutions', href: '/database-solutions' },
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' },
+        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
+        { name: 'AI Cloud Migration Pro', href: '/ai-cloud-migration-pro' }
       ]
     },
     {
@@ -70,7 +72,13 @@ const Footer: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Automation', href: '/ai-email-marketing-automation' },
+        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro' },
+        { name: 'AI Health Monitoring Pro', href: '/ai-health-monitoring-pro' }
       ]
     }
   ];
@@ -137,7 +145,8 @@ const Footer: React.FC = () => {
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI, IT, and 5G solutions. 
                 We transform businesses through innovative technology and 
-                intelligent automation.
+                intelligent automation. Trusted by 500+ companies worldwide 
+                with 99.9% uptime guarantee and 24/7 support.
               </p>
               
               {/* Contact Info */}

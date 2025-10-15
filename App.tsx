@@ -1,13 +1,10 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import './app/globals.css';
 
 // Components
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Pages
 import HomePage from './app/page';
@@ -44,11 +41,14 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
-import AiCustomerSupportProPage from './app/ai-customer-support-pro/page';
 import AiSocialMediaManagerPage from './app/ai-social-media-manager/page';
-import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
+import AiEmailMarketingAutomationPage from './app/ai-email-marketing-automation/page';
+import AiCustomerSupportChatbotPage from './app/ai-customer-support-chatbot/page';
+import AiProjectManagementProPage from './app/ai-project-management-pro/page';
+import AiFinancialAdvisorProPage from './app/ai-financial-advisor-pro/page';
+import AiHealthMonitoringProPage from './app/ai-health-monitoring-pro/page';
 import AiCybersecuritySuitePage from './app/ai-cybersecurity-suite/page';
-import FiveGAiIntegrationPage from './app/5g-ai-integration/page';
+import AiCloudMigrationProPage from './app/ai-cloud-migration-pro/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -71,7 +71,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <EnhancedErrorBoundary>
+    <div>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -110,6 +110,8 @@ const App: React.FC = () => {
                   <Route path="/advanced-security-suite" element={<AdvancedSecuritySuitePage />} />
                   <Route path="/performance-monitoring" element={<PerformanceMonitoringPage />} />
                   <Route path="/devops-solutions" element={<DevOpsSolutionsPage />} />
+                  <Route path="/ai-cybersecurity-suite" element={<AiCybersecuritySuitePage />} />
+                  <Route path="/ai-cloud-migration-pro" element={<AiCloudMigrationProPage />} />
                   
                   {/* 5G Solutions */}
                   <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
@@ -126,20 +128,20 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
-                  <Route path="/ai-customer-support-pro" element={<AiCustomerSupportProPage />} />
                   <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
-                  <Route path="/ai-email-marketing-pro" element={<AiEmailMarketingProPage />} />
-                  <Route path="/ai-cybersecurity-suite" element={<AiCybersecuritySuitePage />} />
-                  <Route path="/5g-ai-integration" element={<FiveGAiIntegrationPage />} />
+                  <Route path="/ai-email-marketing-automation" element={<AiEmailMarketingAutomationPage />} />
+                  <Route path="/ai-customer-support-chatbot" element={<AiCustomerSupportChatbotPage />} />
+                  <Route path="/ai-project-management-pro" element={<AiProjectManagementProPage />} />
+                  <Route path="/ai-financial-advisor-pro" element={<AiFinancialAdvisorProPage />} />
+                  <Route path="/ai-health-monitoring-pro" element={<AiHealthMonitoringProPage />} />
                 </Routes>
               </Suspense>
             </main>
             <Footer />
-            <PerformanceMonitor />
           </div>
         </Router>
       </HelmetProvider>
-    </EnhancedErrorBoundary>
+    </div>
   );
 };
 

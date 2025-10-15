@@ -70,19 +70,19 @@ const HomePage: React.FC = () => {
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Advanced Security Suite",
-      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
-      price: "$399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
-      link: "/advanced-security-suite"
+      title: "AI Cybersecurity Suite",
+      description: "Revolutionary AI-powered cybersecurity with advanced threat detection and zero trust architecture.",
+      price: "$499/month",
+      features: ["AI Threat Detection", "Zero Trust Security", "24/7 Monitoring", "Compliance Management"],
+      link: "/ai-cybersecurity-suite"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "AI Chatbot Enterprise",
-      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities.",
-      price: "$149/month",
-      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
-      link: "/ai-chatbot-enterprise"
+      title: "AI Social Media Manager",
+      description: "Automated social media management with AI content generation and smart scheduling across all platforms.",
+      price: "$79/month",
+      features: ["AI Content Generation", "Smart Scheduling", "Multi-platform Support", "Analytics Dashboard"],
+      link: "/ai-social-media-manager"
     }
   ];
 
@@ -188,9 +188,9 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Services Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
+          <section className="py-24 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
+              <div className="text-center mb-20">
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
                   <Star className="w-4 h-4 mr-2" />
                   Premium Services
@@ -200,9 +200,10 @@ const HomePage: React.FC = () => {
                     Our Services
                   </span>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   Comprehensive AI, IT, and 5G solutions designed to accelerate your business growth. 
-                  From micro SAAS platforms to enterprise-grade systems.
+                  From micro SAAS platforms to enterprise-grade systems. Choose from our extensive 
+                  portfolio of innovative services.
                 </p>
               </div>
               
@@ -256,7 +257,7 @@ const HomePage: React.FC = () => {
           </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-gray-900">
+        <section className="py-24 bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
