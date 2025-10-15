@@ -28,16 +28,25 @@ const Header: React.FC = () => {
       icon: <Users className="w-4 h-4" />
     },
     {
+      name: 'Services Overview',
+      href: '/services-overview',
+      icon: <BarChart3 className="w-4 h-4" />
+    },
+    {
       name: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Project Manager', href: '/ai-project-manager' },
+        { name: 'AI Customer Support', href: '/ai-customer-support' },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing' }
       ]
     },
     {
@@ -50,7 +59,9 @@ const Header: React.FC = () => {
         { name: 'Database Solutions', href: '/database-solutions' },
         { name: 'Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' },
+        { name: 'Cloud Migration Services', href: '/cloud-migration-services' },
+        { name: 'Cybersecurity Consulting', href: '/cybersecurity-consulting' }
       ]
     },
     {
@@ -135,8 +146,26 @@ const Header: React.FC = () => {
               </div>
             </Link>
 
+            {/* Tablet Navigation */}
+            <div className="hidden lg:flex xl:hidden items-center space-x-1">
+              {navigationItems.slice(0, 4).map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-300 text-sm ${
+                    isActive(item.href)
+                      ? 'bg-cyan-600 text-white shadow-lg shadow-cyan-500/25'
+                      : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
+                  }`}
+                >
+                  {item.icon}
+                  <span className="font-medium">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden xl:flex items-center space-x-1">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
@@ -180,13 +209,13 @@ const Header: React.FC = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden xl:flex items-center space-x-4">
               <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                 Get Quote
               </button>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile/Tablet Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
@@ -196,7 +225,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile/Tablet Menu */}
         <div className={`lg:hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>

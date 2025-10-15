@@ -83,6 +83,54 @@ const HomePage: React.FC = () => {
       price: "$149/month",
       features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
       link: "/ai-chatbot-enterprise"
+    },
+    {
+      icon: <Code className="w-8 h-8" />,
+      title: "AI Social Media Manager",
+      description: "Revolutionary AI-powered social media management with automated content creation and analytics.",
+      price: "$149/month",
+      features: ["AI Content Generation", "Multi-platform Support", "Analytics Dashboard", "Automated Posting"],
+      link: "/ai-social-media-manager"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Project Manager",
+      description: "Intelligent project management with AI-powered automation, resource optimization, and analytics.",
+      price: "$99/month",
+      features: ["AI Planning", "Resource Optimization", "Progress Tracking", "Team Collaboration"],
+      link: "/ai-project-manager"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "AI Customer Support",
+      description: "24/7 AI-powered customer support with natural language processing and omnichannel capabilities.",
+      price: "$149/month",
+      features: ["24/7 Support", "Multi-language", "Omnichannel", "Sentiment Analysis"],
+      link: "/ai-customer-support"
+    },
+    {
+      icon: <Wifi className="w-8 h-8" />,
+      title: "Cloud Migration Services",
+      description: "Expert cloud migration services with zero-downtime migration and 40% cost reduction guarantee.",
+      price: "From $2,999",
+      features: ["Zero Downtime", "Cost Optimization", "Multi-cloud Support", "24/7 Support"],
+      link: "/cloud-migration-services"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Cybersecurity Consulting",
+      description: "Expert cybersecurity consulting with comprehensive security assessments and compliance management.",
+      price: "From $2,999",
+      features: ["Security Assessment", "Penetration Testing", "Compliance Management", "24/7 Monitoring"],
+      link: "/cybersecurity-consulting"
+    },
+    {
+      icon: <Mail className="w-8 h-8" />,
+      title: "AI Email Marketing",
+      description: "Revolutionary AI-powered email marketing with 35% higher open rates and 300% ROI improvement.",
+      price: "$99/month",
+      features: ["AI Content Generation", "Advanced Analytics", "A/B Testing", "Automation Workflows"],
+      link: "/ai-email-marketing"
     }
   ];
 
@@ -192,11 +240,11 @@ const HomePage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
                 {services.map((service, index) => (
                   <div 
                     key={index} 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 lg:p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-white">{service.icon}</div>

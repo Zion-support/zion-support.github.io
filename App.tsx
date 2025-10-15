@@ -43,6 +43,13 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import AiSocialMediaManagerPage from './app/ai-social-media-manager/page';
+import AiProjectManagerPage from './app/ai-project-manager/page';
+import AiCustomerSupportPage from './app/ai-customer-support/page';
+import CloudMigrationServicesPage from './app/cloud-migration-services/page';
+import AiEmailMarketingPage from './app/ai-email-marketing/page';
+import CybersecurityConsultingPage from './app/cybersecurity-consulting/page';
+import ServicesOverviewPage from './app/services-overview/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -83,6 +90,7 @@ const App: React.FC = () => {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/services-overview" element={<ServicesOverviewPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
@@ -120,6 +128,14 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
+                  <Route path="/ai-project-manager" element={<AiProjectManagerPage />} />
+                  <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
+                  <Route path="/ai-email-marketing" element={<AiEmailMarketingPage />} />
+                  
+                  {/* IT Services */}
+                  <Route path="/cloud-migration-services" element={<CloudMigrationServicesPage />} />
+                  <Route path="/cybersecurity-consulting" element={<CybersecurityConsultingPage />} />
                 </Routes>
               </Suspense>
             </main>

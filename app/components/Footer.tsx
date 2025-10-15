@@ -34,7 +34,11 @@ const Footer: React.FC = () => {
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Project Manager', href: '/ai-project-manager' },
+        { name: 'AI Customer Support', href: '/ai-customer-support' },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing' }
       ]
     },
     {
@@ -46,7 +50,9 @@ const Footer: React.FC = () => {
         { name: 'Database Solutions', href: '/database-solutions' },
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' },
+        { name: 'Cloud Migration Services', href: '/cloud-migration-services' },
+        { name: 'Cybersecurity Consulting', href: '/cybersecurity-consulting' }
       ]
     },
     {
@@ -105,7 +111,7 @@ const Footer: React.FC = () => {
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-2 mb-6">
@@ -161,7 +167,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Service Categories */}
-            <div className="lg:col-span-2">
+            <div className="md:col-span-2 lg:col-span-2">
               <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {serviceCategories.map((category) => (
