@@ -76,7 +76,6 @@ const DocsPage: React.FC = () => {
     ) || []
   })).filter(section => section.articles?.length > 0);
 
-export default function DocsZionTechGroup() {
   return (
     <>
       <Helmet>
@@ -272,4 +271,6 @@ export default function DocsZionTechGroup() {
       </div>
     </>
   );
-}
+};
+
+export default DocsPage;

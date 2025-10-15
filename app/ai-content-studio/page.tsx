@@ -1,32 +1,21 @@
-import { ArrowRight } from "lucide-react";
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-
-export default function AIContentStudioZionTechGroup() {
+const AiContentStudioPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>AI Content Studio - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+      <SEOHead 
+        title="ai-content-studio - Zion Tech Group"
+        description="Zion Tech Group ai-content-studio service page"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            AI Content Studio
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional AI content studio services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <h1 className="text-4xl font-bold mb-4">ai-content-studio</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
-}
+};
+
+export default AiContentStudioPage;

@@ -4,12 +4,9 @@ export const Performanceoptimizer = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Performanceoptimizer;
+  cleanup: () => {}
+} }}
+export default Performanceoptimizer

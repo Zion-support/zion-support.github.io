@@ -1,132 +1,7 @@
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-export default function ZionCloudVault() {
-  const features = [
-    {
-      icon: <Cloud className="w-6 h-6" />,
-      title: "Secure Cloud Storage",
-      description: "Enterprise-grade cloud storage with 99.999999999% durability and 99.9% availability"
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
-      title: "End-to-End Encryption",
-      description: "Military-grade AES-256 encryption for data at rest and in transit"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Security",
-      description: "Multi-factor authentication, zero-knowledge architecture, and SOC 2 compliance"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Lightning Fast Sync",
-      description: "Real-time file synchronization across all your devices with intelligent caching"
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global CDN",
-      description: "Worldwide content delivery network for fast access from anywhere"
-    },
-    {
-      icon: <Database className="w-6 h-6" />,
-      title: "Unlimited Storage",
-      description: "Scale from GB to PB with no storage limits and automatic scaling"
-    }
-  ];
-
-  const storageFeatures = [
-    "File Versioning & History",
-    "Collaborative Workspaces",
-    "Advanced Search & Filtering",
-    "Mobile & Desktop Apps",
-    "API & SDK Access",
-    "Custom Branding",
-    "Audit Logs & Reporting",
-    "Backup & Recovery",
-    "Compliance Tools (GDPR, HIPAA)",
-    "Team Management",
-    "Share Links & Permissions",
-    "Integration with 100+ Apps"
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Personal",
-      price: "$9",
-      period: "/month",
-      description: "Perfect for individuals",
-      features: [
-        "1TB storage",
-        "5 devices",
-        "Basic encryption",
-        "Email support",
-        "Mobile apps",
-        "File sharing"
-      ],
-      popular: false
-    },
-    {
-      name: "Business",
-      price: "$25",
-      period: "/month",
-      description: "Most popular for teams",
-      features: [
-        "5TB storage",
-        "Unlimited devices",
-        "Advanced encryption",
-        "Priority support",
-        "Team collaboration",
-        "Admin dashboard",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$99",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited storage",
-        "Advanced security",
-        "Custom integrations",
-        "24/7 phone support",
-        "White-label solution",
-        "Compliance tools",
-        "Dedicated account manager"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Adams",
-      company: "Creative Agency",
-      role: "Creative Director",
-      content: "Zion Cloud Vault has revolutionized our file management. The collaboration features are incredible and our team productivity has increased by 60%.",
-      rating: 5
-    },
-    {
-      name: "Robert Kim",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "The security features give us peace of mind. We can safely store sensitive client data knowing it's protected with military-grade encryption.",
-      rating: 5
-    },
-    {
-      name: "Maria Garcia",
-      company: "Consulting Firm",
-      role: "Operations Manager",
-      content: "The sync speed is amazing. Files are available instantly across all our devices. It's like having a personal cloud that just works.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage Platform | Zion Tech Group</title>
         <meta
@@ -135,7 +10,7 @@ export default function ZionCloudVault() {
         />
         <meta
           name="keywords"
-          content="cloud storage, secure file sharing, data encryption, cloud backup, file synchronization, enterprise storage, data security"
+          content="cloud storage, _secure file sharing, _data encryption, _cloud backup, _file synchronization, _enterprise storage, data security"
         />
       </Helmet>
 
@@ -154,7 +29,7 @@ export default function ZionCloudVault() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Secure your most valuable data with the world's most advanced cloud storage platform. 
-              End-to-end encryption, unlimited storage, and enterprise-grade security for modern businesses.
+              End-to-end encryption, _unlimited storage, and enterprise-grade security for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -183,7 +58,7 @@ export default function ZionCloudVault() {
                 <div className="text-gray-300">Encryption Standard</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">50, 000+</div>
                 <div className="text-gray-300">Businesses Trust Us</div>
               </div>
             </div>
@@ -198,7 +73,7 @@ export default function ZionCloudVault() {
                 Advanced Cloud Storage Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to store, sync, and secure your data in the cloud.
+                Everything you need to store, _sync, and secure your data in the cloud.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -325,7 +200,7 @@ export default function ZionCloudVault() {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -369,4 +244,6 @@ export default function ZionCloudVault() {
       </div>
     </>
   );
-}
+};
+
+export default ZionCloudVaultPage;

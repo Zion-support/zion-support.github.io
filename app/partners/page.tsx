@@ -1,9 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
-
-export default function Partners() {
+import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export default function Partners() {
   const partners = [
     {
       name: "Microsoft",
@@ -93,12 +91,11 @@ export default function Partners() {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
-        <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
+        <meta name="keywords" content="partners, partnerships, _technology partners, _cloud partners, strategic alliances" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -182,8 +179,7 @@ export default function Partners() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {tiers.map((tier, index) => (
-                <div
+              {tiers.map((tier, index) => (<div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
@@ -236,4 +232,6 @@ export default function Partners() {
       </div>
     </>
   );
-}
+};
+
+export default PartnersPage;

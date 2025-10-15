@@ -4,12 +4,9 @@ export const Logger = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Logger;
+  cleanup: () => {}
+} }}
+export default Logger

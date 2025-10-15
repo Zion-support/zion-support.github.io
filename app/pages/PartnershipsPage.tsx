@@ -1,34 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Shield, 
-  Clock, 
-  TrendingUp,
-  BarChart3,
-  Database,
-  Smartphone,
-  Globe,
-  Target,
-  Lightbulb,
-  Rocket,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Code,
-  Eye,
-  MessageSquare,
-  Cpu,
-  Network,
-  FileText,
-  Settings
-} from 'lucide-react';
+import { Star, Target, MessageSquare } from "lucide-react";
 
 const PartnershipsPage: React.FC = () => {
   const partnershipTypes = [
@@ -154,7 +125,7 @@ const PartnershipsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {partnershipTypes.map((type, index) => (
+            {partnershipTypes.map((type) => (
               <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6">
                   {type.icon}
@@ -185,7 +156,7 @@ const PartnershipsPage: React.FC = () => {
                 We look for partners who share our commitment to excellence and customer success.
               </p>
               <ul className="space-y-4">
-                {requirements.map((requirement, index) => (
+                {requirements.map((requirement) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{requirement}</span>
@@ -200,7 +171,7 @@ const PartnershipsPage: React.FC = () => {
                 Join our partner program and unlock exclusive benefits and opportunities.
               </p>
               <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefit) => (
                   <li key={index} className="flex items-start">
                     <Star className="w-6 h-6 text-yellow-400 mr-3 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{benefit}</span>

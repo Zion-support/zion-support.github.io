@@ -1,65 +1,62 @@
 
-export default function Careers() {
-  const jobOpenings = [
-    {
+export default function Careers() {}
+}const jobOpenings = []
+    {}
       title: 'Senior AI Engineer',
       department: 'AI Solutions',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead development of AI-powered solutions and machine learning models.',
-      requirements: [
+      requirements: []
         'Master\'s degree in Computer Science or related field',
         '5+ years experience with Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong understanding of ML algorithms and data structures'
       ]
     },
-    {
+    {}
       title: 'Full Stack Developer',
       department: 'Web Development',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '3+ years',
       description: 'Build scalable web applications using modern technologies.',
-      requirements: [
+      requirements: []
         'Bachelor\'s degree in Computer Science or related field',
         '3+ years experience with React, Node.js, TypeScript',
         'Experience with databases (PostgreSQL, MongoDB)',
         'Knowledge of cloud deployment and DevOps practices'
       ]
     },
-    {
+    {}
       title: 'Cybersecurity Specialist',
       department: 'Security',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '4+ years',
       description: 'Protect our systems and client data with advanced security measures.',
-      requirements: [
+      requirements: []
         'Bachelor\'s degree in Cybersecurity or related field',
         '4+ years experience in cybersecurity',
         'Certifications: CISSP, CISM, or equivalent',
         'Experience with security tools and incident response'
       ]
     }
-  ];
-
-  const benefits = [
+  ]
+  const benefits = []
     { icon: <Users className="w-6 h-6" />, title: 'Remote Work', description: 'Work from anywhere with flexible hours' },
     { icon: <Star className="w-6 h-6" />, title: 'Career Growth', description: 'Opportunities for advancement and skill development' },
     { icon: <Briefcase className="w-6 h-6" />, title: 'Competitive Salary', description: 'Attractive compensation packages' },
     { icon: <CheckCircle className="w-6 h-6" />, title: 'Health Benefits', description: 'Comprehensive health and wellness benefits' }
-  ];
-
-  return (
-    <>
+  ]
+  return ()
+    <div>
       <Helmet>
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Join our team of innovative professionals building the future of technology. Explore career opportunities at Zion Tech Group." />
         <meta name="keywords" content="careers, jobs, technology, AI, software development, cybersecurity, remote work" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -70,7 +67,7 @@ export default function Careers() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Be part of a dynamic team that's shaping the future of technology. 
+              Be part of a dynamic team that's shaping the future of technology.
               We're looking for passionate individuals who want to make a difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,7 +81,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -92,7 +88,7 @@ export default function Careers() {
               Why Work With Us?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => ()
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
                   <div className="text-cyan-400 mb-4 flex justify-center">
                     {benefit.icon}
@@ -104,7 +100,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* Job Openings Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -112,7 +107,7 @@ export default function Careers() {
               Current Openings
             </h2>
             <div className="space-y-8">
-              {jobOpenings.map((job, index) => (
+              {jobOpenings.map((job, index) => ()
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                     <div>
@@ -144,7 +139,7 @@ export default function Careers() {
                   <div>
                     <h4 className="text-lg font-semibold mb-3 text-cyan-400">Requirements:</h4>
                     <ul className="space-y-2">
-                      {job.requirements.map((req, reqIndex) => (
+                      {job.requirements.map((req, reqIndex) => ()
                         <li key={reqIndex} className="flex items-start text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                           {req}
@@ -157,7 +152,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -174,6 +168,6 @@ export default function Careers() {
           </div>
         </section>
       </div>
-    </>
-  );
+</div>
+  )
 }

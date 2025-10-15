@@ -1,10 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
-export default function FuturisticGlow() {
-  return (
-    <>
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react"
+export default function FuturisticGlow() {}
+}return ()
+    <div>
       <Helmet>
         <title>Futuristic Glow - Zion Tech Group</title>
       </Helmet>
@@ -17,6 +16,6 @@ export default function FuturisticGlow() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </>
-  );
+</div>
+  )
 }

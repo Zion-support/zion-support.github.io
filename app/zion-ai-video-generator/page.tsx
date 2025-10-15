@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Brain, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
 export default function ZionAiVideoGenerator() {
@@ -138,23 +137,12 @@ export default function ZionAiVideoGenerator() {
     }
   ];
 
+const ZionAiVideoGeneratorPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Create professional videos instantly with AI. Zion AI Video Generator transforms text into stunning videos with voice synthesis, templates, and 4K quality. Start your free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="AI video generator, video creation, automated video, AI video maker, video production, content creation, video templates, voice synthesis"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" />
-      </Helmet>
-      <SEOOptimizer
-        title="Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group"
-        description="Create professional videos instantly with AI. Zion AI Video Generator transforms text into stunning videos with voice synthesis, templates, and 4K quality. Start your free trial today!"
+      <SEOHead 
+        title="zion-ai-video-generator - Zion Tech Group"
+        description="Zion Tech Group zion-ai-video-generator service page"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -379,7 +367,7 @@ export default function ZionAiVideoGenerator() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -456,4 +444,6 @@ export default function ZionAiVideoGenerator() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAiVideoGeneratorPage;

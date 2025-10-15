@@ -1,43 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Server, 
-  Globe, 
-  Shield, 
-  Code, 
-  Database, 
-  Smartphone,
-  BarChart3,
-  Users,
-  Settings,
-  Award,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Rocket,
-  Cloud,
-  Lock,
-  Wifi,
-  Monitor,
-  HardDrive,
-  Layers,
-  MessageSquare,
-  Eye,
-  FileText,
-  Network
-} from 'lucide-react';
-
-const ServicesPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Database, BarChart3, Users, Settings, Award, Clock, Star, TrendingUp, Target, Lightbulb, Rocket, Cloud, Network } from 'lucide-react';const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
@@ -194,14 +158,13 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Our Services - Comprehensive AI & IT Solutions | Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive range of services including micro SAAS solutions, AI services, IT solutions, and 5G technologies. Expert solutions for your business needs." />
-        <meta name="keywords" content="services, micro SAAS, AI services, IT solutions, 5G solutions, cloud infrastructure, cybersecurity, web development, mobile development" />
+        <meta name="description" content="Discover our comprehensive range of services including micro SAAS solutions, AI services, _IT solutions, and 5G technologies. Expert solutions for your business needs." />
+        <meta name="keywords" content="services, _micro SAAS, _AI services, _IT solutions, _5G solutions, _cloud infrastructure, _cybersecurity, _web development, mobile development" />
         <meta property="og:title" content="Our Services - Comprehensive AI & IT Solutions" />
-        <meta property="og:description" content="Discover our comprehensive range of services including micro SAAS solutions, AI services, IT solutions, and 5G technologies." />
+        <meta property="og:description" content="Discover our comprehensive range of services including micro SAAS solutions, _AI services, _IT solutions, and 5G technologies." />
         <meta property="og:url" content="https://ziontechgroup.com/services" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Helmet>
@@ -375,7 +338,7 @@ const ServicesPage: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map(( i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>

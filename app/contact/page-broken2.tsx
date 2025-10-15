@@ -1,9 +1,8 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
-const Pagebroken2Page = () => {
-  return (
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react"
+const Pagebroken2Page = () => {}
+}return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page Broken2 | Zion Tech Group</title>
@@ -12,7 +11,6 @@ const Pagebroken2Page = () => {
           content="Professional page broken2 services by Zion Tech Group"
         />
       </Helmet>
-
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -41,7 +39,6 @@ const Pagebroken2Page = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default Pagebroken2Page;
+  )
+}
+export default Pagebroken2Page

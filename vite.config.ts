@@ -28,7 +28,31 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: false,
-    minify: "terser",
+<<<<<<< HEAD
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Create chunks based on node_modules
+          if (id.includes('node_modules')) {
+            // React and React DOM
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            // Lucide React icons
+            if (id.includes('lucide-react')) {
+              return 'icons-vendor';
+            }
+            // Framer Motion
+            if (id.includes('framer-motion')) {
+              return 'animation-vendor';
+            }
+            // Other vendor libraries
+            return 'vendor';
+          }
+        },
+=======
+    minify: "esbuild",
     target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
@@ -36,45 +60,10 @@ export default defineConfig({
     },
     // Performance optimizations
     chunkSizeWarningLimit: 500,
-    assetsInlineLimit: 4096,
     reportCompressedSize: true,
+    assetsInlineLimit: 4096,
     // Enable tree shaking
     treeshake: true,
-    // Optimize for production
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
-        conditionals: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true,
-        loops: true,
-        sequences: true,
-        side_effects: false,
-        unused: true,
-      },
-      mangle: {
-        safari10: true,
-        toplevel: true,
-        properties: {
-          regex: /^_/
-        }
-      },
-      format: {
-        comments: false,
-        ascii_only: true
-      }
-    },
     // Enhanced build optimizations
     rollupOptions: {
       treeshake: {
@@ -119,20 +108,32 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - group by category
+          // AI service pages - group by category for better caching
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+            if (serviceName?.includes('analytics') || serviceName?.includes('data') || serviceName?.includes('business-intelligence')) {
               return 'ai-analytics'
             }
-            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
+            if (serviceName?.includes('content') || serviceName?.includes('generation') || serviceName?.includes('writer')) {
               return 'ai-content'
             }
-            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
+            if (serviceName?.includes('cyber') || serviceName?.includes('security') || serviceName?.includes('fraud')) {
               return 'ai-security'
             }
-            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
+            if (serviceName?.includes('customer') || serviceName?.includes('support') || serviceName?.includes('service')) {
               return 'ai-customer'
+            }
+            if (serviceName?.includes('voice') || serviceName?.includes('speech') || serviceName?.includes('audio')) {
+              return 'ai-voice'
+            }
+            if (serviceName?.includes('video') || serviceName?.includes('image') || serviceName?.includes('vision')) {
+              return 'ai-media'
+            }
+            if (serviceName?.includes('financial') || serviceName?.includes('fintech') || serviceName?.includes('investment')) {
+              return 'ai-finance'
+            }
+            if (serviceName?.includes('healthcare') || serviceName?.includes('medical') || serviceName?.includes('health')) {
+              return 'ai-healthcare'
             }
             return 'ai-other'
           }
@@ -154,9 +155,27 @@ export default defineConfig({
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
+          // Micro SAAS pages
+          if (id.includes('/micro-saas') && id.includes('/page.tsx')) {
+            return 'micro-saas'
+          }
+          // IT services pages
+          if (id.includes('/it-') && id.includes('/page.tsx')) {
+            return 'it-services'
+          }
+          // Cloud services pages
+          if (id.includes('/cloud-') && id.includes('/page.tsx')) {
+            return 'cloud-services'
+          }
+          // Blockchain pages
+          if (id.includes('/blockchain') && id.includes('/page.tsx')) {
+            return 'blockchain'
+          }
           // Other service pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') && 
+              !id.includes('/micro-saas') && !id.includes('/it-') && !id.includes('/cloud-') && 
+              !id.includes('/blockchain')) {
             return 'pages'
           }
           // Default chunk for other modules
@@ -164,49 +183,33 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const ext = assetInfo.name?.split('.').pop();
-          if (/\.(css)$/i.test(assetInfo.name || '')) {
-            return `assets/css/[name]-[hash].${ext}`;
-          }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return `assets/images/[name]-[hash].${ext}`;
-          }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
-            return `assets/fonts/[name]-[hash].${ext}`;
-          }
-          return `assets/[name]-[hash].${ext}`;
-        },
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
       },
     },
   },
   server: {
     port: 3000,
     open: true,
-    host: true,
-    // Enable HMR
-    hmr: {
-      overlay: true,
-    },
   },
   preview: {
     port: 4173,
     open: true,
-    host: true,
   },
-  // Optimize dependencies
   optimizeDeps: {
     include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "react-helmet-async",
-      "framer-motion",
-      "lucide-react",
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'lucide-react',
+      'framer-motion',
     ],
   },
+<<<<<<< HEAD
+=======
   // CSS optimization
   css: {
     devSourcemap: true,
   },
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
 });

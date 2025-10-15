@@ -4,12 +4,9 @@ export const Performancemonitoring = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Performancemonitoring;
+  cleanup: () => {}
+} }}
+export default Performancemonitoring

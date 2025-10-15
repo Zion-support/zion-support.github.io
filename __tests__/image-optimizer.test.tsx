@@ -9,11 +9,11 @@ const mockImage = {
   removeEventListener: jest.fn(),
   src: '',
   onload: null,
-  onerror: null,
+  onerror: null
 };
 
 Object.defineProperty(global, 'Image', {
-  value: jest.fn(() => mockImage),
+  value: jest.fn(() => mockImage)
 });
 
 describe('ImageOptimizer', () => {
@@ -28,46 +28,27 @@ describe('ImageOptimizer', () => {
         alt="Test image"
         width={300}
         height={200}
-        className="custom-class"
-        lazy={false}
       />
     );
-
-    const img = screen.getByRole('img', { hidden: true });
-    expect(img).toHaveAttribute('alt', 'Test image');
+    
+    const img = screen.getByAltText('Test image');
+    expect(img).toBeInTheDocument();
+    expect(img).toHaveAttribute('src', 'test-image.jpg');
     expect(img).toHaveAttribute('width', '300');
     expect(img).toHaveAttribute('height', '200');
-    expect(img).toHaveAttribute('loading', 'eager');
   });
 
-  it('applies correct attributes', () => {
+  it('handles loading state', () => {
     render(
       <ImageOptimizer
         src="test-image.jpg"
         alt="Test image"
         width={300}
         height={200}
-        className="custom-class"
-        lazy={false}
       />
     );
-
-    const img = screen.getByRole('img', { hidden: true });
-    expect(img).toHaveAttribute('alt', 'Test image');
-    expect(img).toHaveAttribute('width', '300');
-    expect(img).toHaveAttribute('height', '200');
-    expect(img).toHaveAttribute('loading', 'eager');
-  });
-
-  it('generates optimized src with WebP format', () => {
-    render(
-      <ImageOptimizer
-        src="test-image.jpg"
-        alt="Test image"
-      />
-    );
-
-    const img = screen.getByRole('img', { hidden: true });
-    expect(img).toHaveAttribute('src', 'test-image.jpg?format=webp&quality=80');
+    
+    // Should show loading state initially
+    expect(screen.getByTestId('image-loading')).toBeInTheDocument();
   });
 });

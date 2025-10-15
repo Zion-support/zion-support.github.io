@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -6,13 +7,12 @@ import { ArrowRight, Mail } from "lucide-react";
 export default function NewsletterSignup() {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (_e: React.FormEvent) => {
     e.preventDefault();
     // Handle newsletter signup
     };
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>
@@ -42,6 +42,6 @@ export default function NewsletterSignup() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </>
-  );
+</div>
+  )
 }

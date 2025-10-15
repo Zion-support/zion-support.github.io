@@ -9,31 +9,31 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-
-const { email } = req.body;
+  
+  const { email } = req.body;
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
-
+  
   if (!isValidEmail(email)) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Invalid email format' }));
     return;
   }
-
+  
   try {
-console.log('Newsletter subscription:', email);
+    console.log('Newsletter subscription:', email);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Successfully subscribed to newsletter' 
+    res.end(JSON.stringify({
+      success: true,
+      message: 'Successfully subscribed to newsletter'
     }));
   } catch (error) {
-console.error('Newsletter subscription error:', error);
+    console.error('Newsletter subscription error:', error);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
+    res.end(JSON.stringify({
       error: 'Failed to subscribe to newsletter',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));

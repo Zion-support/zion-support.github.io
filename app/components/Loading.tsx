@@ -1,12 +1,10 @@
-import { Helmet } from "react-helmet-async";
-
-interface LoadingProps {
-  message?: string;
+import { Helmet } from "react-helmet-async"
+interface LoadingProps {}
+  message?: string
 }
-
-export default function Loading({ message = "Loading..." }: LoadingProps) {
-  return (
-    <>
+export default function Loading({ message = "Loading..." }: LoadingProps) {}
+}return ()
+    <div>
       <Helmet>
         <title>Loading - Zion Tech Group</title>
         <meta name="description" content="Loading page" />
@@ -20,6 +18,6 @@ export default function Loading({ message = "Loading..." }: LoadingProps) {
           </p>
         </div>
       </div>
-    </>
-  );
+</div>
+  )
 }

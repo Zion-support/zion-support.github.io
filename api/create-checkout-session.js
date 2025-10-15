@@ -16,21 +16,21 @@ export default withErrorLogging(async (req, res) => {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-
+  
   const { productId } = req.body;
   if (!productId) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Product ID is required' }));
     return;
   }
-
+  
   try {
     const session = {
       id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
       status: 'pending',
       productId: productId
     };
-
+    
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(session));
   } catch (error) {

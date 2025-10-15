@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -10,9 +11,8 @@ interface PerformanceMetrics {
   timeToFirstByte: number;
   totalBlockingTime: number;
 }
-
-interface PerformanceMonitorProps {
-  showInProduction?: boolean;
+interface PerformanceMonitorProps {}
+  showInProduction?: boolean
 }
 
 const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
@@ -22,7 +22,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  useEffect() => {
     if (typeof window === 'undefined') return;
 
     const measurePerformance = async () => {
@@ -31,43 +31,40 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const vitals: Partial<PerformanceMetrics> = {};
 
         // Get FCP
-        onFCP((metric: any) => {
+        onFCP((metric: unknown) => {
           vitals.firstContentfulPaint = metric.value;
         });
 
         // Get LCP
-        onLCP((metric: any) => {
+        onLCP((metric: unknown) => {
           vitals.largestContentfulPaint = metric.value;
         });
 
         // Get INP (replaces FID)
-        onINP((metric: any) => {
+        onINP((metric: unknown) => {
           vitals.firstInputDelay = metric.value;
         });
 
         // Get CLS
-        onCLS((metric: any) => {
+        onCLS((metric: unknown) => {
           vitals.cumulativeLayoutShift = metric.value;
         });
 
         // Get TTFB
-        onTTFB((metric: any) => {
+        onTTFB((metric: unknown) => {
           vitals.timeToFirstByte = metric.value;
         });
 
         // Measure additional metrics
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-        
-        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const paintEntries = performance.getEntriesByType('paint')
+        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')
         // Calculate Total Blocking Time
-        const longTasks = performance.getEntriesByType('longtask');
-        const totalBlockingTime = longTasks.reduce((total, task) => {
-          return total + (task.duration - 50); // 50ms is the threshold
-        }, 0);
-
-        const finalMetrics: PerformanceMetrics = {
+        const longTasks = performance.getEntriesByType('longtask')
+        const totalBlockingTime = longTasks.reduce((total, task) => {}
+}return total + (task.duration - 50); // 50ms is the threshold
+        }, 0)
+        const finalMetrics: PerformanceMetrics = {}
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
           firstContentfulPaint: fcp ? fcp.startTime : vitals.firstContentfulPaint || 0,
           largestContentfulPaint: vitals.largestContentfulPaint || 0,
@@ -75,63 +72,56 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           cumulativeLayoutShift: vitals.cumulativeLayoutShift || 0,
           timeToFirstByte: vitals.timeToFirstByte || 0,
           totalBlockingTime: totalBlockingTime
-        };
-
-        setMetrics(finalMetrics);
-        setIsLoading(false);
-
+        }
+        setMetrics(finalMetrics)
+        setIsLoading(false)
         // Send metrics to analytics (if available)
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'web_vitals', {
+        if (typeof window !== 'undefined' && window.gtag) {}
+          window.gtag('event', 'web_vitals', {}
             event_category: 'Performance',
             event_label: 'Core Web Vitals',
             value: Math.round(finalMetrics.largestContentfulPaint),
-            custom_map: {
+            custom_map: {}
               'metric_1': finalMetrics.firstContentfulPaint,
               'metric_2': finalMetrics.largestContentfulPaint,
               'metric_3': finalMetrics.firstInputDelay,
               'metric_4': finalMetrics.cumulativeLayoutShift,
               'metric_5': finalMetrics.timeToFirstByte
             }
-          });
+          })
         }
       } catch (error) {
-        console.error('Error measuring performance:', error);
         setIsLoading(false);
       }
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
     }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
+    // Measure after page load
+    if (document.readyState === 'complete') {}
+      measurePerformance()
+    } else {}
+      window.addEventListener('load', measurePerformance)
+    }
+    return () => {}
+}window.removeEventListener('load', measurePerformance)
+    }
+  }, [])
   // Only show in development or if explicitly enabled
-  if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {
-    return null;
+  if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {}
+    return null
   }
 
-  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreColor = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.needsImprovement) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getScoreText = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreText = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor';
   };
 
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
+  return (<div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
         className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
@@ -140,8 +130,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <span>Performance</span>
       </button>
       
-      {isVisible && (
-        <div className="absolute bottom-14 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-xl shadow-2xl p-6 w-80 max-h-96 overflow-y-auto">
+      {isVisible && (<div className="absolute bottom-14 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-xl shadow-2xl p-6 w-80 max-h-96 overflow-y-auto">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-bold text-gray-900 text-lg">Core Web Vitals</h3>
             <button
@@ -151,7 +140,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               ✕
             </button>
           </div>
-          
           <div className="space-y-4 text-sm">
             {/* LCP */}
             <div className="space-y-1">
@@ -165,7 +153,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 {getScoreText(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}
               </div>
             </div>
-
             {/* FID */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
@@ -178,7 +165,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 {getScoreText(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}
               </div>
             </div>
-
             {/* CLS */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
@@ -191,7 +177,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 {getScoreText(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}
               </div>
             </div>
-
             {/* FCP */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
@@ -204,7 +189,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 {getScoreText(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}
               </div>
             </div>
-
             {/* TTFB */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
@@ -217,7 +201,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 {getScoreText(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 })}
               </div>
             </div>
-
             {/* Additional Metrics */}
             <div className="border-t pt-3 space-y-2">
               <div className="flex justify-between">
@@ -233,7 +216,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </div>
       )}
     </div>
-  );
-};
-
-export default EnhancedPerformanceMonitor;
+  )
+}
+export default EnhancedPerformanceMonitor

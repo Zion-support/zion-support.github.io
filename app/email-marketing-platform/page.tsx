@@ -1,19 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Mail, 
-  Users, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  Target, 
-  Zap,
-  Shield,
-  Globe,
-  Database,
-  Calendar,
-  Smartphone
-} from 'lucide-react';
+import {  } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -183,7 +169,7 @@ const EmailMarketingPlatformPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -218,7 +204,7 @@ const EmailMarketingPlatformPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map((plan) => (
               <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -269,7 +255,7 @@ const EmailMarketingPlatformPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit) => (
               <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   {benefit.icon}
