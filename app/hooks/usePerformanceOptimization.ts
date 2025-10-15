@@ -1,4 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
+<<<<<<< HEAD
 import { logger } from '../utils/logger';
 
 interface PerformanceMetrics {
@@ -28,10 +29,14 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     enableImageOptimization = true,
     enableBundleAnalysis = true,
   } = options;
+=======
+>>>>>>> 8a706cc6720bc3c546c68f8f243fe5fc4236601c
 
-  const metricsRef = useRef<PerformanceMetrics | null>(null);
-  const observerRef = useRef<PerformanceObserver | null>(null);
+interface UsePerformanceOptimizationOptions {
+  // Add your options here
+}
 
+<<<<<<< HEAD
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading) return;
@@ -220,5 +225,25 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     preloadCriticalResources,
     optimizeImages,
     analyzeBundle,
+=======
+interface UsePerformanceOptimizationState {
+  // Add your state here
+}
+
+export const UsePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
+  const stateRef = useRef<UsePerformanceOptimizationState>({
+    // Initialize your state here
+  });
+
+  // Add your hooks logic here
+  useEffect(() => {
+    // Add your effect logic here
+  }, []);
+
+  return {
+    // Return your hook values here
+>>>>>>> 8a706cc6720bc3c546c68f8f243fe5fc4236601c
   };
 };
+
+export default UsePerformanceOptimization;

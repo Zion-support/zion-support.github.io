@@ -22,4 +22,4 @@ describe("Components", () => {
     )
     expect(document.head).toBeInTheDocument()
   })
-})
+});

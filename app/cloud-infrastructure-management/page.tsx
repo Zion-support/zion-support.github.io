@@ -1,12 +1,12 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from './components/SEOHead';
 
 const CloudInfrastructureManagementPage: React.FC = () => {
   return (
     <>
       <SEOHead 
         title="Cloud Infrastructure Management - Zion Tech Group"
-        description="Comprehensive cloud infrastructure management solutions for scalable and secure cloud operations."
+        description="Comprehensive cloud infrastructure management solutions for optimal performance and cost efficiency."
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">

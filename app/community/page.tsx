@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from './components/SEOHead';
 
 const CommunityPage: React.FC = () => {
   return (
@@ -15,7 +15,15 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
+  )
+    },;
+    {
+export default CommunityPage;
+"'"'
+=======
   );
 };
 
 export default CommunityPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017

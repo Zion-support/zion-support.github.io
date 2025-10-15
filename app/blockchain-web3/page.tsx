@@ -1,12 +1,12 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from './components/SEOHead';
 
 const BlockchainWeb3Page: React.FC = () => {
   return (
     <>
       <SEOHead 
         title="Blockchain & Web3 Solutions - Zion Tech Group"
-        description="Cutting-edge blockchain and Web3 solutions for decentralized applications and digital transformation."
+        description="Advanced blockchain and Web3 development services for decentralized applications and smart contracts."
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
