@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -28,46 +27,6 @@ export default class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-8">Please try refreshing the page</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Refresh Page
-            </button>
-=======
-<<<<<<< HEAD
-import { Component, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-export default class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
               <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -86,66 +45,11 @@ export default class ErrorBoundary extends Component<Props, State> {
                 Try again
               </button>
             </div>
-=======
-
-      interface Props {},
-      children: ReactNode;
-fallback?: ReactNode
-      interface State {},
-      hasError: boolean,
-      error: Error | null,
-      errorInfo: ErrorInfo | null
-class ErrorBoundary extends Component<Props, State> {},
-      constructor(props: Props) {},
-      super(props),
-      this.state = {},
-
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-
-      hasError: true,
-      error,
-      errorInfo: null
-
-    this.setState({},)
-
-      error,
-
-    // Log error to console in development
-
-      // Here you would typically send the error to an error reporting service
-  handleRetry = () => {},
-      this.setState({},)
-      hasError: false,
-      error: null,
-      errorInfo: null
-    })
-  render() {},
-      if (this.state.hasError) {}
-      // Custom fallback UI
-      if (this.props.fallback) {},
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
->>>>>>> cursor/fix-errors-and-merge-to-main-6f30
           </div>
         </div>
       );
     }
-<<<<<<< HEAD
 
     return this.props.children;
   }
 }
-=======
-
-<<<<<<< HEAD
-    return this.props.children;
-  }
-}
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
->>>>>>> cursor/fix-errors-and-merge-to-main-6f30
