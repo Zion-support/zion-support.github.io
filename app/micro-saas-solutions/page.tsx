@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -147,11 +146,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
       popular: true,
       link: 'https://ziontechgroup.com/ai-chatbot-builder'
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target, MessageSquare } from 'lucide-react';const MicroSaaSSolutionsPage: React.FC = () => {
   const microSaasProducts = [
     {
       id: 'task-manager-pro',

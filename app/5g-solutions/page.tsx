@@ -1,10 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
-=======
-import { Wifi, CheckCircle, Network, Cpu, Smartphone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
 
 const G5gSolutionsPage: React.FC = () => {
   const solutions = [
@@ -16,7 +12,6 @@ const G5gSolutionsPage: React.FC = () => {
     {
       name: "5G Network Infrastructure",
       description: "Robust 5G infrastructure with advanced tower installation and fiber optic connectivity.",
-<<<<<<< HEAD
       features: ["Tower installation", "Fiber optics deployment", "Coverage optimization", "Signal boosting", "Maintenance contracts", "Performance monitoring"],
       price: "From $4,999",
       marketPrice: "$9,999-39,999",
@@ -235,14 +230,9 @@ const G5gSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
       </div>
     </>
   );
 };
 
-<<<<<<< HEAD
 export default FiveGSolutionsPage;
-=======
-export default G5gSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
