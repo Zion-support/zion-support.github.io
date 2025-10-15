@@ -36,7 +36,9 @@ const Footer: React.FC = () => {
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { name: 'AI Customer Insights Pro', href: '/ai-customer-insights-pro' },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' }
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' }
       ]
     },
     {
@@ -67,18 +69,18 @@ const Footer: React.FC = () => {
       title: 'Micro SAAS',
       icon: <Cloud className="w-5 h-5 text-orange-400" />,
       services: [
-        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
-        { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant-pro' },
-        { name: 'AI Sales Optimizer Pro', href: '/ai-sales-optimizer-pro' },
-        { name: 'AI Document Processor Pro', href: '/ai-document-processor-pro' },
-        { name: 'AI Fraud Detection Pro', href: '/ai-fraud-detection-pro' },
-        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
-        { name: 'AI Price Optimization Pro', href: '/ai-price-optimization-pro' },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
         { name: 'AI Lead Generation Pro', href: '/ai-lead-generation-pro' },
-        { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro' },
-        { name: 'AI Time Tracking Pro', href: '/ai-time-tracking-pro' },
-        { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant-pro' },
-        { name: 'AI Data Migration Pro', href: '/ai-data-migration-pro' }
+        { name: 'AI CRM Enterprise', href: '/ai-crm-enterprise' },
+        { name: 'AI Scheduling Assistant Pro', href: '/ai-scheduling-assistant-pro' },
+        { name: 'AI Document Processor Pro', href: '/ai-document-processor-pro' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Price Optimization Pro', href: '/ai-price-optimization-pro' },
+        { name: 'AI Security Monitor Pro', href: '/ai-security-monitor-pro' },
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager-pro' },
+        { name: 'AI Compliance Monitor Pro', href: '/ai-compliance-monitor-pro' }
       ]
     }
   ];
