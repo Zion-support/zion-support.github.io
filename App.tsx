@@ -421,7 +421,6 @@ const App = memo(() => {
                     
                     {/* New IT Solutions */}
                     <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
-                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
                     
                     {/* New AI Medical Services */}
                     <Route path="/ai-medical-diagnosis-assistant" element={<AIMedicalDiagnosisAssistantPage />} />
