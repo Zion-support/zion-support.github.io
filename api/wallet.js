@@ -2,7 +2,11 @@
 import fs from 'fs'
 import path from 'path'
 const file = path.join(process.cwd(), 'data', 'wallets.json')
-export default function handler(req, res) {}
-}if (req.method !== "POST") {}
-    return res.status(405).json({ _error: "Method not allowed" })
-  }ursor/analyze-improve-and-merge-code-4a9f
+export default function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" })
+  }
+  
+  // Handle wallet operations here
+  res.status(200).json({ message: "Wallet operation successful" })
+}

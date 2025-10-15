@@ -1,6 +1,8 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 
+function AIFinancialAnalyticsProPage() {
   return (<>
       <Helmet>
         <title>AI Financial Analytics Pro - Zion Tech Group</title>
@@ -213,6 +215,6 @@ import SEOHead from '../components/SEOHead';
       </div>
     </>
   );
-};
+}
 
-export default AiFinancialAnalyticsProPage;
+export default AIFinancialAnalyticsProPage;

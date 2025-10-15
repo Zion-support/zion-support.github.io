@@ -1,6 +1,7 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import SEOHead from '../components/SEOHead';
 
+function AIAutomationPlatformPage() {
   return (<>
       <Helmet>
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
@@ -91,6 +92,6 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
       </div>
     </>
   );
-};
+}
 
-export default AiAutomationPlatformPage;
+export default AIAutomationPlatformPage;

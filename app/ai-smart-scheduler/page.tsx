@@ -1,6 +1,8 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import Layout from '../components/Layout';
 
+function AISmartSchedulerPage() {
   return (<Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen flex items-center">
@@ -180,6 +182,6 @@ import SEOHead from '../components/SEOHead';
       </section>
     </Layout>
   );
-};
+}
 
-export default AiSmartSchedulerPage;
+export default AISmartSchedulerPage;

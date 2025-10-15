@@ -1,6 +1,8 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 
+function AIEcommerceOptimizerProPage() {
   return (<>
       <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
@@ -202,6 +204,6 @@ import SEOHead from '../components/SEOHead';
       </div>
     </>
   );
-};
+}
 
-export default AiEcommerceOptimizerProPage;
+export default AIEcommerceOptimizerProPage;

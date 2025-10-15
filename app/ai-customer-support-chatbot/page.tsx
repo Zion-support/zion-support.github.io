@@ -27,7 +27,6 @@ import {
   RefreshCw
 } from 'lucide-react';
 
-const AICustomerSupportChatbotPage: React.FC = () => {
   const features = [
     'Natural Language Processing (NLP)',
     'Multi-language support (50+ languages)',

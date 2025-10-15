@@ -1,6 +1,8 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 
+function AIHealthcareDiagnosticsPage() {
   return (<>
       <Helmet>
         <title>AI Healthcare Diagnostics - Zion Tech Group | Medical AI Solutions</title>
