@@ -1,9 +1,4 @@
-
-      '$1'";
-    );
-    
-    // Clean up any remaining conflict markers: content = content.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs, '');";
-    
+\n.*?\n    
     fs.writeFileSync(filePath, content, 'utf8');";
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
