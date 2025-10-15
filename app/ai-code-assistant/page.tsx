@@ -209,22 +209,24 @@ const AICodeAssistantPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Code className="w-5 h-5" />}
-            >
-              Start Coding with AI
-            </FuturisticButton>
-            <FuturisticButton
-              href="#demo"
-              variant="outline"
-              size="lg"
-              icon={<Terminal className="w-5 h-5" />}
-            >
-              Try Live Demo
-            </FuturisticButton>
+            <a href="/contact">
+              <FuturisticButton
+                variant="primary"
+                size="lg"
+              >
+                <Code className="w-5 h-5 mr-2" />
+                Start Coding with AI
+              </FuturisticButton>
+            </a>
+            <a href="#demo">
+              <FuturisticButton
+                variant="secondary"
+                size="lg"
+              >
+                <Terminal className="w-5 h-5 mr-2" />
+                Try Live Demo
+              </FuturisticButton>
+            </a>
           </div>
           
           {/* Stats */}
@@ -497,22 +499,24 @@ const AICodeAssistantPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Code className="w-5 h-5" />}
-            >
-              Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon={<Terminal className="w-5 h-5" />}
-            >
-              Try Live Demo
-            </FuturisticButton>
+            <a href="/contact">
+              <FuturisticButton
+                variant="primary"
+                size="lg"
+              >
+                <Code className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </FuturisticButton>
+            </a>
+            <a href="/demo">
+              <FuturisticButton
+                variant="secondary"
+                size="lg"
+              >
+                <Terminal className="w-5 h-5 mr-2" />
+                Try Live Demo
+              </FuturisticButton>
+            </a>
           </div>
           
           <div className="mt-8 text-sm text-gray-400">
