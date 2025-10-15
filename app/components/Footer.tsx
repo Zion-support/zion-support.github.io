@@ -72,6 +72,20 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
+            <h4 className="text-md font-semibold mb-4">Micro SAAS Tools</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
+              <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
+              <li><Link to="/ai-video-generator" className="text-gray-300 hover:text-white">AI Video Generator</Link></li>
+              <li><Link to="/ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-white">AI Content Generator</Link></li>
+              <li><Link to="/social-media-scheduler" className="text-gray-300 hover:text-white">Social Media Scheduler</Link></li>
+              <li><Link to="/expense-tracker-pro" className="text-gray-300 hover:text-white">Expense Tracker Pro</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">All Micro SAAS</Link></li>
+            </ul>
+          </div>
+          
+          <div>
             <h4 className="text-md font-semibold mb-4">Zion AI Tools</h4>
             <ul className="space-y-2">
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>

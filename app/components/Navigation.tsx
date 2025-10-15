@@ -127,7 +127,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
         { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
         { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
+        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon }
       ]
     },
     {
@@ -217,8 +221,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute inset-0 opacity-30">
-        <div className="cyber-grid"></div>
+        <div className="cyber-grid-enhanced"></div>
       </div>
+      
+      {/* Scan Lines */}
+      <div className="scan-lines"></div>
+      
+      {/* Data Streams */}
+      <div className="data-stream"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">
