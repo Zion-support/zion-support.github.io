@@ -23,31 +23,45 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SAAS Solutions',
       services: [
-        { name: 'AI Content Writer', path: '/micro-saas' },
-        { name: 'Project Manager', path: '/micro-saas' },
-        { name: 'Email Marketing', path: '/micro-saas' },
-        { name: 'Analytics Dashboard', path: '/micro-saas' },
-        { name: 'Document Processor', path: '/micro-saas' }
+        { name: 'AI Content Writer Pro', path: '/ai-content-generation-pro' },
+        { name: 'AI Project Manager', path: '/ai-project-manager' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Document Processor', path: '/ai-document-processor' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' }
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Automation', path: '/ai-services' },
+        { name: 'AI Automation', path: '/ai-automation' },
         { name: 'Machine Learning', path: '/ai-services' },
-        { name: 'Computer Vision', path: '/ai-services' },
+        { name: 'Computer Vision', path: '/ai-computer-vision' },
         { name: 'Natural Language Processing', path: '/ai-services' },
-        { name: 'Predictive Analytics', path: '/ai-services' }
+        { name: 'Predictive Analytics', path: '/ai-analytics' },
+        { name: 'AI Security Solutions', path: '/ai-security-solutions' }
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', path: '/it-services' },
-        { name: 'Cybersecurity', path: '/it-services' },
-        { name: 'DevOps', path: '/it-services' },
-        { name: 'Mobile Development', path: '/it-services' },
-        { name: 'Web Development', path: '/it-services' }
+        { name: 'Cloud Migration', path: '/cloud-migration-services' },
+        { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
+        { name: 'DevOps Solutions', path: '/devops-solutions' },
+        { name: 'Mobile Development', path: '/mobile-app-development' },
+        { name: 'Web Development', path: '/web-application-development' },
+        { name: 'Database Solutions', path: '/database-solutions' }
+      ]
+    },
+    {
+      title: '5G Solutions',
+      services: [
+        { name: '5G Implementation', path: '/5g-implementation' },
+        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing' },
+        { name: '5G Security Solutions', path: '/5g-security' }
       ]
     }
   ];
@@ -81,7 +95,7 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
@@ -234,7 +248,7 @@ const Footer: React.FC = () => {
       {/* Trust Indicators */}
       <div className="border-t border-slate-700">
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
             <div className="flex items-center justify-center space-x-2">
               <Shield className="w-6 h-6 text-green-400" />
               <span className="text-gray-300">Enterprise Security</span>

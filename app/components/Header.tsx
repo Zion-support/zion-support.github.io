@@ -24,7 +24,10 @@ const Header: React.FC = memo(() => {
       dropdown: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas' },
         { name: 'AI Services', path: '/ai-services' },
-        { name: 'IT Services', path: '/it-services' }
+        { name: 'IT Services', path: '/it-services' },
+        { name: '5G Solutions', path: '/5g-solutions' },
+        { name: 'Cloud Services', path: '/cloud-services' },
+        { name: 'Cybersecurity', path: '/cybersecurity' }
       ]
     },
     { name: 'About', path: '/about' },
@@ -32,13 +35,25 @@ const Header: React.FC = memo(() => {
     { name: 'Pricing', path: '/pricing' },
     { name: 'News', path: '/news' },
     { 
+      name: 'Resources', 
+      path: '#',
+      dropdown: [
+        { name: 'Documentation', path: '/docs' },
+        { name: 'API Reference', path: '/api-docs' },
+        { name: 'Help Center', path: '/help' },
+        { name: 'System Status', path: '/status' },
+        { name: 'Support', path: '/support' }
+      ]
+    },
+    { 
       name: 'Company', 
       path: '#',
       dropdown: [
         { name: 'About Us', path: '/about' },
         { name: 'Our Team', path: '/about#team' },
         { name: 'Careers', path: '/careers' },
-        { name: 'News & Updates', path: '/news' }
+        { name: 'News & Updates', path: '/news' },
+        { name: 'Contact Us', path: '/contact' }
       ]
     },
     { name: 'Contact', path: '/contact' }
@@ -95,7 +110,7 @@ const Header: React.FC = memo(() => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden xl:flex items-center space-x-6">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
@@ -138,7 +153,7 @@ const Header: React.FC = memo(() => {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden xl:flex items-center space-x-4">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
@@ -149,7 +164,7 @@ const Header: React.FC = memo(() => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-white p-2"
+              className="xl:hidden text-white p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
@@ -164,7 +179,7 @@ const Header: React.FC = memo(() => {
         {isMenuOpen && (
           <div 
             id="mobile-menu"
-            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
+            className="xl:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
             role="navigation"
             aria-label="Mobile navigation"
           >
