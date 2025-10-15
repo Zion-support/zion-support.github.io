@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Shield, Eye, Lock, AlertTriangle, Zap, Globe, Users, Clock, DollarSign, Target, Award, Phone, Brain } from 'lucide-react';
+import { 
+  Shield, 
+  Brain, 
+  CheckCircle, 
+  ArrowRight, 
+  Star,
+  Phone,
+  Mail,
+  Lock,
+  Users,
+  BarChart3,
+  Network,
+  Bug,
+  Eye,
+  AlertTriangle,
+  Zap,
+  Globe,
+  Clock,
+  DollarSign,
+  Target,
+  Award
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AiCybersecurityPlatformPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,

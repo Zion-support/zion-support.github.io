@@ -1,97 +1,90 @@
-#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
 
-import fs from "fs";
-import { execSync } from "child_process";
+// Files with unused imports/variables
+const filesToFix = [
+  'app/ai-cybersecurity-platform/page.tsx',
+  'app/ai-ecommerce-platform/page.tsx',
+  'app/ai-education-platform/page.tsx',
+  'app/ai-financial-platform/page.tsx',
+  'app/ai-healthcare-platform/page.tsx',
+  'app/ai-voice-assistant-enterprise/page.tsx',
+  'app/ai-database-solutions/page.tsx',
+  'utils/componentLoader.tsx',
+  'utils/performanceUtils.ts',
+  'utils/seoMonitoring.ts',
+  'utils/accessibilityTesting.ts'
+];
 
-// Find all .tsx files in the app directory
-const findTsxFiles = () => {
+function fixUnusedImports(filePath) {
   try {
-    const result = execSync('find app -name "*.tsx" -type f', {
-      encoding: "utf8",
-    });
-    return result
-      .trim()
-      .split("\n")
-      .filter((file) => file.length > 0);
-  } catch (error) {
-    console.error("Error finding .tsx files:", error.message);
-    return [];
-  }
-};
-
-// Fix unused React imports
-const fixUnusedReactImports = (filePath) => {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Check if React is imported but not used (no JSX)
-    const hasReactImport = content.includes("import React from 'react';");
-    const hasJSX = content.includes("<") && content.includes(">");
-    const hasReactUsage =
-      content.includes("React.") || content.includes("React.createElement");
-
-    if (hasReactImport && !hasJSX && !hasReactUsage) {
-      content = content.replace(/import React from 'react';\n?/g, "");
-      modified = true;
+    // Remove unused imports and variables
+    const lines = content.split('\n');
+    const newLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Skip lines with unused variables that should be removed
+      if (line.includes('activeTab') && line.includes('setActiveTab') && line.includes('useState')) {
+        // Remove the entire line
+        modified = true;
+        continue;
+      }
+      
+      // Skip lines with unused imports
+      if (line.includes('// Unused imports') || 
+          (line.includes('import') && line.includes('Zap') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Globe') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('MapPin') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Download') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Pause') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('RefreshCw') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Settings') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Eye') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Filter') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Calendar') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Target') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Award') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('TrendingUp') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Cpu') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Database') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Activity') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('AlertTriangle') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('FileText') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Server') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Smartphone') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Cloud') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Key') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Search') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Clock') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('Lock') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('ShoppingCart') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('BookOpen') && !line.includes('// Used')) ||
+          (line.includes('import') && line.includes('errorFallback') && !line.includes('// Used'))) {
+        modified = true;
+        continue;
+      }
+      
+      newLines.push(line);
     }
-
+    
     if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
-      console.warn(`Fixed unused React import: ${filePath}`);
-      return true;
+      const newContent = newLines.join('\n');
+      fs.writeFileSync(filePath, newContent, 'utf8');
+      console.log(`✅ Fixed unused imports in ${filePath}`);
+    } else {
+      console.log(`ℹ️  No unused imports found in ${filePath}`);
     }
-    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
   }
-};
+}
 
-// Fix unused Helmet imports
-const fixUnusedHelmetImports = (filePath) => {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-
-    const hasHelmetImport = content.includes(
-      "import { Helmet } from 'react-helmet-async';",
-    );
-    const usesHelmet =
-      content.includes("<Helmet") || content.includes("Helmet.");
-
-    if (hasHelmetImport && !usesHelmet) {
-      content = content.replace(
-        /import { Helmet } from 'react-helmet-async';\n?/g,
-        "",
-      );
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
-      console.warn(`Fixed unused Helmet import: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-};
-
-// Main execution
-console.warn("Fixing unused imports...");
-const tsxFiles = findTsxFiles();
-let fixedCount = 0;
-
-tsxFiles.forEach((file) => {
-  if (fixUnusedReactImports(file)) {
-    fixedCount++;
-  }
-  if (fixUnusedHelmetImports(file)) {
-    fixedCount++;
-  }
-});
-
-console.warn(`Fixed ${fixedCount} files with unused imports.`);
+// Fix all files
+console.log('🔧 Fixing unused imports and variables...\n');
+filesToFix.forEach(fixUnusedImports);
+console.log('\n✅ Unused imports fixes completed!');
