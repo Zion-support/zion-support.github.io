@@ -166,11 +166,6 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-=======
-  // const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8d84
   const stats = [
     { number: '500+', label: 'Infrastructure Projects', icon: Server },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
