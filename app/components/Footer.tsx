@@ -23,31 +23,43 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SAAS Solutions',
       services: [
-        { name: 'AI Content Writer', path: '/micro-saas/ai-content-writer' },
-        { name: 'Project Manager', path: '/micro-saas/ai-project-manager' },
-        { name: 'Email Marketing', path: '/micro-saas/ai-email-marketing' },
-        { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
-        { name: 'Document Processor', path: '/micro-saas/document-processor' }
+        { name: 'AI Content Writer Pro', path: '/ai-content-writer-pro' },
+        { name: 'AI Project Manager Enterprise', path: '/ai-project-manager-enterprise' },
+        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing-suite' },
+        { name: 'Business Intelligence Dashboard', path: '/business-intelligence-dashboard' },
+        { name: 'AI Document Processor Pro', path: '/ai-document-processor-pro' },
+        { name: 'AI Customer Support Hub', path: '/ai-customer-support-hub' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
+        { name: 'AI Lead Generation Engine', path: '/ai-lead-generation-engine' }
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Automation', path: '/ai-services/automation' },
-        { name: 'Machine Learning', path: '/ai-services/ml' },
-        { name: 'Computer Vision', path: '/ai-services/computer-vision' },
-        { name: 'Natural Language Processing', path: '/ai-services/nlp' },
-        { name: 'Predictive Analytics', path: '/ai-services/predictive-analytics' }
+        { name: 'Machine Learning Solutions', path: '/machine-learning-solutions' },
+        { name: 'Computer Vision Pro', path: '/computer-vision-pro' },
+        { name: 'Natural Language Processing', path: '/natural-language-processing' },
+        { name: 'AI Process Automation', path: '/ai-process-automation' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence' },
+        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
+        { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
+        { name: 'AI Customer Experience', path: '/ai-customer-experience' },
+        { name: 'AI Supply Chain Optimization', path: '/ai-supply-chain-optimization' }
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', path: '/it-services/cloud-migration' },
-        { name: 'Cybersecurity', path: '/it-services/cybersecurity' },
-        { name: 'DevOps', path: '/it-services/devops' },
-        { name: 'Mobile Development', path: '/it-services/mobile-development' },
-        { name: 'Web Development', path: '/it-services/web-development' }
+        { name: 'Cloud Migration & Management', path: '/cloud-migration-management' },
+        { name: 'Enterprise Cybersecurity', path: '/enterprise-cybersecurity' },
+        { name: 'DevOps & CI/CD Automation', path: '/devops-cicd-automation' },
+        { name: 'Full-Stack Web Development', path: '/full-stack-web-development' },
+        { name: 'Mobile App Development Suite', path: '/mobile-app-development-suite' },
+        { name: 'Database Solutions & Management', path: '/database-solutions-management' },
+        { name: 'IT Infrastructure Management', path: '/it-infrastructure-management' },
+        { name: 'API Development & Management', path: '/api-development-management' },
+        { name: 'Digital Transformation Consulting', path: '/digital-transformation-consulting' }
       ]
     }
   ];

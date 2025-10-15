@@ -24,50 +24,110 @@ const AiServicesPage: React.FC = () => {
     {
       id: 1,
       name: "Machine Learning Solutions",
-      description: "Custom ML models for predictive analytics, pattern recognition, and data-driven insights.",
-      features: ["Predictive modeling", "Data preprocessing", "Model training", "Performance optimization"],
+      description: "Custom ML models for predictive analytics, pattern recognition, and data-driven insights with 99.9% accuracy.",
+      features: ["Predictive modeling & forecasting", "Advanced data preprocessing", "Automated model training", "Real-time performance optimization", "A/B testing framework", "Model versioning & deployment"],
       icon: <Brain className="w-8 h-8" />,
-      category: "Core AI"
+      category: "Core AI",
+      price: "From $2,999/month",
+      marketPrice: "$5,999/month",
+      savings: "50%",
+      popular: true
     },
     {
       id: 2,
-      name: "Computer Vision",
-      description: "Advanced image and video analysis for object detection, recognition, and processing.",
-      features: ["Object detection", "Image classification", "Facial recognition", "Video analysis"],
+      name: "Computer Vision Pro",
+      description: "Advanced image and video analysis with 99.8% accuracy for object detection, recognition, and real-time processing.",
+      features: ["Real-time object detection", "Advanced image classification", "Facial recognition & verification", "Video content analysis", "OCR & text extraction", "Medical imaging analysis"],
       icon: <Eye className="w-8 h-8" />,
-      category: "Computer Vision"
+      category: "Computer Vision",
+      price: "From $3,499/month",
+      marketPrice: "$6,999/month",
+      savings: "50%",
+      popular: false
     },
     {
       id: 3,
-      name: "Natural Language Processing",
-      description: "Text analysis, sentiment analysis, and language understanding solutions.",
-      features: ["Text classification", "Sentiment analysis", "Language translation", "Chatbot development"],
+      name: "Natural Language Processing Suite",
+      description: "Comprehensive NLP solutions with multi-language support and advanced sentiment analysis capabilities.",
+      features: ["Multi-language text classification", "Advanced sentiment analysis", "Real-time language translation", "Conversational AI development", "Text summarization", "Named entity recognition"],
       icon: <MessageSquare className="w-8 h-8" />,
-      category: "NLP"
+      category: "NLP",
+      price: "From $2,499/month",
+      marketPrice: "$4,999/month",
+      savings: "50%",
+      popular: false
     },
     {
       id: 4,
-      name: "AI Automation",
-      description: "Intelligent process automation to streamline business operations and reduce manual work.",
-      features: ["Workflow automation", "Document processing", "Data extraction", "Task scheduling"],
+      name: "AI Process Automation",
+      description: "Intelligent process automation with RPA integration to streamline operations and reduce costs by up to 70%.",
+      features: ["Intelligent workflow automation", "Document processing & extraction", "Automated data entry", "Smart task scheduling", "RPA integration", "Process optimization"],
       icon: <Zap className="w-8 h-8" />,
-      category: "Automation"
+      category: "Automation",
+      price: "From $1,999/month",
+      marketPrice: "$3,999/month",
+      savings: "50%",
+      popular: false
     },
     {
       id: 5,
-      name: "AI Analytics",
-      description: "Advanced analytics and business intelligence powered by artificial intelligence.",
-      features: ["Predictive analytics", "Real-time insights", "Custom dashboards", "Data visualization"],
+      name: "AI Business Intelligence",
+      description: "Advanced analytics and business intelligence with predictive insights and automated reporting capabilities.",
+      features: ["Predictive analytics & forecasting", "Real-time business insights", "Custom dashboard creation", "Automated report generation", "Data visualization", "Trend analysis"],
       icon: <BarChart3 className="w-8 h-8" />,
-      category: "Analytics"
+      category: "Analytics",
+      price: "From $2,299/month",
+      marketPrice: "$4,599/month",
+      savings: "50%",
+      popular: false
     },
     {
       id: 6,
-      name: "AI Infrastructure",
-      description: "Scalable AI infrastructure and cloud solutions for enterprise deployments.",
-      features: ["Cloud deployment", "Scalable computing", "API management", "Security compliance"],
+      name: "AI Cloud Infrastructure",
+      description: "Scalable AI infrastructure with enterprise-grade security and 99.99% uptime guarantee.",
+      features: ["Multi-cloud deployment", "Auto-scaling computing", "Advanced API management", "Enterprise security compliance", "Load balancing", "Disaster recovery"],
       icon: <Database className="w-8 h-8" />,
-      category: "Infrastructure"
+      category: "Infrastructure",
+      price: "From $3,999/month",
+      marketPrice: "$7,999/month",
+      savings: "50%",
+      popular: false
+    },
+    {
+      id: 7,
+      name: "AI Cybersecurity Suite",
+      description: "Advanced AI-powered cybersecurity with threat detection, prevention, and automated response capabilities.",
+      features: ["Real-time threat detection", "Behavioral analysis", "Automated incident response", "Vulnerability assessment", "Security monitoring", "Compliance reporting"],
+      icon: <Shield className="w-8 h-8" />,
+      category: "Security",
+      price: "From $4,499/month",
+      marketPrice: "$8,999/month",
+      savings: "50%",
+      popular: false
+    },
+    {
+      id: 8,
+      name: "AI Customer Experience",
+      description: "Comprehensive AI solutions for enhancing customer experience with personalization and automation.",
+      features: ["Personalized recommendations", "Customer journey optimization", "Automated support", "Sentiment analysis", "Churn prediction", "Lifetime value prediction"],
+      icon: <Users className="w-8 h-8" />,
+      category: "Customer Experience",
+      price: "From $2,799/month",
+      marketPrice: "$5,599/month",
+      savings: "50%",
+      popular: false
+    },
+    {
+      id: 9,
+      name: "AI Supply Chain Optimization",
+      description: "AI-powered supply chain management with demand forecasting and inventory optimization.",
+      features: ["Demand forecasting", "Inventory optimization", "Route optimization", "Supplier risk assessment", "Quality prediction", "Cost optimization"],
+      icon: <Globe className="w-8 h-8" />,
+      category: "Supply Chain",
+      price: "From $3,799/month",
+      marketPrice: "$7,599/month",
+      savings: "50%",
+      popular: false
     }
   ];
 
@@ -192,41 +252,78 @@ const AiServicesPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {aiServices.map((service) => (
-                <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 transition-all duration-300 hover:border-cyan-500/40 hover:scale-105">
-                  <div className="text-cyan-400 mb-4 flex justify-center">
-                    {service.icon}
+                <div key={service.id} className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 lg:p-8 border transition-all duration-300 hover:border-cyan-500/40 hover:scale-105 ${
+                  service.popular 
+                    ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
+                    : 'border-white/20'
+                }`}>
+                  {service.popular && (
+                    <div className="flex items-center justify-center mb-4">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-cyan-400">
+                      {service.icon}
+                    </div>
+                    <div className="text-right">
+                      <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold">
+                        {service.category}
+                      </span>
+                    </div>
                   </div>
                   
-                  <div className="text-center mb-4">
-                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-semibold">
-                      {service.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 text-center">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     {service.name}
                   </h3>
                   
-                  <p className="text-gray-300 mb-6 text-center">
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
                   
                   <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, index) => (
+                    <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, index) => (
                         <li key={index} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          <span className="text-xs">{feature}</span>
                         </li>
                       ))}
+                      {service.features.length > 4 && (
+                        <li className="text-xs text-cyan-400 ml-5">
+                          +{service.features.length - 4} more features
+                        </li>
+                      )}
                     </ul>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                    Learn More
+                  <div className="text-center mb-4">
+                    <div className="flex items-center justify-center space-x-2 mb-2">
+                      <div className="text-lg font-bold text-white">
+                        {service.price}
+                      </div>
+                      <div className="text-sm text-gray-400 line-through">
+                        {service.marketPrice}
+                      </div>
+                    </div>
+                    <div className="text-xs text-green-400 font-semibold">
+                      Save {service.savings}
+                    </div>
+                  </div>
+                  
+                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    service.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}>
+                    Get Quote
                   </button>
                 </div>
               ))}

@@ -19,12 +19,45 @@ const Header: React.FC = () => {
   const navigationItems = [
     { name: 'Home', path: '/' },
     { 
-      name: 'Services', 
-      path: '#',
+      name: 'Micro SAAS', 
+      path: '/micro-saas',
       dropdown: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas' },
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'IT Services', path: '/it-services' }
+        { name: 'AI Content Writer Pro', path: '/ai-content-writer-pro' },
+        { name: 'AI Project Manager', path: '/ai-project-manager' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+        { name: 'Business Intelligence', path: '/business-intelligence' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
+        { name: 'View All Micro SAAS', path: '/micro-saas' }
+      ]
+    },
+    { 
+      name: 'AI Services', 
+      path: '/ai-services',
+      dropdown: [
+        { name: 'Machine Learning Solutions', path: '/machine-learning-solutions' },
+        { name: 'Computer Vision Pro', path: '/computer-vision-pro' },
+        { name: 'Natural Language Processing', path: '/natural-language-processing' },
+        { name: 'AI Process Automation', path: '/ai-process-automation' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence' },
+        { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
+        { name: 'AI Customer Experience', path: '/ai-customer-experience' },
+        { name: 'View All AI Services', path: '/ai-services' }
+      ]
+    },
+    { 
+      name: 'IT Services', 
+      path: '/it-services',
+      dropdown: [
+        { name: 'Cloud Migration & Management', path: '/cloud-migration-management' },
+        { name: 'Enterprise Cybersecurity', path: '/enterprise-cybersecurity' },
+        { name: 'DevOps & CI/CD', path: '/devops-cicd' },
+        { name: 'Full-Stack Development', path: '/full-stack-development' },
+        { name: 'Mobile App Development', path: '/mobile-app-development' },
+        { name: 'Database Solutions', path: '/database-solutions' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure' },
+        { name: 'View All IT Services', path: '/it-services' }
       ]
     },
     { name: 'About', path: '/about' },
@@ -140,19 +173,19 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20 max-h-screen overflow-y-auto">
             <div className="container mx-auto px-4 py-4">
               {navigationItems.map((item) => (
-                <div key={item.name}>
+                <div key={item.name} className="mb-4">
                   {item.dropdown ? (
                     <div className="py-2">
-                      <div className="text-white font-semibold mb-2">{item.name}</div>
+                      <div className="text-white font-semibold mb-3 text-lg">{item.name}</div>
                       <div className="ml-4 space-y-2">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.path}
-                            className="block text-gray-300 hover:text-blue-400 py-1 transition-colors"
+                            className="block text-gray-300 hover:text-blue-400 py-2 px-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {dropdownItem.name}
@@ -163,8 +196,8 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`block py-2 text-white hover:text-blue-400 transition-colors ${
-                        isActive(item.path) ? 'text-blue-400 font-semibold' : ''
+                      className={`block py-3 px-3 text-white hover:text-blue-400 transition-colors rounded-lg hover:bg-slate-700/50 ${
+                        isActive(item.path) ? 'text-blue-400 font-semibold bg-slate-700/30' : ''
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -173,14 +206,20 @@ const Header: React.FC = () => {
                   )}
                 </div>
               ))}
-              <div className="pt-4 border-t border-white/20 mt-4">
-                <Link
-                  to="/contact"
-                  className="block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
+              <div className="pt-4 border-t border-white/20 mt-6">
+                <div className="space-y-3">
+                  <Link
+                    to="/contact"
+                    className="block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Get Started
+                  </Link>
+                  <div className="text-center text-sm text-gray-400">
+                    <div className="mb-1">Call: +1 302 464 0950</div>
+                    <div>Email: kleber@ziontechgroup.com</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

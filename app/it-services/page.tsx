@@ -22,51 +22,111 @@ const ItServicesPage: React.FC = () => {
   const itServices = [
     {
       id: 1,
-      name: "Cloud Migration & Management",
-      description: "Seamless migration to cloud platforms with ongoing management and optimization.",
-      features: ["AWS/Azure/GCP migration", "Cloud architecture design", "Cost optimization", "24/7 monitoring"],
+      name: "Cloud Migration & Management Pro",
+      description: "Complete cloud transformation with AWS, Azure, and GCP migration, optimization, and 24/7 management.",
+      features: ["Multi-cloud migration strategy", "Cloud architecture design", "Cost optimization (up to 40% savings)", "24/7 monitoring & support", "Disaster recovery setup", "Security compliance"],
       icon: <Cloud className="w-8 h-8" />,
-      category: "Cloud"
+      category: "Cloud",
+      price: "From $4,999/month",
+      marketPrice: "$9,999/month",
+      savings: "50%",
+      popular: true
     },
     {
       id: 2,
-      name: "Cybersecurity Solutions",
-      description: "Comprehensive security services to protect your business from cyber threats.",
-      features: ["Security audits", "Penetration testing", "Incident response", "Compliance management"],
+      name: "Enterprise Cybersecurity Suite",
+      description: "Comprehensive security solutions with advanced threat detection, compliance management, and incident response.",
+      features: ["Security audits & assessments", "Penetration testing", "24/7 SOC monitoring", "Incident response", "Compliance management (SOC2, GDPR)", "Security training"],
       icon: <Shield className="w-8 h-8" />,
-      category: "Security"
+      category: "Security",
+      price: "From $3,999/month",
+      marketPrice: "$7,999/month",
+      savings: "50%",
+      popular: false
     },
     {
       id: 3,
-      name: "DevOps & CI/CD",
-      description: "Streamline development workflows with automated deployment and monitoring.",
-      features: ["CI/CD pipelines", "Infrastructure as code", "Automated testing", "Performance monitoring"],
+      name: "DevOps & CI/CD Automation",
+      description: "Complete DevOps transformation with automated pipelines, infrastructure as code, and continuous monitoring.",
+      features: ["CI/CD pipeline setup", "Infrastructure as code", "Automated testing & deployment", "Performance monitoring", "Container orchestration", "GitOps workflows"],
       icon: <Zap className="w-8 h-8" />,
-      category: "DevOps"
+      category: "DevOps",
+      price: "From $2,999/month",
+      marketPrice: "$5,999/month",
+      savings: "50%",
+      popular: false
     },
     {
       id: 4,
-      name: "Web Development",
-      description: "Modern, responsive websites and web applications built with latest technologies.",
-      features: ["React/Next.js development", "API development", "Database design", "Performance optimization"],
+      name: "Full-Stack Web Development",
+      description: "Modern, scalable web applications with React, Next.js, Node.js, and advanced performance optimization.",
+      features: ["React/Next.js development", "Backend API development", "Database design & optimization", "Performance optimization", "SEO & accessibility", "Maintenance & support"],
       icon: <Globe className="w-8 h-8" />,
-      category: "Development"
+      category: "Development",
+      price: "From $2,499/month",
+      marketPrice: "$4,999/month",
+      savings: "50%",
+      popular: false
     },
     {
       id: 5,
-      name: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
-      features: ["Native iOS/Android", "React Native", "Flutter", "App store deployment"],
+      name: "Mobile App Development Suite",
+      description: "Native and cross-platform mobile applications with advanced features and app store optimization.",
+      features: ["Native iOS/Android development", "React Native & Flutter", "App store deployment", "Push notifications", "Analytics integration", "Maintenance & updates"],
       icon: <Smartphone className="w-8 h-8" />,
-      category: "Mobile"
+      category: "Mobile",
+      price: "From $3,499/month",
+      marketPrice: "$6,999/month",
+      savings: "50%",
+      popular: false
     },
     {
       id: 6,
-      name: "Database Solutions",
-      description: "Database design, optimization, and management for scalable applications.",
-      features: ["Database design", "Performance tuning", "Data migration", "Backup & recovery"],
+      name: "Database Solutions & Management",
+      description: "Comprehensive database services with design, optimization, migration, and 24/7 monitoring.",
+      features: ["Database design & architecture", "Performance tuning", "Data migration", "Backup & recovery", "24/7 monitoring", "Security hardening"],
       icon: <Database className="w-8 h-8" />,
-      category: "Database"
+      category: "Database",
+      price: "From $1,999/month",
+      marketPrice: "$3,999/month",
+      savings: "50%",
+      popular: false
+    },
+    {
+      id: 7,
+      name: "IT Infrastructure Management",
+      description: "Complete IT infrastructure setup, management, and optimization for enterprise environments.",
+      features: ["Server setup & configuration", "Network design & security", "Hardware procurement", "System administration", "Backup & disaster recovery", "24/7 support"],
+      icon: <Server className="w-8 h-8" />,
+      category: "Infrastructure",
+      price: "From $2,799/month",
+      marketPrice: "$5,599/month",
+      savings: "50%",
+      popular: false
+    },
+    {
+      id: 8,
+      name: "API Development & Management",
+      description: "RESTful and GraphQL API development with comprehensive management and monitoring capabilities.",
+      features: ["RESTful API development", "GraphQL implementation", "API documentation", "Rate limiting & security", "API monitoring", "Version management"],
+      icon: <Cpu className="w-8 h-8" />,
+      category: "API Services",
+      price: "From $1,499/month",
+      marketPrice: "$2,999/month",
+      savings: "50%",
+      popular: false
+    },
+    {
+      id: 9,
+      name: "Digital Transformation Consulting",
+      description: "Strategic digital transformation with technology assessment, planning, and implementation guidance.",
+      features: ["Technology assessment", "Digital strategy planning", "Change management", "Process optimization", "Training & support", "ROI measurement"],
+      icon: <TrendingUp className="w-8 h-8" />,
+      category: "Consulting",
+      price: "From $3,999/month",
+      marketPrice: "$7,999/month",
+      savings: "50%",
+      popular: false
     }
   ];
 
@@ -191,41 +251,78 @@ const ItServicesPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {itServices.map((service) => (
-                <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 transition-all duration-300 hover:border-cyan-500/40 hover:scale-105">
-                  <div className="text-cyan-400 mb-4 flex justify-center">
-                    {service.icon}
+                <div key={service.id} className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 lg:p-8 border transition-all duration-300 hover:border-cyan-500/40 hover:scale-105 ${
+                  service.popular 
+                    ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
+                    : 'border-white/20'
+                }`}>
+                  {service.popular && (
+                    <div className="flex items-center justify-center mb-4">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-cyan-400">
+                      {service.icon}
+                    </div>
+                    <div className="text-right">
+                      <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold">
+                        {service.category}
+                      </span>
+                    </div>
                   </div>
                   
-                  <div className="text-center mb-4">
-                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-semibold">
-                      {service.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 text-center">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     {service.name}
                   </h3>
                   
-                  <p className="text-gray-300 mb-6 text-center">
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
                   
                   <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, index) => (
+                    <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, index) => (
                         <li key={index} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          <span className="text-xs">{feature}</span>
                         </li>
                       ))}
+                      {service.features.length > 4 && (
+                        <li className="text-xs text-cyan-400 ml-5">
+                          +{service.features.length - 4} more features
+                        </li>
+                      )}
                     </ul>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                    Learn More
+                  <div className="text-center mb-4">
+                    <div className="flex items-center justify-center space-x-2 mb-2">
+                      <div className="text-lg font-bold text-white">
+                        {service.price}
+                      </div>
+                      <div className="text-sm text-gray-400 line-through">
+                        {service.marketPrice}
+                      </div>
+                    </div>
+                    <div className="text-xs text-green-400 font-semibold">
+                      Save {service.savings}
+                    </div>
+                  </div>
+                  
+                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    service.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}>
+                    Get Quote
                   </button>
                 </div>
               ))}

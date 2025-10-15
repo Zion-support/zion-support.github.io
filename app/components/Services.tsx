@@ -14,17 +14,31 @@ import {
 const Services: React.FC = () => {
   const serviceCategories = [
     {
+      title: 'Micro SAAS Solutions',
+      icon: <Zap className="w-8 h-8" />,
+      color: 'from-orange-500 to-red-600',
+      description: 'Ready-to-use AI-powered software solutions for immediate deployment',
+      services: [
+        { name: 'AI Content Writer Pro', href: '/ai-content-writer-pro', price: 'From $49/month', popular: true },
+        { name: 'AI Project Manager Enterprise', href: '/ai-project-manager-enterprise', price: 'From $79/month', popular: false },
+        { name: 'AI Email Marketing Suite', href: '/ai-email-marketing-suite', price: 'From $59/month', popular: false },
+        { name: 'Business Intelligence Dashboard', href: '/business-intelligence-dashboard', price: 'From $89/month', popular: false },
+        { name: 'AI Customer Support Hub', href: '/ai-customer-support-hub', price: 'From $129/month', popular: false },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', price: 'From $69/month', popular: false }
+      ]
+    },
+    {
       title: 'AI Services',
       icon: <Brain className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-600',
       description: 'Revolutionary AI solutions for modern businesses',
       services: [
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', price: 'From $299/month' },
-        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', price: 'From $199/month' },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', price: 'From $149/month' },
-        { name: 'AI Project Manager', href: '/ai-project-manager', price: 'From $99/month' },
-        { name: 'AI Customer Support', href: '/ai-customer-support', price: 'From $149/month' },
-        { name: 'AI Email Marketing', href: '/ai-email-marketing', price: 'From $99/month' }
+        { name: 'Machine Learning Solutions', href: '/machine-learning-solutions', price: 'From $2,999/month', popular: true },
+        { name: 'Computer Vision Pro', href: '/computer-vision-pro', price: 'From $3,499/month', popular: false },
+        { name: 'Natural Language Processing', href: '/natural-language-processing', price: 'From $2,499/month', popular: false },
+        { name: 'AI Process Automation', href: '/ai-process-automation', price: 'From $1,999/month', popular: false },
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence', price: 'From $2,299/month', popular: false },
+        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite', price: 'From $4,499/month', popular: false }
       ]
     },
     {
@@ -33,12 +47,12 @@ const Services: React.FC = () => {
       color: 'from-purple-500 to-pink-600',
       description: 'Comprehensive IT solutions and cloud services',
       services: [
-        { name: 'Cloud Migration Services', href: '/cloud-migration-services', price: 'From $2,999' },
-        { name: 'Cybersecurity Consulting', href: '/cybersecurity-consulting', price: 'From $2,999' },
-        { name: 'Database Solutions', href: '/database-solutions', price: 'From $1,999' },
-        { name: 'DevOps Solutions', href: '/devops-solutions', price: 'From $1,499' },
-        { name: 'API Management', href: '/ai-api-management', price: 'From $999' },
-        { name: 'Performance Monitoring', href: '/performance-monitoring', price: 'From $799' }
+        { name: 'Cloud Migration & Management', href: '/cloud-migration-management', price: 'From $4,999/month', popular: true },
+        { name: 'Enterprise Cybersecurity', href: '/enterprise-cybersecurity', price: 'From $3,999/month', popular: false },
+        { name: 'DevOps & CI/CD Automation', href: '/devops-cicd-automation', price: 'From $2,999/month', popular: false },
+        { name: 'Full-Stack Web Development', href: '/full-stack-web-development', price: 'From $2,499/month', popular: false },
+        { name: 'Mobile App Development Suite', href: '/mobile-app-development-suite', price: 'From $3,499/month', popular: false },
+        { name: 'Database Solutions & Management', href: '/database-solutions-management', price: 'From $1,999/month', popular: false }
       ]
     },
     {
@@ -47,26 +61,12 @@ const Services: React.FC = () => {
       color: 'from-green-500 to-teal-600',
       description: 'Next-generation 5G infrastructure and applications',
       services: [
-        { name: '5G Implementation', href: '/5g-implementation', price: 'From $5,999' },
-        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure', price: 'From $4,999' },
-        { name: '5G IoT Solutions', href: '/5g-iot-solutions', price: 'From $3,999' },
-        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions', price: 'From $7,999' },
-        { name: '5G Edge Computing', href: '/5g-edge-computing', price: 'From $2,999' },
-        { name: '5G Private Networks', href: '/5g-private-networks', price: 'From $6,999' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: <Zap className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-600',
-      description: 'Ready-to-use software solutions for immediate deployment',
-      services: [
-        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', price: 'From $49/month' },
-        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro', price: 'From $79/month' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro', price: 'From $129/month' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: 'From $199/month' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation', price: 'From $149/month' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', price: 'From $299/month' }
+        { name: '5G Implementation', href: '/5g-implementation', price: 'From $5,999/month', popular: false },
+        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure', price: 'From $4,999/month', popular: false },
+        { name: '5G IoT Solutions', href: '/5g-iot-solutions', price: 'From $3,999/month', popular: false },
+        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions', price: 'From $7,999/month', popular: false },
+        { name: '5G Edge Computing', href: '/5g-edge-computing', price: 'From $2,999/month', popular: false },
+        { name: '5G Private Networks', href: '/5g-private-networks', price: 'From $6,999/month', popular: false }
       ]
     }
   ];
@@ -86,9 +86,9 @@ const Services: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {serviceCategories.map((category, index) => (
-            <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
+            <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 lg:p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
               <div className="flex items-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mr-4`}>
                   <div className="text-white">{category.icon}</div>
@@ -108,7 +108,15 @@ const Services: React.FC = () => {
                   >
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-white font-medium">{service.name}</span>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-white font-medium">{service.name}</span>
+                        {service.popular && (
+                          <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center">
+                            <Star className="w-3 h-3 mr-1" />
+                            Popular
+                          </span>
+                        )}
+                      </div>
                     </div>
                     <div className="flex items-center space-x-2">
                       <span className="text-cyan-400 text-sm font-semibold">{service.price}</span>
