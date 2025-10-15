@@ -1,63 +1,67 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MessageCircle, Headphones, Zap, Shield, Clock, Users, CheckCircle, ArrowRight, Star, Phone, Mail } from 'lucide-react';
+import { Wifi, Brain, Zap, Cloud, CheckCircle, ArrowRight, Star, Phone, Mail, Smartphone, Cpu, Network } from 'lucide-react';
 
-const AiCustomerSupportProPage: React.FC = () => {
+const FiveGAiIntegrationPage: React.FC = () => {
   const features = [
-    "24/7 AI-powered customer support",
-    "Multi-language support (50+ languages)",
-    "Intelligent ticket routing and prioritization",
-    "Sentiment analysis and emotion detection",
-    "Automated response generation",
-    "Integration with CRM systems",
-    "Real-time analytics dashboard",
-    "Customizable AI personality",
-    "Voice and text support",
-    "Escalation to human agents when needed"
+    "AI-powered 5G network optimization",
+    "Real-time network performance monitoring",
+    "Intelligent traffic management and routing",
+    "Edge AI computing integration",
+    "Automated network slicing and resource allocation",
+    "Predictive maintenance and fault detection",
+    "AI-driven capacity planning and scaling",
+    "Advanced analytics and reporting dashboard",
+    "Integration with existing network infrastructure",
+    "Custom AI model deployment and training"
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$1,999",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small to medium networks",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI responses",
-        "Email and chat support",
-        "Standard analytics",
-        "5 team members"
+        "Basic AI optimization",
+        "Up to 10 base stations",
+        "Standard monitoring",
+        "Email support",
+        "Monthly reports",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$4,999",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for enterprise networks",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI with learning",
-        "Multi-channel support",
+        "Advanced AI algorithms",
+        "Up to 100 base stations",
+        "Real-time monitoring",
+        "Priority support",
+        "Custom dashboards",
         "Advanced analytics",
-        "Unlimited team members",
-        "API access"
+        "Edge AI computing"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$12,999",
       period: "/month",
-      description: "For large organizations",
+      description: "For large-scale deployments",
       features: [
-        "Unlimited conversations",
-        "Custom AI training",
-        "All channels supported",
-        "Custom integrations",
-        "Dedicated support",
-        "SLA guarantee"
+        "Full AI suite",
+        "Unlimited base stations",
+        "24/7 monitoring",
+        "Dedicated support team",
+        "Custom AI models",
+        "Advanced edge computing",
+        "SLA guarantee",
+        "Custom integrations"
       ],
       popular: false
     }
@@ -65,35 +69,58 @@ const AiCustomerSupportProPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: "24/7 Availability",
-      description: "Never miss a customer inquiry with round-the-clock AI support"
-    },
-    {
       icon: <Zap className="w-8 h-8" />,
-      title: "Instant Responses",
-      description: "Customers get immediate answers to their questions"
+      title: "Enhanced Performance",
+      description: "AI optimization improves network performance by up to 40%"
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Consistent Quality",
-      description: "Every interaction maintains the same high standard"
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Edge AI Computing",
+      description: "Process data locally for ultra-low latency applications"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Scalable Support",
-      description: "Handle unlimited customer inquiries without additional staff"
+      icon: <Brain className="w-8 h-8" />,
+      title: "Intelligent Automation",
+      description: "Automated network management and optimization"
+    },
+    {
+      icon: <Network className="w-8 h-8" />,
+      title: "Future-Ready",
+      description: "Scalable solution that grows with your network"
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Smart Cities",
+      description: "AI-powered traffic management and public safety",
+      icon: <Smartphone className="w-8 h-8" />
+    },
+    {
+      title: "Industrial IoT",
+      description: "Real-time monitoring and predictive maintenance",
+      icon: <Cpu className="w-8 h-8" />
+    },
+    {
+      title: "Autonomous Vehicles",
+      description: "Ultra-low latency communication for safety",
+      icon: <Wifi className="w-8 h-8" />
+    },
+    {
+      title: "Healthcare",
+      description: "Remote surgery and telemedicine applications",
+      icon: <Brain className="w-8 h-8" />
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Customer Support Pro - Zion Tech Group | 24/7 AI-Powered Support</title>
-        <meta name="description" content="Revolutionary AI customer support solution with 24/7 availability, multi-language support, and intelligent ticket routing. Starting at $99/month." />
-        <meta name="keywords" content="AI customer support, chatbot, customer service automation, 24/7 support, multi-language support" />
-        <meta property="og:title" content="AI Customer Support Pro - Zion Tech Group" />
-        <meta property="og:description" content="Transform your customer support with AI-powered automation and 24/7 availability." />
+        <title>5G AI Integration - Zion Tech Group | Next-Gen Network Intelligence</title>
+        <meta name="description" content="Revolutionary 5G AI integration platform with intelligent network optimization, edge computing, and automated management. Starting at $1,999/month." />
+        <meta name="keywords" content="5G AI integration, network optimization, edge computing, intelligent networks, 5G automation" />
+        <meta property="og:title" content="5G AI Integration - Zion Tech Group" />
+        <meta property="og:description" content="Transform your 5G network with AI-powered intelligence and automation." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -111,16 +138,16 @@ const AiCustomerSupportProPage: React.FC = () => {
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
-                AI-Powered Customer Support
+                5G + AI Integration
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  AI Customer Support Pro
+                  5G AI Integration
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize your customer service with AI-powered support that never sleeps. 
-                Provide instant, intelligent responses to your customers 24/7.
+                Combine the power of 5G networks with artificial intelligence for 
+                intelligent network optimization, edge computing, and automated management.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
@@ -135,20 +162,44 @@ const AiCustomerSupportProPage: React.FC = () => {
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  Get Demo
+                  Get Consultation
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Use Cases Section */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Revolutionary Use Cases</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to provide exceptional customer support
+                Discover how 5G AI integration transforms industries
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-cyan-400">{useCase.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Advanced Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need for intelligent 5G network management
               </p>
             </div>
             
@@ -166,12 +217,12 @@ const AiCustomerSupportProPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">
+        <section className="py-20 bg-white/5 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Support?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our 5G AI Integration?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your customer experience with intelligent automation
+                The future of network intelligence is here
               </p>
             </div>
             
@@ -190,12 +241,12 @@ const AiCustomerSupportProPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 bg-white/5 backdrop-blur-sm">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs
+                Choose the plan that fits your network size and requirements
               </p>
             </div>
             
@@ -250,9 +301,9 @@ const AiCustomerSupportProPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your 5G Network?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join hundreds of companies already using AI to provide better customer service.
+                Join the future of intelligent networking with our 5G AI integration platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -265,7 +316,7 @@ const AiCustomerSupportProPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  Schedule Demo
+                  Schedule Consultation
                 </a>
               </div>
             </div>
@@ -276,4 +327,4 @@ const AiCustomerSupportProPage: React.FC = () => {
   );
 };
 
-export default AiCustomerSupportProPage;
+export default FiveGAiIntegrationPage;

@@ -1,62 +1,67 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MessageCircle, Headphones, Zap, Shield, Clock, Users, CheckCircle, ArrowRight, Star, Phone, Mail } from 'lucide-react';
+import { Mail, Send, BarChart3, Users, Target, CheckCircle, ArrowRight, Star, Phone, TrendingUp, Zap, Shield } from 'lucide-react';
 
-const AiCustomerSupportProPage: React.FC = () => {
+const AiEmailMarketingProPage: React.FC = () => {
   const features = [
-    "24/7 AI-powered customer support",
-    "Multi-language support (50+ languages)",
-    "Intelligent ticket routing and prioritization",
-    "Sentiment analysis and emotion detection",
-    "Automated response generation",
-    "Integration with CRM systems",
-    "Real-time analytics dashboard",
-    "Customizable AI personality",
-    "Voice and text support",
-    "Escalation to human agents when needed"
+    "AI-powered email content generation",
+    "Advanced segmentation and personalization",
+    "Automated drip campaigns and sequences",
+    "A/B testing with AI optimization",
+    "Predictive send time optimization",
+    "Advanced analytics and reporting",
+    "Email template library with AI customization",
+    "Spam score optimization",
+    "Subscriber behavior tracking",
+    "Integration with 100+ platforms"
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$79",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI responses",
-        "Email and chat support",
-        "Standard analytics",
-        "5 team members"
+        "Up to 5,000 subscribers",
+        "10,000 emails per month",
+        "Basic AI content generation",
+        "Email templates",
+        "Basic analytics",
+        "1 user account"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$199",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI with learning",
-        "Multi-channel support",
+        "Up to 25,000 subscribers",
+        "Unlimited emails",
+        "Advanced AI features",
+        "A/B testing",
         "Advanced analytics",
-        "Unlimited team members",
-        "API access"
+        "Automation workflows",
+        "5 user accounts",
+        "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$499",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
+        "Unlimited subscribers",
+        "Unlimited emails",
         "Custom AI training",
-        "All channels supported",
+        "Advanced segmentation",
         "Custom integrations",
-        "Dedicated support",
+        "Dedicated account manager",
+        "Unlimited users",
         "SLA guarantee"
       ],
       popular: false
@@ -65,35 +70,42 @@ const AiCustomerSupportProPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: "24/7 Availability",
-      description: "Never miss a customer inquiry with round-the-clock AI support"
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Higher Open Rates",
+      description: "AI optimization increases open rates by up to 40%"
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Better Targeting",
+      description: "Precise audience segmentation for maximum impact"
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Instant Responses",
-      description: "Customers get immediate answers to their questions"
+      title: "Automated Campaigns",
+      description: "Set it and forget it with intelligent automation"
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Consistent Quality",
-      description: "Every interaction maintains the same high standard"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Scalable Support",
-      description: "Handle unlimited customer inquiries without additional staff"
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Data-Driven Insights",
+      description: "Make informed decisions with detailed analytics"
     }
+  ];
+
+  const stats = [
+    { number: "40%", label: "Higher Open Rates" },
+    { number: "60%", label: "More Clicks" },
+    { number: "25%", label: "Better Conversion" },
+    { number: "50%", label: "Time Saved" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Customer Support Pro - Zion Tech Group | 24/7 AI-Powered Support</title>
-        <meta name="description" content="Revolutionary AI customer support solution with 24/7 availability, multi-language support, and intelligent ticket routing. Starting at $99/month." />
-        <meta name="keywords" content="AI customer support, chatbot, customer service automation, 24/7 support, multi-language support" />
-        <meta property="og:title" content="AI Customer Support Pro - Zion Tech Group" />
-        <meta property="og:description" content="Transform your customer support with AI-powered automation and 24/7 availability." />
+        <title>AI Email Marketing Pro - Zion Tech Group | Intelligent Email Automation</title>
+        <meta name="description" content="Revolutionary AI email marketing platform with automated content generation, segmentation, and optimization. Starting at $79/month." />
+        <meta name="keywords" content="AI email marketing, email automation, email campaigns, email segmentation, email analytics" />
+        <meta property="og:title" content="AI Email Marketing Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform your email marketing with AI-powered automation and optimization." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -111,16 +123,16 @@ const AiCustomerSupportProPage: React.FC = () => {
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
-                AI-Powered Customer Support
+                AI-Powered Email Marketing
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  AI Customer Support Pro
+                  AI Email Marketing Pro
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize your customer service with AI-powered support that never sleeps. 
-                Provide instant, intelligent responses to your customers 24/7.
+                Revolutionize your email marketing with AI-powered content generation, 
+                intelligent segmentation, and automated optimization for maximum ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
@@ -142,13 +154,37 @@ const AiCustomerSupportProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Stats Section */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Proven Results</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI-powered email marketing delivers measurable improvements
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <TrendingUp className="w-10 h-10 text-cyan-400" />
+                  </div>
+                  <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-400">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to provide exceptional customer support
+                Everything you need to create, send, and optimize email campaigns
               </p>
             </div>
             
@@ -166,12 +202,12 @@ const AiCustomerSupportProPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">
+        <section className="py-20 bg-white/5 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Support?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Email Marketing?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your customer experience with intelligent automation
+                Transform your email marketing strategy with intelligent automation
               </p>
             </div>
             
@@ -190,12 +226,12 @@ const AiCustomerSupportProPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 bg-white/5 backdrop-blur-sm">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs
+                Choose the plan that fits your email marketing needs
               </p>
             </div>
             
@@ -250,9 +286,9 @@ const AiCustomerSupportProPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join hundreds of companies already using AI to provide better customer service.
+                Join thousands of businesses already using AI to boost their email marketing ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -276,4 +312,4 @@ const AiCustomerSupportProPage: React.FC = () => {
   );
 };
 
-export default AiCustomerSupportProPage;
+export default AiEmailMarketingProPage;
