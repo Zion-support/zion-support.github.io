@@ -1,10 +1,96 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, User, Calendar } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All', count: 24 },
+    { id: 'ai', name: 'AI', count: 8 },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 6 },
+    { id: 'cloud', name: 'Cloud', count: 5 },
+    { id: 'development', name: 'Development', count: 5 }
+  ];
+
+  const featuredPost = {
+    id: 'featured-1',
+    title: 'The Future of AI in Healthcare: Transforming Patient Care',
+    excerpt: 'Explore how artificial intelligence is revolutionizing healthcare delivery, from diagnostic imaging to personalized treatment plans.',
+    image: '/api/placeholder/600/400',
+    category: 'AI',
+    author: 'Dr. Sarah Chen',
+    date: '2024-01-15',
+    readTime: '8 min read'
+  };
+
+  const regularPosts = [
+    {
+      id: 'post-1',
+      title: 'Zero Trust Security: A Complete Implementation Guide',
+      excerpt: 'Learn how to implement zero trust architecture to protect your organization from modern cyber threats.',
+      image: '/api/placeholder/400/300',
+      category: 'Cybersecurity',
+      author: 'Michael Rodriguez',
+      date: '2024-01-12',
+      readTime: '6 min read'
+    },
+    {
+      id: 'post-2',
+      title: 'Cloud Migration Strategies for Enterprise Applications',
+      excerpt: 'Best practices for migrating legacy applications to the cloud while maintaining security and performance.',
+      image: '/api/placeholder/400/300',
+      category: 'Cloud',
+      author: 'Jennifer Liu',
+      date: '2024-01-10',
+      readTime: '10 min read'
+    },
+    {
+      id: 'post-3',
+      title: 'Building Scalable Microservices with React and Node.js',
+      excerpt: 'A comprehensive guide to building and deploying microservices using modern web technologies.',
+      image: '/api/placeholder/400/300',
+      category: 'Development',
+      author: 'Alex Thompson',
+      date: '2024-01-08',
+      readTime: '12 min read'
+    },
+    {
+      id: 'post-4',
+      title: 'Machine Learning Model Deployment: From Development to Production',
+      excerpt: 'Strategies for deploying ML models at scale while ensuring reliability and monitoring performance.',
+      image: '/api/placeholder/400/300',
+      category: 'AI',
+      author: 'Dr. Sarah Chen',
+      date: '2024-01-05',
+      readTime: '9 min read'
+    },
+    {
+      id: 'post-5',
+      title: 'Advanced Threat Detection with AI-Powered Security Tools',
+      excerpt: 'How artificial intelligence is enhancing cybersecurity through automated threat detection and response.',
+      image: '/api/placeholder/400/300',
+      category: 'Cybersecurity',
+      author: 'Michael Rodriguez',
+      date: '2024-01-03',
+      readTime: '7 min read'
+    },
+    {
+      id: 'post-6',
+      title: 'Serverless Architecture: Benefits and Implementation Challenges',
+      excerpt: 'Exploring the advantages and challenges of serverless computing for modern applications.',
+      image: '/api/placeholder/400/300',
+      category: 'Cloud',
+      author: 'Jennifer Liu',
+      date: '2024-01-01',
+      readTime: '8 min read'
+    }
+  ];
+
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
@@ -180,17 +266,6 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
-      <SEOHead 
-        title="blog - Zion Tech Group"
-        description="Zion Tech Group blog service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">blog</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
       </div>
     </>
   );
