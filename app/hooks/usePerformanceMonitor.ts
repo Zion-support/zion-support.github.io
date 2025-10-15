@@ -1,26 +1,21 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export const usePerformanceMonitor = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Performance monitoring logic here
-    const observer = new PerformanceObserver((list) => {
-      // Handle performance entries
-    });
-
-    observer.observe({ entryTypes: ['measure', 'navigation'] });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  return {
-    isLoading,
-    error,
-    setIsLoading,
-    setError
-  };
+const UsePerformanceMonitorTsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>UsePerformanceMonitor.Ts | Zion Tech Group</title>
+        <meta name="description" content="Professional useperformancemonitor.ts services and solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-8">UsePerformanceMonitor.Ts</h1>
+          <p className="text-xl text-gray-300">Professional useperformancemonitor.ts services and solutions.</p>
+        </div>
+      </div>
+    </>
+  );
 };
+
+export default UsePerformanceMonitorTsPage;

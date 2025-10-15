@@ -6,7 +6,7 @@ export const appConfig = { name: 'Zion Tech Group',
   environment: process.env.NODE_ENV || 'development',
   social: {
     twitter: 'https://twitter.com/ziontechgroup',
-    linkedin: 'https://linkedin.com/company/ziontechgroup',
+    linkedin: 'https://linkedin.com/company/ziontechgroup',}
     github: 'https://github.com/ziontechgroup' }
 };
 

@@ -1,35 +1,21 @@
 import React from 'react';
-import { ResponsiveGridProps } from 'lucide-react';
-interface ResponsiveGridProps {
-  children: React.ReactNode;
-  className?: string;
-  cols?: {
-    default?: number;
-    sm?: number;
-    md?: number;
-    lg?: number;
-    xl?: number;
-  };
-}
-const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ 
-  children, 
-  className = '', 
-  cols = { default: 1, sm: 2, md: 3, lg: 4 } 
-}) => {
-  const gridClasses = [
-    'grid',
-    `grid-cols-${cols.default || 1}`,
-    cols.sm && `sm:grid-cols-${cols.sm}`,
-    cols.md && `md:grid-cols-${cols.md}`,
-    cols.lg && `lg:grid-cols-${cols.lg}`,
-    cols.xl && `xl:grid-cols-${cols.xl}`,
-    'gap-6',
-    className
-  ].filter(Boolean).join(' ');
+import { Helmet } from 'react-helmet-async';
+
+const ResponsiveGridPage: React.FC = () => {
   return (
-    <div className={gridClasses}>
-      {children}
-    </div>
+    <>
+      <Helmet>
+        <title>ResponsiveGrid | Zion Tech Group</title>
+        <meta name="description" content="Professional responsivegrid services and solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-8">ResponsiveGrid</h1>
+          <p className="text-xl text-gray-300">Professional responsivegrid services and solutions.</p>
+        </div>
+      </div>
+    </>
   );
 };
-export default ResponsiveGrid;
+
+export default ResponsiveGridPage;

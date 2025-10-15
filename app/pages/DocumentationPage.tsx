@@ -1,21 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DocumentationPage: React.FC = () => {
+const DocumentationPagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Documentation | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive documentation for our services" />
+        <title>DocumentationPage | Zion Tech Group</title>
+        <meta name="description" content="Professional documentationpage services and solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white mb-8">Documentation</h1>
-          <p className="text-xl text-gray-300">Comprehensive documentation coming soon...</p>
+          <h1 className="text-4xl font-bold text-white mb-8">DocumentationPage</h1>
+          <p className="text-xl text-gray-300">Professional documentationpage services and solutions.</p>
         </div>
       </div>
     </>
   );
 };
 
-export default DocumentationPage;
+export default DocumentationPagePage;

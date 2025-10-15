@@ -6,7 +6,7 @@ export const analyticsConfig = { googleAnalytics: {
     scroll: 'scroll',
     formSubmit: 'form_submit',
     page: 'page',
-    section: 'section',
+    section: 'section',}
     action: 'action' }
 };
 

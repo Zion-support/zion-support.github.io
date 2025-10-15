@@ -5,7 +5,7 @@ export interface ServiceData { id: string;
   features: string[];
   pricing: {
     starter: number;
-    professional: number;
+    professional: number;}
     enterprise: number; };
   icon: string;
 }
@@ -17,7 +17,7 @@ export const servicesData: ServiceData[] = [
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
     pricing: {
       starter: 1000,
-      professional: 2500,
+      professional: 2500,}
       enterprise: 5000 },
     icon: 'robot'
   },
@@ -28,7 +28,7 @@ export const servicesData: ServiceData[] = [
     features: ['Infrastructure Migration', 'Data Migration', 'Security Setup'],
     pricing: {
       starter: 2000,
-      professional: 5000,
+      professional: 5000,}
       enterprise: 10000 },
     icon: 'cloud'
   },
@@ -39,7 +39,7 @@ export const servicesData: ServiceData[] = [
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring'],
     pricing: {
       starter: 1500,
-      professional: 4000,
+      professional: 4000,}
       enterprise: 8000 },
     icon: 'shield'
   }

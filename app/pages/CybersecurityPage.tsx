@@ -1,21 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CybersecurityPage: React.FC = () => {
+const CybersecurityPagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Cybersecurity Solutions | Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity solutions for enterprise protection" />
+        <title>CybersecurityPage | Zion Tech Group</title>
+        <meta name="description" content="Professional cybersecuritypage services and solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white mb-8">Cybersecurity Solutions</h1>
-          <p className="text-xl text-gray-300">Advanced cybersecurity solutions coming soon...</p>
+          <h1 className="text-4xl font-bold text-white mb-8">CybersecurityPage</h1>
+          <p className="text-xl text-gray-300">Professional cybersecuritypage services and solutions.</p>
         </div>
       </div>
     </>
   );
 };
 
-export default CybersecurityPage;
+export default CybersecurityPagePage;

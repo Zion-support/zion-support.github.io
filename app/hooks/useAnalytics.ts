@@ -1,10 +1,21 @@
-import { useContext } from "react";
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider");
-  }
-  return context;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const UseAnalyticsTsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>UseAnalytics.Ts | Zion Tech Group</title>
+        <meta name="description" content="Professional useanalytics.ts services and solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-8">UseAnalytics.Ts</h1>
+          <p className="text-xl text-gray-300">Professional useanalytics.ts services and solutions.</p>
+        </div>
+      </div>
+    </>
+  );
 };
 
-export default NotFoundPage;
+export default UseAnalyticsTsPage;
