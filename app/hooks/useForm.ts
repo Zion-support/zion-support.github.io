@@ -68,9 +68,13 @@ export function useForm<T extends Record<string, any>>({
         data: initialData, // Reset form
       }));
     } catch (error) {
+      // Log error in development, send to error service in production
       if (process.env.NODE_ENV === 'development') {
         console.error('Form submission error:', error);
       }
+      // In production, you would send this to your error monitoring service
+      // Example: sendToErrorService(error, 'FormSubmission');
+      
       setFormState(prev => ({
         ...prev,
         submitStatus: 'error',
