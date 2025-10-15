@@ -12,6 +12,8 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
+// Utils
+import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -74,11 +76,6 @@ const DemoPage = lazy(() => import('./app/demo/page'));
 const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
 const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
-// Missing pages
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-
 // Micro SaaS pages
 const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
@@ -87,17 +84,8 @@ const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
 const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
 const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
-// Missing pages
+// Additional pages
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
-const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
-const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
-const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -132,6 +120,9 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   useEffect(() => {
+    // Initialize performance optimizer
+    performanceOptimizer.init();
+    
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload critical CSS
@@ -160,6 +151,17 @@ function App() {
     };
 
     preloadCriticalResources();
+    
+    // Optimize images
+    performanceOptimizer.optimizeImages();
+    
+    // Lazy load images
+    performanceOptimizer.lazyLoadImages();
+
+    // Cleanup on unmount
+    return () => {
+      performanceOptimizer.destroy();
+    };
   }, []);
   return (
     <GlobalErrorBoundary>
@@ -243,11 +245,6 @@ function App() {
                     <Route path="/cybersecurity" element={<CybersecurityPage />} />
                     <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                     
-                    {/* Missing pages */}
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/docs" element={<DocsPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    
                     {/* Micro SaaS pages */}
                     <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
                     <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
@@ -256,17 +253,8 @@ function App() {
                     <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
                     <Route path="/expense-tracker-pro" element={<ExpenseTrackerProPage />} />
                     
-                    {/* Missing pages */}
+                    {/* Additional pages */}
                     <Route path="/it-solutions" element={<ITSolutionsPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/docs" element={<DocsPage />} />
-                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
-                    <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
-                    <Route path="/inventory-manager" element={<InventoryManagerPage />} />
-                    <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
-                    <Route path="/expense-tracker-pro" element={<ExpenseTrackerProPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
