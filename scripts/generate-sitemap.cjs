@@ -4,10 +4,6 @@ const path = require('path');
 // Generate sitemap.xml
 const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
-<<<<<<< HEAD
-  const currentDate = new Date().toISOString();
-=======
->>>>>>> c3c5988d5369 (Fix merge conflicts, build errors, and test issues)
   
   const pages = [
     '',
