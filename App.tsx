@@ -59,16 +59,11 @@ import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import { PageSkeleton } from './app/components/LoadingSkeleton';
+import { ToastProvider } from './app/components/Toast';
 
 // Enhanced loading component
-const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600 animate-pulse">Loading...</p>
-    </div>
-  </div>
-)
+const LoadingFallback = () => <PageSkeleton />
 
 export default function App() {
   useEffect(() => {
@@ -88,16 +83,25 @@ export default function App() {
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-gray-50">
-            <Navigation />
-            <Sidebar />
-            
-            <main className="flex-1">
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
+        <ToastProvider>
+          <Router>
+            <div className="min-h-screen bg-gray-50">
+              {/* Skip Navigation Link for Accessibility */}
+              <a 
+                href="#main-content" 
+                className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50"
+              >
+                Skip to main content
+              </a>
               
-              <Suspense fallback={<LoadingFallback />}>
+              <Navigation />
+              <Sidebar />
+              
+              <main id="main-content" className="flex-1">
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                
+                <Suspense fallback={<LoadingFallback />}>
                 <Routes>
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
@@ -191,11 +195,12 @@ export default function App() {
                   } />
                 </Routes>
               </Suspense>
-            </main>
-            
-            <Footer />
-          </div>
-        </Router>
+              </main>
+              
+              <Footer />
+            </div>
+          </Router>
+        </ToastProvider>
       </HelmetProvider>
     </GlobalErrorBoundary>
   )

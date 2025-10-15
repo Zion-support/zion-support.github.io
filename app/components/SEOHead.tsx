@@ -71,15 +71,53 @@ export default function SEOHead({
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.png",
           "description": "Leading provider of AI and IT solutions for modern businesses",
+          "foundingDate": "2020",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Tech Street",
+            "addressLocality": "Innovation City",
+            "addressRegion": "IC",
+            "postalCode": "12345",
+            "addressCountry": "US"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-555-123-4567",
+              "contactType": "customer service",
+              "email": "contact@ziontechgroup.com",
+              "availableLanguage": "English"
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-555-123-4568",
+              "contactType": "sales",
+              "email": "sales@ziontechgroup.com",
+              "availableLanguage": "English"
+            }
+          ],
           "sameAs": [
             "https://linkedin.com/company/zion-tech-group",
-            "https://twitter.com/ziontechgroup"
+            "https://twitter.com/ziontechgroup",
+            "https://github.com/ziontechgroup"
           ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-555-ZION-TECH",
-            "contactType": "customer service"
-          }
+          "service": [
+            {
+              "@type": "Service",
+              "name": "AI Services",
+              "description": "Advanced artificial intelligence solutions including machine learning, NLP, and computer vision"
+            },
+            {
+              "@type": "Service", 
+              "name": "Cloud Infrastructure",
+              "description": "Scalable cloud solutions that provide reliability, security, and performance"
+            },
+            {
+              "@type": "Service",
+              "name": "Digital Transformation", 
+              "description": "Complete digital transformation services to modernize business processes and systems"
+            }
+          ]
         })}
       </script>
     </Helmet>
