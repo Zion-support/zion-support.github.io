@@ -143,6 +143,7 @@ function generateReport() {
   if (!audit) return;
 
   console.log('📊 Accessibility Audit Results:');
+  console.log('==');
   console.log(`Total Checks: ${audit.issues.length}`);
   console.log(`Passed: ${audit.issues.filter(i => i.status === 'pass').length}`);
   console.log(`Failed: ${audit.issues.filter(i => i.status === 'fail').length}`);
@@ -156,6 +157,7 @@ function generateReport() {
   });
 
   console.log('\n💡 Recommendations:');
+  console.log('====');
   audit.recommendations.forEach((rec, index) => {
     console.log(`${index + 1}. ${rec}`);
   });

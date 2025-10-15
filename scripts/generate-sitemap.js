@@ -26,8 +26,7 @@ ${pages
   .map(
     (page) => `  <url>
     <loc>${baseUrl}${page.url}</loc>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
+    <changefreq>${page.changefreq}</changefreq>    <priority>${page.priority}</priority>
   </url>`,
   )
   .join("\n")}

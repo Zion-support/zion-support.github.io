@@ -1,4 +1,10 @@
 import '@testing-library/jest-dom';
+import React from 'react';
+import { TextEncoder, TextDecoder } from 'util';
+
+// Polyfill for TextEncoder/TextDecoder
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Mock TextEncoder and TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
@@ -41,7 +47,6 @@ Object.defineProperty(window, 'scrollTo', {
   writable: true,
   value: jest.fn(),
 });
-
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),

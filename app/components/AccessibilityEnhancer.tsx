@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  isHighContrast?: boolean;
+  isReducedMotion?: boolean;
+  fontSize?: number;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -192,7 +193,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         </div>
       </div>
     </>
-  );
-};
+  );};
 
 export default AccessibilityEnhancer;

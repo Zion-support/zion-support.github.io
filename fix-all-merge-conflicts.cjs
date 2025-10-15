@@ -1,75 +1,68 @@
-#!/usr/bin/env node;
-const fs = require('fs');';
-const _path = require('_path');';
-// Function to recursively find all _files;
-function getAllFiles(dirPath, arrayOfFiles = []) {
-  const _files = fs.readdirSync(dirPath);
+const fs = require('fs');
+const path = require('path');
 
-  _files.forEach(file => {
-    const fullPath = _path.join(dirPath, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      // Skip certain directories;
-      if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(file)) {';
-        getAllFiles(fullPath, arrayOfFiles);
-      }
-    } else {
-      // Only process certain file types;
-      if (file.match(/\.(js|jsx|ts|tsx|json|md|html|css|scss|sass|less|py|sh|toml)$/)) {
-        arrayOfFiles.push(fullPath);
-      }
-    }
-  });
+// Files with merge conflicts
+const filesWithConflicts = [
+  './app/contact/page.tsx',
+  './app/components/LoadingSpinner.tsx',
+  './scripts/generate-sitemap.js',
+  './app/components/AccessibilityEnhancer.tsx',
+  './app/blog/page.tsx',
+  './app/5g-solutions/page.tsx',
+  './app/ai-automation-platform/page.tsx',
+  './app/services/page.tsx',
+  './app/support/page.tsx',
+  './app/ai-solutions/page.tsx',
+  './api/wallet.js',
+  './api/subscribe.js',
+  './jest.setup.js',
+  './jest.config.js',
+  './app/ai-services/page.tsx',
+  './app/micro-saas-solutions/page.tsx',
+  './app/pages/AboutPage.tsx',
+  './app/pages/HomePage.tsx',
+  './app/demo/page.tsx',
+  './app/it-solutions/page.tsx',
+  './scripts/performance-analysis.js',
+  './scripts/accessibility-audit.js'
+];
 
-  return arrayOfFiles;
-}
-
-// Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    let _modified = false;
-
-    // Check if file has merge conflict markers;
-          // Skip everything until the closing marker;
-          continue;
-        }
-        
-          inConflict = false;
-          conflictDepth--;
-          continue;
-        }
-        
-        // Only add lines that are not in conflict or are from HEAD;
-        if (!inConflict || conflictDepth === 1) {
-          cleanedLines.push(line);
-        }
-      }
-
-      const cleanedContent = cleanedLines.join('\n');';
-      // Only write if content actually changed;
-      if (cleanedContent !== content) {
-        fs.writeFileSync(filePath, cleanedContent, 'utf8');';
-        _modified = true;
-        global.console.log(`✓ Fixed merge conflicts in: ${filePath}`);
-      }
+    if (!fs.existsSync(filePath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
     }
+
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+
+    // Remove merge conflict markers and keep the HEAD version (first part)
+    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
     
-    return _modified;
-  } catch (_error) {
-    global.console._error(`Error processing ${filePath}:`, _error.message);
-    return false;
+    // Remove any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD\n?/g, '');
+    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+
+    // Clean up any double newlines that might have been created
+    content = content.replace(/\n\n\n+/g, '\n\n');
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed merge conflicts in: ${filePath}`);
+    } else {
+      console.log(`No conflicts found in: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-// Main execution;
-global.console.log('Starting merge conflict cleanup...');';
-const allFiles = getAllFiles(process.cwd());
-let fixedCount = 0;
+console.log('Starting merge conflict resolution...');
 
-allFiles.forEach(file => {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
+filesWithConflicts.forEach(file => {
+  fixMergeConflicts(file);
 });
 
-global.console.log(`\nCompleted! Fixed merge conflicts in ${fixedCount} _files.`);
+console.log('Merge conflict resolution completed!');

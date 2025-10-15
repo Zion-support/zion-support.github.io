@@ -85,6 +85,7 @@ function generateReport() {
   if (!analysis) return;
 
   console.log('📊 Bundle Analysis Results:');
+  console.log('===');
   console.log(`Total Files: ${analysis.totalFiles}`);
   console.log(`Total Size: ${(analysis.totalSize / 1024).toFixed(2)} KB`);
   console.log(`JS Files: ${analysis.jsFiles.length}`);
@@ -96,6 +97,7 @@ function generateReport() {
   console.log(`Average JS File Size: ${(analysis.performanceMetrics.averageJsSize / 1024).toFixed(2)} KB\n`);
 
   console.log('🔧 Recommendations:');
+  console.log('====');
   if (analysis.recommendations.length === 0) {
     console.log('✅ No major performance issues found!');
   } else {

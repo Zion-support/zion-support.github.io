@@ -93,8 +93,7 @@ const AiServicesPage: React.FC = () => {
       applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
       price: "Starting at $3,999/month",
       benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
-    }
-  ];
+    }  ];
 
   const processSteps = [
     {

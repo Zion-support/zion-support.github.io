@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -29,8 +30,7 @@ const ITSolutionsPage: React.FC = () => {
           <h1 className="text-4xl font-bold text-white text-center mb-8">IT Solutions</h1>
           <p className="text-gray-300 text-center">Coming soon...</p>
         </div>
-      </div>
-    </>
+      </div>    </>
   );
 };
 

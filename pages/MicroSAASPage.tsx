@@ -167,7 +167,10 @@ const MicroSAASPage: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
   // const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'];
 
 >>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c

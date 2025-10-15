@@ -535,8 +535,7 @@ const AISolutionsPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </section>    </>
   );
 };
 
