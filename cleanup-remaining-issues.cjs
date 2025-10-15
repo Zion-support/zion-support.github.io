@@ -11,11 +11,9 @@ function cleanMergeConflicts(filePath) {
       content.includes(">>>>>>>")
     ) {
       content = content.replace(
-        /[\s\S]*?>>>>>>> [^\n]+/g,
-        "",
+        /[\s\S]*?        "",
       );
-      content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, "");
-      modified = true;
+      content = content.replace(/[\s\S]*?      modified = true;
     }
     if (modified) {
       fs.writeFileSync(filePath, content, "utf8");

@@ -1,198 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
+export default function EnhancedPerformanceMonitorPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedPerformanceMonitor | Zion Tech Group</title>
+        <meta name="description" content="Professional enhancedperformancemonitor solutions and services." />
+      </Helmet>
 
-      interface PerformanceMetrics {},
-      loadTime: number,
-      firstContentfulPaint: number,
-      largestContentfulPaint: number,
-      firstInputDelay: number,
-      cumulativeLayoutShift: number,
-      timeToFirstByte: number,
-      totalBlockingTime: number
-    },
-    {};
-interface PerformanceMonitorProps {},
-      showInProduction?: boolean
-},
-      const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({},)
-      showInProduction = false 
-}) => {},
-      const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
-
-        // Measure Core Web Vitals
-        const vitals: Partial<PerformanceMetrics> = {};
-        // Get FCP
-        onFCP((metric: unknown) => {},
-      vitals.firstContentfulPaint = metric.value;
-        });
-        // Get LCP
-        onLCP((metric: unknown) => {},
-      vitals.largestContentfulPaint = metric.value;
-        });
-        // Get INP (replaces FID)
-        onINP((metric: unknown) => {},
-      vitals.firstInputDelay = metric.value;
-        });
-        // Get CLS
-        onCLS((metric: unknown) => {},
-      vitals.cumulativeLayoutShift = metric.value;
-        });
-        // Get TTFB
-        onTTFB((metric: unknown) => {},
-
-        // Measure additional metrics
-        const  navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming"
-        const  paintEntries = performance.getEntriesByType('paint')"
-        const  fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')"
-        // Calculate Total Blocking Time
-
-
-}return total + (task.duration - 50); // 50ms is the threshold
-        }, 0)
-        const finalMetrics: PerformanceMetrics  =  {},
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      firstContentfulPaint: fcp ? fcp.startTime : vitals.firstContentfulPaint || 0,
-      largestContentfulPaint: vitals.largestContentfulPaint || 0,
-      firstInputDelay: vitals.firstInputDelay || 0,
-      cumulativeLayoutShift: vitals.cumulativeLayoutShift || 0,
-      timeToFirstByte: vitals.timeToFirstByte || 0,
-      totalBlockingTime: totalBlockingTime
-        },
-      setMetrics(finalMetrics)
-        setIsLoading(false)
-        // Send metrics to analytics (if available)
-
-            };
-
-          })
-        }
-      } catch (error) {},
-      setIsLoading(false)
-    },
-
-    // Measure after page load
-    if (document.readyState === 'complete') {},"
-      measurePerformance()
-    } else {},
-      window.addEventListener('load', measurePerformance)"
-    },
-      return () => {}
-}window.removeEventListener('load', measurePerformance)"
-    }
-  }, [])
-  // Only show in development or if explicitly enabled
-  if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {},"
-      return null
-  },
-      const  getScoreColor = (_value: number, thresholds: { good= number; needsImprovement: number }) => {},
-      if (value <= thresholds.good) return 'text-green-500',"
-      if (value <= thresholds.needsImprovement) return 'text-yellow-500',"
-      return 'text-red-500'"
-    },
-    {}
-  const  getScoreText = (_value: number, thresholds: { good= number; needsImprovement: number }) => {},
-      if (value <= thresholds.good) return 'Good',"
-      if (value <= thresholds.needsImprovement) return 'Needs Improvement',"
-      return 'Poor'"
-    },
-    {}
-  return (<div  className ="fixed bottom-4 right-4 z-50"></=>)"
-      <button>
-        onClick={() => setIsVisible(!isVisible)},
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2""
-      >
-        <div  className ={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>"
-        <span>Performance</span>
-      </button>
-      
-      {isVisible && (<div  className ="absolute bottom-14 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-xl shadow-2xl p-6 w-80 max-h-96 overflow-y-auto"></div>)}"
-          <div  className ="flex items-center justify-between mb-4"></div>"
-            <h3  className ="font-bold text-gray-900 text-lg">Core Web Vitals</h3>"
-            <button>
-              onClick={() => setIsVisible(false)},
-      className="text-gray-400 hover:text-gray-600 transition-colors""
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            EnhancedPerformanceMonitor
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional enhancedperformancemonitor solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
             >
-              ✕
-            </button>
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-          <div  className ="space-y-4 text-sm"></div>"
-            {/* LCP */}
-            <div  className ="space-y-1"></div>"
-              <div  className ="flex justify-between items-center"></div>"
-                <span  className ="text-gray-600 font-medium">LCP (Largest Contentful Paint)</span>"
-                <span  className ={`font-mono font-bold ${getScoreColor(metrics.largestContentfulPaint, { good= 2500, needsImprovement: 4000 })}`}></span>
-                  {metrics.largestContentfulPaint.toFixed(0)}ms
-                </span>
-              </div>
-              <div  className ="text-xs text-gray-500"></div>"
-                {getScoreText(metrics.largestContentfulPaint, { good= 2500, needsImprovement: 4000 })}
-              </div>
-            </div>
-            {/* FID */}
-            <div  className ="space-y-1"></div>"
-              <div  className ="flex justify-between items-center"></div>"
-                <span  className ="text-gray-600 font-medium">FID (First Input Delay)</span>"
-                <span  className ={`font-mono font-bold ${getScoreColor(metrics.firstInputDelay, { good= 100, needsImprovement: 300 })}`}></span>
-                  {metrics.firstInputDelay.toFixed(0)}ms
-                </span>
-              </div>
-              <div  className ="text-xs text-gray-500"></div>"
-                {getScoreText(metrics.firstInputDelay, { good= 100, needsImprovement: 300 })}
-              </div>
-            </div>
-            {/* CLS */}
-            <div  className ="space-y-1"></div>"
-              <div  className ="flex justify-between items-center"></div>"
-                <span  className ="text-gray-600 font-medium">CLS (Cumulative Layout Shift)</span>"
-                <span  className ={`font-mono font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good= 0.1, needsImprovement: 0.25 })}`}></span>
-                  {metrics.cumulativeLayoutShift.toFixed(3)}
-                </span>
-              </div>
-              <div  className ="text-xs text-gray-500"></div>"
-                {getScoreText(metrics.cumulativeLayoutShift, { good= 0.1, needsImprovement: 0.25 })}
-              </div>
-            </div>
-            {/* FCP */}
-            <div  className ="space-y-1"></div>"
-              <div  className ="flex justify-between items-center"></div>"
-                <span  className ="text-gray-600 font-medium">FCP (First Contentful Paint)</span>"
-                <span  className ={`font-mono font-bold ${getScoreColor(metrics.firstContentfulPaint, { good= 1800, needsImprovement: 3000 })}`}></span>
-                  {metrics.firstContentfulPaint.toFixed(0)}ms
-                </span>
-              </div>
-              <div  className ="text-xs text-gray-500"></div>"
-                {getScoreText(metrics.firstContentfulPaint, { good= 1800, needsImprovement: 3000 })}
-              </div>
-            </div>
-            {/* TTFB */}
-            <div  className ="space-y-1"></div>"
-              <div  className ="flex justify-between items-center"></div>"
-                <span  className ="text-gray-600 font-medium">TTFB (Time to First Byte)</span>"
-                <span  className ={`font-mono font-bold ${getScoreColor(metrics.timeToFirstByte, { good= 800, needsImprovement: 1800 })}`}></span>
-                  {metrics.timeToFirstByte.toFixed(0)}ms
-                </span>
-              </div>
-              <div  className ="text-xs text-gray-500"></div>"
-                {getScoreText(metrics.timeToFirstByte, { good= 800, needsImprovement: 1800 })}
-              </div>
-            </div>
-            {/* Additional Metrics */}
-            <div  className ="border-t pt-3 space-y-2"></div>"
-              <div  className ="flex justify-between"></div>"
-                <span  className ="text-gray-600">Load Time:</span>"
-                <span  className ="font-mono">{metrics.loadTime.toFixed(0)}ms</span>"
-              </div>
+        </section>
 
-
-              </div>
-            </div>
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
           </div>
-        </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

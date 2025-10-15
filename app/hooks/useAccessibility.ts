@@ -1,267 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface AccessibilityOptions {
+export default function UseAccessibilityPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>UseAccessibility | Zion Tech Group</title>
+        <meta name="description" content="Professional useaccessibility solutions and services." />
+      </Helmet>
 
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            UseAccessibility
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional useaccessibility solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </section>
 
-  const  focusableElements = useRef<HTMLElement[]>([])
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
-  // Check for high contrast mode
-  const  checkHighContrast = useCallback(() => {';'
-    if (typeof: window === 'undefined') return;";"
-';'
-    const  mediaQuery = window.matchMedia('(prefers-contrast: high)');";"
-    stateRef.current.isHighContrast = mediaQuery.matches
-
-    // Listen for changes
-    const  handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isHighContrast = e.matches;';',"
-      document.documentElement.classList.toggle('high-contrast', e.matches);";"
-    }
-';'
-    mediaQuery.addEventListener('change', handleChange);'
-    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);";"
-';'
-    return () => mediaQuery.removeEventListener('change', handleChange);";"
-  }, [])
-
-  // Check for reduced motion preference
-  const  checkReducedMotion = useCallback(() => {';'
-    if (typeof: window === 'undefined') return;";"
-';'
-    const  mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');";"
-    stateRef.current.isReducedMotion = mediaQuery.matches
-
-    // Listen for changes
-    const  handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isReducedMotion = e.matches;';',"
-      document.documentElement.classList.toggle('reduced-motion', e.matches);";"
-    }
-';'
-    mediaQuery.addEventListener('change', handleChange);'
-    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);";"
-';'
-    return () => mediaQuery.removeEventListener('change', handleChange);";"
-  }, [])
-
-  // Detect keyboard usage
-  const  detectKeyboardUsage = useCallback(() => {
-    let  isKeyboardUser = false
-    const  handleKeyDown = (e: KeyboardEvent) => {}
-      if ($1) {}
-  // If body
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
 }
-
-
-
-    const  handleMouseDown = () => {
-      isKeyboardUser = false
-      stateRef.current.isKeyboardUser = false;';'
-      document.body.classList.remove('keyboard-user');";"
-    }
-';'
-    document.addEventListener('keydown', handleKeyDown);'
-    document.addEventListener('mousedown', handleMouseDown);";"
-
-    return () => {';'
-      document.removeEventListener('keydown', handleKeyDown);'
-      document.removeEventListener('mousedown', handleMouseDown);";"
-    }
-  }, [])
-  // Update focusable elements
-
-    focusableElements.current = Array.from()
-      document.querySelectorAll(focusableSelectors)
-    ) as HTMLElement[];
-  }, [
-  ]);
-
-  // Focus management;
-  const focusElement = useCallback((element: HTMLElement | null) => {;
-    if (!element) return;
-
-    // Add to focus history;
-    stateRef.current.focusHistory.push(element);
-    if (stateRef.current.focusHistory.length > 10) {,
-
-      stateRef.current.focusHistory.shift(),
-
-
-    // Add focus indicator';'
-    element.classList.add('focus-visible');";"
-  }, [])
-
-  const  focusNext = useCallback(() => {
-    updateFocusableElements()
-    const  currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
-    const  nextIndex = (currentIndex + 1) % focusableElements.current.length
-    focusElement(focusableElements.current[nextIndex])
-  }, [updateFocusableElements, focusElement])
-
-  const  focusPrevious = useCallback(() => {
-    updateFocusableElements()
-    const  currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
-    const  prevIndex = currentIndex === 0 ? focusableElements.current.length - 1 : currentIndex - 1
-    focusElement(focusableElements.current[prevIndex])
-  }, [updateFocusableElements, focusElement])
-
-  const  focusFirst = useCallback(() => {
-    updateFocusableElements()
-    if (focusableElements.current.length > 0) {
-      focusElement(focusableElements.current[0])
-    }
-  }, [updateFocusableElements, focusElement])
-
-  const  focusLast = useCallback(() => {
-    updateFocusableElements()
-    if (focusableElements.current.length > 0) {
-      focusElement(focusableElements.current[focusableElements.current.length - 1])
-    }
-  }, [updateFocusableElements, focusElement])
-  // Trap focus within an element
-
-    ) as HTMLElement[];
-
-    if (focusableInContainer.length === 0) return;
-
-        if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
-            e.preventDefault();,
-
-            lastElement.focus(),
-          };
-        } else {
-          if (document.activeElement === lastElement) {
-
-    announcement.textContent = message;
-
-    document.body.appendChild(announcement);
-
-    // Remove after announcement;
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  }, [
-    enableScreenReaderSupport
-  
-  ]);
-  // Add ARIA labels and roles
-  const enhanceElement = useCallback((element: HTMLElement, options: {};)
-    label?: string;
-    description?: string;
-    role?: string;
-    expanded?: boolean;
-    controls?: string;
-
-    style.textContent = `;
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;,
-
-        overflow: hidden,
-        clip: rect(0, 0, 0, 0)
-        white-space: nowrap,
-  border: 0
-      }
-      .focus-visible {}
-        outline: 2px solid #3b82f6
-        outline-offset: 2px,
-      }
-      .keyboard-user *:focus {}
-        outline: 2px solid #3b82f6
-        outline-offset: 2px,
-      }
-      .high-contrast {}
-        filter: contrast(1.2)
-      }
-      .reduced-motion * {}
-        animation-duration: 0.01ms !important
-        animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important,
-
-        border-radius: 4px
-      }
-      .skip-link:focus {}
-        top: 6px,
-
-    }
-    if (enableFocusManagement) {
-      updateFocusableElements()
-    }
-
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
-    return () => {
-      document.head.removeChild(style);
-      if (document.body.contains(skipLink)) {
-        document.body.removeChild(skipLink);
-      };
-      cleanupFunctions.forEach(cleanup => cleanup());
-    };
-  }, [
-    enableHighContrast,;
-    enableReducedMotion,;
-    enableKeyboardNavigation,;
-    enableFocusManagement,;
-    checkHighContrast,;
-    checkReducedMotion,;
-    detectKeyboardUsage,;
-    updateFocusableElements;
-
-  ]);
-
-  return {
-    state: stateRef.current,;
-    focusElement,;
-    focusNext,;
-    focusPrevious,;
-    focusFirst,;
-    focusLast,;
-    trapFocus,;
-
-
-    return () => {
-      document.head.removeChild(style)
-      if (document.body.contains(skipLink)) {
-        document.body.removeChild(skipLink)
-      }
-      cleanupFunctions.forEach(cleanup => cleanup())
-    }
-  }, [
-    enableHighContrast,
-    enableReducedMotion,
-    enableKeyboardNavigation,
-    enableFocusManagement,
-    checkHighContrast,
-    checkReducedMotion,
-    detectKeyboardUsage,
-    updateFocusableElements
-  ])
-
-  return {
-    state: stateRef.current,
-    focusElement,
-    focusNext,
-    focusPrevious,
-    focusFirst,
-    focusLast,
-    trapFocus,
-    announce,
-    enhanceElement,
-    updateFocusableElements
-import { useEffect } from 'react';
-export const  useAccessibility = () => {
-
-  useEffect(() => {
-
-    // Add accessibility logic here;
-  }, [
-  ]);
-  return {
-    // Return accessibility utilities";
-  };";";
-};";";";
-;"
-export default useAccessibility;'";'";"
-

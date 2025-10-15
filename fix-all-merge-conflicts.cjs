@@ -34,11 +34,9 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     // Remove merge conflict markers and keep the HEAD version (first part)
-    content = content.replace(/\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
-    // Remove any remaining conflict markers
+    content = content.replace(/\n([\s\S]*?)\n    // Remove any remaining conflict markers
     content = content.replace(/\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-    // Clean up any double newlines that might have been created
+    content = content.replace(/    // Clean up any double newlines that might have been created
     content = content.replace(/\n\n\n+/g, '\n\n');
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);

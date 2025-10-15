@@ -1,168 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-        </div>"
-      </div>"
-        <div className="mb-8">"
-        <div className="mb-8">"
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p className="text-gray-300">This page is under development...</p>: value";";
-        </div>";";";
-      </div>"
-            <className="w-10 h-10 text-red-400" />";";";
-          </div>"
-        </div>"
-        <h2 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h2>"
-        <p className="text-gray-300 mb-6">{error}</p>";";
-        {onRetry && ()}";";";
-          <buttononClick={onRetry},>"
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300"></button
->
+export default function LoadingStatesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>LoadingStates | Zion Tech Group</title>
+        <meta name="description" content="Professional loadingstates solutions and services." />
+      </Helmet>
 
-const ComponentsPage: React.FC  =  () => {";
-  return (;";";
-    <>;";";";
-      <SEOHead;"
-        title="Components - Zion Tech Group"";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;,
-  ),
-};
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            LoadingStates
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional loadingstates solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </section>
 
-export const ServiceLoading: React.FC<{ service: string }>  =  ({;";
-    service ;";";
-  }) => {},;";";";
-      const getServiceIcon = (_serviceName: string) => {},';";";";";
-      switch (serviceName.toLowerCase()) {},'';"
-      case 'ai':''";"
-      case 'ai services':"'";"
-        return <Brain className ="w-8 h-8 text-cyan-400" />': value';";"
-      case 'security':''";"
-      case 'cybersecurity':"'";"
-        return <Shield className ="w-8 h-8 text-green-400" />': value';";"
-      case 'micro saas':''";"
-      case 'saas':"'";"
-        return <Zap className ="w-8 h-8 text-purple-400" />': value';";"
-      case '5g':''";"
-      case '5g solutions':"";"
-        return <Globe className ="w-8 h-8 text-orange-400" />: value";"
-      default: "";"
-        return <Brain className ="w-8 h-8 text-cyan-400" />: value;",";";
-    }";";";
-    },;"
-    {";"
-  return ()"";"
-    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
-        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
-          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
-          <p className ="text-gray-300">This page is under development...</p>: value;";"
-        </$1>"
-      </div>"";"
-        <div className ="mb-8">";"
-        <div className ="mb-8">";"
-          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
-          <p className ="text-gray-300">This page is under development...</p>: value;";"
-        </$1>"
-      </div>"";"
-            <div className ="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-600/20 flex items-center justify-center animate-pulse"></div>: value;";"
-              {getServiceIcon(service)};";"
-            </div>"";"
-            <div className ="absolute inset-0 rounded-full border-2 border-cyan-400 animate-spin border-t-transparent"></div>: value;";"
-          </$1>"
-        </div>"";"
-        <h2 className ="text-3xl font-bold text-white mb-4">Loading {service}</$1>"
-        <p className ="text-gray-300 mb-6"></p>: value;";"
-          Preparing the latest information about our {service.toLowerCase()} solutions...";"
-        </p>"";"
-        <div className ="flex items-center justify-center space-x-2"></$1>"
-          <Loader2 className ="w-5 h-5 text-cyan-400 animate-spin" />";"
-          <span className ="text-gray-300">Almost ready...</span>: value;";
-        </div>;
-      </div>;
-    </div>;";
-  );";";
-}";";";
-};"
-";"
-export const ErrorLoading: React.FC<{ error?: string, onRetry?: () => void }> = ({};"";"
-  error = "Something went wrong", onRetry;: value;";"
-}) => {};: value";"
-  return ("";"
-    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
-        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
-          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
-          <p className ="text-gray-300">This page is under development...</p>: value;";"
-        </$1>"
-      </div>"";"
-        <div className ="mb-8">";"
-        <div className ="mb-8">";"
-          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
-          <p className ="text-gray-300">This page is under development...</p>: value;";"
-        </$1>"
-      </div>"";"
-            <Shield className ="w-10 h-10 text-red-400" />: value;";"
-          </$1>"
-        </div>"";"
-        <h2 className ="text-2xl font-bold text-white mb-4">Oops! Something went wrong</$1>"
-        <p className ="text-gray-300 mb-6">{error}</p>: value;";";";";
-        {onRetry && ()"
-          <button;>";"
-            onClick={onRetry},">: value";"
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300">;";
-          ></button>;
->;
-            Try Again;
-          </button>,
-        )};
-      </div>;
-    </div>;
-  )
-};
-};
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
-export const SkeletonLoader: React.FC<{ lines?: number }>  =  ({;
-    lines = 3 ;";
-  }) => {};";";
-}";";";
-  return ()"
-    <div className="animate-pulse"></div>
-      {
-    Array.from({ length: lines 
-  
-  }).map(( index) => ()";
-        <divkey={index},>";";
-      className={`h-4 bg-gray-700 rounded mb-2 ${},";";";
-      index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`} />"
-}";"
-  return ()"";"
-    <div className ="animate-pulse"></div>: value;";
-      {
-    Array.from({ length: lines 
-  ";
-  }).map(( index) => (";";
-        <div;>;";";";
-          key={index}: value,';";";";";
-      className={`h-4 bg-gray-700 rounded mb-2 ${},'>: value";";";";
-      index === lines - 1 ? 'w-3/4' : 'w-full">`;
-          }`} />;
-      ))};
-    </div>;
-
-  )
-
-      <div className ="h-8 bg-gray-700 rounded w-1/3"></div>: value;";
-    </div>;";
-  )";";
-}";";";
-};"
-'";'";"
-export default LoadingPage;"'"'`;"
-'";'";";";";
-"
-
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

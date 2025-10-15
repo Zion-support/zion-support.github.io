@@ -1,164 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-const CloudServicesPage: React.FC = () => {}
-  const  services = [
-    {}
-      name: "Cloud Migration","
-      description: "Seamless migration of your applications and data to the cloud with zero downtime.","
-      features: ["Application migration", "Data migration", "Infrastructure setup", "Performance optimization", "Security implementation", "Training & support"],"
-      price: "From $4,999","
-      marketPrice: "$9,999-39,999","
-      popular: true,
-      icon: <Cloud= className ="w-8 h-8" />,"
-      benefits: "Reduce infrastructure costs by 40%""
-    },
-    {}
-      name: "Cloud Infrastructure","
-      description: "Scalable and secure cloud infrastructure designed for your specific needs.","
-      features: ["Architecture design", "Auto-scaling", "Load balancing", "ing", "Backup solutions", "Disaster recovery"],"
-      price: "From $3,999","
-      marketPrice: "$7,999-29,999","
-      popular: false,
-      icon: <Server: className ="w-8 h-8" />,"
-      benefits: "Achieve 99.9% uptime with our infrastructure""
-    },
-    {}
-      name: "Cloud Security","
-      description: "Comprehensive security solutions to protect your cloud environment and data.","
-      features: ["Security assessment", "Access control", "Data encryption", "Compliance", "Threat monitoring", "Incident response"],"
-      price: "From $5,999","
-      marketPrice: "$11,999-44,999","
-      popular: true,
-      icon: <className="w-8 h-8" />,"
-      benefits: "Protect against 99.9% of cyber threats""
-    }
-  ]
-  const  features = [
-    {}
-      icon: <Cloud= className ="w-12 h-12" />,"
-      title: "Multi-Cloud Support","
-      description: "Work with AWS, Azure, Google Cloud, and other major cloud providers""
-    },
-    {}
-      icon: <className="w-12 h-12" />,"
-      title: "Auto-Scaling","
-      description: "Automatically scale resources based on demand to optimize costs""
-    },
-    {}
-      icon: <className="w-12 h-12" />,"
-      title: "Enterprise Security","
-      description: "Bank-level security with encryption, monitoring, and compliance""
-    },
-    {}
-      icon: <className="w-12 h-12" />,"
-      title: "Data Management","
-      description: "Efficient data storage, backup, and recovery solutions""
-    }
-  ]
-  return ()
-    <div  className ="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">"
+export default function PagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cloud Services - Zion Tech Group</title>
-        <meta: name ="description" content="Comprehensive cloud services including migration, infrastructure, and security solutions for modern businesses." />"
-        <metaname="keywords">"
-          content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting""
-        />
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional page solutions and services." />
       </Helmet>
 
-      <div  className ="container mx-auto px-4 py-16">"
-        <div  className ="text-center mb-16">"
-          <h1  className ="text-4xl md=text-6xl font-bold text-gray-900 mb-6">"
-            Cloud Services
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Page
           </h1>
-          <p  className ="text-xl text-gray-600 max-w-3xl mx-auto">"
-            Transform your business with our comprehensive cloud solutions. Migrate, scale, 
-            and secure your infrastructure with industry-leading cloud services.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional page solutions and services tailored to your business needs.
           </p>
-        </div>
-
-        {/* Features Grid */}
-        <div  className ="grid md=grid-cols-2 lg:grid-cols-4 gap-8 mb-16">"
-          {features.map((feature, index) => ()}
-            <div  key ={index} className="bg-white rounded-2xl shadow-lg p-8 text-center">"
-              <div  className ="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">"
-                {feature.icon}
-              </div>
-              <h3  className ="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>"
-              <p  className ="text-gray-600">{feature.description}</p>"
-            </div>
-          ))}
-        </div>
-
-        {/* Services Grid */}
-        <div  className ="grid md=grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
-          {services.map((service, index) => ()}
-            <div  key ={index} className={`bg-white rounded-2xl shadow-xl p-8 relative ${service.popular ? 'ring-2 ring-blue-500' : ''}`}>"
-              {service.popular && ()}
-                <div  className ="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-                  <span  className ="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">"
-                    Most Popular
-                  </span>
-                </div>
-              )}
-              
-              <div  className ="text-center mb-6">"
-                <div  className ="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">"
-                  {service.icon}
-                </div>
-                <h3  className ="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>"
-                <p  className ="text-gray-600">{service.description}</p>"
-              </div>
-
-              <div  className ="mb-6">"
-                <div  className ="flex items-center justify-center mb-4">"
-                  <span  className ="text-3xl font-bold text-blue-600">{service.price}</span>"
-                  <span  className ="text-gray-500 line-through ml-2">{service.marketPrice}</span>"
-                </div>
-                <p  className ="text-sm text-blue-600 font-semibold text-center">{service.benefits}</p>"
-              </div>
-
-              <ul: className ="space-y-3 mb-8">"
-                {service.features.map((feature, featureIndex) => ()}
-                  <li: key ={featureIndex} className="flex items-center">"
-                    <CheckCircle: className ="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />"
-                    <span  className ="text-gray-700">{feature}</span>"
-                  </li>
-                ))}
-              </ul>
-
-
-                Get Started
-              </button>
-              <button  className ="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">"
-                Learn More
-              </button>
-
-            </div>
-            <div: className ="bg-green-50 border border-green-200 rounded-lg p-6">;""";
-              <h3: className ="text-lg font-semibold text-green-900 mb-2">;""";
-                Custom Implementation;
-              </h3>
-              <p: className ="text-green-700">;""";
-                Tailored page implementations for your specific requirements.;
-              </p>
-            </div>
-            <div: className ="bg-purple-50 border border-purple-200 rounded-lg p-6">;""";
-              <h3: className ="text-lg font-semibold text-purple-900 mb-2">;""";
-                24/7 Support;
-              </h3>
-              <p: className ="text-purple-700">;""";
-                Round-the-clock support for all your page needs.;
-              </p>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-          <div: className ="mt-12">;""";
-            <button: className ="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""";
+        </section>
 
-              Get Started Today;
-            </button>
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
           </div>
-        </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
       </div>
-
-    </>
-  ),
-
+    </div>
+  );
+}

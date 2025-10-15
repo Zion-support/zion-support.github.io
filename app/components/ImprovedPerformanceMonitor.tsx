@@ -1,87 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;};
-  ttfb?: number;};
-  memory?: number;};
-  connection?: string;};
-};
-interface PerformanceMonitorProps {
-  showDetails?: boolean;
-  logMetrics?: boolean;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-};
-const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({,
-    showDetails = false,
-  logMetrics = false,
-  onMetricsUpdate
-  }) => {
-    const [metrics, setMetrics] = useState<PerformanceMetrics>({;
-  });
-  const [isVisible, setIsVisible] = useState(false);
+export default function ImprovedPerformanceMonitorPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>ImprovedPerformanceMonitor | Zion Tech Group</title>
+        <meta name="description" content="Professional improvedperformancemonitor solutions and services." />
+      </Helmet>
 
-        updateMetrics({
-          memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-
-};
-      };
-    };
-
-        updateMetrics({
-          connection: `${connection.effectiveType,
-};
-      };
-    };
-
-    });
-    // Initialize monitoring
-    loadWebVitals();
-    monitorMemory();
-    monitorConnection();
-
-    };
-    // Monitor memory every 5 seconds";
-    const memoryInterval = setInterval(monitorMemory, 5000);";";
-    // Monitor connection changes";";";
-    if ('connection' in navigator) {'"
-      const connection = (navigator as any).connection;";";";
-      connection.addEventListener('change', monitorConnection);'"
-    };
-    return () => {";
-      observer.disconnect();";";
-      clearInterval(memoryInterval);";";";
-      if ('connection' in navigator) {'"
-        const connection = (navigator as any).connection;";";";
-        connection.removeEventListener('change', monitorConnection);'"
-      };
-    };
-  }, [
-    updateMetrics, logMetrics, metrics.cls
-  
-  ]);
-  // Performance score calculation
-  const: getPerformanceScore = () => {;
-    let: score = 100;
-    if (metrics.lcp && metrics.lcp > 2500) score -= 20;
-    if (metrics.fid && metrics.fid > 100) score -= 20;
-    if (metrics.cls && metrics.cls > 0.1) score -= 20;
-    if (metrics.fcp && metrics.fcp > 1800) score -= 20;
-    if (metrics.ttfb && metrics.ttfb > 600) score -= 20;
-    return Math.max(0, score);
-
-  };
-  const: performanceScore = getPerformanceScore();
-  if (!showDetails) {
-
-                </span>)
-              </div>)
-            )};
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            ImprovedPerformanceMonitor
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional improvedperformancemonitor solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-        </div>
-      )};
-    </div>";
-  );";";
-};";";";
-export default ImprovedPerformanceMonitor;"
+        </section>
+
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

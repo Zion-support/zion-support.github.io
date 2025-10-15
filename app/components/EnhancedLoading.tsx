@@ -1,65 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface EnhancedLoadingProps {},
-      message?: string
-  showProgress?: boolean
-  progress?: number
-},
-      const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({},)
-      message = "Loading...", showProgress = false, progress = 0"
-}) => {},
-      return ()
-    <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
-      <div  className ="text-center"></div>"
-        {/* Animated Logo/Icon */}
-        <div  className ="mb-8"></div>"
-          <div  className ="w-20 h-20 mx-auto relative"></div>"
-            <div  className ="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-spin"></div>"
-            <div  className ="absolute inset-2 rounded-full bg-slate-900 flex items-center justify-center"></div>"
-              <div  className ="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"></div>"
-            </div>
+export default function EnhancedLoadingPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedLoading | Zion Tech Group</title>
+        <meta name="description" content="Professional enhancedloading solutions and services." />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            EnhancedLoading
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional enhancedloading solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-        </div>
-        {/* Loading Message */}
-        <h2  className ="text-2xl font-bold text-white mb-4 animate-pulse"></h2>"
-          {message}
-        </h2>
-        {/* Progress Bar */}
-        {showProgress && ()}
-          <div  className ="w-64 mx-auto mb-4"></div>"
-            <div  className ="bg-slate-700 rounded-full h-2 overflow-hidden"></div>"
-              <divclassName="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out">"
-                style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-              ></div>
-            </div>
-            <p  className ="text-sm text-gray-400 mt-2"></p>"
-              {Math.round(progress)}% Complete
+        </section>
+
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
             </p>
           </div>
-        )}
-        {/* Loading Animation */}
-        <div  className ="flex justify-center space-x-2"></div>"
-          {[...Array(3)].map(( i) => ()}
-            <divkey={i},>
-      className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce""
-              style={{},
-      animationDelay: `${i * 0.1}s`,
-      animationDuration: '1s'"
-              }}
-            ></div>
-          ))}
-        </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
-
-          Preparing your experience with cutting-edge technology...
-        </p>
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
       </div>
-    </>
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+    </div>
+  );
+}

@@ -8,8 +8,7 @@ function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts to resolve
+    if (!content.includes('      return false; // No conflicts to resolve
     }
     console.log(`📝 Resolving conflicts in: ${filePath}`);
     // Split content by merge conflict markers
@@ -21,8 +20,7 @@ function resolveMergeConflicts(filePath) {
     let inMain = false;
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      if (line.includes('<<<<<<< HEAD')) {
-        inConflict = true;
+      if (line.includes('        inConflict = true;
         inHead = true;
         inSeparator = false;
         inMain = false;
@@ -73,8 +71,7 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-            files.push(fullPath);
+          if (content.includes('            files.push(fullPath);
           }
         } catch (error) {
           // Skip files that can't be read

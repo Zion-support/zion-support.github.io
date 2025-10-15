@@ -1,59 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface AnimatedCardProps {}
-  children: React.ReactNode
-  className?: string
-  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow'
-  hoverEffect?: boolean
-}
+export default function AnimatedCardPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AnimatedCard | Zion Tech Group</title>
+        <meta name="description" content="Professional animatedcard solutions and services." />
+      </Helmet>
 
-const AnimatedCard= React.FC<AnimatedCardProps> = ({)}
-  children,
-  className = '',"
-  glowColor = 'purple',"
-  hoverEffect = true
-}) => {}
-  const  glowColors = {}
-    purple: 'shadow-purple-500/25 hover:shadow-purple-500/40',"
-    cyan: 'shadow-cyan-500/25 hover:shadow-cyan-500/40',"
-    pink: 'shadow-pink-500/25 hover:shadow-pink-500/40',"
-    green: 'shadow-green-500/25 hover:shadow-green-500/40',"
-    blue: 'shadow-blue-500/25 hover:shadow-blue-500/40',"
-    yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40'"
-  }
-  const  borderColors = {}
-    purple: 'border-purple-500/30 hover:border-purple-500/60',"
-    cyan: 'border-cyan-500/30 hover:border-cyan-500/60',"
-    pink: 'border-pink-500/30 hover:border-pink-500/60',"
-    green: 'border-green-500/30 hover:border-green-500/60',"
-    blue: 'border-blue-500/30 hover:border-blue-500/60',"
-    yellow: 'border-yellow-500/30 hover:border-yellow-500/60'"
-  }
-  return ()
-    <divclassName={`>}
-        relative bg-gradient-to-br from-slate-800/80 to-slate-700/80 
-        backdrop-blur-sm border border-slate-600/50 
-        rounded-xl p-6 transition-all duration-300
-        ${hoverEffect ? 'hover:transform hover:scale-105 hover:-translate-y-1' : ''}"
-        ${glowColors[glowColor]}
-        ${borderColors[glowColor]}
-        ${className}
-      `}
-    >
-      {/* Animated border gradient */}
-      <div  className ="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>"
-      {/* Content */}
-      <div  className ="relative z-10">"
-        {children}
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            AnimatedCard
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional animatedcard solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </section>
 
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
       </div>
-    </>
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+    </div>
+  );
+}

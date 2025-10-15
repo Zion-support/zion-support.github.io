@@ -7,8 +7,7 @@ function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     // Skip if no merge conflicts
-    if (!content.includes('') && !content.includes('>>>>>>> ')) {
-      return false;
+    if (!content.includes('') && !content.includes('      return false;
     }
     console.log(`Fixing merge conflicts in: ${filePath}`);
     // Split content by merge conflict markers
@@ -23,8 +22,7 @@ function fixMergeConflicts(filePath) {
       if (line.trim().startsWith('')) {
         conflictType = 'branch';
         continue;
-      } else if (line.trim().startsWith('>>>>>>> ')) {
-        // End of conflict - choose the best content
+      } else if (line.trim().startsWith('        // End of conflict - choose the best content
         if (headContent.length > 0) {
           result.push(...headContent);
         } else if (branchContent.length > 0) {

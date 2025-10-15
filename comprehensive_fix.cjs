@@ -117,11 +117,9 @@ function fixTSXFile(filePath) {
     );
     // Fix merge conflict markers
     content = content.replace(
-      /[\s\S]*?>>>>>>> [^\n]+/g,
-      "",
+      /[\s\S]*?      "",
     );
-    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, "");
-    // Fix missing closing brackets and semicolons
+    content = content.replace(/[\s\S]*?    // Fix missing closing brackets and semicolons
     if (content.includes("const features = [") && !content.includes("];")) {
       content = content.replace(
         /(\s*}\s*)\n\s*const services = \[/,

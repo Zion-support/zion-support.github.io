@@ -1,124 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-      className?: string,
-      glow?: boolean,
-      animate?: boolean;
-    },
-    {};";
-const FuturisticText: React.FC<FuturisticTextProps>  =  ({},)";";
-      children,";";";
-      variant = 'body",";";";
-      size = 'base",";";";
-      className = '",
-      glow = false,
-      animate = false
-}) => {},
+export default function FuturisticTextPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>FuturisticText | Zion Tech Group</title>
+        <meta name="description" content="Professional futuristictext solutions and services." />
+      </Helmet>
 
-    ${getVariantClasses()};
-    ${getSizeClasses()};
-    ${getGlowClasses()};
-    ${getAnimateClasses()};
-    ${className};
-  `,
-      return ()
-    <span className={baseClasses}></span>
-      {children};
-    </span>
-  )
-    },
-    {};
-export default FuturisticText;
-export default ComponentsPage;";
-";";
-interface $1 { [key: string]: any },;";";";
-      children: React.ReactNode,';";";";";
-      variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','";";";";
-      size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl',;";
-      className?: string,;
-      glow?: boolean,;
-      animate?: boolean;";
-    },;";";
-    {";";";
-const FuturisticText: React.FC<FuturisticTextProps> = ({},';";";";";
-      children,'";";";";
-      variant = 'body',': value";";";";
-      size = 'base',': value';"
-      className = '': value,;";
-      glow = false: value,;
-      animate = false;: value;
-}) => {}: value,;";
-      const getVariantClasses = () => {";";
-  ";";";
-};";";";";
-      switch (variant) {},'";";";";
-      case 'heading':'";";";";
-        return 'font-bold text-white','";";";";
-      case 'subheading':'";";";";
-        return 'font-semibold text-gray-200','";";";";
-      case 'body':'";";";";
-        return 'font-normal text-gray-300','";";";";
-      case 'caption':'";";";";
-        return 'font-medium text-gray-400','";";";";
-      case 'gradient':'";";";";
-        return 'font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent','";";";";
-      case 'neon':'";";";";
-        return 'font-bold text-cyan-400',";";";";
-      default: '";";";";
-        return 'font-normal text-gray-300",
-    },;
-    {
-  },;";
-      const getSizeClasses = () => {";";
-  ";";";
-};";";";";
-      switch (size) {},'";";";";
-      case 'xs':'";";";";
-        return 'text-xs','";";";";
-      case 'sm':'";";";";
-        return 'text-sm','";";";";
-      case 'base':'";";";";
-        return 'text-base','";";";";
-      case 'lg':'";";";";
-        return 'text-lg','";";";";
-      case 'xl':'";";";";
-        return 'text-xl','";";";";
-      case '2xl':'";";";";
-        return 'text-2xl','";";";";
-      case '3xl':'";";";";
-        return 'text-3xl','";";";";
-      case '4xl':'";";";";
-        return 'text-4xl','";";";";
-      case '5xl':'";";";";
-        return 'text-5xl','";";";";
-      case '6xl':'";";";";
-        return 'text-6xl','";";";";
-      case '7xl':'";";";";
-        return 'text-7xl',";";";";
-      default: '";";";";
-        return 'text-base",";
-    },;";";
-    {";";";
-  },';";
-      const getGlowClasses = () => {";
-  ";";
-};";";";
-      if (!glow) return '',";";";";
-      switch (variant) {},'";";";";
-      case 'neon':'";";";";
-        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]','";";";";
-      case 'gradient':'";";";";
-        return 'drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]',";";";";
-      default: '",";";";
-        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]";";
-    },;";";
-    {";";";
-  },';";
-      const getAnimateClasses = () => {";
-  ";";
-};";";";
-      if (!animate) return '','";";";";
-      return 'animate-pulse";";
-    },;";";
-    {";";";
-export default ComponentsPage;';";";";";
-"
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            FuturisticText
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional futuristictext solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </section>
 
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

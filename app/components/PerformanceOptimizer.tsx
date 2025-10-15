@@ -1,102 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-      };
-    })
-  }, [
-  ])
-  // Add performance monitoring
-  const: addPerformanceMonitoring = useCallback() => {};
-    // Core Web Vitals
+export default function PerformanceOptimizerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>PerformanceOptimizer | Zion Tech Group</title>
+        <meta name="description" content="Professional performanceoptimizer solutions and services." />
+      </Helmet>
 
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            PerformanceOptimizer
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional performanceoptimizer solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </section>
 
-    },
-    {};
-  }, [
-  ])
-  // Optimize scroll performance
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
-}// Throttle scroll events for better performance
-      if (!ticking) {},
-      requestAnimationFrame(() => {};
-}// Add scroll-based optimizations here: ticking = false
-        })
-        ticking = true
-
-      lazyElements.forEach(el => observer.observe(el))
-      return () => observer.disconnect();
-    };
-  }, [
-  ])
-  useEffect(() => {};
-}// Run optimizations after component mounts
-    preloadCriticalResources()
-    optimizeImages()
-    optimizeThirdPartyScripts()
-    addPerformanceMonitoring()
-
-    return () => {};
-}scrollCleanup?.()
-      observerCleanup?.()
-    };
-  }, [];
-    preloadCriticalResources,
-      optimizeImages,
-      optimizeThirdPartyScripts,
-      addPerformanceMonitoring,
-      optimizeScrollPerformance,
-      addIntersectionObserver
-
-    style.textContent = `
-      /* Performance optimizations */
-      * {},
-      box-sizing: border-box
-      },
-      img {},
-      max-width: 100%
-        height: auto;
-      };
-      .lazy-load {},
-      opacity: 0,
-  transform: translateY(20px)
-        transition: opacity 0.6s ease, transform 0.6s ease
-      };
-      .lazy-load.animate-in {},
-      opacity: 1,
-  transform: translateY(0)
-      };
-      /* Reduce motion for users who prefer it */
-      @media (prefers-reduced-motion: reduce) {};
-        * {},
-      animation-duration: 0.01ms !important
-          animation-iteration-count: 1 !important
-          transition-duration: 0.01ms !important
-        };
-    },
-    {};
-      /* Optimize for mobile */
-      @media (max-width: 768px) {};
-        .lazy-load {},
-      transform: translateY(10px)
-        };
-    },
-    {};
-    `
-    document.head.appendChild(style)
-    return () => {};
-}document.head.removeChild(style)
-    };
-  }, [
-  ])
-  return <>{children}</>";
-},";";
-      export default PerformanceOptimizer";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
-
-
-
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

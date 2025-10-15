@@ -1,186 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
+export default function AdvancedErrorBoundaryPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AdvancedErrorBoundary | Zion Tech Group</title>
+        <meta name="description" content="Professional advancederrorboundary solutions and services." />
+      </Helmet>
 
-      interface Props {},
-      children: ReactNode,
-      fallback?: ReactNode,
-      onError?: (error: Error, errorInfo: ErrorInfo) => void
-    },
-    {};
-interface State {},
-      hasError: boolean,
-      error?: Error,
-      errorInfo?: ErrorInfo,
-      errorId?: string
-    },
-    {};
-class AdvancedErrorBoundary extends Component<Props, State> {},
-      constructor(props: Props) {},
-      super(props),
-      this.state = { hasError: false };
-    },
-    {};
-  static getDerivedStateFromError(error: Error): State {},
-      return {},
-      hasError: true,
-      error,
-
-    },
-    {};
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
-      this.setState({},)
-      error,
-
-    // Call the onError callback if provided
-    if ($1) {};
-  // If body
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode,
-  onError?: (error: Error, errorInfo: ErrorInfo) => void,
-};
-interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo,
-};
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
-    super(props),
-
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);";"
-    this.setState({ error, errorInfo })
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo)
-    }
-    // Log error to console in development
-
-
-    },
-    {};
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, {
-    extra: errorInfo 
-  
-  })
-    },
-    {};
-  handleRetry = () => {},
-      this.setState({
-    hasError: false, error: undefined, errorInfo: undefined 
-  
-  })
-    },
-    {};
-  handleReload = () => {},
-      window.location.reload()
-    },";
-    {};";";
-  handleGoHome = () => {},";";";
-      window.location.href = '/"
-    },
-
-Error Details:;
-- Error ID: ${errorId};
-- Message: ${error?.message};
-- Stack: ${error?.stack};
-- Timestamp: ${new Date().toISOString()};
-- User Agent: ${navigator.userAgent};
-- URL: ${window.location.href};
-    `,
-
-  render() {},;
-      if (this.state.hasError) {};
-
-      // Use custom fallback if provided
-      if (this.props.fallback) {},
-
-            </div>
-            
-            <div  className ="mt-4">"
-              <p  className ="text-sm text-gray-600 dark:text-gray-400">","
-                We're sorry, but something unexpected happened. Please try refreshing the page.";"
-              </p>
-              
-              {process.env.NODE_ENV === 'development' && this.state.error && (";"
-                <details: className ="mt-4">"
-                  <summary: className ="text-sm font-medium text-gray-700 dark: text-gray-300 cursor-pointer">"
-                    Error Details
-                  </summary>
-                  <div  className ="mt-2 p-3 bg-gray-100 dark:bg-gray-700 rounded text-xs font-mono text-gray-800 dark:text-gray-200 overflow-auto">"
-                    <div  className ="mb-2">","
-                      <strong>Error:</strong> {this.state.error.message}
-                    </div>
-                    {this.state.error.stack && (
-                      <div>
-                        <strong>Stack:</strong>
-                        <pre: className ="whitespace-pre-wrap">{this.state.error.stack}</pre>"
-                      </div>
-                    )}
-                  </div>
-                </details>
-              )}
-            </div>
-
-            </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && ()}"
-              <div  className ="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-6 text-left"></div>"
-                <h3  className ="text-sm font-medium text-red-800 dark:text-red-200 mb-2"></h3>"
-                  Error Details (Development Only):
-                </h3>
-                <pre: className ="text-xs text-red-700 dark:text-red-300 whitespace-pre-wrap"></pre>"
-                  {this.state.error.message}
-                  {this.state.error.stack && `\n\n${this.state.error.stack}`}
-                </pre>
-                {this.state.errorId && ()}
-                  <p  className ="text-xs text-red-600 dark:text-red-400 mt-2"></p>"
-                    Error ID: {this.state.errorId}
-                  </p>
-                )}
-              </div>
-            )}
-            <div  className ="space-y-3"></div>"
-              <buttononClick={this.handleRetry},>
-      className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center""
-              ></button
->
-
-                Try Again
-              </button>
-              
-              <buttononClick={this.handleReload},>
-      className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center""
-              ></button
->
-                <RefreshCw: className ="w-4 h-4 mr-2" />"
-                Reload Page
-              </button>
-              
-              <buttononClick={this.handleGoHome},>
-      className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center""
-              ></button
->
-                <Home: className ="w-4 h-4 mr-2" />"
-                Go Home
-              </button>
-              
-              <buttononClick={this.handleReportError},>
-      className="w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center""
-              ></button
->
-
-
-                Report Issue
-              </button>
-            </div>
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            AdvancedErrorBoundary
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional advancederrorboundary solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-        </div>
-      ),
+        </section>
 
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

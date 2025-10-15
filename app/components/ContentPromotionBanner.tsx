@@ -1,61 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface ContentPromotionBannerProps {},
-      title?: string
-  description?: string
-  ctaText?: string
-  ctaLink?: string
-  variant?: "primary" | "secondary" | "success""
-  className?: string
-},
-      const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({},)
-      title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = ""}) => {},"
-      const  getVariantStyles = () => {},
-      switch (variant) {},
-      case "primary":"
-        return "bg-gradient-to-r from-cyan-500 to-purple-600""
-      case "secondary":"
-        return "bg-gradient-to-r from-blue-500 to-indigo-600""
-      case "success":"
-        return "bg-gradient-to-r from-green-500 to-emerald-600""
-      default:
-        return "bg-gradient-to-r from-cyan-500 to-purple-600""
-    }
-    },
-    {}
-  const  getIcon = () => {}
-}switch (variant) {},
-      case "primary":"
-        return <className="w-6 h-6" />"
-      case "secondary":"
-        return <Star: className ="w-6 h-6" />"
-      case "success":"
-        return <Star: className ="w-6 h-6" />"
-      default:
-        return <className="w-6 h-6" />"
-    }
-    },
-    {}
-  return ()
-    <divclassName={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`};>
-    ></div
->
-      <div  className ="relative z-10"></div>"
-        <div  className ="flex items-center justify-center mb-4">{getIcon()}</div>"
-        <h2  className ="text-3xl font-bold text-center mb-4">{title}</h2>"
-        <p  className ="text-lg text-center mb-6 opacity-90 max-w-2xl mx-auto"></p>"
-          {description}
-        </p>
-        <div  className ="text-center"></div>"
-          <>
-            to={ctaLink},
-      className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300""
-          ></>
+export default function ContentPromotionBannerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>ContentPromotionBanner | Zion Tech Group</title>
+        <meta name="description" content="Professional contentpromotionbanner solutions and services." />
+      </Helmet>
 
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            ContentPromotionBanner
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional contentpromotionbanner solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </section>
 
-          </>
-        </div>
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
       </div>
-    </>
-
-
-
+    </div>
+  );
+}

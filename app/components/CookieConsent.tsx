@@ -1,87 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-    if ($1) {}
+export default function CookieConsentPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>CookieConsent | Zion Tech Group</title>
+        <meta name="description" content="Professional cookieconsent solutions and services." />
+      </Helmet>
 
-  // If body
-
-  }, [])
-  const  handleAccept = () => {}
-}localStorage.setItem("cookie-consent", "accepted")"
-    setIsVisible(false)
-  },
-      const  handleReject = () => {}
-}localStorage.setItem("cookie-consent", "rejected")"
-    setIsVisible(false)
-  },
-      const  handleSettings = () => {}
-}setShowSettings(!showSettings)
-  },
-      if (!isVisible) return null
-  return ()
-    <div  className ="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4"></div>"
-      <div  className ="max-w-6xl mx-auto"></div>"
-        <div  className ="flex items-start justify-between"></div>"
-          <div  className ="flex items-start space-x-4"></div>"
-            <Cookie: className ="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />"
-            <div  className ="flex-1"></div>"
-              <h3  className ="text-lg font-semibold text-white mb-2"></h3>"
-                We use cookies
-              </h3>
-              <p  className ="text-gray-300 text-sm mb-4"></p>"
-                We use cookies to enhance your browsing experience, serve
-                personalized content, and analyze our traffic. By clicking
-                "Accept All", you consent to our use of cookies."
-              </p>
-              {showSettings && ()}
-                <div  className ="bg-gray-800 rounded-lg p-4 mb-4"></div>"
-                  <h4  className ="text-white font-semibold mb-3"></h4>"
-                    Cookie Preferences
-                  </h4>
-                  <div  className ="space-y-3"></div>"
-                    <label: className ="flex items-center justify-between"></label>"
-                      <span  className ="text-gray-300">Essential Cookies</span>"
-                      <inputtype="checkbox">"
-                        defaultChecked
-                        disabled= className ="rounded""
-                      />
-                    </label>
-                    <label: className ="flex items-center justify-between"></label>"
-                      <span  className ="text-gray-300">Analytics Cookies</span>"
-                      <inputtype="checkbox">"
-                        defaultChecked= className ="rounded""
-                      />
-                    </label>
-                    <label: className ="flex items-center justify-between"></label>"
-                      <span  className ="text-gray-300">Marketing Cookies</span>"
-                      <input: type ="checkbox" className="rounded" />"
-                    </label>
-                  </div>
-                </div>
-              )}
-            </div>
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            CookieConsent
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional cookieconsent solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-          <div  className ="flex flex-col sm:flex-row gap-2 ml-4"></div>"
-            <buttononClick={handleSettings},>
-      className="flex items-center px-4 py-2 text-gray-300 hover:text-white transition-colors""
-            ></button
->
-              <Settings: className ="w-4 h-4 mr-2" />"
-              Settings
-            </button>
-            <buttononClick={handleReject},>
-      className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors""
-            ></button
->
-              Reject All
-            </button>
-            <buttononClick={handleAccept},>
-      className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300""
-            ></button
+        </section>
 
->
-              Accept All
-            </button>
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
           </div>
-        </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
-
-
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

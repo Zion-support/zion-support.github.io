@@ -1,25 +1,20 @@
 #!/bin/bash
-
 # Function to clean merge conflicts from a file
 clean_conflicts() {
     local file="$1"
     # Skip if file doesn't exist or is a directory
     [[ ! -f "$file" ]] && return
-    
     # Create temp file
     local tmp=$(mktemp)
-    
     # Process file: remove conflict markers and keep the code
     awk '
         /^<<<<<<</ { in_conflict=1; next }
-
         /^/ { in_ours=0; next }
         /^>>>>>>>/ { in_conflict=0; in_ours=0; next }
 ursor/comprehensive-app-audit-and-update-8a56
         !in_conflict || in_ours { print }
         in_conflict && !in_ours { in_ours=1 }
     ' "$file" > "$tmp"
-    
     # Only update if different
     if ! cmp -s "$file" "$tmp"; then
         mv "$tmp" "$file"
@@ -28,7 +23,6 @@ ursor/comprehensive-app-audit-and-update-8a56
         rm "$tmp"
     fi
 }
-
 # Main source files to fix (non-backup files)
 for file in \
     "api/subscribe.js" \
@@ -49,5 +43,4 @@ for file in \
 do
     [[ -f "$file" ]] && clean_conflicts "$file"
 done
-
 echo "Conflict resolution complete!"

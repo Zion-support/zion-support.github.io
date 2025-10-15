@@ -1,82 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-      interface Slide {},
-      id: number,
-      title: string,
-      description: string,
-      image: string,
-      features: string[];
-    },
-    {};
-interface ContentCarouselProps {},
-      slides?: Slide[];
-  autoPlay?: boolean
-  interval?: number
-  className?: string;
-};";
-const defaultSlides: Slide[]  =  [];";";
-  {};";";";
-    id: 1;"
-    title: "AI-Powered Solutions";";";";
-    description:"
-      "Transform your business with cutting-edge artificial intelligence technologies.";"
-    image: "/api/placeholder/600/400";";";";
-    features: []"
-      "Machine Learning";"
-      "Natural Language Processing";"
-      "Computer Vision"]};";";
-  {};";";";
-    id: 2;"
-    title: "Cloud Infrastructure";"
-    description: "Scalable and secure cloud solutions for modern businesses.";"
-    image: "/api/placeholder/600/400";"
-    features: ["Scalable Architecture", "99.9% Uptime", "Global CDN"]};";";
-  {};";";";
-    id: 3;"
-    title: "Cybersecurity";";";";
-    description:"
-      "Protect your digital assets with enterprise-grade security solutions.";"
-    image: "/api/placeholder/600/400";"
-    features: ["Threat Detection", "Data Encryption", "Compliance"]}];
-export default function ContentCarousel() {
-  ;
-};
+export default function ContentCarouselPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>ContentCarousel | Zion Tech Group</title>
+        <meta name="description" content="Professional contentcarousel solutions and services." />
+      </Helmet>
 
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))};
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            ContentCarousel
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional contentcarousel solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </section>
 
-        </div>
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
       </div>
-      {/* Navigation Arrows */};
-      <buttononClick={goToPrevious},>
-      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"";
-        aria-label="Previous slide"";
-      ></button
->
-        <ChevronLeft: className ="w-6 h-6" />";
-      </button>
-      <buttononClick={goToNext},>
-      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"";
-        aria-label="Next slide"";
-      ></button
->
-        <ChevronRight: className ="w-6 h-6" />";
-      </button>
-      {/* Dots Indicator */};
-      <div: className ="flex justify-center mt-6 space-x-2"></div>";
-        {slides.map((_, index) => ()}
-          <buttonkey={index},>
-      onClick={() => goToSlide(index)},
-      className={`w-3 h-3 rounded-full transition-colors ${},
-      index === currentSlide ? "bg-cyan-400" : "bg-gray-600"";
-
-            }`},
-      aria-label={`Go to slide ${index + 1}`} />
-        ))};
-      </div>
-
-
-
+    </div>
+  );
+}

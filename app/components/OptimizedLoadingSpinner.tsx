@@ -1,117 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface OptimizedLoadingSpinnerProps {},
-      size?: "xs" | "sm" | "md" | "lg" | "xl""
-  variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars""
-  text?: string
-  className?: string
-  color?: "blue" | "gray" | "green" | "red" | "purple""
-  fullScreen?: boolean
-},
-      const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({},)
-      size = "md", variant = "spinner", text = "Loading...", className = "", color = "blue", fullScreen = false}) => {},"
-      const  sizeClasses = useMemo(() => ({},)
-      xs: "h-3 w-3","
-      sm: "h-4 w-4","
-      md= "h-8 w-8","
-      lg: "h-12 w-12","
-      xl: "h-16 w-16"});"
-      []
-    ),
-      const  textSizeClasses = useMemo(() => ({},)
-      xs: "text-xs","
-      sm: "text-sm","
-      md= "text-base","
-      lg: "text-lg","
-      xl: "text-xl"});"
-      []
-    ),
-      const  colorClasses = useMemo(() => ({},)
-      blue: "text-blue-500","
-      gray: "text-gray-500","
-      green: "text-green-500","
-      red= "text-red-500","
-      purple: "text-purple-500"});"
-      []
-    )
-    const  renderSpinner = () => {}
-}switch (variant) {},
-      case "dots":"
-          return (<div  className ="flex space-x-1"></div>)"
-              {[0, 1, _2].map((i) => ()}
-                <divkey={i},>
-      className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`},
-      style={{},
-      animationDelay: `${i * 0.2}s`,
-      animationDuration: "1s"}} />"
-              ))}
-            </div>
-          )
-        case "pulse":"
-          return ()
-            <div>
-              className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`} />
-          )
-        case "spinner":"
-          return ()
-            <div>
-              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`} />
-          )
-        case "skeleton":"
-          return ()
-            <div  className ="space-y-2"></div>"
-              <div  className ={`h-4 bg-gray-300 rounded animate-pulse`} />
-              <div  className ={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
-            </div>
-          )
-        case "bars":"
-          return (<div  className ="flex space-x-1"></div>)"
-              {[0, 1, _2, _3].map((i) => ()}
-                <divkey={i},>
-      className={`w-1 ${colorClasses[color]} animate-pulse`},
-      style={{},
-      height: `${8 + i * 4}px`,
-      animationDelay: `${i * 0.1}s`,
+export default function OptimizedLoadingSpinnerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>OptimizedLoadingSpinner | Zion Tech Group</title>
+        <meta name="description" content="Professional optimizedloadingspinner solutions and services." />
+      </Helmet>
 
-              ))};
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            OptimizedLoadingSpinner
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional optimizedloadingspinner solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </section>
 
-            </div>
-          )
-        default:
-          return ()
-            <div>
-              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`} />
-          )
-
-
-    return ()
-      <div></div>
-        <Helmet></Helmet>
-          <title>Loading - Zion Tech Group</title>
-        </Helmet>
-
-          {renderSpinner()};
-          {text && ()};
-            <pclassName={`${textSizeClasses[size]} ${colorClasses[color]} mt-2`};>
-            ></p
->
-
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
             </p>
-          )}
-          <>
-            to="/contact""
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit""
-          ></>
-            Contact Us
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
-
-          </>
-        </div>
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

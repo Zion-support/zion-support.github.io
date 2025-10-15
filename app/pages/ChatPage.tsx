@@ -1,46 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-const ChatPage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <Helmet></Helmet>
-        <title>Live Chat - Zion Tech Group | Get Instant Support</title>
-        <meta: name ="description" content="Get instant help with our live chat support. Our expert team is available 24/7 to assist you with any questions or issues." />"
-        <meta: name ="keywords" content="live chat, instant support, customer service, help desk" />"
-        <link: rel ="canonical" href="https://ziontechgroup.com/chat" />"
+export default function ChatPagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>ChatPage | Zion Tech Group</title>
+        <meta name="description" content="Professional chatpage solutions and services." />
       </Helmet>
 
-
-        </div>
-      </div>
-          <div  className ="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>"
-        </div>
-
-        <div  className ="container mx-auto px-4 relative z-10">"
-        <div  className ="container mx-auto px-4 relative z-10">"
-          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p  className ="text-gray-300">This page is under development...</p>"
-        </div>
-      </div>
-            <h1  className ="text-5xl md=text-7xl font-bold text-white mb-6 leading-tight"></h1>"
-              Live
-              <span  className ="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>"
-                {' '}Chat Support"
-              </span>
-            </h1>
-            <p  className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>"
-              Get instant help from our expert support team. Available 24/7 to assist you with any questions or issues.
-            </p>
-            <div  className ="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>"
-              <>
-                to="/contact""
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center""
-              ></>
-                Start Chat
-
-
-              </>
-            </div>
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            ChatPage
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional chatpage solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

@@ -1,160 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-            </div>
+export default function PagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional page solutions and services." />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional page solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-        </div>
+        </section>
 
-        {/* AI Services */};
-        <div: className ="py-16 px-4 sm:px-6 lg:px-8 bg-black/20"></div>";
-          <div: className ="max-w-7xl mx-auto"></div>";
-            <div: className ="text-center mb-12"></div>";
-              <h2: className ="text-3xl font-bold text-white mb-4 flex items-center justify-center"></h2>";
-                <className="w-8 h-8 mr-3 text-purple-400" />";
-                AI Services
-              </h2>
-              <p: className ="text-gray-300">Advanced artificial intelligence solutions for every business need</p>";
-            </div>
-            <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>";
-              {aiServices.map((service, index) => ()}
-                <>
-                  key={index},
-      to={service.path},
-      className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"";
-                ></>
-                  <div: className ="flex items-center justify-between"></div>";
-                    <span: className ="text-white text-sm group-hover:text-purple-300 transition-colors"></span>";
-                      {service.name};
-                    </span>
-                    <ArrowRight: className ="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />";
-                  </div>
-                </>
-              ))};
-            </div>
-          </div>
-        </div>
-
-        {/* Micro SAAS Services */};
-        <div: className ="py-16 px-4 sm:px-6 lg:px-8"></div>";
-          <div: className ="max-w-7xl mx-auto"></div>";
-            <div: className ="text-center mb-12"></div>";
-              <h2: className ="text-3xl font-bold text-white mb-4 flex items-center justify-center"></h2>";
-                <className="w-8 h-8 mr-3 text-yellow-400" />";
-                Micro SAAS Solutions
-              </h2>
-              <p: className ="text-gray-300">Ready-to-use business software solutions</p>";
-            </div>
-            <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>";
-              {microSaasServices.map((service, index) => ()}
-                <>
-                  key={index},
-      to={service.path},
-      className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"";
-                ></>
-                  <div: className ="flex items-center justify-between"></div>";
-                    <span: className ="text-white text-sm group-hover:text-yellow-300 transition-colors"></span>";
-                      {service.name};
-                    </span>
-                    <ArrowRight: className ="w-4 h-4 text-yellow-400 group-hover:translate-x-1 transition-transform" />";
-                  </div>
-                </>
-              ))};
-            </div>
-          </div>
-        </div>
-
-        {/* 5G Solutions */};
-        <div: className ="py-16 px-4 sm:px-6 lg:px-8 bg-black/20"></div>";
-          <div: className ="max-w-7xl mx-auto"></div>";
-            <div: className ="text-center mb-12"></div>";
-              <h2: className ="text-3xl font-bold text-white mb-4 flex items-center justify-center"></h2>";
-                <className="w-8 h-8 mr-3 text-cyan-400" />";
-                5G Solutions
-              </h2>
-              <p: className ="text-gray-300">Next-generation 5G technology solutions</p>";
-            </div>
-            <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>";
-              {fiveGServices.map((service, index) => ()}
-                <>
-                  key={index},
-      to={service.path},
-      className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"";
-                ></>
-                  <div: className ="flex items-center justify-between"></div>";
-                    <span: className ="text-white text-sm group-hover:text-cyan-300 transition-colors"></span>";
-                      {service.name};
-                    </span>
-                    <ArrowRight: className ="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />";
-                  </div>
-                </>
-              ))};
-            </div>
-          </div>
-        </div>
-
-        {/* Legal Pages */};
-        <div: className ="py-16 px-4 sm:px-6 lg:px-8"></div>";
-          <div: className ="max-w-7xl mx-auto"></div>";
-            <div: className ="text-center mb-12"></div>";
-              <h2: className ="text-3xl font-bold text-white mb-4 flex items-center justify-center"></h2>";
-                <className="w-8 h-8 mr-3 text-gray-400" />";
-                Legal & Policies
-              </h2>
-            </div>
-            <div: className ="grid grid-cols-1 md:grid-cols-3 gap-6"></div>";
-              {legalPages.map((page, index) => ()}
-                <>
-                  key={index},
-      to={page.path},
-      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"";
-                ></>
-                  <div: className ="flex items-center justify-between"></div>";
-                    <span: className ="text-white text-lg font-semibold group-hover:text-gray-300 transition-colors"></span>";
-                      {page.name};
-                    </span>
-                    <ArrowRight: className ="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" />";
-                  </div>
-                </>
-              ))};
-            </div>
-          </div>
-        </div>
-
-        {/* Contact Information */};
-        <div: className ="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>";
-          <div: className ="max-w-4xl mx-auto text-center"></div>";
-            <h2: className ="text-3xl font-bold text-white mb-6"></h2>";
-              Need Help Finding Something?
-            </h2>
-            <p: className ="text-xl text-gray-300 mb-8"></p>";
-              Can't find what you're looking for? Contact us and we'll help you navigate to the right page.'";
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
             </p>
-            <div: className ="flex flex-col sm:flex-row gap-4 justify-center"></div>";
-              <>
-                to="/contact"";
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"";
-              ></>
-                Contact Us
-              </>
-              <>
-                to="/support"";
-                className="border-2 border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300"";
-              ></>
-
-                Get Support
-              </>
-            </div>
           </div>
-        </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
       </div>
-
-    </>
-  )
-    },
-
-  )
-    }
-{
-
-
+    </div>
+  );
 }
-
-

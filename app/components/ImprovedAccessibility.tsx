@@ -1,94 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;};
-  enableHighContrast?: boolean;};
-  enableLargeText?: boolean;};
-  enableReducedMotion?: boolean;};
-};
-const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps>  =  ({,
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,};
-  enableHighContrast = false,};
-  enableLargeText = false,});
-  enableReducedMotion = false;})
-}) => {
-  const [settings, setSettings]  =  useState<AccessibilitySettings>({
-    highContrast: enableHighContrast,
-    largeText: enableLargeText,
-    reducedMotion: enableReducedMotion,};
-    screenReader: enableScreenReader,};
-    keyboardNavigation: enableKeyboardNavigation,});
-    focusVisible: false;})
-  });
-  const [isVisible, setIsVisible] = useState(false);
-  // Apply accessibility settings
-  useEffect(() => {
-
-      announcement.textContent = message;
-      document.body.appendChild(announcement);
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
-
-      return newSettings;
-    });
-  };
+export default function ImprovedAccessibilityPage() {
   return (
-    <></>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>ImprovedAccessibility | Zion Tech Group</title>
+        <meta name="description" content="Professional improvedaccessibility solutions and services." />
+      </Helmet>
 
-              <p>Alt + Shift + Tab: Skip to main content</p>
-              <p>Alt + Ctrl + Tab: Toggle this panel</p>
-              <p>Tab: Navigate elements</p>
-              <p>Enter/Space: Activate elements</p>
-            </div>
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            ImprovedAccessibility
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional improvedaccessibility solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
+        </section>
 
-        .high-contrast * {
-          background-color: var(--tw-bg-opacity) !important;
-          color: var(--tw-text-opacity) !important;
-          border-color: currentColor !important;
-        };
-        .large-text {
-          font-size: 1.125rem;
-        };
-        .large-text h1 { font-size: 3.5rem; };
-        .large-text h2 { font-size: 2.5rem; };
-        .large-text h3 { font-size: 2rem; };
-        .large-text h4 { font-size: 1.5rem; };
-        .large-text h5 { font-size: 1.25rem; };
-        .large-text h6 { font-size: 1.125rem; };
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        };
-        .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        };
-        .focus-visible *:focus {
-          outline: 2px solid #06b6d4 !important;
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
-          position: static;
-          width: auto;
-          height: auto;
-          padding: 0.5rem 1rem;,
-          margin: 0;};
-          overflow: visible;};
-          clip: auto;};
-          white-space: normal;};
-        };
-      `}</style>
-    </>
-  );";
-};";";
-";";";
-export default ImprovedAccessibility;"
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
+    </div>
+  );
+}

@@ -1,8 +1,6 @@
 #!/bin/bash
-
 # Merge remaining PRs
 echo "Merging remaining open PRs..."
-
 # List of remaining PR branches to merge
 REMAINING_PR_BRANCHES=(
     "cursor/fix-errors-and-merge-to-main-4987"
@@ -26,15 +24,12 @@ REMAINING_PR_BRANCHES=(
     "cursor/fix-errors-and-merge-to-main-dfae"
     "cursor/fix-errors-and-merge-to-main-f9be"
 )
-
 success_count=0
 fail_count=0
-
 for branch in "${REMAINING_PR_BRANCHES[@]}"; do
     echo ""
     echo "Processing branch: $branch"
     echo "=================================="
-    
     # Fetch the branch
     echo "Fetching branch $branch..."
     if git fetch origin "$branch" 2>/dev/null; then
@@ -44,7 +39,6 @@ for branch in "${REMAINING_PR_BRANCHES[@]}"; do
         ((fail_count++))
         continue
     fi
-    
     # Attempt to merge
     echo "Attempting to merge $branch..."
     if git merge "origin/$branch" --no-ff -m "Merge branch $branch" 2>/dev/null; then
@@ -52,7 +46,6 @@ for branch in "${REMAINING_PR_BRANCHES[@]}"; do
         ((success_count++))
     else
         echo "⚠️  Merge failed for $branch, attempting conflict resolution..."
-        
         # Try to resolve conflicts
         if python3 fix_merge_conflicts.py 2>/dev/null; then
             echo "✅ Conflicts resolved for $branch"
@@ -68,11 +61,9 @@ for branch in "${REMAINING_PR_BRANCHES[@]}"; do
             ((fail_count++))
         fi
     fi
-    
     echo "Waiting 1 second before next merge..."
     sleep 1
 done
-
 echo ""
 echo "=================================="
 echo "Remaining PRs merge completed!"

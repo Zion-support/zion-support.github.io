@@ -3,23 +3,18 @@
 Script to automatically resolve merge conflicts in specific files.
 This removes conflict markers and keeps the appropriate code sections.
 """
-
 import re
 import sys
-
 def resolve_app_tsx():
     """Resolve merge conflicts in app/App.tsx"""
     with open('/workspace/app/App.tsx', 'r') as f:
         content = f.read()
-    
     # Remove all merge conflict markers and keep appropriate sections
     # For imports, keep all unique imports
     imports_section = """'use client';
-
 import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
@@ -28,27 +23,21 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
-
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
-
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
-
 // Styles
 import './globals.css';
-
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
     logger.lifecycle('initialized', 'App');
-
     // Initialize performance monitoring
     lazyLoadImages();
     preloadCriticalResources();
     performanceOptimizer.init();
-    
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
@@ -60,11 +49,9 @@ const App: React.FC = () => {
         console.log('Performance metrics:', metrics);
       }
     }
-    
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
-
   return (
     <HelmetProvider>
       <AdvancedErrorBoundary
@@ -102,10 +89,8 @@ const App: React.FC = () => {
                     </Routes>
                   </Suspense>
                 </main>
-
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
-                
                 {/* Advanced Performance Monitor */}
                 <AdvancedPerformanceMonitor
                   enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
@@ -123,25 +108,19 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
-
 export default App;
 """
-    
     with open('/workspace/app/App.tsx', 'w') as f:
         f.write(imports_section)
-    
     print("✓ Fixed app/App.tsx")
-
 def remove_conflict_markers(filepath, keep_head=True):
     """Generic function to remove conflict markers"""
     with open(filepath, 'r') as f:
         lines = f.readlines()
-    
     result = []
     in_conflict = False
     in_head = False
     conflict_start = None
-    
     for i, line in enumerate(lines):
         if line.startswith('<<<<<<<'):
             in_conflict = True
@@ -158,17 +137,13 @@ def remove_conflict_markers(filepath, keep_head=True):
             result.append(line)
         elif in_conflict and not in_head and not keep_head:
             result.append(line)
-    
     with open(filepath, 'w') as f:
         f.writelines(result)
-    
     print(f"✓ Fixed {filepath}")
-
 # Fix all files
 resolve_app_tsx()
 remove_conflict_markers('/workspace/app/components/AccessibilityEnhancer.tsx', keep_head=True)
 remove_conflict_markers('/workspace/app/components/ErrorBoundary.tsx', keep_head=True)
 remove_conflict_markers('/workspace/app/enterprise/page.tsx', keep_head=True)
 remove_conflict_markers('/workspace/app/setupTests.tsx', keep_head=True)
-
 print("\n✅ All merge conflicts resolved!")

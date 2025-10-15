@@ -1,9 +1,7 @@
 #!/bin/bash
-
 echo "Checking for merge conflict markers in main branch..."
 echo "======================================================="
 echo ""
-
 files=(
   "app/components/ImprovedErrorBoundary.tsx"
   "app/components/NewestContent2025Banner.tsx"
@@ -21,7 +19,6 @@ files=(
   "src/utils/codeSplitting.ts"
   "src/utils/errorHandler.ts"
 )
-
 conflict_count=0
 for file in "${files[@]}"; do
   if git show origin/main:"$file" 2>/dev/null | grep -q "^<<<<<<<"; then
@@ -31,7 +28,6 @@ for file in "${files[@]}"; do
     echo "✓ $file - No conflicts"
   fi
 done
-
 echo ""
 echo "======================================================="
 echo "Total files with conflicts: $conflict_count / ${#files[@]}"

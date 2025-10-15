@@ -1,75 +1,76 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-      interface AccessibilitySettings {},
-      highContrast: boolean,
-      largeText: boolean,
-      reducedMotion: boolean,
-      screenReader: boolean
-    },
-    {};
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }>  =  ({
-    children ;
-  }) => {};
-}const [settings, setSettings]  =  useState<AccessibilitySettings>({},)
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
+export default function EnhancedAccessibilityPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedAccessibility | Zion Tech Group</title>
+        <meta name="description" content="Professional enhancedaccessibility solutions and services." />
+      </Helmet>
 
-    };
-  }, [
-  ])
-  useEffect(() => {};
+      <div className="container mx-auto px-4 py-16">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            EnhancedAccessibility
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional enhancedaccessibility solutions and services tailored to your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </section>
 
-    style.textContent = `
-      .skip-links {},
-      position: absolute,
-  top: -100px
-        left: 0
-        z-index: 1000;
-      };
-      .skip-link {},
-      position: absolute,
-  top: 0
-        left: 0,
-  background: #000
-        color: #fff
-        padding: 8px 16px
-        text-decoration: none
-        font-weight: bold
-        z-index: 1001,
-  transition: top 0.3s
-      };
-      .skip-link:focus {},
-      top: 0
-      };
-    `
-    document.head.appendChild(style)
-    return () => {};
-}skipLinks.remove()
-      style.remove()
-    };
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Professional solutions designed by industry experts with years of experience.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Custom Implementation</h3>
+            <p className="text-gray-300">
+              Tailored implementation strategies that fit your specific business requirements.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your solutions run smoothly at all times.
+            </p>
+          </div>
+        </section>
 
-    };
-  }, [
-  ])
-  // Add keyboard navigation support
-
-        )
-        const: firstElement = focusableElements[0] as HTMLElement
-        const: lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-        if (event.shiftKey && document.activeElement === firstElement) {},
-      event.preventDefault()
-          lastElement?.focus()
-        } else if (!event.shiftKey && document.activeElement === lastElement) {},
-      event.preventDefault()
-          firstElement?.focus()
-
-      {children};
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our experts to learn how our solutions can transform your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </section>
+      </div>
     </div>
-  )";
-},";";
-      export default EnhancedAccessibility";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
-
-
+  );
+}
