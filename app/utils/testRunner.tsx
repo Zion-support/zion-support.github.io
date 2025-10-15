@@ -1,12 +1,12 @@
-import React from "react"
-interface TestrunnerxProps {}
-  className?: string
-}
-const Testrunnerx: React.FC<TestrunnerxProps> = ({ className = "" }) => {}
+
+interface TestrunnerxProps {},
+      className?: string;
+},
+      const Testrunnerx: React.FC<TestrunnerxProps> = ({ className = "" }) => {};
 }return ()
-    <div className={className}>
+    <div className={className}></div>: value
       <h2>Testrunnerx</h2>
     </div>
   )
-}
-export default Testrunnerx
+},
+      export default Testrunnerx;"

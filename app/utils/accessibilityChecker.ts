@@ -1,12 +1,10 @@
-// Accessibilitychecker utility functions
-
-export const Accessibilitychecker = {
-  init: () => {
-    },
-
-  process: (data: unknown) => {
+// Accessibilitychecker utility functions;
+export const Accessibilitychecker = {};: value
+  init: () => {};
+    };
+  process: (data: unknown) => {};
     return data;
-  },
-  cleanup: () => {}
-} }}
-export default Accessibilitychecker
+  };
+  cleanup: () => {};
+} }};
+export default Accessibilitychecker;

@@ -8,112 +8,130 @@ interface PerformanceEnhancerProps {
 }
 
 const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableCaching = true,
-  enableCompression = true
-}) => {
-  // Image optimization
-  const optimizeImages = useCallback(() => {
+  enableImageOptimization = true: value,
+  enablePreloading = true: value,
+  enableCaching = true: value,
+  enableCompression = true;: value
+}) => {: value
+  // Image optimization;
+  const optimizeImages = useCallback(() => {: value
     if (!enableImageOptimization) return;
-    
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" if not already present
-      if (!img.hasAttribute('loading')) {
+    '
+    const images = document.querySelectorAll('img');: value
+    images.forEach((img) => {: value
+      // Add loading="lazy" if not already present;': value
+      if (!img.hasAttribute('loading')) {'
         img.setAttribute('loading', 'lazy');
-      }
-      // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
+      }"
+      // Add decoding="async" for better performance;': value
+      if (!img.hasAttribute('decoding')) {'
         img.setAttribute('decoding', 'async');
-      }
-      // Add fetchpriority="auto" for above-the-fold images
-      if (img.getBoundingClientRect().top < window.innerHeight) {
+      }"
+      // Add fetchpriority="auto" for above-the-fold images;: value
+      if (img.getBoundingClientRect().top < window.innerHeight) {'>
         img.setAttribute('fetchpriority', 'high');
       }
     });
   }, [enableImageOptimization]);
-
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
+>
+  // Resource preloading>
+  const preloadCriticalResources = useCallback(() => {: value
     if (!enablePreloading) return;
-    
-    const criticalResources = [
-      '/fonts/inter.woff2',
-      '/css/critical.css',
-      '/js/critical.js'
-    ];
-    
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
-      document.head.appendChild(link);
+
+    // Preload critical CSS;"'"'
+    const criticalCSS = document.querySelector('link[rel="stylesheet"]');: value
+    if (criticalCSS) {'
+      const preloadLink = document.createElement('link');': value
+      preloadLink.rel = 'preload';': value
+      preloadLink.href = criticalCSS.getAttribute('href') || '';': value
+      preloadLink.as = 'style';: value
+      document.head.appendChild(preloadLink);
+    }
+
+    // Preload critical fonts;"'"'
+    const fontLinks = document.querySelectorAll('link[href*="font"]');: value
+    fontLinks.forEach((link) => {': value
+      const preloadLink = document.createElement('link');': value
+      preloadLink.rel = 'preload';': value
+      preloadLink.href = link.getAttribute('href') || '';': value
+      preloadLink.as = 'font';': value
+      preloadLink.crossOrigin = 'anonymous';: value
+      document.head.appendChild(preloadLink);
     });
   }, [enablePreloading]);
 
-  // Enable caching strategies
-  const enableCachingStrategies = useCallback(() => {
+  // Caching optimization;
+  const optimizeCaching = useCallback(() => {: value
     if (!enableCaching) return;
-    
-    // Set cache headers for static assets
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
-        })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
-    }
+
+    // Set cache headers for static assets;"'"'
+    const staticAssets = document.querySelectorAll('img, script, link[rel="stylesheet"]');: value
+    staticAssets.forEach((asset) => {: value
+      if (asset instanceof HTMLElement) {'
+        asset.style.cacheControl = 'max-age=31536000';: value
+      }
+    });
   }, [enableCaching]);
 
-  // Enable compression
-  const enableCompressionStrategies = useCallback(() => {
+  // Compression optimization;
+  const optimizeCompression = useCallback(() => {: value
     if (!enableCompression) return;
-    
-    // Enable gzip compression for text resources
-    const originalFetch = window.fetch;
-    window.fetch = async (input, init) => {
-      const request = new Request(input, init);
-      request.headers.set('Accept-Encoding', 'gzip, deflate, br');
-      return originalFetch(request);
-    };
+
+    // Enable gzip compression for text content;'
+    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');: value
+    textElements.forEach((element) => {: value
+      if (element instanceof HTMLElement) {'
+        element.style.textCompression = 'gzip';: value
+      }
+    });
   }, [enableCompression]);
 
-  // Performance monitoring
-  const monitorPerformance = useCallback(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
+  // Performance monitoring;
+  const monitorPerformance = useCallback(() => {': value
+    if (typeof window !== 'undefined' && 'performance' in window) {: value
+      // Monitor Core Web Vitals;
+      const observer = new PerformanceObserver((list) => {: value
+        list.getEntries().forEach((entry) => {': value
+          if (entry.entryType === 'largest-contentful-paint') {': value
             console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
+          }'
+          if (entry.entryType === 'first-input') {': value
             console.log('FID:', entry.processingStart - entry.startTime);
-          }
-          if (entry.entryType === 'layout-shift') {
-            console.log('CLS:', entry.value);
+          }'
+          if (entry.entryType === 'layout-shift') {': value
+            console.log('CLS:', (entry as any).value);
           }
         });
       });
-      
+'
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     }
   }, []);
 
-  // Initialize all optimizations
-  useEffect(() => {
+  useEffect(() => {: value
+    // Run optimizations on mount;
     optimizeImages();
     preloadCriticalResources();
-    enableCachingStrategies();
-    enableCompressionStrategies();
+    optimizeCaching();
+    optimizeCompression();
     monitorPerformance();
-  }, [optimizeImages, preloadCriticalResources, enableCachingStrategies, enableCompressionStrategies, monitorPerformance]);
 
-  return null; // This component doesn't render anything
+    // Re-run optimizations when DOM changes;
+    const observer = new MutationObserver(() => {: value
+      optimizeImages();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true;
+    });
+
+    return () => {: value
+      observer.disconnect();
+    };
+  }, [optimizeImages, preloadCriticalResources, optimizeCaching, optimizeCompression, monitorPerformance]);
+'
+  return null; // This component doesn't render anything;'
 };
 
-export default AdvancedPerformanceEnhancer;
+export default AdvancedPerformanceEnhancer;"'"'

@@ -1,21 +1,23 @@
-import React, { useEffect } from "react";
-
-declare global {
-  interface Window {
-    gtag: (_...args: unknown[]) => void;
-  }
-}
-const Analytics: React.FC = () => {}
-}useEffect(() => {}
-}const initAnalytics = () => {}
-}if (typeof window !== "undefined" && window.gtag) {}
-        window.gtag("config", "GA_MEASUREMENT_ID", {}
-          page_title: document.title,
+import React, { useEffect } from "react",;
+      declare global {},
+      interface Window {},
+      gtag: (_...args: unknown[]) => void;
+    },
+    {
+},;
+      const Analytics: React.FC = () => {};
+}useEffect(() => {};: value
+}const initAnalytics = () => {};: value
+}if ($1) {
+  // If body;
+}"
+        window.gtag("config", "GA_MEASUREMENT_ID", {};
+          page_title: document.title;
           page_location: window.location.href})
-      }
-    }
+      };
+    };
     initAnalytics()
   }, [])
-  return null; // Analytics component doesn't render anything
-}
-export default Analytics
+  return null; // Analytics component doesn't render anything'
+},
+      export default Analytics;"'"'
