@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, memo } from 'react';
+import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load pages for better performance
@@ -24,49 +24,8 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 
 // Components
-import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
-import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Memoized components for better performance
-const UnifiedContentPromotion = memo(() => (
-  <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
-      <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
-    </div>
-  </div>
-));
-
-const InteractiveAIROICalculator = memo(() => (
-  <div className="bg-gray-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
-      <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
-    </div>
-  </div>
-));
-
-const ContentShowcase = memo(() => (
-  <div className="py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
-      <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
-    </div>
-  </div>
-));
-
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className="bg-blue-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
-      <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
-    </div>
-  </div>
-));
 
 // Loading component
 const LoadingSpinner = memo(() => (
@@ -74,54 +33,8 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
+LoadingSpinner.displayName = 'LoadingSpinner';
 
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error for debugging
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>
-            <button
-              onClick={() => this.setState({ hasError: false, error: null })}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Try again
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
 
 // Main App component
 const App: React.FC = () => {

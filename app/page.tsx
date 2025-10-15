@@ -139,6 +139,8 @@ export default function HomePage() {
               </a>
             </div>
           </div>
+        </section>
+
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">

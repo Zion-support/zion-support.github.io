@@ -831,3 +831,4 @@ const ITServicesPage: React.FC = () => {
   );
 };
 
+export default ITServicesPage;
