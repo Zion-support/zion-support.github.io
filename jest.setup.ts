@@ -64,17 +64,18 @@ if (typeof window.IntersectionObserver === 'undefined') {
     disconnect() {}
     takeRecords() { return []; }
   }
-  // @ts-expect-error - Mock implementation for testing environment
+  // @ts-expect-error - Mock implementation for testing
   window.IntersectionObserver = MockIntersectionObserver;
-  // @ts-expect-error - Mock implementation for testing environment
+  // @ts-expect-error - Mock implementation for testing
   global.IntersectionObserver = MockIntersectionObserver;
 }
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
-  performance.getEntriesByType = jest.fn(() => []);
+  // @ts-expect-error - Mock implementation for testing
+  performance.getEntriesByType = () => [];
 }
 
 // Ensure all code paths use the mock implementation
-// @ts-expect-error - Mock implementation for testing environment
+// @ts-expect-error - Mock implementation for testing
 global.fetch = fetchMock;

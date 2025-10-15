@@ -1,27 +1,37 @@
-export const dataTransformers = { transformToTableData: (data: unknown[]) => {
+export const dataTransformers = { 
+  transformToTableData: (data: unknown[]) => {
     return data.map((item, index) => {
       const itemObj = item as Record<string, unknown>;
-  return {
-        id: itemObj['id'] as string || index.toString(),
-        ...itemObj };
+      return {
+        id: itemObj['id'] || index,
+        ...itemObj 
+      };
     });
   },
-  transformToChartData: (data: unknown[], xField: string, yField: string) => { return data.map(item => {
+  transformToChartData: (data: unknown[], xField: string, yField: string) => { 
+    return data.map(item => {
       const itemObj = item as Record<string, unknown>;
-  return {
+      return {
         x: itemObj[xField],
-        y: itemObj[yField] };
+        y: itemObj[yField] 
+      };
     });
   },
-  transformToSelectOptions: (data: unknown[], valueField: string, labelField: string) => { return data.map(item => {
+  transformToSelectOptions: (data: unknown[], valueField: string, labelField: string) => { 
+    return data.map(item => {
       const itemObj = item as Record<string, unknown>;
-  return {
+      return {
         value: itemObj[valueField],
-        label: itemObj[labelField] };
+        label: itemObj[labelField] 
+      };
     });
   },
-  transformToKeyValuePairs: (data: Record<string, unknown>[]) => { return data.map((item, index) => ({
-      id: item['id'] as string || index.toString(),
-      ...item }));
+  transformToKeyValuePairs: (data: Record<string, unknown>[]) => { 
+    return data.map((item, index) => ({
+      id: item['id'] || index,
+      ...item 
+    }));
   }
 };
+
+export default dataTransformers;

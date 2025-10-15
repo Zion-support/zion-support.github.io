@@ -91,20 +91,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
+      this.setState({
         hasError: false,
-        error: undefined as Error | undefined,
-        errorInfo: undefined as ErrorInfo | undefined,
-        retryCount: prevState.retryCount + 1
-      }));
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: this.state.retryCount + 1
+      });
     }
   };
 
   handleReset = () => {
     this.setState({
       hasError: false,
-      error: undefined as Error | undefined,
-      errorInfo: undefined as ErrorInfo | undefined,
+      error: undefined,
+      errorInfo: undefined,
       retryCount: 0
     });
   };

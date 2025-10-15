@@ -6,64 +6,56 @@ const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
-  /* const documentationSections = [
+  const documentationSections = [
     {
       id: 'getting-started',
       title: 'Getting Started',
-      description: 'Learn how to get started with our AI solutions',
-      content: 'Comprehensive guide to implementing AI in your business'
+      icon: <Zap className="w-6 h-6" />,
+      description: 'Quick start guides and setup instructions',
+      articles: [
+        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
+        { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },
+        { title: 'First Project', description: 'Create your first AI project', readTime: '10 min' },
+        { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' }
+      ]
+    },
+    {
+      id: 'ai-services',
+      title: 'AI Services',
+      icon: <Code className="w-6 h-6" />,
+      description: 'Comprehensive guides for our AI services',
+      articles: [
+        { title: 'Machine Learning API', description: 'Complete ML API reference', readTime: '15 min' },
+        { title: 'Computer Vision', description: 'Image and video processing guides', readTime: '12 min' },
+        { title: 'Natural Language Processing', description: 'Text analysis and generation', readTime: '8 min' },
+        { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min' }
+      ]
+    },
+    {
+      id: 'it-services',
+      title: 'IT Services',
+      icon: <Shield className="w-6 h-6" />,
+      description: 'Documentation for our IT solutions',
+      articles: [
+        { title: 'Cloud Infrastructure', description: 'Setting up cloud environments', readTime: '25 min' },
+        { title: 'Cybersecurity Setup', description: 'Security best practices', readTime: '18 min' },
+        { title: 'Web Development', description: 'Building modern web applications', readTime: '30 min' },
+        { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min' }
+      ]
+    },
+    {
+      id: 'api-reference',
+      title: 'API Reference',
+      icon: <Book className="w-6 h-6" />,
+      description: 'Complete API documentation and examples',
+      articles: [
+        { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
+        { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
+        { title: 'SDKs', description: 'Software development kits', readTime: '10 min' },
+        { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min' }
+      ]
     }
-  ]; */
-  
-  // const features = [
-  //   {
-  //     title: 'Getting Started',
-  //     icon: <Zap className="w-6 h-6" />,
-  //     description: 'Quick start guides and setup instructions',
-  //     articles: [
-  //       { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
-  //       { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },
-  //       { title: 'First Project', description: 'Create your first AI project', readTime: '10 min' },
-  //       { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' }
-  //     ]
-  //   },
-  //   {
-  //     id: 'ai-services',
-  //     title: 'AI Services',
-  //     icon: <Code className="w-6 h-6" />,
-  //     description: 'Comprehensive guides for our AI services',
-  //     articles: [
-  //       { title: 'Machine Learning API', description: 'Complete ML API reference', readTime: '15 min' },
-  //       { title: 'Computer Vision', description: 'Image and video processing guides', readTime: '12 min' },
-  //       { title: 'Natural Language Processing', description: 'Text analysis and generation', readTime: '8 min' },
-  //       { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min' }
-  //     ]
-  //   },
-  //   {
-  //     id: 'it-services',
-  //     title: 'IT Services',
-  //     icon: <Shield className="w-6 h-6" />,
-  //     description: 'Documentation for our IT solutions',
-  //     articles: [
-  //       { title: 'Cloud Infrastructure', description: 'Setting up cloud environments', readTime: '25 min' },
-  //       { title: 'Cybersecurity Setup', description: 'Security best practices', readTime: '18 min' },
-  //       { title: 'Web Development', description: 'Building modern web applications', readTime: '30 min' },
-  //       { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min' }
-  //     ]
-  //   },
-  //   {
-  //     id: 'api-reference',
-  //     title: 'API Reference',
-  //     icon: <Book className="w-6 h-6" />,
-  //     description: 'Complete API documentation and examples',
-  //     articles: [
-  //       { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
-  //       { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
-  //       { title: 'SDKs', description: 'Software development kits', readTime: '10 min' },
-  //       { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min' }
-  //     ]
-  //   }
-  // ];
+  ];
 
   const popularArticles = [
     { title: 'Quick Start Guide', category: 'Getting Started', readTime: '5 min', views: '12.5k' },
@@ -73,13 +65,13 @@ const DocsPage: React.FC = () => {
     { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' }
   ];
 
-  const filteredSections = features.map(section => ({
+  const filteredSections = documentationSections.map(section => ({
     ...section,
-    articles: section.articles.filter(article =>
+    articles: (section.articles || []).filter((article: any) =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(section => section.articles.length > 0);
+  })).filter(section => (section.articles || []).length > 0);
 
   return (
     <>
@@ -168,12 +160,12 @@ const DocsPage: React.FC = () => {
               {filteredSections.map((section) => (
                 <div key={section.id} className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                   <button
-                    onClick={() => setExpandedSection(expandedSection === section.id ? null : (section.id || null))}
+                    onClick={() => setExpandedSection(expandedSection === section.id ? null : section.id)}
                     className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                   >
                     <div className="flex items-center">
                       <div className="text-cyan-400 mr-4">
-                        <Zap className="w-6 h-6" />
+                        {section.icon || <Book className="w-6 h-6" />}
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white">{section.title}</h3>
@@ -189,8 +181,22 @@ const DocsPage: React.FC = () => {
                   
                   {expandedSection === section.id && (
                     <div className="px-8 pb-6">
-                      <div className="bg-white/5 rounded-lg p-4">
-                        <p className="text-gray-300">{section.content}</p>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {section.articles.map((article, articleIndex) => (
+                          <div key={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">
+                            <div className="flex items-center justify-between mb-2">
+                              <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                {article.title}
+                              </h4>
+                              <span className="text-gray-400 text-sm">{article.readTime}</span>
+                            </div>
+                            <p className="text-gray-300 text-sm mb-2">{article.description}</p>
+                            <div className="flex items-center text-cyan-400 text-sm">
+                              <span>Read more</span>
+                              <ExternalLink className="w-3 h-3 ml-1" />
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   )}
