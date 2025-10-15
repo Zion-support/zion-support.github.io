@@ -18,6 +18,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
     { name: 'Contact', href: '/contact' }
   ];
 

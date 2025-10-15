@@ -14,11 +14,11 @@ const Footer: React.FC = () => {
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' },
-    { name: 'Micro SaaS', href: '/micro-saas-solutions' },
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Cybersecurity', href: '/cybersecurity' }
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'IT Services', href: '/services' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: '5G Solutions', href: '/5g-solutions' }
   ];
 
   const company = [
@@ -128,15 +128,15 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center">
               <Phone className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
+              <span className="text-gray-300">+1 302 464 0950</span>
             </div>
             <div className="flex items-center">
               <EnvelopeIcon className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">info@ziontechgroup.com</span>
+              <span className="text-gray-300">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
               <MapPinIcon className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">San Francisco, CA</span>
+              <span className="text-gray-300">364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
         </div>

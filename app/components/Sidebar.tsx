@@ -11,16 +11,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: Users },
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
     { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+    { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
     { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
-    { name: 'Portfolio', href: '/portfolio', icon: BarChart3 },
     { name: 'Blog', href: '/blog', icon: Globe },
     { name: 'Tutorials', href: '/tutorials', icon: Settings },
     { name: 'Demo', href: '/demo', icon: Settings },
     { name: 'Support', href: '/support', icon: Settings },
-    { name: 'FAQ', href: '/faq', icon: Settings },
     { name: 'Contact', href: '/contact', icon: Settings },
   ];
   return (
