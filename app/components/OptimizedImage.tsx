@@ -64,13 +64,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     onError?.();
   };
 
-  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+  const handleIntersection = (entries: IntersectionObserverEntry[]): void => {
     entries.forEach((entry) => {
       if (entry.isIntersecting && !isLoaded && !hasError) {
         setCurrentSrc(optimizedSrc);
       }
     });
-    return undefined;
   };
 
   useEffect(() => {

@@ -1,14 +1,17 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
+import { handleError, logError, AppError } from '../utils/errorHandler';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: AppError, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
+  errorId: string | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -17,7 +20,8 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: null,
+      errorId: null
     };
   }
 
@@ -25,15 +29,25 @@ class ErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorInfo: null
+      errorInfo: null,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
+
+    // Handle error using our error handler
+    const appError = handleError(error);
+    logError(appError, 'ErrorBoundary');
+    
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(appError, errorInfo);
+    }
 
     // In production, you might want to send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {
@@ -42,7 +56,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
@@ -61,6 +75,11 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="mt-2 text-sm text-gray-500">
                 {this.state.error?.message || 'An unexpected error occurred'}
               </p>
+              {this.state.errorId && (
+                <p className="mt-1 text-xs text-gray-400">
+                  Error ID: {this.state.errorId}
+                </p>
+              )}
               <div className="mt-4 space-y-2">
                 <button
                   onClick={() => window.location.reload()}
