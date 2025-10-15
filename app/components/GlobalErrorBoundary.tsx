@@ -20,15 +20,12 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
+    // Always report errors for monitoring
+    this.reportError(error, errorInfo);
+    
+    // Only log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Global error caught:', error, errorInfo);
-    }
-    
-    // Send error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Replace with your error monitoring service (e.g., Sentry, LogRocket, etc.)
-      this.reportError(error, errorInfo);
     }
   }
 

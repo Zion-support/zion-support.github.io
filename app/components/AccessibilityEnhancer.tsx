@@ -18,10 +18,34 @@ const AccessibilityEnhancer: React.FC = () => {
           }
         }
       }
+
+      // Escape key to close modals/dropdowns
+      if (event.key === 'Escape') {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.blur) {
+          activeElement.blur();
+        }
+      }
     };
 
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
+    };
+
+    // Add focus management for better accessibility
+    const handleFocusIn = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      if (target) {
+        // Add focus ring for better visibility
+        target.classList.add('focus-visible');
+      }
+    };
+
+    const handleFocusOut = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      if (target) {
+        target.classList.remove('focus-visible');
+      }
     };
 
     // Add skip to main content link
@@ -50,12 +74,48 @@ const AccessibilityEnhancer: React.FC = () => {
       footer.setAttribute('role', 'contentinfo');
     }
 
+    // Add high contrast mode detection
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.body.classList.add('high-contrast');
+      } else {
+        document.body.classList.remove('high-contrast');
+      }
+    };
+    
+    if (prefersHighContrast.matches) {
+      document.body.classList.add('high-contrast');
+    }
+    prefersHighContrast.addEventListener('change', handleContrastChange);
+
+    // Add reduced motion detection
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.body.classList.add('reduced-motion');
+      } else {
+        document.body.classList.remove('reduced-motion');
+      }
+    };
+    
+    if (prefersReducedMotion.matches) {
+      document.body.classList.add('reduced-motion');
+    }
+    prefersReducedMotion.addEventListener('change', handleMotionChange);
+
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
+      prefersHighContrast.removeEventListener('change', handleContrastChange);
+      prefersReducedMotion.removeEventListener('change', handleMotionChange);
       
       // Clean up skip link
       const existingSkipLink = document.querySelector('[data-skip-to-main]');

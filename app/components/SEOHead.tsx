@@ -1,27 +1,29 @@
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
+  noIndex?: boolean;
 }
 
 export default function SEOHead({
-  title,
-  description,
-  keywords = 'AI, IT solutions, artificial intelligence, cloud infrastructure, digital transformation, Zion Tech Group',
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, micro SaaS, and digital transformation.',
+  keywords = 'AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence, micro saas, business automation',
   canonicalUrl,
-  ogImage = '/og-image.jpg',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
+  structuredData,
+  noIndex = false
 }: SEOHeadProps) {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || 'Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.';
   
   return (
@@ -31,7 +33,7 @@ export default function SEOHead({
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Canonical URL */}
@@ -52,8 +54,10 @@ export default function SEOHead({
       <meta name="twitter:image" content={ogImage} />
       
       {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
+      <meta name="theme-color" content="#00ffff" />
+      <meta name="msapplication-TileColor" content="#00ffff" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Structured Data */}
       {structuredData && (
@@ -77,8 +81,17 @@ export default function SEOHead({
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-555-ZION-TECH",
-            "contactType": "customer service"
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
           }
         })}
       </script>

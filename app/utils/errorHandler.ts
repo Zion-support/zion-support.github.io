@@ -73,6 +73,15 @@ class ErrorHandler {
   }
 
   private logError(errorReport: ErrorReport): void {
+    // Store errors in localStorage for debugging
+    try {
+      const existingErrors = JSON.parse(localStorage.getItem('appErrors') || '[]');
+      existingErrors.push(errorReport);
+      localStorage.setItem('appErrors', JSON.stringify(existingErrors.slice(-20))); // Keep last 20 errors
+    } catch {
+      // Ignore localStorage errors
+    }
+    
     // Log to console only in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error reported:', errorReport);

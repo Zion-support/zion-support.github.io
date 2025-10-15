@@ -22,9 +22,16 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
       
-      // Also log in development
+      // Store metrics for debugging in development
       if (process.env.NODE_ENV === 'development') {
-        console.log(`[Web Vitals] ${metric.name}:`, metric.value);
+        // Store in localStorage for debugging without console logs
+        try {
+          const metrics = JSON.parse(localStorage.getItem('webVitals') || '[]');
+          metrics.push({ ...metric, timestamp: Date.now() });
+          localStorage.setItem('webVitals', JSON.stringify(metrics.slice(-50))); // Keep last 50 metrics
+        } catch (e) {
+          // Ignore localStorage errors
+        }
       }
     };
 
@@ -37,7 +44,10 @@ const PerformanceMonitor: React.FC = () => {
         onTTFB(sendToAnalytics);
         onINP(sendToAnalytics);
       }).catch((error) => {
-        console.warn('Failed to load web-vitals:', error);
+        // Silently handle web-vitals loading errors
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to load web-vitals:', error);
+        }
       });
     }
 
@@ -49,9 +59,19 @@ const PerformanceMonitor: React.FC = () => {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
           const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
           
+          // Store performance metrics for analysis
           if (process.env.NODE_ENV === 'development') {
-            console.log(`[Performance] Page Load Time: ${loadTime}ms`);
-            console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);
+            try {
+              const perfData = JSON.parse(localStorage.getItem('performanceMetrics') || '[]');
+              perfData.push({
+                loadTime,
+                domContentLoaded,
+                timestamp: Date.now()
+              });
+              localStorage.setItem('performanceMetrics', JSON.stringify(perfData.slice(-20))); // Keep last 20 entries
+            } catch (e) {
+              // Ignore localStorage errors
+            }
           }
         }
       }
