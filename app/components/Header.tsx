@@ -29,20 +29,25 @@ const Header: React.FC = () => {
     },
     {
       name: 'AI Services',
-      href: '/ai-services',
+      href: '/services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+        { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant-pro' },
+        { name: 'AI Document Processor Pro', href: '/ai-document-processor-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor-pro' },
+        { name: 'AI Cloud Optimization Pro', href: '/ai-cloud-optimization-pro' }
       ]
     },
     {
       name: 'IT Services',
-      href: '/it-services',
+      href: '/services',
       icon: <Code className="w-4 h-4" />,
       dropdown: [
         { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
@@ -55,7 +60,7 @@ const Header: React.FC = () => {
     },
     {
       name: '5G Solutions',
-      href: '/5g-solutions',
+      href: '/services',
       icon: <Wifi className="w-4 h-4" />,
       dropdown: [
         { name: '5G Implementation', href: '/5g-implementation' },
@@ -63,12 +68,13 @@ const Header: React.FC = () => {
         { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', href: '/5g-edge-computing' },
-        { name: '5G Private Networks', href: '/5g-private-networks' }
+        { name: '5G Private Networks', href: '/5g-private-networks' },
+        { name: '5G Smart Manufacturing Pro', href: '/5g-smart-manufacturing-pro' }
       ]
     },
     {
       name: 'Micro SAAS',
-      href: '/micro-saas',
+      href: '/services',
       icon: <Cloud className="w-4 h-4" />,
       dropdown: [
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },

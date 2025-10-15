@@ -20,12 +20,16 @@ const serviceCategories = [
     title: "AI & Machine Learning",
     description: "Advanced artificial intelligence solutions including deep learning, natural language processing, computer vision, and predictive analytics.",
     services: [
-      "Machine Learning Model Development",
-      "Natural Language Processing",
-      "Computer Vision Solutions",
-      "Predictive Analytics",
-      "AI Chatbots & Virtual Assistants",
-      "Recommendation Systems"
+      "AI Analytics Dashboard Pro",
+      "AI Content Generation Pro",
+      "AI Voice Assistant Pro",
+      "AI Document Processor Pro",
+      "AI Social Media Manager Pro",
+      "AI Cybersecurity Monitor Pro",
+      "AI Cloud Optimization Pro",
+      "AI Chatbot Enterprise",
+      "AI Code Assistant Pro",
+      "AI Business Intelligence Pro"
     ],
     color: "from-blue-600 to-cyan-600"
   },
@@ -34,12 +38,13 @@ const serviceCategories = [
     title: "5G Technology",
     description: "Next-generation 5G implementation, optimization, and IoT solutions for ultra-fast connectivity and smart infrastructure.",
     services: [
-      "5G Network Implementation",
-      "IoT Solutions & Integration",
-      "Edge Computing",
-      "Smart City Solutions",
-      "5G Performance Optimization",
-      "Private 5G Networks"
+      "5G Implementation",
+      "5G Network Infrastructure",
+      "5G IoT Solutions",
+      "5G Smart City Solutions",
+      "5G Edge Computing",
+      "5G Private Networks",
+      "5G Smart Manufacturing Pro"
     ],
     color: "from-purple-600 to-pink-600"
   },
@@ -98,6 +103,20 @@ const serviceCategories = [
       "Progressive Web Apps"
     ],
     color: "from-teal-600 to-cyan-600"
+  },
+  {
+    icon: <Cloud className="w-8 h-8" />,
+    title: "Micro SAAS Solutions",
+    description: "Specialized software-as-a-service solutions for specific business needs with AI-powered automation and optimization.",
+    services: [
+      "AI Accounting Assistant",
+      "AI Content Moderation Pro",
+      "AI Climate Solutions Pro",
+      "AI Agricultural Intelligence Pro",
+      "AI 3D Generation",
+      "AI Blockchain Solutions"
+    ],
+    color: "from-orange-600 to-red-600"
   }
 ];
 
@@ -168,7 +187,7 @@ const ServicesPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {serviceCategories.map((category, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-purple-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>

@@ -83,6 +83,22 @@ const HomePage: React.FC = () => {
       price: "$149/month",
       features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
       link: "/ai-chatbot-enterprise"
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Voice Assistant Pro",
+      description: "Revolutionary voice AI with natural language processing, multi-language support, and enterprise features.",
+      price: "$99/month",
+      features: ["50+ Languages", "Voice Recognition", "API Integration", "Custom Training"],
+      link: "/ai-voice-assistant-pro"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "AI Cybersecurity Monitor Pro",
+      description: "AI-powered security monitoring with real-time threat detection and automated response.",
+      price: "$499/month",
+      features: ["Real-time Monitoring", "AI Threat Detection", "Automated Response", "Compliance Management"],
+      link: "/ai-cybersecurity-monitor-pro"
     }
   ];
 

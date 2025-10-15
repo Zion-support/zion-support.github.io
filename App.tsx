@@ -1,12 +1,14 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './app/styles/globals.css';
 
 // Components
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Pages
 import HomePage from './app/page';
@@ -43,6 +45,12 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import AiVoiceAssistantProPage from './app/ai-voice-assistant-pro/page';
+import AiDocumentProcessorProPage from './app/ai-document-processor-pro/page';
+import AiSocialMediaManagerProPage from './app/ai-social-media-manager-pro/page';
+import AiCybersecurityMonitorProPage from './app/ai-cybersecurity-monitor-pro/page';
+import AiCloudOptimizationProPage from './app/ai-cloud-optimization-pro/page';
+import FiveGSmartManufacturingProPage from './app/5g-smart-manufacturing-pro/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -57,11 +65,7 @@ const App: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="text-white text-xl">Loading application...</div>
-      </div>
-    );
+    return <LoadingSpinner />;
   }
 
   return (
@@ -120,6 +124,16 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  
+                  {/* New AI Services */}
+                  <Route path="/ai-voice-assistant-pro" element={<AiVoiceAssistantProPage />} />
+                  <Route path="/ai-document-processor-pro" element={<AiDocumentProcessorProPage />} />
+                  <Route path="/ai-social-media-manager-pro" element={<AiSocialMediaManagerProPage />} />
+                  <Route path="/ai-cybersecurity-monitor-pro" element={<AiCybersecurityMonitorProPage />} />
+                  <Route path="/ai-cloud-optimization-pro" element={<AiCloudOptimizationProPage />} />
+                  
+                  {/* New 5G Services */}
+                  <Route path="/5g-smart-manufacturing-pro" element={<FiveGSmartManufacturingProPage />} />
                 </Routes>
               </Suspense>
             </main>

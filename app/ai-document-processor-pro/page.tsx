@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Share2, 
+  FileText, 
   Brain, 
   Zap, 
   Shield, 
@@ -14,137 +14,130 @@ import {
   Clock,
   Users,
   Award,
-  TrendingUp,
-  BarChart3,
-  Calendar,
-  Target
+  Search,
+  Download,
+  Upload,
+  Eye
 } from 'lucide-react';
 
-const AiSocialMediaManagerProPage: React.FC = () => {
+const AiDocumentProcessorProPage: React.FC = () => {
   const features = [
-    "AI Content Generation & Scheduling",
-    "Multi-Platform Management (10+ platforms)",
-    "Smart Hashtag Optimization",
-    "Engagement Analytics & Insights",
-    "Automated Response Management",
-    "Influencer Collaboration Tools",
-    "Content Calendar & Planning",
-    "Brand Voice Consistency",
-    "Competitor Analysis",
-    "ROI Tracking & Reporting"
+    "OCR Text Extraction (99.9% accuracy)",
+    "Multi-format Support (PDF, DOC, XLS, PPT, Images)",
+    "Intelligent Data Classification",
+    "Automated Form Processing",
+    "Document Comparison & Version Control",
+    "Smart Search & Indexing",
+    "Batch Processing (1000+ docs/min)",
+    "API Integration & Webhooks",
+    "Compliance & Audit Trails",
+    "Cloud & On-premise Deployment"
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$39",
+      name: "Basic",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 3 social media accounts",
-        "Basic AI content generation",
-        "Scheduling for 1 month ahead",
-        "Basic analytics",
-        "Email support"
+        "Up to 1,000 documents/month",
+        "5 supported formats",
+        "Basic OCR extraction",
+        "Email support",
+        "Cloud storage (10GB)"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$149",
       period: "/month",
-      description: "Most popular for growing brands",
+      description: "Most popular for businesses",
       features: [
-        "Up to 10 social media accounts",
-        "Advanced AI content generation",
-        "Unlimited scheduling",
-        "Advanced analytics & insights",
+        "Up to 10,000 documents/month",
+        "All supported formats",
+        "Advanced OCR + AI classification",
         "Priority support",
-        "Hashtag optimization",
-        "Engagement automation"
+        "Cloud storage (100GB)",
+        "API access",
+        "Custom workflows"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$249",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited social media accounts",
-        "Full AI suite + custom training",
-        "White-label solution",
-        "Advanced reporting & ROI tracking",
+        "Unlimited documents",
+        "All formats + custom parsers",
+        "Full AI suite + ML training",
         "24/7 dedicated support",
-        "Team collaboration tools",
-        "API access",
-        "Custom integrations"
+        "Unlimited cloud storage",
+        "Full API + webhooks",
+        "On-premise deployment",
+        "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const platforms = [
+  const documentTypes = [
     {
-      name: "Facebook & Instagram",
-      description: "AI-optimized posts, stories, and reels with engagement tracking",
-      icon: <Share2 className="w-6 h-6" />
+      type: "Invoices & Receipts",
+      description: "Automatically extract vendor info, amounts, dates, and line items",
+      icon: <FileText className="w-6 h-6" />
     },
     {
-      name: "Twitter & LinkedIn",
-      description: "Smart thread creation and professional content optimization",
-      icon: <TrendingUp className="w-6 h-6" />
+      type: "Contracts & Legal",
+      description: "Identify key terms, clauses, and important dates in legal documents",
+      icon: <Shield className="w-6 h-6" />
     },
     {
-      name: "TikTok & YouTube",
-      description: "Video content suggestions and viral trend analysis",
-      icon: <Target className="w-6 h-6" />
+      type: "Forms & Applications",
+      description: "Process structured forms and extract data into databases",
+      icon: <CheckCircle className="w-6 h-6" />
     },
     {
-      name: "Pinterest & Snapchat",
-      description: "Visual content optimization and story management",
-      icon: <BarChart3 className="w-6 h-6" />
+      type: "Reports & Analytics",
+      description: "Extract tables, charts, and metrics from business reports",
+      icon: <Search className="w-6 h-6" />
     }
   ];
 
   const benefits = [
     {
-      title: "10x Engagement",
-      description: "AI-optimized content increases engagement by 1000%",
-      icon: <TrendingUp className="w-6 h-6" />
-    },
-    {
-      title: "Save 20 Hours/Week",
-      description: "Automate content creation and scheduling",
+      title: "Save 80% Time",
+      description: "Automate document processing that used to take hours",
       icon: <Clock className="w-6 h-6" />
     },
     {
-      title: "Consistent Brand Voice",
-      description: "AI maintains your brand personality across all platforms",
-      icon: <Shield className="w-6 h-6" />
+      title: "99.9% Accuracy",
+      description: "AI-powered extraction with human-level precision",
+      icon: <Award className="w-6 h-6" />
     },
     {
-      title: "Data-Driven Results",
-      description: "Advanced analytics help optimize your strategy",
-      icon: <BarChart3 className="w-6 h-6" />
+      title: "Scale Instantly",
+      description: "Process thousands of documents in minutes",
+      icon: <Zap className="w-6 h-6" />
+    },
+    {
+      title: "Secure & Compliant",
+      description: "Enterprise-grade security with audit trails",
+      icon: <Shield className="w-6 h-6" />
     }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Brands Managed", icon: <Users className="w-6 h-6" /> },
-    { number: "10M+", label: "Posts Published", icon: <Share2 className="w-6 h-6" /> },
-    { number: "95%", label: "Engagement Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Social Media Manager Pro - Zion Tech Group | Automated Social Media Management</title>
-        <meta name="description" content="Revolutionary AI social media management with automated content generation, scheduling, and analytics. Boost engagement and grow your brand across all platforms." />
-        <meta name="keywords" content="AI social media management, social media automation, content generation, social media analytics, brand management, engagement optimization" />
-        <meta property="og:title" content="AI Social Media Manager Pro - Zion Tech Group" />
-        <meta property="og:description" content="Advanced AI social media management with automated content and engagement optimization." />
+        <title>AI Document Processor Pro - Zion Tech Group | Intelligent Document Processing</title>
+        <meta name="description" content="Revolutionary AI document processing with 99.9% accuracy OCR, intelligent classification, and automated data extraction. Transform your document workflows." />
+        <meta name="keywords" content="AI document processing, OCR, document automation, data extraction, intelligent classification, document management" />
+        <meta property="og:title" content="AI Document Processor Pro - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI document processing with enterprise-grade accuracy and automation." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -156,16 +149,16 @@ const AiSocialMediaManagerProPage: React.FC = () => {
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
-                #1 AI Social Media Platform
+                Industry-Leading Document AI
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Social Media Manager Pro
+                  AI Document Processor Pro
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your social media presence with AI-powered content generation, automated scheduling, 
-                and intelligent engagement. Grow your brand across all platforms effortlessly.
+                Transform your document workflows with AI-powered processing. Extract, classify, and analyze 
+                documents with 99.9% accuracy. From invoices to contracts, automate it all.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
@@ -187,25 +180,8 @@ const AiSocialMediaManagerProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {stats.map((stat, index) => (
-                <div key={index} className="group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-white">{stat.icon}</div>
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-400">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -214,7 +190,7 @@ const AiSocialMediaManagerProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI capabilities that make social media management effortless and effective
+                Advanced AI capabilities that make document processing effortless and accurate
               </p>
             </div>
             
@@ -231,24 +207,24 @@ const AiSocialMediaManagerProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Platforms Section */}
-        <section className="py-20 bg-slate-800/50">
+        {/* Document Types Section */}
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Supported Platforms</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Supported Document Types</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Manage all your social media accounts from one powerful AI-driven platform
+                Process any document type with intelligent AI classification and extraction
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {platforms.map((platform, index) => (
+              {documentTypes.map((docType, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-white">{platform.icon}</div>
+                    <div className="text-white">{docType.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{platform.name}</h3>
-                  <p className="text-gray-300">{platform.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-4">{docType.type}</h3>
+                  <p className="text-gray-300">{docType.description}</p>
                 </div>
               ))}
             </div>
@@ -256,12 +232,12 @@ const AiSocialMediaManagerProPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">
+        <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Solution?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of AI-driven social media management
+                Experience the power of AI-driven document processing
               </p>
             </div>
             
@@ -280,12 +256,12 @@ const AiSocialMediaManagerProPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 bg-slate-800/50">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Pricing Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your social media management needs
+                Choose the perfect plan for your document processing needs
               </p>
             </div>
             
@@ -335,13 +311,49 @@ const AiSocialMediaManagerProPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Stats Section */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="group">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <FileText className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">1M+</div>
+                <div className="text-gray-400">Documents Processed</div>
+              </div>
+              <div className="group">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+                <div className="text-gray-400">Accuracy Rate</div>
+              </div>
+              <div className="group">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">1000+</div>
+                <div className="text-gray-400">Docs/Minute</div>
+              </div>
+              <div className="group">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">500+</div>
+                <div className="text-gray-400">Happy Clients</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Social Media?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Documents?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us today to schedule a demo and see how AI Social Media Manager Pro can grow your brand.
+                Contact us today to schedule a demo and see how AI Document Processor Pro can transform your workflow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -370,4 +382,4 @@ const AiSocialMediaManagerProPage: React.FC = () => {
   );
 };
 
-export default AiSocialMediaManagerProPage;
+export default AiDocumentProcessorProPage;

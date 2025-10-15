@@ -34,7 +34,12 @@ const Footer: React.FC = () => {
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant-pro' },
+        { name: 'AI Document Processor Pro', href: '/ai-document-processor-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor-pro' },
+        { name: 'AI Cloud Optimization Pro', href: '/ai-cloud-optimization-pro' }
       ]
     },
     {
@@ -58,7 +63,8 @@ const Footer: React.FC = () => {
         { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', href: '/5g-edge-computing' },
-        { name: '5G Private Networks', href: '/5g-private-networks' }
+        { name: '5G Private Networks', href: '/5g-private-networks' },
+        { name: '5G Smart Manufacturing Pro', href: '/5g-smart-manufacturing-pro' }
       ]
     },
     {
