@@ -1,4 +1,7 @@
+// monitoring utility functions
 
-interface MonitoringOptions {
+export const monitoring = {
+  // Add utility functions here
+};
 
-
+export default monitoring;

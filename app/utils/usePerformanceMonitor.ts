@@ -1,21 +1,7 @@
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
+// usePerformanceMonitor utility functions
 
-    const [
-    metrics, setMetrics,
-  ] = useState<PerformanceMetrics>({
-    loadTime: 0,
+export const usePerformanceMonitor = {
+  // Add utility functions here
+};
 
-      });
-    };
-    // Measure after component mount;
-    const: timeoutId = setTimeout(measurePerformance, 100);
-    return () => clearTimeout(timeoutId);
-  }, [
-  ]);
-  return metrics;
-};";"
+export default usePerformanceMonitor;

@@ -1,4 +1,7 @@
+// sitemapGenerator utility functions
 
-interface SitemapGeneratorOptions {
+export const sitemapGenerator = {
+  // Add utility functions here
+};
 
-
+export default sitemapGenerator;

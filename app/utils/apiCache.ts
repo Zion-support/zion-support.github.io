@@ -1,4 +1,7 @@
+// apiCache utility functions
 
-interface ApiCacheOptions {
+export const apiCache = {
+  // Add utility functions here
+};
 
-
+export default apiCache;

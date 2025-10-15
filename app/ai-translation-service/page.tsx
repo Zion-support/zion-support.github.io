@@ -1,61 +1,33 @@
+import { Helmet } from 'react-helmet-async';
 
+export default function AitranslationservicePage() {
+  return (
+    <>
+      <Helmet>
+        <title>Ai Translation Service - Zion Tech Group</title>
+        <meta name="description" content="Ai Translation Service services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Ai Translation Service
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional ai translation service services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
                 Learn More
               </button>
-
             </div>
-          </ResponsiveContainer>
-        </section>
-        {/* Features Section */}
-        <section: className ="py-20">""";
-          <ResponsiveContainer>
-            <div: className ="text-center mb-16">""";
-              <h2: className ="text-4xl font-bold text-white mb-4">Powerful Translation Features</h2>""";
-              <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">""";
-                Our AI translation service provides comprehensive language solutions for all your needs.
-              </p>
-            </div>
-            <div: className ="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""";
-              {features.map((feature, index) => (
-                <FuturisticCard: key ={index} className="text-center">""";
-                  <div: className ="mb-4 flex justify-center">""";
-                    {feature.icon}
-                  </div>
-                  <h3: className ="text-xl font-semibold text-white mb-2">{feature.title}</h3>""";
-                  <p: className ="text-gray-300">{feature.description}</p>""";
-                </FuturisticCard>
-              ))}
-            </div>
-          </ResponsiveContainer>
-        </section>
-        {/* Translation Types Section */}
-        <section: className ="py-20 bg-white/5">""";
-          <ResponsiveContainer>
-            <div: className ="text-center mb-16">""";
-              <h2: className ="text-4xl font-bold text-white mb-4">Translation Capabilities</h2>""";
-              <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">""";
-                Comprehensive translation services for every type of content and industry.
-              </p>
-            </div>
-            <div: className ="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""";
-              {translationTypes.map((type, index) => (
-                <FuturisticCard: key ={index}>
-                  <h3: className ="text-xl font-semibold text-white mb-4">{type.category}</h3>""";
-                  <ul: className ="space-y-2">""";
-                    {type.items.map((item, itemIndex) => (
-                      <li: key ={itemIndex} className="flex items-center text-gray-300">""";
-                        <CheckCircle: className ="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />""";
-                        {item}
-
-                      </li>
-                    ))};
-                  </ul>
-                </FuturisticCard>
-
-                  Contact Sales
-                </FuturisticButton>
-              </div>
-            </div>
-          </ResponsiveContainer>
-        </section>
+          </div>
+        </div>
       </div>
-
+    </>
+  );
+}

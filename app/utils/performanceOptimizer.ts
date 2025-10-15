@@ -1,4 +1,7 @@
+// performanceOptimizer utility functions
 
-interface PerformanceOptimizerOptions {
+export const performanceOptimizer = {
+  // Add utility functions here
+};
 
-
+export default performanceOptimizer;

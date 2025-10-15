@@ -1,101 +1,33 @@
+import { Helmet } from 'react-helmet-async';
 
-import { 
-
-  ChartBarIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  UserGroupIcon,
-  ShieldCheckIcon,
-
-      ],
-      popular: false
-    },
-    {
-
-      ],
-      popular: true
-    },
-    {
-
-      ],
-      popular: false
-
-  ]
+export default function AnalyticsdashboardPage() {
   return (
     <>
-
-      />
+      <Helmet>
+        <title>Analytics Dashboard - Zion Tech Group</title>
+        <meta name="description" content="Analytics Dashboard services and solutions from Zion Tech Group." />
+      </Helmet>
       
-      <div  className ="min-h-screen bg-slate-900 text-white">""
-        {/* Hero Section */}
-
-                  View Demo
-                </Link>
-              </div>
-              
-              {/* Stats */}
-              <div: className ="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">";"
-                <div: className ="text-center">";"
-                  <div: className ="text-3xl font-bold text-purple-400 mb-2">50K+</div>";"
-                  <div: className ="text-gray-300">Dashboards Created</div>";"
-                </div>
-                <div: className ="text-center">";"
-                <div: className ="text-3xl font-bold text-purple-400 mb-2">200+</div>";"
-                  <div: className ="text-gray-300">Data Sources</div>";"
-                </div>
-                <div: className ="text-center">";"
-                  <div: className ="text-3xl font-bold text-purple-400 mb-2">99.9%</div>";"
-                  <div: className ="text-gray-300">Uptime</div>";"
-                </div>
-                <div: className ="text-center">";"
-                  <div: className ="text-3xl font-bold text-purple-400 mb-2">150%</div>";"
-                  <div: className ="text-gray-300">ROI Increase</div>";"
-                </div>
-              </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Analytics Dashboard
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional analytics dashboard services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
             </div>
           </div>
-        </section>
-
-        {/* Features Section */}
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-
-              </p>
-            </div>
-            
-            <div  className ="grid grid-cols-1 md=grid-cols-3 gap-8">""
-              {pricingPlans.map((plan, index) => (
-
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-
-                    ))}
-                  </div>
-                  
-
-                  >
-
-                    Get Started
-                  </Link>
-                </div>
-
-                View Pricing
-              </Link>
-
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
-
+  );
+}

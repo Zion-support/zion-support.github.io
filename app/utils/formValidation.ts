@@ -1,4 +1,7 @@
+// formValidation utility functions
 
-interface FormValidationOptions {
+export const formValidation = {
+  // Add utility functions here
+};
 
-
+export default formValidation;

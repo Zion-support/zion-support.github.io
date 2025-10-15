@@ -1,4 +1,7 @@
+// advancedAnalytics utility functions
 
-interface AdvancedAnalyticsOptions {
+export const advancedAnalytics = {
+  // Add utility functions here
+};
 
-
+export default advancedAnalytics;

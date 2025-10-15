@@ -1,4 +1,7 @@
+// performanceOptimizations utility functions
 
-interface PerformanceOptimizationsOptions {
+export const performanceOptimizations = {
+  // Add utility functions here
+};
 
-
+export default performanceOptimizations;

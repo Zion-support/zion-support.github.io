@@ -1,4 +1,7 @@
+// performanceMonitoring utility functions
 
-interface PerformanceMonitoringOptions {
+export const performanceMonitoring = {
+  // Add utility functions here
+};
 
-
+export default performanceMonitoring;

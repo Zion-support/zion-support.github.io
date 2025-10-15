@@ -1,4 +1,7 @@
+// accessibilityEnhancer utility functions
 
-interface AccessibilityEnhancerOptions {
+export const accessibilityEnhancer = {
+  // Add utility functions here
+};
 
-
+export default accessibilityEnhancer;

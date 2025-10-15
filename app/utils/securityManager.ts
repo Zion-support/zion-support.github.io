@@ -1,4 +1,7 @@
+// securityManager utility functions
 
-interface SecurityManagerOptions {
+export const securityManager = {
+  // Add utility functions here
+};
 
-
+export default securityManager;

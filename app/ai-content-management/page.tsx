@@ -1,22 +1,33 @@
-import SEOHead from '../components/SEOHead';";"
-const AiContentManagementPage: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+export default function AicontentmanagementPage() {
   return (
     <>
-      <SEOHead= title ="ai-content-management - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group ai-content-management service page"";"
-      />
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div  className ="text-center">";"
-          <h1  className ="text-4xl font-bold mb-4">ai-content-management - Zion Tech Group</h1>";"
-          <p  className ="text-gray-300">Coming soon...</p>";"
+      <Helmet>
+        <title>Ai Content Management - Zion Tech Group</title>
+        <meta name="description" content="Ai Content Management services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Ai Content Management
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional ai content management services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>
-  )
+  );
 }
-export default AiContentManagementPage
-
-        </div>
-      </div>
-    </>,";
-  ),";";

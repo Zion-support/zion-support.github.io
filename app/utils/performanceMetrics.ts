@@ -1,4 +1,7 @@
+// performanceMetrics utility functions
 
-interface PerformanceMetricsOptions {
+export const performanceMetrics = {
+  // Add utility functions here
+};
 
-
+export default performanceMetrics;

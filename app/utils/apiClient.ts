@@ -1,4 +1,7 @@
+// apiClient utility functions
 
-interface ApiClientOptions {
+export const apiClient = {
+  // Add utility functions here
+};
 
-
+export default apiClient;

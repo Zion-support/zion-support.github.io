@@ -1,4 +1,7 @@
+// validators utility functions
 
-interface ValidatorsOptions {
+export const validators = {
+  // Add utility functions here
+};
 
-
+export default validators;

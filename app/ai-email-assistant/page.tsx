@@ -1,5 +1,5 @@
 
-export default function AiEmailAssistantPage() {
+export default function AiemailassistantPage() {
   return (
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>

@@ -1,4 +1,7 @@
+// accessibilityUtils utility functions
 
-interface AccessibilityUtilsOptions {
+export const accessibilityUtils = {
+  // Add utility functions here
+};
 
-
+export default accessibilityUtils;

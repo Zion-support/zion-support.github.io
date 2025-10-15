@@ -1,4 +1,7 @@
+// dataValidator utility functions
 
-interface DataValidatorOptions {
+export const dataValidator = {
+  // Add utility functions here
+};
 
-
+export default dataValidator;

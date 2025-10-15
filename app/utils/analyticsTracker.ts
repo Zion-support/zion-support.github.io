@@ -1,4 +1,7 @@
+// analyticsTracker utility functions
 
-interface AnalyticsTrackerOptions {
+export const analyticsTracker = {
+  // Add utility functions here
+};
 
-
+export default analyticsTracker;

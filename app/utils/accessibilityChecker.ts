@@ -1,4 +1,7 @@
+// accessibilityChecker utility functions
 
-interface AccessibilityCheckerOptions {
+export const accessibilityChecker = {
+  // Add utility functions here
+};
 
-
+export default accessibilityChecker;

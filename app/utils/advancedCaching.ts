@@ -1,4 +1,7 @@
+// advancedCaching utility functions
 
-interface AdvancedCachingOptions {
+export const advancedCaching = {
+  // Add utility functions here
+};
 
-
+export default advancedCaching;

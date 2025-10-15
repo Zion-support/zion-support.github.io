@@ -1,4 +1,7 @@
+// performanceEnhancer utility functions
 
-interface PerformanceEnhancerOptions {
+export const performanceEnhancer = {
+  // Add utility functions here
+};
 
-
+export default performanceEnhancer;
