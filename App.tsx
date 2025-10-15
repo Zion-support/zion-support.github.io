@@ -68,6 +68,19 @@ const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
 
+// Missing pages
+const TutorialsPage = lazy(() => import('./app/tutorials/page'));
+const DocsPage = lazy(() => import('./app/docs/page'));
+const SupportPage = lazy(() => import('./app/support/page'));
+
+// Micro SaaS pages
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
+const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
+const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
+const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
+const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -194,6 +207,19 @@ function App() {
                     <Route path="/accessibility" element={<AccessibilityPage />} />
                     <Route path="/api-docs" element={<APIDocsPage />} />
                     <Route path="/partnerships" element={<PartnershipsPage />} />
+                    
+                    {/* Missing pages */}
+                    <Route path="/tutorials" element={<TutorialsPage />} />
+                    <Route path="/docs" element={<DocsPage />} />
+                    <Route path="/support" element={<SupportPage />} />
+                    
+                    {/* Micro SaaS pages */}
+                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
+                    <Route path="/inventory-manager" element={<InventoryManagerPage />} />
+                    <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
+                    <Route path="/expense-tracker-pro" element={<ExpenseTrackerProPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
