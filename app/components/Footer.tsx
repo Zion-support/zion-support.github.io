@@ -22,7 +22,9 @@ const Footer: React.FC = () => {
     { name: 'Cloud Solutions', href: '/cloud-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Software Development', href: '/software-development' }
+    { name: 'Custom Software Development', href: '/software-development' },
+    { name: 'Edge Computing', href: '/5g-edge-computing' },
+    { name: 'IoT Solutions', href: '/5g-iot-solutions' }
   ];
 
   const company = [
@@ -170,18 +172,31 @@ const Footer: React.FC = () => {
 
         {/* Contact Info */}
         <div className="mt-8 pt-8 border-t border-slate-700">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="flex items-center text-gray-400 text-sm">
-              <PhoneIcon className="w-4 h-4 mr-2" />
-              <span>+1 302 464 0950</span>
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-semibold text-white mb-4">Get in Touch</h3>
+            <p className="text-gray-300 text-sm">Ready to transform your business? Contact us today for a free consultation.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center justify-center text-gray-300 text-sm bg-slate-800/50 p-4 rounded-lg hover:bg-slate-700/50 transition-colors group">
+              <PhoneIcon className="w-5 h-5 mr-3 text-purple-400 group-hover:scale-110 transition-transform" />
+              <div>
+                <div className="font-semibold">+1 302 464 0950</div>
+                <div className="text-xs text-gray-400">Available 24/7</div>
+              </div>
             </div>
-            <div className="flex items-center text-gray-400 text-sm">
-              <EnvelopeIcon className="w-4 h-4 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
+            <div className="flex items-center justify-center text-gray-300 text-sm bg-slate-800/50 p-4 rounded-lg hover:bg-slate-700/50 transition-colors group">
+              <EnvelopeIcon className="w-5 h-5 mr-3 text-cyan-400 group-hover:scale-110 transition-transform" />
+              <div>
+                <div className="font-semibold">kleber@ziontechgroup.com</div>
+                <div className="text-xs text-gray-400">Response within 2 hours</div>
+              </div>
             </div>
-            <div className="flex items-center text-gray-400 text-sm">
-              <MapPinIcon className="w-4 h-4 mr-2" />
-              <span>364 E Main St STE 1008 Middletown DE 19709</span>
+            <div className="flex items-center justify-center text-gray-300 text-sm bg-slate-800/50 p-4 rounded-lg hover:bg-slate-700/50 transition-colors group">
+              <MapPinIcon className="w-5 h-5 mr-3 text-green-400 group-hover:scale-110 transition-transform" />
+              <div>
+                <div className="font-semibold">364 E Main St STE 1008</div>
+                <div className="text-xs text-gray-400">Middletown DE 19709</div>
+              </div>
             </div>
           </div>
         </div>
