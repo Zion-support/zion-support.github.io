@@ -54,6 +54,6 @@ const NotFoundPage: React.FC = () => {
   );
 };
 
-export default 404Page;
+export default NotFoundPage;
 
 

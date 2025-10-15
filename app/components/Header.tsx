@@ -38,13 +38,16 @@ const Header: React.FC = () => {
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
+        { name: 'AI Marketing Automation Pro', href: '/ai-marketing-automation-pro' },
         { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
-        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-        { name: 'AI Database Solutions', href: '/ai-database-solutions' }
+        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' }
       ]
     },
     {
@@ -57,7 +60,9 @@ const Header: React.FC = () => {
         { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', href: '/5g-edge-computing' },
-        { name: '5G Private Networks', href: '/5g-private-networks' }
+        { name: '5G Private Networks', href: '/5g-private-networks' },
+        { name: '5G Data Analytics', href: '/5g-data-analytics' },
+        { name: '5G Security', href: '/5g-security' }
       ]
     },
     {
@@ -65,12 +70,31 @@ const Header: React.FC = () => {
       href: '/micro-saas',
       icon: <Cloud className="w-4 h-4" />,
       dropdown: [
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
+        { name: 'AI Marketing Automation Pro', href: '/ai-marketing-automation-pro' },
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
         { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
         { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+      ]
+    },
+    {
+      name: 'IT Services',
+      href: '/it-services',
+      icon: <Code className="w-4 h-4" />,
+      dropdown: [
+        { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'API Management', href: '/ai-api-management' },
+        { name: 'Database Solutions', href: '/ai-database-solutions' },
+        { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
+        { name: 'DevOps Solutions', href: '/devops-solutions' },
+        { name: 'Performance Monitoring', href: '/performance-monitoring' },
+        { name: 'Data Analytics', href: '/ai-analytics' },
+        { name: 'Mobile Development', href: '/mobile-development' }
       ]
     },
     {
@@ -82,6 +106,8 @@ const Header: React.FC = () => {
         { name: 'Blog', href: '/blog' },
         { name: 'Careers', href: '/careers' },
         { name: 'Support', href: '/support' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'API Reference', href: '/api-reference' },
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' }
       ]

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
+  Heart, 
   Zap, 
   Shield, 
   Globe, 
@@ -35,21 +35,37 @@ import {
   AlertCircle,
   CheckSquare,
   XCircle,
-  Kanban,
-  GanttChart,
   PieChart,
   LineChart,
-  GitBranch,
-  MessageSquare,
-  Bell,
-  Flag,
-  Timer,
-  Layers,
-  Workflow,
-  Command
+  TrendingDown,
+  Calculator,
+  CreditCard,
+  Banknote,
+  Wallet,
+  Receipt,
+  ChartBar,
+  Percent,
+  Coins,
+  Building2,
+  Briefcase,
+  PiggyBank,
+  HandCoins,
+  Stethoscope,
+  Pill,
+  Microscope,
+  UserCheck,
+  Clipboard,
+  Thermometer,
+  Bandage,
+  Syringe,
+  Hospital,
+  Ambulance,
+  Shield as ShieldIcon,
+  Lock,
+  AlertTriangle
 } from 'lucide-react';
 
-const AiProjectManagementProPage: React.FC = () => {
+const AiHealthcareSolutionsProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -59,89 +75,89 @@ const AiProjectManagementProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Planning",
-      description: "Intelligent project planning with AI that analyzes requirements, estimates timelines, and suggests optimal resource allocation.",
-      benefits: ["Smart scheduling", "Resource optimization", "Risk prediction", "Timeline estimation"]
+      title: "AI-Powered Diagnostics",
+      description: "Advanced AI algorithms that analyze medical images, lab results, and patient data to provide accurate diagnostic insights and early disease detection.",
+      benefits: ["Medical imaging analysis", "Lab result interpretation", "Early detection", "Diagnostic accuracy"]
     },
     {
-      icon: <Kanban className="w-6 h-6" />,
-      title: "Smart Task Management",
-      description: "Advanced task management with AI-driven prioritization, automatic assignment, and intelligent workflow optimization.",
-      benefits: ["Auto-prioritization", "Smart assignment", "Workflow automation", "Progress tracking"]
+      icon: <Stethoscope className="w-6 h-6" />,
+      title: "Telemedicine Platform",
+      description: "Comprehensive telemedicine solution with AI-powered patient monitoring, virtual consultations, and remote health assessments.",
+      benefits: ["Virtual consultations", "Remote monitoring", "AI triage", "Patient management"]
+    },
+    {
+      icon: <Pill className="w-6 h-6" />,
+      title: "Drug Discovery & Development",
+      description: "AI-driven drug discovery platform that accelerates pharmaceutical research and development with predictive modeling and molecular analysis.",
+      benefits: ["Molecular analysis", "Drug interaction prediction", "Clinical trial optimization", "Side effect prediction"]
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "HIPAA-Compliant Security",
+      description: "Enterprise-grade security with full HIPAA compliance, data encryption, and privacy protection for sensitive healthcare information.",
+      benefits: ["HIPAA compliance", "Data encryption", "Privacy protection", "Audit trails"]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Predictive Analytics",
-      description: "Get insights into project health, predict bottlenecks, and optimize performance with AI-powered analytics.",
-      benefits: ["Performance insights", "Bottleneck prediction", "Trend analysis", "ROI tracking"]
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Team Collaboration",
-      description: "Enhanced team collaboration with real-time communication, shared workspaces, and intelligent meeting scheduling.",
-      benefits: ["Real-time chat", "Shared workspaces", "Smart meetings", "Document collaboration"]
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with role-based access, audit trails, and compliance with industry standards.",
-      benefits: ["Role-based access", "Audit trails", "Data encryption", "Compliance"]
+      description: "Advanced predictive analytics that forecast patient outcomes, identify high-risk patients, and optimize treatment plans.",
+      benefits: ["Outcome prediction", "Risk stratification", "Treatment optimization", "Population health"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Streamline processes with intelligent automation that handles routine tasks and keeps projects on track.",
-      benefits: ["Process automation", "Smart notifications", "Auto-updates", "Integration"]
+      title: "Workflow Automation",
+      description: "Intelligent automation that streamlines healthcare workflows, reduces administrative burden, and improves operational efficiency.",
+      benefits: ["Appointment scheduling", "Billing automation", "Documentation", "Resource optimization"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$149",
+      name: "Clinic",
+      price: "$299",
       period: "month",
-      description: "Perfect for small teams getting started with AI project management",
+      description: "Perfect for small clinics and private practices",
       features: [
-        "Up to 10 team members",
-        "Basic AI planning",
-        "Task management",
+        "Basic AI diagnostics",
+        "Up to 100 patients",
+        "Telemedicine platform",
         "Basic analytics",
         "Email support",
-        "5 projects max"
+        "Standard security"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$399",
+      name: "Hospital",
+      price: "$799",
       period: "month",
-      description: "Ideal for growing teams with advanced project management needs",
+      description: "Comprehensive solution for hospitals and healthcare systems",
       features: [
-        "Up to 50 team members",
-        "Advanced AI features",
-        "Full analytics suite",
-        "Custom workflows",
+        "Advanced AI diagnostics",
+        "Unlimited patients",
+        "Full telemedicine suite",
+        "Predictive analytics",
         "Priority support",
-        "Unlimited projects",
-        "API access",
-        "Integrations"
+        "HIPAA compliance",
+        "Custom integrations",
+        "24/7 monitoring"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$1,499",
       period: "month",
-      description: "Complete solution for large organizations with complex requirements",
+      description: "Complete solution for large healthcare organizations",
       features: [
-        "Unlimited team members",
-        "Custom AI training",
-        "Advanced security",
-        "Dedicated support",
+        "Full AI suite",
+        "Multi-location support",
         "Custom development",
-        "On-premise deployment",
+        "Dedicated support team",
+        "Advanced security",
         "White-label options",
-        "24/7 support"
+        "API access",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -149,76 +165,74 @@ const AiProjectManagementProPage: React.FC = () => {
 
   const testimonials = [
     {
+      name: "Dr. Sarah Johnson",
+      company: "Regional Medical Center",
+      role: "Chief Medical Officer",
+      content: "AI Healthcare Solutions Pro has revolutionized our diagnostic accuracy. We've seen a 40% improvement in early disease detection and reduced misdiagnosis by 60%.",
+      rating: 5
+    },
+    {
       name: "Michael Chen",
-      company: "TechFlow Solutions",
-      role: "Project Director",
-      content: "AI Project Management Pro has increased our project success rate by 60%. The AI planning and predictive analytics are game-changers for our team.",
+      company: "City Health Clinic",
+      role: "Medical Director",
+      content: "The telemedicine platform and AI-powered patient monitoring have transformed our patient care. We can now provide better care to more patients efficiently.",
       rating: 5
     },
     {
-      name: "Lisa Rodriguez",
-      company: "Digital Innovations",
-      role: "CTO",
-      content: "The intelligent task management and team collaboration features have streamlined our development process. We're delivering projects 40% faster.",
-      rating: 5
-    },
-    {
-      name: "James Wilson",
-      company: "Enterprise Corp",
-      role: "VP of Operations",
-      content: "The predictive analytics and automated workflows have helped us identify and resolve issues before they become problems. Highly recommended!",
+      name: "Dr. Lisa Rodriguez",
+      company: "University Hospital",
+      role: "Head of Research",
+      content: "The drug discovery platform has accelerated our research by 3x. The AI predictions have been remarkably accurate in identifying promising drug candidates.",
       rating: 5
     }
   ];
 
   const useCases = [
     {
-      title: "Software Development",
-      description: "Manage agile development cycles with AI-powered sprint planning and resource allocation",
-      icon: <Cpu className="w-8 h-8" />,
-      benefits: ["Sprint planning", "Bug tracking", "Code review", "Release management"]
+      title: "Radiology & Imaging",
+      description: "AI-powered analysis of X-rays, MRIs, CT scans, and ultrasounds for accurate diagnosis",
+      icon: <Microscope className="w-8 h-8" />,
+      benefits: ["Image analysis", "Tumor detection", "Fracture identification", "Contrast enhancement"]
     },
     {
-      title: "Marketing Campaigns",
-      description: "Plan and execute marketing campaigns with intelligent content scheduling and performance tracking",
-      icon: <Target className="w-8 h-8" />,
-      benefits: ["Campaign planning", "Content calendar", "Performance tracking", "ROI analysis"]
+      title: "Emergency Medicine",
+      description: "AI triage systems and real-time patient monitoring for emergency departments",
+      icon: <Ambulance className="w-8 h-8" />,
+      benefits: ["Triage automation", "Vital sign monitoring", "Alert systems", "Resource allocation"]
     },
     {
-      title: "Construction Projects",
-      description: "Manage complex construction projects with AI-driven timeline optimization and resource management",
-      icon: <Layers className="w-8 h-8" />,
-      benefits: ["Timeline optimization", "Resource allocation", "Safety tracking", "Quality control"]
+      title: "Chronic Disease Management",
+      description: "AI-powered monitoring and management of diabetes, hypertension, and other chronic conditions",
+      icon: <Heart className="w-8 h-8" />,
+      benefits: ["Continuous monitoring", "Medication adherence", "Lifestyle tracking", "Early intervention"]
     },
     {
-      title: "Event Planning",
-      description: "Organize events with intelligent vendor management and automated coordination",
-      icon: <Calendar className="w-8 h-8" />,
-      benefits: ["Vendor management", "Timeline coordination", "Budget tracking", "Guest management"]
+      title: "Mental Health",
+      description: "AI-powered mental health assessment, therapy support, and patient monitoring",
+      icon: <UserCheck className="w-8 h-8" />,
+      benefits: ["Mood analysis", "Therapy recommendations", "Crisis detection", "Progress tracking"]
     }
   ];
 
-  const integrations = [
-    { name: "Slack", icon: "💬", description: "Team communication" },
-    { name: "Microsoft Teams", icon: "👥", description: "Video conferencing" },
-    { name: "Jira", icon: "🎯", description: "Issue tracking" },
-    { name: "GitHub", icon: "🐙", description: "Code management" },
-    { name: "Trello", icon: "📋", description: "Task boards" },
-    { name: "Asana", icon: "✅", description: "Project tracking" },
-    { name: "Google Workspace", icon: "📧", description: "Productivity suite" },
-    { name: "Salesforce", icon: "☁️", description: "CRM integration" }
+  const compliance = [
+    { name: "HIPAA", description: "Health Insurance Portability and Accountability Act" },
+    { name: "FDA", description: "Food and Drug Administration compliance" },
+    { name: "SOC 2", description: "Security and availability controls" },
+    { name: "ISO 27001", description: "Information security management" },
+    { name: "GDPR", description: "General Data Protection Regulation" },
+    { name: "HITECH", description: "Health Information Technology Act" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Project Management Pro - Intelligent Project Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your project management with AI-powered planning, intelligent task management, and predictive analytics. Increase project success rates by 60%." />
-        <meta name="keywords" content="AI project management, project planning, task management, team collaboration, predictive analytics, workflow automation" />
-        <meta property="og:title" content="AI Project Management Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent project management platform with AI-powered planning and analytics" />
+        <title>AI Healthcare Solutions Pro - Intelligent Healthcare Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform healthcare with AI-powered diagnostics, telemedicine, and predictive analytics. HIPAA-compliant solutions that improve patient outcomes and reduce costs." />
+        <meta name="keywords" content="AI healthcare, medical diagnostics, telemedicine, drug discovery, HIPAA compliance, healthcare analytics, medical AI" />
+        <meta property="og:title" content="AI Healthcare Solutions Pro - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent healthcare platform with AI-powered diagnostics and telemedicine capabilities" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-project-management-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-healthcare-solutions-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -247,16 +261,16 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Project Management Platform
+                  #1 AI Healthcare Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Project Management Pro
+                    AI Healthcare Solutions Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your project management with AI-powered planning, intelligent task management, 
-                  and predictive analytics. Increase project success rates by 60% and deliver on time, every time.
+                  Revolutionize healthcare with AI-powered diagnostics, telemedicine, and predictive analytics. 
+                  HIPAA-compliant solutions that improve patient outcomes and reduce costs by 30%.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -284,11 +298,11 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Intelligent Project Features
+                    Advanced Healthcare Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to manage projects smarter with AI-powered automation and insights.
+                  Everything you need to transform healthcare delivery with AI-powered solutions and intelligent automation.
                 </p>
               </div>
               
@@ -327,11 +341,11 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Perfect for Every Industry
+                    Medical Specializations
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our AI project management solution adapts to your specific industry needs and workflows.
+                  Our AI healthcare solutions are designed for various medical specialties and healthcare settings.
                 </p>
               </div>
               
@@ -360,29 +374,31 @@ const AiProjectManagementProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Integrations Section */}
+          {/* Compliance Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Seamless Integrations
+                    Healthcare Compliance
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Connect with your favorite tools and platforms for a unified project management experience.
+                  Our platform meets all major healthcare compliance standards and regulations.
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {integrations.map((integration, index) => (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                {compliance.map((item, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                   >
-                    <div className="text-4xl mb-3">{integration.icon}</div>
-                    <div className="text-white font-semibold mb-1 text-sm">{integration.name}</div>
-                    <div className="text-cyan-400 text-xs">{integration.description}</div>
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <ShieldIcon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-white font-semibold mb-2">{item.name}</div>
+                    <div className="text-cyan-400 text-sm">{item.description}</div>
                   </div>
                 ))}
               </div>
@@ -399,7 +415,7 @@ const AiProjectManagementProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your team size and project management needs.
+                  Choose the plan that fits your healthcare organization's needs and budget.
                 </p>
               </div>
               
@@ -459,11 +475,11 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Project Success Stories
+                    Healthcare Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how teams are achieving better project outcomes with AI Project Management Pro.
+                  See how healthcare organizations are improving patient care with AI Healthcare Solutions Pro.
                 </p>
               </div>
               
@@ -497,10 +513,10 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Manage Projects Smarter?
+                  Ready to Transform Healthcare?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of teams that have transformed their project management with AI-powered automation and intelligent insights.
+                  Join leading healthcare organizations that are revolutionizing patient care with AI-powered solutions and intelligent automation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -527,4 +543,4 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AiProjectManagementProPage;
+export default AiHealthcareSolutionsProPage;

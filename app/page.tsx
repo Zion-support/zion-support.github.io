@@ -1,5 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock, MessageCircle, Calendar, DollarSign, Megaphone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 // Loading skeleton component
@@ -37,36 +37,36 @@ const HomePage: React.FC = () => {
       link: "/ai-code-assistant-pro"
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "AI Cloud Infrastructure",
-      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization.",
-      price: "$499/month",
-      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime"],
-      link: "/ai-cloud-infrastructure"
+      icon: <MessageCircle className="w-8 h-8" />,
+      title: "AI Customer Support Pro",
+      description: "Revolutionary customer support with AI-powered chatbots, omnichannel capabilities, and intelligent automation.",
+      price: "$99/month",
+      features: ["AI Chatbots", "Omnichannel Support", "Real-time Analytics", "Fraud Detection"],
+      link: "/ai-customer-support-pro"
     },
     {
-      icon: <Wifi className="w-8 h-8" />,
-      title: "5G Implementation",
-      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity.",
-      price: "$999/month",
-      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring"],
-      link: "/5g-implementation"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Advanced Security Suite",
-      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
-      price: "$399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
-      link: "/advanced-security-suite"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "AI Chatbot Enterprise",
-      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities.",
+      icon: <Calendar className="w-8 h-8" />,
+      title: "AI Project Management Pro",
+      description: "Intelligent project management with AI-powered planning, task automation, and predictive analytics.",
       price: "$149/month",
-      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
-      link: "/ai-chatbot-enterprise"
+      features: ["AI Planning", "Smart Task Management", "Predictive Analytics", "Team Collaboration"],
+      link: "/ai-project-management-pro"
+    },
+    {
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "AI Financial Analytics Pro",
+      description: "Transform financial management with AI-powered forecasting, fraud detection, and automated accounting.",
+      price: "$199/month",
+      features: ["95% Forecasting Accuracy", "Fraud Detection", "Automated Accounting", "Investment Analysis"],
+      link: "/ai-financial-analytics-pro"
+    },
+    {
+      icon: <Megaphone className="w-8 h-8" />,
+      title: "AI Marketing Automation Pro",
+      description: "Revolutionize marketing with AI-powered campaigns, advanced segmentation, and multi-channel automation.",
+      price: "$149/month",
+      features: ["AI Campaigns", "Advanced Segmentation", "Multi-channel", "Real-time Analytics"],
+      link: "/ai-marketing-automation-pro"
     }
   ];
 
@@ -270,7 +270,5 @@ const HomePage: React.FC = () => {
     </>
   );
 };
-
-export default AppPage;
 
 export default HomePage;
