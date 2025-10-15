@@ -11,6 +11,13 @@ interface SEOHeadProps {
   twitterCard?: string;
   structuredData?: object;
   noIndex?: boolean;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  locale?: string;
+  alternateLocales?: Array<{ href: string; hreflang: string }>;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -23,6 +30,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   noIndex = false,
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  locale = 'en_US',
+  alternateLocales = [],
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
   const fullDescription = description || 'Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.';
@@ -59,6 +73,30 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="revisit-after" content="7 days" />
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
+      <meta name="author" content={author} />
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+      
+      {/* Article specific meta tags */}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.length > 0 && tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
+      
+      {/* Locale and alternate languages */}
+      <meta property="og:locale" content={locale} />
+      {alternateLocales.map((alt, index) => (
+        <link key={index} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
+      ))}
+      
+      {/* Additional performance and SEO meta tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="theme-color" content="#3b82f6" />
+      <meta name="msapplication-TileColor" content="#3b82f6" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Structured Data */}
       {structuredData && (

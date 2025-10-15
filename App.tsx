@@ -79,7 +79,15 @@ export default function App() {
   useEffect(() => {
     // Preload critical resources
     preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
-  }, [preloadResource])
+    
+    // Preload critical images
+    const criticalImages = [
+      '/og-image.jpg',
+      '/logo.png',
+      '/favicon.svg'
+    ];
+    preloadImages(criticalImages);
+  }, [preloadResource, preloadImages])
 
   return (
     <GlobalErrorBoundary>
@@ -154,13 +162,7 @@ export default function App() {
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                   
                   {/* Catch all route */}
-                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                      <p className="text-gray-600 mb-8">Page not found</p>
-                      <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
-                    </div>
-                  </div>} />
+                  <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </Suspense>
             </main>
