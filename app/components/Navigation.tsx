@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import { Link } from 'react-router-dom';
 
-const Navigation: React.FC = () => {
+const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  const handleMenuToggle = useCallback(() => {
+    setIsOpen(prev => !prev);
+  }, []);
+
+  const handleServicesMouseEnter = useCallback(() => {
+    setServicesOpen(true);
+  }, []);
+
+  const handleServicesMouseLeave = useCallback(() => {
+    setServicesOpen(false);
+  }, []);
 
   return (
     <nav className="bg-white shadow-lg">
@@ -25,11 +37,11 @@ const Navigation: React.FC = () => {
             
             {/* Services Dropdown */}
             <div className="relative">
-              <button
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
-              >
+            <button
+              onMouseEnter={handleServicesMouseEnter}
+              onMouseLeave={handleServicesMouseLeave}
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+            >
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -37,8 +49,8 @@ const Navigation: React.FC = () => {
               </button>
               {servicesOpen && (
                 <div
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
+                  onMouseEnter={handleServicesMouseEnter}
+                  onMouseLeave={handleServicesMouseLeave}
                   className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
                 >
                   <div className="py-1">
@@ -135,7 +147,7 @@ const Navigation: React.FC = () => {
 
           <div className="md:hidden flex items-center">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={handleMenuToggle}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -246,6 +258,8 @@ const Navigation: React.FC = () => {
       )}
     </nav>
   );
-};
+});
+
+Navigation.displayName = 'Navigation';
 
 export default Navigation;

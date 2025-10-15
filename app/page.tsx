@@ -1,14 +1,44 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from './components/SEOHead';
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = memo(() => {
+  const structuredData = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of AI and IT solutions for modern businesses",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "customer service",
+      "email": "contact@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Tech Street",
+      "addressLocality": "Innovation City",
+      "addressRegion": "IC",
+      "postalCode": "12345",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup"
+    ]
+  }), []);
+
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation." />
-      </Helmet>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation."
+        keywords="AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence"
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={structuredData}
+      />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -90,6 +120,8 @@ const HomePage: React.FC = () => {
       </div>
     </>
   );
-};
+});
+
+HomePage.displayName = 'HomePage';
 
 export default HomePage;
