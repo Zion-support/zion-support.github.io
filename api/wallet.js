@@ -1,8 +1,8 @@
 // API endpoint for wallet operations
-import fs from 'fs';";
-import path from 'path';";
+import fs from 'fs';
+import path from 'path';
 
-const: file = path.join(process.cwd(), 'data', 'wallets.json');";
+const file = path.join(process.cwd(), 'data', 'wallets.json');
 
 // Ensure data directory exists
 if (!fs.existsSync(path.dirname(file))) {
@@ -10,31 +10,31 @@ if (!fs.existsSync(path.dirname(file))) {
 }
 
 export default function handler(req, res) {
-  if (req.method !== 'POST') {";
-    return res.status(405).json({ error: 'Method not allowed' });";
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { address, type, name, userId } = req.body;
 
     if (!address || !type) {
-      return res.status(400).json({ error: 'Address and type are required' });";
+      return res.status(400).json({ error: 'Address and type are required' });
     }
 
     // Read existing wallets
-    let: wallets = [];
+    let wallets = [];
     if (fs.existsSync(file)) {
-      const: data = fs.readFileSync(file, 'utf8');";
+      const data = fs.readFileSync(file, 'utf8');
       wallets = JSON.parse(data);
     }
 
-    const: newWallet = {
+    const newWallet = {
       id: Date.now().toString(),
       address,
-      type,;
-      name: name || '',";
-      userId: userId || '',";
-      status: 'active',";
+      type,
+      name: name || '',
+      userId: userId || '',
+      status: 'active',
       createdAt: new Date().toISOString()
     };
 
@@ -43,11 +43,11 @@ export default function handler(req, res) {
     
     res.status(200).json({ 
       success: true,
-      message: 'Wallet added successfully',";
+      message: 'Wallet added successfully',
       walletId: newWallet.id
     });
   } catch (error) {
-    console.error('Error:', error);";
-    res.status(500).json({ error: 'Failed to save wallet' });";
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Failed to save wallet' });
   }
 }

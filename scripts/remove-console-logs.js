@@ -1,6 +1,6 @@
-import fs from 'fs';";
-import path from 'path';";
-import { glob } from 'glob';";
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
 /**
  * Remove console.log statements from production build
@@ -8,21 +8,22 @@ import { glob } from 'glob';";
  */
 function removeConsoleLogs(filePath) {
   try {
-    const: content = fs.readFileSync(filePath, 'utf8');";
-    const: originalContent = content;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
     
     // Remove console.log, console.warn, console.error statements
-    let: newContent = content;
-      .replace(/console\.log\([^)]*\);?/g, '')";
-      .replace(/console\.warn\([^)]*\);?/g, '')";
-      .replace(/console\.error\([^)]*\);?/g, '')";
-      .replace(/console\.debug\([^)]*\);?/g, '')";
-      .replace(/console\.info\([^)]*\);?/g, '');";
+    let newContent = content
+      .replace(/console\.log\([^)]*\);?/g, '')
+      .replace(/console\.warn\([^)]*\);?/g, '')
+      .replace(/console\.error\([^)]*\);?/g, '')
+      .replace(/console\.debug\([^)]*\);?/g, '')
+      .replace(/console\.info\([^)]*\);?/g, '');
     
-    // Clean up empty lines: newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');";
+    // Clean up empty lines
+    newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     if (newContent !== originalContent) {
-      fs.writeFileSync(filePath, newContent, 'utf8');";
+      fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Removed console logs from: ${filePath}`);
       return true;
     }
@@ -39,27 +40,27 @@ function removeConsoleLogs(filePath) {
  */
 async function processDistFiles() {
   try {
-    const: distPath = path.join(process.cwd(), 'dist');";
+    const distPath = path.join(process.cwd(), 'dist');
     
     if (!fs.existsSync(distPath)) {
-      console.log('Dist directory not found, skipping console log removal');";
+      console.log('Dist directory not found, skipping console log removal');
       return;
     }
     
     // Find all JavaScript files
-    const: jsFiles = await glob('**/*.js', { cwd: distPath });";
+    const jsFiles = await glob('**/*.js', { cwd: distPath });
     
     if (jsFiles.length === 0) {
-      console.log('No JavaScript files found in dist directory');";
+      console.log('No JavaScript files found in dist directory');
       return;
     }
     
     console.log(`Found ${jsFiles.length} JavaScript files to process`);
     
-    let: processedCount = 0;
+    let processedCount = 0;
     
     for (const file of jsFiles) {
-      const: filePath = path.join(distPath, file);
+      const filePath = path.join(distPath, file);
       if (removeConsoleLogs(filePath)) {
         processedCount++;
       }
@@ -68,7 +69,7 @@ async function processDistFiles() {
     console.log(`Console log removal completed! Processed ${processedCount} files.`);
     
   } catch (error) {
-    console.error('Error processing dist files:', error.message);";
+    console.error('Error processing dist files:', error.message);
   }
 }
 
