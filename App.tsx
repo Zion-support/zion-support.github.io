@@ -7,6 +7,27 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
+import AIServicesPage from './app/ai-services/page';
+import ITServicesPage from './app/it-services/page';
+import CloudInfrastructurePage from './app/cloud-infrastructure/page';
+import TeamPage from './app/team/page';
+import CareersPage from './app/careers/page';
+import HelpPage from './app/help/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import PricingPage from './app/pricing/page';
+import BlogPage from './app/blog/page';
+import CaseStudiesPage from './app/case-studies/page';
+import PartnershipsPage from './app/partnerships/page';
+import DataAnalyticsPage from './app/data-analytics/page';
+import DatabaseManagementPage from './app/database-management/page';
+import DigitalTransformationPage from './app/digital-transformation/page';
+import MobileDevelopmentPage from './app/mobile-development/page';
+import NetworkInfrastructurePage from './app/network-infrastructure/page';
+import MicroSaasPage from './app/micro-saas-solutions/page';
+import WebDevelopmentPage from './app/web-development/page';
+import AccessibilityPage from './app/accessibility/page';
+import ApiDocsPage from './app/api-docs/page';
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -57,6 +78,37 @@ export default function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  
+                  {/* Service Pages */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                  <Route path="/database-management" element={<DatabaseManagementPage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                  <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  <Route path="/web-development" element={<WebDevelopmentPage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSaasPage />} />
+                  
+                  {/* Company Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/partnerships" element={<PartnershipsPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  
+                  {/* Content Pages */}
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  
+                  {/* Support Pages */}
+                  <Route path="/help" element={<HelpPage />} />
+                  <Route path="/accessibility" element={<AccessibilityPage />} />
+                  <Route path="/api-docs" element={<ApiDocsPage />} />
+                  
+                  {/* Legal Pages */}
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
