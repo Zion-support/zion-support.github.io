@@ -1,6 +1,7 @@
 import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './app/styles/futuristic.css'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -89,7 +90,7 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen animated-bg cyber-grid">
             <Navigation />
             <Sidebar />
             
