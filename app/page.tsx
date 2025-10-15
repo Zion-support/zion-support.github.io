@@ -242,123 +242,171 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Content Generator */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+              {/* AI Code Assistant */}
               <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
-                    <SparklesIcon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <CogIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-cyan-400 font-medium holographic-text">AI Content</span>
+                  <span className="text-sm text-blue-400 font-medium holographic-text">Development</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors holographic-text">
-                  AI Content Generator Pro
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors holographic-text">
+                  AI Code Assistant
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI.
+                  Generate, analyze, and optimize code with AI-powered development assistance.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-cyan-400">$199/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
+                  <span className="text-xl font-bold text-blue-400">$79/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$129/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
-                    <span>Unlimited content generation</span>
+                    <span>Code generation</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
-                    <span>SEO optimization</span>
+                    <span>Bug detection</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
-                    <span>Multi-language support</span>
+                    <span>Auto documentation</span>
                   </div>
                 </div>
-                <Link to="/ai-content-generator"
+                <Link to="/ai-code-assistant"
                   className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
 
-              {/* Analytics Dashboard */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+              {/* AI Translator */}
+              <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <ChartBarIcon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <GlobeAltIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-purple-400 font-medium">Analytics</span>
+                  <span className="text-sm text-green-400 font-medium holographic-text">Translation</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  Business Analytics Pro
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-green-300 transition-colors holographic-text">
+                  AI Translator
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Comprehensive business intelligence and analytics platform with real-time insights and reporting.
+                  Break language barriers with 100+ language support and real-time translation.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-purple-400">$349/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$499/mo</span>
+                  <span className="text-xl font-bold text-green-400">$19/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$39/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time dashboards</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>100+ languages</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Predictive analytics</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Real-time translation</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Custom reports</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Voice & image support</span>
                   </div>
                 </div>
-                <Link to="/data-analytics"
-                  className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                <Link to="/ai-translator"
+                  className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
 
-              {/* Task Manager */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+              {/* AI Video Generator */}
+              <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <CheckCircleIcon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <EyeIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-green-400 font-medium">Productivity</span>
+                  <span className="text-sm text-purple-400 font-medium holographic-text">Video</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
-                  Task Manager Pro
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors holographic-text">
+                  AI Video Generator
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Advanced task management with AI-powered prioritization and team collaboration features.
+                  Create professional videos from text prompts with AI-powered generation.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-green-400">$29/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$49/mo</span>
+                  <span className="text-xl font-bold text-purple-400">$79/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$149/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI task prioritization</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Text-to-video</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Team collaboration</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>4K quality</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Time tracking</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Voice synthesis</span>
                   </div>
                 </div>
-                <Link to="/micro-saas-solutions"
-                  className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                <Link to="/ai-video-generator"
+                  className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
+
+              {/* AI Legal Assistant */}
+              <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <ShieldCheckIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-amber-400 font-medium holographic-text">Legal</span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-300 transition-colors holographic-text">
+                  AI Legal Assistant
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Contract analysis, legal research, and compliance monitoring with AI.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-bold text-amber-400">$199/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Contract analysis</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Legal research</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Compliance monitoring</span>
+                  </div>
+                </div>
+                <Link to="/ai-legal-assistant"
+                  className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+            </div>
+            
+            <div className="text-center mt-12">
+              <Link to="/micro-saas-solutions"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
+              >
+                View All Micro SaaS Solutions
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </Link>
             </div>
           </div>
         </section>

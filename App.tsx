@@ -342,6 +342,15 @@ function App() {
                     <Route path="/devops-automation-pro" element={<DevOpsAutomationProPage />} />
                     <Route path="/iot-solutions-pro" element={<IOTSolutionsProPage />} />
                     
+                    {/* New AI Services */}
+                    <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                    <Route path="/ai-translator" element={<AITranslatorPage />} />
+                    <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
+                    <Route path="/ai-audio-processor" element={<AIAudioProcessorPage />} />
+                    <Route path="/ai-3d-model-generator" element={<AI3DModelGeneratorPage />} />
+                    <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                    <Route path="/ai-medical-assistant" element={<AIMedicalAssistantPage />} />
+                    
                     {/* Zion AI Services */}
                     <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
                     <Route path="/zion-ai-code-assistant" element={<ZionAICodeAssistantPage />} />

@@ -27,7 +27,10 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  MicrophoneIcon,
+  CubeIcon,
+  HeartIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -69,6 +72,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
         { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: CubeIcon },
+        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
+        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: HeartIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },
