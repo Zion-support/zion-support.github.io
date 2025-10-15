@@ -46,7 +46,12 @@ const AISocialMediaManagerProPage = () => {
 
   return (
     <>
-      { /* Animated Background */ }
+      <Helmet>
+        <title>AI Solutions - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered solutions for your business." />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+        { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -54,7 +59,7 @@ const AISocialMediaManagerProPage = () => {
         </div>
         { /* Grid Pattern */ }
         <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={ {
+          <div className="h-full w-full" style={{
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
