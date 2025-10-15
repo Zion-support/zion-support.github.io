@@ -47,6 +47,19 @@ const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrast
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
 
+// Micro SAAS pages
+const DevOpsServicesPage = React.lazy(() => import("./app/devops-services/page"));
+const SoftwareDevelopmentPage = React.lazy(() => import("./app/software-development/page"));
+const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-tool/page"));
+const CustomerRelationshipManagerPage = React.lazy(() => import("./app/customer-relationship-manager/page"));
+const InventoryManagementSystemPage = React.lazy(() => import("./app/inventory-management-system/page"));
+const FinancialReportingToolPage = React.lazy(() => import("./app/financial-reporting-tool/page"));
+const EmployeeTimeTrackerPage = React.lazy(() => import("./app/employee-time-tracker/page"));
+const SocialMediaSchedulerPage = React.lazy(() => import("./app/social-media-scheduler/page"));
+const EmailMarketingPlatformPage = React.lazy(() => import("./app/email-marketing-platform/page"));
+const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/website-analytics-tool/page"));
+const TaskAutomationWorkflowPage = React.lazy(() => import("./app/task-automation-workflow/page"));
+
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
@@ -97,6 +110,19 @@ function App() {
                         <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
                         <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                         <Route path="/careers" element={<CareersPage />} />
+                        
+                        {/* Micro SAAS routes */}
+                        <Route path="/devops-services" element={<DevOpsServicesPage />} />
+                        <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
+                        <Route path="/project-management-tool" element={<ProjectManagementToolPage />} />
+                        <Route path="/customer-relationship-manager" element={<CustomerRelationshipManagerPage />} />
+                        <Route path="/inventory-management-system" element={<InventoryManagementSystemPage />} />
+                        <Route path="/financial-reporting-tool" element={<FinancialReportingToolPage />} />
+                        <Route path="/employee-time-tracker" element={<EmployeeTimeTrackerPage />} />
+                        <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
+                        <Route path="/email-marketing-platform" element={<EmailMarketingPlatformPage />} />
+                        <Route path="/website-analytics-tool" element={<WebsiteAnalyticsToolPage />} />
+                        <Route path="/task-automation-workflow" element={<TaskAutomationWorkflowPage />} />
                       </Routes>
                     </Suspense>
                   </main>
