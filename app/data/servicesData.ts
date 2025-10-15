@@ -471,6 +471,288 @@ export const servicesData = {
         website: 'https://ziontechgroup.com/workflow-automator'
       },
       link: '/workflow-automator',
+    },
+    {
+      id: 'ai-fraud-detection',
+      title: 'AI Fraud Detection System',
+      description: 'Advanced AI-powered fraud detection and prevention system with real-time monitoring and machine learning algorithms',
+      shortDescription: 'Protect your business with AI fraud detection',
+      icon: '🛡️',
+      features: [
+        'Real-time Fraud Detection',
+        'Machine Learning Models',
+        'Behavioral Analysis',
+        'Transaction Monitoring',
+        'Risk Scoring',
+        'Alert System',
+        'Pattern Recognition',
+        'API Integration',
+        'Custom Rules Engine',
+        'Compliance Reporting'
+      ],
+      pricing: {
+        basic: 199,
+        pro: 599,
+        enterprise: 1999
+      },
+      benefits: [
+        'Reduced fraud losses',
+        'Real-time protection',
+        'Automated monitoring',
+        'Better risk management',
+        'Compliance assurance',
+        'Cost savings'
+      ],
+      useCases: [
+        'E-commerce fraud prevention',
+        'Financial services',
+        'Payment processing',
+        'Insurance claims',
+        'Identity verification',
+        'Transaction security'
+      ],
+      marketPrice: '$199 - $1,999/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-fraud-detection'
+      },
+      link: '/ai-fraud-detection',
+    },
+    {
+      id: 'ai-lead-scoring',
+      title: 'AI Lead Scoring Engine',
+      description: 'Intelligent lead scoring system that automatically identifies and prioritizes high-value prospects using AI',
+      shortDescription: 'Score and prioritize leads with AI intelligence',
+      icon: '🎯',
+      features: [
+        'Behavioral Analysis',
+        'Lead Scoring Algorithms',
+        'CRM Integration',
+        'Predictive Analytics',
+        'Lead Nurturing',
+        'Conversion Tracking',
+        'Custom Scoring Models',
+        'Real-time Updates',
+        'Performance Analytics',
+        'Automated Workflows'
+      ],
+      pricing: {
+        basic: 149,
+        pro: 399,
+        enterprise: 1299
+      },
+      benefits: [
+        'Higher conversion rates',
+        'Better lead quality',
+        'Reduced sales cycle',
+        'Improved ROI',
+        'Automated prioritization',
+        'Data-driven decisions'
+      ],
+      useCases: [
+        'Sales qualification',
+        'Marketing automation',
+        'Lead nurturing',
+        'Revenue optimization',
+        'Customer acquisition',
+        'Sales pipeline management'
+      ],
+      marketPrice: '$149 - $1,299/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-lead-scoring'
+      },
+      link: '/ai-lead-scoring',
+    },
+    {
+      id: 'ai-price-optimizer',
+      title: 'AI Price Optimization Engine',
+      description: 'Dynamic pricing optimization system that maximizes revenue through AI-powered price recommendations',
+      shortDescription: 'Optimize pricing with AI for maximum revenue',
+      icon: '💰',
+      features: [
+        'Dynamic Pricing Models',
+        'Market Analysis',
+        'Competitor Monitoring',
+        'Demand Forecasting',
+        'Price Elasticity Analysis',
+        'A/B Testing',
+        'Revenue Optimization',
+        'Real-time Adjustments',
+        'Performance Tracking',
+        'Custom Rules Engine'
+      ],
+      pricing: {
+        basic: 299,
+        pro: 799,
+        enterprise: 2499
+      },
+      benefits: [
+        'Increased revenue',
+        'Better profit margins',
+        'Competitive advantage',
+        'Market responsiveness',
+        'Automated optimization',
+        'Data-driven pricing'
+      ],
+      useCases: [
+        'E-commerce pricing',
+        'SaaS subscription pricing',
+        'Hotel pricing',
+        'Airline pricing',
+        'Retail pricing',
+        'Service pricing'
+      ],
+      marketPrice: '$299 - $2,499/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-price-optimizer'
+      },
+      link: '/ai-price-optimizer',
+    },
+    {
+      id: 'ai-predictive-maintenance',
+      title: 'AI Predictive Maintenance System',
+      description: 'IoT-enabled predictive maintenance solution that prevents equipment failures using AI and machine learning',
+      shortDescription: 'Prevent equipment failures with AI predictions',
+      icon: '🔧',
+      features: [
+        'IoT Sensor Integration',
+        'Predictive Analytics',
+        'Failure Prediction',
+        'Maintenance Scheduling',
+        'Cost Optimization',
+        'Real-time Monitoring',
+        'Alert System',
+        'Performance Tracking',
+        'Maintenance History',
+        'ROI Analysis'
+      ],
+      pricing: {
+        basic: 399,
+        pro: 999,
+        enterprise: 2999
+      },
+      benefits: [
+        'Reduced downtime',
+        'Lower maintenance costs',
+        'Extended equipment life',
+        'Improved efficiency',
+        'Proactive maintenance',
+        'Better resource planning'
+      ],
+      useCases: [
+        'Manufacturing equipment',
+        'HVAC systems',
+        'Fleet management',
+        'Industrial machinery',
+        'Building systems',
+        'Transportation'
+      ],
+      marketPrice: '$399 - $2,999/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-predictive-maintenance'
+      },
+      link: '/ai-predictive-maintenance',
+    },
+    {
+      id: 'ai-image-recognition',
+      title: 'AI Image Recognition Platform',
+      description: 'Advanced computer vision platform for image analysis, object detection, and visual content understanding',
+      shortDescription: 'Analyze and understand images with AI',
+      icon: '👁️',
+      features: [
+        'Object Detection',
+        'Image Classification',
+        'Facial Recognition',
+        'OCR Text Extraction',
+        'Content Moderation',
+        'Quality Assessment',
+        'Custom Model Training',
+        'API Integration',
+        'Batch Processing',
+        'Real-time Analysis'
+      ],
+      pricing: {
+        basic: 99,
+        pro: 299,
+        enterprise: 999
+      },
+      benefits: [
+        'Automated image processing',
+        'Improved accuracy',
+        'Cost reduction',
+        'Scalable solutions',
+        'Custom applications',
+        'Real-time insights'
+      ],
+      useCases: [
+        'Content moderation',
+        'Medical imaging',
+        'Security surveillance',
+        'E-commerce cataloging',
+        'Quality control',
+        'Document processing'
+      ],
+      marketPrice: '$99 - $999/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-image-recognition'
+      },
+      link: '/ai-image-recognition',
+    },
+    {
+      id: 'ai-voice-assistant',
+      title: 'AI Voice Assistant Platform',
+      description: 'Custom voice assistant solution with natural language processing and voice command capabilities',
+      shortDescription: 'Build intelligent voice assistants with AI',
+      icon: '🎤',
+      features: [
+        'Natural Language Processing',
+        'Voice Recognition',
+        'Text-to-Speech',
+        'Intent Recognition',
+        'Multi-language Support',
+        'Custom Commands',
+        'API Integration',
+        'Conversation Management',
+        'Analytics Dashboard',
+        'Mobile SDK'
+      ],
+      pricing: {
+        basic: 199,
+        pro: 599,
+        enterprise: 1999
+      },
+      benefits: [
+        'Improved user experience',
+        'Hands-free operation',
+        'Accessibility features',
+        'Cost reduction',
+        'Scalable solutions',
+        'Custom applications'
+      ],
+      useCases: [
+        'Customer service',
+        'Smart home control',
+        'Mobile apps',
+        'Accessibility tools',
+        'IoT devices',
+        'Business automation'
+      ],
+      marketPrice: '$199 - $1,999/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-voice-assistant'
+      },
+      link: '/ai-voice-assistant',
     }
   ],
   itSolutions: [

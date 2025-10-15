@@ -39,7 +39,7 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-96 bg-white rounded-md shadow-lg z-50 max-h-96 overflow-y-auto"
                 >
                   <div className="py-1">
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
@@ -51,6 +51,24 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       AI Content Generator
+                    </Link>
+                    <Link to="/ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Fraud Detection
+                    </Link>
+                    <Link to="/ai-lead-scoring" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Lead Scoring
+                    </Link>
+                    <Link to="/ai-price-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Price Optimizer
+                    </Link>
+                    <Link to="/ai-predictive-maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Predictive Maintenance
+                    </Link>
+                    <Link to="/ai-image-recognition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Image Recognition
+                    </Link>
+                    <Link to="/ai-voice-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Voice Assistant
                     </Link>
                     <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Data Analytics
@@ -72,6 +90,24 @@ const Navigation: React.FC = () => {
                     <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Network Infrastructure
                     </Link>
+                    <Link to="/api-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      API Development
+                    </Link>
+                    <Link to="/blockchain-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Blockchain Solutions
+                    </Link>
+                    <Link to="/iot-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      IoT Solutions
+                    </Link>
+                    <Link to="/data-engineering" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Data Engineering
+                    </Link>
+                    <Link to="/devops-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      DevOps Automation
+                    </Link>
+                    <Link to="/security-audit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Security Audit
+                    </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Infrastructure</div>
                     <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -89,26 +125,41 @@ const Navigation: React.FC = () => {
                       Micro SaaS Solutions
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
-                    <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      AI Content Moderator
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Micro SaaS Solutions</div>
+                    <Link to="/ai-chatbot-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Chatbot Builder
                     </Link>
-                    <Link to="/zion-ai-customer-churn-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Customer Churn Predictor
+                    <Link to="/ai-form-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Form Builder
                     </Link>
-                    <Link to="/zion-ai-customer-sentiment-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Customer Sentiment Tracker
+                    <Link to="/ai-document-processor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Document Processor
                     </Link>
-                    <Link to="/zion-ai-document-analyzer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Document Analyzer
+                    <Link to="/ai-scheduling-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Scheduling Assistant
                     </Link>
-                    <Link to="/zion-ai-financial-forecaster" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Financial Forecaster
+                    <Link to="/ai-social-media-manager" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Social Media Manager
                     </Link>
-                    <Link to="/zion-ai-sales-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Sales Predictor
+                    <Link to="/ai-crm-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI CRM Optimizer
                     </Link>
-                    <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-email-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Email Optimizer
+                    </Link>
+                    <Link to="/ai-website-analyzer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Website Analyzer
+                    </Link>
+                    <Link to="/ai-data-visualizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Data Visualizer
+                    </Link>
+                    <Link to="/task-manager" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Task Manager Pro
+                    </Link>
+                    <Link to="/expense-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Smart Expense Tracker
+                    </Link>
+                    <Link to="/workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
                     </Link>
                   </div>
@@ -156,7 +207,7 @@ const Navigation: React.FC = () => {
               About
             </Link>
             <div className="space-y-1">
-              <div className="text-gray-700 px-3 py-2 text-base font-medium">AI & Machine Learning</div>
+              <div className="text-gray-700 px-3 py-2 text-base font-medium border-b border-gray-200">AI & Machine Learning</div>
               <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 AI Services
               </Link>
@@ -166,11 +217,29 @@ const Navigation: React.FC = () => {
               <Link to="/ai-content-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 AI Content Generator
               </Link>
+              <Link to="/ai-fraud-detection" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Fraud Detection
+              </Link>
+              <Link to="/ai-lead-scoring" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Lead Scoring
+              </Link>
+              <Link to="/ai-price-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Price Optimizer
+              </Link>
+              <Link to="/ai-predictive-maintenance" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Predictive Maintenance
+              </Link>
+              <Link to="/ai-image-recognition" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Image Recognition
+              </Link>
+              <Link to="/ai-voice-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Voice Assistant
+              </Link>
               <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Data Analytics
               </Link>
               
-              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">IT Services</div>
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4 border-b border-gray-200">IT Services</div>
               <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 IT Services
               </Link>
@@ -186,8 +255,26 @@ const Navigation: React.FC = () => {
               <Link to="/network-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Network Infrastructure
               </Link>
+              <Link to="/api-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                API Development
+              </Link>
+              <Link to="/blockchain-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Blockchain Solutions
+              </Link>
+              <Link to="/iot-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                IoT Solutions
+              </Link>
+              <Link to="/data-engineering" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Data Engineering
+              </Link>
+              <Link to="/devops-automation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                DevOps Automation
+              </Link>
+              <Link to="/security-audit" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Security Audit
+              </Link>
               
-              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Infrastructure</div>
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4 border-b border-gray-200">Infrastructure</div>
               <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Cloud Infrastructure
               </Link>
@@ -195,7 +282,7 @@ const Navigation: React.FC = () => {
                 5G Solutions
               </Link>
               
-              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Business Solutions</div>
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4 border-b border-gray-200">Business Solutions</div>
               <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Digital Transformation
               </Link>
@@ -203,26 +290,41 @@ const Navigation: React.FC = () => {
                 Micro SaaS Solutions
               </Link>
               
-              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>
-              <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                AI Content Moderator
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4 border-b border-gray-200">Micro SaaS Solutions</div>
+              <Link to="/ai-chatbot-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Chatbot Builder
               </Link>
-              <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Customer Churn Predictor
+              <Link to="/ai-form-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Form Builder
               </Link>
-              <Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Customer Sentiment Tracker
+              <Link to="/ai-document-processor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Document Processor
               </Link>
-              <Link to="/zion-ai-document-analyzer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Document Analyzer
+              <Link to="/ai-scheduling-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Scheduling Assistant
               </Link>
-              <Link to="/zion-ai-financial-forecaster" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Financial Forecaster
+              <Link to="/ai-social-media-manager" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Social Media Manager
               </Link>
-              <Link to="/zion-ai-sales-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Sales Predictor
+              <Link to="/ai-crm-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI CRM Optimizer
               </Link>
-              <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/ai-email-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Email Optimizer
+              </Link>
+              <Link to="/ai-website-analyzer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Website Analyzer
+              </Link>
+              <Link to="/ai-data-visualizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Data Visualizer
+              </Link>
+              <Link to="/task-manager" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Task Manager Pro
+              </Link>
+              <Link to="/expense-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Smart Expense Tracker
+              </Link>
+              <Link to="/workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Workflow Automator
               </Link>
             </div>
