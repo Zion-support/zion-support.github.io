@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {render} from "@testing-library/react"
 
 const TestComponent = () => {
@@ -26,4 +24,3 @@ describe("Advanced Components", () => {
     consoleSpy.mockRestore()
   })
 })
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7

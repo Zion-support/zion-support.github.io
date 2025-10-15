@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
 interface ImageOptimizerProps {
@@ -12,7 +11,7 @@ interface ImageOptimizerProps {
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src, alt, className = '', _width, _height, priority = false, _placeholder, effect = 'blur', threshold = 100, _onLoad, _onError
+  src, alt, className = '', width, height, priority = false, placeholder
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -28,7 +27,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   };
 
   // Generate optimized src with WebP support
-  const getOptimizedSrc = (_originalSrc: string) => {
+  const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
       return originalSrc;
     }
@@ -42,50 +41,59 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     return originalSrc;
   };
 
-  // Generate responsive srcset
-  const generateSrcSet = (_baseSrc: string) => {
-    if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {
-      return baseSrc;
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if (priority) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
     }
 
-    const sizes = [320, 640, 768, 1024, 1280, 1920];
-    const srcSet = sizes
-      .map(size => `${baseSrc}?w=${size} ${size}w`)
-      .join(', ');
-    
-    return srcSet;
-  };
-
-  const optimizedSrc = getOptimizedSrc(src);
-  const srcSet = generateSrcSet(src);
+    return () => observer.disconnect();
+  }, [priority]);
 
   if (hasError) {
     return (
-      <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-gray-500 text-sm">Image failed to load</span>
+      <div className={`flex items-center justify-center bg-gray-200 ${className}`} style={{ width, height }}>
+        <span className="text-gray-500">Failed to load image</span>
       </div>
     );
   }
 
-  if (priority) {
+  if (!isInView && !priority) {
     return (
-      <img
+      <div 
         ref={imgRef}
-        src={optimizedSrc}
-        srcSet={srcSet}
-        alt={alt}
-        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-        width={width}
-        height={height}
-        onLoad={handleLoad}
-        onError={handleError}
-        loading="eager"
-        decoding="async"
+        className={`bg-gray-200 animate-pulse ${className}`} 
+        style={{ width, height }}
       />
     );
   }
 
   return (
+    <img
+      ref={imgRef}
+      src={getOptimizedSrc(src)}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+      onLoad={handleLoad}
+      onError={handleError}
+    />
+  );
+};
+
+export default ImageOptimizer;
