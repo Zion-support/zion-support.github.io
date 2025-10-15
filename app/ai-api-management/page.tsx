@@ -1,9 +1,7 @@
-import { ArrowRight, Globe, Target, CheckCircle } from 'lucide-react';
+import { ArrowRight, Globe, Target, CheckCircle, BarChart3, FileText, Shield, Users, Zap, Clock } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAPIManagement() {
-  return;
-},
+const features = [
     {
       title: "Smart Analytics",
       description: "AI-driven analytics that provide insights into API performance, usage patterns, and optimization opportunities",
@@ -121,6 +119,8 @@ const testimonials = [
       avatar: "MR"
     }
   ];
+
+export default function AIAPIManagement() {
   return (
     <>
       <Helmet>
@@ -135,7 +135,7 @@ const testimonials = [
         />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-teal-500/10 animate-pulse"></div>
