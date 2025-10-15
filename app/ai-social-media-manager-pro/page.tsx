@@ -44,7 +44,6 @@ const AISocialMediaManagerProPage = () => {
     { name: "David Kim", role: "Marketing Director", content: "Best social media management tool!", rating: 5, company: "Brand Solutions" }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d1e0
   return (
     <>
       <Helmet>
